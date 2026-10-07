@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vương Lâm · Pixel 64 × 96 · Đứng và đi</title>
+  <link rel="stylesheet" href="preview.css">
+  <script defer src="native-v2/atlas-data.js" data-atlas></script>
+  <script defer src="preview.js"></script>
+</head>
+<body>
+<main>
+  <h1>Vương Lâm · Bộ đứng và đi đầu tiên</h1>
+  <p>Nhận diện v2 đã duyệt. Bộ áo xám dùng frame <strong>64 × 96 px</strong>, bốn hướng và sáu frame đi mỗi hướng. Xem động tác tại chỗ hoặc thử bước trên nền môn phái.</p>
+  <p class="note" id="asset-status" role="status">Đang nạp atlas…</p>
+  <nav aria-label="Tài liệu"><a href="../index.html">Nhân vật</a><a href="../../../WANG-LIN-SPRITE-SPEC.md">Đặc tả sprite</a><a href="native-v2/atlas.png" download>PNG atlas</a><a href="native-v2/atlas.json" download>JSON atlas</a><a href="README.md">Nguồn và prompt</a></nav>
+  <section aria-labelledby="overview-heading">
+    <h2 id="overview-heading">Bốn hướng cùng một nhịp</h2>
+    <div class="overview">
+      <figure><canvas width="64" height="96" data-overview="south" aria-label="Vương Lâm hướng xuống"></canvas><figcaption>Xuống · Mặt trước</figcaption></figure>
+      <figure><canvas width="64" height="96" data-overview="west" aria-label="Vương Lâm hướng trái"></canvas><figcaption>Trái</figcaption></figure>
+      <figure><canvas width="64" height="96" data-overview="east" aria-label="Vương Lâm hướng phải"></canvas><figcaption>Phải</figcaption></figure>
+      <figure><canvas width="64" height="96" data-overview="north" aria-label="Vương Lâm hướng lên"></canvas><figcaption>Lên · Mặt sau</figcaption></figure>
+    </div>
+  </section>
+  <div class="editor">
+    <section aria-labelledby="detail-heading">
+      <h2 id="detail-heading">Xem từng frame</h2>
+      <div class="detail-scroll"><div class="detail-stage" id="detail-stage"><canvas id="detail-canvas" width="64" height="96" aria-label="Frame đang chọn"></canvas></div></div>
+      <p id="frame-status" class="note">—</p>
+    </section>
+    <section class="controls" aria-label="Điều khiển animation">
+      <h2>Điều khiển</h2>
+      <fieldset><legend>Động tác</legend><button type="button" data-motion="stand" aria-pressed="false">Đứng</button><button type="button" data-motion="walk" aria-pressed="true">Đi</button></fieldset>
+      <fieldset><legend>Hướng</legend><button type="button" data-direction="south">Xuống</button><button type="button" data-direction="west">Trái</button><button type="button" data-direction="east">Phải</button><button type="button" data-direction="north">Lên</button></fieldset>
+      <div class="line"><label for="scale">Phóng nguyên lần</label><select id="scale"><option value="1">1× · Cỡ gốc</option><option value="2">2×</option><option value="4" selected>4×</option><option value="8">8×</option></select></div>
+      <div class="line"><label for="fps">Nhịp đi</label><select id="fps"><option value="6">6 FPS</option><option value="8" selected>8 FPS</option><option value="10">10 FPS</option></select></div>
+      <div class="line"><label for="background">Nền xem</label><select id="background"><option value="paper">Giấy sáng</option><option value="dark">Mực tối</option></select></div>
+      <div class="checks"><label><input id="show-grid" type="checkbox"> Lưới mỗi 8 px</label><label><input id="show-anchor" type="checkbox" checked> Mốc chân (32, 88)</label></div>
+      <div class="line"><button type="button" id="play-toggle">Tạm dừng</button><button type="button" id="step-back">← Frame trước</button><button type="button" id="step-forward">Frame sau →</button></div>
+      <label for="frame-slider">Frame đi 0–5</label><input type="range" id="frame-slider" min="0" max="5" value="0">
+      <p class="note">Đứng dùng một frame cho mỗi hướng. Nhịp mặc định 8 FPS: một vòng đi dài 0,75 giây.</p>
+    </section>
+  </div>
+  <section aria-labelledby="map-heading">
+    <h2 id="map-heading">Thử bước trên sân tham chiếu</h2>
+    <p>Chọn vùng sân rồi giữ WASD/phím mũi tên, hoặc giữ nút hướng bên dưới. Nhân vật giữ cỡ gốc; màn nhỏ xem một phần sân.</p>
+    <div class="map-viewport" id="map-viewport"><canvas id="map-canvas" width="960" height="640" tabindex="0" aria-label="Sân xem ART, dùng WASD hoặc phím mũi tên để thử chuyển động"></canvas></div>
+    <div class="drive" aria-label="Hướng đi trên sân"><button type="button" data-drive="west" aria-label="Giữ để đi trái">←</button><button type="button" data-drive="north" aria-label="Giữ để đi lên">↑</button><button type="button" data-drive="south" aria-label="Giữ để đi xuống">↓</button><button type="button" data-drive="east" aria-label="Giữ để đi phải">→</button><button type="button" id="reset-position">Về giữa sân</button></div>
+    <p class="note" id="map-status">Vương Lâm · Nhân vật truyện · Thử ART</p>
+  </section>
+  <section>
+    <h2>Atlas và palette</h2>
+    <p class="note">Mỗi hàng: đứng, đi 0–5. Thứ tự hàng: xuống, trái, phải, lên. Atlas 448 × 384 px; các frame rời và tọa độ nằm trong JSON.</p>
+    <div class="atlas-scroll"><img class="atlas" src="native-v2/atlas.png" width="448" height="384" alt="Atlas 4 hàng, 7 cột: đứng và đi của Vương Lâm áo xám ở bốn hướng"></div>
+    <div id="palette" class="palette" aria-label="Palette 24 mục, gồm trong suốt"></div>
+    <p class="note">Hình được vẽ bằng imagegen, chuẩn hóa lưới/palette và đóng gói bằng script. Bộ này dùng xem nhịp bước, tóc/áo và đổi hướng trước tích hợp game.</p>
+    <p><a href="source-sheet-v3.png">Nguồn hiện tại</a> · <a href="source-sheet-v3.prompt.txt">Prompt tinh chỉnh</a> · <a href="source-sheet-v2.prompt.txt">Prompt chu kỳ</a> · <a href="source-sheet-v1.prompt.txt">Prompt đầu</a> · <a href="pixel-spec.json">Lưới và palette</a> · <a href="export-native.ps1">Script xuất</a></p>
+  </section>
+</main>
+</body>
+</html>

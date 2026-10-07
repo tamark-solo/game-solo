@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bộ ba trọng tâm — Tạo hình Tiên Nghịch</title>
+  <link rel="stylesheet" href="preview.css">
+  <script defer src="../wang-lin-gray-walk-v1/native-v2/atlas-data.js"></script>
+  <script defer src="situ-nan/native-v4/atlas-data.js"></script>
+  <script defer src="li-muwan/native-v2/atlas-data.js"></script>
+  <script defer src="preview.js"></script>
+</head>
+<body>
+<main>
+  <h1>Vương Lâm · Tư Đồ Nam · Lý Mộ Uyển</h1>
+  <p>Ba nhân vật trọng tâm của chính truyện đã chốt trong GDD. Vương Lâm v2 và Lý Mộ Uyển v1 đã được chấp nhận; Tư Đồ Nam đứng v3 giữ mặt/tóc v2 đã được tạm chấp nhận làm chuẩn thiết kế. Người chơi điều khiển đệ tử riêng.</p>
+  <nav aria-label="Bộ ba nhân vật"><a href="../core-ui-v1/index.html">Chân dung UI</a><a href="../../../CORE-CHARACTER-MOTION-PLAN.md">Kế hoạch động tác</a><a href="#pixel">Mẫu pixel</a><a href="#situ-nan">Tư Đồ Nam</a><a href="#li-muwan">Lý Mộ Uyển</a><a href="#wang-lin">Vương Lâm</a><a href="../../../CORE-CHARACTER-VISUAL-SPEC.md">Hồ sơ và nguồn truyện</a><a href="../index.html">Thư viện nhân vật</a></nav>
+  <section id="pixel">
+    <h2>Đối chiếu ngôn ngữ pixel</h2>
+    <p id="asset-status" role="status">Đang nạp mẫu pixel…</p>
+    <fieldset><legend>Hướng</legend><button type="button" data-direction="south" aria-pressed="true">Xuống / Trước</button><button type="button" data-direction="west" aria-pressed="false">Trái</button><button type="button" data-direction="east" aria-pressed="false">Phải</button><button type="button" data-direction="north" aria-pressed="false">Lên / Sau</button></fieldset>
+    <div class="line"><label for="scale">Cỡ xem</label><select id="scale"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select><label for="backdrop">Nền</label><select id="backdrop"><option value="paper">Giấy</option><option value="dark">Tối</option></select><label><input id="anchor" type="checkbox"> Hiện điểm đặt</label></div>
+    <div id="comparison" class="comparison">
+      <article><h3>Vương Lâm</h3><p class="badge">NPC truyện · Nhận diện đã duyệt</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-wanglin" width="64" height="96" aria-label="Vương Lâm áo xám, frame đứng của hướng được chọn"></canvas></div></div><p>Dáng thiếu niên, tóc dài buộc nửa đầu, áo xám.</p><p class="note">64 × 96 · Điểm chân (32, 88).</p></article>
+      <article><h3>Tư Đồ Nam</h3><p class="badge">Linh thể đứng · V3 tạm chấp nhận</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-situ" width="64" height="96" aria-label="Tư Đồ Nam đứng lơ lửng dạng linh thể, theo hướng được chọn"></canvas></div></div><p>Giữ mặt/tóc v2; đứng lơ lửng, chân duỗi, tay thả tự nhiên; ngực có khoảng khuyết.</p><p class="note">64 × 96 · Điểm chiếu (32, 88), lơ lửng cao 4 px.</p></article>
+      <article><h3>Lý Mộ Uyển</h3><p class="badge">Áo tím chương 144 · Nhận diện đã chấp nhận</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-muwan" width="64" height="96" aria-label="Lý Mộ Uyển áo tím, frame đứng của hướng được chọn"></canvas></div></div><p>Tóc dài buộc đuôi, áo tím, dáng tập trung và dịu.</p><p class="note">64 × 96 · Điểm chân (32, 88).</p></article>
+    </div>
+    <p class="note">Tám mẫu tĩnh hiện tại cùng lưới 64 × 96. Tư Đồ Nam đứng là ART cho tương tác; animation lướt sẽ làm sau. Dạng ngồi 128 × 128 được lưu riêng cho cảnh tu luyện theo truyện.</p>
+  </section>
+  <section id="situ-nan">
+    <h2>Tư Đồ Nam · Linh thể đứng v3</h2>
+    <a href="situ-nan-spirit-standing-v3.png"><img src="situ-nan-spirit-standing-v3.png" width="1536" height="1024" alt="Tư Đồ Nam đứng v3: ba góc linh thể lơ lửng với mặt và tóc v2, chân duỗi, tay thả tự nhiên, hai đầu biểu cảm"></a>
+    <p>Giữ mặt/tóc v2: hàm rộng, mũi thẳng, tóc đen buộc thấp có chút bạc. Chuyển sang đứng lơ lửng, chân duỗi, tay thả tự nhiên, mắt mở để đọc thần thái khi tương tác. Gấu áo và mép bàn chân đứt nhẹ cùng khoảng rỗng ở ngực biểu thị linh thể. Dự kiến di chuyển bằng lướt.</p>
+    <p>Tư thế đứng là chuyển thể cho MMORPG. Chương 46–47 giới thiệu qua tiếng nói; trạng thái ngồi/mắt nhắm ở chương 112 được lưu trong v2. Cảnh xuất hiện và mức độ tổn khuyết vẫn cần biên tập đúng mốc.</p>
+    <p class="note"><a href="situ-nan-spirit-standing-v3.prompt.txt">Prompt tạo hình</a> · <a href="situ-nan/pixel-source-standing-v4.png">Nguồn pixel</a> · <a href="situ-nan/pixel-source-standing-v4.prompt.txt">Prompt pixel</a> · <a href="situ-nan/native-v4/atlas.png">Atlas</a> · <a href="situ-nan/native-v4/atlas.json">JSON</a>.</p>
+
+    <details><summary>Dạng ngồi tu luyện v2</summary><p>Giữ bản ngồi xếp bằng/mắt nhắm tham chiếu chương 112 cho cảnh tương ứng. Đây là cùng mặt/tóc v2 với bản đứng hiện tại.</p><a href="situ-nan-spirit-identity-v2.png"><img loading="lazy" src="situ-nan-spirit-identity-v2.png" width="1536" height="1024" alt="Tư Đồ Nam v2 dạng ngồi xếp bằng, lưu cho cảnh tu luyện"></a><p class="note"><a href="situ-nan-spirit-identity-v2.prompt.txt">Prompt ngồi v2</a> · <a href="situ-nan/native-v2/atlas.png">Pixel ngồi 128 × 128</a> · <a href="situ-nan/pixel-spec-v2-seated.json">Spec ngồi</a>.</p></details>
+
+    <details><summary>Đối chiếu Tư Đồ Nam v1 và mẫu chỉnh đầu</summary><p>V1 được yêu cầu đổi mặt/tóc. Mẫu chỉnh đầu đã đổi tóc nhưng mặt còn gần bản cũ; bản v2 sau đó được vẽ lại từ brief mới.</p><a href="situ-nan-spirit-identity-v1.png"><img loading="lazy" src="situ-nan-spirit-identity-v1.png" width="1536" height="1024" alt="Tư Đồ Nam v1 với mặt dài và tóc xám xõa, giữ để so sánh"></a><p class="note"><a href="situ-nan-spirit-identity-v1.prompt.txt">Prompt v1</a> · <a href="situ-nan/native-v1/atlas.png">Pixel v1</a> · <a href="situ-nan-spirit-identity-v2-study.png">Mẫu chỉnh đầu</a> · <a href="situ-nan-spirit-identity-v2-study.prompt.txt">Prompt mẫu chỉnh đầu</a>.</p></details>
+  </section>
+  <section id="li-muwan">
+    <h2>Lý Mộ Uyển · Thời Hỏa Phần / Tu Ma Hải</h2>
+    <a href="li-muwan-early-identity-v1.png"><img src="li-muwan-early-identity-v1.png" width="1536" height="1024" alt="Bảng tạo hình Lý Mộ Uyển với ba góc áo tím, tóc dài buộc đuôi, một biến thể áo đỏ và chân dung cùng lò đan/dược liệu tham chiếu"></a>
+    <p>Áo tím và tóc buộc đuôi lấy căn cứ từ cảnh luyện đan; áo đỏ là biến thể của lần gặp trước đó. Cùng một gương mặt qua hai bộ đồ. Lò đan/dược liệu là tham chiếu cảnh, chưa là asset đạo cụ được duyệt.</p>
+    <p class="note"><a href="li-muwan-early-identity-v1.prompt.txt">Prompt chỉnh tóc</a> · <a href="li-muwan-early-identity-v1-study.prompt.txt">Prompt đầu</a> · <a href="li-muwan/pixel-source-v2.png">Nguồn pixel</a> · <a href="li-muwan/pixel-source-v2.prompt.txt">Prompt chỉnh tỷ lệ</a> · <a href="li-muwan/native-v2/atlas.png">Atlas</a> · <a href="li-muwan/native-v2/atlas.json">JSON</a>.</p>
+    <details><summary>Nghiên cứu trước khi chỉnh tóc</summary><a href="li-muwan-early-identity-v1-study.png"><img loading="lazy" src="li-muwan-early-identity-v1-study.png" width="1536" height="1024" alt="Bảng Lý Mộ Uyển trước khi chỉnh tóc từ buộc nửa đầu sang đuôi tóc buộc gọn"></a></details>
+  </section>
+  <section id="wang-lin">
+    <h2>Vương Lâm · Nhận diện đã duyệt</h2>
+    <a href="../wang-lin-initiation-v2.png"><img loading="lazy" src="../wang-lin-initiation-v2.png" width="1536" height="1024" alt="Bảng Vương Lâm đã duyệt với đồ thường, áo xám, áo đỏ và các góc mặt/tóc"></a>
+    <p><a href="../wang-lin-gray-walk-v1/index.html">Bộ đứng và đi Vương Lâm</a> vẫn dùng nguồn đã duyệt. Hai tạo hình mới bổ sung nhận diện của bộ ba, chưa thay phiên bản Vương Lâm.</p>
+  </section>
+  <p class="note">Hình mới vẽ bằng imagegen tích hợp. <a href="README.md">Nguồn và bộ prompt</a> · <a href="study.json">Manifest</a> · <a href="../../../CORE-CHARACTER-VISUAL-SPEC.md">Căn cứ truyện và lựa chọn ART</a>. Lý Mộ Uyển v1 đã chấp nhận; Tư Đồ Nam đứng v3 tạm chấp nhận làm chuẩn thiết kế, tiếp tục hoàn thiện ART sau. Thời điểm mở B/arc sau theo GDD.</p>
+</main>
+</body>
+</html>

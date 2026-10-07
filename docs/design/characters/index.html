@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tạo hình nhân vật — Tiên Nghịch online</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #F3EBDD; color: #252722; font: 18px/1.65 'Segoe UI', Arial, sans-serif; }
+    main { max-width: 1240px; margin: auto; padding: 32px 24px 64px; }
+    h1, h2 { font-family: Cambria, 'Times New Roman', serif; line-height: 1.3; }
+    h1 { margin: 0 0 16px; font-size: 34px; }
+    h2 { margin: 0 0 12px; font-size: 26px; }
+    a { color: #245C53; text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid #245C53; outline-offset: 3px; }
+    nav { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+    nav a { padding: 10px 16px; border: 1px solid #7A7464; border-radius: 6px; background: #FBF7EE; }
+    section { margin: 0 0 28px; padding: 24px; background: #FBF7EE; border: 1px solid #CFC1A8; border-radius: 10px; }
+    img { display: block; width: 100%; height: auto; border-radius: 8px; }
+    img.pixel-study { width: min(100%, 380px); margin: 16px auto; image-rendering: pixelated; background: #EEE6D7; }
+    .native-scroll { max-width: 100%; overflow: auto; background: #EEE6D7; }
+    img.native-atlas { width: 448px; height: 384px; max-width: none; image-rendering: pixelated; }
+    .avatar-atlases { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    .avatar-atlases article { min-width: 0; }
+    details { margin-top: 20px; }
+    summary { cursor: pointer; color: #245C53; margin-bottom: 16px; }
+    .note { color: #605E54; font-size: 16px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 12px; border-bottom: 1px solid #CFC1A8; text-align: left; vertical-align: top; }
+    @media (max-width: 900px) { .avatar-atlases { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { main { padding: 20px 16px; } section { padding: 16px; } h1 { font-size: 28px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Thư viện tạo hình nhân vật</h1>
+    <p>MMORPG tu luyện có idle; nhân vật pixel trên nền stylized 2D, portrait/truyện giữ tranh mực/giấy cổ. Ưu tiên bộ ba Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển; Lý Mộ Uyển đã chấp nhận nhận diện v1; Tư Đồ Nam đứng v3 tạm chấp nhận làm chuẩn thiết kế. Nhận diện Vương Lâm đã duyệt; đệ tử v2 giữ bộ thử.</p>
+    <p class="note"><a href="../../WANG-LIN-VISUAL-SPEC.md">Hồ sơ Vương Lâm</a> ghi nguồn tiểu thuyết và diện mạo riêng. <a href="wang-lin-gray-walk-v1/index.html">Trang animation</a> dùng 28 frame native 64 × 96, palette 24 mục; chuyển động mới cần xem thử.</p>
+    <nav aria-label="Tạo hình"><a href="core-ui-v1/index.html">Chân dung UI</a><a href="#core-trio">Bộ ba trọng tâm</a><a href="core-trio-v1/index.html">Tư Đồ Nam / Lý Mộ Uyển</a><a href="#avatar-pixel">Pixel đệ tử</a><a href="#male">Đệ tử nam v2</a><a href="#female">Đệ tử nữ v2</a><a href="#wang-lin-animation">Vương Lâm đứng/đi</a><a href="#wang-lin">Vương Lâm v2</a><a href="#wang-lin-expressions">Biểu cảm</a><a href="#wang-lin-pixel">Nguồn pixel</a><a href="../../CHARACTERS.md">Dàn nhân vật</a><a href="../index.html">Thư viện UX/ART</a></nav>
+    <section>
+      <h2>Phạm vi nhân vật đề xuất</h2>
+      <p><a href="wang-lin-sprite-study/index.html">Thử hai sprite Vương Lâm: nét mịn và pixel art</a> · Sau so sánh, người phát triển chọn nhân vật pixel trên nền stylized 2D. Bộ native thử dùng chung frame 64 × 96 và điểm chân; nhận diện đệ tử cần đánh giá riêng.</p>
+      <table>
+        <thead><tr><th>Phạm vi</th><th>Số lượng</th></tr></thead>
+        <tbody>
+          <tr><td>Nhân vật điều khiển</td><td>1 đệ tử mỗi tài khoản; 2 mẫu hình dùng chung</td></tr>
+          <tr><td>Nhân vật trọng tâm dài hạn</td><td>3: Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển</td></tr>
+          <tr><td>NPC có tên trong A</td><td>7 người; cha mẹ dùng chung 1 nguồn chân dung</td></tr>
+          <tr><td>NPC sau A → B</td><td>10 người; Lý Mộ Uyển dành cho arc sau</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="core-trio">
+      <h2>Bộ ba trọng tâm · Nhận diện trước NPC phụ</h2>
+      <p><a href="core-ui-v1/index.html">Chân dung UI 512/160/64</a>: Vương Lâm áo xám, Tư Đồ Nam linh thể, Lý Mộ Uyển áo tím; PNG/WebP, một biểu cảm cơ bản mỗi người, hình mới chờ đánh giá. <a href="../../CORE-CHARACTER-MOTION-PLAN.md">Kế hoạch động tác</a> ghi phần đã có và phần cần vẽ.</p>
+      <p><a href="core-trio-v1/index.html">Mở trang tạo hình và mẫu pixel của Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển</a>. Hai nhận diện mới dùng nguyên tác làm căn cứ, mặt/tóc/đường áo là thiết kế riêng của game.</p>
+      <p>Tư Đồ Nam đứng v3 có mặt/tóc v2, dáng lơ lửng và linh thể ít sương; Lý Mộ Uyển có áo tím, biến thể áo đỏ và tóc buộc đuôi. Mỗi người thêm bốn mẫu tĩnh để xem camera; thời điểm xuất hiện vẫn theo B/arc sau.</p>
+      <p class="note"><a href="../../CORE-CHARACTER-VISUAL-SPEC.md">Hồ sơ và nguồn chương</a> · <a href="core-trio-v1/README.md">Nguồn/prompt</a>. Lý Mộ Uyển v1 đã chấp nhận; Tư Đồ Nam đứng v3 tạm chấp nhận.</p>
+    </section>
+    <section id="avatar-pixel">
+      <h2>Hai đệ tử · Pixel đứng và đi thử</h2>
+      <p><a href="player-avatars-v2/index.html">Mở trang so sánh cùng Vương Lâm và thử hai mẫu trên sân</a>: đổi hướng, dừng ở từng frame, xem 1×/2×/4×/8×, đổi nền và chọn mẫu thử đi.</p>
+      <div class="avatar-atlases">
+        <article><h3>Đệ tử nam · Búi cao</h3><div class="native-scroll"><a href="player-avatars-v2/male/native-v2/atlas.png"><img class="native-atlas" src="player-avatars-v2/male/native-v2/atlas.png" width="448" height="384" alt="Atlas nam: bốn hàng hướng, mỗi hàng một frame đứng và sáu frame đi, tóc búi cao và đai xanh"></a></div></article>
+        <article><h3>Đệ tử nữ · Búi thấp</h3><div class="native-scroll"><a href="player-avatars-v2/female/native-v2/atlas.png"><img class="native-atlas" src="player-avatars-v2/female/native-v2/atlas.png" width="448" height="384" alt="Atlas nữ: bốn hàng hướng, mỗi hàng một frame đứng và sáu frame đi, tóc búi thấp và đai xanh"></a></div></article>
+      </div>
+      <p class="note">56 frame tổng, cùng palette 24 mục, frame 64 × 96 và điểm chân (32, 88); nhận diện/motion đệ tử còn chờ đánh giá. <a href="../../PLAYER-AVATAR-VISUAL-SPEC.md">Hồ sơ</a> · <a href="player-avatars-v2/README.md">Nguồn/prompt</a>.</p>
+    </section>
+    <section id="wang-lin-animation">
+      <h2>Vương Lâm · Bộ đứng và đi đầu tiên</h2>
+      <p><a href="wang-lin-gray-walk-v1/index.html">Mở trang animation và thử bước trên sân</a>: xem bốn hướng, dừng ở từng frame, phóng nguyên lần và đổi nền.</p>
+      <div class="native-scroll"><a href="wang-lin-gray-walk-v1/native-v2/atlas.png"><img class="native-atlas" src="wang-lin-gray-walk-v1/native-v2/atlas.png" width="448" height="384" alt="Atlas đứng và đi của Vương Lâm áo xám: bốn hàng hướng xuống, trái, phải, lên; mỗi hàng một frame đứng và sáu frame đi"></a></div>
+      <p class="note">Frame 64 × 96; điểm chân (32, 88); palette 24 mục gồm trong suốt. Nhận diện đã duyệt, motion là bản đầu. <a href="../../WANG-LIN-SPRITE-SPEC.md">Spec sprite</a> · <a href="wang-lin-gray-walk-v1/native-v2/atlas.json">JSON</a> · <a href="wang-lin-gray-walk-v1/README.md">Nguồn/prompt</a>.</p>
+    </section>
+    <section id="wang-lin">
+      <h2>Vương Lâm v2 · Tạo hình và trang phục</h2>
+      <a href="wang-lin-initiation-v2.png"><img src="wang-lin-initiation-v2.png" width="1536" height="1024" alt="Cùng thiếu niên Vương Lâm với đồ đời thường, áo xám và áo đỏ có gấu gọn; phía dưới có góc mặt trước, ba phần tư, bên, tóc phía sau và một biến thể hư hại trong cảnh hang"></a>
+      <p>Ba bộ đồ thường giữ cùng nhận diện. Hàng dưới thể hiện góc mặt/tóc; biến thể cảnh hang ở dưới phải được tách khỏi trang phục thường.</p>
+      <p class="note">Mặt/tóc và đường cắt áo là thiết kế riêng theo brief; nhận diện đã được người phát triển duyệt. <a href="wang-lin-initiation-v2.prompt.txt">Prompt đã dùng</a> · <a href="wang-lin-v2-study.json">Input và trạng thái</a>.</p>
+      <details><summary>Xem bảng nhập môn v1 để so sánh</summary><a href="wang-lin-initiation-v1.png"><img loading="lazy" src="wang-lin-initiation-v1.png" width="1536" height="1024" alt="Bảng tạo hình Vương Lâm v1 được giữ để so sánh trước khi sửa trạng thái trang phục"></a><p class="note">Nguồn nghiên cứu trước hồ sơ truyện; giữ nguyên ảnh và <a href="wang-lin-initiation-v1.prompt.txt">prompt v1</a>.</p></details>
+    </section>
+    <section id="wang-lin-expressions">
+      <h2>Vương Lâm v2 · Biểu cảm</h2>
+      <a href="wang-lin-expressions-v2.png"><img loading="lazy" src="wang-lin-expressions-v2.png" width="1254" height="1254" alt="Bốn chân dung Vương Lâm áo xám trên giấy cổ: trên trái hy vọng, trên phải thận trọng, dưới trái tập trung, dưới phải mệt"></a>
+      <p>Thứ tự: trên trái hy vọng; trên phải thận trọng; dưới trái tập trung; dưới phải mệt. Biểu cảm nhẹ để giữ nét thiếu niên và nhận diện.</p>
+      <p class="note">Bảng nghiên cứu; chưa tách thành portrait dùng trong game. <a href="wang-lin-expressions-v2.prompt.txt">Prompt đã dùng</a>.</p>
+    </section>
+    <section id="wang-lin-pixel">
+      <h2>Vương Lâm v2 · Mẫu pixel đứng áo xám</h2>
+      <a href="wang-lin-sprite-study/wang-lin-gray-pixel-v2.png"><img class="pixel-study" loading="lazy" src="wang-lin-sprite-study/wang-lin-gray-pixel-v2.png" width="1254" height="1254" alt="Một mẫu pixel Vương Lâm áo xám có gấu gọn, tóc đen buộc nửa đầu, đứng ở góc top-down ba phần tư trên nền trong suốt"></a>
+      <p>Giữ camera/tư thế của mẫu pixel v1, đối chiếu nhận diện và bộ áo xám với bảng v2. PNG có alpha trong suốt; màu giấy phía sau do trang xem đặt.</p>
+      <p class="note">Nguồn nhận diện 1.254 × 1.254 được giữ; bộ native xuất riêng trong <a href="wang-lin-gray-walk-v1/index.html">trang animation</a>. <a href="wang-lin-sprite-study/wang-lin-gray-pixel-v2.prompt.txt">Prompt đã dùng</a> · <a href="wang-lin-sprite-study/index.html">So sánh phong cách v1</a> · <a href="../world/hybrid-study/index.html">Thử sân v1</a>.</p>
+    </section>
+    <section id="male">
+      <h2>Đệ tử nam v2 · Mẫu người chơi</h2>
+      <a href="player-male-novice-v2.png"><img loading="lazy" src="player-male-novice-v2.png" width="1536" height="1024" alt="Đệ tử nam trưởng thành trẻ, hàm hơi vuông, vai rộng, tóc búi cao, áo xám đai xanh; ba góc thân và hai chân dung"></a>
+      <p>Mặt rộng và hàm rõ hơn, tóc búi cao gọn, vai rộng hơn Vương Lâm; áo xám và đai xanh trầm. Tên do người chơi đặt, mẫu không thay đổi chỉ số.</p>
+      <p class="note">Nhân vật do game bổ sung; nhận diện v2 còn chờ đánh giá. <a href="player-male-novice-v2.prompt.txt">Prompt đã dùng</a> · <a href="player-avatars-v2/index.html">Xem pixel</a>.</p>
+      <details><summary>Xem mẫu nam v1</summary><a href="player-male-novice-v1.png"><img loading="lazy" src="player-male-novice-v1.png" width="1536" height="1024" alt="Mẫu nam v1 được giữ để so sánh"></a><p><a href="player-male-novice-v1.prompt.txt">Prompt v1</a>.</p></details>
+    </section>
+    <section id="female">
+      <h2>Đệ tử nữ v2 · Mẫu người chơi</h2>
+      <a href="player-female-novice-v2.png"><img loading="lazy" src="player-female-novice-v2.png" width="1536" height="1024" alt="Đệ tử nữ trưởng thành trẻ, một búi thấp sau gáy, áo xám đai xanh; ba góc thân và hai chân dung"></a>
+      <p>Búi thấp sau gáy nhất quán giữa các góc, dáng gọn và mặt oval rộng. Cùng chất liệu và cấp trang bị với mẫu nam; mẫu hình không đổi chỉ số tu luyện.</p>
+      <p class="note">Nhân vật do game bổ sung; nhận diện v2 còn chờ đánh giá. <a href="player-female-novice-v2.prompt.txt">Prompt chỉnh tóc</a> · <a href="player-female-novice-v2-study.prompt.txt">Prompt đầu</a> · <a href="player-avatars-v2/index.html">Xem pixel</a>.</p>
+      <details><summary>Xem mẫu nữ v1 và bản tóc trước chỉnh</summary><a href="player-female-novice-v1.png"><img loading="lazy" src="player-female-novice-v1.png" width="1536" height="1024" alt="Mẫu nữ v1 được giữ để so sánh"></a><p><a href="player-female-novice-v1.prompt.txt">Prompt v1</a> · <a href="player-female-novice-v2-study.png">Nghiên cứu v2 trước chỉnh tóc</a>.</p></details>
+    </section>
+    <p>Tạo bằng imagegen tích hợp. Hồ sơ: <a href="../../CHARACTERS.md">Nhân vật và brief</a> · <a href="../../ONLINE-DIRECTION.md">Điều chỉnh online</a>.</p>
+  </main>
+</body>
+</html>

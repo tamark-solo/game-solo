@@ -1,0 +1,269 @@
+{
+    "schemaVersion":  "pixel-atlas-1",
+    "characterId":  "CHR-WANG-LIN-CHIBI-EAST-PILOT",
+    "sourceCharacterId":  "CHR-WANG-LIN",
+    "costume":  "gray",
+    "previewOnly":  true,
+    "availableDirections":  [
+                                "east"
+                            ],
+    "identityApprovedByProjectOwner":  false,
+    "animationStatus":  "chibi_pilot_pending_owner_review",
+    "frameSizePx":  [
+                        64,
+                        96
+                    ],
+    "footAnchorPx":  [
+                         32,
+                         88
+                     ],
+    "fps":  8,
+    "palette":  [
+                    "#00000000",
+                    "#1F1D24FF",
+                    "#29272DFF",
+                    "#3B383FFF",
+                    "#514C53FF",
+                    "#53535CFF",
+                    "#727179FF",
+                    "#96959CFF",
+                    "#B7B4B7FF",
+                    "#ADA59AFF",
+                    "#D0C7B5FF",
+                    "#EFE5D1FF",
+                    "#A96850FF",
+                    "#CC9873FF",
+                    "#E5B88FFF",
+                    "#F2CEA6FF",
+                    "#34323AFF",
+                    "#4B4850FF",
+                    "#69646AFF",
+                    "#3A363CFF",
+                    "#88796AFF",
+                    "#AB9E8BFF",
+                    "#C8B697FF",
+                    "#D3C5ACFF"
+                ],
+    "frames":  {
+                   "wanglin_chibi_stand_east":  {
+                                                    "frame":  {
+                                                                  "x":  0,
+                                                                  "y":  0,
+                                                                  "w":  64,
+                                                                  "h":  96
+                                                              },
+                                                    "sourceSize":  {
+                                                                       "w":  64,
+                                                                       "h":  96
+                                                                   },
+                                                    "rotated":  false,
+                                                    "trimmed":  false,
+                                                    "anchorPx":  [
+                                                                     32,
+                                                                     88
+                                                                 ],
+                                                    "image":  "frames/wanglin_chibi_stand_east.png",
+                                                    "pixelHash":  "dcd2f17074e3db7132a7a8a510afd5dd4aa0e46bf8ea169266d31e8e57ff575c"
+                                                },
+                   "wanglin_chibi_walk_east_00":  {
+                                                      "frame":  {
+                                                                    "x":  64,
+                                                                    "y":  0,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_chibi_walk_east_00.png",
+                                                      "pixelHash":  "e90fee308bb1d499e98590af13daad9e166d0af42ddb90c3506703bccf74070f"
+                                                  },
+                   "wanglin_chibi_walk_east_01":  {
+                                                      "frame":  {
+                                                                    "x":  128,
+                                                                    "y":  0,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_chibi_walk_east_01.png",
+                                                      "pixelHash":  "0db79494564245f85df2db5f71db88076f744659ddff110518223077c8f14d69"
+                                                  },
+                   "wanglin_chibi_walk_east_02":  {
+                                                      "frame":  {
+                                                                    "x":  192,
+                                                                    "y":  0,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_chibi_walk_east_02.png",
+                                                      "pixelHash":  "f193bbd067a5f83b197803f447339e6f4c20a2ce0d418aaecc2b5ed74bfe827e"
+                                                  },
+                   "wanglin_chibi_walk_east_03":  {
+                                                      "frame":  {
+                                                                    "x":  256,
+                                                                    "y":  0,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_chibi_walk_east_03.png",
+                                                      "pixelHash":  "ec3fba3a91d9aad4a9c79c08a151cc8658707e96bccdf8c5060cb807a0cc9140"
+                                                  }
+               },
+    "animations":  {
+                       "stand_east":  [
+                                          "wanglin_chibi_stand_east"
+                                      ],
+                       "walk_east":  [
+                                         "wanglin_chibi_walk_east_00",
+                                         "wanglin_chibi_walk_east_01",
+                                         "wanglin_chibi_walk_east_02",
+                                         "wanglin_chibi_walk_east_03"
+                                     ]
+                   },
+    "meta":  {
+                 "image":  "atlas.png",
+                 "size":  {
+                              "w":  320,
+                              "h":  96
+                          },
+                 "format":  "indexed_png",
+                 "scale":  1
+             },
+    "sourceImage":  "../wang-lin-chibi-east-source-v2.png",
+    "referenceUrl":  "https://www.pinterest.com/pin/480196379041020113/",
+    "proportionTarget":  "approximately_2_7_heads",
+    "walkPhase":  [
+                      "contact_a",
+                      "passing_b",
+                      "contact_b",
+                      "passing_a"
+                  ],
+    "export":  {
+                   "artMethod":  "built_in_image_gen",
+                   "geometryGeneratedByCode":  false,
+                   "reports":  [
+                                   {
+                                       "SourceIndex":  0,
+                                       "SourceBounds":  [
+                                                            170,
+                                                            24,
+                                                            283,
+                                                            485
+                                                        ],
+                                       "NativeBounds":  [
+                                                            5,
+                                                            7,
+                                                            48,
+                                                            82
+                                                        ],
+                                       "PixelHash":  "dcd2f17074e3db7132a7a8a510afd5dd4aa0e46bf8ea169266d31e8e57ff575c",
+                                       "HeadCenterX":  330.32897971727107
+                                   },
+                                   {
+                                       "SourceIndex":  1,
+                                       "SourceBounds":  [
+                                                            628,
+                                                            24,
+                                                            287,
+                                                            486
+                                                        ],
+                                       "NativeBounds":  [
+                                                            5,
+                                                            7,
+                                                            48,
+                                                            82
+                                                        ],
+                                       "PixelHash":  "e90fee308bb1d499e98590af13daad9e166d0af42ddb90c3506703bccf74070f",
+                                       "HeadCenterX":  790.10143746295194
+                                   },
+                                   {
+                                       "SourceIndex":  2,
+                                       "SourceBounds":  [
+                                                            1112,
+                                                            23,
+                                                            282,
+                                                            488
+                                                        ],
+                                       "NativeBounds":  [
+                                                            6,
+                                                            7,
+                                                            47,
+                                                            82
+                                                        ],
+                                       "PixelHash":  "0db79494564245f85df2db5f71db88076f744659ddff110518223077c8f14d69",
+                                       "HeadCenterX":  1270.6117376294592
+                                   },
+                                   {
+                                       "SourceIndex":  3,
+                                       "SourceBounds":  [
+                                                            170,
+                                                            525,
+                                                            286,
+                                                            474
+                                                        ],
+                                       "NativeBounds":  [
+                                                            5,
+                                                            9,
+                                                            49,
+                                                            80
+                                                        ],
+                                       "PixelHash":  "f193bbd067a5f83b197803f447339e6f4c20a2ce0d418aaecc2b5ed74bfe827e",
+                                       "HeadCenterX":  330.2193946099739
+                                   },
+                                   {
+                                       "SourceIndex":  4,
+                                       "SourceBounds":  [
+                                                            628,
+                                                            525,
+                                                            287,
+                                                            474
+                                                        ],
+                                       "NativeBounds":  [
+                                                            5,
+                                                            9,
+                                                            49,
+                                                            80
+                                                        ],
+                                       "PixelHash":  "ec3fba3a91d9aad4a9c79c08a151cc8658707e96bccdf8c5060cb807a0cc9140",
+                                       "HeadCenterX":  788.98480913026367
+                                   }
+                               ]
+               }
+}

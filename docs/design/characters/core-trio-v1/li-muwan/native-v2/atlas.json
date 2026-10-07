@@ -1,0 +1,252 @@
+{
+  "schemaVersion": "pixel-static-atlas-1",
+  "characterId": "CHR-LI-MUWAN",
+  "form": "living_early_arc",
+  "costume": "purple_ch144_reference",
+  "identityApprovedByProjectOwner": true,
+  "studyStatus": "accepted_as_first_static_pixel_baseline",
+  "sourceImage": "../pixel-source-v2.png",
+  "frameSizePx": [
+    64,
+    96
+  ],
+  "anchorPx": [
+    32,
+    88
+  ],
+  "anchorKind": "feet",
+  "directionOrder": [
+    "south",
+    "west",
+    "east",
+    "north"
+  ],
+  "palette": [
+    "#00000000",
+    "#1F1D24FF",
+    "#29272DFF",
+    "#3B383FFF",
+    "#594259FF",
+    "#7B5D7DFF",
+    "#A785A3FF",
+    "#C2A2BCFF",
+    "#ADA59AFF",
+    "#D0C7B5FF",
+    "#EFE5D1FF",
+    "#A96850FF",
+    "#CC9873FF",
+    "#E5B88FFF",
+    "#F2CEA6FF",
+    "#34323AFF",
+    "#3A363CFF",
+    "#88796AFF",
+    "#AB9E8BFF",
+    "#C8B697FF",
+    "#D3C5ACFF",
+    "#3D2A43FF",
+    "#604064FF",
+    "#92708FFF"
+  ],
+  "frames": {
+    "li_muwan_purple_static_south": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "anchorPx": [
+        32,
+        88
+      ],
+      "image": "frames/li_muwan_purple_static_south.png",
+      "pixelHash": "997b3b2bc55439adcfc0e5d7017c2e0af3f2a3203be212ee688ca7aa38080205"
+    },
+    "li_muwan_purple_static_west": {
+      "frame": {
+        "x": 64,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "anchorPx": [
+        32,
+        88
+      ],
+      "image": "frames/li_muwan_purple_static_west.png",
+      "pixelHash": "d970aa0cff2ce85c1b9c33914cf4a1f2ec9dc70f0782dfd5b501ede5f3fcca89"
+    },
+    "li_muwan_purple_static_east": {
+      "frame": {
+        "x": 128,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "anchorPx": [
+        32,
+        88
+      ],
+      "image": "frames/li_muwan_purple_static_east.png",
+      "pixelHash": "7e0978716e804bc461300346b8b24dce00bf9ad10d0558a306b88e2134507433"
+    },
+    "li_muwan_purple_static_north": {
+      "frame": {
+        "x": 192,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "anchorPx": [
+        32,
+        88
+      ],
+      "image": "frames/li_muwan_purple_static_north.png",
+      "pixelHash": "9777fb5b2d8f7e23f5bf5d772cd4fce389e97cdefceff5faefea43efb2fe852a"
+    }
+  },
+  "animations": {
+    "static_south": [
+      "li_muwan_purple_static_south"
+    ],
+    "static_west": [
+      "li_muwan_purple_static_west"
+    ],
+    "static_east": [
+      "li_muwan_purple_static_east"
+    ],
+    "static_north": [
+      "li_muwan_purple_static_north"
+    ]
+  },
+  "meta": {
+    "image": "atlas.png",
+    "size": {
+      "w": 256,
+      "h": 96
+    },
+    "format": "indexed_png",
+    "scale": 1
+  },
+  "export": {
+    "artMethod": "built_in_image_gen",
+    "packingMethod": "connected_component_crop_uniform_nearest_neighbor_fixed_palette_registered_static_atlas",
+    "nativeAlpha": "0_or_255",
+    "frameCount": 4,
+    "sourcePath": "pixel-source-v2.png",
+    "sourceDirectionOrder": [
+      "south",
+      "east",
+      "west",
+      "north"
+    ],
+    "reports": [
+      {
+        "Row": 0,
+        "Column": 0,
+        "SourceBounds": [
+          119,
+          37,
+          337,
+          717
+        ],
+        "NativeBounds": [
+          13,
+          7,
+          39,
+          82
+        ],
+        "OpaquePixels": 2072,
+        "PixelHash": "997b3b2bc55439adcfc0e5d7017c2e0af3f2a3203be212ee688ca7aa38080205",
+        "LowestLeftPixelY": 88,
+        "LowestRightPixelY": 88
+      },
+      {
+        "Row": 1,
+        "Column": 0,
+        "SourceBounds": [
+          136,
+          780,
+          299,
+          711
+        ],
+        "NativeBounds": [
+          13,
+          7,
+          34,
+          82
+        ],
+        "OpaquePixels": 1924,
+        "PixelHash": "d970aa0cff2ce85c1b9c33914cf4a1f2ec9dc70f0782dfd5b501ede5f3fcca89",
+        "LowestLeftPixelY": 88,
+        "LowestRightPixelY": 87
+      },
+      {
+        "Row": 0,
+        "Column": 1,
+        "SourceBounds": [
+          592,
+          42,
+          300,
+          712
+        ],
+        "NativeBounds": [
+          18,
+          7,
+          35,
+          82
+        ],
+        "OpaquePixels": 1935,
+        "PixelHash": "7e0978716e804bc461300346b8b24dce00bf9ad10d0558a306b88e2134507433",
+        "LowestLeftPixelY": 86,
+        "LowestRightPixelY": 88
+      },
+      {
+        "Row": 1,
+        "Column": 1,
+        "SourceBounds": [
+          565,
+          780,
+          366,
+          714
+        ],
+        "NativeBounds": [
+          12,
+          7,
+          41,
+          82
+        ],
+        "OpaquePixels": 2202,
+        "PixelHash": "9777fb5b2d8f7e23f5bf5d772cd4fce389e97cdefceff5faefea43efb2fe852a",
+        "LowestLeftPixelY": 88,
+        "LowestRightPixelY": 87
+      }
+    ]
+  },
+  "runtimeReady": false,
+  "identityApprovalScope": "li_muwan_early_v1_identity"
+}

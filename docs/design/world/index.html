@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mẫu màn thế giới — Tiên Nghịch</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root { color-scheme: light; }
+    body { margin: 0; color: #252722; background: #F3EBDD; font: 18px/1.6 'Segoe UI', Arial, sans-serif; }
+    main { max-width: 1344px; padding: 24px; margin: auto; }
+    h1, h2, h3 { font-family: Cambria, 'Times New Roman', serif; line-height: 1.25; }
+    h1 { margin: 0 0 12px; font-size: 32px; }
+    h2 { font-size: 24px; margin: 0 0 12px; }
+    h3 { margin: 0 0 12px; font-size: 21px; }
+    p { margin: 0 0 16px; }
+    a { color: #245C53; text-underline-offset: 4px; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #245C53; outline-offset: 3px; }
+    .intro { max-width: 1050px; }
+    .note { font-size: 16px; color: #605E54; }
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 16px; align-items: center; }
+    button { min-height: 48px; padding: 8px 16px; border: 1px solid #7A7464; border-radius: 6px; background: #FBF7EE; color: #252722; font: inherit; cursor: pointer; }
+    button[aria-pressed="true"] { background: #245C53; color: #FBF7EE; border-color: #245C53; }
+    .workbench { display: grid; grid-template-columns: minmax(0, 960px) 288px; gap: 16px; align-items: start; }
+    .preview-column { min-width: 0; }
+    .viewport-scroll { width: 100%; overflow: auto; border: 1px solid #7A7464; border-radius: 8px; background: #252722; }
+    .viewport-scroll.narrow-frame { width: 362px; max-width: 100%; }
+    .world-viewport { position: relative; width: 960px; height: 640px; overflow: hidden; }
+    .world { position: relative; width: 960px; height: 640px; }
+    .world img { display: block; width: 960px; height: 640px; }
+    .label { position: absolute; z-index: 1; transform: translate(-50%, -100%); border: 1px solid #CFC1A8; border-radius: 5px; padding: 2px 8px; background: #FBF7EE; color: #252722; font-size: 14px; line-height: 1.5; white-space: nowrap; }
+    .label.player { color: #245C53; font-weight: 700; border-color: #245C53; }
+    .player-label { left: 481px; top: 287px; }
+    .peer-label { left: 386px; top: 251px; }
+    .npc-label { left: 786px; top: 191px; }
+    .location { position: absolute; top: 12px; left: 12px; padding: 8px 12px; border: 1px solid #CFC1A8; border-radius: 6px; background: #FBF7EE; font-size: 16px; }
+    .hint { position: absolute; bottom: 12px; left: 12px; right: 12px; padding: 6px 12px; border: 1px solid #CFC1A8; border-radius: 6px; background: #FBF7EE; font-size: 14px; line-height: 1.5; }
+    .cards { display: grid; gap: 16px; }
+    .card { padding: 18px; background: #FBF7EE; border: 1px solid #CFC1A8; border-radius: 8px; }
+    .card p:last-child { margin-bottom: 0; }
+    .card ul { padding-left: 24px; margin: 12px 0 0; }
+    .tag { display: inline-block; padding: 2px 10px; border: 1px solid #245C53; border-radius: 5px; color: #245C53; background: #DCE9E0; font-size: 15px; }
+    .menu { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .menu span { padding: 6px 10px; border: 1px solid #7A7464; border-radius: 5px; font-size: 16px; }
+    .menu .selected { color: #245C53; background: #DCE9E0; border-color: #245C53; }
+    .details { margin-top: 28px; padding: 24px; background: #FBF7EE; border: 1px solid #CFC1A8; border-radius: 8px; }
+    .details img { display: block; width: 100%; height: auto; border-radius: 6px; }
+    .world-viewport.narrow { width: 360px; height: 520px; }
+    .narrow .world { left: -301px; top: -32px; }
+    @media (max-width: 1000px) { .workbench { grid-template-columns: minmax(0, 1fr); } .cards { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); } }
+    @media (max-width: 600px) { main { padding: 16px; } h1 { font-size: 27px; } .details { padding: 16px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mẫu màn thế giới · Sân môn phái v1</h1>
+    <p class="intro"><a href="hybrid-study/index.html">Mở bản thử ghép Vương Lâm pixel trên nền stylized v1</a> — có cỡ 80/96/112 px và cảnh 1×/2×. Trang bên dưới giữ nguyên nghiên cứu sân cũ.</p>
+    <p class="intro"><strong>Tham chiếu sân v0.9:</strong> ảnh này giữ nền/bố cục stylized 2D và camera top-down ba phần tư. Hướng đã chọn là nhân vật pixel art trên nền stylized; ba người nét mịn trong ảnh cũ chưa được thay. Xem <a href="hybrid-study/index.html">bản thử ghép mới</a> hoặc <a href="../characters/wang-lin-sprite-study/index.html">mẫu pixel Vương Lâm</a>.</p>
+    <p class="intro note">Bản thiết kế hình/UI để xem tỷ lệ. Nhân vật và cảnh đang nằm chung trong một ảnh tham chiếu, chưa có di chuyển hoặc gameplay. Các thẻ bên phải là dữ liệu minh họa. Chỉ hai nút xem khung bên dưới có tương tác.</p>
+    <div class="controls" role="group" aria-label="Kích thước khung xem mẫu">
+      <button type="button" id="wide-button" aria-pressed="true" aria-controls="world-viewport">Khung 960 × 640</button>
+      <button type="button" id="narrow-button" aria-pressed="false" aria-controls="world-viewport">Khung 360 px</button>
+      <span class="note" id="view-status" aria-live="polite">Giữ cỡ ảnh 960 × 640; nhân vật trung tâm cao khoảng 85 px.</span>
+    </div>
+    <div class="workbench">
+      <div class="preview-column">
+        <div class="viewport-scroll" id="viewport-scroll">
+          <div class="world-viewport" id="world-viewport">
+            <div class="world">
+              <img src="sect-courtyard-topdown-v2.png" width="960" height="640" alt="Sân môn phái stylized giản lược nhìn từ trên chéo xuống: nhà phía trên, cổng phía dưới, bệ ngồi bên trái, bảng việc bên phải và ba đệ tử nhỏ">
+              <span class="label player player-label">Đệ tử của bạn</span>
+              <span class="label peer-label">Đồng môn</span>
+              <span class="label npc-label">Điểm NPC</span>
+            </div>
+            <div class="location">Môn phái · Sân nhập môn</div>
+            <div class="hint">Đệ tử đi lại và tương tác tại các điểm trong khu chung.</div>
+          </div>
+        </div>
+        <p class="note" style="margin-top:12px">Khung 360 px cắt một vùng quanh đệ tử, giữ cỡ nhân vật. Đây là phép xem tỷ lệ, chưa là bố cục mobile đã duyệt.</p>
+      </div>
+      <aside class="cards" aria-label="Thẻ giao diện minh họa">
+        <section class="card">
+          <h2>Đệ tử của bạn</h2>
+          <p><span class="tag">Phàm nhân</span></p>
+          <p class="note">Áo xám · Đai xanh trầm<br>Mẫu nhân vật nhập môn</p>
+        </section>
+        <section class="card">
+          <h3>Mục tiêu minh họa</h3>
+          <p>Làm quen sân môn phái</p>
+          <ul><li>Đến bảng việc</li><li>Gặp một đồng môn</li></ul>
+        </section>
+        <section class="card">
+          <h3>Tu luyện idle</h3>
+          <p>Chưa chọn hoạt động</p>
+          <p class="note">Hoạt động có bảng quản lý riêng cạnh màn thế giới.</p>
+        </section>
+        <section class="card">
+          <h3>Khu vực UI</h3>
+          <div class="menu"><span class="selected">Thế giới</span><span>Tu luyện</span><span>Nhiệm vụ</span><span>Hành trang</span></div>
+        </section>
+      </aside>
+    </div>
+    <section class="details">
+      <h2>Ảnh ART v2 · Khối hình giản lược</h2>
+      <p class="note">Tạo bằng imagegen tích hợp. Trang trí/bố cục là thiết kế của game, không khẳng định đây là sơ đồ nguyên tác. Người ở bảng việc là hình đại diện tạm cho điểm NPC, chưa thêm một nhân vật có tên vào roster.</p>
+      <a href="sect-courtyard-topdown-v2.png"><img loading="lazy" src="sect-courtyard-topdown-v2.png" width="1536" height="1024" alt="Sân môn phái ART v2 với tán cây và mái dùng khối màu lớn, không có chữ hoặc giao diện"></a>
+      <p style="margin-top:16px"><a href="sect-courtyard-topdown-v2.prompt.txt">Prompt v2</a> · <a href="sect-courtyard-topdown-v1.png">Bản ART v1</a> · <a href="sect-courtyard-topdown-v1.prompt.txt">Prompt v1</a> · <a href="../../WORLD-VISUAL-SPEC.md">Đặc tả hình trên map</a> · <a href="../characters/index.html">Concept nhân vật</a> · <a href="../index.html">Thư viện UX/ART</a></p>
+      <p class="note">Ảnh chụp trước khi đổi hướng nhân vật pixel: <a href="world-desktop-v1.png">desktop v0.9</a> · <a href="world-360-v1.png">khung 360 px v0.9</a>.</p>
+    </section>
+  </main>
+  <script>
+    const viewport = document.getElementById('world-viewport');
+    const wideButton = document.getElementById('wide-button');
+    const narrowButton = document.getElementById('narrow-button');
+    const viewStatus = document.getElementById('view-status');
+    const scrollArea = document.getElementById('viewport-scroll');
+    function setFrame(narrow) {
+      viewport.classList.toggle('narrow', narrow);
+      scrollArea.classList.toggle('narrow-frame', narrow);
+      wideButton.setAttribute('aria-pressed', String(!narrow));
+      narrowButton.setAttribute('aria-pressed', String(narrow));
+      viewStatus.textContent = narrow
+        ? 'Khung 360 px; giữ cỡ nhân vật và cắt cảnh quanh đệ tử.'
+        : 'Giữ cỡ ảnh 960 × 640; nhân vật trung tâm cao khoảng 85 px.';
+      scrollArea.scrollLeft = 0;
+    }
+    wideButton.addEventListener('click', () => setFrame(false));
+    narrowButton.addEventListener('click', () => setFrame(true));
+    setFrame(new URLSearchParams(location.search).get('frame') === '360');
+  </script>
+</body>
+</html>

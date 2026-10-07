@@ -1,0 +1,132 @@
+{
+  "status": "illustrative_design_snapshots",
+  "contentVersion": "mvp-a-0.4",
+  "notes": [
+    "Các snapshot là ví dụ độc lập để vẽ UX, không phải save hoặc kết quả chạy game.",
+    "Mốc, hình châu và tài nguyên được đối chiếu với đặc tả MVP A."
+  ],
+  "cultivation": {
+    "completedEventIds": ["E01", "E02", "E03", "E04", "E05", "E06", "E07"],
+    "realmId": "mortal",
+    "resources": {"springWater": 0, "spiritWater": 6, "cultivation": 120},
+    "activityId": "ACT-DREAM",
+    "mode": "manual",
+    "cycleProgressSeconds": 6,
+    "activityLocationId": "MAP-009",
+    "beadVariantKey": "inscribed"
+  },
+  "journey": {
+    "completedEventIds": ["E01", "E02", "E03", "E04", "E05", "E06", "E07"],
+    "resources": {"springWater": 12, "spiritWater": 2, "cultivation": 120},
+    "activityId": "ACT-DRAW-WATER",
+    "mode": "manual",
+    "cycleProgressSeconds": 6,
+    "activityLocationId": "MAP-006",
+    "viewedLocationId": "MAP-001",
+    "knownLocationIds": ["MAP-001", "MAP-002", "MAP-003", "MAP-004", "MAP-005", "MAP-006", "MAP-007", "MAP-008", "MAP-009"]
+  },
+  "story": {
+    "completedEventIds": ["E01", "E02", "E03", "E04"],
+    "resources": {"springWater": 6, "spiritWater": 2, "cultivation": 0},
+    "counters": {"drawCycles": 6, "infuseCycles": 3, "breathingCycles": 0},
+    "activeEventId": "E05",
+    "currentStorySceneId": "E05-GARDEN",
+    "segmentIndex": 1,
+    "cycleProgressSeconds": 0,
+    "userPaused": true
+  },
+  "bead": {
+    "completedEventIds": ["E01", "E02", "E03", "E04", "E05", "E06", "E07"],
+    "beadVariantKey": "inscribed",
+    "resources": {"springWater": 4, "spiritWater": 2, "cultivation": 120},
+    "userPaused": true
+  },
+  "inventory": {
+    "completedEventIds": ["E01", "E02", "E03", "E04", "E05"],
+    "resources": {"springWater": 6, "spiritWater": 2, "cultivation": 0},
+    "selectedItemId": "ITEM-MANUAL",
+    "userPaused": true
+  },
+  "settings": {
+    "completedEventIds": ["E01", "E02", "E03", "E04", "E05", "E06", "E07"],
+    "resources": {"springWater": 0, "spiritWater": 6, "cultivation": 120},
+    "fontSizePx": 18,
+    "reducedMotion": false,
+    "saveStatus": "saved",
+    "savedAtLabel": "06/10/2026 · 07:00"
+  },
+  "importPreview": {
+    "current": {
+      "completedEventIds": ["E01", "E02", "E03", "E04", "E05", "E06", "E07"],
+      "realmId": "mortal",
+      "resources": {"springWater": 0, "spiritWater": 6, "cultivation": 120},
+      "stageLabel": "Mộng cảnh đã mở"
+    },
+    "incoming": {
+      "completedEventIds": ["E01", "E02", "E03", "E04", "E05"],
+      "realmId": "mortal",
+      "resources": {"springWater": 6, "spiritWater": 2, "cultivation": 0},
+      "stageLabel": "Đã nhận công pháp",
+      "fileName": "vuong-lam-nhap-mon.json"
+    },
+    "validationStatus": "valid_design_example",
+    "committed": false
+  },
+  "offline": {
+    "completedEventIds": ["E01", "E02", "E03", "E04", "E05", "E06", "E07"],
+    "realmId": "mortal",
+    "beforeResources": {"springWater": 0, "spiritWater": 0, "cultivation": 0},
+    "afterResources": {"springWater": 0, "spiritWater": 0, "cultivation": 480},
+    "mode": "auto",
+    "awaySeconds": 36000,
+    "eligibleSeconds": 28800,
+    "activeSeconds": 1440,
+    "lastProcessedAtBefore": 1791244800000,
+    "lastProcessedAtAfter": 1791280800000,
+    "cyclesByActivity": {"ACT-DRAW-WATER": 48, "ACT-INFUSE-WATER": 48, "ACT-DREAM": 48},
+    "waitReason": "BREAKTHROUGH_READY",
+    "cycleProgressSeconds": 0
+  },
+  "end": {
+    "completedEventIds": ["E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08"],
+    "realmId": "qi_condensation",
+    "realmLayer": 1,
+    "resources": {"springWater": 4, "spiritWater": 2, "cultivation": 480},
+    "beadVariantKey": "inscribed",
+    "waitReason": "CONTENT_COMPLETE",
+    "userPaused": true,
+    "cycleProgressSeconds": 0
+  },
+  "activityStates": [
+    {"id": "NEED_WATER", "completedThrough": "E04", "resources": {"springWater": 0, "spiritWater": 0, "cultivation": 0}, "selectedActivityId": "ACT-INFUSE-WATER", "action": "start_draw_water"},
+    {"id": "NEED_SPIRIT_WATER", "completedThrough": "E07", "resources": {"springWater": 4, "spiritWater": 0, "cultivation": 120}, "selectedActivityId": "ACT-DREAM", "action": "enable_auto"},
+    {"id": "WATER_CAPACITY", "completedThrough": "E04", "resources": {"springWater": 120, "spiritWater": 0, "cultivation": 0}, "selectedActivityId": "ACT-DRAW-WATER", "action": "start_infuse_water"},
+    {"id": "SPIRIT_CAPACITY", "completedThrough": "E07", "resources": {"springWater": 4, "spiritWater": 30, "cultivation": 120}, "selectedActivityId": "ACT-INFUSE-WATER", "action": "start_dream"},
+    {"id": "PRACTICE_GATE", "completedThrough": "E05", "resources": {"springWater": 0, "spiritWater": 4, "cultivation": 0}, "breathingCycles": 3, "selectedActivityId": "ACT-PRACTICE", "action": "start_draw_water"},
+    {"id": "EVENT_READY", "completedThrough": "E04", "resources": {"springWater": 6, "spiritWater": 2, "cultivation": 0}, "drawCycles": 6, "infuseCycles": 3, "nextEventId": "E05", "action": "open_story"},
+    {"id": "USER_STOPPED", "completedThrough": "E07", "resources": {"springWater": 4, "spiritWater": 2, "cultivation": 120}, "selectedActivityId": "ACT-DREAM", "userPaused": true, "action": "resume_dream"},
+    {"id": "BREAKTHROUGH_READY", "completedThrough": "E07", "resources": {"springWater": 0, "spiritWater": 0, "cultivation": 480}, "realmId": "mortal", "nextEventId": "E08", "action": "open_story"}
+  ],
+  "storyStates": {
+    "collapsed": {"completedThrough": "E04", "activeEventId": "E05", "currentStorySceneId": "E05-GARDEN", "segmentIndex": 1, "spiritWater": 2, "userPaused": true},
+    "history": {"completedThrough": "E07", "viewedSceneId": "E05-GARDEN", "activityId": "ACT-DRAW-WATER", "cycleProgressSeconds": 6},
+    "beforeBreakthroughCommit": {"completedThrough": "E07", "activeEventId": "E08", "currentStorySceneId": "E08-BREAKTHROUGH", "segmentIndex": 0, "realmId": "mortal", "cultivation": 480, "userPaused": true},
+    "beforeBead": {"completedThrough": "E02", "ownedItemIds": []},
+    "emptyInventory": {"completedThrough": "E01", "ownedItemIds": []},
+    "beadVariants": [
+      {"completedThrough": "E03", "variantKey": "five_clouds", "cloudCount": 5},
+      {"completedThrough": "E04", "variantKey": "seven_clouds", "cloudCount": 7},
+      {"completedThrough": "E06", "variantKey": "nine_clouds", "cloudCount": 9},
+      {"completedThrough": "E07", "variantKey": "inscribed", "cloudCount": 0}
+    ],
+    "transientBeadCloudCount": 10
+  },
+  "systemStates": {
+    "offlinePaused": {"awaySeconds": 12600, "activeSeconds": 0, "netResources": {"springWater": 0, "spiritWater": 0, "cultivation": 0}, "reason": "USER_STOPPED"},
+    "offlineStory": {"awaySeconds": 10800, "activeSeconds": 0, "reason": "STORY_ACTIVE", "activeEventId": "E05", "segmentIndex": 1, "spiritWater": 2},
+    "saveFailure": {"persisted": false, "preserveInMemory": true, "actions": ["retry_save", "export_current_state"]},
+    "invalidImport": {"reason": "event_order", "replacesCurrent": false},
+    "unsupportedImport": {"reason": "unsupported_version", "replacesCurrent": false},
+    "readOnlyTab": {"canMutate": false, "canExportSnapshot": true, "canRequestControl": true}
+  }
+}

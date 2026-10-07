@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "visual-study-1",
+  "id": "STUDY-WANG-LIN-HYBRID-01",
+  "date": "2026-10-07",
+  "status": "pending_visual_review",
+  "pathBase": "workspace_root",
+  "subject": {
+    "characterId": "CHR-WANG-LIN",
+    "role": "story_character",
+    "costume": "gray_registered_disciple",
+    "playerAvatar": false
+  },
+  "direction": {
+    "character": "pixel_art",
+    "environment": "simplified_stylized_2d",
+    "camera": "top_down_three_quarter"
+  },
+  "inputs": {
+    "environment": "docs/design/world/sect-courtyard-topdown-v2.png",
+    "character": "docs/design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v1.png"
+  },
+  "artifacts": {
+    "cleanEnvironment": "docs/design/world/hybrid-study/sect-courtyard-empty-v1.png",
+    "cleanEnvironmentPrompt": "docs/design/world/hybrid-study/sect-courtyard-empty-v1.prompt.txt",
+    "composite": "docs/design/world/hybrid-study/wang-lin-courtyard-composite-v1.png",
+    "compositePrompt": "docs/design/world/hybrid-study/wang-lin-courtyard-composite-v1.prompt.txt",
+    "viewer": "docs/design/world/hybrid-study/index.html",
+    "desktopCapture": "docs/design/world/hybrid-study/hybrid-desktop-v1.png",
+    "zoomCapture": "docs/design/world/hybrid-study/hybrid-zoom-v1.png",
+    "narrowCapture": "docs/design/world/hybrid-study/hybrid-360-v1.png"
+  },
+  "preview": {
+    "worldViewportPx": [
+      960,
+      640
+    ],
+    "narrowViewportPx": [
+      360,
+      520
+    ],
+    "spriteCanvasHeightPxOptions": [
+      80,
+      96,
+      112
+    ],
+    "defaultSpriteCanvasHeightPx": 96,
+    "zoomOptions": [
+      1,
+      2
+    ],
+    "footAnchorPx": [
+      480,
+      400
+    ],
+    "usesOriginalCharacterPng": true,
+    "characterFiltering": "pixelated",
+    "nativeFrameSize": null,
+    "animationImplemented": false
+  },
+  "generator": "built_in_imagegen",
+  "notes": [
+    "Các cỡ là chiều cao khung PNG khi xem; chưa chốt lưới pixel gốc.",
+    "Ảnh ghép imagegen là tham chiếu tổng thể; trang xem dùng nền/sprite tách lớp.",
+    "Nghiên cứu hình không đổi roster, nhiệm vụ, phạm vi A/B hoặc thực thi máy chủ."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "pixel-animation-spec-1",
+  "characterId": "AVATAR-NOVICE-MALE",
+  "framePrefix": "avatar_male_novice_",
+  "dataGlobal": "AvatarMaleAtlasData",
+  "costume": "gray_jade_sash",
+  "date": "2026-10-07",
+  "identityReferencePath": "docs/design/characters/player-male-novice-v2.png",
+  "identityApprovedByProjectOwner": false,
+  "gridStatus": "wang_lin_baseline_applied_to_avatar_draft",
+  "frameSizePx": [
+    64,
+    96
+  ],
+  "footAnchorPx": [
+    32,
+    88
+  ],
+  "sourceGrid": {
+    "columns": 7,
+    "rows": 4,
+    "directions": [
+      "south",
+      "west",
+      "east",
+      "north"
+    ],
+    "standColumn": 0,
+    "walkColumns": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "walkFps": 8,
+  "displayScales": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "alphaMode": "binary",
+  "palette": [
+    "#00000000",
+    "#1F1D24FF",
+    "#29272DFF",
+    "#3B383FFF",
+    "#53535CFF",
+    "#727179FF",
+    "#96959CFF",
+    "#B7B4B7FF",
+    "#ADA59AFF",
+    "#D0C7B5FF",
+    "#EFE5D1FF",
+    "#A96850FF",
+    "#CC9873FF",
+    "#E5B88FFF",
+    "#F2CEA6FF",
+    "#34323AFF",
+    "#3A363CFF",
+    "#88796AFF",
+    "#AB9E8BFF",
+    "#C8B697FF",
+    "#D3C5ACFF",
+    "#24443BFF",
+    "#3B6454FF",
+    "#608275FF"
+  ],
+  "walkPhase": [
+    "left_contact",
+    "left_follow_through",
+    "right_passing",
+    "right_contact",
+    "right_follow_through",
+    "left_passing"
+  ],
+  "drawMethod": "built_in_image_gen",
+  "exportMethod": "deterministic_crop_nearest_neighbor_palette_and_atlas_pack",
+  "scope": "first_novice_avatar_draft",
+  "runtimeReady": false
+}

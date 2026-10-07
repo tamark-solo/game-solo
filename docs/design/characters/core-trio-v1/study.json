@@ -1,0 +1,434 @@
+{
+  "schemaVersion": "core-trio-visual-study-1",
+  "id": "STUDY-CORE-TRIO-V1",
+  "date": "2026-10-07",
+  "pathBase": "workspace_root",
+  "coreCharacterIds": [
+    "CHR-WANG-LIN",
+    "CHR-SITU-NAN",
+    "CHR-LI-MUWAN"
+  ],
+  "coreRosterConfirmedByProjectOwner": true,
+  "priority": "complete_core_identity_before_supporting_npcs",
+  "status": "li_muwan_identity_accepted_situ_standing_v3_provisionally_accepted",
+  "newCharacterIds": [
+    "CHR-SITU-NAN",
+    "CHR-LI-MUWAN"
+  ],
+  "newIdentityApprovedByProjectOwner": false,
+  "artMethod": "built_in_image_gen",
+  "specPath": "docs/CORE-CHARACTER-VISUAL-SPEC.md",
+  "viewerPath": "docs/design/characters/core-trio-v1/index.html",
+  "exporterPath": "docs/design/characters/core-trio-v1/export-static.ps1",
+  "verificationPath": "docs/design/characters/core-trio-v1/verification.json",
+  "newNativeFrameCount": 8,
+  "framesPerNewCharacter": 4,
+  "motionProduced": false,
+  "onlineGameplayImplemented": false,
+  "runtimeReady": false,
+  "existingWangLin": {
+    "identityPath": "docs/design/characters/wang-lin-initiation-v2.png",
+    "identityApproved": true,
+    "atlasPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+    "metaPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.json",
+    "role": "existing_approved_identity_and_style_reference"
+  },
+  "characters": [
+    {
+      "characterId": "CHR-SITU-NAN",
+      "identityPath": "docs/design/characters/core-trio-v1/situ-nan-spirit-standing-v3.png",
+      "identityPromptPath": "docs/design/characters/core-trio-v1/situ-nan-spirit-standing-v3.prompt.txt",
+      "identityInputs": [
+        {
+          "path": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v2.png",
+          "role": "edit_target_face_hair_robe_preserved_pose_changed"
+        }
+      ],
+      "sourcePath": "docs/design/characters/core-trio-v1/situ-nan/pixel-source-standing-v4.png",
+      "sourcePromptPath": "docs/design/characters/core-trio-v1/situ-nan/pixel-source-standing-v4.prompt.txt",
+      "sourceInputs": [
+        {
+          "path": "docs/design/characters/core-trio-v1/situ-nan/pixel-source-standing-v3.png",
+          "role": "map_proportion_and_true_void_edit_target"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+          "role": "required_pixel_camera_head_body_proportions"
+        }
+      ],
+      "nativeAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.png",
+      "nativeMetadataPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.json",
+      "pixelSpecPath": "docs/design/characters/core-trio-v1/situ-nan/pixel-spec.json",
+      "frameSizePx": [
+        64,
+        96
+      ],
+      "anchorPx": [
+        32,
+        88
+      ],
+      "anchorKind": "ground_projection",
+      "form": "standing_spirit_game_adaptation",
+      "firstPlannedPhase": "B",
+      "voiceIntroChapters": [
+        46,
+        47
+      ],
+      "soulIllustrationReferenceChapter": 112,
+      "identityApproved": false,
+      "appearancePolicy": "scene_edit_required_no_auto_unlock_from_art",
+      "identityVersion": "v2",
+      "visualIdentity": {
+        "face": "broad_square_jaw_fuller_cheeks_straight_nose_confident_grin",
+        "hair": "black_swept_back_low_nape_knot_small_silver_temple_streak",
+        "body": "upright_standing_levitating_human_soul",
+        "robe": "ink_navy_ivory_gray_collar_dark_sash",
+        "spiritEffect": "transparent_chest_void_subtle_hem_breaks_4px_hover",
+        "pose": "legs_extended_arms_lowered_eyes_open"
+      },
+      "identityHistory": [
+        {
+          "path": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v1.png",
+          "promptPath": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v1.prompt.txt",
+          "status": "redesign_requested_face_and_hair",
+          "nativeAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v1/atlas.png",
+          "pixelSpecPath": "docs/design/characters/core-trio-v1/situ-nan/pixel-spec-v1.json"
+        },
+        {
+          "path": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v2-study.png",
+          "promptPath": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v2-study.prompt.txt",
+          "status": "internal_iteration_face_too_close_to_v1",
+          "inputs": [
+            {
+              "path": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v1.png",
+              "role": "initial_edit_target"
+            },
+            {
+              "path": "docs/design/characters/wang-lin-initiation-v2.png",
+              "role": "ink_paper_style_only"
+            }
+          ]
+        },
+        {
+          "path": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v2.png",
+          "promptPath": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v2.prompt.txt",
+          "status": "preserved_seated_meditation_form_ch112",
+          "nativeAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v2/atlas.png",
+          "pixelSpecPath": "docs/design/characters/core-trio-v1/situ-nan/pixel-spec-v2-seated.json"
+        }
+      ],
+      "sourceDirectionOrder": [
+        "south",
+        "east",
+        "west",
+        "north"
+      ],
+      "nativeDirectionOrder": [
+        "south",
+        "west",
+        "east",
+        "north"
+      ],
+      "sourceHistory": [
+        {
+          "path": "docs/design/characters/core-trio-v1/situ-nan/pixel-source-v2.png",
+          "promptPath": "docs/design/characters/core-trio-v1/situ-nan/pixel-source-v2.prompt.txt",
+          "role": "preserved_seated_v2",
+          "inputs": [
+            {
+              "path": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v2.png",
+              "role": "identity_and_soul_form_reference"
+            },
+            {
+              "path": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+              "role": "pixel_style_only"
+            }
+          ]
+        },
+        {
+          "path": "docs/design/characters/core-trio-v1/situ-nan/pixel-source-standing-v3.png",
+          "promptPath": "docs/design/characters/core-trio-v1/situ-nan/pixel-source-standing-v3.prompt.txt",
+          "role": "standing_source_first_study_head_small_void_incorrectly_filled",
+          "inputs": [
+            {
+              "path": "docs/design/characters/core-trio-v1/situ-nan-spirit-standing-v3.png",
+              "role": "standing_identity_reference"
+            },
+            {
+              "path": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+              "role": "pixel_style_reference"
+            }
+          ],
+          "nativeAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v3/atlas.png",
+          "pixelSpecPath": "docs/design/characters/core-trio-v1/situ-nan/pixel-spec-v3-standing-study.json"
+        }
+      ],
+      "hoverHeightPx": 4,
+      "representationVersion": "v3_standing",
+      "standingPoseDirectionConfirmedByProjectOwner": true,
+      "movementPlan": "glide_animation_not_yet_produced",
+      "preservedSeatedForm": {
+        "identityPath": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v2.png",
+        "atlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v2/atlas.png",
+        "pixelSpecPath": "docs/design/characters/core-trio-v1/situ-nan/pixel-spec-v2-seated.json",
+        "frameSizePx": [
+          128,
+          128
+        ],
+        "anchorPx": [
+          64,
+          112
+        ],
+        "anchorKind": "seat_base",
+        "sourceChapter": 112,
+        "eyes": "closed"
+      },
+      "canonBoundary": {
+        "standingPose": "game_art_adaptation",
+        "openEyes": "game_art_adaptation",
+        "chestVoid": "damage_reference_from_ch112_scene_edit_required",
+        "voiceIntro": "chapters46_47_no_default_standing_sprite_spawn"
+      },
+      "transparentChestProbePx": {
+        "south": [
+          36,
+          35
+        ],
+        "west": [
+          27,
+          36
+        ],
+        "east": [
+          39,
+          36
+        ],
+        "north": [
+          33,
+          35
+        ]
+      },
+      "prototypeBaselineAcceptedByProjectOwner": true,
+      "identityApprovalLevel": "provisional",
+      "provisionalAcceptance": {
+        "by": "project_owner",
+        "date": "2026-10-07",
+        "level": "provisional",
+        "scope": "situ_nan_standing_v3_and_four_static_pixel_views",
+        "feedback": "tạm chấp nhận được rồi",
+        "purpose": "continue_gdd_art_design",
+        "releaseApproval": false
+      }
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "identityPath": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1.png",
+      "identityPromptPath": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1.prompt.txt",
+      "identityInitialPath": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1-study.png",
+      "identityInitialPromptPath": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1-study.prompt.txt",
+      "identityInputs": [
+        {
+          "path": "docs/design/characters/wang-lin-initiation-v2.png",
+          "role": "ink_paper_style_only"
+        },
+        {
+          "path": "docs/design/characters/player-female-novice-v2.png",
+          "role": "comparison_only_distinct_face_hair"
+        }
+      ],
+      "identityEditInput": {
+        "path": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1-study.png",
+        "role": "hair_only_edit_target"
+      },
+      "sourcePath": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v2.png",
+      "sourcePromptPath": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v2.prompt.txt",
+      "sourceHistory": [
+        {
+          "path": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v1.png",
+          "promptPath": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v1.prompt.txt",
+          "inputs": [
+            {
+              "path": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1.png",
+              "role": "identity_reference"
+            },
+            {
+              "path": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+              "role": "pixel_style_reference"
+            }
+          ]
+        },
+        {
+          "path": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v2.png",
+          "promptPath": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v2.prompt.txt",
+          "inputs": [
+            {
+              "path": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v1.png",
+              "role": "map_proportion_edit_target"
+            },
+            {
+              "path": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+              "role": "required_map_head_body_pixel_density_reference"
+            }
+          ]
+        }
+      ],
+      "nativeAtlasPath": "docs/design/characters/core-trio-v1/li-muwan/native-v2/atlas.png",
+      "nativeMetadataPath": "docs/design/characters/core-trio-v1/li-muwan/native-v2/atlas.json",
+      "preservedNativePath": "docs/design/characters/core-trio-v1/li-muwan/native-v1",
+      "pixelSpecPath": "docs/design/characters/core-trio-v1/li-muwan/pixel-spec.json",
+      "sourceDirectionOrder": [
+        "south",
+        "east",
+        "west",
+        "north"
+      ],
+      "nativeDirectionOrder": [
+        "south",
+        "west",
+        "east",
+        "north"
+      ],
+      "frameSizePx": [
+        64,
+        96
+      ],
+      "anchorPx": [
+        32,
+        88
+      ],
+      "anchorKind": "feet",
+      "costume": "purple_ch144_reference",
+      "costumeChapterRefs": {
+        "red": 130,
+        "purple": 144
+      },
+      "firstPlannedPhase": "later_arc",
+      "identityApproved": true,
+      "appearancePolicy": "arc_edit_required_no_auto_unlock_from_art",
+      "identityApproval": {
+        "by": "project_owner",
+        "date": "2026-10-07",
+        "scope": "li_muwan_early_v1_identity",
+        "feedback": "tôi thấy ổn rồi chỉ là Tư Đồ nam dạng linh thể nhìn không ổn lắm, tôi muốn nó tạo hình khác"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "characterId": "CHR-SITU-NAN",
+      "chapter": 46,
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-46",
+      "scope": "old_arrogant_voice_intro",
+      "readStatus": "chapter_text_read"
+    },
+    {
+      "characterId": "CHR-SITU-NAN",
+      "chapter": 47,
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-47",
+      "scope": "name_body_lost_trapped_in_bead",
+      "readStatus": "chapter_text_read"
+    },
+    {
+      "characterId": "CHR-SITU-NAN",
+      "chapter": 112,
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-112",
+      "scope": "bead_space_context",
+      "readStatus": "official_teaser_only",
+      "publicTextUrl": "https://novelfire.net/book/renegade-immortal/chapter-112",
+      "publicTextScope": "giant_floating_cross_legged_non_solid_chest_void_closed_eyes"
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "chapter": 130,
+      "url": "https://novelfull.com/renegade-immortal/chapter-130-sudden-arrival-of-nascent-soul.html",
+      "scope": "red_clothed_wan_er_with_brother",
+      "readStatus": "public_chapter_text_read"
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "chapter": 131,
+      "url": "https://novelfull.com/renegade-immortal/chapter-131-is-he-a-fat-sheep.html",
+      "scope": "identity_confirmed_alchemy_context",
+      "readStatus": "public_chapter_text_read"
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "chapter": 141,
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-141",
+      "scope": "alchemy_cautious_sea_of_devils",
+      "readStatus": "official_teaser_read"
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "chapter": 144,
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-144",
+      "scope": "chapter_title_and_cultivation_context",
+      "readStatus": "official_teaser_only",
+      "publicTextUrl": "https://novelfull.com/renegade-immortal/chapter-144-core-formation-1.html",
+      "publicTextScope": "purple_dress_tied_ponytail_alchemy_room"
+    }
+  ],
+  "artChoicesNotCanon": [
+    "precise_face_features",
+    "apparent_age",
+    "situ_hair_pigment_in_spectral_art",
+    "precise_garment_cut",
+    "palette_shades",
+    "li_muwan_ponytail_height_and_ribbon",
+    "situ_standing_pose_and_open_eyes_for_interaction",
+    "standing_sprite_scale_and_hover_height"
+  ],
+  "reviewItems": [
+    "situ_standing_spirit_readability",
+    "v2_face_hair_preserved_in_standing_form",
+    "compact_map_sprite_proportions",
+    "true_transparent_chest_void",
+    "four_facing_directions",
+    "hover_ground_projection"
+  ],
+  "sourceProvenanceNote": "Official teaser limits are recorded; details beyond teasers use the linked publicly readable chapter text, not adaptation art or fanfiction.",
+  "previewPaths": [
+    "docs/design/characters/core-trio-v1/preview-desktop-v3.png",
+    "docs/design/characters/core-trio-v1/preview-360-v3.png"
+  ],
+  "revision": "situ_nan_standing_spirit_v3",
+  "ownerReview": {
+    "date": "2026-10-07",
+    "by": "project_owner",
+    "liMuwanAccepted": true,
+    "situV1Accepted": false,
+    "situRequestedChange": "new_face_and_hair_identity",
+    "userFeedback": "tôi thấy ổn rồi chỉ là Tư Đồ nam dạng linh thể nhìn không ổn lắm, tôi muốn nó tạo hình khác",
+    "selectedDirection": "Đổi cả khuôn mặt và tóc, tạo một nhận diện Tư Đồ Nam mới",
+    "standingPoseReview": {
+      "by": "project_owner",
+      "date": "2026-10-07",
+      "requestedPose": "standing_spirit",
+      "userFeedback": "tôi nghỉ nên cho tư đồ nam đạng linh thể đúng thay vì ngồi. vì chúng ta đang sản xuất game MMO-RPG tu tiên",
+      "interpretation": "upright_standing_levitating_spirit_for_mmorpg_interaction",
+      "standingAssetApproved": false,
+      "standingAssetProvisionalAccepted": true
+    },
+    "provisionalAcceptance": {
+      "by": "project_owner",
+      "date": "2026-10-07",
+      "level": "provisional",
+      "scope": "situ_nan_standing_v3_and_four_static_pixel_views",
+      "feedback": "tạm chấp nhận được rồi",
+      "purpose": "continue_gdd_art_design",
+      "releaseApproval": false
+    }
+  },
+  "previousStudyPath": "docs/design/characters/core-trio-v1/study-v2.json",
+  "verification": {
+    "nativeFramesPassed": 8,
+    "browserChecksPassed": 12,
+    "browserExceptions": 0,
+    "mobileViewportPx": [
+      360,
+      900
+    ],
+    "reportPath": "docs/design/characters/core-trio-v1/verification.json",
+    "standingSpiritChestVoidVerified": true,
+    "standingSpiritHoverHeightPx": 4
+  }
+}

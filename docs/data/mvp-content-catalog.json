@@ -1,0 +1,1201 @@
+{
+  "schemaVersion": "planning-2",
+  "contentVersion": "mvp-a-0.4",
+  "status": "reference_pending_online_adaptation",
+  "designContext": {
+    "sourceDesignVersion": "gdd-0.6",
+    "confirmedDelivery": "online_multiplayer_web",
+    "confirmedGenreIntent": "cultivation_mmorpg_with_idle",
+    "confirmedInitialSharedSpace": "walkable_sect_hub",
+    "confirmedMapArtStyle": "stylized_environment_with_pixel_characters",
+    "confirmedMapCharacterStyle": "pixel_art",
+    "confirmedMapEnvironmentStyle": "simplified_stylized_2d",
+    "confirmedMapCamera": "top_down_three_quarter",
+    "confirmedPlayerRole": "original_disciple",
+    "storySubject": "CHR-WANG-LIN",
+    "runtimeReady": false,
+    "migrationDocument": "docs/ONLINE-DIRECTION.md",
+    "characterRoster": "docs/data/character-roster.json",
+    "requiredChanges": [
+      "Separate player progression from Wang Lin story events and rewards.",
+      "Replace local save import and browser time authority with server state and sessions.",
+      "Keep Wang Lin exclusive story items separate from player-owned items.",
+      "Add player avatar templates and shared-region interactions."
+    ]
+  },
+  "scope": "A",
+  "developmentSequence": ["A", "B"],
+  "roadmapStatus": "confirmed",
+  "notes": [
+    "Catalog v0.6 giữ làm tham chiếu truyện/luật; chưa là catalog runtime của đệ tử online.",
+    "Danh mục thiết kế; không khẳng định hình ảnh đã được sản xuất.",
+    "Chỉ chứa nội dung phương án A. Các địa điểm và combat của B nằm trong tài liệu kế hoạch.",
+    "Các số liệu và bố cục là thiết kế game; sourceRefs dùng đối chiếu sự kiện nguyên tác.",
+    "revealSceneId quy định khi node được giới thiệu; hoạt động phải kiểm tra requiresEvents riêng.",
+    "rewardOwner là nơi duy nhất nhận tác dụng; xem lại encounter không cấp thêm phần thưởng.",
+    "Văn bản segments là lời dẫn tóm tắt viết riêng cho game, đang ở trạng thái biên tập đề xuất.",
+    "Điều kiện/cost kiểm tra lại tại nút cuối; chi phí và tác dụng chỉ áp dụng khi mốc hoàn thành.",
+    "conditionalOutputs và locationRules dùng nhánh đầu tiên phù hợp; không cộng mọi nhánh."
+  ],
+  "regions": [
+    {
+      "id": "REG-ZHAO",
+      "name": "Triệu Quốc — giai đoạn nhập môn",
+      "kind": "region"
+    },
+    {
+      "id": "REG-BEAD",
+      "name": "Không gian qua hạt châu",
+      "kind": "special_space",
+      "entryLocationId": "MAP-008"
+    }
+  ],
+  "events": [
+    {
+      "id": "E01",
+      "order": 1,
+      "title": "Cơ hội tu tiên",
+      "requiresPreviousEvent": null,
+      "sceneIds": ["E01-VILLAGE"],
+      "minimumCounters": {},
+      "minimumResources": {},
+      "cost": {},
+      "completionEffects": {},
+      "finalActionLabel": "Lên đường"
+    },
+    {
+      "id": "E02",
+      "order": 2,
+      "title": "Khảo nghiệm nhập môn",
+      "requiresPreviousEvent": "E01",
+      "sceneIds": ["E02-EXAM"],
+      "minimumCounters": {},
+      "minimumResources": {},
+      "cost": {},
+      "completionEffects": {},
+      "finalActionLabel": "Tiếp tục hành trình"
+    },
+    {
+      "id": "E03",
+      "order": 3,
+      "title": "Cơ duyên trong hang",
+      "requiresPreviousEvent": "E02",
+      "sceneIds": ["E03-TRAIL", "E03-CAVE"],
+      "minimumCounters": {},
+      "minimumResources": {},
+      "cost": {},
+      "completionEffects": {
+        "grantItemIds": ["ITEM-BEAD"],
+        "beadVariantKey": "five_clouds"
+      },
+      "finalActionLabel": "Hoàn thành cảnh hang"
+    },
+    {
+      "id": "E04",
+      "order": 4,
+      "title": "Làm quen môn phái",
+      "requiresPreviousEvent": "E03",
+      "sceneIds": ["E04-DORM", "E04-SPRING"],
+      "minimumCounters": {},
+      "minimumResources": {},
+      "cost": {},
+      "completionEffects": {
+        "grantItemIds": ["ITEM-GOURD"],
+        "unlockActivityIds": ["ACT-DRAW-WATER", "ACT-INFUSE-WATER"],
+        "beadVariantKey": "seven_clouds",
+        "characterVariantKey": "gray_clothes"
+      },
+      "finalActionLabel": "Mở hoạt động lấy nước"
+    },
+    {
+      "id": "E05",
+      "order": 5,
+      "title": "Nhận công pháp",
+      "requiresPreviousEvent": "E04",
+      "sceneIds": ["E05-GARDEN"],
+      "minimumCounters": {"drawCycles": 6, "infuseCycles": 3},
+      "minimumResources": {"spiritWater": 1},
+      "cost": {"spiritWater": 1},
+      "completionEffects": {
+        "grantItemIds": ["ITEM-MANUAL", "ITEM-STORAGE-BAG"],
+        "unlockActivityIds": ["ACT-PRACTICE"],
+        "characterVariantKey": "red_clothes"
+      },
+      "finalActionLabel": "Hoàn thành mốc"
+    },
+    {
+      "id": "E06",
+      "order": 6,
+      "title": "Giải trừ trở ngại",
+      "requiresPreviousEvent": "E05",
+      "sceneIds": ["E06-ROOM"],
+      "minimumCounters": {"breathingCycles": 3},
+      "minimumResources": {"spiritWater": 6},
+      "cost": {"spiritWater": 6},
+      "completionEffects": {
+        "enableCultivationGain": true,
+        "beadVariantKey": "nine_clouds"
+      },
+      "finalActionLabel": "Hoàn thành mốc"
+    },
+    {
+      "id": "E07",
+      "order": 7,
+      "title": "Khám phá mộng cảnh",
+      "requiresPreviousEvent": "E06",
+      "sceneIds": ["E07-DREAM"],
+      "minimumCounters": {},
+      "minimumResources": {"spiritWater": 6},
+      "cost": {"spiritWater": 6},
+      "completionEffects": {
+        "unlockActivityIds": ["ACT-DREAM"],
+        "unlockAutoMode": true,
+        "beadVariantKey": "inscribed"
+      },
+      "finalActionLabel": "Mở mộng cảnh"
+    },
+    {
+      "id": "E08",
+      "order": 8,
+      "title": "Đột phá tầng đầu",
+      "requiresPreviousEvent": "E07",
+      "sceneIds": ["E08-BREAKTHROUGH"],
+      "minimumCounters": {},
+      "minimumResources": {"cultivation": 480},
+      "cost": {},
+      "completionEffects": {
+        "realmId": "qi_condensation",
+        "realmLayer": 1,
+        "endScope": "A",
+        "retainCultivation": true
+      },
+      "finalActionLabel": "Hoàn tất đột phá"
+    }
+  ],
+  "storyScenes": [
+    {
+      "id": "E01-VILLAGE",
+      "eventId": "E01",
+      "locationId": "MAP-001",
+      "title": "Kỳ vọng của gia đình",
+      "characterPresentationVariantKey": "mortal_clothes",
+      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-1"],
+      "presentationAssetRefs": ["AS-ENV-001", "AS-CHR-001", "AS-CHR-002", "AS-CHR-003"],
+      "segments": [
+        {"id": "E01-VILLAGE-S1", "text": "Vương Lâm lớn lên trong một gia đình bình thường. Cơ hội bước vào con đường tu tiên mang theo niềm hy vọng của cha mẹ."},
+        {"id": "E01-VILLAGE-S2", "text": "Nhờ cơ hội được tứ thúc đem tới, Vương Lâm lên đường tới Hằng Nhạc phái. Hành trình bắt đầu bằng các khảo nghiệm tuyển chọn."}
+      ]
+    },
+    {
+      "id": "E02-EXAM",
+      "eventId": "E02",
+      "locationId": "MAP-002",
+      "encounterId": "ENC-003",
+      "title": "Khảo nghiệm Hằng Nhạc",
+      "characterPresentationVariantKey": "mortal_clothes",
+      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-3", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-4"],
+      "presentationAssetRefs": ["AS-ENV-004", "AS-CHR-001", "AS-CHR-004"],
+      "segments": [
+        {"id": "E02-EXAM-S1", "text": "Vương Lâm cùng những người dự tuyển đến khu khảo nghiệm. Vương Trác cũng có mặt trong dịp tuyển chọn này."},
+        {"id": "E02-EXAM-S2", "text": "Kết quả khảo nghiệm tư chất không đem lại cơ hội nhập môn cho Vương Lâm. Mong muốn tu tiên gặp trở ngại ngay từ bước đầu."},
+        {"id": "E02-EXAM-S3", "text": "Thử thách tiếp theo dưới áp lực kiếm linh cũng không thành công. Vương Lâm phải rời đi, nhưng hành trình tìm đường tu tiên vẫn chưa kết thúc."}
+      ]
+    },
+    {
+      "id": "E03-TRAIL",
+      "eventId": "E03",
+      "locationId": "MAP-003",
+      "encounterId": "ENC-001",
+      "title": "Nguy hiểm trên đường núi",
+      "characterPresentationVariantKey": "mortal_clothes",
+      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-7"],
+      "presentationAssetRefs": ["AS-ENV-002", "AS-CHR-001", "AS-CRE-001"],
+      "segments": [
+        {"id": "E03-TRAIL-S1", "text": "Trên đường núi trở lại tìm cơ hội, Vương Lâm gặp một con hổ trắng có đôi mắt đỏ. Nguy hiểm buộc hắn phải tìm đường thoát."},
+        {"id": "E03-TRAIL-S2", "text": "Biến cố thoát hiểm dẫn Vương Lâm tới khu vực vách núi. Một hang đá trở thành nơi tiếp theo trong hành trình."}
+      ]
+    },
+    {
+      "id": "E03-CAVE",
+      "eventId": "E03",
+      "locationId": "MAP-004",
+      "encounterId": "ENC-002",
+      "title": "Hạt châu trong hang",
+      "characterPresentationVariantKey": "mortal_clothes",
+      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-8"],
+      "presentationAssetRefs": ["AS-ENV-003", "AS-CHR-001", "AS-ICO-004"],
+      "segments": [
+        {"id": "E03-CAVE-S1", "text": "Trong hang có một lực hút xuất hiện theo đợt. Vương Lâm quan sát dấu tích và sự bất thường để tìm hiểu nơi này."},
+        {"id": "E03-CAVE-S2", "text": "Giữa những dấu tích trong hang, hắn có được một hạt châu xám với năm đám mây. Công dụng và lai lịch của vật này vẫn là điều chưa biết.", "beadPresentationVariantKey": "five_clouds"}
+      ]
+    },
+    {
+      "id": "E04-DORM",
+      "eventId": "E04",
+      "locationId": "MAP-005",
+      "title": "Đệ tử ký danh",
+      "characterPresentationVariantKey": "gray_clothes",
+      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-10"],
+      "presentationAssetRefs": ["AS-ENV-005", "AS-CHR-001", "AS-CHR-005"],
+      "segments": [
+        {"id": "E04-DORM-S1", "text": "Sau những biến cố tiếp theo, Vương Lâm có cơ hội vào Hằng Nhạc phái với thân phận đệ tử ký danh, mặc áo xám và ở trong phòng chung."},
+        {"id": "E04-DORM-S2", "text": "Cuộc sống trong môn phái bắt đầu bằng các công việc thường ngày. Trương Hổ xuất hiện trong giai đoạn này; việc lấy nước trở thành một phần sinh hoạt của Vương Lâm."}
+      ]
+    },
+    {
+      "id": "E04-SPRING",
+      "eventId": "E04",
+      "locationId": "MAP-006",
+      "title": "Nước và hạt châu",
+      "characterPresentationVariantKey": "gray_clothes",
+      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-11", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-14"],
+      "presentationAssetRefs": ["AS-ENV-002", "AS-CHR-001", "AS-ICO-004", "AS-ICO-005"],
+      "segments": [
+        {"id": "E04-SPRING-S1", "text": "Vương Lâm đến nguồn nước trong núi để làm công việc được giao. Nước suối là bước đầu của chuỗi chuẩn bị.", "beadPresentationVariantKey": "five_clouds"},
+        {"id": "E04-SPRING-S2", "text": "Nước tiếp xúc với hạt châu bộc lộ tác dụng khác thường. Phần nước chứa linh khí này được gọi ngắn là linh dịch trên bảng tài nguyên.", "beadPresentationVariantKey": "five_clouds"},
+        {"id": "E04-SPRING-S3", "text": "Những diễn biến trong giai đoạn nhập môn, bao gồm trận giông, khiến hoa văn trên hạt châu đạt bảy đám mây. Hãy bắt đầu lấy nước rồi chuẩn bị linh dịch để tiếp tục khám phá.", "beadPresentationVariantKey": "seven_clouds"}
+      ]
+    },
+    {
+      "id": "E05-GARDEN",
+      "eventId": "E05",
+      "locationId": "MAP-007",
+      "title": "Nhận công pháp",
+      "characterPresentationVariantKey": "gray_clothes",
+      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-16", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17"],
+      "presentationAssetRefs": ["AS-ENV-004", "AS-ENV-005", "AS-CHR-001", "AS-CHR-006", "AS-ICO-006"],
+      "segments": [
+        {"id": "E05-GARDEN-S1", "text": "Bầu nước khiến Tôn Đại Trụ chú ý tới Vương Lâm. Hắn được nhận làm đệ tử, chuyển sang áo đỏ và có cơ hội học công pháp nhập môn."},
+        {"id": "E05-GARDEN-S2", "text": "Phòng ở của đệ tử là nơi thử luyện thổ nạp. Việc tu luyện được tách khỏi luống dược thảo; hãy luyện ba lần để quan sát tiến triển.", "characterPresentationVariantKey": "red_clothes"}
+      ]
+    },
+    {
+      "id": "E06-ROOM",
+      "eventId": "E06",
+      "locationId": "MAP-008",
+      "title": "Giải trừ trở ngại",
+      "characterPresentationVariantKey": "red_clothes",
+      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-18", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-20", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-22"],
+      "presentationAssetRefs": ["AS-ENV-005", "AS-CHR-001", "AS-ICO-004"],
+      "segments": [
+        {"id": "E06-ROOM-S1", "text": "Dù đã thử công pháp, Vương Lâm vẫn không giữ được linh khí. Những diễn biến liên quan tới dược liệu làm tán linh khí giải thích trở ngại này."},
+        {"id": "E06-ROOM-S2", "text": "Sau khi rời dược viên và lấy lại hạt châu, hắn tiếp tục tìm cách tu luyện trong phòng riêng. Hoa văn trên châu lúc này đã đạt chín đám mây.", "beadPresentationVariantKey": "nine_clouds"},
+        {"id": "E06-ROOM-S3", "text": "Vương Lâm giải trừ tác động cản trở bằng cách điều chỉnh thổ nạp. Từ mốc này, tu luyện thường bắt đầu giữ lại được tu vi trong game.", "beadPresentationVariantKey": "nine_clouds"}
+      ]
+    },
+    {
+      "id": "E07-DREAM",
+      "eventId": "E07",
+      "locationId": "MAP-009",
+      "title": "Không gian mộng cảnh",
+      "characterPresentationVariantKey": "red_clothes",
+      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-23", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-24"],
+      "presentationAssetRefs": ["AS-ENV-006", "AS-CHR-001", "AS-ICO-004"],
+      "segments": [
+        {"id": "E07-DREAM-S1", "text": "Hoa văn đạt mười đám mây rồi biến mất, để lộ những dấu trên hạt châu. Đây là bước chuyển dẫn tới khả năng khám phá mộng cảnh.", "beadPresentationVariantKey": "ten_clouds_transition"},
+        {"id": "E07-DREAM-S2", "text": "Trong không gian mộng cảnh, thời gian dài gấp mười lần bên ngoài. Vương Lâm có thêm thời gian cho việc tu luyện.", "beadPresentationVariantKey": "inscribed"},
+        {"id": "E07-DREAM-S3", "text": "Mộng cảnh không có linh khí tự nhiên để sử dụng tùy ý. Linh dịch được dùng để chuẩn bị trước khi vào; từ đây có thể chọn mộng cảnh hoặc bật chuỗi chuẩn bị tự động.", "beadPresentationVariantKey": "inscribed"}
+      ]
+    },
+    {
+      "id": "E08-BREAKTHROUGH",
+      "eventId": "E08",
+      "locationId": "MAP-008",
+      "title": "Chuẩn bị đột phá",
+      "characterPresentationVariantKey": "red_clothes",
+      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-25"],
+      "presentationAssetRefs": ["AS-ENV-005", "AS-CHR-001", "AS-ICO-003"],
+      "segments": [
+        {"id": "E08-BREAKTHROUGH-S1", "text": "Qua quá trình chuẩn bị và tu luyện, Vương Lâm đã tích lũy đủ tu vi cho tầng đầu. Hoàn tất đột phá để bước từ phàm nhân vào Ngưng Khí tầng 1."}
+      ]
+    }
+  ],
+  "resourceDefinitions": [
+    {"id": "springWater", "name": "Nước suối", "assetId": "AS-ICO-001", "cap": 120, "integerOnly": true},
+    {"id": "spiritWater", "name": "Linh dịch", "description": "Nước chứa linh khí, được chuẩn bị bằng hạt châu.", "assetId": "AS-ICO-002", "cap": 30, "integerOnly": true},
+    {"id": "cultivation", "name": "Tu vi", "assetId": "AS-ICO-003", "cap": 480, "integerOnly": true}
+  ],
+  "itemDefinitions": [
+    {"id": "ITEM-BEAD", "name": "Hạt châu bí ẩn", "assetId": "AS-ICO-004", "grantEventId": "E03", "unique": true, "description": "Cơ duyên được tìm thấy trong hang; công dụng hiện theo mốc đã khám phá."},
+    {"id": "ITEM-GOURD", "name": "Bầu nước", "assetId": "AS-ICO-005", "grantEventId": "E04", "unique": true, "description": "Dùng đựng nước cho sinh hoạt và chuẩn bị tu luyện.", "interactionPolicy": "story_item_no_capacity_modifier"},
+    {"id": "ITEM-MANUAL", "name": "Công pháp nhập môn", "assetId": "AS-ICO-006", "grantEventId": "E05", "unique": true, "description": "Công pháp được nhận khi nhập môn dưới sự chỉ dẫn của Tôn Đại Trụ.", "interactionPolicy": "explain_unlocked_practice"},
+    {"id": "ITEM-STORAGE-BAG", "name": "Túi trữ vật", "assetId": "AS-ICO-007", "grantEventId": "E05", "unique": true, "description": "Vật phẩm được nhận trong giai đoạn nhập môn.", "interactionPolicy": "story_item_no_capacity_modifier"}
+  ],
+  "characterEntries": [
+    {"id": "CHR-WANG-LIN", "name": "Vương Lâm", "assetId": "AS-CHR-001", "revealSceneId": "E01-VILLAGE", "description": "Nhân vật người chơi theo dõi; kiên trì tìm đường tu tiên dù tư chất ban đầu hạn chế."},
+    {"id": "CHR-PARENTS", "name": "Cha mẹ Vương Lâm", "assetId": "AS-CHR-002", "revealSceneId": "E01-VILLAGE", "description": "Gia đình đặt niềm hy vọng vào hành trình tu tiên của Vương Lâm."},
+    {"id": "CHR-FOURTH-UNCLE", "name": "Tứ thúc", "assetId": "AS-CHR-003", "revealSceneId": "E01-VILLAGE", "description": "Người thân đem tới cơ hội dự tuyển vào Hằng Nhạc phái."},
+    {"id": "CHR-WANG-ZHUO", "name": "Vương Trác", "assetId": "AS-CHR-004", "revealSceneId": "E02-EXAM", "description": "Người cùng thế hệ xuất hiện trong dịp tuyển chọn của Hằng Nhạc phái."},
+    {"id": "CHR-ZHANG-HU", "name": "Trương Hổ", "assetId": "AS-CHR-005", "revealSceneId": "E04-DORM", "description": "Đệ tử xuất hiện trong sinh hoạt giai đoạn ký danh của Vương Lâm."},
+    {"id": "CHR-SUN-DAZHU", "name": "Tôn Đại Trụ", "assetId": "AS-CHR-006", "revealSceneId": "E05-GARDEN", "description": "Sư phụ của Vương Lâm trong giai đoạn này, gắn với dược viên và công pháp nhập môn."}
+  ],
+  "systemPolicies": {
+    "story": {
+      "completionPolicy": "manual_once_on_final_segment",
+      "costTiming": "on_event_completion",
+      "newStoryActivityPolicy": "stop_and_clear_partial_cycle",
+      "historyActivityPolicy": "keep_running",
+      "resumeActivityAfterCompletion": false,
+      "offlinePolicy": "wait_for_player"
+    },
+    "activity": {
+      "conditionalBranchSelection": "first_matching_rule",
+      "locationBranchSelection": "first_matching_rule",
+      "selectCurrentRunningActivity": "keep_progress",
+      "switchPolicy": "clear_partial_cycle",
+      "costTiming": "on_cycle_completion",
+      "waitProgressPolicy": "zero",
+      "commandOrder": "process_elapsed_time_then_apply_command"
+    },
+    "save": {
+      "schemaVersion": "mvp-a-save-1",
+      "periodicSaveSeconds": 5,
+      "singleWriter": true,
+      "backupCount": 1,
+      "derivedState": ["beadVariant", "clothingVariant", "cultivationBlocked", "unlocks", "ownedItems", "revealedCharacters", "activityLocation", "mvpComplete", "waitReason"]
+    }
+  },
+  "assets": [
+    {
+      "id": "AS-ENV-001",
+      "name": "Thôn và nhà Vương Lâm",
+      "kind": "background",
+      "width": 1600,
+      "height": 900,
+      "format": "webp",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "MAP-001"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-1"
+      ],
+      "variants": [
+        "home",
+        "departure"
+      ]
+    },
+    {
+      "id": "AS-ENV-002",
+      "name": "Đường núi và suối",
+      "kind": "background",
+      "width": 1600,
+      "height": 900,
+      "format": "webp",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "MAP-003",
+        "MAP-006"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-7",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-11"
+      ],
+      "variants": [
+        "trail_crop",
+        "spring_crop"
+      ]
+    },
+    {
+      "id": "AS-ENV-003",
+      "name": "Hang bên vách núi",
+      "kind": "background",
+      "width": 1600,
+      "height": 900,
+      "format": "webp",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "MAP-004"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-8"
+      ],
+      "variants": [
+        "cave",
+        "suction_overlay"
+      ]
+    },
+    {
+      "id": "AS-ENV-004",
+      "name": "Kiến trúc Hằng Nhạc",
+      "kind": "background",
+      "width": 1600,
+      "height": 900,
+      "format": "webp",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "MAP-002",
+        "MAP-007"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-3",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17"
+      ],
+      "variants": [
+        "entrance",
+        "herb_garden"
+      ]
+    },
+    {
+      "id": "AS-ENV-005",
+      "name": "Phòng trong môn phái",
+      "kind": "background",
+      "width": 1600,
+      "height": 900,
+      "format": "webp",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "MAP-005",
+        "MAP-007",
+        "MAP-008"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-10",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-20"
+      ],
+      "variants": [
+        "shared_room",
+        "disciple_room",
+        "private_room"
+      ]
+    },
+    {
+      "id": "AS-ENV-006",
+      "name": "Mộng cảnh",
+      "kind": "background",
+      "width": 1600,
+      "height": 900,
+      "format": "webp",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "MAP-009"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-23",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-24"
+      ],
+      "variants": [
+        "still",
+        "cultivating"
+      ]
+    },
+    {
+      "id": "AS-CHR-001",
+      "name": "Vương Lâm",
+      "kind": "portrait",
+      "width": 512,
+      "height": 512,
+      "format": "webp_alpha",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "E08"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-1",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-10",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17"
+      ],
+      "variants": [
+        "mortal_clothes",
+        "gray_clothes",
+        "red_clothes"
+      ]
+    },
+    {
+      "id": "AS-CHR-002",
+      "name": "Cha mẹ Vương Lâm",
+      "kind": "portrait",
+      "width": 512,
+      "height": 512,
+      "format": "webp_alpha",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "E01"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-1"
+      ],
+      "variants": []
+    },
+    {
+      "id": "AS-CHR-003",
+      "name": "Tứ thúc",
+      "kind": "portrait",
+      "width": 512,
+      "height": 512,
+      "format": "webp_alpha",
+      "priority": "P2",
+      "status": "planned",
+      "usedBy": [
+        "E01"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-1"
+      ],
+      "variants": []
+    },
+    {
+      "id": "AS-CHR-004",
+      "name": "Vương Trác",
+      "kind": "portrait",
+      "width": 512,
+      "height": 512,
+      "format": "webp_alpha",
+      "priority": "P2",
+      "status": "planned",
+      "usedBy": [
+        "E02"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-3"
+      ],
+      "variants": []
+    },
+    {
+      "id": "AS-CHR-005",
+      "name": "Trương Hổ",
+      "kind": "portrait",
+      "width": 512,
+      "height": 512,
+      "format": "webp_alpha",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "E04"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-10"
+      ],
+      "variants": []
+    },
+    {
+      "id": "AS-CHR-006",
+      "name": "Tôn Đại Trụ",
+      "kind": "portrait",
+      "width": 512,
+      "height": 512,
+      "format": "webp_alpha",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "E05",
+        "E06"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17"
+      ],
+      "variants": []
+    },
+    {
+      "id": "AS-CRE-001",
+      "name": "Hổ trắng",
+      "kind": "creature_illustration",
+      "width": 768,
+      "height": 768,
+      "format": "webp_alpha",
+      "priority": "P1",
+      "status": "planned",
+      "usedBy": [
+        "ENC-001"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-7"
+      ],
+      "variants": []
+    },
+    {
+      "id": "AS-ICO-001",
+      "name": "Nước suối",
+      "kind": "icon",
+      "width": 128,
+      "height": 128,
+      "format": "svg",
+      "priority": "P0",
+      "status": "planned",
+      "usedBy": [
+        "ACT-DRAW-WATER"
+      ],
+      "sourceRefs": [],
+      "variants": []
+    },
+    {
+      "id": "AS-ICO-002",
+      "name": "Linh dịch",
+      "kind": "icon",
+      "width": 128,
+      "height": 128,
+      "format": "svg",
+      "priority": "P0",
+      "status": "planned",
+      "usedBy": [
+        "ACT-INFUSE-WATER",
+        "ACT-DREAM"
+      ],
+      "sourceRefs": [],
+      "variants": []
+    },
+    {
+      "id": "AS-ICO-003",
+      "name": "Tu vi",
+      "kind": "icon",
+      "width": 128,
+      "height": 128,
+      "format": "svg",
+      "priority": "P0",
+      "status": "planned",
+      "usedBy": [
+        "ACT-PRACTICE",
+        "ACT-DREAM",
+        "E08"
+      ],
+      "sourceRefs": [],
+      "variants": []
+    },
+    {
+      "id": "AS-ICO-004",
+      "name": "Hạt châu",
+      "kind": "icon",
+      "width": 128,
+      "height": 128,
+      "format": "svg",
+      "priority": "P0",
+      "status": "planned",
+      "usedBy": [
+        "E03",
+        "E04",
+        "E06",
+        "E07"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-8",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-14",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-20",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-23"
+      ],
+      "variants": [
+        "five_clouds",
+        "seven_clouds",
+        "nine_clouds",
+        "ten_clouds_transition",
+        "inscribed"
+      ]
+    },
+    {
+      "id": "AS-ICO-005",
+      "name": "Bầu nước",
+      "kind": "icon",
+      "width": 128,
+      "height": 128,
+      "format": "svg",
+      "priority": "P0",
+      "status": "planned",
+      "usedBy": [
+        "E04",
+        "E05",
+        "ACT-INFUSE-WATER"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-16"
+      ],
+      "variants": [
+        "ordinary",
+        "spirit_water"
+      ]
+    },
+    {
+      "id": "AS-ICO-006",
+      "name": "Công pháp nhập môn",
+      "kind": "icon",
+      "width": 128,
+      "height": 128,
+      "format": "svg",
+      "priority": "P0",
+      "status": "planned",
+      "usedBy": [
+        "E05",
+        "ACT-PRACTICE"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17"
+      ],
+      "variants": []
+    },
+    {
+      "id": "AS-ICO-007",
+      "name": "Túi trữ vật",
+      "kind": "icon",
+      "width": 128,
+      "height": 128,
+      "format": "svg",
+      "priority": "P0",
+      "status": "planned",
+      "usedBy": [
+        "E05"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17"
+      ],
+      "variants": []
+    }
+  ],
+  "locations": [
+    {
+      "id": "MAP-001",
+      "name": "Thôn và nhà Vương Lâm",
+      "regionId": "REG-ZHAO",
+      "kind": "story",
+      "revealSceneId": "E01-VILLAGE",
+      "assetRefs": [
+        "AS-ENV-001"
+      ],
+      "assetVariant": "home",
+      "activityIds": [],
+      "encounterIds": [],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-1"
+      ]
+    },
+    {
+      "id": "MAP-002",
+      "name": "Khu khảo nghiệm Hằng Nhạc",
+      "regionId": "REG-ZHAO",
+      "kind": "story_trial",
+      "revealSceneId": "E02-EXAM",
+      "assetRefs": [
+        "AS-ENV-004"
+      ],
+      "assetVariant": "entrance",
+      "activityIds": [],
+      "encounterIds": [
+        "ENC-003"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-3",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-4"
+      ]
+    },
+    {
+      "id": "MAP-003",
+      "name": "Đường núi",
+      "regionId": "REG-ZHAO",
+      "kind": "story",
+      "revealSceneId": "E03-TRAIL",
+      "assetRefs": [
+        "AS-ENV-002"
+      ],
+      "assetVariant": "trail_crop",
+      "activityIds": [],
+      "encounterIds": [
+        "ENC-001"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-7"
+      ]
+    },
+    {
+      "id": "MAP-004",
+      "name": "Hang bên vách núi",
+      "regionId": "REG-ZHAO",
+      "kind": "story",
+      "revealSceneId": "E03-CAVE",
+      "assetRefs": [
+        "AS-ENV-003"
+      ],
+      "assetVariant": "cave",
+      "activityIds": [],
+      "encounterIds": [
+        "ENC-002"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-8"
+      ]
+    },
+    {
+      "id": "MAP-005",
+      "name": "Phòng đệ tử ký danh",
+      "regionId": "REG-ZHAO",
+      "kind": "preparation",
+      "revealSceneId": "E04-DORM",
+      "assetRefs": [
+        "AS-ENV-005"
+      ],
+      "assetVariant": "shared_room",
+      "activityIds": [
+        "ACT-INFUSE-WATER"
+      ],
+      "encounterIds": [],
+      "activityContext": {
+        "requiresEvents": [
+          "E04"
+        ],
+        "untilEvent": "E05"
+      },
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-10",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-11"
+      ]
+    },
+    {
+      "id": "MAP-006",
+      "name": "Suối trong núi",
+      "regionId": "REG-ZHAO",
+      "kind": "resource",
+      "revealSceneId": "E04-SPRING",
+      "assetRefs": [
+        "AS-ENV-002"
+      ],
+      "assetVariant": "spring_crop",
+      "activityIds": [
+        "ACT-DRAW-WATER"
+      ],
+      "encounterIds": [],
+      "activityContext": {
+        "requiresEvents": [
+          "E04"
+        ],
+        "untilEvent": "E08"
+      },
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-11"
+      ]
+    },
+    {
+      "id": "MAP-007",
+      "name": "Dược viên và phòng đệ tử",
+      "regionId": "REG-ZHAO",
+      "kind": "story_and_preparation",
+      "revealSceneId": "E05-GARDEN",
+      "assetRefs": [
+        "AS-ENV-004",
+        "AS-ENV-005"
+      ],
+      "assetVariant": "herb_garden",
+      "activitySubscene": "disciple_room",
+      "activityIds": [
+        "ACT-INFUSE-WATER",
+        "ACT-PRACTICE"
+      ],
+      "encounterIds": [],
+      "activityContext": {
+        "requiresEvents": [
+          "E05"
+        ],
+        "untilEvent": "E06"
+      },
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17"
+      ]
+    },
+    {
+      "id": "MAP-008",
+      "name": "Phòng riêng",
+      "regionId": "REG-ZHAO",
+      "kind": "cultivation_and_preparation",
+      "revealSceneId": "E06-ROOM",
+      "assetRefs": [
+        "AS-ENV-005"
+      ],
+      "assetVariant": "private_room",
+      "activityIds": [
+        "ACT-INFUSE-WATER",
+        "ACT-PRACTICE"
+      ],
+      "encounterIds": [],
+      "activityContext": {
+        "requiresEvents": [
+          "E06"
+        ],
+        "untilEvent": "E08"
+      },
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-20"
+      ]
+    },
+    {
+      "id": "MAP-009",
+      "name": "Không gian mộng cảnh",
+      "regionId": "REG-BEAD",
+      "kind": "special_cultivation",
+      "revealSceneId": "E07-DREAM",
+      "assetRefs": [
+        "AS-ENV-006"
+      ],
+      "assetVariant": "still",
+      "activityIds": [
+        "ACT-DREAM"
+      ],
+      "encounterIds": [],
+      "activityContext": {
+        "requiresEvents": [
+          "E07"
+        ],
+        "untilEvent": "E08"
+      },
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-23",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-24"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "ACT-DRAW-WATER",
+      "name": "Lấy nước suối",
+      "cycleSeconds": 10,
+      "requiresEvents": [
+        "E04"
+      ],
+      "cost": {},
+      "output": {
+        "springWater": 2
+      },
+      "counter": "drawCycles",
+      "counterGain": 1,
+      "locationRules": [
+        {
+          "requiresEvents": [
+            "E04"
+          ],
+          "locationId": "MAP-006"
+        }
+      ]
+    },
+    {
+      "id": "ACT-INFUSE-WATER",
+      "name": "Ủ nước với hạt châu",
+      "cycleSeconds": 10,
+      "requiresEvents": [
+        "E04"
+      ],
+      "cost": {
+        "springWater": 2
+      },
+      "output": {
+        "spiritWater": 1
+      },
+      "counter": "infuseCycles",
+      "counterGain": 1,
+      "locationRules": [
+        {
+          "requiresEvents": [
+            "E06"
+          ],
+          "locationId": "MAP-008"
+        },
+        {
+          "requiresEvents": [
+            "E05"
+          ],
+          "locationId": "MAP-007",
+          "subscene": "disciple_room"
+        },
+        {
+          "requiresEvents": [
+            "E04"
+          ],
+          "locationId": "MAP-005"
+        }
+      ]
+    },
+    {
+      "id": "ACT-PRACTICE",
+      "name": "Luyện thổ nạp / tu luyện thường",
+      "cycleSeconds": 10,
+      "requiresEvents": [
+        "E05"
+      ],
+      "cost": {},
+      "conditionalOutputs": [
+        {
+          "requiresEvents": [
+            "E06"
+          ],
+          "output": {
+            "cultivation": 1
+          }
+        },
+        {
+          "requiresEvents": [
+            "E05"
+          ],
+          "counter": "breathingCycles",
+          "counterGain": 1,
+          "counterCap": 3
+        }
+      ],
+      "locationRules": [
+        {
+          "requiresEvents": [
+            "E06"
+          ],
+          "locationId": "MAP-008"
+        },
+        {
+          "requiresEvents": [
+            "E05"
+          ],
+          "locationId": "MAP-007",
+          "subscene": "disciple_room"
+        }
+      ]
+    },
+    {
+      "id": "ACT-DREAM",
+      "name": "Tu luyện trong mộng cảnh",
+      "cycleSeconds": 10,
+      "requiresEvents": [
+        "E07"
+      ],
+      "cost": {
+        "spiritWater": 1
+      },
+      "output": {
+        "cultivation": 10
+      },
+      "outputCapPolicy": "clamp_cultivation_charge_full_cost",
+      "locationRules": [
+        {
+          "requiresEvents": [
+            "E07"
+          ],
+          "locationId": "MAP-009"
+        }
+      ]
+    }
+  ],
+  "encounters": [
+    {
+      "id": "ENC-001",
+      "name": "Hổ trắng trên đường núi",
+      "type": "scripted_escape",
+      "locationId": "MAP-003",
+      "sceneId": "E03-TRAIL",
+      "eventId": "E03",
+      "assetRefs": [
+        "AS-CRE-001"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-7"
+      ],
+      "canonStatus": "verified_excerpt",
+      "resolution": "continue_fixed_story",
+      "nextSceneId": "E03-CAVE",
+      "repeatable": false,
+      "offlinePolicy": "wait_for_player",
+      "combatStats": null,
+      "rewardOwner": "E03",
+      "directRewards": []
+    },
+    {
+      "id": "ENC-002",
+      "name": "Lực hút trong hang",
+      "type": "environment_hazard",
+      "locationId": "MAP-004",
+      "sceneId": "E03-CAVE",
+      "eventId": "E03",
+      "assetRefs": [
+        "AS-ENV-003"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-8"
+      ],
+      "canonStatus": "verified_excerpt",
+      "resolution": "continue_fixed_story",
+      "repeatable": false,
+      "offlinePolicy": "wait_for_player",
+      "combatStats": null,
+      "rewardOwner": "E03",
+      "directRewards": []
+    },
+    {
+      "id": "ENC-003",
+      "name": "Áp lực khảo nghiệm kiếm linh",
+      "type": "story_trial",
+      "locationId": "MAP-002",
+      "sceneId": "E02-EXAM",
+      "eventId": "E02",
+      "assetRefs": [
+        "AS-ENV-004"
+      ],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-4"
+      ],
+      "canonStatus": "verified_excerpt",
+      "resolution": "fixed_failure_then_continue_story",
+      "repeatable": false,
+      "offlinePolicy": "wait_for_player",
+      "combatStats": null,
+      "rewardOwner": "E02",
+      "directRewards": []
+    }
+  ],
+  "beadVariants": [
+    {
+      "variantKey": "five_clouds",
+      "afterEvent": "E03",
+      "cloudCount": 5
+    },
+    {
+      "variantKey": "seven_clouds",
+      "afterEvent": "E04",
+      "cloudCount": 7
+    },
+    {
+      "variantKey": "nine_clouds",
+      "afterEvent": "E06",
+      "cloudCount": 9
+    },
+    {
+      "variantKey": "ten_clouds_transition",
+      "duringEvent": "E07",
+      "cloudCount": 10,
+      "transient": true
+    },
+    {
+      "variantKey": "inscribed",
+      "afterEvent": "E07",
+      "cloudCount": 0,
+      "dreamUnlocked": true
+    }
+  ],
+  "balance": {
+    "cycleSeconds": 10,
+    "resourceCaps": {
+      "springWater": 120,
+      "spiritWater": 30,
+      "cultivation": 480
+    },
+    "offlineCapSeconds": 28800,
+    "progressionEndsAfterEvent": "E08",
+    "automaticModeUnlockEvent": "E07"
+  },
+  "presentation": {
+    "mainSection": "Hành trình",
+    "mainSections": ["Tu luyện", "Hạt châu", "Hành trình", "Hành trang", "Cài đặt"],
+    "minimumLayoutWidthPx": 360,
+    "defaultFontSizePx": 18,
+    "subviews": [
+      "Mốc truyện",
+      "Địa điểm"
+    ],
+    "viewDoesNotChangeActivity": true,
+    "travelCostSeconds": 0,
+    "missingAssetFallback": "name_and_description"
+  }
+}

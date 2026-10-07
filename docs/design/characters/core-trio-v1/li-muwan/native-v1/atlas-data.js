@@ -1,0 +1,245 @@
+window.LiMuwanStaticData = {
+    "schemaVersion":  "pixel-static-atlas-1",
+    "characterId":  "CHR-LI-MUWAN",
+    "form":  "living_early_arc",
+    "costume":  "purple_ch144_reference",
+    "identityApprovedByProjectOwner":  false,
+    "studyStatus":  "concept_and_static_pixel_study_pending_review",
+    "sourceImage":  "../pixel-source-v1.png",
+    "frameSizePx":  [
+                        64,
+                        96
+                    ],
+    "anchorPx":  [
+                     32,
+                     88
+                 ],
+    "anchorKind":  "feet",
+    "directionOrder":  [
+                           "south",
+                           "west",
+                           "east",
+                           "north"
+                       ],
+    "palette":  [
+                    "#00000000",
+                    "#1F1D24FF",
+                    "#29272DFF",
+                    "#3B383FFF",
+                    "#594259FF",
+                    "#7B5D7DFF",
+                    "#A785A3FF",
+                    "#C2A2BCFF",
+                    "#ADA59AFF",
+                    "#D0C7B5FF",
+                    "#EFE5D1FF",
+                    "#A96850FF",
+                    "#CC9873FF",
+                    "#E5B88FFF",
+                    "#F2CEA6FF",
+                    "#34323AFF",
+                    "#3A363CFF",
+                    "#88796AFF",
+                    "#AB9E8BFF",
+                    "#C8B697FF",
+                    "#D3C5ACFF",
+                    "#3D2A43FF",
+                    "#604064FF",
+                    "#92708FFF"
+                ],
+    "frames":  {
+                   "li_muwan_purple_static_south":  {
+                                                        "frame":  {
+                                                                      "x":  0,
+                                                                      "y":  0,
+                                                                      "w":  64,
+                                                                      "h":  96
+                                                                  },
+                                                        "sourceSize":  {
+                                                                           "w":  64,
+                                                                           "h":  96
+                                                                       },
+                                                        "rotated":  false,
+                                                        "trimmed":  false,
+                                                        "anchorPx":  [
+                                                                         32,
+                                                                         88
+                                                                     ],
+                                                        "image":  "frames/li_muwan_purple_static_south.png",
+                                                        "pixelHash":  "1f35029bb3190f25824555c8a3e5ed86f8099f8d65ecc0ff94d5fcaea51f86a5"
+                                                    },
+                   "li_muwan_purple_static_west":  {
+                                                       "frame":  {
+                                                                     "x":  64,
+                                                                     "y":  0,
+                                                                     "w":  64,
+                                                                     "h":  96
+                                                                 },
+                                                       "sourceSize":  {
+                                                                          "w":  64,
+                                                                          "h":  96
+                                                                      },
+                                                       "rotated":  false,
+                                                       "trimmed":  false,
+                                                       "anchorPx":  [
+                                                                        32,
+                                                                        88
+                                                                    ],
+                                                       "image":  "frames/li_muwan_purple_static_west.png",
+                                                       "pixelHash":  "7e472eeba6d2f5807112e5760833bf651eec70c2d6060849695d303339220f79"
+                                                   },
+                   "li_muwan_purple_static_east":  {
+                                                       "frame":  {
+                                                                     "x":  128,
+                                                                     "y":  0,
+                                                                     "w":  64,
+                                                                     "h":  96
+                                                                 },
+                                                       "sourceSize":  {
+                                                                          "w":  64,
+                                                                          "h":  96
+                                                                      },
+                                                       "rotated":  false,
+                                                       "trimmed":  false,
+                                                       "anchorPx":  [
+                                                                        32,
+                                                                        88
+                                                                    ],
+                                                       "image":  "frames/li_muwan_purple_static_east.png",
+                                                       "pixelHash":  "e1f464d5521d2501ecbb53dacceb0b70f3beb489057c243eb721755312ea5d85"
+                                                   },
+                   "li_muwan_purple_static_north":  {
+                                                        "frame":  {
+                                                                      "x":  192,
+                                                                      "y":  0,
+                                                                      "w":  64,
+                                                                      "h":  96
+                                                                  },
+                                                        "sourceSize":  {
+                                                                           "w":  64,
+                                                                           "h":  96
+                                                                       },
+                                                        "rotated":  false,
+                                                        "trimmed":  false,
+                                                        "anchorPx":  [
+                                                                         32,
+                                                                         88
+                                                                     ],
+                                                        "image":  "frames/li_muwan_purple_static_north.png",
+                                                        "pixelHash":  "1c6b6a2f422335f8e62b57078081d85f8a7762ad7028dbef08e955d4a61bb6b2"
+                                                    }
+               },
+    "animations":  {
+                       "static_south":  [
+                                            "li_muwan_purple_static_south"
+                                        ],
+                       "static_west":  [
+                                           "li_muwan_purple_static_west"
+                                       ],
+                       "static_east":  [
+                                           "li_muwan_purple_static_east"
+                                       ],
+                       "static_north":  [
+                                            "li_muwan_purple_static_north"
+                                        ]
+                   },
+    "meta":  {
+                 "image":  "atlas.png",
+                 "size":  {
+                              "w":  256,
+                              "h":  96
+                          },
+                 "format":  "indexed_png",
+                 "scale":  1
+             },
+    "export":  {
+                   "artMethod":  "built_in_image_gen",
+                   "packingMethod":  "connected_component_crop_uniform_nearest_neighbor_fixed_palette_registered_static_atlas",
+                   "nativeAlpha":  "0_or_255",
+                   "frameCount":  4,
+                   "sourcePath":  "pixel-source-v1.png",
+                   "reports":  [
+                                   {
+                                       "Row":  0,
+                                       "Column":  0,
+                                       "SourceBounds":  [
+                                                            123,
+                                                            48,
+                                                            315,
+                                                            719
+                                                        ],
+                                       "NativeBounds":  [
+                                                            15,
+                                                            7,
+                                                            35,
+                                                            82
+                                                        ],
+                                       "OpaquePixels":  1886,
+                                       "PixelHash":  "1f35029bb3190f25824555c8a3e5ed86f8099f8d65ecc0ff94d5fcaea51f86a5",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  0,
+                                       "Column":  1,
+                                       "SourceBounds":  [
+                                                            580,
+                                                            55,
+                                                            279,
+                                                            712
+                                                        ],
+                                       "NativeBounds":  [
+                                                            16,
+                                                            7,
+                                                            32,
+                                                            82
+                                                        ],
+                                       "OpaquePixels":  1596,
+                                       "PixelHash":  "7e472eeba6d2f5807112e5760833bf651eec70c2d6060849695d303339220f79",
+                                       "LowestLeftPixelY":  87,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  0,
+                                       "SourceBounds":  [
+                                                            155,
+                                                            795,
+                                                            273,
+                                                            706
+                                                        ],
+                                       "NativeBounds":  [
+                                                            18,
+                                                            8,
+                                                            31,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  1593,
+                                       "PixelHash":  "e1f464d5521d2501ecbb53dacceb0b70f3beb489057c243eb721755312ea5d85",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  87
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  1,
+                                       "SourceBounds":  [
+                                                            572,
+                                                            792,
+                                                            321,
+                                                            708
+                                                        ],
+                                       "NativeBounds":  [
+                                                            14,
+                                                            8,
+                                                            37,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  1879,
+                                       "PixelHash":  "1c6b6a2f422335f8e62b57078081d85f8a7762ad7028dbef08e955d4a61bb6b2",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   }
+                               ]
+               },
+    "runtimeReady":  false
+};

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bản phác UX và ART — Tiên Nghịch</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #F3EBDD; color: #252722; font: 18px/1.6 'Segoe UI', Arial, sans-serif; }
+    main { max-width: 1240px; margin: auto; padding: 32px 24px 64px; }
+    h1, h2 { font-family: Cambria, 'Times New Roman', serif; line-height: 1.3; }
+    h1 { font-size: 34px; margin: 0 0 12px; }
+    h2 { font-size: 26px; margin: 0 0 16px; }
+    p { max-width: 850px; }
+    nav { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0 32px; }
+    a { color: #245C53; text-underline-offset: 4px; }
+    nav a { border: 1px solid #7A7464; padding: 10px 16px; border-radius: 6px; background: #FBF7EE; }
+    a:focus-visible { outline: 3px solid #245C53; outline-offset: 3px; }
+    section { margin-bottom: 28px; padding: 24px; background: #FBF7EE; border: 1px solid #CFC1A8; border-radius: 10px; }
+    img { display: block; width: 100%; height: auto; border-radius: 8px; background: #F3EBDD; }
+    .phone { max-width: 360px; margin: auto; }
+    .caption { color: #605E54; font-size: 16px; margin-bottom: 0; }
+    @media (max-width: 600px) { main { padding: 20px 16px 40px; } section { padding: 16px; } h1 { font-size: 28px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Bản phác UX và ART</h1>
+    <p><strong>GDD v0.20:</strong> ưu tiên <a href="characters/core-trio-v1/index.html">bộ ba Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển</a>; Lý Mộ Uyển đã chấp nhận nhận diện v1; Tư Đồ Nam đứng v3 tạm chấp nhận làm chuẩn thiết kế. Vương Lâm đã duyệt; <a href="characters/player-avatars-v2/index.html">hai đệ tử</a> giữ bộ thử. Bộ 14 UI v0.6 là tham chiếu.</p>
+    <p>Tiên Nghịch: Hành Trình Vương Lâm · MVP nhập môn. Hướng hình: tranh mực, giấy cổ và điểm sáng ngọc. Bộ 14 bản vẽ UI dùng snapshot độc lập để duyệt bố cục và thứ tự thông tin. Các nút trong hình là bản vẽ tĩnh.</p>
+    <p><a href="characters/core-ui-v1/index.html">Chân dung UI bộ ba 512/160/64</a> đã có bản đầu; <a href="../CORE-CHARACTER-MOTION-PLAN.md">kế hoạch động tác</a> tách 36 frame hiện có và 64 frame chưa vẽ.</p>
+    <p>Client đã chọn <strong>TypeScript + Three.js</strong>; <a href="../ANIMATION-PREVIEW-SPEC.md">preview chung animation/map</a> có đặc tả, là bước trước bộ động tác mới. <a href="../TECH-STACK.md">Thiết kế công nghệ</a>.</p>
+    <nav aria-label="Các bản phác"><a href="#art">ART</a><a href="#cultivation">Tu luyện</a><a href="#mobile">Mobile</a><a href="#journey">Hành trình</a><a href="#story">Đọc truyện</a><a href="#bead">Hạt châu</a><a href="#inventory">Hành trang</a><a href="#settings">Cài đặt</a><a href="#import">Nhập save</a><a href="#offline">Offline</a><a href="#end">Kết thúc A</a><a href="#activity-states">Trạng thái</a></nav>
+    <section id="art"><h2>Bảng tham chiếu ART</h2><a href="art-reference-v1.png"><img src="art-reference-v1.png" alt="Bảng tranh mực: đường núi và suối, phòng đệ tử, Vương Lâm áo xám và áo đỏ, mộng cảnh có ánh ngọc"></a><p class="caption">Tham chiếu phong cách cho các nguồn hình trong kế hoạch asset.</p></section>
+    <section id="cultivation"><h2>Tu luyện · Desktop</h2><a href="cultivation-desktop.svg"><img src="cultivation-desktop.png" alt="Bản phác Tu luyện desktop sau khi mở mộng cảnh"></a><p class="caption">Phàm nhân; tu vi 120/480; còn 6 linh dịch; mộng cảnh thủ công đang chạy.</p></section>
+    <section id="mobile"><h2>Tu luyện · Mobile 360 px</h2><a href="cultivation-mobile.svg"><img class="phone" src="cultivation-mobile.png" alt="Cùng snapshot Tu luyện trên bản phác rộng 360 pixel"></a><p class="caption">Nội dung một cột và điều hướng có nhãn xuống dòng.</p></section>
+    <section id="journey"><h2>Hành trình · Desktop</h2><a href="journey-desktop.svg"><img src="journey-desktop.png" alt="Bản phác Hành trình: đang xem thôn, hoạt động lấy nước vẫn tại suối"></a><p class="caption">Node đang xem và nơi đang hoạt động có nhãn riêng.</p></section>
+    <section id="story"><h2>Đọc truyện · Desktop</h2><a href="story-desktop.svg"><img src="story-desktop.png" alt="Bản phác đoạn cuối mốc nhận công pháp, có nút hoàn thành và chi phí một linh dịch"></a><p class="caption">Chi phí chưa trừ khi đọc; nút cuối áp dụng mốc một lần.</p></section>
+    <section id="bead"><h2>Hạt châu · Desktop</h2><a href="bead-desktop.svg"><img loading="lazy" src="bead-desktop.png" alt="Hạt châu có dấu sau E07; cách ủ nước và chi phí mộng cảnh"></a><p class="caption">Chỉ hiện điều đã khám phá. Các nút Xem dẫn tới hoạt động hoặc lịch sử.</p></section>
+    <section id="inventory"><h2>Hành trang · Desktop</h2><a href="inventory-desktop.svg"><img loading="lazy" src="inventory-desktop.png" alt="Bốn vật phẩm sau E05 và chi tiết công pháp trước khi giữ được tu vi"></a><p class="caption">Bầu nước và túi trữ vật giữ vai trò trong truyện; tài nguyên có bảng riêng.</p></section>
+    <section id="settings"><h2>Cài đặt · Desktop</h2><a href="settings-desktop.svg"><img loading="lazy" src="settings-desktop.png" alt="Cài đặt cỡ chữ 18, 20, 22 pixel, giảm chuyển động, xuất và nhập bản lưu"></a><p class="caption">Mẫu chữ, trạng thái đã lưu và hai hành động quản lý bản lưu.</p></section>
+    <section id="import"><h2>Xem trước bản nhập · Desktop</h2><a href="save-import-desktop.svg"><img loading="lazy" src="save-import-desktop.png" alt="So sánh bản đang chơi sau E07 với file sau E05 trước khi thay tiến trình"></a><p class="caption">Chọn file chưa thay tiến trình; so sánh rồi chủ động chọn bản muốn tiếp tục.</p></section>
+    <section id="offline"><h2>Tổng kết offline · Desktop</h2><a href="offline-desktop.svg"><img loading="lazy" src="offline-desktop.png" alt="Vắng 10 giờ, giới hạn 8 giờ, có hoạt động 24 phút và thêm 480 tu vi; vẫn là phàm nhân"></a><p class="caption">Số tài nguyên là thay đổi ròng. Đóng bảng giữ kết quả đã xử lý và lưu.</p></section>
+    <section id="offline-mobile"><h2>Tổng kết offline · Mobile 360 px</h2><a href="offline-mobile.svg"><img loading="lazy" class="phone" src="offline-mobile.png" alt="Tổng kết tự động trên màn hình rộng 360 pixel, các nút toàn chiều rộng"></a><p class="caption">Cùng snapshot với desktop; thông tin và thao tác đọc theo một cột.</p></section>
+    <section id="end"><h2>Kết thúc A · Desktop</h2><a href="end-desktop.svg"><img loading="lazy" src="end-desktop.png" alt="Sau hoàn tất E08, Vương Lâm đạt Ngưng Khí tầng 1, giữ tài nguyên và có nút xem hành trình, xuất save"></a><p class="caption">Kết quả sau nút Hoàn tất đột phá; tài nguyên còn lại được giữ.</p></section>
+    <section id="activity-states"><h2>Trạng thái hoạt động và mục tiêu</h2><a href="activity-states.svg"><img loading="lazy" src="activity-states.png" alt="Tám ví dụ: thiếu nước, thiếu linh dịch, đầy kho, đủ luyện thử, mốc sẵn sàng, đã dừng và đủ đột phá"></a><p class="caption">Các ô là ví dụ độc lập của thành phần; mỗi lý do chờ có hướng xử lý hợp lệ.</p></section>
+    <section id="story-states"><h2>Trạng thái truyện, vật phẩm và hạt châu</h2><a href="story-bead-states.svg"><img loading="lazy" src="story-bead-states.png" alt="Đọc sau, xem lịch sử, E08 trước nút cuối, vật phẩm chưa nhận và bốn hình dạng châu theo mốc"></a><p class="caption">Hình châu là nét phác SVG. Hình trong lịch sử và hình vật phẩm hiện tại có quy tắc riêng.</p></section>
+    <section id="system-states"><h2>Offline, bản lưu và tab chỉ xem</h2><a href="system-states.svg"><img loading="lazy" src="system-states.png" alt="Tổng kết khi đã dừng hoặc đang đọc truyện, lỗi lưu và nhập, phiên bản chưa hỗ trợ, tab chỉ xem"></a><p class="caption">Phản hồi bằng chữ và hành động phù hợp với trạng thái đang dùng.</p></section>
+    <p>Luồng thao tác và nghiệm thu: <a href="../UX-SCREENS-AND-STATES.md">Chi tiết màn hình và trạng thái</a>. Bản vẽ này thuộc giai đoạn GDD/UX; hành vi sẽ kiểm chứng khi có prototype.</p>
+  </main>
+</body>
+</html>

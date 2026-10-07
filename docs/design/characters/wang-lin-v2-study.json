@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "character-visual-study-1",
+  "id": "STUDY-WANG-LIN-INITIATION-V2",
+  "date": "2026-10-07",
+  "characterId": "CHR-WANG-LIN",
+  "portraitAssetId": "AS-CHR-001",
+  "status": "identity_v2_approved",
+  "identityApproval": {
+    "by": "project_owner",
+    "date": "2026-10-07",
+    "scope": "wang_lin_v2_identity"
+  },
+  "derivedAnimationSpecPath": "docs/WANG-LIN-SPRITE-SPEC.md",
+  "derivedAnimationViewerPath": "docs/design/characters/wang-lin-gray-walk-v1/index.html",
+  "visualSpecPath": "docs/WANG-LIN-VISUAL-SPEC.md",
+  "referenceBasis": "novel_descriptions_original_game_design",
+  "mapCharacterStyle": "pixel_art",
+  "portraitStyle": "ink_and_parchment",
+  "mapCamera": "top_down_three_quarter",
+  "pathBase": "workspace_root",
+  "generationMode": "built_in_image_gen",
+  "nativeFrameSizePx": null,
+  "nativePaletteSize": null,
+  "animationProduced": false,
+  "runtimeReady": false,
+  "artifacts": [
+    {
+      "id": "identity_costumes_v2",
+      "imagePath": "docs/design/characters/wang-lin-initiation-v2.png",
+      "promptPath": "docs/design/characters/wang-lin-initiation-v2.prompt.txt",
+      "imageSizePx": [
+        1536,
+        1024
+      ],
+      "transparentBackground": false,
+      "inputImages": [
+        {
+          "path": "docs/design/characters/wang-lin-initiation-v1.png",
+          "role": "starting_design_and_ink_style_reference"
+        }
+      ],
+      "normalCostumeKeys": [
+        "civilian",
+        "gray",
+        "red"
+      ],
+      "identityViews": [
+        "front",
+        "three_quarter",
+        "side",
+        "rear_hair"
+      ],
+      "storyVariantKey": "cave_damage"
+    },
+    {
+      "id": "expressions_v2",
+      "imagePath": "docs/design/characters/wang-lin-expressions-v2.png",
+      "promptPath": "docs/design/characters/wang-lin-expressions-v2.prompt.txt",
+      "imageSizePx": [
+        1254,
+        1254
+      ],
+      "transparentBackground": false,
+      "inputImages": [
+        {
+          "path": "docs/design/characters/wang-lin-initiation-v2.png",
+          "role": "identity_and_ink_style_reference"
+        }
+      ],
+      "layout": "two_by_two",
+      "expressionOrder": [
+        "hopeful_top_left",
+        "cautious_top_right",
+        "focused_bottom_left",
+        "tired_bottom_right"
+      ]
+    },
+    {
+      "id": "gray_pixel_v2",
+      "imagePath": "docs/design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v2.png",
+      "promptPath": "docs/design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v2.prompt.txt",
+      "imageSizePx": [
+        1254,
+        1254
+      ],
+      "transparentBackground": true,
+      "inputImages": [
+        {
+          "path": "docs/design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v1.png",
+          "role": "edit_target_pose_camera_pixel_style"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-initiation-v2.png",
+          "role": "supporting_identity_and_costume_reference"
+        }
+      ],
+      "costumeKey": "gray",
+      "pose": "standing",
+      "viewCount": 1
+    }
+  ],
+  "visualChecks": {
+    "manuallyInspected": true,
+    "threeNormalCostumesAndSceneVariantPresent": true,
+    "expressionSheetHasFourStudies": true,
+    "pixelPngHasAlpha": true,
+    "pixelCornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "textNotRequested": true,
+    "appearanceApprovedByProjectOwner": true,
+    "portraitThumbnailReadability": "pending_portrait_extraction",
+    "nativeGridAndPalette": "defined_in_first_gray_animation_set"
+  },
+  "preservedReferences": [
+    "docs/design/characters/wang-lin-initiation-v1.png",
+    "docs/design/characters/wang-lin-initiation-v1.prompt.txt",
+    "docs/design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v1.png",
+    "docs/design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v1.prompt.txt",
+    "docs/design/world/hybrid-study/index.html"
+  ],
+  "identityReviewChecklist": [
+    "apparent_age_and_facial_identity_across_views",
+    "portrait_to_pixel_identity",
+    "cloth_hair_shape_consistency",
+    "native_grid_body_proportion_and_palette_before_animation"
+  ],
+  "sourceRefs": [
+    "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-1",
+    "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-8",
+    "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-10",
+    "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17",
+    "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-25"
+  ]
+}

@@ -1,0 +1,19 @@
+Use case: stylized-concept / identity-preserve.
+Asset type: animation source sprite sheet, Wang Lin gray disciple, four cardinal directions, standing and walking in place.
+Input image 1: APPROVED character identity/style reference, the isolated gray-robed Wang Lin pixel V2. Keep his youthful face, black half-up hair and plain light cloth tie, ivory V collar, intact gray robe, charcoal sash, dark trousers, leg wraps and cloth shoes. This image supplies identity/costume, not a pose to duplicate.
+Primary request: a carefully aligned, readable PIXEL ART animation sheet with EXACTLY FOUR ROWS and SEVEN COLUMNS, 28 complete figures. Every slot contains one complete sprite, no empty cells and no additional sprites.
+Canvas/grid: landscape near 1792 by 1536, aspect 7:6. The entire canvas is a uniform 7-column by 4-row grid, without an outer margin or gutters. Each logical cell represents a 64 by 96 game frame displayed at 4x scale. Keep every full figure comfortably inside its own cell. Transparent padding inside each cell, consistent foot-ground baseline and body size; no visible grid lines.
+ROW ORDER, top to bottom:
+Row 1: SOUTH / down, facing toward the viewer, top-down three-quarter camera with face and ivory collar visible.
+Row 2: WEST / left, genuinely facing screen-left; left-facing hair, face, torso and feet in ALL seven cells.
+Row 3: EAST / right, genuinely facing screen-right; right-facing hair, face, torso and feet in ALL seven cells.
+Row 4: NORTH / up, genuine REAR VIEW in ALL seven cells; back of head, cloth tie, long black rear hair, back of gray robe, no frontal face or chest V collar.
+COLUMN ORDER for EVERY row:
+Column 1: relaxed neutral STANDING, both feet planted, arms resting.
+Columns 2 through 7: SIX successive frames of ONE CYCLIC WALK IN PLACE, alternating left and right legs and opposite arm swings. Walk 0: left foot forward contact, right foot back. Walk 1: follow-through/down, opposite arms. Walk 2: right foot passing forward, left leg supporting. Walk 3: right foot forward contact, left foot back. Walk 4: opposite follow-through/down. Walk 5: left foot passing forward to loop seamlessly into walk 0.
+Motion: real visible leg/foot progression, not seven identical static poses. Both cloth shoes remain readable below the robe; hands swing gently in opposition to feet. Keep each direction fixed throughout its row. Small consistent robe/hair secondary motion and only about 1 logical pixel of head bob; no spinning, teleporting, changing age or stretching torso. Root position remains consistent between cells. Long robes must not hide all leg animation.
+Native proportions: keep the modest youthful silhouette, lean shoulders and recognizable head/hair/robe shapes; roughly 80 to 84 logical pixels from hair top to planted soles, about five to six heads tall. In every logical 64x96 cell, center the body near x32 and ground/feet near y88, with full hair/hands/shoes inside the padding.
+Rendering: deliberate crisp small pixel clusters, regular square-pixel edges, restrained outline and flat 2-3 shade clusters per material. Clean limited charcoal/gray/ivory/skin palette matched to the approved reference. Simplify tiny folds and facial details to suit native frames. No smooth painting, anti-aliased outlines, gradients, texture noise or mosaic filter.
+Background: genuine TRANSPARENT ALPHA across the full sheet, no paper, no floor, no cast shadows, no checkerboard pattern drawn into the image.
+Text: absolutely NONE: no letters, labels, numbers, title, borders, grid marks or watermark.
+Constraints: exactly 28 isolated full-body sprites in 4 equal rows and 7 equal columns; one fixed direction per row; consistent face/hair/clothing/palette across frames; intact cuffs/hems in this normal uniform. No weapons, exposed bead, magic aura, white hair, armor, accessories, cave injuries, extra people or cropped extremities.

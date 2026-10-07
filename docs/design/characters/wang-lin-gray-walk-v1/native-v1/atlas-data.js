@@ -1,0 +1,1235 @@
+window.WangLinAtlasData = {
+    "schemaVersion":  "pixel-atlas-1",
+    "characterId":  "CHR-WANG-LIN",
+    "costume":  "gray",
+    "identityApprovedByProjectOwner":  true,
+    "animationStatus":  "first_set_pending_motion_review",
+    "sourceImage":  "../source-sheet-v2.png",
+    "frameSizePx":  [
+                        64,
+                        96
+                    ],
+    "footAnchorPx":  [
+                         32,
+                         88
+                     ],
+    "directionOrder":  [
+                           "south",
+                           "west",
+                           "east",
+                           "north"
+                       ],
+    "fps":  8,
+    "palette":  [
+                    "#00000000",
+                    "#1F1D24FF",
+                    "#29272DFF",
+                    "#3B383FFF",
+                    "#514C53FF",
+                    "#53535CFF",
+                    "#727179FF",
+                    "#96959CFF",
+                    "#B7B4B7FF",
+                    "#ADA59AFF",
+                    "#D0C7B5FF",
+                    "#EFE5D1FF",
+                    "#A96850FF",
+                    "#CC9873FF",
+                    "#E5B88FFF",
+                    "#F2CEA6FF",
+                    "#34323AFF",
+                    "#4B4850FF",
+                    "#69646AFF",
+                    "#3A363CFF",
+                    "#88796AFF",
+                    "#AB9E8BFF",
+                    "#C8B697FF",
+                    "#D3C5ACFF"
+                ],
+    "frames":  {
+                   "wanglin_gray_stand_south":  {
+                                                    "frame":  {
+                                                                  "x":  0,
+                                                                  "y":  0,
+                                                                  "w":  64,
+                                                                  "h":  96
+                                                              },
+                                                    "sourceSize":  {
+                                                                       "w":  64,
+                                                                       "h":  96
+                                                                   },
+                                                    "rotated":  false,
+                                                    "trimmed":  false,
+                                                    "anchorPx":  [
+                                                                     32,
+                                                                     88
+                                                                 ],
+                                                    "image":  "frames/wanglin_gray_stand_south.png",
+                                                    "pixelHash":  "b0a0be521d9fc9c0fcecbd000995c1aefe733c7e7daef8f3e62ce836582fe697"
+                                                },
+                   "wanglin_gray_walk_south_00":  {
+                                                      "frame":  {
+                                                                    "x":  64,
+                                                                    "y":  0,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_south_00.png",
+                                                      "pixelHash":  "3bb476676d2748b6f1d2367cd152c41b97b1cc4be5b015913b8df6d43e3b2710"
+                                                  },
+                   "wanglin_gray_walk_south_01":  {
+                                                      "frame":  {
+                                                                    "x":  128,
+                                                                    "y":  0,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_south_01.png",
+                                                      "pixelHash":  "23ccd722d88de0726d2ac49c87d6b79e0d8642f9f44e36294a4c814b7cb51fbc"
+                                                  },
+                   "wanglin_gray_walk_south_02":  {
+                                                      "frame":  {
+                                                                    "x":  192,
+                                                                    "y":  0,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_south_02.png",
+                                                      "pixelHash":  "ffc92b4e205e4e225d47ed1be1caac3acc6aa77c186717d5d206945f48be09e3"
+                                                  },
+                   "wanglin_gray_walk_south_03":  {
+                                                      "frame":  {
+                                                                    "x":  256,
+                                                                    "y":  0,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_south_03.png",
+                                                      "pixelHash":  "aa19aa6fdea8769e8edaf9720f3bf5edb80a98f8042b436ec41d7d7e7fa2cca6"
+                                                  },
+                   "wanglin_gray_walk_south_04":  {
+                                                      "frame":  {
+                                                                    "x":  320,
+                                                                    "y":  0,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_south_04.png",
+                                                      "pixelHash":  "7263580b59ccb42ee7b8fe82737704cd055da675e5bcb460336d96331bf093a7"
+                                                  },
+                   "wanglin_gray_walk_south_05":  {
+                                                      "frame":  {
+                                                                    "x":  384,
+                                                                    "y":  0,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_south_05.png",
+                                                      "pixelHash":  "9a8a4b44545406f24e0a7b0086a9a9915b8b6921d42cb72fb8370e7b739c0cb4"
+                                                  },
+                   "wanglin_gray_stand_west":  {
+                                                   "frame":  {
+                                                                 "x":  0,
+                                                                 "y":  96,
+                                                                 "w":  64,
+                                                                 "h":  96
+                                                             },
+                                                   "sourceSize":  {
+                                                                      "w":  64,
+                                                                      "h":  96
+                                                                  },
+                                                   "rotated":  false,
+                                                   "trimmed":  false,
+                                                   "anchorPx":  [
+                                                                    32,
+                                                                    88
+                                                                ],
+                                                   "image":  "frames/wanglin_gray_stand_west.png",
+                                                   "pixelHash":  "d9794482f8cacdc5fe809d3dc89f19ce3bf8543ebb7299d8970ffdd20634e1d4"
+                                               },
+                   "wanglin_gray_walk_west_00":  {
+                                                     "frame":  {
+                                                                   "x":  64,
+                                                                   "y":  96,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_west_00.png",
+                                                     "pixelHash":  "835fba4e9c70511397c8168cba91fc87c9949d55994c41b9d1e79636699876d1"
+                                                 },
+                   "wanglin_gray_walk_west_01":  {
+                                                     "frame":  {
+                                                                   "x":  128,
+                                                                   "y":  96,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_west_01.png",
+                                                     "pixelHash":  "71f43479c297181451c7880848afdc703acd0cad1e58d2c1c3f95007e4492f73"
+                                                 },
+                   "wanglin_gray_walk_west_02":  {
+                                                     "frame":  {
+                                                                   "x":  192,
+                                                                   "y":  96,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_west_02.png",
+                                                     "pixelHash":  "6cd68cefc2a35202167259a744efe9d6295bc17adfcb178cc42afa4adaa10ec9"
+                                                 },
+                   "wanglin_gray_walk_west_03":  {
+                                                     "frame":  {
+                                                                   "x":  256,
+                                                                   "y":  96,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_west_03.png",
+                                                     "pixelHash":  "fc14dece8911a4a379791a175874dc79537cc41945c8e42dc7def20eb3ff2394"
+                                                 },
+                   "wanglin_gray_walk_west_04":  {
+                                                     "frame":  {
+                                                                   "x":  320,
+                                                                   "y":  96,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_west_04.png",
+                                                     "pixelHash":  "337de321828ca85a7cd4f997fa998fcc77f1bcb19cf6534feb999f39f22a20ca"
+                                                 },
+                   "wanglin_gray_walk_west_05":  {
+                                                     "frame":  {
+                                                                   "x":  384,
+                                                                   "y":  96,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_west_05.png",
+                                                     "pixelHash":  "0a8771ea8240a91e1a639e2c01f3c206def90b6aa37b5b0ff537e569e4c556e3"
+                                                 },
+                   "wanglin_gray_stand_east":  {
+                                                   "frame":  {
+                                                                 "x":  0,
+                                                                 "y":  192,
+                                                                 "w":  64,
+                                                                 "h":  96
+                                                             },
+                                                   "sourceSize":  {
+                                                                      "w":  64,
+                                                                      "h":  96
+                                                                  },
+                                                   "rotated":  false,
+                                                   "trimmed":  false,
+                                                   "anchorPx":  [
+                                                                    32,
+                                                                    88
+                                                                ],
+                                                   "image":  "frames/wanglin_gray_stand_east.png",
+                                                   "pixelHash":  "f190f9b4046f23ac7da37bd0cffd7da5f966c81adfe8de0aacda315505e66cae"
+                                               },
+                   "wanglin_gray_walk_east_00":  {
+                                                     "frame":  {
+                                                                   "x":  64,
+                                                                   "y":  192,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_east_00.png",
+                                                     "pixelHash":  "cf5382c3074f8345957783dc1c8b98ed0dcab6a528baa305a9b99398ad0fde30"
+                                                 },
+                   "wanglin_gray_walk_east_01":  {
+                                                     "frame":  {
+                                                                   "x":  128,
+                                                                   "y":  192,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_east_01.png",
+                                                     "pixelHash":  "7c1fd8391f9ab9dac773c5af9bf61edf2aa63a985634a638748080860f843419"
+                                                 },
+                   "wanglin_gray_walk_east_02":  {
+                                                     "frame":  {
+                                                                   "x":  192,
+                                                                   "y":  192,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_east_02.png",
+                                                     "pixelHash":  "ccb3f106db180a0fc9231992dc1b502bf32eb2c42d950b29e94c2f2311945b36"
+                                                 },
+                   "wanglin_gray_walk_east_03":  {
+                                                     "frame":  {
+                                                                   "x":  256,
+                                                                   "y":  192,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_east_03.png",
+                                                     "pixelHash":  "c43e48e9b9b025541aaceed0cf13d5bd59ad78b7ad24a9640f808a834ea67b69"
+                                                 },
+                   "wanglin_gray_walk_east_04":  {
+                                                     "frame":  {
+                                                                   "x":  320,
+                                                                   "y":  192,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_east_04.png",
+                                                     "pixelHash":  "8d39672af06dc70aea069cdc2befd7c26351bbb4212fb88f09a7ce5a507bb11a"
+                                                 },
+                   "wanglin_gray_walk_east_05":  {
+                                                     "frame":  {
+                                                                   "x":  384,
+                                                                   "y":  192,
+                                                                   "w":  64,
+                                                                   "h":  96
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  64,
+                                                                        "h":  96
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      32,
+                                                                      88
+                                                                  ],
+                                                     "image":  "frames/wanglin_gray_walk_east_05.png",
+                                                     "pixelHash":  "7116da8bdfe51989c735ec2cc1217b548ee92af2ab30bbb5e6e8a6c852e29d5a"
+                                                 },
+                   "wanglin_gray_stand_north":  {
+                                                    "frame":  {
+                                                                  "x":  0,
+                                                                  "y":  288,
+                                                                  "w":  64,
+                                                                  "h":  96
+                                                              },
+                                                    "sourceSize":  {
+                                                                       "w":  64,
+                                                                       "h":  96
+                                                                   },
+                                                    "rotated":  false,
+                                                    "trimmed":  false,
+                                                    "anchorPx":  [
+                                                                     32,
+                                                                     88
+                                                                 ],
+                                                    "image":  "frames/wanglin_gray_stand_north.png",
+                                                    "pixelHash":  "0e9ec2064c7e19c2bc469710a7b7fb4e4f761d687241deb3a3b5d7aca506ed87"
+                                                },
+                   "wanglin_gray_walk_north_00":  {
+                                                      "frame":  {
+                                                                    "x":  64,
+                                                                    "y":  288,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_north_00.png",
+                                                      "pixelHash":  "d5b3d644b31d418403acff27a92fe3416b3afc95f1451ecb246377234270b8bd"
+                                                  },
+                   "wanglin_gray_walk_north_01":  {
+                                                      "frame":  {
+                                                                    "x":  128,
+                                                                    "y":  288,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_north_01.png",
+                                                      "pixelHash":  "a1144fade6cab4f9619869909ecfb16ccdd145ec0b7d2a13d29b4a0076056fdd"
+                                                  },
+                   "wanglin_gray_walk_north_02":  {
+                                                      "frame":  {
+                                                                    "x":  192,
+                                                                    "y":  288,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_north_02.png",
+                                                      "pixelHash":  "201ee2b492f977244f8653a2b300b0970cc7b34e1d2db1f44a22c9778e0e5d2c"
+                                                  },
+                   "wanglin_gray_walk_north_03":  {
+                                                      "frame":  {
+                                                                    "x":  256,
+                                                                    "y":  288,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_north_03.png",
+                                                      "pixelHash":  "bafd739f80dc7690fa3c7acfc2c547bfc91abe214a8892ded516bfdcc0ca5232"
+                                                  },
+                   "wanglin_gray_walk_north_04":  {
+                                                      "frame":  {
+                                                                    "x":  320,
+                                                                    "y":  288,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_north_04.png",
+                                                      "pixelHash":  "d2d8c3646607c0a7100694d8362f36afec2ed4e4190efd093bef4f5f45ea2b7f"
+                                                  },
+                   "wanglin_gray_walk_north_05":  {
+                                                      "frame":  {
+                                                                    "x":  384,
+                                                                    "y":  288,
+                                                                    "w":  64,
+                                                                    "h":  96
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  64,
+                                                                         "h":  96
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       32,
+                                                                       88
+                                                                   ],
+                                                      "image":  "frames/wanglin_gray_walk_north_05.png",
+                                                      "pixelHash":  "62c84fc6e8c9cdf01bc7982b780b452821934d809729b0584848e622c0784329"
+                                                  }
+               },
+    "animations":  {
+                       "stand_south":  [
+                                           "wanglin_gray_stand_south"
+                                       ],
+                       "walk_south":  [
+                                          "wanglin_gray_walk_south_00",
+                                          "wanglin_gray_walk_south_01",
+                                          "wanglin_gray_walk_south_02",
+                                          "wanglin_gray_walk_south_03",
+                                          "wanglin_gray_walk_south_04",
+                                          "wanglin_gray_walk_south_05"
+                                      ],
+                       "stand_west":  [
+                                          "wanglin_gray_stand_west"
+                                      ],
+                       "walk_west":  [
+                                         "wanglin_gray_walk_west_00",
+                                         "wanglin_gray_walk_west_01",
+                                         "wanglin_gray_walk_west_02",
+                                         "wanglin_gray_walk_west_03",
+                                         "wanglin_gray_walk_west_04",
+                                         "wanglin_gray_walk_west_05"
+                                     ],
+                       "stand_east":  [
+                                          "wanglin_gray_stand_east"
+                                      ],
+                       "walk_east":  [
+                                         "wanglin_gray_walk_east_00",
+                                         "wanglin_gray_walk_east_01",
+                                         "wanglin_gray_walk_east_02",
+                                         "wanglin_gray_walk_east_03",
+                                         "wanglin_gray_walk_east_04",
+                                         "wanglin_gray_walk_east_05"
+                                     ],
+                       "stand_north":  [
+                                           "wanglin_gray_stand_north"
+                                       ],
+                       "walk_north":  [
+                                          "wanglin_gray_walk_north_00",
+                                          "wanglin_gray_walk_north_01",
+                                          "wanglin_gray_walk_north_02",
+                                          "wanglin_gray_walk_north_03",
+                                          "wanglin_gray_walk_north_04",
+                                          "wanglin_gray_walk_north_05"
+                                      ]
+                   },
+    "meta":  {
+                 "image":  "atlas.png",
+                 "size":  {
+                              "w":  448,
+                              "h":  384
+                          },
+                 "format":  "indexed_png",
+                 "scale":  1
+             },
+    "export":  {
+                   "artMethod":  "built_in_image_gen",
+                   "packingMethod":  "connected_component_crop_uniform_nearest_neighbor_fixed_palette",
+                   "nativeAlpha":  "0_or_255",
+                   "frameCount":  28,
+                   "sourcePath":  "source-sheet-v2.png",
+                   "reports":  [
+                                   {
+                                       "Row":  0,
+                                       "Column":  0,
+                                       "SourceBounds":  [
+                                                            57,
+                                                            5,
+                                                            142,
+                                                            281
+                                                        ],
+                                       "NativeBounds":  [
+                                                            12,
+                                                            8,
+                                                            41,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2076,
+                                       "PixelHash":  "b0a0be521d9fc9c0fcecbd000995c1aefe733c7e7daef8f3e62ce836582fe697",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  87
+                                   },
+                                   {
+                                       "Row":  0,
+                                       "Column":  1,
+                                       "SourceBounds":  [
+                                                            258,
+                                                            6,
+                                                            158,
+                                                            283
+                                                        ],
+                                       "NativeBounds":  [
+                                                            10,
+                                                            7,
+                                                            46,
+                                                            82
+                                                        ],
+                                       "OpaquePixels":  2196,
+                                       "PixelHash":  "3bb476676d2748b6f1d2367cd152c41b97b1cc4be5b015913b8df6d43e3b2710",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  0,
+                                       "Column":  2,
+                                       "SourceBounds":  [
+                                                            451,
+                                                            6,
+                                                            153,
+                                                            283
+                                                        ],
+                                       "NativeBounds":  [
+                                                            9,
+                                                            7,
+                                                            44,
+                                                            82
+                                                        ],
+                                       "OpaquePixels":  2152,
+                                       "PixelHash":  "23ccd722d88de0726d2ac49c87d6b79e0d8642f9f44e36294a4c814b7cb51fbc",
+                                       "LowestLeftPixelY":  87,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  0,
+                                       "Column":  3,
+                                       "SourceBounds":  [
+                                                            635,
+                                                            5,
+                                                            150,
+                                                            284
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            7,
+                                                            43,
+                                                            82
+                                                        ],
+                                       "OpaquePixels":  2117,
+                                       "PixelHash":  "ffc92b4e205e4e225d47ed1be1caac3acc6aa77c186717d5d206945f48be09e3",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  0,
+                                       "Column":  4,
+                                       "SourceBounds":  [
+                                                            826,
+                                                            5,
+                                                            146,
+                                                            284
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            7,
+                                                            43,
+                                                            82
+                                                        ],
+                                       "OpaquePixels":  2119,
+                                       "PixelHash":  "aa19aa6fdea8769e8edaf9720f3bf5edb80a98f8042b436ec41d7d7e7fa2cca6",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  0,
+                                       "Column":  5,
+                                       "SourceBounds":  [
+                                                            1020,
+                                                            6,
+                                                            146,
+                                                            283
+                                                        ],
+                                       "NativeBounds":  [
+                                                            12,
+                                                            7,
+                                                            42,
+                                                            82
+                                                        ],
+                                       "OpaquePixels":  2101,
+                                       "PixelHash":  "7263580b59ccb42ee7b8fe82737704cd055da675e5bcb460336d96331bf093a7",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  0,
+                                       "Column":  6,
+                                       "SourceBounds":  [
+                                                            1199,
+                                                            6,
+                                                            146,
+                                                            283
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            7,
+                                                            42,
+                                                            82
+                                                        ],
+                                       "OpaquePixels":  2061,
+                                       "PixelHash":  "9a8a4b44545406f24e0a7b0086a9a9915b8b6921d42cb72fb8370e7b739c0cb4",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  87
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  0,
+                                       "SourceBounds":  [
+                                                            61,
+                                                            289,
+                                                            122,
+                                                            281
+                                                        ],
+                                       "NativeBounds":  [
+                                                            17,
+                                                            8,
+                                                            35,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  1841,
+                                       "PixelHash":  "d9794482f8cacdc5fe809d3dc89f19ce3bf8543ebb7299d8970ffdd20634e1d4",
+                                       "LowestLeftPixelY":  86,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  1,
+                                       "SourceBounds":  [
+                                                            236,
+                                                            291,
+                                                            179,
+                                                            281
+                                                        ],
+                                       "NativeBounds":  [
+                                                            10,
+                                                            8,
+                                                            51,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2342,
+                                       "PixelHash":  "835fba4e9c70511397c8168cba91fc87c9949d55994c41b9d1e79636699876d1",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  87
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  2,
+                                       "SourceBounds":  [
+                                                            452,
+                                                            292,
+                                                            149,
+                                                            280
+                                                        ],
+                                       "NativeBounds":  [
+                                                            14,
+                                                            8,
+                                                            43,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2187,
+                                       "PixelHash":  "71f43479c297181451c7880848afdc703acd0cad1e58d2c1c3f95007e4492f73",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  85
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  3,
+                                       "SourceBounds":  [
+                                                            647,
+                                                            294,
+                                                            145,
+                                                            278
+                                                        ],
+                                       "NativeBounds":  [
+                                                            15,
+                                                            8,
+                                                            42,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  1994,
+                                       "PixelHash":  "6cd68cefc2a35202167259a744efe9d6295bc17adfcb178cc42afa4adaa10ec9",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  85
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  4,
+                                       "SourceBounds":  [
+                                                            840,
+                                                            292,
+                                                            136,
+                                                            281
+                                                        ],
+                                       "NativeBounds":  [
+                                                            15,
+                                                            8,
+                                                            39,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2018,
+                                       "PixelHash":  "fc14dece8911a4a379791a175874dc79537cc41945c8e42dc7def20eb3ff2394",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  86
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  5,
+                                       "SourceBounds":  [
+                                                            1008,
+                                                            292,
+                                                            167,
+                                                            280
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            8,
+                                                            48,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2245,
+                                       "PixelHash":  "337de321828ca85a7cd4f997fa998fcc77f1bcb19cf6534feb999f39f22a20ca",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  6,
+                                       "SourceBounds":  [
+                                                            1204,
+                                                            293,
+                                                            145,
+                                                            279
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            8,
+                                                            42,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2001,
+                                       "PixelHash":  "0a8771ea8240a91e1a639e2c01f3c206def90b6aa37b5b0ff537e569e4c556e3",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  87
+                                   },
+                                   {
+                                       "Row":  2,
+                                       "Column":  0,
+                                       "SourceBounds":  [
+                                                            50,
+                                                            576,
+                                                            129,
+                                                            283
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            7,
+                                                            37,
+                                                            82
+                                                        ],
+                                       "OpaquePixels":  1948,
+                                       "PixelHash":  "f190f9b4046f23ac7da37bd0cffd7da5f966c81adfe8de0aacda315505e66cae",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  86
+                                   },
+                                   {
+                                       "Row":  2,
+                                       "Column":  1,
+                                       "SourceBounds":  [
+                                                            239,
+                                                            578,
+                                                            171,
+                                                            281
+                                                        ],
+                                       "NativeBounds":  [
+                                                            7,
+                                                            8,
+                                                            50,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2228,
+                                       "PixelHash":  "cf5382c3074f8345957783dc1c8b98ed0dcab6a528baa305a9b99398ad0fde30",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  87
+                                   },
+                                   {
+                                       "Row":  2,
+                                       "Column":  2,
+                                       "SourceBounds":  [
+                                                            437,
+                                                            578,
+                                                            165,
+                                                            283
+                                                        ],
+                                       "NativeBounds":  [
+                                                            6,
+                                                            7,
+                                                            48,
+                                                            82
+                                                        ],
+                                       "OpaquePixels":  2215,
+                                       "PixelHash":  "7c1fd8391f9ab9dac773c5af9bf61edf2aa63a985634a638748080860f843419",
+                                       "LowestLeftPixelY":  86,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  2,
+                                       "Column":  3,
+                                       "SourceBounds":  [
+                                                            630,
+                                                            579,
+                                                            138,
+                                                            280
+                                                        ],
+                                       "NativeBounds":  [
+                                                            10,
+                                                            8,
+                                                            40,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2103,
+                                       "PixelHash":  "ccb3f106db180a0fc9231992dc1b502bf32eb2c42d950b29e94c2f2311945b36",
+                                       "LowestLeftPixelY":  86,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  2,
+                                       "Column":  4,
+                                       "SourceBounds":  [
+                                                            816,
+                                                            579,
+                                                            170,
+                                                            281
+                                                        ],
+                                       "NativeBounds":  [
+                                                            7,
+                                                            8,
+                                                            49,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2284,
+                                       "PixelHash":  "c43e48e9b9b025541aaceed0cf13d5bd59ad78b7ad24a9640f808a834ea67b69",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  2,
+                                       "Column":  5,
+                                       "SourceBounds":  [
+                                                            1013,
+                                                            579,
+                                                            163,
+                                                            281
+                                                        ],
+                                       "NativeBounds":  [
+                                                            7,
+                                                            8,
+                                                            47,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2221,
+                                       "PixelHash":  "8d39672af06dc70aea069cdc2befd7c26351bbb4212fb88f09a7ce5a507bb11a",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  87
+                                   },
+                                   {
+                                       "Row":  2,
+                                       "Column":  6,
+                                       "SourceBounds":  [
+                                                            1197,
+                                                            578,
+                                                            142,
+                                                            281
+                                                        ],
+                                       "NativeBounds":  [
+                                                            9,
+                                                            8,
+                                                            41,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2060,
+                                       "PixelHash":  "7116da8bdfe51989c735ec2cc1217b548ee92af2ab30bbb5e6e8a6c852e29d5a",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  3,
+                                       "Column":  0,
+                                       "SourceBounds":  [
+                                                            47,
+                                                            861,
+                                                            147,
+                                                            277
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            9,
+                                                            43,
+                                                            80
+                                                        ],
+                                       "OpaquePixels":  2120,
+                                       "PixelHash":  "0e9ec2064c7e19c2bc469710a7b7fb4e4f761d687241deb3a3b5d7aca506ed87",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  3,
+                                       "Column":  1,
+                                       "SourceBounds":  [
+                                                            246,
+                                                            861,
+                                                            156,
+                                                            279
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            9,
+                                                            45,
+                                                            80
+                                                        ],
+                                       "OpaquePixels":  2113,
+                                       "PixelHash":  "d5b3d644b31d418403acff27a92fe3416b3afc95f1451ecb246377234270b8bd",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  3,
+                                       "Column":  2,
+                                       "SourceBounds":  [
+                                                            436,
+                                                            861,
+                                                            149,
+                                                            280
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            8,
+                                                            43,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2043,
+                                       "PixelHash":  "a1144fade6cab4f9619869909ecfb16ccdd145ec0b7d2a13d29b4a0076056fdd",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  3,
+                                       "Column":  3,
+                                       "SourceBounds":  [
+                                                            629,
+                                                            861,
+                                                            145,
+                                                            277
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            9,
+                                                            42,
+                                                            80
+                                                        ],
+                                       "OpaquePixels":  2071,
+                                       "PixelHash":  "201ee2b492f977244f8653a2b300b0970cc7b34e1d2db1f44a22c9778e0e5d2c",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  3,
+                                       "Column":  4,
+                                       "SourceBounds":  [
+                                                            810,
+                                                            862,
+                                                            159,
+                                                            278
+                                                        ],
+                                       "NativeBounds":  [
+                                                            9,
+                                                            8,
+                                                            45,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2074,
+                                       "PixelHash":  "bafd739f80dc7690fa3c7acfc2c547bfc91abe214a8892ded516bfdcc0ca5232",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  88
+                                   },
+                                   {
+                                       "Row":  3,
+                                       "Column":  5,
+                                       "SourceBounds":  [
+                                                            1008,
+                                                            861,
+                                                            151,
+                                                            279
+                                                        ],
+                                       "NativeBounds":  [
+                                                            11,
+                                                            8,
+                                                            43,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2137,
+                                       "PixelHash":  "d2d8c3646607c0a7100694d8362f36afec2ed4e4190efd093bef4f5f45ea2b7f",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  87
+                                   },
+                                   {
+                                       "Row":  3,
+                                       "Column":  6,
+                                       "SourceBounds":  [
+                                                            1191,
+                                                            861,
+                                                            152,
+                                                            279
+                                                        ],
+                                       "NativeBounds":  [
+                                                            10,
+                                                            8,
+                                                            44,
+                                                            81
+                                                        ],
+                                       "OpaquePixels":  2085,
+                                       "PixelHash":  "62c84fc6e8c9cdf01bc7982b780b452821934d809729b0584848e622c0784329",
+                                       "LowestLeftPixelY":  88,
+                                       "LowestRightPixelY":  87
+                                   }
+                               ]
+               }
+};

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vương Lâm — thử sprite nét mịn và pixel art</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root { --frame: 384px; --stage: #EDE0C8; }
+    body { margin: 0; background: #F3EBDD; color: #252722; font: 18px/1.6 'Segoe UI', Arial, sans-serif; }
+    main { max-width: 1180px; margin: auto; padding: 28px 24px 48px; }
+    h1, h2 { font-family: Cambria, 'Times New Roman', serif; line-height: 1.3; }
+    h1 { font-size: 32px; margin: 0 0 12px; }
+    h2 { font-size: 26px; margin: 0 0 16px; }
+    p { max-width: 1000px; margin: 0 0 16px; }
+    a { color: #245C53; text-underline-offset: 4px; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #245C53; outline-offset: 3px; }
+    .note { font-size: 16px; color: #605E54; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 18px 0; }
+    button { font: inherit; color: #252722; background: #FBF7EE; border: 1px solid #7A7464; border-radius: 6px; padding: 8px 14px; min-height: 48px; cursor: pointer; }
+    button[aria-pressed="true"] { background: #245C53; border-color: #245C53; color: #FBF7EE; }
+    .comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .card { min-width: 0; padding: 20px; border: 1px solid #CFC1A8; border-radius: 10px; background: #FBF7EE; }
+    .stage { background: var(--stage); border-radius: 8px; overflow: auto; padding: 24px; margin-bottom: 16px; }
+    .artboard { width: 100%; min-width: var(--frame); height: var(--frame); display: grid; place-items: center; }
+    .sprite { display: block; width: var(--frame); height: var(--frame); object-fit: contain; }
+    .pixel { image-rendering: pixelated; }
+    .card p:last-child { margin-bottom: 0; }
+    .footer { margin-top: 24px; }
+    @media (max-width: 760px) { .comparison { grid-template-columns: minmax(0, 1fr); } }
+    @media (max-width: 500px) { main { padding: 20px 16px; } h1 { font-size: 27px; } .card { padding: 16px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Vương Lâm · Hai mẫu sprite thử</h1>
+    <p><a href="../../world/hybrid-study/index.html">Xem Vương Lâm pixel trên nền môn phái stylized</a> · Có cỡ 80/96/112 px để kiểm tra khi ghép cảnh.</p>
+    <p>Cùng giai đoạn áo xám, tóc buộc nửa đầu và một tư thế đứng ở góc nhìn từ trên chéo xuống. Bản pixel lấy bản nét mịn làm tham chiếu để giữ nhận diện và tư thế.</p>
+    <p class="note">Sau so sánh, ưu tiên pixel art cho nhân vật và giữ nền stylized 2D. Hai PNG có nền trong suốt, là mẫu đứng tĩnh; kích thước native/lưới pixel và animation cần duyệt trước sản xuất.</p>
+    <p class="note">Nhận diện <a href="../index.html#wang-lin-pixel">Vương Lâm v2</a> đã duyệt theo <a href="../../../WANG-LIN-VISUAL-SPEC.md">hồ sơ tiểu thuyết</a>. Đã có <a href="../wang-lin-gray-walk-v1/index.html">bộ đứng/đi native 64 × 96</a>. Hai hình v1 ở đây giữ làm thử phong cách.</p>
+    <div class="controls" role="group" aria-label="Cỡ khung ảnh so sánh">
+      <span>Cỡ khung ảnh:</span>
+      <button type="button" data-size="96" aria-pressed="false" aria-controls="comparison">96 px</button>
+      <button type="button" data-size="192" aria-pressed="false" aria-controls="comparison">192 px</button>
+      <button type="button" data-size="384" aria-pressed="true" aria-controls="comparison">384 px</button>
+    </div>
+    <div class="controls" role="group" aria-label="Nền để kiểm tra sprite">
+      <span>Nền xem:</span>
+      <button type="button" data-bg="light" aria-pressed="true" aria-controls="comparison">Giấy sáng</button>
+      <button type="button" data-bg="dark" aria-pressed="false" aria-controls="comparison">Mực đậm</button>
+    </div>
+    <p class="note" id="preview-status" aria-live="polite">Khung ảnh 384 px; nền giấy sáng. Hai ảnh giữ cùng kích thước canvas khi hiển thị.</p>
+    <div class="comparison" id="comparison">
+      <section class="card">
+        <h2>Stylized 2D · Nét mịn</h2>
+        <div class="stage"><div class="artboard"><img class="sprite" src="wang-lin-gray-smooth-v1.png" width="1254" height="1254" alt="Vương Lâm áo xám, tóc đen buộc nửa đầu, đứng ở góc trên chéo xuống, thể hiện bằng hình 2D nét mịn"></div></div>
+        <p><a href="wang-lin-gray-smooth-v1.png">PNG gốc</a> · <a href="wang-lin-gray-smooth-v1.prompt.txt">Prompt nét mịn</a></p>
+      </section>
+      <section class="card">
+        <h2>2D · Pixel art</h2>
+        <div class="stage"><div class="artboard"><img class="sprite pixel" src="wang-lin-gray-pixel-v1.png" width="1254" height="1254" alt="Vương Lâm với cùng tóc, áo xám và tư thế, thể hiện bằng các cụm pixel và đường viền bậc thang"></div></div>
+        <p><a href="wang-lin-gray-pixel-v1.png">PNG gốc</a> · <a href="wang-lin-gray-pixel-v1.prompt.txt">Prompt pixel art</a></p>
+      </section>
+    </div>
+    <p class="note footer">Tạo bằng imagegen tích hợp. Cỡ 96/192/384 là khung hiển thị ảnh nguồn 1.254 × 1.254; chưa khẳng định đây là sprite native 64 × 96. Bản pixel dùng chế độ hiển thị giữ cạnh pixel.</p>
+    <p><a href="README.md">Hồ sơ thử nghiệm</a> · <a href="../index.html">Concept nhân vật</a> · <a href="../../world/index.html">Mẫu môn phái</a></p>
+  </main>
+  <script>
+    let frame = 384;
+    let background = 'light';
+    const root = document.documentElement;
+    const status = document.getElementById('preview-status');
+    function updateStatus() {
+      status.textContent = `Khung ảnh ${frame} px; nền ${background === 'light' ? 'giấy sáng' : 'mực đậm'}. Hai ảnh giữ cùng kích thước canvas khi hiển thị.`;
+    }
+    document.querySelectorAll('[data-size]').forEach(button => {
+      button.addEventListener('click', () => {
+        frame = Number(button.dataset.size);
+        root.style.setProperty('--frame', `${frame}px`);
+        document.querySelectorAll('[data-size]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        updateStatus();
+      });
+    });
+    document.querySelectorAll('[data-bg]').forEach(button => {
+      button.addEventListener('click', () => {
+        background = button.dataset.bg;
+        root.style.setProperty('--stage', background === 'light' ? '#EDE0C8' : '#252722');
+        document.querySelectorAll('[data-bg]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        updateStatus();
+      });
+    });
+  </script>
+</body>
+</html>

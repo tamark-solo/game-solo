@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "core-static-verification-1",
+  "sets": [
+    {
+      "characterId": "CHR-SITU-NAN",
+      "directory": "situ-nan/native-v4",
+      "frameCount": 4,
+      "frameSizePx": [
+        64,
+        96
+      ],
+      "atlasSizePx": [
+        256,
+        96
+      ],
+      "anchorPx": [
+        32,
+        88
+      ],
+      "anchorKind": "ground_projection",
+      "paletteEntries": 24,
+      "hoverHeightPx": 4,
+      "bottomPixelsAlignWithProjection": true,
+      "transparentChestVoidVerified": true,
+      "activePaletteEntries": 20,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "heightRangePx": [
+        78,
+        80
+      ],
+      "hashesMatch": true,
+      "individualFramesMatchAtlas": true,
+      "jsonAndViewerDataMatch": true,
+      "crcAndPaddingValid": true,
+      "fourDistinctDirections": true,
+      "identityApproval": false,
+      "atlasBytes": 5935
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "directory": "li-muwan/native-v2",
+      "frameCount": 4,
+      "frameSizePx": [
+        64,
+        96
+      ],
+      "atlasSizePx": [
+        256,
+        96
+      ],
+      "anchorPx": [
+        32,
+        88
+      ],
+      "anchorKind": "feet",
+      "paletteEntries": 24,
+      "hoverHeightPx": 0,
+      "bottomPixelsAlignWithProjection": true,
+      "transparentChestVoidVerified": null,
+      "activePaletteEntries": 24,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "heightRangePx": [
+        82,
+        82
+      ],
+      "hashesMatch": true,
+      "individualFramesMatchAtlas": true,
+      "jsonAndViewerDataMatch": true,
+      "crcAndPaddingValid": true,
+      "fourDistinctDirections": true,
+      "identityApproval": true,
+      "atlasBytes": 5791
+    }
+  ],
+  "browserVerification": {
+    "browser": "local_chrome_headless",
+    "checks": {
+      "three_character_data_loaded": true,
+      "individual_identity_review_status": true,
+      "shared_map_frame_sizes": true,
+      "standing_spirit_hover_projection": true,
+      "four_direction_controls": true,
+      "smoothing_disabled": true,
+      "integer_zoom": true,
+      "dark_background": true,
+      "native_transparent_pixels": true,
+      "desktop_no_page_overflow": true,
+      "mobile_360_no_page_overflow": true,
+      "mobile_frames_not_fractional": true
+    },
+    "runtimeExceptions": 0,
+    "screenshots": [
+      "preview-desktop-v3.png",
+      "preview-360-v3.png"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3ebdd" />
+  <title>Tiên Nghịch · Phòng thử chuyển động</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23245c53'/%3E%3Cpath d='M16 46L32 16l16 30M23 35h18' fill='none' stroke='%23f3ebdd' stroke-width='4'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="app">
+    <header class="masthead">
+      <div class="brand"><div class="seal" aria-hidden="true">仙</div><div><p class="eyebrow">TIÊN NGHỊCH · XƯỞNG GAME</p><h1>Phòng thử chuyển động</h1><p class="intro">Nhân vật pixel trên nền stylized 2D.</p></div></div>
+      <div class="header-status"><span class="version">BẢN THỬ 0.3.1</span><span id="connection-chip" class="chip"><i></i>Cục bộ</span></div>
+    </header>
+    <nav class="mode-tabs" aria-label="Chế độ xem">
+      <button type="button" data-mode="inspector" aria-pressed="true"><span>01</span> Xem animation</button>
+      <button type="button" data-mode="map" aria-pressed="false"><span>02</span> Thử trên map</button>
+      <button type="button" data-mode="online" aria-pressed="false"><span>03</span> Sân chung online <i class="live-dot"></i></button>
+    </nav>
+    <main class="workspace">
+      <section class="preview-panel" aria-label="Vùng xem nhân vật">
+        <div class="stage-heading"><div><span class="eyebrow" id="scene-kicker">NGHIÊN CỨU NHÂN VẬT</span><h2 id="scene-title">Vương Lâm · chibi (mẫu mới)</h2></div><span class="tag" id="scene-tag">MẪU CHIBI MỚI</span></div>
+        <div id="stage" tabindex="0" aria-label="Vùng xem. Dùng WASD hoặc phím mũi tên để di chuyển trong chế độ map.">
+          <div id="world-labels" aria-hidden="true"></div>
+          <div id="stage-message" role="status">Đang nạp mẫu chibi và các bộ preview…</div>
+          <div class="stage-badge" id="stage-badge">ĐIỂM NEO · 32, 88</div>
+          <div class="stage-corner" id="stage-corner">PIXEL NATIVE · 2×</div>
+        </div>
+        <div class="transport">
+          <div class="transport-buttons"><button id="previous-frame" type="button" aria-label="Frame trước">‹</button><button id="play-pause" class="primary" type="button">Tạm dừng</button><button id="next-frame" type="button" aria-label="Frame sau">›</button></div>
+          <div class="frame-info"><strong id="frame-counter">—</strong><span id="frame-name">Đang nạp atlas</span></div>
+          <button id="reset-position" type="button" class="quiet">Đặt lại</button>
+        </div>
+        <div class="movement-help" id="movement-help" hidden><div><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span>hoặc phím mũi tên</span></div><p id="movement-note">Bấm vào sân để điều khiển. Trụ giữa sân dùng thử va chạm và che khuất.</p></div>
+        <div class="touch-pad" id="touch-pad" hidden aria-label="Nút di chuyển"><button type="button" data-input="north" aria-label="Đi lên">↑</button><div><button type="button" data-input="west" aria-label="Đi trái">←</button><button type="button" data-input="south" aria-label="Đi xuống">↓</button><button type="button" data-input="east" aria-label="Đi phải">→</button></div></div>
+        <div class="readouts"><div><span>Vị trí chân</span><strong id="position-readout">480 · 370</strong></div><div><span>Nhịp hiển thị</span><strong id="render-readout">— FPS</strong></div><div><span id="third-stat-label">Frame trong bộ</span><strong id="third-stat">5</strong></div></div>
+        <section class="online-roster" id="online-roster" hidden><div class="roster-heading"><h3>Đồng môn trong sân</h3><span id="room-id">—</span></div><div id="player-list"></div><p>Phiên thử dùng tên tạm; vị trí được server xử lý. Tài khoản và lưu tiến trình sẽ được bổ sung ở mốc sau.</p></section>
+      </section>
+      <aside class="controls-panel">
+        <section class="control-section" id="actor-controls"><div class="section-title"><span>01</span><h3>Nhân vật</h3></div><label for="actor">Bộ sprite</label><select id="actor" disabled></select><p class="field-note" id="actor-note">5 bộ · 116 frame native</p><p class="field-note"><a href="/assets/gait-review/index.html" target="_blank" rel="noopener">So sánh tay/chân cũ và mới ↗</a></p></section>
+        <section class="control-section" id="online-controls" hidden><div class="section-title"><span>01</span><h3>Vào sân chung</h3></div><label for="player-name">Tên đệ tử</label><input id="player-name" maxlength="24" value="Đệ tử mới" autocomplete="off" /><label for="avatar">Tạo hình</label><select id="avatar"><option value="AVATAR-NOVICE-MALE">Đệ tử nam</option><option value="AVATAR-NOVICE-FEMALE">Đệ tử nữ</option></select><label for="server-url">Địa chỉ server</label><input id="server-url" type="url" spellcheck="false" /><div class="join-actions"><button type="button" id="join-room" class="primary">Vào sân</button><button type="button" id="leave-room" disabled>Rời sân</button></div><p id="network-status" class="field-note" role="status">Chưa vào sân chung</p><button type="button" id="second-window" class="quiet wide">Mở cửa sổ người chơi thứ hai ↗</button></section>
+        <section class="control-section" id="animation-controls"><div class="section-title"><span>02</span><h3>Diễn hoạt</h3></div><label for="motion-state">Động tác</label><select id="motion-state"><option value="stand">Đứng</option><option value="walk" selected>Đi bộ</option></select><label>Hướng nhìn</label><div class="direction-grid" role="group" aria-label="Hướng nhân vật"><button type="button" data-direction="north" aria-pressed="false">↑ Bắc</button><button type="button" data-direction="west" aria-pressed="false">← Tây</button><button type="button" data-direction="south" aria-pressed="true">↓ Nam</button><button type="button" data-direction="east" aria-pressed="false">→ Đông</button></div><label for="animation-fps">Nhịp animation <output id="fps-value">8 FPS</output></label><input id="animation-fps" type="range" min="1" max="12" value="8" /><p id="gait-note" class="field-note" hidden>Khi di chuyển, nhịp chân tự khớp quãng đường. FPS thủ công dùng cho xem animation tại chỗ.</p></section>
+        <section class="control-section"><div class="section-title"><span>03</span><h3>Khung xem</h3></div><label>Phóng đại pixel</label><div class="segmented" role="group" aria-label="Zoom"><button type="button" data-zoom="1" aria-pressed="false">1×</button><button type="button" data-zoom="2" aria-pressed="true">2×</button><button type="button" data-zoom="4" aria-pressed="false">4×</button></div><label for="backdrop">Nền xem</label><select id="backdrop"><option value="paper">Giấy sáng</option><option value="dark">Mực tối</option><option value="grid">Lưới pixel</option></select><label class="check-row"><input id="show-debug" type="checkbox" checked />Hiện điểm neo / va chạm</label><label class="check-row" id="follow-control" hidden><input id="follow-camera" type="checkbox" />Camera bám nhân vật</label><div id="gait-control" hidden><label for="stride-distance">Sải bước <output id="stride-value">48 px/vòng</output></label><input id="stride-distance" type="range" min="24" max="72" step="4" value="48" /><p class="field-note">Sải ngắn: bước nhanh hơn. Dùng để khớp nhịp chân với tốc độ trên sân.</p></div></section>
+        <section class="control-section" id="movement-controls" hidden><div class="section-title"><span>04</span><h3>Thử chuyển động</h3></div><label for="move-speed">Tốc độ <output id="speed-value">80 px/s</output></label><input id="move-speed" type="range" min="40" max="160" step="10" value="80" /><label for="actor-count">Số hình mô phỏng</label><select id="actor-count"><option value="1">1 nhân vật</option><option value="5">5 nhân vật</option><option value="20">20 nhân vật</option></select><p class="field-note">Hình mô phỏng cục bộ để xem hiệu năng, không phải tài khoản online.</p></section>
+        <div class="asset-note"><span class="eyebrow">TỪ ART ĐẾN GAME</span><p>Giữ lưới 64 × 96 và điểm chân chung. Xem chuyển động trước khi sản xuất bộ động tác tiếp theo.</p><span id="asset-source">Nguồn: atlas native đã có</span></div>
+      </aside>
+    </main>
+    <footer><span>TypeScript + Three.js <i>·</i> Node.js + Colyseus</span><span>Map thử · chưa có tu luyện và chiến đấu</span></footer>
+    <p class="field-note"><a href="/chibi-pilot.html" target="_blank" rel="noopener">Xem mẫu Vương Lâm chibi theo reference mới ↗</a></p>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "tien-nghich-preview",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "assets": "node scripts/sync-preview-assets.mjs",
+    "dev": "npm run assets && concurrently -k -n SERVER,CLIENT npm:dev:server npm:dev:client",
+    "dev:client": "vite --config vite.config.ts",
+    "dev:server": "tsx watch server/src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run assets && npm run typecheck && vite build --config vite.config.ts",
+    "preview": "vite preview --config vite.config.ts",
+    "start:server": "tsx server/src/index.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "test:online": "tsx tests/online-smoke.ts",
+    "test:browser": "node tests/browser-smoke.mjs",
+    "test:movement": "node tests/movement-smoke.mjs",
+    "test:gait-review": "node tests/gait-review-smoke.mjs",
+    "test:chibi-pilot": "node tests/chibi-pilot-smoke.mjs"
+  },
+  "dependencies": {
+    "@colyseus/schema": "5.0.36",
+    "@colyseus/sdk": "0.18.5",
+    "@colyseus/ws-transport": "0.18.4",
+    "colyseus": "0.18.9",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "@types/three": "0.186.0",
+    "concurrently": "10.0.5",
+    "playwright": "1.63.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.3"
+  }
+}

@@ -1,0 +1,18 @@
+Use case: identity-preserve / precise-object-edit.
+Asset type: corrected pixel-art WALK sprite sheet for the male novice disciple in a top-down three-quarter 2D MMORPG.
+Input image 1 is the existing native atlas: use ONLY as the locked character identity, costume, palette, pixel-cluster style, camera and proportions reference. The old walking anatomy is WRONG: its near arm keeps pointing forward and its feet do not show a sound full walking cycle. Redraw the walking poses rather than copying those errors.
+Keep the same broad-shouldered young adult man, square face, black HIGH BUN with short back hair, gray intact robe, cream inner collar, dark trousers, dark cloth shoes and muted JADE GREEN belt with short belt tails. No weapons, no new props, no armor, no identity redesign. Pixel clusters with crisp square edges, no soft painterly shading.
+Deliver a wide transparent sprite sheet with EXACTLY 32 separate FULL-BODY figures: a strict grid of 4 rows and 8 columns, roomy uniform gutters, no text/grid/shadows/background. Suggested canvas 1536x1024. All sprites same scale and baseline, anatomy and camera. Do NOT include standing poses.
+ROW 1 ALL south/front-down, row 2 ALL west/left, row 3 ALL east/right, row 4 ALL north/rear-up. Every sprite in a row stays facing the same direction; never rotate to a different direction halfway through the cycle.
+Each row has ONE full in-place walking cycle in 8 genuinely different sequential poses, left-to-right:
+0 LEFT FOOT CONTACT: left leg forward heel down, right leg trailing toe. RIGHT arm forward and LEFT arm back.
+1 LEFT DOWN: weight settles on left leg, right heel lifts/toe off; opposite arms continue through.
+2 RIGHT PASSING: right bent knee passes under hips while left supports; hands pass near hips, neither arm points forward permanently.
+3 RIGHT UP: right leg swings forward, left supports behind; LEFT arm swings forward and RIGHT arm backward.
+4 RIGHT FOOT CONTACT: right leg forward heel down, left leg trailing toe. LEFT arm forward and RIGHT arm clearly BACK. Must be opposite limb configuration to pose 0.
+5 RIGHT DOWN: weight settles on right leg, left heel lifts/toe off; opposite arms continue through.
+6 LEFT PASSING: left bent knee passes under hips while right supports, arms pass neutral at hips.
+7 LEFT UP: left leg swings forward and right supports behind; RIGHT arm returns forward and LEFT arm back, approaches pose 0 smoothly.
+The visible near arm MUST swing from in front of torso to behind torso over the cycle. Shoulders pivot, elbows relaxed slightly bent, hands relaxed closed, arms swing mostly below chest height. No pointing/extended weapon-holding pose. The far arm swings in opposition and is visible when appropriate.
+Front/rear rows also alternate left/right planted shoes; robe hem should leave lower legs and both shoes readable. Side rows need heel strike, toe-off, passing and lifted swing leg, not two feet stuck to floor. No sliding the whole sprite within its cell. Slight 1–2 native pixel body bob, quiet head, restrained robe movement. Ground contact foot remains at shared baseline; other foot lifts. Preserve long-term loop 7 to 0 and upper-body consistency.
+Actual alpha transparency everywhere around/between sprites. Exactly 4x8 figures, no duplicated poses, extra fingers/limbs, merged feet, giant feet, changing face/hat/hair, labels, watermark, checkerboard or scenery.

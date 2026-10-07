@@ -1,0 +1,245 @@
+window.SituNanStaticData = {
+    "schemaVersion":  "pixel-static-atlas-1",
+    "characterId":  "CHR-SITU-NAN",
+    "form":  "damaged_nascent_soul_ch112_reference",
+    "costume":  "spectral_robe_visualization",
+    "identityApprovedByProjectOwner":  false,
+    "studyStatus":  "concept_and_static_pixel_study_pending_review",
+    "sourceImage":  "../pixel-source-v1.png",
+    "frameSizePx":  [
+                        128,
+                        128
+                    ],
+    "anchorPx":  [
+                     64,
+                     112
+                 ],
+    "anchorKind":  "seat_base",
+    "directionOrder":  [
+                           "south",
+                           "west",
+                           "east",
+                           "north"
+                       ],
+    "palette":  [
+                    "#00000000",
+                    "#10151EFF",
+                    "#1F2733FF",
+                    "#303A49FF",
+                    "#43526AFF",
+                    "#60718BFF",
+                    "#8093ACFF",
+                    "#AABBD0FF",
+                    "#D0DBE5FF",
+                    "#EBF0F3FF",
+                    "#24232AFF",
+                    "#43424AFF",
+                    "#66656DFF",
+                    "#908E93FF",
+                    "#A17766FF",
+                    "#C7A18AFF",
+                    "#E0BC9FFF",
+                    "#EDCFAFFF",
+                    "#8396A0FF",
+                    "#ADBEC8FF",
+                    "#E1EBEDFF",
+                    "#676E7AFF",
+                    "#89909BFF",
+                    "#B3BAC5FF"
+                ],
+    "frames":  {
+                   "situ_nan_soul_static_south":  {
+                                                      "frame":  {
+                                                                    "x":  0,
+                                                                    "y":  0,
+                                                                    "w":  128,
+                                                                    "h":  128
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  128,
+                                                                         "h":  128
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       64,
+                                                                       112
+                                                                   ],
+                                                      "image":  "frames/situ_nan_soul_static_south.png",
+                                                      "pixelHash":  "9550592be80b94802f6196280c50ca278074b48e53835a581712ac0d8ff701ff"
+                                                  },
+                   "situ_nan_soul_static_west":  {
+                                                     "frame":  {
+                                                                   "x":  128,
+                                                                   "y":  0,
+                                                                   "w":  128,
+                                                                   "h":  128
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  128,
+                                                                        "h":  128
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      64,
+                                                                      112
+                                                                  ],
+                                                     "image":  "frames/situ_nan_soul_static_west.png",
+                                                     "pixelHash":  "bee51dd5223df586626f3e360d3d59819113aabf9dec52c717f227688ca0fa5e"
+                                                 },
+                   "situ_nan_soul_static_east":  {
+                                                     "frame":  {
+                                                                   "x":  256,
+                                                                   "y":  0,
+                                                                   "w":  128,
+                                                                   "h":  128
+                                                               },
+                                                     "sourceSize":  {
+                                                                        "w":  128,
+                                                                        "h":  128
+                                                                    },
+                                                     "rotated":  false,
+                                                     "trimmed":  false,
+                                                     "anchorPx":  [
+                                                                      64,
+                                                                      112
+                                                                  ],
+                                                     "image":  "frames/situ_nan_soul_static_east.png",
+                                                     "pixelHash":  "18a028b1b478278f9d46e6e31639a4d4af5faba262cf622aeb1dac3fcc3398f9"
+                                                 },
+                   "situ_nan_soul_static_north":  {
+                                                      "frame":  {
+                                                                    "x":  384,
+                                                                    "y":  0,
+                                                                    "w":  128,
+                                                                    "h":  128
+                                                                },
+                                                      "sourceSize":  {
+                                                                         "w":  128,
+                                                                         "h":  128
+                                                                     },
+                                                      "rotated":  false,
+                                                      "trimmed":  false,
+                                                      "anchorPx":  [
+                                                                       64,
+                                                                       112
+                                                                   ],
+                                                      "image":  "frames/situ_nan_soul_static_north.png",
+                                                      "pixelHash":  "6a8c2c5dc4c996e6dc77a87124b25185c7f9e5cbb5c1b78448a05a6643641138"
+                                                  }
+               },
+    "animations":  {
+                       "static_south":  [
+                                            "situ_nan_soul_static_south"
+                                        ],
+                       "static_west":  [
+                                           "situ_nan_soul_static_west"
+                                       ],
+                       "static_east":  [
+                                           "situ_nan_soul_static_east"
+                                       ],
+                       "static_north":  [
+                                            "situ_nan_soul_static_north"
+                                        ]
+                   },
+    "meta":  {
+                 "image":  "atlas.png",
+                 "size":  {
+                              "w":  512,
+                              "h":  128
+                          },
+                 "format":  "indexed_png",
+                 "scale":  1
+             },
+    "export":  {
+                   "artMethod":  "built_in_image_gen",
+                   "packingMethod":  "connected_component_crop_uniform_nearest_neighbor_fixed_palette_registered_static_atlas",
+                   "nativeAlpha":  "0_or_255",
+                   "frameCount":  4,
+                   "sourcePath":  "pixel-source-v1.png",
+                   "reports":  [
+                                   {
+                                       "Row":  0,
+                                       "Column":  0,
+                                       "SourceBounds":  [
+                                                            64,
+                                                            18,
+                                                            582,
+                                                            594
+                                                        ],
+                                       "NativeBounds":  [
+                                                            14,
+                                                            9,
+                                                            101,
+                                                            104
+                                                        ],
+                                       "OpaquePixels":  5250,
+                                       "PixelHash":  "9550592be80b94802f6196280c50ca278074b48e53835a581712ac0d8ff701ff",
+                                       "LowestLeftPixelY":  108,
+                                       "LowestRightPixelY":  112
+                                   },
+                                   {
+                                       "Row":  0,
+                                       "Column":  1,
+                                       "SourceBounds":  [
+                                                            698,
+                                                            17,
+                                                            541,
+                                                            591
+                                                        ],
+                                       "NativeBounds":  [
+                                                            17,
+                                                            9,
+                                                            95,
+                                                            104
+                                                        ],
+                                       "OpaquePixels":  4522,
+                                       "PixelHash":  "bee51dd5223df586626f3e360d3d59819113aabf9dec52c717f227688ca0fa5e",
+                                       "LowestLeftPixelY":  112,
+                                       "LowestRightPixelY":  111
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  0,
+                                       "SourceBounds":  [
+                                                            71,
+                                                            619,
+                                                            566,
+                                                            585
+                                                        ],
+                                       "NativeBounds":  [
+                                                            15,
+                                                            11,
+                                                            99,
+                                                            102
+                                                        ],
+                                       "OpaquePixels":  4604,
+                                       "PixelHash":  "18a028b1b478278f9d46e6e31639a4d4af5faba262cf622aeb1dac3fcc3398f9",
+                                       "LowestLeftPixelY":  104,
+                                       "LowestRightPixelY":  112
+                                   },
+                                   {
+                                       "Row":  1,
+                                       "Column":  1,
+                                       "SourceBounds":  [
+                                                            690,
+                                                            621,
+                                                            538,
+                                                            581
+                                                        ],
+                                       "NativeBounds":  [
+                                                            17,
+                                                            11,
+                                                            95,
+                                                            102
+                                                        ],
+                                       "OpaquePixels":  4830,
+                                       "PixelHash":  "6a8c2c5dc4c996e6dc77a87124b25185c7f9e5cbb5c1b78448a05a6643641138",
+                                       "LowestLeftPixelY":  108,
+                                       "LowestRightPixelY":  112
+                                   }
+                               ]
+               },
+    "runtimeReady":  false
+};

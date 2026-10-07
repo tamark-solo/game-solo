@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "native-verification-1",
+  "sets": [
+    {
+      "characterId": "AVATAR-NOVICE-MALE",
+      "nativeDirectory": "male/native-v2",
+      "frameCount": 28,
+      "frameSizePx": [
+        64,
+        96
+      ],
+      "atlasSizePx": [
+        448,
+        384
+      ],
+      "paletteEntries": 24,
+      "activePaletteEntries": 21,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "heightRangePx": [
+        78,
+        82
+      ],
+      "bottomPixelY": 88,
+      "pngCrcsValid": true,
+      "hashesMatch": true,
+      "individualFramesMatchAtlas": true,
+      "jsonAndViewerDataMatch": true,
+      "distinctWalkFrames": {
+        "south": 6,
+        "west": 6,
+        "east": 6,
+        "north": 6
+      },
+      "atlasBytes": 30104,
+      "identityApproval": false,
+      "motionQuality": "visual_review_required"
+    },
+    {
+      "characterId": "AVATAR-NOVICE-FEMALE",
+      "nativeDirectory": "female/native-v2",
+      "frameCount": 28,
+      "frameSizePx": [
+        64,
+        96
+      ],
+      "atlasSizePx": [
+        448,
+        384
+      ],
+      "paletteEntries": 24,
+      "activePaletteEntries": 21,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "heightRangePx": [
+        77,
+        82
+      ],
+      "bottomPixelY": 88,
+      "pngCrcsValid": true,
+      "hashesMatch": true,
+      "individualFramesMatchAtlas": true,
+      "jsonAndViewerDataMatch": true,
+      "distinctWalkFrames": {
+        "south": 6,
+        "west": 6,
+        "east": 6,
+        "north": 6
+      },
+      "atlasBytes": 31327,
+      "identityApproval": false,
+      "motionQuality": "visual_review_required"
+    }
+  ],
+  "browserVerification": {
+    "browser": "local_chrome_headless_real_time",
+    "checks": {
+      "three_atlases_84_frames_loaded": true,
+      "identity_not_auto_approved": true,
+      "native_comparison_canvas_dimensions": true,
+      "pixel_smoothing_disabled": true,
+      "direction_controls": true,
+      "standing_frame_controls": true,
+      "single_step_and_pause": true,
+      "six_frame_wrap": true,
+      "integer_zoom_2x": true,
+      "dark_background": true,
+      "real_time_clock_advances": true,
+      "male_map_moves_and_stops": true,
+      "female_map_moves_after_switch": true,
+      "map_reset": true,
+      "desktop_no_page_overflow": true,
+      "mobile_360_no_page_overflow": true,
+      "mobile_native_map_keeps_1x": true
+    },
+    "runtimeExceptions": 0,
+    "screenshots": [
+      "preview-desktop-v2.png",
+      "preview-courtyard-v2.png",
+      "preview-360-v2.png"
+    ]
+  }
+}

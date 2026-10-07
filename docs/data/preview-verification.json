@@ -1,0 +1,377 @@
+{
+  "date": "2026-10-07",
+  "scope": "gait_art_redraw_local_animation_preview_and_temporary_online_courtyard",
+  "passed": true,
+  "unitTests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "browser": {
+    "passed": true,
+    "browserVersion": "155.0.8059.39",
+    "checks": [
+      "five_real_atlases_116_frames",
+      "pause_and_manual_frame_step",
+      "four_directions_all_actors_static_states_explicit",
+      "every_walk_pose_is_displayed_by_three_renderer",
+      "paper_dark_grid_integer_zoom",
+      "local_wasd_movement_input_focus_does_not_move_actor",
+      "independent_animation_uvs_1_5_20_local_actors",
+      "mobile_360_px_dpr2_touch_movement_no_horizontal_overflow",
+      "browser_auto_reconnect_same_session",
+      "two_browser_clients_see_same_server_movement",
+      "browser_leave_updates_roster"
+    ],
+    "measurements": [
+      {
+        "simulatedActors": 1,
+        "readout": "58 FPS · 1 hình",
+        "renderer": "headless_software",
+        "mmoCapacityClaim": false
+      },
+      {
+        "simulatedActors": 5,
+        "readout": "59 FPS · 5 hình",
+        "renderer": "headless_software",
+        "mmoCapacityClaim": false
+      },
+      {
+        "simulatedActors": 20,
+        "readout": "60 FPS · 20 hình",
+        "renderer": "headless_software",
+        "mmoCapacityClaim": false
+      }
+    ],
+    "browserErrors": [],
+    "mobileInputStartX": 480
+  },
+  "network": {
+    "passed": true,
+    "checks": [
+      "two_clients_same_room",
+      "both_avatar_templates",
+      "reject_teleport_and_speed",
+      "native_input_axis_sanitization",
+      "authoritative_movement",
+      "processed_input_ack",
+      "packet_flood_does_not_increase_speed",
+      "shared_positions",
+      "solid_boundary",
+      "empty_input_stops_movement",
+      "drop_and_same_session_reconnect",
+      "leave_removes_entity"
+    ],
+    "persistentAccounts": false,
+    "lastVerifiedRuntimeVersion": "0.2.0",
+    "backendChangedSinceVerification": false
+  },
+  "dependencies": {
+    "@colyseus/schema": "5.0.36",
+    "@colyseus/sdk": "0.18.5",
+    "@colyseus/ws-transport": "0.18.4",
+    "colyseus": "0.18.9",
+    "three": "0.186.1"
+  },
+  "build": {
+    "typecheck": "passed",
+    "productionClient": "passed"
+  },
+  "sourceArtModified": true,
+  "newAnimationProduced": true,
+  "persistentAccountsImplemented": false,
+  "cultivationGameplayImplemented": false,
+  "ownerMotionApproval": "changes_requested_after_reference_feedback",
+  "measurementsAreMMOCapacity": false,
+  "developmentLaunch": {
+    "command": "npm.cmd run dev",
+    "clientUrl": "http://127.0.0.1:5173/",
+    "clientHTTPStatus": 200,
+    "backendHealth": true
+  },
+  "runtimeVersion": "0.3.0",
+  "movement": {
+    "passed": true,
+    "nativeWalkFramesPerDirection": 8,
+    "newArtGenerated": true,
+    "checks": [
+      "distance_locked_gait",
+      "local_stop_no_drift",
+      "fractional_camera",
+      "prediction_before_server_roundtrip",
+      "stop_no_long_easing_tail",
+      "no_standing_slide_frames",
+      "prediction_converges_to_server",
+      "shared_collision_under_latency"
+    ],
+    "measurements": [
+      {
+        "mode": "local",
+        "postReleaseDriftPx": 0,
+        "cameraWorldX": 518.4960000000001
+      },
+      {
+        "mode": "online",
+        "injectedOneWayLatencyMs": 100,
+        "jitterMs": [
+          -8,
+          12
+        ],
+        "earlyLocalTravelPx": 3.9973333333333585,
+        "earlyServerTravelPx": 0,
+        "postReleaseDriftPx": 1.8030088142495515e-05,
+        "finalServerErrorPx": 4.164888878221973e-08,
+        "standingSlideFrames": 0
+      }
+    ]
+  },
+  "gaitReview": {
+    "passed": true,
+    "actors": 3,
+    "directionsPerActor": 4,
+    "posesPerDirection": 8,
+    "checks": [
+      "all_96_new_poses_render",
+      "opposite_contact_selection",
+      "manual_loop_wrap",
+      "mobile_360_no_page_overflow"
+    ],
+    "browserErrors": [],
+    "visualMotionApproval": "pending_owner_review"
+  },
+  "gaitSources": {
+    "passed": true,
+    "checkedActors": 3,
+    "results": [
+      {
+        "characterId": "AVATAR-NOVICE-MALE",
+        "frameCount": 36,
+        "nativeSizePx": [
+          64,
+          96
+        ],
+        "atlasSizePx": [
+          576,
+          384
+        ],
+        "paletteEntries": 24,
+        "alphaValues": [
+          0,
+          255
+        ],
+        "standingPngsByteIdentical": true,
+        "heightRangePx": [
+          79,
+          82
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "pngCRCsValid": true,
+        "frameHashesMatch": true,
+        "framesMatchAtlas": true,
+        "directions": {
+          "south": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 751,
+            "oppositeContactLegRegionChangedPixels": 343
+          },
+          "west": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 736,
+            "oppositeContactLegRegionChangedPixels": 428
+          },
+          "east": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 660,
+            "oppositeContactLegRegionChangedPixels": 433
+          },
+          "north": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 631,
+            "oppositeContactLegRegionChangedPixels": 388
+          }
+        },
+        "motionReview": "gait_redraw_changes_requested",
+        "geometryGeneratedByCode": false
+      },
+      {
+        "characterId": "AVATAR-NOVICE-FEMALE",
+        "frameCount": 36,
+        "nativeSizePx": [
+          64,
+          96
+        ],
+        "atlasSizePx": [
+          576,
+          384
+        ],
+        "paletteEntries": 24,
+        "alphaValues": [
+          0,
+          255
+        ],
+        "standingPngsByteIdentical": true,
+        "heightRangePx": [
+          74,
+          82
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "pngCRCsValid": true,
+        "frameHashesMatch": true,
+        "framesMatchAtlas": true,
+        "directions": {
+          "south": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 747,
+            "oppositeContactLegRegionChangedPixels": 290
+          },
+          "west": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 594,
+            "oppositeContactLegRegionChangedPixels": 224
+          },
+          "east": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 713,
+            "oppositeContactLegRegionChangedPixels": 530
+          },
+          "north": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 626,
+            "oppositeContactLegRegionChangedPixels": 329
+          }
+        },
+        "motionReview": "gait_redraw_changes_requested",
+        "geometryGeneratedByCode": false
+      },
+      {
+        "characterId": "CHR-WANG-LIN",
+        "frameCount": 36,
+        "nativeSizePx": [
+          64,
+          96
+        ],
+        "atlasSizePx": [
+          576,
+          384
+        ],
+        "paletteEntries": 24,
+        "alphaValues": [
+          0,
+          255
+        ],
+        "standingPngsByteIdentical": true,
+        "heightRangePx": [
+          78,
+          82
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "pngCRCsValid": true,
+        "frameHashesMatch": true,
+        "framesMatchAtlas": true,
+        "directions": {
+          "south": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 852,
+            "oppositeContactLegRegionChangedPixels": 302
+          },
+          "west": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 817,
+            "oppositeContactLegRegionChangedPixels": 527
+          },
+          "east": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 715,
+            "oppositeContactLegRegionChangedPixels": 561
+          },
+          "north": {
+            "walkFrames": 8,
+            "oppositeContactHandRegionChangedPixels": 639,
+            "oppositeContactLegRegionChangedPixels": 307
+          }
+        },
+        "motionReview": "gait_redraw_changes_requested",
+        "geometryGeneratedByCode": false
+      }
+    ],
+    "visualQualityAutomaticallyApproved": false
+  },
+  "activeNativeFrameCount": 116,
+  "archivedOriginalNativeFrameCount": 92,
+  "newDrawnWalkingPoses": 96,
+  "reusedStandingFrames": 12,
+  "unchangedStaticFrames": 8,
+  "originalSourceArtModified": false,
+  "newFrameIdentityApproval": "pending_project_owner_review",
+  "gaitSpecPath": "docs/GAIT-CORRECTION.md",
+  "sourceAndPromptSetPath": "docs/design/characters/gait-correction-v1/README.md",
+  "reviewUrl": "http://127.0.0.1:5173/assets/gait-review/index.html",
+  "technicalChecksPassed": true,
+  "referenceReviewSpecPath": "docs/GAIT-REFERENCE-REVIEW.md",
+  "chibiPilot": {
+    "nativeSource": {
+      "passed": true,
+      "characterId": "CHR-WANG-LIN",
+      "nativeFrames": 5,
+      "walkingPoses": 4,
+      "directions": [
+        "east"
+      ],
+      "frameSizePx": [
+        64,
+        96
+      ],
+      "atlasSizePx": [
+        320,
+        96
+      ],
+      "anchorPx": [
+        32,
+        88
+      ],
+      "heightRangePx": [
+        80,
+        82
+      ],
+      "paletteEntries": 24,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "distinctSourcePoses": 5,
+      "pngCRCsAndHashesValid": true,
+      "framesMatchAtlas": true,
+      "noSyntheticPoseGeometry": true,
+      "ownerMotionApproval": "pending_review"
+    },
+    "browser": {
+      "passed": true,
+      "nativeFrames": 5,
+      "walkingPoses": 4,
+      "directions": [
+        "east"
+      ],
+      "checks": [
+        "shared_three_renderer_loads_partial_asset_explicitly",
+        "all_four_poses_and_stand",
+        "distance_based_map_motion",
+        "stop_keeps_new_standing_proportions",
+        "mobile_360_touch_no_overflow"
+      ],
+      "browserErrors": [],
+      "ownerVisualApproval": "pending_review"
+    },
+    "localUrl": "http://127.0.0.1:5173/chibi-pilot.html",
+    "sourceAndPromptSetPath": "docs/design/characters/wang-lin-chibi-pilot-v1/README.md",
+    "ownerVisualApproval": "pending_review",
+    "mainOnlineActorsReplaced": false
+  }
+}

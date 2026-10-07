@@ -1,0 +1,189 @@
+{
+  "schemaVersion": "player-avatar-study-1",
+  "id": "STUDY-PLAYER-AVATARS-V2",
+  "date": "2026-10-07",
+  "pathBase": "workspace_root",
+  "status": "draft_identity_and_motion_review",
+  "characterIds": [
+    "AVATAR-NOVICE-MALE",
+    "AVATAR-NOVICE-FEMALE"
+  ],
+  "playerRole": "original_disciple",
+  "canonical": false,
+  "identityApprovedByProjectOwner": false,
+  "motionApprovedByProjectOwner": false,
+  "onlineGameplayImplemented": false,
+  "runtimeReady": false,
+  "artMethod": "built_in_image_gen",
+  "exportMethod": "connected_component_crop_uniform_nearest_neighbor_fixed_palette_registered_atlas",
+  "specPath": "docs/PLAYER-AVATAR-VISUAL-SPEC.md",
+  "viewerPath": "docs/design/characters/player-avatars-v2/index.html",
+  "exporterPath": "docs/design/characters/player-avatars-v2/export-native.ps1",
+  "verificationPath": "docs/design/characters/player-avatars-v2/verification.json",
+  "frameSizePx": [
+    64,
+    96
+  ],
+  "footAnchorPx": [
+    32,
+    88
+  ],
+  "directionOrder": [
+    "south",
+    "west",
+    "east",
+    "north"
+  ],
+  "standingFramesPerTemplate": 4,
+  "walkingFramesPerTemplate": 24,
+  "totalFrames": 56,
+  "paletteEntries": 24,
+  "paletteSharedByAvatarTemplates": true,
+  "fps": 8,
+  "baseline": {
+    "characterId": "CHR-WANG-LIN",
+    "atlasPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+    "sourceRole": "pixel_style_camera_grid_reference_only",
+    "identityApproval": true,
+    "prototypeFeedback": "có vẻ ổn đấy",
+    "releaseApproval": false
+  },
+  "templates": [
+    {
+      "characterId": "AVATAR-NOVICE-MALE",
+      "identityPath": "docs/design/characters/player-male-novice-v2.png",
+      "identityPromptPath": "docs/design/characters/player-male-novice-v2.prompt.txt",
+      "identityInputs": [
+        {
+          "path": "docs/design/characters/player-male-novice-v1.png",
+          "role": "original_identity_edit_target"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-initiation-v2.png",
+          "role": "comparison_only_avoid_same_face_and_hair"
+        }
+      ],
+      "sourceHistory": [
+        {
+          "imagePath": "docs/design/characters/player-avatars-v2/male/source-sheet-v1.png",
+          "promptPath": "docs/design/characters/player-avatars-v2/male/source-sheet-v1.prompt.txt",
+          "inputs": [
+            {
+              "path": "docs/design/characters/player-male-novice-v2.png",
+              "role": "identity_reference"
+            },
+            {
+              "path": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+              "role": "pixel_style_camera_layout_reference"
+            }
+          ]
+        },
+        {
+          "imagePath": "docs/design/characters/player-avatars-v2/male/source-sheet-v2.png",
+          "promptPath": "docs/design/characters/player-avatars-v2/male/source-sheet-v2.prompt.txt",
+          "inputs": [
+            {
+              "path": "docs/design/characters/player-avatars-v2/male/source-sheet-v1.png",
+              "role": "lower_leg_phase_edit_target"
+            }
+          ]
+        }
+      ],
+      "currentSourcePath": "docs/design/characters/player-avatars-v2/male/source-sheet-v2.png",
+      "currentNativeDirectory": "docs/design/characters/player-avatars-v2/male/native-v2",
+      "atlasPath": "docs/design/characters/player-avatars-v2/male/native-v2/atlas.png",
+      "metadataPath": "docs/design/characters/player-avatars-v2/male/native-v2/atlas.json",
+      "pixelSpecPath": "docs/design/characters/player-avatars-v2/male/pixel-spec.json",
+      "preservedNativeDirectory": "docs/design/characters/player-avatars-v2/male/native-v1",
+      "identityApprovedByProjectOwner": false,
+      "animationStatus": "draft_identity_and_motion_review",
+      "frameCount": 28
+    },
+    {
+      "characterId": "AVATAR-NOVICE-FEMALE",
+      "identityPath": "docs/design/characters/player-female-novice-v2.png",
+      "identityPromptPath": "docs/design/characters/player-female-novice-v2.prompt.txt",
+      "identityInputs": [
+        {
+          "path": "docs/design/characters/player-female-novice-v1.png",
+          "role": "original_identity_edit_target"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-initiation-v2.png",
+          "role": "comparison_only_avoid_same_face_and_hair"
+        }
+      ],
+      "sourceHistory": [
+        {
+          "imagePath": "docs/design/characters/player-avatars-v2/female/source-sheet-v1.png",
+          "promptPath": "docs/design/characters/player-avatars-v2/female/source-sheet-v1.prompt.txt",
+          "inputs": [
+            {
+              "path": "docs/design/characters/player-female-novice-v2.png",
+              "role": "identity_reference"
+            },
+            {
+              "path": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+              "role": "pixel_style_camera_layout_reference"
+            }
+          ]
+        },
+        {
+          "imagePath": "docs/design/characters/player-avatars-v2/female/source-sheet-v2.png",
+          "promptPath": "docs/design/characters/player-avatars-v2/female/source-sheet-v2.prompt.txt",
+          "inputs": [
+            {
+              "path": "docs/design/characters/player-avatars-v2/female/source-sheet-v1.png",
+              "role": "lower_leg_phase_edit_target"
+            }
+          ]
+        }
+      ],
+      "currentSourcePath": "docs/design/characters/player-avatars-v2/female/source-sheet-v2.png",
+      "currentNativeDirectory": "docs/design/characters/player-avatars-v2/female/native-v2",
+      "atlasPath": "docs/design/characters/player-avatars-v2/female/native-v2/atlas.png",
+      "metadataPath": "docs/design/characters/player-avatars-v2/female/native-v2/atlas.json",
+      "pixelSpecPath": "docs/design/characters/player-avatars-v2/female/pixel-spec.json",
+      "preservedNativeDirectory": "docs/design/characters/player-avatars-v2/female/native-v1",
+      "identityApprovedByProjectOwner": false,
+      "animationStatus": "draft_identity_and_motion_review",
+      "frameCount": 28,
+      "intermediateIdentityPath": "docs/design/characters/player-female-novice-v2-study.png",
+      "intermediateIdentityPromptPath": "docs/design/characters/player-female-novice-v2-study.prompt.txt",
+      "hairCorrectionInput": {
+        "path": "docs/design/characters/player-female-novice-v2-study.png",
+        "role": "hair_only_edit_target"
+      }
+    }
+  ],
+  "reviewItems": [
+    "portrait_and_pixel_identity_consistency",
+    "high_topknot_vs_low_nape_bun_readability_at_1x",
+    "direction_camera_consistency",
+    "walk_leg_alternation_and_loop",
+    "hair_robe_body_stability",
+    "standing_transition_anchor",
+    "gray_and_green_contrast_on_stylized_map"
+  ],
+  "futureScope": [
+    "cultivation_and_interaction_motion",
+    "additional_costumes_after_identity_review",
+    "combat_and_eight_directions_if_needed"
+  ],
+  "verification": {
+    "nativeFilesPassed": true,
+    "frameCount": 56,
+    "browserControlsPassed": 17,
+    "runtimeExceptions": 0,
+    "mobileViewportPx": [
+      360,
+      900
+    ],
+    "reportPath": "docs/design/characters/player-avatars-v2/verification.json"
+  },
+  "previewPaths": [
+    "docs/design/characters/player-avatars-v2/preview-desktop-v2.png",
+    "docs/design/characters/player-avatars-v2/preview-courtyard-v2.png",
+    "docs/design/characters/player-avatars-v2/preview-360-v2.png"
+  ]
+}

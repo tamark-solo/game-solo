@@ -1,0 +1,217 @@
+{
+  "schemaVersion": "core-ui-portraits-1",
+  "id": "CORE-UI-PORTRAITS-V1",
+  "date": "2026-10-07",
+  "pathBase": "workspace_root",
+  "status": "three_portraits_pending_review",
+  "artMethod": "built_in_image_gen",
+  "exportMethod": "whole_square_high_quality_resample_and_webp_encode",
+  "viewerPath": "docs/design/characters/core-ui-v1/index.html",
+  "motionPlanPath": "docs/CORE-CHARACTER-MOTION-PLAN.md",
+  "coreCharacterIds": [
+    "CHR-WANG-LIN",
+    "CHR-SITU-NAN",
+    "CHR-LI-MUWAN"
+  ],
+  "portraitCount": 3,
+  "expressionsPerCharacter": 1,
+  "nativeSizesPx": [
+    512,
+    160,
+    64
+  ],
+  "identitySourceScope": "accepted_wang_lin_li_muwan_and_provisional_situ_standing_v3",
+  "portraitAssetsApprovedByProjectOwner": false,
+  "animationProduced": false,
+  "onlineGameplayImplemented": false,
+  "runtimeReady": false,
+  "portraits": [
+    {
+      "id": "POR-WL-GRAY-NEUTRAL",
+      "slug": "wang-lin",
+      "characterId": "CHR-WANG-LIN",
+      "sourceAssetId": "AS-CHR-001",
+      "name": "Vương Lâm",
+      "firstPhase": "A",
+      "costume": "gray",
+      "expression": "attentive_neutral",
+      "sourceIdentityApprovalLevel": "accepted",
+      "sourceIdentityPath": "docs/design/characters/wang-lin-initiation-v2.png",
+      "sourcePath": "docs/design/characters/core-ui-v1/portraits/wang-lin/source-v1.png",
+      "promptPath": "docs/design/characters/core-ui-v1/portraits/wang-lin/source-v1.prompt.txt",
+      "inputRole": "identity_face_hair_costume_reference",
+      "status": "first_ui_portrait_pending_review",
+      "nativeFiles": [
+        {
+          "sizePx": [
+            512,
+            512
+          ],
+          "pngPath": "docs/design/characters/core-ui-v1/portraits/wang-lin/native-v1/portrait-512.png",
+          "webpPath": "docs/design/characters/core-ui-v1/portraits/wang-lin/native-v1/portrait-512.webp",
+          "pngBytes": 413544,
+          "webpBytes": 96082,
+          "webpBudgetBytes": 122880,
+          "webpSHA256": "da17d5e5722e06df00c8a1fa4e2736c5d9e014e371a83f6658f98c7988b5e114"
+        },
+        {
+          "sizePx": [
+            160,
+            160
+          ],
+          "pngPath": "docs/design/characters/core-ui-v1/portraits/wang-lin/native-v1/portrait-160.png",
+          "webpPath": "docs/design/characters/core-ui-v1/portraits/wang-lin/native-v1/portrait-160.webp",
+          "pngBytes": 45231,
+          "webpBytes": 13994,
+          "webpBudgetBytes": 24576,
+          "webpSHA256": "d0109ed1ecbcbd479fc2f8da163514dfd5f006619d3d75d12852224262918070"
+        },
+        {
+          "sizePx": [
+            64,
+            64
+          ],
+          "pngPath": "docs/design/characters/core-ui-v1/portraits/wang-lin/native-v1/portrait-64.png",
+          "webpPath": "docs/design/characters/core-ui-v1/portraits/wang-lin/native-v1/portrait-64.webp",
+          "pngBytes": 8864,
+          "webpBytes": 3574,
+          "webpBudgetBytes": 8192,
+          "webpSHA256": "f6cf843b3430098362fbe2d7b142728f983d34cd421721da3f3c05b93a681690"
+        }
+      ],
+      "usagePolicy": "story_npc_gray_costume_scene_only_not_player_avatar",
+      "sourceSizePx": [
+        1254,
+        1254
+      ],
+      "portraitApprovedByProjectOwner": false
+    },
+    {
+      "id": "POR-SNN-SPIRIT-CONFIDENT",
+      "slug": "situ-nan",
+      "characterId": "CHR-SITU-NAN",
+      "sourceAssetId": "AS-CHR-008",
+      "name": "Tư Đồ Nam",
+      "firstPhase": "B",
+      "costume": "spirit_navy_v2_identity",
+      "expression": "confident_slight_grin",
+      "sourceIdentityApprovalLevel": "provisional",
+      "sourceIdentityPath": "docs/design/characters/core-trio-v1/situ-nan-spirit-standing-v3.png",
+      "sourcePath": "docs/design/characters/core-ui-v1/portraits/situ-nan/source-v1.png",
+      "promptPath": "docs/design/characters/core-ui-v1/portraits/situ-nan/source-v1.prompt.txt",
+      "inputRole": "identity_face_hair_costume_reference",
+      "status": "first_ui_portrait_pending_review",
+      "nativeFiles": [
+        {
+          "sizePx": [
+            512,
+            512
+          ],
+          "pngPath": "docs/design/characters/core-ui-v1/portraits/situ-nan/native-v1/portrait-512.png",
+          "webpPath": "docs/design/characters/core-ui-v1/portraits/situ-nan/native-v1/portrait-512.webp",
+          "pngBytes": 440111,
+          "webpBytes": 96530,
+          "webpBudgetBytes": 122880,
+          "webpSHA256": "bb37d7bb415415f3ee104476be0438d572b4519a561ee60b0ca7b50793a59768"
+        },
+        {
+          "sizePx": [
+            160,
+            160
+          ],
+          "pngPath": "docs/design/characters/core-ui-v1/portraits/situ-nan/native-v1/portrait-160.png",
+          "webpPath": "docs/design/characters/core-ui-v1/portraits/situ-nan/native-v1/portrait-160.webp",
+          "pngBytes": 47905,
+          "webpBytes": 14140,
+          "webpBudgetBytes": 24576,
+          "webpSHA256": "7dbe88f9bf27f71434de717829e2ab462474f4fad879c01388cd94acba5ce123"
+        },
+        {
+          "sizePx": [
+            64,
+            64
+          ],
+          "pngPath": "docs/design/characters/core-ui-v1/portraits/situ-nan/native-v1/portrait-64.png",
+          "webpPath": "docs/design/characters/core-ui-v1/portraits/situ-nan/native-v1/portrait-64.webp",
+          "pngBytes": 9038,
+          "webpBytes": 3634,
+          "webpBudgetBytes": 8192,
+          "webpSHA256": "393258c5ac72107a62f5306a087092584015f32df7089fb18cc93f1a1c6265f5"
+        }
+      ],
+      "usagePolicy": "bead_personal_scene_standing_spirit_identity_upper_chest_crop",
+      "sourceSizePx": [
+        1254,
+        1254
+      ],
+      "portraitApprovedByProjectOwner": false
+    },
+    {
+      "id": "POR-LMM-PURPLE-FOCUSED",
+      "slug": "li-muwan",
+      "characterId": "CHR-LI-MUWAN",
+      "sourceAssetId": "AS-CHR-010",
+      "name": "Lý Mộ Uyển",
+      "firstPhase": "later_arc",
+      "costume": "purple_ch144_reference",
+      "expression": "calm_focused",
+      "sourceIdentityApprovalLevel": "accepted",
+      "sourceIdentityPath": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1.png",
+      "sourcePath": "docs/design/characters/core-ui-v1/portraits/li-muwan/source-v1.png",
+      "promptPath": "docs/design/characters/core-ui-v1/portraits/li-muwan/source-v1.prompt.txt",
+      "inputRole": "identity_face_hair_costume_reference",
+      "status": "first_ui_portrait_pending_review",
+      "nativeFiles": [
+        {
+          "sizePx": [
+            512,
+            512
+          ],
+          "pngPath": "docs/design/characters/core-ui-v1/portraits/li-muwan/native-v1/portrait-512.png",
+          "webpPath": "docs/design/characters/core-ui-v1/portraits/li-muwan/native-v1/portrait-512.webp",
+          "pngBytes": 435549,
+          "webpBytes": 100810,
+          "webpBudgetBytes": 122880,
+          "webpSHA256": "688d1f993c89f63a46ec890611eda72e75ed665c42bd74e3e90de209df3eb6e1"
+        },
+        {
+          "sizePx": [
+            160,
+            160
+          ],
+          "pngPath": "docs/design/characters/core-ui-v1/portraits/li-muwan/native-v1/portrait-160.png",
+          "webpPath": "docs/design/characters/core-ui-v1/portraits/li-muwan/native-v1/portrait-160.webp",
+          "pngBytes": 46930,
+          "webpBytes": 13796,
+          "webpBudgetBytes": 24576,
+          "webpSHA256": "24411b913c98e30c1dfae460348e35762d02f125f623e1b22c1b9cfccaebfe21"
+        },
+        {
+          "sizePx": [
+            64,
+            64
+          ],
+          "pngPath": "docs/design/characters/core-ui-v1/portraits/li-muwan/native-v1/portrait-64.png",
+          "webpPath": "docs/design/characters/core-ui-v1/portraits/li-muwan/native-v1/portrait-64.webp",
+          "pngBytes": 8947,
+          "webpBytes": 3510,
+          "webpBudgetBytes": 8192,
+          "webpSHA256": "ef521420fc33b0661335cee98578f5d95423b106b12e6f95d80d4d34d4ae9d40"
+        }
+      ],
+      "usagePolicy": "later_arc_purple_costume_not_intro_red_or_generic_healer",
+      "sourceSizePx": [
+        1254,
+        1254
+      ],
+      "portraitApprovedByProjectOwner": false
+    }
+  ],
+  "webpQualityParameter": 0.92,
+  "verificationPath": "docs/design/characters/core-ui-v1/verification.json",
+  "previewPaths": [
+    "docs/design/characters/core-ui-v1/preview-desktop-dark-v1.png",
+    "docs/design/characters/core-ui-v1/preview-desktop-v1.png",
+    "docs/design/characters/core-ui-v1/preview-360-v1.png"
+  ]
+}

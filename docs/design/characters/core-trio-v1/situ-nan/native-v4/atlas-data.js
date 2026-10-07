@@ -1,0 +1,263 @@
+window.SituNanStaticData = {
+  "schemaVersion": "pixel-static-atlas-1",
+  "characterId": "CHR-SITU-NAN",
+  "form": "standing_spirit_game_adaptation",
+  "costume": "spectral_robe_v2_identity",
+  "identityApprovedByProjectOwner": false,
+  "studyStatus": "provisionally_accepted_design_baseline",
+  "sourceImage": "../pixel-source-standing-v4.png",
+  "frameSizePx": [
+    64,
+    96
+  ],
+  "anchorPx": [
+    32,
+    88
+  ],
+  "anchorKind": "ground_projection",
+  "hoverHeightPx": 4,
+  "directionOrder": [
+    "south",
+    "west",
+    "east",
+    "north"
+  ],
+  "palette": [
+    "#00000000",
+    "#10151EFF",
+    "#1F2733FF",
+    "#303A49FF",
+    "#43526AFF",
+    "#60718BFF",
+    "#8093ACFF",
+    "#AABBD0FF",
+    "#D0DBE5FF",
+    "#EBF0F3FF",
+    "#24232AFF",
+    "#43424AFF",
+    "#66656DFF",
+    "#908E93FF",
+    "#A17766FF",
+    "#C7A18AFF",
+    "#E0BC9FFF",
+    "#EDCFAFFF",
+    "#8396A0FF",
+    "#ADBEC8FF",
+    "#E1EBEDFF",
+    "#676E7AFF",
+    "#89909BFF",
+    "#B3BAC5FF"
+  ],
+  "frames": {
+    "situ_nan_spirit_static_south": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "anchorPx": [
+        32,
+        88
+      ],
+      "image": "frames/situ_nan_spirit_static_south.png",
+      "pixelHash": "68bceaae62d41f48f8429347f04770d3adefc13bde403fa2e3c4a1ce479704cd"
+    },
+    "situ_nan_spirit_static_west": {
+      "frame": {
+        "x": 64,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "anchorPx": [
+        32,
+        88
+      ],
+      "image": "frames/situ_nan_spirit_static_west.png",
+      "pixelHash": "12efbbe997cac0a83de111a476dc3aea3df06f3b2f227229c523a8c5475177b2"
+    },
+    "situ_nan_spirit_static_east": {
+      "frame": {
+        "x": 128,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "anchorPx": [
+        32,
+        88
+      ],
+      "image": "frames/situ_nan_spirit_static_east.png",
+      "pixelHash": "93e55a505496a2e51a82b8544c32993ee0699e1c33dd414f917c57cdf06445c1"
+    },
+    "situ_nan_spirit_static_north": {
+      "frame": {
+        "x": 192,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "anchorPx": [
+        32,
+        88
+      ],
+      "image": "frames/situ_nan_spirit_static_north.png",
+      "pixelHash": "2b29ca2e32210d53ae5ebef371d166a4b8c5831ee31a902f87272fa6dfaec5cc"
+    }
+  },
+  "animations": {
+    "static_south": [
+      "situ_nan_spirit_static_south"
+    ],
+    "static_west": [
+      "situ_nan_spirit_static_west"
+    ],
+    "static_east": [
+      "situ_nan_spirit_static_east"
+    ],
+    "static_north": [
+      "situ_nan_spirit_static_north"
+    ]
+  },
+  "meta": {
+    "image": "atlas.png",
+    "size": {
+      "w": 256,
+      "h": 96
+    },
+    "format": "indexed_png",
+    "scale": 1
+  },
+  "export": {
+    "artMethod": "built_in_image_gen",
+    "packingMethod": "connected_component_crop_uniform_nearest_neighbor_fixed_palette_registered_static_atlas",
+    "nativeAlpha": "0_or_255",
+    "frameCount": 4,
+    "sourcePath": "pixel-source-standing-v4.png",
+    "sourceDirectionOrder": [
+      "south",
+      "east",
+      "west",
+      "north"
+    ],
+    "reports": [
+      {
+        "Row": 0,
+        "Column": 0,
+        "SourceBounds": [
+          145,
+          53,
+          359,
+          625
+        ],
+        "NativeBounds": [
+          9,
+          5,
+          46,
+          80
+        ],
+        "OpaquePixels": 2196,
+        "PixelHash": "68bceaae62d41f48f8429347f04770d3adefc13bde403fa2e3c4a1ce479704cd",
+        "LowestLeftPixelY": 84,
+        "LowestRightPixelY": 84
+      },
+      {
+        "Row": 1,
+        "Column": 0,
+        "SourceBounds": [
+          178,
+          691,
+          311,
+          608
+        ],
+        "NativeBounds": [
+          12,
+          7,
+          40,
+          78
+        ],
+        "OpaquePixels": 1889,
+        "PixelHash": "12efbbe997cac0a83de111a476dc3aea3df06f3b2f227229c523a8c5475177b2",
+        "LowestLeftPixelY": 84,
+        "LowestRightPixelY": 83
+      },
+      {
+        "Row": 0,
+        "Column": 1,
+        "SourceBounds": [
+          715,
+          57,
+          311,
+          624
+        ],
+        "NativeBounds": [
+          13,
+          5,
+          40,
+          80
+        ],
+        "OpaquePixels": 1927,
+        "PixelHash": "93e55a505496a2e51a82b8544c32993ee0699e1c33dd414f917c57cdf06445c1",
+        "LowestLeftPixelY": 84,
+        "LowestRightPixelY": 84
+      },
+      {
+        "Row": 1,
+        "Column": 1,
+        "SourceBounds": [
+          702,
+          691,
+          347,
+          608
+        ],
+        "NativeBounds": [
+          10,
+          7,
+          45,
+          78
+        ],
+        "OpaquePixels": 2087,
+        "PixelHash": "2b29ca2e32210d53ae5ebef371d166a4b8c5831ee31a902f87272fa6dfaec5cc",
+        "LowestLeftPixelY": 83,
+        "LowestRightPixelY": 84
+      }
+    ]
+  },
+  "runtimeReady": false,
+  "prototypeBaselineAcceptedByProjectOwner": true,
+  "identityApprovalLevel": "provisional",
+  "provisionalAcceptance": {
+    "by": "project_owner",
+    "date": "2026-10-07",
+    "level": "provisional",
+    "scope": "situ_nan_standing_v3_and_four_static_pixel_views",
+    "feedback": "tạm chấp nhận được rồi",
+    "purpose": "continue_gdd_art_design",
+    "releaseApproval": false
+  }
+};

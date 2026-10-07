@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "core-static-verification-1",
+  "sets": [
+    {
+      "characterId": "CHR-SITU-NAN",
+      "directory": "situ-nan/native-v1",
+      "frameCount": 4,
+      "frameSizePx": [
+        128,
+        128
+      ],
+      "atlasSizePx": [
+        512,
+        128
+      ],
+      "anchorPx": [
+        64,
+        112
+      ],
+      "anchorKind": "seat_base",
+      "paletteEntries": 24,
+      "activePaletteEntries": 24,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "heightRangePx": [
+        102,
+        104
+      ],
+      "hashesMatch": true,
+      "individualFramesMatchAtlas": true,
+      "jsonAndViewerDataMatch": true,
+      "crcAndPaddingValid": true,
+      "fourDistinctDirections": true,
+      "identityApproval": false,
+      "atlasBytes": 13540
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "directory": "li-muwan/native-v2",
+      "frameCount": 4,
+      "frameSizePx": [
+        64,
+        96
+      ],
+      "atlasSizePx": [
+        256,
+        96
+      ],
+      "anchorPx": [
+        32,
+        88
+      ],
+      "anchorKind": "feet",
+      "paletteEntries": 24,
+      "activePaletteEntries": 24,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "heightRangePx": [
+        82,
+        82
+      ],
+      "hashesMatch": true,
+      "individualFramesMatchAtlas": true,
+      "jsonAndViewerDataMatch": true,
+      "crcAndPaddingValid": true,
+      "fourDistinctDirections": true,
+      "identityApproval": false,
+      "atlasBytes": 5791
+    }
+  ],
+  "browserVerification": {
+    "browser": "local_chrome_headless",
+    "checks": {
+      "three_character_data_loaded": true,
+      "pending_identity_review": true,
+      "separate_frame_sizes": true,
+      "four_direction_controls": true,
+      "smoothing_disabled": true,
+      "integer_zoom": true,
+      "dark_background": true,
+      "native_transparent_pixels": true,
+      "desktop_no_page_overflow": true,
+      "mobile_360_no_page_overflow": true,
+      "mobile_frames_not_fractional": true
+    },
+    "runtimeExceptions": 0,
+    "screenshots": [
+      "preview-desktop.png",
+      "preview-360.png"
+    ]
+  }
+}

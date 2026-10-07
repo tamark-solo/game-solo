@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "core-character-motion-plan-1",
+  "date": "2026-10-07",
+  "status": "partial_production_wanglin_gait_ready_other_motion_planned",
+  "specPath": "docs/CORE-CHARACTER-MOTION-PLAN.md",
+  "frameSizePx": [
+    64,
+    96
+  ],
+  "directionOrder": [
+    "south",
+    "west",
+    "east",
+    "north"
+  ],
+  "anchorPx": [
+    32,
+    88
+  ],
+  "currentUniqueFrames": 44,
+  "plannedUniqueFrames": 108,
+  "plannedAdditionalFrames": 64,
+  "optionalAdditionalWangLinFrames": 8,
+  "newAnimationProduced": true,
+  "runtimeReady": false,
+  "characters": [
+    {
+      "characterId": "CHR-WANG-LIN",
+      "costume": "gray",
+      "firstPhase": "A",
+      "existingAtlasPath": "docs/design/characters/gait-correction-v1/wang-lin/native-v1/atlas.png",
+      "anchorKind": "feet",
+      "currentUniqueFrames": 36,
+      "plannedUniqueFrames": 36,
+      "plannedAdditionalFrames": 0,
+      "animations": [
+        {
+          "id": "stand",
+          "directions": 4,
+          "framesPerDirection": 1,
+          "fps": 0,
+          "currentUniqueFrames": 4,
+          "additionalFrames": 0,
+          "status": "existing"
+        },
+        {
+          "id": "walk",
+          "directions": 4,
+          "framesPerDirection": 8,
+          "fps": 8,
+          "currentUniqueFrames": 32,
+          "additionalFrames": 0,
+          "status": "previous_gait_changes_requested"
+        }
+      ],
+      "optionalAnimations": [
+        {
+          "id": "interact",
+          "directions": [
+            "south"
+          ],
+          "frames": 4,
+          "status": "optional_not_produced"
+        },
+        {
+          "id": "meditate",
+          "directions": [
+            "south"
+          ],
+          "frames": 4,
+          "status": "optional_not_produced"
+        }
+      ],
+      "previousAtlasPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png"
+    },
+    {
+      "characterId": "CHR-SITU-NAN",
+      "form": "standing_spirit_game_adaptation",
+      "firstPhase": "B",
+      "existingAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.png",
+      "anchorKind": "ground_projection",
+      "hoverHeightPx": 4,
+      "sourceIdentityApprovalLevel": "provisional",
+      "currentUniqueFrames": 4,
+      "plannedUniqueFrames": 40,
+      "plannedAdditionalFrames": 36,
+      "animations": [
+        {
+          "id": "hover",
+          "directions": 4,
+          "framesPerDirection": 4,
+          "fps": 4,
+          "reusedExistingFrames": 4,
+          "additionalFrames": 12,
+          "status": "planned",
+          "firstFrameUsesCurrentStatic": true
+        },
+        {
+          "id": "glide",
+          "directions": 4,
+          "framesPerDirection": 6,
+          "fps": 6,
+          "reusedExistingFrames": 0,
+          "additionalFrames": 24,
+          "status": "planned",
+          "legsStayExtended": true
+        }
+      ],
+      "preservedSeatedAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v2/atlas.png"
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "costume": "purple_ch144_reference",
+      "firstPhase": "later_arc",
+      "existingAtlasPath": "docs/design/characters/core-trio-v1/li-muwan/native-v2/atlas.png",
+      "anchorKind": "feet",
+      "currentUniqueFrames": 4,
+      "plannedUniqueFrames": 32,
+      "plannedAdditionalFrames": 28,
+      "animations": [
+        {
+          "id": "stand",
+          "directions": 4,
+          "framesPerDirection": 1,
+          "fps": 0,
+          "currentUniqueFrames": 4,
+          "additionalFrames": 0,
+          "status": "existing"
+        },
+        {
+          "id": "walk",
+          "directions": 4,
+          "framesPerDirection": 6,
+          "fps": 8,
+          "reusedExistingFrames": 0,
+          "additionalFrames": 24,
+          "status": "planned"
+        },
+        {
+          "id": "alchemy",
+          "directions": [
+            "south"
+          ],
+          "framesPerDirection": 4,
+          "fps": 4,
+          "reusedExistingFrames": 0,
+          "additionalFrames": 4,
+          "status": "planned_after_workbench_layout",
+          "propsSeparate": true
+        }
+      ]
+    }
+  ],
+  "originalCurrentUniqueFrames": 36,
+  "previewRuntimeReady": true,
+  "frameBudgetRequiresReestimationForChibi": true,
+  "chibiPilotSpecPath": "docs/GAIT-REFERENCE-REVIEW.md"
+}

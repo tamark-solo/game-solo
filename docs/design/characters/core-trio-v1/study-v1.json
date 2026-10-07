@@ -1,0 +1,254 @@
+{
+  "schemaVersion": "core-trio-visual-study-1",
+  "id": "STUDY-CORE-TRIO-V1",
+  "date": "2026-10-07",
+  "pathBase": "workspace_root",
+  "coreCharacterIds": [
+    "CHR-WANG-LIN",
+    "CHR-SITU-NAN",
+    "CHR-LI-MUWAN"
+  ],
+  "coreRosterConfirmedByProjectOwner": true,
+  "priority": "complete_core_identity_before_supporting_npcs",
+  "status": "two_new_identities_and_static_pixel_studies_pending_review",
+  "newCharacterIds": [
+    "CHR-SITU-NAN",
+    "CHR-LI-MUWAN"
+  ],
+  "newIdentityApprovedByProjectOwner": false,
+  "artMethod": "built_in_image_gen",
+  "specPath": "docs/CORE-CHARACTER-VISUAL-SPEC.md",
+  "viewerPath": "docs/design/characters/core-trio-v1/index.html",
+  "exporterPath": "docs/design/characters/core-trio-v1/export-static.ps1",
+  "verificationPath": "docs/design/characters/core-trio-v1/verification.json",
+  "newNativeFrameCount": 8,
+  "framesPerNewCharacter": 4,
+  "motionProduced": false,
+  "onlineGameplayImplemented": false,
+  "runtimeReady": false,
+  "existingWangLin": {
+    "identityPath": "docs/design/characters/wang-lin-initiation-v2.png",
+    "identityApproved": true,
+    "atlasPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+    "metaPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.json",
+    "role": "existing_approved_identity_and_style_reference"
+  },
+  "characters": [
+    {
+      "characterId": "CHR-SITU-NAN",
+      "identityPath": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v1.png",
+      "identityPromptPath": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v1.prompt.txt",
+      "identityInputs": [
+        {
+          "path": "docs/design/characters/wang-lin-initiation-v2.png",
+          "role": "ink_paper_style_only"
+        }
+      ],
+      "sourcePath": "docs/design/characters/core-trio-v1/situ-nan/pixel-source-v1.png",
+      "sourcePromptPath": "docs/design/characters/core-trio-v1/situ-nan/pixel-source-v1.prompt.txt",
+      "sourceInputs": [
+        {
+          "path": "docs/design/characters/core-trio-v1/situ-nan-spirit-identity-v1.png",
+          "role": "identity_and_soul_form_reference"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+          "role": "pixel_style_only"
+        }
+      ],
+      "nativeAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v1/atlas.png",
+      "nativeMetadataPath": "docs/design/characters/core-trio-v1/situ-nan/native-v1/atlas.json",
+      "pixelSpecPath": "docs/design/characters/core-trio-v1/situ-nan/pixel-spec.json",
+      "frameSizePx": [
+        128,
+        128
+      ],
+      "anchorPx": [
+        64,
+        112
+      ],
+      "anchorKind": "seat_base",
+      "form": "damaged_nascent_soul_ch112_reference",
+      "firstPlannedPhase": "B",
+      "voiceIntroChapters": [
+        46,
+        47
+      ],
+      "soulIllustrationReferenceChapter": 112,
+      "identityApproved": false,
+      "appearancePolicy": "scene_edit_required_no_auto_unlock_from_art"
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "identityPath": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1.png",
+      "identityPromptPath": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1.prompt.txt",
+      "identityInitialPath": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1-study.png",
+      "identityInitialPromptPath": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1-study.prompt.txt",
+      "identityInputs": [
+        {
+          "path": "docs/design/characters/wang-lin-initiation-v2.png",
+          "role": "ink_paper_style_only"
+        },
+        {
+          "path": "docs/design/characters/player-female-novice-v2.png",
+          "role": "comparison_only_distinct_face_hair"
+        }
+      ],
+      "identityEditInput": {
+        "path": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1-study.png",
+        "role": "hair_only_edit_target"
+      },
+      "sourcePath": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v2.png",
+      "sourcePromptPath": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v2.prompt.txt",
+      "sourceHistory": [
+        {
+          "path": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v1.png",
+          "promptPath": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v1.prompt.txt",
+          "inputs": [
+            {
+              "path": "docs/design/characters/core-trio-v1/li-muwan-early-identity-v1.png",
+              "role": "identity_reference"
+            },
+            {
+              "path": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+              "role": "pixel_style_reference"
+            }
+          ]
+        },
+        {
+          "path": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v2.png",
+          "promptPath": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v2.prompt.txt",
+          "inputs": [
+            {
+              "path": "docs/design/characters/core-trio-v1/li-muwan/pixel-source-v1.png",
+              "role": "map_proportion_edit_target"
+            },
+            {
+              "path": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+              "role": "required_map_head_body_pixel_density_reference"
+            }
+          ]
+        }
+      ],
+      "nativeAtlasPath": "docs/design/characters/core-trio-v1/li-muwan/native-v2/atlas.png",
+      "nativeMetadataPath": "docs/design/characters/core-trio-v1/li-muwan/native-v2/atlas.json",
+      "preservedNativePath": "docs/design/characters/core-trio-v1/li-muwan/native-v1",
+      "pixelSpecPath": "docs/design/characters/core-trio-v1/li-muwan/pixel-spec.json",
+      "sourceDirectionOrder": [
+        "south",
+        "east",
+        "west",
+        "north"
+      ],
+      "nativeDirectionOrder": [
+        "south",
+        "west",
+        "east",
+        "north"
+      ],
+      "frameSizePx": [
+        64,
+        96
+      ],
+      "anchorPx": [
+        32,
+        88
+      ],
+      "anchorKind": "feet",
+      "costume": "purple_ch144_reference",
+      "costumeChapterRefs": {
+        "red": 130,
+        "purple": 144
+      },
+      "firstPlannedPhase": "later_arc",
+      "identityApproved": false,
+      "appearancePolicy": "arc_edit_required_no_auto_unlock_from_art"
+    }
+  ],
+  "sources": [
+    {
+      "characterId": "CHR-SITU-NAN",
+      "chapter": 46,
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-46",
+      "scope": "old_arrogant_voice_intro",
+      "readStatus": "chapter_text_read"
+    },
+    {
+      "characterId": "CHR-SITU-NAN",
+      "chapter": 47,
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-47",
+      "scope": "name_body_lost_trapped_in_bead",
+      "readStatus": "chapter_text_read"
+    },
+    {
+      "characterId": "CHR-SITU-NAN",
+      "chapter": 112,
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-112",
+      "scope": "bead_space_context",
+      "readStatus": "official_teaser_only",
+      "publicTextUrl": "https://novelfire.net/book/renegade-immortal/chapter-112",
+      "publicTextScope": "giant_floating_cross_legged_non_solid_chest_void_closed_eyes"
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "chapter": 130,
+      "url": "https://novelfull.com/renegade-immortal/chapter-130-sudden-arrival-of-nascent-soul.html",
+      "scope": "red_clothed_wan_er_with_brother",
+      "readStatus": "public_chapter_text_read"
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "chapter": 131,
+      "url": "https://novelfull.com/renegade-immortal/chapter-131-is-he-a-fat-sheep.html",
+      "scope": "identity_confirmed_alchemy_context",
+      "readStatus": "public_chapter_text_read"
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "chapter": 141,
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-141",
+      "scope": "alchemy_cautious_sea_of_devils",
+      "readStatus": "official_teaser_read"
+    },
+    {
+      "characterId": "CHR-LI-MUWAN",
+      "chapter": 144,
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-144",
+      "scope": "chapter_title_and_cultivation_context",
+      "readStatus": "official_teaser_only",
+      "publicTextUrl": "https://novelfull.com/renegade-immortal/chapter-144-core-formation-1.html",
+      "publicTextScope": "purple_dress_tied_ponytail_alchemy_room"
+    }
+  ],
+  "artChoicesNotCanon": [
+    "precise_face_features",
+    "apparent_age",
+    "situ_hair_pigment_in_spectral_art",
+    "precise_garment_cut",
+    "palette_shades",
+    "li_muwan_ponytail_height_and_ribbon"
+  ],
+  "reviewItems": [
+    "two_new_faces_and_hair_identity",
+    "portrait_and_pixel_consistency",
+    "situ_soul_void_seated_form",
+    "li_muwan_red_purple_scene_separation",
+    "four_facing_directions_and_camera",
+    "legibility_at_native_size"
+  ],
+  "sourceProvenanceNote": "Official teaser limits are recorded; details beyond teasers use the linked publicly readable chapter text, not adaptation art or fanfiction.",
+  "verification": {
+    "nativeFramesPassed": 8,
+    "browserChecksPassed": 11,
+    "browserExceptions": 0,
+    "mobileViewportPx": [
+      360,
+      900
+    ],
+    "reportPath": "docs/design/characters/core-trio-v1/verification.json"
+  },
+  "previewPaths": [
+    "docs/design/characters/core-trio-v1/preview-desktop.png",
+    "docs/design/characters/core-trio-v1/preview-360.png"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "core-static-pixel-spec-1",
+  "date": "2026-10-07",
+  "characterId": "CHR-SITU-NAN",
+  "framePrefix": "situ_nan_spirit_",
+  "dataGlobal": "SituNanStaticData",
+  "form": "standing_spirit_game_adaptation",
+  "costume": "spectral_robe_v2_identity",
+  "frameSizePx": [
+    64,
+    96
+  ],
+  "anchorPx": [
+    32,
+    88
+  ],
+  "anchorKind": "ground_projection",
+  "contentMaxSizePx": [
+    52,
+    80
+  ],
+  "sourceGrid": {
+    "columns": 2,
+    "rows": 2,
+    "directions": [
+      "south",
+      "east",
+      "west",
+      "north"
+    ]
+  },
+  "palette": [
+    "#00000000",
+    "#10151EFF",
+    "#1F2733FF",
+    "#303A49FF",
+    "#43526AFF",
+    "#60718BFF",
+    "#8093ACFF",
+    "#AABBD0FF",
+    "#D0DBE5FF",
+    "#EBF0F3FF",
+    "#24232AFF",
+    "#43424AFF",
+    "#66656DFF",
+    "#908E93FF",
+    "#A17766FF",
+    "#C7A18AFF",
+    "#E0BC9FFF",
+    "#EDCFAFFF",
+    "#8396A0FF",
+    "#ADBEC8FF",
+    "#E1EBEDFF",
+    "#676E7AFF",
+    "#89909BFF",
+    "#B3BAC5FF"
+  ],
+  "alphaMode": "binary",
+  "identityApprovedByProjectOwner": false,
+  "purpose": "four_direction_standing_spirit_interaction_study",
+  "drawMethod": "built_in_image_gen",
+  "exportMethod": "deterministic_crop_nearest_neighbor_palette_and_atlas_pack",
+  "runtimeReady": false,
+  "hoverHeightPx": 4,
+  "standingPoseDirectionConfirmedByProjectOwner": true,
+  "transparentChestProbePx": {
+    "south": [
+      36,
+      35
+    ],
+    "west": [
+      27,
+      36
+    ],
+    "east": [
+      39,
+      36
+    ],
+    "north": [
+      33,
+      35
+    ]
+  },
+  "prototypeBaselineAcceptedByProjectOwner": true,
+  "identityApprovalLevel": "provisional",
+  "provisionalAcceptance": {
+    "by": "project_owner",
+    "date": "2026-10-07",
+    "level": "provisional",
+    "scope": "situ_nan_standing_v3_and_four_static_pixel_views",
+    "feedback": "tạm chấp nhận được rồi",
+    "purpose": "continue_gdd_art_design",
+    "releaseApproval": false
+  }
+}

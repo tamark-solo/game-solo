@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "pixel-animation-spec-1",
+  "characterId": "CHR-WANG-LIN",
+  "costume": "gray",
+  "date": "2026-10-07",
+  "identityReferencePath": "docs/design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v2.png",
+  "identityApprovedByProjectOwner": true,
+  "gridStatus": "selected_for_first_animation_set",
+  "frameSizePx": [
+    64,
+    96
+  ],
+  "footAnchorPx": [
+    32,
+    88
+  ],
+  "sourceGrid": {
+    "columns": 7,
+    "rows": 4,
+    "directions": [
+      "south",
+      "west",
+      "east",
+      "north"
+    ],
+    "standColumn": 0,
+    "walkColumns": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "walkFps": 8,
+  "displayScales": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "alphaMode": "binary",
+  "palette": [
+    "#00000000",
+    "#1F1D24FF",
+    "#29272DFF",
+    "#3B383FFF",
+    "#514C53FF",
+    "#53535CFF",
+    "#727179FF",
+    "#96959CFF",
+    "#B7B4B7FF",
+    "#ADA59AFF",
+    "#D0C7B5FF",
+    "#EFE5D1FF",
+    "#A96850FF",
+    "#CC9873FF",
+    "#E5B88FFF",
+    "#F2CEA6FF",
+    "#34323AFF",
+    "#4B4850FF",
+    "#69646AFF",
+    "#3A363CFF",
+    "#88796AFF",
+    "#AB9E8BFF",
+    "#C8B697FF",
+    "#D3C5ACFF"
+  ],
+  "walkPhase": [
+    "left_contact",
+    "left_follow_through",
+    "right_passing",
+    "right_contact",
+    "right_follow_through",
+    "left_passing"
+  ],
+  "drawMethod": "built_in_image_gen",
+  "exportMethod": "deterministic_crop_nearest_neighbor_palette_and_atlas_pack",
+  "scope": "first_gray_costume_set_only",
+  "runtimeReady": false
+}

@@ -1,0 +1,19 @@
+Use case: precise-object-edit / identity-preserve.
+Asset type: corrected walking sprite source sheet V2.
+Input image 1: EDIT TARGET, a transparent sheet of the approved youthful gray-robed Wang Lin in exactly 4 rows by 7 columns.
+Primary request: correct ONLY the WALK POSE SEQUENCE in columns 2 through 7 of every row, retaining the first standing column, exact 4x7 layout, character identity, body size, hairstyle, gray costume, direction order, camera and transparent background.
+Critical issue to fix: the current sheet repeats the same leading foot in most walking cells. The SECOND HALF of the walk must lead with the OPPOSITE leg. Do not keep nearly identical boots and arms across all six frames.
+Keep rows fixed: row1 SOUTH/front, row2 WEST/screen-left, row3 EAST/screen-right, row4 NORTH/rear view. Row4 shows back of head and robe, no face. Standing column1 stays unchanged.
+For each row use the following six unmistakably DIFFERENT walk phases in columns2–7, left-to-right:
+2: LEFT leg forward CONTACT, right leg back, right arm gently forward.
+3: LEFT leg supports body, right heel lifts and begins to travel forward; visible bent right knee, gentle opposite arm movement.
+4: RIGHT leg PASSING forward, supporting left foot planted; legs closer together, right shoe raised and knee bent.
+5: RIGHT leg forward CONTACT, LEFT leg back, LEFT arm forward. This MUST be the opposite leading foot and opposite arm to column2.
+6: RIGHT leg supports body, LEFT heel lifts and begins to travel forward; visible bent left knee.
+7: LEFT leg PASSING forward, supporting right foot planted; left shoe raised, then loop to column2.
+For the FRONT row, anatomical LEFT appears on the viewer's RIGHT. Thus the low forward shoe in column2 is on the viewer-right side; in column5 it is on the viewer-left side. For the BACK row, reverse these screen-side positions. In side rows, preserve proper near/far leg overlap so the lead swaps, with passing poses distinctly narrower than contact poses.
+Arms swing gently opposite the legs, without changing hands into fists holding props. Show feet and knees below the intact robe. Mild robe/hair motion follows the steps. No running, jumping, facing changes, adult face changes, extra limbs or foot sliding. Body/root position stays fixed within each cell; all standing/contact ground baselines align.
+Rendering: clean restrained pixel-art clusters, regular crisp edges, same charcoal/gray/ivory/skin colors. Remove accidental neon red/yellow edge flecks so every visible pixel belongs to the character palette; no glow or colored outline.
+Grid/invariants: EXACTLY 4 equal rows and 7 equal columns occupying the whole canvas; no gutters, labels or visible grid. Twenty-eight complete isolated figures; generous padding WITHIN each cell. All heads, hands and shoes inside their cells. Keep the source composition and relative placements.
+Background: TRUE TRANSPARENT ALPHA, not black, paper, checkerboard or a floor. No shadows.
+Text: none, no labels, letters, numbers, titles, watermark or logo.

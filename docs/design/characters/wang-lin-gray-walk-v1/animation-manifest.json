@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "sprite-animation-set-1",
+  "id": "ANIM-WANG-LIN-GRAY-STAND-WALK-01",
+  "date": "2026-10-07",
+  "characterId": "CHR-WANG-LIN",
+  "costume": "gray",
+  "identityApprovedByProjectOwner": true,
+  "identityReferencePath": "docs/design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v2.png",
+  "identityApprovalScope": "wang_lin_v2_identity",
+  "status": "first_set_pending_motion_review",
+  "specPath": "docs/WANG-LIN-SPRITE-SPEC.md",
+  "pixelSpecPath": "docs/design/characters/wang-lin-gray-walk-v1/pixel-spec.json",
+  "viewerPath": "docs/design/characters/wang-lin-gray-walk-v1/index.html",
+  "atlasPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png",
+  "metadataPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.json",
+  "exporterPath": "docs/design/characters/wang-lin-gray-walk-v1/export-native.ps1",
+  "pathBase": "workspace_root",
+  "frameSizePx": [
+    64,
+    96
+  ],
+  "footAnchorPx": [
+    32,
+    88
+  ],
+  "atlasSizePx": [
+    448,
+    384
+  ],
+  "paletteEntries": 24,
+  "alphaValues": [
+    0,
+    255
+  ],
+  "directionOrder": [
+    "south",
+    "west",
+    "east",
+    "north"
+  ],
+  "standingFrames": 4,
+  "walkingFrames": 24,
+  "totalFrames": 28,
+  "fps": 8,
+  "artMethod": "built_in_image_gen",
+  "exportMethod": "component_crop_uniform_nearest_neighbor_fixed_palette_registered_atlas",
+  "currentSourcePath": "docs/design/characters/wang-lin-gray-walk-v1/source-sheet-v3.png",
+  "currentSourcePromptPath": "docs/design/characters/wang-lin-gray-walk-v1/source-sheet-v3.prompt.txt",
+  "sourceHistory": [
+    {
+      "imagePath": "docs/design/characters/wang-lin-gray-walk-v1/source-sheet-v1.png",
+      "promptPath": "docs/design/characters/wang-lin-gray-walk-v1/source-sheet-v1.prompt.txt",
+      "inputPath": "docs/design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v2.png",
+      "inputRole": "approved_identity_and_style_reference"
+    },
+    {
+      "imagePath": "docs/design/characters/wang-lin-gray-walk-v1/source-sheet-v2.png",
+      "promptPath": "docs/design/characters/wang-lin-gray-walk-v1/source-sheet-v2.prompt.txt",
+      "inputPath": "docs/design/characters/wang-lin-gray-walk-v1/source-sheet-v1.png",
+      "inputRole": "edit_target_walk_cycle"
+    },
+    {
+      "imagePath": "docs/design/characters/wang-lin-gray-walk-v1/source-sheet-v3.png",
+      "promptPath": "docs/design/characters/wang-lin-gray-walk-v1/source-sheet-v3.prompt.txt",
+      "inputPath": "docs/design/characters/wang-lin-gray-walk-v1/source-sheet-v2.png",
+      "inputRole": "edit_target_lower_leg_phase_refinement"
+    }
+  ],
+  "preservedNativeExportPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v1",
+  "verification": {
+    "frameDimensions": true,
+    "indexedPng": true,
+    "activePaletteEntries": 24,
+    "alphaBinary": true,
+    "fixedBottomPixelY": 88,
+    "characterHeightRangePx": [
+      80,
+      82
+    ],
+    "framePixelHashesMatch": true,
+    "individualFramesMatchAtlas": true,
+    "sixDistinctWalkFramesPerDirection": true,
+    "jsonAndViewerDataMatch": true,
+    "browser": "local_chrome_headless_real_time",
+    "browserControlsPassed": [
+      "load_28_frames",
+      "direction",
+      "standing_mode",
+      "single_step_pause",
+      "step_back",
+      "six_frame_wrap",
+      "integer_scale",
+      "dark_background",
+      "smoothing_disabled",
+      "clock_advances",
+      "map_movement",
+      "stop_reset",
+      "palette_display",
+      "page_width"
+    ],
+    "atlasBytes": 36315
+  },
+  "motionApprovedByProjectOwner": false,
+  "onlineGameplayImplemented": false
+}

@@ -1,0 +1,60 @@
+{
+  "version": "ux-art-0.1",
+  "status": "proposed_visual_system",
+  "artDirection": "ink_and_antique_paper",
+  "artDirectionStatus": "confirmed_by_project_owner",
+  "mapArtDirection": {
+    "style": "stylized_environment_with_pixel_characters",
+    "characterStyle": "pixel_art",
+    "environmentStyle": "simplified_stylized_2d",
+    "camera": "top_down_three_quarter",
+    "status": "confirmed_by_project_owner",
+    "decisionDate": "2026-10-07",
+    "referenceViewer": "docs/design/world/hybrid-study/index.html"
+  },
+  "colors": {
+    "paper": "#F3EBDD",
+    "surface": "#FBF7EE",
+    "ink": "#252722",
+    "mutedInk": "#605E54",
+    "jade": "#245C53",
+    "jadeSoft": "#DCE9E0",
+    "spiritLight": "#8FCBBE",
+    "robeRed": "#873B35",
+    "border": "#CFC1A8",
+    "controlBorder": "#7A7464",
+    "progressTrack": "#DDD2BF",
+    "disabledSurface": "#E5DDD0",
+    "errorInk": "#963F33",
+    "focus": "#245C53"
+  },
+  "typography": {
+    "headingFamily": "Cambria, 'Times New Roman', serif",
+    "bodyFamily": "'Segoe UI', Arial, sans-serif",
+    "bodyPx": 18,
+    "captionPx": 14,
+    "headingPx": 32,
+    "resourceValuePx": 26,
+    "lineHeight": 1.6
+  },
+  "layout": {
+    "spacingPx": [4, 8, 12, 16, 24, 32, 48],
+    "cardRadiusPx": 10,
+    "buttonRadiusPx": 6,
+    "buttonHeightPx": 48,
+    "minimumTargetPx": 44,
+    "minimumViewportPx": 360,
+    "desktopMockupPx": [1440, 960],
+    "mobileMockupPx": [360, 1160]
+  },
+  "contrastTargets": {
+    "bodyText": 4.5,
+    "essentialControlIndicator": 3,
+    "focusIndicator": 3
+  },
+  "notes": [
+    "Màu sắc, kích thước và font là đề xuất chi tiết; hướng tranh mực/giấy cổ đã được người phát triển chọn.",
+    "Texture và tranh nằm ngoài các vùng chữ/số chính; spiritLight dùng cho ánh sáng, không dùng làm chữ trên nền giấy.",
+    "Các bản phác dùng ảnh cắt khung từ bảng ART để xem phối hợp hình và UI; asset game trong catalog vẫn chưa sản xuất."
+  ]
+}
