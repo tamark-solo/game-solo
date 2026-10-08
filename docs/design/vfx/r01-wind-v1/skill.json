@@ -1,0 +1,177 @@
+{
+  "version": "1.0.0",
+  "artStatus": "produced_pending_owner_motion_review",
+  "fps": 24,
+  "authoringFrameBase": 1,
+  "runtimeReady": false,
+  "character": {
+    "baseIdleFrame": [
+      64,
+      96
+    ],
+    "bodyHeightMax": 80,
+    "collisionChanged": false,
+    "directions": [
+      "east"
+    ],
+    "clip": "wanglin-wind-east",
+    "castCanvas": [
+      112,
+      96
+    ],
+    "castAnchor": [
+      56,
+      88
+    ]
+  },
+  "authority": {
+    "damage": "combat_server",
+    "movement": "movement_server",
+    "vfxAppliesDamage": false,
+    "vfxMovesActor": false
+  },
+  "presentation": {
+    "screenFlash": false,
+    "sfxAssetsProduced": false,
+    "ghosts": {
+      "sampleLagFrames": [
+        2,
+        4
+      ],
+      "opacity": [
+        0.3,
+        0.18
+      ],
+      "decorativeOnly": true
+    },
+    "sfxHooks": [
+      "wind.dash",
+      "wind.land"
+    ]
+  },
+  "preview": {
+    "worldSize": [
+      960,
+      640
+    ],
+    "cameraCenter": [
+      480,
+      320
+    ],
+    "zoom": [
+      1,
+      2,
+      4
+    ],
+    "dprCap": 2,
+    "endFrame": 28,
+    "confirmFrame": 13,
+    "moveStartFrame": 5,
+    "arrivalFrame": 11,
+    "travelWorld": 160,
+    "travelScope": "illustrative_only_replace_with_gameplay_snapshots"
+  },
+  "id": "R01-WIND-FBF-EAST",
+  "family": "wind",
+  "name": "Ngự Phong Bộ",
+  "sockets": [
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -30
+    ],
+    [
+      17,
+      -25
+    ],
+    [
+      22,
+      -25
+    ],
+    [
+      25,
+      -22
+    ],
+    [
+      25,
+      -20
+    ],
+    [
+      30,
+      -22
+    ],
+    [
+      30,
+      -22
+    ],
+    [
+      25,
+      -23
+    ],
+    [
+      20,
+      -22
+    ],
+    [
+      20,
+      -30
+    ],
+    [
+      15,
+      -25
+    ]
+  ],
+  "tracks": [
+    {
+      "clip": "wind-depart",
+      "startFrame": 1,
+      "anchor": "departure",
+      "layer": 0
+    },
+    {
+      "clip": "wind-trail",
+      "startFrame": 5,
+      "stopBeforeFrame": 11,
+      "anchor": "body",
+      "layer": 0,
+      "stopOnArrival": true
+    },
+    {
+      "clip": "wind-arrival",
+      "trigger": "movement.arrived",
+      "anchor": "arrival",
+      "layer": 2
+    }
+  ],
+  "events": [
+    {
+      "frame": 1,
+      "type": "cast.start"
+    },
+    {
+      "frame": 5,
+      "type": "movement.request",
+      "sfx": "wind.dash"
+    },
+    {
+      "frame": 11,
+      "type": "recovery.start"
+    },
+    {
+      "frame": 15,
+      "type": "character.end"
+    }
+  ],
+  "arrivalContract": {
+    "required": [
+      "castId",
+      "worldFoot",
+      "arrivedAt"
+    ],
+    "authority": "movement_server",
+    "noAutomaticInvulnerability": true
+  }
+}

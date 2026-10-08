@@ -1,5 +1,9 @@
 # Quái, nguy hiểm và chiến đấu — MVP và dài hạn
 
+> **Hồ sơ encounter hiện hành:** [Đối thủ và khảo nghiệm Hằng Nhạc v0.1](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất HN-E01/02/03, vùng/timing/AI, ba pha HN10 và checkpoint/kết nối lại, đồng bộ với [trải nghiệm v0.4](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay](NGUNG-KHI-GAMEPLAY-SPEC.md) và [tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md). Chưa là danh tính canon hoặc combat đã triển khai; hồ sơ bên dưới giữ làm tham chiếu lịch sử.
+
+> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Luật gặp gỡ/phân kỳ tầng 1/giao đấu bên dưới là tham chiếu cũ; khảo nghiệm, đối thủ và combat của nhập môn ba người còn cần hồ sơ mới. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+
 > **Điều chỉnh online v0.7:** hổ/hang/kiếm linh và trận của Vương Lâm dưới đây thuộc hồ sơ chính truyện tham chiếu. Người chơi tạo đệ tử riêng; gặp gỡ/đối thủ/phần thưởng của đệ tử cần biên tập riêng. Không dùng sự kiện truyện để nhân vật mỗi tài khoản nhận vật phẩm độc hữu của Vương Lâm. [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md) xác định hướng mới; B vẫn sau A.
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  

@@ -1,0 +1,194 @@
+{
+  "version": "1.0.0",
+  "realm": "R02",
+  "realmName": "Trúc Cơ",
+  "artStatus": "produced_pending_owner_motion_review",
+  "fps": 24,
+  "authoringFrameBase": 1,
+  "runtimeReady": false,
+  "authority": {
+    "damage": "combat_server",
+    "movement": "movement_server",
+    "vfxAppliesDamage": false,
+    "vfxMovesActor": false
+  },
+  "presentation": {
+    "screenFlash": false,
+    "sfxAssetsProduced": false,
+    "ghosts": {
+      "sampleLagFrames": [
+        2,
+        4
+      ],
+      "opacity": [
+        0.3,
+        0.18
+      ],
+      "decorativeOnly": true
+    }
+  },
+  "preview": {
+    "endFrame": 38,
+    "confirmFrame": 15,
+    "worldSize": [
+      960,
+      640
+    ],
+    "bodyHeightMax": 80,
+    "zoom": [
+      1,
+      2,
+      4
+    ],
+    "cameraCenter": [
+      480,
+      320
+    ],
+    "dprCap": 2,
+    "moveStartFrame": 8,
+    "arrivalFrame": 14,
+    "travelWorld": 160,
+    "travelScope": "illustrative_only_host_movement_required"
+  },
+  "id": "R02-WIND",
+  "family": "wind",
+  "name": "Hồi Phong Bộ",
+  "character": {
+    "baseIdleFrame": [
+      64,
+      96
+    ],
+    "bodyHeightMax": 80,
+    "collisionChanged": false,
+    "directions": [
+      "east"
+    ],
+    "clip": "wanglin-wind-east",
+    "castCanvas": [
+      112,
+      96
+    ],
+    "castAnchor": [
+      56,
+      88
+    ],
+    "holds": [
+      1,
+      1,
+      2,
+      3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      2
+    ]
+  },
+  "sockets": [
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -30
+    ],
+    [
+      17,
+      -25
+    ],
+    [
+      22,
+      -25
+    ],
+    [
+      25,
+      -22
+    ],
+    [
+      25,
+      -20
+    ],
+    [
+      30,
+      -22
+    ],
+    [
+      30,
+      -22
+    ],
+    [
+      25,
+      -23
+    ],
+    [
+      20,
+      -22
+    ],
+    [
+      20,
+      -30
+    ],
+    [
+      15,
+      -25
+    ]
+  ],
+  "tracks": [
+    {
+      "clip": "wind-departure-coil",
+      "startFrame": 1,
+      "anchor": "departure",
+      "layer": 0
+    },
+    {
+      "clip": "wind-trail",
+      "startFrame": 8,
+      "stopBeforeFrame": 14,
+      "stopOnArrival": true,
+      "anchor": "body",
+      "layer": 0
+    },
+    {
+      "clip": "wind-return-curl",
+      "trigger": "movement.arrived",
+      "anchor": "arrival",
+      "layer": 2
+    }
+  ],
+  "events": [
+    {
+      "frame": 1,
+      "type": "cast.start"
+    },
+    {
+      "frame": 4,
+      "type": "coil.organize"
+    },
+    {
+      "frame": 8,
+      "type": "movement.request",
+      "sfx": "r02.wind.dash"
+    },
+    {
+      "frame": 14,
+      "type": "recovery.start"
+    },
+    {
+      "frame": 18,
+      "type": "character.end"
+    }
+  ],
+  "arrivalContract": {
+    "required": [
+      "castId",
+      "worldFoot",
+      "arrivedAt"
+    ],
+    "returnCurlMovesActor": false,
+    "noAutomaticInvulnerability": true
+  }
+}

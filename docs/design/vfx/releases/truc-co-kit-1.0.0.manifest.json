@@ -1,0 +1,2491 @@
+{
+  "id": "TRUC-CO-UPGRADE-KIT",
+  "version": "1.0.0",
+  "date": "2026-10-07",
+  "primary": {
+    "realm": "R02",
+    "frames": 132,
+    "atlases": 15,
+    "newFrames": 48,
+    "reusedFrames": 84,
+    "artStatus": "produced_pending_owner_motion_review"
+  },
+  "includedBaseline": {
+    "realm": "R01",
+    "frames": 114,
+    "atlases": 13,
+    "artStatus": "owner_approved"
+  },
+  "archiveFrames": 246,
+  "archiveAtlases": 28,
+  "runtimeReady": false,
+  "automatedTestsPassed": 31,
+  "browserInteractionVerified": false,
+  "files": [
+    {
+      "file": "frame-by-frame-r01/atlases/qi-impact.png",
+      "bytes": 81927,
+      "sha256": "c32fe76a333bd42be9857feaaf8f3d68374a016fe7f364158041fb8b4a4ecee2"
+    },
+    {
+      "file": "frame-by-frame-r01/atlases/sword-charge.png",
+      "bytes": 11168,
+      "sha256": "61994bafe492ea220058dcc64914a2b745258b40082c6f26701074a95e9db3fe"
+    },
+    {
+      "file": "frame-by-frame-r01/atlases/sword-projectile.png",
+      "bytes": 78556,
+      "sha256": "fdc7a2cc4928fb96958b65cb4899c0557d8d30aeb5fd51f64d46c37d444e40ae"
+    },
+    {
+      "file": "frame-by-frame-r01/atlases/wanglin-cast-east.png",
+      "bytes": 122227,
+      "sha256": "7243467a93693090a553ef3df2780ae89d8ea511a564eaad51a17b759778d9d6"
+    },
+    {
+      "file": "frame-by-frame-r01/build-assets.mjs",
+      "bytes": 7261,
+      "sha256": "22f332cfd199f2edc47f579cd5e382e087231db25474528d3d4f74f7439b8a97"
+    },
+    {
+      "file": "frame-by-frame-r01/build-report.json",
+      "bytes": 800,
+      "sha256": "2125507e12125bdc67b08c4e20a8fa953c5e8ff9dde7584154c92cd2c67b2cfa"
+    },
+    {
+      "file": "frame-by-frame-r01/clips.json",
+      "bytes": 22192,
+      "sha256": "6a10de3237fc70f9a560a96084aaed471ea78d8788a2a6ca3e347f37c152d471"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/001.png",
+      "bytes": 3174,
+      "sha256": "8b1fa1827cf04f7a916ba1e7a634878d5ebeed427eb7286a109ff33bbb3684a0"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/002.png",
+      "bytes": 6662,
+      "sha256": "c4de0409d73eac4a19ba060746cd654688d8440703999a09c7191cb07ed2797b"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/003.png",
+      "bytes": 10215,
+      "sha256": "3ffb07483053d8540d164bf7afed9cffe4267e784921691f07acd14c76e611e0"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/004.png",
+      "bytes": 10199,
+      "sha256": "cf95cee6df2bfdc0f9cab37aadf256a660cbe55d366a6ffba2a0276220b6d0fb"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/005.png",
+      "bytes": 9855,
+      "sha256": "02917e90beecd8a45cea36ab0034e0dfdfa79302512ceb5aa2a54d8ac4e7a230"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/006.png",
+      "bytes": 9907,
+      "sha256": "9417e836437c0e8663af8d4de3f1c8db90ca19016cc8111eb9b00a9fe8ebdb77"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/007.png",
+      "bytes": 10388,
+      "sha256": "9b536c23645d96f02fd2af8a879f859527535f42ef143871c95559d6c24788b9"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/008.png",
+      "bytes": 8311,
+      "sha256": "7aab021896bbf443489be457b551fa953bfff6666ef2391b00bcbc7270683c94"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/009.png",
+      "bytes": 6964,
+      "sha256": "a8134a66cd9e355cf35678f8ef3abebf3d2b5a76e08b257d2001171804f3f37c"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/010.png",
+      "bytes": 5818,
+      "sha256": "a02c72b88cc87c36166d99e289fbdc7bf2f21041ae5ff47475b9be15744e1948"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/011.png",
+      "bytes": 1902,
+      "sha256": "ebffa09a8faf06de7ce43431cf7a035d02b5a70171f277907863f9c5aac7a0ec"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/qi-impact/012.png",
+      "bytes": 500,
+      "sha256": "b7b53eaae1472c7286b9a92cc57b0ed2c386f9bc807e777a3f9fc2fc80007e49"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-charge/001.png",
+      "bytes": 1282,
+      "sha256": "014cc76a5c4150a90e14005ae87629b091eb177c766d25dccf4309df4fd2b2d9"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-charge/002.png",
+      "bytes": 1800,
+      "sha256": "5acb27e7d1c54c84990869eb63e7bf2fc2c04b575f1916af3e463f3ebb62145b"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-charge/003.png",
+      "bytes": 2329,
+      "sha256": "5ad38d2f5d3330fb108b9cb224c4024dc3f9a24d88521c8a1856b225a4e9cb96"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-charge/004.png",
+      "bytes": 1996,
+      "sha256": "5cc361983731ca00f64780b9edac2c513b8ca3fcc474e0ac74be2c6bfcc0cc89"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-charge/005.png",
+      "bytes": 2182,
+      "sha256": "efe95c86ad058566cf8f79f8f46e9cf8e7f2fc4a59b2bbb6a76d062d95585daf"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-charge/006.png",
+      "bytes": 2410,
+      "sha256": "ead73e2326f50a8b594b3e5f7170cf9b53108c9c624458334c7b4607397a5b2b"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-projectile/001.png",
+      "bytes": 11257,
+      "sha256": "5b18b530950596d7f059db9e37571228d2d4c1e96a83b2dffa5c0be069ab9895"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-projectile/002.png",
+      "bytes": 14012,
+      "sha256": "c9cf6fb0f2c648b8a9a186cbdd962290bd13bfd5c323118011441317497800ff"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-projectile/003.png",
+      "bytes": 14187,
+      "sha256": "f3a3f8e590115ab536c73af1af2136ec97c81e55036bcdc90765c0bf676d47fa"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-projectile/004.png",
+      "bytes": 13837,
+      "sha256": "bf85425902fdbcd0f9332b1bfab53a7bf21c5616282430567ba3a39c56c4ff62"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-projectile/005.png",
+      "bytes": 14799,
+      "sha256": "6730bdd7386a4b89278998019f1d54ce8b7105683a754caa252abb17dfbd84f4"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/sword-projectile/006.png",
+      "bytes": 11699,
+      "sha256": "0f6e4d1251da15b47950f5346501d8048aa3377ad1e1d2ff8e8cd892e7b8ed58"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/001.png",
+      "bytes": 9585,
+      "sha256": "21ea3f9096a8579a732b9ed34f9d46ebf9ece7b5cc6ed1b078297e5cea7a5167"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/002.png",
+      "bytes": 10722,
+      "sha256": "a897a276dc1153e6a8bb651cb098b3099db1eebfa8c75d2741fd0654523da342"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/003.png",
+      "bytes": 10172,
+      "sha256": "56c495f1dff1a9fe57229642b65e8879307addd63fdd39e081c888fa48afe1d6"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/004.png",
+      "bytes": 11825,
+      "sha256": "e059c722f0e5a53d04b98d5511d722e0a167fb91a80715289512ac0dee0db387"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/005.png",
+      "bytes": 10318,
+      "sha256": "505ff79e84980d162ed2e1fda563d85fff87dd898274b644b978f0d82e992b0c"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/006.png",
+      "bytes": 11664,
+      "sha256": "dcf4c3b90d0f73693d8de9c9bf0b47925595ac7b71fc34538fb06a9804092d73"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/007.png",
+      "bytes": 11899,
+      "sha256": "2186aa945cee12af2027ed3b7110594e66a273716cfff9b41b49281054c3ca7b"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/008.png",
+      "bytes": 11695,
+      "sha256": "955f7870f3f82be0d62bb673bf1abc3df2eb900241e680ef657696a8f289e1f5"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/009.png",
+      "bytes": 10377,
+      "sha256": "507cd4c44463188b551b2e288d303cc1bc55a09831d76b5605f42ab8bc75cec4"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/010.png",
+      "bytes": 10535,
+      "sha256": "1a76da067a4414231abe55ad7fbd84365a6102808054379f584bd945556a6813"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/011.png",
+      "bytes": 9828,
+      "sha256": "5f13eec64d93e0cc9d19be3b06bbf61e75335df82cf1d3a8f0467ac6a248287c"
+    },
+    {
+      "file": "frame-by-frame-r01/frames/wanglin-cast-east/012.png",
+      "bytes": 9645,
+      "sha256": "98dbc807da7f7a5082def9ce6f016c4f669a32edec0555807a8c497c4c1b35a3"
+    },
+    {
+      "file": "frame-by-frame-r01/pack-atlases.mjs",
+      "bytes": 1340,
+      "sha256": "28dee63147e5e6c5d7044cbd59fa8b96982e00f04fefdce06a2cbfdea642ce45"
+    },
+    {
+      "file": "frame-by-frame-r01/PIPELINE.md",
+      "bytes": 13443,
+      "sha256": "d528c0b1e584a73cd505ea8c36b2dce284cb1e2fcd4783f3e8e8a83ab2956eb7"
+    },
+    {
+      "file": "frame-by-frame-r01/preview-model.mjs",
+      "bytes": 2550,
+      "sha256": "1ba2283583bccd8a3df59e62a356538b96b9e83fdec01e28769867ea74621036"
+    },
+    {
+      "file": "frame-by-frame-r01/prompts/charge-v1.txt",
+      "bytes": 1545,
+      "sha256": "4c078766919cae309ef16a579148458b5cae40bc23734e39b7db5640c85ec15e"
+    },
+    {
+      "file": "frame-by-frame-r01/prompts/impact-v1.txt",
+      "bytes": 2023,
+      "sha256": "ae7770e77fbffa106e63eacf22ed4953a88c44c953cc5201a3ac2d29300dd9b2"
+    },
+    {
+      "file": "frame-by-frame-r01/prompts/projectile-v1.txt",
+      "bytes": 1972,
+      "sha256": "6480edaef54215488714c91ace59458e8ab21beab24023257f8715419a318d62"
+    },
+    {
+      "file": "frame-by-frame-r01/prompts/wanglin-cast-v1.txt",
+      "bytes": 2369,
+      "sha256": "f4c4735e4ffb0ad4ad56854dfa424636ae9606ebf5c6c7a98d7d86a77b72ac82"
+    },
+    {
+      "file": "frame-by-frame-r01/review/impact-1x.png",
+      "bytes": 861834,
+      "sha256": "32e824d7f10c381898a41bcd1c3210f54c173de5377632eae9dfca67c88328a0"
+    },
+    {
+      "file": "frame-by-frame-r01/review/release-1x.png",
+      "bytes": 867362,
+      "sha256": "24b2f65b181d5d0edff8b90705b431501b4dcb98e36c1109a0ebb5a463932c65"
+    },
+    {
+      "file": "frame-by-frame-r01/review/release-2x.png",
+      "bytes": 560658,
+      "sha256": "7899401fd2cd366222061af9f80afabc8177d76404876f59a5830f83d8cdf27f"
+    },
+    {
+      "file": "frame-by-frame-r01/review/residue-1x.png",
+      "bytes": 860809,
+      "sha256": "97611642a234f9a889194b03e993c811da34fbcb1ee0a1de49ab716079815be1"
+    },
+    {
+      "file": "frame-by-frame-r01/sequence-system.mjs",
+      "bytes": 2516,
+      "sha256": "c20b913e504096b036bf4d1732ef13b23e8d126022bf3440547a9abe7183e15c"
+    },
+    {
+      "file": "frame-by-frame-r01/sequence-system.test.mjs",
+      "bytes": 6267,
+      "sha256": "a311c09dc9cb2330f183d22b7427b64d93d33592200c1dd72be37940e968e343"
+    },
+    {
+      "file": "frame-by-frame-r01/skill-vfx-controller.mjs",
+      "bytes": 4370,
+      "sha256": "aac766cf84b43ac17b55442f1c10b09a0058cbbcdc34649ee2c942d9bc644c39"
+    },
+    {
+      "file": "frame-by-frame-r01/skill.json",
+      "bytes": 1844,
+      "sha256": "593ace787a863b6f27b9926e3f11c500e4b163997199d0e346db2fd4eb1fe5e3"
+    },
+    {
+      "file": "frame-by-frame-r01/source/charge-v1.png",
+      "bytes": 2043877,
+      "sha256": "412b94bf2e0f96396f5f4e72a5e6ceefb38d030321f29732fcd8c15151afe106"
+    },
+    {
+      "file": "frame-by-frame-r01/source/impact-v1.png",
+      "bytes": 1795220,
+      "sha256": "f1f2afeed735e1b673fa9ef723ffb9193e7f990afe1b7df19cf9bdf0d6e0a00a"
+    },
+    {
+      "file": "frame-by-frame-r01/source/projectile-v1.png",
+      "bytes": 1799554,
+      "sha256": "68312d17585dd25f7bf6c40d5c914f6b39ac03b60b2d8da16ada5c51231caecc"
+    },
+    {
+      "file": "frame-by-frame-r01/source/wanglin-cast-v1.png",
+      "bytes": 1750016,
+      "sha256": "255ad81dfc26a173067aa3b3ed63bb5b2be4a5bb6af036ee294d84ba7f5ac019"
+    },
+    {
+      "file": "kiem-khi-preview-v3.mjs",
+      "bytes": 13049,
+      "sha256": "b9d6f49f57afd4b2674eaaeda0e0b4ce398b4f53d6a313f42f8f7650ab1949cc"
+    },
+    {
+      "file": "kiem-khi-preview.html",
+      "bytes": 9472,
+      "sha256": "29e6fecae41be42d1384cc8fb7c3692498b934f644fd6cfca566bff0a744ba00"
+    },
+    {
+      "file": "library.json",
+      "bytes": 4989,
+      "sha256": "e6b8f367b9b779efcabe2d4c846feafd00dbc436facdaa950a4da5cd773a0f15"
+    },
+    {
+      "file": "milestones/P3-TRUC-CO.md",
+      "bytes": 2421,
+      "sha256": "297f4c0409968044eb146dffd3e82e4deaf4b9febaafaa5ee48303ac7b8cc14c"
+    },
+    {
+      "file": "ngung-khi-approved-art-v1.png",
+      "bytes": 2829774,
+      "sha256": "f060ff1e41419cf40086c88adda263def7110c697f9a5805a7291952e46824d4"
+    },
+    {
+      "file": "ngung-khi-kit-preview.mjs",
+      "bytes": 11845,
+      "sha256": "c530dbd369181811c1ba4aa134bfbf4f727be06114d377518eaf9b0d486a14e3"
+    },
+    {
+      "file": "ngung-khi-kit.html",
+      "bytes": 9050,
+      "sha256": "c1ead2787abe8496c3fae575a8aeb5c96787e9c9b73403952c30c029d92d2f04"
+    },
+    {
+      "file": "NGUNG-KHI-KIT.md",
+      "bytes": 7369,
+      "sha256": "71e30ff135e201148e73f3665bef75f93c175e8c60a93e304f778a3c3d38419e"
+    },
+    {
+      "file": "production/art-selection.json",
+      "bytes": 2825,
+      "sha256": "8bd10878ae117601e4651e6c23fd9daea799abd7e9da6569d0f4c90cad97abe8"
+    },
+    {
+      "file": "production/build-r02.mjs",
+      "bytes": 1664,
+      "sha256": "ec64c98aa335fbfd11994e1c38ce789fa0e3c9fff8dd989c3a54f777a92e0100"
+    },
+    {
+      "file": "production/export-sequences.mjs",
+      "bytes": 4584,
+      "sha256": "5c4171372a6e8fc061b8e541a91adbd535e0d8312d71216ab405e637a45ffb52"
+    },
+    {
+      "file": "production/p2-controller.mjs",
+      "bytes": 3169,
+      "sha256": "c4af2a4bece87024c336b984274f69801c14a70d6d4eda364340c9f00ac58c2f"
+    },
+    {
+      "file": "production/p2-model.mjs",
+      "bytes": 2739,
+      "sha256": "5d6282f62945e45621cf14ca77aa59fcde989d185cd402fa9d35881280267746"
+    },
+    {
+      "file": "production/p2.test.mjs",
+      "bytes": 5857,
+      "sha256": "c7b7bd6c5d86f35ed0e7c966697f66a84799f0db6a835c37c9cd748091df8f77"
+    },
+    {
+      "file": "production/pack-atlases.mjs",
+      "bytes": 1479,
+      "sha256": "9d2e146a0e96be9d4b61a7251204e091f7836307bf726f9cb7dd31bf42942bd6"
+    },
+    {
+      "file": "production/package-skills.py",
+      "bytes": 4668,
+      "sha256": "b9a3247c079d28352db31808e05108f8f7245b5d86b6499883cf7f830e3e48fc"
+    },
+    {
+      "file": "production/package-upgrade-kit.py",
+      "bytes": 3287,
+      "sha256": "48923042f4ef71a226777309efecd859e05518048c86859810ade9308ec2b211"
+    },
+    {
+      "file": "production/png-source-hashes.json",
+      "bytes": 10352,
+      "sha256": "832c4a8d522ff571592b607f6bae8377378b5c31d74add004dbb6b07d2a4f338"
+    },
+    {
+      "file": "production/r02-art-selection.json",
+      "bytes": 2803,
+      "sha256": "5f22159c8463eb6c388ce8a85e0ab497cb9f40a33ec06371e7c6400db808c3e1"
+    },
+    {
+      "file": "production/r02-controller.mjs",
+      "bytes": 4485,
+      "sha256": "786a33dc994d16fd84edeefdcd2368c9a6a3b7d8f9e1084253028fe3e9fdd4c5"
+    },
+    {
+      "file": "production/r02-model.mjs",
+      "bytes": 4680,
+      "sha256": "dddd42dc6d70efcd240602276787c87cec34b2923f31d6b433a4e73ed377e472"
+    },
+    {
+      "file": "production/r02-review-report.json",
+      "bytes": 10428,
+      "sha256": "1cba076a2cc764b988b8901a6f5210ed7d8d9777eb0de1e260dbcd62c9990ce8"
+    },
+    {
+      "file": "production/r02.test.mjs",
+      "bytes": 7896,
+      "sha256": "2172ddc69a23bc76c29ff6938e4b133de2e5decf59f9bc44f2cfeecb9ba3c493"
+    },
+    {
+      "file": "production/release-kit.py",
+      "bytes": 2812,
+      "sha256": "6050d0ac4e846f3cdf354a5b3470f9421a63e95f5e2e5fed14be1ad0ea7562cc"
+    },
+    {
+      "file": "production/render-r02-review.mjs",
+      "bytes": 5808,
+      "sha256": "d80c5a651ecdb14a277e7dc47e7d55ae38f96c8c09c8e8583b71b567df5fd230"
+    },
+    {
+      "file": "production/render-review.mjs",
+      "bytes": 3536,
+      "sha256": "a4d79392586eac7633db9547b7067ee5c7a69aab8009d445fcfffdd303f5faf7"
+    },
+    {
+      "file": "production/review-report.json",
+      "bytes": 6360,
+      "sha256": "13de49332ef504898299b4edc61a12762df94322dfdd147f30c920ff1ea7cc8c"
+    },
+    {
+      "file": "pvp-target-stand-west-native-v1.png",
+      "bytes": 2234,
+      "sha256": "2334ccd47d2795060daea3e811d5e0388d4de4fa0ca07db7afcce667353f719d"
+    },
+    {
+      "file": "r01-thunder-v1/atlases/thunder-bolt.png",
+      "bytes": 39076,
+      "sha256": "d9d467c7fb57aff4ad8ecd32b1b1712e05ebde1a045b91e8477466d0ea7cbe9b"
+    },
+    {
+      "file": "r01-thunder-v1/atlases/thunder-impact.png",
+      "bytes": 71768,
+      "sha256": "8cdeb4e1d246c883263d048de5908261b0e049f2e72c5836f273ac7ab8538b10"
+    },
+    {
+      "file": "r01-thunder-v1/atlases/thunder-ring.png",
+      "bytes": 55945,
+      "sha256": "78b9234228dbfbe223d0ac436fb5034b7d24e333f1736183dcb4b00074bacdfc"
+    },
+    {
+      "file": "r01-thunder-v1/atlases/thunder-seal.png",
+      "bytes": 22943,
+      "sha256": "0f4892a37fc6ecc14520fb2cbcc393667cc34a2543328ee9ff0a7bb513134be9"
+    },
+    {
+      "file": "r01-thunder-v1/atlases/wanglin-thunder-east.png",
+      "bytes": 124381,
+      "sha256": "aceb0aab8e5358cf5fcc01ee266dd1718d4e1418f2474f8a950e141c4bc6b734"
+    },
+    {
+      "file": "r01-thunder-v1/build-report.json",
+      "bytes": 857,
+      "sha256": "c4b9a89fc50b6e6fa93c1a3e0419edcea33ff69ff1cdb7a4ba3b6463f10ea9d8"
+    },
+    {
+      "file": "r01-thunder-v1/clips.json",
+      "bytes": 26142,
+      "sha256": "2f7cf30d8f5db78dbff862547a47317d21351e7bafbfbe88478dcd0b51b5207f"
+    },
+    {
+      "file": "r01-thunder-v1/export-spec.json",
+      "bytes": 1710,
+      "sha256": "638bdcaf4854aab0026e06fc9fdebb559b9d6ef12c85129335b746ddbf8e4611"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-bolt/001.png",
+      "bytes": 1721,
+      "sha256": "e600588a16e96209c611e35cc8ab1b6ab624b7b395550a757dc2ab1c23ec84dc"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-bolt/002.png",
+      "bytes": 3544,
+      "sha256": "0e1a9dcc68ea1449eff335ffd86547a696245b0fefd1e4d241ddad1fa89e9960"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-bolt/003.png",
+      "bytes": 7435,
+      "sha256": "266deff0949b37b4dd0336dbaa3450d533f26c4ee3b806faa87b0df68840a0b6"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-bolt/004.png",
+      "bytes": 14685,
+      "sha256": "20e3efaace05ca2c092f376dba6c0c0daa3d0c4bd9b005f39ca9b92cc16b6410"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-bolt/005.png",
+      "bytes": 7553,
+      "sha256": "b36de2907bcb404792197b6179f6d97737f618e884847ea4c0354f8768192c64"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-bolt/006.png",
+      "bytes": 3585,
+      "sha256": "f7251ee3a89ec075413b3d454aff6af504e6ec7c24dafae6a6df28cdcd88ec08"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/001.png",
+      "bytes": 1100,
+      "sha256": "b27f770593ceec1e93ea9cd9e4f1fd2f939a04664b348cb1101f3f69c9960be1"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/002.png",
+      "bytes": 6773,
+      "sha256": "df8b07c670faa14152a4c3c01afa9a5f9998b02423e23ccd809c1a3e80990a45"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/003.png",
+      "bytes": 11297,
+      "sha256": "b823d9d8a260aab4f27584d77edc695402d549a03dc4af0eef6b2353da161a54"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/004.png",
+      "bytes": 10905,
+      "sha256": "fc57f184068e92ec183ae392303f1317347ad8e29b4624bc085d418cdcd0b6ba"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/005.png",
+      "bytes": 9537,
+      "sha256": "38be5c8590b24665cbf19635bd158d4bfb190677e0a36b1ce456a8affecd94ee"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/006.png",
+      "bytes": 10437,
+      "sha256": "ae90195c7d9f7c489724f2005e6a14c8c6bf3eb18e428294b42becb6c4d44e3f"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/007.png",
+      "bytes": 8443,
+      "sha256": "51545e2c1fbbb38ae2c95e9597132cfef5bd26bdfb50245c0f71a6a842d8c729"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/008.png",
+      "bytes": 6266,
+      "sha256": "1e3f3d0e4ad9a5ec8b140578381f4364eb92bdf18ab2859dcc819e1029565ad3"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/009.png",
+      "bytes": 3545,
+      "sha256": "0122a8fe345d5cc4015fe5e63d9a2578df83c316b94755aaa206ea55fed88195"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/010.png",
+      "bytes": 2120,
+      "sha256": "e5619360e3236f3f09df2c146cc24b5da539f21fe1d6d3ecaa8864f8a4eb18a3"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/011.png",
+      "bytes": 1935,
+      "sha256": "098795909e9ccf5c7c1f4e3f087a6b203a0e498bd4a75420a4eff6881d411c30"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-impact/012.png",
+      "bytes": 846,
+      "sha256": "192bed06c95796db041ac8afeb929a5547ed89386a00282c63d649d0e30af44d"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-ring/001.png",
+      "bytes": 6116,
+      "sha256": "d6dd9a014151907e35bc12a0c3387575f259f2ea962c035f2db63178c2c479ae"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-ring/002.png",
+      "bytes": 8295,
+      "sha256": "f066cd54f281c9327a0c1df7f458850dd1a7c901188d077ccc7f652df0962ad5"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-ring/003.png",
+      "bytes": 9275,
+      "sha256": "282bfde2b48ed1cff206c732cba9ac49aa1a3dcd4b19875e7cbbb00ba9e62ad3"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-ring/004.png",
+      "bytes": 10642,
+      "sha256": "85ffc41b3dbbc3e7dc34c12f596445f408a6f629a020b730bc7b8ea84f1c7372"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-ring/005.png",
+      "bytes": 12428,
+      "sha256": "e587d8b8e9a1cd3c759a5cb6bc8ac788c68e6b174922780ce2521d339354ddcd"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-ring/006.png",
+      "bytes": 9615,
+      "sha256": "b545c9ce8252602c93d93cd7285651e278cd3f8b64667df27c9cd1fb158a6a43"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-seal/001.png",
+      "bytes": 1142,
+      "sha256": "acf6f92fd6d0d3122cf12b752c2817a3de38a26ec6c815383e966522d21499d6"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-seal/002.png",
+      "bytes": 3477,
+      "sha256": "7dc0a569a3b53959f1b1bba9f2541873287b2058823c0c65c8ae343ddf56a263"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-seal/003.png",
+      "bytes": 4307,
+      "sha256": "70fe8661dba25e2a7bfecd12b052dbf53a7933a4181f5214c2abf3420096d410"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-seal/004.png",
+      "bytes": 5372,
+      "sha256": "736c982418b7ca9406dd7cfc0b7dda39992250a75c87ebd2c9e45adb9ec76191"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-seal/005.png",
+      "bytes": 4665,
+      "sha256": "ddf76242df03917ea51d27c102de013e0acd7e31e2f9fd71c281b655c10a2fd5"
+    },
+    {
+      "file": "r01-thunder-v1/frames/thunder-seal/006.png",
+      "bytes": 4592,
+      "sha256": "3be750a6d530c621421d0ba246fb7f10042025be6679a1268fefe6af129d2c87"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/001.png",
+      "bytes": 9942,
+      "sha256": "bd14feec428df1e8e971e7bfcd7571eeb23522c7d99aa4384acc3b0a5ca0fd2d"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/002.png",
+      "bytes": 11005,
+      "sha256": "ad1911164722a6de41800332048a7a85c661d3f42db340ba14e887876139e123"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/003.png",
+      "bytes": 10294,
+      "sha256": "01aac6de0fabcf042fc82ac9212bf070751821fe9d546fb953a0d70eb4903058"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/004.png",
+      "bytes": 10731,
+      "sha256": "1b39dde3ae92819fca68c6829b04986d8797d586a17d58f74941a10dc7a0a6e9"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/005.png",
+      "bytes": 10110,
+      "sha256": "5ab75b43c3927615fbd33822df41115668e932832a412c685a9f53a885a929d7"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/006.png",
+      "bytes": 11588,
+      "sha256": "ef0afed927f191d42fe7b81267a978180ffbf1ef13c96a063e68a3cdfd6431dc"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/007.png",
+      "bytes": 12048,
+      "sha256": "37d1afaa66d08d710d2bc45a7121b421d3f2e236f00816928bec2391fcf5d84d"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/008.png",
+      "bytes": 12626,
+      "sha256": "ec8faa4a1064ebd426f583952650bcadd3bda35d4790a153102142550e1d481d"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/009.png",
+      "bytes": 11714,
+      "sha256": "9cfa340d43d4e79c74c0aa7e170442fe73e70e1efc813e7df08e01b3e1daf82b"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/010.png",
+      "bytes": 11178,
+      "sha256": "29389fa2ba64064710befe51a9d2a774a67863cada22b92c309cfdc7f35e6ca8"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/011.png",
+      "bytes": 10095,
+      "sha256": "46435d0c913bb0d88a724c5bb4b71b055c3322cb0ccd1a054e73b4a12f8f6385"
+    },
+    {
+      "file": "r01-thunder-v1/frames/wanglin-thunder-east/012.png",
+      "bytes": 9788,
+      "sha256": "14c5886b2664e7aabe665c328e636630e2dd7ef651763a93ee2a6d07295336dc"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-bolt-clean.txt",
+      "bytes": 816,
+      "sha256": "5ff9d3317ed0d3640b273bdfe66dd55164b9de756b6d537ddbe0dd6f07dab7fb"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-bolt-production.txt",
+      "bytes": 1131,
+      "sha256": "8210cb8ddf95eb3f64d1740998018cc1903a77fc48d55e1baa966b2c33b4076b"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-bolt.txt",
+      "bytes": 892,
+      "sha256": "a2d398c0db6dc4769d7087bae07af54e57ef5eb8f0ae63c8fa4906d6d74757ca"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-cast.txt",
+      "bytes": 1090,
+      "sha256": "ec8615fd7df533f01dc4176f07da81541c9ad837a9d67b1f473d96239a93699e"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-impact-clean.txt",
+      "bytes": 710,
+      "sha256": "fd789b5101fccdd5a1988eec5b9a24386b317a359af6af0545beff69d5203e7e"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-impact-production.txt",
+      "bytes": 1068,
+      "sha256": "639cc36bde20e972511755e3900b4696eda730d0890ec3cd8e7d6b25ab55a195"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-impact.txt",
+      "bytes": 947,
+      "sha256": "8235f72d84f2b1e163b686e78885405c96fb424e8738f3782018940b9aa3c349"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-ring-clean.txt",
+      "bytes": 559,
+      "sha256": "b860a66cc981e6a26ac84f91d26aad3a0f9aefd8d418e2177b6d52d82359d83b"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-ring-production.txt",
+      "bytes": 1092,
+      "sha256": "542c6e3c4eebcbd2f69408f2cdff35d6ad556dace06124de21fdca967a379a4e"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-ring.txt",
+      "bytes": 847,
+      "sha256": "9089fe67af7c1b5c385f801c4a5a595d6ad7ae82898961071bbe928dcc7c60d0"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-seal-clean.txt",
+      "bytes": 578,
+      "sha256": "331dc509a46be180084be97da9542402a7c1a056135a3a978729d60e91122690"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-seal-production.txt",
+      "bytes": 1027,
+      "sha256": "c1a2e94e2fd1ac01a511523e93a34924683f808a45d576228a2facd5c3d86f24"
+    },
+    {
+      "file": "r01-thunder-v1/prompts/thunder-seal.txt",
+      "bytes": 815,
+      "sha256": "822977fbdad38aaad03b57e608154ec7cf17a8a3c973f28db516573be7795041"
+    },
+    {
+      "file": "r01-thunder-v1/review/F10-1x.png",
+      "bytes": 740637,
+      "sha256": "c636edaac057f6e2fa973db78d15a7094cc322aa1c01fc6e0e9296c1961cab3f"
+    },
+    {
+      "file": "r01-thunder-v1/review/F10-2x.png",
+      "bytes": 427224,
+      "sha256": "cb9ee90dfbeafd3d8847e94d7d54b3ee9e577056739771144f637d4d8a9a4940"
+    },
+    {
+      "file": "r01-thunder-v1/review/F16-1x.png",
+      "bytes": 749414,
+      "sha256": "f3c1b429395b089f3639927ba9a3c91871f0d3cda3963b2e5f6bd887e4cb9d8c"
+    },
+    {
+      "file": "r01-thunder-v1/review/F16-2x.png",
+      "bytes": 464862,
+      "sha256": "4145eece000bf11a1fc3e7f34eb994a45249fcbecb4b0655500fb16a061c5b4f"
+    },
+    {
+      "file": "r01-thunder-v1/review/F23-1x.png",
+      "bytes": 735456,
+      "sha256": "05b05be65919d2c9865889dc78ecb3bb70f00069c561b93e36e21cf03817ad62"
+    },
+    {
+      "file": "r01-thunder-v1/review/F23-2x.png",
+      "bytes": 413739,
+      "sha256": "ec7bc8caa8322a66bd77cfd921a800210e4e67e836e65aa8eee6448be4070a43"
+    },
+    {
+      "file": "r01-thunder-v1/review/F4-1x.png",
+      "bytes": 735642,
+      "sha256": "c7d8224d904590e493b10951f4c31889652a5865e105bcdf1ca7e25dbe6327fa"
+    },
+    {
+      "file": "r01-thunder-v1/review/F4-2x.png",
+      "bytes": 418794,
+      "sha256": "90c817f4dc64fabc3c65d55d91c9c961aa703ef9638a186347d0643a2bc00c36"
+    },
+    {
+      "file": "r01-thunder-v1/skill.json",
+      "bytes": 2723,
+      "sha256": "c4300a268f07e4cafabace6b57d60d3119eb1484aa44d132741f1ffe28f6903e"
+    },
+    {
+      "file": "r01-thunder-v1/source/thunder-bolt-v0.png",
+      "bytes": 1865006,
+      "sha256": "fa29178f34388edddc678eddac36e95ab634db1519120c40bd667584df1bd335"
+    },
+    {
+      "file": "r01-thunder-v1/source/thunder-bolt.png",
+      "bytes": 1300921,
+      "sha256": "0cf9ffbd8ee4b5e0e9e058457d15834705f7f0e823505952d5ad0736415072cf"
+    },
+    {
+      "file": "r01-thunder-v1/source/thunder-cast.png",
+      "bytes": 1819278,
+      "sha256": "f4763db376b1b29a357d8c6e01135017b23be1e3e4cd8009d8ec0f3df95edd01"
+    },
+    {
+      "file": "r01-thunder-v1/source/thunder-impact-v0.png",
+      "bytes": 1816175,
+      "sha256": "651182f1ab764d2b839cd2ac51e0f7f2aefc7f8a74ac21966ad9e298d8dd36ba"
+    },
+    {
+      "file": "r01-thunder-v1/source/thunder-impact.png",
+      "bytes": 1863293,
+      "sha256": "b261a118716a34c98d96da69c27611afcdb422f62ff730ebd6d9a01457577774"
+    },
+    {
+      "file": "r01-thunder-v1/source/thunder-ring-initial.png",
+      "bytes": 2090653,
+      "sha256": "4ce6e91c855b7fdfa8d711cc08980ef2b4e010a76178b8abede1ce0b4fd704f0"
+    },
+    {
+      "file": "r01-thunder-v1/source/thunder-ring.png",
+      "bytes": 2076374,
+      "sha256": "1b87ec8d7ee250201a2ad1b2db1548171e08247703481095563b9519700a3ac5"
+    },
+    {
+      "file": "r01-thunder-v1/source/thunder-seal-initial.png",
+      "bytes": 2086613,
+      "sha256": "971f87edb262f59bbd0bced36118823af1941f605e636c752d365c296eb246ef"
+    },
+    {
+      "file": "r01-thunder-v1/source/thunder-seal.png",
+      "bytes": 2092273,
+      "sha256": "f2b7fe5a3e67967725f8d306634d907ee4aeb1cbb8390d8a70baf94725db28cc"
+    },
+    {
+      "file": "r01-wind-v1/atlases/wanglin-wind-east.png",
+      "bytes": 122310,
+      "sha256": "0936d82225d70a99539eb323e3407e56046cb816f7b75fc531ed0d2c07fb8da2"
+    },
+    {
+      "file": "r01-wind-v1/atlases/wind-arrival.png",
+      "bytes": 50751,
+      "sha256": "3626443d58f6c69268d5a5186989f224f9baa4f984ec936f4c926325ffc634c8"
+    },
+    {
+      "file": "r01-wind-v1/atlases/wind-depart.png",
+      "bytes": 28056,
+      "sha256": "948c9f99236768c7931dc3d96b768de556be913a3a27109ce7da611b7f11b433"
+    },
+    {
+      "file": "r01-wind-v1/atlases/wind-trail.png",
+      "bytes": 99338,
+      "sha256": "7732381dba2355b5facb54f4728908a72b513976bd0441c296eecb10d8e3ddad"
+    },
+    {
+      "file": "r01-wind-v1/build-report.json",
+      "bytes": 671,
+      "sha256": "36a91db6bf9d44aff1fbe8f88ae27fabeecea20ad4d6cab1139d61a0d99aeb2c"
+    },
+    {
+      "file": "r01-wind-v1/clips.json",
+      "bytes": 22134,
+      "sha256": "8e94ad323e7ae989d229c735ac79190e3fa53f0dab09c94a0cd1854e9e7be62d"
+    },
+    {
+      "file": "r01-wind-v1/export-spec.json",
+      "bytes": 1265,
+      "sha256": "d1a1da24f604d0a0a7bf7b11936bb5857359ed6413a2e6e16b3ecf068b741bd7"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/001.png",
+      "bytes": 10503,
+      "sha256": "125f62da646f4cad23004a9a112b919577e88345f4f649fa7e1c64c44ff0b558"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/002.png",
+      "bytes": 10320,
+      "sha256": "9eba734c88efdfe4735131d9c459dd31b5091e356c31878b3dea2d81915f54b2"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/003.png",
+      "bytes": 9884,
+      "sha256": "0c67b021094696c224b47b504742840b87fa8b00d65f33c88eb95bda478b7a6b"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/004.png",
+      "bytes": 10613,
+      "sha256": "89ef17945395b3e6902bab19fb3a9743cf396c375f19c13a720f4a23dc47f648"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/005.png",
+      "bytes": 10410,
+      "sha256": "d3d4df420b913ba4470ce4fc8a71da17a02b5b7bc7a882e26bc8de6ff85720ee"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/006.png",
+      "bytes": 10568,
+      "sha256": "ab8e524ee79e0cbdebad0f657276e5a641ef8fd3bb9852858b3b280a0633581d"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/007.png",
+      "bytes": 11750,
+      "sha256": "2dacf5433cd8a4428717005e16b1a7f9778f16251a2568c6caa5f49ae8428da0"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/008.png",
+      "bytes": 10442,
+      "sha256": "b5aa46548e317ec915611732d7d594ecd422fd476e46b6eda69e90881417922f"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/009.png",
+      "bytes": 11536,
+      "sha256": "51668c1558f1547e82701d43be5d2249fc90049365f0cad0e323b7a8067debab"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/010.png",
+      "bytes": 11160,
+      "sha256": "dd03ada64f990fa378508a81ed3974ca931ceb5d1d32a2cb218cbec665f8c314"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/011.png",
+      "bytes": 11406,
+      "sha256": "bd88b638d9436ebaf3ee833bf9a1e7e97d44a86bac768155fea57191dc893bb8"
+    },
+    {
+      "file": "r01-wind-v1/frames/wanglin-wind-east/012.png",
+      "bytes": 10029,
+      "sha256": "537f3b05b0c8267378ff0b25e6220bad2687fbc03ff952aaa2b49ee4f9c21f58"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/001.png",
+      "bytes": 2026,
+      "sha256": "dd1542d0d1f8ac52950b6cc7fd28343ae79cca0c8ef21e8fa87a808182a852c7"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/002.png",
+      "bytes": 5766,
+      "sha256": "b5074280a7ecbdf943146ddcc418b8928045b84f0340f85ba6b0addd404873fe"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/003.png",
+      "bytes": 9170,
+      "sha256": "84cfa45ce9522f2da4ca30100a596ebfd2f01230090f970023a886337e31d8be"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/004.png",
+      "bytes": 9435,
+      "sha256": "e72bff9bcd22bf3a747ce6f513536ded68e6c992124b6a58ed8d1548a176d6b8"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/005.png",
+      "bytes": 7455,
+      "sha256": "f95c7e7791fdc894d5deab2e18a1340aac7d9a7e66bd23a629e4b8a08fe568a2"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/006.png",
+      "bytes": 5883,
+      "sha256": "afebc55164b2407a61f2eed36216d9c2c8d35515e4f7148a7ab6a514ae194d71"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/007.png",
+      "bytes": 3828,
+      "sha256": "c43fb758246e93ce25dd57f5620d4e09537cfbf7bfee347e0730b6be7e22f3b0"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/008.png",
+      "bytes": 4563,
+      "sha256": "9b0575bfc569260cb3081c5a9ff77eea08a2ca67406ee1eea952ff61a9df1978"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/009.png",
+      "bytes": 1724,
+      "sha256": "6f6350ed587ab045b9f3fd5a15db0b6278a30b40323be869c93023fc8fb17c9a"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/010.png",
+      "bytes": 1536,
+      "sha256": "abd63253d0f464e8af47bc98563ac4af9cbed3cb06155dfd89ad1d2757b2bf51"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/011.png",
+      "bytes": 797,
+      "sha256": "e536a3583dcc0f6ab090d56def75d4122f7f888fb5900d292372ff79ab39a746"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-arrival/012.png",
+      "bytes": 633,
+      "sha256": "7e0b53b52ac677196ae43ec36607a97b049568bf1a97c62abcf4f305d492312b"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-depart/001.png",
+      "bytes": 2416,
+      "sha256": "470b32a6ce050b17689f0fa21041f9ef16ad0f36bdccb6c3abf36c7ebb227182"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-depart/002.png",
+      "bytes": 5281,
+      "sha256": "9808a92a683f31e6169c1eca9cec93540959430cf994dd5af6a9813f6ef9ab9d"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-depart/003.png",
+      "bytes": 7084,
+      "sha256": "b541da60461ec2b4308fdb955fe8eb8a81d00999409081f917566ee4d1f6158b"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-depart/004.png",
+      "bytes": 6360,
+      "sha256": "ab8cdf08de14175ad44fc652233d714330d6e49a8cd2a42100e04ef1817856e2"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-depart/005.png",
+      "bytes": 4787,
+      "sha256": "0239cfb1af37b080b051ed10b2c3ccefd0033be90514d6853338fc18c5865473"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-depart/006.png",
+      "bytes": 2817,
+      "sha256": "7b5a03c4f7a378038c5e70e040d8c71eb9f97d79e1d1e4197b0d6dc1faf17f73"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-trail/001.png",
+      "bytes": 12532,
+      "sha256": "ebdeddc25cf6b12ec2084686ef0961d451e7959c54c6260e57bc357b4031fbd2"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-trail/002.png",
+      "bytes": 17139,
+      "sha256": "1554efe431d4f910868ada030053a0adb194be0e93511582039472f7441345d5"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-trail/003.png",
+      "bytes": 28214,
+      "sha256": "a62ef7f4e62b24f39ac0e3a74a9442b467827be6a969e616de4431703221e1d6"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-trail/004.png",
+      "bytes": 13725,
+      "sha256": "5c60ddcedfd73d28d563b3e62bf63047ffe31b63cd9c7ead226ff78b04cf9e14"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-trail/005.png",
+      "bytes": 16835,
+      "sha256": "aca04ba54bed455ec50766c7480ee4ed3e4e15b10921ec4d4bc4f3f3aca49f84"
+    },
+    {
+      "file": "r01-wind-v1/frames/wind-trail/006.png",
+      "bytes": 11195,
+      "sha256": "a8c5d4989278d100e77b399d0c4693411c67e5215f4cf16ae3c3ef17f502fe16"
+    },
+    {
+      "file": "r01-wind-v1/prompts/wind-arrival-clean.txt",
+      "bytes": 803,
+      "sha256": "ba18fbc71f62dc1ce3ea705a55473055f952baf3c90ac0bf2625c17a363b6cf4"
+    },
+    {
+      "file": "r01-wind-v1/prompts/wind-arrival-production.txt",
+      "bytes": 1152,
+      "sha256": "accbccb92bd08b1e4c1afab7691ead77b95501a096a04873d06e6e962a4d9709"
+    },
+    {
+      "file": "r01-wind-v1/prompts/wind-arrival.txt",
+      "bytes": 1105,
+      "sha256": "07063ed3c6d73ab3a4585690ac6ba2dbece19cdc2df2567da9e67fac06172d8c"
+    },
+    {
+      "file": "r01-wind-v1/prompts/wind-cast.txt",
+      "bytes": 1175,
+      "sha256": "4b1164745cde2a1437a9fdff4d3455901e7efdcb061a3b4467db12c44419f31a"
+    },
+    {
+      "file": "r01-wind-v1/prompts/wind-depart-clean.txt",
+      "bytes": 800,
+      "sha256": "e33f905ad2a9959952027232ef636fd05ddbe29bf5d3e16ac01aafc666c4dfc6"
+    },
+    {
+      "file": "r01-wind-v1/prompts/wind-depart-production.txt",
+      "bytes": 1048,
+      "sha256": "7bbede51d438046f2675128db4b61d9ab829932c39a32da6b068df9308b6dcc5"
+    },
+    {
+      "file": "r01-wind-v1/prompts/wind-depart.txt",
+      "bytes": 920,
+      "sha256": "e7d7772b618379d8881452b291e1e6079b466b0ed64b4e03ba51e1e8cca35ae3"
+    },
+    {
+      "file": "r01-wind-v1/prompts/wind-trail-clean.txt",
+      "bytes": 800,
+      "sha256": "7dc3e0e73ac73e994b2c7eea16fa7899afd72a3dcb04a6f8448f282e379580aa"
+    },
+    {
+      "file": "r01-wind-v1/prompts/wind-trail-production.txt",
+      "bytes": 1130,
+      "sha256": "776485bb5f33db435deaf31b88c97f14d03b366b337281187858a1dbdd0fcd89"
+    },
+    {
+      "file": "r01-wind-v1/prompts/wind-trail.txt",
+      "bytes": 1117,
+      "sha256": "3fed9afa76f05f23ebbcbb2e7685f26ce0f4178d1b00c5fa428b0ef1661c9c0e"
+    },
+    {
+      "file": "r01-wind-v1/review/F13-1x.png",
+      "bytes": 741533,
+      "sha256": "cb7d1ae34b077d80ae05873fef420374baeadcede1a95e65bf90149b9fe801ba"
+    },
+    {
+      "file": "r01-wind-v1/review/F13-2x.png",
+      "bytes": 432468,
+      "sha256": "e3136424cab491ecd7904d431aa303551d7b4045d86368376e32f7725f8c4314"
+    },
+    {
+      "file": "r01-wind-v1/review/F20-1x.png",
+      "bytes": 733376,
+      "sha256": "22efd24669201eec26cb3b408895fb1941652af3322cebaad4ab9e7c90918151"
+    },
+    {
+      "file": "r01-wind-v1/review/F20-2x.png",
+      "bytes": 411547,
+      "sha256": "4f1403a49c45b6afbad5e174411e3228167dca549de7441ed5b2b03430b1d8a9"
+    },
+    {
+      "file": "r01-wind-v1/review/F4-1x.png",
+      "bytes": 735231,
+      "sha256": "8004e25dddac1bd8cb1d32107acecc9d7af585736944dcde46268c6261b7669a"
+    },
+    {
+      "file": "r01-wind-v1/review/F4-2x.png",
+      "bytes": 418521,
+      "sha256": "efafe4e3e14392d3273814d70048647aab88c6d97f21cf489b5979451d45ab68"
+    },
+    {
+      "file": "r01-wind-v1/review/F8-1x.png",
+      "bytes": 742145,
+      "sha256": "e399cccd5a4abf4606b5a1de728800181e0719a3a82f2a9108fadf6461425de6"
+    },
+    {
+      "file": "r01-wind-v1/review/F8-2x.png",
+      "bytes": 435522,
+      "sha256": "3d3d99aa3ebc7c7f225d44e8147c9ac7382c77b7d471bab3e400aa6dd57b6b17"
+    },
+    {
+      "file": "r01-wind-v1/skill.json",
+      "bytes": 2640,
+      "sha256": "25581606f98ecf28db5f20d9537bf754be222b0c8ba98ec0df1c312eb622cdee"
+    },
+    {
+      "file": "r01-wind-v1/source/wind-arrival-v0.png",
+      "bytes": 1723358,
+      "sha256": "01baecae550adb2946469ed20b36144e5ef75a65c5cfe18ff912507f987c1f3f"
+    },
+    {
+      "file": "r01-wind-v1/source/wind-arrival.png",
+      "bytes": 1775200,
+      "sha256": "29a9d097b3e942baca7036b7360cd36d66655b5b96075274dc002ce589125a2f"
+    },
+    {
+      "file": "r01-wind-v1/source/wind-cast.png",
+      "bytes": 1590152,
+      "sha256": "abf75b4ae65646e08a5eafef34a09667e0ebfa0f573b4e9099e703dc6dd959d7"
+    },
+    {
+      "file": "r01-wind-v1/source/wind-depart-v0.png",
+      "bytes": 1670928,
+      "sha256": "6798180e6f64a9d71645e874ba56cdb00f33da7887244c59cc3c538674e3d2db"
+    },
+    {
+      "file": "r01-wind-v1/source/wind-depart.png",
+      "bytes": 1771139,
+      "sha256": "d062363435678e09605b9c315814889dd3f44803e43e0c24d46b6f52f6d96171"
+    },
+    {
+      "file": "r01-wind-v1/source/wind-trail-v0.png",
+      "bytes": 1686916,
+      "sha256": "fe809658a25daec7cf3525f7a8d32a1730cd7deb0869e7620e543aa0898d113c"
+    },
+    {
+      "file": "r01-wind-v1/source/wind-trail.png",
+      "bytes": 1690554,
+      "sha256": "cf1cfff43c09da66e920648fe428810e92ad06cdf54f453048f4db74c0267212"
+    },
+    {
+      "file": "r02-sword-v1/atlases/qi-impact.png",
+      "bytes": 81927,
+      "sha256": "c32fe76a333bd42be9857feaaf8f3d68374a016fe7f364158041fb8b4a4ecee2"
+    },
+    {
+      "file": "r02-sword-v1/atlases/sword-charge.png",
+      "bytes": 11168,
+      "sha256": "61994bafe492ea220058dcc64914a2b745258b40082c6f26701074a95e9db3fe"
+    },
+    {
+      "file": "r02-sword-v1/atlases/sword-flight.png",
+      "bytes": 185999,
+      "sha256": "d629c5d75c3636d3b6f7f2c97923a51ea85c7ef739c8da1da743d7c49b7e888c"
+    },
+    {
+      "file": "r02-sword-v1/atlases/sword-formation.png",
+      "bytes": 180543,
+      "sha256": "9e24a1652289709f3ac75fd3d8bd8ca3cb4a34549fd657dc4cc2b0e667cf159a"
+    },
+    {
+      "file": "r02-sword-v1/atlases/sword-guide.png",
+      "bytes": 18711,
+      "sha256": "7585c13775a65a1d07af878cf4bca1bf8fd1ffcaad782b1d36113835af2d8108"
+    },
+    {
+      "file": "r02-sword-v1/atlases/wanglin-cast-east.png",
+      "bytes": 122227,
+      "sha256": "7243467a93693090a553ef3df2780ae89d8ea511a564eaad51a17b759778d9d6"
+    },
+    {
+      "file": "r02-sword-v1/build-report.json",
+      "bytes": 510,
+      "sha256": "84de81000c6b4db61304c2fb0da593b86e1c099f5b29447cadb9b29e62c5da81"
+    },
+    {
+      "file": "r02-sword-v1/clips.json",
+      "bytes": 30935,
+      "sha256": "dfadc4beed4f494f387d711d0c7578fa6d8354d271ddf92129de1c48b0a74055"
+    },
+    {
+      "file": "r02-sword-v1/export-spec.json",
+      "bytes": 1421,
+      "sha256": "3e15cca470d0ea55f791029dec189361da460fa3073947bfb84ce59eff33e889"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/001.png",
+      "bytes": 3174,
+      "sha256": "8b1fa1827cf04f7a916ba1e7a634878d5ebeed427eb7286a109ff33bbb3684a0"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/002.png",
+      "bytes": 6662,
+      "sha256": "c4de0409d73eac4a19ba060746cd654688d8440703999a09c7191cb07ed2797b"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/003.png",
+      "bytes": 10215,
+      "sha256": "3ffb07483053d8540d164bf7afed9cffe4267e784921691f07acd14c76e611e0"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/004.png",
+      "bytes": 10199,
+      "sha256": "cf95cee6df2bfdc0f9cab37aadf256a660cbe55d366a6ffba2a0276220b6d0fb"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/005.png",
+      "bytes": 9855,
+      "sha256": "02917e90beecd8a45cea36ab0034e0dfdfa79302512ceb5aa2a54d8ac4e7a230"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/006.png",
+      "bytes": 9907,
+      "sha256": "9417e836437c0e8663af8d4de3f1c8db90ca19016cc8111eb9b00a9fe8ebdb77"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/007.png",
+      "bytes": 10388,
+      "sha256": "9b536c23645d96f02fd2af8a879f859527535f42ef143871c95559d6c24788b9"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/008.png",
+      "bytes": 8311,
+      "sha256": "7aab021896bbf443489be457b551fa953bfff6666ef2391b00bcbc7270683c94"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/009.png",
+      "bytes": 6964,
+      "sha256": "a8134a66cd9e355cf35678f8ef3abebf3d2b5a76e08b257d2001171804f3f37c"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/010.png",
+      "bytes": 5818,
+      "sha256": "a02c72b88cc87c36166d99e289fbdc7bf2f21041ae5ff47475b9be15744e1948"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/011.png",
+      "bytes": 1902,
+      "sha256": "ebffa09a8faf06de7ce43431cf7a035d02b5a70171f277907863f9c5aac7a0ec"
+    },
+    {
+      "file": "r02-sword-v1/frames/qi-impact/012.png",
+      "bytes": 500,
+      "sha256": "b7b53eaae1472c7286b9a92cc57b0ed2c386f9bc807e777a3f9fc2fc80007e49"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-charge/001.png",
+      "bytes": 1282,
+      "sha256": "014cc76a5c4150a90e14005ae87629b091eb177c766d25dccf4309df4fd2b2d9"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-charge/002.png",
+      "bytes": 1800,
+      "sha256": "5acb27e7d1c54c84990869eb63e7bf2fc2c04b575f1916af3e463f3ebb62145b"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-charge/003.png",
+      "bytes": 2329,
+      "sha256": "5ad38d2f5d3330fb108b9cb224c4024dc3f9a24d88521c8a1856b225a4e9cb96"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-charge/004.png",
+      "bytes": 1996,
+      "sha256": "5cc361983731ca00f64780b9edac2c513b8ca3fcc474e0ac74be2c6bfcc0cc89"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-charge/005.png",
+      "bytes": 2182,
+      "sha256": "efe95c86ad058566cf8f79f8f46e9cf8e7f2fc4a59b2bbb6a76d062d95585daf"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-charge/006.png",
+      "bytes": 2410,
+      "sha256": "ead73e2326f50a8b594b3e5f7170cf9b53108c9c624458334c7b4607397a5b2b"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-flight/001.png",
+      "bytes": 30116,
+      "sha256": "831fd6f80cd5d0d921cf50e4c7710311711f40e3cdce6aa9f3b356b141721b89"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-flight/002.png",
+      "bytes": 31560,
+      "sha256": "ff2558e6d4f2060e0bb63ad2bf5eeace44477624d2288b14a70c55c0bba6a740"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-flight/003.png",
+      "bytes": 32713,
+      "sha256": "1df274a39b5d7d460dc091e68fef5746047fd92d0699e3f89d76d64bc51f9384"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-flight/004.png",
+      "bytes": 30542,
+      "sha256": "ba694ad554259914614d1ffaa794080105f6126a4d027d73db66ed84cabfcf5e"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-flight/005.png",
+      "bytes": 32373,
+      "sha256": "71624e207f5907514e33c03849ae2c5690cff7f50763339a2065c28a3fec97cf"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-flight/006.png",
+      "bytes": 29189,
+      "sha256": "2aef6381a82c290a375fad7f5397de267efaea8078b3d8eed43c8ba34d7b5c66"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-formation/001.png",
+      "bytes": 7567,
+      "sha256": "831364be1796d457d8e4a580dad727ca30c710375018d0d777f4f1221cc4d899"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-formation/002.png",
+      "bytes": 17375,
+      "sha256": "c0e3e3234ed829fde12cbde44e669ca303a5f08219810cd32a7beee30afb1f55"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-formation/003.png",
+      "bytes": 22670,
+      "sha256": "c592fca578f61e59f93d109ffc7026a4995f6c9da2a9e80472a4bed1e1cdf5ef"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-formation/004.png",
+      "bytes": 24531,
+      "sha256": "9b7db161de3b11b07ec33c4f68cc53e0fc21a12c6683fb6a7f72b2b4aa4f2aed"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-formation/005.png",
+      "bytes": 26865,
+      "sha256": "47d5dd663c76a2371f63abdad8014fcba6030325ebbb1135c15f36548e238196"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-formation/006.png",
+      "bytes": 25897,
+      "sha256": "1cb51519038283caee0f537c0cad14f7ef8761bc2dbaae7d08d4f70b8b95b597"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-formation/007.png",
+      "bytes": 33878,
+      "sha256": "a4e989e1d1c70df9b1a393d749b94215b335e39b14da1afb0c0c1926b72aa618"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-formation/008.png",
+      "bytes": 24530,
+      "sha256": "b64e6d88fd0cf72f36bacd28132152adb3b8dc91a89cf2c426b3ef3187aec55b"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-guide/001.png",
+      "bytes": 2473,
+      "sha256": "808d0e27fae1420043f23927a3ab69b1d044b334d398df4552a43146ef7840a5"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-guide/002.png",
+      "bytes": 3493,
+      "sha256": "1eb64d6c017dfa94cb2b961fc8ccbbc7ccf3dec0620f2d13fdea9314e228cc57"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-guide/003.png",
+      "bytes": 3992,
+      "sha256": "0807ec3cab5d8f6855eca8b9da820b04e8d221e7cf638a02644abb4ba6c4552f"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-guide/004.png",
+      "bytes": 4393,
+      "sha256": "ad87f404b8bcf885fdeb45826dc203175e7d9be8688faedd8a23077fe782f591"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-guide/005.png",
+      "bytes": 3230,
+      "sha256": "ebf502f765f8ca370d9a9d86332dbc4578b903d43cbbc951f2227cbda706981d"
+    },
+    {
+      "file": "r02-sword-v1/frames/sword-guide/006.png",
+      "bytes": 2066,
+      "sha256": "4ea33d931c1a3b2c6fff650c11d847d5a5b50039489e26bfb30b9b20226cb5fa"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/001.png",
+      "bytes": 9585,
+      "sha256": "21ea3f9096a8579a732b9ed34f9d46ebf9ece7b5cc6ed1b078297e5cea7a5167"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/002.png",
+      "bytes": 10722,
+      "sha256": "a897a276dc1153e6a8bb651cb098b3099db1eebfa8c75d2741fd0654523da342"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/003.png",
+      "bytes": 10172,
+      "sha256": "56c495f1dff1a9fe57229642b65e8879307addd63fdd39e081c888fa48afe1d6"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/004.png",
+      "bytes": 11825,
+      "sha256": "e059c722f0e5a53d04b98d5511d722e0a167fb91a80715289512ac0dee0db387"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/005.png",
+      "bytes": 10318,
+      "sha256": "505ff79e84980d162ed2e1fda563d85fff87dd898274b644b978f0d82e992b0c"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/006.png",
+      "bytes": 11664,
+      "sha256": "dcf4c3b90d0f73693d8de9c9bf0b47925595ac7b71fc34538fb06a9804092d73"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/007.png",
+      "bytes": 11899,
+      "sha256": "2186aa945cee12af2027ed3b7110594e66a273716cfff9b41b49281054c3ca7b"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/008.png",
+      "bytes": 11695,
+      "sha256": "955f7870f3f82be0d62bb673bf1abc3df2eb900241e680ef657696a8f289e1f5"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/009.png",
+      "bytes": 10377,
+      "sha256": "507cd4c44463188b551b2e288d303cc1bc55a09831d76b5605f42ab8bc75cec4"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/010.png",
+      "bytes": 10535,
+      "sha256": "1a76da067a4414231abe55ad7fbd84365a6102808054379f584bd945556a6813"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/011.png",
+      "bytes": 9828,
+      "sha256": "5f13eec64d93e0cc9d19be3b06bbf61e75335df82cf1d3a8f0467ac6a248287c"
+    },
+    {
+      "file": "r02-sword-v1/frames/wanglin-cast-east/012.png",
+      "bytes": 9645,
+      "sha256": "98dbc807da7f7a5082def9ce6f016c4f669a32edec0555807a8c497c4c1b35a3"
+    },
+    {
+      "file": "r02-sword-v1/prompts/reused-r01/charge-v1.txt",
+      "bytes": 1545,
+      "sha256": "4c078766919cae309ef16a579148458b5cae40bc23734e39b7db5640c85ec15e"
+    },
+    {
+      "file": "r02-sword-v1/prompts/reused-r01/impact-v1.txt",
+      "bytes": 2023,
+      "sha256": "ae7770e77fbffa106e63eacf22ed4953a88c44c953cc5201a3ac2d29300dd9b2"
+    },
+    {
+      "file": "r02-sword-v1/prompts/reused-r01/projectile-v1.txt",
+      "bytes": 1972,
+      "sha256": "6480edaef54215488714c91ace59458e8ab21beab24023257f8715419a318d62"
+    },
+    {
+      "file": "r02-sword-v1/prompts/reused-r01/wanglin-cast-v1.txt",
+      "bytes": 2369,
+      "sha256": "f4c4735e4ffb0ad4ad56854dfa424636ae9606ebf5c6c7a98d7d86a77b72ac82"
+    },
+    {
+      "file": "r02-sword-v1/prompts/sword-flight.txt",
+      "bytes": 1461,
+      "sha256": "a7690738c504071051d8b36cf23f5086b2a544fb37d8556b3378a4f6a7b73b03"
+    },
+    {
+      "file": "r02-sword-v1/prompts/sword-formation.txt",
+      "bytes": 1557,
+      "sha256": "cee9994ea76f1f0d3f09d28163f9475625f35ef0894d9f5995d1ff17a110fce4"
+    },
+    {
+      "file": "r02-sword-v1/prompts/sword-guide.txt",
+      "bytes": 1210,
+      "sha256": "76a25c874f8f019ef5f060d4996921e5d9571baf8d5d8fa10a2d75ed71d98b4c"
+    },
+    {
+      "file": "r02-sword-v1/provenance.json",
+      "bytes": 1311,
+      "sha256": "8472106d6d0b79e066e7d8b28ac3794b1012d4fe24e4c32c444c9a263b65903a"
+    },
+    {
+      "file": "r02-sword-v1/review/F13-1x.png",
+      "bytes": 797526,
+      "sha256": "ca5c34eebee82b48dbff7f473394f767da0a56344b874ead57d73ae3e0a2f56d"
+    },
+    {
+      "file": "r02-sword-v1/review/F13-2x.png",
+      "bytes": 501843,
+      "sha256": "13e7cd39b929c260752d70c87b8ca78aabeb472986c5980381e81938a1b82e0d"
+    },
+    {
+      "file": "r02-sword-v1/review/F19-1x.png",
+      "bytes": 782402,
+      "sha256": "2e7575582c705eda6e721218eb4578f68d543fa6fd9543dac7fa33030f747d84"
+    },
+    {
+      "file": "r02-sword-v1/review/F19-2x.png",
+      "bytes": 457809,
+      "sha256": "c9f5a9f6eeda7a62a11c3f3bfccc3e25917a8926d7b0eb1217c08a24e481e1d5"
+    },
+    {
+      "file": "r02-sword-v1/review/F25-1x.png",
+      "bytes": 781603,
+      "sha256": "98468bc9293f81b2afed704964bcc91083709d8430a1a7dc260030fb8d58f381"
+    },
+    {
+      "file": "r02-sword-v1/review/F25-2x.png",
+      "bytes": 453823,
+      "sha256": "670a0317f9604b46010839a523e6842b7ca69ee69a77b0f3d3ce228ee05618df"
+    },
+    {
+      "file": "r02-sword-v1/review/F9-1x.png",
+      "bytes": 797695,
+      "sha256": "62adb5f08c18bc1f7edfd97b378479064ad7588d718122ed9ecdda4a79d6bebc"
+    },
+    {
+      "file": "r02-sword-v1/review/F9-2x.png",
+      "bytes": 500206,
+      "sha256": "f23327b8a70d298e85239fcc8850db9af6c140b557ce98537149510e718ba0fd"
+    },
+    {
+      "file": "r02-sword-v1/skill.json",
+      "bytes": 2958,
+      "sha256": "70a1f8f39d71239f531d6ddaed0788735c56836a06f2448487de795daa9ecd27"
+    },
+    {
+      "file": "r02-sword-v1/source/charge-v1.png",
+      "bytes": 2043877,
+      "sha256": "412b94bf2e0f96396f5f4e72a5e6ceefb38d030321f29732fcd8c15151afe106"
+    },
+    {
+      "file": "r02-sword-v1/source/impact-v1.png",
+      "bytes": 1795220,
+      "sha256": "f1f2afeed735e1b673fa9ef723ffb9193e7f990afe1b7df19cf9bdf0d6e0a00a"
+    },
+    {
+      "file": "r02-sword-v1/source/sword-flight.png",
+      "bytes": 2115738,
+      "sha256": "8cb20e6e0fd01dca75c4ccf387273429b8b5d62f51e25f1d3d026347311ede40"
+    },
+    {
+      "file": "r02-sword-v1/source/sword-formation.png",
+      "bytes": 1229916,
+      "sha256": "a6e5792fa1a89830868b2d910ac031caa4849d3771d224dd64a1881485a688ff"
+    },
+    {
+      "file": "r02-sword-v1/source/sword-guide.png",
+      "bytes": 1590239,
+      "sha256": "e1737cd028f6089e81a7e8a442c55a8c29d4340564b55e71e465ed87b26f6a18"
+    },
+    {
+      "file": "r02-sword-v1/source/wanglin-cast-v1.png",
+      "bytes": 1750016,
+      "sha256": "255ad81dfc26a173067aa3b3ed63bb5b2be4a5bb6af036ee294d84ba7f5ac019"
+    },
+    {
+      "file": "r02-thunder-v1/atlases/thunder-bolt.png",
+      "bytes": 39076,
+      "sha256": "d9d467c7fb57aff4ad8ecd32b1b1712e05ebde1a045b91e8477466d0ea7cbe9b"
+    },
+    {
+      "file": "r02-thunder-v1/atlases/thunder-convergence.png",
+      "bytes": 175767,
+      "sha256": "b2b24d0fb7ce00b0d5a71c9dec58bc2161135ce7420fa6f829abd2f2aa3a5a9b"
+    },
+    {
+      "file": "r02-thunder-v1/atlases/thunder-impact.png",
+      "bytes": 71768,
+      "sha256": "8cdeb4e1d246c883263d048de5908261b0e049f2e72c5836f273ac7ab8538b10"
+    },
+    {
+      "file": "r02-thunder-v1/atlases/thunder-seal.png",
+      "bytes": 22943,
+      "sha256": "0f4892a37fc6ecc14520fb2cbcc393667cc34a2543328ee9ff0a7bb513134be9"
+    },
+    {
+      "file": "r02-thunder-v1/atlases/wanglin-thunder-east.png",
+      "bytes": 124381,
+      "sha256": "aceb0aab8e5358cf5fcc01ee266dd1718d4e1418f2474f8a950e141c4bc6b734"
+    },
+    {
+      "file": "r02-thunder-v1/build-report.json",
+      "bytes": 179,
+      "sha256": "d0e880281095393d629263cbcbeaba0348ff119fb759d107016e0d890c409e31"
+    },
+    {
+      "file": "r02-thunder-v1/clips.json",
+      "bytes": 27228,
+      "sha256": "f36d4a9e29d95809444c065dd8fbf05eaa55cb7b630ae2c3d11d9fef6f40430d"
+    },
+    {
+      "file": "r02-thunder-v1/export-spec.json",
+      "bytes": 697,
+      "sha256": "1b96fce95cb678b59066eb459459253aaea6ae35dc4bffec7f3c26bba52895d7"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/001.png",
+      "bytes": 1721,
+      "sha256": "e600588a16e96209c611e35cc8ab1b6ab624b7b395550a757dc2ab1c23ec84dc"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/002.png",
+      "bytes": 3544,
+      "sha256": "0e1a9dcc68ea1449eff335ffd86547a696245b0fefd1e4d241ddad1fa89e9960"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/003.png",
+      "bytes": 7435,
+      "sha256": "266deff0949b37b4dd0336dbaa3450d533f26c4ee3b806faa87b0df68840a0b6"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/004.png",
+      "bytes": 14685,
+      "sha256": "20e3efaace05ca2c092f376dba6c0c0daa3d0c4bd9b005f39ca9b92cc16b6410"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/005.png",
+      "bytes": 7553,
+      "sha256": "b36de2907bcb404792197b6179f6d97737f618e884847ea4c0354f8768192c64"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/006.png",
+      "bytes": 3585,
+      "sha256": "f7251ee3a89ec075413b3d454aff6af504e6ec7c24dafae6a6df28cdcd88ec08"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/001.png",
+      "bytes": 15132,
+      "sha256": "8cf292f42c37ea893c7b7ef952d618e36276d034c71d7fb96e1352486eaa6cb8"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/002.png",
+      "bytes": 19731,
+      "sha256": "77979212774358c1568e64303bb887d5a60f5124743e8921de5aff6740693984"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/003.png",
+      "bytes": 21264,
+      "sha256": "5fe25a1bc8f8dd703b584a7e06dab569e30c778fc651f312a592da07b81182f5"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/004.png",
+      "bytes": 23074,
+      "sha256": "29ccd7b7735b7f96b726a7a8dba4d44ace519d6fcbcb583f6ca2bd751662be56"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/005.png",
+      "bytes": 24030,
+      "sha256": "d1e26ad9de3a2904db9d910cee158f69522f5dcbf3a944e523cbe2bfde3f5ff8"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/006.png",
+      "bytes": 25386,
+      "sha256": "0f67a76b8ab80edaa4c580abd52b05519dc15564d50988397a98b6ad243d63f9"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/007.png",
+      "bytes": 26481,
+      "sha256": "ee422a445b35cbba1278fd6cbcf1bb434230f19972190b1766fa3949a754c7af"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/008.png",
+      "bytes": 24526,
+      "sha256": "623f6aafec498ea16afb9810e0f43ed73a610ca59a19b814d2a8e20c3565ef9d"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/001.png",
+      "bytes": 1100,
+      "sha256": "b27f770593ceec1e93ea9cd9e4f1fd2f939a04664b348cb1101f3f69c9960be1"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/002.png",
+      "bytes": 6773,
+      "sha256": "df8b07c670faa14152a4c3c01afa9a5f9998b02423e23ccd809c1a3e80990a45"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/003.png",
+      "bytes": 11297,
+      "sha256": "b823d9d8a260aab4f27584d77edc695402d549a03dc4af0eef6b2353da161a54"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/004.png",
+      "bytes": 10905,
+      "sha256": "fc57f184068e92ec183ae392303f1317347ad8e29b4624bc085d418cdcd0b6ba"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/005.png",
+      "bytes": 9537,
+      "sha256": "38be5c8590b24665cbf19635bd158d4bfb190677e0a36b1ce456a8affecd94ee"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/006.png",
+      "bytes": 10437,
+      "sha256": "ae90195c7d9f7c489724f2005e6a14c8c6bf3eb18e428294b42becb6c4d44e3f"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/007.png",
+      "bytes": 8443,
+      "sha256": "51545e2c1fbbb38ae2c95e9597132cfef5bd26bdfb50245c0f71a6a842d8c729"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/008.png",
+      "bytes": 6266,
+      "sha256": "1e3f3d0e4ad9a5ec8b140578381f4364eb92bdf18ab2859dcc819e1029565ad3"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/009.png",
+      "bytes": 3545,
+      "sha256": "0122a8fe345d5cc4015fe5e63d9a2578df83c316b94755aaa206ea55fed88195"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/010.png",
+      "bytes": 2120,
+      "sha256": "e5619360e3236f3f09df2c146cc24b5da539f21fe1d6d3ecaa8864f8a4eb18a3"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/011.png",
+      "bytes": 1935,
+      "sha256": "098795909e9ccf5c7c1f4e3f087a6b203a0e498bd4a75420a4eff6881d411c30"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/012.png",
+      "bytes": 846,
+      "sha256": "192bed06c95796db041ac8afeb929a5547ed89386a00282c63d649d0e30af44d"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/001.png",
+      "bytes": 1142,
+      "sha256": "acf6f92fd6d0d3122cf12b752c2817a3de38a26ec6c815383e966522d21499d6"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/002.png",
+      "bytes": 3477,
+      "sha256": "7dc0a569a3b53959f1b1bba9f2541873287b2058823c0c65c8ae343ddf56a263"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/003.png",
+      "bytes": 4307,
+      "sha256": "70fe8661dba25e2a7bfecd12b052dbf53a7933a4181f5214c2abf3420096d410"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/004.png",
+      "bytes": 5372,
+      "sha256": "736c982418b7ca9406dd7cfc0b7dda39992250a75c87ebd2c9e45adb9ec76191"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/005.png",
+      "bytes": 4665,
+      "sha256": "ddf76242df03917ea51d27c102de013e0acd7e31e2f9fd71c281b655c10a2fd5"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/006.png",
+      "bytes": 4592,
+      "sha256": "3be750a6d530c621421d0ba246fb7f10042025be6679a1268fefe6af129d2c87"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/001.png",
+      "bytes": 9942,
+      "sha256": "bd14feec428df1e8e971e7bfcd7571eeb23522c7d99aa4384acc3b0a5ca0fd2d"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/002.png",
+      "bytes": 11005,
+      "sha256": "ad1911164722a6de41800332048a7a85c661d3f42db340ba14e887876139e123"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/003.png",
+      "bytes": 10294,
+      "sha256": "01aac6de0fabcf042fc82ac9212bf070751821fe9d546fb953a0d70eb4903058"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/004.png",
+      "bytes": 10731,
+      "sha256": "1b39dde3ae92819fca68c6829b04986d8797d586a17d58f74941a10dc7a0a6e9"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/005.png",
+      "bytes": 10110,
+      "sha256": "5ab75b43c3927615fbd33822df41115668e932832a412c685a9f53a885a929d7"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/006.png",
+      "bytes": 11588,
+      "sha256": "ef0afed927f191d42fe7b81267a978180ffbf1ef13c96a063e68a3cdfd6431dc"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/007.png",
+      "bytes": 12048,
+      "sha256": "37d1afaa66d08d710d2bc45a7121b421d3f2e236f00816928bec2391fcf5d84d"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/008.png",
+      "bytes": 12626,
+      "sha256": "ec8faa4a1064ebd426f583952650bcadd3bda35d4790a153102142550e1d481d"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/009.png",
+      "bytes": 11714,
+      "sha256": "9cfa340d43d4e79c74c0aa7e170442fe73e70e1efc813e7df08e01b3e1daf82b"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/010.png",
+      "bytes": 11178,
+      "sha256": "29389fa2ba64064710befe51a9d2a774a67863cada22b92c309cfdc7f35e6ca8"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/011.png",
+      "bytes": 10095,
+      "sha256": "46435d0c913bb0d88a724c5bb4b71b055c3322cb0ccd1a054e73b4a12f8f6385"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/012.png",
+      "bytes": 9788,
+      "sha256": "14c5886b2664e7aabe665c328e636630e2dd7ef651763a93ee2a6d07295336dc"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-bolt-clean.txt",
+      "bytes": 816,
+      "sha256": "5ff9d3317ed0d3640b273bdfe66dd55164b9de756b6d537ddbe0dd6f07dab7fb"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-bolt-production.txt",
+      "bytes": 1131,
+      "sha256": "8210cb8ddf95eb3f64d1740998018cc1903a77fc48d55e1baa966b2c33b4076b"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-bolt.txt",
+      "bytes": 892,
+      "sha256": "a2d398c0db6dc4769d7087bae07af54e57ef5eb8f0ae63c8fa4906d6d74757ca"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-cast.txt",
+      "bytes": 1090,
+      "sha256": "ec8615fd7df533f01dc4176f07da81541c9ad837a9d67b1f473d96239a93699e"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-impact-clean.txt",
+      "bytes": 710,
+      "sha256": "fd789b5101fccdd5a1988eec5b9a24386b317a359af6af0545beff69d5203e7e"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-impact-production.txt",
+      "bytes": 1068,
+      "sha256": "639cc36bde20e972511755e3900b4696eda730d0890ec3cd8e7d6b25ab55a195"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-impact.txt",
+      "bytes": 947,
+      "sha256": "8235f72d84f2b1e163b686e78885405c96fb424e8738f3782018940b9aa3c349"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-ring-clean.txt",
+      "bytes": 559,
+      "sha256": "b860a66cc981e6a26ac84f91d26aad3a0f9aefd8d418e2177b6d52d82359d83b"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-ring-production.txt",
+      "bytes": 1092,
+      "sha256": "542c6e3c4eebcbd2f69408f2cdff35d6ad556dace06124de21fdca967a379a4e"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-ring.txt",
+      "bytes": 847,
+      "sha256": "9089fe67af7c1b5c385f801c4a5a595d6ad7ae82898961071bbe928dcc7c60d0"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-seal-clean.txt",
+      "bytes": 578,
+      "sha256": "331dc509a46be180084be97da9542402a7c1a056135a3a978729d60e91122690"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-seal-production.txt",
+      "bytes": 1027,
+      "sha256": "c1a2e94e2fd1ac01a511523e93a34924683f808a45d576228a2facd5c3d86f24"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-seal.txt",
+      "bytes": 815,
+      "sha256": "822977fbdad38aaad03b57e608154ec7cf17a8a3c973f28db516573be7795041"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/thunder-convergence.txt",
+      "bytes": 1605,
+      "sha256": "d25045c327d86fc8668615562ed200b243882a87443783d4deb2e714d5e24bc4"
+    },
+    {
+      "file": "r02-thunder-v1/provenance.json",
+      "bytes": 606,
+      "sha256": "4f2e1349351ef07d9a8d1bbf06d84a21c182a25df5eb0f3cda2b765f2fb36637"
+    },
+    {
+      "file": "r02-thunder-v1/review/F12-1x.png",
+      "bytes": 790602,
+      "sha256": "365ff8f67c9c6b4304bb2e268c0217c94c7a744bd6be06cf1e7e1b6b466028d4"
+    },
+    {
+      "file": "r02-thunder-v1/review/F12-2x.png",
+      "bytes": 474328,
+      "sha256": "8fe9185e92a6523dd981c03adc8874eae9f1eed974d26a855c0cb062636126b8"
+    },
+    {
+      "file": "r02-thunder-v1/review/F14-1x.png",
+      "bytes": 791165,
+      "sha256": "f10855846f94025a1ae2fef63011fea2191d7ae941c051006990e1e046296d61"
+    },
+    {
+      "file": "r02-thunder-v1/review/F14-2x.png",
+      "bytes": 475935,
+      "sha256": "01b1177c87790b9876310d73085a0958a69d0f066bdc31dc995232489c0d293a"
+    },
+    {
+      "file": "r02-thunder-v1/review/F18-1x.png",
+      "bytes": 799020,
+      "sha256": "08ce83e1fc2343849c13a6c337d2beffa5bdf733da1a3cc5caed77ebab68a821"
+    },
+    {
+      "file": "r02-thunder-v1/review/F18-2x.png",
+      "bytes": 510529,
+      "sha256": "99560aa44e64fb20609ae248263470929e9fb41f5cbacbd917dc9dd14b609431"
+    },
+    {
+      "file": "r02-thunder-v1/review/F24-1x.png",
+      "bytes": 782122,
+      "sha256": "a6e3e6a8d4f5f438f3ab8bd32b793559c04ba116061fd60d680cb6c18ffed9bf"
+    },
+    {
+      "file": "r02-thunder-v1/review/F24-2x.png",
+      "bytes": 451707,
+      "sha256": "df227118c617b30fb0f02af04519e156bd9d444bad6d821314a51571ccb65215"
+    },
+    {
+      "file": "r02-thunder-v1/skill.json",
+      "bytes": 2901,
+      "sha256": "26b1a7226b843d19c2a6c1ac97eddb96001baefc48a50edf67419f7e6eb1fed0"
+    },
+    {
+      "file": "r02-thunder-v1/source/thunder-bolt.png",
+      "bytes": 1300921,
+      "sha256": "0cf9ffbd8ee4b5e0e9e058457d15834705f7f0e823505952d5ad0736415072cf"
+    },
+    {
+      "file": "r02-thunder-v1/source/thunder-cast.png",
+      "bytes": 1819278,
+      "sha256": "f4763db376b1b29a357d8c6e01135017b23be1e3e4cd8009d8ec0f3df95edd01"
+    },
+    {
+      "file": "r02-thunder-v1/source/thunder-convergence.png",
+      "bytes": 1861806,
+      "sha256": "74bed0214871fd7351c365bab3989b4999212559d9a254e677b0822188b8c8d8"
+    },
+    {
+      "file": "r02-thunder-v1/source/thunder-impact.png",
+      "bytes": 1863293,
+      "sha256": "b261a118716a34c98d96da69c27611afcdb422f62ff730ebd6d9a01457577774"
+    },
+    {
+      "file": "r02-thunder-v1/source/thunder-seal.png",
+      "bytes": 2092273,
+      "sha256": "f2b7fe5a3e67967725f8d306634d907ee4aeb1cbb8390d8a70baf94725db28cc"
+    },
+    {
+      "file": "r02-wind-v1/atlases/wanglin-wind-east.png",
+      "bytes": 122310,
+      "sha256": "0936d82225d70a99539eb323e3407e56046cb816f7b75fc531ed0d2c07fb8da2"
+    },
+    {
+      "file": "r02-wind-v1/atlases/wind-departure-coil.png",
+      "bytes": 72668,
+      "sha256": "c8f0856892655077ecefed122564730fc8a4d8af7a2f302161531d4d99d537f2"
+    },
+    {
+      "file": "r02-wind-v1/atlases/wind-return-curl.png",
+      "bytes": 166197,
+      "sha256": "f7fc505bb9ab0e99fb313038a416121f03dd2d4ded326420c3eb286ba1ad54c6"
+    },
+    {
+      "file": "r02-wind-v1/atlases/wind-trail.png",
+      "bytes": 99338,
+      "sha256": "7732381dba2355b5facb54f4728908a72b513976bd0441c296eecb10d8e3ddad"
+    },
+    {
+      "file": "r02-wind-v1/build-report.json",
+      "bytes": 352,
+      "sha256": "ec2aaa5b83bf5e9d80720f9c60e7a454a23a223c8bd769dde54c1e8a8d8f89f2"
+    },
+    {
+      "file": "r02-wind-v1/clips.json",
+      "bytes": 23375,
+      "sha256": "d2fa77a5517a8e6ad02dd3580e01296be909632bc13ed70e76383c72e6702054"
+    },
+    {
+      "file": "r02-wind-v1/export-spec.json",
+      "bytes": 1047,
+      "sha256": "87849f28ea826020875645d575fc36ce1b977906ee62682effa75f553d4ef972"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/001.png",
+      "bytes": 10503,
+      "sha256": "125f62da646f4cad23004a9a112b919577e88345f4f649fa7e1c64c44ff0b558"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/002.png",
+      "bytes": 10320,
+      "sha256": "9eba734c88efdfe4735131d9c459dd31b5091e356c31878b3dea2d81915f54b2"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/003.png",
+      "bytes": 9884,
+      "sha256": "0c67b021094696c224b47b504742840b87fa8b00d65f33c88eb95bda478b7a6b"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/004.png",
+      "bytes": 10613,
+      "sha256": "89ef17945395b3e6902bab19fb3a9743cf396c375f19c13a720f4a23dc47f648"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/005.png",
+      "bytes": 10410,
+      "sha256": "d3d4df420b913ba4470ce4fc8a71da17a02b5b7bc7a882e26bc8de6ff85720ee"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/006.png",
+      "bytes": 10568,
+      "sha256": "ab8e524ee79e0cbdebad0f657276e5a641ef8fd3bb9852858b3b280a0633581d"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/007.png",
+      "bytes": 11750,
+      "sha256": "2dacf5433cd8a4428717005e16b1a7f9778f16251a2568c6caa5f49ae8428da0"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/008.png",
+      "bytes": 10442,
+      "sha256": "b5aa46548e317ec915611732d7d594ecd422fd476e46b6eda69e90881417922f"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/009.png",
+      "bytes": 11536,
+      "sha256": "51668c1558f1547e82701d43be5d2249fc90049365f0cad0e323b7a8067debab"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/010.png",
+      "bytes": 11160,
+      "sha256": "dd03ada64f990fa378508a81ed3974ca931ceb5d1d32a2cb218cbec665f8c314"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/011.png",
+      "bytes": 11406,
+      "sha256": "bd88b638d9436ebaf3ee833bf9a1e7e97d44a86bac768155fea57191dc893bb8"
+    },
+    {
+      "file": "r02-wind-v1/frames/wanglin-wind-east/012.png",
+      "bytes": 10029,
+      "sha256": "537f3b05b0c8267378ff0b25e6220bad2687fbc03ff952aaa2b49ee4f9c21f58"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-departure-coil/001.png",
+      "bytes": 3700,
+      "sha256": "74feacd585a09509f8138ffde07a6242425d8ed4915a6c32577bd0165a85917a"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-departure-coil/002.png",
+      "bytes": 9067,
+      "sha256": "0edbf7e020cf22b326ac415ddc4b56f61e6ff2f95d0bf5f1bf2916ca42142181"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-departure-coil/003.png",
+      "bytes": 10911,
+      "sha256": "d1b14d19693d8941de952ed48072249a4ebce8500324ff759b8a6d95365bc4ae"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-departure-coil/004.png",
+      "bytes": 13834,
+      "sha256": "1e31fa314505b36ebfb881d5d1c836b7946b4878d3cce3c39007ea1ac852f937"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-departure-coil/005.png",
+      "bytes": 12889,
+      "sha256": "e929a52bfedf085f07f1c93291d2c98bc317d4f798101033c30a46e1133d3feb"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-departure-coil/006.png",
+      "bytes": 12153,
+      "sha256": "b19eedf141e43f8dd25b0bf7e1097762b57c0919e9654648baf66bc6890760be"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-departure-coil/007.png",
+      "bytes": 8479,
+      "sha256": "7c158099f7a1ce9fa3ff3d39f52de27f7d62ee694ee368d590e3fae1bb7f8dba"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-departure-coil/008.png",
+      "bytes": 3266,
+      "sha256": "8afcbf491a2a639f379f3e8d22dcf63b8e8db293e4ed15d5b495faf6974ed05c"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/001.png",
+      "bytes": 11569,
+      "sha256": "c369c00d8f735fd4bf572b478f06433bfe3ccaf802b063fa4306705ae9677c89"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/002.png",
+      "bytes": 17859,
+      "sha256": "62fc87b973924d23e949ac11d9f8ba41a12bfdb8434f1405684318343e915e5b"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/003.png",
+      "bytes": 22629,
+      "sha256": "e4e222bf1f72c765fd897cc502fa4d8a02d5c2b37b0ee1a7d83e3d06f85bcb24"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/004.png",
+      "bytes": 28049,
+      "sha256": "a77ac5a34ad22b40a3469966ef7b271eca50924aeb091087bc55f487f6277360"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/005.png",
+      "bytes": 20483,
+      "sha256": "5aeb2e4cb3c147dfc54ace19dc9b0d7bedbf221a9efc91be11e416d9fd2af31d"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/006.png",
+      "bytes": 18532,
+      "sha256": "5ff38588578fd4d330558756e116515a627b28e3e632101699e0643ba3f86635"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/007.png",
+      "bytes": 16286,
+      "sha256": "c6b03893f903617573a80ba821c53984461b608588dd774a5b135c0e3bcb05db"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/008.png",
+      "bytes": 12807,
+      "sha256": "e05c30a71a5c0a5a64e9575be2268b58b7348aa05f907871613c9301c1cf92aa"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/009.png",
+      "bytes": 11829,
+      "sha256": "04fac51911e79c285350107e49e8b7746f43b052326da7129cbd9fd51bd074f5"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/010.png",
+      "bytes": 6075,
+      "sha256": "3421c163bd5a41f28fdbc25594956f21ef061dc16b054966fa90070b03cd3ec6"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/011.png",
+      "bytes": 1870,
+      "sha256": "789371fda0012815e2f9801fe54690f39deb7ddf0b44609e0152ed26e48244fc"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-return-curl/012.png",
+      "bytes": 804,
+      "sha256": "b359175f12884e55f6ad84f5384c72c9af79be57533268c16ec6003b4c0d3828"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-trail/001.png",
+      "bytes": 12532,
+      "sha256": "ebdeddc25cf6b12ec2084686ef0961d451e7959c54c6260e57bc357b4031fbd2"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-trail/002.png",
+      "bytes": 17139,
+      "sha256": "1554efe431d4f910868ada030053a0adb194be0e93511582039472f7441345d5"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-trail/003.png",
+      "bytes": 28214,
+      "sha256": "a62ef7f4e62b24f39ac0e3a74a9442b467827be6a969e616de4431703221e1d6"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-trail/004.png",
+      "bytes": 13725,
+      "sha256": "5c60ddcedfd73d28d563b3e62bf63047ffe31b63cd9c7ead226ff78b04cf9e14"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-trail/005.png",
+      "bytes": 16835,
+      "sha256": "aca04ba54bed455ec50766c7480ee4ed3e4e15b10921ec4d4bc4f3f3aca49f84"
+    },
+    {
+      "file": "r02-wind-v1/frames/wind-trail/006.png",
+      "bytes": 11195,
+      "sha256": "a8c5d4989278d100e77b399d0c4693411c67e5215f4cf16ae3c3ef17f502fe16"
+    },
+    {
+      "file": "r02-wind-v1/prompts/reused-r01/wind-arrival-clean.txt",
+      "bytes": 803,
+      "sha256": "ba18fbc71f62dc1ce3ea705a55473055f952baf3c90ac0bf2625c17a363b6cf4"
+    },
+    {
+      "file": "r02-wind-v1/prompts/reused-r01/wind-arrival-production.txt",
+      "bytes": 1152,
+      "sha256": "accbccb92bd08b1e4c1afab7691ead77b95501a096a04873d06e6e962a4d9709"
+    },
+    {
+      "file": "r02-wind-v1/prompts/reused-r01/wind-arrival.txt",
+      "bytes": 1105,
+      "sha256": "07063ed3c6d73ab3a4585690ac6ba2dbece19cdc2df2567da9e67fac06172d8c"
+    },
+    {
+      "file": "r02-wind-v1/prompts/reused-r01/wind-cast.txt",
+      "bytes": 1175,
+      "sha256": "4b1164745cde2a1437a9fdff4d3455901e7efdcb061a3b4467db12c44419f31a"
+    },
+    {
+      "file": "r02-wind-v1/prompts/reused-r01/wind-depart-clean.txt",
+      "bytes": 800,
+      "sha256": "e33f905ad2a9959952027232ef636fd05ddbe29bf5d3e16ac01aafc666c4dfc6"
+    },
+    {
+      "file": "r02-wind-v1/prompts/reused-r01/wind-depart-production.txt",
+      "bytes": 1048,
+      "sha256": "7bbede51d438046f2675128db4b61d9ab829932c39a32da6b068df9308b6dcc5"
+    },
+    {
+      "file": "r02-wind-v1/prompts/reused-r01/wind-depart.txt",
+      "bytes": 920,
+      "sha256": "e7d7772b618379d8881452b291e1e6079b466b0ed64b4e03ba51e1e8cca35ae3"
+    },
+    {
+      "file": "r02-wind-v1/prompts/reused-r01/wind-trail-clean.txt",
+      "bytes": 800,
+      "sha256": "7dc3e0e73ac73e994b2c7eea16fa7899afd72a3dcb04a6f8448f282e379580aa"
+    },
+    {
+      "file": "r02-wind-v1/prompts/reused-r01/wind-trail-production.txt",
+      "bytes": 1130,
+      "sha256": "776485bb5f33db435deaf31b88c97f14d03b366b337281187858a1dbdd0fcd89"
+    },
+    {
+      "file": "r02-wind-v1/prompts/reused-r01/wind-trail.txt",
+      "bytes": 1117,
+      "sha256": "3fed9afa76f05f23ebbcbb2e7685f26ce0f4178d1b00c5fa428b0ef1661c9c0e"
+    },
+    {
+      "file": "r02-wind-v1/prompts/wind-departure-coil.txt",
+      "bytes": 1297,
+      "sha256": "cc5274da1548085717901588cb1bfc55d4bf4b94b76359127cc335a979881169"
+    },
+    {
+      "file": "r02-wind-v1/prompts/wind-return-curl.txt",
+      "bytes": 1558,
+      "sha256": "ea4e704a246e1eb3eaf7580c3970f2d71e82df648aff452b8cfe32cb1356cb9e"
+    },
+    {
+      "file": "r02-wind-v1/provenance.json",
+      "bytes": 973,
+      "sha256": "c3fe868f8dc21eb83a6de3ec6a5daf07e81a59b920cc0edcc5a86d0b09090c5e"
+    },
+    {
+      "file": "r02-wind-v1/review/F11-1x.png",
+      "bytes": 785509,
+      "sha256": "aba28a20099b89d182d10068108411ca926388ce099c7cb1ab218c39016cff29"
+    },
+    {
+      "file": "r02-wind-v1/review/F11-2x.png",
+      "bytes": 465274,
+      "sha256": "9d5cc1ef8d5086b25b5dc0f9015dbfd6d50f75fc839bcfe3faff8b6a1058d455"
+    },
+    {
+      "file": "r02-wind-v1/review/F17-1x.png",
+      "bytes": 791639,
+      "sha256": "c932cfdf796552d3052b3cd86ec101ba84aaa90f98e955799b235a6d525e2bc6"
+    },
+    {
+      "file": "r02-wind-v1/review/F17-2x.png",
+      "bytes": 486739,
+      "sha256": "0b52e0609891379578df9c24157986d56dccda5dd08d9e96e00fe451261f15ce"
+    },
+    {
+      "file": "r02-wind-v1/review/F23-1x.png",
+      "bytes": 779081,
+      "sha256": "dfd66b7b3d40235e424a681196ae7f263626522becffa00a3a29e90c249717f1"
+    },
+    {
+      "file": "r02-wind-v1/review/F23-2x.png",
+      "bytes": 448495,
+      "sha256": "b596b4f54ba8d1ad2e7b60996177543e92b7e6a469fedc370ac176fceb3314ce"
+    },
+    {
+      "file": "r02-wind-v1/review/F5-1x.png",
+      "bytes": 780513,
+      "sha256": "2ac66137fa710309093f605d540a15100ef22628f444fee67cc55d199513df5b"
+    },
+    {
+      "file": "r02-wind-v1/review/F5-2x.png",
+      "bytes": 454246,
+      "sha256": "b018576dcc926d881f549b4fcfab0220bb4a0961de325532f2cf56e66720d483"
+    },
+    {
+      "file": "r02-wind-v1/skill.json",
+      "bytes": 2836,
+      "sha256": "308708d7fcc38e902321caa42e3b4b69abc12fc56266a4504ddd221880d56131"
+    },
+    {
+      "file": "r02-wind-v1/source/wind-cast.png",
+      "bytes": 1590152,
+      "sha256": "abf75b4ae65646e08a5eafef34a09667e0ebfa0f573b4e9099e703dc6dd959d7"
+    },
+    {
+      "file": "r02-wind-v1/source/wind-departure-coil.png",
+      "bytes": 1201275,
+      "sha256": "74b788117e33a75be7db92620a16d2654e25292a795d90c96cad03a89066a8d1"
+    },
+    {
+      "file": "r02-wind-v1/source/wind-return-curl.png",
+      "bytes": 1699826,
+      "sha256": "2e85630664f96edc12918f690f56cd75458b2dcc21c59b3a8042d15e578b44f3"
+    },
+    {
+      "file": "r02-wind-v1/source/wind-trail.png",
+      "bytes": 1690554,
+      "sha256": "cf1cfff43c09da66e920648fe428810e92ad06cdf54f453048f4db74c0267212"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1647,
+      "sha256": "75733d289122ec880866e81f2ae9ac9ca1bd69033bbc32d455e98d970e5f3a57"
+    },
+    {
+      "file": "releases/kiem-khi-r01-1.0.0/manifest.json",
+      "bytes": 10363,
+      "sha256": "9695a8e0fa3de3f78ec97fd157fb00a43be0b5f563417ec4537893f66c12782e"
+    },
+    {
+      "file": "releases/skill-packs/index.json",
+      "bytes": 1315,
+      "sha256": "97d81bfbbad3c22e26dd06cb30ef937e701036c6e7e227019e2402e141b8afa9"
+    },
+    {
+      "file": "releases/skill-packs/r01-sword-1.0.0.manifest.json",
+      "bytes": 13034,
+      "sha256": "9437695f1fa3b8c5775d816acc0d7c1250f3418e05199111e16c3417697b8c07"
+    },
+    {
+      "file": "releases/skill-packs/r01-thunder-1.0.0.manifest.json",
+      "bytes": 16555,
+      "sha256": "8664cafc84b887f6e0a09cacafe3ccd576843d563b98f74ee92e993f41a5628f"
+    },
+    {
+      "file": "releases/skill-packs/r01-wind-1.0.0.manifest.json",
+      "bytes": 14033,
+      "sha256": "b15577448a47f5f319f3a667f0f01dc8d346da692440d743e19553e254963994"
+    },
+    {
+      "file": "releases/skill-packs/r02-sword-1.0.0.manifest.json",
+      "bytes": 16347,
+      "sha256": "0229965750456b77ab6d64336f62d4fd6a954bf8acce2857fb5b9212de0d6468"
+    },
+    {
+      "file": "releases/skill-packs/r02-thunder-1.0.0.manifest.json",
+      "bytes": 16643,
+      "sha256": "508e4900457f1765aed271eedd31e7aa1618933ec900e8b7ec008a0f14d325cf"
+    },
+    {
+      "file": "releases/skill-packs/r02-wind-1.0.0.manifest.json",
+      "bytes": 14531,
+      "sha256": "baa6362231800cc4933a97e0b81aa0fba57bfc09bc41b040272a562f25a037c9"
+    },
+    {
+      "file": "review-r01-r02-sword.png",
+      "bytes": 966088,
+      "sha256": "da44c5aeaa628afb342fa5acbc38af0776891504fb0486c4d49d4601302392fe"
+    },
+    {
+      "file": "review-r01-r02-thunder.png",
+      "bytes": 1003727,
+      "sha256": "c4aa79492c79f3d04209447eabef6db1f772bfe16803dce2736557d7235a086c"
+    },
+    {
+      "file": "review-r01-r02-wind.png",
+      "bytes": 953256,
+      "sha256": "89305c37c05c01843ad7591f3ed4a53c9518969aad18758e707010f6e4a28ce5"
+    },
+    {
+      "file": "sect-courtyard-game-reference-v1.png",
+      "bytes": 1989099,
+      "sha256": "67073bc73686ddf40cc7859a27323f58a1fb562ffbc7deb94f16e3007efdc34f"
+    },
+    {
+      "file": "serve-preview.py",
+      "bytes": 820,
+      "sha256": "5f8aee9ef94cd2475bf23afd82d0cff8599c07fbe7594de1de1152a808186a28"
+    },
+    {
+      "file": "skill-library.html",
+      "bytes": 9547,
+      "sha256": "ef8f2484e1f67adcb29b6b18a7ef2ef6b3ded3b5ca5488733535d87f09151cf8"
+    },
+    {
+      "file": "truc-co-kit-preview.mjs",
+      "bytes": 12588,
+      "sha256": "7ca02cc915f6165d9a7951ebc0f3eae18fc1c5537b0ebe77781907039f118fac"
+    },
+    {
+      "file": "truc-co-kit.html",
+      "bytes": 9049,
+      "sha256": "34c3109027ca8655fd46dbe7fb8fee312fb69663c47f3a64bb696b026bc010e3"
+    },
+    {
+      "file": "TRUC-CO-KIT.md",
+      "bytes": 7103,
+      "sha256": "f5b0fb3886ea5dbc1b228a9d92171f7158755e47166940a330d5fb7f5634acfd"
+    },
+    {
+      "file": "wanglin-chibi-stand-east-native-v1.png",
+      "bytes": 2637,
+      "sha256": "7b2a2fdfa29790eb920915f13aa781a61a8d200b3e0eeac2bc1c506dd7f77896"
+    }
+  ]
+}

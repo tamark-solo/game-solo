@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "id": "CULTIVATION-SKILL-VFX-LIBRARY",
+  "version": "1.9.0",
+  "updatedAt": "2026-10-07",
+  "world": {
+    "size": [
+      960,
+      640
+    ],
+    "bodyHeightMax": 80,
+    "unitAtZoom1": "CSS_px",
+    "camera": "orthographic",
+    "dprCap": 2
+  },
+  "pipeline": {
+    "core": "individual_RGBA_PNG_sequences",
+    "delivery": "atlas_and_frame_events",
+    "fps": 24,
+    "artTool": "built_in_imagegen",
+    "exportTool": "Node_Sharp",
+    "damageAuthority": "combat_server",
+    "movementAuthority": "movement_server"
+  },
+  "skills": [
+    {
+      "id": "R01-SWORD",
+      "name": "Kiếm Khí",
+      "version": "1.0.0",
+      "path": "frame-by-frame-r01",
+      "frames": 36,
+      "atlases": 4,
+      "artStatus": "owner_approved",
+      "release": "releases/kiem-khi-r01-1.0.0/manifest.json",
+      "runtimeIntegrated": false,
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User viewed the kit, said it looks quite good, and requested packaging and upgrades"
+      },
+      "pack": "releases/skill-packs/r01-sword-1.0.0.zip"
+    },
+    {
+      "id": "R01-THUNDER",
+      "name": "Lôi Ấn",
+      "version": "1.0.0",
+      "path": "r01-thunder-v1",
+      "frames": 42,
+      "atlases": 5,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User viewed the kit, said it looks quite good, and requested packaging and upgrades"
+      },
+      "pack": "releases/skill-packs/r01-thunder-1.0.0.zip"
+    },
+    {
+      "id": "R01-WIND",
+      "name": "Ngự Phong Bộ",
+      "version": "1.0.0",
+      "path": "r01-wind-v1",
+      "frames": 36,
+      "atlases": 4,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User viewed the kit, said it looks quite good, and requested packaging and upgrades"
+      },
+      "pack": "releases/skill-packs/r01-wind-1.0.0.zip"
+    },
+    {
+      "id": "R02-SWORD",
+      "name": "Ngự Kiếm",
+      "version": "1.0.0",
+      "path": "r02-sword-v1",
+      "frames": 50,
+      "atlases": 6,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r02-sword-1.0.1.zip",
+      "preview": "truc-co-kit.html?family=sword",
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed current Truc Co kit, said it looks quite good and requested packaging and further upgrades."
+      },
+      "packVersion": "1.0.1"
+    },
+    {
+      "id": "R02-THUNDER",
+      "name": "Liên Lôi Ấn",
+      "version": "1.0.0",
+      "path": "r02-thunder-v1",
+      "frames": 44,
+      "atlases": 5,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r02-thunder-1.0.1.zip",
+      "preview": "truc-co-kit.html?family=thunder",
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed current Truc Co kit, said it looks quite good and requested packaging and further upgrades."
+      },
+      "packVersion": "1.0.1"
+    },
+    {
+      "id": "R02-WIND",
+      "name": "Hồi Phong Bộ",
+      "version": "1.0.0",
+      "path": "r02-wind-v1",
+      "frames": 38,
+      "atlases": 4,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r02-wind-1.0.1.zip",
+      "preview": "truc-co-kit.html?family=wind",
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed current Truc Co kit, said it looks quite good and requested packaging and further upgrades."
+      },
+      "packVersion": "1.0.1"
+    },
+    {
+      "id": "R03-SWORD",
+      "name": "Kiếm Luân",
+      "version": "1.0.0",
+      "path": "r03-sword-v1",
+      "frames": 50,
+      "atlases": 6,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r03-sword-1.0.1.zip",
+      "preview": "ket-dan-kit.html?family=sword",
+      "packVersion": "1.0.1",
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed the current Ket Dan kit, said it looks quite good and requested packaging and further upgrades."
+      }
+    },
+    {
+      "id": "R03-THUNDER",
+      "name": "Lôi Hạch",
+      "version": "1.0.0",
+      "path": "r03-thunder-v1",
+      "frames": 40,
+      "atlases": 5,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r03-thunder-1.0.1.zip",
+      "preview": "ket-dan-kit.html?family=thunder",
+      "packVersion": "1.0.1",
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed the current Ket Dan kit, said it looks quite good and requested packaging and further upgrades."
+      }
+    },
+    {
+      "id": "R03-WIND",
+      "name": "Phong Luân",
+      "version": "1.0.0",
+      "path": "r03-wind-v1",
+      "frames": 40,
+      "atlases": 4,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r03-wind-1.0.1.zip",
+      "preview": "ket-dan-kit.html?family=wind",
+      "packVersion": "1.0.1",
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed the current Ket Dan kit, said it looks quite good and requested packaging and further upgrades."
+      }
+    },
+    {
+      "id": "R04-SWORD",
+      "name": "Kiếm Linh Ảnh",
+      "version": "2.0.0",
+      "path": "r04-sword-v2",
+      "frames": 56,
+      "atlases": 7,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r04-sword-2.0.1.zip",
+      "preview": "nguyen-anh-kit.html?family=sword",
+      "packVersion": "2.0.1",
+      "edition": "half_body_qi_sigil",
+      "redrawnSpiritFrames": 6,
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed the current redesigned Nguyen Anh kit, said it looks quite good and requested packaging and further upgrades."
+      }
+    },
+    {
+      "id": "R04-THUNDER",
+      "name": "Linh Ảnh Lôi Ấn",
+      "version": "2.0.0",
+      "path": "r04-thunder-v2",
+      "frames": 54,
+      "atlases": 7,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r04-thunder-2.0.1.zip",
+      "preview": "nguyen-anh-kit.html?family=thunder",
+      "packVersion": "2.0.1",
+      "edition": "half_body_qi_sigil",
+      "redrawnSpiritFrames": 6,
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed the current redesigned Nguyen Anh kit, said it looks quite good and requested packaging and further upgrades."
+      }
+    },
+    {
+      "id": "R04-WIND",
+      "name": "Linh Ảnh Phong Bộ",
+      "version": "2.0.0",
+      "path": "r04-wind-v2",
+      "frames": 46,
+      "atlases": 5,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r04-wind-2.0.1.zip",
+      "preview": "nguyen-anh-kit.html?family=wind",
+      "packVersion": "2.0.1",
+      "edition": "half_body_qi_sigil",
+      "redrawnSpiritFrames": 6,
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed the current redesigned Nguyen Anh kit, said it looks quite good and requested packaging and further upgrades."
+      }
+    },
+    {
+      "id": "R05-SWORD",
+      "name": "Ý Cảnh Kiếm",
+      "version": "3.0.0",
+      "packVersion": "3.0.1",
+      "path": "r05-sword-v3",
+      "frames": 38,
+      "atlases": 5,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r05-sword-3.0.1.zip",
+      "preview": "hoa-than-kit.html?family=sword",
+      "edition": "reference_jade_silk_and_golden_seals",
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed Hoa Than V3, said it looks quite good, requested packaging into skill/VFX sets and ending the introductory skill/VFX batch.",
+        "userMessage": "nhìn khá tốt rồi giờ tiếp tục đống gói thành các bộ skill/vfx. Kết thúc vfx/skill nhập môn"
+      }
+    },
+    {
+      "id": "R05-THUNDER",
+      "name": "Ý Cảnh Lôi",
+      "version": "3.0.0",
+      "packVersion": "3.0.1",
+      "path": "r05-thunder-v3",
+      "frames": 40,
+      "atlases": 5,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r05-thunder-3.0.1.zip",
+      "preview": "hoa-than-kit.html?family=thunder",
+      "edition": "reference_jade_silk_and_golden_seals",
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed Hoa Than V3, said it looks quite good, requested packaging into skill/VFX sets and ending the introductory skill/VFX batch.",
+        "userMessage": "nhìn khá tốt rồi giờ tiếp tục đống gói thành các bộ skill/vfx. Kết thúc vfx/skill nhập môn"
+      }
+    },
+    {
+      "id": "R05-WIND",
+      "name": "Ý Cảnh Phong",
+      "version": "3.0.0",
+      "packVersion": "3.0.1",
+      "path": "r05-wind-v3",
+      "frames": 36,
+      "atlases": 4,
+      "artStatus": "owner_approved",
+      "runtimeIntegrated": false,
+      "pack": "releases/skill-packs/r05-wind-3.0.1.zip",
+      "preview": "hoa-than-kit.html?family=wind",
+      "edition": "reference_jade_silk_and_golden_seals",
+      "approval": {
+        "date": "2026-10-07",
+        "evidence": "User reviewed Hoa Than V3, said it looks quite good, requested packaging into skill/VFX sets and ending the introductory skill/VFX batch.",
+        "userMessage": "nhìn khá tốt rồi giờ tiếp tục đống gói thành các bộ skill/vfx. Kết thúc vfx/skill nhập môn"
+      }
+    }
+  ],
+  "milestones": [
+    {
+      "id": "P1",
+      "realm": "Ngưng Khí",
+      "scope": [
+        "R01-SWORD"
+      ],
+      "status": "art_approved_release_saved"
+    },
+    {
+      "id": "P2",
+      "realm": "Ngưng Khí",
+      "scope": [
+        "R01-THUNDER",
+        "R01-WIND"
+      ],
+      "status": "art_approved_release_saved"
+    },
+    {
+      "id": "P3",
+      "realm": "Trúc Cơ",
+      "scope": [
+        "R02-SWORD",
+        "R02-THUNDER",
+        "R02-WIND"
+      ],
+      "priority": "Ngự Kiếm first",
+      "status": "art_approved_release_saved",
+      "brief": "milestones/P3-TRUC-CO.md"
+    },
+    {
+      "id": "P4",
+      "realm": "Kết Đan",
+      "scope": [
+        "R03-SWORD",
+        "R03-THUNDER",
+        "R03-WIND"
+      ],
+      "status": "art_approved_release_saved",
+      "brief": "milestones/P4-KET-DAN.md"
+    },
+    {
+      "id": "P5",
+      "realm": [
+        "Nguyên Anh",
+        "Hóa Thần"
+      ],
+      "scope": [
+        "linh ảnh",
+        "ý cảnh"
+      ],
+      "status": "art_approved_release_saved",
+      "brief": "milestones/P5-NGUYEN-ANH.md",
+      "stages": [
+        {
+          "realm": "R04",
+          "status": "art_approved_release_saved",
+          "scope": [
+            "R04-SWORD",
+            "R04-THUNDER",
+            "R04-WIND"
+          ]
+        },
+        {
+          "realm": "R05",
+          "status": "art_approved_release_saved",
+          "scope": [
+            "R05-SWORD",
+            "R05-THUNDER",
+            "R05-WIND"
+          ]
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "automatedTests": {
+      "passed": 87,
+      "failed": 0
+    },
+    "offlineReviewCaptures": 16,
+    "browserInteractionVerified": false,
+    "browserReason": "localhost browser access permission was declined",
+    "runtimeReady": false,
+    "r02OfflineCaptures": 24,
+    "r01R02Comparisons": 3,
+    "r03OfflineCaptures": 30,
+    "r02R03Comparisons": 3,
+    "r04OfflineCaptures": 30,
+    "r03R04Comparisons": 3,
+    "r04SpiritRedesignComparisons": 3,
+    "currentR04Edition": "half_body_qi_sigil",
+    "r05OfflineCaptures": 30,
+    "r04R05Comparisons": 3,
+    "r05ForceOfflineCaptures": 30,
+    "r05V1V2Comparisons": 3,
+    "currentR05Edition": "reference_jade_silk_and_golden_seals",
+    "r05JadeOfflineCaptures": 30,
+    "r05V2V3Comparisons": 3
+  },
+  "release": "releases/hoa-than-kit-3.0.1.manifest.json",
+  "approvedR01Release": "releases/ngung-khi-kit-1.1.0.zip",
+  "releaseArchive": "releases/hoa-than-kit-3.0.1.zip",
+  "individualPacks": "releases/skill-packs/index.json",
+  "approvedR01ReleaseNote": "Historical 1.1.0 snapshot kept unchanged; current approval is in library and individual PACK-MANIFESTs.",
+  "approvedR02Release": "releases/truc-co-approval-1.0.1.json",
+  "approvalRule": "Library and PACK-MANIFEST record current approval. Previously sealed source/archives remain unchanged.",
+  "approvedR03Release": "releases/ket-dan-approval-1.0.1.json",
+  "approvedR04Release": "releases/nguyen-anh-approval-2.0.1.json",
+  "approvedR05Release": "releases/hoa-than-approval-3.0.1.json",
+  "productionBatch": {
+    "id": "INTRODUCTORY-SKILL-VFX-ART",
+    "status": "closed_owner_approved",
+    "closedAt": "2026-10-07",
+    "scope": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05"
+    ],
+    "skillCount": 15,
+    "activeFrames": 646,
+    "activeAtlases": 76,
+    "nextRealmProductionPlanned": false,
+    "runtimeReady": false,
+    "closureNote": "ART source and presentation deliverables completed for the agreed first batch; runtime/SFX/directions/LOD are separate work."
+  }
+}

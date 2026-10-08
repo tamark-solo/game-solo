@@ -1,5 +1,7 @@
 # Đặc tả hệ thống MVP A
 
+> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Luật E01–E08, đệ tử riêng, kết thúc tầng 1 và số liệu bên dưới là tham chiếu cũ; không là đặc tả tu tiên/server của GDD mới. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+
 > **Tham chiếu v0.6, chờ điều chỉnh online.** Người phát triển đã chọn nhiều người chơi và đệ tử riêng. Quy tắc dành cho Vương Lâm, save cục bộ, nhập JSON và quyền ghi theo tab bên dưới chưa là đặc tả máy chủ hiện tại. [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md) xác định điều chỉnh; [CHARACTERS.md](CHARACTERS.md) xác định vai và tạo hình. Phải tách tuyến đệ tử/chính truyện trước triển khai; bộ số liệu vẫn là giả thuyết cân bằng.
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  

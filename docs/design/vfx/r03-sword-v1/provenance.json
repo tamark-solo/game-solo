@@ -1,0 +1,40 @@
+{
+  "tool": "built_in_imagegen",
+  "newArt": [
+    {
+      "clip": "sword-wheel",
+      "source": "source/sword-wheel.png",
+      "prompt": "prompts/sword-wheel.txt",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "commonScale": 0.31756756756756754,
+      "registeredOrigins": "export-spec.json",
+      "selection": "five blades at sword peak; visual only"
+    },
+    {
+      "clip": "sword-flight",
+      "source": "source/sword-lance.png",
+      "prompt": "prompts/sword-lance.txt",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "grid": [
+        3,
+        2
+      ],
+      "commonScale": 0.31771894093686354,
+      "registeredOrigins": "export-spec.json",
+      "selection": "five blades at sword peak; visual only"
+    }
+  ],
+  "reuse": "byte_identical_R02_PNGs",
+  "reusePrompts": "prompts/reused-r02",
+  "processing": "mechanical_crop_semantic_registration_uniform_resize_atlas_pack"
+}

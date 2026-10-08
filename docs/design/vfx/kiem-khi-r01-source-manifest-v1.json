@@ -1,0 +1,37 @@
+{
+  "id": "R01-SWORD-ART-ANIMATIC",
+  "version": "0.1",
+  "status": "art_animatic_not_combat_runtime",
+  "tool": "built_in_imagegen",
+  "fx": {
+    "file": "kiem-khi-r01-fx-v2.png",
+    "size": [1536, 1024],
+    "alpha": true,
+    "regions": {
+      "sword": {"x": 41, "y": 242, "w": 454, "h": 187,"pivot":[0.5,0.38]},
+      "trail": {"x": 552, "y": 213, "w": 532, "h": 217},
+      "gather": {"x": 1158, "y": 160, "w": 322, "h": 307},
+      "impact": {"x": 62, "y": 534, "w": 443, "h": 423},
+      "dissolve": {"x": 578, "y": 625, "w": 469, "h": 293},
+      "dust": {"x": 1111, "y": 630, "w": 383, "h": 259}
+    }
+  },
+  "pose": {
+    "file": "kiem-khi-r01-pose-v1.png",
+    "size": [1254, 1254],
+    "alpha": true,
+    "referenceHeight": 540,
+    "style": "painted_chibi_art_proxy_not_native_pixel_sprite",
+    "regions": [
+      {"id":"ready", "x":102,"y":58,"w":427,"h":540,"anchor":[220,532]},
+      {"id":"gather", "x":722,"y":73,"w":453,"h":524,"anchor":[218,517]},
+      {"id":"release", "x":75,"y":694,"w":602,"h":505,"anchor":[245,496]},
+      {"id":"recover", "x":728,"y":683,"w":432,"h":519,"anchor":[218,510]}
+    ]
+  },
+  "scene": {"file":"kiem-khi-r01-scene-v1.png", "size":[1536,1024], "usage":"preview_plate_only"},
+  "layout": {"canvas":[960,640],"foot":[240,512],"gather":[296,403],"cast":[358,393],"impact":[796,315]},
+  "timeline": "kiem-khi-r01-timing.json",
+  "prompts": ["kiem-khi-r01-fx-v1.prompt.txt","kiem-khi-r01-fx-v2.prompt.txt","kiem-khi-r01-pose-v1.prompt.txt","kiem-khi-r01-scene-v1.prompt.txt"],
+  "runtime_ready": false
+}

@@ -1,0 +1,30 @@
+{
+  "realm": "R05",
+  "edition": "2.0.0 pressure_and_snap",
+  "tool": "built_in_imagegen",
+  "newArt": [
+    {
+      "id": "sword-piercing-flight",
+      "family": "sword",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-c216edc4-a5bd-4222-ba63-5dc4be3fe311.png",
+      "selectedSource": "r05-sword-v2/source/sword-piercing-flight.png",
+      "prompt": "r05-sword-v2/prompts/sword-piercing-flight.txt",
+      "sha256": "ab709dfc253d090f8a2397c2e8254e6baa6569301351c6a8a4e0d49cc15171ec"
+    },
+    {
+      "id": "sword-cleave-impact",
+      "family": "sword",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-7df03ae2-1e96-49ac-96b4-d47d2da7025c.png",
+      "selectedSource": "r05-sword-v2/source/sword-cleave-impact.png",
+      "prompt": "r05-sword-v2/prompts/sword-cleave-impact.txt",
+      "sha256": "d2fd609e1fb7a8f70bee7bbb2b59b511acbc64bd56b2ef59bfb1a0005521bd80"
+    }
+  ],
+  "reuse": "70 PNGs across the three V2 skills byte-identical to sealed R05 V1; per-clip reusedFrom in clips.json",
+  "processing": "Node Sharp mechanical crop, semantic pivot, common scale per sequence, atlas pack",
+  "newFramesAcrossKit": 42,
+  "oldReleasesPreserved": true,
+  "artStatus": "redesigned_pending_owner_motion_review"
+}

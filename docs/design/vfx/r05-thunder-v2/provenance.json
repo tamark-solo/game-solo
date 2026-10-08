@@ -1,0 +1,30 @@
+{
+  "realm": "R05",
+  "edition": "2.0.0 pressure_and_snap",
+  "tool": "built_in_imagegen",
+  "newArt": [
+    {
+      "id": "thunder-verdict-bolt",
+      "family": "thunder",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-b6afbc09-d029-43ed-afec-254eec4d283e.png",
+      "selectedSource": "r05-thunder-v2/source/thunder-verdict-bolt.png",
+      "prompt": "r05-thunder-v2/prompts/thunder-verdict-bolt.txt",
+      "sha256": "82b243af3a6dbe63696515db53b961def36d6d1dd917c933770bb28c6007995b"
+    },
+    {
+      "id": "thunder-verdict-impact",
+      "family": "thunder",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-33c68482-09d0-4e7a-b216-7805bee38a71.png",
+      "selectedSource": "r05-thunder-v2/source/thunder-verdict-impact.png",
+      "prompt": "r05-thunder-v2/prompts/thunder-verdict-impact.txt",
+      "sha256": "63dcb3c70ab00372c9cb48db8a02cac608eae80fe0edc3cfb19489fb257ab41c"
+    }
+  ],
+  "reuse": "70 PNGs across the three V2 skills byte-identical to sealed R05 V1; per-clip reusedFrom in clips.json",
+  "processing": "Node Sharp mechanical crop, semantic pivot, common scale per sequence, atlas pack",
+  "newFramesAcrossKit": 42,
+  "oldReleasesPreserved": true,
+  "artStatus": "redesigned_pending_owner_motion_review"
+}

@@ -1,62 +1,44 @@
-# Định hướng MMORPG tu luyện có cơ chế idle
+# Định hướng MMORPG — Hằng Nhạc và hành trình nhân vật
 
-**Phiên bản:** 0.7, ngày 07/10/2026.  
-**Người phát triển đã xác nhận:** MMORPG có idle, đệ tử riêng, khu môn phái đi lại; nhân vật pixel art trên nền stylized 2D, góc top-down ba phần tư.  
-**Đang đề xuất:** phạm vi thế giới/chiến đấu, phân bổ A → B, tỷ lệ nhân vật và bộ hướng/động tác.  
-**Tham chiếu:** [GDD](GDD.md), [online](ONLINE-DIRECTION.md), [nhân vật](CHARACTERS.md), [map tham chiếu](WORLD-MAPS.md), [ART](ART-DIRECTION.md).
+**Phiên bản:** 0.8 · **Ngày:** 08/10/2026 · **Tham chiếu:** [GDD](GDD.md), [tu tiên](CULTIVATION-SYSTEM.md), [online](ONLINE-DIRECTION.md), [nhân vật](CHARACTERS.md).
 
-**Công nghệ client đã chốt:** TypeScript + Three.js; [phân công công nghệ](TECH-STACK.md). Bước tiếp theo trước animation mới là [preview chung](ANIMATION-PREVIEW-SPEC.md) để kiểm tra bộ có sẵn trong hai chế độ. Giữ ART 2D/camera cố định; framework máy chủ và giao thức online được thiết kế riêng.
+## 1. Hướng đã chốt
 
-## 1. Trải nghiệm mục tiêu
+MMORPG web có idle. Người chơi chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, dùng map Hằng Nhạc để học game và tiến triển qua Ngưng Khí; sau map đầu mới mở sâu công pháp, tổ hợp và hành trình riêng từ Trúc Cơ.
 
-Người chơi tạo một đệ tử, đi lại trong thế giới tu tiên, gặp NPC và người chơi khác, nhận nhiệm vụ, phát triển công pháp/cảnh giới và tham gia chiến đấu. Tu luyện idle là một hệ thống tiến triển trong trải nghiệm RPG đó. Nhân vật và thành quả thuộc tài khoản, được lưu tại máy chủ.
+Không dùng mô hình tạo đệ tử mới hoặc chờ arc sau mới mở nhân vật. [Bản trước](archive/design-before-three-playable-characters/MMORPG-DIRECTION.md) giữ làm lịch sử. Pixel art chibi trên nền stylized 2D/top-down ba phần tư, UI/truyện tranh mực–giấy cổ giữ theo quyết định ART.
 
-Khu môn phái có nhân vật đi lại là **vùng khởi đầu**. Mục tiêu dài hạn có thêm khu vực nối với nó, nội dung khám phá và chiến đấu. Các chương Vương Lâm vẫn được trình bày theo tiến trình cá nhân, giữ quan hệ và vật phẩm độc hữu của nguyên tác.
+## 2. Nền nhập môn và phân hóa
 
-| Thành phần | Vai trò trong hướng MMORPG | Trạng thái |
+| Giai đoạn | Nội dung chung | Khác biệt |
 | --- | --- | --- |
-| Nhân vật người chơi | Đệ tử riêng, có hình trên map và tiến trình lâu dài | Vai đệ tử đã chốt; mẫu hình chờ duyệt |
-| Map có thể đi lại | Môn phái khởi đầu, sau đó mở vùng theo arc | Khu môn phái đã chọn; các vùng sau đang đề xuất |
-| NPC và nhiệm vụ | Điểm tương tác trong thế giới và mục tiêu phát triển nhân vật | Cần tách tuyến đệ tử khỏi chính truyện |
-| Tu luyện idle | Tích lũy/chuẩn bị tài nguyên và cảnh giới theo luật đã chọn | Cơ chế cốt lõi đã chọn; cân bằng cần cập nhật |
-| Chiến đấu và trang bị | Kỹ năng, đối thủ, chiến lợi phẩm, lựa chọn đồ | Mục tiêu RPG đề xuất; luật/phạm vi chưa chốt |
-| Xã hội | Gặp đồng môn, giao tiếp; sau đó tổ đội và hoạt động chung | Cùng thế giới đã chọn; từng tính năng cần thiết kế |
+| Hằng Nhạc/Ngưng Khí | Di chuyển, NPC, nhiệm vụ, tài nguyên, tu luyện, thuật nền, combat/né, pháp bảo đơn giản, khảo nghiệm cuối | Lời dẫn, trạng thái và dấu nhận diện nhẹ; Tư Đồ Nam là hồi phục phần năng lực |
+| Sau map đầu/Trúc Cơ | Vòng khám phá–chuẩn bị–tu luyện–khảo nghiệm | Công pháp, cách vận dụng thuật, pháp bảo và tuyến riêng |
+| Các arc cao hơn | Mốc nội dung và hoạt động nhóm mới | Bình cảnh, cơ duyên, lĩnh ngộ và truyền thừa theo từng người |
 
-Số người đồng thời, số phiên bản khu vực, số máy chủ và quy mô thế giới chưa xác định. Định hướng MMORPG không phải một cam kết năng lực vận hành đã kiểm chứng.
+Một lựa chọn đầu game phải có bản sắc nhưng không buộc người mới đọc nhiều cây build. Sau Hằng Nhạc, khác biệt phải thay đổi lựa chọn/hành động, không chỉ số hoặc màu skill. Cả ba tự chơi được, không bắt buộc có một người khác để hoàn thành nhập môn.
 
-## 2. Quan hệ với A → B
+## 3. Phân kỳ đề xuất
 
-Giữ lộ trình phát triển từng bước A → B. **Phạm vi chi tiết trước đây cần xét lại theo mục tiêu MMORPG**: A chưa có combat, B chỉ có một trận truyện của Vương Lâm, và 9/13 node cũ chưa phải map di chuyển của đệ tử.
+| Lát | Kết quả cần kiểm chứng |
+| --- | --- |
+| A — Nhập môn online hẹp | Cả ba chọn được, bước vào Hằng Nhạc, hai tài khoản thấy nhau và có nhiệm vụ/tiến trình riêng; tu luyện đầu và combat đơn giản |
+| B — Toàn map Hằng Nhạc | Tiến triển Ngưng Khí, luyện thuật, pháp bảo nền và khảo nghiệm cuối; mục tiêu chuẩn bị Trúc Cơ khi rời map |
+| C — Phân hóa | Công pháp/tổ hợp và tuyến riêng đầu tiên, điều chỉnh lựa chọn trước đầu tư sâu |
+| Arc sau | Mỗi arc có vòng chơi, map/NPC/đối thủ, nguồn truyện và ngân sách riêng |
 
-Đề xuất phân kỳ để thảo luận:
+Thay A cũ “không combat tới tầng 1” / B “một trận truyện”. Số nhiệm vụ/map, thứ tự kỹ thuật và lịch phát hành chưa khóa. Lát A dừng ở mốc đầu không đồng nghĩa Hằng Nhạc đã hoàn thành.
 
-| Bước | Trải nghiệm cần kiểm chứng | Phần còn phải thiết kế |
-| --- | --- | --- |
-| A — Nhập môn online | Tạo đệ tử, đi lại trong một khu môn phái chung, tương tác NPC/người chơi, nhận nhiệm vụ, tu luyện tới tầng đầu | Map đi lại, sprite và chuyển động, nhiệm vụ đệ tử, tài khoản/đồng bộ; vị trí combat trong A cần quyết định riêng |
-| B — Vòng RPG có chiến đấu | Đi từ môn phái tới một vùng thử chiến đấu, dùng thuật pháp, có đồ/phần thưởng và quay về chuẩn bị | Quái/đối thủ của đệ tử, quyền nhận thưởng, kỹ năng và trang bị; bố trí chung/riêng cho từng trận |
-| Sau B | Mở vùng theo arc, tổ đội, hoạt động môn phái và các hình thức tương tác bổ sung | Từng gói có nhiệm vụ/map/đối thủ/ngân sách riêng |
+## 4. Truyện, thế giới và hoạt động lặp
 
-Không tự chuyển con hổ thoát hiểm hoặc Chu Bằng trong chính truyện thành mục tiêu farm của mọi đệ tử. Quái/đối thủ cho tuyến người chơi cần hồ sơ nội dung riêng.
+Hằng Nhạc chung cho cả ba là chuyển thể. Không kể lại rằng họ cùng nhập môn trong nguyên tác. Chương cá nhân/tổ đội giữ nguồn và trạng thái theo tuyến; một người hoàn thành không đổi toàn server. Các người cùng chọn một nhân vật là các hồ sơ gameplay riêng.
 
-A là mốc kiểm chứng nhập môn và thế giới online ban đầu. Muốn đánh giá đầy đủ cảm giác RPG chiến đấu phải kiểm chứng thêm vòng B. Thứ tự này đang đề xuất; chưa coi danh sách tính năng hay số map của bản MMORPG đầu tiên là đã duyệt.
+Node WORLD-MAPS cũ tham chiếu hành trình Vương Lâm, chưa là địa lý/map đi lại đã duyệt. Không tự biến mọi nhân vật/sinh vật của một biến cố truyện thành quái farm. Hoạt động lặp, loot, party, boss/PvP/giao dịch cần hồ sơ riêng, không phát sinh tự động từ nhãn MMORPG.
 
-## 3. ART, góc nhìn và tỷ lệ
+## 5. ART và thực trạng
 
-MMORPG là định hướng thể loại. Pixel art hoặc stylized là phong cách hình; top-down hoặc isometric là góc nhìn; 2D/2.5D là cách dựng cảnh. Các lựa chọn có thể kết hợp, không phải những thể loại loại trừ nhau. [Curse of Aros](https://www.curseofaros.com/) là ví dụ sản phẩm được nhà phát triển giới thiệu là MMORPG 2D; [IdleOn](https://www.legendsofidleon.com/) là tham chiếu cho việc kết hợp idle với trải nghiệm MMO.
+Giữ nhận diện bộ ba đã duyệt/tạm chấp nhận trong hồ sơ ART. Mẫu đệ tử cũ chỉ dùng nghiên cứu và preview lịch sử, không là roster người chơi hiện hành. Không đổi pixel/animation hoặc runtime trong lần cập nhật định hướng.
 
-Sau [thử sprite Vương Lâm](design/characters/wang-lin-sprite-study/index.html), ngày 07/10/2026 người phát triển ưu tiên **nhân vật pixel art** và chọn **giữ nền stylized 2D**, cùng góc **top-down ba phần tư**. Portrait/cảnh truyện/UI giữ tranh mực/giấy cổ. [WORLD-VISUAL-SPEC.md](WORLD-VISUAL-SPEC.md) ghi cách phối hợp; mẫu sân cũ giữ tham chiếu nền/bố cục. Lưới pixel, tỷ lệ, kích thước và animation cần duyệt riêng.
+Đợt VFX 15 skill R01–R05 đã được chấp nhận và đóng. Có hình Hóa Thần không mở quyền dùng Hóa Thần tại nhập môn; chưa có đầy đủ animation chiến đấu của cả ba hoặc luật gameplay của từng thuật. [Bàn giao](design/vfx/STARTER-VFX-HANDOFF.md).
 
-Tỷ lệ khoảng **4–5 đầu chiều cao** là hướng nghiên cứu để đọc silhouette ở cỡ nhỏ. Nhận diện Vương Lâm v2 đã duyệt; [bộ áo xám đầu tiên](WANG-LIN-SPRITE-SPEC.md) có frame 64 × 96 và bốn hướng đứng/đi. Hai [mẫu đệ tử thử](PLAYER-AVATAR-VISUAL-SPEC.md) đã áp dụng cùng frame/anchor, 28 frame/mẫu; nhận diện và motion còn chờ đánh giá. Lưới nhân vật này độc lập kích thước ô/va chạm của map.
-
-## 4. Phần việc hình ảnh tăng thêm
-
-- Hình đệ tử trên map và các động tác đứng, đi, tu luyện; động tác chiến đấu theo bước mở combat.
-- Cảnh/đạo cụ hoặc bộ ô ghép cho map đi lại; hình chân dung nền truyện 1.600 × 900 không tự thay thế bộ map này.
-- Hình NPC xuất hiện thật trên map; roster chân dung không yêu cầu mọi nhân vật truyện đều có sprite trong A.
-- Phần UI cần cho màn thế giới: tên nhân vật, điểm tương tác, nhiệm vụ hiện tại, tài nguyên và hoạt động idle.
-
-Ngân sách 20/22 nguồn A và 30 sau B trong tài liệu trước là **dự toán portrait/minh họa**, chưa gồm bộ map/animation/chiến đấu MMORPG. Lập lại ngân sách sau khi chốt ART/góc nhìn và phạm vi A/B.
-
-## 5. Bước thiết kế gần nhất
-
-Hướng kết hợp giữ [thử ghép v1](design/world/hybrid-study/index.html) làm lịch sử nghiên cứu. [Trang animation Vương Lâm](design/characters/wang-lin-gray-walk-v1/index.html) có 28 frame native; [trang đệ tử v2](design/characters/player-avatars-v2/index.html) bổ sung 56 frame, nhận diện nam/nữ và thử chung trên sân. Tiếp theo triển khai preview chung TypeScript + Three.js bằng năm bộ/92 frame có sẵn; đánh giá đặt hình/chuyển động trước khi vẽ animation mới. Biên tập map/nhiệm vụ/online tiếp tục theo phạm vi riêng. Công việc vẫn ở GDD/ART, gameplay online chưa triển khai.
+Client/backend preview hiện có là công cụ kỹ thuật; tài khoản/lưu bền vững và gameplay cần đặc tả tiếp. Ngân sách portrait/map/animation cũ và hạn mức người/phòng không được coi là nghiệm thu sản phẩm mới.

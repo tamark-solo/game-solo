@@ -1,5 +1,11 @@
 # Hệ thống map — MVP và dài hạn
 
+> **Bố cục hiện hành đang thiết kế:** [Hằng Nhạc — map và bố cục v0.1](HANG-NHAC-MAP-LAYOUT.md), bảy địa điểm/tám chức năng, khu chung 2400 × 1800 đề xuất và arena HN10 riêng. Hoàn thiện map trước đặc tả vận hành; các kích thước/tọa độ chưa khóa.
+
+> **Đặc tả trải nghiệm mới:** [Hằng Nhạc — Ngưng Khí v0.4](HANG-NHAC-NGUNG-KHI-SPEC.md) đề xuất tám khu chức năng/tuyến HN01–HN12; [tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) phân bổ 15 tầng thử; [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất arena và phiên khảo nghiệm. Chưa là địa lý/ngân sách background đã khóa; bảng node ở đây giữ làm nguồn tham chiếu lịch sử.
+
+> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Các node/số map/phân kỳ A–B bên dưới là tham chiếu truyện cũ, không phải map gameplay Hằng Nhạc hoàn chỉnh; map nhập môn hiện hành đi qua Ngưng Khí. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+
 > **Điều chỉnh MMORPG v0.10:** khu môn phái là vùng khởi đầu; nhân vật pixel art trên nền stylized 2D/top-down ba phần tư đã chọn sau thử Vương Lâm. [Sân v2](design/world/index.html) giữ tham chiếu nền/bố cục; cần thử cách ghép pixel theo [WORLD-VISUAL-SPEC](WORLD-VISUAL-SPEC.md). Các 9/13 node dưới đây chỉ tham chiếu chính truyện. Phạm vi A/B và ngân sách map/sprite/animation cần xét lại.
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  

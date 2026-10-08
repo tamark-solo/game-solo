@@ -1,0 +1,25 @@
+{
+  "id":"R01-SWORD-FBF-EAST",
+  "version":"1.0",
+  "status":"produced_sequence_preview_not_integrated_combat",
+  "fps":24,
+  "authoringFrameBase":1,
+  "character":{"clip":"wanglin-cast-east","baseIdleFrame":[64,96],"castCanvas":[96,96],"castAnchor":[48,88],"bodyHeight":80,"collisionChanged":false},
+  "sockets":[[15,-25],[22,-42],[7,-40],[28,-52],[12,-37],[40,-36],[44,-36],[43,-36],[20,-31],[15,-25],[15,-25],[15,-25]],
+  "tracks":[
+    {"id":"character","clip":"wanglin-cast-east","startFrame":1,"layer":"body"},
+    {"id":"anticipation","clip":"sword-charge","startFrame":1,"stopBeforeFrame":7,"anchor":"character.castSocket","layer":"air"},
+    {"id":"projectile","clip":"sword-projectile","trigger":"release","anchor":"projectile.tip","layer":"air","worldSpeed":480,"initialTipAhead":100,"maxTravelWorld":360,"speedAndRangeScope":"preview_only_replace_with_combat_definition"},
+    {"id":"impact","clip":"qi-impact","trigger":"combat.hitConfirmed","anchor":"hit.worldPosition","layer":"impact"}
+  ],
+  "events":[
+    {"frame":1,"type":"cast.start"},
+    {"frame":7,"type":"release","clip":"sword-projectile","sfx":"sword.cast"},
+    {"frame":10,"type":"recovery.start"},
+    {"frame":17,"type":"character.end"}
+  ],
+  "hitContract":{"authority":"combat_server","required":["castId","targetId","worldPosition","incomingDirection"],"miss":"no_impact","deduplicateBy":"castId_and_hitId","damageFromVfx":false},
+  "presentation":{"hitStopMs":25,"cameraShakeWorld":1,"cameraShakeFrames":3,"screenFlash":false,"sfxHooks":["sword.cast","sword.hit"],"sfxAssetsProduced":false},
+  "preview":{"defaultFoot":[360,386],"defaultTargetFoot":[620,386],"cameraCenter":[480,320],"worldSize":[960,640],"impactSource":"explicit_simulated_confirmation_after_projectile_contact","hitDelayFrames":[0,6,12],"zoom":[1,2,4],"dprCap":2},
+  "runtimeReady":false
+}

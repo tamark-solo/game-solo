@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiếm Khí · Vương Lâm chibi — VFX đúng tỷ lệ game</title>
+<style>
+:root{color-scheme:dark;font-family:Segoe UI,Arial,sans-serif;background:#101c23;color:#ece9df}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#273d40,#101c23 70%);min-height:100vh}main{width:min(1100px,100%);margin:auto;padding:26px 22px 38px}header{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:20px}.eyebrow{font-size:12px;letter-spacing:2px;color:#9fc4ba;margin:0 0 8px}h1{font:500 clamp(27px,4vw,40px) Cambria,"Times New Roman",serif;margin:0;color:#f5e9ce}.subtitle{font-size:14px;color:#adc0c0;margin:9px 0 0}.badge{font-size:12px;border:1px solid #5d736b;border-radius:20px;padding:7px 12px;white-space:nowrap;color:#bcdbc9}.stage{position:relative;overflow:hidden;border:1px solid #7a7560;border-radius:12px;background:#16262d;box-shadow:0 24px 60px #030b1280}canvas{display:block;width:100%;aspect-ratio:3/2}.phase-overlay{position:absolute;left:18px;top:16px;pointer-events:none;background:#12262bd9;border:1px solid #9f98717a;border-radius:7px;padding:9px 14px;color:#ecdfbb;font:20px Cambria,"Times New Roman",serif}.loading{position:absolute;inset:0;display:grid;place-items:center;background:#14252bf2;text-align:center;padding:30px}.loading[hidden]{display:none}.tools{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:17px 0 13px}button,select{font:inherit;font-size:14px;border:1px solid #566f6c;background:#213739;color:#e5eee5;border-radius:7px;padding:10px 14px;cursor:pointer}button:hover,select:hover{background:#314e4c}button:disabled{opacity:.45;cursor:wait}button.primary{background:#bcd9bb;color:#172b25;border-color:#c0dfc1;font-weight:600}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #e7d398;outline-offset:4px}.tools label{font-size:13px;color:#c2d0ca;display:flex;align-items:center;gap:8px}.spacer{flex:1}.timeline{border:1px solid #344d50;border-radius:9px;padding:16px;background:#162a30}input[type=range]{width:100%;accent-color:#b7d7b7;cursor:pointer;margin:9px 0 12px}input[type=checkbox]{accent-color:#b7d7b7}.timeline-top{display:flex;justify-content:space-between;color:#b4c8c4;font-size:13px}.beats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.beats button{padding:9px 4px;font-size:13px;background:#1b3136}.beats button.active{background:#36544c;border-color:#a7c4a0;color:#f4efd9}.note{color:#a7bfbc;font-size:13px;line-height:1.65;margin:16px 0 0}.note a{color:#d2dcbb}footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid #30464a;padding-top:14px;margin-top:18px;font-size:12px;color:#8eaaa8}footer a{color:#bfcec0}#time{font-variant-numeric:tabular-nums}.error{color:#f4c4a7}@media(max-width:600px){main{padding:18px 10px 25px}header{display:block}.badge{display:inline-block;margin-top:13px}.phase-overlay{font-size:15px;top:10px;left:10px;padding:7px 10px}.tools{gap:8px}.tools button,.tools select{padding:9px 10px}.spacer{display:none}.beats{gap:4px}.beats button{font-size:11px}.timeline{padding:12px}.subtitle{line-height:1.5}}
+</style>
+<style>
+main{width:min(1006px,100%)}.stage{height:642px;max-width:100%;margin:auto}canvas{width:100%;height:100%;aspect-ratio:auto}.tools{gap:10px}.meta{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;color:#acc5c0;font-size:12px}.meta strong{color:#e6dcbb;font-weight:500}@media(max-width:600px){.stage{height:402px}}
+</style>
+</head>
+<body>
+<main>
+<header><div><p class="eyebrow">ART / VFX · R01</p><h1>Kiếm Khí · Vương Lâm</h1><p class="subtitle">Vương Lâm chibi trên sân game · linh quang chạm và dư khí dùng chung.</p></div><span class="badge">Bản thử v2 · Ngưng Khí</span></header>
+<section class="stage" aria-label="Cảnh thi triển Kiếm Khí">
+<canvas id="scene" width="960" height="640" role="img" aria-label="Vương Lâm chibi dùng Kiếm Khí, hiệu ứng chạm và dư khí áp dụng cho nhân vật, quái, boss và PvP"></canvas>
+<div class="phase-overlay" id="phase">Chuẩn bị</div>
+<div class="loading" id="loading" role="status">Đang nạp nguồn mỹ thuật…</div>
+</section>
+<div class="tools">
+<button class="primary" id="cast" disabled>Thi triển</button><button id="pause" disabled>Tạm dừng</button><button id="export" disabled>Xuất khung PNG</button>
+<label>Tốc độ <select id="speed" aria-label="Tốc độ diễn hoạt"><option value="0.25">0,25×</option><option value="0.5" selected>0,5×</option><option value="1">1×</option></select></label>
+<label><input type="checkbox" id="loop" checked>Lặp lại</label><span class="spacer"></span>
+<label>Zoom <select id="zoom" aria-label="Zoom game"><option value="1" selected>1× · game</option><option value="2">2× · xem kỹ</option><option value="4">4× · xem pixel</option></select></label>
+<label>Nền <select id="mood" aria-label="Nền kiểm tra"><option value="night">Sân tối</option><option value="light">Sân sáng</option><option value="alpha">Kiểm alpha</option></select></label>
+<label><input type="checkbox" id="reduced">Giảm trang trí</label>
+</div>
+<div class="tools">
+<label>Mục tiêu <select id="target-kind" aria-label="Mục tiêu VFX"><option value="pvp" selected>PvP</option><option value="character">Nhân vật</option><option value="monster">Quái · vùng chạm</option><option value="boss">Boss · vùng chạm</option></select></label>
+<label><input type="checkbox" id="contact" checked>Va chạm</label><label><input type="checkbox" id="bounds">Hiện khung và điểm chạm</label>
+<label>Khung xem <select id="view-size" aria-label="Khung xem thử"><option value="auto" selected>Theo cửa sổ</option><option value="compact">360 × 400</option></select></label>
+</div>
+<div class="meta"><strong id="size-info">Frame 64 × 96 · zoom 1×</strong><span>Kiếm 96 px · ánh chạm 52–62 px ở 1×</span></div>
+<section class="timeline" aria-label="Bốn nhịp Kiếm Khí"><div class="timeline-top"><span id="description">Tụ khí → xuất kiếm → chạm → tan</span><span id="time">0,00 / 0,68 s</span></div>
+<input id="seek" type="range" min="0" max="680" value="0" step="1" aria-label="Thời điểm trong chiêu">
+<div class="beats"><button data-time="100">01 · Tụ khí</button><button data-time="260">02 · Xuất kiếm</button><button data-time="360">03 · Chạm</button><button data-time="560">04 · Dư khí</button></div></section>
+<p class="note">Ở zoom 1×, một đơn vị map bằng một CSS pixel; thu hẹp cửa sổ sẽ cắt vùng nhìn. Hiệu ứng cuối là mảnh sáng và dư khí quanh điểm chạm. Quái/boss hiện bằng vùng chạm thử để kiểm cách gắn VFX; nhân vật/PvP dùng sprite có sẵn. Vương Lâm đang dùng frame đứng chibi của game, pose thi triển sẽ được vẽ riêng.</p>
+<footer><span>Kéo thanh thời gian hoặc chọn một nhịp để xem kỹ.</span><span><a href="kiem-khi-r01-timing-v2.png">Bảng đã duyệt</a> · <a href="KIEM-KHI-R01.md">Hồ sơ ART</a> · <a href="kiem-khi-r01-source-manifest.json">Metadata nguồn</a></span></footer>
+</main>
+<script type="module" src="./kiem-khi-preview-v2.mjs?v=1"></script>
+</body></html>

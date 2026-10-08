@@ -1,0 +1,40 @@
+{
+  "tool": "built_in_imagegen",
+  "newArt": [
+    {
+      "clip": "thunder-core",
+      "source": "source/thunder-core.png",
+      "prompt": "prompts/thunder-core.txt",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "commonScale": 0.3188405797101449,
+      "registeredOrigins": "export-spec.json",
+      "selection": "core/ring/trail production"
+    },
+    {
+      "clip": "thunder-impact",
+      "source": "source/thunder-core-burst.png",
+      "prompt": "prompts/thunder-core-burst.txt",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "commonScale": 0.24821002386634844,
+      "registeredOrigins": "export-spec.json",
+      "selection": "core/ring/trail production"
+    }
+  ],
+  "reuse": "byte_identical_R02_PNGs",
+  "reusePrompts": "prompts/reused-r02",
+  "processing": "mechanical_crop_semantic_registration_uniform_resize_atlas_pack"
+}

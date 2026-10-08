@@ -1,0 +1,23 @@
+{
+  "id": "hang-nhac-art-v1",
+  "status": "art-review-not-collision-ready",
+  "generation": "built-in-imagegen",
+  "image": {"file": "hang-nhac-map-v1.png", "width": 1448, "height": 1086, "mode": "RGB", "sha256": "c42e9015b7ca4573faa132c6822954e962864da2b5a7225164b69250eb3f60c5"},
+  "layoutReference": "../hang-nhac-layout-v1/layout.json",
+  "worldReference": {"width": 2400, "height": 1800, "viewportWidth": 960, "viewportHeight": 640},
+  "anchorScope": "manually-observed-art-review-points-not-game-spawns-or-colliders",
+  "artAnchorsNative": [
+    {"id": "HN-Z01", "name": "Sơn môn · Tiếp dẫn", "x": 730, "y": 900},
+    {"id": "HN-Z02", "name": "Sân môn phái", "x": 735, "y": 540},
+    {"id": "HN-Z03", "name": "Đình thổ nạp", "x": 248, "y": 316},
+    {"id": "HN-Z04", "name": "Sân luyện thuật", "x": 1220, "y": 463},
+    {"id": "HN-Z05", "name": "Ngoại vi · Hậu sơn", "x": 245, "y": 773},
+    {"id": "HN-Z06", "name": "Chuẩn bị · Luyện hóa", "x": 1210, "y": 741},
+    {"id": "HN-Z07", "name": "Lối vào khảo nghiệm", "x": 724, "y": 132},
+    {"id": "HN-Z08", "name": "Sơn môn · Xuất hành", "x": 730, "y": 900}
+  ],
+  "review": {
+    "confirmedVisually": ["seven places, gate reused for arrival/departure", "central courtyard clear of standing props", "two main hall wings with visible central passage", "west return path and east preparation/training connection", "no characters, UI, labels or fixed skill effects"],
+    "pending": ["floor footprints and narrow stair sections differ from coordinate blockout", "measure route widths and camera occlusion using actual collision layers", "split ground, roofs, vegetation and props before production", "native image resolution is below proposed 2400x1800 world, no lossless-detail upscale claim", "private trial arena needs its own background, top terrace is only an entry"]
+  }
+}

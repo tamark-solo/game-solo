@@ -1,0 +1,40 @@
+{
+  "tool": "built_in_imagegen",
+  "newArt": [
+    {
+      "clip": "wind-wheel",
+      "source": "source/wind-wheel.png",
+      "prompt": "prompts/wind-wheel.txt",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "commonScale": 0.24324324324324326,
+      "registeredOrigins": "export-spec.json",
+      "selection": "core/ring/trail production"
+    },
+    {
+      "clip": "wind-trail",
+      "source": "source/wind-compressed-trail.png",
+      "prompt": "prompts/wind-compressed-trail.txt",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "commonScale": 0.42597402597402595,
+      "registeredOrigins": "export-spec.json",
+      "selection": "core/ring/trail production"
+    }
+  ],
+  "reuse": "byte_identical_R02_PNGs",
+  "reusePrompts": "prompts/reused-r02",
+  "processing": "mechanical_crop_semantic_registration_uniform_resize_atlas_pack"
+}

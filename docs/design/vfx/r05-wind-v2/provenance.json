@@ -1,0 +1,30 @@
+{
+  "realm": "R05",
+  "edition": "2.0.0 pressure_and_snap",
+  "tool": "built_in_imagegen",
+  "newArt": [
+    {
+      "id": "wind-pressure-trail",
+      "family": "wind",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-bd53fae8-2fc0-4409-82d1-6cadcb978f53.png",
+      "selectedSource": "r05-wind-v2/source/wind-pressure-trail.png",
+      "prompt": "r05-wind-v2/prompts/wind-pressure-trail.txt",
+      "sha256": "fb11a5a6036cd911f84eb31a7fbe68801bae145cc034345dc78bea9e944bf2ca"
+    },
+    {
+      "id": "wind-pressure-arrival",
+      "family": "wind",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-ba16d935-5f8e-4d09-809a-1e1656d229ee.png",
+      "selectedSource": "r05-wind-v2/source/wind-pressure-arrival.png",
+      "prompt": "r05-wind-v2/prompts/wind-pressure-arrival.txt",
+      "sha256": "8f8a74fc85a3b69e38dff8cb6a144fa6fe1f06bd417791e078f9f42b665fccae"
+    }
+  ],
+  "reuse": "70 PNGs across the three V2 skills byte-identical to sealed R05 V1; per-clip reusedFrom in clips.json",
+  "processing": "Node Sharp mechanical crop, semantic pivot, common scale per sequence, atlas pack",
+  "newFramesAcrossKit": 42,
+  "oldReleasesPreserved": true,
+  "artStatus": "redesigned_pending_owner_motion_review"
+}

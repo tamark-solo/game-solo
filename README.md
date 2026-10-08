@@ -1,6 +1,6 @@
 # game-solo
 
-Dự án game web theo hướng **MMORPG tu luyện có cơ chế idle**, dành cho một người phát triển. Client dùng **TypeScript + Three.js**, backend thử nghiệm dùng **TypeScript + Node.js + Colyseus**. Mỗi người chơi tạo một đệ tử riêng trong thế giới *Tiên Nghịch*; Vương Lâm giữ vai trò trung tâm của chính truyện. Khu môn phái có nhân vật đi lại là vùng khởi đầu đã chọn.
+Dự án game web theo hướng **MMORPG tu luyện có cơ chế idle**, dành cho một người phát triển. Client dùng **TypeScript + Three.js**, backend thử nghiệm dùng **TypeScript + Node.js + Colyseus**. Người chơi chọn **Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu**, nhập môn tại **Hằng Nhạc qua Ngưng Khí**, rồi phân hóa lối chơi và tuyến tu luyện từ hành trình Trúc Cơ. Mở đầu chung là chuyển thể của game, không phải sự kiện ba người cùng nhập môn trong nguyên tác.
 
 ## Chạy bản thử
 
@@ -17,7 +17,16 @@ Cần Node.js >= 22.12.0. Backend mặc định ở localhost:2567. Đây là ph
 
 ## Tài liệu thiết kế
 
-- [GDD phiên bản 0.24](docs/GDD.md): đã chọn tỷ lệ chibi theo reference; mẫu Vương Lâm một hướng để đánh giá.
+- [GDD phiên bản 0.28](docs/GDD.md): ba nhân vật từ đầu, bộ R01 chung có sẵn, Hằng Nhạc qua Ngưng Khí, sáu phần phát triển và phân hóa sau nhập môn.
+- [Đặc tả trải nghiệm Hằng Nhạc — Ngưng Khí](docs/HANG-NHAC-NGUNG-KHI-SPEC.md): hành trình HN01–HN12, bốn mốc trải nghiệm, ba đoạn cá nhân, bình cảnh, khảo nghiệm và xuất hành; bản đề xuất chưa triển khai.
+- [Hồ sơ gameplay Ngưng Khí](docs/NGUNG-KHI-GAMEPLAY-SPEC.md): Kiếm Khí/Lôi Ấn/Ngự Phong Bộ cho cả ba từ đầu; cơ chế, frame event và số liệu thử nghiệm chưa khóa.
+- [Tiến trình tu luyện và phần thưởng Hằng Nhạc](docs/HANG-NHAC-PROGRESSION-REWARDS.md): nguồn 15 tầng, phân bổ mốc, tu vi/thưởng HN01–HN12, pháp khí/vật tư và idle; phạm vi/số liệu mới là đề xuất.
+- [Đối thủ và khảo nghiệm nhập môn Hằng Nhạc](docs/HANG-NHAC-ENCOUNTERS-TRIAL.md): ba mẫu AI/vùng/timing đòn, ba pha HN10, chủ khảo hai nhịp, checkpoint/thử lại và kết nối lại; bản thiết kế chưa triển khai.
+- [Map và bố cục Hằng Nhạc](docs/HANG-NHAC-MAP-LAYOUT.md): bảy địa điểm/tám chức năng, sân trung tâm, hai vòng đi lại và arena riêng; phương án đầu để duyệt trước đặc tả vận hành.
+- [Toàn nền Hằng Nhạc v3](docs/design/world/hang-nhac-art-v3/index.html): bảy địa điểm liền mạch, nguồn vùng đủ pixel cho camera 1×, phần vẽ sửa mép, Vương Lâm body 80 và khung hẹp; bản duyệt ART, chưa tích hợp game.
+- [Nền mỹ thuật Hằng Nhạc v1](docs/design/world/hang-nhac-art-v1/index.html): xem nền môn phái mới, chọn địa điểm theo khung game và ghép Vương Lâm R01 để xem tỷ lệ; chưa tích hợp runtime/va chạm.
+- [Thử tỷ lệ/camera Hằng Nhạc](docs/design/world/hang-nhac-art-v1/camera-study.html): Vương Lâm R01 body 80 ở 1×, camera bám/cố định, khung desktop và khung hẹp giữ cỡ nhân vật; chỉ là bản duyệt camera.
+- [Hệ thống tu tiên](docs/CULTIVATION-SYSTEM.md): cảnh giới, công pháp, thuật pháp, pháp bảo, lĩnh ngộ, hành trình cá nhân; bình cảnh/đột phá và hồi phục Tư Đồ Nam.
 - [Đối chiếu reference và hướng sửa](docs/GAIT-REFERENCE-REVIEW.md): tỷ lệ mới, bước nhỏ, tay gần thân và thứ tự kiểm tra một hướng.
 - [Nguồn/prompt mẫu chibi](docs/design/characters/wang-lin-chibi-pilot-v1/README.md): PNG v1/v2, atlas native và kết quả kiểm tra; tạo bằng imagegen tích hợp.
 - [Công nghệ client](docs/TECH-STACK.md): vai trò TypeScript, Three.js, UI và thành phần dùng chung với preview.
@@ -29,7 +38,7 @@ Cần Node.js >= 22.12.0. Backend mặc định ở localhost:2567. Đây là ph
 - [Hình ảnh trên map](docs/WORLD-VISUAL-SPEC.md): góc nhìn đã chọn, tỷ lệ/kích thước thử và điều kiện duyệt trước bộ sprite.
 - [Mẫu màn thế giới v1](docs/design/world/index.html): sân môn phái và thẻ UI, có khung 960 × 640/360 px để xem tỷ lệ; kèm ảnh ART và prompt đã dùng.
 - [Định hướng online](docs/ONLINE-DIRECTION.md): thế giới chung, chương cá nhân, lưu máy chủ và tu luyện khi vắng mặt.
-- [Dàn nhân vật và brief tạo hình](docs/CHARACTERS.md): trục 3 nhân vật đã chốt; đệ tử riêng và phạm vi NPC A/B đề xuất.
+- [Dàn nhân vật và brief tạo hình](docs/CHARACTERS.md): ba lựa chọn chơi được từ đầu, trạng thái riêng và nguồn nhận diện; roster NPC cần biên tập lại.
 - [Chân dung UI bộ ba](docs/design/characters/core-ui-v1/index.html): một biểu cảm cơ bản mỗi người, bản PNG/WebP 512/160/64 và ví dụ hội thoại; mới chờ đánh giá.
 - [Kế hoạch động tác bộ ba](docs/CORE-CHARACTER-MOTION-PLAN.md): 44 frame core hiện có, mục tiêu 108; 64 frame Tư Đồ Nam/Lý Mộ Uyển còn ở thiết kế, theo giai đoạn xuất hiện.
 - [Hồ sơ tạo hình bộ ba](docs/CORE-CHARACTER-VISUAL-SPEC.md): Tư Đồ Nam dạng linh hồn, Lý Mộ Uyển áo đỏ/tím; căn cứ truyện tách lựa chọn ART.
@@ -37,7 +46,7 @@ Cần Node.js >= 22.12.0. Backend mặc định ở localhost:2567. Đây là ph
 - [Hồ sơ tạo hình Vương Lâm](docs/WANG-LIN-VISUAL-SPEC.md): chi tiết có nguồn, phần ART đề xuất, bộ nghiên cứu v2, prompt và điểm cần duyệt trước bộ sprite.
 - [Đặc tả sprite Vương Lâm](docs/WANG-LIN-SPRITE-SPEC.md): frame 64 × 96, palette 24 mục, điểm chân, 4 đứng và 24 đi; atlas/metadata.
 - [Xem animation và thử bước](docs/design/characters/wang-lin-gray-walk-v1/index.html): bốn hướng, bước từng frame/phóng nguyên lần và sân tham chiếu ở cỡ gốc.
-- [Hai mẫu đệ tử người chơi](docs/PLAYER-AVATAR-VISUAL-SPEC.md): nhận diện v2, dấu phân biệt với Vương Lâm, palette chung và ngân sách 28 frame/mẫu.
+- [Hai mẫu đệ tử — lịch sử preview](docs/PLAYER-AVATAR-VISUAL-SPEC.md): nhận diện v2, dấu phân biệt với Vương Lâm, palette chung và ngân sách 28 frame/mẫu.
 - [So sánh sprite và thử hai đệ tử trên sân](docs/design/characters/player-avatars-v2/index.html): tạo hình nam/nữ, bốn hướng đứng/đi, xem pixel và thử dịch chuyển; kèm nguồn/prompt/atlas.
 - [Thư viện tạo hình nhân vật](docs/design/characters/index.html): Vương Lâm v2 và hai mẫu đệ tử v2; hình trước đó được giữ để so sánh.
 - [Thử sprite Vương Lâm](docs/design/characters/wang-lin-sprite-study/index.html): hai mẫu nét mịn/pixel art có nền trong suốt, cùng giai đoạn áo xám và tư thế; dùng so sánh phong cách.
@@ -50,16 +59,16 @@ Cần Node.js >= 22.12.0. Backend mặc định ở localhost:2567. Đây là ph
 - [Thư viện bản phác UX/ART](docs/design/index.html): bảng ART, năm khu vực chính, đọc truyện, offline/kết thúc và ba bảng trạng thái; mở trong trình duyệt.
 - [Backlog MVP](docs/MVP-BACKLOG.md): thứ tự triển khai và điều kiện nghiệm thu.
 - [Kế hoạch asset](docs/ASSET-PLAN.md): danh mục, brief, biến thể theo truyện và thứ tự sản xuất.
-- [Hệ thống map](docs/WORLD-MAPS.md): 9 địa điểm nhập môn, mở rộng lên 13 địa điểm ở B và kế hoạch các arc sau.
+- [Hệ thống map — tham chiếu trước](docs/WORLD-MAPS.md): các node truyện và kế hoạch cũ; bố trí chức năng Hằng Nhạc hiện hành được đề xuất trong đặc tả trải nghiệm mới.
 - [Quái, nguy hiểm và chiến đấu](docs/ENCOUNTERS.md): hồ sơ gặp gỡ, luật lặp, combat thử và phần thưởng dài hạn.
 - [Roster nhân vật online](docs/data/character-roster.json): ID, vai trò, giai đoạn xuất hiện, nguồn và trạng thái concept.
-- [Catalog tham chiếu MVP A](docs/data/mvp-content-catalog.json): 10 cảnh của Vương Lâm và luật cũ; chờ tách tuyến đệ tử/chính truyện trước triển khai online.
+- [Catalog tham chiếu MVP A](docs/data/mvp-content-catalog.json): 10 cảnh của Vương Lâm và luật cũ; cần biên tập cho ba nhân vật và map nhập môn mới; không phải luật runtime hiện hành.
 - [Save minh họa cũ](docs/data/mvp-save-example.json): snapshot v0.6 sau E07, để tham chiếu bộ mô phỏng; không là hợp đồng lưu máy chủ.
 
-Lộ trình đã chốt: **A → B**. Đề xuất A kiểm chứng nhập môn/tu luyện và một khu môn phái đi lại chung; B kiểm chứng vòng RPG có chiến đấu. Phạm vi nhiệm vụ, map và combat cần xét lại theo mục tiêu MMORPG; xem MMORPG-DIRECTION. Số map/asset cũ giữ làm tham chiếu cho chính truyện.
+Phạm vi đã chốt: **Hằng Nhạc qua Ngưng Khí, phân hóa sau nhập môn từ Trúc Cơ**. Đề xuất các lát A nhập môn online hẹp có combat đơn giản, B hoàn thiện Hằng Nhạc, C phân hóa; phạm vi chi tiết còn cần đặc tả. Số map/asset cũ giữ làm tham chiếu.
 
 **Giai đoạn hiện tại: preview chạy được và backend online tối thiểu; gameplay tài nguyên/tu luyện chưa triển khai.** Nhận diện Vương Lâm v2 đã duyệt làm tham chiếu. Bộ đi sửa cho Vương Lâm/hai đệ tử có 36 frame/mẫu, cùng lưới 64 × 96, điểm chân (32, 88); frame mới chờ đánh giá nhận diện/chuyển động. Bộ sáu pose cũ được giữ để so sánh. Nhân vật pixel/nền stylized 2D/top-down ba phần tư, portrait/truyện/UI tranh mực/giấy cổ được giữ theo định hướng đã chọn.
 
-Hiện ưu tiên hoàn thiện nhận diện Vương Lâm, Tư Đồ Nam và Lý Mộ Uyển trước NPC phụ. Lý Mộ Uyển đã chấp nhận nhận diện v1; Tư Đồ Nam đứng v3 giữ mặt/tóc v2 đã được tạm chấp nhận làm chuẩn thiết kế; dáng ngồi được lưu cho cảnh tu luyện. Tạo hình sớm giữ thời điểm xuất hiện theo B/arc sau.
+Hiện ưu tiên hoàn thiện nhận diện Vương Lâm, Tư Đồ Nam và Lý Mộ Uyển trước NPC phụ. Lý Mộ Uyển đã chấp nhận nhận diện v1; Tư Đồ Nam đứng v3 giữ mặt/tóc v2 đã được tạm chấp nhận làm chuẩn thiết kế; dáng ngồi được lưu cho cảnh tu luyện. Cả ba nhân vật được chọn từ đầu theo GDD mới; thời điểm xuất hiện nguyên tác được giữ trong nguồn và phiên truyện, tách với mở đầu gameplay chuyển thể.
 
-Bước triển khai đầu tiên đã có **preview chung TypeScript + Three.js** bằng asset có sẵn và **sân chung Node.js + Colyseus**. Loader/animation/movement/renderer được dùng chung giữa duyệt ART và thử online. Bước tiếp theo là đánh giá chuyển động, rồi đặc tả tài khoản/lưu tiến trình và tuyến nhiệm vụ đệ tử trước vòng tu luyện.
+Bước triển khai đầu tiên đã có **preview chung TypeScript + Three.js** bằng asset có sẵn và **sân chung Node.js + Colyseus**. Loader/animation/movement/renderer được dùng chung giữa duyệt ART và thử online. Bước tiếp theo về thiết kế là biên tập mở đầu ba người, Hằng Nhạc, trạng thái tu tiên và tài khoản/lưu theo GDD mới. Preview hiện vẫn dùng các mẫu thử cũ; chưa triển khai mô hình gameplay mới.

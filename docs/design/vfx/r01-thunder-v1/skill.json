@@ -1,0 +1,181 @@
+{
+  "version": "1.0.0",
+  "artStatus": "produced_pending_owner_motion_review",
+  "fps": 24,
+  "authoringFrameBase": 1,
+  "runtimeReady": false,
+  "character": {
+    "baseIdleFrame": [
+      64,
+      96
+    ],
+    "bodyHeightMax": 80,
+    "collisionChanged": false,
+    "directions": [
+      "east"
+    ],
+    "clip": "wanglin-thunder-east",
+    "castCanvas": [
+      96,
+      96
+    ],
+    "castAnchor": [
+      48,
+      88
+    ]
+  },
+  "authority": {
+    "damage": "combat_server",
+    "movement": "movement_server",
+    "vfxAppliesDamage": false,
+    "vfxMovesActor": false
+  },
+  "presentation": {
+    "screenFlash": false,
+    "sfxAssetsProduced": false,
+    "strikeLeadFrames": 2,
+    "contactLagMs": 83.333,
+    "sfxHooks": [
+      "thunder.cast",
+      "thunder.hit"
+    ]
+  },
+  "preview": {
+    "worldSize": [
+      960,
+      640
+    ],
+    "cameraCenter": [
+      480,
+      320
+    ],
+    "zoom": [
+      1,
+      2,
+      4
+    ],
+    "dprCap": 2,
+    "endFrame": 30,
+    "confirmFrame": 13,
+    "hitDelayFrames": [
+      0,
+      6,
+      12
+    ]
+  },
+  "id": "R01-THUNDER-FBF-EAST",
+  "family": "thunder",
+  "name": "Lôi Ấn",
+  "sockets": [
+    [
+      15,
+      -25
+    ],
+    [
+      16,
+      -37
+    ],
+    [
+      12,
+      -40
+    ],
+    [
+      14,
+      -40
+    ],
+    [
+      12,
+      -37
+    ],
+    [
+      17,
+      -53
+    ],
+    [
+      37,
+      -39
+    ],
+    [
+      45,
+      -39
+    ],
+    [
+      40,
+      -38
+    ],
+    [
+      19,
+      -45
+    ],
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -25
+    ]
+  ],
+  "tracks": [
+    {
+      "clip": "thunder-seal",
+      "startFrame": 1,
+      "stopBeforeFrame": 9,
+      "anchor": "hand",
+      "layer": 2
+    },
+    {
+      "clip": "thunder-ring",
+      "startFrame": 7,
+      "holdLastUntilResolve": true,
+      "anchor": "target.ground",
+      "layer": 0
+    },
+    {
+      "clip": "thunder-bolt",
+      "trigger": "combat.hitConfirmed",
+      "anchor": "hit",
+      "layer": 2
+    },
+    {
+      "clip": "thunder-impact",
+      "trigger": "visual.contact",
+      "anchor": "hit",
+      "layer": 3
+    }
+  ],
+  "events": [
+    {
+      "frame": 1,
+      "type": "cast.start"
+    },
+    {
+      "frame": 7,
+      "type": "telegraph.start"
+    },
+    {
+      "frame": 9,
+      "type": "release",
+      "sfx": "thunder.cast"
+    },
+    {
+      "frame": 15,
+      "type": "recovery.start"
+    },
+    {
+      "frame": 18,
+      "type": "character.end"
+    }
+  ],
+  "hitContract": {
+    "required": [
+      "castId",
+      "hitId",
+      "worldPosition",
+      "confirmedAt"
+    ],
+    "deduplicateBy": "single_resolution_per_cast",
+    "scope": "single_target_visual_pilot",
+    "presentationLeadDoesNotDelayDamage": true
+  }
+}

@@ -1,5 +1,7 @@
 # Bộ ba trọng tâm — kế hoạch động tác
 
+> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Vai NPC và thứ tự xuất hiện gameplay trước đây không còn quyết định quyền chọn nhân vật. Kế hoạch motion cần xét lại cho ba người chơi được; trạng thái asset đã có vẫn giữ. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+
 **Phiên bản:** 0.3, ngày 07/10/2026.  
 **Trạng thái:** Vương Lâm đã có bản sửa bộ đi tám pose/hướng, chờ đánh giá. Animation Tư Đồ Nam/Lý Mộ Uyển trong bảng vẫn là kế hoạch.  
 

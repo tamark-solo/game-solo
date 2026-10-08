@@ -1,0 +1,1208 @@
+{
+  "wind-trail": {
+    "fps": 24,
+    "frameSize": [
+      240,
+      144
+    ],
+    "anchor": [
+      192,
+      80
+    ],
+    "sampling": "linear",
+    "loop": true,
+    "durations": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "source": "source/wind-spirit-dual-trail.png",
+    "sourceGrid": [
+      4,
+      2
+    ],
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "commonScale": 0.41414141414141414,
+    "frames": [
+      {
+        "file": "frames/wind-trail/001.png",
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "w": 444,
+          "h": 444
+        },
+        "sourceOrigin": [
+          410,
+          256
+        ],
+        "registeredBounds": {
+          "x": 36,
+          "y": 48,
+          "w": 162,
+          "h": 60
+        },
+        "rect": {
+          "x": 2,
+          "y": 2,
+          "w": 240,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-trail/002.png",
+        "sourceRect": {
+          "x": 444,
+          "y": 0,
+          "w": 443,
+          "h": 444
+        },
+        "sourceOrigin": [
+          409,
+          256.5
+        ],
+        "registeredBounds": {
+          "x": 35,
+          "y": 22,
+          "w": 162,
+          "h": 94
+        },
+        "rect": {
+          "x": 246,
+          "y": 2,
+          "w": 240,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-trail/003.png",
+        "sourceRect": {
+          "x": 887,
+          "y": 0,
+          "w": 444,
+          "h": 444
+        },
+        "sourceOrigin": [
+          406,
+          256.5
+        ],
+        "registeredBounds": {
+          "x": 40,
+          "y": 27,
+          "w": 157,
+          "h": 85
+        },
+        "rect": {
+          "x": 490,
+          "y": 2,
+          "w": 240,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-trail/004.png",
+        "sourceRect": {
+          "x": 1331,
+          "y": 0,
+          "w": 443,
+          "h": 444
+        },
+        "sourceOrigin": [
+          403,
+          256
+        ],
+        "registeredBounds": {
+          "x": 33,
+          "y": 25,
+          "w": 164,
+          "h": 90
+        },
+        "rect": {
+          "x": 734,
+          "y": 2,
+          "w": 240,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-trail/005.png",
+        "sourceRect": {
+          "x": 0,
+          "y": 444,
+          "w": 444,
+          "h": 443
+        },
+        "sourceOrigin": [
+          410,
+          221.5
+        ],
+        "registeredBounds": {
+          "x": 34,
+          "y": 33,
+          "w": 163,
+          "h": 81
+        },
+        "rect": {
+          "x": 2,
+          "y": 150,
+          "w": 240,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-trail/006.png",
+        "sourceRect": {
+          "x": 444,
+          "y": 444,
+          "w": 443,
+          "h": 443
+        },
+        "sourceOrigin": [
+          410,
+          221
+        ],
+        "registeredBounds": {
+          "x": 35,
+          "y": 27,
+          "w": 162,
+          "h": 86
+        },
+        "rect": {
+          "x": 246,
+          "y": 150,
+          "w": 240,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-trail/007.png",
+        "sourceRect": {
+          "x": 887,
+          "y": 444,
+          "w": 444,
+          "h": 443
+        },
+        "sourceOrigin": [
+          406,
+          221.5
+        ],
+        "registeredBounds": {
+          "x": 33,
+          "y": 38,
+          "w": 164,
+          "h": 73
+        },
+        "rect": {
+          "x": 490,
+          "y": 150,
+          "w": 240,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-trail/008.png",
+        "sourceRect": {
+          "x": 1331,
+          "y": 444,
+          "w": 443,
+          "h": 443
+        },
+        "sourceOrigin": [
+          402,
+          222
+        ],
+        "registeredBounds": {
+          "x": 34,
+          "y": 51,
+          "w": 163,
+          "h": 58
+        },
+        "rect": {
+          "x": 734,
+          "y": 150,
+          "w": 240,
+          "h": 144
+        }
+      }
+    ],
+    "atlas": "atlases/wind-trail.png",
+    "atlasSize": [
+      976,
+      296
+    ],
+    "padding": 2,
+    "retainedFrom": {
+      "realm": "R04",
+      "path": "../r04-wind-v1",
+      "clip": "wind-trail",
+      "mode": "byte_identical_source_PNGs"
+    }
+  },
+  "wanglin-wind-east": {
+    "fps": 24,
+    "frameSize": [
+      112,
+      96
+    ],
+    "anchor": [
+      56,
+      88
+    ],
+    "sampling": "nearest",
+    "loop": false,
+    "durations": [
+      1,
+      1,
+      2,
+      5,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ],
+    "source": "source/wind-cast.png",
+    "sourceGrid": [
+      4,
+      3
+    ],
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "commonScale": 0.23738872403560832,
+    "frames": [
+      {
+        "file": "frames/wanglin-wind-east/001.png",
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "w": 362,
+          "h": 403
+        },
+        "sourceOrigin": [
+          181.5,
+          375
+        ],
+        "registeredBounds": {
+          "x": 25,
+          "y": 8,
+          "w": 56,
+          "h": 80
+        },
+        "rect": {
+          "x": 2,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/002.png",
+        "sourceRect": {
+          "x": 362,
+          "y": 0,
+          "w": 362,
+          "h": 403
+        },
+        "sourceOrigin": [
+          169.5,
+          375
+        ],
+        "registeredBounds": {
+          "x": 26,
+          "y": 15,
+          "w": 60,
+          "h": 73
+        },
+        "rect": {
+          "x": 118,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/003.png",
+        "sourceRect": {
+          "x": 724,
+          "y": 0,
+          "w": 362,
+          "h": 403
+        },
+        "sourceOrigin": [
+          155.5,
+          376
+        ],
+        "registeredBounds": {
+          "x": 30,
+          "y": 26,
+          "w": 70,
+          "h": 63
+        },
+        "rect": {
+          "x": 234,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/004.png",
+        "sourceRect": {
+          "x": 1086,
+          "y": 0,
+          "w": 362,
+          "h": 403
+        },
+        "sourceOrigin": [
+          152.5,
+          374
+        ],
+        "registeredBounds": {
+          "x": 29,
+          "y": 19,
+          "w": 65,
+          "h": 69
+        },
+        "rect": {
+          "x": 350,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/005.png",
+        "sourceRect": {
+          "x": 0,
+          "y": 403,
+          "w": 362,
+          "h": 322
+        },
+        "sourceOrigin": [
+          142,
+          306
+        ],
+        "registeredBounds": {
+          "x": 32,
+          "y": 24,
+          "w": 70,
+          "h": 64
+        },
+        "rect": {
+          "x": 2,
+          "y": 102,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/006.png",
+        "sourceRect": {
+          "x": 362,
+          "y": 403,
+          "w": 362,
+          "h": 322
+        },
+        "sourceOrigin": [
+          139.5,
+          305
+        ],
+        "registeredBounds": {
+          "x": 26,
+          "y": 26,
+          "w": 77,
+          "h": 62
+        },
+        "rect": {
+          "x": 118,
+          "y": 102,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/007.png",
+        "sourceRect": {
+          "x": 724,
+          "y": 403,
+          "w": 362,
+          "h": 322
+        },
+        "sourceOrigin": [
+          178,
+          283
+        ],
+        "registeredBounds": {
+          "x": 14,
+          "y": 26,
+          "w": 86,
+          "h": 62
+        },
+        "rect": {
+          "x": 234,
+          "y": 102,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/008.png",
+        "sourceRect": {
+          "x": 1086,
+          "y": 403,
+          "w": 362,
+          "h": 322
+        },
+        "sourceOrigin": [
+          170.5,
+          309
+        ],
+        "registeredBounds": {
+          "x": 23,
+          "y": 24,
+          "w": 77,
+          "h": 64
+        },
+        "rect": {
+          "x": 350,
+          "y": 102,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/009.png",
+        "sourceRect": {
+          "x": 0,
+          "y": 725,
+          "w": 362,
+          "h": 361
+        },
+        "sourceOrigin": [
+          192,
+          329
+        ],
+        "registeredBounds": {
+          "x": 21,
+          "y": 20,
+          "w": 75,
+          "h": 68
+        },
+        "rect": {
+          "x": 2,
+          "y": 202,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/010.png",
+        "sourceRect": {
+          "x": 362,
+          "y": 725,
+          "w": 362,
+          "h": 361
+        },
+        "sourceOrigin": [
+          188.5,
+          328
+        ],
+        "registeredBounds": {
+          "x": 11,
+          "y": 23,
+          "w": 82,
+          "h": 65
+        },
+        "rect": {
+          "x": 118,
+          "y": 202,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/011.png",
+        "sourceRect": {
+          "x": 724,
+          "y": 725,
+          "w": 362,
+          "h": 361
+        },
+        "sourceOrigin": [
+          178,
+          331
+        ],
+        "registeredBounds": {
+          "x": 24,
+          "y": 16,
+          "w": 72,
+          "h": 73
+        },
+        "rect": {
+          "x": 234,
+          "y": 202,
+          "w": 112,
+          "h": 96
+        }
+      },
+      {
+        "file": "frames/wanglin-wind-east/012.png",
+        "sourceRect": {
+          "x": 1086,
+          "y": 725,
+          "w": 362,
+          "h": 361
+        },
+        "sourceOrigin": [
+          180.5,
+          337
+        ],
+        "registeredBounds": {
+          "x": 25,
+          "y": 11,
+          "w": 55,
+          "h": 77
+        },
+        "rect": {
+          "x": 350,
+          "y": 202,
+          "w": 112,
+          "h": 96
+        }
+      }
+    ],
+    "atlas": "atlases/wanglin-wind-east.png",
+    "atlasSize": [
+      464,
+      300
+    ],
+    "padding": 2,
+    "reusedFrom": {
+      "realm": "R03",
+      "path": "../r03-wind-v1",
+      "clip": "wanglin-wind-east",
+      "mode": "byte_identical_source_PNGs"
+    }
+  },
+  "wind-wheel": {
+    "fps": 24,
+    "frameSize": [
+      160,
+      112
+    ],
+    "anchor": [
+      80,
+      56
+    ],
+    "sampling": "linear",
+    "loop": false,
+    "durations": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "source": "source/wind-wheel.png",
+    "sourceGrid": [
+      4,
+      2
+    ],
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "commonScale": 0.24324324324324326,
+    "frames": [
+      {
+        "file": "frames/wind-wheel/001.png",
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "w": 444,
+          "h": 444
+        },
+        "sourceOrigin": [
+          222,
+          286
+        ],
+        "registeredBounds": {
+          "x": 40,
+          "y": 33,
+          "w": 93,
+          "h": 44
+        },
+        "rect": {
+          "x": 2,
+          "y": 2,
+          "w": 160,
+          "h": 112
+        }
+      },
+      {
+        "file": "frames/wind-wheel/002.png",
+        "sourceRect": {
+          "x": 444,
+          "y": 0,
+          "w": 443,
+          "h": 444
+        },
+        "sourceOrigin": [
+          222,
+          286
+        ],
+        "registeredBounds": {
+          "x": 36,
+          "y": 32,
+          "w": 90,
+          "h": 49
+        },
+        "rect": {
+          "x": 166,
+          "y": 2,
+          "w": 160,
+          "h": 112
+        }
+      },
+      {
+        "file": "frames/wind-wheel/003.png",
+        "sourceRect": {
+          "x": 887,
+          "y": 0,
+          "w": 444,
+          "h": 444
+        },
+        "sourceOrigin": [
+          222,
+          286
+        ],
+        "registeredBounds": {
+          "x": 29,
+          "y": 30,
+          "w": 105,
+          "h": 52
+        },
+        "rect": {
+          "x": 330,
+          "y": 2,
+          "w": 160,
+          "h": 112
+        }
+      },
+      {
+        "file": "frames/wind-wheel/004.png",
+        "sourceRect": {
+          "x": 1331,
+          "y": 0,
+          "w": 443,
+          "h": 444
+        },
+        "sourceOrigin": [
+          222,
+          286
+        ],
+        "registeredBounds": {
+          "x": 26,
+          "y": 29,
+          "w": 98,
+          "h": 53
+        },
+        "rect": {
+          "x": 494,
+          "y": 2,
+          "w": 160,
+          "h": 112
+        }
+      },
+      {
+        "file": "frames/wind-wheel/005.png",
+        "sourceRect": {
+          "x": 0,
+          "y": 444,
+          "w": 444,
+          "h": 443
+        },
+        "sourceOrigin": [
+          222,
+          205
+        ],
+        "registeredBounds": {
+          "x": 41,
+          "y": 31,
+          "w": 90,
+          "h": 47
+        },
+        "rect": {
+          "x": 2,
+          "y": 118,
+          "w": 160,
+          "h": 112
+        }
+      },
+      {
+        "file": "frames/wind-wheel/006.png",
+        "sourceRect": {
+          "x": 444,
+          "y": 444,
+          "w": 443,
+          "h": 443
+        },
+        "sourceOrigin": [
+          222,
+          205
+        ],
+        "registeredBounds": {
+          "x": 38,
+          "y": 33,
+          "w": 96,
+          "h": 45
+        },
+        "rect": {
+          "x": 166,
+          "y": 118,
+          "w": 160,
+          "h": 112
+        }
+      },
+      {
+        "file": "frames/wind-wheel/007.png",
+        "sourceRect": {
+          "x": 887,
+          "y": 444,
+          "w": 444,
+          "h": 443
+        },
+        "sourceOrigin": [
+          222,
+          205
+        ],
+        "registeredBounds": {
+          "x": 26,
+          "y": 32,
+          "w": 108,
+          "h": 46
+        },
+        "rect": {
+          "x": 330,
+          "y": 118,
+          "w": 160,
+          "h": 112
+        }
+      },
+      {
+        "file": "frames/wind-wheel/008.png",
+        "sourceRect": {
+          "x": 1331,
+          "y": 444,
+          "w": 443,
+          "h": 443
+        },
+        "sourceOrigin": [
+          222,
+          205
+        ],
+        "registeredBounds": {
+          "x": 26,
+          "y": 34,
+          "w": 97,
+          "h": 42
+        },
+        "rect": {
+          "x": 494,
+          "y": 118,
+          "w": 160,
+          "h": 112
+        }
+      }
+    ],
+    "atlas": "atlases/wind-wheel.png",
+    "atlasSize": [
+      656,
+      232
+    ],
+    "padding": 2,
+    "opacities": [
+      0.35,
+      0.55,
+      0.8,
+      1,
+      1,
+      0.85,
+      0.5,
+      0.15
+    ],
+    "reusedFrom": {
+      "realm": "R03",
+      "path": "../r03-wind-v1",
+      "clip": "wind-wheel",
+      "mode": "byte_identical_source_PNGs"
+    }
+  },
+  "wind-return-curl": {
+    "fps": 24,
+    "frameSize": [
+      208,
+      144
+    ],
+    "anchor": [
+      156,
+      80
+    ],
+    "sampling": "linear",
+    "loop": false,
+    "durations": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "source": "source/wind-return-curl.png",
+    "sourceGrid": [
+      4,
+      3
+    ],
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "commonScale": 0.38636363636363635,
+    "frames": [
+      {
+        "file": "frames/wind-return-curl/001.png",
+        "sourceRect": {
+          "x": 0,
+          "y": 0,
+          "w": 384,
+          "h": 341
+        },
+        "sourceOrigin": [
+          375,
+          254
+        ],
+        "registeredBounds": {
+          "x": 23,
+          "y": 61,
+          "w": 136,
+          "h": 33
+        },
+        "rect": {
+          "x": 2,
+          "y": 2,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/002.png",
+        "sourceRect": {
+          "x": 384,
+          "y": 0,
+          "w": 384,
+          "h": 341
+        },
+        "sourceOrigin": [
+          362,
+          254
+        ],
+        "registeredBounds": {
+          "x": 31,
+          "y": 36,
+          "w": 128,
+          "h": 63
+        },
+        "rect": {
+          "x": 214,
+          "y": 2,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/003.png",
+        "sourceRect": {
+          "x": 768,
+          "y": 0,
+          "w": 384,
+          "h": 341
+        },
+        "sourceOrigin": [
+          352,
+          254
+        ],
+        "registeredBounds": {
+          "x": 28,
+          "y": 35,
+          "w": 132,
+          "h": 66
+        },
+        "rect": {
+          "x": 426,
+          "y": 2,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/004.png",
+        "sourceRect": {
+          "x": 1152,
+          "y": 0,
+          "w": 384,
+          "h": 341
+        },
+        "sourceOrigin": [
+          345,
+          254
+        ],
+        "registeredBounds": {
+          "x": 29,
+          "y": 27,
+          "w": 131,
+          "h": 86
+        },
+        "rect": {
+          "x": 638,
+          "y": 2,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/005.png",
+        "sourceRect": {
+          "x": 0,
+          "y": 341,
+          "w": 384,
+          "h": 342
+        },
+        "sourceOrigin": [
+          374,
+          202
+        ],
+        "registeredBounds": {
+          "x": 30,
+          "y": 38,
+          "w": 130,
+          "h": 68
+        },
+        "rect": {
+          "x": 2,
+          "y": 150,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/006.png",
+        "sourceRect": {
+          "x": 384,
+          "y": 341,
+          "w": 384,
+          "h": 342
+        },
+        "sourceOrigin": [
+          363,
+          210
+        ],
+        "registeredBounds": {
+          "x": 50,
+          "y": 46,
+          "w": 109,
+          "h": 62
+        },
+        "rect": {
+          "x": 214,
+          "y": 150,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/007.png",
+        "sourceRect": {
+          "x": 768,
+          "y": 341,
+          "w": 384,
+          "h": 342
+        },
+        "sourceOrigin": [
+          343,
+          204
+        ],
+        "registeredBounds": {
+          "x": 52,
+          "y": 48,
+          "w": 107,
+          "h": 64
+        },
+        "rect": {
+          "x": 426,
+          "y": 150,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/008.png",
+        "sourceRect": {
+          "x": 1152,
+          "y": 341,
+          "w": 384,
+          "h": 342
+        },
+        "sourceOrigin": [
+          335,
+          204
+        ],
+        "registeredBounds": {
+          "x": 36,
+          "y": 50,
+          "w": 123,
+          "h": 56
+        },
+        "rect": {
+          "x": 638,
+          "y": 150,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/009.png",
+        "sourceRect": {
+          "x": 0,
+          "y": 683,
+          "w": 384,
+          "h": 341
+        },
+        "sourceOrigin": [
+          374,
+          143
+        ],
+        "registeredBounds": {
+          "x": 48,
+          "y": 58,
+          "w": 111,
+          "h": 51
+        },
+        "rect": {
+          "x": 2,
+          "y": 298,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/010.png",
+        "sourceRect": {
+          "x": 384,
+          "y": 683,
+          "w": 384,
+          "h": 341
+        },
+        "sourceOrigin": [
+          353,
+          151
+        ],
+        "registeredBounds": {
+          "x": 97,
+          "y": 62,
+          "w": 63,
+          "h": 31
+        },
+        "rect": {
+          "x": 214,
+          "y": 298,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/011.png",
+        "sourceRect": {
+          "x": 768,
+          "y": 683,
+          "w": 384,
+          "h": 341
+        },
+        "sourceOrigin": [
+          353,
+          151
+        ],
+        "registeredBounds": {
+          "x": 101,
+          "y": 72,
+          "w": 36,
+          "h": 18
+        },
+        "rect": {
+          "x": 426,
+          "y": 298,
+          "w": 208,
+          "h": 144
+        }
+      },
+      {
+        "file": "frames/wind-return-curl/012.png",
+        "sourceRect": {
+          "x": 1152,
+          "y": 683,
+          "w": 384,
+          "h": 341
+        },
+        "sourceOrigin": [
+          353,
+          151
+        ],
+        "registeredBounds": {
+          "x": 107,
+          "y": 76,
+          "w": 11,
+          "h": 11
+        },
+        "rect": {
+          "x": 638,
+          "y": 298,
+          "w": 208,
+          "h": 144
+        }
+      }
+    ],
+    "atlas": "atlases/wind-return-curl.png",
+    "atlasSize": [
+      848,
+      444
+    ],
+    "padding": 2,
+    "reusedFrom": {
+      "realm": "R03",
+      "path": "../r03-wind-v1",
+      "clip": "wind-return-curl",
+      "mode": "byte_identical_source_PNGs"
+    }
+  }
+}

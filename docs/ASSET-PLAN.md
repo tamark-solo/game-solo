@@ -1,5 +1,7 @@
 # Kế hoạch asset — Tiên Nghịch: Hành Trình Vương Lâm
 
+> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Vai NPC/đệ tử và ngân sách A–B bên dưới thuộc kế hoạch trước; phải lập lại ngân sách nhập môn ba nhân vật. Nguồn/asset đã sản xuất giữ nguyên. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+
 **Phiên bản:** 1.5, ngày 07/10/2026.  
 **Trạng thái:** nhận diện Vương Lâm v2 đã duyệt; bộ áo xám 28 frame làm chuẩn thử. Hai đệ tử v2 đã có nhận diện và 56 frame đứng/đi thử; còn chờ đánh giá.  
 **Tham chiếu:** [GDD](GDD.md), [ART direction](ART-DIRECTION.md), [bộ UI](UI-COMPONENTS.md), [map](WORLD-MAPS.md), [quái và gặp gỡ](ENCOUNTERS.md).

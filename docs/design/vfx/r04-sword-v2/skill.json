@@ -1,0 +1,236 @@
+{
+  "version": "2.0.0",
+  "realm": "R04",
+  "realmName": "Nguyên Anh",
+  "artStatus": "produced_pending_owner_motion_review",
+  "fps": 24,
+  "authoringFrameBase": 1,
+  "runtimeReady": false,
+  "authority": {
+    "damage": "combat_server",
+    "movement": "movement_server",
+    "vfxAppliesDamage": false,
+    "vfxMovesActor": false
+  },
+  "presentation": {
+    "screenFlash": false,
+    "sfxAssetsProduced": false
+  },
+  "preview": {
+    "endFrame": 48,
+    "confirmFrame": 17,
+    "worldSize": [
+      960,
+      640
+    ],
+    "bodyHeightMax": 80,
+    "zoom": [
+      1,
+      2,
+      4
+    ],
+    "cameraCenter": [
+      480,
+      320
+    ],
+    "dprCap": 2
+  },
+  "id": "R04-SWORD",
+  "family": "sword",
+  "name": "Kiếm Linh Ảnh",
+  "character": {
+    "clip": "wanglin-cast-east",
+    "baseIdleFrame": [
+      64,
+      96
+    ],
+    "castCanvas": [
+      96,
+      96
+    ],
+    "castAnchor": [
+      48,
+      88
+    ],
+    "bodyHeight": 80,
+    "collisionChanged": false,
+    "bodyHeightMax": 80,
+    "holds": [
+      1,
+      1,
+      2,
+      2,
+      6,
+      1,
+      2,
+      2,
+      2,
+      1,
+      1,
+      2
+    ]
+  },
+  "sockets": [
+    [
+      15,
+      -25
+    ],
+    [
+      22,
+      -42
+    ],
+    [
+      7,
+      -40
+    ],
+    [
+      28,
+      -52
+    ],
+    [
+      12,
+      -37
+    ],
+    [
+      40,
+      -36
+    ],
+    [
+      44,
+      -36
+    ],
+    [
+      43,
+      -36
+    ],
+    [
+      20,
+      -31
+    ],
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -25
+    ]
+  ],
+  "formationOffset": [
+    88,
+    -48
+  ],
+  "projectile": {
+    "worldSpeed": 480,
+    "initialTipAhead": 143,
+    "maxTravelWorld": 360,
+    "scope": "preview_only_replace_with_combat"
+  },
+  "tracks": [
+    {
+      "clip": "sword-charge",
+      "startFrame": 1,
+      "stopBeforeFrame": 13,
+      "anchor": "hand",
+      "layer": 2
+    },
+    {
+      "clip": "sword-wheel",
+      "startFrame": 3,
+      "stopBeforeFrame": 13,
+      "anchor": "formation",
+      "layer": 2
+    },
+    {
+      "clip": "sword-guide",
+      "startFrame": 7,
+      "stopBeforeFrame": 13,
+      "anchor": "hand",
+      "layer": 2
+    },
+    {
+      "clip": "sword-flight",
+      "trigger": "release",
+      "anchor": "projectile",
+      "layer": 2
+    },
+    {
+      "clip": "qi-impact",
+      "trigger": "combat.hitConfirmed",
+      "anchor": "hit",
+      "layer": 3
+    }
+  ],
+  "events": [
+    {
+      "frame": 1,
+      "type": "cast.start"
+    },
+    {
+      "frame": 3,
+      "type": "wheel.form"
+    },
+    {
+      "frame": 3,
+      "type": "spirit.appear"
+    },
+    {
+      "frame": 9,
+      "type": "wheel.compress"
+    },
+    {
+      "frame": 13,
+      "type": "release",
+      "sfx": "r03.sword.release"
+    },
+    {
+      "frame": 17,
+      "type": "recovery.start"
+    },
+    {
+      "frame": 24,
+      "type": "character.end"
+    }
+  ],
+  "hitContract": {
+    "required": [
+      "castId",
+      "hitId",
+      "worldPosition",
+      "confirmedAt"
+    ],
+    "swordCountVisual": 5,
+    "damageEventsFromDecorativeSwords": 0
+  },
+  "spirit": {
+    "clip": "spirit-sword-east",
+    "offset": [
+      -42,
+      -34
+    ],
+    "startFrame": 3,
+    "opacities": [
+      0.3,
+      0.65,
+      0.85,
+      0.65,
+      0.32,
+      0.06
+    ],
+    "decorativeOnly": true,
+    "hasAI": false,
+    "hasCollision": false,
+    "appliesDamage": false,
+    "mainActorBodyHeightMax": 80,
+    "scale": 1,
+    "layer": 0.5,
+    "behindActor": true,
+    "designLanguage": "half_body_qi_sigil",
+    "anchorRole": "spirit_root",
+    "heightMax": 48
+  }
+}

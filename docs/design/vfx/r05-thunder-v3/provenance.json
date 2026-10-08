@@ -1,0 +1,47 @@
+{
+  "realm": "R05",
+  "edition": "3.0.0 reference_jade_silk_and_golden_seals",
+  "tool": "built_in_imagegen",
+  "newArt": [
+    {
+      "id": "golden-thunder-sanctum",
+      "family": "thunder",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-a6c162a5-aeef-4690-b6ac-b26a4273bae5.png",
+      "selectedSource": "r05-thunder-v3/source/golden-thunder-sanctum.png",
+      "prompt": "r05-thunder-v3/prompts/golden-thunder-sanctum.txt",
+      "sha256": "15be5c14d5ef59306dfb0dbee2ce2adcd2652b8ec46c8a86e4d9e9c5d05ca741",
+      "reference": "reference-hoa-than-user-v3.png"
+    },
+    {
+      "id": "celestial-thunder-descent",
+      "family": "thunder",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-160709fd-a052-4ca7-9268-a10a46523d1b.png",
+      "selectedSource": "r05-thunder-v3/source/celestial-thunder-descent.png",
+      "prompt": "r05-thunder-v3/prompts/celestial-thunder-descent.txt",
+      "sha256": "f5d89ec9af8fabe9d8ddbafddbc8f670a4c8109d5714e4d32fb7bd5733724dc5",
+      "reference": "reference-hoa-than-user-v3.png"
+    },
+    {
+      "id": "golden-thunder-contact",
+      "family": "thunder",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-0954fcf5-b581-4fa5-bcc0-e278c154fb4f.png",
+      "selectedSource": "r05-thunder-v3/source/golden-thunder-contact.png",
+      "prompt": "r05-thunder-v3/prompts/golden-thunder-contact-gutter.txt",
+      "sha256": "23ab49ae69a62320296e1474cbbbe1012a1d48c0572257b70472a6cb87b898ce",
+      "reference": "reference-hoa-than-user-v3.png",
+      "rejectedOriginals": [
+        "exec-90f9a2cd-474e-4853-96f4-0219acadaf75.png",
+        "exec-ae800e31-f13e-4cae-a261-3249e999c887.png"
+      ],
+      "selectionReason": "Transparent gutters avoid neighbouring-frame contamination"
+    }
+  ],
+  "reuse": "56 PNGs across V3 retain V2 bytes; clips.json records reusedFrom",
+  "processing": "Mechanical crop, semantic registration, uniform scale, RGBA export and atlas pack only",
+  "newFramesAcrossKit": 58,
+  "oldReleasesPreserved": true,
+  "artStatus": "reference_redesigned_pending_owner_motion_review"
+}

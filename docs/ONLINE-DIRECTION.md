@@ -1,86 +1,52 @@
-# Định hướng online nhiều người — điều chỉnh GDD
+# Định hướng online — ba nhân vật chơi được
 
-**Phiên bản:** 0.5, ngày 07/10/2026.  
-**Đã xác nhận:** web online, đệ tử riêng, idle kết hợp khu môn phái có nhân vật đi lại; người phát triển muốn trải nghiệm giống MMORPG.  
-**ART/góc nhìn hiện tại:** nhân vật pixel art trên nền stylized 2D, top-down ba phần tư.  
-**Đang đề xuất:** phạm vi A/B theo MMORPG, tuyến người chơi/chính truyện, tỷ lệ/animation và giới hạn tu luyện khi vắng mặt.  
-**Tham chiếu:** [GDD](GDD.md), [nhân vật](CHARACTERS.md), [backlog](MVP-BACKLOG.md).
+**Phiên bản:** 0.8 · **Ngày:** 08/10/2026 · **Chuẩn hiện hành:** [GDD 0.28](GDD.md), [tu tiên](CULTIVATION-SYSTEM.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md).
 
-## 1. Quyết định sản phẩm
+Quyết định mới thay mô hình đệ tử riêng: người chơi chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; cùng vào Hằng Nhạc qua Ngưng Khí, phân hóa sau map nhập môn từ hành trình Trúc Cơ. Bản trước giữ trong [lịch sử](archive/design-before-three-playable-characters/ONLINE-DIRECTION.md). Tài liệu này là định hướng, không báo đã triển khai tài khoản/gameplay.
 
-Game hướng tới **MMORPG tu luyện có idle**, có tài khoản và nhân vật cá nhân. Khu môn phái đi lại chung là vùng khởi đầu; mục tiêu dài hạn mở thêm map/nhiệm vụ/chiến đấu theo arc. Map theo nút cũ còn dùng tham chiếu chính truyện và điều hướng tổng quan. [MMORPG-DIRECTION.md](MMORPG-DIRECTION.md) ghi điều chỉnh mới và phần cần xét lại trong A → B.
+## 1. Tài khoản, nhân vật và tiến trình
 
-| Phần | Quyết định/đề xuất |
+| Phần | Thiết kế hiện hành |
 | --- | --- |
-| Người chơi | Mỗi tài khoản đề xuất 1 đệ tử đang hoạt động trong A; chọn tên và mẫu hình |
-| Trục truyện | Vương Lâm là NPC trung tâm; nhân vật người chơi có hành trình riêng trong cùng bối cảnh |
-| Tiến trình | Cảnh giới, tài nguyên, hoạt động và chương cá nhân thuộc từng đệ tử |
-| Thế giới chung | Khu môn phái có nhân vật đi lại đã chọn; tương tác/NPC cụ thể đang đề xuất |
-| Máy chủ | Xác nhận hoạt động, chi phí, phần thưởng, mốc truyện và lưu tiến trình |
-| Khi đóng trang | Máy chủ tính thời gian tu luyện đã được chọn; kết quả xuất hiện khi trở lại |
+| Lựa chọn ban đầu | Cả ba nhân vật có sẵn tại màn chọn; không chờ arc sau mới mở |
+| Đang điều khiển | Đề xuất một nhân vật mỗi lần; số slot và cách đổi còn mở |
+| Danh tính online | ID hồ sơ + tên tài khoản/biệt danh + nhãn nhân vật; cùng chọn Vương Lâm không cùng một save |
+| Tiến trình riêng | Mốc/cảnh giới hoặc hồi phục, tu vi, công pháp, thuật, pháp bảo, lĩnh ngộ, chương và tài nguyên |
+| Dùng chung tài khoản | Chưa chốt kho/tri thức/tiện ích chung; không tự chuyển tu vi, cơ duyên hoặc đồ độc hữu giữa nhân vật |
+| Máy chủ | Xác nhận trạng thái, hoạt động, kết quả và quyền truy cập của hồ sơ |
 
-Số người đồng thời, số máy chủ, công nghệ đăng nhập và cấu hình hạ tầng chưa chốt. Phạm vi tương tác dưới đây là đề xuất để thiết kế A; cần thử ít nhất hai tài khoản cùng phiên thế giới trước khi coi A là bản online hoàn chỉnh.
+Tên biệt danh không viết lại quan hệ/gia đình của nhân vật trong truyện. Không mặc định một tài khoản điều khiển tổ đội ba người, đổi giữa trận, gacha hoặc mua nhân vật.
 
-## 2. Chính truyện và hành trình đệ tử
+## 2. Không gian chung và phiên cá nhân
 
-Các mốc E01–E08 đã viết kể sự kiện của **Vương Lâm**. Giữ chúng làm hồ sơ chính truyện; không thay tên Vương Lâm thành tên người chơi hoặc chuyển quan hệ cha mẹ/sư phụ sang mọi tài khoản.
-
-Đề xuất thêm tuyến `P01–P08` cho đệ tử: nhập môn, làm việc, học công pháp, tích lũy tu vi và đột phá đầu. Chương chính truyện mở cùng mức tiến trình để người chơi hiểu Vương Lâm đã trải qua gì. Điều kiện/cost/reward của tuyến P phải được biên tập riêng trước prototype; đây chưa phải bộ nhiệm vụ đã đặc tả.
-
-| Nội dung hiện tại | Cách dùng trong bản online |
-| --- | --- |
-| E01/E02, gia đình và khảo nghiệm của Vương Lâm | Chương truyện; người chơi có màn tạo đệ tử và nhiệm vụ nhập môn riêng |
-| E03, hổ/hang/hạt châu | Cảnh truyện của Vương Lâm; không cấp một hạt châu độc hữu cho từng đệ tử |
-| Nước → nước chứa linh khí → tu luyện | Giữ vòng tài nguyên làm giả thuyết cân bằng; đề xuất nước dưỡng khí được chuẩn bị tại trận tụ linh của môn phái |
-| Châu và mộng cảnh | Hồ sơ/cảnh chính truyện; không là trang quản lý vật phẩm thuộc người chơi |
-| E05/E06, công pháp và trở ngại của Vương Lâm | Không mặc định người chơi là đệ tử riêng của Tôn Đại Trụ hoặc có cùng tư chất |
-| E08 | Đạt Ngưng Khí tầng 1 cho đệ tử qua mốc P tương ứng; xem sự kiện đột phá Vương Lâm trong chính truyện |
-| Giao đấu của Vương Lâm ở B | Cảnh chính truyện; luyện thuật/giao đấu của người chơi có đối thủ và luật riêng khi B được biên tập |
-
-**Trận tụ linh, nước dưỡng khí và tuyến đệ tử mới là cơ chế chuyển thể đề xuất của game.** Chúng không được trình bày là sự kiện có sẵn trong nguyên tác. Các số liệu 10 giây/chu kỳ, 480 tu vi, kho 120/30 và 8 giờ là dữ liệu tham chiếu của thiết kế trước; cân bằng tuyến P chưa được xác nhận.
-
-## 3. Không gian chung và cảnh cá nhân
-
-| Loại không gian | Nội dung | Quy tắc |
+| Không gian | Nội dung | Quy tắc |
 | --- | --- | --- |
-| Môn phái chung | Hình đệ tử đi lại, đồng môn, điểm NPC và hồ sơ công khai | Người chơi cùng khu thấy nhau di chuyển; tương tác theo luật máy chủ |
-| Tu luyện cá nhân | Hoạt động/tài nguyên của đệ tử | Người khác không lấy tài nguyên hoặc làm đổi tiến trình |
-| Chương truyện cá nhân | Vương Lâm và các NPC tại đúng mốc người đọc | Không áp dụng kết quả chương của một tài khoản cho cả thế giới |
-| Cảnh chiến đấu B | Phiên riêng được mở theo nhiệm vụ | Kết quả cốt truyện và thưởng cá nhân kiểm tra ở máy chủ |
+| Hằng Nhạc chung | Nhân vật đi lại, gặp người chơi/NPC, hoạt động chung | Nhiều phiên cùng nhân vật là cách biểu diễn gameplay, không thêm nhân vật mới vào canon |
+| Tu luyện riêng | Hoạt động và tài nguyên của hồ sơ | Người khác không lấy hoặc sửa tiến trình nếu không có luật tương tác đã duyệt |
+| Chương cá nhân | Trạng thái truyện, cơ duyên và lời dẫn riêng | Một tài khoản hoàn thành không đổi tiến trình toàn server |
+| Khảo nghiệm cá nhân/tổ đội | Nhiệm vụ và kết quả chiến đấu | Điều kiện tham gia, quyền thưởng và cập nhật mốc phải đặc tả riêng |
+| Hoạt động thế giới | Nội dung lặp có ngữ cảnh | Không lặp biến cố độc hữu của truyện như một sự kiện toàn server |
 
-NPC trong chương cá nhân dùng diện mạo theo mốc; cùng một NPC có thể được hai người xem ở hai chương khác nhau. Khu chung không hiển thị biến cố tương lai của NPC khi người chơi chưa tới chương đó. Các map 001–009 hiện là **bản đồ tham chiếu hành trình Vương Lâm**; map hoạt động của đệ tử và điểm tới khu chung cần bản điều chỉnh riêng.
+Chọn Lý Mộ Uyển/Tư Đồ Nam từ đầu là chuyển thể nhập môn, không thay thời điểm họ xuất hiện trong tuyến truyện nguyên tác của Vương Lâm. Khu chung tránh spoil; phiên truyện dùng trạng thái theo chương. Quy tắc cùng nhân vật trong party hoặc cùng chương nhóm còn mở, không tự cấm chơi chung chỉ vì chọn giống nhau.
 
-## 4. Tương tác nhiều người trong A → B
+## 3. Mốc chung và sức mạnh khác nhau
 
-| Giai đoạn | Tương tác đề xuất | Điều kiện nghiệm thu bổ sung |
-| --- | --- | --- |
-| A | Đệ tử đi lại trong khu môn phái chung; đề xuất tương tác NPC, xem hồ sơ đồng môn và lời chào | Hai tài khoản thấy nhau di chuyển và tương tác; tiến trình riêng đúng; phạm vi NPC/nhiệm vụ cần biên tập |
-| B | Đề xuất thêm vùng thử vòng RPG chiến đấu, kỹ năng/đồ; sau đó cân nhắc tỷ thí hoặc nhóm nhỏ | Xét lại B theo MMORPG; tách trận của đệ tử khỏi cảnh truyện Vương Lâm; có luật sở hữu phần thưởng |
-| Sau B | Tổ đội, môn phái người chơi, trao đổi vật phẩm và hoạt động thế giới theo arc | Có thiết kế kinh tế, quyền sở hữu và luật giải quyết kết quả |
+Vương Lâm có tiến triển tu luyện đầu. Tư Đồ Nam có trạng thái linh thể/hồi phục năng lực hiện dùng được; không gọi ông là tu sĩ Ngưng Khí mới. Lý Mộ Uyển có tuyến mở đầu gameplay riêng giữ nền đan–trận. Mốc nhập môn chung hỗ trợ nội dung/ghép nhóm nhưng không đồng nhất cảnh giới canon.
 
-Lời chào có sẵn đủ tạo tương tác thật ở A mà ít nội dung UI. Chat tự do, PvP, tổ đội và giao dịch còn cần đặc tả riêng; chọn online không tự động đưa mọi tính năng này vào MVP.
+Không lấy một trường “cảnh giới” duy nhất để quy đổi sức mạnh cả ba trước khi có thiết kế cân bằng. Sức mạnh và giới hạn hiện dùng được cần hồ sơ theo nhân vật/mốc.
 
-## 5. Lưu và thời gian
+## 4. Thời gian, lệnh và lưu
 
-Tiến trình gameplay hợp lệ nằm trên máy chủ. Trình duyệt có thể lưu tùy chọn hiển thị/cache; JSON do người chơi nhập không được dùng để thay tài nguyên, cảnh giới hoặc mốc thưởng trên máy chủ. Các màn xuất/nhập save và đổi bản lưu trong UX v0.6 là thiết kế cũ cần thay bằng tài khoản/trạng thái đồng bộ.
+Máy chủ sở hữu thời gian, chi phí, phần thưởng, vị trí hợp lệ, damage, học/luyện hóa và mốc truyện. Trình duyệt chỉ giữ tùy chọn/cache. Import JSON cũ không thay trạng thái hợp lệ.
 
-Đề xuất giữ giới hạn tu luyện khi vắng mặt **8 giờ cho mỗi quãng mất kết nối**, chịu giới hạn kho và cổng mốc. Khi có kết nối, máy chủ xử lý đến thời điểm hiện tại theo luật hoạt động, không dùng đồng hồ thiết bị. Quy tắc xác định phiên mất kết nối và quãng vắng mặt phải đặc tả trước lập trình để nhiều tab/thiết bị không làm nhân thời gian.
+Mỗi lệnh cần quyền hồ sơ và cách xử lý một lần; gửi lại hoặc nhiều tab không nhân thưởng, đột phá hay thời gian. Kết nối lại khôi phục hoạt động/cảnh đang đọc và kết quả đã xác nhận. Một phiên điều khiển mỗi hồ sơ là đề xuất; hợp đồng thiết bị/phiên cần đặc tả.
 
-Mỗi lệnh có ID và phiên bản tiến trình; máy chủ xử lý thời gian, kiểm tra điều kiện, áp dụng chi phí/tác dụng và lưu trong cùng một giao dịch. Gửi lại một lệnh không áp dụng lại tác dụng. Nhiều tab/thiết bị đọc cùng tiến trình; đề xuất một phiên điều khiển tại một thời điểm, được máy chủ quyết định. Tổng kết khi quay lại chỉ trình bày kết quả đã xử lý.
+Riêng [HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất checkpoint sau pha 1/2, reset hai actor khi thử lại pha chưa qua và pause tối đa 30 giây sau khi server phát hiện mất kết nối. Pause chỉ mô phỏng phiên cá nhân, không thế giới chung; không regen/offline thưởng khi pause. Kết quả đã lưu quyết định checkpoint/M04, event pha cũ không tác động pha mới. Luật này cần đánh giá/hợp đồng kỹ thuật, không áp ngầm cho PvP hoặc mọi encounter.
 
-Mất mạng hiện trạng thái chờ kết nối; lệnh hoạt động/đột phá cần máy chủ xác nhận. Hình ảnh hoặc thông báo thành công chỉ hiện sau xác nhận. Chi tiết đăng nhập, phục hồi tài khoản, xử lý máy chủ gián đoạn và tổng kết nhiều phiên sẽ được đặc tả trong bước online kế tiếp.
+Tu luyện vắng mặt chỉ tiếp tục hoạt động đã chọn theo điều kiện/kho/bình cảnh. Không tự combat, truyện, lĩnh ngộ then chốt hoặc đại đột phá. [Hồ sơ tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) đề xuất cap offline thử 30 phút, nền dừng ở cổng, thưởng nhiệm vụ vượt cổng được giữ và không tự xác nhận tầng; rời game trong combat/bài tương tác không tự chuyển hoạt động. Đây là luật thử cần đánh giá, không kế thừa 8 giờ cũ thành quyết định đã khóa.
 
-## 6. UX và asset chịu ảnh hưởng
+## 5. Phạm vi kiểm chứng
 
-- Thêm màn vào tài khoản và tạo đệ tử; tách chân dung người chơi khỏi portrait Vương Lâm trong truyện.
-- Đề xuất đổi khu **Hạt châu** thành **Công pháp** của đệ tử; hồ sơ châu chuyển vào Chính truyện/Hành trình.
-- Thêm bảng Đồng môn trong khu chung, nhãn kết nối và xác nhận lưu máy chủ.
-- Thêm màn thế giới có avatar đi lại và điểm tương tác; vị trí/chuyển động do máy chủ kiểm tra. Cần sprite/animation và map riêng ngoài nguồn portrait.
-- Thay màn nhập save bằng luồng tài khoản/phiên; đổi nhãn tổng kết thành **Tu luyện khi vắng mặt**.
-- Hai nguồn hình đệ tử được cộng vào ngân sách nhân vật; trang phục xám/đỏ của Vương Lâm không tự áp dụng cho mọi người chơi.
+Lát A đề xuất: ba lựa chọn từ đầu, hai tài khoản vào Hằng Nhạc, di chuyển/tương tác, nhiệm vụ/tu luyện đầu và combat đơn giản, lưu riêng. Lát B hoàn thiện Ngưng Khí và khảo nghiệm cuối. Lát C mở phân hóa Trúc Cơ. Đây là phân kỳ thiết kế, chưa là lịch phát hành.
 
-Các bản phác v0.6 vẫn hữu ích để tham chiếu bố cục mực/giấy, nhưng chưa thể dùng làm UX hoàn chỉnh cho online. Đã có preview chạy được và backend phòng tối thiểu, ghi tại [BACKEND-PREVIEW.md](BACKEND-PREVIEW.md); chưa triển khai tài khoản/tiến trình và luật tu luyện.
-
-## 7. Phần thiết kế tiếp theo
-
-Ưu tiên hiện tại là đánh giá chuyển động bằng preview và sân chung tối thiểu. Sau đó biên tập tuyến P, tách dữ liệu đệ tử/chính truyện, cập nhật map/UX và viết hợp đồng tài khoản/tiến trình máy chủ. Các điều kiện chuyển A → B phải bổ sung đăng nhập, kết nối lại, lưu máy chủ và tương tác hai tài khoản; tiêu chí xuất/nhập save cục bộ trước đây được thay thế. Hai phiên tạm trong preview không thay nghiệm thu hai tài khoản có tiến trình riêng.
+Tài khoản, DB, loot/tổ đội/PvP/giao dịch, quy mô phòng/server và khóa/chuyển nhân vật còn mở. Backend phiên tạm hiện có chỉ chứng minh phần trong [hợp đồng preview](BACKEND-PREVIEW.md), không chứng minh sáu hệ tu tiên đã hoạt động.

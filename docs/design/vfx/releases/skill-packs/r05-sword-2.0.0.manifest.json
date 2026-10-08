@@ -1,0 +1,493 @@
+{
+  "id": "R05-SWORD",
+  "name": "Ý Cảnh Kiếm",
+  "version": "2.0.0",
+  "realm": "R05",
+  "artStatus": "redesigned_pending_owner_motion_review",
+  "runtimeReady": false,
+  "date": "2026-10-07",
+  "assetPath": "r05-sword-v2",
+  "frames": 38,
+  "atlases": 5,
+  "sourceOfTruth": "individual_RGBA_PNG_frames",
+  "files": [
+    {
+      "file": "frame-by-frame-r01/sequence-system.mjs",
+      "bytes": 2516,
+      "sha256": "c20b913e504096b036bf4d1732ef13b23e8d126022bf3440547a9abe7183e15c"
+    },
+    {
+      "file": "production/export-r04-sequences.mjs",
+      "bytes": 4682,
+      "sha256": "9aec58cff97e43626e087e02195da64778b30119a5f21e3f83c65fdf21e6c9c3"
+    },
+    {
+      "file": "production/export-sequences.mjs",
+      "bytes": 4584,
+      "sha256": "5c4171372a6e8fc061b8e541a91adbd535e0d8312d71216ab405e637a45ffb52"
+    },
+    {
+      "file": "production/p2-controller.mjs",
+      "bytes": 3169,
+      "sha256": "c4af2a4bece87024c336b984274f69801c14a70d6d4eda364340c9f00ac58c2f"
+    },
+    {
+      "file": "production/p2-model.mjs",
+      "bytes": 2739,
+      "sha256": "5d6282f62945e45621cf14ca77aa59fcde989d185cd402fa9d35881280267746"
+    },
+    {
+      "file": "production/pack-atlases.mjs",
+      "bytes": 1479,
+      "sha256": "9d2e146a0e96be9d4b61a7251204e091f7836307bf726f9cb7dd31bf42942bd6"
+    },
+    {
+      "file": "production/r02-controller.mjs",
+      "bytes": 4485,
+      "sha256": "786a33dc994d16fd84edeefdcd2368c9a6a3b7d8f9e1084253028fe3e9fdd4c5"
+    },
+    {
+      "file": "production/r02-model.mjs",
+      "bytes": 4680,
+      "sha256": "dddd42dc6d70efcd240602276787c87cec34b2923f31d6b433a4e73ed377e472"
+    },
+    {
+      "file": "production/r05-art-selection.json",
+      "bytes": 3239,
+      "sha256": "48577e6a1af650bf4e125ef7ea0c20c07178a056edc0dc5e0a81d327665c42a5"
+    },
+    {
+      "file": "production/r05-controller.mjs",
+      "bytes": 750,
+      "sha256": "7c4e4db00e14ff154fbc21c33b6ffb130292f38bc60b6862821ade26d7fedcb2"
+    },
+    {
+      "file": "production/r05-force-art-selection.json",
+      "bytes": 2829,
+      "sha256": "2098732f358e639ae35ab7122a9921f598980870222944671fb5d6a01b89ad53"
+    },
+    {
+      "file": "production/r05-force-controller.mjs",
+      "bytes": 1060,
+      "sha256": "3bd8da71944ee1bc9b238974181c169646f0fac51e7e82aa95c7cba3d164a472"
+    },
+    {
+      "file": "production/r05-force-model.mjs",
+      "bytes": 1921,
+      "sha256": "1838ed35799adc7006c45af881db54098f70a1c50d1f2c647e80dd634aa8a8d6"
+    },
+    {
+      "file": "production/r05-lighting.mjs",
+      "bytes": 1257,
+      "sha256": "d2d7696284a299a16d1c10be2403d0b5b9e70f11ca985594a7d1ab2133bbdbcd"
+    },
+    {
+      "file": "production/r05-model.mjs",
+      "bytes": 539,
+      "sha256": "2428e0a48d90f8a1ead6fbebfcec54cf116225630463384a160f583ccda06c33"
+    },
+    {
+      "file": "r05-sword-v2/atlases/qi-impact.png",
+      "bytes": 103344,
+      "sha256": "b05c25a3f1a8eed8486da7d4c5c7817cbd7d9527ba99be25f4c39a39899ada2e"
+    },
+    {
+      "file": "r05-sword-v2/atlases/sword-charge.png",
+      "bytes": 11168,
+      "sha256": "61994bafe492ea220058dcc64914a2b745258b40082c6f26701074a95e9db3fe"
+    },
+    {
+      "file": "r05-sword-v2/atlases/sword-flight.png",
+      "bytes": 171410,
+      "sha256": "ca2e961fe59475e10dc862c00dad068f5a2a98cca3754573cb4a42aef2d2ad09"
+    },
+    {
+      "file": "r05-sword-v2/atlases/sword-stillness.png",
+      "bytes": 57301,
+      "sha256": "effb10d42fa850ba4b57d88e9996b1cbafd339e502ea794f0fa0799b934fd04d"
+    },
+    {
+      "file": "r05-sword-v2/atlases/wanglin-cast-east.png",
+      "bytes": 122227,
+      "sha256": "7243467a93693090a553ef3df2780ae89d8ea511a564eaad51a17b759778d9d6"
+    },
+    {
+      "file": "r05-sword-v2/build-report.json",
+      "bytes": 328,
+      "sha256": "b6bc85ae9d3839264284b1b3aa1f0782637636614a77a87d7879734a15cf2553"
+    },
+    {
+      "file": "r05-sword-v2/clips.json",
+      "bytes": 23970,
+      "sha256": "39bfb43dfcaf19fc6a30fbc82b6b53424efd07e3f59b6b2f958aa95625aa67d2"
+    },
+    {
+      "file": "r05-sword-v2/export-spec.json",
+      "bytes": 1415,
+      "sha256": "e5a4167beef97acbbfb50a184af0d7543b6540ca08f0b1a6a1c221a241cf7350"
+    },
+    {
+      "file": "r05-sword-v2/frames/qi-impact/001.png",
+      "bytes": 10019,
+      "sha256": "d29783b25e4248377536d520944ea1e17791d90f05377c36e24daec58c898715"
+    },
+    {
+      "file": "r05-sword-v2/frames/qi-impact/002.png",
+      "bytes": 21007,
+      "sha256": "cf67d441c2ea6be955e1663c5cf9663d68813236a7ac239d488121c8727b7f29"
+    },
+    {
+      "file": "r05-sword-v2/frames/qi-impact/003.png",
+      "bytes": 26988,
+      "sha256": "43ce768da1602371a9865134a9084ae2ee15ec1ceb7992fe9a9444c906eccf32"
+    },
+    {
+      "file": "r05-sword-v2/frames/qi-impact/004.png",
+      "bytes": 18782,
+      "sha256": "90af3c3c3cff6a8703379ef7fbfd3ba15834a147d938ad193d1c9602c44fc4bd"
+    },
+    {
+      "file": "r05-sword-v2/frames/qi-impact/005.png",
+      "bytes": 13959,
+      "sha256": "e59a54edd58cbd48c93fbda6f9ceee151d7ca7ca97eb2801d13305b52dbbadbb"
+    },
+    {
+      "file": "r05-sword-v2/frames/qi-impact/006.png",
+      "bytes": 8787,
+      "sha256": "011c9a039bfa5c9d3950686e2465b31de1ffdee5f92552f48b3d601c81de5f6e"
+    },
+    {
+      "file": "r05-sword-v2/frames/qi-impact/007.png",
+      "bytes": 3103,
+      "sha256": "4c65966b181ffb8c9ab364f1f4d1e517d6db36a80baa71f085ac80962e1bbf29"
+    },
+    {
+      "file": "r05-sword-v2/frames/qi-impact/008.png",
+      "bytes": 1637,
+      "sha256": "c4185bb5a7cd6ca7d3930b76475acd32073cf9cf3238cd5d46a3a2748ef1991f"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-charge/001.png",
+      "bytes": 1282,
+      "sha256": "014cc76a5c4150a90e14005ae87629b091eb177c766d25dccf4309df4fd2b2d9"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-charge/002.png",
+      "bytes": 1800,
+      "sha256": "5acb27e7d1c54c84990869eb63e7bf2fc2c04b575f1916af3e463f3ebb62145b"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-charge/003.png",
+      "bytes": 2329,
+      "sha256": "5ad38d2f5d3330fb108b9cb224c4024dc3f9a24d88521c8a1856b225a4e9cb96"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-charge/004.png",
+      "bytes": 1996,
+      "sha256": "5cc361983731ca00f64780b9edac2c513b8ca3fcc474e0ac74be2c6bfcc0cc89"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-charge/005.png",
+      "bytes": 2182,
+      "sha256": "efe95c86ad058566cf8f79f8f46e9cf8e7f2fc4a59b2bbb6a76d062d95585daf"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-charge/006.png",
+      "bytes": 2410,
+      "sha256": "ead73e2326f50a8b594b3e5f7170cf9b53108c9c624458334c7b4607397a5b2b"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-flight/001.png",
+      "bytes": 37539,
+      "sha256": "782ed489039a25a14e65ab77a8fb6ce84137755dd01034e224fff3060a58cabf"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-flight/002.png",
+      "bytes": 30295,
+      "sha256": "15bf3321de607329b677041dad85381119c866a123d2cdb8ec258043634ede13"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-flight/003.png",
+      "bytes": 23223,
+      "sha256": "cbe66eea823e7bd6420fc54875526cae0db80a0e3f6d6e12db8d678a66710c6e"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-flight/004.png",
+      "bytes": 37274,
+      "sha256": "b4e219dbdaae3edc9e2cb4d87cd4db06c540cb657ec564cd9a030430d0164d58"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-flight/005.png",
+      "bytes": 29047,
+      "sha256": "386eb146e54a87a4752be9ef9979389e992a372420370a10fef96e90cab7c50d"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-flight/006.png",
+      "bytes": 16015,
+      "sha256": "411aa4ddffba54a0ef31a0075e1e00d9aa36f920e1280da4641571463277029e"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-stillness/001.png",
+      "bytes": 12808,
+      "sha256": "a533a6fbcac38cd6b85aa1c4439409d74afbd556b60cde07de7f1de3a9b096b2"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-stillness/002.png",
+      "bytes": 12118,
+      "sha256": "6409b5133dfdee071cb30c5705ce2a835b00276e05235bc30473bc1e8d2e8929"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-stillness/003.png",
+      "bytes": 11197,
+      "sha256": "030f1a9dce23281b50958f460398c30c5ce7c2aa992d40226380430f2d6d95ab"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-stillness/004.png",
+      "bytes": 9658,
+      "sha256": "17d6dbd96cb20b8eb31e207f96d66d2ab0ed09aef932dfe22e298d283e265e80"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-stillness/005.png",
+      "bytes": 7563,
+      "sha256": "80235aae3f82aca25be7517dfc17ed5619c10698e947d6aad4df7829d28d14bf"
+    },
+    {
+      "file": "r05-sword-v2/frames/sword-stillness/006.png",
+      "bytes": 4867,
+      "sha256": "a24f7213fcfd46f8cefc00d5bb74161b905c454ddec4c1abff0752e177130270"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/001.png",
+      "bytes": 9585,
+      "sha256": "21ea3f9096a8579a732b9ed34f9d46ebf9ece7b5cc6ed1b078297e5cea7a5167"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/002.png",
+      "bytes": 10722,
+      "sha256": "a897a276dc1153e6a8bb651cb098b3099db1eebfa8c75d2741fd0654523da342"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/003.png",
+      "bytes": 10172,
+      "sha256": "56c495f1dff1a9fe57229642b65e8879307addd63fdd39e081c888fa48afe1d6"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/004.png",
+      "bytes": 11825,
+      "sha256": "e059c722f0e5a53d04b98d5511d722e0a167fb91a80715289512ac0dee0db387"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/005.png",
+      "bytes": 10318,
+      "sha256": "505ff79e84980d162ed2e1fda563d85fff87dd898274b644b978f0d82e992b0c"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/006.png",
+      "bytes": 11664,
+      "sha256": "dcf4c3b90d0f73693d8de9c9bf0b47925595ac7b71fc34538fb06a9804092d73"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/007.png",
+      "bytes": 11899,
+      "sha256": "2186aa945cee12af2027ed3b7110594e66a273716cfff9b41b49281054c3ca7b"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/008.png",
+      "bytes": 11695,
+      "sha256": "955f7870f3f82be0d62bb673bf1abc3df2eb900241e680ef657696a8f289e1f5"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/009.png",
+      "bytes": 10377,
+      "sha256": "507cd4c44463188b551b2e288d303cc1bc55a09831d76b5605f42ab8bc75cec4"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/010.png",
+      "bytes": 10535,
+      "sha256": "1a76da067a4414231abe55ad7fbd84365a6102808054379f584bd945556a6813"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/011.png",
+      "bytes": 9828,
+      "sha256": "5f13eec64d93e0cc9d19be3b06bbf61e75335df82cf1d3a8f0467ac6a248287c"
+    },
+    {
+      "file": "r05-sword-v2/frames/wanglin-cast-east/012.png",
+      "bytes": 9645,
+      "sha256": "98dbc807da7f7a5082def9ce6f016c4f669a32edec0555807a8c497c4c1b35a3"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/charge-v1.txt",
+      "bytes": 1545,
+      "sha256": "4c078766919cae309ef16a579148458b5cae40bc23734e39b7db5640c85ec15e"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/impact-v1.txt",
+      "bytes": 2023,
+      "sha256": "ae7770e77fbffa106e63eacf22ed4953a88c44c953cc5201a3ac2d29300dd9b2"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/projectile-v1.txt",
+      "bytes": 1972,
+      "sha256": "6480edaef54215488714c91ace59458e8ab21beab24023257f8715419a318d62"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wanglin-cast-v1.txt",
+      "bytes": 2369,
+      "sha256": "f4c4735e4ffb0ad4ad56854dfa424636ae9606ebf5c6c7a98d7d86a77b72ac82"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/reused-r03/reused-r02/sword-flight.txt",
+      "bytes": 1461,
+      "sha256": "a7690738c504071051d8b36cf23f5086b2a544fb37d8556b3378a4f6a7b73b03"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/reused-r03/reused-r02/sword-formation.txt",
+      "bytes": 1557,
+      "sha256": "cee9994ea76f1f0d3f09d28163f9475625f35ef0894d9f5995d1ff17a110fce4"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/reused-r03/reused-r02/sword-guide.txt",
+      "bytes": 1210,
+      "sha256": "76a25c874f8f019ef5f060d4996921e5d9571baf8d5d8fa10a2d75ed71d98b4c"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/reused-r03/sword-lance.txt",
+      "bytes": 2042,
+      "sha256": "94c029bc47c2a5e16009e81054c1700c26d80a404dc4e78406054fd7814cdb89"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/reused-r03/sword-wheel.txt",
+      "bytes": 2107,
+      "sha256": "fe2409cbb55f92e22d802f44915f2791df99c019be04ea8d998043a8881eea9f"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/spirit-sword-sigil.txt",
+      "bytes": 2316,
+      "sha256": "305036bf39b84a69c2ce7428b527a65b8c08f6cfb8102784fc2c4ad207e71772"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/reused-r04/sword-spirit-lattice.txt",
+      "bytes": 1596,
+      "sha256": "7e601990965a034741775c02efe06413dee7a8e9775c1034013db5f4add5b7c3"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/sword-ink-flight.txt",
+      "bytes": 2278,
+      "sha256": "613e1057b15d0d8af611944b98691f317466b9c6193fd447158183482a33c72c"
+    },
+    {
+      "file": "r05-sword-v2/prompts/reused-v1/sword-stillness.txt",
+      "bytes": 2259,
+      "sha256": "8d267adf1e19c83e63a25a040652414d17ed8992942a1b00c5d9f8be2cbb9672"
+    },
+    {
+      "file": "r05-sword-v2/prompts/sword-cleave-impact.txt",
+      "bytes": 1861,
+      "sha256": "d466a81ab9b5f10918d5ecacdb1fb62ec6998423f0c39de624d5a0c4d3b2a186"
+    },
+    {
+      "file": "r05-sword-v2/prompts/sword-piercing-flight.txt",
+      "bytes": 1770,
+      "sha256": "7c4abc793267511a716b6c174a3815d12bb0fd5330f4366313aa4888519b7d6d"
+    },
+    {
+      "file": "r05-sword-v2/provenance.json",
+      "bytes": 1430,
+      "sha256": "dfbceb0ff59cdea4e9de2e1062fa3f5cdb88966d47a39736e758b76328f2a048"
+    },
+    {
+      "file": "r05-sword-v2/README.md",
+      "bytes": 531,
+      "sha256": "9125d83074f4c8e41db1ab18bdf0a95b290ee99d782b37764141e27dc1bc6ca0"
+    },
+    {
+      "file": "r05-sword-v2/reuse-spec.json",
+      "bytes": 56,
+      "sha256": "0279a6d67d899fed255150035a61e351d3ca5a7e76fe24838c64b2b10d2f11b3"
+    },
+    {
+      "file": "r05-sword-v2/review/F11-1x.png",
+      "bytes": 792978,
+      "sha256": "97c8c263688681a9aea6177d75abe9ce15cbe505bee89a73355d06f5772216a2"
+    },
+    {
+      "file": "r05-sword-v2/review/F11-2x.png",
+      "bytes": 503687,
+      "sha256": "372cfddb8643a97e077a4d625c1155e7ca70f96a8de2a0ffda65f8b4dfcc50fe"
+    },
+    {
+      "file": "r05-sword-v2/review/F13-1x.png",
+      "bytes": 793441,
+      "sha256": "4ed53019ccdbc5b12e3c24fc026c9755c223f2d6b44dc77cdf73a797fa80d2dc"
+    },
+    {
+      "file": "r05-sword-v2/review/F13-2x.png",
+      "bytes": 484383,
+      "sha256": "812f028561587712c26a3616fe292ddddf7ea7b1bc0fc0f9c5f8e5da796f310c"
+    },
+    {
+      "file": "r05-sword-v2/review/F16-1x.png",
+      "bytes": 791039,
+      "sha256": "3072a2123cf64c5aab3760602dde02941159357c28b82e32fc180000885403b0"
+    },
+    {
+      "file": "r05-sword-v2/review/F16-2x.png",
+      "bytes": 483827,
+      "sha256": "01798ff81184ae8b48efc6b9bd2ce79c209d333cec2f7c864f834412b434b5cf"
+    },
+    {
+      "file": "r05-sword-v2/review/F21-1x.png",
+      "bytes": 784146,
+      "sha256": "f317e90324356ba854fd6debe0c63b0e255248093c26b174ee050a89759055d0"
+    },
+    {
+      "file": "r05-sword-v2/review/F21-2x.png",
+      "bytes": 457049,
+      "sha256": "7521fa0084848b468273e0ee31229c1330baa0886d5655171fd4209df34fccda"
+    },
+    {
+      "file": "r05-sword-v2/review/F9-1x.png",
+      "bytes": 784829,
+      "sha256": "2492d9b6e3cd7fbb9b7122d90e2afb77a22b6aea13b1627f0d8a8dd9b6283b5d"
+    },
+    {
+      "file": "r05-sword-v2/review/F9-2x.png",
+      "bytes": 456482,
+      "sha256": "c9ebf8e60102ce4185353003371cd96d7ca9d5916e52a5dd9ce990839b1c721d"
+    },
+    {
+      "file": "r05-sword-v2/skill.json",
+      "bytes": 3677,
+      "sha256": "88664eb7a06eb893113d401a6c88e311952a282c3d4d1361434e01909bb2f4c2"
+    },
+    {
+      "file": "r05-sword-v2/source/charge-v1.png",
+      "bytes": 2043877,
+      "sha256": "412b94bf2e0f96396f5f4e72a5e6ceefb38d030321f29732fcd8c15151afe106"
+    },
+    {
+      "file": "r05-sword-v2/source/sword-cleave-impact.png",
+      "bytes": 1896522,
+      "sha256": "d2fd609e1fb7a8f70bee7bbb2b59b511acbc64bd56b2ef59bfb1a0005521bd80"
+    },
+    {
+      "file": "r05-sword-v2/source/sword-piercing-flight.png",
+      "bytes": 1877289,
+      "sha256": "ab709dfc253d090f8a2397c2e8254e6baa6569301351c6a8a4e0d49cc15171ec"
+    },
+    {
+      "file": "r05-sword-v2/source/sword-stillness.png",
+      "bytes": 1822068,
+      "sha256": "95612e7b9895fa6707e68509162f1233d63b09be18ccfadda520e199acd227b6"
+    },
+    {
+      "file": "r05-sword-v2/source/wanglin-cast-v1.png",
+      "bytes": 1750016,
+      "sha256": "255ad81dfc26a173067aa3b3ed63bb5b2be4a5bb6af036ee294d84ba7f5ac019"
+    }
+  ],
+  "previewIncluded": false,
+  "approval": null,
+  "integration": "presentation_helpers_only_host_owns_damage_and_movement"
+}

@@ -1,5 +1,7 @@
 # Đệ tử người chơi — tạo hình và bộ pixel thử đầu tiên
 
+> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Hai mẫu đệ tử trong hồ sơ này là nghiên cứu/preview lịch sử, không là roster nhân vật người chơi chính của GDD hiện hành. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+
 **Phiên bản:** 0.1, ngày 07/10/2026.  
 **Phạm vi:** hai mẫu `AVATAR-NOVICE-MALE/FEMALE`, cùng đồng phục nhập môn; tên riêng do người chơi đặt.  
 **Trạng thái:** tạo hình v2 và bộ đứng/đi thử đã dựng để đánh giá; nhận diện và chuyển động đệ tử chưa được người phát triển duyệt.  

@@ -1,0 +1,22 @@
+{
+  "tool": "built_in_imagegen",
+  "sourceOfTruth": "individual_RGBA_PNG_frames",
+  "processing": "mechanical_crop_fixed_scale_anchor_resize_pack",
+  "sourceSelection": "../production/r04-art-selection.json",
+  "prompts": [
+    {
+      "source": "source/spirit-thunder-east.png",
+      "prompt": "prompts/spirit-thunder-east.txt",
+      "sourceSha256": "16dd591cec6153c2ab5d039df366a992c39214275dac11d59453b7a0c18ab6a7"
+    },
+    {
+      "source": "source/thunder-spirit-weave.png",
+      "prompt": "prompts/thunder-spirit-weave.txt",
+      "sourceSha256": "ef55acec839331e74bdb0edf4f44f84024ef8291403d0b53958043b339a3f6eb"
+    }
+  ],
+  "newFrames": 14,
+  "reusedFrames": 40,
+  "reusedFrom": "R03",
+  "artStatus": "produced_pending_owner_motion_review"
+}

@@ -1,0 +1,246 @@
+{
+  "version": "1.0.1",
+  "realm": "R04",
+  "realmName": "Nguyên Anh",
+  "artStatus": "produced_pending_owner_motion_review",
+  "fps": 24,
+  "authoringFrameBase": 1,
+  "runtimeReady": false,
+  "authority": {
+    "damage": "combat_server",
+    "movement": "movement_server",
+    "vfxAppliesDamage": false,
+    "vfxMovesActor": false
+  },
+  "presentation": {
+    "screenFlash": false,
+    "sfxAssetsProduced": false,
+    "ghosts": {
+      "sampleLagFrames": [
+        2
+      ],
+      "opacity": [
+        0.12
+      ],
+      "decorativeOnly": true
+    }
+  },
+  "preview": {
+    "endFrame": 48,
+    "confirmFrame": 17,
+    "worldSize": [
+      960,
+      640
+    ],
+    "bodyHeightMax": 80,
+    "zoom": [
+      1,
+      2,
+      4
+    ],
+    "cameraCenter": [
+      480,
+      320
+    ],
+    "dprCap": 2,
+    "moveStartFrame": 10,
+    "arrivalFrame": 16,
+    "travelWorld": 160,
+    "travelScope": "illustrative_only_host_movement_required"
+  },
+  "id": "R04-WIND",
+  "family": "wind",
+  "name": "Linh Ảnh Phong Bộ",
+  "character": {
+    "baseIdleFrame": [
+      64,
+      96
+    ],
+    "bodyHeightMax": 80,
+    "collisionChanged": false,
+    "directions": [
+      "east"
+    ],
+    "clip": "wanglin-wind-east",
+    "castCanvas": [
+      112,
+      96
+    ],
+    "castAnchor": [
+      56,
+      88
+    ],
+    "holds": [
+      1,
+      1,
+      2,
+      5,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ]
+  },
+  "sockets": [
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -30
+    ],
+    [
+      17,
+      -25
+    ],
+    [
+      22,
+      -25
+    ],
+    [
+      25,
+      -22
+    ],
+    [
+      25,
+      -20
+    ],
+    [
+      30,
+      -22
+    ],
+    [
+      30,
+      -22
+    ],
+    [
+      25,
+      -23
+    ],
+    [
+      20,
+      -22
+    ],
+    [
+      20,
+      -30
+    ],
+    [
+      15,
+      -25
+    ]
+  ],
+  "tracks": [
+    {
+      "clip": "wind-wheel",
+      "startFrame": 1,
+      "anchor": "departure",
+      "layer": 0
+    },
+    {
+      "clip": "wind-trail",
+      "startFrame": 10,
+      "stopBeforeFrame": 16,
+      "stopOnArrival": true,
+      "anchor": "body",
+      "layer": 0
+    },
+    {
+      "clip": "wind-return-curl",
+      "trigger": "movement.arrived",
+      "anchor": "arrival",
+      "layer": 2
+    }
+  ],
+  "events": [
+    {
+      "frame": 1,
+      "type": "cast.start"
+    },
+    {
+      "frame": 4,
+      "type": "spirit.appear"
+    },
+    {
+      "frame": 5,
+      "type": "wheel.organize"
+    },
+    {
+      "frame": 8,
+      "type": "wheel.compress"
+    },
+    {
+      "frame": 10,
+      "type": "movement.request",
+      "sfx": "r03.wind.dash"
+    },
+    {
+      "frame": 16,
+      "type": "recovery.start"
+    },
+    {
+      "frame": 21,
+      "type": "character.end"
+    }
+  ],
+  "arrivalContract": {
+    "required": [
+      "castId",
+      "worldFoot",
+      "arrivedAt"
+    ],
+    "returnCurlMovesActor": false,
+    "noAutomaticInvulnerability": true
+  },
+  "spirit": {
+    "clip": "spirit-wind-east",
+    "offset": [
+      -46,
+      -24
+    ],
+    "startFrame": 4,
+    "opacities": [
+      0.12,
+      0.22,
+      0.32,
+      0.26,
+      0.14,
+      0.03
+    ],
+    "decorativeOnly": true,
+    "hasAI": false,
+    "hasCollision": false,
+    "appliesDamage": false,
+    "mainActorBodyHeightMax": 80,
+    "departureIndices": [
+      0,
+      1,
+      2
+    ],
+    "departureHolds": [
+      2,
+      2,
+      2
+    ],
+    "arrivalIndices": [
+      3,
+      4,
+      5
+    ],
+    "arrivalHolds": [
+      1,
+      2,
+      2
+    ],
+    "mergeFrames": 5,
+    "maxHoldFrames": 48,
+    "scale": 0.78,
+    "layer": 0.5,
+    "behindActor": true
+  }
+}

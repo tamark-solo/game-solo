@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hằng Nhạc — nền mỹ thuật v1</title>
+  <style>
+    :root { color-scheme: light; --paper: #f3eddf; --ink: #263b37; --jade: #37665a; --line: #c9c2ae; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 "Segoe UI", sans-serif; }
+    main { max-width: 1448px; margin: auto; padding: 24px; }
+    h1 { margin: 0 0 6px; font: 34px/1.2 Georgia, serif; }
+    p { margin: 0 0 14px; }
+    a { color: var(--jade); text-underline-offset: 3px; }
+    .toolbar { display: flex; gap: 12px; align-items: end; flex-wrap: wrap; margin: 18px 0; }
+    button, select { font: inherit; border: 1px solid var(--line); background: #fffbf2; color: var(--ink); padding: 8px 14px; border-radius: 5px; min-height: 44px; }
+    button { cursor: pointer; }
+    button[aria-pressed="true"] { background: var(--jade); color: #fffbf2; border-color: var(--jade); }
+    button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid var(--jade); outline-offset: 3px; }
+    label { display: flex; gap: 6px; align-items: center; }
+    .zone-field { display: grid; gap: 2px; }
+    select { max-width: 100%; }
+    .viewport { position: relative; overflow: hidden; background: #d5dccf; width: 100%; }
+    .viewport[data-view="camera"] { max-width: 960px; }
+    .world { position: absolute; width: 2400px; height: 1800px; transform-origin: 0 0; }
+    .background { position: absolute; inset: 0; width: 2400px; height: 1800px; display: block; }
+    .actor { position: absolute; width: 96px; height: 96px; image-rendering: pixelated; pointer-events: none; }
+    .marker { position: absolute; transform: translate(-50%, -110%); border: 1px solid var(--line); background: #fffbf2; color: var(--ink); border-radius: 4px; padding: 2px 7px; font-size: 14px; line-height: 1.25; white-space: nowrap; }
+    .markers[hidden], .actor[hidden] { display: none; }
+    .status { margin: 12px 0; min-height: 26px; }
+    .note { color: #555f54; font-size: 14px; }
+    details { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 14px; }
+    summary { cursor: pointer; }
+    details p { margin-top: 12px; }
+    @media (max-width: 600px) {
+      main { padding: 14px; }
+      h1 { font-size: 28px; }
+      .zone-field { flex-basis: 100%; }
+      .toolbar { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Hằng Nhạc</h1>
+  <p>Nền môn phái trên núi · Bản mỹ thuật đầu tiên theo bố cục nhập môn.</p>
+  <p><a href="camera-study.html">Thử Vương Lâm ở tỷ lệ 1× và camera bám — màn hẹp giữ cỡ nhân vật</a></p>
+  <div class="toolbar" aria-label="Xem nền map">
+    <button type="button" id="overview" aria-pressed="true">Toàn map</button>
+    <button type="button" id="camera" aria-pressed="false">Khung 960 × 640</button>
+    <label class="zone-field" for="zone">Địa điểm
+      <select id="zone">
+        <option value="HN-Z01">Sơn môn · Tiếp dẫn</option>
+        <option value="HN-Z02" selected>Sân môn phái</option>
+        <option value="HN-Z03">Đình thổ nạp</option>
+        <option value="HN-Z04">Sân luyện thuật</option>
+        <option value="HN-Z05">Ngoại vi · Hậu sơn</option>
+        <option value="HN-Z06">Chuẩn bị · Luyện hóa</option>
+        <option value="HN-Z07">Lối vào khảo nghiệm</option>
+        <option value="HN-Z08">Sơn môn · Xuất hành</option>
+      </select>
+    </label>
+    <label><input type="checkbox" id="show-zones"> Nhãn khu</label>
+    <label><input type="checkbox" id="show-actor" checked> Vương Lâm để xem tỷ lệ</label>
+  </div>
+  <div class="viewport" id="viewport" aria-label="Nền Hằng Nhạc, các điểm chức năng và nhân vật tham chiếu">
+    <div class="world" id="world">
+      <img class="background" id="background" src="hang-nhac-map-v1.png" alt="Môn phái Hằng Nhạc trên núi: sơn môn phía nam, sân trống ở giữa, đình thông phía tây, sân luyện và bàn chuẩn bị phía đông, đường lên khảo nghiệm giữa hai cánh chính điện">
+      <img class="actor" id="actor" src="../../vfx/frame-by-frame-r01/frames/wanglin-cast-east/001.png" alt="Vương Lâm chibi, frame tham chiếu R01" hidden>
+    </div>
+    <div class="markers" id="markers" hidden></div>
+  </div>
+  <p class="status" id="status" aria-live="polite">Toàn map · Nền mỹ thuật v1</p>
+  <p class="note">Địa điểm trên ảnh dùng để duyệt bố cục và tỷ lệ. Chọn một địa điểm để xem gần; đây chưa là bản di chuyển hoặc va chạm trong game.</p>
+  <details>
+    <summary>Nguồn thiết kế và bước hoàn thiện</summary>
+    <p><a href="../../../HANG-NHAC-MAP-LAYOUT.md">Bố cục Hằng Nhạc</a> · <a href="README.md">Ghi chú duyệt mỹ thuật</a> · <a href="hang-nhac-map-v1.prompt.txt">Prompt tạo nền</a></p>
+    <p>Nền gốc 1448 × 1086 px. Bản xem ánh xạ vào world tham chiếu 2400 × 1800, không tăng chi tiết ảnh. Frame Vương Lâm R01 là lớp riêng, ô 96 × 96, neo chân (48,88), body khoảng 80; nút toàn map thu nhỏ cả cảnh và nhân vật để nhìn bố cục.</p>
+    <p>Vị trí các khu trên tranh có sai lệch so với tọa độ blockout. Cần hiệu chỉnh mặt đất, đo đường và tách mái/cây/đạo cụ trước tích hợp runtime. Đài phía bắc là lối vào, arena HN10 nằm trong phiên riêng.</p>
+  </details>
+</main>
+<script>
+(() => {
+  const anchors = [
+    {id: 'HN-Z01', name: 'Sơn môn · Tiếp dẫn', x: 730, y: 900},
+    {id: 'HN-Z02', name: 'Sân môn phái', x: 735, y: 540},
+    {id: 'HN-Z03', name: 'Đình thổ nạp', x: 248, y: 316},
+    {id: 'HN-Z04', name: 'Sân luyện thuật', x: 1220, y: 463},
+    {id: 'HN-Z05', name: 'Ngoại vi · Hậu sơn', x: 245, y: 773},
+    {id: 'HN-Z06', name: 'Chuẩn bị · Luyện hóa', x: 1210, y: 741},
+    {id: 'HN-Z07', name: 'Lối vào khảo nghiệm', x: 724, y: 132},
+    {id: 'HN-Z08', name: 'Sơn môn · Xuất hành', x: 730, y: 900}
+  ];
+  const viewport = document.getElementById('viewport');
+  const world = document.getElementById('world');
+  const zone = document.getElementById('zone');
+  const actor = document.getElementById('actor');
+  const markers = document.getElementById('markers');
+  const status = document.getElementById('status');
+  const overview = document.getElementById('overview');
+  const camera = document.getElementById('camera');
+  const showActor = document.getElementById('show-actor');
+  const showZones = document.getElementById('show-zones');
+  const markerItems = [];
+  let local = false;
+  function worldPoint(a) { return {x: a.x * 2400 / 1448, y: a.y * 1800 / 1086}; }
+  anchors.filter(a => a.id !== 'HN-Z08').forEach(a => {
+    const p = worldPoint(a);
+    const marker = document.createElement('span');
+    marker.className = 'marker';
+    marker.textContent = a.id === 'HN-Z01' ? 'Z01/Z08 · Sơn môn' : a.name;
+    marker.style.left = `${p.x}px`;
+    marker.style.top = `${p.y}px`;
+    markers.appendChild(marker);
+    markerItems.push({anchor: a, point: p, element: marker});
+  });
+  function draw() {
+    const selected = anchors.find(a => a.id === zone.value);
+    const p = worldPoint(selected);
+    const width = viewport.clientWidth;
+    const view = local ? {w: 960, h: 640} : {w: 2400, h: 1800};
+    const scale = width / view.w;
+    viewport.style.height = `${view.h * scale}px`;
+    const origin = local ? {x: Math.max(0, Math.min(1440, p.x - 480)), y: Math.max(0, Math.min(1160, p.y - 320))} : {x: 0, y: 0};
+    world.style.transform = `scale(${scale})`;
+    world.style.left = `${-origin.x * scale}px`;
+    world.style.top = `${-origin.y * scale}px`;
+    actor.style.left = `${p.x - 48}px`;
+    actor.style.top = `${p.y - 88}px`;
+    actor.hidden = !showActor.checked || !local;
+    markers.hidden = !showZones.checked;
+    markerItems.forEach(item => {
+      item.element.hidden = local && item.anchor.id !== (selected.id === 'HN-Z08' ? 'HN-Z01' : selected.id);
+      item.element.style.left = `${(item.point.x - origin.x) * scale}px`;
+      item.element.style.top = `${(item.point.y - origin.y) * scale}px`;
+      item.element.textContent = width < 640 && !local
+        ? (item.anchor.id === 'HN-Z01' ? 'Z01/Z08' : item.anchor.id.replace('HN-', ''))
+        : (item.anchor.id === 'HN-Z01' ? 'Z01/Z08 · Sơn môn' : item.anchor.name);
+    });
+    overview.setAttribute('aria-pressed', String(!local));
+    camera.setAttribute('aria-pressed', String(local));
+    status.textContent = local ? `${selected.name} · Khung 960 × 640${showActor.checked ? ' · Vương Lâm dùng tỷ lệ R01' : ''}` : 'Toàn map · Bảy địa điểm, tám chức năng · Sơn môn dùng cho tiếp dẫn và xuất hành';
+    viewport.dataset.view = local ? 'camera' : 'overview';
+    viewport.dataset.zone = selected.id;
+  }
+  overview.addEventListener('click', () => {local = false; draw();});
+  camera.addEventListener('click', () => {local = true; draw();});
+  zone.addEventListener('change', () => {local = true; draw();});
+  showActor.addEventListener('change', draw);
+  showZones.addEventListener('change', draw);
+  new ResizeObserver(draw).observe(viewport);
+  draw();
+})();
+</script>
+</body>
+</html>

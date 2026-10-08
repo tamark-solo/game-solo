@@ -1,0 +1,205 @@
+{
+  "version": "1.0.0",
+  "realm": "R05",
+  "realmName": "Hóa Thần",
+  "artStatus": "produced_pending_owner_motion_review",
+  "fps": 24,
+  "authoringFrameBase": 1,
+  "runtimeReady": false,
+  "authority": {
+    "damage": "combat_server",
+    "movement": "movement_server",
+    "vfxAppliesDamage": false,
+    "vfxMovesActor": false
+  },
+  "presentation": {
+    "screenFlash": false,
+    "sfxAssetsProduced": false,
+    "ghosts": {
+      "sampleLagFrames": [],
+      "opacity": [],
+      "reason": "no_body_echoes_forward_mist_path_only"
+    },
+    "clipOpacities": {
+      "wind-return-curl": [
+        0.55,
+        0.85,
+        1,
+        0.85,
+        0.6,
+        0.4,
+        0.18,
+        0.04
+      ]
+    }
+  },
+  "preview": {
+    "endFrame": 48,
+    "confirmFrame": 17,
+    "worldSize": [
+      960,
+      640
+    ],
+    "bodyHeightMax": 80,
+    "zoom": [
+      1,
+      2,
+      4
+    ],
+    "cameraCenter": [
+      480,
+      320
+    ],
+    "dprCap": 2,
+    "moveStartFrame": 13,
+    "arrivalFrame": 19,
+    "travelWorld": 160,
+    "travelScope": "illustrative_only_host_movement_required"
+  },
+  "id": "R05-WIND",
+  "family": "wind",
+  "name": "Ý Cảnh Phong",
+  "character": {
+    "baseIdleFrame": [
+      64,
+      96
+    ],
+    "bodyHeightMax": 80,
+    "collisionChanged": false,
+    "directions": [
+      "east"
+    ],
+    "clip": "wanglin-wind-east",
+    "castCanvas": [
+      112,
+      96
+    ],
+    "castAnchor": [
+      56,
+      88
+    ],
+    "holds": [
+      1,
+      1,
+      2,
+      8,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ]
+  },
+  "sockets": [
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -30
+    ],
+    [
+      17,
+      -25
+    ],
+    [
+      22,
+      -25
+    ],
+    [
+      25,
+      -22
+    ],
+    [
+      25,
+      -20
+    ],
+    [
+      30,
+      -22
+    ],
+    [
+      30,
+      -22
+    ],
+    [
+      25,
+      -23
+    ],
+    [
+      20,
+      -22
+    ],
+    [
+      20,
+      -30
+    ],
+    [
+      15,
+      -25
+    ]
+  ],
+  "tracks": [
+    {
+      "clip": "wind-wheel",
+      "startFrame": 1,
+      "anchor": "departure",
+      "layer": 0
+    },
+    {
+      "clip": "wind-trail",
+      "startFrame": 13,
+      "stopBeforeFrame": 19,
+      "stopOnArrival": true,
+      "anchor": "body",
+      "layer": 0
+    },
+    {
+      "clip": "wind-return-curl",
+      "trigger": "movement.arrived",
+      "anchor": "arrival",
+      "layer": 0
+    }
+  ],
+  "events": [
+    {
+      "frame": 1,
+      "type": "cast.start"
+    },
+    {
+      "frame": 5,
+      "type": "intent.quiet"
+    },
+    {
+      "frame": 13,
+      "type": "movement.request"
+    },
+    {
+      "frame": 19,
+      "type": "recovery.start"
+    },
+    {
+      "frame": 24,
+      "type": "character.end"
+    }
+  ],
+  "arrivalContract": {
+    "required": [
+      "castId",
+      "worldFoot",
+      "arrivedAt"
+    ],
+    "returnCurlMovesActor": false,
+    "noAutomaticInvulnerability": true
+  },
+  "intent": {
+    "artTheme": "Phong_Du",
+    "visualOnly": true,
+    "fullScreenEffect": false,
+    "echoReturnsActor": false
+  }
+}
