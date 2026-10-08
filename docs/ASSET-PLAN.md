@@ -1,12 +1,14 @@
 # Kế hoạch asset — Tiên Nghịch: Hành Trình Vương Lâm
 
+> **Ưu tiên hiện tại:** [đoạn ngoại viện native mẫu](MAP-COURTYARD-PILOT-PLAN.md) theo [quy tắc xây map](MAP-BUILDING-GUIDE.md), giữ ART tham chiếu và sprite64 × 96; nguồn sạch/cụm/layer trước mở rộng map. NPC/quest/combat/đồ/đột phá theo sau map đã duyệt; portrait để sau. [MVP mới](MVP-RPG-A.md) dự kiến204 frame combat bổ sung; dự toán portrait/map-node bên dưới giữ tham chiếu, không thay ngân sách7 PNG chính dự kiến của đoạn mẫu.
+
 **Phiên bản:** 1.5, ngày 07/10/2026.  
 **Trạng thái:** nhận diện Vương Lâm v2 đã duyệt; bộ áo xám 28 frame làm chuẩn thử. Hai đệ tử v2 đã có nhận diện và 56 frame đứng/đi thử; còn chờ đánh giá.  
 **Tham chiếu:** [GDD](GDD.md), [ART direction](ART-DIRECTION.md), [bộ UI](UI-COMPONENTS.md), [map](WORLD-MAPS.md), [quái và gặp gỡ](ENCOUNTERS.md).
 
 **Điều chỉnh online:** hai nguồn đệ tử `AS-PC-001/002` được bổ sung; Vương Lâm/cha mẹ và các nhân vật truyện là NPC. [CHARACTERS.md](CHARACTERS.md) và [roster](data/character-roster.json) xác định số người, vai trò và concept. Các map/cảnh/vị trí dùng ở phần dưới giữ làm tham chiếu, chờ tách tuyến người chơi theo [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md).
 
-**Điều chỉnh MMORPG v0.10:** nhân vật pixel art trên nền stylized 2D/top-down ba phần tư. [Mẫu Vương Lâm](design/characters/wang-lin-sprite-study/index.html) dùng tham chiếu phong cách; [sân v2](design/world/index.html) giữ tham chiếu nền/bố cục. Các tổng 20/22/30 chỉ dự toán portrait/minh họa; bộ pixel native/map/animation cần ngân sách sau khi duyệt cách ghép/tỷ lệ/động tác. Xem mục 14 và [WORLD-VISUAL-SPEC.md](WORLD-VISUAL-SPEC.md).
+**Điều chỉnh MMORPG v0.10:** nhân vật pixel art trên nền stylized 2D/top-down ba phần tư. [Mẫu Vương Lâm](design/characters/wang-lin-sprite-study/index.html) dùng tham chiếu phong cách; sân v2 (bộ cũ đã xóa) giữ tham chiếu nền/bố cục. Các tổng 20/22/30 chỉ dự toán portrait/minh họa; bộ pixel native/map/animation cần ngân sách sau khi duyệt cách ghép/tỷ lệ/động tác. Xem mục 14 và [WORLD-VISUAL-SPEC.md](WORLD-VISUAL-SPEC.md).
 
 ## 1. Khuyến nghị
 
@@ -249,4 +251,4 @@ Không quy đổi một sheet nhiều khung thành một nguồn portrait trong 
 
 WebP 512 hiện khoảng 94–99 KB, 160 khoảng 14 KB, 64 khoảng 3,5 KB; PNG giữ làm master. [Manifest](design/characters/core-ui-v1/manifest.json) và [nguồn/prompt](design/characters/core-ui-v1/README.md) ghi dung lượng chính xác. Chân dung mới chờ đánh giá; trang phục khác và biểu cảm đặc thù tách theo cảnh.
 
-[Kế hoạch động tác](CORE-CHARACTER-MOTION-PLAN.md): bộ ba hiện có 36 frame riêng; đề xuất mục tiêu 100, gồm 36 frame mới cho linh thể và 28 cho Lý Mộ Uyển. 64 frame mới chưa được vẽ. Tư Đồ Nam ngồi 128 × 128, các bộ đệ tử và trang phục Vương Lâm khác không cộng vào tổng này.
+[Kế hoạch động tác](CORE-CHARACTER-MOTION-PLAN.md) hiện dùng [dàn chibi mới](CHIBI-ROSTER-SPEC.md): bộ ba có 60 frame riêng; thêm 12 lơ lửng tại chỗ và 4 luyện đan còn dự kiến, tổng mục tiêu 76. Hai đệ tử có 40 frame chibi riêng, dùng trong sân online. Các ngân sách 28 frame/mẫu và mẫu tĩnh phía trên thuộc giai đoạn trước. Lý Mộ Uyển đã làm lại mặt/tóc/trang phục; bộ mới chờ đánh giá, portrait cần đồng bộ sau khi chọn diện mạo.

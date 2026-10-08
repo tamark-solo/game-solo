@@ -1,6 +1,6 @@
 {
   "name": "tien-nghich-preview",
-  "version": "0.3.1",
+  "version": "0.12.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -20,7 +20,10 @@
     "test:browser": "node tests/browser-smoke.mjs",
     "test:movement": "node tests/movement-smoke.mjs",
     "test:gait-review": "node tests/gait-review-smoke.mjs",
-    "test:chibi-pilot": "node tests/chibi-pilot-smoke.mjs"
+    "test:chibi-pilot": "node tests/chibi-pilot-smoke.mjs",
+    "test:starter-region": "node tests/starter-region-smoke.mjs",
+    "test:map-editor": "node tests/map-editor-smoke.mjs",
+    "test:level-design": "node tests/level-design-smoke.mjs"
   },
   "dependencies": {
     "@colyseus/schema": "5.0.36",

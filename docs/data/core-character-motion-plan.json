@@ -1,7 +1,7 @@
 {
   "schemaVersion": "core-character-motion-plan-1",
   "date": "2026-10-07",
-  "status": "partial_production_wanglin_gait_ready_other_motion_planned",
+  "status": "chibi_stand_and_move_produced_new_roster_pending_owner_review",
   "specPath": "docs/CORE-CHARACTER-MOTION-PLAN.md",
   "frameSizePx": [
     64,
@@ -17,21 +17,21 @@
     32,
     88
   ],
-  "currentUniqueFrames": 44,
-  "plannedUniqueFrames": 108,
-  "plannedAdditionalFrames": 64,
+  "currentUniqueFrames": 60,
+  "plannedUniqueFrames": 76,
+  "plannedAdditionalFrames": 16,
   "optionalAdditionalWangLinFrames": 8,
   "newAnimationProduced": true,
-  "runtimeReady": false,
+  "runtimeReady": true,
   "characters": [
     {
       "characterId": "CHR-WANG-LIN",
       "costume": "gray",
       "firstPhase": "A",
-      "existingAtlasPath": "docs/design/characters/gait-correction-v1/wang-lin/native-v1/atlas.png",
+      "existingAtlasPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.png",
       "anchorKind": "feet",
-      "currentUniqueFrames": 36,
-      "plannedUniqueFrames": 36,
+      "currentUniqueFrames": 20,
+      "plannedUniqueFrames": 20,
       "plannedAdditionalFrames": 0,
       "animations": [
         {
@@ -41,16 +41,17 @@
           "fps": 0,
           "currentUniqueFrames": 4,
           "additionalFrames": 0,
-          "status": "existing"
+          "status": "produced"
         },
         {
           "id": "walk",
+          "clipKeyPrefix": "walk",
           "directions": 4,
-          "framesPerDirection": 8,
-          "fps": 8,
-          "currentUniqueFrames": 32,
+          "framesPerDirection": 4,
+          "fps": 5,
+          "currentUniqueFrames": 16,
           "additionalFrames": 0,
-          "status": "previous_gait_changes_requested"
+          "status": "produced_positive_visual_feedback"
         }
       ],
       "optionalAnimations": [
@@ -71,20 +72,43 @@
           "status": "optional_not_produced"
         }
       ],
-      "previousAtlasPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png"
+      "previousAtlasPath": "docs/design/characters/gait-correction-v1/wang-lin/native-v1/atlas.png",
+      "motionApproval": "positive_visual_feedback_reference_for_roster",
+      "metadataPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.json",
+      "movementKind": "walk"
     },
     {
       "characterId": "CHR-SITU-NAN",
       "form": "standing_spirit_game_adaptation",
       "firstPhase": "B",
-      "existingAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.png",
+      "existingAtlasPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.png",
       "anchorKind": "ground_projection",
       "hoverHeightPx": 4,
       "sourceIdentityApprovalLevel": "provisional",
-      "currentUniqueFrames": 4,
-      "plannedUniqueFrames": 40,
-      "plannedAdditionalFrames": 36,
+      "currentUniqueFrames": 20,
+      "plannedUniqueFrames": 32,
+      "plannedAdditionalFrames": 12,
       "animations": [
+        {
+          "id": "stand",
+          "directions": 4,
+          "framesPerDirection": 1,
+          "fps": 0,
+          "currentUniqueFrames": 4,
+          "additionalFrames": 0,
+          "status": "produced"
+        },
+        {
+          "id": "glide",
+          "clipKeyPrefix": "walk",
+          "directions": 4,
+          "framesPerDirection": 4,
+          "fps": 5,
+          "currentUniqueFrames": 16,
+          "additionalFrames": 0,
+          "status": "produced_pending_owner_review",
+          "legsStayExtended": true
+        },
         {
           "id": "hover",
           "directions": 4,
@@ -94,29 +118,23 @@
           "additionalFrames": 12,
           "status": "planned",
           "firstFrameUsesCurrentStatic": true
-        },
-        {
-          "id": "glide",
-          "directions": 4,
-          "framesPerDirection": 6,
-          "fps": 6,
-          "reusedExistingFrames": 0,
-          "additionalFrames": 24,
-          "status": "planned",
-          "legsStayExtended": true
         }
       ],
-      "preservedSeatedAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v2/atlas.png"
+      "preservedSeatedAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v2/atlas.png",
+      "previousAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.png",
+      "motionApproval": "pending_owner_review",
+      "metadataPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.json",
+      "movementKind": "glide"
     },
     {
       "characterId": "CHR-LI-MUWAN",
-      "costume": "purple_ch144_reference",
+      "costume": "lavender_two_layer_redesign",
       "firstPhase": "later_arc",
-      "existingAtlasPath": "docs/design/characters/core-trio-v1/li-muwan/native-v2/atlas.png",
+      "existingAtlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
       "anchorKind": "feet",
-      "currentUniqueFrames": 4,
-      "plannedUniqueFrames": 32,
-      "plannedAdditionalFrames": 28,
+      "currentUniqueFrames": 20,
+      "plannedUniqueFrames": 24,
+      "plannedAdditionalFrames": 4,
       "animations": [
         {
           "id": "stand",
@@ -125,16 +143,17 @@
           "fps": 0,
           "currentUniqueFrames": 4,
           "additionalFrames": 0,
-          "status": "existing"
+          "status": "produced"
         },
         {
           "id": "walk",
+          "clipKeyPrefix": "walk",
           "directions": 4,
-          "framesPerDirection": 6,
-          "fps": 8,
-          "reusedExistingFrames": 0,
-          "additionalFrames": 24,
-          "status": "planned"
+          "framesPerDirection": 4,
+          "fps": 5,
+          "currentUniqueFrames": 16,
+          "additionalFrames": 0,
+          "status": "produced_positive_visual_feedback"
         },
         {
           "id": "alchemy",
@@ -146,13 +165,168 @@
           "reusedExistingFrames": 0,
           "additionalFrames": 4,
           "status": "planned_after_workbench_layout",
-          "propsSeparate": true
+          "propAssetSeparate": true
         }
-      ]
+      ],
+      "previousAtlasPath": "docs/design/characters/core-trio-v1/li-muwan/native-v2/atlas.png",
+      "motionApproval": "positive_visual_feedback_prototype_baseline",
+      "metadataPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.json",
+      "movementKind": "walk",
+      "identityStatus": "accepted_chibi_prototype_baseline",
+      "prototypeAcceptance": {
+        "by": "project_owner",
+        "date": "2026-10-07",
+        "feedback": "tôi thấy ổn rồi đó.",
+        "scope": "li_muwan_chibi_native_v5_identity_and_preview_baseline",
+        "level": "accepted_prototype_baseline",
+        "nativeVersion": "native-v5",
+        "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
+        "runtimeVersion": "0.5.1"
+      }
     }
   ],
   "originalCurrentUniqueFrames": 36,
   "previewRuntimeReady": true,
   "frameBudgetRequiresReestimationForChibi": true,
-  "chibiPilotSpecPath": "docs/GAIT-REFERENCE-REVIEW.md"
+  "chibiPilotSpecPath": "docs/GAIT-REFERENCE-REVIEW.md",
+  "history": [
+    {
+      "date": "2026-10-07",
+      "status": "partial_production_wanglin_gait_ready_other_motion_planned",
+      "currentUniqueFrames": 44,
+      "plannedUniqueFrames": 108,
+      "plannedAdditionalFrames": 64,
+      "characters": [
+        {
+          "characterId": "CHR-WANG-LIN",
+          "costume": "gray",
+          "firstPhase": "A",
+          "existingAtlasPath": "docs/design/characters/gait-correction-v1/wang-lin/native-v1/atlas.png",
+          "anchorKind": "feet",
+          "currentUniqueFrames": 36,
+          "plannedUniqueFrames": 36,
+          "plannedAdditionalFrames": 0,
+          "animations": [
+            {
+              "id": "stand",
+              "directions": 4,
+              "framesPerDirection": 1,
+              "fps": 0,
+              "currentUniqueFrames": 4,
+              "additionalFrames": 0,
+              "status": "existing"
+            },
+            {
+              "id": "walk",
+              "directions": 4,
+              "framesPerDirection": 8,
+              "fps": 8,
+              "currentUniqueFrames": 32,
+              "additionalFrames": 0,
+              "status": "previous_gait_changes_requested"
+            }
+          ],
+          "optionalAnimations": [
+            {
+              "id": "interact",
+              "directions": [
+                "south"
+              ],
+              "frames": 4,
+              "status": "optional_not_produced"
+            },
+            {
+              "id": "meditate",
+              "directions": [
+                "south"
+              ],
+              "frames": 4,
+              "status": "optional_not_produced"
+            }
+          ],
+          "previousAtlasPath": "docs/design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png"
+        },
+        {
+          "characterId": "CHR-SITU-NAN",
+          "form": "standing_spirit_game_adaptation",
+          "firstPhase": "B",
+          "existingAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.png",
+          "anchorKind": "ground_projection",
+          "hoverHeightPx": 4,
+          "sourceIdentityApprovalLevel": "provisional",
+          "currentUniqueFrames": 4,
+          "plannedUniqueFrames": 40,
+          "plannedAdditionalFrames": 36,
+          "animations": [
+            {
+              "id": "hover",
+              "directions": 4,
+              "framesPerDirection": 4,
+              "fps": 4,
+              "reusedExistingFrames": 4,
+              "additionalFrames": 12,
+              "status": "planned",
+              "firstFrameUsesCurrentStatic": true
+            },
+            {
+              "id": "glide",
+              "directions": 4,
+              "framesPerDirection": 6,
+              "fps": 6,
+              "reusedExistingFrames": 0,
+              "additionalFrames": 24,
+              "status": "planned",
+              "legsStayExtended": true
+            }
+          ],
+          "preservedSeatedAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v2/atlas.png"
+        },
+        {
+          "characterId": "CHR-LI-MUWAN",
+          "costume": "purple_ch144_reference",
+          "firstPhase": "later_arc",
+          "existingAtlasPath": "docs/design/characters/core-trio-v1/li-muwan/native-v2/atlas.png",
+          "anchorKind": "feet",
+          "currentUniqueFrames": 4,
+          "plannedUniqueFrames": 32,
+          "plannedAdditionalFrames": 28,
+          "animations": [
+            {
+              "id": "stand",
+              "directions": 4,
+              "framesPerDirection": 1,
+              "fps": 0,
+              "currentUniqueFrames": 4,
+              "additionalFrames": 0,
+              "status": "existing"
+            },
+            {
+              "id": "walk",
+              "directions": 4,
+              "framesPerDirection": 6,
+              "fps": 8,
+              "reusedExistingFrames": 0,
+              "additionalFrames": 24,
+              "status": "planned"
+            },
+            {
+              "id": "alchemy",
+              "directions": [
+                "south"
+              ],
+              "framesPerDirection": 4,
+              "fps": 4,
+              "reusedExistingFrames": 0,
+              "additionalFrames": 4,
+              "status": "planned_after_workbench_layout",
+              "propsSeparate": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "runtimeVersion": "0.5.1",
+  "productionPriority": "map_art_review_then_gameplay_design_then_animation_production",
+  "currentMvpSpecPath": "docs/MVP-RPG-A.md"
 }

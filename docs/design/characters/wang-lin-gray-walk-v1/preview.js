@@ -91,7 +91,7 @@
     } else { actor.time = 0; }
     mapContext.imageSmoothingEnabled = true;
     mapContext.clearRect(0,0,960,640);
-    mapContext.drawImage(background,0,0,960,640);
+    mapContext.fillStyle='#eee5d3';mapContext.fillRect(0,0,960,640);
     mapContext.fillStyle = "rgba(48,43,31,0.20)";
     mapContext.beginPath(); mapContext.ellipse(Math.round(actor.x),Math.round(actor.y)-1,12,3,0,0,Math.PI*2); mapContext.fill();
     paint(mapContext,frameName(actor.direction,direction ? "walk" : "stand",Math.floor(actor.time)),actor.x-32,actor.y-88);
@@ -135,7 +135,7 @@
     swatch.style.backgroundColor=color;swatch.title=index+" · "+color;get("palette").append(swatch);
   });
   function loadImage(url) {return new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>reject(new Error("Không nạp được "+url));image.src=url;});}
-  let texture,background;
+  let texture;
   let previous=0;
   function loop(timestamp) {
     const delta=previous ? Math.min(0.06,(timestamp-previous)/1000) : 0;previous=timestamp;
@@ -143,10 +143,9 @@
     drawDetails();drawMap(delta);requestAnimationFrame(loop);
   }
   Promise.all([
-    loadImage(new URL(data.meta.image,assetBase).href),
-    loadImage(new URL("../../world/hybrid-study/sect-courtyard-empty-v1.png",location.href).href)
+    loadImage(new URL(data.meta.image,assetBase).href)
   ]).then((images)=>{
-    texture=images[0];background=images[1];
+    texture=images[0];
     if(texture.width!==448 || texture.height!==384 || Object.keys(data.frames).length!==28) throw new Error("Atlas không khớp metadata.");
     state.ready=true;document.documentElement.dataset.ready="true";
     get("asset-status").textContent="Đã nạp 28 frame · 64 × 96 px · 24 mục palette · Điểm chân (32, 88)";

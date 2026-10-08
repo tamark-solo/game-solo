@@ -1,23 +1,29 @@
 {
   "date": "2026-10-07",
-  "scope": "gait_art_redraw_local_animation_preview_and_temporary_online_courtyard",
+  "scope": "layered_map_review_and_existing_character_online_preview",
   "passed": true,
   "unitTests": {
-    "passed": 12,
-    "failed": 0
+    "passed": 22,
+    "failed": 0,
+    "command": "npm.cmd test",
+    "runtimeVersion": "0.8.1"
   },
   "browser": {
     "passed": true,
     "browserVersion": "155.0.8059.39",
     "checks": [
-      "five_real_atlases_116_frames",
+      "source_atlases_6_packs_136_frames",
+      "home_page_defaults_to_new_chibi_asset",
       "pause_and_manual_frame_step",
+      "main_map_chibi_four_directions_walk_stop_and_normalized_diagonal",
       "four_directions_all_actors_static_states_explicit",
       "every_walk_pose_is_displayed_by_three_renderer",
+      "new_chibi_sets_all_directions_spirit_glide_label_explicit",
       "paper_dark_grid_integer_zoom",
       "local_wasd_movement_input_focus_does_not_move_actor",
       "independent_animation_uvs_1_5_20_local_actors",
-      "mobile_360_px_dpr2_touch_movement_no_horizontal_overflow",
+      "mobile_360_px_dpr2_four_direction_touch_movement_no_horizontal_overflow",
+      "five_character_chibi_gallery_frames_and_mobile_no_overflow",
       "browser_auto_reconnect_same_session",
       "two_browser_clients_see_same_server_movement",
       "browser_leave_updates_roster"
@@ -25,19 +31,19 @@
     "measurements": [
       {
         "simulatedActors": 1,
-        "readout": "58 FPS · 1 hình",
+        "readout": "24 FPS · 1 hình",
         "renderer": "headless_software",
         "mmoCapacityClaim": false
       },
       {
         "simulatedActors": 5,
-        "readout": "59 FPS · 5 hình",
+        "readout": "46 FPS · 5 hình",
         "renderer": "headless_software",
         "mmoCapacityClaim": false
       },
       {
         "simulatedActors": 20,
-        "readout": "60 FPS · 20 hình",
+        "readout": "38 FPS · 20 hình",
         "renderer": "headless_software",
         "mmoCapacityClaim": false
       }
@@ -63,7 +69,8 @@
     ],
     "persistentAccounts": false,
     "lastVerifiedRuntimeVersion": "0.2.0",
-    "backendChangedSinceVerification": false
+    "backendChangedSinceVerification": true,
+    "browserMovementAndReconnectVerifiedRuntimeVersion": "0.6.0"
   },
   "dependencies": {
     "@colyseus/schema": "5.0.36",
@@ -80,7 +87,7 @@
   "newAnimationProduced": true,
   "persistentAccountsImplemented": false,
   "cultivationGameplayImplemented": false,
-  "ownerMotionApproval": "changes_requested_after_reference_feedback",
+  "ownerMotionApproval": "wang_lin_positive_reference_new_roster_pending_review",
   "measurementsAreMMOCapacity": false,
   "developmentLaunch": {
     "command": "npm.cmd run dev",
@@ -88,10 +95,10 @@
     "clientHTTPStatus": 200,
     "backendHealth": true
   },
-  "runtimeVersion": "0.3.0",
+  "runtimeVersion": "0.12.0",
   "movement": {
     "passed": true,
-    "nativeWalkFramesPerDirection": 8,
+    "nativeWalkFramesPerDirection": 4,
     "newArtGenerated": true,
     "checks": [
       "distance_locked_gait",
@@ -122,7 +129,9 @@
         "finalServerErrorPx": 4.164888878221973e-08,
         "standingSlideFrames": 0
       }
-    ]
+    ],
+    "historicalMeasurements": true,
+    "measurementScope": "movement_logic_before_chibi_roster"
   },
   "gaitReview": {
     "passed": true,
@@ -136,7 +145,8 @@
       "mobile_360_no_page_overflow"
     ],
     "browserErrors": [],
-    "visualMotionApproval": "pending_owner_review"
+    "visualMotionApproval": "pending_owner_review",
+    "archived": true
   },
   "gaitSources": {
     "passed": true,
@@ -302,18 +312,16 @@
         "geometryGeneratedByCode": false
       }
     ],
-    "visualQualityAutomaticallyApproved": false
+    "visualQualityAutomaticallyApproved": false,
+    "archived": true
   },
-  "activeNativeFrameCount": 116,
+  "activeNativeFrameCount": 136,
   "archivedOriginalNativeFrameCount": 92,
-  "newDrawnWalkingPoses": 96,
-  "reusedStandingFrames": 12,
-  "unchangedStaticFrames": 8,
   "originalSourceArtModified": false,
-  "newFrameIdentityApproval": "pending_project_owner_review",
-  "gaitSpecPath": "docs/GAIT-CORRECTION.md",
-  "sourceAndPromptSetPath": "docs/design/characters/gait-correction-v1/README.md",
-  "reviewUrl": "http://127.0.0.1:5173/assets/gait-review/index.html",
+  "newFrameIdentityApproval": "new_roster_pending_owner_review",
+  "gaitSpecPath": "docs/CHIBI-ROSTER-SPEC.md",
+  "sourceAndPromptSetPath": "docs/design/characters/chibi-roster-v1/README.md",
+  "reviewUrl": "http://127.0.0.1:5173/assets/chibi-roster/index.html",
   "technicalChecksPassed": true,
   "referenceReviewSpecPath": "docs/GAIT-REFERENCE-REVIEW.md",
   "chibiPilot": {
@@ -372,6 +380,363 @@
     "localUrl": "http://127.0.0.1:5173/chibi-pilot.html",
     "sourceAndPromptSetPath": "docs/design/characters/wang-lin-chibi-pilot-v1/README.md",
     "ownerVisualApproval": "pending_review",
-    "mainOnlineActorsReplaced": false
+    "mainOnlineActorsReplaced": false,
+    "ownerVisualFeedback": {
+      "text": "nhin ổn đó.",
+      "by": "project_owner",
+      "date": "2026-10-07",
+      "scope": "current_chibi_visual_preview",
+      "level": "positive_visual_feedback_reference_for_next_directions"
+    },
+    "mainPreviewDefault": false
+  },
+  "activePreviewAssetCount": 6,
+  "defaultActorId": "CHR-WANG-LIN-CHIBI",
+  "defaultDirection": "east",
+  "homePageChibiIntegration": {
+    "verified": true,
+    "defaultVisibleOnRoot": true,
+    "catalogReloadsWithoutCache": true,
+    "assetURLsUseContentHashes": true,
+    "unsupportedDirectionsDisabled": true
+  },
+  "chibiWalk": {
+    "sourceCharacterId": "CHR-WANG-LIN",
+    "previewActorId": "CHR-WANG-LIN-CHIBI",
+    "nativeFolder": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2",
+    "nativeFrameCount": 20,
+    "newFrameCount": 16,
+    "preservedEastFrameCount": 4,
+    "directions": [
+      "south",
+      "west",
+      "east",
+      "north"
+    ],
+    "standFramesPerDirection": 1,
+    "walkFramesPerDirection": 4,
+    "defaultAnimationFPS": 5,
+    "defaultGaitCycleDistancePx": 24,
+    "defaultMovementSpeedPxPerSecond": 40,
+    "eastPixelsPreserved": false,
+    "previewOnly": true,
+    "route": "/",
+    "sourceAndPromptSetPath": "docs/design/characters/wang-lin-chibi-walk-v1/README.md",
+    "motionApproval": "positive_visual_feedback_reference_for_roster",
+    "ownerProportionFeedback": {
+      "text": "nhin ổn đó.",
+      "by": "project_owner",
+      "date": "2026-10-07",
+      "scope": "current_chibi_visual_preview",
+      "level": "positive_visual_feedback_reference_for_next_directions"
+    },
+    "changedFrameIds": [
+      "wanglin_chibi_walk_east_03"
+    ],
+    "preservedOtherFrameCount": 19,
+    "directionFeedback": {
+      "south": "positive_visual_feedback",
+      "north": "positive_visual_feedback",
+      "west": "positive_visual_feedback",
+      "east": "last_frame_changes_requested"
+    },
+    "sourceVerification": {
+      "passed": true,
+      "nativeFrames": 20,
+      "newFramesFromOriginalPilot": 16,
+      "reusedEastFrames": 4,
+      "directions": [
+        "south",
+        "west",
+        "east",
+        "north"
+      ],
+      "frameSizePx": [
+        64,
+        96
+      ],
+      "atlasSizePx": [
+        320,
+        384
+      ],
+      "anchorPx": [
+        32,
+        88
+      ],
+      "paletteEntries": 24,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "heightRangePx": [
+        80,
+        82
+      ],
+      "eastPixelsPreserved": false,
+      "changedFrameIds": [
+        "wanglin_chibi_walk_east_03"
+      ],
+      "preservedOtherFrameCount": 19,
+      "unchangedDirections": [
+        "south",
+        "west",
+        "north"
+      ],
+      "framesMatchAtlas": true,
+      "pngCRCsAndHashesValid": true,
+      "noSyntheticPoseGeometry": true,
+      "perDirection": {
+        "south": {
+          "standFrames": 1,
+          "walkFrames": 4,
+          "distinctPoses": 5,
+          "heightRangePx": [
+            80,
+            82
+          ]
+        },
+        "west": {
+          "standFrames": 1,
+          "walkFrames": 4,
+          "distinctPoses": 5,
+          "heightRangePx": [
+            80,
+            82
+          ]
+        },
+        "east": {
+          "standFrames": 1,
+          "walkFrames": 4,
+          "distinctPoses": 5,
+          "heightRangePx": [
+            80,
+            82
+          ]
+        },
+        "north": {
+          "standFrames": 1,
+          "walkFrames": 4,
+          "distinctPoses": 5,
+          "heightRangePx": [
+            81,
+            82
+          ]
+        }
+      },
+      "ownerNewMotionApproval": "east_final_frame_fix_pending_review"
+    },
+    "buildPassed": true
+  },
+  "browserBaselineRuntimeVersion": "0.6.0",
+  "eastFinalFrameFix": {
+    "passed": true,
+    "runtimeVersion": "0.4.1",
+    "url": "http://127.0.0.1:5173",
+    "sourcePath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.json",
+    "changedFrameIds": [
+      "wanglin_chibi_walk_east_03"
+    ],
+    "preservedOtherFrameCount": 19,
+    "livePngAndMetadataMatchSource": true,
+    "eastLoopFrames": [
+      "wanglin_chibi_walk_east_00",
+      "wanglin_chibi_walk_east_01",
+      "wanglin_chibi_walk_east_02",
+      "wanglin_chibi_walk_east_03"
+    ],
+    "checks": [
+      "native_v2_loaded_on_main_page",
+      "east_last_to_first_wrap",
+      "all_east_walk_frames_on_map",
+      "stop_returns_to_stand_east"
+    ],
+    "browserErrors": []
+  },
+  "chibiRoster": {
+    "passed": true,
+    "newFrames": 80,
+    "models": [
+      {
+        "characterId": "AVATAR-NOVICE-MALE",
+        "movementKind": "walk",
+        "frames": 20,
+        "standFrames": 4,
+        "movementFrames": 16,
+        "heightRangePx": [
+          81,
+          82
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "hoverHeightPx": 0,
+        "paletteEntries": 24,
+        "framesMatchAtlas": true,
+        "pngCRCsAndHashesValid": true,
+        "transparentChestFrameCount": 0
+      },
+      {
+        "characterId": "AVATAR-NOVICE-FEMALE",
+        "movementKind": "walk",
+        "frames": 20,
+        "standFrames": 4,
+        "movementFrames": 16,
+        "heightRangePx": [
+          79,
+          82
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "hoverHeightPx": 0,
+        "paletteEntries": 24,
+        "framesMatchAtlas": true,
+        "pngCRCsAndHashesValid": true,
+        "transparentChestFrameCount": 0
+      },
+      {
+        "characterId": "CHR-LI-MUWAN",
+        "movementKind": "walk",
+        "frames": 20,
+        "standFrames": 4,
+        "movementFrames": 16,
+        "heightRangePx": [
+          80,
+          82
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "hoverHeightPx": 0,
+        "paletteEntries": 24,
+        "framesMatchAtlas": true,
+        "pngCRCsAndHashesValid": true,
+        "transparentChestFrameCount": 0
+      },
+      {
+        "characterId": "CHR-SITU-NAN",
+        "movementKind": "glide",
+        "frames": 20,
+        "standFrames": 4,
+        "movementFrames": 16,
+        "heightRangePx": [
+          80,
+          80
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "hoverHeightPx": 4,
+        "paletteEntries": 24,
+        "framesMatchAtlas": true,
+        "pngCRCsAndHashesValid": true,
+        "transparentChestFrameCount": 20
+      }
+    ],
+    "referenceWangLinPngUnchanged": true,
+    "artMethod": "built_in_image_gen",
+    "newArtApproval": "partial_owner_acceptance_li_muwan",
+    "activeChibiFrameCount": 100,
+    "galleryUrl": "http://127.0.0.1:5173/assets/chibi-roster/index.html",
+    "liMuwanNativeVersion": "native-v5",
+    "liMuwanIdentityRedesign": "accepted_prototype_baseline",
+    "sourceAndPromptSetPath": "docs/design/characters/chibi-roster-v1/README.md",
+    "newStandingFrames": 16,
+    "newMovementFrames": 64,
+    "liMuwanOwnerAcceptance": {
+      "by": "project_owner",
+      "date": "2026-10-07",
+      "feedback": "tôi thấy ổn rồi đó.",
+      "scope": "li_muwan_chibi_native_v5_identity_and_preview_baseline",
+      "level": "accepted_prototype_baseline",
+      "nativeVersion": "native-v5",
+      "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
+      "runtimeVersion": "0.5.1"
+    }
+  },
+  "liveAssetVerification": {
+    "passed": true,
+    "runtimeVersion": "0.5.1",
+    "actors": [
+      {
+        "characterId": "CHR-WANG-LIN",
+        "metadataPath": "docs/design/characters/gait-correction-v1/wang-lin/native-v1/atlas.json",
+        "frames": 36,
+        "livePngAndMetadataMatchSource": true
+      },
+      {
+        "characterId": "AVATAR-NOVICE-MALE",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/male/native-v2/atlas.json",
+        "frames": 20,
+        "livePngAndMetadataMatchSource": true
+      },
+      {
+        "characterId": "AVATAR-NOVICE-FEMALE",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/female/native-v2/atlas.json",
+        "frames": 20,
+        "livePngAndMetadataMatchSource": true
+      },
+      {
+        "characterId": "CHR-SITU-NAN",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.json",
+        "frames": 20,
+        "livePngAndMetadataMatchSource": true
+      },
+      {
+        "characterId": "CHR-LI-MUWAN",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.json",
+        "frames": 20,
+        "livePngAndMetadataMatchSource": true
+      },
+      {
+        "characterId": "CHR-WANG-LIN-CHIBI",
+        "metadataPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.json",
+        "frames": 20,
+        "livePngAndMetadataMatchSource": true
+      }
+    ]
+  },
+  "historicalEightPoseProduction": {
+    "newDrawnWalkingPoses": 96,
+    "reusedStandingFrames": 12,
+    "unchangedStaticFrames": 8
+  },
+  "starterRegion": {
+    "verificationPath": "docs/data/starter-region-verification.json",
+    "localLayoutImplemented": true,
+    "browserPassed": true,
+    "onlineRegionImplemented": false,
+    "combatPlayable": false,
+    "questsPlayable": false
+  },
+  "mapAssetsReset": {
+    "date": "2026-10-08",
+    "runtimeVersion": "0.11.1",
+    "previousEnvironmentArtRemoved": true,
+    "guidePath": "docs/MAP-ASSETS-RESET.md"
+  },
+  "levelDesign": {
+    "verificationPath": "docs/data/level-design-verification.json",
+    "passed": true,
+    "browserWorkflowsPassed": 9,
+    "unitTestsPassed": 28,
+    "nativeCharacterDimensionsPreserved": true,
+    "mapArtApproval": false,
+    "ownerAuthoredMapsModified": false
+  },
+  "mapEditor": {
+    "verificationPath": "docs/data/map-editor-verification.json",
+    "passed": true,
+    "browserWorkflowsPassed": 12
+  },
+  "currentBrowserRegression": {
+    "path": "artifacts/browser-verification.json",
+    "passed": true,
+    "checks": 15,
+    "background": "neutral_after_legacy_map_art_removal"
   }
 }

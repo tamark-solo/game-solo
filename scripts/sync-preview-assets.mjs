@@ -10,10 +10,11 @@ await mkdir(target, { recursive: true });
 const names = {
   'CHR-WANG-LIN': 'Vương Lâm · bộ trước',
   'CHR-WANG-LIN-CHIBI-EAST-PILOT': 'Vương Lâm · chibi (mẫu mới)',
-  'AVATAR-NOVICE-MALE': 'Đệ tử nam',
-  'AVATAR-NOVICE-FEMALE': 'Đệ tử nữ',
-  'CHR-SITU-NAN': 'Tư Đồ Nam · linh thể',
-  'CHR-LI-MUWAN': 'Lý Mộ Uyển · áo tím',
+  'CHR-WANG-LIN-CHIBI': 'Vương Lâm · chibi bốn hướng',
+  'AVATAR-NOVICE-MALE': 'Đệ tử nam · chibi',
+  'AVATAR-NOVICE-FEMALE': 'Đệ tử nữ · chibi',
+  'CHR-SITU-NAN': 'Tư Đồ Nam · chibi linh thể',
+  'CHR-LI-MUWAN': 'Lý Mộ Uyển · chibi áo tím',
 };
 const actors = [];
 let nativeFrameCount = 0;
@@ -39,12 +40,12 @@ for (const asset of design.preview.assets) {
     defaultAnimationFPS: asset.defaultAnimationFPS,
     defaultGaitCycleDistancePx: asset.defaultGaitCycleDistancePx,
     defaultMovementSpeedPxPerSecond: asset.defaultMovementSpeedPxPerSecond,
+    movementKind: asset.movementKind,
   });
 }
-await copyFile(resolve(root, design.preview.backgroundPath), resolve(target, 'courtyard.png'));
 if (nativeFrameCount !== design.preview.existingNativeFrameCount) throw new Error('Tổng frame không khớp thiết kế.');
 await writeFile(resolve(target, 'catalog.json'), JSON.stringify({
-  actors, backgroundUrl: '/assets/courtyard.png', nativeFrameCount,
+  actors, nativeFrameCount,
   defaultActorId: design.preview.defaultActorId,
   defaultDirection: design.preview.defaultDirection,
 }, null, 2) + '\n', 'utf8');
@@ -71,4 +72,25 @@ if (design.chibiPilot) {
   await mkdir(folder, { recursive: true });
   for (const name of ['atlas.png', 'atlas.json']) await copyFile(resolve(root, design.chibiPilot.nativeFolder, name), resolve(folder, name));
 }
-console.log(`Đã chuẩn bị ${actors.length} bộ / ${nativeFrameCount} frame và nền sân; nguồn ART giữ tại docs/design.`);
+if (design.chibiRoster) {
+  const gallerySource = resolve(root, design.chibiRoster.sourceFolder);
+  const galleryTarget = resolve(target, 'chibi-roster');
+  await mkdir(galleryTarget, { recursive: true });
+  for (const name of ['index.html', 'gallery.js']) await copyFile(resolve(gallerySource, name), resolve(galleryTarget, name));
+  const script = await readFile(resolve(gallerySource, 'gallery-data.js'), 'utf8');
+  const data = JSON.parse(script.slice(script.indexOf('=') + 1).trim().replace(/;$/, ''));
+  for (const actor of data.actors) {
+    const definition = actors.find(a => a.id === actor.id);
+    if (!definition) throw new Error(`Thiếu nhân vật trong thư viện chibi: ${actor.id}`);
+    actor.atlasUrl = definition.atlasUrl;
+  }
+  await writeFile(resolve(galleryTarget, 'gallery-data.js'), `window.ChibiRosterGallery = ${JSON.stringify(data)};\n`, 'utf8');
+}
+if (design.mapAssetKit) {
+  const source=resolve(root,design.mapAssetKit.sourceFolder),folder=resolve(target,'map-kit');
+  const manifest=JSON.parse(await readFile(resolve(source,'manifest.json'),'utf8'));
+  await mkdir(folder,{recursive:true});
+  const files=new Set(['index.html','README.md','manifest.json',...manifest.assets.flatMap(a=>[a.completeFile,...a.layers.map(p=>p.file)].filter(Boolean))]);
+  for(const name of files){await mkdir(dirname(resolve(folder,name)),{recursive:true});await copyFile(resolve(source,name),resolve(folder,name));}
+}
+console.log(`Đã chuẩn bị ${actors.length} bộ / ${nativeFrameCount} frame; thư viện map theo manifest hiện tại.`);

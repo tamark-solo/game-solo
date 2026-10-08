@@ -18,7 +18,7 @@
     playing: query.get('paused') !== '1' && !matchMedia('(prefers-reduced-motion: reduce)').matches,
     elapsed: 0, active: 'male', drive: null
   };
-  let background;
+
   let lastTime = null;
   const heldKeys = new Set();
   const keyDirections = { w: 'north', arrowup: 'north', a: 'west', arrowleft: 'west', s: 'south', arrowdown: 'south', d: 'east', arrowright: 'east' };
@@ -104,7 +104,7 @@
     if (!state.ready) return;
     mapContext.clearRect(0,0,960,640);
     mapContext.imageSmoothingEnabled = true;
-    mapContext.drawImage(background,0,0,960,640);
+    mapContext.fillStyle='#eee5d3';mapContext.fillRect(0,0,960,640);
     const labels = $('labels').checked;
     for (const actor of actors.slice().sort((a,b) => a.y - b.y)) {
       mapContext.fillStyle = 'rgba(25,25,20,.22)';
@@ -163,7 +163,7 @@
       });
       const images = await Promise.all(configs.map(config => imageAt(config.atlasPath)));
       configs.forEach((config,index) => { config.image = images[index]; actors[index].image = images[index]; });
-      background = await imageAt('../../world/hybrid-study/sect-courtyard-empty-v1.png');
+
       state.ready = true; document.documentElement.dataset.ready = 'true';
       $('asset-status').textContent = 'Đã nạp 56 frame đệ tử và 28 frame Vương Lâm để so sánh. Hai mẫu dùng chung palette 24 mục, thêm xanh trầm cho đai.';
       drawComparison(); drawMap(); requestAnimationFrame(frameAt);

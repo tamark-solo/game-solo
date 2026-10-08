@@ -20,11 +20,6 @@ Mở [thư viện bản phác](index.html) trong trình duyệt, hoặc mở t�
 | [Vương Lâm pixel đứng v2](characters/wang-lin-sprite-study/wang-lin-gray-pixel-v2.png) | Nguồn nhận diện lớn được giữ; native xuất riêng; [prompt](characters/wang-lin-sprite-study/wang-lin-gray-pixel-v2.prompt.txt) |
 | [Vương Lâm đứng/đi native](characters/wang-lin-gray-walk-v1/index.html) | 4 hướng, 28 frame, xem từng frame/nhịp và thử bước trên sân; [nguồn/prompt](characters/wang-lin-gray-walk-v1/README.md) |
 | [Đệ tử nam/nữ v2 và sprite thử](characters/player-avatars-v2/index.html) | 28 frame/mẫu, chung palette và lưới 64 × 96; so sánh cùng Vương Lâm và thử trên sân; [nguồn/prompt](characters/player-avatars-v2/README.md) |
-| [Màn thế giới v1](world/index.html) | Mẫu sân môn phái và UI; hai chế độ khung xem |
-| [Thử ghép pixel/nền stylized](world/hybrid-study/index.html) | Giữ PNG Vương Lâm gốc trên nền riêng, có các cỡ và mức phóng |
-| [Ảnh ghép v1](world/hybrid-study/wang-lin-courtyard-composite-v1.png) | Tham chiếu tổng thể bằng imagegen, kèm [prompt](world/hybrid-study/wang-lin-courtyard-composite-v1.prompt.txt) |
-| [ART sân môn phái v2](world/sect-courtyard-topdown-v2.png) | Khối màu giản lược, giữ bố cục top-down của [v1](world/sect-courtyard-topdown-v1.png) |
-| [Prompt sân môn phái v2](world/sect-courtyard-topdown-v2.prompt.txt) | Prompt chỉnh hình bằng imagegen tích hợp; [prompt đầu](world/sect-courtyard-topdown-v1.prompt.txt) lưu riêng |
 | [Tu luyện desktop](cultivation-desktop.svg) | Phân cấp mục tiêu, tài nguyên, hoạt động và tranh |
 | [Tu luyện mobile](cultivation-mobile.svg) | Bố cục một cột ở chiều rộng 360 px |
 | [Hành trình desktop](journey-desktop.svg) | Đang xem thôn; hoạt động vẫn ở suối |
@@ -57,3 +52,6 @@ python docs/design/build_mockups.py
 Script Python dùng thư viện chuẩn, dựng bản vẽ từ token/fixture và [module màn hình bổ sung](build_ux_screens.py). Script PowerShell dùng Chrome đã cài để render PNG, với profile tạm riêng và cửa sổ ẩn. Có thể truyền Edge/Chrome khác qua `-BrowserPath` hoặc chỉ dựng một số PNG bằng `-MockupNames @('offline-desktop','offline-mobile')`.
 
 Các script chỉ phục vụ tài liệu thiết kế. Luật gameplay, lưu và offline chưa được triển khai trong dự án. Nét icon/châu trong SVG là hình phác; catalog asset game vẫn giữ trạng thái cần sản xuất.
+
+
+Map cũ đã xóa theo yêu cầu. Xem [thư viện mới](world/map-asset-library/README.md) và [Map Editor](../MAP-EDITOR.md).

@@ -1,5 +1,7 @@
 # Luồng màn hình và tương tác MVP A
 
+> **UX tham chiếu:** các màn idle/tầng 1 dưới đây chưa là UX combat của [RPG-A mới](MVP-RPG-A.md). HUD target/kỹ năng/túi/trang bị/minimap và tracker nhiệm vụ cần cập nhật theo [kịch bản](STARTER-STORY.md); bản bố trí đi thử ở `/starter-region.html` giữ cỡ nhân vật hiện tại.
+
 > **Bộ UX v0.6 giữ làm tham chiếu.** Hướng hiện tại là online nhiều người và đệ tử riêng. Cần thay portrait người chơi, khu Hạt châu, tài khoản/nhập save và nhãn vắng mặt theo [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md); thêm tạo đệ tử và tương tác đồng môn. [Concept nhân vật v1](design/characters/index.html) là đầu ra thiết kế mới; chưa có bộ UX online hoàn chỉnh.
 
 **Phiên bản:** 0.3, ngày 06/10/2026.  

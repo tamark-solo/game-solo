@@ -1,0 +1,92 @@
+{
+  "sourceCharacterId": "CHR-WANG-LIN",
+  "previewActorId": "CHR-WANG-LIN-CHIBI",
+  "nativeFolder": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2",
+  "nativeFrameCount": 20,
+  "newFrameCount": 16,
+  "preservedEastFrameCount": 4,
+  "directions": [
+    "south",
+    "west",
+    "east",
+    "north"
+  ],
+  "standFramesPerDirection": 1,
+  "walkFramesPerDirection": 4,
+  "defaultAnimationFPS": 5,
+  "defaultGaitCycleDistancePx": 24,
+  "defaultMovementSpeedPxPerSecond": 40,
+  "eastPixelsPreserved": false,
+  "previewOnly": true,
+  "route": "/",
+  "sourceAndPromptSetPath": "docs/design/characters/wang-lin-chibi-walk-v1/README.md",
+  "motionApproval": "south_north_west_positive_feedback_east_last_fix_pending_review",
+  "ownerProportionFeedback": {
+    "text": "nhin ổn đó.",
+    "by": "project_owner",
+    "date": "2026-10-07",
+    "scope": "current_chibi_visual_preview",
+    "level": "positive_visual_feedback_reference_for_next_directions"
+  },
+  "frameSizePx": [
+    64,
+    96
+  ],
+  "footAnchorPx": [
+    32,
+    88
+  ],
+  "atlasSizePx": [
+    320,
+    384
+  ],
+  "paletteEntries": 24,
+  "artMethod": "built_in_image_gen",
+  "exporterPath": "docs/design/characters/wang-lin-chibi-walk-v1/export-east-fix.ps1",
+  "sourceVerificationPath": "docs/design/characters/wang-lin-chibi-walk-v1/verification.json",
+  "browserVerificationPath": "docs/data/preview-verification.json",
+  "sources": [
+    {
+      "direction": "south",
+      "source": "south-source-v1.png",
+      "prompt": "south-source-v1.prompt.txt"
+    },
+    {
+      "direction": "west",
+      "source": "west-source-v2.png",
+      "prompt": "west-source-v2.prompt.txt",
+      "previousSource": "west-source-v1.png",
+      "previousPrompt": "west-source-v1.prompt.txt"
+    },
+    {
+      "direction": "east",
+      "source": "../wang-lin-chibi-pilot-v1/wang-lin-chibi-east-source-v2.png",
+      "prompt": "../wang-lin-chibi-pilot-v1/wang-lin-chibi-east-source-v2.prompt.txt",
+      "reusedNativeFolder": "../wang-lin-chibi-pilot-v1/native-v1"
+    },
+    {
+      "direction": "north",
+      "source": "north-source-v1.png",
+      "prompt": "north-source-v1.prompt.txt"
+    }
+  ],
+  "changedFrameIds": [
+    "wanglin_chibi_walk_east_03"
+  ],
+  "preservedOtherFrameCount": 19,
+  "directionFeedback": {
+    "south": "positive_visual_feedback",
+    "north": "positive_visual_feedback",
+    "west": "positive_visual_feedback",
+    "east": "last_frame_changes_requested"
+  },
+  "baseNativeFolder": "docs/design/characters/wang-lin-chibi-walk-v1/native-v1",
+  "frameOverrides": [
+    {
+      "frameId": "wanglin_chibi_walk_east_03",
+      "source": "east-last-source-v1.png",
+      "prompt": "east-last-source-v1.prompt.txt",
+      "sourceIndex": 4
+    }
+  ]
+}

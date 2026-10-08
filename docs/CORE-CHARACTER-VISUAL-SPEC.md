@@ -2,8 +2,10 @@
 
 **Phiên bản:** 0.4, ngày 07/10/2026.  
 **Đã chốt:** trục nhân vật của game gồm **Vương Lâm, Tư Đồ Nam và Lý Mộ Uyển**; ưu tiên làm nhận diện hai người còn lại trước nhóm NPC phụ.  
-**Trạng thái:** Vương Lâm v2 và Lý Mộ Uyển v1 đã được chấp nhận; Tư Đồ Nam chuyển sang linh thể đứng v3 theo yêu cầu, giữ mặt/tóc v2; bản đứng được tạm chấp nhận để tiếp tục thiết kế.  
+**Trạng thái:** hồ sơ nguồn và concept trước chibi. Vương Lâm làm chuẩn tỷ lệ; Tư Đồ Nam đứng trước được tạm chấp nhận. Lý Mộ Uyển native-v5 đã chấp nhận làm chuẩn bản thử sau khi làm lại toàn bộ mặt/tóc/trang phục.
 **Xem:** [thư viện ba nhân vật](design/characters/core-trio-v1/index.html), [nguồn/prompt](design/characters/core-trio-v1/README.md), [manifest](design/characters/core-trio-v1/study.json), [roster](data/character-roster.json).
+
+**Cập nhật sản xuất:** [dàn chibi](CHIBI-ROSTER-SPEC.md) có 20 frame/người; bộ ba 60 frame, đủ đứng/đi/lướt bốn hướng. Lý Mộ Uyển native-v5 đổi mặt, tóc xanh đen rẽ lệch/buộc thấp và áo lavender hai lớp/cổ ngà. Các hình cũ trong tài liệu này được giữ để đối chiếu nguồn; portrait sẽ cần đồng bộ sau khi chọn nhận diện mới.
 
 ## 1. Phạm vi ba nhân vật
 
@@ -68,7 +70,7 @@ Nhận diện v1 được chấp nhận ngày 07/10/2026 qua phản hồi về b
 
 Tư Đồ Nam được crop đầu/vai phía trên vùng ngực khuyết; không chuyển linh thể thành thân thể phục hồi. Trang phục và thời điểm xuất hiện theo cảnh. Chân dung NPC không là ảnh đệ tử người chơi.
 
-[Kế hoạch động tác](CORE-CHARACTER-MOTION-PLAN.md) và [dữ liệu](data/core-character-motion-plan.json) ghi 36 frame đang có, mục tiêu 100 nếu sản xuất đủ các bộ, cần 64 frame mới theo giai đoạn. Gói UI hiện tại chưa vẽ animation mới.
+[Kế hoạch động tác](CORE-CHARACTER-MOTION-PLAN.md) và [dữ liệu](data/core-character-motion-plan.json) hiện ghi 60 frame chibi, mục tiêu 76 khi thêm 12 lơ lửng tại chỗ và 4 luyện đan. Gói chân dung UI trước được giữ tham chiếu; 16 frame bổ sung chưa vẽ.
 
 ### Gói xem và bàn giao
 

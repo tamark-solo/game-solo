@@ -17,15 +17,17 @@
     "docs/ANIMATION-PREVIEW-SPEC.md",
     "docs/PREVIEW-RUNBOOK.md",
     "docs/BACKEND-PREVIEW.md",
-    "docs/GAIT-CORRECTION.md"
+    "docs/GAIT-CORRECTION.md",
+    "docs/MVP-RPG-A.md",
+    "docs/STARTER-REGION-MAP.md"
   ],
   "preview": {
     "id": "PREVIEW-V1",
-    "implementationStatus": "chibi_default_on_main_page_pending_owner_motion_review",
+    "implementationStatus": "five_chibi_characters_in_preview_and_player_avatars_online",
     "beforeNewAnimationProduction": false,
     "existingActorAssetCount": 6,
-    "existingNativeFrameCount": 121,
-    "defaultActorId": "CHR-WANG-LIN-CHIBI-EAST-PILOT",
+    "existingNativeFrameCount": 136,
+    "defaultActorId": "CHR-WANG-LIN-CHIBI",
     "modes": [
       "animation_inspector",
       "map_motion_lab",
@@ -60,7 +62,6 @@
       "cameraSampling": "fractional",
       "pixelSnapSpace": "screen_after_camera_and_zoom"
     },
-    "backgroundPath": "docs/design/world/hybrid-study/sect-courtyard-empty-v1.png",
     "backgroundRole": "art_reference_only_separate_demo_collision_and_occlusion_fixtures",
     "proposedDefaults": {
       "animationFPSForExistingWalk": 8,
@@ -133,6 +134,390 @@
         "standingPixelsPreserved": true,
         "motionApproval": "changes_requested_after_reference_feedback"
       },
+      {
+        "characterId": "AVATAR-NOVICE-MALE",
+        "role": "player_template",
+        "plannedGamePhase": "A",
+        "atlasPath": "docs/design/characters/chibi-roster-v1/male/native-v2/atlas.png",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/male/native-v2/atlas.json",
+        "schemaVersion": "pixel-atlas-1",
+        "frameCount": 20,
+        "frameSizePx": [
+          64,
+          96
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "anchorKind": "feet",
+        "hoverHeightPx": 0,
+        "rawAnimations": [
+          "stand_south",
+          "walk_south",
+          "stand_west",
+          "walk_west",
+          "stand_east",
+          "walk_east",
+          "stand_north",
+          "walk_north"
+        ],
+        "defaultAnimationFPS": 5,
+        "availablePreviewStates": [
+          "stand",
+          "walk"
+        ],
+        "previewAdapter": "standing_walk_atlas_adapter",
+        "unsupportedAnimationsRemainDisabled": true,
+        "previousAtlasPath": "docs/design/characters/gait-correction-v1/male/native-v1/atlas.png",
+        "previousMetadataPath": "docs/design/characters/gait-correction-v1/male/native-v1/atlas.json",
+        "walkFramesPerDirection": 4,
+        "motionApproval": "chibi_redraw_pending_owner_review",
+        "availableDirections": [
+          "south",
+          "west",
+          "east",
+          "north"
+        ],
+        "defaultGaitCycleDistancePx": 24,
+        "defaultMovementSpeedPxPerSecond": 40,
+        "movementKind": "walk"
+      },
+      {
+        "characterId": "AVATAR-NOVICE-FEMALE",
+        "role": "player_template",
+        "plannedGamePhase": "A",
+        "atlasPath": "docs/design/characters/chibi-roster-v1/female/native-v2/atlas.png",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/female/native-v2/atlas.json",
+        "schemaVersion": "pixel-atlas-1",
+        "frameCount": 20,
+        "frameSizePx": [
+          64,
+          96
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "anchorKind": "feet",
+        "hoverHeightPx": 0,
+        "rawAnimations": [
+          "stand_south",
+          "walk_south",
+          "stand_west",
+          "walk_west",
+          "stand_east",
+          "walk_east",
+          "stand_north",
+          "walk_north"
+        ],
+        "defaultAnimationFPS": 5,
+        "availablePreviewStates": [
+          "stand",
+          "walk"
+        ],
+        "previewAdapter": "standing_walk_atlas_adapter",
+        "unsupportedAnimationsRemainDisabled": true,
+        "previousAtlasPath": "docs/design/characters/gait-correction-v1/female/native-v1/atlas.png",
+        "previousMetadataPath": "docs/design/characters/gait-correction-v1/female/native-v1/atlas.json",
+        "walkFramesPerDirection": 4,
+        "motionApproval": "chibi_redraw_pending_owner_review",
+        "availableDirections": [
+          "south",
+          "west",
+          "east",
+          "north"
+        ],
+        "defaultGaitCycleDistancePx": 24,
+        "defaultMovementSpeedPxPerSecond": 40,
+        "movementKind": "walk"
+      },
+      {
+        "characterId": "CHR-SITU-NAN",
+        "role": "story_npc",
+        "plannedGamePhase": "B",
+        "atlasPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.png",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.json",
+        "schemaVersion": "pixel-atlas-1",
+        "frameCount": 20,
+        "frameSizePx": [
+          64,
+          96
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "anchorKind": "ground_projection",
+        "hoverHeightPx": 4,
+        "rawAnimations": [
+          "stand_south",
+          "walk_south",
+          "stand_west",
+          "walk_west",
+          "stand_east",
+          "walk_east",
+          "stand_north",
+          "walk_north"
+        ],
+        "defaultAnimationFPS": 5,
+        "availablePreviewStates": [
+          "stand",
+          "walk"
+        ],
+        "previewAdapter": "standing_walk_atlas_adapter",
+        "unsupportedAnimationsRemainDisabled": true,
+        "availableDirections": [
+          "south",
+          "west",
+          "east",
+          "north"
+        ],
+        "defaultGaitCycleDistancePx": 24,
+        "defaultMovementSpeedPxPerSecond": 40,
+        "movementKind": "glide",
+        "walkFramesPerDirection": 4,
+        "motionApproval": "chibi_redraw_pending_owner_review",
+        "previousAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.png",
+        "previousMetadataPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.json"
+      },
+      {
+        "characterId": "CHR-LI-MUWAN",
+        "role": "story_npc",
+        "plannedGamePhase": "later_arc",
+        "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.json",
+        "schemaVersion": "pixel-atlas-1",
+        "frameCount": 20,
+        "frameSizePx": [
+          64,
+          96
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "anchorKind": "feet",
+        "hoverHeightPx": 0,
+        "rawAnimations": [
+          "stand_south",
+          "walk_south",
+          "stand_west",
+          "walk_west",
+          "stand_east",
+          "walk_east",
+          "stand_north",
+          "walk_north"
+        ],
+        "defaultAnimationFPS": 5,
+        "availablePreviewStates": [
+          "stand",
+          "walk"
+        ],
+        "previewAdapter": "standing_walk_atlas_adapter",
+        "unsupportedAnimationsRemainDisabled": true,
+        "availableDirections": [
+          "south",
+          "west",
+          "east",
+          "north"
+        ],
+        "defaultGaitCycleDistancePx": 24,
+        "defaultMovementSpeedPxPerSecond": 40,
+        "movementKind": "walk",
+        "walkFramesPerDirection": 4,
+        "motionApproval": "positive_visual_feedback_prototype_baseline",
+        "previousAtlasPath": "docs/design/characters/core-trio-v1/li-muwan/native-v2/atlas.png",
+        "previousMetadataPath": "docs/design/characters/core-trio-v1/li-muwan/native-v2/atlas.json",
+        "identityApprovedByProjectOwner": true,
+        "prototypeAcceptance": {
+          "by": "project_owner",
+          "date": "2026-10-07",
+          "feedback": "tôi thấy ổn rồi đó.",
+          "scope": "li_muwan_chibi_native_v5_identity_and_preview_baseline",
+          "level": "accepted_prototype_baseline",
+          "nativeVersion": "native-v5",
+          "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
+          "runtimeVersion": "0.5.1"
+        }
+      },
+      {
+        "characterId": "CHR-WANG-LIN-CHIBI",
+        "sourceCharacterId": "CHR-WANG-LIN",
+        "role": "story_npc",
+        "plannedGamePhase": "A",
+        "atlasPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.png",
+        "metadataPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.json",
+        "schemaVersion": "pixel-atlas-1",
+        "frameCount": 20,
+        "frameSizePx": [
+          64,
+          96
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "anchorKind": "feet",
+        "hoverHeightPx": 0,
+        "rawAnimations": [
+          "stand_south",
+          "walk_south",
+          "stand_west",
+          "walk_west",
+          "stand_east",
+          "walk_east",
+          "stand_north",
+          "walk_north"
+        ],
+        "defaultAnimationFPS": 5,
+        "availablePreviewStates": [
+          "stand",
+          "walk"
+        ],
+        "previewAdapter": "standing_walk_atlas_adapter",
+        "defaultGaitCycleDistancePx": 24,
+        "defaultMovementSpeedPxPerSecond": 40,
+        "unsupportedAnimationsRemainDisabled": true,
+        "motionApproval": "south_north_west_positive_feedback_east_last_fix_pending_review",
+        "availableDirections": [
+          "south",
+          "west",
+          "east",
+          "north"
+        ],
+        "walkFramesPerDirection": 4
+      }
+    ],
+    "entry": "client/index.html",
+    "runCommand": "npm.cmd run dev",
+    "localUrl": "http://127.0.0.1:5173/",
+    "defaultCameraBehavior": "fixed_orientation_follow_toggle_for_map",
+    "gaitClock": "distance_travelled_on_map_time_in_inspector",
+    "walkPhaseOnTurn": "preserve",
+    "originalNativeFrameCount": 92,
+    "gaitReviewPath": "docs/design/characters/gait-correction-v1/index.html",
+    "gaitCorrectionSpecPath": "docs/GAIT-CORRECTION.md",
+    "gaitPoseReviewStatus": "changes_requested_after_reference_feedback",
+    "defaultDirection": "east",
+    "defaultDirectionUnavailableBehavior": "disable_controls_and_ignore_unsupported_movement"
+  },
+  "deferredDecisions": [
+    "persistent_database",
+    "account_authentication",
+    "full_game_command_and_progression_contract",
+    "production_scaling",
+    "final_game_map_layout",
+    "full_3d_terrain_pipeline"
+  ],
+  "newAnimationProduced": true,
+  "onlineGameplayImplemented": true,
+  "backendDecision": {
+    "language": "TypeScript",
+    "runtime": "Node.js",
+    "framework": "Colyseus",
+    "scope": "minimal_online_courtyard_preview",
+    "status": "confirmed_and_implemented",
+    "confirmedBy": "project_owner",
+    "confirmationText": "tôi đồng ý",
+    "persistentDatabaseSelected": false,
+    "authenticationSelected": false
+  },
+  "dependencyLockPath": "package-lock.json",
+  "onlineGameplayScope": "temporary_sessions_shared_courtyard_movement_only",
+  "persistentAccountsImplemented": false,
+  "cultivationGameplayImplemented": false,
+  "verificationPath": "docs/data/preview-verification.json",
+  "runtimeVersion": "0.12.0",
+  "backendRuntimeDesign": {
+    "inputSchema": [
+      "moveX",
+      "moveY"
+    ],
+    "fixedTickHz": 30,
+    "patchIntervalMs": 50,
+    "commandsPerServerTick": 1,
+    "clientPrediction": "Colyseus_Predict_reconciler_with_shared_applyMovement",
+    "remoteInterpolationDelayMs": 100,
+    "correctionSmoothMs": 35,
+    "ackMeaning": "inputs_consumed",
+    "serverAuthoritative": true
+  },
+  "chibiPilot": {
+    "sourceCharacterId": "CHR-WANG-LIN",
+    "nativeFolder": "docs/design/characters/wang-lin-chibi-pilot-v1/native-v1",
+    "nativeFrameCount": 5,
+    "directions": [
+      "east"
+    ],
+    "walkFramesPerDirection": 4,
+    "previewOnly": true,
+    "route": "/chibi-pilot.html",
+    "specPath": "docs/GAIT-REFERENCE-REVIEW.md",
+    "proportionsDecision": "large_head_compact_chibi",
+    "confirmedBy": "project_owner",
+    "motionApproval": "pending_owner_review",
+    "integratedIntoMainPreview": false,
+    "ownerVisualFeedback": {
+      "text": "nhin ổn đó.",
+      "by": "project_owner",
+      "date": "2026-10-07",
+      "scope": "current_chibi_visual_preview",
+      "level": "positive_visual_feedback_reference_for_next_directions"
+    },
+    "supersededInMainPreviewBy": "CHR-WANG-LIN-CHIBI"
+  },
+  "chibiWalk": {
+    "sourceCharacterId": "CHR-WANG-LIN",
+    "previewActorId": "CHR-WANG-LIN-CHIBI",
+    "nativeFolder": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2",
+    "nativeFrameCount": 20,
+    "newFrameCount": 16,
+    "preservedEastFrameCount": 4,
+    "directions": [
+      "south",
+      "west",
+      "east",
+      "north"
+    ],
+    "standFramesPerDirection": 1,
+    "walkFramesPerDirection": 4,
+    "defaultAnimationFPS": 5,
+    "defaultGaitCycleDistancePx": 24,
+    "defaultMovementSpeedPxPerSecond": 40,
+    "eastPixelsPreserved": false,
+    "previewOnly": true,
+    "route": "/",
+    "sourceAndPromptSetPath": "docs/design/characters/wang-lin-chibi-walk-v1/README.md",
+    "motionApproval": "positive_visual_feedback_reference_for_roster",
+    "ownerProportionFeedback": {
+      "text": "nhin ổn đó.",
+      "by": "project_owner",
+      "date": "2026-10-07",
+      "scope": "current_chibi_visual_preview",
+      "level": "positive_visual_feedback_reference_for_next_directions"
+    },
+    "changedFrameIds": [
+      "wanglin_chibi_walk_east_03"
+    ],
+    "preservedOtherFrameCount": 19,
+    "directionFeedback": {
+      "south": "positive_visual_feedback",
+      "north": "positive_visual_feedback",
+      "west": "positive_visual_feedback",
+      "east": "last_frame_changes_requested"
+    }
+  },
+  "chibiRoster": {
+    "sourceFolder": "docs/design/characters/chibi-roster-v1",
+    "modelManifestPath": "docs/design/characters/chibi-roster-v1/models.json",
+    "newFrameCount": 80,
+    "activeChibiActorCount": 5,
+    "activeChibiFrameCount": 100,
+    "legacyComparisonFrameCount": 36,
+    "galleryRoute": "/assets/chibi-roster/index.html",
+    "referenceAtlasSHA256": "b367680daa1d8831ea2cb924e406b91dad40e44f1aa27c572166033af5532a8a",
+    "previousAssetSets": [
       {
         "characterId": "AVATAR-NOVICE-MALE",
         "role": "player_template",
@@ -278,111 +663,115 @@
         ],
         "previewAdapter": "static_atlas_adapter",
         "unsupportedAnimationsRemainDisabled": true
-      },
-      {
-        "characterId": "CHR-WANG-LIN-CHIBI-EAST-PILOT",
-        "sourceCharacterId": "CHR-WANG-LIN",
-        "role": "story_npc",
-        "plannedGamePhase": "A",
-        "atlasPath": "docs/design/characters/wang-lin-chibi-pilot-v1/native-v1/atlas.png",
-        "metadataPath": "docs/design/characters/wang-lin-chibi-pilot-v1/native-v1/atlas.json",
-        "schemaVersion": "pixel-atlas-1",
-        "frameCount": 5,
-        "frameSizePx": [
-          64,
-          96
-        ],
-        "anchorPx": [
-          32,
-          88
-        ],
-        "anchorKind": "feet",
-        "hoverHeightPx": 0,
-        "rawAnimations": [
-          "stand_east",
-          "walk_east"
-        ],
-        "defaultAnimationFPS": 5,
-        "availablePreviewStates": [
-          "stand",
-          "walk"
-        ],
-        "previewAdapter": "explicit_single_direction_pilot",
-        "previewOnlyDirection": "east",
-        "defaultGaitCycleDistancePx": 24,
-        "defaultMovementSpeedPxPerSecond": 40,
-        "unsupportedAnimationsRemainDisabled": true,
-        "motionApproval": "pending_owner_review"
       }
     ],
-    "entry": "client/index.html",
-    "runCommand": "npm.cmd run dev",
-    "localUrl": "http://127.0.0.1:5173/",
-    "defaultCameraBehavior": "fixed_orientation_follow_toggle_for_map",
-    "gaitClock": "distance_travelled_on_map_time_in_inspector",
-    "walkPhaseOnTurn": "preserve",
-    "originalNativeFrameCount": 92,
-    "gaitReviewPath": "docs/design/characters/gait-correction-v1/index.html",
-    "gaitCorrectionSpecPath": "docs/GAIT-CORRECTION.md",
-    "gaitPoseReviewStatus": "changes_requested_after_reference_feedback",
-    "defaultDirection": "east",
-    "defaultDirectionUnavailableBehavior": "disable_controls_and_ignore_unsupported_movement"
-  },
-  "deferredDecisions": [
-    "persistent_database",
-    "account_authentication",
-    "full_game_command_and_progression_contract",
-    "production_scaling",
-    "final_game_map_layout",
-    "full_3d_terrain_pipeline"
-  ],
-  "newAnimationProduced": true,
-  "onlineGameplayImplemented": true,
-  "backendDecision": {
-    "language": "TypeScript",
-    "runtime": "Node.js",
-    "framework": "Colyseus",
-    "scope": "minimal_online_courtyard_preview",
-    "status": "confirmed_and_implemented",
-    "confirmedBy": "project_owner",
-    "confirmationText": "tôi đồng ý",
-    "persistentDatabaseSelected": false,
-    "authenticationSelected": false
-  },
-  "dependencyLockPath": "package-lock.json",
-  "onlineGameplayScope": "temporary_sessions_shared_courtyard_movement_only",
-  "persistentAccountsImplemented": false,
-  "cultivationGameplayImplemented": false,
-  "verificationPath": "docs/data/preview-verification.json",
-  "runtimeVersion": "0.3.1",
-  "backendRuntimeDesign": {
-    "inputSchema": [
-      "moveX",
-      "moveY"
-    ],
-    "fixedTickHz": 30,
-    "patchIntervalMs": 50,
-    "commandsPerServerTick": 1,
-    "clientPrediction": "Colyseus_Predict_reconciler_with_shared_applyMovement",
-    "remoteInterpolationDelayMs": 100,
-    "correctionSmoothMs": 35,
-    "ackMeaning": "inputs_consumed",
-    "serverAuthoritative": true
-  },
-  "chibiPilot": {
-    "sourceCharacterId": "CHR-WANG-LIN",
-    "nativeFolder": "docs/design/characters/wang-lin-chibi-pilot-v1/native-v1",
-    "nativeFrameCount": 5,
-    "directions": [
-      "east"
-    ],
-    "walkFramesPerDirection": 4,
-    "previewOnly": true,
-    "route": "/chibi-pilot.html",
-    "specPath": "docs/GAIT-REFERENCE-REVIEW.md",
-    "proportionsDecision": "large_head_compact_chibi",
-    "confirmedBy": "project_owner",
     "motionApproval": "pending_owner_review",
-    "integratedIntoMainPreview": true
+    "liMuwanRedesign": {
+      "scope": [
+        "face",
+        "hair",
+        "costume",
+        "neutral_hair_palette"
+      ],
+      "sourceImagePath": "docs/design/characters/chibi-roster-v1/li-muwan/source-v6.png",
+      "sourcePromptPath": "docs/design/characters/chibi-roster-v1/li-muwan/source-v6.prompt.txt",
+      "oldVersionRejectedByOwner": true,
+      "currentNativeVersion": "native-v5",
+      "approval": "accepted_prototype_baseline",
+      "prototypeAcceptance": {
+        "by": "project_owner",
+        "date": "2026-10-07",
+        "feedback": "tôi thấy ổn rồi đó.",
+        "scope": "li_muwan_chibi_native_v5_identity_and_preview_baseline",
+        "level": "accepted_prototype_baseline",
+        "nativeVersion": "native-v5",
+        "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
+        "runtimeVersion": "0.5.1"
+      }
+    }
+  },
+  "starterRegion": {
+    "contentPath": "docs/data/mvp-rpg-content.json",
+    "specPath": "docs/STARTER-REGION-MAP.md",
+    "storyPath": "docs/STARTER-STORY.md",
+    "mvpPath": "docs/MVP-RPG-A.md",
+    "route": "/starter-region.html",
+    "sharedWorldSizePx": [
+      3840,
+      2560
+    ],
+    "bossSceneSizePx": [
+      960,
+      640
+    ],
+    "nativeCharacterFrameSizePx": [
+      64,
+      96
+    ],
+    "localLayoutImplemented": true,
+    "onlineRegionImplemented": false,
+    "combatImplemented": false,
+    "questsPlayable": false,
+    "ownerLayoutAcceptance": {
+      "by": "project_owner",
+      "date": "2026-10-07",
+      "feedback": "tôi đã xem khá ổn rồi",
+      "scope": "starter_region_layout_scale_and_local_walk_preview",
+      "level": "accepted_prototype_baseline",
+      "contentVersion": "rpg-a-1.0",
+      "runtimeVersion": "0.6.0"
+    }
+  },
+  "mapAssetKit": {
+    "sourceFolder": "docs/design/world/map-asset-library",
+    "ownerAssemblesMap": true,
+    "editorUrl": "/map-editor.html",
+    "assetCount": 0,
+    "libraryRevision": "reset-2026-10-08",
+    "status": "empty_after_owner_requested_reset"
+  },
+  "mapEditor": {
+    "version": "2.0",
+    "previewUrl": "/map-editor.html",
+    "schemaVersion": "game-solo-map-editor-1",
+    "ownerAuthorsLayout": true,
+    "ownerAuthorsNavigation": true,
+    "assistantProducesAssetsAndTools": true,
+    "defaultProjectIsBlank": true,
+    "storageFolder": "docs/data/authored-maps",
+    "guidePath": "docs/MAP-EDITOR.md",
+    "workflowPath": "docs/MAP-ASSET-PRODUCTION-NOTES.md",
+    "onlineConnected": false,
+    "artOwnerApproved": false,
+    "libraryStartsEmpty": true,
+    "levelDesignGuidePath": "docs/MAP-LEVEL-DESIGN.md"
+  },
+  "mapAssetReset": {
+    "date": "2026-10-08",
+    "status": "legacy_environment_assets_deleted",
+    "guidePath": "docs/MAP-ASSETS-RESET.md",
+    "preserveAuthoredMaps": true,
+    "preserveCharacterAssets": true
+  },
+  "levelDesign": {
+    "version": "1.0",
+    "status": "implemented_local_authoring_and_test",
+    "guidePath": "docs/MAP-LEVEL-DESIGN.md",
+    "schemaModule": "shared/level-design.ts",
+    "tools": [
+      "multi_select_marquee",
+      "groups_and_alignment",
+      "native_tileset_import",
+      "brush_rect_eraser",
+      "multipart_asset_editing",
+      "prefabs_with_manual_regions",
+      "library_json_import_export",
+      "minimap_camera",
+      "level_audit",
+      "runtime_export"
+    ],
+    "preservesAuthoredMaps": true,
+    "libraryStartsEmpty": true,
+    "onlineConnected": false
   }
 }

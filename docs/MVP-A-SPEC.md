@@ -1,5 +1,7 @@
 # Đặc tả hệ thống MVP A
 
+> **Tham chiếu trước RPG-A:** đặc tả idle/tầng 1 bên dưới giữ lịch sử. Phạm vi hiện tại dùng [MVP mới](MVP-RPG-A.md), [nhiệm vụ](STARTER-STORY.md), [map](STARTER-REGION-MAP.md) và [dữ liệu](data/mvp-rpg-content.json); không lấy luật kết thúc/480 tu vi/save cục bộ dưới đây nghiệm thu bản MMORPG.
+
 > **Tham chiếu v0.6, chờ điều chỉnh online.** Người phát triển đã chọn nhiều người chơi và đệ tử riêng. Quy tắc dành cho Vương Lâm, save cục bộ, nhập JSON và quyền ghi theo tab bên dưới chưa là đặc tả máy chủ hiện tại. [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md) xác định điều chỉnh; [CHARACTERS.md](CHARACTERS.md) xác định vai và tạo hình. Phải tách tuyến đệ tử/chính truyện trước triển khai; bộ số liệu vẫn là giả thuyết cân bằng.
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  

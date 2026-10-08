@@ -20,7 +20,8 @@
       "CHR-SITU-NAN",
       "CHR-LI-MUWAN"
     ],
-    "coreIdentityArtPriority": "wang_lin_situ_nan_li_muwan_before_supporting_npcs"
+    "coreIdentityArtPriority": "wang_lin_situ_nan_li_muwan_before_supporting_npcs",
+    "initialCombat": "auto_basic_attack_with_manual_skills_and_avoidance"
   },
   "counts": {
     "controlledCharactersPerAccount": 1,
@@ -43,8 +44,8 @@
     "camera": "top_down_three_quarter",
     "decisionDate": "2026-10-07",
     "proposedBodyHeads": [
-      4,
-      5
+      2.5,
+      3
     ],
     "proposedDisplayHeightPx": [
       80,
@@ -112,7 +113,11 @@
     "coreUIPortraitViewerPath": "docs/design/characters/core-ui-v1/index.html",
     "coreUIPortraitManifestPath": "docs/design/characters/core-ui-v1/manifest.json",
     "coreCharacterMotionPlanPath": "docs/CORE-CHARACTER-MOTION-PLAN.md",
-    "coreCharacterMotionDataPath": "docs/data/core-character-motion-plan.json"
+    "coreCharacterMotionDataPath": "docs/data/core-character-motion-plan.json",
+    "previousProposedBodyHeads": [
+      4,
+      5
+    ]
   },
   "notes": [
     "Số NPC đếm theo người có tên trong roster; cha và mẹ là hai người dùng chung một nguồn chân dung.",
@@ -142,7 +147,7 @@
       "statModifier": null,
       "conceptPath": "docs/design/characters/player-male-novice-v2.png",
       "promptPath": "docs/design/characters/player-male-novice-v2.prompt.txt",
-      "artStatus": "identity_reference_gait_changes_requested",
+      "artStatus": "chibi_redraw_pending_owner_review",
       "conceptHistory": [
         {
           "version": "v1",
@@ -204,6 +209,32 @@
         "fps": 8,
         "paletteEntries": 24,
         "status": "draft_identity_and_motion_review"
+      },
+      "chibiAnimationSet": {
+        "atlasPath": "docs/design/characters/chibi-roster-v1/male/native-v2/atlas.png",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/male/native-v2/atlas.json",
+        "sourceImagePath": "docs/design/characters/chibi-roster-v1/male/source-v2.png",
+        "sourcePromptPath": "docs/design/characters/chibi-roster-v1/male/source-v2.prompt.txt",
+        "viewerRoute": "/",
+        "galleryRoute": "/assets/chibi-roster/index.html",
+        "frameSizePx": [
+          64,
+          96
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "anchorKind": "feet",
+        "hoverHeightPx": 0,
+        "movementKind": "walk",
+        "standFrameCount": 4,
+        "movementFramesPerDirection": 4,
+        "frameCount": 20,
+        "paletteEntries": 24,
+        "proportionReferenceCharacterId": "CHR-WANG-LIN",
+        "newArtApprovedByProjectOwner": false,
+        "status": "chibi_redraw_pending_owner_review"
       }
     },
     {
@@ -218,7 +249,7 @@
       "statModifier": null,
       "conceptPath": "docs/design/characters/player-female-novice-v2.png",
       "promptPath": "docs/design/characters/player-female-novice-v2.prompt.txt",
-      "artStatus": "identity_reference_gait_changes_requested",
+      "artStatus": "chibi_redraw_pending_owner_review",
       "conceptHistory": [
         {
           "version": "v1",
@@ -280,6 +311,32 @@
         "fps": 8,
         "paletteEntries": 24,
         "status": "draft_identity_and_motion_review"
+      },
+      "chibiAnimationSet": {
+        "atlasPath": "docs/design/characters/chibi-roster-v1/female/native-v2/atlas.png",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/female/native-v2/atlas.json",
+        "sourceImagePath": "docs/design/characters/chibi-roster-v1/female/source-v2.png",
+        "sourcePromptPath": "docs/design/characters/chibi-roster-v1/female/source-v2.prompt.txt",
+        "viewerRoute": "/",
+        "galleryRoute": "/assets/chibi-roster/index.html",
+        "frameSizePx": [
+          64,
+          96
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "anchorKind": "feet",
+        "hoverHeightPx": 0,
+        "movementKind": "walk",
+        "standFrameCount": 4,
+        "movementFramesPerDirection": 4,
+        "frameCount": 20,
+        "paletteEntries": 24,
+        "proportionReferenceCharacterId": "CHR-WANG-LIN",
+        "newArtApprovedByProjectOwner": false,
+        "status": "chibi_redraw_pending_owner_review"
       }
     }
   ],
@@ -461,7 +518,70 @@
         "viewerRoute": "/chibi-pilot.html",
         "identityApprovedByProjectOwner": false,
         "motionApprovedByProjectOwner": false,
-        "status": "pending_owner_review"
+        "status": "pending_owner_review",
+        "ownerVisualFeedback": {
+          "text": "nhin ổn đó.",
+          "by": "project_owner",
+          "date": "2026-10-07",
+          "scope": "current_chibi_visual_preview",
+          "level": "positive_visual_feedback_reference_for_next_directions"
+        },
+        "mainPreviewDefault": false
+      },
+      "chibiAnimationSet": {
+        "sourceCharacterId": "CHR-WANG-LIN",
+        "previewActorId": "CHR-WANG-LIN-CHIBI",
+        "nativeFolder": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2",
+        "nativeFrameCount": 20,
+        "newFrameCount": 16,
+        "preservedEastFrameCount": 4,
+        "directions": [
+          "south",
+          "west",
+          "east",
+          "north"
+        ],
+        "standFramesPerDirection": 1,
+        "walkFramesPerDirection": 4,
+        "defaultAnimationFPS": 5,
+        "defaultGaitCycleDistancePx": 24,
+        "defaultMovementSpeedPxPerSecond": 40,
+        "eastPixelsPreserved": false,
+        "previewOnly": true,
+        "route": "/",
+        "sourceAndPromptSetPath": "docs/design/characters/wang-lin-chibi-walk-v1/README.md",
+        "motionApproval": "south_north_west_positive_feedback_east_last_fix_pending_review",
+        "ownerProportionFeedback": {
+          "text": "nhin ổn đó.",
+          "by": "project_owner",
+          "date": "2026-10-07",
+          "scope": "current_chibi_visual_preview",
+          "level": "positive_visual_feedback_reference_for_next_directions"
+        },
+        "atlasPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.png",
+        "metadataPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.json",
+        "frameSizePx": [
+          64,
+          96
+        ],
+        "footAnchorPx": [
+          32,
+          88
+        ],
+        "paletteEntries": 24,
+        "mainPreviewDefault": true,
+        "newDirectionsApprovedByProjectOwner": false,
+        "status": "east_last_frame_fix_pending_review",
+        "changedFrameIds": [
+          "wanglin_chibi_walk_east_03"
+        ],
+        "preservedOtherFrameCount": 19,
+        "directionFeedback": {
+          "south": "positive_visual_feedback",
+          "north": "positive_visual_feedback",
+          "west": "positive_visual_feedback",
+          "east": "last_frame_changes_requested"
+        }
       }
     },
     {
@@ -576,7 +696,7 @@
         "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-112",
         "https://novelfire.net/book/renegade-immortal/chapter-112"
       ],
-      "artStatus": "standing_spirit_v3_provisionally_accepted_design_baseline",
+      "artStatus": "chibi_redraw_pending_owner_review",
       "unlockPolicy": "pending_B_story_edit",
       "appearanceSourceStatus": "voice_intro_46_47_separate_from_ch112_soul_reference",
       "artProductionPriority": "core_identity_now",
@@ -762,6 +882,32 @@
         "specPath": "docs/CORE-CHARACTER-MOTION-PLAN.md",
         "dataPath": "docs/data/core-character-motion-plan.json",
         "newAnimationProduced": false
+      },
+      "chibiAnimationSet": {
+        "atlasPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.png",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.json",
+        "sourceImagePath": "docs/design/characters/chibi-roster-v1/situ-nan/source-v2.png",
+        "sourcePromptPath": "docs/design/characters/chibi-roster-v1/situ-nan/source-v2.prompt.txt",
+        "viewerRoute": "/",
+        "galleryRoute": "/assets/chibi-roster/index.html",
+        "frameSizePx": [
+          64,
+          96
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "anchorKind": "ground_projection",
+        "hoverHeightPx": 4,
+        "movementKind": "glide",
+        "standFrameCount": 4,
+        "movementFramesPerDirection": 4,
+        "frameCount": 20,
+        "paletteEntries": 24,
+        "proportionReferenceCharacterId": "CHR-WANG-LIN",
+        "newArtApprovedByProjectOwner": false,
+        "status": "chibi_redraw_pending_owner_review"
       }
     },
     {
@@ -791,7 +937,7 @@
         "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-141",
         "https://novelfull.com/renegade-immortal/chapter-144-core-formation-1.html"
       ],
-      "artStatus": "identity_v1_accepted_static_pixel_baseline",
+      "artStatus": "chibi_redesign_accepted_prototype_baseline",
       "unlockPolicy": "pending_arc_edit",
       "sourceStatus": "chapter_dossier_compiled_explicit_art_choices",
       "artProductionPriority": "core_identity_now",
@@ -837,8 +983,12 @@
       "identityApproval": {
         "by": "project_owner",
         "date": "2026-10-07",
-        "scope": "li_muwan_early_v1_identity",
-        "feedback": "tôi thấy ổn rồi chỉ là Tư Đồ nam dạng linh thể nhìn không ổn lắm, tôi muốn nó tạo hình khác"
+        "feedback": "tôi thấy ổn rồi đó.",
+        "scope": "li_muwan_chibi_native_v5_identity_and_preview_baseline",
+        "level": "accepted_prototype_baseline",
+        "nativeVersion": "native-v5",
+        "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
+        "runtimeVersion": "0.5.1"
       },
       "uiPortraitSet": {
         "assetId": "POR-LMM-PURPLE-FOCUSED",
@@ -892,15 +1042,67 @@
           }
         ],
         "portraitApprovedByProjectOwner": false,
-        "status": "first_ui_portrait_pending_review",
+        "status": "requires_alignment_with_accepted_chibi_identity",
         "sourceIdentityApprovalLevel": "accepted",
         "phase": "later_arc"
       },
       "motionPlan": {
         "specPath": "docs/CORE-CHARACTER-MOTION-PLAN.md",
         "dataPath": "docs/data/core-character-motion-plan.json",
-        "newAnimationProduced": false
-      }
+        "newAnimationProduced": true
+      },
+      "chibiAnimationSet": {
+        "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
+        "metadataPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.json",
+        "sourceImagePath": "docs/design/characters/chibi-roster-v1/li-muwan/source-v6.png",
+        "sourcePromptPath": "docs/design/characters/chibi-roster-v1/li-muwan/source-v6.prompt.txt",
+        "viewerRoute": "/",
+        "galleryRoute": "/assets/chibi-roster/index.html",
+        "frameSizePx": [
+          64,
+          96
+        ],
+        "anchorPx": [
+          32,
+          88
+        ],
+        "anchorKind": "feet",
+        "hoverHeightPx": 0,
+        "movementKind": "walk",
+        "standFrameCount": 4,
+        "movementFramesPerDirection": 4,
+        "frameCount": 20,
+        "paletteEntries": 24,
+        "proportionReferenceCharacterId": "CHR-WANG-LIN",
+        "newArtApprovedByProjectOwner": true,
+        "status": "accepted_prototype_baseline",
+        "redesignScope": [
+          "face",
+          "hair",
+          "costume",
+          "neutral_hair_palette"
+        ],
+        "ownerAcceptance": {
+          "by": "project_owner",
+          "date": "2026-10-07",
+          "feedback": "tôi thấy ổn rồi đó.",
+          "scope": "li_muwan_chibi_native_v5_identity_and_preview_baseline",
+          "level": "accepted_prototype_baseline",
+          "nativeVersion": "native-v5",
+          "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
+          "runtimeVersion": "0.5.1"
+        }
+      },
+      "previousIdentityApprovedByProjectOwner": true,
+      "currentIdentityStatus": "accepted_chibi_prototype_baseline",
+      "identityApprovalHistory": [
+        {
+          "by": "project_owner",
+          "date": "2026-10-07",
+          "scope": "li_muwan_early_v1_identity",
+          "feedback": "tôi thấy ổn rồi chỉ là Tư Đồ nam dạng linh thể nhìn không ổn lắm, tôi muốn nó tạo hình khác"
+        }
+      ]
     }
   ],
   "artifactGenerator": "built_in_imagegen",
@@ -909,6 +1111,9 @@
     "confirmedBy": "project_owner",
     "date": "2026-10-07",
     "referenceUrl": "https://www.pinterest.com/pin/480196379041020113/",
-    "specPath": "docs/GAIT-REFERENCE-REVIEW.md"
-  }
+    "specPath": "docs/GAIT-REFERENCE-REVIEW.md",
+    "sharedChibiRosterPath": "docs/design/characters/chibi-roster-v1/models.json"
+  },
+  "starterRegionNpcDefinitionPath": "docs/data/mvp-rpg-content.json",
+  "artProductionPriority": "map_art_and_scale_review_before_quest_design_combat_and_portraits"
 }

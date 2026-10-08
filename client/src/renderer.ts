@@ -1,16 +1,29 @@
 import * as THREE from 'three';
 import { WORLD, type Motion } from '../../shared/world';
 import { AnimationPlayer, normalizeAtlas, type ActorDefinition, type Atlas } from './atlas';
+import { imageAlpha, cropAlpha, opaqueMasksOverlap, type AlphaMask, type PlacedMask } from './occlusion';
 
-export interface LoadedActor { definition: ActorDefinition; atlas: Atlas; texture: THREE.Texture }
+export interface LoadedActor { definition: ActorDefinition; atlas: Atlas; texture: THREE.Texture; alpha: AlphaMask; frameMasks: Map<string,AlphaMask> }
 export interface RenderActor extends Motion {
   id: string; name: string; assetId: string; own: boolean; connected?: boolean;
   animation: AnimationPlayer;
+}
+export interface MapLayout {
+  width: number; height: number; color: string;
+  ground: Array<{ x: number; y: number; w: number; h: number; color: string }>;
+  obstacles: Array<{ x: number; y: number; w: number; h: number; color: string; visualHeight: number }>;
 }
 interface Visual {
   actor: RenderActor; sprite: THREE.Sprite; texture: THREE.Texture;
   shadow: THREE.Sprite; collider: THREE.LineLoop; anchor: THREE.LineSegments;
   label: HTMLDivElement;
+}
+export interface MapDepthItem {
+  mesh: THREE.Mesh | THREE.Sprite; y: number;
+  sortPriority?: number;
+  opacityOverride?: number;
+  fadeRegion?: { x: number; y: number; w: number; h: number };
+  occlusionMask?: PlacedMask;
 }
 function canvasTexture(width: number, height: number, draw: (context: CanvasRenderingContext2D) => void): THREE.CanvasTexture {
   const canvas = document.createElement('canvas'); canvas.width = width; canvas.height = height;
@@ -30,6 +43,8 @@ export class PreviewRenderer {
   readonly camera = new THREE.OrthographicCamera(-480, 480, 320, -320, 0.1, 100);
   readonly webgl: THREE.WebGLRenderer;
   private visuals = new Map<string, Visual>();
+  private mapLayout?: THREE.Group;
+  private mapDepthItems: MapDepthItem[] = [];
   private background?: THREE.Mesh;
   private grid: THREE.Mesh;
   private fixture: THREE.Sprite;
@@ -90,7 +105,7 @@ export class PreviewRenderer {
     this.resize();
   }
 
-  async loadActors(definitions: ActorDefinition[], backgroundUrl: string): Promise<void> {
+  async loadActors(definitions: ActorDefinition[], backgroundUrl?: string): Promise<void> {
     const loader = new THREE.TextureLoader();
     const errors: string[] = [];
     const results = await Promise.allSettled(definitions.map(async definition => {
@@ -104,16 +119,45 @@ export class PreviewRenderer {
       }
       texture.colorSpace = THREE.SRGBColorSpace; texture.minFilter = texture.magFilter = THREE.NearestFilter;
       texture.generateMipmaps = false;
-      this.assets.set(definition.id, { definition, atlas, texture });
+      this.assets.set(definition.id, { definition, atlas, texture, alpha:imageAlpha(texture.image), frameMasks:new Map() });
     }));
     results.forEach((result, i) => { if (result.status === 'rejected') errors.push(`${definitions[i].name}: ${String(result.reason)}`); });
-    const backgroundTexture = await loader.loadAsync(backgroundUrl);
-    backgroundTexture.colorSpace = THREE.SRGBColorSpace;
-    this.background = new THREE.Mesh(new THREE.PlaneGeometry(WORLD.width, WORLD.height),
-      new THREE.MeshBasicMaterial({ map: backgroundTexture, depthTest: false, depthWrite: false }));
-    this.background.position.set(480, -320, 0); this.background.renderOrder = -10000; this.scene.add(this.background);
+    if (backgroundUrl) {
+      const backgroundTexture = await loader.loadAsync(backgroundUrl);
+      backgroundTexture.colorSpace = THREE.SRGBColorSpace;
+      this.background = new THREE.Mesh(new THREE.PlaneGeometry(WORLD.width, WORLD.height),
+        new THREE.MeshBasicMaterial({ map: backgroundTexture, depthTest: false, depthWrite: false }));
+      this.background.position.set(480, -320, 0); this.background.renderOrder = -10000; this.scene.add(this.background);
+    }
     if (errors.length) throw new Error(errors.join('\n'));
   }
+
+  setMapLayout(layout: MapLayout): void {
+    if (this.mapLayout) {
+      this.scene.remove(this.mapLayout);
+      this.mapLayout.traverse(object => {
+        if (object instanceof THREE.Mesh) { object.geometry.dispose(); (object.material as THREE.Material).dispose(); }
+      });
+    }
+    this.mapLayout = new THREE.Group(); this.mapDepthItems = [];
+    const rectangle = (r: { x: number; y: number; w: number; h: number }, color: string, order: number) => {
+      const mesh = new THREE.Mesh(new THREE.PlaneGeometry(r.w, r.h),
+        new THREE.MeshBasicMaterial({ color, depthTest: false, depthWrite: false, toneMapped: false }));
+      mesh.position.set(r.x + r.w / 2, -r.y - r.h / 2, 0); mesh.renderOrder = order;
+      this.mapLayout!.add(mesh); return mesh;
+    };
+    rectangle({ x: 0, y: 0, w: layout.width, h: layout.height }, layout.color, -12000);
+    layout.ground.forEach(r => rectangle(r, r.color, -10000));
+    for (const r of layout.obstacles) {
+      const body = rectangle(r, r.color, -9500);
+      body.userData.mapObstacle = true;
+      const roof = rectangle({ x: r.x - 8, y: r.y - r.visualHeight, w: r.w + 16, h: r.visualHeight + 16 }, r.color, 0);
+      this.mapDepthItems.push({ mesh: roof, y: r.y + r.h });
+    }
+    this.scene.add(this.mapLayout);
+  }
+
+  setMapDepthItems(items: MapDepthItem[]): void { this.mapDepthItems = items; }
 
   private resize(): void {
     this.width = Math.max(1, this.stage.clientWidth); this.height = Math.max(1, this.stage.clientHeight);
@@ -131,19 +175,36 @@ export class PreviewRenderer {
   render(actors: RenderActor[]): void {
     this.updateCamera();
     const isMap = this.mode !== 'inspector';
-    if (this.background) this.background.visible = isMap;
-    this.fixture.visible = isMap;
-    this.debugGroup.visible = isMap && this.debug;
+    if (this.background) this.background.visible = isMap && !this.mapLayout;
+    this.fixture.visible = isMap && !this.mapLayout;
+    this.debugGroup.visible = isMap && this.debug && !this.mapLayout;
     this.grid.visible = !isMap && this.backdrop === 'grid';
     this.scene.background = new THREE.Color(this.backdrop === 'dark' ? '#1c2425' : '#efe6d3');
     const wanted = new Set(actors.map(a => a.id));
     for (const [id, visual] of this.visuals) if (!wanted.has(id)) { this.remove(visual); this.visuals.delete(id); }
     const sorted = [...actors].sort((a, b) => a.y - b.y || a.id.localeCompare(b.id));
-    const depthItems = sorted.map(a => ({ id: a.id, y: a.y }));
-    if (isMap) depthItems.push({ id: '__pillar', y: 351 });
-    depthItems.sort((a, b) => a.y - b.y || a.id.localeCompare(b.id));
+    const depthItems = sorted.map(a => ({ id: a.id, y: a.y, priority:10 }));
+    if (isMap && !this.mapLayout) depthItems.push({ id: '__pillar', y: 351,priority:0 });
+    this.mapDepthItems.forEach((item, i) => depthItems.push({ id: `__map-${i}`, y: item.y,priority:item.sortPriority??0 }));
+    depthItems.sort((a, b) => a.y - b.y || a.priority-b.priority || a.id.localeCompare(b.id));
     const orders = new Map(depthItems.map((a, i) => [a.id, i]));
     this.fixture.renderOrder = orders.get('__pillar') ?? 0;
+    const ownActor = actors.find(a => a.own);
+    let ownMask:PlacedMask|undefined;
+    if(ownActor){
+      const asset=this.assets.get(ownActor.assetId)!;
+      let mask=asset.frameMasks.get(ownActor.animation.frameId);
+      if(!mask){mask=cropAlpha(asset.alpha,asset.atlas.frames[ownActor.animation.frameId]);asset.frameMasks.set(ownActor.animation.frameId,mask);}
+      ownMask={mask,left:ownActor.x-asset.atlas.anchor[0],top:ownActor.y-asset.atlas.anchor[1]};
+    }
+    this.mapDepthItems.forEach((item, i) => {
+      item.mesh.renderOrder = orders.get(`__map-${i}`) ?? 0;
+      const r = item.fadeRegion;
+      const overlaps = ownActor && ownActor.y < item.y && (item.occlusionMask&&ownMask ? opaqueMasksOverlap(item.occlusionMask,ownMask) :
+        r && ownActor.x > r.x - 24 && ownActor.x < r.x + r.w + 24 && ownActor.y > r.y && ownActor.y - 80 < r.y + r.h);
+      const material = item.mesh.material as THREE.MeshBasicMaterial | THREE.SpriteMaterial;
+      material.opacity = item.opacityOverride ?? (overlaps ? .35 : 1);
+    });
     for (const actor of sorted) {
       const asset = this.assets.get(actor.assetId); if (!asset) continue;
       let visual = this.visuals.get(actor.id);

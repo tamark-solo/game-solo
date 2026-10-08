@@ -64,7 +64,7 @@ window.addEventListener('blur', () => { hold = heldKey = false; });
 document.addEventListener('visibilitychange', () => { hold = heldKey = false; });
 
 async function start(): Promise<void> {
-  await renderer.loadActors(definitions, '/assets/courtyard.png');
+  await renderer.loadActors(definitions);
   actors = definitions.map((d, i) => {
     const animation = new AnimationPlayer(renderer.assets.get(d.id)!.atlas); animation.set('walk', 'east');
     return { id: `pilot-${i}`, assetId: d.id, name: d.name, own: false, x: 390 + i * 120, y: 410, direction: 'east', moving: false, animation };

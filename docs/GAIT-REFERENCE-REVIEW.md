@@ -2,7 +2,9 @@
 
 **Ngày:** 07/10/2026.  
 **Đã chốt:** người phát triển chọn học cả tỷ lệ đầu lớn/thân gọn của reference.  
-**Mẫu hiện có:** [Vương Lâm chibi một hướng](design/characters/wang-lin-chibi-pilot-v1/README.md), 1 đứng + 4 pose đi hướng Đông. Xem **http://127.0.0.1:5173/chibi-pilot.html**.
+**Bộ hiện có:** [Vương Lâm chibi bốn hướng](design/characters/wang-lin-chibi-walk-v1/README.md), 4 đứng + 16 pose đi. Xem **http://127.0.0.1:5173/**. Mẫu hướng Đông ban đầu giữ ở `/chibi-pilot.html`.
+
+**Cập nhật web:** người phát triển phản hồi mẫu Đông nhìn ổn và yêu cầu sản xuất ba hướng còn lại. Bộ đầy đủ được chọn mặc định, mở WASD và cảm ứng bốn hướng; hình Đông được giữ nguyên pixel, ba hướng mới còn chờ đánh giá. Trang đối chiếu riêng giữ mẫu Đông và có tùy chọn bật bộ trước.
 
 ## 1. Quan sát reference
 
@@ -26,7 +28,7 @@ Ví dụ kỹ thuật: các frame nữ hướng Đông trong bản sửa trướ
 
 Bộ tám pose trước được ghi **cần chỉnh tiếp sau phản hồi**. Các atlas cũ giữ để đối chiếu; không ghi trạng thái chuyển động đã duyệt.
 
-## 3. Mẫu chibi một hướng
+## 3. Mẫu chibi một hướng ban đầu
 
 - Một hình đứng mới cùng tỷ lệ với bốn hình đi; tránh chuyển từ người thân dài sang chibi khi bắt đầu đi.
 - Bốn pose gốc: tiếp đất A → chân B đi qua → tiếp đất B → chân A đi qua.
@@ -42,4 +44,4 @@ Trong inspector, hai bộ dùng cùng thời lượng chu kỳ, mặc định 0,
 
 Kiểm tra [nguồn](design/characters/wang-lin-chibi-pilot-v1/verification.json) và [preview](data/preview-verification.json) chỉ xác nhận kỹ thuật. Cần xem đầu/thân ổn định, chân trụ, sự đổi chân, tay đối nhịp, đoạn nối cuối → đầu và chuyển đứng–đi. Nếu cần sửa, ưu tiên đúng pose trong mẫu một hướng.
 
-Sau khi mẫu này đạt cảm giác mong muốn, sản xuất ba hướng còn lại rồi áp dụng tỷ lệ cho hai đệ tử và NPC theo mốc. Ngân sách frame dài hạn cần xét lại sau quyết định vòng đi cuối cùng. Mẫu này vẫn là Vương Lâm; số nhân vật trọng tâm và các mốc A/B/arc sau giữ theo roster.
+Ba hướng còn lại đã được sản xuất theo phản hồi tích cực của người phát triển. Bộ bốn hướng có 20 frame 64 × 96, palette/điểm chân chung, 15 hình mới và 5 hình Đông giữ nguyên. Xem [nguồn, prompt và quy trình kiểm tra](design/characters/wang-lin-chibi-walk-v1/README.md). Tiếp theo đánh giá vòng đi khi đổi hướng, rồi mới áp dụng tỷ lệ cho hai đệ tử và NPC. Ngân sách dài hạn cần xét lại sau quyết định vòng đi; số nhân vật và mốc truyện giữ theo roster.

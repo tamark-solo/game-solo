@@ -34,7 +34,7 @@ Các chương đã kiểm tra chưa đủ căn cứ để chốt hình mắt, m�
 | Dấu nhận diện | Đường tóc, hình đầu và cổ áo nhất quán qua ba bộ đồ; khác mẫu đệ tử nam của người chơi |
 | Đạo cụ | Sách/bầu/túi chỉ xuất hiện theo cảnh đã biên tập. Châu được vẽ riêng trong cảnh phát hiện hoặc kiểm tra vật phẩm |
 
-Các cỡ hiển thị 80/96/112 px trong [nghiên cứu ghép](design/world/hybrid-study/index.html) giữ là lịch sử thử tỷ lệ. Nhận diện đã duyệt; [spec sprite](WANG-LIN-SPRITE-SPEC.md) chọn frame 64 × 96 cho bộ áo xám đầu tiên, hình trong frame cao khoảng 80–82 px. PNG nghiên cứu lớn tiếp tục làm nguồn tạo hình.
+Các cỡ hiển thị 80/96/112 px trong nghiên cứu ghép (bộ cũ đã xóa) giữ là lịch sử thử tỷ lệ. Nhận diện đã duyệt; [spec sprite](WANG-LIN-SPRITE-SPEC.md) chọn frame 64 × 96 cho bộ áo xám đầu tiên, hình trong frame cao khoảng 80–82 px. PNG nghiên cứu lớn tiếp tục làm nguồn tạo hình.
 
 ## 3. Ba bộ đồ và biến thể theo cảnh
 
@@ -69,7 +69,7 @@ Portrait dùng nét mực để đọc được cảm xúc ở 160 px, còn thum
 | --- | --- | --- |
 | [Bảng nhập môn v1](design/characters/wang-lin-initiation-v1.png) | Nghiên cứu một gương mặt qua ba bộ đồ, phong cách chân dung mực | Đối chiếu tuổi thể hiện và mức sờn áo theo hồ sơ này; không mặc định mọi chi tiết ảnh sinh ra là đã duyệt |
 | [Pixel áo xám v1](design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v1.png) | Hướng pixel, khối tóc/đai và nhận diện toàn thân | Làm mềm nét mặt thiếu niên; thay gấu xám nhiều mảng rách bằng gấu thường; giản lược nếp áo khi chọn lưới native |
-| [Ghép sân v1](design/world/hybrid-study/index.html) | Nền stylized, camera và so sánh cỡ hiển thị | Đặt mẫu đã chỉnh lên cùng cảnh để duyệt; cỡ 96 px mặc định trong trang xem chưa là quyết định sản xuất |
+| Ghép sân v1 (bộ cũ đã xóa) | Nền stylized, camera và so sánh cỡ hiển thị | Đặt mẫu đã chỉnh lên cùng cảnh để duyệt; cỡ 96 px mặc định trong trang xem chưa là quyết định sản xuất |
 
 Giữ nguyên ảnh và prompt v1 để truy được nguồn. Hình mới đặt tên phiên bản kế tiếp; cập nhật liên kết tham chiếu khi đã xem và duyệt. Hồ sơ này không đổi trạng thái của ảnh cũ thành asset hoàn thiện.
 

@@ -5,7 +5,7 @@
 **Trạng thái:** tạo hình v2 và bộ đứng/đi thử đã dựng để đánh giá; nhận diện và chuyển động đệ tử chưa được người phát triển duyệt.  
 **Xem:** [trang so sánh và thử trên sân](design/characters/player-avatars-v2/index.html), [nguồn/prompt](design/characters/player-avatars-v2/README.md), [dữ liệu nghiên cứu](design/characters/player-avatars-v2/study.json), [roster](data/character-roster.json).
 
-**Cập nhật bộ đi:** preview hiện dùng [bản sửa tay/chân](GAIT-CORRECTION.md), tám pose/hướng và 36 frame/mẫu. Bộ 28 frame dưới đây giữ làm lịch sử và tham chiếu nhận diện/palette; các frame đi mới chờ đánh giá.
+**Cập nhật bộ đi:** preview/online hiện dùng [hai đệ tử chibi](CHIBI-ROSTER-SPEC.md), cùng tỷ lệ Vương Lâm: mỗi mẫu 4 đứng + 16 đi, bốn hướng và 20 frame. Nam búi cao, nữ búi thấp, áo xám/đai xanh. Bộ 28 frame dưới đây và [bản tám pose](GAIT-CORRECTION.md) giữ lịch sử; bộ chibi mới chờ đánh giá nhận diện/chuyển động.
 
 ## 1. Vai trò và nguồn thiết kế
 

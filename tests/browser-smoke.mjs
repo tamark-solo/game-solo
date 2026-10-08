@@ -27,15 +27,15 @@ try {
   await mkdir('artifacts', { recursive: true });
   const context = await browser.newContext({ viewport: { width: 1440, height: 1100 }, deviceScaleFactor: 1 });
   const page = await context.newPage(); monitor(page); await page.goto(clientUrl);
-  await page.waitForFunction(() => typeof window.__previewDiagnostics === 'function');
+  await page.waitForFunction(() => typeof window.__previewDiagnostics === 'function' && window.__previewDiagnostics().sprites.length > 0);
   const initial = await diagnostics(page);
   assert.equal(initial.loadedAssets, design.preview.assets.length);
   assert.equal(initial.nativeFrames, design.preview.existingNativeFrameCount);
   assert.equal(initial.selectedActorId, design.preview.defaultActorId);
   assert.match(initial.actors[0].frame, /^wanglin_chibi_walk_east_/);
-  assert.deepEqual(initial.availableDirections, ['east']);
+  assert.deepEqual(initial.availableDirections, ['south', 'west', 'east', 'north']);
   assert.match(await page.locator('#scene-title').textContent(), /chibi/);
-  for (const direction of ['north', 'west', 'south']) assert.equal(await page.locator(`[data-direction=${direction}]`).isDisabled(), true);
+  for (const direction of initial.availableDirections) assert.equal(await page.locator(`[data-direction=${direction}]`).isDisabled(), false);
   assert.equal(initial.sprites[0].center[0], .5);
   assert.ok(Math.abs(initial.sprites[0].center[1] - 1 / 12) < 1e-10);
   checks.push(`source_atlases_${initial.loadedAssets}_packs_${initial.nativeFrames}_frames`, 'home_page_defaults_to_new_chibi_asset');
@@ -49,29 +49,44 @@ try {
   checks.push('pause_and_manual_frame_step');
   await page.screenshot({ path: 'artifacts/preview-default-chibi.png' });
   await page.locator('[data-mode=map]').click(); await page.locator('#stage').click();
-  const chibiBefore = (await diagnostics(page)).actors[0].x;
-  await page.keyboard.down('d'); await page.waitForTimeout(450); await page.keyboard.up('d'); await page.waitForTimeout(100);
-  const chibiAfter = (await diagnostics(page)).actors[0];
-  assert.ok(chibiAfter.x > chibiBefore + 8);
-  assert.match(chibiAfter.frame, /^wanglin_chibi_stand_east$/);
-  await page.keyboard.down('a'); await page.keyboard.down('w'); await page.waitForTimeout(180); await page.keyboard.up('a'); await page.keyboard.up('w');
-  assert.equal((await diagnostics(page)).actors[0].x, chibiAfter.x);
-  assert.equal((await diagnostics(page)).actors[0].y, chibiAfter.y);
+  for (const [key, direction, axis, sign] of [['d', 'east', 'x', 1], ['a', 'west', 'x', -1], ['s', 'south', 'y', 1], ['w', 'north', 'y', -1]]) {
+    const before = (await diagnostics(page)).actors[0];
+    await page.keyboard.down(key); await page.waitForTimeout(180);
+    assert.ok((await diagnostics(page)).actors[0].frame.includes(`walk_${direction}_`));
+    await page.waitForTimeout(270); await page.keyboard.up(key); await page.waitForTimeout(100);
+    const after = (await diagnostics(page)).actors[0];
+    assert.ok((after[axis] - before[axis]) * sign > 8, `chibi moves ${direction}`);
+    assert.equal(after[axis === 'x' ? 'y' : 'x'], before[axis === 'x' ? 'y' : 'x']);
+    assert.equal(after.frame, `wanglin_chibi_stand_${direction}`);
+    await page.waitForTimeout(100);
+    assert.equal((await diagnostics(page)).actors[0][axis], after[axis]);
+  }
+  const diagonalBefore = (await diagnostics(page)).actors[0];
+  await page.keyboard.down('a'); await page.keyboard.down('w'); await page.waitForTimeout(250); await page.keyboard.up('a'); await page.keyboard.up('w');
+  await page.waitForTimeout(80);
+  const diagonalAfter = (await diagnostics(page)).actors[0];
+  assert.ok(diagonalAfter.x < diagonalBefore.x - 3 && diagonalAfter.y < diagonalBefore.y - 3);
+  assert.ok(Math.hypot(diagonalAfter.x - diagonalBefore.x, diagonalAfter.y - diagonalBefore.y) < 14, 'diagonal speed remains normalized');
+  await page.screenshot({ path: 'artifacts/chibi-four-direction-map.png' });
   await page.locator('#actor-count').selectOption('5'); await page.waitForTimeout(300);
   assert.ok((await diagnostics(page)).actors.every(a => a.frame.startsWith('wanglin_chibi_')));
   await page.locator('#actor-count').selectOption('1');
-  checks.push('main_map_chibi_motion_and_unsupported_directions_disabled');
+  checks.push('main_map_chibi_four_directions_walk_stop_and_normalized_diagonal');
   await page.locator('[data-mode=inspector]').click(); await page.locator('#play-pause').click();
-  for (const actorId of ['CHR-WANG-LIN', 'AVATAR-NOVICE-MALE', 'AVATAR-NOVICE-FEMALE', 'CHR-SITU-NAN', 'CHR-LI-MUWAN']) {
+  for (const actorId of ['CHR-WANG-LIN-CHIBI', 'CHR-WANG-LIN', 'AVATAR-NOVICE-MALE', 'AVATAR-NOVICE-FEMALE', 'CHR-SITU-NAN', 'CHR-LI-MUWAN']) {
     await page.locator('#actor').selectOption(actorId);
     for (const direction of ['south', 'west', 'east', 'north']) {
       await page.locator(`[data-direction=${direction}]`).click(); await page.waitForTimeout(25);
       assert.ok((await diagnostics(page)).actors[0].frame.endsWith(direction) || (await diagnostics(page)).actors[0].frame.includes(`${direction}_`));
     }
-    const staticActor = ['CHR-SITU-NAN', 'CHR-LI-MUWAN'].includes(actorId);
+    const staticActor = !design.preview.assets.find(a => a.characterId === actorId).availablePreviewStates.includes('walk');
     assert.equal(await page.locator('#motion-state option[value=walk]').evaluate(option => option.disabled), staticActor);
     if (staticActor) assert.match(await page.locator('#actor-note').textContent(), /hình tĩnh/);
     else {
+      if (actorId === 'CHR-SITU-NAN') {
+        assert.equal(await page.locator('#motion-state option[value=walk]').textContent(), 'Lướt');
+        assert.match(await page.locator('#actor-note').textContent(), /4 px/);
+      }
       await page.locator('#motion-state').selectOption('walk');
       for (const direction of ['south', 'west', 'east', 'north']) {
         await page.locator(`[data-direction=${direction}]`).click();
@@ -83,11 +98,27 @@ try {
           await page.locator('#next-frame').click();
         }
         assert.deepEqual(shown, new Set(expected), `all walk poses display: ${actorId}/${direction}`);
+        if (actorId === 'CHR-WANG-LIN-CHIBI') {
+          await page.locator('#motion-state').selectOption('stand');
+          assert.equal((await diagnostics(page)).actors[0].frame, `wanglin_chibi_stand_${direction}`);
+          await waitFor(async () => (await page.locator('#frame-name').textContent()) === `wanglin_chibi_stand_${direction}`, 'standing pose readout updated');
+          await page.screenshot({ path: `artifacts/chibi-four-direction-${direction}.png` });
+          await page.locator('#motion-state').selectOption('walk');
+        }
       }
     }
   }
   checks.push('four_directions_all_actors_static_states_explicit');
   checks.push('every_walk_pose_is_displayed_by_three_renderer');
+  checks.push('new_chibi_sets_all_directions_spirit_glide_label_explicit');
+  await page.locator('#actor').selectOption('CHR-SITU-NAN');
+  await page.locator('[data-mode=map]').click(); await page.locator('#stage').click();
+  const spiritBefore = (await diagnostics(page)).actors[0].x;
+  await page.keyboard.down('d'); await page.waitForTimeout(420); await page.keyboard.up('d'); await page.waitForTimeout(100);
+  assert.ok((await diagnostics(page)).actors[0].x > spiritBefore + 8);
+  assert.equal((await diagnostics(page)).actors[0].frame, 'situ_nan_chibi_stand_east');
+  await page.screenshot({ path: 'artifacts/chibi-spirit-map.png' });
+  await page.locator('[data-mode=inspector]').click();
   await page.locator('#actor').selectOption('CHR-WANG-LIN');
   await page.locator('#motion-state').selectOption('walk'); await page.locator('[data-direction=south]').click();
   await page.locator('#backdrop').selectOption('dark'); await page.locator('[data-zoom="4"]').click();
@@ -123,19 +154,51 @@ try {
   const phone = await phoneContext.newPage(); monitor(phone); await phone.goto(clientUrl);
   await phone.waitForFunction(() => typeof window.__previewDiagnostics === 'function');
   await phone.locator('[data-mode=map]').click(); await assertNoOverflow(phone, 'mobile 360 px');
-  await phone.locator('[data-input=east]').scrollIntoViewIfNeeded();
   await phone.bringToFront();
   const phoneBefore = (await diagnostics(phone)).actors[0].x;
-  const touchBounds = await phone.locator('[data-input=east]').boundingBox();
   const cdp = await phoneContext.newCDPSession(phone);
-  await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: touchBounds.x + touchBounds.width / 2, y: touchBounds.y + touchBounds.height / 2 }] });
-  await phone.waitForTimeout(400);
-  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
-  assert.ok((await diagnostics(phone)).actors[0].x > phoneBefore + 10, 'touch pad moves character');
+  for (const [direction, axis, sign] of [['east', 'x', 1], ['west', 'x', -1], ['south', 'y', 1], ['north', 'y', -1]]) {
+    const button = phone.locator(`[data-input=${direction}]`);
+    assert.equal(await button.isDisabled(), false);
+    await button.scrollIntoViewIfNeeded();
+    const touchBounds = await button.boundingBox();
+    const before = (await diagnostics(phone)).actors[0];
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: touchBounds.x + touchBounds.width / 2, y: touchBounds.y + touchBounds.height / 2 }] });
+    await phone.waitForTimeout(400);
+    assert.ok((await diagnostics(phone)).actors[0].frame.includes(`walk_${direction}_`));
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+    await phone.waitForTimeout(100);
+    const after = (await diagnostics(phone)).actors[0];
+    assert.ok((after[axis] - before[axis]) * sign > 8, `touch pad moves ${direction}`);
+    assert.equal(after.frame, `wanglin_chibi_stand_${direction}`);
+  }
   await cdp.detach();
   await phone.screenshot({ path: 'artifacts/preview-map-mobile.png', fullPage: true });
-  checks.push('mobile_360_px_dpr2_touch_movement_no_horizontal_overflow');
+  checks.push('mobile_360_px_dpr2_four_direction_touch_movement_no_horizontal_overflow');
   await phoneContext.close();
+  const gallery = await context.newPage(); monitor(gallery);
+  await gallery.goto(`${clientUrl}/assets/chibi-roster/index.html`);
+  await gallery.waitForFunction(() => typeof window.__chibiRosterDiagnostics === 'function');
+  await gallery.evaluate(() => Promise.all(window.ChibiRosterGallery.actors.map(async a => { const img = new Image(); img.src = a.atlasUrl; await img.decode(); })));
+  assert.equal(await gallery.locator('.card').count(), 5);
+  await gallery.locator('#pause').click();
+  for (const direction of ['south', 'west', 'east', 'north']) {
+    await gallery.locator(`[data-direction=${direction}]`).click();
+    for (let i = 0; i < 4; i++) {
+      const d = await gallery.evaluate(() => window.__chibiRosterDiagnostics());
+      assert.equal(d.actors.length, 5);
+      assert.ok(d.actors.every(a => a.frame.includes(`walk_${direction}_`)));
+      await gallery.locator('#next').click();
+    }
+  }
+  await gallery.locator('[data-direction=south]').click(); await gallery.locator('#motion').selectOption('stand');
+  await gallery.screenshot({ path: 'artifacts/chibi-roster-desktop.png', fullPage: true });
+  await gallery.locator('#backdrop').selectOption('dark');
+  await gallery.screenshot({ path: 'artifacts/chibi-roster-dark.png', fullPage: true });
+  await gallery.setViewportSize({ width: 360, height: 900 }); await assertNoOverflow(gallery, 'chibi gallery 360 px');
+  await gallery.screenshot({ path: 'artifacts/chibi-roster-mobile.png', fullPage: true });
+  await gallery.close();
+  checks.push('five_character_chibi_gallery_frames_and_mobile_no_overflow');
   await page.bringToFront(); await page.locator('[data-mode=online]').click();
   await page.locator('#player-name').fill('Đệ tử A'); await page.locator('#join-room').click();
   await waitFor(async () => (await page.locator('.player-card').count()) === 1, 'first browser joins');

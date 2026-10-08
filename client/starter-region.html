@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3ebdd">
+  <link rel="icon" href="data:,">
+  <title>Vùng nhập môn Hằng Nhạc · bố trí MVP</title>
+  <link rel="stylesheet" href="/src/starter-region.css">
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">TIÊN NGHỊCH · MAP VÀ MVP</p><h1>Vùng nhập môn Hằng Nhạc</h1><p>Đi thử năm khu nối nhau và hang boss riêng, giữ cỡ nhân vật chibi hiện tại.</p><a href="/">Preview nhân vật</a> · <a href="/assets/chibi-roster/index.html">Dàn nhân vật</a></header>
+    <div class="workspace">
+      <section class="map-panel" aria-label="Map đi thử">
+        <div class="toolbar"><label>Nhân vật <select id="actor"><option value="AVATAR-NOVICE-MALE">Đệ tử nam</option><option value="AVATAR-NOVICE-FEMALE">Đệ tử nữ</option><option value="CHR-WANG-LIN-CHIBI">Vương Lâm · tham chiếu</option></select></label><label>Cỡ xem <select id="zoom"><option value="1">1× · cỡ gốc</option><option value="2">2×</option></select></label><label><input type="checkbox" id="markers" checked> Điểm thiết kế</label></div>
+        <div id="stage" tabindex="0" aria-label="Di chuyển bằng WASD hoặc phím mũi tên"><div id="world-labels"></div><div id="point-labels"></div><div class="scene-hud"><strong id="zone-label">Đang nạp map…</strong><span id="position-label"></span></div></div>
+        <div class="movement"><div class="touch-pad" aria-label="Nút di chuyển"><button data-direction="north" aria-label="Đi lên">↑</button><div><button data-direction="west" aria-label="Đi trái">←</button><button data-direction="south" aria-label="Đi xuống">↓</button><button data-direction="east" aria-label="Đi phải">→</button></div></div><div><button id="interact">Tương tác / E</button><p id="nearby">Bấm vào map rồi đi bằng WASD; E tại cửa hang.</p></div></div>
+        <p class="note">Bản bố trí để duyệt đường đi và tỷ lệ. Quái, boss và nhiệm vụ đang là điểm thiết kế; ART nền hoàn chỉnh và combat triển khai theo MVP mới.</p>
+        <p id="error" role="alert" hidden></p>
+      </section>
+      <aside>
+        <section class="card"><h2>Tổng quan vùng</h2><div id="minimap" aria-label="Sơ đồ vùng nhập môn"></div><label>Khu cần duyệt <select id="zone-select"></select></label><button id="visit-zone">Đến khu để duyệt</button><p id="zone-description" class="note"></p><p class="note">Ngoài: 3840 × 2560. Hang: 960 × 640.<br>Sprite 64 × 96; nhân vật cao khoảng 80 px ở 1×.</p></section>
+        <section class="card"><h2>Kịch bản nhập môn</h2><label>Nhiệm vụ <select id="quest-select"></select></label><h3 id="quest-title"></h3><p id="quest-dialogue"></p><ul id="quest-objectives"></ul><p id="quest-reward" class="note"></p><p class="note">Mục tiêu: quái đầu phút 2–3, tầng 1 phút 5–7, boss phút 25–35. Số liệu còn cần chơi thử.</p></section>
+      </aside>
+    </div>
+  </main>
+  <script type="module" src="/src/starter-region.ts"></script>
+</body>
+</html>

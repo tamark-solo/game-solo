@@ -1,0 +1,1724 @@
+{
+  "schemaVersion": "mvp-rpg-content-1",
+  "version": "rpg-a-1.0",
+  "date": "2026-10-07",
+  "status": "design_baseline_pending_playtest",
+  "pathBase": "workspace_root",
+  "scope": {
+    "sequence": [
+      "A",
+      "B"
+    ],
+    "aTargetRealm": 3,
+    "normalEnemyTypes": 4,
+    "eliteTypes": 1,
+    "bossTypes": 1,
+    "mainQuests": 10,
+    "sideQuests": 2,
+    "repeatableQuests": 2,
+    "inventorySlots": 24,
+    "equipmentSlots": [
+      "weapon",
+      "robe",
+      "boots",
+      "amulet"
+    ],
+    "prototypeConcurrentPlayersTarget": 8,
+    "capacityStatus": "design_target_not_load_verified",
+    "postponed": [
+      "portrait_alignment",
+      "pvp",
+      "trade",
+      "auction",
+      "guilds",
+      "open_world_boss",
+      "parties",
+      "advanced_realms"
+    ]
+  },
+  "decisions": {
+    "playerRole": "original_disciple",
+    "combat": "auto_basic_attack_target_with_manual_skills_and_avoidance",
+    "combatConfirmedBy": "project_owner",
+    "storyPacing": "accelerated_beginning",
+    "storyOwnership": "wang_lin_unique_bead_not_granted_to_players",
+    "characterSizePreserved": true
+  },
+  "art": {
+    "frameSizePx": [
+      64,
+      96
+    ],
+    "anchorPx": [
+      32,
+      88
+    ],
+    "bodyHeightPx": [
+      79,
+      82
+    ],
+    "worldPixelPerNativePixel": 1,
+    "defaultZoom": 1,
+    "allowedIntegerZooms": [
+      1,
+      2
+    ],
+    "logicalViewportPx": [
+      960,
+      640
+    ],
+    "planningGridPx": 64,
+    "environmentStyle": "stylized_2d",
+    "characterStyle": "pixel_chibi",
+    "planningView": "walkable_graybox_not_final_map_art"
+  },
+  "sources": [
+    {
+      "id": "TN07",
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-7",
+      "supports": "Hổ và thoát hiểm thuộc chuyện Vương Lâm."
+    },
+    {
+      "id": "TN10",
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-10",
+      "supports": "Ký danh áo xám, tạp vụ, phòng ở và Trương Hổ."
+    },
+    {
+      "id": "TN11",
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-11",
+      "supports": "Suối ở phía đông, việc kiếm củi của Trương Hổ."
+    },
+    {
+      "id": "TN17",
+      "url": "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17",
+      "supports": "Dược viên Tôn Đại Trụ; pháp quyết ba tầng đầu và cấm hút linh khí trong vườn."
+    }
+  ],
+  "world": {
+    "mainSceneId": "REGION-HENG-YUE",
+    "scenes": [
+      {
+        "id": "REGION-HENG-YUE",
+        "name": "Vùng nhập môn Hằng Nhạc",
+        "width": 3840,
+        "height": 2560,
+        "spawn": {
+          "x": 640,
+          "y": 656
+        },
+        "ownership": "shared"
+      },
+      {
+        "id": "INSTANCE-WOLF",
+        "name": "Hang yêu lang",
+        "width": 960,
+        "height": 640,
+        "spawn": {
+          "x": 480,
+          "y": 528
+        },
+        "ownership": "solo_instance"
+      }
+    ],
+    "zones": [
+      {
+        "id": "ZONE-SECT",
+        "name": "Ngoại viện Hằng Nhạc",
+        "kind": "safe_hub",
+        "sceneId": "REGION-HENG-YUE",
+        "rect": {
+          "x": 160,
+          "y": 144,
+          "w": 1120,
+          "h": 832
+        },
+        "entry": {
+          "x": 640,
+          "y": 656
+        },
+        "color": "#d9ccb5",
+        "layerRange": [
+          0,
+          3
+        ],
+        "narrative": "Áo xám, tạp vụ, chỗ ở và bước đầu tu luyện.",
+        "sourceRefs": [
+          "TN10",
+          "TN11"
+        ]
+      },
+      {
+        "id": "ZONE-SPRING",
+        "name": "Suối Đông Sơn",
+        "kind": "farm",
+        "sceneId": "REGION-HENG-YUE",
+        "rect": {
+          "x": 1600,
+          "y": 144,
+          "w": 1024,
+          "h": 704
+        },
+        "entry": {
+          "x": 1792,
+          "y": 512
+        },
+        "color": "#bfcfc0",
+        "layerRange": [
+          0,
+          1
+        ],
+        "narrative": "Đường lấy nước; quái nhỏ mở chiến đấu nhanh.",
+        "sourceRefs": [
+          "TN11"
+        ]
+      },
+      {
+        "id": "ZONE-GARDEN",
+        "name": "Lối ngoài dược viên",
+        "kind": "quest_crafting",
+        "sceneId": "REGION-HENG-YUE",
+        "rect": {
+          "x": 1600,
+          "y": 1008,
+          "w": 960,
+          "h": 832
+        },
+        "entry": {
+          "x": 2048,
+          "y": 1392
+        },
+        "color": "#c9ceb1",
+        "layerRange": [
+          1,
+          3
+        ],
+        "narrative": "Giữ giới hạn dược viên của Tôn Đại Trụ; hái ở bãi ngoài và mua vật liệu.",
+        "sourceRefs": [
+          "TN17"
+        ]
+      },
+      {
+        "id": "ZONE-PINE",
+        "name": "Rừng tùng hậu sơn",
+        "kind": "farm",
+        "sceneId": "REGION-HENG-YUE",
+        "rect": {
+          "x": 160,
+          "y": 1264,
+          "w": 1120,
+          "h": 1088
+        },
+        "entry": {
+          "x": 640,
+          "y": 1536
+        },
+        "color": "#a9bcab",
+        "layerRange": [
+          1,
+          2
+        ],
+        "narrative": "Nơi đệ tử kiếm củi, đường tuần sơn và vật liệu trang bị.",
+        "sourceRefs": [
+          "TN11"
+        ]
+      },
+      {
+        "id": "ZONE-RAVINE",
+        "name": "Khe đá hậu sơn",
+        "kind": "elite_portal",
+        "sceneId": "REGION-HENG-YUE",
+        "rect": {
+          "x": 2848,
+          "y": 688,
+          "w": 800,
+          "h": 1632
+        },
+        "entry": {
+          "x": 3072,
+          "y": 1440
+        },
+        "color": "#b8bbaf",
+        "layerRange": [
+          2,
+          3
+        ],
+        "narrative": "Đường dẹp thú dữ do game bổ sung; mini-boss và cửa hang.",
+        "sourceRefs": []
+      },
+      {
+        "id": "ZONE-CAVE",
+        "name": "Hang yêu lang",
+        "kind": "boss_instance",
+        "sceneId": "INSTANCE-WOLF",
+        "rect": {
+          "x": 64,
+          "y": 128,
+          "w": 832,
+          "h": 464
+        },
+        "entry": {
+          "x": 480,
+          "y": 528
+        },
+        "color": "#bbb1bf",
+        "layerRange": [
+          2,
+          3
+        ],
+        "narrative": "Boss riêng của đệ tử; không phải hang Vương Lâm nhặt hạt châu.",
+        "sourceRefs": []
+      }
+    ],
+    "corridors": [
+      {
+        "id": "PATH-SECT-SPRING",
+        "from": "ZONE-SECT",
+        "to": "ZONE-SPRING",
+        "rect": {
+          "x": 1152,
+          "y": 448,
+          "w": 576,
+          "h": 128
+        }
+      },
+      {
+        "id": "PATH-SECT-PINE",
+        "from": "ZONE-SECT",
+        "to": "ZONE-PINE",
+        "rect": {
+          "x": 576,
+          "y": 864,
+          "w": 128,
+          "h": 512
+        }
+      },
+      {
+        "id": "PATH-SPRING-GARDEN",
+        "from": "ZONE-SPRING",
+        "to": "ZONE-GARDEN",
+        "rect": {
+          "x": 1984,
+          "y": 736,
+          "w": 128,
+          "h": 400
+        }
+      },
+      {
+        "id": "PATH-PINE-GARDEN",
+        "from": "ZONE-PINE",
+        "to": "ZONE-GARDEN",
+        "rect": {
+          "x": 1152,
+          "y": 1664,
+          "w": 576,
+          "h": 128
+        }
+      },
+      {
+        "id": "PATH-GARDEN-RAVINE",
+        "from": "ZONE-GARDEN",
+        "to": "ZONE-RAVINE",
+        "rect": {
+          "x": 2432,
+          "y": 1376,
+          "w": 544,
+          "h": 128
+        }
+      }
+    ],
+    "obstacles": [
+      {
+        "id": "BUILD-DORM",
+        "sceneId": "REGION-HENG-YUE",
+        "name": "Dãy phòng ký danh",
+        "kind": "building",
+        "rect": {
+          "x": 320,
+          "y": 256,
+          "w": 288,
+          "h": 128
+        },
+        "color": "#776f64",
+        "visualHeight": 120
+      },
+      {
+        "id": "BUILD-REGISTRY",
+        "sceneId": "REGION-HENG-YUE",
+        "name": "Nhà quản sự",
+        "kind": "building",
+        "rect": {
+          "x": 864,
+          "y": 256,
+          "w": 256,
+          "h": 128
+        },
+        "color": "#777060",
+        "visualHeight": 112
+      },
+      {
+        "id": "BUILD-GARDEN",
+        "sceneId": "REGION-HENG-YUE",
+        "name": "Dược viên hạn chế",
+        "kind": "building",
+        "rect": {
+          "x": 1888,
+          "y": 1120,
+          "w": 256,
+          "h": 128
+        },
+        "color": "#727f68",
+        "visualHeight": 96
+      },
+      {
+        "id": "ROCK-PINE-A",
+        "sceneId": "REGION-HENG-YUE",
+        "name": "Đá rừng",
+        "kind": "rock",
+        "rect": {
+          "x": 320,
+          "y": 1408,
+          "w": 96,
+          "h": 64
+        },
+        "color": "#8c9383",
+        "visualHeight": 36
+      },
+      {
+        "id": "ROCK-PINE-B",
+        "sceneId": "REGION-HENG-YUE",
+        "name": "Đá rừng",
+        "kind": "rock",
+        "rect": {
+          "x": 832,
+          "y": 1920,
+          "w": 128,
+          "h": 64
+        },
+        "color": "#8c9383",
+        "visualHeight": 40
+      },
+      {
+        "id": "ROCK-RAVINE-A",
+        "sceneId": "REGION-HENG-YUE",
+        "name": "Vách đá",
+        "kind": "rock",
+        "rect": {
+          "x": 3072,
+          "y": 896,
+          "w": 128,
+          "h": 128
+        },
+        "color": "#929289",
+        "visualHeight": 64
+      },
+      {
+        "id": "ROCK-RAVINE-B",
+        "sceneId": "REGION-HENG-YUE",
+        "name": "Vách đá",
+        "kind": "rock",
+        "rect": {
+          "x": 3296,
+          "y": 1920,
+          "w": 192,
+          "h": 96
+        },
+        "color": "#929289",
+        "visualHeight": 64
+      },
+      {
+        "id": "ROCK-CAVE-A",
+        "sceneId": "INSTANCE-WOLF",
+        "name": "Đá hang",
+        "kind": "rock",
+        "rect": {
+          "x": 112,
+          "y": 240,
+          "w": 96,
+          "h": 96
+        },
+        "color": "#7c7381",
+        "visualHeight": 40
+      },
+      {
+        "id": "ROCK-CAVE-B",
+        "sceneId": "INSTANCE-WOLF",
+        "name": "Đá hang",
+        "kind": "rock",
+        "rect": {
+          "x": 752,
+          "y": 240,
+          "w": 96,
+          "h": 96
+        },
+        "color": "#7c7381",
+        "visualHeight": 40
+      }
+    ],
+    "npcs": [
+      {
+        "id": "NPC-REGISTRY",
+        "name": "Quản sự ngoại viện",
+        "canon": "game_adaptation",
+        "zoneId": "ZONE-SECT",
+        "point": {
+          "x": 832,
+          "y": 528
+        },
+        "role": "Nhập môn, vật phẩm, đột phá"
+      },
+      {
+        "id": "CHR-ZHANG-HU",
+        "name": "Trương Hổ",
+        "canon": "novel_character_adapted_quest",
+        "zoneId": "ZONE-SECT",
+        "point": {
+          "x": 416,
+          "y": 608
+        },
+        "role": "Tạp vụ, đường rừng; giữ nghề kiếm củi theo truyện"
+      },
+      {
+        "id": "CHR-WANG-LIN",
+        "name": "Vương Lâm",
+        "canon": "novel_character",
+        "zoneId": "ZONE-SECT",
+        "point": {
+          "x": 672,
+          "y": 640
+        },
+        "role": "Mốc truyện ngắn, áo xám; bí mật hạt châu riêng"
+      },
+      {
+        "id": "NPC-GARDEN",
+        "name": "Người giữ lối dược viên",
+        "canon": "game_adaptation",
+        "zoneId": "ZONE-GARDEN",
+        "point": {
+          "x": 2176,
+          "y": 1392
+        },
+        "role": "Dược liệu ngoài vườn, chế tạo, giới thiệu Tôn Đại Trụ"
+      },
+      {
+        "id": "NPC-PATROL",
+        "name": "Đệ tử tuần sơn",
+        "canon": "game_adaptation",
+        "zoneId": "ZONE-PINE",
+        "point": {
+          "x": 1056,
+          "y": 1632
+        },
+        "role": "Tuần rừng và dẫn vào khe đá"
+      }
+    ],
+    "pois": [
+      {
+        "id": "POI-SPRING",
+        "name": "Điểm lấy nước",
+        "zoneId": "ZONE-SPRING",
+        "point": {
+          "x": 2240,
+          "y": 448
+        },
+        "kind": "resource",
+        "gather": {
+          "questOnly": true,
+          "durationSeconds": 3
+        }
+      },
+      {
+        "id": "POI-TRAINING",
+        "name": "Mục tiêu luyện đánh",
+        "zoneId": "ZONE-SECT",
+        "point": {
+          "x": 1024,
+          "y": 640
+        },
+        "kind": "training"
+      },
+      {
+        "id": "POI-CULTIVATE",
+        "name": "Bế quan đệ tử",
+        "zoneId": "ZONE-SECT",
+        "point": {
+          "x": 448,
+          "y": 784
+        },
+        "kind": "cultivation"
+      },
+      {
+        "id": "POI-HERBS",
+        "name": "Bãi sơn thảo ngoài vườn",
+        "zoneId": "ZONE-GARDEN",
+        "point": {
+          "x": 2240,
+          "y": 1712
+        },
+        "kind": "resource",
+        "gather": {
+          "itemId": "MAT-HERB",
+          "quantity": 1,
+          "durationSeconds": 3,
+          "respawnSeconds": 12
+        }
+      },
+      {
+        "id": "POI-WOOD",
+        "name": "Điểm kiếm củi",
+        "zoneId": "ZONE-PINE",
+        "point": {
+          "x": 480,
+          "y": 1840
+        },
+        "kind": "resource",
+        "gather": {
+          "itemId": "MAT-RESIN",
+          "quantity": 1,
+          "durationSeconds": 3,
+          "respawnSeconds": 12
+        }
+      },
+      {
+        "id": "POI-RAVINE",
+        "name": "Trạm đường khe đá",
+        "zoneId": "ZONE-RAVINE",
+        "point": {
+          "x": 3008,
+          "y": 1504
+        },
+        "kind": "waypoint"
+      },
+      {
+        "id": "PORTAL-WOLF",
+        "name": "Lối vào hang yêu lang",
+        "zoneId": "ZONE-RAVINE",
+        "point": {
+          "x": 3328,
+          "y": 1504
+        },
+        "kind": "portal",
+        "toSceneId": "INSTANCE-WOLF",
+        "requires": [
+          "Q08",
+          "Q09"
+        ],
+        "minimumRealmLayer": 2
+      },
+      {
+        "id": "POI-BOSS-CHEST",
+        "name": "Rương lần đầu",
+        "zoneId": "ZONE-CAVE",
+        "point": {
+          "x": 640,
+          "y": 464
+        },
+        "kind": "reward"
+      },
+      {
+        "id": "PORTAL-RETURN",
+        "name": "Trở lại khe đá",
+        "zoneId": "ZONE-CAVE",
+        "point": {
+          "x": 480,
+          "y": 528
+        },
+        "kind": "portal",
+        "toSceneId": "REGION-HENG-YUE"
+      }
+    ]
+  },
+  "encounters": [
+    {
+      "id": "MOB-RAT",
+      "name": "Sơn thử",
+      "kind": "normal",
+      "zoneId": "ZONE-SPRING",
+      "point": {
+        "x": 1856,
+        "y": 384
+      },
+      "hp": 48,
+      "attack": 6,
+      "defense": 0,
+      "tuvi": 4,
+      "respawnSeconds": 15,
+      "spawnCount": 6,
+      "aggro": "passive",
+      "loot": [
+        {
+          "itemId": "MAT-HIDE",
+          "chance": 0.65,
+          "quantity": 1
+        }
+      ],
+      "source": "game_adaptation"
+    },
+    {
+      "id": "MOB-BEETLE",
+      "name": "Giáp trùng",
+      "kind": "normal",
+      "zoneId": "ZONE-GARDEN",
+      "point": {
+        "x": 2368,
+        "y": 1456
+      },
+      "hp": 100,
+      "attack": 9,
+      "defense": 2,
+      "tuvi": 6,
+      "respawnSeconds": 20,
+      "spawnCount": 6,
+      "aggro": "passive",
+      "loot": [
+        {
+          "itemId": "MAT-HERB",
+          "chance": 1,
+          "quantity": 1
+        }
+      ],
+      "source": "game_adaptation"
+    },
+    {
+      "id": "MOB-BOAR",
+      "name": "Sơn trư",
+      "kind": "normal",
+      "zoneId": "ZONE-PINE",
+      "point": {
+        "x": 800,
+        "y": 1584
+      },
+      "hp": 160,
+      "attack": 12,
+      "defense": 2,
+      "tuvi": 8,
+      "respawnSeconds": 25,
+      "spawnCount": 5,
+      "aggro": "passive",
+      "loot": [
+        {
+          "itemId": "MAT-HIDE",
+          "chance": 1,
+          "quantity": 1
+        }
+      ],
+      "source": "game_adaptation"
+    },
+    {
+      "id": "MOB-WOLF",
+      "name": "Hôi lang",
+      "kind": "normal",
+      "zoneId": "ZONE-PINE",
+      "point": {
+        "x": 1024,
+        "y": 2016
+      },
+      "hp": 210,
+      "attack": 15,
+      "defense": 2,
+      "tuvi": 10,
+      "respawnSeconds": 30,
+      "spawnCount": 6,
+      "aggro": "active_160px",
+      "loot": [
+        {
+          "itemId": "MAT-FANG",
+          "chance": 1,
+          "quantity": 1
+        }
+      ],
+      "source": "game_adaptation"
+    },
+    {
+      "id": "ELITE-WOLF",
+      "name": "Lang đầu đàn",
+      "kind": "elite",
+      "zoneId": "ZONE-RAVINE",
+      "point": {
+        "x": 3200,
+        "y": 1248
+      },
+      "hp": 600,
+      "attack": 18,
+      "defense": 4,
+      "tuvi": 50,
+      "respawnSeconds": 60,
+      "spawnCount": 1,
+      "aggro": "active_192px",
+      "loot": [
+        {
+          "itemId": "MAT-SPIRIT-SHARD",
+          "chance": 1,
+          "quantity": 2
+        }
+      ],
+      "source": "game_adaptation",
+      "mechanics": [
+        "Chuẩn bị 0,9 giây rồi lao thẳng; rời đường đòn để né."
+      ]
+    },
+    {
+      "id": "BOSS-WOLF",
+      "name": "Hắc Nha Yêu Lang",
+      "kind": "boss",
+      "zoneId": "ZONE-CAVE",
+      "point": {
+        "x": 480,
+        "y": 288
+      },
+      "hp": 1900,
+      "attack": 26,
+      "defense": 4,
+      "tuvi": 120,
+      "respawnSeconds": null,
+      "spawnCount": 1,
+      "aggro": "instance",
+      "loot": [
+        {
+          "itemId": "MAT-WOLF-CORE",
+          "chance": 1,
+          "quantity": 1
+        },
+        {
+          "itemId": "GEAR-STEEL-SWORD",
+          "chance": 0.15,
+          "quantity": 1,
+          "pityAtKill": 5
+        }
+      ],
+      "source": "game_adaptation",
+      "mechanics": [
+        {
+          "id": "SWEEP",
+          "name": "Quét vuốt",
+          "windupMs": 1100,
+          "shape": "cone",
+          "rangePx": 192,
+          "damage": 26,
+          "cooldownSeconds": 5,
+          "angleDegrees": 90
+        },
+        {
+          "id": "CHARGE",
+          "name": "Lao xuyên sân",
+          "windupMs": 1400,
+          "shape": "line",
+          "rangePx": 320,
+          "damage": 34,
+          "cooldownSeconds": 10,
+          "widthPx": 80
+        },
+        {
+          "id": "HOWL",
+          "name": "Hống khi HP dưới 50%",
+          "windupMs": 1600,
+          "shape": "circle",
+          "radiusPx": 112,
+          "damage": 20,
+          "cooldownSeconds": 12
+        }
+      ],
+      "maxMinions": 0,
+      "firstClearReward": "Q10 guaranteed gear choice"
+    }
+  ],
+  "items": [
+    {
+      "id": "GEAR-BAMBOO-SWORD",
+      "name": "Trúc kiếm",
+      "kind": "equipment",
+      "slot": "weapon",
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 1,
+      "source": "game_adaptation",
+      "stats": {
+        "attack": 6
+      }
+    },
+    {
+      "id": "GEAR-SECT-ROBE",
+      "name": "Áo ký danh",
+      "kind": "equipment",
+      "slot": "robe",
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 1,
+      "source": "game_adaptation",
+      "stats": {
+        "hp": 10,
+        "defense": 1
+      }
+    },
+    {
+      "id": "GEAR-STEEL-SWORD",
+      "name": "Thanh cương kiếm",
+      "kind": "equipment",
+      "slot": "weapon",
+      "rarity": "rare",
+      "bound": true,
+      "stackLimit": 1,
+      "source": "game_adaptation",
+      "stats": {
+        "attack": 12
+      }
+    },
+    {
+      "id": "GEAR-OUTER-ROBE",
+      "name": "Áo ngoại viện",
+      "kind": "equipment",
+      "slot": "robe",
+      "rarity": "rare",
+      "bound": true,
+      "stackLimit": 1,
+      "source": "game_adaptation",
+      "stats": {
+        "hp": 20,
+        "defense": 3
+      }
+    },
+    {
+      "id": "GEAR-CLOTH-BOOTS",
+      "name": "Giày vải",
+      "kind": "equipment",
+      "slot": "boots",
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 1,
+      "source": "game_adaptation",
+      "stats": {
+        "hp": 5
+      }
+    },
+    {
+      "id": "GEAR-WOOD-CHARM",
+      "name": "Hộ phù mộc",
+      "kind": "equipment",
+      "slot": "amulet",
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 1,
+      "source": "game_adaptation",
+      "stats": {
+        "mana": 10,
+        "defense": 1
+      }
+    },
+    {
+      "id": "POT-HEALTH",
+      "name": "Dưỡng khí đan",
+      "kind": "consumable",
+      "slot": null,
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 99,
+      "source": "game_adaptation"
+    },
+    {
+      "id": "POT-MANA",
+      "name": "Hồi linh tán",
+      "kind": "consumable",
+      "slot": null,
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 99,
+      "source": "game_adaptation"
+    },
+    {
+      "id": "MAT-HERB",
+      "name": "Sơn thảo",
+      "kind": "material",
+      "slot": null,
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 99,
+      "source": "game_adaptation"
+    },
+    {
+      "id": "MAT-RESIN",
+      "name": "Nhựa mộc",
+      "kind": "material",
+      "slot": null,
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 99,
+      "source": "game_adaptation"
+    },
+    {
+      "id": "MAT-FANG",
+      "name": "Nanh lang",
+      "kind": "material",
+      "slot": null,
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 99,
+      "source": "game_adaptation"
+    },
+    {
+      "id": "MAT-SPIRIT-SHARD",
+      "name": "Mảnh linh thạch",
+      "kind": "material",
+      "slot": null,
+      "rarity": "uncommon",
+      "bound": true,
+      "stackLimit": 99,
+      "source": "game_adaptation"
+    },
+    {
+      "id": "MAT-HIDE",
+      "name": "Da thú",
+      "kind": "material",
+      "slot": null,
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 99,
+      "source": "game_adaptation"
+    },
+    {
+      "id": "MAT-WOLF-CORE",
+      "name": "Tinh hạch yêu lang",
+      "kind": "material",
+      "slot": null,
+      "rarity": "rare",
+      "bound": true,
+      "stackLimit": 99,
+      "source": "game_adaptation"
+    },
+    {
+      "id": "QUEST-MANUAL",
+      "name": "Pháp quyết nhập môn",
+      "kind": "quest",
+      "slot": null,
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 99,
+      "source": "game_adaptation"
+    },
+    {
+      "id": "QUEST-TOKEN",
+      "name": "Lệnh ngoại viện",
+      "kind": "quest",
+      "slot": null,
+      "rarity": "common",
+      "bound": true,
+      "stackLimit": 99,
+      "source": "game_adaptation"
+    }
+  ],
+  "quests": [
+    {
+      "id": "Q01",
+      "name": "Tên trên danh sách",
+      "kind": "main",
+      "giverNpcId": "NPC-REGISTRY",
+      "zoneId": "ZONE-SECT",
+      "prerequisites": [],
+      "targetWindowMinutes": [
+        0,
+        1
+      ],
+      "rewardTuvi": 0,
+      "objectives": [
+        {
+          "type": "talk",
+          "targetId": "NPC-REGISTRY",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "items": [
+          [
+            "GEAR-BAMBOO-SWORD",
+            1
+          ],
+          [
+            "GEAR-SECT-ROBE",
+            1
+          ],
+          [
+            "POT-HEALTH",
+            3
+          ]
+        ],
+        "coins": 20
+      },
+      "dialogueOriginalForGame": true,
+      "dialogue": "Nhận áo và kiếm trước. Ở ngoại viện, làm đúng việc được giao cũng là một bước vào đạo.",
+      "minimumRealmLayer": 0
+    },
+    {
+      "id": "Q02",
+      "name": "Đường lấy nước",
+      "kind": "main",
+      "giverNpcId": "CHR-ZHANG-HU",
+      "zoneId": "ZONE-SPRING",
+      "prerequisites": [
+        "Q01"
+      ],
+      "targetWindowMinutes": [
+        1,
+        3
+      ],
+      "rewardTuvi": 40,
+      "objectives": [
+        {
+          "type": "kill",
+          "targetId": "MOB-RAT",
+          "count": 2
+        },
+        {
+          "type": "gather",
+          "targetId": "POI-SPRING",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "unlock": [
+          "auto_attack",
+          "enemy_target",
+          "story_card_TN10_TN11"
+        ]
+      },
+      "dialogueOriginalForGame": true,
+      "dialogue": "Ta còn phải kiếm củi. Ngươi đi suối phía đông thì chú ý lũ chuột ở bờ đá; bình nước đừng để chúng làm đổ.",
+      "minimumRealmLayer": 0
+    },
+    {
+      "id": "Q03",
+      "name": "Dẫn khí đầu tiên",
+      "kind": "main",
+      "giverNpcId": "NPC-REGISTRY",
+      "zoneId": "ZONE-SECT",
+      "prerequisites": [
+        "Q02"
+      ],
+      "targetWindowMinutes": [
+        3,
+        7
+      ],
+      "rewardTuvi": 60,
+      "objectives": [
+        {
+          "type": "train",
+          "targetId": "POI-TRAINING",
+          "count": 1
+        },
+        {
+          "type": "meditate_seconds",
+          "targetId": "POI-CULTIVATE",
+          "count": 15
+        }
+      ],
+      "rewards": {
+        "items": [
+          [
+            "QUEST-MANUAL",
+            1
+          ]
+        ],
+        "unlock": [
+          "realm_1",
+          "SKILL-SPIRIT",
+          "idle_cultivation"
+        ]
+      },
+      "dialogueOriginalForGame": true,
+      "dialogue": "Pháp quyết chỉ cho đường vào. Giữ tâm ổn định, rồi tự cảm nhận hơi linh khí đầu tiên.",
+      "minimumRealmLayer": 0
+    },
+    {
+      "id": "Q04",
+      "name": "Giữ sạch nguồn nước",
+      "kind": "main",
+      "giverNpcId": "CHR-ZHANG-HU",
+      "zoneId": "ZONE-SPRING",
+      "prerequisites": [
+        "Q03"
+      ],
+      "targetWindowMinutes": [
+        7,
+        10
+      ],
+      "rewardTuvi": 70,
+      "objectives": [
+        {
+          "type": "kill",
+          "targetId": "MOB-RAT",
+          "count": 4
+        }
+      ],
+      "rewards": {
+        "coins": 25,
+        "contribution": 10
+      },
+      "dialogueOriginalForGame": true,
+      "dialogue": "Đường này không chỉ có mình ngươi đi. Dọn chỗ nước đọng để đồng môn sau còn dùng được.",
+      "minimumRealmLayer": 1
+    },
+    {
+      "id": "Q05",
+      "name": "Lối ngoài dược viên",
+      "kind": "main",
+      "giverNpcId": "NPC-GARDEN",
+      "zoneId": "ZONE-GARDEN",
+      "prerequisites": [
+        "Q04"
+      ],
+      "targetWindowMinutes": [
+        10,
+        14
+      ],
+      "rewardTuvi": 80,
+      "objectives": [
+        {
+          "type": "kill",
+          "targetId": "MOB-BEETLE",
+          "count": 4
+        },
+        {
+          "type": "gather",
+          "targetId": "POI-HERBS",
+          "count": 2
+        }
+      ],
+      "rewards": {
+        "items": [
+          [
+            "POT-HEALTH",
+            2
+          ]
+        ],
+        "unlock": [
+          "crafting",
+          "upgrade_1",
+          "story_card_TN17"
+        ]
+      },
+      "dialogueOriginalForGame": true,
+      "dialogue": "Luống trong vườn do Tôn trưởng lão trông coi. Muốn lấy dược liệu thì tìm sơn thảo ở bãi ngoài.",
+      "minimumRealmLayer": 1
+    },
+    {
+      "id": "Q06",
+      "name": "Củi và dấu chân",
+      "kind": "main",
+      "giverNpcId": "CHR-ZHANG-HU",
+      "zoneId": "ZONE-PINE",
+      "prerequisites": [
+        "Q05"
+      ],
+      "targetWindowMinutes": [
+        14,
+        19
+      ],
+      "rewardTuvi": 100,
+      "objectives": [
+        {
+          "type": "kill",
+          "targetId": "MOB-BOAR",
+          "count": 3
+        },
+        {
+          "type": "gather",
+          "targetId": "POI-WOOD",
+          "count": 2
+        }
+      ],
+      "rewards": {
+        "items": [
+          [
+            "GEAR-CLOTH-BOOTS",
+            1
+          ]
+        ],
+        "unlock": [
+          "realm_2",
+          "SKILL-SHIELD"
+        ]
+      },
+      "dialogueOriginalForGame": true,
+      "dialogue": "Dạo này đường kiếm củi có dấu chân thú lớn. Nếu ngươi đã dẫn được khí, giúp ta nhìn qua.",
+      "minimumRealmLayer": 1
+    },
+    {
+      "id": "Q07",
+      "name": "Tuần đường hậu sơn",
+      "kind": "main",
+      "giverNpcId": "NPC-PATROL",
+      "zoneId": "ZONE-PINE",
+      "prerequisites": [
+        "Q06"
+      ],
+      "targetWindowMinutes": [
+        19,
+        23
+      ],
+      "rewardTuvi": 110,
+      "objectives": [
+        {
+          "type": "kill",
+          "targetId": "MOB-WOLF",
+          "count": 4
+        },
+        {
+          "type": "discover",
+          "targetId": "POI-RAVINE",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "coins": 40,
+        "contribution": 15
+      },
+      "dialogueOriginalForGame": true,
+      "dialogue": "Bầy sói đã tràn xuống đường rừng. Dẹp những con ở lối đi, rồi báo lại dấu vết ở khe đá.",
+      "minimumRealmLayer": 2
+    },
+    {
+      "id": "Q08",
+      "name": "Con đầu đàn",
+      "kind": "main",
+      "giverNpcId": "NPC-PATROL",
+      "zoneId": "ZONE-RAVINE",
+      "prerequisites": [
+        "Q07"
+      ],
+      "targetWindowMinutes": [
+        23,
+        27
+      ],
+      "rewardTuvi": 120,
+      "objectives": [
+        {
+          "type": "kill",
+          "targetId": "ELITE-WOLF",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "items": [
+          [
+            "MAT-SPIRIT-SHARD",
+            2
+          ]
+        ],
+        "unlock": [
+          "boss_portal"
+        ]
+      },
+      "dialogueOriginalForGame": true,
+      "dialogue": "Con đầu đàn không lao ngay. Thấy nó hạ vai thì tránh khỏi đường trước mặt.",
+      "minimumRealmLayer": 2
+    },
+    {
+      "id": "Q09",
+      "name": "Chuẩn bị vào hang",
+      "kind": "main",
+      "giverNpcId": "NPC-GARDEN",
+      "zoneId": "ZONE-GARDEN",
+      "prerequisites": [
+        "Q08"
+      ],
+      "targetWindowMinutes": [
+        27,
+        30
+      ],
+      "rewardTuvi": 100,
+      "objectives": [
+        {
+          "type": "craft",
+          "targetId": "RECIPE-HEALTH",
+          "count": 1
+        },
+        {
+          "type": "equip_slot",
+          "targetId": "amulet",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "items": [
+          [
+            "POT-MANA",
+            2
+          ]
+        ],
+        "unlock": [
+          "boss_entry_ready"
+        ]
+      },
+      "dialogueOriginalForGame": true,
+      "dialogue": "Chế sẵn một bình hồi phục, kiểm tra hộ phù rồi hãy đi.",
+      "minimumRealmLayer": 2
+    },
+    {
+      "id": "Q10",
+      "name": "Bình yên dưới chân núi",
+      "kind": "main",
+      "giverNpcId": "NPC-PATROL",
+      "zoneId": "ZONE-CAVE",
+      "prerequisites": [
+        "Q09"
+      ],
+      "targetWindowMinutes": [
+        30,
+        40
+      ],
+      "rewardTuvi": 180,
+      "objectives": [
+        {
+          "type": "kill",
+          "targetId": "BOSS-WOLF",
+          "count": 1
+        },
+        {
+          "type": "claim_first_clear",
+          "targetId": "POI-BOSS-CHEST",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "choice": [
+          [
+            "GEAR-STEEL-SWORD",
+            1
+          ],
+          [
+            "GEAR-OUTER-ROBE",
+            1
+          ]
+        ],
+        "items": [
+          [
+            "QUEST-TOKEN",
+            1
+          ]
+        ],
+        "contribution": 30,
+        "unlock": [
+          "realm_3",
+          "repeat_boss",
+          "mvp_a_complete"
+        ]
+      },
+      "dialogueOriginalForGame": true,
+      "dialogue": "Đường đã thông. Ngoại viện sẽ nhớ phần việc ngươi làm hôm nay.",
+      "minimumRealmLayer": 2
+    },
+    {
+      "id": "S01",
+      "name": "Nhìn lại con đường của đồng môn",
+      "kind": "side",
+      "giverNpcId": "CHR-WANG-LIN",
+      "zoneId": "ZONE-SECT",
+      "prerequisites": [
+        "Q03"
+      ],
+      "rewardTuvi": 0,
+      "objectives": [
+        {
+          "type": "read_story",
+          "targetId": "STORY-WANG-INIT",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "coins": 20
+      }
+    },
+    {
+      "id": "S02",
+      "name": "Mảnh hộ phù",
+      "kind": "side",
+      "giverNpcId": "NPC-GARDEN",
+      "zoneId": "ZONE-GARDEN",
+      "prerequisites": [
+        "Q05"
+      ],
+      "rewardTuvi": 0,
+      "objectives": [
+        {
+          "type": "gather",
+          "targetId": "MAT-RESIN",
+          "count": 2
+        }
+      ],
+      "rewards": {
+        "items": [
+          [
+            "MAT-RESIN",
+            2
+          ],
+          [
+            "MAT-HIDE",
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "R01",
+      "name": "Đường rừng thông thoáng",
+      "kind": "repeatable",
+      "giverNpcId": "NPC-PATROL",
+      "zoneId": "ZONE-PINE",
+      "prerequisites": [
+        "Q07"
+      ],
+      "rewardTuvi": 15,
+      "objectives": [
+        {
+          "type": "kill",
+          "targetId": "MOB-WOLF",
+          "count": 5
+        }
+      ],
+      "rewards": {
+        "coins": 30,
+        "contribution": 5
+      },
+      "cooldownSeconds": 0
+    },
+    {
+      "id": "R02",
+      "name": "Vật liệu dược phòng",
+      "kind": "repeatable",
+      "giverNpcId": "NPC-GARDEN",
+      "zoneId": "ZONE-GARDEN",
+      "prerequisites": [
+        "Q05"
+      ],
+      "rewardTuvi": 10,
+      "objectives": [
+        {
+          "type": "gather",
+          "targetId": "POI-HERBS",
+          "count": 3
+        }
+      ],
+      "rewards": {
+        "coins": 20,
+        "contribution": 3
+      },
+      "cooldownSeconds": 0
+    }
+  ],
+  "skills": [
+    {
+      "id": "SKILL-BASIC",
+      "name": "Đánh thường",
+      "unlock": "Q01",
+      "manual": false,
+      "rangePx": 80,
+      "intervalSeconds": 0.8,
+      "manaCost": 0,
+      "lineOfSightRequired": true
+    },
+    {
+      "id": "SKILL-SPIRIT",
+      "name": "Linh khí chỉ",
+      "unlock": "Q03",
+      "manual": true,
+      "rangePx": 192,
+      "cooldownSeconds": 6,
+      "manaCost": 8,
+      "baseDamage": 24
+    },
+    {
+      "id": "SKILL-SHIELD",
+      "name": "Hộ thân thuật",
+      "unlock": "Q06",
+      "manual": true,
+      "cooldownSeconds": 12,
+      "manaCost": 10,
+      "shieldHP": 20,
+      "durationSeconds": 4
+    }
+  ],
+  "progression": {
+    "realmThresholds": [
+      {
+        "layer": 1,
+        "cumulativeTuvi": 100,
+        "questId": "Q03"
+      },
+      {
+        "layer": 2,
+        "cumulativeTuvi": 400,
+        "questId": "Q06"
+      },
+      {
+        "layer": 3,
+        "cumulativeTuvi": 900,
+        "questId": "Q10"
+      }
+    ],
+    "breakthrough": "manual_server_atomic_quest_gate",
+    "tuviOnEnemyKills": true,
+    "killTuviIsGameAdaptation": true,
+    "overflow": "retained_in_bank_until_next_phase",
+    "idle": {
+      "unlock": "Q03",
+      "tuviPerMinute": 4,
+      "offlineCapHours": 8,
+      "locationId": "POI-CULTIVATE",
+      "stopAtPendingRealmGate": true,
+      "combatRewardsWhileAbsent": false
+    },
+    "startingHP": 100,
+    "startingMana": 60,
+    "statsPerLayer": {
+      "hp": 30,
+      "mana": 10,
+      "attack": 10
+    },
+    "baseAttack": 14,
+    "damageFormula": "max(1,attack-defense)",
+    "tuviQuestsAreCumulative": true,
+    "minimumMainPathTuvi": 1142
+  },
+  "recipes": [
+    {
+      "id": "RECIPE-HEALTH",
+      "name": "Dưỡng khí đan",
+      "ingredients": [
+        [
+          "MAT-HERB",
+          2
+        ]
+      ],
+      "coins": 5,
+      "result": [
+        "POT-HEALTH",
+        1
+      ],
+      "unlock": "Q05"
+    },
+    {
+      "id": "RECIPE-CHARM",
+      "name": "Hộ phù mộc",
+      "ingredients": [
+        [
+          "MAT-RESIN",
+          2
+        ],
+        [
+          "MAT-HIDE",
+          2
+        ]
+      ],
+      "coins": 10,
+      "result": [
+        "GEAR-WOOD-CHARM",
+        1
+      ],
+      "unlock": "Q05"
+    },
+    {
+      "id": "RECIPE-UPGRADE",
+      "name": "Cường hóa +1",
+      "ingredients": [
+        [
+          "MAT-SPIRIT-SHARD",
+          2
+        ]
+      ],
+      "coins": 20,
+      "result": "equipped_weapon_plus_one",
+      "unlock": "Q05",
+      "successChance": 1,
+      "maxUpgrade": 1
+    }
+  ],
+  "economy": {
+    "currencies": [
+      "coins",
+      "sect_contribution"
+    ],
+    "binding": "all_items_personal_bound_in_A",
+    "healthPotion": {
+      "restoreHP": 50,
+      "cooldownSeconds": 10
+    },
+    "manaPotion": {
+      "restoreMana": 30,
+      "cooldownSeconds": 10
+    },
+    "bossReentryCooldownSeconds": 45,
+    "firstBossGearSelectionGuaranteed": true,
+    "lootGrant": "atomic_encounter_id_character_id_once",
+    "rareWeaponPityKills": 5,
+    "death": "safe_respawn_no_loss_of_gear_quest_items_or_currencies"
+  },
+  "multiplayer": {
+    "openFarm": "shared_visible_mobs",
+    "questCredit": "eligible_participants_not_last_hit_only",
+    "participation": "valid_damage_in_last_20s_and_within_320px_at_death",
+    "boss": "one_player_private_instance_A",
+    "parties": "B",
+    "loot": "individual_rolls_no_ground_theft",
+    "persistentProgressRequiredForRelease": true
+  },
+  "implementation": {
+    "contentDesign": true,
+    "largeMapLocalLayoutPreview": true,
+    "questsPlayable": false,
+    "combatPlayable": false,
+    "persistentAccounts": false,
+    "existingOnlineRoom": "temporary_960x640_courtyard",
+    "nextMilestone": "map_art_design_and_owner_review",
+    "largeMapPreviewPassed": true,
+    "verificationPath": "docs/data/starter-region-verification.json"
+  },
+  "storyCards": [
+    {
+      "id": "STORY-WANG-INIT",
+      "unlockQuestId": "Q02",
+      "sourceRefs": [
+        "TN10",
+        "TN11"
+      ]
+    },
+    {
+      "id": "STORY-GARDEN",
+      "unlockQuestId": "Q05",
+      "sourceRefs": [
+        "TN17"
+      ]
+    },
+    {
+      "id": "STORY-WANG-ROAD",
+      "unlockQuestId": "Q10",
+      "sourceRefs": [
+        "TN10",
+        "TN17"
+      ]
+    }
+  ],
+  "review": {
+    "mapLayout": {
+      "by": "project_owner",
+      "date": "2026-10-07",
+      "feedback": "tôi đã xem khá ổn rồi",
+      "scope": "starter_region_layout_scale_and_local_walk_preview",
+      "level": "accepted_prototype_baseline",
+      "contentVersion": "rpg-a-1.0",
+      "runtimeVersion": "0.6.0"
+    },
+    "balance": "pending_playtest",
+    "combatGameplay": "not_implemented",
+    "pipeline": [
+      "map_art",
+      "map_scale_and_navigation",
+      "owner_map_review",
+      "quest_design_on_map",
+      "combat_loot_breakthrough_design",
+      "online_gameplay"
+    ],
+    "gameplayDesign": "draft_adjust_after_map_art_approval",
+    "mapAssetsReset": {
+      "date": "2026-10-08",
+      "status": "legacy_art_deleted_new_layout_to_be_authored_in_editor"
+    }
+  },
+  "mapArtSpecPath": "docs/MAP-ART-DESIGN.md"
+}

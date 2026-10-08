@@ -1,13 +1,14 @@
 # Định hướng ART — Tiên Nghịch: Hành Trình Vương Lâm
 
-**Phiên bản:** 1.6, ngày 07/10/2026.  
+**Phiên bản:** 1.7, ngày 07/10/2026.
+
 **Hướng hiện tại:** nhân vật pixel art + nền stylized 2D, top-down ba phần tư; portrait/truyện/UI giữ tranh mực và giấy cổ.  
 **Trạng thái:** định hướng và bảng tham chiếu; màu/font/diện mạo cụ thể là đề xuất để xem trong bố cục UX.  
 **Tham chiếu:** [UX](UX-MVP-A.md), [thành phần UI](UI-COMPONENTS.md), [asset](ASSET-PLAN.md), [bảng ART](design/art-reference-v1.png).
 
 **Điều chỉnh online:** người chơi tạo đệ tử riêng, Vương Lâm là NPC trung tâm của chính truyện. [CHARACTERS.md](CHARACTERS.md) và [thư viện tạo hình v1](design/characters/index.html) là hồ sơ nhân vật hiện tại. Bộ UX v0.6 còn cần điều chỉnh theo [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md).
 
-**Thử ghép từ GDD v0.11:** nhân vật pixel + nền stylized đã có [thử ghép v1](design/world/hybrid-study/index.html), nền/sprite riêng, cỡ 80/96/112 px và cảnh 1×/2×. [WORLD-VISUAL-SPEC.md](WORLD-VISUAL-SPEC.md) ghi kết quả quan sát; tỷ lệ/palette/lưới native cần duyệt trước bộ đứng/đi. Sân v2 và hai sprite thử cũ được giữ làm nguồn tham chiếu.
+**Thử ghép từ GDD v0.11:** nhân vật pixel + nền stylized đã có thử ghép v1 (bộ cũ đã xóa), nền/sprite riêng, cỡ 80/96/112 px và cảnh 1×/2×. [WORLD-VISUAL-SPEC.md](WORLD-VISUAL-SPEC.md) ghi kết quả quan sát; tỷ lệ/palette/lưới native cần duyệt trước bộ đứng/đi. Sân v2 và hai sprite thử cũ được giữ làm nguồn tham chiếu.
 
 **Nguồn diện mạo đã chốt:** mô tả tiểu thuyết, thiết kế riêng cho game. [WANG-LIN-VISUAL-SPEC.md](WANG-LIN-VISUAL-SPEC.md) xác định tuổi, ba bộ đồ, thần thái và biến thể cảnh; mặt/tóc, đường cắt áo và palette chi tiết vẫn là phần ART đề xuất.
 
@@ -19,9 +20,13 @@
 
 **Bộ ba trọng tâm:** người phát triển ưu tiên nhận diện Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển trước NPC phụ. [Gói tạo hình](design/characters/core-trio-v1/index.html) bổ sung hai concept và tám mẫu tĩnh; [hồ sơ nguồn](CORE-CHARACTER-VISUAL-SPEC.md) tách lời thoại/dạng nguyên anh của Tư Đồ Nam và áo đỏ/tím của Lý Mộ Uyển. Tư Đồ Nam đứng v3 và Lý Mộ Uyển dùng khung 64 × 96; dạng ngồi Tư Đồ Nam 128 × 128 được lưu riêng. Lý Mộ Uyển v1 đã được chấp nhận. Tư Đồ Nam đứng v3 giữ mặt rộng/tóc đen buộc thấp của v2; điểm chiếu (32, 88), hình lơ lửng cao 4 px. Tư thế đứng là ART cho tương tác MMORPG, mẫu v3 đã tạm chấp nhận làm chuẩn thiết kế, ART sẽ hoàn thiện theo phản hồi sau.
 
-**Chân dung UI v1:** [ba chân dung](design/characters/core-ui-v1/index.html) dùng nhận diện hiện tại, tranh mực có alpha trên nền UI giấy/tối. Một biểu cảm/người, PNG/WebP 512/160/64; nguồn/master giữ riêng, WebP giao web đạt ngân sách 120/24/8 KB. Hình mới chờ đánh giá. [Kế hoạch động tác](CORE-CHARACTER-MOTION-PLAN.md) ghi thêm 64 frame sau khi sản xuất các bộ theo giai đoạn, chưa là animation đã có.
+**Dàn chibi hiện tại:** [quy chuẩn](CHIBI-ROSTER-SPEC.md) và [gallery](design/characters/chibi-roster-v1/index.html) có năm mẫu/100 frame theo Vương Lâm. Bốn bộ mới gồm hai đệ tử, Tư Đồ Nam đứng/lướt và Lý Mộ Uyển làm lại toàn bộ mặt/tóc/áo. Bộ mới chờ đánh giá; mẫu tĩnh/nhận diện v1 phía trên là lịch sử.
+
+**Chân dung UI v1:** [ba chân dung](design/characters/core-ui-v1/index.html) giữ diện mạo trước, tranh mực có alpha trên nền UI giấy/tối. Một biểu cảm/người, PNG/WebP 512/160/64; WebP đạt ngân sách 120/24/8 KB. Lý Mộ Uyển cần đồng bộ portrait sau khi chọn diện mạo chibi mới. [Kế hoạch động tác](CORE-CHARACTER-MOTION-PLAN.md) ghi 60 frame core đã có, 16 frame lơ lửng/luyện đan bổ sung chưa vẽ.
 
 **Preview trước animation mới:** client đã chọn TypeScript + Three.js. [Đặc tả preview](ANIMATION-PREVIEW-SPEC.md) dùng camera orthographic cố định, texture pixel lấy mẫu nearest và điểm chiếu từ metadata; nền/portrait giữ sampling mượt. Dùng năm bộ hiện có để kiểm công cụ trước sản xuất thêm động tác. Framework đồ họa không tự đổi ART 2D thành map 3D.
+
+**Quy tắc sản xuất map:** áp dụng [MAP-BUILDING-GUIDE.md](MAP-BUILDING-GUIDE.md). Giữ ART tổng làm chuẩn bố cục; nguồn native, cụm tĩnh và phần che được tổ chức từ đầu, alpha đúng silhouette. [Đoạn ngoại viện mẫu](MAP-COURTYARD-PILOT-PLAN.md) làm trước toàn vùng; ảnh lỗi0.9.0 (bộ cũ đã xóa) phải xem khi kiểm alpha/nền dưới. Test ghép khớp ảnh không thay review hình khi mờ.
 
 ## 1. Cảm giác và cách thể hiện
 
@@ -46,7 +51,7 @@ Bảng này là tài liệu tham chiếu. Trong bản phác UX, tranh được c
 
 Đã bổ sung 3 bảng concept bằng imagegen tích hợp: [Vương Lâm nhập môn](design/characters/wang-lin-initiation-v1.png), [đệ tử nam](design/characters/player-male-novice-v1.png), [đệ tử nữ](design/characters/player-female-novice-v1.png). Prompt chính xác lưu cạnh từng hình, liên kết trong [CHARACTERS.md](CHARACTERS.md). Chúng bổ sung việc nghiên cứu mặt/tóc/trang phục; nguồn portrait game sẽ làm sau khi duyệt.
 
-[ART sân môn phái v2](design/world/sect-courtyard-topdown-v2.png) được tạo bằng imagegen tích hợp: [v1](design/world/sect-courtyard-topdown-v1.png)/[prompt đầu](design/world/sect-courtyard-topdown-v1.prompt.txt), rồi chỉnh mức chi tiết theo [prompt v2](design/world/sect-courtyard-topdown-v2.prompt.txt). Hình thử khối cảnh và tỷ lệ người nhỏ; [mẫu UI v1](design/world/index.html) dùng v2 và cho xem khung 960/360 px. Cảnh/nhân vật còn chung một ảnh, chưa là tileset hoặc sprite đã duyệt.
+ART sân môn phái v2 (bộ cũ đã xóa) được tạo bằng imagegen tích hợp: v1 (bộ cũ đã xóa)/prompt đầu (bộ cũ đã xóa), rồi chỉnh mức chi tiết theo prompt v2 (bộ cũ đã xóa). Hình thử khối cảnh và tỷ lệ người nhỏ; mẫu UI v1 (bộ cũ đã xóa) dùng v2 và cho xem khung 960/360 px. Cảnh/nhân vật còn chung một ảnh, chưa là tileset hoặc sprite đã duyệt.
 
 ## 3. Bảng màu UI đề xuất
 

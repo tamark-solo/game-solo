@@ -1,10 +1,14 @@
 # Công cụ preview animation và di chuyển — v1
 
-**Phiên bản:** 0.4, ngày 07/10/2026.  
+**Phiên bản:** 0.6, ngày 07/10/2026.
 **Mục đích:** xem animation thật từ atlas và đánh giá cảm giác di chuyển trên map trước khi vẽ thêm bộ động tác.  
 **Công nghệ đã chọn:** TypeScript + Three.js; [quyết định client](TECH-STACK.md).  
 **Trạng thái:** đã có ứng dụng Three.js chạy được và chế độ sân chung với backend Node.js + Colyseus; [hướng dẫn](PREVIEW-RUNBOOK.md), [hợp đồng backend](BACKEND-PREVIEW.md), [kết quả kiểm tra](data/preview-verification.json).  
 **Tham chiếu:** [dữ liệu cấu hình](data/client-tech-preview-design.json), [kế hoạch động tác](CORE-CHARACTER-MOTION-PLAN.md), [lưới Vương Lâm](WANG-LIN-SPRITE-SPEC.md), [ART/map](WORLD-VISUAL-SPEC.md).
+
+**Runtime 0.6.0:** thêm [vùng nhập môn đi thử](STARTER-REGION-MAP.md) tại `/starter-region.html`, giữ cùng renderer/atlas/anchor và tỷ lệ 1×. Map bố trí 3840 × 2560 và hang 960 × 640 dùng dữ liệu RPG-A; nhiệm vụ/quái chưa chạy gameplay, online vẫn phòng sân tạm. [MVP mới](MVP-RPG-A.md) thay phạm vi gameplay idle cũ.
+
+**Cập nhật runtime 0.5.1:** trang chính mặc định chọn [Vương Lâm chibi](design/characters/wang-lin-chibi-walk-v1/README.md). [Bốn bộ chibi mới](CHIBI-ROSTER-SPEC.md) dùng cùng tỷ lệ; Lý Mộ Uyển có mặt/tóc/trang phục mới, Tư Đồ Nam có pose lướt. Catalog gồm năm bộ chibi/100 frame và Vương Lâm trước 36 frame. Chibi thử 5 FPS tại chỗ, 24 px/vòng và 40 px/s trên map, đủ WASD/phím mũi tên và cảm ứng. Gallery chung tại `/assets/chibi-roster/index.html`. Online dùng hai đệ tử chibi mới và sải 48 px/vòng.
 
 ## 1. Các chế độ trong một công cụ
 
@@ -22,15 +26,16 @@ Phân biệt **FPS animation tại chỗ** với nhịp bước trên map và nh
 
 | Actor | Bộ nguồn hiện tại | Frame riêng | Có thể xem |
 | --- | --- | --- | --- |
+| Vương Lâm chibi · mặc định | [Bộ bốn hướng v2](design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.json) | 20 | 4 đứng + 16 đi; chuẩn tỷ lệ đã chọn |
 | Vương Lâm áo xám | [Bộ sửa tay/chân](design/characters/gait-correction-v1/wang-lin/native-v1/atlas.json) | 36 | 4 đứng giữ nguyên + 32 đi; frame mới chờ đánh giá |
-| Đệ tử nam | [Bộ sửa tay/chân](design/characters/gait-correction-v1/male/native-v1/atlas.json) | 36 | 4 đứng giữ nguyên + 32 đi; nhận diện/motion còn đánh giá |
-| Đệ tử nữ | [Bộ sửa tay/chân](design/characters/gait-correction-v1/female/native-v1/atlas.json) | 36 | 4 đứng giữ nguyên + 32 đi; nhận diện/motion còn đánh giá |
-| Tư Đồ Nam linh thể đứng | [native-v4](design/characters/core-trio-v1/situ-nan/native-v4/atlas.json) | 4 | Đứng tĩnh bốn hướng, tạm chấp nhận làm chuẩn |
-| Lý Mộ Uyển áo tím | [native-v2](design/characters/core-trio-v1/li-muwan/native-v2/atlas.json) | 4 | Đứng tĩnh bốn hướng |
+| Đệ tử nam chibi | [native-v2](design/characters/chibi-roster-v1/male/native-v2/atlas.json) | 20 | 4 đứng + 16 đi, dùng trên sân online |
+| Đệ tử nữ chibi | [native-v2](design/characters/chibi-roster-v1/female/native-v2/atlas.json) | 20 | 4 đứng + 16 đi, dùng trên sân online |
+| Tư Đồ Nam linh thể chibi | [native-v2](design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.json) | 20 | 4 đứng lơ lửng + 16 lướt |
+| Lý Mộ Uyển · diện mạo mới | [native-v5](design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.json) | 20 | 4 đứng + 16 đi; mặt/tóc/áo mới chờ đánh giá |
 
-Tổng đang dùng cho preview là **5 bộ / 116 frame**. Core hiện có 44; hai bộ đệ tử có 72 frame riêng. Bản preview đầu dùng 92 frame cũ; sau phản hồi tay/chân, [gói sửa](GAIT-CORRECTION.md) vẽ lại 96 frame đi. Không cộng atlas cũ vào tổng đang chạy. [Trang so sánh](design/characters/gait-correction-v1/index.html) giữ hai bản để xem cùng thời lượng vòng bước.
+**6 bộ / 136 frame** đang nạp: bộ ba chibi 60 + hai đệ tử chibi 40 + Vương Lâm trước 36. Các mẫu tĩnh, bộ tám pose/hướng và pilot Đông cũ được lưu lịch sử; không cộng vào số đang dùng. [Gallery mới](design/characters/chibi-roster-v1/index.html) cho xem cùng hướng/pha/nền; [gói sửa trước](GAIT-CORRECTION.md) giữ để đối chiếu.
 
-Tư Đồ Nam/Lý Mộ Uyển có thể dịch chuyển hình tĩnh để thử đặt hình/tỷ lệ; UI ghi rõ **“Di chuyển với hình tĩnh”**. Động tác chưa có bị khóa, không đặt tên lướt/đi cho bộ chỉ có một frame. Animation được thêm khi có atlas mới.
+Tư Đồ Nam có bốn pose lướt mỗi hướng, UI ghi **“Lướt”** theo `movementKind: glide`; clip dữ liệu vẫn dùng `walk_*` để chung bộ điều khiển di chuyển. Đứng lơ lửng hiện là một frame mỗi hướng; vòng dao động tại chỗ chưa được vẽ. Bộ tĩnh nếu nạp lại vẫn phải khóa động tác chưa có.
 
 Map thử là fixture ART; chọn nhân vật ở đây không mở NPC trong game hoặc đổi mốc B/arc sau.
 
@@ -47,7 +52,7 @@ Hai schema đang có được chuẩn hóa thành dữ liệu nội bộ dùng c
 | frames | Frame ID → rectangle x/y/w/h trong atlas |
 | animations | stand_* và walk_* giữ tên; static_* chỉ ánh xạ thành stand_* |
 | supportedStates | Chỉ lấy trạng thái có dữ liệu; không tạo animation dựa vào tên nhân vật |
-| hoverHeight | Giá trị nguồn, Tư Đồ Nam hiện 4 px; đây là khoảng đặt hình tĩnh |
+| hoverHeight | Giá trị nguồn, Tư Đồ Nam 4 px trong cả đứng và lướt; điểm chiếu giữ ở (32,88) |
 | provenance/review | Giữ trạng thái duyệt và hình thái/trang phục của nguồn |
 
 Kiểm tra khi nạp: PNG/JSON tồn tại, kích thước atlas/rectangle hợp lệ, điểm neo trong frame, frame ID tham chiếu đủ, bốn hướng đúng tên, số frame đọc từ dữ liệu. Khi lỗi, hiển thị tên bộ/file và lý do; giữ UI dùng được để chọn bộ khác.
@@ -73,7 +78,7 @@ Vị trí logic và camera giữ số thực để nền tranh cuộn liên tụ
 
 ## 5. Map thử và di chuyển
 
-Dùng [sân trống tham chiếu](design/world/hybrid-study/sect-courtyard-empty-v1.png) hoặc nền lưới để xem tỷ lệ. Không dùng ảnh đã vẽ sẵn nhân vật làm nền động. Trên map thử đặt thêm fixture tường, lối hẹp và vật cao để xét va chạm/lớp; các collider này không suy tự động từ màu ảnh.
+Dùng sân trống tham chiếu (bộ cũ đã xóa) hoặc nền lưới để xem tỷ lệ. Không dùng ảnh đã vẽ sẵn nhân vật làm nền động. Trên map thử đặt thêm fixture tường, lối hẹp và vật cao để xét va chạm/lớp; các collider này không suy tự động từ màu ảnh.
 
 Giá trị mặc định đề xuất để thử:
 

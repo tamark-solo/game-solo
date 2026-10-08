@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dàn nhân vật chibi · Tiên Nghịch</title>
+  <link rel="icon" href="data:,">
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f3ebdd;color:#252722;font:16px/1.6 'Segoe UI',Arial,sans-serif}main{max-width:1220px;margin:auto;padding:28px 20px 50px}h1,h2{font-family:Cambria,serif}h1{margin:8px 0;font-size:32px}h2{font-size:20px;margin:0}p{margin:8px 0 16px}a{color:#245c53}.eyebrow{font-size:12px;letter-spacing:.12em;color:#605e54}.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:24px 0;padding:16px;border:1px solid #cfc1a8;border-radius:10px;background:#fbf7ee}.group{display:flex;gap:5px;align-items:center;flex-wrap:wrap}button,select{font:inherit;min-height:44px;border:1px solid #7a7464;border-radius:6px;background:#fbf7ee;color:#252722;padding:7px 12px;cursor:pointer}button[aria-pressed=true],button.primary{background:#245c53;color:#fbf7ee}button:disabled{opacity:.45;cursor:default}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #378576;outline-offset:3px}label{display:flex;gap:8px;align-items:center}input[type=range]{max-width:130px;accent-color:#245c53}.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;--zoom:2}.card{min-width:0;border:1px solid #cfc1a8;border-radius:10px;background:#fbf7ee;padding:18px 12px;text-align:center}.caption{font-size:13px;color:#605e54;margin:4px 0 16px}.viewport{position:relative;width:calc(64px * var(--zoom));height:calc(96px * var(--zoom));max-width:none;margin:0 auto;background:#eee6d7;overflow:hidden}.sprite{position:absolute;left:0;top:0;width:64px;height:96px;transform:scale(var(--zoom));transform-origin:top left;image-rendering:pixelated;background-repeat:no-repeat}.ground{position:absolute;left:0;right:0;top:calc(88px * var(--zoom));border-top:1px dashed #963f3380;pointer-events:none}.frame{font-size:12px;color:#605e54;overflow-wrap:anywhere;margin:14px 0 0}.dark .viewport{background:#242329}.note{font-size:14px;color:#605e54}.scroll{overflow-x:auto}.cards.zoom4{grid-template-columns:repeat(5,280px)}@media(max-width:980px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:580px){main{padding:20px 14px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{padding:14px 6px}h1{font-size:27px}h2{font-size:18px}.controls{padding:12px}}
+  </style>
+</head>
+<body>
+<main>
+  <span class="eyebrow">TIÊN NGHỊCH · NHÂN VẬT PIXEL</span>
+  <h1>Dàn nhân vật chibi</h1>
+  <p>Vương Lâm làm chuẩn tỷ lệ. Hai đệ tử giữ đai xanh; Lý Mộ Uyển áo tím, tóc buộc thấp; Tư Đồ Nam linh thể đứng lơ lửng.</p>
+  <p><a href="/" id="preview-link">Thử di chuyển trong preview ↗</a></p>
+  <div class="controls">
+    <label>Động tác <select id="motion"><option value="walk">Đi / Lướt</option><option value="stand">Đứng</option></select></label>
+    <div class="group" aria-label="Hướng"><button data-direction="south" aria-pressed="true">↓ Nam</button><button data-direction="west" aria-pressed="false">← Tây</button><button data-direction="east" aria-pressed="false">→ Đông</button><button data-direction="north" aria-pressed="false">↑ Bắc</button></div>
+    <div class="group"><button id="previous" aria-label="Frame trước">‹</button><button id="pause" class="primary">Tạm dừng</button><button id="next" aria-label="Frame sau">›</button></div>
+    <label>Nhịp <input type="range" id="fps" min="1" max="12" value="5"><output id="fps-label">5 FPS</output></label>
+    <label>Cỡ xem <select id="zoom"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select></label>
+    <label>Nền <select id="backdrop"><option value="paper">Giấy sáng</option><option value="dark">Mực tối</option></select></label>
+  </div>
+  <div class="scroll"><section class="cards" id="cards" aria-label="So sánh năm nhân vật"></section></div>
+  <p class="note">Các khung dùng cùng lưới 64 × 96 và điểm đặt (32, 88). Đường đứt biểu thị mặt đất; Tư Đồ Nam có khoảng lơ lửng 4 px. Lý Mộ Uyển mới đã được chấp nhận làm chuẩn bản thử; hai đệ tử và Tư Đồ Nam chibi còn chờ đánh giá.</p>
+</main>
+<script src="./gallery-data.js"></script>
+<script src="./gallery.js"></script>
+</body>
+</html>

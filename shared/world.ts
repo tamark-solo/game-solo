@@ -36,6 +36,11 @@ export function isWalkable(position: Position, radius = WORLD.radius): boolean {
 }
 
 export function move(motion: Motion, rawInput: Input, dt: number, speed = WORLD.speed): Motion {
+  return moveUsingCollision(motion, rawInput, dt, speed, position => isWalkable(position));
+}
+
+export function moveUsingCollision(motion: Motion, rawInput: Input, dt: number, speed: number,
+  walkable: (position: Position) => boolean): Motion {
   const input = normalizeInput(rawInput);
   let direction = motion.direction;
   if (Math.abs(input.x) > Math.abs(input.y)) direction = input.x > 0 ? 'east' : 'west';
@@ -51,9 +56,9 @@ export function move(motion: Motion, rawInput: Input, dt: number, speed = WORLD.
   const steps = Math.max(1, Math.ceil(distance / 4));
   for (let i = 0; i < steps; i++) {
     const nextX = x + input.x * distance / steps;
-    if (isWalkable({ x: nextX, y })) x = nextX;
+    if (walkable({ x: nextX, y })) x = nextX;
     const nextY = y + input.y * distance / steps;
-    if (isWalkable({ x, y: nextY })) y = nextY;
+    if (walkable({ x, y: nextY })) y = nextY;
   }
   return { x, y, direction, moving: Math.hypot(x - motion.x, y - motion.y) > 0.001 };
 }

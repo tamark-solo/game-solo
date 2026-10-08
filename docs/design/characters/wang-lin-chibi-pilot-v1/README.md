@@ -2,7 +2,9 @@
 
 Xem **http://127.0.0.1:5173/chibi-pilot.html** sau `npm.cmd run dev`. Trang dùng chung Three.js renderer với phòng thử chính; có đứng/đi, bước pose, zoom và đi trên sân bằng D/→ hoặc nút giữ trên mobile.
 
-**Trạng thái:** mẫu tỷ lệ mới sau khi người phát triển chọn đầu lớn/thân gọn theo [reference Pinterest](https://www.pinterest.com/pin/480196379041020113/). Các frame mới chờ đánh giá nhận diện/chuyển động. Chỉ có hướng Đông; chưa thay các bộ trong sân online.
+Mẫu được giữ để đối chiếu hướng Đông đã nhận phản hồi tích cực. Trang chính **http://127.0.0.1:5173/** hiện mặc định dùng [bộ chibi bốn hướng](../wang-lin-chibi-walk-v1/README.md), giữ nguyên 5 frame Đông của mẫu này và bổ sung 15 frame. Bản online của đệ tử dùng bộ riêng.
+
+**Trạng thái:** mẫu tỷ lệ sau khi người phát triển chọn đầu lớn/thân gọn theo [reference Pinterest](https://www.pinterest.com/pin/480196379041020113/). Hướng Đông nhận phản hồi tích cực, làm chuẩn thử cho bộ đầy đủ. Trang đối chiếu này chỉ có hướng Đông.
 
 ## Nguồn và prompt
 

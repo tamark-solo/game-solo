@@ -1,9 +1,11 @@
 # Dàn nhân vật và tạo hình — bản online
 
-**Phiên bản:** 1.3, ngày 07/10/2026.  
+**Phiên bản:** 1.4, ngày 07/10/2026.
 **Hướng hiện tại:** MMORPG có idle, đệ tử riêng; nhân vật pixel art trên nền stylized 2D/top-down ba phần tư. Portrait/truyện giữ tranh mực/giấy cổ.  
-**Đã chốt:** ba nhân vật trọng tâm Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển; ưu tiên tạo hình bộ ba trước NPC phụ. **Đã duyệt:** nhận diện Vương Lâm v2 và Lý Mộ Uyển v1. **Tạm chấp nhận:** Tư Đồ Nam đứng v3 làm chuẩn thiết kế. **Còn đánh giá:** hai đệ tử và phạm vi NPC/tùy biến.  
+**Đã chốt:** ba nhân vật trọng tâm Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển; ưu tiên bộ ba trước NPC phụ. Vương Lâm chibi làm chuẩn tỷ lệ. Lý Mộ Uyển native-v5 đã chấp nhận làm chuẩn bản thử; hai đệ tử và Tư Đồ Nam chibi mới còn chờ đánh giá. Các trạng thái v1 dưới đây thuộc hình tham chiếu trước.
 **Tham chiếu:** [GDD](GDD.md), [định hướng online](ONLINE-DIRECTION.md), [ART](ART-DIRECTION.md), [hồ sơ Vương Lâm](WANG-LIN-VISUAL-SPEC.md), [roster dữ liệu](data/character-roster.json), [thư viện tạo hình](design/characters/index.html).
+
+**Bộ đang dùng trên map:** [năm mẫu chibi](CHIBI-ROSTER-SPEC.md), mỗi mẫu 20 frame, bốn hướng và điểm đặt (32,88). Hai đệ tử dùng trên sân online. Tư Đồ Nam đứng/lướt; Lý Mộ Uyển mới có tóc xanh đen buộc thấp và áo lavender hai lớp. Thời điểm xuất hiện và số nhân vật không đổi.
 
 **Nguồn tạo hình đã chọn:** mô tả tiểu thuyết và diện mạo riêng của game. Nhận diện Vương Lâm v2 đã được người phát triển duyệt. [Bộ native đầu tiên](WANG-LIN-SPRITE-SPEC.md) có 28 frame 64 × 96, gồm đứng và đi bốn hướng; xem tại [trang animation](design/characters/wang-lin-gray-walk-v1/index.html).
 
@@ -41,11 +43,11 @@ Mẫu nam v2 có mặt rộng/hàm hơi vuông, vai rộng và búi tóc cao g�
 
 Trong A, tùy biến giới hạn ở hai mẫu và tên. Bộ trộn mặt/tóc, nhuộm trang phục, trang phục bán hàng và nhiều lớp nhân vật cần một kế hoạch khác; số lượng mẫu không quyết định số lượng người được chơi.
 
-[Mẫu màn thế giới v1](design/world/index.html) thể hiện đệ tử ở cỡ khoảng 85 px trong khung cảnh rộng 960 px. Tỷ lệ 4–5 đầu và cỡ này là đề xuất, không thay việc duyệt mặt/trang phục của concept v1. [WORLD-VISUAL-SPEC.md](WORLD-VISUAL-SPEC.md) ghi phần kiểm tra trước bộ sprite.
+Mẫu màn thế giới v1 (bộ cũ đã xóa) thể hiện đệ tử ở cỡ khoảng 85 px trong khung cảnh rộng 960 px. Tỷ lệ 4–5 đầu và cỡ này là đề xuất, không thay việc duyệt mặt/trang phục của concept v1. [WORLD-VISUAL-SPEC.md](WORLD-VISUAL-SPEC.md) ghi phần kiểm tra trước bộ sprite.
 
 Sau [thử Vương Lâm nét mịn/pixel](design/characters/wang-lin-sprite-study/index.html), người phát triển ưu tiên pixel art cho nhân vật trên map. Bản pixel dùng nghiên cứu nhận diện, chưa xác nhận tỷ lệ 4–5 đầu hoặc frame native. Mẫu sân cũ giữ tham chiếu nền/bố cục và chưa đổi hình người trong ảnh. Roster/số NPC không đổi do lựa chọn mỹ thuật.
 
-Đã có [thử ghép Vương Lâm pixel v1](design/world/hybrid-study/index.html), giữ PNG nhân vật gốc trên nền sân riêng với cỡ 80/96/112 px. Nhãn vẫn là nhân vật truyện. Bản thử giúp duyệt tỷ lệ/lưới trước khi tạo sprite cho đệ tử người chơi và các NPC khác.
+Đã có thử ghép Vương Lâm pixel v1 (bộ cũ đã xóa), giữ PNG nhân vật gốc trên nền sân riêng với cỡ 80/96/112 px. Nhãn vẫn là nhân vật truyện. Bản thử giúp duyệt tỷ lệ/lưới trước khi tạo sprite cho đệ tử người chơi và các NPC khác.
 
 ## 3. Ba nhân vật trọng tâm dài hạn
 

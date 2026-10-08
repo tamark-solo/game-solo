@@ -1,9 +1,14 @@
 # Hình ảnh trên map — nhân vật pixel art, nền stylized 2D
 
-**Phiên bản:** 0.7, ngày 07/10/2026.  
+**Phiên bản:** 0.8, ngày 07/10/2026.
+
 **Hướng đã chọn:** nhân vật pixel art chibi đầu lớn/thân gọn + nền stylized 2D; top-down ba phần tư, thấy mặt/thân.  
-**Mẫu mới:** [Vương Lâm chibi một hướng](GAIT-REFERENCE-REVIEW.md), 1 đứng + 4 pose đi, frame 64 × 96, palette 24 mục. **Còn đánh giá:** tỷ lệ/motion của mẫu và việc mở các hướng/nhân vật khác.  
-**Tham chiếu:** [GDD](GDD.md), [MMORPG](MMORPG-DIRECTION.md), [ART](ART-DIRECTION.md), [nhân vật](CHARACTERS.md), [mẫu màn thế giới](design/world/index.html).
+**Chuẩn hiện tại:** [năm bộ chibi](CHIBI-ROSTER-SPEC.md), mỗi mẫu 20 frame bốn hướng, 64 × 96 và chân (32,88). Vương Lâm làm chuẩn, Lý Mộ Uyển mới được chấp nhận cho bản thử; hai đệ tử/Tư Đồ Nam mới còn đánh giá.
+**Tham chiếu:** [GDD](GDD.md), [MMORPG](MMORPG-DIRECTION.md), [ART](ART-DIRECTION.md), [nhân vật](CHARACTERS.md), mẫu màn thế giới (bộ cũ đã xóa).
+
+**Map mới:** [vùng nhập môn](STARTER-REGION-MAP.md) rộng 3840 × 2560 và hang 960 × 640. Mở kích thước thế giới/camera cuộn, giữ cao khoảng 80 px ở 1×; không thu nhỏ người hoặc kéo ảnh sân cũ. Các nghiên cứu một hướng/nền ở mục sau giữ lịch sử.
+
+**Chuẩn dựng map từ review0.9.0:** đọc [quy tắc xây map](MAP-BUILDING-GUIDE.md) và [kế hoạch đoạn native mẫu](MAP-COURTYARD-PILOT-PLAN.md). Giữ bố cục/mật độ tham chiếu, nguồn rõ ở1×, gom cụm cùng quan hệ trước/sau, tách phần che cần điều khiển; nền dưới đầy đủ và alpha sạch. Các nghiên cứu/mask từ ảnh tổng phóng hiện tại là prototype, không là cách xuất ART sản xuất.
 
 ## 1. Ba nhóm hình dùng trong game
 
@@ -23,7 +28,7 @@ Sau thử Vương Lâm, người phát triển ưu tiên pixel art cho nhân v�
 - Nhân vật giữ cạnh pixel rõ; nền dùng khối lớn và texture nhẹ để người nhỏ vẫn nổi bật.
 - Chuẩn hóa nhân vật về lưới pixel và cỡ native trước animation; kiểm tra mức phóng nguyên và camera để cạnh pixel nhất quán.
 - Tên, mục tiêu và phản hồi do UI vẽ; portrait hội thoại giữ mức chi tiết riêng.
-- Thử cảnh ghép trước khi chốt palette/kích thước; đã có [nghiên cứu ghép v1](design/world/hybrid-study/index.html), các cỡ/lưới vẫn chờ duyệt.
+- Thử cảnh ghép trước khi chốt palette/kích thước; đã có nghiên cứu ghép v1 (bộ cũ đã xóa), các cỡ/lưới vẫn chờ duyệt.
 
 ## 2. Quy chuẩn góc nhìn
 
@@ -38,10 +43,10 @@ Sau thử Vương Lâm, người phát triển ưu tiên pixel art cho nhân v�
 
 | Nội dung | Giá trị thử | Trạng thái |
 | --- | --- | --- |
-| Tỷ lệ nhân vật trên map | Chibi đầu lớn/thân gọn; thử khoảng 2,5–3 đầu | Người phát triển chọn học cả tỷ lệ reference; mẫu mới chờ đánh giá |
+| Tỷ lệ nhân vật trên map | Chibi đầu lớn/thân gọn khoảng 2,5–3 đầu | Giữ chuẩn Vương Lâm đã được dùng cho dàn mới |
 | Khung cảnh để xem tỷ lệ | 960 × 640 px | Khung minh họa của trang thiết kế |
 | Chiều cao nhân vật hiển thị | Bộ native áo xám đầu tiên khoảng 80–82 px ở 1× | Đã xuất; xem trên sân tham chiếu |
-| Hướng nhân vật | 4 hướng đứng/đi | Đã có 4 đứng/24 đi cho Vương Lâm áo xám |
+| Hướng nhân vật | 4 hướng đứng/đi/lướt theo bộ | Năm mẫu chibi có 4 đứng/16 chuyển động mỗi mẫu |
 | Frame nhân vật | 64 × 96; chân (32, 88) | Chuẩn bộ đầu tiên; độc lập ô map/va chạm |
 
 Mục tiêu 80–96 px ở bảng là cỡ hiển thị đã đề xuất trước; cỡ native và hệ số phóng pixel cần thiết kế riêng. Hai PNG thử 1.254 × 1.254 là ảnh tham chiếu lớn, không tự trở thành frame native 64 × 96.
@@ -52,21 +57,21 @@ Khung 360 px trong trang mẫu cắt vùng quanh nhân vật từ cùng ảnh hi
 
 Mẫu dưới đây được làm trước khi ưu tiên pixel art cho nhân vật. Nó dùng tham chiếu **nền, camera và bố cục UI**; ba người nét mịn đã nằm sẵn trong ảnh. Chưa trình bày được cách ghép cuối cùng đã chọn.
 
-[Ảnh ART v2](design/world/sect-courtyard-topdown-v2.png) có sân trống ở giữa, nhà phía trên, cổng phía dưới, bệ ngồi bên trái và bảng việc bên phải. Có đệ tử trung tâm, một đồng môn và hình đại diện điểm NPC. Đây là bố cục game để nghiên cứu, không là bản đồ nguyên tác đã xác minh hoặc nhiệm vụ đã duyệt.
+Ảnh ART v2 (bộ cũ đã xóa) có sân trống ở giữa, nhà phía trên, cổng phía dưới, bệ ngồi bên trái và bảng việc bên phải. Có đệ tử trung tâm, một đồng môn và hình đại diện điểm NPC. Đây là bố cục game để nghiên cứu, không là bản đồ nguyên tác đã xác minh hoặc nhiệm vụ đã duyệt.
 
-Tạo bằng **imagegen tích hợp**: [v1](design/world/sect-courtyard-topdown-v1.png) theo [prompt đầu](design/world/sect-courtyard-topdown-v1.prompt.txt), sau đó chỉnh mức chi tiết thành v2 theo [prompt chỉnh hình](design/world/sect-courtyard-topdown-v2.prompt.txt). Hai ảnh nguồn 1.536 × 1.024; v1 giữ làm nghiên cứu, trang mẫu dùng v2. [Trang mẫu](design/world/index.html) ghép nhãn/thẻ UI bằng HTML/CSS để xem khung 960 × 640 và 360 px. Cảnh/nhân vật còn chung một ảnh; chưa là map hoặc sprite game.
+Tạo bằng **imagegen tích hợp**: v1 (bộ cũ đã xóa) theo prompt đầu (bộ cũ đã xóa), sau đó chỉnh mức chi tiết thành v2 theo prompt chỉnh hình (bộ cũ đã xóa). Hai ảnh nguồn 1.536 × 1.024; v1 giữ làm nghiên cứu, trang mẫu dùng v2. Trang mẫu (bộ cũ đã xóa) ghép nhãn/thẻ UI bằng HTML/CSS để xem khung 960 × 640 và 360 px. Cảnh/nhân vật còn chung một ảnh; chưa là map hoặc sprite game.
 
-Đánh giá ban đầu: góc nhìn/điểm trong sân rõ, nhân vật nhỏ và cùng palette nhập môn. V2 gom tán cây/mái/đá thành khối rõ và giảm texture, giữ bố cục/camera/ba người của v1. Khi làm nguồn game còn cần duyệt tỷ lệ NPC và kiểm tra che khuất ở cổng/mái. Bản mẫu chưa là chuẩn sản xuất cuối cùng. [Ảnh chụp desktop](design/world/world-desktop-v1.png) và [khung 360 px](design/world/world-360-v1.png) ghi bố cục UI của trang mẫu.
+Đánh giá ban đầu: góc nhìn/điểm trong sân rõ, nhân vật nhỏ và cùng palette nhập môn. V2 gom tán cây/mái/đá thành khối rõ và giảm texture, giữ bố cục/camera/ba người của v1. Khi làm nguồn game còn cần duyệt tỷ lệ NPC và kiểm tra che khuất ở cổng/mái. Bản mẫu chưa là chuẩn sản xuất cuối cùng. Ảnh chụp desktop (bộ cũ đã xóa) và khung 360 px (bộ cũ đã xóa) ghi bố cục UI của trang mẫu.
 
 ## 5. Thử ghép Vương Lâm pixel trên nền stylized — v1
 
-[Trang nghiên cứu](design/world/hybrid-study/index.html) ghép [PNG Vương Lâm gốc](design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v1.png) lên [nền sân riêng](design/world/hybrid-study/sect-courtyard-empty-v1.png). Imagegen đã bỏ ba người/bóng chân khỏi sân v2 để giữ nền/bố cục. Trong trang xem, nền và sprite là hai lớp riêng; sprite có chế độ hiển thị cạnh pixel, bóng chân/nhãn bằng UI.
+Trang nghiên cứu (bộ cũ đã xóa) ghép [PNG Vương Lâm gốc](design/characters/wang-lin-sprite-study/wang-lin-gray-pixel-v1.png) lên nền sân riêng (bộ cũ đã xóa). Imagegen đã bỏ ba người/bóng chân khỏi sân v2 để giữ nền/bố cục. Trong trang xem, nền và sprite là hai lớp riêng; sprite có chế độ hiển thị cạnh pixel, bóng chân/nhãn bằng UI.
 
 Có thể chọn khung sprite **80/96/112 px**, cảnh **1×/2×** và khung **960 × 640/360 px**. 96 px là mốc thử ban đầu; cỡ đó chỉ là khung hiển thị PNG nguồn, chưa chốt frame native. Khung nhỏ giữ cỡ nhân vật và cắt vùng cảnh. Bản thử chưa có di chuyển/animation/va chạm hoặc server.
 
-[Ảnh ghép imagegen](design/world/hybrid-study/wang-lin-courtyard-composite-v1.png) là tham chiếu tổng thể riêng, theo [prompt ghép](design/world/hybrid-study/wang-lin-courtyard-composite-v1.prompt.txt). [Prompt nền](design/world/hybrid-study/sect-courtyard-empty-v1.prompt.txt) và [dữ liệu nghiên cứu](design/world/hybrid-study/study.json) được lưu để đối chiếu. Hai ảnh cảnh mới 1.536 × 1.024; sprite nguồn vẫn giữ 1.254 × 1.254.
+Ảnh ghép imagegen (bộ cũ đã xóa) là tham chiếu tổng thể riêng, theo prompt ghép (bộ cũ đã xóa). Prompt nền (bộ cũ đã xóa) và dữ liệu nghiên cứu (bộ cũ đã xóa) được lưu để đối chiếu. Hai ảnh cảnh mới 1.536 × 1.024; sprite nguồn vẫn giữ 1.254 × 1.254.
 
-Quan sát ở khung 96 px: đường viền/tóc/áo xám tách được khỏi nền đá sáng; chi tiết mặt/nếp áo nhỏ và khá dày. Nền/nhân vật có tông đất/xám tương thích. Trước animation cần chuẩn hóa về lưới native và giản lược cụm màu theo cỡ thực; chưa duyệt tỷ lệ hoặc palette thành chuẩn cuối. Đã xem [desktop 1×](design/world/hybrid-study/hybrid-desktop-v1.png), [2×](design/world/hybrid-study/hybrid-zoom-v1.png) và [khung 360 px](design/world/hybrid-study/hybrid-360-v1.png).
+Quan sát ở khung 96 px: đường viền/tóc/áo xám tách được khỏi nền đá sáng; chi tiết mặt/nếp áo nhỏ và khá dày. Nền/nhân vật có tông đất/xám tương thích. Trước animation cần chuẩn hóa về lưới native và giản lược cụm màu theo cỡ thực; chưa duyệt tỷ lệ hoặc palette thành chuẩn cuối. Đã xem desktop 1× (bộ cũ đã xóa), 2× (bộ cũ đã xóa) và khung 360 px (bộ cũ đã xóa).
 
 ## 6. Điều kiện duyệt trước bộ sprite
 

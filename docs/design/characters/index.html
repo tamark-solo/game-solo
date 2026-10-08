@@ -34,7 +34,13 @@
 <body>
   <main>
     <h1>Thư viện tạo hình nhân vật</h1>
-    <p>MMORPG tu luyện có idle; nhân vật pixel trên nền stylized 2D, portrait/truyện giữ tranh mực/giấy cổ. Ưu tiên bộ ba Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển; Lý Mộ Uyển đã chấp nhận nhận diện v1; Tư Đồ Nam đứng v3 tạm chấp nhận làm chuẩn thiết kế. Nhận diện Vương Lâm đã duyệt; đệ tử v2 giữ bộ thử.</p>
+    <p>MMORPG tu luyện có idle; nhân vật pixel trên nền stylized 2D, portrait/truyện giữ tranh mực/giấy cổ. Vương Lâm chibi làm chuẩn. Lý Mộ Uyển native-v5 đã chấp nhận cho bản thử; hai đệ tử và Tư Đồ Nam chibi mới còn chờ đánh giá. Các bảng tạo hình trước giữ tham chiếu.</p>
+    <section id="chibi-roster">
+      <h2>Dàn chibi mới · preview 0.5.1</h2>
+      <p><a href="chibi-roster-v1/index.html">Xem năm nhân vật cùng hướng và pose</a> · <a href="http://127.0.0.1:5173/assets/chibi-roster/index.html">Mở gallery đang chạy</a> · <a href="http://127.0.0.1:5173/">Thử di chuyển trên map</a>.</p>
+      <p>20 frame/mẫu, bốn hướng, frame 64 × 96. Lý Mộ Uyển: mặt mềm, tóc xanh đen buộc thấp, áo lavender hai lớp/cổ ngà. Tư Đồ Nam: linh thể đứng/lướt, chân duỗi và khoảng khuyết ở ngực. Hai đệ tử mới dùng trên sân online.</p>
+      <p class="note"><a href="chibi-roster-v1/README.md">Nguồn và prompt imagegen</a> · <a href="../../CHIBI-ROSTER-SPEC.md">Quy chuẩn và trạng thái duyệt</a>.</p>
+    </section>
     <p class="note"><a href="../../WANG-LIN-VISUAL-SPEC.md">Hồ sơ Vương Lâm</a> ghi nguồn tiểu thuyết và diện mạo riêng. <a href="wang-lin-gray-walk-v1/index.html">Trang animation</a> dùng 28 frame native 64 × 96, palette 24 mục; chuyển động mới cần xem thử.</p>
     <nav aria-label="Tạo hình"><a href="core-ui-v1/index.html">Chân dung UI</a><a href="#core-trio">Bộ ba trọng tâm</a><a href="core-trio-v1/index.html">Tư Đồ Nam / Lý Mộ Uyển</a><a href="#avatar-pixel">Pixel đệ tử</a><a href="#male">Đệ tử nam v2</a><a href="#female">Đệ tử nữ v2</a><a href="#wang-lin-animation">Vương Lâm đứng/đi</a><a href="#wang-lin">Vương Lâm v2</a><a href="#wang-lin-expressions">Biểu cảm</a><a href="#wang-lin-pixel">Nguồn pixel</a><a href="../../CHARACTERS.md">Dàn nhân vật</a><a href="../index.html">Thư viện UX/ART</a></nav>
     <section>
@@ -66,6 +72,12 @@
       </div>
       <p class="note">56 frame tổng, cùng palette 24 mục, frame 64 × 96 và điểm chân (32, 88); nhận diện/motion đệ tử còn chờ đánh giá. <a href="../../PLAYER-AVATAR-VISUAL-SPEC.md">Hồ sơ</a> · <a href="player-avatars-v2/README.md">Nguồn/prompt</a>.</p>
     </section>
+    <section id="wang-lin-chibi">
+      <h2>Vương Lâm · Chibi đứng và đi bốn hướng</h2>
+      <p><a href="http://127.0.0.1:5173/">Mở preview Three.js</a>, chọn Thử trên map và dùng WASD hoặc nút hướng. Bộ này được chọn mặc định; mẫu hướng Đông đã được đánh giá tốt, ba hướng mới chờ duyệt chuyển động.</p>
+      <div class="native-scroll"><a href="wang-lin-chibi-walk-v1/native-v2/atlas.png"><img src="wang-lin-chibi-walk-v1/native-v2/atlas.png" width="320" height="384" style="width:320px;max-width:none;image-rendering:pixelated" alt="Vương Lâm chibi: bốn hàng xuống, trái, phải, lên; mỗi hàng một pose đứng và bốn pose đi"></a></div>
+      <p class="note">20 frame, 64 × 96; điểm chân (32, 88), palette 24 mục. <a href="wang-lin-chibi-walk-v1/README.md">Nguồn/prompt imagegen tích hợp</a> · <a href="wang-lin-chibi-walk-v1/native-v2/atlas.json">JSON</a> · <a href="wang-lin-chibi-walk-v1/verification.json">Kiểm tra</a>.</p>
+    </section>
     <section id="wang-lin-animation">
       <h2>Vương Lâm · Bộ đứng và đi đầu tiên</h2>
       <p><a href="wang-lin-gray-walk-v1/index.html">Mở trang animation và thử bước trên sân</a>: xem bốn hướng, dừng ở từng frame, phóng nguyên lần và đổi nền.</p>
@@ -89,7 +101,7 @@
       <h2>Vương Lâm v2 · Mẫu pixel đứng áo xám</h2>
       <a href="wang-lin-sprite-study/wang-lin-gray-pixel-v2.png"><img class="pixel-study" loading="lazy" src="wang-lin-sprite-study/wang-lin-gray-pixel-v2.png" width="1254" height="1254" alt="Một mẫu pixel Vương Lâm áo xám có gấu gọn, tóc đen buộc nửa đầu, đứng ở góc top-down ba phần tư trên nền trong suốt"></a>
       <p>Giữ camera/tư thế của mẫu pixel v1, đối chiếu nhận diện và bộ áo xám với bảng v2. PNG có alpha trong suốt; màu giấy phía sau do trang xem đặt.</p>
-      <p class="note">Nguồn nhận diện 1.254 × 1.254 được giữ; bộ native xuất riêng trong <a href="wang-lin-gray-walk-v1/index.html">trang animation</a>. <a href="wang-lin-sprite-study/wang-lin-gray-pixel-v2.prompt.txt">Prompt đã dùng</a> · <a href="wang-lin-sprite-study/index.html">So sánh phong cách v1</a> · <a href="../world/hybrid-study/index.html">Thử sân v1</a>.</p>
+      <p class="note">Nguồn nhận diện 1.254 × 1.254 được giữ; bộ native xuất riêng trong <a href="wang-lin-gray-walk-v1/index.html">trang animation</a>. <a href="wang-lin-sprite-study/wang-lin-gray-pixel-v2.prompt.txt">Prompt đã dùng</a> · <a href="wang-lin-sprite-study/index.html">So sánh phong cách v1</a> · Nền map cũ đã xóa; dùng editor cho map mới.</p>
     </section>
     <section id="male">
       <h2>Đệ tử nam v2 · Mẫu người chơi</h2>

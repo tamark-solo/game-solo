@@ -7,6 +7,7 @@ export interface ActorDefinition {
   defaultAnimationFPS?: number;
   defaultGaitCycleDistancePx?: number;
   defaultMovementSpeedPxPerSecond?: number;
+  movementKind?: 'walk' | 'glide' | 'static';
 }
 export interface FrameRect { x: number; y: number; w: number; h: number }
 export interface Atlas {

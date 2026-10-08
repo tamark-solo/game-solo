@@ -34,7 +34,7 @@ let selectedDirection: Direction = 'south';
 let localActor: RenderActor | undefined;
 let localActors: RenderActor[] = [];
 const onlineActors = new Map<string, RenderActor>();
-let selectedId = 'CHR-WANG-LIN-CHIBI-EAST-PILOT';
+let selectedId = 'CHR-WANG-LIN-CHIBI';
 let elapsed = 0;
 let lastTime = performance.now();
 let hudTime = 0;
@@ -123,11 +123,16 @@ function updateActorUI(): void {
   const asset = renderer?.assets.get(selectedId); if (!asset) return;
   actorSelect.value = selectedId;
   motionSelect.querySelector<HTMLOptionElement>('option[value=walk]')!.disabled = !asset.atlas.canWalk;
+  const glide = asset.definition.movementKind === 'glide';
+  motionSelect.querySelector<HTMLOptionElement>('option[value=walk]')!.textContent = glide ? 'Lướt' : 'Đi bộ';
+  motionSelect.querySelector<HTMLOptionElement>('option[value=stand]')!.textContent = glide ? 'Đứng lơ lửng' : 'Đứng';
   if (!asset.atlas.canWalk) desiredState = 'stand';
   motionSelect.value = desiredState;
   localActor?.animation.set(desiredState, selectedDirection);
   el('actor-note').textContent = asset.definition.previewOnlyDirection
     ? 'Mẫu chibi mới · 1 đứng + 4 pose đi · hiện có hướng Đông'
+    : asset.definition.id === 'CHR-WANG-LIN-CHIBI' ? 'Chibi · 4 đứng + 16 pose đi · bốn hướng'
+    : glide ? 'Chibi linh thể · 4 đứng + 16 pose lướt · cách điểm chiếu 4 px'
     : asset.atlas.canWalk ? `${Object.keys(asset.atlas.frames).length} frame · đứng / đi bốn hướng` : '4 frame tĩnh · di chuyển với hình tĩnh';
   document.querySelectorAll<HTMLButtonElement>('[data-direction]').forEach(button => {
     button.disabled = !directionsForActor().includes(button.dataset.direction as Direction);
@@ -167,7 +172,7 @@ function updateModeUI(): void {
   const definition = renderer?.assets.get(selectedId)?.definition;
   el('scene-kicker').textContent = online ? 'MÔN PHÁI · KHU CHUNG' : map ? 'SÂN THỬ · CHUYỂN ĐỘNG CỤC BỘ' : 'NGHIÊN CỨU NHÂN VẬT';
   el('scene-title').textContent = online ? 'Sân môn phái' : map ? 'Sân môn phái · map thử' : definition?.name ?? 'Đang nạp nhân vật';
-  el('scene-tag').textContent = online ? 'PHIÊN THỬ ONLINE' : definition?.previewOnlyDirection ? 'MẪU CHIBI MỚI' : '64 × 96 PX';
+  el('scene-tag').textContent = online ? 'PHIÊN THỬ ONLINE' : definition?.id === 'CHR-WANG-LIN-CHIBI' ? 'CHIBI · 4 HƯỚNG' : definition?.previewOnlyDirection ? 'MẪU CHIBI MỚI' : '64 × 96 PX';
   el('movement-note').textContent = online ? 'Dùng WASD / nút hướng. Hai cửa sổ cùng server sẽ gặp nhau trong sân.'
     : definition?.previewOnlyDirection ? 'Mẫu chibi hiện có hướng Đông. Giữ D / mũi tên phải hoặc nút → để đi.' : 'Bấm vào sân để điều khiển. Trụ giữa sân dùng thử va chạm và che khuất.';
   document.querySelectorAll<HTMLButtonElement>('[data-input]').forEach(button => {
@@ -280,7 +285,8 @@ function updateHUD(actors: RenderActor[]): void {
   if (own) {
     const gaitFrames = own.animation.atlas.animations[`walk_${own.direction}`]?.length ?? 0;
     el('fps-value').textContent = mode === 'inspector' ? `${fpsInput.value} FPS` : `${((mode === 'online' ? WORLD.speed : Number(speedInput.value)) * gaitFrames / Number(strideInput.value)).toFixed(1)} FPS · tự khớp`;
-    el('frame-counter').textContent = `${own.animation.state === 'walk' ? 'Đi' : 'Đứng'} · ${own.animation.frameIndex + 1} / ${own.animation.ids.length}`;
+    const glide = renderer?.assets.get(own.assetId)?.definition.movementKind === 'glide';
+    el('frame-counter').textContent = `${own.animation.state === 'walk' ? (glide ? 'Lướt' : 'Đi') : (glide ? 'Lơ lửng' : 'Đứng')} · ${own.animation.frameIndex + 1} / ${own.animation.ids.length}`;
     el('frame-name').textContent = own.animation.frameId;
     document.querySelectorAll<HTMLButtonElement>('[data-direction]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.direction === own.direction)));
   } else { el('frame-counter').textContent = 'Chưa có nhân vật'; el('frame-name').textContent = 'Vào sân để bắt đầu'; }
@@ -307,7 +313,7 @@ async function initialize(): Promise<void> {
     renderer = new PreviewRenderer(stage, el('world-labels'));
     const response = await fetch('/assets/catalog.json', { cache: 'no-store' });
     if (!response.ok) throw new Error('Thiếu catalog. Hãy chạy npm run assets.');
-    const catalog = await response.json() as { actors: ActorDefinition[]; backgroundUrl: string; defaultActorId?: string; defaultDirection?: Direction };
+    const catalog = await response.json() as { actors: ActorDefinition[]; backgroundUrl?: string; defaultActorId?: string; defaultDirection?: Direction };
     selectedId = catalog.defaultActorId ?? selectedId;
     selectedDirection = catalog.defaultDirection ?? 'east';
     let loadError: unknown;

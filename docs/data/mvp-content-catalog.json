@@ -24,7 +24,10 @@
     ]
   },
   "scope": "A",
-  "developmentSequence": ["A", "B"],
+  "developmentSequence": [
+    "A",
+    "B"
+  ],
   "roadmapStatus": "confirmed",
   "notes": [
     "Catalog v0.6 giữ làm tham chiếu truyện/luật; chưa là catalog runtime của đệ tử online.",
@@ -56,7 +59,9 @@
       "order": 1,
       "title": "Cơ hội tu tiên",
       "requiresPreviousEvent": null,
-      "sceneIds": ["E01-VILLAGE"],
+      "sceneIds": [
+        "E01-VILLAGE"
+      ],
       "minimumCounters": {},
       "minimumResources": {},
       "cost": {},
@@ -68,7 +73,9 @@
       "order": 2,
       "title": "Khảo nghiệm nhập môn",
       "requiresPreviousEvent": "E01",
-      "sceneIds": ["E02-EXAM"],
+      "sceneIds": [
+        "E02-EXAM"
+      ],
       "minimumCounters": {},
       "minimumResources": {},
       "cost": {},
@@ -80,12 +87,17 @@
       "order": 3,
       "title": "Cơ duyên trong hang",
       "requiresPreviousEvent": "E02",
-      "sceneIds": ["E03-TRAIL", "E03-CAVE"],
+      "sceneIds": [
+        "E03-TRAIL",
+        "E03-CAVE"
+      ],
       "minimumCounters": {},
       "minimumResources": {},
       "cost": {},
       "completionEffects": {
-        "grantItemIds": ["ITEM-BEAD"],
+        "grantItemIds": [
+          "ITEM-BEAD"
+        ],
         "beadVariantKey": "five_clouds"
       },
       "finalActionLabel": "Hoàn thành cảnh hang"
@@ -95,13 +107,21 @@
       "order": 4,
       "title": "Làm quen môn phái",
       "requiresPreviousEvent": "E03",
-      "sceneIds": ["E04-DORM", "E04-SPRING"],
+      "sceneIds": [
+        "E04-DORM",
+        "E04-SPRING"
+      ],
       "minimumCounters": {},
       "minimumResources": {},
       "cost": {},
       "completionEffects": {
-        "grantItemIds": ["ITEM-GOURD"],
-        "unlockActivityIds": ["ACT-DRAW-WATER", "ACT-INFUSE-WATER"],
+        "grantItemIds": [
+          "ITEM-GOURD"
+        ],
+        "unlockActivityIds": [
+          "ACT-DRAW-WATER",
+          "ACT-INFUSE-WATER"
+        ],
         "beadVariantKey": "seven_clouds",
         "characterVariantKey": "gray_clothes"
       },
@@ -112,13 +132,27 @@
       "order": 5,
       "title": "Nhận công pháp",
       "requiresPreviousEvent": "E04",
-      "sceneIds": ["E05-GARDEN"],
-      "minimumCounters": {"drawCycles": 6, "infuseCycles": 3},
-      "minimumResources": {"spiritWater": 1},
-      "cost": {"spiritWater": 1},
+      "sceneIds": [
+        "E05-GARDEN"
+      ],
+      "minimumCounters": {
+        "drawCycles": 6,
+        "infuseCycles": 3
+      },
+      "minimumResources": {
+        "spiritWater": 1
+      },
+      "cost": {
+        "spiritWater": 1
+      },
       "completionEffects": {
-        "grantItemIds": ["ITEM-MANUAL", "ITEM-STORAGE-BAG"],
-        "unlockActivityIds": ["ACT-PRACTICE"],
+        "grantItemIds": [
+          "ITEM-MANUAL",
+          "ITEM-STORAGE-BAG"
+        ],
+        "unlockActivityIds": [
+          "ACT-PRACTICE"
+        ],
         "characterVariantKey": "red_clothes"
       },
       "finalActionLabel": "Hoàn thành mốc"
@@ -128,10 +162,18 @@
       "order": 6,
       "title": "Giải trừ trở ngại",
       "requiresPreviousEvent": "E05",
-      "sceneIds": ["E06-ROOM"],
-      "minimumCounters": {"breathingCycles": 3},
-      "minimumResources": {"spiritWater": 6},
-      "cost": {"spiritWater": 6},
+      "sceneIds": [
+        "E06-ROOM"
+      ],
+      "minimumCounters": {
+        "breathingCycles": 3
+      },
+      "minimumResources": {
+        "spiritWater": 6
+      },
+      "cost": {
+        "spiritWater": 6
+      },
       "completionEffects": {
         "enableCultivationGain": true,
         "beadVariantKey": "nine_clouds"
@@ -143,12 +185,20 @@
       "order": 7,
       "title": "Khám phá mộng cảnh",
       "requiresPreviousEvent": "E06",
-      "sceneIds": ["E07-DREAM"],
+      "sceneIds": [
+        "E07-DREAM"
+      ],
       "minimumCounters": {},
-      "minimumResources": {"spiritWater": 6},
-      "cost": {"spiritWater": 6},
+      "minimumResources": {
+        "spiritWater": 6
+      },
+      "cost": {
+        "spiritWater": 6
+      },
       "completionEffects": {
-        "unlockActivityIds": ["ACT-DREAM"],
+        "unlockActivityIds": [
+          "ACT-DREAM"
+        ],
         "unlockAutoMode": true,
         "beadVariantKey": "inscribed"
       },
@@ -159,9 +209,13 @@
       "order": 8,
       "title": "Đột phá tầng đầu",
       "requiresPreviousEvent": "E07",
-      "sceneIds": ["E08-BREAKTHROUGH"],
+      "sceneIds": [
+        "E08-BREAKTHROUGH"
+      ],
       "minimumCounters": {},
-      "minimumResources": {"cultivation": 480},
+      "minimumResources": {
+        "cultivation": 480
+      },
       "cost": {},
       "completionEffects": {
         "realmId": "qi_condensation",
@@ -179,11 +233,24 @@
       "locationId": "MAP-001",
       "title": "Kỳ vọng của gia đình",
       "characterPresentationVariantKey": "mortal_clothes",
-      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-1"],
-      "presentationAssetRefs": ["AS-ENV-001", "AS-CHR-001", "AS-CHR-002", "AS-CHR-003"],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-1"
+      ],
+      "presentationAssetRefs": [
+        "AS-ENV-001",
+        "AS-CHR-001",
+        "AS-CHR-002",
+        "AS-CHR-003"
+      ],
       "segments": [
-        {"id": "E01-VILLAGE-S1", "text": "Vương Lâm lớn lên trong một gia đình bình thường. Cơ hội bước vào con đường tu tiên mang theo niềm hy vọng của cha mẹ."},
-        {"id": "E01-VILLAGE-S2", "text": "Nhờ cơ hội được tứ thúc đem tới, Vương Lâm lên đường tới Hằng Nhạc phái. Hành trình bắt đầu bằng các khảo nghiệm tuyển chọn."}
+        {
+          "id": "E01-VILLAGE-S1",
+          "text": "Vương Lâm lớn lên trong một gia đình bình thường. Cơ hội bước vào con đường tu tiên mang theo niềm hy vọng của cha mẹ."
+        },
+        {
+          "id": "E01-VILLAGE-S2",
+          "text": "Nhờ cơ hội được tứ thúc đem tới, Vương Lâm lên đường tới Hằng Nhạc phái. Hành trình bắt đầu bằng các khảo nghiệm tuyển chọn."
+        }
       ]
     },
     {
@@ -193,12 +260,28 @@
       "encounterId": "ENC-003",
       "title": "Khảo nghiệm Hằng Nhạc",
       "characterPresentationVariantKey": "mortal_clothes",
-      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-3", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-4"],
-      "presentationAssetRefs": ["AS-ENV-004", "AS-CHR-001", "AS-CHR-004"],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-3",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-4"
+      ],
+      "presentationAssetRefs": [
+        "AS-ENV-004",
+        "AS-CHR-001",
+        "AS-CHR-004"
+      ],
       "segments": [
-        {"id": "E02-EXAM-S1", "text": "Vương Lâm cùng những người dự tuyển đến khu khảo nghiệm. Vương Trác cũng có mặt trong dịp tuyển chọn này."},
-        {"id": "E02-EXAM-S2", "text": "Kết quả khảo nghiệm tư chất không đem lại cơ hội nhập môn cho Vương Lâm. Mong muốn tu tiên gặp trở ngại ngay từ bước đầu."},
-        {"id": "E02-EXAM-S3", "text": "Thử thách tiếp theo dưới áp lực kiếm linh cũng không thành công. Vương Lâm phải rời đi, nhưng hành trình tìm đường tu tiên vẫn chưa kết thúc."}
+        {
+          "id": "E02-EXAM-S1",
+          "text": "Vương Lâm cùng những người dự tuyển đến khu khảo nghiệm. Vương Trác cũng có mặt trong dịp tuyển chọn này."
+        },
+        {
+          "id": "E02-EXAM-S2",
+          "text": "Kết quả khảo nghiệm tư chất không đem lại cơ hội nhập môn cho Vương Lâm. Mong muốn tu tiên gặp trở ngại ngay từ bước đầu."
+        },
+        {
+          "id": "E02-EXAM-S3",
+          "text": "Thử thách tiếp theo dưới áp lực kiếm linh cũng không thành công. Vương Lâm phải rời đi, nhưng hành trình tìm đường tu tiên vẫn chưa kết thúc."
+        }
       ]
     },
     {
@@ -208,11 +291,23 @@
       "encounterId": "ENC-001",
       "title": "Nguy hiểm trên đường núi",
       "characterPresentationVariantKey": "mortal_clothes",
-      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-7"],
-      "presentationAssetRefs": ["AS-ENV-002", "AS-CHR-001", "AS-CRE-001"],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-7"
+      ],
+      "presentationAssetRefs": [
+        "AS-ENV-002",
+        "AS-CHR-001",
+        "AS-CRE-001"
+      ],
       "segments": [
-        {"id": "E03-TRAIL-S1", "text": "Trên đường núi trở lại tìm cơ hội, Vương Lâm gặp một con hổ trắng có đôi mắt đỏ. Nguy hiểm buộc hắn phải tìm đường thoát."},
-        {"id": "E03-TRAIL-S2", "text": "Biến cố thoát hiểm dẫn Vương Lâm tới khu vực vách núi. Một hang đá trở thành nơi tiếp theo trong hành trình."}
+        {
+          "id": "E03-TRAIL-S1",
+          "text": "Trên đường núi trở lại tìm cơ hội, Vương Lâm gặp một con hổ trắng có đôi mắt đỏ. Nguy hiểm buộc hắn phải tìm đường thoát."
+        },
+        {
+          "id": "E03-TRAIL-S2",
+          "text": "Biến cố thoát hiểm dẫn Vương Lâm tới khu vực vách núi. Một hang đá trở thành nơi tiếp theo trong hành trình."
+        }
       ]
     },
     {
@@ -222,11 +317,24 @@
       "encounterId": "ENC-002",
       "title": "Hạt châu trong hang",
       "characterPresentationVariantKey": "mortal_clothes",
-      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-8"],
-      "presentationAssetRefs": ["AS-ENV-003", "AS-CHR-001", "AS-ICO-004"],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-8"
+      ],
+      "presentationAssetRefs": [
+        "AS-ENV-003",
+        "AS-CHR-001",
+        "AS-ICO-004"
+      ],
       "segments": [
-        {"id": "E03-CAVE-S1", "text": "Trong hang có một lực hút xuất hiện theo đợt. Vương Lâm quan sát dấu tích và sự bất thường để tìm hiểu nơi này."},
-        {"id": "E03-CAVE-S2", "text": "Giữa những dấu tích trong hang, hắn có được một hạt châu xám với năm đám mây. Công dụng và lai lịch của vật này vẫn là điều chưa biết.", "beadPresentationVariantKey": "five_clouds"}
+        {
+          "id": "E03-CAVE-S1",
+          "text": "Trong hang có một lực hút xuất hiện theo đợt. Vương Lâm quan sát dấu tích và sự bất thường để tìm hiểu nơi này."
+        },
+        {
+          "id": "E03-CAVE-S2",
+          "text": "Giữa những dấu tích trong hang, hắn có được một hạt châu xám với năm đám mây. Công dụng và lai lịch của vật này vẫn là điều chưa biết.",
+          "beadPresentationVariantKey": "five_clouds"
+        }
       ]
     },
     {
@@ -235,11 +343,23 @@
       "locationId": "MAP-005",
       "title": "Đệ tử ký danh",
       "characterPresentationVariantKey": "gray_clothes",
-      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-10"],
-      "presentationAssetRefs": ["AS-ENV-005", "AS-CHR-001", "AS-CHR-005"],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-10"
+      ],
+      "presentationAssetRefs": [
+        "AS-ENV-005",
+        "AS-CHR-001",
+        "AS-CHR-005"
+      ],
       "segments": [
-        {"id": "E04-DORM-S1", "text": "Sau những biến cố tiếp theo, Vương Lâm có cơ hội vào Hằng Nhạc phái với thân phận đệ tử ký danh, mặc áo xám và ở trong phòng chung."},
-        {"id": "E04-DORM-S2", "text": "Cuộc sống trong môn phái bắt đầu bằng các công việc thường ngày. Trương Hổ xuất hiện trong giai đoạn này; việc lấy nước trở thành một phần sinh hoạt của Vương Lâm."}
+        {
+          "id": "E04-DORM-S1",
+          "text": "Sau những biến cố tiếp theo, Vương Lâm có cơ hội vào Hằng Nhạc phái với thân phận đệ tử ký danh, mặc áo xám và ở trong phòng chung."
+        },
+        {
+          "id": "E04-DORM-S2",
+          "text": "Cuộc sống trong môn phái bắt đầu bằng các công việc thường ngày. Trương Hổ xuất hiện trong giai đoạn này; việc lấy nước trở thành một phần sinh hoạt của Vương Lâm."
+        }
       ]
     },
     {
@@ -248,12 +368,32 @@
       "locationId": "MAP-006",
       "title": "Nước và hạt châu",
       "characterPresentationVariantKey": "gray_clothes",
-      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-11", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-14"],
-      "presentationAssetRefs": ["AS-ENV-002", "AS-CHR-001", "AS-ICO-004", "AS-ICO-005"],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-11",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-14"
+      ],
+      "presentationAssetRefs": [
+        "AS-ENV-002",
+        "AS-CHR-001",
+        "AS-ICO-004",
+        "AS-ICO-005"
+      ],
       "segments": [
-        {"id": "E04-SPRING-S1", "text": "Vương Lâm đến nguồn nước trong núi để làm công việc được giao. Nước suối là bước đầu của chuỗi chuẩn bị.", "beadPresentationVariantKey": "five_clouds"},
-        {"id": "E04-SPRING-S2", "text": "Nước tiếp xúc với hạt châu bộc lộ tác dụng khác thường. Phần nước chứa linh khí này được gọi ngắn là linh dịch trên bảng tài nguyên.", "beadPresentationVariantKey": "five_clouds"},
-        {"id": "E04-SPRING-S3", "text": "Những diễn biến trong giai đoạn nhập môn, bao gồm trận giông, khiến hoa văn trên hạt châu đạt bảy đám mây. Hãy bắt đầu lấy nước rồi chuẩn bị linh dịch để tiếp tục khám phá.", "beadPresentationVariantKey": "seven_clouds"}
+        {
+          "id": "E04-SPRING-S1",
+          "text": "Vương Lâm đến nguồn nước trong núi để làm công việc được giao. Nước suối là bước đầu của chuỗi chuẩn bị.",
+          "beadPresentationVariantKey": "five_clouds"
+        },
+        {
+          "id": "E04-SPRING-S2",
+          "text": "Nước tiếp xúc với hạt châu bộc lộ tác dụng khác thường. Phần nước chứa linh khí này được gọi ngắn là linh dịch trên bảng tài nguyên.",
+          "beadPresentationVariantKey": "five_clouds"
+        },
+        {
+          "id": "E04-SPRING-S3",
+          "text": "Những diễn biến trong giai đoạn nhập môn, bao gồm trận giông, khiến hoa văn trên hạt châu đạt bảy đám mây. Hãy bắt đầu lấy nước rồi chuẩn bị linh dịch để tiếp tục khám phá.",
+          "beadPresentationVariantKey": "seven_clouds"
+        }
       ]
     },
     {
@@ -262,11 +402,27 @@
       "locationId": "MAP-007",
       "title": "Nhận công pháp",
       "characterPresentationVariantKey": "gray_clothes",
-      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-16", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17"],
-      "presentationAssetRefs": ["AS-ENV-004", "AS-ENV-005", "AS-CHR-001", "AS-CHR-006", "AS-ICO-006"],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-16",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17"
+      ],
+      "presentationAssetRefs": [
+        "AS-ENV-004",
+        "AS-ENV-005",
+        "AS-CHR-001",
+        "AS-CHR-006",
+        "AS-ICO-006"
+      ],
       "segments": [
-        {"id": "E05-GARDEN-S1", "text": "Bầu nước khiến Tôn Đại Trụ chú ý tới Vương Lâm. Hắn được nhận làm đệ tử, chuyển sang áo đỏ và có cơ hội học công pháp nhập môn."},
-        {"id": "E05-GARDEN-S2", "text": "Phòng ở của đệ tử là nơi thử luyện thổ nạp. Việc tu luyện được tách khỏi luống dược thảo; hãy luyện ba lần để quan sát tiến triển.", "characterPresentationVariantKey": "red_clothes"}
+        {
+          "id": "E05-GARDEN-S1",
+          "text": "Bầu nước khiến Tôn Đại Trụ chú ý tới Vương Lâm. Hắn được nhận làm đệ tử, chuyển sang áo đỏ và có cơ hội học công pháp nhập môn."
+        },
+        {
+          "id": "E05-GARDEN-S2",
+          "text": "Phòng ở của đệ tử là nơi thử luyện thổ nạp. Việc tu luyện được tách khỏi luống dược thảo; hãy luyện ba lần để quan sát tiến triển.",
+          "characterPresentationVariantKey": "red_clothes"
+        }
       ]
     },
     {
@@ -275,12 +431,31 @@
       "locationId": "MAP-008",
       "title": "Giải trừ trở ngại",
       "characterPresentationVariantKey": "red_clothes",
-      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-18", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-20", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-22"],
-      "presentationAssetRefs": ["AS-ENV-005", "AS-CHR-001", "AS-ICO-004"],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-18",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-20",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-22"
+      ],
+      "presentationAssetRefs": [
+        "AS-ENV-005",
+        "AS-CHR-001",
+        "AS-ICO-004"
+      ],
       "segments": [
-        {"id": "E06-ROOM-S1", "text": "Dù đã thử công pháp, Vương Lâm vẫn không giữ được linh khí. Những diễn biến liên quan tới dược liệu làm tán linh khí giải thích trở ngại này."},
-        {"id": "E06-ROOM-S2", "text": "Sau khi rời dược viên và lấy lại hạt châu, hắn tiếp tục tìm cách tu luyện trong phòng riêng. Hoa văn trên châu lúc này đã đạt chín đám mây.", "beadPresentationVariantKey": "nine_clouds"},
-        {"id": "E06-ROOM-S3", "text": "Vương Lâm giải trừ tác động cản trở bằng cách điều chỉnh thổ nạp. Từ mốc này, tu luyện thường bắt đầu giữ lại được tu vi trong game.", "beadPresentationVariantKey": "nine_clouds"}
+        {
+          "id": "E06-ROOM-S1",
+          "text": "Dù đã thử công pháp, Vương Lâm vẫn không giữ được linh khí. Những diễn biến liên quan tới dược liệu làm tán linh khí giải thích trở ngại này."
+        },
+        {
+          "id": "E06-ROOM-S2",
+          "text": "Sau khi rời dược viên và lấy lại hạt châu, hắn tiếp tục tìm cách tu luyện trong phòng riêng. Hoa văn trên châu lúc này đã đạt chín đám mây.",
+          "beadPresentationVariantKey": "nine_clouds"
+        },
+        {
+          "id": "E06-ROOM-S3",
+          "text": "Vương Lâm giải trừ tác động cản trở bằng cách điều chỉnh thổ nạp. Từ mốc này, tu luyện thường bắt đầu giữ lại được tu vi trong game.",
+          "beadPresentationVariantKey": "nine_clouds"
+        }
       ]
     },
     {
@@ -289,12 +464,31 @@
       "locationId": "MAP-009",
       "title": "Không gian mộng cảnh",
       "characterPresentationVariantKey": "red_clothes",
-      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-23", "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-24"],
-      "presentationAssetRefs": ["AS-ENV-006", "AS-CHR-001", "AS-ICO-004"],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-23",
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-24"
+      ],
+      "presentationAssetRefs": [
+        "AS-ENV-006",
+        "AS-CHR-001",
+        "AS-ICO-004"
+      ],
       "segments": [
-        {"id": "E07-DREAM-S1", "text": "Hoa văn đạt mười đám mây rồi biến mất, để lộ những dấu trên hạt châu. Đây là bước chuyển dẫn tới khả năng khám phá mộng cảnh.", "beadPresentationVariantKey": "ten_clouds_transition"},
-        {"id": "E07-DREAM-S2", "text": "Trong không gian mộng cảnh, thời gian dài gấp mười lần bên ngoài. Vương Lâm có thêm thời gian cho việc tu luyện.", "beadPresentationVariantKey": "inscribed"},
-        {"id": "E07-DREAM-S3", "text": "Mộng cảnh không có linh khí tự nhiên để sử dụng tùy ý. Linh dịch được dùng để chuẩn bị trước khi vào; từ đây có thể chọn mộng cảnh hoặc bật chuỗi chuẩn bị tự động.", "beadPresentationVariantKey": "inscribed"}
+        {
+          "id": "E07-DREAM-S1",
+          "text": "Hoa văn đạt mười đám mây rồi biến mất, để lộ những dấu trên hạt châu. Đây là bước chuyển dẫn tới khả năng khám phá mộng cảnh.",
+          "beadPresentationVariantKey": "ten_clouds_transition"
+        },
+        {
+          "id": "E07-DREAM-S2",
+          "text": "Trong không gian mộng cảnh, thời gian dài gấp mười lần bên ngoài. Vương Lâm có thêm thời gian cho việc tu luyện.",
+          "beadPresentationVariantKey": "inscribed"
+        },
+        {
+          "id": "E07-DREAM-S3",
+          "text": "Mộng cảnh không có linh khí tự nhiên để sử dụng tùy ý. Linh dịch được dùng để chuẩn bị trước khi vào; từ đây có thể chọn mộng cảnh hoặc bật chuỗi chuẩn bị tự động.",
+          "beadPresentationVariantKey": "inscribed"
+        }
       ]
     },
     {
@@ -303,31 +497,126 @@
       "locationId": "MAP-008",
       "title": "Chuẩn bị đột phá",
       "characterPresentationVariantKey": "red_clothes",
-      "sourceRefs": ["https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-25"],
-      "presentationAssetRefs": ["AS-ENV-005", "AS-CHR-001", "AS-ICO-003"],
+      "sourceRefs": [
+        "https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-25"
+      ],
+      "presentationAssetRefs": [
+        "AS-ENV-005",
+        "AS-CHR-001",
+        "AS-ICO-003"
+      ],
       "segments": [
-        {"id": "E08-BREAKTHROUGH-S1", "text": "Qua quá trình chuẩn bị và tu luyện, Vương Lâm đã tích lũy đủ tu vi cho tầng đầu. Hoàn tất đột phá để bước từ phàm nhân vào Ngưng Khí tầng 1."}
+        {
+          "id": "E08-BREAKTHROUGH-S1",
+          "text": "Qua quá trình chuẩn bị và tu luyện, Vương Lâm đã tích lũy đủ tu vi cho tầng đầu. Hoàn tất đột phá để bước từ phàm nhân vào Ngưng Khí tầng 1."
+        }
       ]
     }
   ],
   "resourceDefinitions": [
-    {"id": "springWater", "name": "Nước suối", "assetId": "AS-ICO-001", "cap": 120, "integerOnly": true},
-    {"id": "spiritWater", "name": "Linh dịch", "description": "Nước chứa linh khí, được chuẩn bị bằng hạt châu.", "assetId": "AS-ICO-002", "cap": 30, "integerOnly": true},
-    {"id": "cultivation", "name": "Tu vi", "assetId": "AS-ICO-003", "cap": 480, "integerOnly": true}
+    {
+      "id": "springWater",
+      "name": "Nước suối",
+      "assetId": "AS-ICO-001",
+      "cap": 120,
+      "integerOnly": true
+    },
+    {
+      "id": "spiritWater",
+      "name": "Linh dịch",
+      "description": "Nước chứa linh khí, được chuẩn bị bằng hạt châu.",
+      "assetId": "AS-ICO-002",
+      "cap": 30,
+      "integerOnly": true
+    },
+    {
+      "id": "cultivation",
+      "name": "Tu vi",
+      "assetId": "AS-ICO-003",
+      "cap": 480,
+      "integerOnly": true
+    }
   ],
   "itemDefinitions": [
-    {"id": "ITEM-BEAD", "name": "Hạt châu bí ẩn", "assetId": "AS-ICO-004", "grantEventId": "E03", "unique": true, "description": "Cơ duyên được tìm thấy trong hang; công dụng hiện theo mốc đã khám phá."},
-    {"id": "ITEM-GOURD", "name": "Bầu nước", "assetId": "AS-ICO-005", "grantEventId": "E04", "unique": true, "description": "Dùng đựng nước cho sinh hoạt và chuẩn bị tu luyện.", "interactionPolicy": "story_item_no_capacity_modifier"},
-    {"id": "ITEM-MANUAL", "name": "Công pháp nhập môn", "assetId": "AS-ICO-006", "grantEventId": "E05", "unique": true, "description": "Công pháp được nhận khi nhập môn dưới sự chỉ dẫn của Tôn Đại Trụ.", "interactionPolicy": "explain_unlocked_practice"},
-    {"id": "ITEM-STORAGE-BAG", "name": "Túi trữ vật", "assetId": "AS-ICO-007", "grantEventId": "E05", "unique": true, "description": "Vật phẩm được nhận trong giai đoạn nhập môn.", "interactionPolicy": "story_item_no_capacity_modifier"}
+    {
+      "id": "ITEM-BEAD",
+      "name": "Hạt châu bí ẩn",
+      "assetId": "AS-ICO-004",
+      "grantEventId": "E03",
+      "unique": true,
+      "description": "Cơ duyên được tìm thấy trong hang; công dụng hiện theo mốc đã khám phá."
+    },
+    {
+      "id": "ITEM-GOURD",
+      "name": "Bầu nước",
+      "assetId": "AS-ICO-005",
+      "grantEventId": "E04",
+      "unique": true,
+      "description": "Dùng đựng nước cho sinh hoạt và chuẩn bị tu luyện.",
+      "interactionPolicy": "story_item_no_capacity_modifier"
+    },
+    {
+      "id": "ITEM-MANUAL",
+      "name": "Công pháp nhập môn",
+      "assetId": "AS-ICO-006",
+      "grantEventId": "E05",
+      "unique": true,
+      "description": "Công pháp được nhận khi nhập môn dưới sự chỉ dẫn của Tôn Đại Trụ.",
+      "interactionPolicy": "explain_unlocked_practice"
+    },
+    {
+      "id": "ITEM-STORAGE-BAG",
+      "name": "Túi trữ vật",
+      "assetId": "AS-ICO-007",
+      "grantEventId": "E05",
+      "unique": true,
+      "description": "Vật phẩm được nhận trong giai đoạn nhập môn.",
+      "interactionPolicy": "story_item_no_capacity_modifier"
+    }
   ],
   "characterEntries": [
-    {"id": "CHR-WANG-LIN", "name": "Vương Lâm", "assetId": "AS-CHR-001", "revealSceneId": "E01-VILLAGE", "description": "Nhân vật người chơi theo dõi; kiên trì tìm đường tu tiên dù tư chất ban đầu hạn chế."},
-    {"id": "CHR-PARENTS", "name": "Cha mẹ Vương Lâm", "assetId": "AS-CHR-002", "revealSceneId": "E01-VILLAGE", "description": "Gia đình đặt niềm hy vọng vào hành trình tu tiên của Vương Lâm."},
-    {"id": "CHR-FOURTH-UNCLE", "name": "Tứ thúc", "assetId": "AS-CHR-003", "revealSceneId": "E01-VILLAGE", "description": "Người thân đem tới cơ hội dự tuyển vào Hằng Nhạc phái."},
-    {"id": "CHR-WANG-ZHUO", "name": "Vương Trác", "assetId": "AS-CHR-004", "revealSceneId": "E02-EXAM", "description": "Người cùng thế hệ xuất hiện trong dịp tuyển chọn của Hằng Nhạc phái."},
-    {"id": "CHR-ZHANG-HU", "name": "Trương Hổ", "assetId": "AS-CHR-005", "revealSceneId": "E04-DORM", "description": "Đệ tử xuất hiện trong sinh hoạt giai đoạn ký danh của Vương Lâm."},
-    {"id": "CHR-SUN-DAZHU", "name": "Tôn Đại Trụ", "assetId": "AS-CHR-006", "revealSceneId": "E05-GARDEN", "description": "Sư phụ của Vương Lâm trong giai đoạn này, gắn với dược viên và công pháp nhập môn."}
+    {
+      "id": "CHR-WANG-LIN",
+      "name": "Vương Lâm",
+      "assetId": "AS-CHR-001",
+      "revealSceneId": "E01-VILLAGE",
+      "description": "Nhân vật người chơi theo dõi; kiên trì tìm đường tu tiên dù tư chất ban đầu hạn chế."
+    },
+    {
+      "id": "CHR-PARENTS",
+      "name": "Cha mẹ Vương Lâm",
+      "assetId": "AS-CHR-002",
+      "revealSceneId": "E01-VILLAGE",
+      "description": "Gia đình đặt niềm hy vọng vào hành trình tu tiên của Vương Lâm."
+    },
+    {
+      "id": "CHR-FOURTH-UNCLE",
+      "name": "Tứ thúc",
+      "assetId": "AS-CHR-003",
+      "revealSceneId": "E01-VILLAGE",
+      "description": "Người thân đem tới cơ hội dự tuyển vào Hằng Nhạc phái."
+    },
+    {
+      "id": "CHR-WANG-ZHUO",
+      "name": "Vương Trác",
+      "assetId": "AS-CHR-004",
+      "revealSceneId": "E02-EXAM",
+      "description": "Người cùng thế hệ xuất hiện trong dịp tuyển chọn của Hằng Nhạc phái."
+    },
+    {
+      "id": "CHR-ZHANG-HU",
+      "name": "Trương Hổ",
+      "assetId": "AS-CHR-005",
+      "revealSceneId": "E04-DORM",
+      "description": "Đệ tử xuất hiện trong sinh hoạt giai đoạn ký danh của Vương Lâm."
+    },
+    {
+      "id": "CHR-SUN-DAZHU",
+      "name": "Tôn Đại Trụ",
+      "assetId": "AS-CHR-006",
+      "revealSceneId": "E05-GARDEN",
+      "description": "Sư phụ của Vương Lâm trong giai đoạn này, gắn với dược viên và công pháp nhập môn."
+    }
   ],
   "systemPolicies": {
     "story": {
@@ -352,7 +641,17 @@
       "periodicSaveSeconds": 5,
       "singleWriter": true,
       "backupCount": 1,
-      "derivedState": ["beadVariant", "clothingVariant", "cultivationBlocked", "unlocks", "ownedItems", "revealedCharacters", "activityLocation", "mvpComplete", "waitReason"]
+      "derivedState": [
+        "beadVariant",
+        "clothingVariant",
+        "cultivationBlocked",
+        "unlocks",
+        "ownedItems",
+        "revealedCharacters",
+        "activityLocation",
+        "mvpComplete",
+        "waitReason"
+      ]
     }
   },
   "assets": [
@@ -1187,7 +1486,13 @@
   },
   "presentation": {
     "mainSection": "Hành trình",
-    "mainSections": ["Tu luyện", "Hạt châu", "Hành trình", "Hành trang", "Cài đặt"],
+    "mainSections": [
+      "Tu luyện",
+      "Hạt châu",
+      "Hành trình",
+      "Hành trang",
+      "Cài đặt"
+    ],
     "minimumLayoutWidthPx": 360,
     "defaultFontSizePx": 18,
     "subviews": [
@@ -1197,5 +1502,7 @@
     "viewDoesNotChangeActivity": true,
     "travelCostSeconds": 0,
     "missingAssetFallback": "name_and_description"
-  }
+  },
+  "planningStatus": "legacy_story_idle_reference",
+  "currentGameplayContentPath": "docs/data/mvp-rpg-content.json"
 }

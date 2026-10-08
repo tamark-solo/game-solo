@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-07",
+  "runtimeVersion": "0.6.0",
+  "passed": true,
+  "unitTests": {
+    "passed": 17,
+    "failed": 0,
+    "command": "npm.cmd test"
+  },
+  "browser": {
+    "passed": true,
+    "checks": [
+      "large_region_native_scale_and_real_atlases",
+      "wasd_camera_and_stop_without_drift",
+      "requested_zone_survives_camera_render_updates",
+      "all_six_zones_and_boss_portal_roundtrip",
+      "actor_zoom_and_quest_script_controls",
+      "mobile_360_touch_native_size_no_overflow"
+    ],
+    "browserErrors": [],
+    "regionSizePx": [
+      3840,
+      2560
+    ],
+    "characterFrameSizePx": [
+      64,
+      96
+    ],
+    "combatAndQuestsPlayable": false
+  },
+  "existingPreviewBrowser": {
+    "passed": true,
+    "browserVersion": "155.0.8059.39",
+    "checks": [
+      "source_atlases_6_packs_136_frames",
+      "home_page_defaults_to_new_chibi_asset",
+      "pause_and_manual_frame_step",
+      "main_map_chibi_four_directions_walk_stop_and_normalized_diagonal",
+      "four_directions_all_actors_static_states_explicit",
+      "every_walk_pose_is_displayed_by_three_renderer",
+      "new_chibi_sets_all_directions_spirit_glide_label_explicit",
+      "paper_dark_grid_integer_zoom",
+      "local_wasd_movement_input_focus_does_not_move_actor",
+      "independent_animation_uvs_1_5_20_local_actors",
+      "mobile_360_px_dpr2_four_direction_touch_movement_no_horizontal_overflow",
+      "five_character_chibi_gallery_frames_and_mobile_no_overflow",
+      "browser_auto_reconnect_same_session",
+      "two_browser_clients_see_same_server_movement",
+      "browser_leave_updates_roster"
+    ],
+    "measurements": [
+      {
+        "simulatedActors": 1,
+        "readout": "29 FPS · 1 hình",
+        "renderer": "headless_software",
+        "mmoCapacityClaim": false
+      },
+      {
+        "simulatedActors": 5,
+        "readout": "47 FPS · 5 hình",
+        "renderer": "headless_software",
+        "mmoCapacityClaim": false
+      },
+      {
+        "simulatedActors": 20,
+        "readout": "50 FPS · 20 hình",
+        "renderer": "headless_software",
+        "mmoCapacityClaim": false
+      }
+    ],
+    "browserErrors": [],
+    "mobileInputStartX": 480
+  },
+  "documentation": {
+    "localLinksChecked": 878,
+    "brokenLinks": 0,
+    "allJsonValid": true,
+    "mapSvgValid": true
+  },
+  "developmentLaunch": {
+    "regionUrl": "http://127.0.0.1:5173/starter-region.html",
+    "regionHTTPStatus": 200,
+    "existingBackendHealthy": true
+  },
+  "scope": {
+    "localLayoutImplemented": true,
+    "onlineRegionImplemented": false,
+    "combatPlayable": false,
+    "questsPlayable": false,
+    "persistentAccounts": false
+  },
+  "mvpContentPath": "docs/data/mvp-rpg-content.json",
+  "mvpSpecPath": "docs/MVP-RPG-A.md",
+  "mapSpecPath": "docs/STARTER-REGION-MAP.md",
+  "ownerLayoutAcceptance": {
+    "by": "project_owner",
+    "date": "2026-10-07",
+    "feedback": "tôi đã xem khá ổn rồi",
+    "scope": "starter_region_layout_scale_and_local_walk_preview",
+    "level": "accepted_prototype_baseline",
+    "contentVersion": "rpg-a-1.0",
+    "runtimeVersion": "0.6.0"
+  }
+}
