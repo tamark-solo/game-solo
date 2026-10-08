@@ -1,0 +1,265 @@
+{
+  "version": "3.0.0",
+  "realm": "R05",
+  "realmName": "Hóa Thần",
+  "artStatus": "reference_redesigned_pending_owner_motion_review",
+  "fps": 24,
+  "authoringFrameBase": 1,
+  "runtimeReady": false,
+  "authority": {
+    "damage": "combat_server",
+    "movement": "movement_server",
+    "vfxAppliesDamage": false,
+    "vfxMovesActor": false
+  },
+  "presentation": {
+    "screenFlash": false,
+    "sfxAssetsProduced": false,
+    "strikeLeadFrames": 1,
+    "clipOpacities": {
+      "thunder-core": [
+        0.35,
+        0.5,
+        0.65,
+        0.8,
+        0.85,
+        0.8,
+        0.55,
+        0.2
+      ],
+      "thunder-impact": [
+        1,
+        1,
+        0.9,
+        0.75,
+        0.6,
+        0.4,
+        0.2,
+        0.08
+      ]
+    },
+    "feedback": {
+      "enabledByDefault": false,
+      "cameraAmplitudeWorld": 2,
+      "cameraTicks": [
+        1,
+        -0.5,
+        0.25,
+        0
+      ],
+      "hitStopMs": 50,
+      "scope": "optional_visual_only_never_combat_clock",
+      "fullScreenFlash": false
+    }
+  },
+  "preview": {
+    "endFrame": 48,
+    "confirmFrame": 16,
+    "worldSize": [
+      960,
+      640
+    ],
+    "bodyHeightMax": 80,
+    "zoom": [
+      1,
+      2,
+      4
+    ],
+    "cameraCenter": [
+      480,
+      320
+    ],
+    "dprCap": 2
+  },
+  "id": "R05-THUNDER",
+  "family": "thunder",
+  "name": "Ý Cảnh Lôi",
+  "character": {
+    "baseIdleFrame": [
+      64,
+      96
+    ],
+    "bodyHeightMax": 80,
+    "collisionChanged": false,
+    "directions": [
+      "east"
+    ],
+    "clip": "wanglin-thunder-east",
+    "castCanvas": [
+      96,
+      96
+    ],
+    "castAnchor": [
+      48,
+      88
+    ],
+    "holds": [
+      1,
+      1,
+      2,
+      2,
+      4,
+      1,
+      1,
+      1,
+      2,
+      1,
+      1,
+      2
+    ]
+  },
+  "sockets": [
+    [
+      15,
+      -25
+    ],
+    [
+      16,
+      -37
+    ],
+    [
+      12,
+      -40
+    ],
+    [
+      14,
+      -40
+    ],
+    [
+      12,
+      -37
+    ],
+    [
+      17,
+      -53
+    ],
+    [
+      37,
+      -39
+    ],
+    [
+      45,
+      -39
+    ],
+    [
+      40,
+      -38
+    ],
+    [
+      19,
+      -45
+    ],
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -25
+    ]
+  ],
+  "tracks": [
+    {
+      "clip": "thunder-seal",
+      "startFrame": 1,
+      "stopBeforeFrame": 12,
+      "anchor": "hand",
+      "layer": 2
+    },
+    {
+      "clip": "thunder-core",
+      "startFrame": 4,
+      "stopBeforeFrame": 20,
+      "holdLastUntilResolve": true,
+      "anchor": "target.ground",
+      "layer": 0
+    },
+    {
+      "clip": "thunder-bolt",
+      "trigger": "combat.hitConfirmed",
+      "anchor": "hit",
+      "layer": 2
+    },
+    {
+      "clip": "thunder-impact",
+      "trigger": "visual.contact",
+      "anchor": "hit",
+      "layer": 3
+    }
+  ],
+  "events": [
+    {
+      "frame": 1,
+      "type": "cast.start"
+    },
+    {
+      "frame": 4,
+      "type": "intent.boundary"
+    },
+    {
+      "frame": 7,
+      "type": "intent.quiet"
+    },
+    {
+      "frame": 11,
+      "type": "intent.focus"
+    },
+    {
+      "frame": 12,
+      "type": "release"
+    },
+    {
+      "frame": 16,
+      "type": "recovery.start"
+    },
+    {
+      "frame": 20,
+      "type": "character.end"
+    }
+  ],
+  "hitContract": {
+    "required": [
+      "castId",
+      "hitId",
+      "worldPosition",
+      "confirmedAt"
+    ],
+    "secondaryNodesVisual": 6,
+    "damageEventsFromNodes": 0,
+    "coreDischargeVisualOnly": true
+  },
+  "intent": {
+    "artTheme": "Dinh_Loi",
+    "visualOnly": true,
+    "fullScreenEffect": false,
+    "localLighting": {
+      "radii": [
+        72,
+        48
+      ],
+      "startFrame": 4,
+      "endFrame": 20,
+      "quietAlpha": [
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.12,
+        0.12,
+        0.1,
+        0.08,
+        0.06,
+        0.04,
+        0.02
+      ],
+      "flashAlpha": [
+        0.18,
+        0.1,
+        0.03
+      ]
+    }
+  },
+  "edition": "reference_jade_silk_and_golden_seals"
+}

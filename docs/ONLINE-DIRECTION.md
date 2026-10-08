@@ -1,40 +1,52 @@
-# Định hướng online — vùng nhập môn RPG-A
+# Định hướng online — ba nhân vật chơi được
 
-**Ưu tiên thiết kế hiện tại:** [ART map để nhìn/duyệt](MAP-ART-DESIGN.md) trước, sau đó NPC/nhiệm vụ/combat/đồ/đột phá theo địa điểm. Vùng online và lưu tiến trình dưới đây triển khai sau bước duyệt map; bản nhiệm vụ/chỉ số hiện là nháp.
+**Phiên bản:** 0.8 · **Ngày:** 08/10/2026 · **Chuẩn hiện hành:** [GDD 0.28](GDD.md), [tu tiên](CULTIVATION-SYSTEM.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md).
 
-**Phiên bản:** 1.0, ngày07/10/2026. Người chơi là đệ tử riêng, cùng thế giới Hằng Nhạc; [MVP hiện tại](MVP-RPG-A.md) có nhiệm vụ, farm và boss ngay A. Client TypeScript + Three.js, backend Node.js + Colyseus.
+Quyết định mới thay mô hình đệ tử riêng: người chơi chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; cùng vào Hằng Nhạc qua Ngưng Khí, phân hóa sau map nhập môn từ hành trình Trúc Cơ. Bản trước giữ trong [lịch sử](archive/design-before-three-playable-characters/ONLINE-DIRECTION.md). Tài liệu này là định hướng, không báo đã triển khai tài khoản/gameplay.
 
-## Không gian và chủ thể
+## 1. Tài khoản, nhân vật và tiến trình
 
-| Không gian | Quy tắc A |
+| Phần | Thiết kế hiện hành |
 | --- | --- |
-| Vùng nhập môn chung | 5 khu liên kết, người chơi/NPC/quái; vị trí/va chạm/HP do server |
-| Hang boss | Phiên1 người với runId; gate Q08/Q09 và tầng 2 |
-| Tu luyện | Tài nguyên/cổng riêng từng đệ tử; không chạy cùng combat/farm |
-| Chính truyện Vương Lâm | Chương cá nhân; không áp dụng mốc/đồ của một người cho cả thế giới |
+| Lựa chọn ban đầu | Cả ba nhân vật có sẵn tại màn chọn; không chờ arc sau mới mở |
+| Đang điều khiển | Đề xuất một nhân vật mỗi lần; số slot và cách đổi còn mở |
+| Danh tính online | ID hồ sơ + tên tài khoản/biệt danh + nhãn nhân vật; cùng chọn Vương Lâm không cùng một save |
+| Tiến trình riêng | Mốc/cảnh giới hoặc hồi phục, tu vi, công pháp, thuật, pháp bảo, lĩnh ngộ, chương và tài nguyên |
+| Dùng chung tài khoản | Chưa chốt kho/tri thức/tiện ích chung; không tự chuyển tu vi, cơ duyên hoặc đồ độc hữu giữa nhân vật |
+| Máy chủ | Xác nhận trạng thái, hoạt động, kết quả và quyền truy cập của hồ sơ |
 
-NPC chính trong vùng mở đầu là Vương Lâm áo xám/Trương Hổ; các vai quản sự/người giữ lối/tuần sơn là game bổ sung. Hạt châu của Vương Lâm không thành đồ của mọi tài khoản. Lý Mộ Uyển/Tư Đồ Nam không được mở trong A chỉ vì đã có sprite.
+Tên biệt danh không viết lại quan hệ/gia đình của nhân vật trong truyện. Không mặc định một tài khoản điều khiển tổ đội ba người, đổi giữa trận, gacha hoặc mua nhân vật.
 
-## Farm và quyền thưởng
+## 2. Không gian chung và phiên cá nhân
 
-Người có damage hợp lệ trong20 giây cuối, còn trong320px khi quái chết được xét quest credit/loot cá nhân. Không ép last hit hoặc thả đồ cho người khác nhặt. Party chia thưởng ở B. Quái có leash, không đi vào hub an toàn.
+| Không gian | Nội dung | Quy tắc |
+| --- | --- | --- |
+| Hằng Nhạc chung | Nhân vật đi lại, gặp người chơi/NPC, hoạt động chung | Nhiều phiên cùng nhân vật là cách biểu diễn gameplay, không thêm nhân vật mới vào canon |
+| Tu luyện riêng | Hoạt động và tài nguyên của hồ sơ | Người khác không lấy hoặc sửa tiến trình nếu không có luật tương tác đã duyệt |
+| Chương cá nhân | Trạng thái truyện, cơ duyên và lời dẫn riêng | Một tài khoản hoàn thành không đổi tiến trình toàn server |
+| Khảo nghiệm cá nhân/tổ đội | Nhiệm vụ và kết quả chiến đấu | Điều kiện tham gia, quyền thưởng và cập nhật mốc phải đặc tả riêng |
+| Hoạt động thế giới | Nội dung lặp có ngữ cảnh | Không lặp biến cố độc hữu của truyện như một sự kiện toàn server |
 
-Mỗi lần chết tạo encounterRunId duy nhất; server đánh dấu cấp thưởng theo người/rewardType trong cùng giao dịch. Nhiệm vụ lặp dùng completionIndex; thùng thưởng đầu/boss pity là dữ liệu server. Không roll lại khi client gửi lại hoặc túi đầy; phần thưởng chờ nhận vẫn lưu.
+Chọn Lý Mộ Uyển/Tư Đồ Nam từ đầu là chuyển thể nhập môn, không thay thời điểm họ xuất hiện trong tuyến truyện nguyên tác của Vương Lâm. Khu chung tránh spoil; phiên truyện dùng trạng thái theo chương. Quy tắc cùng nhân vật trong party hoặc cùng chương nhóm còn mở, không tự cấm chơi chung chỉ vì chọn giống nhau.
 
-## Tiến trình và kết nối
+## 3. Mốc chung và sức mạnh khác nhau
 
-Tài khoản/nhân vật/version/giờ server quyết định progress; trình duyệt giữ cache/tùy chọn. Một phiên điều khiển/nhân vật; nhiều tab không nhân thời gian, đòn đánh hay thưởng. Hợp đồng auth/DB cần chốt trong A1, room state trong bộ nhớ không là lưu bền vững.
+Vương Lâm có tiến triển tu luyện đầu. Tư Đồ Nam có trạng thái linh thể/hồi phục năng lực hiện dùng được; không gọi ông là tu sĩ Ngưng Khí mới. Lý Mộ Uyển có tuyến mở đầu gameplay riêng giữ nền đan–trận. Mốc nhập môn chung hỗ trợ nội dung/ghép nhóm nhưng không đồng nhất cảnh giới canon.
 
-Di chuyển/skill/loot/đột phá gửi ý định và requestId. Server kiểm điều kiện, tài nguyên và idempotency, client hiển thị kết quả xác nhận. Mất mạng trong boss giữ hoặc reset theo quy tắc phiên được đặc tả trước combat; không cho mất kết nối để bỏ đòn rồi nhận thưởng.
+Không lấy một trường “cảnh giới” duy nhất để quy đổi sức mạnh cả ba trước khi có thiết kế cân bằng. Sức mạnh và giới hạn hiện dùng được cần hồ sơ theo nhân vật/mốc.
 
-Bế quan đã chọn tính4 tu vi/phút, tối đa8giờ vắng mặt, dừng tại gate nhiệm vụ/tầng. Không mô phỏng kill/loot khi đóng game. Farm và bế quan là hai hoạt động loại trừ nhau.
+## 4. Thời gian, lệnh và lưu
 
-## Trạng thái hiện tại và lộ trình
+Máy chủ sở hữu thời gian, chi phí, phần thưởng, vị trí hợp lệ, damage, học/luyện hóa và mốc truyện. Trình duyệt chỉ giữ tùy chọn/cache. Import JSON cũ không thay trạng thái hợp lệ.
 
-Preview/runtime có sân chung tạm960 × 640, server-authoritative movement/reconnect; chưa có tài khoản/DB/combat/quest. [Bản map rộng](STARTER-REGION-MAP.md) là bố trí đi thử cục bộ. Mốc A1 nối vùng mới với server và tiến trình; A2 làm một quái/Q01–Q03 trước mở cả nội dung.
+Mỗi lệnh cần quyền hồ sơ và cách xử lý một lần; gửi lại hoặc nhiều tab không nhân thưởng, đột phá hay thời gian. Kết nối lại khôi phục hoạt động/cảnh đang đọc và kết quả đã xác nhận. Một phiên điều khiển mỗi hồ sơ là đề xuất; hợp đồng thiết bị/phiên cần đặc tả.
 
-Mục tiêu kiểm thử8 client thật, chia room/shard theo số đo; hai phiên thử và20 hình local không chứng minh tải MMORPG. A cần hai tài khoản trọn hành trình/lưu qua restart, rồi thử nhóm/mobile theo [backlog](MVP-BACKLOG.md).
+Riêng [HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất checkpoint sau pha 1/2, reset hai actor khi thử lại pha chưa qua và pause tối đa 30 giây sau khi server phát hiện mất kết nối. Pause chỉ mô phỏng phiên cá nhân, không thế giới chung; không regen/offline thưởng khi pause. Kết quả đã lưu quyết định checkpoint/M04, event pha cũ không tác động pha mới. Luật này cần đánh giá/hợp đồng kỹ thuật, không áp ngầm cho PvP hoặc mọi encounter.
 
-B thêm party2–4/boss nhóm và arc mới. Chat/giao dịch/PvP/bang hội/world boss cần thiết kế dữ liệu/kinh tế riêng, không tự coi đã có vì chọn thể loại MMO.
+Tu luyện vắng mặt chỉ tiếp tục hoạt động đã chọn theo điều kiện/kho/bình cảnh. Không tự combat, truyện, lĩnh ngộ then chốt hoặc đại đột phá. [Hồ sơ tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) đề xuất cap offline thử 30 phút, nền dừng ở cổng, thưởng nhiệm vụ vượt cổng được giữ và không tự xác nhận tầng; rời game trong combat/bài tương tác không tự chuyển hoạt động. Đây là luật thử cần đánh giá, không kế thừa 8 giờ cũ thành quyết định đã khóa.
 
-[Định hướng trước](ONLINE-DIRECTION-REFERENCE.md) và E01–E08/JSON save cũ giữ hồ sơ; [kịch bản đệ tử mới](STARTER-STORY.md) cùng [JSON](data/mvp-rpg-content.json) là đầu vào gameplay hiện tại.
+## 5. Phạm vi kiểm chứng
+
+Lát A đề xuất: ba lựa chọn từ đầu, hai tài khoản vào Hằng Nhạc, di chuyển/tương tác, nhiệm vụ/tu luyện đầu và combat đơn giản, lưu riêng. Lát B hoàn thiện Ngưng Khí và khảo nghiệm cuối. Lát C mở phân hóa Trúc Cơ. Đây là phân kỳ thiết kế, chưa là lịch phát hành.
+
+Tài khoản, DB, loot/tổ đội/PvP/giao dịch, quy mô phòng/server và khóa/chuyển nhân vật còn mở. Backend phiên tạm hiện có chỉ chứng minh phần trong [hợp đồng preview](BACKEND-PREVIEW.md), không chứng minh sáu hệ tu tiên đã hoạt động.

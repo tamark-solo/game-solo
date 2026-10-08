@@ -1,0 +1,7 @@
+Use case: precise-object-edit.
+Asset type: seamless native-detail environment repair patch for the Hằng Nhạc 2D RPG map.
+Input: Image 1 is the EDIT TARGET, a 960x640 world-pixel camera crop of an assembled background. It contains small art-stitching defects, not intentional architecture.
+Primary request: Repair the vertical stitching artifact at the image's center x=480: align the north terrace medallion, central stair risers, middle corridor paving joints and split gateway beam into ONE clean continuous drawing. Preserve the two distinct hall wings and the corridor gap.
+Draw the corrected region at native 1536x1024 landscape 3:2 resolution if possible, matching Image 1 exactly in framing and style. Crisp hand-drawn anime game background, intentional stone joints and timber edges, muted limestone floor, jade foliage, blue-grey tiled roofs. No sharpening halo, blur, bloom or noise.
+Invariants: preserve all existing object positions, silhouettes, floor footprint, path widths, steps, foliage groups, lanterns, morning light and palette. Do not zoom, move, rotate or crop the scene. KEEP THE OUTERMOST 60 WORLD PIXELS on all four edges especially faithful to the input geometry, colours and shading so it can be overlaid into the larger map. Correct only the broken joins and malformed details in the inner area; no new object or landmark.
+Background only. No people, names, UI, labels, text, numbers, magic, VFX, borders or watermarks. Return ONLY the repaired background crop, landscape 3:2.

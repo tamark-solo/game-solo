@@ -1,0 +1,461 @@
+{
+  "id": "R02-THUNDER",
+  "name": "Liên Lôi Ấn",
+  "version": "1.0.1",
+  "realm": "R02",
+  "artStatus": "owner_approved",
+  "runtimeReady": false,
+  "date": "2026-10-07",
+  "assetPath": "r02-thunder-v1",
+  "frames": 44,
+  "atlases": 5,
+  "sourceOfTruth": "individual_RGBA_PNG_frames",
+  "files": [
+    {
+      "file": "frame-by-frame-r01/sequence-system.mjs",
+      "bytes": 2516,
+      "sha256": "c20b913e504096b036bf4d1732ef13b23e8d126022bf3440547a9abe7183e15c"
+    },
+    {
+      "file": "production/export-sequences.mjs",
+      "bytes": 4584,
+      "sha256": "5c4171372a6e8fc061b8e541a91adbd535e0d8312d71216ab405e637a45ffb52"
+    },
+    {
+      "file": "production/p2-controller.mjs",
+      "bytes": 3169,
+      "sha256": "c4af2a4bece87024c336b984274f69801c14a70d6d4eda364340c9f00ac58c2f"
+    },
+    {
+      "file": "production/p2-model.mjs",
+      "bytes": 2739,
+      "sha256": "5d6282f62945e45621cf14ca77aa59fcde989d185cd402fa9d35881280267746"
+    },
+    {
+      "file": "production/pack-atlases.mjs",
+      "bytes": 1479,
+      "sha256": "9d2e146a0e96be9d4b61a7251204e091f7836307bf726f9cb7dd31bf42942bd6"
+    },
+    {
+      "file": "production/r02-controller.mjs",
+      "bytes": 4485,
+      "sha256": "786a33dc994d16fd84edeefdcd2368c9a6a3b7d8f9e1084253028fe3e9fdd4c5"
+    },
+    {
+      "file": "production/r02-model.mjs",
+      "bytes": 4680,
+      "sha256": "dddd42dc6d70efcd240602276787c87cec34b2923f31d6b433a4e73ed377e472"
+    },
+    {
+      "file": "r02-thunder-v1/atlases/thunder-bolt.png",
+      "bytes": 39076,
+      "sha256": "d9d467c7fb57aff4ad8ecd32b1b1712e05ebde1a045b91e8477466d0ea7cbe9b"
+    },
+    {
+      "file": "r02-thunder-v1/atlases/thunder-convergence.png",
+      "bytes": 175767,
+      "sha256": "b2b24d0fb7ce00b0d5a71c9dec58bc2161135ce7420fa6f829abd2f2aa3a5a9b"
+    },
+    {
+      "file": "r02-thunder-v1/atlases/thunder-impact.png",
+      "bytes": 71768,
+      "sha256": "8cdeb4e1d246c883263d048de5908261b0e049f2e72c5836f273ac7ab8538b10"
+    },
+    {
+      "file": "r02-thunder-v1/atlases/thunder-seal.png",
+      "bytes": 22943,
+      "sha256": "0f4892a37fc6ecc14520fb2cbcc393667cc34a2543328ee9ff0a7bb513134be9"
+    },
+    {
+      "file": "r02-thunder-v1/atlases/wanglin-thunder-east.png",
+      "bytes": 124381,
+      "sha256": "aceb0aab8e5358cf5fcc01ee266dd1718d4e1418f2474f8a950e141c4bc6b734"
+    },
+    {
+      "file": "r02-thunder-v1/build-report.json",
+      "bytes": 179,
+      "sha256": "d0e880281095393d629263cbcbeaba0348ff119fb759d107016e0d890c409e31"
+    },
+    {
+      "file": "r02-thunder-v1/clips.json",
+      "bytes": 27228,
+      "sha256": "f36d4a9e29d95809444c065dd8fbf05eaa55cb7b630ae2c3d11d9fef6f40430d"
+    },
+    {
+      "file": "r02-thunder-v1/export-spec.json",
+      "bytes": 697,
+      "sha256": "1b96fce95cb678b59066eb459459253aaea6ae35dc4bffec7f3c26bba52895d7"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/001.png",
+      "bytes": 1721,
+      "sha256": "e600588a16e96209c611e35cc8ab1b6ab624b7b395550a757dc2ab1c23ec84dc"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/002.png",
+      "bytes": 3544,
+      "sha256": "0e1a9dcc68ea1449eff335ffd86547a696245b0fefd1e4d241ddad1fa89e9960"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/003.png",
+      "bytes": 7435,
+      "sha256": "266deff0949b37b4dd0336dbaa3450d533f26c4ee3b806faa87b0df68840a0b6"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/004.png",
+      "bytes": 14685,
+      "sha256": "20e3efaace05ca2c092f376dba6c0c0daa3d0c4bd9b005f39ca9b92cc16b6410"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/005.png",
+      "bytes": 7553,
+      "sha256": "b36de2907bcb404792197b6179f6d97737f618e884847ea4c0354f8768192c64"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-bolt/006.png",
+      "bytes": 3585,
+      "sha256": "f7251ee3a89ec075413b3d454aff6af504e6ec7c24dafae6a6df28cdcd88ec08"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/001.png",
+      "bytes": 15132,
+      "sha256": "8cf292f42c37ea893c7b7ef952d618e36276d034c71d7fb96e1352486eaa6cb8"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/002.png",
+      "bytes": 19731,
+      "sha256": "77979212774358c1568e64303bb887d5a60f5124743e8921de5aff6740693984"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/003.png",
+      "bytes": 21264,
+      "sha256": "5fe25a1bc8f8dd703b584a7e06dab569e30c778fc651f312a592da07b81182f5"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/004.png",
+      "bytes": 23074,
+      "sha256": "29ccd7b7735b7f96b726a7a8dba4d44ace519d6fcbcb583f6ca2bd751662be56"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/005.png",
+      "bytes": 24030,
+      "sha256": "d1e26ad9de3a2904db9d910cee158f69522f5dcbf3a944e523cbe2bfde3f5ff8"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/006.png",
+      "bytes": 25386,
+      "sha256": "0f67a76b8ab80edaa4c580abd52b05519dc15564d50988397a98b6ad243d63f9"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/007.png",
+      "bytes": 26481,
+      "sha256": "ee422a445b35cbba1278fd6cbcf1bb434230f19972190b1766fa3949a754c7af"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-convergence/008.png",
+      "bytes": 24526,
+      "sha256": "623f6aafec498ea16afb9810e0f43ed73a610ca59a19b814d2a8e20c3565ef9d"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/001.png",
+      "bytes": 1100,
+      "sha256": "b27f770593ceec1e93ea9cd9e4f1fd2f939a04664b348cb1101f3f69c9960be1"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/002.png",
+      "bytes": 6773,
+      "sha256": "df8b07c670faa14152a4c3c01afa9a5f9998b02423e23ccd809c1a3e80990a45"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/003.png",
+      "bytes": 11297,
+      "sha256": "b823d9d8a260aab4f27584d77edc695402d549a03dc4af0eef6b2353da161a54"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/004.png",
+      "bytes": 10905,
+      "sha256": "fc57f184068e92ec183ae392303f1317347ad8e29b4624bc085d418cdcd0b6ba"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/005.png",
+      "bytes": 9537,
+      "sha256": "38be5c8590b24665cbf19635bd158d4bfb190677e0a36b1ce456a8affecd94ee"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/006.png",
+      "bytes": 10437,
+      "sha256": "ae90195c7d9f7c489724f2005e6a14c8c6bf3eb18e428294b42becb6c4d44e3f"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/007.png",
+      "bytes": 8443,
+      "sha256": "51545e2c1fbbb38ae2c95e9597132cfef5bd26bdfb50245c0f71a6a842d8c729"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/008.png",
+      "bytes": 6266,
+      "sha256": "1e3f3d0e4ad9a5ec8b140578381f4364eb92bdf18ab2859dcc819e1029565ad3"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/009.png",
+      "bytes": 3545,
+      "sha256": "0122a8fe345d5cc4015fe5e63d9a2578df83c316b94755aaa206ea55fed88195"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/010.png",
+      "bytes": 2120,
+      "sha256": "e5619360e3236f3f09df2c146cc24b5da539f21fe1d6d3ecaa8864f8a4eb18a3"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/011.png",
+      "bytes": 1935,
+      "sha256": "098795909e9ccf5c7c1f4e3f087a6b203a0e498bd4a75420a4eff6881d411c30"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-impact/012.png",
+      "bytes": 846,
+      "sha256": "192bed06c95796db041ac8afeb929a5547ed89386a00282c63d649d0e30af44d"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/001.png",
+      "bytes": 1142,
+      "sha256": "acf6f92fd6d0d3122cf12b752c2817a3de38a26ec6c815383e966522d21499d6"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/002.png",
+      "bytes": 3477,
+      "sha256": "7dc0a569a3b53959f1b1bba9f2541873287b2058823c0c65c8ae343ddf56a263"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/003.png",
+      "bytes": 4307,
+      "sha256": "70fe8661dba25e2a7bfecd12b052dbf53a7933a4181f5214c2abf3420096d410"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/004.png",
+      "bytes": 5372,
+      "sha256": "736c982418b7ca9406dd7cfc0b7dda39992250a75c87ebd2c9e45adb9ec76191"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/005.png",
+      "bytes": 4665,
+      "sha256": "ddf76242df03917ea51d27c102de013e0acd7e31e2f9fd71c281b655c10a2fd5"
+    },
+    {
+      "file": "r02-thunder-v1/frames/thunder-seal/006.png",
+      "bytes": 4592,
+      "sha256": "3be750a6d530c621421d0ba246fb7f10042025be6679a1268fefe6af129d2c87"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/001.png",
+      "bytes": 9942,
+      "sha256": "bd14feec428df1e8e971e7bfcd7571eeb23522c7d99aa4384acc3b0a5ca0fd2d"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/002.png",
+      "bytes": 11005,
+      "sha256": "ad1911164722a6de41800332048a7a85c661d3f42db340ba14e887876139e123"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/003.png",
+      "bytes": 10294,
+      "sha256": "01aac6de0fabcf042fc82ac9212bf070751821fe9d546fb953a0d70eb4903058"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/004.png",
+      "bytes": 10731,
+      "sha256": "1b39dde3ae92819fca68c6829b04986d8797d586a17d58f74941a10dc7a0a6e9"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/005.png",
+      "bytes": 10110,
+      "sha256": "5ab75b43c3927615fbd33822df41115668e932832a412c685a9f53a885a929d7"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/006.png",
+      "bytes": 11588,
+      "sha256": "ef0afed927f191d42fe7b81267a978180ffbf1ef13c96a063e68a3cdfd6431dc"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/007.png",
+      "bytes": 12048,
+      "sha256": "37d1afaa66d08d710d2bc45a7121b421d3f2e236f00816928bec2391fcf5d84d"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/008.png",
+      "bytes": 12626,
+      "sha256": "ec8faa4a1064ebd426f583952650bcadd3bda35d4790a153102142550e1d481d"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/009.png",
+      "bytes": 11714,
+      "sha256": "9cfa340d43d4e79c74c0aa7e170442fe73e70e1efc813e7df08e01b3e1daf82b"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/010.png",
+      "bytes": 11178,
+      "sha256": "29389fa2ba64064710befe51a9d2a774a67863cada22b92c309cfdc7f35e6ca8"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/011.png",
+      "bytes": 10095,
+      "sha256": "46435d0c913bb0d88a724c5bb4b71b055c3322cb0ccd1a054e73b4a12f8f6385"
+    },
+    {
+      "file": "r02-thunder-v1/frames/wanglin-thunder-east/012.png",
+      "bytes": 9788,
+      "sha256": "14c5886b2664e7aabe665c328e636630e2dd7ef651763a93ee2a6d07295336dc"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-bolt-clean.txt",
+      "bytes": 816,
+      "sha256": "5ff9d3317ed0d3640b273bdfe66dd55164b9de756b6d537ddbe0dd6f07dab7fb"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-bolt-production.txt",
+      "bytes": 1131,
+      "sha256": "8210cb8ddf95eb3f64d1740998018cc1903a77fc48d55e1baa966b2c33b4076b"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-bolt.txt",
+      "bytes": 892,
+      "sha256": "a2d398c0db6dc4769d7087bae07af54e57ef5eb8f0ae63c8fa4906d6d74757ca"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-cast.txt",
+      "bytes": 1090,
+      "sha256": "ec8615fd7df533f01dc4176f07da81541c9ad837a9d67b1f473d96239a93699e"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-impact-clean.txt",
+      "bytes": 710,
+      "sha256": "fd789b5101fccdd5a1988eec5b9a24386b317a359af6af0545beff69d5203e7e"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-impact-production.txt",
+      "bytes": 1068,
+      "sha256": "639cc36bde20e972511755e3900b4696eda730d0890ec3cd8e7d6b25ab55a195"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-impact.txt",
+      "bytes": 947,
+      "sha256": "8235f72d84f2b1e163b686e78885405c96fb424e8738f3782018940b9aa3c349"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-ring-clean.txt",
+      "bytes": 559,
+      "sha256": "b860a66cc981e6a26ac84f91d26aad3a0f9aefd8d418e2177b6d52d82359d83b"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-ring-production.txt",
+      "bytes": 1092,
+      "sha256": "542c6e3c4eebcbd2f69408f2cdff35d6ad556dace06124de21fdca967a379a4e"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-ring.txt",
+      "bytes": 847,
+      "sha256": "9089fe67af7c1b5c385f801c4a5a595d6ad7ae82898961071bbe928dcc7c60d0"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-seal-clean.txt",
+      "bytes": 578,
+      "sha256": "331dc509a46be180084be97da9542402a7c1a056135a3a978729d60e91122690"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-seal-production.txt",
+      "bytes": 1027,
+      "sha256": "c1a2e94e2fd1ac01a511523e93a34924683f808a45d576228a2facd5c3d86f24"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/reused-r01/thunder-seal.txt",
+      "bytes": 815,
+      "sha256": "822977fbdad38aaad03b57e608154ec7cf17a8a3c973f28db516573be7795041"
+    },
+    {
+      "file": "r02-thunder-v1/prompts/thunder-convergence.txt",
+      "bytes": 1605,
+      "sha256": "d25045c327d86fc8668615562ed200b243882a87443783d4deb2e714d5e24bc4"
+    },
+    {
+      "file": "r02-thunder-v1/provenance.json",
+      "bytes": 606,
+      "sha256": "4f2e1349351ef07d9a8d1bbf06d84a21c182a25df5eb0f3cda2b765f2fb36637"
+    },
+    {
+      "file": "r02-thunder-v1/review/F12-1x.png",
+      "bytes": 790602,
+      "sha256": "365ff8f67c9c6b4304bb2e268c0217c94c7a744bd6be06cf1e7e1b6b466028d4"
+    },
+    {
+      "file": "r02-thunder-v1/review/F12-2x.png",
+      "bytes": 474328,
+      "sha256": "8fe9185e92a6523dd981c03adc8874eae9f1eed974d26a855c0cb062636126b8"
+    },
+    {
+      "file": "r02-thunder-v1/review/F14-1x.png",
+      "bytes": 791165,
+      "sha256": "f10855846f94025a1ae2fef63011fea2191d7ae941c051006990e1e046296d61"
+    },
+    {
+      "file": "r02-thunder-v1/review/F14-2x.png",
+      "bytes": 475935,
+      "sha256": "01b1177c87790b9876310d73085a0958a69d0f066bdc31dc995232489c0d293a"
+    },
+    {
+      "file": "r02-thunder-v1/review/F18-1x.png",
+      "bytes": 799020,
+      "sha256": "08ce83e1fc2343849c13a6c337d2beffa5bdf733da1a3cc5caed77ebab68a821"
+    },
+    {
+      "file": "r02-thunder-v1/review/F18-2x.png",
+      "bytes": 510529,
+      "sha256": "99560aa44e64fb20609ae248263470929e9fb41f5cbacbd917dc9dd14b609431"
+    },
+    {
+      "file": "r02-thunder-v1/review/F24-1x.png",
+      "bytes": 782122,
+      "sha256": "a6e3e6a8d4f5f438f3ab8bd32b793559c04ba116061fd60d680cb6c18ffed9bf"
+    },
+    {
+      "file": "r02-thunder-v1/review/F24-2x.png",
+      "bytes": 451707,
+      "sha256": "df227118c617b30fb0f02af04519e156bd9d444bad6d821314a51571ccb65215"
+    },
+    {
+      "file": "r02-thunder-v1/skill.json",
+      "bytes": 2901,
+      "sha256": "26b1a7226b843d19c2a6c1ac97eddb96001baefc48a50edf67419f7e6eb1fed0"
+    },
+    {
+      "file": "r02-thunder-v1/source/thunder-bolt.png",
+      "bytes": 1300921,
+      "sha256": "0cf9ffbd8ee4b5e0e9e058457d15834705f7f0e823505952d5ad0736415072cf"
+    },
+    {
+      "file": "r02-thunder-v1/source/thunder-cast.png",
+      "bytes": 1819278,
+      "sha256": "f4763db376b1b29a357d8c6e01135017b23be1e3e4cd8009d8ec0f3df95edd01"
+    },
+    {
+      "file": "r02-thunder-v1/source/thunder-convergence.png",
+      "bytes": 1861806,
+      "sha256": "74bed0214871fd7351c365bab3989b4999212559d9a254e677b0822188b8c8d8"
+    },
+    {
+      "file": "r02-thunder-v1/source/thunder-impact.png",
+      "bytes": 1863293,
+      "sha256": "b261a118716a34c98d96da69c27611afcdb422f62ff730ebd6d9a01457577774"
+    },
+    {
+      "file": "r02-thunder-v1/source/thunder-seal.png",
+      "bytes": 2092273,
+      "sha256": "f2b7fe5a3e67967725f8d306634d907ee4aeb1cbb8390d8a70baf94725db28cc"
+    }
+  ],
+  "previewIncluded": false,
+  "approval": {
+    "date": "2026-10-07",
+    "evidence": "User reviewed current Truc Co kit, said it looks quite good and requested packaging and further upgrades."
+  },
+  "integration": "presentation_helpers_only_host_owns_damage_and_movement"
+}

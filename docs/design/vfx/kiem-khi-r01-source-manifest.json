@@ -1,0 +1,200 @@
+{
+  "id": "R01-SWORD-WANG-LIN-NATIVE-PREVIEW",
+  "version": "0.2",
+  "status": "native_scale_vfx_preview_not_combat_runtime",
+  "tool": "built_in_imagegen",
+  "fx": {
+    "file": "kiem-khi-r01-fx-v2.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "alpha": true,
+    "regions": {
+      "sword": {
+        "x": 41,
+        "y": 242,
+        "w": 454,
+        "h": 187,
+        "pivot": [
+          0.5,
+          0.38
+        ]
+      },
+      "trail": {
+        "x": 552,
+        "y": 213,
+        "w": 532,
+        "h": 217
+      },
+      "gather": {
+        "x": 1158,
+        "y": 160,
+        "w": 322,
+        "h": 307
+      },
+      "impact": {
+        "x": 62,
+        "y": 534,
+        "w": 443,
+        "h": 423
+      },
+      "dissolve": {
+        "x": 578,
+        "y": 625,
+        "w": 469,
+        "h": 293
+      },
+      "dust": {
+        "x": 1111,
+        "y": 630,
+        "w": 383,
+        "h": 259
+      }
+    }
+  },
+  "hit": {
+    "file": "kiem-khi-r01-universal-hit-v1.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha": true,
+    "materialIndependent": true,
+    "regions": {
+      "contact": {
+        "x": 158,
+        "y": 123,
+        "w": 455,
+        "h": 431,
+        "pivot": [
+          0.31,
+          0.48
+        ]
+      },
+      "recoil": {
+        "x": 704,
+        "y": 105,
+        "w": 522,
+        "h": 479
+      },
+      "scatter": {
+        "x": 92,
+        "y": 688,
+        "w": 573,
+        "h": 478,
+        "pivot": [
+          0.09,
+          0.89
+        ]
+      },
+      "residue": {
+        "x": 805,
+        "y": 658,
+        "w": 321,
+        "h": 539
+      }
+    }
+  },
+  "main": {
+    "file": "wanglin-chibi-stand-east-native-v1.png",
+    "characterId": "CHR-WANG-LIN-CHIBI-EAST-PILOT",
+    "sourceCharacterId": "CHR-WANG-LIN",
+    "frameSize": [
+      64,
+      96
+    ],
+    "anchor": [
+      32,
+      88
+    ],
+    "castSocketOffset": [
+      16,
+      -30
+    ],
+    "sampling": "nearest",
+    "pose": "existing_stand_east_cast_pose_pending",
+    "source": "../characters/wang-lin-chibi-pilot-v1/native-v1/frames/wanglin_chibi_stand_east.png"
+  },
+  "target": {
+    "file": "pvp-target-stand-west-native-v1.png",
+    "frameSize": [
+      64,
+      96
+    ],
+    "anchor": [
+      32,
+      88
+    ],
+    "sampling": "nearest",
+    "usage": "existing_avatar_for_character_and_pvp_preview"
+  },
+  "scene": {
+    "file": "sect-courtyard-game-reference-v1.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "worldSize": [
+      960,
+      640
+    ],
+    "usage": "same_world_plate_as_game_preview"
+  },
+  "camera": {
+    "center": [
+      480,
+      320
+    ],
+    "referenceViewport": [
+      960,
+      640
+    ],
+    "defaultZoom": 1,
+    "allowedZooms": [
+      1,
+      2,
+      4
+    ],
+    "cssPixelPerWorldUnitAtZoom1": 1,
+    "responsivePolicy": "resize_frustum_crop_world_never_scale_whole_scene",
+    "devicePixelRatioCap": 2
+  },
+  "layout": {
+    "foot": [
+      400,
+      386
+    ],
+    "targetFoot": [
+      600,
+      386
+    ]
+  },
+  "skillSizes": {
+    "unit": "world_pixel",
+    "sword": 96,
+    "trailThickness": 36,
+    "contact": 52,
+    "recoil": 72,
+    "scatter": 56,
+    "residue": 46,
+    "scope": "art_preview_sizes_not_gameplay_damage_bounds"
+  },
+  "timeline": "kiem-khi-r01-timing.json",
+  "impactContract": {
+    "anchor": "target_world_hit_socket",
+    "timestamp": "demo_0.32s_replace_with_combat_hit_event",
+    "missPolicy": "no_contact_flash_or_target_residue",
+    "targetSizePolicy": "change_hit_anchor_not_player_skill_scale",
+    "materialDebris": false,
+    "groundDamage": false
+  },
+  "prompts": [
+    "kiem-khi-r01-fx-v1.prompt.txt",
+    "kiem-khi-r01-fx-v2.prompt.txt",
+    "kiem-khi-r01-pose-v1.prompt.txt",
+    "kiem-khi-r01-scene-v1.prompt.txt",
+    "kiem-khi-r01-universal-hit-v1.prompt.txt"
+  ],
+  "runtime_ready": false
+}

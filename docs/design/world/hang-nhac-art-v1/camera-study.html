@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vương Lâm trên Hằng Nhạc — tỷ lệ và camera</title>
+  <style>
+    :root { color-scheme: light; --paper: #f3eddf; --ink: #263b37; --jade: #37665a; --line: #c9c2ae; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 "Segoe UI", sans-serif; }
+    main { max-width: 1048px; margin: auto; padding: 24px; }
+    h1 { margin: 0 0 8px; font: 30px/1.25 Georgia, serif; }
+    p { margin: 0 0 12px; }
+    a { color: var(--jade); text-underline-offset: 3px; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin: 16px 0; }
+    button, select { font: inherit; padding: 8px 12px; min-height: 44px; border: 1px solid var(--line); border-radius: 5px; background: #fffbf2; color: var(--ink); }
+    button { cursor: pointer; }
+    button[aria-pressed="true"] { background: var(--jade); border-color: var(--jade); color: #fffbf2; }
+    :focus-visible { outline: 3px solid var(--jade); outline-offset: 3px; }
+    label { display: flex; align-items: center; gap: 6px; }
+    select { max-width: 100%; }
+    .frame { position: relative; width: 100%; max-width: 960px; height: 640px; overflow: hidden; background: #ccd5c7; touch-action: manipulation; }
+    .frame[data-frame="narrow"] { max-width: 360px; height: 520px; }
+    .world { position: absolute; left: 0; top: 0; width: 2400px; height: 1800px; will-change: transform; }
+    .ground { display: block; width: 2400px; height: 1800px; user-select: none; pointer-events: none; }
+    .player { position: absolute; left: 0; top: 0; width: 96px; height: 96px; pointer-events: none; }
+    .body { position: absolute; left: -48px; top: -88px; width: 96px; height: 96px; image-rendering: pixelated; }
+    .shadow { position: absolute; left: -15px; top: -4px; width: 30px; height: 8px; background: #26372b; opacity: .2; border-radius: 50%; }
+    .name { position: absolute; left: -70px; top: -112px; width: 140px; text-align: center; color: #fff8de; font-size: 13px; font-weight: 600; text-shadow: 0 1px 2px #152a27, 1px 0 2px #152a27, -1px 0 2px #152a27; }
+    .guide { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .guide[hidden] { display: none; }
+    .caption { margin-top: 10px; font-size: 14px; }
+    .pad { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .note { font-size: 14px; color: #586257; }
+    details { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 12px; }
+    details p { margin-top: 12px; }
+    @media (max-width: 600px) { main { padding: 14px; } h1 { font-size: 26px; } .controls > label:first-child { flex-basis: 100%; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Vương Lâm trên Hằng Nhạc</h1>
+  <p>Body 80 px · Tỷ lệ 1× · Màn hẹp giữ cỡ nhân vật và cắt vùng nhìn.</p>
+  <p><a href="../hang-nhac-art-v3/index.html">Xem toàn Hằng Nhạc v3 — nền vẽ mới cho cả bảy khu và camera 1×</a>. Bản dưới giữ nền v1 để đối chiếu lịch sử.</p>
+  <p><a href="../hang-nhac-art-v2/index.html">Xem sân chính v2 — nền được vẽ lại để kiểm chứng độ nét cùng nhân vật</a></p>
+  <div class="controls" aria-label="Thiết lập bản thử camera">
+    <label for="location">Khu
+      <select id="location">
+        <option value="HN-Z02" selected>Sân môn phái</option>
+        <option value="HN-Z04">Sân luyện thuật</option>
+        <option value="HN-Z01">Sơn môn</option>
+        <option value="HN-Z03">Đình thổ nạp</option>
+        <option value="HN-Z05">Ngoại vi</option>
+        <option value="HN-Z06">Chuẩn bị</option>
+        <option value="HN-Z07">Lối vào khảo nghiệm</option>
+      </select>
+    </label>
+    <button type="button" id="desktop" aria-pressed="true">Khung 960 × 640</button>
+    <button type="button" id="narrow" aria-pressed="false">Khung hẹp 360 × 520</button>
+    <label><input type="checkbox" id="follow" checked> Camera bám</label>
+    <label><input type="checkbox" id="show-guide"> Neo chân / thước 80</label>
+  </div>
+  <div id="frame" class="frame" data-frame="desktop" role="region" aria-label="Thử tỷ lệ và camera trên nền Hằng Nhạc">
+    <div id="world" class="world">
+      <img class="ground" id="ground" src="hang-nhac-map-v1.png" alt="Nền Hằng Nhạc với sân môn phái và các đường núi" draggable="false">
+      <div id="player" class="player">
+        <div class="shadow" aria-hidden="true"></div>
+        <img id="sprite" class="body" src="../../vfx/frame-by-frame-r01/frames/wanglin-cast-east/001.png" alt="Vương Lâm chibi, frame đứng tham chiếu R01" draggable="false">
+        <div class="name" aria-hidden="true">Vương Lâm</div>
+      </div>
+    </div>
+    <svg id="guide" class="guide" hidden role="img" aria-label="Neo chân và chiều cao body 80 pixel"></svg>
+  </div>
+  <p id="caption" class="caption" aria-live="polite">Khung 960 × 640 · Body 80 px ở 1×</p>
+  <div class="pad" aria-label="Dịch vị trí nhân vật để thử camera">
+    <button type="button" data-nudge="0,-48" aria-label="Dịch lên">↑ Lên</button>
+    <button type="button" data-nudge="-48,0" aria-label="Dịch sang trái">← Trái</button>
+    <button type="button" data-nudge="0,48" aria-label="Dịch xuống">↓ Xuống</button>
+    <button type="button" data-nudge="48,0" aria-label="Dịch sang phải">Phải →</button>
+  </div>
+  <p class="note">Dùng WASD/phím mũi tên, các nút trên hoặc bấm nền để thử vị trí và camera. Mẫu dùng pose đứng; chưa mô phỏng đi bộ, va chạm hoặc che khuất bởi mái/cây.</p>
+  <p><a href="index.html">Xem toàn map</a> · <a href="CAMERA-STUDY.md">Ghi chú tỷ lệ và camera</a></p>
+  <details>
+    <summary>Thông số bản thử</summary>
+    <p>Camera orthographic: 1 world px = 1 CSS px ở 1×. Theo ngang ở 50%, neo chân ở 62% chiều cao khung để chừa vùng nhìn phía trên. Camera dừng ở biên world 2400 × 1800. Màn hẹp giảm vùng nhìn, không scale sprite.</p>
+    <p>Nền gốc 1448 × 1086 được ánh xạ lên world tham chiếu. Frame R01 gốc 96 × 96 có body alpha cao 80 px và neo chân (48,88); source nhân vật/VFX giữ nguyên. Các vị trí thử trên tranh không phải spawn hoặc collider đã duyệt.</p>
+  </details>
+</main>
+<script>
+(() => {
+  const frame = document.getElementById('frame');
+  const world = document.getElementById('world');
+  const player = document.getElementById('player');
+  const caption = document.getElementById('caption');
+  const location = document.getElementById('location');
+  const follow = document.getElementById('follow');
+  const guide = document.getElementById('guide');
+  const showGuide = document.getElementById('show-guide');
+  const desktop = document.getElementById('desktop');
+  const narrow = document.getElementById('narrow');
+  const positions = {
+    'HN-Z01': {name: 'Sơn môn', x: 730, y: 900},
+    'HN-Z02': {name: 'Sân môn phái', x: 735, y: 540},
+    'HN-Z03': {name: 'Đình thổ nạp', x: 248, y: 316},
+    'HN-Z04': {name: 'Sân luyện thuật', x: 1220, y: 463},
+    'HN-Z05': {name: 'Ngoại vi', x: 245, y: 773},
+    'HN-Z06': {name: 'Chuẩn bị', x: 1210, y: 741},
+    'HN-Z07': {name: 'Lối vào khảo nghiệm', x: 724, y: 132}
+  };
+  let pos = {x: 0, y: 0};
+  let camera = {x: 0, y: 0};
+  let mode = 'desktop';
+  const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+  function desiredCamera() {
+    return {x: clamp(pos.x - frame.clientWidth * .5, 0, 2400 - frame.clientWidth),
+      y: clamp(pos.y - frame.clientHeight * .62, 0, 1800 - frame.clientHeight)};
+  }
+  function draw(recenter = false) {
+    if (follow.checked || recenter) camera = desiredCamera();
+    camera.x = clamp(camera.x, 0, 2400 - frame.clientWidth);
+    camera.y = clamp(camera.y, 0, 1800 - frame.clientHeight);
+    world.style.transform = `translate(${-camera.x}px, ${-camera.y}px)`;
+    player.style.left = `${pos.x}px`;
+    player.style.top = `${pos.y}px`;
+    const px = pos.x - camera.x, py = pos.y - camera.y;
+    guide.setAttribute('viewBox', `0 0 ${frame.clientWidth} ${frame.clientHeight}`);
+    guide.replaceChildren();
+    const ns = 'http://www.w3.org/2000/svg';
+    function mark(tag, attrs, text) {
+      const node = document.createElementNS(ns, tag);
+      Object.entries(attrs).forEach(([key, value]) => node.setAttribute(key, String(value)));
+      if (text) node.textContent = text;
+      guide.appendChild(node);
+    }
+    mark('circle', {cx: px, cy: py, r: 5, fill: '#fff8de', stroke: '#285548', 'stroke-width': 2});
+    mark('path', {d: `M ${px + 44} ${py - 80} v 80 M ${px + 38} ${py - 80} h 12 M ${px + 38} ${py} h 12`, fill: 'none', stroke: '#285548', 'stroke-width': 2});
+    mark('text', {x: px + 56, y: py - 35, fill: '#163b30', 'font-size': 14, 'paint-order': 'stroke', stroke: '#fff8de', 'stroke-width': 3}, '80 px');
+    caption.textContent = `${positions[location.value].name} · Khung ${frame.clientWidth} × ${frame.clientHeight} · Body 80 px ở 1× · ${follow.checked ? 'Camera bám' : 'Camera cố định'}`;
+    frame.dataset.zone = location.value;
+    frame.dataset.playerX = pos.x;
+    frame.dataset.playerY = pos.y;
+    frame.dataset.cameraX = camera.x;
+    frame.dataset.cameraY = camera.y;
+  }
+  function placeZone() {
+    const point = positions[location.value];
+    pos = {x: point.x * 2400 / 1448, y: point.y * 1800 / 1086};
+    draw(true);
+  }
+  function setFrame(value) {
+    mode = value;
+    frame.dataset.frame = value;
+    desktop.setAttribute('aria-pressed', String(value === 'desktop'));
+    narrow.setAttribute('aria-pressed', String(value === 'narrow'));
+    draw(true);
+  }
+  function nudge(dx, dy) {
+    pos.x = clamp(pos.x + dx, 48, 2352);
+    pos.y = clamp(pos.y + dy, 112, 1792);
+    draw();
+  }
+  location.addEventListener('change', placeZone);
+  follow.addEventListener('change', () => draw());
+  showGuide.addEventListener('change', () => {guide.toggleAttribute('hidden', !showGuide.checked);});
+  desktop.addEventListener('click', () => setFrame('desktop'));
+  narrow.addEventListener('click', () => setFrame('narrow'));
+  document.querySelectorAll('[data-nudge]').forEach(button => button.addEventListener('click', () => {
+    const [dx, dy] = button.dataset.nudge.split(',').map(Number);
+    nudge(dx, dy);
+  }));
+  frame.addEventListener('click', event => {
+    const bounds = frame.getBoundingClientRect();
+    const x = camera.x + event.clientX - bounds.left;
+    const y = camera.y + event.clientY - bounds.top;
+    pos = {x: clamp(x, 48, 2352), y: clamp(y, 112, 1792)};
+    draw();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.target.closest('input,select,textarea,button,a,summary')) return;
+    const steps = {ArrowUp: [0, -16], w: [0, -16], ArrowDown: [0, 16], s: [0, 16], ArrowLeft: [-16, 0], a: [-16, 0], ArrowRight: [16, 0], d: [16, 0]};
+    const step = steps[event.key] || steps[event.key.toLowerCase()];
+    if (step) {event.preventDefault(); nudge(...step);}
+  });
+  new ResizeObserver(() => draw(true)).observe(frame);
+  placeZone();
+  window.__hangNhacCameraStudy = () => ({scope: 'preview-position-and-camera-only', mode, player: {...pos}, camera: {...camera},
+    viewport: {width: frame.clientWidth, height: frame.clientHeight}, scale: 1, bodyHeight: 80, canvas: [96,96], footAnchor: [48,88]});
+})();
+</script>
+</body>
+</html>

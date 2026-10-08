@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toàn Hằng Nhạc — nền v3 và camera 1×</title>
+  <link rel="stylesheet" href="map-art.css">
+  <style>
+    :root { color-scheme: light; --paper: #f3eddf; --ink: #243a34; --jade: #37665a; --line: #c8c2af; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 16px/1.55 "Segoe UI", sans-serif; }
+    main { max-width: 1048px; margin: auto; padding: 24px; }
+    h1 { margin: 0 0 8px; font: 32px/1.2 Georgia, serif; }
+    p { margin: 0 0 12px; }
+    a { color: var(--jade); text-underline-offset: 3px; }
+    .eyebrow { font-size: 12px; letter-spacing: 2px; color: var(--jade); margin-bottom: 7px; }
+    .controls { display: flex; gap: 10px 14px; flex-wrap: wrap; align-items: center; margin: 16px 0; }
+    button, select { font: inherit; min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 5px; background: #fffbf2; color: var(--ink); }
+    button { cursor: pointer; }
+    button[aria-pressed="true"] { background: var(--jade); color: #fffbf2; border-color: var(--jade); }
+    label { display: flex; align-items: center; gap: 6px; }
+    select { max-width: 100%; }
+    :focus-visible { outline: 3px solid var(--jade); outline-offset: 3px; }
+    .frame { position: relative; width: 100%; max-width: 960px; overflow: hidden; background: #cad5c9; touch-action: manipulation; }
+    .frame[data-view="overview"] { aspect-ratio: 4 / 3; }
+    .frame[data-view="camera"] { height: 640px; }
+    .frame[data-view="camera"][data-size="narrow"] { max-width: 360px; height: 520px; }
+    .world { position: absolute; left: 0; top: 0; width: 2400px; height: 1800px; transform-origin: 0 0; }
+    .player { position: absolute; left: 0; top: 0; width: 96px; height: 96px; pointer-events: none; }
+    .body { position: absolute; left: -48px; top: -88px; width: 96px; height: 96px; image-rendering: pixelated; }
+    .shadow { position: absolute; left: -15px; top: -4px; width: 30px; height: 8px; border-radius: 50%; background: #26372b; opacity: .2; }
+    .name { position: absolute; left: -70px; top: -112px; width: 140px; text-align: center; color: #fff8de; font-size: 13px; font-weight: 600; text-shadow: 0 1px 2px #152a27, 1px 0 2px #152a27, -1px 0 2px #152a27; }
+    .pins { position: absolute; inset: 0; pointer-events: none; }
+    .pin { position: absolute; transform: translate(-50%, -100%); border: 3px solid #eae2cc; border-radius: 10px; padding: 9px 20px; color: #fff8de; background: #264e42ed; font: 600 34px/1.2 "Segoe UI", sans-serif; white-space: nowrap; }
+    .pin::after { content: ''; position: absolute; left: 50%; bottom: -18px; width: 12px; height: 12px; border: 3px solid #fff8de; border-radius: 50%; background: var(--jade); }
+    .guide { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    [hidden] { display: none !important; }
+    .caption, .note { font-size: 14px; }
+    .caption { margin-top: 10px; }
+    .note { color: #596359; }
+    .pad { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+    details { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line); }
+    details p { margin-top: 12px; }
+    @media (max-width: 600px) { main { padding: 14px; } h1 { font-size: 26px; } .controls > label:first-child { flex-basis: 100%; } .pin { font-size: 42px; } }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">HẰNG NHẠC · BẢN DUYỆT MỸ THUẬT V3</p>
+  <h1>Một map liền mạch, bảy địa điểm</h1>
+  <p>Sơn môn, sân môn phái và hai nhánh tu luyện cùng nằm trong một không gian. Chọn khu để xem Vương Lâm ở camera 1×.</p>
+  <div class="controls" aria-label="Chế độ xem map">
+    <button id="overview" type="button" aria-pressed="true">Toàn Hằng Nhạc</button>
+    <button id="camera-view" type="button" aria-pressed="false">Camera 1×</button>
+    <label id="pins-control"><input id="show-pins" type="checkbox" checked> Tên địa điểm</label>
+  </div>
+  <div class="controls" aria-label="Địa điểm và camera">
+    <label for="location">Khu
+      <select id="location">
+        <option value="HN-Z02" selected>Sân môn phái</option>
+        <option value="HN-Z01">Sơn môn · Tiếp dẫn / Xuất hành</option>
+        <option value="HN-Z03">Đình thổ nạp</option>
+        <option value="HN-Z04">Sân luyện thuật</option>
+        <option value="HN-Z05">Ngoại vi · Hậu sơn</option>
+        <option value="HN-Z06">Chuẩn bị · Luyện hóa</option>
+        <option value="HN-Z07">Lối vào khảo nghiệm</option>
+      </select>
+    </label>
+    <button id="go" type="button">Xem khu ở 1×</button>
+    <span id="camera-controls" class="controls" hidden>
+      <button id="desktop" type="button" aria-pressed="true">960 × 640</button>
+      <button id="narrow" type="button" aria-pressed="false">360 × 520</button>
+      <label><input id="follow" type="checkbox" checked> Camera bám</label>
+      <label><input id="show-guide" type="checkbox"> Thước 80 px</label>
+    </span>
+  </div>
+  <div id="frame" class="frame" data-view="overview" data-size="desktop" role="region" aria-label="Toàn map Hằng Nhạc và thử camera với Vương Lâm">
+    <div id="world" class="world">
+      <div id="map-art" class="map-art" data-join="cut" role="img" aria-label="Nền Hằng Nhạc gồm sơn môn phía nam, sân giữa, đình phía tây, sân luyện phía đông, hai đường vòng và đài phía bắc"></div>
+      <div id="pins" class="pins" aria-hidden="true"></div>
+      <div id="player" class="player">
+        <div class="shadow" aria-hidden="true"></div>
+        <img id="sprite" class="body" src="../../vfx/frame-by-frame-r01/frames/wanglin-cast-east/001.png" alt="Vương Lâm chibi, pose đứng R01" draggable="false">
+        <div class="name" aria-hidden="true">Vương Lâm</div>
+      </div>
+    </div>
+    <svg id="guide" class="guide" hidden role="img" aria-label="Thước body 80 pixel và neo chân"></svg>
+  </div>
+  <p id="caption" class="caption" aria-live="polite"></p>
+  <div id="pad" class="pad" aria-label="Dịch nhân vật để thử camera" hidden>
+    <button type="button" data-nudge="0,-48">↑ Lên</button>
+    <button type="button" data-nudge="-48,0">← Trái</button>
+    <button type="button" data-nudge="0,48">↓ Xuống</button>
+    <button type="button" data-nudge="48,0">Phải →</button>
+  </div>
+  <p class="note">Toàn cảnh thu nhỏ để thấy bố cục. Camera 1× giữ body 80 px; màn hẹp cắt vùng nhìn. Bấm nền hoặc dùng WASD/mũi tên để thử vị trí. Pose đứng chỉ dùng đo tỷ lệ.</p>
+  <p><a href="README.md">Nguồn nền, prompt và những phần còn cần hoàn thiện</a> · <a href="../hang-nhac-art-v2/index.html">Sân thử v2</a></p>
+  <details>
+    <summary>Kiểm tra nguồn nền và mép ghép</summary>
+    <p>World tham chiếu 2400 × 1800. Bốn vùng vẽ mới đều có nguồn 1448 × 1086, đặt vào vùng 1320 × 990; tương đương 1,097 pixel nguồn/world px. Các vùng chồng 240 px ngang và 180 px dọc để kiểm tra mép.</p>
+    <p>Năm phần sửa riêng nối lại trục bắc, hoa văn sân, mái sơn môn và hai đường vòng. Nguồn mỗi phần 1536 × 1024 cho vùng 960 × 640. Chuyển mép dưới đây chỉ dùng đối chiếu cách ghép; không tăng độ nét ảnh.</p>
+    <div class="controls">
+      <label><input type="checkbox" id="show-repairs" checked> Dùng phần vẽ sửa mép</label>
+      <label for="join">Mép ghép
+        <select id="join"><option value="cut">Cắt tại giữa phần chồng</option><option value="blend">Chuyển nhẹ 24 px để đối chiếu</option></select>
+      </label>
+    </div>
+    <p>Bản này duyệt toàn nền, tỷ lệ và đường nối mỹ thuật; chưa tách mái/cây/đạo cụ, collider hoặc tích hợp game. Z07 chỉ là cửa vào; sân khảo nghiệm riêng cần nền riêng. Neo trên tranh là điểm xem ART, không thay tọa độ gameplay.</p>
+  </details>
+</main>
+<script src="map-art.js"></script>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const frame = $('frame'), world = $('world'), player = $('player'), location = $('location');
+  const positions = {
+    'HN-Z01': {name: 'Sơn môn', x: 1200, y: 1505},
+    'HN-Z02': {name: 'Sân môn phái', x: 1200, y: 912},
+    'HN-Z03': {name: 'Đình thổ nạp', x: 425, y: 640},
+    'HN-Z04': {name: 'Sân luyện thuật', x: 1972, y: 770},
+    'HN-Z05': {name: 'Ngoại vi · Hậu sơn', x: 385, y: 1212},
+    'HN-Z06': {name: 'Chuẩn bị · Luyện hóa', x: 1972, y: 1258},
+    'HN-Z07': {name: 'Lối vào khảo nghiệm', x: 1200, y: 225}
+  };
+  HangNhacArt.mount($('map-art'));
+  Object.values(positions).forEach(p => {
+    const pin = document.createElement('span');
+    pin.className = 'pin'; pin.textContent = p.name;
+    pin.style.left = `${p.x}px`; pin.style.top = `${p.y - 50}px`;
+    $('pins').appendChild(pin);
+  });
+  let view = new URLSearchParams(window.location.search).get('view') === 'camera' ? 'camera' : 'overview';
+  let size = 'desktop', scale = 1, pos = {...positions[location.value]}, camera = {x: 0, y: 0};
+  const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+  function draw(recenter = false) {
+    const cameraMode = view === 'camera';
+    frame.dataset.view = view; frame.dataset.size = size;
+    $('camera-controls').hidden = !cameraMode; $('pad').hidden = !cameraMode;
+    $('pins-control').hidden = cameraMode;
+    $('pins').hidden = cameraMode || !$('show-pins').checked;
+    $('overview').setAttribute('aria-pressed', String(!cameraMode));
+    $('camera-view').setAttribute('aria-pressed', String(cameraMode));
+    $('desktop').setAttribute('aria-pressed', String(size === 'desktop'));
+    $('narrow').setAttribute('aria-pressed', String(size === 'narrow'));
+    const width = frame.clientWidth, height = frame.clientHeight;
+    if (cameraMode) {
+      scale = 1;
+      if ($('follow').checked || recenter) camera = {x: clamp(pos.x - width * .5, 0, 2400 - width), y: clamp(pos.y - height * .62, 0, 1800 - height)};
+      camera.x = clamp(camera.x, 0, 2400 - width); camera.y = clamp(camera.y, 0, 1800 - height);
+      world.style.transform = `translate(${-camera.x}px, ${-camera.y}px)`;
+    } else { scale = width / 2400; world.style.transform = `scale(${scale})`; }
+    player.style.left = `${pos.x}px`; player.style.top = `${pos.y}px`;
+    $('guide').toggleAttribute('hidden', !cameraMode || !$('show-guide').checked);
+    $('guide').setAttribute('viewBox', `0 0 ${width} ${height}`);
+    $('guide').replaceChildren();
+    const px = pos.x - camera.x, py = pos.y - camera.y;
+    const ns = 'http://www.w3.org/2000/svg';
+    function mark(tag, attrs, text) {
+      const el = document.createElementNS(ns, tag);
+      Object.entries(attrs).forEach(([k,v]) => el.setAttribute(k, String(v)));
+      if (text) el.textContent = text;
+      $('guide').appendChild(el);
+    }
+    mark('circle', {cx: px, cy: py, r: 5, fill: '#fff8de', stroke: '#285548', 'stroke-width': 2});
+    mark('path', {d: `M ${px + 44} ${py - 80} v 80 M ${px + 38} ${py - 80} h 12 M ${px + 38} ${py} h 12`, fill: 'none', stroke: '#285548', 'stroke-width': 2});
+    mark('text', {x: px + 56, y: py - 35, fill: '#163b30', 'font-size': 14, 'paint-order': 'stroke', stroke: '#fff8de', 'stroke-width': 3}, '80 px');
+    $('caption').textContent = cameraMode ? `${positions[location.value].name} · Khung ${width} × ${height} · Body 80 px · Camera 1×` : `Toàn Hằng Nhạc · World 2400 × 1800 · Toàn cảnh thu nhỏ ${Math.round(scale * 100)}%`;
+    frame.dataset.cameraX = camera.x; frame.dataset.cameraY = camera.y;
+  }
+  function placeZone() { pos = {...positions[location.value]}; draw(true); }
+  function setView(value) { view = value; draw(true); }
+  function nudge(dx, dy) { pos.x = clamp(pos.x + dx, 48, 2352); pos.y = clamp(pos.y + dy, 112, 1792); draw(); }
+  $('overview').addEventListener('click', () => setView('overview'));
+  $('camera-view').addEventListener('click', () => setView('camera'));
+  $('go').addEventListener('click', () => {placeZone(); setView('camera');});
+  location.addEventListener('change', placeZone);
+  $('desktop').addEventListener('click', () => {size = 'desktop'; draw(true);});
+  $('narrow').addEventListener('click', () => {size = 'narrow'; draw(true);});
+  ['show-pins', 'show-guide', 'follow'].forEach(id => $(id).addEventListener('change', () => draw()));
+  $('join').addEventListener('change', () => {$('map-art').dataset.join = $('join').value;});
+  $('show-repairs').addEventListener('change', () => {$('map-art').dataset.repairs = $('show-repairs').checked ? 'on' : 'off';});
+  document.querySelectorAll('[data-nudge]').forEach(b => b.addEventListener('click', () => nudge(...b.dataset.nudge.split(',').map(Number))));
+  frame.addEventListener('click', event => {
+    const r = frame.getBoundingClientRect();
+    const x = (event.clientX - r.left) / scale + (view === 'camera' ? camera.x : 0);
+    const y = (event.clientY - r.top) / scale + (view === 'camera' ? camera.y : 0);
+    pos = {x: clamp(x, 48, 2352), y: clamp(y, 112, 1792)};
+    if (view === 'overview') setView('camera'); else draw();
+  });
+  document.addEventListener('keydown', event => {
+    if (view !== 'camera' || event.target.closest('input,select,textarea,button,a,summary')) return;
+    const steps = {ArrowUp: [0,-16], w: [0,-16], ArrowDown: [0,16], s: [0,16], ArrowLeft: [-16,0], a: [-16,0], ArrowRight: [16,0], d: [16,0]};
+    const step = steps[event.key] || steps[event.key.toLowerCase()];
+    if (step) {event.preventDefault(); nudge(...step);}
+  });
+  new ResizeObserver(() => draw(true)).observe(frame);
+  draw(true);
+  window.__hangNhacFullMap = () => ({scope: 'full-map-art-and-camera-review', view, size, scale, player: {...pos}, camera: {...camera}, viewport: {width: frame.clientWidth, height: frame.clientHeight}, bodyHeight: 80, footAnchor: [48,88], positions, regions: HangNhacArt.regions.map(r => ({...r})), repairs: HangNhacArt.repairs.map(r => ({...r}))});
+})();
+</script>
+</body>
+</html>

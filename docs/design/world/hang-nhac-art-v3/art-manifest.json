@@ -1,0 +1,288 @@
+{
+  "id": "hang-nhac-full-map-art-v3",
+  "date": "2026-10-08",
+  "status": "full-map-art-approved-not-game-ready",
+  "ownerApproval": {
+    "date": "2026-10-08",
+    "scope": "full-map-art-review",
+    "evidence": "User accepted the v3 preview and requested a branch commit."
+  },
+  "generation": "built-in-imagegen",
+  "worldReference": {
+    "width": 2400,
+    "height": 1800
+  },
+  "layoutReference": "../hang-nhac-layout-v1/layout.json",
+  "regions": [
+    {
+      "id": "northwest",
+      "source": {
+        "file": "northwest-native.png",
+        "width": 1448,
+        "height": 1086,
+        "mode": "RGB",
+        "sha256": "9b96bf854c7f66ea42d72bdbe9e1b523d6868aa6a9e5db8ce1ce3ed4b7d86dc2"
+      },
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "width": 1320,
+        "height": 990
+      },
+      "prompt": "northwest.prompt.txt",
+      "editTarget": "ref-northwest.png",
+      "sourcePixelsPerWorldPixel": 1.096969696969697
+    },
+    {
+      "id": "northeast",
+      "source": {
+        "file": "northeast-native.png",
+        "width": 1448,
+        "height": 1086,
+        "mode": "RGB",
+        "sha256": "32587a1d75653b31371534237673855337aade1cdf67fdb0ad6f545a5ae74f95"
+      },
+      "placement": {
+        "x": 1080,
+        "y": 0,
+        "width": 1320,
+        "height": 990
+      },
+      "prompt": "northeast.prompt.txt",
+      "editTarget": "ref-northeast.png",
+      "sourcePixelsPerWorldPixel": 1.096969696969697
+    },
+    {
+      "id": "southwest",
+      "source": {
+        "file": "southwest-native.png",
+        "width": 1448,
+        "height": 1086,
+        "mode": "RGB",
+        "sha256": "db84814880a19be7814b7bcd6910be0544e8e231fd3229fcbf1cb904c28697c1"
+      },
+      "placement": {
+        "x": 0,
+        "y": 810,
+        "width": 1320,
+        "height": 990
+      },
+      "prompt": "southwest.prompt.txt",
+      "editTarget": "ref-southwest.png",
+      "sourcePixelsPerWorldPixel": 1.096969696969697
+    },
+    {
+      "id": "southeast",
+      "source": {
+        "file": "southeast-native.png",
+        "width": 1448,
+        "height": 1086,
+        "mode": "RGB",
+        "sha256": "f7a06cf62d59a7f7a12fe14333d023a7c72173097fb4cdb071d3abb330af7643"
+      },
+      "placement": {
+        "x": 1080,
+        "y": 810,
+        "width": 1320,
+        "height": 990
+      },
+      "prompt": "southeast.prompt.txt",
+      "editTarget": "ref-southeast.png",
+      "sourcePixelsPerWorldPixel": 1.096969696969697
+    }
+  ],
+  "overlap": {
+    "x": 240,
+    "y": 180
+  },
+  "repairs": [
+    {
+      "id": "west-loop",
+      "source": {
+        "file": "west-loop-repair.png",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "sha256": "56f0bb0d58d3f63c3b92222213dec35b720e77d355781e56ba43e95337bff5f2"
+      },
+      "placement": {
+        "x": 0,
+        "y": 600,
+        "width": 960,
+        "height": 640
+      },
+      "prompt": "west-loop.prompt.txt",
+      "editTarget": "west-loop-edit-target.png",
+      "sourcePixelsPerWorldPixel": 1.6
+    },
+    {
+      "id": "east-loop",
+      "source": {
+        "file": "east-loop-repair.png",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "sha256": "b2aa83610fff7f1c0138c2624124db5cb9e68778b641f311b8fc146d40fae19a"
+      },
+      "placement": {
+        "x": 1440,
+        "y": 600,
+        "width": 960,
+        "height": 640
+      },
+      "prompt": "east-loop.prompt.txt",
+      "editTarget": "east-loop-edit-target.png",
+      "sourcePixelsPerWorldPixel": 1.6
+    },
+    {
+      "id": "north-axis",
+      "source": {
+        "file": "north-axis-repair.png",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "sha256": "eb21bd720dc35070bcad5dbeb63ae1c9832315c79c3dca8b8c7f29584f0bccea"
+      },
+      "placement": {
+        "x": 720,
+        "y": 0,
+        "width": 960,
+        "height": 640
+      },
+      "prompt": "north-axis.prompt.txt",
+      "editTarget": "north-axis-edit-target.png",
+      "sourcePixelsPerWorldPixel": 1.6
+    },
+    {
+      "id": "courtyard-join",
+      "source": {
+        "file": "courtyard-join-repair.png",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "sha256": "77211311317a131826c9a21ab94c1493ffd4109ca172e4dbb3a63e48796b495d"
+      },
+      "placement": {
+        "x": 720,
+        "y": 515.2,
+        "width": 960,
+        "height": 640
+      },
+      "prompt": "courtyard-join.prompt.txt",
+      "editTarget": "courtyard-join-edit-target.png",
+      "sourcePixelsPerWorldPixel": 1.6
+    },
+    {
+      "id": "gate-join",
+      "source": {
+        "file": "gate-join-repair.png",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "sha256": "2a67b1919a3cce52df84a897171b108047197fda648d47301917753325e0d183"
+      },
+      "placement": {
+        "x": 720,
+        "y": 1108.2,
+        "width": 960,
+        "height": 640
+      },
+      "prompt": "gate-join.prompt.txt",
+      "editTarget": "gate-join-edit-target.png",
+      "sourcePixelsPerWorldPixel": 1.6
+    }
+  ],
+  "assembly": {
+    "renderer": "standalone HTML/CSS",
+    "files": [
+      "map-art.js",
+      "map-art.css"
+    ],
+    "defaultJoin": "cut at world x=1200 and y=900",
+    "repairEdgeTransitionPixels": 32,
+    "alternativeBaseJoinTransitionPixels": 24
+  },
+  "flattenedReview": {
+    "source": {
+      "file": "full-map-review-native.png",
+      "width": 2400,
+      "height": 1800,
+      "mode": "RGB",
+      "sha256": "de2f6efca2c6262d053bb75618d064b4255e475d372bc6c0034a73e3dde8fc96"
+    },
+    "method": "browser screenshot of composed ART at 1 CSS pixel per world pixel",
+    "containsCharactersOrUI": false,
+    "directlyGeneratedAtThisSize": false
+  },
+  "styleReference": {
+    "source": {
+      "file": "full-map-style-reference.png",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB",
+      "sha256": "66808970cfadfd58905bcf0e2ca4048371cfb6f9652ee9013c394f8dce637ae2"
+    },
+    "prompt": "full-map-native.prompt.txt",
+    "usedAsGameplayGround": false
+  },
+  "character": {
+    "source": "../../vfx/frame-by-frame-r01/frames/wanglin-cast-east/001.png",
+    "bodyHeight": 80,
+    "canvas": [
+      96,
+      96
+    ],
+    "footAnchor": [
+      48,
+      88
+    ],
+    "scope": "static position and camera only"
+  },
+  "artReviewAnchors": {
+    "HN-Z01": {
+      "name": "Sơn môn",
+      "x": 1200,
+      "y": 1505
+    },
+    "HN-Z02": {
+      "name": "Sân môn phái",
+      "x": 1200,
+      "y": 912
+    },
+    "HN-Z03": {
+      "name": "Đình thổ nạp",
+      "x": 425,
+      "y": 640
+    },
+    "HN-Z04": {
+      "name": "Sân luyện thuật",
+      "x": 1972,
+      "y": 770
+    },
+    "HN-Z05": {
+      "name": "Ngoại vi · Hậu sơn",
+      "x": 385,
+      "y": 1212
+    },
+    "HN-Z06": {
+      "name": "Chuẩn bị · Luyện hóa",
+      "x": 1972,
+      "y": 1258
+    },
+    "HN-Z07": {
+      "name": "Lối vào khảo nghiệm",
+      "x": 1200,
+      "y": 225
+    }
+  },
+  "validation": "verification.json",
+  "pending": [
+    "production polish of remaining detail and joins from the accepted v3 art",
+    "split ground, roofs, vegetation and props for occlusion",
+    "align actual floor footprints and walking/collision geometry",
+    "runtime camera, movement, crowd, network and combat checks",
+    "separate background for private trial arena; top terrace is entrance only"
+  ],
+  "runtimeIntegrated": false,
+  "changesExistingVFXAssets": false
+}

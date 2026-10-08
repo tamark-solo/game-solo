@@ -1,5 +1,7 @@
 # Ba nhân vật trọng tâm — nhận diện và gói tạo hình đầu tiên
 
+> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Các mục vai NPC và mở theo B/arc sau bên dưới ghi phạm vi trước. Cả ba nay chọn được từ đầu; thời điểm xuất hiện nguyên tác và nguồn nhận diện không đổi. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+
 **Phiên bản:** 0.4, ngày 07/10/2026.  
 **Đã chốt:** trục nhân vật của game gồm **Vương Lâm, Tư Đồ Nam và Lý Mộ Uyển**; ưu tiên làm nhận diện hai người còn lại trước nhóm NPC phụ.  
 **Trạng thái:** hồ sơ nguồn và concept trước chibi. Vương Lâm làm chuẩn tỷ lệ; Tư Đồ Nam đứng trước được tạm chấp nhận. Lý Mộ Uyển native-v5 đã chấp nhận làm chuẩn bản thử sau khi làm lại toàn bộ mặt/tóc/trang phục.

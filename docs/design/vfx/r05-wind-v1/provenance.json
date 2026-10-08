@@ -1,0 +1,28 @@
+{
+  "realm": "R05",
+  "tool": "built_in_imagegen",
+  "newArt": [
+    {
+      "id": "wind-ink-trail",
+      "family": "wind",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-5814afbf-e9ba-47e2-a379-1474743e0f55.png",
+      "selectedSource": "r05-wind-v1/source/wind-ink-trail.png",
+      "prompt": "r05-wind-v1/prompts/wind-ink-trail.txt",
+      "sha256": "e779a804905f7a9439382d7f89c4e5630ebba04586b3117e536db02710aa56b3"
+    },
+    {
+      "id": "wind-path-echo",
+      "family": "wind",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-9e11ae49-97f8-4f54-9ed9-a720172f84cb.png",
+      "selectedSource": "r05-wind-v1/source/wind-path-echo.png",
+      "prompt": "r05-wind-v1/prompts/wind-path-echo.txt",
+      "sha256": "41142f3f5150fab2dc3f5ba85900598934f083712dde35d68232363ee6c9e5d1"
+    }
+  ],
+  "mechanicalProcessing": "Node Sharp crop, common scale across each clip, register semantic pivot, pack atlas",
+  "reuse": "76 total PNGs byte-identical to R04 V2; per-clip reusedFrom in clips.json",
+  "sourceOfTruth": "individual RGBA frames",
+  "artStatus": "produced_pending_owner_motion_review"
+}

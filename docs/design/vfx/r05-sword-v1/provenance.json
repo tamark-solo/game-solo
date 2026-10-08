@@ -1,0 +1,28 @@
+{
+  "realm": "R05",
+  "tool": "built_in_imagegen",
+  "newArt": [
+    {
+      "id": "sword-stillness",
+      "family": "sword",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-071e4f41-8c2f-40fa-a48e-bbebc2fd8789.png",
+      "selectedSource": "r05-sword-v1/source/sword-stillness.png",
+      "prompt": "r05-sword-v1/prompts/sword-stillness.txt",
+      "sha256": "95612e7b9895fa6707e68509162f1233d63b09be18ccfadda520e199acd227b6"
+    },
+    {
+      "id": "sword-ink-flight",
+      "family": "sword",
+      "tool": "built_in_imagegen",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1159e-a059-7403-89ec-b1099738d65d\\exec-2b8d21a6-d0cc-4578-b54d-da076dd638fc.png",
+      "selectedSource": "r05-sword-v1/source/sword-ink-flight.png",
+      "prompt": "r05-sword-v1/prompts/sword-ink-flight.txt",
+      "sha256": "718b81e98c82f664181b7ce2189afe63027af92d62d728014c2146336c5f7807"
+    }
+  ],
+  "mechanicalProcessing": "Node Sharp crop, common scale across each clip, register semantic pivot, pack atlas",
+  "reuse": "76 total PNGs byte-identical to R04 V2; per-clip reusedFrom in clips.json",
+  "sourceOfTruth": "individual RGBA frames",
+  "artStatus": "produced_pending_owner_motion_review"
+}

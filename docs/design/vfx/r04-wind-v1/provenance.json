@@ -1,0 +1,22 @@
+{
+  "tool": "built_in_imagegen",
+  "sourceOfTruth": "individual_RGBA_PNG_frames",
+  "processing": "mechanical_crop_fixed_scale_anchor_resize_pack",
+  "sourceSelection": "../production/r04-art-selection.json",
+  "prompts": [
+    {
+      "source": "source/spirit-wind-east.png",
+      "prompt": "prompts/spirit-wind-east.txt",
+      "sourceSha256": "d2a7897e223d2771015dbdc0872724cd9acfaf6a0786af63d3a1af02a34a1cf6"
+    },
+    {
+      "source": "source/wind-spirit-dual-trail.png",
+      "prompt": "prompts/wind-spirit-dual-trail.txt",
+      "sourceSha256": "eb0b762ba2c424d29cd28a8499c4932205844a762aa0646c8d708e45baf9abe0"
+    }
+  ],
+  "newFrames": 14,
+  "reusedFrames": 32,
+  "reusedFrom": "R03",
+  "artStatus": "produced_pending_owner_motion_review"
+}

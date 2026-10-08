@@ -1,0 +1,528 @@
+{
+  "id": "R05-WIND",
+  "name": "Ý Cảnh Phong",
+  "version": "3.0.0",
+  "realm": "R05",
+  "artStatus": "reference_redesigned_pending_owner_motion_review",
+  "runtimeReady": false,
+  "date": "2026-10-07",
+  "assetPath": "r05-wind-v3",
+  "frames": 36,
+  "atlases": 4,
+  "sourceOfTruth": "individual_RGBA_PNG_frames",
+  "files": [
+    {
+      "file": "frame-by-frame-r01/sequence-system.mjs",
+      "bytes": 2516,
+      "sha256": "c20b913e504096b036bf4d1732ef13b23e8d126022bf3440547a9abe7183e15c"
+    },
+    {
+      "file": "production/export-r04-sequences.mjs",
+      "bytes": 4682,
+      "sha256": "9aec58cff97e43626e087e02195da64778b30119a5f21e3f83c65fdf21e6c9c3"
+    },
+    {
+      "file": "production/export-sequences.mjs",
+      "bytes": 4584,
+      "sha256": "5c4171372a6e8fc061b8e541a91adbd535e0d8312d71216ab405e637a45ffb52"
+    },
+    {
+      "file": "production/p2-controller.mjs",
+      "bytes": 3169,
+      "sha256": "c4af2a4bece87024c336b984274f69801c14a70d6d4eda364340c9f00ac58c2f"
+    },
+    {
+      "file": "production/p2-model.mjs",
+      "bytes": 2739,
+      "sha256": "5d6282f62945e45621cf14ca77aa59fcde989d185cd402fa9d35881280267746"
+    },
+    {
+      "file": "production/pack-atlases.mjs",
+      "bytes": 1479,
+      "sha256": "9d2e146a0e96be9d4b61a7251204e091f7836307bf726f9cb7dd31bf42942bd6"
+    },
+    {
+      "file": "production/r02-controller.mjs",
+      "bytes": 4485,
+      "sha256": "786a33dc994d16fd84edeefdcd2368c9a6a3b7d8f9e1084253028fe3e9fdd4c5"
+    },
+    {
+      "file": "production/r02-model.mjs",
+      "bytes": 4680,
+      "sha256": "dddd42dc6d70efcd240602276787c87cec34b2923f31d6b433a4e73ed377e472"
+    },
+    {
+      "file": "production/r05-art-selection.json",
+      "bytes": 3239,
+      "sha256": "48577e6a1af650bf4e125ef7ea0c20c07178a056edc0dc5e0a81d327665c42a5"
+    },
+    {
+      "file": "production/r05-controller.mjs",
+      "bytes": 750,
+      "sha256": "7c4e4db00e14ff154fbc21c33b6ffb130292f38bc60b6862821ade26d7fedcb2"
+    },
+    {
+      "file": "production/r05-force-art-selection.json",
+      "bytes": 2829,
+      "sha256": "2098732f358e639ae35ab7122a9921f598980870222944671fb5d6a01b89ad53"
+    },
+    {
+      "file": "production/r05-force-controller.mjs",
+      "bytes": 1060,
+      "sha256": "3bd8da71944ee1bc9b238974181c169646f0fac51e7e82aa95c7cba3d164a472"
+    },
+    {
+      "file": "production/r05-force-model.mjs",
+      "bytes": 1921,
+      "sha256": "1838ed35799adc7006c45af881db54098f70a1c50d1f2c647e80dd634aa8a8d6"
+    },
+    {
+      "file": "production/r05-jade-art-selection.json",
+      "bytes": 4420,
+      "sha256": "4c42e4ab12ebc97a71f6acfcec99c8afa549e3c3ee07eae8e5c664674d274876"
+    },
+    {
+      "file": "production/r05-jade-controller.mjs",
+      "bytes": 1867,
+      "sha256": "63ac6dea44481ad121077bd9aeb7a9d7fc74584978f39becf53e6dd9fea2409f"
+    },
+    {
+      "file": "production/r05-jade-model.mjs",
+      "bytes": 1481,
+      "sha256": "e610df50b8c8ff877bd664a21672e8ef63cd4948689753b032c314b7cf1ae41d"
+    },
+    {
+      "file": "production/r05-lighting.mjs",
+      "bytes": 1257,
+      "sha256": "d2d7696284a299a16d1c10be2403d0b5b9e70f11ca985594a7d1ab2133bbdbcd"
+    },
+    {
+      "file": "production/r05-model.mjs",
+      "bytes": 539,
+      "sha256": "2428e0a48d90f8a1ead6fbebfcec54cf116225630463384a160f583ccda06c33"
+    },
+    {
+      "file": "r05-wind-v3/atlases/wanglin-wind-east.png",
+      "bytes": 122310,
+      "sha256": "0936d82225d70a99539eb323e3407e56046cb816f7b75fc531ed0d2c07fb8da2"
+    },
+    {
+      "file": "r05-wind-v3/atlases/wind-return-curl.png",
+      "bytes": 86984,
+      "sha256": "56b24fc5e65539b61dea90101c862e62ddcf546bb2d22bfc165c0f4c74c03145"
+    },
+    {
+      "file": "r05-wind-v3/atlases/wind-trail.png",
+      "bytes": 257632,
+      "sha256": "27a381662a7ee872508d7d670f20a25a1aecfe913da87d9ff89ced7d2c343578"
+    },
+    {
+      "file": "r05-wind-v3/atlases/wind-wheel.png",
+      "bytes": 85266,
+      "sha256": "4eebba97ec6935cb2d572aad81d1b643ece6ae8b8c540ee2917760d726243b53"
+    },
+    {
+      "file": "r05-wind-v3/build-report.json",
+      "bytes": 344,
+      "sha256": "5fa9bff7026f0d7c6e956178c353ce3580d9c345bdbfedeb914d2ade8dad7e57"
+    },
+    {
+      "file": "r05-wind-v3/clips.json",
+      "bytes": 22438,
+      "sha256": "c9fb9ffbc4635b4fc1b0f4d030592a9f13c81ed5590c7ebaa05d6627e17607b3"
+    },
+    {
+      "file": "r05-wind-v3/export-spec.json",
+      "bytes": 1516,
+      "sha256": "a1ed3cc2b1fec65f72ab927e3fce7c1b9e6348f2ce895f69725f5407f97abe68"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/001.png",
+      "bytes": 10503,
+      "sha256": "125f62da646f4cad23004a9a112b919577e88345f4f649fa7e1c64c44ff0b558"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/002.png",
+      "bytes": 10320,
+      "sha256": "9eba734c88efdfe4735131d9c459dd31b5091e356c31878b3dea2d81915f54b2"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/003.png",
+      "bytes": 9884,
+      "sha256": "0c67b021094696c224b47b504742840b87fa8b00d65f33c88eb95bda478b7a6b"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/004.png",
+      "bytes": 10613,
+      "sha256": "89ef17945395b3e6902bab19fb3a9743cf396c375f19c13a720f4a23dc47f648"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/005.png",
+      "bytes": 10410,
+      "sha256": "d3d4df420b913ba4470ce4fc8a71da17a02b5b7bc7a882e26bc8de6ff85720ee"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/006.png",
+      "bytes": 10568,
+      "sha256": "ab8e524ee79e0cbdebad0f657276e5a641ef8fd3bb9852858b3b280a0633581d"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/007.png",
+      "bytes": 11750,
+      "sha256": "2dacf5433cd8a4428717005e16b1a7f9778f16251a2568c6caa5f49ae8428da0"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/008.png",
+      "bytes": 10442,
+      "sha256": "b5aa46548e317ec915611732d7d594ecd422fd476e46b6eda69e90881417922f"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/009.png",
+      "bytes": 11536,
+      "sha256": "51668c1558f1547e82701d43be5d2249fc90049365f0cad0e323b7a8067debab"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/010.png",
+      "bytes": 11160,
+      "sha256": "dd03ada64f990fa378508a81ed3974ca931ceb5d1d32a2cb218cbec665f8c314"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/011.png",
+      "bytes": 11406,
+      "sha256": "bd88b638d9436ebaf3ee833bf9a1e7e97d44a86bac768155fea57191dc893bb8"
+    },
+    {
+      "file": "r05-wind-v3/frames/wanglin-wind-east/012.png",
+      "bytes": 10029,
+      "sha256": "537f3b05b0c8267378ff0b25e6220bad2687fbc03ff952aaa2b49ee4f9c21f58"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-return-curl/001.png",
+      "bytes": 10638,
+      "sha256": "b566ce9d6c267017741df6215022f1259635fcefde749aabf11c1d87c153fdc2"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-return-curl/002.png",
+      "bytes": 13593,
+      "sha256": "cbfdb14b9b2ebd7a87631484a5e3bb295bc4b72ab599586f3e38975a3a64fe83"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-return-curl/003.png",
+      "bytes": 19990,
+      "sha256": "37ef7a1050268c02a78779c61d8dc839125568064e117a025d59e7e95229ae3a"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-return-curl/004.png",
+      "bytes": 14111,
+      "sha256": "c8755ca3d01bdea29bdb9db680b9bbee88150c8d11fc937fe71f9d8df7eb9569"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-return-curl/005.png",
+      "bytes": 13663,
+      "sha256": "f0e9afd1911442c3cef0f4f6c6c87b24a6db641a0d1baee4e8093e03f2077a94"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-return-curl/006.png",
+      "bytes": 9143,
+      "sha256": "5f28f27fae0c4f7780137e88b23a151ffd27be44f058ef2b48fb0cb1d2d62bbf"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-return-curl/007.png",
+      "bytes": 4094,
+      "sha256": "2efadae1999559cb285a2d280a336276b0e89f16a2136f1e133765bf63ec7e8d"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-return-curl/008.png",
+      "bytes": 3270,
+      "sha256": "dc10e37c480bba1457c654943db255a754f59fe98fdfcd434f142f16bcc694d1"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-trail/001.png",
+      "bytes": 29497,
+      "sha256": "57f0e6b510977b171c723a2199ba5b20c9d054be7beec7edb3cce512308b709e"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-trail/002.png",
+      "bytes": 31622,
+      "sha256": "5d8b3f1fa7786d225f0974ffa98b5dc91b3177e92536dc78b843f5dc57223277"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-trail/003.png",
+      "bytes": 33416,
+      "sha256": "9d2ca20ad932564a72d4c40f173cb060d0344716844f60dd366015522108da4a"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-trail/004.png",
+      "bytes": 39238,
+      "sha256": "8ac22989ff6f5773911411c4913f7ade0308098131ce38223e1b9c4a5aaa1e25"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-trail/005.png",
+      "bytes": 27783,
+      "sha256": "f59d5c98618004e8a2ae9a36862c22baf251b2a425e5b25c2f746c7e7be093cc"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-trail/006.png",
+      "bytes": 38796,
+      "sha256": "c9a52e492520c5a0ffb3ca04c334f20e1134dc75cf9ae901387ef81e976d2eb3"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-trail/007.png",
+      "bytes": 25336,
+      "sha256": "cd2638536eb91b81c8a5e6158f481851b197f5db937f2ad6055ba383fbd7ddd0"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-trail/008.png",
+      "bytes": 35251,
+      "sha256": "538e5a8bafab5202be4ddd1997d6bc5d159531bd17abf68aa4c707d521ba4d0b"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-wheel/001.png",
+      "bytes": 7817,
+      "sha256": "1ecabef6de22a246cfb4fe517915f1f44699183711626a0652ccf682635483f5"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-wheel/002.png",
+      "bytes": 9718,
+      "sha256": "21bc02e562a2b7d76a720a9683dd0e89ff4cbdc251dcdef327cfc7f17da20d23"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-wheel/003.png",
+      "bytes": 13501,
+      "sha256": "be8dde71a0cbbdaf0400d8ab316e44c0b826fecd9ebf154dc27ce20f656ee546"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-wheel/004.png",
+      "bytes": 14078,
+      "sha256": "68c0e1a4915d0ba1fa4065cace4f2c27d72b612180cce5d596aac68a7f821d1e"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-wheel/005.png",
+      "bytes": 12178,
+      "sha256": "ef3e870baf46ecf502c800f147a1b143b3e90f79a69f3a37e134a78a3871984f"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-wheel/006.png",
+      "bytes": 10607,
+      "sha256": "cded87125693eae97b83f241b8c1eb8c357692df43eb39b9eb0d933f11fc72ef"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-wheel/007.png",
+      "bytes": 10603,
+      "sha256": "256225279a46032aaa6f53050cf40f603945c2421c50307b2569fa757002e5c8"
+    },
+    {
+      "file": "r05-wind-v3/frames/wind-wheel/008.png",
+      "bytes": 8718,
+      "sha256": "cd9bca6f537a18aaea209733d1bfa3eed4536c9b6ac568ab477a59906869d154"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wind-arrival-clean.txt",
+      "bytes": 803,
+      "sha256": "ba18fbc71f62dc1ce3ea705a55473055f952baf3c90ac0bf2625c17a363b6cf4"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wind-arrival-production.txt",
+      "bytes": 1152,
+      "sha256": "accbccb92bd08b1e4c1afab7691ead77b95501a096a04873d06e6e962a4d9709"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wind-arrival.txt",
+      "bytes": 1105,
+      "sha256": "07063ed3c6d73ab3a4585690ac6ba2dbece19cdc2df2567da9e67fac06172d8c"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wind-cast.txt",
+      "bytes": 1175,
+      "sha256": "4b1164745cde2a1437a9fdff4d3455901e7efdcb061a3b4467db12c44419f31a"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wind-depart-clean.txt",
+      "bytes": 800,
+      "sha256": "e33f905ad2a9959952027232ef636fd05ddbe29bf5d3e16ac01aafc666c4dfc6"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wind-depart-production.txt",
+      "bytes": 1048,
+      "sha256": "7bbede51d438046f2675128db4b61d9ab829932c39a32da6b068df9308b6dcc5"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wind-depart.txt",
+      "bytes": 920,
+      "sha256": "e7d7772b618379d8881452b291e1e6079b466b0ed64b4e03ba51e1e8cca35ae3"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wind-trail-clean.txt",
+      "bytes": 800,
+      "sha256": "7dc3e0e73ac73e994b2c7eea16fa7899afd72a3dcb04a6f8448f282e379580aa"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wind-trail-production.txt",
+      "bytes": 1130,
+      "sha256": "776485bb5f33db435deaf31b88c97f14d03b366b337281187858a1dbdd0fcd89"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/reused-r01/wind-trail.txt",
+      "bytes": 1117,
+      "sha256": "3fed9afa76f05f23ebbcbb2e7685f26ce0f4178d1b00c5fa428b0ef1661c9c0e"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/wind-departure-coil.txt",
+      "bytes": 1297,
+      "sha256": "cc5274da1548085717901588cb1bfc55d4bf4b94b76359127cc335a979881169"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/reused-r02/wind-return-curl.txt",
+      "bytes": 1558,
+      "sha256": "ea4e704a246e1eb3eaf7580c3970f2d71e82df648aff452b8cfe32cb1356cb9e"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/wind-compressed-trail.txt",
+      "bytes": 1989,
+      "sha256": "83723f34db03b8ec3f1a501b21ac45885499f1f16fecfd3feb096843eec66d6e"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/reused-r03/wind-wheel.txt",
+      "bytes": 2030,
+      "sha256": "733548893adc2e8ed2bcb49461adfad1f7f6426e40fd4033b28d709ee64be91f"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/spirit-wind-sigil.txt",
+      "bytes": 2309,
+      "sha256": "5c963a3968f07697edf4238f4c8cd6493340b963399856fda9f276a31ea30d8b"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/reused-r04/wind-spirit-dual-trail.txt",
+      "bytes": 1565,
+      "sha256": "78e2d630a01b72d30da2ba6edbded96748ab2ff26e76ffb3ffebf47b74fbfdbe"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/wind-ink-trail.txt",
+      "bytes": 2329,
+      "sha256": "616ea74e5cbda10800d6af051a21de55ca9e70f70c5ce8e6017dc26b079a76c2"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/reused-v1/wind-path-echo.txt",
+      "bytes": 2397,
+      "sha256": "5ec0dd8f631541a2f9549ddb07488678af3689e872b2d61a37df96a42987657a"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/wind-pressure-arrival.txt",
+      "bytes": 1894,
+      "sha256": "199f9ad941e390dde3237915c1ad66b7bebfa4d365ed6c28b664644658f20244"
+    },
+    {
+      "file": "r05-wind-v3/prompts/reused-v2/wind-pressure-trail.txt",
+      "bytes": 1840,
+      "sha256": "ffb3e204032648ece90f4dcbbe2887d606e40b5f4456425c4cc44e810e0dcd42"
+    },
+    {
+      "file": "r05-wind-v3/prompts/silk-wind-passage.txt",
+      "bytes": 2318,
+      "sha256": "c6a8b78b4c08bcc64d646231ffca269228e119e02c5cfc8ed5de1f6999714cd0"
+    },
+    {
+      "file": "r05-wind-v3/prompts/silk-wind-settle.txt",
+      "bytes": 2381,
+      "sha256": "35a9b4c434b4d335870d6f4878714cbcc72f8470ec03887880a22855eb9c259a"
+    },
+    {
+      "file": "r05-wind-v3/provenance.json",
+      "bytes": 1508,
+      "sha256": "94eeb9a2f63affea4945c2c69348235a38e117eda2ab2e36dbbb3e81d370f6b1"
+    },
+    {
+      "file": "r05-wind-v3/README.md",
+      "bytes": 739,
+      "sha256": "b8d856e095e624c8334c6d9a1321b515ab59ee19bf430012c7440db8f370c8b1"
+    },
+    {
+      "file": "r05-wind-v3/reuse-spec.json",
+      "bytes": 35,
+      "sha256": "e4ff5070be4e01b253e590f639915eab30c571b27f94fd35b3f888f25d9aad5e"
+    },
+    {
+      "file": "r05-wind-v3/review/F10-1x.png",
+      "bytes": 788248,
+      "sha256": "8f4ec82712659e6387704cfad168c0d417cdadc1420874e73f3abea2973c3f67"
+    },
+    {
+      "file": "r05-wind-v3/review/F10-2x.png",
+      "bytes": 468462,
+      "sha256": "4510e2ba1961b7baf3ea90694955a6e65a597ebcd8594d4c10e704e9bcd8bd81"
+    },
+    {
+      "file": "r05-wind-v3/review/F13-1x.png",
+      "bytes": 793388,
+      "sha256": "5e9897f5761538551e0a3b1ebb648000a1778e8d6064ea0cb2fae3694ae1bac3"
+    },
+    {
+      "file": "r05-wind-v3/review/F13-2x.png",
+      "bytes": 491941,
+      "sha256": "5184bff247f7a05b0d52dba2d0d08baca4c907ecf613140bd2760555ae4a6599"
+    },
+    {
+      "file": "r05-wind-v3/review/F16-1x.png",
+      "bytes": 783374,
+      "sha256": "959032eb51347933d21e9177b34fa0142b60e4ab6cd53870fcf1a03528d6c00f"
+    },
+    {
+      "file": "r05-wind-v3/review/F16-2x.png",
+      "bytes": 457329,
+      "sha256": "22e33b9b9bc256a14e1b215a5900c97d9f1b516a9bfd28fa79e0d3f282a932bb"
+    },
+    {
+      "file": "r05-wind-v3/review/F22-1x.png",
+      "bytes": 780062,
+      "sha256": "e4c0acd14c000e990e27400c5772e2c6293ac7c0297e14141bf85d808f597006"
+    },
+    {
+      "file": "r05-wind-v3/review/F22-2x.png",
+      "bytes": 448426,
+      "sha256": "83d99c520eb8d4db0de04c39a6a46b6c8d7500785604d9a6fc9c102fadba80f9"
+    },
+    {
+      "file": "r05-wind-v3/review/F7-1x.png",
+      "bytes": 779530,
+      "sha256": "397a015b3a0d3256e1e216da3fbc38d2052f0e056ede3db36550f2b1971b976b"
+    },
+    {
+      "file": "r05-wind-v3/review/F7-2x.png",
+      "bytes": 446853,
+      "sha256": "4c315b5f6720c4c04ec072f85c5c2fc1c9db6bcf6745c6e2103d0a6db6a75604"
+    },
+    {
+      "file": "r05-wind-v3/skill.json",
+      "bytes": 3787,
+      "sha256": "5542ac1d677e0e961365b685ab543397894b4069f506cbe50c73cc0f987ff450"
+    },
+    {
+      "file": "r05-wind-v3/source/silk-wind-passage.png",
+      "bytes": 1234320,
+      "sha256": "e0d4bb64a3e36bcbe991ebc970db795415b3a34d768ad1ec9d7f78e74e6ccf63"
+    },
+    {
+      "file": "r05-wind-v3/source/silk-wind-settle.png",
+      "bytes": 959070,
+      "sha256": "28bcf1a9f7f63bda32a31a0fc5b75797489e36eb9fafa14408a49f412d8af0a4"
+    },
+    {
+      "file": "r05-wind-v3/source/wind-cast.png",
+      "bytes": 1590152,
+      "sha256": "abf75b4ae65646e08a5eafef34a09667e0ebfa0f573b4e9099e703dc6dd959d7"
+    },
+    {
+      "file": "r05-wind-v3/source/wind-wheel.png",
+      "bytes": 1148474,
+      "sha256": "e47e245d6fa577cf0de529bc97438c7646d337516ec73e091a14f350f1b0dd6f"
+    },
+    {
+      "file": "reference-hoa-than-user-v3.png",
+      "bytes": 3232205,
+      "sha256": "7a7b7f7b0a97d6c6485086dae15cbe9554379a9030a5a759a506a8e4abb5c3af"
+    }
+  ],
+  "previewIncluded": false,
+  "approval": null,
+  "integration": "presentation_helpers_only_host_owns_damage_and_movement"
+}

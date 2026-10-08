@@ -1,0 +1,57 @@
+{
+  "realm": "R02",
+  "newArt": [
+    {
+      "clip": "sword-formation",
+      "source": "source/sword-formation.png",
+      "prompt": "prompts/sword-formation.txt",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "sourceGrid": [
+        4,
+        2
+      ],
+      "tool": "built_in_imagegen",
+      "registration": "uniform_scale_per_clip_with_semantic_origin"
+    },
+    {
+      "clip": "sword-flight",
+      "source": "source/sword-flight.png",
+      "prompt": "prompts/sword-flight.txt",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceGrid": [
+        3,
+        2
+      ],
+      "tool": "built_in_imagegen",
+      "registration": "uniform_scale_per_clip_with_semantic_origin"
+    },
+    {
+      "clip": "sword-guide",
+      "source": "source/sword-guide.png",
+      "prompt": "prompts/sword-guide.txt",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceGrid": [
+        3,
+        2
+      ],
+      "tool": "built_in_imagegen",
+      "registration": "uniform_scale_per_clip_with_semantic_origin"
+    }
+  ],
+  "reuse": {
+    "mode": "byte_identical_PNG",
+    "from": "frame-by-frame-r01",
+    "prompts": "prompts/reused-r01",
+    "holds": "R02_metadata_only"
+  },
+  "runtimeReady": false
+}

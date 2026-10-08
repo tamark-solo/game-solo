@@ -1,0 +1,22 @@
+{
+  "id": "R01-SWORD",
+  "name": "Kiếm Khí",
+  "realm": "Ngưng Khí",
+  "version": "0.1",
+  "status": "art_keyframe_plan_not_runtime",
+  "reference": "ngung-khi-approved-art-v1.png",
+  "direction": "left_to_right",
+  "camera": "orthographic_top_down_three_quarter",
+  "total_reference_seconds": 0.68,
+  "time_model": "reference_cast_only_impact_driven_by_combat_event",
+  "phases": [
+    {"id": "gather", "label": "Tụ khí", "start": 0, "end": 0.18, "keyframe": 0.1, "position": "top_left"},
+    {"id": "release", "label": "Xuất kiếm", "start": 0.18, "end": 0.32, "keyframe": 0.26, "position": "top_right"},
+    {"id": "impact", "label": "Chạm", "start": 0.32, "end": 0.4, "keyframe": 0.36, "position": "bottom_left"},
+    {"id": "dissolve", "label": "Tan khí", "start": 0.4, "end": 0.68, "keyframe": 0.56, "position": "bottom_right"}
+  ],
+  "main_blades": 1,
+  "decorative_motion_echoes": 2,
+  "damage_model": "not_defined_by_art",
+  "runtime_ready": false
+}

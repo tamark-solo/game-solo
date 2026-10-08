@@ -1,98 +1,213 @@
-# GDD — MMORPG tu luyện theo Tiên Nghịch
+# GDD — Tiên Nghịch: MMORPG Tu Tiên
 
-**Phiên bản:** 0.35, ngày08/10/2026. **Ưu tiên hiện tại:** [Map Editor](MAP-EDITOR.md) để người phát triển tự ghép asset, bố trí layer và vẽ vùng hoạt động của từng level. Trợ lý tạo asset rời và phát triển công cụ theo [phân công](MAP-ASSET-PRODUCTION-NOTES.md), giữ tham chiếu/tỷ lệ chibi. Sau map mới thiết kế nhiệm vụ → đánh → nhận đồ → đột phá; portrait tiếp tục để sau.
+**Phiên bản:** 0.28 · **Ngày:** 08/10/2026 · **Tên dự án:** tên làm việc nội bộ.
 
-**Nguồn gameplay hiện tại:** [MVP RPG-A 1.0](MVP-RPG-A.md), [kịch bản](STARTER-STORY.md), [map](STARTER-REGION-MAP.md), [dữ liệu](data/mvp-rpg-content.json), [backlog](MVP-BACKLOG.md). Các số liệu/số lượng là thiết kế khởi đầu cần chơi thử.
+Người chơi chọn **Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển ngay từ đầu**, cùng trải qua map nhập môn **Hằng Nhạc và giai đoạn Ngưng Khí**, sau đó phát triển con đường riêng từ hành trình **Trúc Cơ** trở đi. Game là MMORPG web có chiến đấu chủ động, khám phá, nhiệm vụ và tu luyện idle. Cốt truyện Tiên Nghịch làm nền; cách tổ chức ba nhân vật cùng nhập môn là chuyển thể của game.
 
-**Công cụ đang dùng:** [editor](http://127.0.0.1:5173/map-editor.html), thư viện trống và PNG tự nhập; từng level có kích thước/Spawn/layer/vùng/portal riêng, lưu file dự án/level, xuất/nhập và Test cục bộ. Người phát triển tự bố trí map.
+GDD này thay hướng “tạo đệ tử riêng, Vương Lâm là NPC trung tâm” và phạm vi “kết thúc tại Ngưng Khí tầng 1” của bản trước. [Bản cũ](archive/design-before-three-playable-characters/GDD.md) được giữ làm lịch sử. Lần biên tập này không triển khai gameplay hay thay các gói ART đã khóa.
 
-**Reset ngày 08/10/2026:** người phát triển yêu cầu xóa asset map cũ để làm lại từ đầu. Nguồn ART, bản xuất/chunk/mask, thư viện/ZIP và builder cũ đã gỡ. Giữ nhân vật, editor, dữ liệu gameplay nháp và map tự lưu. [Thư viện mới](design/world/map-asset-library/README.md) có 0 asset; chưa chốt tham chiếu hoặc bố cục mới. Xem [biên bản reset](MAP-ASSETS-RESET.md).
+## 1. Quyết định đã chốt và phần còn thiết kế
 
-**Level Design đã triển khai:** [hướng dẫn](MAP-LEVEL-DESIGN.md), chọn nhiều/nhóm/căn chỉnh, cọ/tileset, prefab kèm vùng thủ công, quản lý part/pivot, thư viện JSON, minimap, kiểm lỗi và xuất runtime. Chưa nối map tự biên tập vào server MMO.
-
-## 1. Các quyết định
-
-| Nội dung | Hướng hiện tại | Trạng thái |
+| Nội dung | Hướng hiện hành | Trạng thái |
 | --- | --- | --- |
-| Thể loại/nền tảng | MMORPG tu luyện có idle trên web | Người phát triển đã chọn |
-| Nhân vật người chơi | Đệ tử riêng; hai mẫu nam/nữ | Đã chọn; bộ chibi hiện có |
-| Chính truyện | Vương Lâm trung tâm; Tư Đồ Nam/Lý Mộ Uyển là trục dài hạn | Ba trọng tâm đã chốt; thời điểm theo arc |
-| ART/camera | Nhân vật pixel chibi, nền stylized 2D, top-down ba phần tư | Đã chọn; giữ tỷ lệ hiện tại |
-| Combat | Chọn mục tiêu/tự đánh thường; kỹ năng và né chủ động | Người phát triển chọn ngày 07/10/2026 |
-| Map mới | Người phát triển tự dựng trong editor | Bắt đầu lại sau khi xóa ART cũ ngày 08/10/2026 |
-| MAP03 đi thử | Prototype trước đã dừng | Nguồn/bản xuất cũ đã xóa |
-| Đoạn native mẫu | Bộ asset trước đã xóa | Chưa chọn bộ asset mới |
-| Map Editor | Asset kéo thả, layer/vùng/portal, file riêng mỗi level, lưu/xuất/nhập/Test | Bản0.12.0 có Level Design, thư viện trống; người phát triển tự thiết kế bố cục |
-| Nhịp đầu | Quái đầu phút 2–3, tầng 1 phút 5–7, boss phút 25–35 | Mục tiêu đề xuất cần đo |
-| Phạm vi A | 10 chính/2 phụ/2 lặp, 4 quái thường/1 tinh anh/1 boss, tầng 1–3 | Phạm vi thiết kế theo yêu cầu mở combat/farm vào MVP |
-| Tỷ lệ | Frame64 × 96, chân(32,88), thân khoảng80px ở1× | Giữ như bộ đã thử; mở vùng bằng kích thước thế giới |
-| Vương Lâm | Chibi làm chuẩn tỷ lệ, 20 frame | Phản hồi tích cực, nguồn giữ nguyên |
-| Lý Mộ Uyển | Chibi native-v5, tóc xanh đen/áo lavender | Chấp nhận làm chuẩn bản thử |
-| Tư Đồ Nam | Linh thể đứng/lướt, ngực khuyết, cao4px | Concept đứng tạm chấp nhận; bộ chibi/lướt còn đánh giá |
-| Nhân lực/lộ trình | Một người phát triển, A → B | Đã chọn; B nay tập trung tổ đội/arc sau |
-| Client/backend | TypeScript + Three.js; Node.js + Colyseus | Preview/room tạm đã chạy |
-| Tiến trình lâu dài | Tài khoản/lưu tại server | Chưa triển khai; chọn auth/DB trong A1 |
+| Thể loại/nền tảng | MMORPG tu tiên có idle, trình duyệt web | Đã chốt |
+| Nhân vật | Vương Lâm / Tư Đồ Nam / Lý Mộ Uyển đều chọn được từ đầu | Đã chốt; không chờ arc sau mới mở lựa chọn |
+| Map đầu | Hằng Nhạc, học game và tiến triển qua Ngưng Khí | Đã chốt |
+| Phân hóa | Nền nhập môn chung, dấu nhận diện nhẹ; phân hóa sâu sau map đầu, từ Trúc Cơ | Đã chốt về hướng; kỹ năng cụ thể chưa khóa |
+| Skill khởi đầu | Cả ba có Kiếm Khí, Lôi Ấn, Ngự Phong Bộ R01 khi bắt đầu điều khiển | Đã chốt bộ chung; tutorial dạy vận dụng, không giữ quyền skill sau nhiệm vụ |
+| Tu tiên | Cảnh giới, công pháp, thuật pháp, pháp bảo, lĩnh ngộ, hành trình cá nhân | Đã chốt khung; luật chi tiết là thiết kế cơ sở để đánh giá |
+| Truyện | Theo nền nguyên tác rồi mở rộng; ghi rõ sáng tạo/chuyển thể | Đã chốt |
+| ART | Pixel art chibi, nền stylized 2D, top-down ba phần tư; portrait/truyện/UI tranh mực và giấy cổ | Giữ quyết định hiện có |
+| VFX | PNG frame-by-frame 24 FPS; bộ Kiếm/Lôi/Phong có tới Hóa Thần | Đợt ART đã duyệt/đóng; không phải gameplay đã tích hợp |
+| Online | Máy chủ sở hữu tiến trình, tài nguyên, vị trí và kết quả hợp lệ | Giữ hướng online; đặc tả nghiệp vụ còn cần hoàn thiện |
+| Công nghệ | TypeScript + Three.js; backend thử TypeScript + Node.js + Colyseus | Đã chọn cho preview/bản thử |
+| Hồ sơ nhân vật | Một nhân vật điều khiển tại một thời điểm; tiến trình gắn với hồ sơ | Thiết kế cơ sở; số slot/đổi nhân vật/phần dùng chung chưa chốt |
+| Cân bằng và nội dung chi tiết | Phân bổ tầng vào map, chi phí, stat, thời lượng, đối thủ, nhiệm vụ và phần thưởng | Có bảng thử ở hồ sơ tiến trình; chưa chốt, không kế thừa tự động số liệu cũ |
+| Tổ đội/PvP/kinh tế | Hoạt động online và phối hợp theo nhân vật/cảnh giới | Mục tiêu; phạm vi bản đầu còn cần đặc tả |
 
-## 2. Trải nghiệm và vòng chơi
+“Đã chốt hướng” không đồng nghĩa tính năng đã triển khai. Bảng số liệu và quy tắc mới chỉ được khóa sau đặc tả, prototype và đánh giá.
 
-Người chơi đăng ký làm đệ tử, nhận việc, đi ra vùng ngoài, đánh quái/thu thập, quay về chế đồ và tự đột phá. Khi đã học pháp quyết có thể bế quan để tích lũy thêm. Tốc độ nhập môn được thiết kế cho bản RPG, không lặp nhiều chục phút lấy nước trước chiến đấu.
+## 2. Trải nghiệm cốt lõi
 
-**Nhiệm vụ → khám phá/đánh/thu thập → tu vi và vật liệu → trang bị/chế tạo → kỹ năng/đột phá → boss → vòng farm.**
+Người chơi nhận ra mình đang điều khiển ai, hiểu bình cảnh và chủ động chuẩn bị để vượt qua. Công pháp, pháp bảo hoặc lĩnh ngộ mới làm thay đổi cách chơi, không chỉ tăng một con số chiến lực.
 
-Lượt đầu mục tiêu35–45 phút tới tầng 3; sau đó chơi tiếp nhiệm vụ lặp/boss. Đây là giả thuyết cân bằng. Luật, cửa tầng và quyền thưởng tại máy chủ; client gửi thao tác và trình bày hình ảnh.
+Nguyên tắc:
 
-## 3. Bối cảnh truyện và kịch bản
+1. **Nhập môn dễ hiểu:** dạy từng hệ thống qua nhiệm vụ; không đưa nhiều cây kỹ năng và sáu thanh tích lũy ngay đầu game.
+2. **Cảnh giới đổi khả năng:** đại cảnh giới mở cách vận dụng mới, không chỉ nhân HP/sát thương.
+3. **Bản sắc nhân vật:** chung khung tu luyện nhưng khác cơ duyên, trạng thái và cách giải bình cảnh.
+4. **Lựa chọn có tác dụng:** tổ hợp công pháp–thuật–pháp bảo có đánh đổi; lựa chọn đầu tiên thử/chỉnh được trước đầu tư sâu.
+5. **Idle hỗ trợ chơi trực tiếp:** tích lũy và chuẩn bị; truyện, khảo nghiệm, lĩnh ngộ then chốt và đột phá cần tương tác.
+6. **Nội dung đi trước mở khóa:** có ART không tự cấp hiệu lực kỹ năng/cảnh giới.
 
-Hằng Nhạc, áo ký danh xám/phòng ở/tạp vụ, suối phía đông, Trương Hổ kiếm củi và dược viên Tôn Đại Trụ là căn cứ nhập môn từ [chương10](https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-10), [11](https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-11), [17](https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17).
+## 3. Ba nhân vật và ranh giới chuyển thể
 
-Người chơi là đệ tử mới do game bổ sung; các nhiệm vụ, quái/boss, bố cục địa hình, thuật pháp người chơi và tốc độ tăng tầng là chuyển thể. Hạt châu thuộc Vương Lâm, không phát đại trà. Hổ thoát hiểm ở chương7 giữ trong chính truyện, không làm mục tiêu farm. Lý Mộ Uyển/Tư Đồ Nam giữ B/arc sau.
+### 3.1. Lựa chọn từ đầu
 
-[Kịch bản](STARTER-STORY.md) có ba hồi: áo xám/đường lấy nước; dược viên/tuần rừng; chuẩn bị/thử thách hang. Thoại ngắn, thẻ truyện15–30 giây có thể xem lại. Không buộc xem đoạn dài để tiếp tục chơi.
+Màn chọn có cả ba, giới thiệu danh tính, trạng thái nhập môn và hướng phát triển về sau. Không bắt hoàn thành Vương Lâm để mở hai người còn lại. Không mặc định gacha, nhân vật trả phí hoặc đổi nhân vật tự do giữa trận.
 
-## 4. Thế giới và tỷ lệ
+| Nhân vật | Hằng Nhạc: chung nền, khác nhẹ | Sau nhập môn: hướng thiết kế, chưa phải danh sách thuật đã duyệt |
+| --- | --- | --- |
+| Vương Lâm | Học dùng linh lực, thuật cơ bản, quan sát và khảo nghiệm; cơ duyên châu ở mốc riêng | Đấu pháp, thần thức, cấm chế, lĩnh ngộ và truyền thừa theo truyện |
+| Tư Đồ Nam | Linh thể bị hạn chế hiện diện/thi triển; dùng phần năng lực hiện có để học thao tác chung | Khôi phục trạng thái, năng lực và quyền tiếp cận thuật pháp |
+| Lý Mộ Uyển | Tự chiến đấu được; dấu nhận diện nhẹ qua dược liệu, đan hoặc phù/trận đơn giản | Đan–trận, chuẩn bị chiến đấu, bảo vệ/kiểm soát khu vực và phối hợp |
 
-Ngoại viện an toàn ↔ suối; ngoại viện ↔ rừng; suối/rừng ↔ lối ngoài dược viên ↔ khe đá → hang boss riêng. Cổng dược viên hạn chế và hang bí mật của Vương Lâm tách khỏi khu farm.
+Không khóa ba người thành kiếm sĩ / pháp sư lôi / người chỉ hồi máu. Tên công pháp, tác dụng và build phải được biên tập theo nhân vật và nguồn truyện.
 
-[Map mới](STARTER-REGION-MAP.md) giữ sprite/camera/1× như preview: mở số pixel thế giới, camera cuộn theo người, không kéo ảnh sân hoặc thu nhỏ nhân vật. Map lớn chia lớp mặt đất/đạo cụ/che khuất, ô bố trí64px độc lập collider8px. Minimap chỉ là tổng quan.
+### 3.2. Hằng Nhạc chung không phải lịch sử nguyên tác
 
-[Bản đi thử](http://127.0.0.1:5173/starter-region.html) dùng hình khối để kiểm đường/POI/portal và tỷ lệ. Phòng online cũ vẫn960 × 640; nối vùng mới vào server là mốc A1.
+Không kể ba người vốn cùng nhập môn Hằng Nhạc trong truyện. Dùng mở đầu gameplay chung và các cảnh cá nhân có nguồn. Lý Mộ Uyển chơi được từ đầu không chuyển mốc gặp đầu trong nguyên tác sang Hằng Nhạc.
 
-[Map phân lớp](MAP-LAYERED-DESIGN.md) hiện dùng ảnh tổng năm khu phóng để đối chiếu; 12 chunk, 8 phần che, polygon đường/nước/cầu/footprint. Kỹ thuật đi thử đã kiểm, ART/mask còn lỗi. [Đoạn native mẫu](MAP-COURTYARD-PILOT-PLAN.md) sẽ xác lập nguồn sạch, cụm/layer và chất lượng trước khi mở rộng. Nút đặt người chỉ để review; chưa streaming hoặc thử tải online.
+Tư Đồ Nam không mất kiến thức để trở thành tu sĩ Ngưng Khí mới. Tiến trình nhập môn chung của ông biểu thị **khả năng hiện diện/thi triển đang phục hồi**. UI phân biệt trạng thái/cảnh giới trong truyện với mốc gameplay, không ghi cảnh giới nguyên tác của ông là Ngưng Khí. Chi tiết tại [hệ thống tu tiên](CULTIVATION-SYSTEM.md).
 
-## 5. Combat, farm và phần thưởng
+Nguồn truyện, tiến trình gameplay và trạng thái dùng trong chế độ chơi là ba thông tin khác nhau. Tuyến thay số phận hoặc phát triển ngoài mốc nguyên tác phải ghi là mở rộng game; không tự áp kết thúc mới vào chính truyện.
 
-A có đánh thường, Linh khí chỉ, Hộ thân thuật, bình hồi phục, né bằng di chuyển. Chọn mục tiêu không giành quyền đi khi né. Cự ly/đường nhìn/cooldown/MP/damage/HP/chết do server xử lý; frame vẽ không tự quyết định sát thương.
+### 3.3. Nhiều người cùng chọn một nhân vật
 
-4 quái thường cung cấp da/sơn thảo/nanh; tinh anh cho mảnh linh thạch; boss cho tinh hạch và đồ hiếm. Lần boss đầu cho chọn kiếm hoặc áo chắc chắn. Lượt farm hiếm có pity, không là cổng bắt buộc trước Q10. Túi đầy giữ thưởng chờ nhận, gửi lại không roll lại.
+Mỗi hồ sơ là một phiên trải nghiệm của tài khoản, không phải một nhân vật mới được thêm vào canon. Khu chung dùng tên tài khoản/biệt danh và nhãn nhân vật. Chương cá nhân/tổ đội theo tiến trình của người tham gia; hoàn thành chương của một người không thay tiến trình toàn server hoặc số phận NPC ở mọi phiên.
 
-Quái ngoài vùng là chung, credit cho contributor hợp lệ, loot cá nhân. Boss A đề xuất phiên1 người; B thêm nhóm2–4 và boss nhóm. Không có PvP/giao dịch trong A.
+## 4. Vòng chơi
 
-## 6. Tiến trình, kinh tế và idle
+**Mục tiêu → khám phá/nhiệm vụ/chiến đấu → tài nguyên hoặc tri thức → tu luyện/luyện thuật/luyện hóa → bình cảnh → chuẩn bị/khảo nghiệm → đột phá hoặc hồi phục → ổn định sức mạnh → hành trình mới.**
 
-Tu vi tích lũy100/400/900 + Q03/Q06/Q10 để chủ động đạt tầng 1/2/3. Tuyến chính đủ lượng tu vi và vật liệu Q09 dù không rơi rare; không cần nhiệm vụ phụ để qua A.
+Idle đã chọn hỗ trợ tích lũy; không thay vòng khám phá và khảo nghiệm.
 
-16 vật phẩm, túi24ô/stack99, 4 ô trang bị; hai số dư tiền/cống hiến. Chế bình/hộ phù/+1 chắc chắn. Vắng mặt chỉ tính bế quan đã chọn, 4 tu vi/phút, tối đa8giờ, dừng tại gate; không tạo kill/loot. Farm và bế quan không chạy cùng lúc.
+Vòng ngắn: một nhiệm vụ, lần luyện thuật hoặc điều chỉnh chuẩn bị. Vòng trung: nhóm mục tiêu và thử tổ hợp. Vòng dài: vượt bình cảnh, rời Hằng Nhạc và xây dựng con đường riêng. Chưa gán thời lượng; mục tiêu 30–45 phút/tầng 1 và chu kỳ 10 giây của thiết kế trước chỉ là lịch sử.
 
-## 7. Online và dữ liệu
+## 5. Hằng Nhạc — nhập môn qua Ngưng Khí
 
-Giữ tiến trình tại máy chủ, một phiên điều khiển mỗi nhân vật. Auth/DB, giao dịch cấp thưởng/đột phá, khôi phục restart, idempotency và nhiều tab phải có trước nghiệm thu A. Colyseus room state hiện chỉ trong bộ nhớ.
+Trải nghiệm, tuyến nhiệm vụ, bình cảnh, khảo nghiệm và điều kiện xuất hành được đề xuất tại [Đặc tả Hằng Nhạc — Ngưng Khí v0.4](HANG-NHAC-NGUNG-KHI-SPEC.md). [Gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md) xác định bộ khởi đầu và luật skill; [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md) bổ sung ngưỡng, nền vận hành, vật tư/idle; [đối thủ và HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất AI, ba pha, checkpoint và luật kết nối lại. Chi tiết mới cần đánh giá; chưa xác nhận gameplay đã triển khai.
 
-Mục tiêu thử8 client thật là yêu cầu đề xuất cần đo; số FPS của20 hình local không chứng minh tải MMORPG. [Dữ liệu RPG-A](data/mvp-rpg-content.json) chọn ID/nhiệm vụ/đồ/gate. Catalog/save idle cũ chỉ giữ tham chiếu.
+Hằng Nhạc là vùng có thể đi lại, gặp người chơi/NPC, nhận nhiệm vụ, tu luyện và thử chiến đấu. Đồ thị chín node truyện cũ không phải map online đã hoàn thiện.
 
-## 8. UX và ART
+Ưu tiên hiện tại là hoàn thiện map trước đặc tả vận hành. [Bố cục Hằng Nhạc v0.1](HANG-NHAC-MAP-LAYOUT.md) đề xuất sân trung tâm, bảy địa điểm/tám chức năng, hai vòng đi lại và lối vào khảo nghiệm riêng; vị trí/kích thước mới chưa khóa và chưa thay runtime.
 
-Màn thế giới cần target/HP/linh lực/kỹ năng, tracker nhiệm vụ, túi/trang bị, minimap và tương tác NPC. Mobile giữ cỡ người, nút chạm rõ, vùng báo đòn đọc được. Nhật ký đọc lại truyện; màn hoàn thành A mở farm thay vì dừng mọi hoạt động.
+| Chặng | Nội dung cần học | Kết quả |
+| --- | --- | --- |
+| Vào Hằng Nhạc | Chọn nhân vật, di chuyển, tương tác, mục tiêu | Biết danh tính và trạng thái nhập môn |
+| Chuẩn bị tu luyện | Tài nguyên, công pháp nền, thổ nạp | Hiểu tích lũy; Tư Đồ Nam có diễn giải hồi phục riêng |
+| Luyện thuật | Kỹ năng nền, linh lực, khoảng cách, né đòn | Tự vượt khảo nghiệm chiến đấu đơn giản |
+| Tiến triển Ngưng Khí | Nhiệm vụ môn phái, luyện tập, đồ/pháp bảo nền | Vận dụng ổn định, đọc được điều kiện bình cảnh |
+| Khảo nghiệm cuối | Vận dụng điều đã học, không chỉ kiểm tu vi | Đủ năng lực hoàn thành nhập môn |
+| Rời map | Chốt nhập môn, mục tiêu chuẩn bị Trúc Cơ | Bắt đầu tuyến riêng; không tự đột phá chỉ vì qua cổng |
 
-Năm bộ chibi có100 frame; thêm Vương Lâm trước36 để đối chiếu. Chân dung/truyện/UI giữ mực/giấy. Đồng bộ portrait hoãn; ART map và combat ưu tiên một avatar/một quái trước mở cả gói204 frame dự kiến.
+Đạt Ngưng Khí tầng 1 là mốc sớm, không phải kết thúc map. Nguyên tác nêu 15 tầng tại [chương 17](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17). Đề xuất map chuyển thể bao phủ hết 15 tầng, bốn mốc trải nghiệm tương ứng 1/3/9/15; Tư Đồ Nam dùng nhãn hồi phục. Phạm vi này, ngưỡng và số liệu chưa được duyệt chi tiết; không kể đó là hành trình Hằng Nhạc giống nguyên tác.
 
-## 9. Lộ trình và nghiệm thu
+Cả ba có **Kiếm Khí, Lôi Ấn và Ngự Phong Bộ bản R01** làm skill khởi đầu ngay khi bắt đầu điều khiển. HN03/04 hướng dẫn sử dụng, HN09 luyện phối hợp; không cần làm nhiệm vụ để mới được quyền học ba thuật này. Bộ chung là chuyển thể gameplay, không phải ba class hoặc ba công pháp canon. Cả ba tự hoàn thành được nhiệm vụ đơn lẻ, có lời dẫn/biểu hiện và dấu nhận diện nhẹ; phân hóa sâu sau map đầu. Slot toàn game, tác dụng và số liệu cần đánh giá theo hồ sơ; R02–R05 không tự cấp ở Hằng Nhạc.
 
-MAP01–MAP04: tổng quan ART → cảnh chi tiết/tỷ lệ → lớp/đường/collider → duyệt map. Trong MAP03, thực hiện MP01–MP07 cho một đoạn ngoại viện native trước; sau đánh giá mới mở rộng cùng phương pháp sang các khu khác. D-GAME sau đó thiết kế nhiệm vụ/combat/đồ/đột phá theo map. A1 nối online/lưu; A2 làm vòng nhập môn, rồi A3–A5 mở farm/boss/chơi thử. [Backlog](MVP-BACKLOG.md) quy định phụ thuộc và checklist.
+Điều kiện hoàn thành đề xuất: tuyến chung và đoạn nhận diện riêng đã xong, đạt mốc Ngưng Khí/hồi phục tương ứng, sử dụng được năng lực nền, vượt khảo nghiệm cuối, hiểu mục tiêu kế tiếp; máy chủ xác nhận mốc và thưởng một lần.
 
-Hai tài khoản phải qua trọn A, đăng nhập lại giữ tiến trình; quái chung/thưởng riêng đúng, túi đầy/replay/mất mạng không mất hoặc nhân loot. Thử tải và thời gian thật trước B. B mở tổ đội/arc mới; world boss, PvP, giao dịch/bang hội cần đặc tả riêng.
+## 6. Sáu phần phát triển tu tiên
 
-## 10. Tham chiếu lịch sử
+| Phần phát triển | Ý nghĩa trong game | Quan hệ |
+| --- | --- | --- |
+| **Cảnh giới** | Năng lực tu luyện và những khả năng có thể tiếp cận | Điều kiện năng lực; không thay công pháp, thành thạo hoặc điều kiện truyện |
+| **Công pháp** | Cách hấp thu, vận hành và sử dụng sức mạnh | Định hướng tu luyện và cách vận dụng các thuật |
+| **Thuật pháp** | Bộ kỹ năng chiến đấu, phòng thủ, di chuyển và hỗ trợ | Học, luyện và lựa chọn; cần nền tảng hoặc cơ duyên phù hợp |
+| **Pháp bảo** | Công cụ tạo thêm cách chơi, được tìm kiếm, luyện hóa và sử dụng | Bổ sung khả năng; có giới hạn vận dụng và điều kiện sở hữu |
+| **Lĩnh ngộ** | Hiểu công pháp, giải quyết bình cảnh và hình thành nhận thức về đạo | Trải nghiệm có nghĩa mở cách dùng hoặc giải yêu cầu đột phá |
+| **Hành trình cá nhân** | Cơ duyên, quan hệ, truyền thừa và biến cố quyết định hướng phát triển | Cho ngữ cảnh/quyền tiếp cận và khác biệt giữa nhân vật |
 
-[GDD trước v0.26](GDD-IDLE-REFERENCE-v0.26.md), [backlog idle](MVP-BACKLOG-IDLE-REFERENCE.md), [MVP-A-SPEC](MVP-A-SPEC.md), 9node và cảnh E01–E08 lưu làm hồ sơ hành trình Vương Lâm. Các ngưỡng480, kho120/30, kết thúc tại tầng 1 và luật save cục bộ không là nghiệm thu RPG-A mới.
+Sáu phần không phải sáu loại EXP hoặc sáu tiền tệ bắt buộc farm. UI mở dần. [CULTIVATION-SYSTEM.md](CULTIVATION-SYSTEM.md) chi tiết hóa trạng thái, cách phát triển, quan hệ và ví dụ.
 
-[Preview runbook](PREVIEW-RUNBOOK.md), [quy chuẩn chibi](CHIBI-ROSTER-SPEC.md), [công nghệ](TECH-STACK.md), [online](ONLINE-DIRECTION.md) giữ nguồn triển khai và quyết định liên quan.
+Khung đầu: **Ngưng Khí → Trúc Cơ → Kết Đan → Nguyên Anh → Hóa Thần**. Anh Biến/Vấn Đỉnh và giai đoạn sau là định hướng dài hạn; chưa mở đợt sản xuất mới. [Chương 20](https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-20), [chương 410](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-410).
+
+| Mốc gameplay | Thay đổi trải nghiệm đề xuất |
+| --- | --- |
+| Ngưng Khí | Học nền, linh lực, thuật và khảo nghiệm |
+| Trúc Cơ | Bắt đầu công pháp/tổ hợp riêng; khám phá/chuẩn bị có trọng tâm |
+| Kết Đan | Năng lực chủ đạo rõ, phối hợp công pháp–thuật–pháp bảo |
+| Nguyên Anh | Nội dung thần thức/linh hồn phù hợp nhân vật và nguồn |
+| Hóa Thần | Lĩnh ngộ/ý cảnh thay đổi cách vận dụng sức mạnh |
+| Về sau | Vòng chơi mới theo arc và nguồn sức mạnh; thiết kế riêng |
+
+Đây là mục tiêu gameplay, không tự cấp phân thân/triệu hồi/bất tử từ tên cảnh giới. Cổ Thần/Cực Cảnh của Vương Lâm có hồ sơ riêng khi tới mốc; không biến thành bậc EXP chung của cả ba.
+
+## 7. Tu luyện, bình cảnh và đột phá
+
+Thiết kế cơ sở cho đại đột phá:
+
+1. **Tích lũy:** đủ tu vi/tài nguyên phù hợp; tu vi khác linh lực tiêu trong trận.
+2. **Năng lực:** hiểu công pháp, đạt luyện thuật/khảo nghiệm nếu mốc yêu cầu.
+3. **Hành trình:** cơ duyên hoặc mốc riêng khi có căn cứ.
+4. **Chuẩn bị:** thấy chi phí, điều kiện thiếu, tác dụng và rủi ro đã biết.
+5. **Chủ động vượt mốc:** khảo nghiệm/bế quan hoặc hồi phục được xác nhận.
+6. **Ổn định:** làm quen năng lực mới, lưu kết quả một lần và mở mục tiêu tiếp.
+
+Không bắt mọi tầng nhỏ trải qua đủ quy trình đại cảnh giới. Không áp xác suất thất bại/thiên kiếp chung; rủi ro nếu có phải có nguyên nhân, cách chuẩn bị và hệ quả rõ. Chưa chốt chết vĩnh viễn, mất cảnh giới hay phá vật phẩm.
+
+Idle không tự đột phá vì đủ thời gian. Mốc hồi phục Tư Đồ Nam không viết lại lịch sử cảnh giới; giới hạn chiến lực hiện dùng được phải cân bằng riêng.
+
+## 8. Phân hóa sau Hằng Nhạc
+
+Mở công pháp đặc trưng, cách vận dụng thuật, pháp bảo và tuyến riêng từ hành trình chuẩn bị Trúc Cơ. Khác biệt nằm ở hành động/lựa chọn/chuẩn bị, không chỉ màu VFX.
+
+| Nhân vật | Vòng phát triển đề xuất | Giới hạn |
+| --- | --- | --- |
+| Vương Lâm | Khám phá/đấu pháp → cơ duyên/tri thức → vận dụng → giải bình cảnh | Không mở Cực Cảnh/Cổ Thần tùy tiện hoặc cho PvP thắng ngay |
+| Tư Đồ Nam | Khôi phục trạng thái → hiện diện/thi triển → phục hồi năng lực/thuật | Kiến thức cao không cấp toàn bộ chiến lực lúc đầu |
+| Lý Mộ Uyển | Dược liệu/tri thức → đan/trận → chuẩn bị/kiểm soát → giải yêu cầu riêng | Tự chơi được; không chỉ làm kho đan; thuật/ý cảnh sáng tạo không ghi là canon |
+
+Nguồn nền đan–trận: [chương 143](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-143), [224](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-224). Nguồn trạng thái Tư Đồ Nam: [47](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-47). Quãng khắc tượng/lĩnh ngộ Vương Lâm: [271](https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-271). Không suy ra cả ba phải làm cùng một thử thách hoặc cùng ý cảnh từ các nguồn này.
+
+## 9. Online, chiến đấu và idle
+
+Hằng Nhạc chung cho thấy nhau, di chuyển và tương tác. Khảo nghiệm/truyện riêng hoặc tổ đội có điều kiện và quyền thưởng riêng; không buộc mọi tài khoản tới cùng chương. Quy mô phòng, quyền loot, ghép nhóm và đồng bộ chương nhóm cần đặc tả.
+
+Máy chủ xác nhận tài nguyên, tu vi, học thuật, pháp bảo, truyện, vị trí, hit/damage và movement/arrival. Gửi lại lệnh/nhiều tab không nhân thời gian, thưởng hay đột phá. Trình duyệt chỉ giữ cache/tùy chọn, không nhập JSON để thay trạng thái hợp lệ.
+
+Idle tiếp tục hoạt động đã chọn, dừng ở thiếu tài nguyên/kho/bình cảnh/cổng tương tác. Không tự hoàn thành truyện, combat, lĩnh ngộ then chốt hoặc đại đột phá. Không mặc định farm combat khi đóng game. Giới hạn 8 giờ cũ chưa được chốt lại cho thiết kế ba nhân vật.
+
+PvP cần hồ sơ riêng: đề xuất nhóm cảnh giới hoặc tỷ thí cân bằng; không áp ngầm luật này cho PvE. Không chuyển khả năng đặc biệt trong truyện thành thắng ngay mọi trận online. Giao dịch đan/pháp bảo và kinh tế còn mở.
+
+## 10. UX và ART
+
+| Khu vực | Nội dung ưu tiên |
+| --- | --- |
+| Chọn nhân vật | Cả ba từ đầu; danh tính/trạng thái/hướng tương lai; chưa ép build |
+| Thế giới | Nhân vật điều khiển, nhiệm vụ, tương tác, thuật đang dùng và linh lực |
+| Tu tiên | Mốc cảnh giới/hồi phục, tu vi, công pháp, hoạt động và bình cảnh |
+| Thuật/pháp bảo | Nguồn học, điều kiện sử dụng, tổ hợp và lý do khóa |
+| Hành trình | Chương riêng, cơ duyên, quan hệ, lĩnh ngộ; nhãn nguyên tác/chuyển thể |
+| Tài khoản/cài đặt | Kết nối/lưu, slot nếu có, giảm chuyển động và tùy chọn |
+
+Sáu phần tu tiên mở theo nhiệm vụ; không là sáu menu bắt buộc ngay đầu. Tu vi là tiến triển dài hạn, linh lực là nguồn dùng năng lực. Nhãn Tư Đồ Nam biểu thị hồi phục, không kể ông bắt đầu tu lại từ Ngưng Khí.
+
+Chuẩn VFX hiện có: body tối đa 80 world px, world 960×640, 24 FPS, alpha thường; rìa glow không phải hitbox. Impact dùng cho nhân vật/quái/boss/PvP, không phụ thuộc bia đá. [Bàn giao](design/vfx/STARTER-VFX-HANDOFF.md). Chân dung/diện mạo theo hồ sơ ART đã duyệt; vai gameplay mới không tự đổi nhận diện.
+
+## 11. Phân kỳ kiểm chứng và nghiệm thu
+
+Map qua Ngưng Khí là mục tiêu sản phẩm, không phải cam kết sản xuất toàn map trong một bước. Thay phân kỳ cũ A “không combat, tới tầng 1” / B “thêm một trận” bằng các lát đề xuất:
+
+| Lát | Nội dung | Đánh giá |
+| --- | --- | --- |
+| A — Lát nhập môn online | Cả ba, Hằng Nhạc, nhiệm vụ/tu luyện đầu và combat đơn giản | Ba lựa chọn vào được; hai tài khoản có tiến trình riêng; hiểu nền |
+| B — Hoàn thiện Hằng Nhạc | Ngưng Khí, luyện thuật, pháp bảo nền, khảo nghiệm cuối | Cả ba tự hoàn thành; điều kiện rời map/thưởng nhất quán |
+| C — Phân hóa sau map đầu | Chuẩn bị/đột phá Trúc Cơ, công pháp/tổ hợp/tuyến riêng | Khác hành động/lựa chọn; thử/chỉnh hướng đầu được |
+| Arc sau | Kết Đan và cao hơn, nội dung nhóm/kinh tế | Vòng chơi, nguồn truyện và ngân sách riêng |
+
+Tên lát, số nhiệm vụ/combat và thứ tự kỹ thuật là đề xuất lập kế hoạch, chưa là lịch phát hành đã duyệt. Một lát dừng ở tầng đầu không được gọi là hoàn tất Hằng Nhạc.
+
+Nghiệm thu toàn map: ba người chơi được từ đầu; vòng chuẩn bị–tu luyện–luyện thuật–combat; dấu nhận diện riêng nhẹ; khảo nghiệm cuối; kết nối lại/lưu riêng; không thưởng/đột phá lặp; rời map có mục tiêu tuyến riêng. Cân bằng cần chơi thử, không suy từ số atlas hoặc test kỹ thuật.
+
+## 12. Hiện trạng, câu hỏi mở và tài liệu
+
+Đã có preview ART/chuyển động và backend phòng tối thiểu theo [runbook](PREVIEW-RUNBOOK.md), [hợp đồng preview](BACKEND-PREVIEW.md). Mẫu đệ tử trong preview là lịch sử thử, không xác nhận mô hình hiện hành. Tài khoản/lưu bền vững và tu tiên chưa được triển khai chỉ bởi việc sửa GDD.
+
+Đợt ART R01–R05 đã chốt **15 skill / 646 PNG / 76 atlas**, gồm frame dùng lại; các gói duyệt giữ nguyên. ART chủ yếu dùng Vương Lâm, chưa đủ animation chiến đấu ba nhân vật. Quyền dùng bộ R01 chung đã chốt; công pháp/tác dụng/cân bằng và quyền học các giai đoạn sau còn cần hồ sơ gameplay.
+
+Còn mở: slot/đổi nhân vật, phân bổ tầng và thời lượng nhập môn, chi phí/độ khó đột phá, slot công pháp/thuật/pháp bảo, stat/kỹ năng đặc trưng, lời dẫn chuyển thể đầu game, map tiếp, NPC/đối thủ, loot/tổ đội/PvP/giao dịch, idle, monetization và quy mô server. Hồ sơ tiến trình có giá trị thử, chưa khóa. Không kế thừa 480 tu vi, kho 120/30, 10 giây/chu kỳ hoặc 30–45 phút như số liệu đã duyệt.
+
+Tài liệu hiện hành:
+
+- [Đặc tả trải nghiệm Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md): hành trình, nhiệm vụ chung/riêng, bình cảnh, khảo nghiệm và xuất hành.
+- [Hồ sơ gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md): bộ R01 chung, trạng thái ba người, luật skill/frame event và baseline thử nghiệm.
+- [Tiến trình tu luyện và phần thưởng Hằng Nhạc](HANG-NHAC-PROGRESSION-REWARDS.md): bảng 15 ngưỡng thử, nền vận hành, thưởng nhiệm vụ, vật tư và idle.
+- [Đối thủ và khảo nghiệm nhập môn](HANG-NHAC-ENCOUNTERS-TRIAL.md): ba mẫu AI, vùng/timing đòn, ba pha HN10, checkpoint và nghiệm thu.
+- [Hệ thống tu tiên](CULTIVATION-SYSTEM.md): sáu phần, trạng thái và quan hệ.
+- [Nhân vật](CHARACTERS.md): ba lựa chọn từ đầu và hành trình riêng.
+- [Online](ONLINE-DIRECTION.md), [MMORPG](MMORPG-DIRECTION.md): tổ chức thế giới và tiến trình.
+- [Backlog](MVP-BACKLOG.md): việc cần đặc tả trước triển khai.
+- [Nguồn tạo hình bộ ba](CORE-CHARACTER-VISUAL-SPEC.md), [ART](ART-DIRECTION.md), [công nghệ](TECH-STACK.md).
+
+MVP-A-SPEC, UX cũ, node WORLD-MAPS và catalog/save minh họa là tham chiếu lịch sử cần biên tập lại. Thông báo đầu tài liệu chỉ rõ phần bị thay. Không sửa JSON/code để giả định đã triển khai hướng mới.

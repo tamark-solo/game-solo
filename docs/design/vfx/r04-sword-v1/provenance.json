@@ -1,0 +1,22 @@
+{
+  "tool": "built_in_imagegen",
+  "sourceOfTruth": "individual_RGBA_PNG_frames",
+  "processing": "mechanical_crop_fixed_scale_anchor_resize_pack",
+  "sourceSelection": "../production/r04-art-selection.json",
+  "prompts": [
+    {
+      "source": "source/spirit-sword-east.png",
+      "prompt": "prompts/spirit-sword-east.txt",
+      "sourceSha256": "d8287ccb6e55c98b50696bcbd9d4e8469fa1c64de18e7615591e2e60878b6a8c"
+    },
+    {
+      "source": "source/sword-spirit-lattice.png",
+      "prompt": "prompts/sword-spirit-lattice.txt",
+      "sourceSha256": "b706fa545accd9c2783349e09d5278aafd1ea8f671bef1956d2b89feb9b5a333"
+    }
+  ],
+  "newFrames": 12,
+  "reusedFrames": 44,
+  "reusedFrom": "R03",
+  "artStatus": "produced_pending_owner_motion_review"
+}

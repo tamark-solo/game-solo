@@ -1,0 +1,16 @@
+.map-art { position: absolute; inset: 0; width: 2400px; height: 1800px; pointer-events: none; }
+.art-row { position: absolute; left: 0; width: 2400px; height: 990px; overflow: hidden; }
+.art-row.north { top: 0; }
+.art-row.south { top: 810px; clip-path: inset(90px 0 0 0); }
+.art-tile { position: absolute; top: 0; width: 1320px; height: 990px; display: block; user-select: none; }
+.art-tile.west { left: 0; }
+.art-tile.east { left: 1080px; clip-path: inset(0 0 0 120px); }
+/* Short transition only for seam review. The source images retain their drawn edges. */
+.map-art[data-join="blend"] .art-tile.east { clip-path: none; mask-image: linear-gradient(to right, transparent 108px, black 132px); }
+.map-art[data-join="blend"] .art-row.south { clip-path: none; mask-image: linear-gradient(to bottom, transparent 78px, black 102px); }
+.art-repair { position: absolute; mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent); }
+.art-repair.touches-west { mask-image: linear-gradient(to right, black, black calc(100% - 32px), transparent); }
+.art-repair.touches-east { mask-image: linear-gradient(to right, transparent, black 32px, black); }
+.art-repair img { display: block; width: 100%; height: 100%; mask-image: linear-gradient(to bottom, transparent, black 32px, black calc(100% - 32px), transparent); }
+.art-repair img.touches-north { mask-image: linear-gradient(to bottom, black, black calc(100% - 32px), transparent); }
+.map-art[data-repairs="off"] .art-repair { display: none; }

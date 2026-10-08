@@ -1,0 +1,201 @@
+{
+  "version": "1.0.0",
+  "realm": "R02",
+  "realmName": "Trúc Cơ",
+  "artStatus": "produced_pending_owner_motion_review",
+  "fps": 24,
+  "authoringFrameBase": 1,
+  "runtimeReady": false,
+  "authority": {
+    "damage": "combat_server",
+    "movement": "movement_server",
+    "vfxAppliesDamage": false,
+    "vfxMovesActor": false
+  },
+  "presentation": {
+    "screenFlash": false,
+    "sfxAssetsProduced": false
+  },
+  "preview": {
+    "endFrame": 38,
+    "confirmFrame": 15,
+    "worldSize": [
+      960,
+      640
+    ],
+    "bodyHeightMax": 80,
+    "zoom": [
+      1,
+      2,
+      4
+    ],
+    "cameraCenter": [
+      480,
+      320
+    ],
+    "dprCap": 2
+  },
+  "id": "R02-SWORD",
+  "family": "sword",
+  "name": "Ngự Kiếm",
+  "character": {
+    "clip": "wanglin-cast-east",
+    "baseIdleFrame": [
+      64,
+      96
+    ],
+    "castCanvas": [
+      96,
+      96
+    ],
+    "castAnchor": [
+      48,
+      88
+    ],
+    "bodyHeight": 80,
+    "collisionChanged": false,
+    "bodyHeightMax": 80,
+    "holds": [
+      1,
+      1,
+      1,
+      2,
+      5,
+      1,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1
+    ]
+  },
+  "sockets": [
+    [
+      15,
+      -25
+    ],
+    [
+      22,
+      -42
+    ],
+    [
+      7,
+      -40
+    ],
+    [
+      28,
+      -52
+    ],
+    [
+      12,
+      -37
+    ],
+    [
+      40,
+      -36
+    ],
+    [
+      44,
+      -36
+    ],
+    [
+      43,
+      -36
+    ],
+    [
+      20,
+      -31
+    ],
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -25
+    ]
+  ],
+  "formationOffset": [
+    88,
+    -48
+  ],
+  "projectile": {
+    "worldSpeed": 480,
+    "initialTipAhead": 100,
+    "maxTravelWorld": 360,
+    "scope": "preview_only_replace_with_combat"
+  },
+  "tracks": [
+    {
+      "clip": "sword-charge",
+      "startFrame": 1,
+      "stopBeforeFrame": 11,
+      "anchor": "hand",
+      "layer": 2
+    },
+    {
+      "clip": "sword-formation",
+      "startFrame": 3,
+      "stopBeforeFrame": 11,
+      "anchor": "formation",
+      "layer": 2
+    },
+    {
+      "clip": "sword-guide",
+      "startFrame": 5,
+      "stopBeforeFrame": 11,
+      "anchor": "hand",
+      "layer": 2
+    },
+    {
+      "clip": "sword-flight",
+      "trigger": "release",
+      "anchor": "projectile",
+      "layer": 2
+    },
+    {
+      "clip": "qi-impact",
+      "trigger": "combat.hitConfirmed",
+      "anchor": "hit",
+      "layer": 3
+    }
+  ],
+  "events": [
+    {
+      "frame": 1,
+      "type": "cast.start"
+    },
+    {
+      "frame": 3,
+      "type": "formation.start"
+    },
+    {
+      "frame": 11,
+      "type": "release",
+      "sfx": "r02.sword.cast"
+    },
+    {
+      "frame": 14,
+      "type": "recovery.start"
+    },
+    {
+      "frame": 21,
+      "type": "character.end"
+    }
+  ],
+  "hitContract": {
+    "required": [
+      "castId",
+      "hitId",
+      "worldPosition",
+      "confirmedAt"
+    ],
+    "swordCountVisual": 3,
+    "damageEventsFromDecorativeSwords": 0
+  }
+}

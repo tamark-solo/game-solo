@@ -1,5 +1,7 @@
 # Chi tiết màn hình và trạng thái — MVP A
 
+> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Các màn save/import, mô hình đệ tử và trạng thái kết thúc A bên dưới là tham chiếu cũ, không phải UX hiện hành của ba nhân vật. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+
 > **Tham chiếu UX v0.6.** Game đã chuyển hướng online nhiều người, đệ tử riêng. Luồng xuất/nhập/thay save cục bộ bên dưới được thay bằng tài khoản và lưu máy chủ; hồ sơ châu thuộc chính truyện. Các màn cần điều chỉnh theo [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md), sau khi duyệt [tạo hình nhân vật](CHARACTERS.md).
 
 **Phiên bản:** 0.1, ngày 06/10/2026.  

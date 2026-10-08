@@ -1,0 +1,192 @@
+{
+  "version": "1.0.0",
+  "realm": "R03",
+  "realmName": "Kết Đan",
+  "artStatus": "produced_pending_owner_motion_review",
+  "fps": 24,
+  "authoringFrameBase": 1,
+  "runtimeReady": false,
+  "authority": {
+    "damage": "combat_server",
+    "movement": "movement_server",
+    "vfxAppliesDamage": false,
+    "vfxMovesActor": false
+  },
+  "presentation": {
+    "screenFlash": false,
+    "sfxAssetsProduced": false,
+    "strikeLeadFrames": 2
+  },
+  "preview": {
+    "endFrame": 44,
+    "confirmFrame": 17,
+    "worldSize": [
+      960,
+      640
+    ],
+    "bodyHeightMax": 80,
+    "zoom": [
+      1,
+      2,
+      4
+    ],
+    "cameraCenter": [
+      480,
+      320
+    ],
+    "dprCap": 2
+  },
+  "id": "R03-THUNDER",
+  "family": "thunder",
+  "name": "Lôi Hạch",
+  "character": {
+    "baseIdleFrame": [
+      64,
+      96
+    ],
+    "bodyHeightMax": 80,
+    "collisionChanged": false,
+    "directions": [
+      "east"
+    ],
+    "clip": "wanglin-thunder-east",
+    "castCanvas": [
+      96,
+      96
+    ],
+    "castAnchor": [
+      48,
+      88
+    ],
+    "holds": [
+      1,
+      1,
+      2,
+      2,
+      3,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      2
+    ]
+  },
+  "sockets": [
+    [
+      15,
+      -25
+    ],
+    [
+      16,
+      -37
+    ],
+    [
+      12,
+      -40
+    ],
+    [
+      14,
+      -40
+    ],
+    [
+      12,
+      -37
+    ],
+    [
+      17,
+      -53
+    ],
+    [
+      37,
+      -39
+    ],
+    [
+      45,
+      -39
+    ],
+    [
+      40,
+      -38
+    ],
+    [
+      19,
+      -45
+    ],
+    [
+      15,
+      -25
+    ],
+    [
+      15,
+      -25
+    ]
+  ],
+  "tracks": [
+    {
+      "clip": "thunder-seal",
+      "startFrame": 1,
+      "stopBeforeFrame": 13,
+      "anchor": "hand",
+      "layer": 2
+    },
+    {
+      "clip": "thunder-core",
+      "startFrame": 4,
+      "holdLastUntilResolve": true,
+      "anchor": "target.ground",
+      "layer": 0
+    },
+    {
+      "clip": "thunder-bolt",
+      "trigger": "combat.hitConfirmed",
+      "anchor": "hit",
+      "layer": 2
+    },
+    {
+      "clip": "thunder-impact",
+      "trigger": "visual.contact",
+      "anchor": "hit",
+      "layer": 3
+    }
+  ],
+  "events": [
+    {
+      "frame": 1,
+      "type": "cast.start"
+    },
+    {
+      "frame": 4,
+      "type": "core.ringsForm"
+    },
+    {
+      "frame": 9,
+      "type": "core.compress"
+    },
+    {
+      "frame": 13,
+      "type": "release",
+      "sfx": "r03.thunder.release"
+    },
+    {
+      "frame": 17,
+      "type": "recovery.start"
+    },
+    {
+      "frame": 21,
+      "type": "character.end"
+    }
+  ],
+  "hitContract": {
+    "required": [
+      "castId",
+      "hitId",
+      "worldPosition",
+      "confirmedAt"
+    ],
+    "secondaryNodesVisual": 3,
+    "damageEventsFromNodes": 0,
+    "coreDischargeVisualOnly": true
+  }
+}

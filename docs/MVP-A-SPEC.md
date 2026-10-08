@@ -1,6 +1,6 @@
 # Đặc tả hệ thống MVP A
 
-> **Tham chiếu trước RPG-A:** đặc tả idle/tầng 1 bên dưới giữ lịch sử. Phạm vi hiện tại dùng [MVP mới](MVP-RPG-A.md), [nhiệm vụ](STARTER-STORY.md), [map](STARTER-REGION-MAP.md) và [dữ liệu](data/mvp-rpg-content.json); không lấy luật kết thúc/480 tu vi/save cục bộ dưới đây nghiệm thu bản MMORPG.
+> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Luật E01–E08, đệ tử riêng, kết thúc tầng 1 và số liệu bên dưới là tham chiếu cũ; không là đặc tả tu tiên/server của GDD mới. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
 
 > **Tham chiếu v0.6, chờ điều chỉnh online.** Người phát triển đã chọn nhiều người chơi và đệ tử riêng. Quy tắc dành cho Vương Lâm, save cục bộ, nhập JSON và quyền ghi theo tab bên dưới chưa là đặc tả máy chủ hiện tại. [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md) xác định điều chỉnh; [CHARACTERS.md](CHARACTERS.md) xác định vai và tạo hình. Phải tách tuyến đệ tử/chính truyện trước triển khai; bộ số liệu vẫn là giả thuyết cân bằng.
 
