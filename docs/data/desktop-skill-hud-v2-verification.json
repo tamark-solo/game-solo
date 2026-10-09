@@ -1,0 +1,192 @@
+{
+  "version": 2,
+  "date": "2026-10-09",
+  "branch": "_MMO",
+  "baseCommit": "e481c09",
+  "status": "desktop_options_for_owner_review",
+  "desktop": true,
+  "mobileDeferred": true,
+  "runtimeIntegrated": false,
+  "artApproved": false,
+  "ownerFeedback": "Initial 370 px information-heavy HUD rejected; request compact native-scale MMO xianxia alternatives.",
+  "page": "/skill-bar-desktop.html",
+  "variants": [
+    {
+      "id": "bronze",
+      "name": "A — Đồng cổ",
+      "bar": [
+        184,
+        62
+      ],
+      "slot": [
+        48,
+        48
+      ]
+    },
+    {
+      "id": "jade",
+      "name": "B — Ngọc giản",
+      "bar": [
+        174,
+        62
+      ],
+      "slot": [
+        44,
+        52
+      ]
+    },
+    {
+      "id": "seal",
+      "name": "C — Ấn thuật",
+      "bar": [
+        178,
+        60
+      ],
+      "slot": [
+        48,
+        48
+      ],
+      "shape": "circle"
+    }
+  ],
+  "icons": {
+    "tool": "built_in_imagegen",
+    "source": "docs/design/ui/desktop-skill-hud-v2/skill-icons-source.png",
+    "prompt": "docs/design/ui/desktop-skill-hud-v2/icons.prompt.txt",
+    "atlas": "docs/design/ui/desktop-skill-hud-v2/skill-icons-v2.webp",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "atlasSize": [
+      288,
+      96
+    ],
+    "cellSize": [
+      96,
+      96
+    ],
+    "bytes": 15062,
+    "sha256": "7e90fd361878ac6ba14e0712b40a8ac2dd29e41cc1f382356817e8f9c6749a67",
+    "artApproved": false
+  },
+  "nativeContract": {
+    "cameraScale": 1,
+    "actorFrame": [
+      64,
+      96
+    ],
+    "anchor": [
+      32,
+      88
+    ],
+    "mapVersion": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480"
+  },
+  "checks": {
+    "build": {
+      "command": "npm.cmd run build",
+      "passed": true,
+      "log": "artifacts/desktop-hotbar-v2-build.log",
+      "warning": "Existing renderer chunk greater than 500 KB"
+    },
+    "singleVariantVisibility": {
+      "passed": true,
+      "visibleBars": 1
+    },
+    "states": {
+      "passed": true,
+      "variants": 3,
+      "presets": [
+        "ready",
+        "resource",
+        "target",
+        "casting",
+        "offline",
+        "cooldown"
+      ],
+      "noTargetOnlyLocksThunder": true
+    },
+    "casts": {
+      "passed": true,
+      "mouseAndKeyboard": [
+        {
+          "variant": "bronze",
+          "skill": "sword",
+          "key": "1",
+          "remainingMp": 90
+        },
+        {
+          "variant": "jade",
+          "skill": "thunder",
+          "key": "2",
+          "remainingMp": 75
+        },
+        {
+          "variant": "seal",
+          "skill": "wind",
+          "key": "3",
+          "remainingMp": 90
+        }
+      ],
+      "immediateCastFeedback": true
+    },
+    "blockedActions": {
+      "passed": true,
+      "resourceMp": 8,
+      "targetMp": 100,
+      "castingMp": 100,
+      "offlineMp": 100,
+      "cooldownMp": 65,
+      "reasonsVisible": true
+    },
+    "viewports": {
+      "passed": true,
+      "sizes": [
+        [
+          1024,
+          768
+        ],
+        [
+          1366,
+          768
+        ],
+        [
+          1920,
+          1080
+        ]
+      ],
+      "constantBarGeometry": true,
+      "noHorizontalOverflow": true,
+      "allBarsInsideViewport": true,
+      "overrideReset": true
+    },
+    "tooltips": {
+      "passed": true,
+      "allThreeVariants": true,
+      "withinViewport": true,
+      "escapeHidesAll": true,
+      "duplicateIds": 0
+    },
+    "scenesAndActors": {
+      "passed": true,
+      "scenes": 3,
+      "actors": 3,
+      "combinations": 9,
+      "loaded": true
+    },
+    "console": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "actualGameplay": "Not exercised; isolated presentation prototype without server/profile/animation."
+  },
+  "screenshots": [
+    "docs/design/ui/desktop-skill-hud-v2/compare-native.jpg",
+    "docs/design/ui/desktop-skill-hud-v2/compare-1024.jpg",
+    "docs/design/ui/desktop-skill-hud-v2/compare-1366.jpg",
+    "docs/design/ui/desktop-skill-hud-v2/compare-1920.jpg",
+    "docs/design/ui/desktop-skill-hud-v2/bronze-desktop.jpg",
+    "docs/design/ui/desktop-skill-hud-v2/jade-desktop.jpg",
+    "docs/design/ui/desktop-skill-hud-v2/seal-desktop.jpg"
+  ]
+}

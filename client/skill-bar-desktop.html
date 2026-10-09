@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hằng Nhạc · Thanh kỹ năng desktop</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%231b3836' d='M0 0h32v32H0z'/%3E%3Cpath stroke='%23d4b677' fill='none' d='m16 5 8 11-8 11-8-11Z'/%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="review-header">
+    <div class="review-title"><span class="review-tag">HẰNG NHẠC · DESKTOP / 03</span><h1>HUD tu tiên</h1></div>
+    <p class="review-direction"><b>Vân Ngọc · Khí quang</b><span>Hai ngọc cầu · pháp trận · 10 ô thuật</span></p>
+    <label class="review-effects"><input id="hud-effects" type="checkbox" checked><span>Linh quang</span></label>
+    <details class="review-settings"><summary>Đối chiếu</summary><div class="review-controls" aria-label="Đối chiếu bản phác">
+      <label>Khung cảnh<select id="scene"><option value="courtyard">Sân môn phái</option><option value="garden">Vườn tĩnh tu</option><option value="training">Sân luyện thuật</option></select></label>
+      <label>Nhân vật<select id="avatar"><option value="CHR-WANG-LIN-CHIBI">Vương Lâm</option><option value="CHR-SITU-NAN">Tư Đồ Nam</option><option value="CHR-LI-MUWAN">Lý Mộ Uyển</option></select></label>
+      <label>Trạng thái<select id="preview-state"><option value="ready">Sẵn sàng</option><option value="cooldown">Hồi chiêu</option><option value="resource">Thiếu linh lực</option><option value="health">Sinh lực thấp</option><option value="target">Chưa chọn mục tiêu</option><option value="casting">Đang thi triển</option><option value="offline">Mất kết nối</option></select></label>
+      <button id="reset-preview" type="button" title="Khôi phục linh lực và trạng thái sẵn sàng">Đặt lại</button>
+    </div></details>
+    <a class="game-link" href="/hang-nhac.html" target="_blank" rel="noopener">Mở game ↗</a>
+  </header>
+  <main id="preview-stage" tabindex="0" aria-label="Bản phác thanh kỹ năng trên map Hằng Nhạc">
+    <canvas id="scene-canvas" aria-label="Nền Hằng Nhạc và nhân vật ở tỷ lệ chơi 1×"></canvas>
+    <div class="location-plaque"><span class="location-mark" aria-hidden="true">恒</span><div><b>Hằng Nhạc</b><span id="scene-name">Sân môn phái</span></div></div>
+    <div id="character-label" class="character-label">Vương Lâm</div>
+    <div id="preview-loading" class="preview-loading" role="status">Đang nạp khung cảnh…</div>
+    <div id="hotbar-mount"></div>
+  </main>
+  <footer class="review-footer"><span><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> Thử kỹ năng · rê chuột hoặc Tab để xem mô tả</span><span>3 thuật · 7 ô chưa gán · nhân vật 1× · bản thử</span></footer>
+  <script type="module" src="/src/skill-bar-desktop.ts"></script>
+</body>
+</html>

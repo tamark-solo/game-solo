@@ -1,0 +1,206 @@
+{
+  "version": 3,
+  "date": "2026-10-09",
+  "branch": "_MMO",
+  "baseCommit": "e481c09",
+  "status": "desktop_reference_layout_for_owner_review",
+  "artApproved": false,
+  "runtimeIntegrated": false,
+  "mobileDeferred": true,
+  "ownerReference": "docs/design/ui/desktop-skill-hud-v3/layout-reference.png",
+  "direction": "Type 2 composition adapted to original bronze/jade/cloud/lotus xianxia frame",
+  "page": "/skill-bar-desktop.html",
+  "geometry": {
+    "bar": [
+      760,
+      140
+    ],
+    "slot": [
+      36,
+      36
+    ],
+    "resourceOpening": [
+      67,
+      67
+    ],
+    "mappedSkills": 3,
+    "reservedSlots": 7,
+    "resourcePositions": {
+      "hp": "left",
+      "mp": "right"
+    }
+  },
+  "frame": {
+    "tool": "built_in_imagegen",
+    "artApproved": false,
+    "source": "cultivation-frame-source.png",
+    "reference": "layout-reference.png",
+    "prompt": "frame.prompt.txt",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "crop": {
+      "left": 0,
+      "top": 159,
+      "width": 2172,
+      "height": 400
+    },
+    "runtime": "cultivation-frame-v3.webp",
+    "runtimeSize": [
+      1520,
+      280
+    ],
+    "displayWidth": 760,
+    "bytes": 169946,
+    "sha256": "38e8efea0997d77c42e9b55ea6e8b0c13cbaf4d01a34017c18acf45a7b32fab0",
+    "processing": "Trim transparent margins, uniform Lanczos3 downsample, WebP conversion preserving alpha; no repainting or sharpening.",
+    "folder": "docs/design/ui/desktop-skill-hud-v3"
+  },
+  "icons": {
+    "folder": "docs/design/ui/desktop-skill-hud-v2",
+    "bytes": 15062,
+    "reused": true,
+    "artApproved": false
+  },
+  "nativeContract": {
+    "cameraScale": 1,
+    "actorFrame": [
+      64,
+      96
+    ],
+    "anchor": [
+      32,
+      88
+    ]
+  },
+  "checks": {
+    "build": {
+      "command": "npm.cmd run build",
+      "passed": true,
+      "log": "artifacts/desktop-hotbar-v3-build.log",
+      "warning": "Existing renderer chunk greater than 500 KB"
+    },
+    "states": {
+      "passed": true,
+      "presets": [
+        "ready",
+        "health",
+        "resource",
+        "target",
+        "casting",
+        "offline",
+        "cooldown"
+      ],
+      "lowHealth": {
+        "hp": 32,
+        "fill": "32%",
+        "doesNotLockSkills": true
+      },
+      "lowMana": {
+        "mp": 8,
+        "fill": "8%",
+        "locksAllMappedSkills": true
+      },
+      "missingTargetOnlyLocksThunder": true
+    },
+    "cast": {
+      "passed": true,
+      "mouseAndKeyboard": [
+        {
+          "skill": "sword",
+          "key": "1",
+          "remainingMp": 90
+        },
+        {
+          "skill": "thunder",
+          "key": "2",
+          "remainingMp": 75
+        },
+        {
+          "skill": "wind",
+          "key": "3",
+          "remainingMp": 90
+        }
+      ],
+      "immediateFeedbackAndSnapshot": true
+    },
+    "blockedActions": {
+      "passed": true,
+      "presets": [
+        "resource",
+        "target",
+        "casting",
+        "offline",
+        "cooldown"
+      ],
+      "resourcesPreserved": true,
+      "reasonsDisplayed": true
+    },
+    "desktopGeometry": {
+      "passed": true,
+      "sizes": [
+        [
+          1024,
+          768
+        ],
+        [
+          1366,
+          768
+        ],
+        [
+          1920,
+          1080
+        ]
+      ],
+      "constantBarSize": true,
+      "allSlotsInsideViewport": true,
+      "noHorizontalOverflow": true,
+      "overrideReset": true
+    },
+    "keyboardTooltip": {
+      "passed": true,
+      "tabOpensSword": true,
+      "viewportClamped": true,
+      "escapeCloses": true,
+      "duplicateIds": 0
+    },
+    "reservedSlots": {
+      "passed": true,
+      "activeButtons": 3,
+      "nonInteractivePlaceholders": 7
+    },
+    "scenesAndActors": {
+      "passed": true,
+      "pairs": [
+        [
+          "courtyard",
+          "Vương Lâm"
+        ],
+        [
+          "garden",
+          "Tư Đồ Nam"
+        ],
+        [
+          "training",
+          "Lý Mộ Uyển"
+        ]
+      ]
+    },
+    "browserConsole": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "scope": "Presentation prototype only; no server/profile/save/animation gameplay tested or modified."
+  },
+  "screenshots": [
+    "docs/design/ui/desktop-skill-hud-v3/desktop-native.jpg",
+    "docs/design/ui/desktop-skill-hud-v3/hud-detail.jpg",
+    "docs/design/ui/desktop-skill-hud-v3/desktop-1024.jpg",
+    "docs/design/ui/desktop-skill-hud-v3/desktop-1366.jpg",
+    "docs/design/ui/desktop-skill-hud-v3/desktop-1920.jpg",
+    "docs/design/ui/desktop-skill-hud-v3/low-health.jpg",
+    "docs/design/ui/desktop-skill-hud-v3/low-mana.jpg",
+    "docs/design/ui/desktop-skill-hud-v3/tooltip.jpg"
+  ]
+}

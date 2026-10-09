@@ -7,7 +7,7 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "assets": "node scripts/sync-preview-assets.mjs && tsx scripts/build-hang-nhac-runtime.ts && node scripts/sync-r01-vfx.mjs",
+    "assets": "node scripts/sync-preview-assets.mjs && tsx scripts/build-hang-nhac-runtime.ts && node scripts/sync-r01-vfx.mjs && node scripts/sync-skill-hud.mjs",
     "dev": "npm run assets && concurrently -k -n SERVER,CLIENT npm:dev:server npm:dev:client",
     "dev:client": "vite --config vite.config.ts",
     "dev:server": "tsx watch server/src/index.ts",

@@ -1,5 +1,9 @@
 # Bộ thành phần UI — tham chiếu và yêu cầu biên tập
 
+**Thanh kỹ năng 09/10/2026:** [bản desktop 03 Vân Ngọc](DESKTOP-SKILL-HUD.md) theo mẫu khung liền / cầu tài nguyên / dãy thuật của chủ dự án: đồng/ngọc/mây, HP trái / MP phải, 10 ô 36 px, ba thuật R01 và bảy chỗ chưa gán. Khung/icon ImageGen, số/nút/cooldown/tooltip là UI. Bản phác riêng chờ duyệt hình trước khi ghép game; desktop trước, mobile sau. Ảnh 01/02 giữ làm lịch sử.
+
+[Khí quang 02](design/ui/desktop-skill-hud-v3/qi-v2/README.md) bổ sung material khí xoáy đỏ/ngọc, vòng trận pháp và ánh hắt khung sau phản hồi FX đầu chưa rõ. Có đối chiếu bật/tắt; giữ kích thước 03, tách FX khỏi skill core.
+
 > **Chuẩn hiện hành [GDD 0.28](GDD.md):** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, có sẵn cả ba thuật R01, Hằng Nhạc qua Ngưng Khí và phân hóa từ hành trình Trúc Cơ. Vai đệ tử riêng/bộ ba chỉ là NPC đã bị thay. [Trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [tu tiên](CULTIVATION-SYSTEM.md) và [online](ONLINE-DIRECTION.md) xác định ngữ nghĩa cần dùng khi biên tập UI mới.
 
 > **Các mục 1–5 giữ bộ thành phần/bản vẽ idle v0.6 để tham khảo:** điều hướng năm khu, E01–E08, import client, 480 tu vi/8 giờ và kết thúc tầng 1 không là UX hiện hành. C14 ở mục 6 nêu cách dùng chân dung theo vai chơi mới; không nâng trạng thái duyệt ART hoặc xác nhận hội thoại đã tích hợp.

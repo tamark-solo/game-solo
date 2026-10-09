@@ -4,6 +4,10 @@
 
 ## Công việc liên quan đến map
 
+**HUD 09/10:** desktop trước, mobile sau. Owner làm rõ mẫu muốn khung mỹ thuật liền + cầu tài nguyên + dãy kỹ năng. [Bản 03 Vân Ngọc](docs/DESKTOP-SKILL-HUD.md) ở `/skill-bar-desktop.html` theo cấu trúc Type 2, đồng/ngọc/mây, khung 760 × 140 px, 10 ô 36 px, HP trái/MP phải. Ba skill thử được; bảy ô chưa gán không có hành động. Frame ImageGen alpha 170 KB, icon 15 KB; chờ duyệt hình. Bản phác riêng, chưa đổi HUD game. `client/src/skills/hotbar.ts` chỉ trình bày snapshot/callback, không sở hữu gameplay, animation hoặc transport. Giữ hợp đồng native và save/map owner.
+
+**Khí quang 02:** FX đầu quá nhẹ theo phản hồi owner. [Nguồn/tham khảo/đối chiếu mới](docs/design/ui/desktop-skill-hud-v3/qi-v2/README.md) dùng texture khí ImageGen 50 KB, kính/thể tích cầu, vòng trận pháp và ánh hắt khung; giữ toàn bộ kích thước 03. `hotbar-effects.ts/.css` tách trang trí, đọc snapshot, không phát lệnh cast. Tắt Linh quang về vẻ nền 03; hidden/offline dừng motion, reduced motion giữ vẻ tĩnh. Chưa suy duyệt hình hoặc ghép game từ kiểm kỹ thuật.
+
 **Kết nối/NPC 09/10:** lưu token sau khi SDK hoàn tất handshake reconnect; Hằng Nhạc phục hồi cùng hồ sơ có giới hạn khi backend restart. Rời sân hủy phục hồi, không replay lệnh nhiệm vụ/thưởng. Khi sửa lifecycle chạy `npm.cmd run test:hang-nhac-reload` với DB/publicDir fixture, thêm hồi quy NPC/R01 phù hợp; không reset save thật để làm E hoạt động. Xem `docs/data/hang-nhac-reload-interaction-verification.json`.
 
 **Hướng thuật 09/10:** WASD/mũi tên/mobile đổi hướng Kiếm/Phong, dừng giữ hướng; chạm map ngắm riêng đến khi đổi input đi. Lôi quay về mục tiêu trên server lúc nhận cast. `SkillAim` tách ý định input khỏi `castAimX/Y` đã xác nhận; `inputSeq` nối cast vào tick di chuyển để không tự hủy khi nhấn cùng frame. Room giới hạn/hết hạn lệnh chờ, xóa khi drop/leave; giữ khóa receipt cũ. Xem `docs/SKILL-CORE.md`; khi sửa hướng/input chạy `test:skill-aim`, hồi quy R01 và NPC/reload phù hợp, chỉ dùng fixture riêng.

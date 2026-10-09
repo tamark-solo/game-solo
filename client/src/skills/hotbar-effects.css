@@ -1,0 +1,62 @@
+/* Decorative qi material and light, independent of gameplay, input and skill timelines. */
+.hud-fx-layer { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.hud-fx-layer *, .hud-fx-slot-clip, .hud-fx-skill-halo { pointer-events: none; }
+.hud-fx-frame-light, .hud-fx-frame-sheen { position: absolute; inset: 0; overflow: hidden; mask: var(--hud-frame) center / 100% 100% no-repeat; }
+.hud-fx-frame-light { background: radial-gradient(ellipse 94px 76px at 102px 74px, #ffac855c, transparent), radial-gradient(ellipse 94px 76px at 658px 74px, #85ffe88c, transparent), radial-gradient(ellipse 55px 24px at 380px 50px, #beffe37d, transparent); mix-blend-mode: screen; }
+.hud-fx-frame-sheen > i { position: absolute; top: -35px; left: -80px; width: 100px; height: 220px; background: linear-gradient(90deg, transparent, #e7fbe2b3 50%, transparent); opacity: 0; animation: hud-frame-sweep 10s ease-in-out infinite; }
+.hud-fx-orb-aura { position: absolute; top: 5px; width: 137px; height: 137px; border-radius: 50%; opacity: .7; background: radial-gradient(circle, transparent 29%, rgb(var(--aura-rgb) / .3) 36%, rgb(var(--aura-rgb) / .3) 40%, transparent 68%); animation: hud-orb-breathe 5s ease-in-out infinite; }
+.hud-fx-health-aura { left: 33px; --aura-rgb: 255 161 104; }
+.hud-fx-mana-aura { right: 33px; --aura-rgb: 100 255 220; animation-delay: -2.5s; }
+.hud-fx-mandala { position: absolute; top: 18px; width: 111px; height: 111px; --seal-color: #ffcb8a; opacity: .85; filter: drop-shadow(0 0 2px var(--seal-color)); }
+.hud-fx-health-seal { left: 46px; }
+.hud-fx-mana-seal { right: 46px; --seal-color: #a5ffe0; }
+.hud-fx-mandala svg { width: 100%; height: 100%; fill: none; stroke: var(--seal-color); stroke-width: .85; animation: hud-seal-orbit 48s linear infinite; }
+.hud-fx-mana-seal svg { animation-direction: reverse; animation-duration: 42s; }
+.seal-rim { opacity: .27; }
+.seal-ticks { stroke-dasharray: 1 7; opacity: .65; }
+.seal-arcs { stroke-width: 1.2; }
+.seal-star { fill: var(--seal-color); stroke-width: .3; }
+.hud-fx-mana-flare { position: absolute; top: 18px; right: 46px; width: 111px; height: 111px; border-radius: 50%; border: 1px solid #ddfff3; box-shadow: 0 0 13px #68ffd4, inset 0 0 10px #aaffdd; opacity: 0; }
+.hud-fx-center-seal { position: absolute; top: 25px; left: 356px; width: 48px; height: 48px; opacity: .85; }
+.hud-fx-center-seal svg { width: 100%; height: 100%; fill: none; stroke: #d5ffdb; stroke-width: .6; filter: drop-shadow(0 0 2px #91ffd8); animation: hud-seal-orbit 60s linear infinite reverse; }
+.hud-fx-gem { position: absolute; width: 40px; height: 40px; margin: -20px; border-radius: 50%; background: radial-gradient(circle, #f5ffeccf 0, #b1ffe9cc 9%, #c4f9d44d 26%, transparent 70%); opacity: .7; animation: hud-gem-breathe 4.8s ease-in-out infinite; }
+.hud-fx-glint { position: absolute; width: 13px; height: 13px; margin: -6.5px; background: #fff4ce; filter: drop-shadow(0 0 3px #fbdf90); clip-path: polygon(50% 0, 58% 42%, 100% 50%, 58% 58%, 50% 100%, 42% 58%, 0 50%, 42% 42%); opacity: 0; animation: hud-glint 6s ease-in-out infinite; }
+.hud-fx-qi { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; }
+.hud-fx-qi .qi-rail { stroke: #b9dfbe; stroke-width: .6; opacity: .25; }
+.hud-fx-qi .qi-current { stroke: #dcffe4; stroke-width: 1.6; stroke-dasharray: 54 350; stroke-dashoffset: 404; opacity: .85; filter: drop-shadow(0 0 2px #71edc1); animation: hud-qi-stream 6s linear infinite; }
+.hud-fx-qi .qi-current + .qi-current { stroke: #ffe3aa; animation-delay: -3s; }
+.hotbar-orb-liquid { overflow: hidden; }
+/* Fixed-size texture at the bottom: lower resources clip the artwork, never squash it. */
+.hotbar-orb-liquid::before { content: ''; position: absolute; bottom: 0; left: 0; width: 67px; height: 67px; background: var(--orb-texture, none) 100% 50% / 200% 100% no-repeat; opacity: 1; animation: hud-orb-current 24s linear infinite; }
+.hotbar-health .hotbar-orb-liquid::before { background-position: 0% 50%; animation-duration: 28s; animation-direction: reverse; }
+.hotbar-orb-liquid::after { content: ''; position: absolute; left: 8px; top: 0; width: 51px; height: 2px; border-radius: 50%; background: #ccfff2ad; box-shadow: 0 1px 4px #b2ffe875; opacity: .7; animation: hud-liquid-surface 4s ease-in-out infinite; }
+.hotbar-health .hotbar-orb-liquid::after { background: #ffe0b2ad; box-shadow: 0 1px 4px #ffc18575; animation-delay: -2s; }
+.game-hotbar[data-effects=on] .hotbar-orb-glass { background: radial-gradient(circle at 55% 35%, #0d2831, #010b0f 85%); box-shadow: inset 0 0 8px #01060e, 0 0 7px #71dfb43b; }
+.game-hotbar[data-effects=on] .hotbar-orb-glass::after { background: radial-gradient(ellipse at 29% 17%, #ffffffab, transparent 19%), radial-gradient(ellipse at 70% 83%, #c8fff336, transparent 23%), radial-gradient(ellipse at 52% 40%, transparent 41%, #00050b8c 80%); box-shadow: inset 0 0 0 1px #f2ffe48c, inset 3px -3px 8px #000b; }
+.hotbar-slot-group[data-fx-skill=sword] { --skill-rgb: 137 222 255; }
+.hotbar-slot-group[data-fx-skill=thunder] { --skill-rgb: 222 177 255; }
+.hotbar-slot-group[data-fx-skill=wind] { --skill-rgb: 161 248 191; }
+.hotbar-slot[data-state=ready]::before { content: ''; position: absolute; z-index: 1; inset: -2px; border: 1px solid rgb(var(--skill-rgb) / .7); border-radius: 3px; box-shadow: 0 0 9px rgb(var(--skill-rgb) / .6), inset 0 0 4px rgb(var(--skill-rgb) / .3); opacity: .7; animation: hud-slot-breathe 4.8s ease-in-out infinite; pointer-events: none; }
+.hotbar-thunder[data-state=ready]::before { animation-delay: -1.6s; }
+.hotbar-wind[data-state=ready]::before { animation-delay: -3.2s; }
+.hud-fx-slot-clip { position: absolute; z-index: 3; inset: 2px; overflow: hidden; border-radius: 1px; }
+.hud-fx-cast-sheen { position: absolute; inset: -8px -4px; background: linear-gradient(115deg, transparent 20%, rgb(var(--skill-rgb) / .75) 48%, #fffbe9bf 53%, transparent 78%); opacity: 0; }
+.hud-fx-skill-halo { position: absolute; z-index: 5; top: -6px; left: -6px; width: 48px; height: 48px; border: 1px solid rgb(var(--skill-rgb) / .8); border-radius: 7px; box-shadow: 0 0 12px rgb(var(--skill-rgb) / .6), inset 0 0 8px rgb(var(--skill-rgb) / .25); opacity: 0; }
+@keyframes hud-frame-sweep { 0%, 10% { opacity: 0; transform: translateX(-100px) rotate(-18deg); } 15% { opacity: .65; } 44% { opacity: .65; } 48%, 100% { opacity: 0; transform: translateX(930px) rotate(-18deg); } }
+@keyframes hud-orb-breathe { 0%, 100% { opacity: .55; transform: scale(.97); } 50% { opacity: .9; transform: scale(1.03); } }
+@keyframes hud-gem-breathe { 0%, 100% { opacity: .5; transform: scale(.9); } 50% { opacity: 1; transform: scale(1.1); } }
+@keyframes hud-glint { 0%, 25%, 100% { opacity: 0; transform: scale(.3); } 45% { opacity: .95; transform: scale(1); } 62% { opacity: .3; transform: scale(.65); } 78% { opacity: 0; } }
+@keyframes hud-qi-stream { to { stroke-dashoffset: 0; } }
+@keyframes hud-seal-orbit { to { transform: rotate(360deg); } }
+@keyframes hud-orb-current { to { transform: rotate(360deg); } }
+@keyframes hud-liquid-surface { 0%, 100% { transform: translateX(-3px); opacity: .45; } 50% { transform: translateX(3px); opacity: .85; } }
+@keyframes hud-slot-breathe { 0%, 100% { opacity: .4; } 50% { opacity: .9; } }
+.game-hotbar[data-fx-paused=true] .hud-fx-layer *, .game-hotbar[data-fx-paused=true] .hotbar-orb-liquid::before, .game-hotbar[data-fx-paused=true] .hotbar-orb-liquid::after, .game-hotbar[data-fx-paused=true] .hotbar-slot::before { animation-play-state: paused; }
+.game-hotbar[data-effects=off] .hud-fx-layer { display: none; }
+.game-hotbar[data-effects=off] .hotbar-orb-liquid::before, .game-hotbar[data-effects=off] .hotbar-orb-liquid::after, .game-hotbar[data-effects=off] .hotbar-slot::before { content: none; animation: none; }
+.game-hotbar[data-online=false] .hud-fx-layer { opacity: .25; }
+.game-hotbar[data-online=false] .hud-fx-layer *, .game-hotbar[data-online=false] .hotbar-orb-liquid::before, .game-hotbar[data-online=false] .hotbar-orb-liquid::after { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .game-hotbar .hud-fx-layer *, .game-hotbar .hotbar-orb-liquid::before, .game-hotbar .hotbar-orb-liquid::after, .game-hotbar .hotbar-slot::before { animation: none; }
+  .hud-fx-glint, .hud-fx-frame-sheen { display: none; }
+}

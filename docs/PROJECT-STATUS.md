@@ -56,6 +56,10 @@ Actor locomotion giữ frame **64 × 96**, neo **(32,88)** và collider chân 8 
 
 ## Ưu tiên và phần còn thiếu
 
+**Ưu tiên mới 09/10:** làm [HUD desktop](DESKTOP-SKILL-HUD.md) trước, mobile sau. Owner đã cung cấp mẫu khung liền/cầu tài nguyên/dãy thuật. Bản 03 Vân Ngọc theo Type 2, khung đồng/ngọc/mây 760 × 140 px, 10 ô 36 px (ba R01 + bảy chưa gán), sinh lực/linh lực và bảy trạng thái trên nền/nhân vật 1×. Frame/icon ImageGen, nguồn/prompt đã lưu; bản phác riêng chờ duyệt hình, chưa ghép game hoặc kết nối profile/server. Ảnh các bản 01/02 giữ làm lịch sử.
+
+[Khí quang 02](design/ui/desktop-skill-hud-v3/qi-v2/README.md) làm rõ khác biệt sau phản hồi FX đầu quá nhẹ: texture khí xoáy đỏ/ngọc ImageGen 50 KB, kính/thể tích, vòng trận pháp và ánh hắt khung. Có đối chiếu bật/tắt, FX tách khỏi skill core và chưa ghép game.
+
 Ưu tiên hiện tại: bước 1 map, [bước 2 hồ sơ/lưu/R01](HANG-NHAC-R01-RUNTIME.md) và [phần đầu bước 3 NPC/HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) đã có bản thử. Tiếp nối HN03–HN04 theo [kế hoạch GDD](HANG-NHAC-IMPLEMENTATION-PLAN.md), rồi map farm/khảo nghiệm riêng; asset che người theo nhu cầu. Không sửa vùng chặn đã chốt.
 
 Đã có hồ sơ khách riêng, save/reload/restart, R01/mục tiêu luyện không thưởng và mở đầu HN01–HN02. Nhật ký chỉ đường tới bốn NPC dùng mẫu đệ tử sẵn có; vận khí và phần thưởng do server xác nhận. Tích lũy nền tách MP, 120/phút online, dừng tại cổng 360; chưa tính offline, chưa mở M02/nền 4–9. Đăng nhập sản xuất, HN03–HN12, combat farm, pháp khí và khảo nghiệm chưa hoàn tất. Số liệu vẫn baseline thử.

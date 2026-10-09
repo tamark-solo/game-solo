@@ -1,5 +1,9 @@
 # Thư viện ART và bản phác UX
 
+[HUD desktop 03 Vân Ngọc](http://127.0.0.1:5173/skill-bar-desktop.html) · [đặc tả](../DESKTOP-SKILL-HUD.md) · [ảnh / frame / prompt](ui/desktop-skill-hud-v3/README.md): khung liền, cầu sinh lực / linh lực và 10 ô thuật theo mẫu owner, đồng/ngọc/mây trên nền Hằng Nhạc 1×. Bản phác riêng chờ duyệt hình; desktop trước, mobile sau. Ảnh 01/02 giữ làm lịch sử.
+
+[Khí quang 02 / mẫu tham khảo / prompt](ui/desktop-skill-hud-v3/qi-v2/README.md): bản tương tác hiện thêm texture khí xoáy ImageGen, kính cầu và vòng trận pháp; nút Linh quang cho phép so với vẻ nền 03.
+
 **Cập nhật:** 08/10/2026. Xem [trạng thái dự án](../PROJECT-STATUS.md) và [GDD 0.28](../GDD.md) để phân biệt thiết kế hiện hành, ART đã duyệt và prototype đã chạy. Client Three.js/Colyseus và Map Editor 0.12.0 đã triển khai; gameplay MMO chưa triển khai.
 
 ## ART đang dùng để duyệt

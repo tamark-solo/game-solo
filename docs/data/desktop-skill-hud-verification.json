@@ -1,0 +1,320 @@
+{
+  "schema": "game-solo-desktop-skill-hud-review-1",
+  "date": "2026-10-09T05:32:44.513Z",
+  "branch": "_MMO",
+  "baseCommit": "e481c09",
+  "status": "desktop_prototype_for_owner_review",
+  "passed": true,
+  "artApproved": false,
+  "mobileDeferred": true,
+  "runtimeIntegrated": false,
+  "validation": {
+    "buildAndTypecheck": true,
+    "availabilityPresets": [
+      {
+        "preset": "ready",
+        "result": {
+          "mana": "100 / 100",
+          "slots": [
+            {
+              "disabled": "false",
+              "id": "sword",
+              "state": "ready",
+              "status": "Sẵn sàng"
+            },
+            {
+              "disabled": "false",
+              "id": "thunder",
+              "state": "ready",
+              "status": "Sẵn sàng"
+            },
+            {
+              "disabled": "false",
+              "id": "wind",
+              "state": "ready",
+              "status": "Sẵn sàng"
+            }
+          ]
+        }
+      },
+      {
+        "preset": "resource",
+        "result": {
+          "mana": "8 / 100",
+          "slots": [
+            {
+              "disabled": "true",
+              "id": "sword",
+              "state": "resource",
+              "status": "Thiếu linh lực"
+            },
+            {
+              "disabled": "true",
+              "id": "thunder",
+              "state": "resource",
+              "status": "Thiếu linh lực"
+            },
+            {
+              "disabled": "true",
+              "id": "wind",
+              "state": "resource",
+              "status": "Thiếu linh lực"
+            }
+          ]
+        }
+      },
+      {
+        "preset": "target",
+        "result": {
+          "mana": "100 / 100",
+          "slots": [
+            {
+              "disabled": "false",
+              "id": "sword",
+              "state": "ready",
+              "status": "Sẵn sàng"
+            },
+            {
+              "disabled": "true",
+              "id": "thunder",
+              "state": "target",
+              "status": "Chọn mục tiêu"
+            },
+            {
+              "disabled": "false",
+              "id": "wind",
+              "state": "ready",
+              "status": "Sẵn sàng"
+            }
+          ]
+        }
+      },
+      {
+        "preset": "casting",
+        "result": {
+          "mana": "100 / 100",
+          "slots": [
+            {
+              "disabled": "true",
+              "id": "sword",
+              "state": "casting",
+              "status": "Chờ thi triển"
+            },
+            {
+              "disabled": "true",
+              "id": "thunder",
+              "state": "casting",
+              "status": "Đang thi triển"
+            },
+            {
+              "disabled": "true",
+              "id": "wind",
+              "state": "casting",
+              "status": "Chờ thi triển"
+            }
+          ]
+        }
+      },
+      {
+        "preset": "offline",
+        "result": {
+          "mana": "100 / 100",
+          "slots": [
+            {
+              "disabled": "true",
+              "id": "sword",
+              "state": "offline",
+              "status": "Mất kết nối"
+            },
+            {
+              "disabled": "true",
+              "id": "thunder",
+              "state": "offline",
+              "status": "Mất kết nối"
+            },
+            {
+              "disabled": "true",
+              "id": "wind",
+              "state": "offline",
+              "status": "Mất kết nối"
+            }
+          ]
+        }
+      },
+      {
+        "preset": "cooldown",
+        "result": {
+          "mana": "65 / 100",
+          "slots": [
+            {
+              "disabled": "true",
+              "id": "sword",
+              "state": "cooldown",
+              "status": "Đang hồi thuật"
+            },
+            {
+              "disabled": "true",
+              "id": "thunder",
+              "state": "cooldown",
+              "status": "Đang hồi thuật"
+            },
+            {
+              "disabled": "true",
+              "id": "wind",
+              "state": "cooldown",
+              "status": "Đang hồi thuật"
+            }
+          ]
+        }
+      }
+    ],
+    "keyboard": [
+      {
+        "id": "sword",
+        "castingMana": "90",
+        "expectedMana": "90"
+      },
+      {
+        "id": "thunder",
+        "castingMana": "75",
+        "expectedMana": "75"
+      },
+      {
+        "id": "wind",
+        "castingMana": "90",
+        "expectedMana": "90"
+      }
+    ],
+    "mouse": [
+      {
+        "id": "sword",
+        "mana": "90"
+      },
+      {
+        "id": "thunder",
+        "mana": "75"
+      },
+      {
+        "id": "wind",
+        "mana": "90"
+      }
+    ],
+    "blockedAttempts": [
+      {
+        "state": "resource",
+        "skill": "sword",
+        "manaBefore": 8,
+        "manaAfter": 8,
+        "feedback": "Cần 10 linh lực; hiện có 8."
+      },
+      {
+        "state": "target",
+        "skill": "thunder",
+        "manaBefore": 100,
+        "manaAfter": 100,
+        "feedback": "Chọn một mục tiêu trong tầm để dùng Lôi Ấn."
+      },
+      {
+        "state": "offline",
+        "skill": "wind",
+        "manaBefore": 100,
+        "manaAfter": 100,
+        "feedback": "Đang mất kết nối. Kỹ năng sẽ sẵn sàng khi kết nối trở lại."
+      }
+    ],
+    "thunderCycle": {
+      "manaAfterCast": "75",
+      "castingObserved": true,
+      "cooldownObserved": true,
+      "readyObserved": true
+    },
+    "layout": [
+      {
+        "hotbar": [
+          327,
+          512,
+          370,
+          207
+        ],
+        "insideStage": true,
+        "noHorizontalOverflow": true,
+        "viewport": [
+          1024,
+          768
+        ],
+        "width": 370
+      },
+      {
+        "hotbar": [
+          498,
+          512,
+          370,
+          207
+        ],
+        "insideStage": true,
+        "noHorizontalOverflow": true,
+        "viewport": [
+          1366,
+          768
+        ],
+        "width": 370
+      },
+      {
+        "hotbar": [
+          775,
+          824,
+          370,
+          207
+        ],
+        "insideStage": true,
+        "noHorizontalOverflow": true,
+        "viewport": [
+          1920,
+          1080
+        ],
+        "width": 370
+      }
+    ],
+    "keyboardTooltip": {
+      "tabToSword": true,
+      "tabToThunder": true,
+      "escapeCloses": true,
+      "inside1024Viewport": true,
+      "characterUncovered": true
+    },
+    "scenes": [
+      {
+        "actor": "Vương Lâm",
+        "loadingHidden": true,
+        "scene": "Sân môn phái"
+      },
+      {
+        "actor": "Lý Mộ Uyển",
+        "loadingHidden": true,
+        "scene": "Vườn tĩnh tu"
+      },
+      {
+        "actor": "Tư Đồ Nam",
+        "loadingHidden": true,
+        "scene": "Sân luyện thuật"
+      }
+    ],
+    "consoleErrors": []
+  },
+  "preserved": {
+    "mapAndOwnerBlockers": true,
+    "frame": [
+      64,
+      96
+    ],
+    "anchor": [
+      32,
+      88
+    ],
+    "cssPixelsPerWorldPixel": 1,
+    "gameplayFilesUnchanged": true,
+    "opensProfileOrRoom": false,
+    "writesSaveOrOwnerMap": false
+  },
+  "proof": "docs/design/ui/desktop-skill-hud-v1/README.md"
+}

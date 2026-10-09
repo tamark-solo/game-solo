@@ -1,0 +1,333 @@
+{
+  "date": "2026-10-09",
+  "version": "desktop-03-qi-02",
+  "scope": "Isolated desktop prototype only; no game/profile/map/save writes.",
+  "artApproved": false,
+  "geometry": {
+    "effects": "on",
+    "hud": [
+      760,
+      140
+    ],
+    "loaded": true,
+    "slot": [
+      36,
+      36
+    ],
+    "viewport": [
+      1156,
+      884
+    ]
+  },
+  "build": {
+    "command": "npm.cmd run build",
+    "passed": true,
+    "log": "artifacts/desktop-hotbar-qi-build.log"
+  },
+  "states": [
+    {
+      "preset": "ready",
+      "view": {
+        "fill": "100%",
+        "hp": "100",
+        "mp": "100",
+        "online": "true",
+        "sealAnimation": "running",
+        "slots": [
+          {
+            "disabled": "false",
+            "skill": "sword",
+            "state": "ready"
+          },
+          {
+            "disabled": "false",
+            "skill": "thunder",
+            "state": "ready"
+          },
+          {
+            "disabled": "false",
+            "skill": "wind",
+            "state": "ready"
+          }
+        ],
+        "textureSize": "67px"
+      }
+    },
+    {
+      "preset": "health",
+      "view": {
+        "fill": "100%",
+        "hp": "32",
+        "mp": "100",
+        "online": "true",
+        "sealAnimation": "running",
+        "slots": [
+          {
+            "disabled": "false",
+            "skill": "sword",
+            "state": "ready"
+          },
+          {
+            "disabled": "false",
+            "skill": "thunder",
+            "state": "ready"
+          },
+          {
+            "disabled": "false",
+            "skill": "wind",
+            "state": "ready"
+          }
+        ],
+        "textureSize": "67px"
+      }
+    },
+    {
+      "preset": "resource",
+      "view": {
+        "fill": "8%",
+        "hp": "100",
+        "mp": "8",
+        "online": "true",
+        "sealAnimation": "running",
+        "slots": [
+          {
+            "disabled": "true",
+            "skill": "sword",
+            "state": "resource"
+          },
+          {
+            "disabled": "true",
+            "skill": "thunder",
+            "state": "resource"
+          },
+          {
+            "disabled": "true",
+            "skill": "wind",
+            "state": "resource"
+          }
+        ],
+        "textureSize": "67px"
+      }
+    },
+    {
+      "preset": "target",
+      "view": {
+        "fill": "100%",
+        "hp": "100",
+        "mp": "100",
+        "online": "true",
+        "sealAnimation": "running",
+        "slots": [
+          {
+            "disabled": "false",
+            "skill": "sword",
+            "state": "ready"
+          },
+          {
+            "disabled": "true",
+            "skill": "thunder",
+            "state": "target"
+          },
+          {
+            "disabled": "false",
+            "skill": "wind",
+            "state": "ready"
+          }
+        ],
+        "textureSize": "67px"
+      }
+    },
+    {
+      "preset": "casting",
+      "view": {
+        "fill": "100%",
+        "hp": "100",
+        "mp": "100",
+        "online": "true",
+        "sealAnimation": "running",
+        "slots": [
+          {
+            "disabled": "true",
+            "skill": "sword",
+            "state": "casting"
+          },
+          {
+            "disabled": "true",
+            "skill": "thunder",
+            "state": "casting"
+          },
+          {
+            "disabled": "true",
+            "skill": "wind",
+            "state": "casting"
+          }
+        ],
+        "textureSize": "67px"
+      }
+    },
+    {
+      "preset": "offline",
+      "view": {
+        "fill": "100%",
+        "hp": "100",
+        "mp": "100",
+        "online": "false",
+        "sealAnimation": "paused",
+        "slots": [
+          {
+            "disabled": "true",
+            "skill": "sword",
+            "state": "offline"
+          },
+          {
+            "disabled": "true",
+            "skill": "thunder",
+            "state": "offline"
+          },
+          {
+            "disabled": "true",
+            "skill": "wind",
+            "state": "offline"
+          }
+        ],
+        "textureSize": "67px"
+      }
+    },
+    {
+      "preset": "cooldown",
+      "view": {
+        "fill": "65%",
+        "hp": "100",
+        "mp": "65",
+        "online": "true",
+        "sealAnimation": "running",
+        "slots": [
+          {
+            "disabled": "true",
+            "skill": "sword",
+            "state": "cooldown"
+          },
+          {
+            "disabled": "true",
+            "skill": "thunder",
+            "state": "cooldown"
+          },
+          {
+            "disabled": "true",
+            "skill": "wind",
+            "state": "cooldown"
+          }
+        ],
+        "textureSize": "67px"
+      }
+    }
+  ],
+  "clicks": [
+    {
+      "skill": "sword",
+      "before": {
+        "mp": "100",
+        "states": [
+          "ready",
+          "ready",
+          "ready"
+        ]
+      },
+      "after": {
+        "feedback": "Kiếm Khí · −10 linh lực",
+        "mp": "90",
+        "states": [
+          "casting",
+          "casting",
+          "casting"
+        ]
+      }
+    },
+    {
+      "skill": "thunder",
+      "before": {
+        "mp": "100",
+        "states": [
+          "ready",
+          "ready",
+          "ready"
+        ]
+      },
+      "after": {
+        "feedback": "Lôi Ấn · −25 linh lực",
+        "mp": "75",
+        "states": [
+          "casting",
+          "casting",
+          "casting"
+        ]
+      }
+    },
+    {
+      "skill": "wind",
+      "before": {
+        "mp": "100",
+        "states": [
+          "ready",
+          "ready",
+          "ready"
+        ]
+      },
+      "after": {
+        "feedback": "Ngự Phong Bộ · −10 linh lực",
+        "mp": "90",
+        "states": [
+          "casting",
+          "casting",
+          "casting"
+        ]
+      }
+    }
+  ],
+  "keyboard": [
+    {
+      "skill": "sword",
+      "mp": 90
+    },
+    {
+      "skill": "thunder",
+      "mp": 75,
+      "verification": "Reset read back 100, isolated key 2 then read back 75."
+    },
+    {
+      "skill": "wind",
+      "mp": 90
+    }
+  ],
+  "noEffectsCast": {
+    "effects": "off",
+    "feedback": "Kiếm Khí · −10 linh lực",
+    "flare": "0",
+    "mp": "90"
+  },
+  "pulse": {
+    "observedWindManaFlareOpacity": 0.17465,
+    "source": "computed style during confirmed preview cast"
+  },
+  "offlineMotionPaused": true,
+  "console": [],
+  "reducedMotion": {
+    "implementationReviewed": true,
+    "browserEmulationTested": false,
+    "behavior": "Static material and lights; no looping or one-shot movement."
+  },
+  "hiddenMotion": {
+    "implementationReviewed": true,
+    "source": "visibilitychange pauses CSS and cancels one-shot animations"
+  },
+  "asset": {
+    "bytes": 50372,
+    "dimensions": [
+      512,
+      256
+    ],
+    "path": "docs/design/ui/desktop-skill-hud-v3/qi-v2/orb-textures-v2.webp"
+  },
+  "proof": "docs/design/ui/desktop-skill-hud-v3/qi-v2/",
+  "proofCrop": "CUA full viewport JPEG originals retained; technical Sharp extraction at (190,696), 776x156. No resize, repainting, effects or sharpening applied to screenshots."
+}
