@@ -5,6 +5,7 @@ import { dirname } from 'node:path';
 import { CHARACTER_INFO, R01_IDS, initialProfile, isAvatarId, publicProfile, type AvatarId, type CharacterProfile } from '../../shared/profiles';
 import { HANG_NHAC_AVATARS } from '../../shared/hang-nhac';
 import { initialSectProgress, validSectProgress } from '../../shared/sect';
+import { initialLessonProgress } from '../../shared/lesson-contracts';
 
 const hashToken = (token: string) => createHash('sha256').update(token).digest('hex');
 export class ProfileStore {
@@ -52,7 +53,8 @@ export class ProfileStore {
         p.progressionKind!==CHARACTER_INFO[avatarId].progressionKind || typeof p.name!=='string' || typeof p.mapId!=='string' || typeof p.mapVersion!=='string')
       throw new Error('Saved profile failed validation.');
     // Upgrade old JSON lazily. Its identity, coordinates, R01, receipts and resources survive.
-    return raw.schema===1 ? {...p,schema:2,sect:initialSectProgress()} : p;
+    return raw.schema===1 ? {...p,schema:2,sect:initialSectProgress()} :
+      {...p,sect:{...p.sect,lessons:p.sect.lessons??initialLessonProgress()}};
   }
   list(accountId: string) { return HANG_NHAC_AVATARS.map(id => publicProfile(this.get(accountId, id))); }
   save(profile: CharacterProfile): void {

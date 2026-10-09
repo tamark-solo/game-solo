@@ -83,4 +83,22 @@
 .hotbar-tooltip-facts { display: flex; justify-content: space-between; gap: 10px; border-top: 1px solid #a997663b; padding-top: 8px; font-size: 10px; color: #bdcdbf; }
 .hotbar-tooltip-facts b { color: #e8d7ac; }
 .hotbar-tooltip .hotbar-tooltip-reason { margin: 8px 0 0; padding-top: 7px; border-top: 1px solid #b9a36e33; color: #f0cc91; font-size: 10px; }
+/* Functional narrow-screen fallback; desktop keeps the approved 760 × 140 artwork. */
+@media (max-width: 760px) {
+  #stage .game-hotbar { width: calc(100% - 24px); max-width: 440px; height: 96px; bottom: 8px; }
+  #stage .hotbar-tray { border: 1px solid #bca46a99; border-radius: 8px; background: #132d2eed; }
+  #stage .hotbar-frame, #stage .hotbar-rail, #stage .hotbar-reserved, #stage .hud-fx-layer { display: none; }
+  #stage .hotbar-slots { left: 50%; top: 14px; transform: translateX(-50%); gap: 10px; }
+  #stage .hotbar-slot { width: 48px; height: 48px; }
+  #stage .hotbar-icon { width: 38px; height: 38px; inset: 4px; }
+  #stage .hotbar-slot kbd { bottom: -15px; height: 14px; font-size: 10px; line-height: 12px; }
+  #stage .hotbar-orb { width: 46px; height: 46px; top: 13px; }
+  #stage .hotbar-health { left: 8px; }
+  #stage .hotbar-mana { right: 8px; }
+  #stage .hotbar-hp-value, #stage .hotbar-mp-value { top: 14px; font-size: 15px; }
+  #stage .hotbar-orb > small { top: 49px; font-size: 9px; }
+  #stage .hotbar-orb-label { top: 64px; font-size: 9px; }
+  #stage .hotbar-feedback { max-width: calc(100vw - 64px); font-size: 10px; }
+  #stage .hotbar-tooltip { width: min(256px, calc(100vw - 64px)); }
+}
 @media (prefers-reduced-motion: reduce) { .game-hotbar * { transition: none; } }

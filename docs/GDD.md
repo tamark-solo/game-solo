@@ -6,7 +6,7 @@ Người chơi chọn **Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển ngay 
 
 GDD này thay hướng “tạo đệ tử riêng, Vương Lâm là NPC trung tâm” và phạm vi “kết thúc tại Ngưng Khí tầng 1” của bản trước. [Bản cũ](archive/design-before-three-playable-characters/GDD.md) được giữ làm lịch sử. Lần biên tập này không triển khai gameplay hay thay các gói ART đã khóa.
 
-**Trạng thái code 08/10/2026:** nền map owner, ba hồ sơ/R01 và [NPC/HN01–HN02/thổ nạp online](HANG-NHAC-SECT-RUNTIME.md) đã có bản thử. Số liệu vẫn baseline; HN03–HN12, map farm/khảo nghiệm riêng, offline và đăng nhập sản xuất còn tiếp tục. Trạng thái code không biến toàn bộ đề xuất GDD thành tính năng đã hoàn tất.
+**Trạng thái code 09/10/2026:** nền map owner, ba hồ sơ/R01, [NPC/HN01–HN02/thổ nạp online](HANG-NHAC-SECT-RUNTIME.md), [HN03–HN04/đòn thường/bài né](HANG-NHAC-LESSONS-RUNTIME.md) và [HUD/map layer đã duyệt](HANG-NHAC-HUD-LAYERS.md) đã có bản thử. Số liệu vẫn baseline; HN05–HN12, map farm/khảo nghiệm riêng, offline và đăng nhập sản xuất còn tiếp tục. Trạng thái code không biến toàn bộ đề xuất GDD thành tính năng đã hoàn tất.
 
 ## 1. Quyết định đã chốt và phần còn thiết kế
 

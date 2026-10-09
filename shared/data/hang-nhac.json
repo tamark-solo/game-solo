@@ -6,9 +6,9 @@
   "levelId": "40db90c5-86f2-4767-a13f-ccb8fdfefe03",
   "sourceSha256": "b8571377613bf0b83997fd7087a4301955300f5ab2f3627ab9837988fb3a8256",
   "background": {
-    "url": "/assets/hang-nhac/map-6eb1aa51e23d81e2.webp",
-    "sha256": "6eb1aa51e23d81e2371316329531ab2415575165aeb0b83e7306443e588b3521",
-    "bytes": 2939564
+    "url": "/assets/hang-nhac/overview-6f775d1a0ffa25c389a5.webp",
+    "sha256": "6f775d1a0ffa25c389a57064a609fe26712d161289702a2b7ae8597ee5a02074",
+    "bytes": 2690422
   },
   "world": {
     "width": 3072,
@@ -1354,5 +1354,983 @@
     }
   ],
   "portals": [],
-  "version": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480"
+  "scene": {
+    "projectId": "2001d474-b7c5-4965-bdf5-fd49c639b558",
+    "levelId": "baf957e1-e5a9-49d3-8480-fd39b11a92d9",
+    "background": "#e4ddc9",
+    "sourceProjectSha256": "28b72f3ec5e0e8d6e06c96b27413769d05ccb968e54a43478fea94535522961a",
+    "sourceReviewSha256": "6864251c4afc4e600e1a4b107c7cd06d6349be9f2f6f433589ec39dfb13598aa",
+    "world": {
+      "width": 3072,
+      "height": 2048,
+      "spawn": {
+        "x": 1616,
+        "y": 992
+      },
+      "playerRadius": 8
+    },
+    "layers": [
+      {
+        "id": "aaad2ae1-af90-4059-9f15-e69747471852",
+        "name": "Nền",
+        "kind": "ground",
+        "visible": true,
+        "locked": true,
+        "enabled": true
+      },
+      {
+        "id": "472e0aed-88de-4d41-9577-c70b2337898e",
+        "name": "Trang trí thấp",
+        "kind": "decor",
+        "visible": true,
+        "locked": false,
+        "enabled": false
+      },
+      {
+        "id": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "name": "Vật thể · theo chân",
+        "kind": "depth",
+        "visible": true,
+        "locked": false,
+        "enabled": true
+      },
+      {
+        "id": "57035885-7529-4752-913c-df5227acedd7",
+        "name": "Tán / mái · theo chân",
+        "kind": "cover",
+        "visible": true,
+        "locked": false,
+        "enabled": true
+      },
+      {
+        "id": "13d19056-1b4c-4f0d-b821-e44420d40fa4",
+        "name": "Vùng hoạt động",
+        "kind": "regions",
+        "visible": true,
+        "locked": false,
+        "enabled": true
+      }
+    ],
+    "assets": [
+      {
+        "id": "multipart-v4-ground-0-0",
+        "name": "Nền · 0,0",
+        "width": 1024,
+        "height": 1024,
+        "pivot": {
+          "x": 0,
+          "y": 0
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-9f0de3644b0f407e50b3.webp",
+            "cover": false
+          }
+        ],
+        "category": "terrain",
+        "defaultLayer": "ground"
+      },
+      {
+        "id": "multipart-v4-ground-1-0",
+        "name": "Nền · 1,0",
+        "width": 1024,
+        "height": 1024,
+        "pivot": {
+          "x": 0,
+          "y": 0
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-4591b2e86d0c975393a0.webp",
+            "cover": false
+          }
+        ],
+        "category": "terrain",
+        "defaultLayer": "ground"
+      },
+      {
+        "id": "multipart-v4-ground-2-0",
+        "name": "Nền · 2,0",
+        "width": 1024,
+        "height": 1024,
+        "pivot": {
+          "x": 0,
+          "y": 0
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-41adc7f8cc87515e5a66.webp",
+            "cover": false
+          }
+        ],
+        "category": "terrain",
+        "defaultLayer": "ground"
+      },
+      {
+        "id": "multipart-v4-ground-0-1",
+        "name": "Nền · 0,1",
+        "width": 1024,
+        "height": 1024,
+        "pivot": {
+          "x": 0,
+          "y": 0
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-63deeb6c4c64eb29ec9d.webp",
+            "cover": false
+          }
+        ],
+        "category": "terrain",
+        "defaultLayer": "ground"
+      },
+      {
+        "id": "multipart-v4-ground-1-1",
+        "name": "Nền · 1,1",
+        "width": 1024,
+        "height": 1024,
+        "pivot": {
+          "x": 0,
+          "y": 0
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-f70b8fb9ae243fdcb95a.webp",
+            "cover": false
+          }
+        ],
+        "category": "terrain",
+        "defaultLayer": "ground"
+      },
+      {
+        "id": "multipart-v4-ground-2-1",
+        "name": "Nền · 2,1",
+        "width": 1024,
+        "height": 1024,
+        "pivot": {
+          "x": 0,
+          "y": 0
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-3ec73cd0516a2d5d13b4.webp",
+            "cover": false
+          }
+        ],
+        "category": "terrain",
+        "defaultLayer": "ground"
+      },
+      {
+        "id": "multipart-v4-main-hall",
+        "name": "Đại điện",
+        "width": 1036,
+        "height": 554,
+        "pivot": {
+          "x": 518,
+          "y": 527
+        },
+        "parts": [
+          {
+            "id": "body",
+            "file": "/assets/hang-nhac/layers/part-fc62d598326f62b7571e.webp",
+            "cover": false
+          },
+          {
+            "id": "roof",
+            "file": "/assets/hang-nhac/layers/part-5b6a8d0ba2bd3cd309e7.webp",
+            "cover": true
+          }
+        ],
+        "category": "building",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "multipart-v4-upper-pavilion",
+        "name": "Đình trên trái",
+        "width": 332,
+        "height": 257,
+        "pivot": {
+          "x": 170,
+          "y": 202
+        },
+        "parts": [
+          {
+            "id": "body",
+            "file": "/assets/hang-nhac/layers/part-fb096adb4a6681050908.webp",
+            "cover": false
+          },
+          {
+            "id": "roof",
+            "file": "/assets/hang-nhac/layers/part-d28ed2dd1eb468ae0ee0.webp",
+            "cover": true
+          }
+        ],
+        "category": "building",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "multipart-v4-garden-pavilion",
+        "name": "Đình vườn",
+        "width": 330,
+        "height": 334,
+        "pivot": {
+          "x": 168,
+          "y": 301
+        },
+        "parts": [
+          {
+            "id": "body",
+            "file": "/assets/hang-nhac/layers/part-23a1cca33622affcee17.webp",
+            "cover": false
+          },
+          {
+            "id": "roof",
+            "file": "/assets/hang-nhac/layers/part-0eacb353c5cbebf0e997.webp",
+            "cover": true
+          }
+        ],
+        "category": "building",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "multipart-v4-training-pavilion",
+        "name": "Nhà dụng cụ",
+        "width": 336,
+        "height": 376,
+        "pivot": {
+          "x": 161,
+          "y": 299
+        },
+        "parts": [
+          {
+            "id": "body",
+            "file": "/assets/hang-nhac/layers/part-2fcf4024347a7bd79174.webp",
+            "cover": false
+          },
+          {
+            "id": "roof",
+            "file": "/assets/hang-nhac/layers/part-d34b44c3f675d905877d.webp",
+            "cover": true
+          }
+        ],
+        "category": "building",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "multipart-v4-right-dwelling",
+        "name": "Nhà sinh hoạt",
+        "width": 546,
+        "height": 396,
+        "pivot": {
+          "x": 269,
+          "y": 371
+        },
+        "parts": [
+          {
+            "id": "body",
+            "file": "/assets/hang-nhac/layers/part-71b491adaf89e17a930b.webp",
+            "cover": false
+          },
+          {
+            "id": "roof",
+            "file": "/assets/hang-nhac/layers/part-98fe86e5b7d6c03616a3.webp",
+            "cover": true
+          }
+        ],
+        "category": "building",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "multipart-v4-garden-dwelling",
+        "name": "Nhà dược viên",
+        "width": 375,
+        "height": 490,
+        "pivot": {
+          "x": 180,
+          "y": 431
+        },
+        "parts": [
+          {
+            "id": "body",
+            "file": "/assets/hang-nhac/layers/part-a83bbefb270fd8fec5ef.webp",
+            "cover": false
+          },
+          {
+            "id": "roof",
+            "file": "/assets/hang-nhac/layers/part-bda8d6af316597cc3b4f.webp",
+            "cover": true
+          }
+        ],
+        "category": "building",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "multipart-v4-entrance-gate",
+        "name": "Cổng và hai cánh tường mái",
+        "width": 1266,
+        "height": 446,
+        "pivot": {
+          "x": 646,
+          "y": 367
+        },
+        "parts": [
+          {
+            "id": "body",
+            "file": "/assets/hang-nhac/layers/part-57568b2b9ca9454449e4.webp",
+            "cover": false
+          },
+          {
+            "id": "roof",
+            "file": "/assets/hang-nhac/layers/part-c32a09fff2a0ef417f90.webp",
+            "cover": true
+          }
+        ],
+        "category": "building",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "route-v5-banner-nw",
+        "name": "banner-nw",
+        "width": 110,
+        "height": 260,
+        "pivot": {
+          "x": 55,
+          "y": 243
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-713d41cbf02ccda5c270.webp",
+            "cover": false
+          }
+        ],
+        "category": "prop",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "route-v5-banner-ne",
+        "name": "banner-ne",
+        "width": 110,
+        "height": 260,
+        "pivot": {
+          "x": 57,
+          "y": 243
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-c4f73969321a11f0f492.webp",
+            "cover": false
+          }
+        ],
+        "category": "prop",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "route-v5-banner-sw",
+        "name": "banner-sw",
+        "width": 110,
+        "height": 240,
+        "pivot": {
+          "x": 57,
+          "y": 215
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-eb754c7cf39e88833cd7.webp",
+            "cover": false
+          }
+        ],
+        "category": "prop",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "route-v5-banner-se",
+        "name": "banner-se",
+        "width": 110,
+        "height": 240,
+        "pivot": {
+          "x": 50,
+          "y": 215
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-a3b74424c7a54226cf5b.webp",
+            "cover": false
+          }
+        ],
+        "category": "prop",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "route-v5-lamp-sw",
+        "name": "lamp-sw",
+        "width": 90,
+        "height": 200,
+        "pivot": {
+          "x": 48,
+          "y": 135
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-a71a1dd848597177c1c6.webp",
+            "cover": false
+          }
+        ],
+        "category": "prop",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "route-v5-lamp-se",
+        "name": "lamp-se",
+        "width": 90,
+        "height": 200,
+        "pivot": {
+          "x": 45,
+          "y": 135
+        },
+        "parts": [
+          {
+            "id": "image",
+            "file": "/assets/hang-nhac/layers/part-ec332df9214ffd361183.webp",
+            "cover": false
+          }
+        ],
+        "category": "prop",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "route-v6-tree-courtyard-west-north",
+        "name": "tree-courtyard-west-north",
+        "width": 190,
+        "height": 210,
+        "pivot": {
+          "x": 95,
+          "y": 168
+        },
+        "parts": [
+          {
+            "id": "body",
+            "file": "/assets/hang-nhac/layers/part-341e44a3371d1edd3014.webp",
+            "cover": false
+          },
+          {
+            "id": "canopy",
+            "file": "/assets/hang-nhac/layers/part-ed5a16f87d946f6612f9.webp",
+            "cover": true
+          }
+        ],
+        "category": "nature",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "route-v6-tree-courtyard-west-south",
+        "name": "tree-courtyard-west-south",
+        "width": 230,
+        "height": 225,
+        "pivot": {
+          "x": 148,
+          "y": 138
+        },
+        "parts": [
+          {
+            "id": "body",
+            "file": "/assets/hang-nhac/layers/part-207b0d03df528f8fb805.webp",
+            "cover": false
+          },
+          {
+            "id": "canopy",
+            "file": "/assets/hang-nhac/layers/part-92efbac8273b72ab09b7.webp",
+            "cover": true
+          }
+        ],
+        "category": "nature",
+        "defaultLayer": "depth"
+      },
+      {
+        "id": "route-v6-tree-courtyard-east-north",
+        "name": "tree-courtyard-east-north",
+        "width": 210,
+        "height": 225,
+        "pivot": {
+          "x": 99,
+          "y": 182
+        },
+        "parts": [
+          {
+            "id": "body",
+            "file": "/assets/hang-nhac/layers/part-8fa5b5cb383d4285b0b8.webp",
+            "cover": false
+          },
+          {
+            "id": "canopy",
+            "file": "/assets/hang-nhac/layers/part-36711d8fee4bebd8999d.webp",
+            "cover": true
+          }
+        ],
+        "category": "nature",
+        "defaultLayer": "depth"
+      }
+    ],
+    "objects": [
+      {
+        "id": "6297b3b0-fb7e-4321-ad6c-21dd1df30e68",
+        "name": "multipart-v4-ground-0-0",
+        "assetId": "multipart-v4-ground-0-0",
+        "layerId": "aaad2ae1-af90-4059-9f15-e69747471852",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "6a207d63-9dde-4f2a-b00b-2c7b8d4969cb",
+        "name": "multipart-v4-ground-1-0",
+        "assetId": "multipart-v4-ground-1-0",
+        "layerId": "aaad2ae1-af90-4059-9f15-e69747471852",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1024,
+        "y": 0,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "3061241e-6c60-428d-8af8-687448db5a93",
+        "name": "multipart-v4-ground-2-0",
+        "assetId": "multipart-v4-ground-2-0",
+        "layerId": "aaad2ae1-af90-4059-9f15-e69747471852",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 2048,
+        "y": 0,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "5316b6da-6b59-494f-81d0-6433910699f5",
+        "name": "multipart-v4-ground-0-1",
+        "assetId": "multipart-v4-ground-0-1",
+        "layerId": "aaad2ae1-af90-4059-9f15-e69747471852",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 0,
+        "y": 1024,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "1e026d28-38d9-4efe-b3f4-40b0de08dfc1",
+        "name": "multipart-v4-ground-1-1",
+        "assetId": "multipart-v4-ground-1-1",
+        "layerId": "aaad2ae1-af90-4059-9f15-e69747471852",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1024,
+        "y": 1024,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "bcb08df4-d0f4-45a6-bd15-38a4434e8041",
+        "name": "multipart-v4-ground-2-1",
+        "assetId": "multipart-v4-ground-2-1",
+        "layerId": "aaad2ae1-af90-4059-9f15-e69747471852",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 2048,
+        "y": 1024,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "7c6c3eb0-b63f-45ec-95be-f1fbab9b0fc0",
+        "name": "Đại điện",
+        "assetId": "multipart-v4-main-hall",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1584,
+        "y": 527,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "40adaf25-fa1c-4a78-a202-90dd9763745a",
+        "name": "Đình trên trái",
+        "assetId": "multipart-v4-upper-pavilion",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 580,
+        "y": 202,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "f3e12701-f619-4fdb-a420-f403c66c17a0",
+        "name": "Đình vườn",
+        "assetId": "multipart-v4-garden-pavilion",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 473,
+        "y": 899,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "49f8b853-d873-459b-90d7-061b23637464",
+        "name": "Nhà dụng cụ",
+        "assetId": "multipart-v4-training-pavilion",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 2848,
+        "y": 816,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "89d20bcc-28f6-404f-8a53-6e2d0651c4f7",
+        "name": "Nhà sinh hoạt",
+        "assetId": "multipart-v4-right-dwelling",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 2396,
+        "y": 1398,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "62e71814-8202-4559-848b-db777bf98eae",
+        "name": "Nhà dược viên",
+        "assetId": "multipart-v4-garden-dwelling",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 2877,
+        "y": 1585,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "ff02fbbe-36bf-4552-85c0-3371838efd83",
+        "name": "Cổng và hai cánh tường mái",
+        "assetId": "multipart-v4-entrance-gate",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1573,
+        "y": 1724,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "a166643a-4fe6-49dd-94ba-ed7f3bfff207",
+        "name": "banner-nw",
+        "assetId": "route-v5-banner-nw",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1345,
+        "y": 853,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "409723b5-e465-4998-a552-bec3336de7ff",
+        "name": "banner-ne",
+        "assetId": "route-v5-banner-ne",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1807,
+        "y": 853,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "03ef1f43-7f23-46fa-8e98-a09cd4bd7202",
+        "name": "banner-sw",
+        "assetId": "route-v5-banner-sw",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1347,
+        "y": 1305,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "6f0fd076-c5e6-4a85-863c-fe610e339d25",
+        "name": "banner-se",
+        "assetId": "route-v5-banner-se",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1800,
+        "y": 1305,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "4eb7af0c-756b-4193-894d-9e82113a4a73",
+        "name": "lamp-sw",
+        "assetId": "route-v5-lamp-sw",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1408,
+        "y": 1305,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "7b1ca0fb-8547-41d5-8707-4c38f9b4bffe",
+        "name": "lamp-se",
+        "assetId": "route-v5-lamp-se",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1745,
+        "y": 1305,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "4b97ebf0-95e0-4781-a3c1-ac1c126e1d3d",
+        "name": "tree-courtyard-west-north",
+        "assetId": "route-v6-tree-courtyard-west-north",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1190,
+        "y": 971,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "198ba27c-4513-4e75-8fdc-f8fe000a9b4a",
+        "name": "tree-courtyard-west-south",
+        "assetId": "route-v6-tree-courtyard-west-south",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1168,
+        "y": 1148,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      },
+      {
+        "id": "92e38aec-9a5d-4adb-be6a-3ea77f3e0097",
+        "name": "tree-courtyard-east-north",
+        "assetId": "route-v6-tree-courtyard-east-north",
+        "layerId": "3584866e-b7dd-4010-86e0-ac20cf9c5884",
+        "coverLayerId": "57035885-7529-4752-913c-df5227acedd7",
+        "x": 1964,
+        "y": 972,
+        "scale": 1,
+        "flipX": false,
+        "opacity": 1,
+        "locked": true
+      }
+    ],
+    "images": [
+      {
+        "url": "/assets/hang-nhac/layers/part-9f0de3644b0f407e50b3.webp",
+        "sha256": "9f0de3644b0f407e50b347245b99c63d5753def882154abe876292bd4edc4df6",
+        "bytes": 1685364
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-4591b2e86d0c975393a0.webp",
+        "sha256": "4591b2e86d0c975393a0ce63722785f4441d7d871df7b9715b0d0ded586828bb",
+        "bytes": 1304026
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-41adc7f8cc87515e5a66.webp",
+        "sha256": "41adc7f8cc87515e5a668f1f4b612111ff6e8e05c6caa89d2313768fa5196d0f",
+        "bytes": 1502274
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-63deeb6c4c64eb29ec9d.webp",
+        "sha256": "63deeb6c4c64eb29ec9d1a4622a4153308ee0a67748fcdd14ef7a59e135464ed",
+        "bytes": 1656288
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-f70b8fb9ae243fdcb95a.webp",
+        "sha256": "f70b8fb9ae243fdcb95a7e692300d34272f867cae6a1bf67c2f268de28a75107",
+        "bytes": 1273476
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-3ec73cd0516a2d5d13b4.webp",
+        "sha256": "3ec73cd0516a2d5d13b4c3bc018b272ed155da8f1e12c9c3f0088bd76768ff48",
+        "bytes": 1516574
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-fc62d598326f62b7571e.webp",
+        "sha256": "fc62d598326f62b7571eb010c02d57c44a51bd578acae9714012036780e0adee",
+        "bytes": 160014
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-5b6a8d0ba2bd3cd309e7.webp",
+        "sha256": "5b6a8d0ba2bd3cd309e71686a58b475b4808a2f813f0e6189ffb888b11bbe74a",
+        "bytes": 364388
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-fb096adb4a6681050908.webp",
+        "sha256": "fb096adb4a668105090845d01874154347d478c5520ec7094b5ee5da91296be1",
+        "bytes": 38586
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-d28ed2dd1eb468ae0ee0.webp",
+        "sha256": "d28ed2dd1eb468ae0ee0758a6aaf748b9e3e1bfa319c989885a5ce1c2df3293a",
+        "bytes": 31246
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-23a1cca33622affcee17.webp",
+        "sha256": "23a1cca33622affcee17f11129bf071fad9275d67cd97053ff9dc4740309bfa4",
+        "bytes": 36498
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-0eacb353c5cbebf0e997.webp",
+        "sha256": "0eacb353c5cbebf0e997ee95e68b334dde3a24ea24254adcb138f2fb3faca317",
+        "bytes": 45370
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-2fcf4024347a7bd79174.webp",
+        "sha256": "2fcf4024347a7bd79174c0e46df10f7bcd8070bc3ec137646d3926b3d208117e",
+        "bytes": 54390
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-d34b44c3f675d905877d.webp",
+        "sha256": "d34b44c3f675d905877dd26c3dc7d91d9292159f7b7b61cb3cb5735b25851420",
+        "bytes": 44660
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-71b491adaf89e17a930b.webp",
+        "sha256": "71b491adaf89e17a930b1abdd8c0da5dfd58603fb7e3a8dd320f3030cfa50e5c",
+        "bytes": 94184
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-98fe86e5b7d6c03616a3.webp",
+        "sha256": "98fe86e5b7d6c03616a3e97944ad1d6ea0d45858d7e52ba22175882a795a1551",
+        "bytes": 99278
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-a83bbefb270fd8fec5ef.webp",
+        "sha256": "a83bbefb270fd8fec5efb4dacd47719c9024edac1a72884ea6314a79f457f2de",
+        "bytes": 54936
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-bda8d6af316597cc3b4f.webp",
+        "sha256": "bda8d6af316597cc3b4f5263aa5550e8522210fb7647f9cd5e2464981d93cd30",
+        "bytes": 94174
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-57568b2b9ca9454449e4.webp",
+        "sha256": "57568b2b9ca9454449e4e7b0253ca9033114fbfa881e7e581cbfa9f4c590b834",
+        "bytes": 83736
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-c32a09fff2a0ef417f90.webp",
+        "sha256": "c32a09fff2a0ef417f90dfda478fe0a430ea626ae6a7e7b65716ccfbfe5202e1",
+        "bytes": 106890
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-713d41cbf02ccda5c270.webp",
+        "sha256": "713d41cbf02ccda5c270a4879f97338b696a8f8f48c8fdd23aefb68972dd8ba6",
+        "bytes": 12654
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-c4f73969321a11f0f492.webp",
+        "sha256": "c4f73969321a11f0f492cdd8a63d3804e8780de672938c3d4b607487721cbd1e",
+        "bytes": 12874
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-eb754c7cf39e88833cd7.webp",
+        "sha256": "eb754c7cf39e88833cd7d51ea6038b423c5a9c8e5bc1a8fdfd9f4bb74ea7922d",
+        "bytes": 10584
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-a3b74424c7a54226cf5b.webp",
+        "sha256": "a3b74424c7a54226cf5b9135c2b2cb4766cca51ee0c7a4ec4c6794ffd3f0e922",
+        "bytes": 10278
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-a71a1dd848597177c1c6.webp",
+        "sha256": "a71a1dd848597177c1c65ff48bf2a77dc5797551f257e75ff201ed5c93942235",
+        "bytes": 4682
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-ec332df9214ffd361183.webp",
+        "sha256": "ec332df9214ffd3611830d2a18a644a1dfa8a664cfdd5cfe2fc9d681cba16e44",
+        "bytes": 4602
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-341e44a3371d1edd3014.webp",
+        "sha256": "341e44a3371d1edd30141219a0677673d2e4916401e0de187d512fff033e3b5a",
+        "bytes": 1630
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-ed5a16f87d946f6612f9.webp",
+        "sha256": "ed5a16f87d946f6612f95086d6013522090d27dfbbae0116fc9ef74a7addce80",
+        "bytes": 17882
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-207b0d03df528f8fb805.webp",
+        "sha256": "207b0d03df528f8fb8053cc20d48e1b2ed6ab3b7734b0d6d596896bb589da1ba",
+        "bytes": 1214
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-92efbac8273b72ab09b7.webp",
+        "sha256": "92efbac8273b72ab09b79b9b87eb80cc461fa587bf5bb3428a3303e966d25b89",
+        "bytes": 16516
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-8fa5b5cb383d4285b0b8.webp",
+        "sha256": "8fa5b5cb383d4285b0b829fc10b0f065956366861b0ec47c9bdd4b7864e5da43",
+        "bytes": 1738
+      },
+      {
+        "url": "/assets/hang-nhac/layers/part-36711d8fee4bebd8999d.webp",
+        "sha256": "36711d8fee4bebd8999d340f2eec47d52ac303469fc301f982f0d1fee6de5a67",
+        "bytes": 17392
+      }
+    ]
+  },
+  "version": "c0ae305432f4762200ee6de399fd9f8f40d6814fd46688276b7983f6b60ee9a9"
 }

@@ -12,14 +12,14 @@ Game web theo hướng **MMORPG tu tiên có combat chủ động và idle hỗ 
 | Nhân vật trong preview | 5 bộ chibi / 100 frame, thêm Vương Lâm bộ trước 36 frame để đối chiếu: 6 bộ / 136 frame |
 | Backend thử | Node.js + Colyseus; Hằng Nhạc với hồ sơ khách SQLite, vị trí/chi phí thuật do server xử lý, reload/reconnect/restart; fixture cũ giữ RAM |
 | Level Design / Map Editor | Nhiều level/layer, vùng đi/chặn/portal, tileset/brush, nhóm, prefab, multipart, minimap, audit và xuất runtime JSON |
-| Map Hằng Nhạc | [Map owner đã chốt](docs/design/world/hang-nhac-map-v1/README.md), 9 blocker; [runtime TypeScript](docs/HANG-NHAC-RUNTIME.md) đã nạp nền/navigation vào client và server, camera 1× |
-| Thư viện editor | Manifest hiện trống; bộ ART map cũ đã xóa, chưa có asset thay thế |
+| Map Hằng Nhạc | [Layer/HUD đã tích hợp](docs/HANG-NHAC-HUD-LAYERS.md): 22 object / 32 part / 10 mái-tán, y-sort và alpha fade; giữ 9 blocker, Spawn và camera 1× |
+| Thư viện editor | Manifest mặc định vẫn trống; [package layer Hằng Nhạc](docs/design/world/hang-nhac-layered-v1/README.md) dành cho runtime, không ghi đè authored map hoặc nháp Editor |
 | VFX / animation skill | 15 skill đã bàn giao; R01 có 10 FX gốc và 36 clip thi triển bộ ba/bốn hướng; [core tách gameplay/presentation/asset/UI](docs/SKILL-CORE.md), ART mới chờ đánh giá hình |
 | Gameplay MMO | Ba hồ sơ riêng/lưu, R01 luyện thử, NPC/HN01–HN02, nhật ký/chỉ đường và thổ nạp online đã chạy; HN03–HN12/farm/khảo nghiệm/đăng nhập sản xuất còn tiếp tục |
 
 Room `hang_nhac` có ba hồ sơ riêng từ đầu, lưu vị trí/linh lực/cooldown và luyện thử Kiếm Khí/Lôi Ấn/Ngự Phong Bộ bằng phím 1/2/3. [Hợp đồng bước 2](docs/HANG-NHAC-R01-RUNTIME.md) ghi baseline và giới hạn local. Client/server giữ cùng release/vùng chặn owner. Room `sect_courtyard` với hai avatar đệ tử/fixture giữ để kiểm hồi quy.
 
-[Tương tác môn phái](docs/HANG-NHAC-SECT-RUNTIME.md): nhấn **E** gần NPC, theo Nhật ký để làm HN01–HN02, xác nhận M01 rồi chọn thổ nạp/hồi phục nền. Tu vi tách khỏi MP, thưởng nhập môn một lần/hồ sơ; chưa tính offline hoặc mở ngưỡng sau nền 1–3.
+[Tương tác môn phái](docs/HANG-NHAC-SECT-RUNTIME.md): nhấn **E** gần NPC, theo Nhật ký để làm HN01–HN02, xác nhận M01 rồi chọn thổ nạp/hồi phục nền. [HN03–HN04](docs/HANG-NHAC-LESSONS-RUNTIME.md) tại người coi luyện thuật: F/đòn thường 0 MP, 1 Kiếm/2 Lôi trúng mục tiêu của bài; sau đó né báo trước bằng đi bộ và 3 Phong, mỗi bài +80 một lần khi xác nhận. Tu vi tách khỏi MP, thưởng nhập môn một lần/hồ sơ; chưa tính offline hoặc mở ngưỡng sau nền 1–3.
 
 ## Chạy bản thử
 
@@ -29,6 +29,8 @@ Cần Node.js >= 22.13.0. Trong checkout của nhánh đang làm:
 npm.cmd ci
 npm.cmd run dev
 ```
+
+Chạy từ worktree `_MMO`; nếu đang chạy bản trước, khởi động lại client/backend rồi tải lại trang, không xóa DB hoặc save. HUD Vân Ngọc đã dùng HP/MP/cooldown thật và phím 1/2/3; `npm.cmd run test:hang-nhac-hud-layers` kiểm phần mới bằng fixture riêng.
 
 Mở [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html), [preview chính](http://127.0.0.1:5173/), [Map Editor](http://127.0.0.1:5173/map-editor.html) hoặc [gallery chibi](http://127.0.0.1:5173/assets/chibi-roster/index.html). Backend mặc định localhost:2567. Các URL `/map-design.html`, `/layered-map.html`, `/map-pilot.html` chuyển sang editor.
 

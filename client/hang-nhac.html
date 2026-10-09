@@ -17,6 +17,7 @@
       <div><b id="quest-title">HN01 · Bước vào Hằng Nhạc</b><span id="quest-hint">Vào sân chung để bắt đầu.</span><small id="cultivation-summary">Hành trình riêng cho từng nhân vật</small><span id="sect-feedback" role="status" hidden></span></div>
       <button id="interact" type="button" disabled>E · Nói chuyện</button><button id="journal" type="button">Nhật ký / Bản đồ</button>
     </div>
+    <aside id="lesson-panel" class="lesson-panel" hidden aria-label="Bài luyện nhập môn"><b id="lesson-title"></b><p id="lesson-hint" role="status"></p><button id="lesson-retry" type="button">Tiếp tục / thử lại</button><button id="lesson-stop" type="button">Dừng bài</button></aside>
     <section id="stage" tabindex="0" aria-label="Map Hằng Nhạc. Di chuyển bằng WASD hoặc phím mũi tên.">
       <div id="world-labels"></div>
       <div id="loading" role="status">Đang nạp Hằng Nhạc…</div>
@@ -27,11 +28,12 @@
         <button data-input="east" aria-label="Đi phải">→</button>
       </div>
       <aside class="skill-panel" aria-label="Thuật R01">
-        <div class="resource"><span id="resources">Linh lực 100 / 100</span><button id="training" type="button" disabled>Mục tiêu luyện</button></div>
-        <div class="skill-bar"><button data-skill="sword" disabled><b>1 · Kiếm Khí</b><span>10 linh lực</span></button><button data-skill="thunder" disabled><b>2 · Lôi Ấn</b><span>25 linh lực</span></button><button data-skill="wind" disabled><b>3 · Ngự Phong Bộ</b><span>10 linh lực</span></button></div>
+        <div class="resource"><span id="resources">Linh lực 100 / 100</span><button id="training" type="button" disabled>Mục tiêu luyện</button><button id="basic-attack" type="button" disabled>F · Đánh thường</button></div>
         <div id="skill-aim" class="skill-aim">Kiếm / Phong ↓ · hướng nhân vật</div>
-        <p id="skill-feedback" role="status">Di chuyển để đổi hướng thuật · chạm map để ngắm · Lôi theo mục tiêu.</p>
+        <label class="hud-effects-toggle"><input id="hud-effects" type="checkbox" checked> Linh quang</label>
+        <p id="skill-feedback" class="sr-only">Di chuyển để đổi hướng thuật · chạm map để ngắm · Lôi theo mục tiêu.</p>
       </aside>
+      <div id="hotbar-mount"></div>
     </section>
     <footer><span id="status" role="status">Khám phá Hằng Nhạc</span><span>WASD / phím mũi tên · camera 1×</span><a href="/map-editor.html" target="_blank">Map Editor</a></footer>
     <p class="note">Hồ sơ và hành trình lưu tự động. Hằng Nhạc là sân an toàn; thổ nạp và linh lực là hai nguồn riêng. NPC dùng hình đệ tử có sẵn để thử luồng nhập môn.</p>

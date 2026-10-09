@@ -10,6 +10,11 @@ import { ProjectileState, TrainingTargetState, type Disciple } from '@shared/pro
 import type { ProfileStore, ProfileLeases } from './profile-store';
 import { CYCLE_PHASE_MS, nearStation, readSectCommand, sectCommandKey, type SectResult } from '../../shared/sect';
 import { advanceCultivation, isPractising, performSectCommand, sectView } from './sect-progress';
+import { clearSectPath } from '../../shared/sect';
+import type { SkillEvent } from '../../shared/skills/contracts';
+import { observeAvoidMotion, observeAvoidSkill, resolveAvoidAttempt } from '../../shared/lesson-contracts';
+import { basicDamage, copyLessonProfile, creditLessonHit, lessonView, performLessonCommand,
+  type LessonRuntime, type LessonOutcome } from './training-lessons';
 
 interface ProfileAuth { accountId: string; profile: CharacterProfile }
 
@@ -23,6 +28,7 @@ export class HangNhacRoom extends CourtyardRoom {
   private engine!: R01Engine;
   private nextSaveAt = 0;
   private cycles = new Map<string,number>();
+  private lessons = new Map<string,LessonRuntime>();
   private sectSent = new Map<string,string>();
   private sectWatchers = new Set<string>();
   private nextSectAt = 0;
@@ -37,7 +43,7 @@ export class HangNhacRoom extends CourtyardRoom {
     catch (error) { HangNhacRoom.leases.release(accountId, client.sessionId); throw error; }
   }
   onCreate(): void {
-    this.engine = new R01Engine(Date.now(), event => this.broadcast('skill:event', event), (actor, command, result) => this.commitCast(actor, command, result));
+    this.engine = new R01Engine(Date.now(), event => this.skillEvent(event), (actor, command, result) => this.commitCast(actor, command, result));
     super.onCreate();
     this.state.mapId = HANG_NHAC.id;
     this.state.mapVersion = HANG_NHAC.version;
@@ -58,6 +64,7 @@ export class HangNhacRoom extends CourtyardRoom {
       this.cast(client,command);
     });
     this.onMessage('training:start', (client, raw: unknown) => {
+      if(this.lessons.has(client.sessionId)){client.send('training:result',{ok:false,reason:'lesson_active'});return;}
       const p = raw && typeof raw === 'object' ? raw as Record<string, unknown> : {};
       const valid = typeof p.x === 'number' && typeof p.y === 'number' && Number.isFinite(p.x) && Number.isFinite(p.y) && Math.abs(p.x) <= 1 && Math.abs(p.y) <= 1;
       const target = valid ? this.engine.practice(client.sessionId, { x: p.x as number, y: p.y as number }) : undefined;
@@ -72,13 +79,20 @@ export class HangNhacRoom extends CourtyardRoom {
       const key=sectCommandKey(command);
       const old=HangNhacRoom.store.sectReceipt(profile.id,command.id) as {command:string;result:SectResult}|undefined;
       if(old){client.send('sect:result',old.command===key?{...old.result,duplicate:true}:{requestId:command.id,ok:false,reason:'request_reused'});this.sendSect(client,true);return;}
-      const outcome=performSectCommand(this.snapshot(profile,actor),actor,command,this.engine.now,this.cycles.get(actor.id)??0,this.hasProjectile(actor.id));
+      const lessonCommand=command.action.startsWith('lesson_')||command.action==='basic_attack';
+      const outcome:LessonOutcome&{startCycle?:boolean;finishCycle?:boolean}=lessonCommand?
+        performLessonCommand(this.snapshot(profile,actor),actor,command,this.engine.now,this.engine.targets,this.lessons.get(actor.id),this.hasProjectile(actor.id)):
+        performSectCommand(this.snapshot(profile,actor),actor,command,this.engine.now,this.cycles.get(actor.id)??0,this.hasProjectile(actor.id));
       try {
         if(outcome.candidate){
           HangNhacRoom.store.commitSect(outcome.candidate,command.id,{command:key,result:outcome.result});
           this.profiles.set(actor.id,outcome.candidate);actor.hp=outcome.candidate.hp;actor.savedAt=outcome.candidate.updatedAt;
           if(outcome.startCycle)this.cycles.set(actor.id,this.engine.now+CYCLE_PHASE_MS);
           if(outcome.finishCycle)this.cycles.delete(actor.id);
+          if(outcome.stop||outcome.start)this.clearLesson(actor.id);
+          if(outcome.start)this.lessons.set(actor.id,outcome.start);
+          if(outcome.target){this.engine.targets.set(outcome.target.id,outcome.target);client.send('training:result',{ok:true,targetId:outcome.target.id});}
+          if(outcome.basicTarget){outcome.basicTarget.hp=Math.max(0,outcome.basicTarget.hp-basicDamage);actor.practiceHits=outcome.candidate.practiceHits;}
         }
         client.send('sect:result',outcome.result);
       }catch{client.send('sect:result',{requestId:command.id,ok:false,reason:'save'});}
@@ -135,6 +149,7 @@ export class HangNhacRoom extends CourtyardRoom {
       if(waiting.length)this.pendingCasts.set(id,waiting);else this.pendingCasts.delete(id);
     }
     this.engine.finish(dt); this.state.serverTime = this.engine.now;
+    this.advanceLessons(dt);
     for (const [id, target] of this.engine.targets) {
       let value = this.state.targets.get(id); if (!value) { value = new TrainingTargetState(); this.state.targets.set(id, value); } Object.assign(value, target);
     }
@@ -146,12 +161,46 @@ export class HangNhacRoom extends CourtyardRoom {
     for(const [id,profile] of this.profiles){
       const actor=this.state.players.get(id);if(!actor)continue;
       const projectile=this.hasProjectile(id);
-      if(this.cycles.has(id)&&(!actor.connected||actor.moving||!nearStation(actor,'cultivation')||isPractising(actor,this.engine.now,projectile)))
+      if(this.cycles.has(id)&&(!actor.connected||actor.moving||!nearStation(actor,'cultivation')||isPractising(actor,this.engine.now,projectile,profile.sect.lessons.nextBasicAt)))
         this.cycles.set(id,this.engine.now+CYCLE_PHASE_MS);
       advanceCultivation(profile,actor,dt,this.engine.now,projectile);
     }
     if (this.engine.now >= this.nextSaveAt) { this.nextSaveAt = this.engine.now + 1000; for (const id of this.profiles.keys()) this.save(id); }
     if(this.engine.now>=this.nextSectAt){this.nextSectAt=this.engine.now+250;for(const client of this.clients)this.sendSect(client);}
+  }
+  private clearLesson(id:string):void {
+    const runtime=this.lessons.get(id);if(runtime?.kind==='arts')this.engine.targets.delete(runtime.targetId);
+    this.lessons.delete(id);
+  }
+  private persistLesson(id:string,candidate:CharacterProfile):boolean {
+    try {
+      HangNhacRoom.store.save(candidate);this.profiles.set(id,candidate);
+      const actor=this.state.players.get(id);if(actor)actor.savedAt=candidate.updatedAt;
+      return true;
+    }catch{this.clients.find(client=>client.sessionId===id)?.send('sect:result',{ok:false,reason:'save'});return false;}
+  }
+  private skillEvent(event:SkillEvent):void {
+    const runtime=this.lessons.get(event.actorId);
+    if(runtime?.kind==='avoid'&&runtime.status==='warning')observeAvoidSkill(runtime.attempt,event);
+    const profile=this.profiles.get(event.actorId),actor=this.state.players.get(event.actorId);
+    if(profile&&actor){const candidate=creditLessonHit(this.snapshot(profile,actor),runtime,event);if(candidate)this.persistLesson(actor.id,candidate);}
+    this.broadcast('skill:event',event);
+  }
+  private advanceLessons(dt:number):void {
+    for(const [id,runtime] of this.lessons){
+      if(runtime.kind!=='avoid'||runtime.status!=='warning')continue;
+      const actor=this.state.players.get(id),profile=this.profiles.get(id);if(!actor||!profile)continue;
+      const attempt=runtime.attempt;
+      observeAvoidMotion(attempt,actor,actor.moving,!!actor.dashVX||!!actor.dashVY,dt);
+      const result=resolveAvoidAttempt(attempt,actor,this.engine.now,actor.connected,
+        clearSectPath(attempt.center,actor)&&Math.hypot(actor.x-attempt.center.x,actor.y-attempt.center.y)<=240);
+      if(result==='pending')continue;
+      runtime.status=result;
+      if(result==='passed'){
+        const candidate=copyLessonProfile(this.snapshot(profile,actor));candidate.sect.lessons[attempt.method]=true;
+        if(!this.persistLesson(id,candidate))runtime.status='save_failed';
+      }
+    }
   }
   private hasProjectile(id:string):boolean {return [...this.engine.projectiles.values()].some(p=>p.ownerId===id);}
   private cast(client:Client,command:CastCommand):void {
@@ -166,7 +215,8 @@ export class HangNhacRoom extends CourtyardRoom {
   private sendSect(client:Client,force=false):void {
     if(!force&&!this.sectWatchers.has(client.sessionId))return;
     const profile=this.profiles.get(client.sessionId),actor=this.state.players.get(client.sessionId);if(!profile||!actor?.connected)return;
-    const view=sectView(profile,actor,this.engine.now,this.cycles.get(actor.id)??0,this.hasProjectile(actor.id)),key=JSON.stringify(view);
+    const view={...sectView(profile,actor,this.engine.now,this.cycles.get(actor.id)??0,this.hasProjectile(actor.id)),
+      lessonView:lessonView(this.lessons.get(actor.id))},key=JSON.stringify(view);
     if(force||this.sectSent.get(actor.id)!==key){client.send('sect:state',view);this.sectSent.set(actor.id,key);}
   }
   private snapshot(profile: CharacterProfile, actor: Disciple): CharacterProfile {
@@ -189,6 +239,7 @@ export class HangNhacRoom extends CourtyardRoom {
     } catch { client?.send('profile:saved', { ok: false }); }
   }
   async onDrop(client: Client): Promise<void> {
+    this.clearLesson(client.sessionId);
     this.pendingCasts.delete(client.sessionId);
     this.cycles.delete(client.sessionId);this.sectSent.delete(client.sessionId);this.sectWatchers.delete(client.sessionId);
     this.engine.cancel(client.sessionId); this.held.delete(client.sessionId); this.save(client.sessionId);
@@ -205,6 +256,7 @@ export class HangNhacRoom extends CourtyardRoom {
     super.onReconnect(client);
   }
   onLeave(client: Client): void {
+    this.clearLesson(client.sessionId);
     this.pendingCasts.delete(client.sessionId);
     this.cycles.delete(client.sessionId);this.sectSent.delete(client.sessionId);this.sectWatchers.delete(client.sessionId);
     this.engine.cancel(client.sessionId); this.save(client.sessionId); this.engine.remove(client.sessionId); this.held.delete(client.sessionId);
@@ -212,6 +264,7 @@ export class HangNhacRoom extends CourtyardRoom {
     this.profiles.delete(client.sessionId); super.onLeave(client);
   }
   onDispose(): void {
+    for(const id of this.lessons.keys())this.clearLesson(id);
     this.pendingCasts.clear();
     for (const [id, p] of this.profiles) { this.save(id); HangNhacRoom.leases.release(p.accountId, id); }
   }

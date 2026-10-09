@@ -1,6 +1,7 @@
 import { hangNhacWalkable } from './hang-nhac';
 import type { AvatarId, CharacterProfile } from './profiles';
 import type { Position } from './world/types';
+import { initialLessonProgress, validLessonProgress, type LessonProgress, type LessonView } from './lesson-contracts';
 
 // Runtime interaction points on owner-authored walkable ground, not new map geometry.
 export const SECT_STATIONS = [
@@ -18,12 +19,15 @@ export interface SectProgress {
   hn01: boolean; hn02: boolean; foundation: 'none' | 'breathing' | 'spirit';
   cycleStep: number; level: number; activity: boolean; remainderMs: number;
   supplies: number; nextRecoveryAt: number;
+  lessons: LessonProgress;
 }
 export const initialSectProgress = (): SectProgress => ({ hn01: false, hn02: false, foundation: 'none',
-  cycleStep: 0, level: 0, activity: false, remainderMs: 0, supplies: 0, nextRecoveryAt: 0 });
+  cycleStep: 0, level: 0, activity: false, remainderMs: 0, supplies: 0, nextRecoveryAt: 0, lessons:initialLessonProgress() });
 export type SectAction = 'talk' | 'accept_intro' | 'cycle_start' | 'cycle_step' | 'understanding' |
-  'confirm_m01' | 'activity_start' | 'activity_stop' | 'confirm_level' | 'use_recovery';
-export interface SectCommand { id: string; action: SectAction; stationId?: StationId; step?: number; level?: number; answer?: 'cultivation' | 'mp' }
+  'confirm_m01' | 'activity_start' | 'activity_stop' | 'confirm_level' | 'use_recovery' |
+  'lesson_start' | 'lesson_stop' | 'lesson_confirm' | 'basic_attack';
+export interface SectCommand { id: string; action: SectAction; stationId?: StationId; step?: number; level?: number;
+  answer?: 'cultivation' | 'mp'; lesson?:'arts'|'avoid'; targetId?:string }
 export interface SectResult { requestId?: string; ok: boolean; reason?: string; duplicate?: boolean; stationId?: StationId }
 export interface SectView extends SectProgress {
   profileId: string; cultivation: number; milestone: CharacterProfile['milestone']; savedAt: number;
@@ -31,21 +35,31 @@ export interface SectView extends SectProgress {
   activityStatus: 'locked' | 'stopped' | 'running' | 'paused' | 'gate' | 'offline';
   cycleStatus: 'idle' | 'settling' | 'ready' | 'away' | 'combat' | 'confirm' | 'complete';
   cycleReadyAt: number;
+  lessonView?: LessonView;
 }
 export function readSectCommand(raw: unknown): SectCommand | undefined {
   if (!raw || typeof raw !== 'object') return;
   const r = raw as Record<string, unknown>;
   if (typeof r.id !== 'string' || !/^[A-Za-z0-9_-]{1,80}$/.test(r.id) ||
-    !['talk','accept_intro','cycle_start','cycle_step','understanding','confirm_m01','activity_start','activity_stop','confirm_level','use_recovery'].includes(String(r.action))) return;
+    !['talk','accept_intro','cycle_start','cycle_step','understanding','confirm_m01','activity_start','activity_stop','confirm_level','use_recovery','lesson_start','lesson_stop','lesson_confirm','basic_attack'].includes(String(r.action))) return;
   if (r.action === 'talk' && !SECT_STATIONS.some(s => s.id === r.stationId)) return;
+  if ((r.action==='lesson_start'||r.action==='lesson_confirm') && r.lesson!=='arts' && r.lesson!=='avoid') return;
+  if (r.action==='basic_attack' && (typeof r.targetId!=='string'||!/^[A-Za-z0-9_-]{1,100}$/.test(r.targetId))) return;
   if (r.action === 'cycle_step' && (!Number.isInteger(r.step) || (r.step as number) < 0 || (r.step as number) > 2)) return;
   if (r.action === 'understanding' && r.answer !== 'cultivation' && r.answer !== 'mp') return;
   if (r.action === 'confirm_level' && r.level !== 1 && r.level !== 2) return;
   return { id: r.id, action: r.action as SectAction, ...(r.action === 'talk' ? { stationId: r.stationId as StationId } : {}),
     ...(r.action === 'cycle_step' ? { step: r.step as number } : {}), ...(r.action === 'understanding' ? { answer: r.answer as 'cultivation' | 'mp' } : {}),
-    ...(r.action === 'confirm_level' ? { level:r.level as number } : {}) };
+    ...(r.action === 'confirm_level' ? { level:r.level as number } : {}),
+    ...(r.action==='lesson_start'||r.action==='lesson_confirm'?{lesson:r.lesson as 'arts'|'avoid'}:{}),
+    ...(r.action==='basic_attack'?{targetId:r.targetId as string}:{}) };
 }
-export const sectCommandKey = (command: SectCommand): string => JSON.stringify([command.action,command.stationId,command.step,command.answer,command.level]);
+export const sectCommandKey = (command: SectCommand): string => {
+  const legacy=[command.action,command.stationId,command.step,command.answer,command.level];
+  // Existing receipt keys remain byte-for-byte compatible.
+  return JSON.stringify(command.action.startsWith('lesson_')||command.action==='basic_attack'?
+    [...legacy,command.lesson,command.targetId]:legacy);
+};
 export function clearSectPath(from: Position, to: Position): boolean {
   const steps = Math.max(1, Math.ceil(Math.hypot(to.x-from.x,to.y-from.y)/4));
   for (let i=0;i<=steps;i++) if (!hangNhacWalkable({ x:from.x+(to.x-from.x)*i/steps, y:from.y+(to.y-from.y)*i/steps })) return false;
@@ -67,7 +81,8 @@ export function guideText(avatarId: AvatarId): string {
 export function validSectProgress(value: unknown, profile: Pick<CharacterProfile,'milestone'|'cultivation'|'avatarId'>): value is SectProgress {
   if (!value || typeof value!=='object') return false;
   const t=value as SectProgress;
-  return typeof t.hn01==='boolean' && typeof t.hn02==='boolean' && typeof t.activity==='boolean' &&
+  return (t.lessons===undefined || validLessonProgress(t.lessons,t.hn02)) &&
+    typeof t.hn01==='boolean' && typeof t.hn02==='boolean' && typeof t.activity==='boolean' &&
     ['none','breathing','spirit'].includes(t.foundation) &&
     [t.cycleStep,t.level,t.supplies].every(n=>Number.isInteger(n)&&n>=0) && t.cycleStep<=4 && t.level<=3 &&
     Number.isFinite(t.remainderMs) && t.remainderMs>=0 && t.remainderMs<500 && Number.isFinite(t.nextRecoveryAt) && t.nextRecoveryAt>=0 &&

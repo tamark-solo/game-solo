@@ -32,7 +32,9 @@ Giữ ID project và level hiện có để tiếp tục sửa mà không tạo 
 
 **Bước 2 đã có bản thử:** [hồ sơ/lưu/R01](HANG-NHAC-R01-RUNTIME.md) tạo ba hồ sơ riêng cho tài khoản khách local, lưu SQLite, phục hồi reload/restart và dùng Kiếm/Lôi/Phong từ đầu. Server kiểm chi phí/cooldown/hit/đường Phong; mục tiêu luyện không thưởng và không là quái farm. Ngày 09/10 bổ sung [skill core và 36 clip thi triển bộ ba/bốn hướng](SKILL-CORE.md). Số liệu là baseline thử, ART mới cần đánh giá; đăng nhập sản xuất còn thiếu.
 
-**Bước 3 phần mở đầu đã có bản thử:** [NPC/HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) gồm bốn điểm vai chức năng trên vùng đi thật, E/đối thoại, nhật ký/chỉ đường, nhận vật tư một lần, vòng vận khí tương tác và xác nhận M01. Tích lũy nền 120/phút online, tạm dừng khi luyện thuật, cổng 360 và xác nhận ngưỡng riêng; lưu schema 2 tương thích hồ sơ cũ. HN03–HN04 là phần tiếp nối, rồi HN05–HN12 phụ thuộc ngoại vi/chuẩn bị/bình cảnh/khảo nghiệm. Chưa hoàn tất toàn bước 3; bước 4–5 tiếp tục, chưa có portal/farm/loot/khảo nghiệm hoặc offline cultivation.
+**Bước 3 phần mở đầu đã có bản thử:** [NPC/HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) gồm bốn điểm vai chức năng trên vùng đi thật, E/đối thoại, nhật ký/chỉ đường, nhận vật tư một lần, vòng vận khí tương tác và xác nhận M01. Tích lũy nền 120/phút online, tạm dừng khi luyện thuật, cổng 360 và xác nhận ngưỡng riêng; lưu schema 2 tương thích hồ sơ cũ. [HN03–HN04](HANG-NHAC-LESSONS-RUNTIME.md) đã có đòn thường, target riêng, credit Kiếm/Lôi và warning né bằng đi bộ/Phong; +80/bài một lần sau xác nhận, không cấp lại skill hay ghi M02. HN05–HN12 còn phụ thuộc ngoại vi/chuẩn bị/bình cảnh/khảo nghiệm. Chưa hoàn tất toàn bước 3; bước 4–5 tiếp tục, chưa có portal/farm/loot/khảo nghiệm hoặc offline cultivation.
+
+**HUD/layer đã tích hợp 09/10:** [bàn giao](HANG-NHAC-HUD-LAYERS.md) dùng đúng bản review owner chỉ định, scene 22 object/32 part/10 cover, y-sort/alpha và HUD Vân Ngọc đọc snapshot thật. Giữ nguyên geometry owner; không tự sản xuất thêm ART.
 
 ## Nguồn yêu cầu
 

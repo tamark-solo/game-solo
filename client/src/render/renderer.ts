@@ -5,6 +5,7 @@ import { AnimationPlayer } from '../assets/animation';
 import { normalizeAtlas, type ActorDefinition, type Atlas } from '../assets/atlas';
 import { imageAlpha, cropAlpha, opaqueMasksOverlap, type AlphaMask, type PlacedMask } from './occlusion';
 import {atlasSprite,setSpriteFrame} from './sprite-frame';
+import { authoredMapParts, type AuthoredMapScene } from '@shared/map-presentation';
 
 export interface LoadedActor { definition: ActorDefinition; atlas: Atlas; texture: THREE.Texture; alpha: AlphaMask; frameMasks: Map<string,AlphaMask> }
 export interface ActorSpriteFrame {
@@ -33,6 +34,7 @@ export interface MapDepthItem {
   mesh: THREE.Mesh | THREE.Sprite; y: number;
   sortPriority?: number;
   opacityOverride?: number;
+  baseOpacity?: number;
   fadeRegion?: { x: number; y: number; w: number; h: number };
   occlusionMask?: PlacedMask;
 }
@@ -174,6 +176,60 @@ export class PreviewRenderer {
 
   setMapDepthItems(items: MapDepthItem[]): void { this.mapDepthItems = items; }
 
+  async loadAuthoredMap(map: AuthoredMapScene): Promise<void> {
+    const parts = authoredMapParts(map), loader = new THREE.TextureLoader();
+    const textures = new Map<string, THREE.Texture<HTMLImageElement>>();
+    const results = await Promise.allSettled([...new Set(parts.map(part => part.file))].map(async file => {
+      const texture = await loader.loadAsync(file);
+      if (parts.some(part => part.file === file &&
+          (texture.image.width !== part.nativeWidth || texture.image.height !== part.nativeHeight))) {
+        texture.dispose(); throw new Error(`Map: canvas không khớp ${file}.`);
+      }
+      texture.colorSpace = THREE.SRGBColorSpace;
+      texture.generateMipmaps = false;
+      texture.minFilter = texture.magFilter = THREE.LinearFilter;
+      textures.set(file, texture);
+    }));
+    const failed = results.find(result => result.status === 'rejected');
+    if (failed?.status === 'rejected') {
+      for (const texture of textures.values()) texture.dispose();
+      throw failed.reason;
+    }
+    this.setMapLayout({ width: map.world.width, height: map.world.height, color: map.background, ground: [], obstacles: [] });
+    const masks = new Map<string, AlphaMask>();
+    parts.forEach((part, index) => {
+      const texture = textures.get(part.file)!;
+      const mesh = new THREE.Mesh(new THREE.PlaneGeometry(part.width, part.height),
+        new THREE.MeshBasicMaterial({ map: texture, transparent: true, opacity: part.opacity,
+          depthTest: false, depthWrite: false, toneMapped: false }));
+      mesh.position.set(part.left + part.width / 2, -part.top - part.height / 2, 0);
+      if (part.flipX) mesh.scale.x = -1;
+      mesh.userData.mapPart = { objectId: part.objectId, assetId: part.assetId, partId: part.partId,
+        cover: part.cover, band: part.band, footY: part.footY, file: part.file };
+      this.mapLayout!.add(mesh);
+      if (part.band !== 'depth') {
+        mesh.renderOrder = (part.band === 'ground' ? -10000 : -8500) + index / (parts.length + 1);
+        return;
+      }
+      let occlusionMask: PlacedMask | undefined;
+      if (part.cover) {
+        let mask = masks.get(part.file);
+        if (!mask) { mask = imageAlpha(texture.image); masks.set(part.file, mask); }
+        occlusionMask = { mask, left: part.left, top: part.top, scaleX: part.scale, scaleY: part.scale, flipX: part.flipX };
+      }
+      this.mapDepthItems.push({ mesh, y: part.footY, sortPriority: part.cover ? 20 : 0,
+        baseOpacity: part.opacity, occlusionMask });
+    });
+  }
+
+  mapDiagnostics() {
+    return (this.mapLayout?.children ?? []).filter(mesh => mesh.userData.mapPart).map(mesh => ({
+      ...mesh.userData.mapPart, order: mesh.renderOrder,
+      opacity: ((mesh as THREE.Mesh).material as THREE.MeshBasicMaterial).opacity,
+      position: mesh.position.toArray(), scale: mesh.scale.toArray(),
+    }));
+  }
+
   async loadBackgroundMap(url: string, width: number, height: number): Promise<void> {
     const texture = await new THREE.TextureLoader().loadAsync(url);
     if (texture.image.width !== width || texture.image.height !== height) {
@@ -234,7 +290,7 @@ export class PreviewRenderer {
       const overlaps = ownActor && ownActor.y < item.y && (item.occlusionMask&&ownMask ? opaqueMasksOverlap(item.occlusionMask,ownMask) :
         r && ownActor.x > r.x - 24 && ownActor.x < r.x + r.w + 24 && ownActor.y > r.y && ownActor.y - 80 < r.y + r.h);
       const material = item.mesh.material as THREE.MeshBasicMaterial | THREE.SpriteMaterial;
-      material.opacity = item.opacityOverride ?? (overlaps ? .35 : 1);
+      material.opacity = item.opacityOverride ?? (item.baseOpacity ?? 1) * (overlaps ? .35 : 1);
     });
     for (const actor of sorted) {
       const asset = this.assets.get(actor.assetId); if (!asset) continue;

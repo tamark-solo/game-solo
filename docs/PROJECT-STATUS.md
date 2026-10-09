@@ -29,7 +29,7 @@ HN01–HN12, phân bổ 15 tầng/mốc 1–3–9–15, balance combat/phần th
 | --- | --- | --- |
 | Preview TypeScript + Three.js | Loader, atlas/animation, renderer, camera, input và di chuyển/va chạm fixture | Chưa là vòng gameplay MMO |
 | Catalog nhân vật | 5 bộ chibi/100 frame, thêm Vương Lâm trước 36 frame: 6 bộ/136 frame; bộ ba chibi có 60 frame | Chọn nhân vật ART không là tạo hồ sơ playable online; combat/động tác riêng chưa đủ |
-| Backend Colyseus | Room `hang_nhac` nạp map owner và hồ sơ bộ ba, SQLite lưu riêng, R01 do server tính; NPC/HN01–HN02, M01, thổ nạp online, vật tư và ledger thưởng một lần. Room `sect_courtyard` giữ hồi quy RAM | Tài khoản khách local, một nhân vật điều khiển/tài khoản; chưa có đăng nhập sản xuất/khóa phân tán. Giới hạn 20 client/phòng chưa là công suất được đo |
+| Backend Colyseus | Room `hang_nhac` nạp map owner và hồ sơ bộ ba, SQLite lưu riêng, R01 do server tính; NPC/HN01–HN04, M01, đòn thường, bài thuật/né cá nhân, thổ nạp online, vật tư và ledger thưởng một lần. Room `sect_courtyard` giữ hồi quy RAM | Tài khoản khách local, một nhân vật điều khiển/tài khoản; chưa có đăng nhập sản xuất/khóa phân tán. Giới hạn 20 client/phòng chưa là công suất được đo |
 | Level Design / Map Editor | Nhiều level/layer, vùng đi/chặn/portal, chọn nhiều/nhóm/căn chỉnh, tileset/brush, prefab, multipart, minimap, audit, save và export | Save là dữ liệu biên tập; API workspace có trong Vite dev/preview, không có khi chỉ phục vụ dist tĩnh. Release Hằng Nhạc đã nối client/server từ export đã chốt |
 | Starter region cũ | Prototype di chuyển/portal/điểm nội dung từ trước GDD mới | Chưa có nhiệm vụ/combat; không thay bố cục Hằng Nhạc hiện hành |
 
@@ -60,9 +60,9 @@ Actor locomotion giữ frame **64 × 96**, neo **(32,88)** và collider chân 8 
 
 [Khí quang 02](design/ui/desktop-skill-hud-v3/qi-v2/README.md) làm rõ khác biệt sau phản hồi FX đầu quá nhẹ: texture khí xoáy đỏ/ngọc ImageGen 50 KB, kính/thể tích, vòng trận pháp và ánh hắt khung. Có đối chiếu bật/tắt, FX tách khỏi skill core và chưa ghép game.
 
-Ưu tiên hiện tại: bước 1 map, [bước 2 hồ sơ/lưu/R01](HANG-NHAC-R01-RUNTIME.md) và [phần đầu bước 3 NPC/HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) đã có bản thử. Tiếp nối HN03–HN04 theo [kế hoạch GDD](HANG-NHAC-IMPLEMENTATION-PLAN.md), rồi map farm/khảo nghiệm riêng; asset che người theo nhu cầu. Không sửa vùng chặn đã chốt.
+Ưu tiên hiện tại: bước 1 map, [bước 2 hồ sơ/lưu/R01](HANG-NHAC-R01-RUNTIME.md) và [phần đầu bước 3 NPC/HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) đã có bản thử. [HN03–HN04](HANG-NHAC-LESSONS-RUNTIME.md) đã có bài thuật/né an toàn và đòn thường, credit/thưởng một lần theo server. [HUD/layer](HANG-NHAC-HUD-LAYERS.md) đã tích hợp. Tiếp nối HN05 với map ngoại vi/encounter riêng trước khi mở portal hoặc khảo nghiệm. Không sửa vùng chặn đã chốt.
 
-Đã có hồ sơ khách riêng, save/reload/restart, R01/mục tiêu luyện không thưởng và mở đầu HN01–HN02. Nhật ký chỉ đường tới bốn NPC dùng mẫu đệ tử sẵn có; vận khí và phần thưởng do server xác nhận. Tích lũy nền tách MP, 120/phút online, dừng tại cổng 360; chưa tính offline, chưa mở M02/nền 4–9. Đăng nhập sản xuất, HN03–HN12, combat farm, pháp khí và khảo nghiệm chưa hoàn tất. Số liệu vẫn baseline thử.
+Đã có hồ sơ khách riêng, save/reload/restart, R01/mục tiêu luyện không thưởng và mở đầu HN01–HN02. Nhật ký chỉ đường tới bốn NPC dùng mẫu đệ tử sẵn có; vận khí và phần thưởng do server xác nhận. Tích lũy nền tách MP, 120/phút online, dừng tại cổng 360; chưa tính offline, chưa mở M02/nền 4–9. HN03/HN04 đã nối journal/NPC, đòn thường F/0 MP, Kiếm/Lôi và né bằng đi bộ/Phong; mỗi bài +80 baseline chỉ sau xác nhận, giữ tiến trình schema 2. Đăng nhập sản xuất, HN05–HN12, combat farm, pháp khí và khảo nghiệm chưa hoàn tất. Số liệu vẫn baseline thử.
 
 Phục hồi kết nối 09/10 đã sửa lỗi lưu reconnection token cũ và thêm phục hồi cùng hồ sơ khi backend restart. [Hồi quy riêng](data/hang-nhac-reload-interaction-verification.json) kiểm E/nút nói chuyện sau reload/reconnect/restart, quyền R01 có sẵn và Rời sân hủy phục hồi. Map owner và tiến trình thật không được seed/reset trong kiểm chứng.
 

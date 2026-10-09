@@ -1,10 +1,10 @@
 # Thanh HUD desktop — Vân Ngọc, bản 03
 
-**09/10/2026 · _MMO.** Chủ dự án cung cấp mẫu HUD MMO có khung mỹ thuật liền, cầu tài nguyên và dãy kỹ năng. Bản 03 chuyển theo cấu trúc **Type 2** trong mẫu, phối đồng cổ / ngọc / mây cuộn để hợp chất tu tiên và map Hằng Nhạc. Đây là thiết kế đề xuất để xem trên map; chưa ghi nhận duyệt hình hoặc tích hợp HUD game. Desktop trước, mobile thiết kế và làm sau.
+**09/10/2026 · _MMO.** Chủ dự án cung cấp mẫu HUD MMO có khung mỹ thuật liền, cầu tài nguyên và dãy kỹ năng. Bản 03 chuyển theo cấu trúc **Type 2** trong mẫu, phối đồng cổ / ngọc / mây cuộn để hợp chất tu tiên và map Hằng Nhạc. Chủ dự án đã xác nhận duyệt HUD và yêu cầu ghép vào game. HUD đã nối vào `/hang-nhac.html` qua snapshot server và SkillSession; trang demo giữ riêng để đối chiếu. Desktop giữ artwork 760 × 140; màn hình hẹp có fallback chức năng với ba nút 48 px. Xem [bàn giao HUD/layer](HANG-NHAC-HUD-LAYERS.md).
 
 [Mở bản thử](http://127.0.0.1:5173/skill-bar-desktop.html) · [Ảnh / artwork / prompt](design/ui/desktop-skill-hud-v3/README.md) · [Skill core](SKILL-CORE.md).
 
-**Khí quang 02:** owner thấy FX đầu tiên quá nhẹ. [Mẫu tham khảo và bản ghép mới](design/ui/desktop-skill-hud-v3/qi-v2/README.md) bổ sung khí xoáy ImageGen 50 KB, kính/thể tích cầu, vòng trận pháp và ánh hắt lên khung. Bật/tắt **Linh quang** để đối chiếu. FX đọc snapshot trình bày, không sở hữu skill; tab ẩn/mất kết nối dừng vòng lặp, reduced motion giữ vẻ tĩnh. Chưa tích hợp runtime hoặc suy duyệt hình từ kiểm kỹ thuật.
+**Khí quang 02:** owner thấy FX đầu tiên quá nhẹ. [Mẫu tham khảo và bản ghép mới](design/ui/desktop-skill-hud-v3/qi-v2/README.md) bổ sung khí xoáy ImageGen 50 KB, kính/thể tích cầu, vòng trận pháp và ánh hắt lên khung. Bật/tắt **Linh quang** để đối chiếu. FX đọc snapshot trình bày, không sở hữu skill; tab ẩn/mất kết nối dừng vòng lặp, reduced motion giữ vẻ tĩnh. Đã ghép vào runtime theo yêu cầu trực tiếp của chủ dự án; duyệt hình không được suy từ kiểm kỹ thuật.
 
 ## Bố cục
 
@@ -51,7 +51,7 @@ Adapter bản phác mô phỏng HP/MP, thời gian thi triển và cooldown; kh�
 | shared/skills/definitions.ts | Bộ thuật, chi phí, phím, cooldown hiện hành |
 | client/src/skills/session.ts | Nối gameplay thật sau khi phương án được chọn |
 
-Khi ghép vào game, lấy HP/MP/cooldown từ snapshot server và gửi yêu cầu qua skill session; giữ E/NPC, hướng/input, reload/reconnect và animation core. Các ô mới cần cấu hình skill/loadout có thật, không suy quyền sử dụng từ ô trống của bản phác.
+Trong game, SkillSession lấy HP/MP/cooldown/cast/target từ snapshot server, cấp HotbarView và gửi lệnh qua giao thức skill hiện có. HUD không trừ MP hoặc mở pose dự đoán. Giữ E/NPC, hướng/input, reload/reconnect và animation core; handshake chưa có snapshot giữ HUD offline. Lệnh `test:hang-nhac-hud-layers` kiểm bố cục, thao tác, snapshot và phần che bằng fixture riêng. Các ô mới cần cấu hình skill/loadout có thật, không suy quyền sử dụng từ ô trống của bản phác.
 
 ## Đối chiếu kỹ thuật và lịch sử
 

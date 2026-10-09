@@ -6,7 +6,7 @@ import { startService, waitFor } from '../support/services.mjs';
 const origin = 'http://127.0.0.1:5187', endpoint = 'http://127.0.0.1:2588';
 const release = JSON.parse(await readFile('shared/data/hang-nhac.json', 'utf8'));
 const backend = await startService(['--import', 'tsx', 'server/src/index.ts'], `${endpoint}/health`, { PORT: '2588', GAME_DB_PATH: ':memory:' });
-let vite, browser;
+let vite, browser, debugPage;
 const errors = [], checks = [];
 const diagnostic = page => page.evaluate(() => window.__hangNhacDiagnostics());
 const own = d => d.actors.find(a => a.own);
@@ -15,7 +15,7 @@ try {
   browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true,
     args: ['--enable-unsafe-swiftshader', '--use-angle=swiftshader'] });
   const context = await browser.newContext({ viewport: { width: 1440, height: 980 }, deviceScaleFactor: 1 });
-  const a = await context.newPage();
+  const a = await context.newPage(); debugPage = a;
   a.on('pageerror', e => errors.push(e.message));
   a.on('response', r => { if (r.status() >= 400) errors.push(`HTTP ${r.status()}: ${r.url()}`); });
   a.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
@@ -63,4 +63,11 @@ try {
   const report = { passed: true, version: release.version, checks, errors, blockerStop: wall };
   await writeFile('artifacts/hang-nhac-browser-verification.json', JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report, null, 2));
+} catch (error) {
+  console.error(JSON.stringify({ checks, errors, game: await debugPage?.evaluate(() => window.__hangNhacDiagnostics?.()),
+    status: await debugPage?.locator('#status').textContent(), feedback: await debugPage?.locator('#skill-feedback').textContent(),
+    backend: backend.output(), vite: vite?.output() }, null, 2));
+  await mkdir('artifacts', { recursive: true });
+  await debugPage?.screenshot({ path: 'artifacts/hang-nhac-browser-failure.png' });
+  throw error;
 } finally { await browser?.close(); vite?.stop(); backend.stop(); }

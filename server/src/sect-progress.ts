@@ -2,18 +2,18 @@ import type { CharacterProfile } from '../../shared/profiles';
 import type { CombatActor } from '../../shared/r01';
 import { CULTIVATION_GATE, LEVEL_THRESHOLDS, nearStation, type SectCommand, type SectResult, type SectView } from '../../shared/sect';
 
-export const isPractising = (actor: CombatActor, now: number, projectile = false): boolean =>
-  !!actor.castId || projectile || now < actor.lastSpentAt+2000;
+export const isPractising = (actor: CombatActor, now: number, projectile = false, nextBasicAt = 0): boolean =>
+  !!actor.castId || projectile || now < actor.lastSpentAt+2000 || nextBasicAt > 0 && now < nextBasicAt+1200;
 export function sectView(profile: CharacterProfile, actor: CombatActor, now: number, readyAt: number, projectile = false): SectView {
-  const t=profile.sect, busy=isPractising(actor,now,projectile);
+  const t=profile.sect, busy=isPractising(actor,now,projectile,t.lessons.nextBasicAt);
   return { ...t, profileId:profile.id, cultivation:profile.cultivation, milestone:profile.milestone, savedAt:profile.updatedAt,hp:actor.hp,practising:busy,
-    activityStatus: !t.hn02?'locked':!t.activity?'stopped':!actor.connected?'offline':profile.cultivation>=CULTIVATION_GATE?'gate':busy?'paused':'running',
+    activityStatus: !t.hn02?'locked':!t.activity?'stopped':!actor.connected?'offline':profile.cultivation>=CULTIVATION_GATE?'gate':busy||t.lessons.active!=='none'?'paused':'running',
     cycleStatus: t.hn02?'complete':t.cycleStep===4?'confirm':!readyAt?'idle':!nearStation(actor,'cultivation')?'away':busy?'combat':
       actor.moving||readyAt>now?'settling':'ready', cycleReadyAt:readyAt };
 }
 export function advanceCultivation(profile: CharacterProfile, actor: CombatActor, dt: number, now: number, projectile = false): void {
   const t=profile.sect;
-  if (!t.hn02 || !t.activity || !actor.connected || actor.hp<=0 || isPractising(actor,now,projectile) || profile.cultivation>=CULTIVATION_GATE) return;
+  if (!t.hn02 || !t.activity || t.lessons.active!=='none' || !actor.connected || actor.hp<=0 || isPractising(actor,now,projectile,t.lessons.nextBasicAt) || profile.cultivation>=CULTIVATION_GATE) return;
   // 120/minute: one point per 500 valid server milliseconds. No wall-clock/offline catch-up.
   t.remainderMs+=Math.max(0,Math.min(dt,.1))*1000;
   const points=Math.min(CULTIVATION_GATE-profile.cultivation,Math.floor((t.remainderMs+1e-7)/500));
@@ -28,7 +28,7 @@ export function performSectCommand(profile: CharacterProfile, actor: CombatActor
     ['cycle_start','cycle_step','understanding','confirm_m01','activity_start','confirm_level'].includes(command.action)?'cultivation':undefined;
   if (station && !nearStation(actor,station)) return reject('distance');
   if (command.action==='talk') return {result:{requestId:command.id,ok:true,stationId:command.stationId}};
-  if (command.action!=='activity_stop' && isPractising(actor,now,projectile)) return reject('combat');
+  if (command.action!=='activity_stop' && isPractising(actor,now,projectile,profile.sect.lessons.nextBasicAt)) return reject('combat');
   const p={...profile,sect:{...profile.sect}},t=p.sect;
   const accepted=(extra:{startCycle?:boolean;finishCycle?:boolean}={})=>({result:{requestId:command.id,ok:true},candidate:p,...extra});
   const already=()=>({result:{requestId:command.id,ok:true,reason:'already_complete'}});
@@ -74,5 +74,6 @@ export function performSectCommand(profile: CharacterProfile, actor: CombatActor
       if(t.nextRecoveryAt>now) return reject('cooldown');
       if(actor.hp>=100) return reject('full_hp');
       t.supplies--;t.nextRecoveryAt=now+10000;p.hp=Math.min(100,actor.hp+30);return accepted();
+    default:return reject('invalid');
   }
 }

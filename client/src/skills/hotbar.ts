@@ -71,7 +71,7 @@ export class SkillHotbar {
         <div class="hotbar-frame" aria-hidden="true"></div>
         <div class="hotbar-slots">${R01_IDS.map(id => `
           <div class="hotbar-slot-group">
-            <button class="hotbar-slot hotbar-${id}" data-hotbar-skill="${id}" type="button" aria-describedby="${tooltipId}">
+            <button class="hotbar-slot hotbar-${id}" data-hotbar-skill="${id}" data-skill="${id}" type="button" aria-describedby="${tooltipId}">
               <kbd>${SKILL_DEFINITIONS[id].shortcut}</kbd>
               <svg class="hotbar-icon" viewBox="0 0 64 64" aria-hidden="true">${ART[id].icon}</svg>
               <span class="hotbar-art hotbar-art-${id}" aria-hidden="true"></span>
@@ -192,8 +192,10 @@ export class SkillHotbar {
     const bar = this.root.getBoundingClientRect(), tip = this.tooltip.getBoundingClientRect();
     const slot = this.slots.get(id)!.getBoundingClientRect();
     const preferredLeft = slot.left + slot.width / 2 - tip.width / 2;
-    const left = Math.max(12, Math.min(window.innerWidth - tip.width - 12, preferredLeft));
-    const top = Math.max(12, Math.min(window.innerHeight - tip.height - 12, bar.top - tip.height - 8));
+    const bounds = this.root.closest('#stage')?.getBoundingClientRect();
+    const minLeft = (bounds?.left ?? 0) + 12, maxRight = (bounds?.right ?? window.innerWidth) - 12;
+    const left = Math.max(minLeft, Math.min(maxRight - tip.width, preferredLeft));
+    const top = Math.max((bounds?.top ?? 0) + 12, Math.min((bounds?.bottom ?? window.innerHeight) - tip.height - 12, bar.top - tip.height - 8));
     this.tooltip.style.left = `${left - bar.left}px`;
     this.tooltip.style.top = `${top - bar.top}px`;
   }

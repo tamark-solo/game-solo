@@ -40,7 +40,7 @@ try {
   };
   const expectAim=async(x,y,source)=>{await waitFor(async()=>{const s=(await state(page)).input;return Math.abs(s.aim.x-x)<.001&&Math.abs(s.aim.y-y)<.001&&(!source||s.source===source);},`aim ${x},${y} ${source??''}`);};
   const cast=async(skill,x,y,direction,trigger)=>{
-    await page.locator(`[data-skill=${skill}]:enabled`).waitFor();
+    await page.locator(`[data-skill=${skill}][aria-disabled="false"]`).waitFor();
     const before=(await state(page)).own.casts;
     if(trigger)await trigger();else await page.keyboard.press({sword:'1',thunder:'2',wind:'3'}[skill]);
     await waitFor(async()=>(await state(page)).own.casts===before+1,'accepted cast');
@@ -79,7 +79,7 @@ try {
   await waitFor(async()=>(await state(page)).own.practiceHits===beforeThunder.own.practiceHits+1,'targeted thunder hit');
   const beforeWind=await state(page),windAim=await aim(0,-1);const wind=await cast('wind',windAim.x,windAim.y,'north');assert.ok(beforeWind.own.y-wind.own.y>150);assert.ok(Math.abs(wind.own.x-beforeWind.own.x)<1);
   // Changing pointer aim during an active dash affects the next skill, not this accepted dash.
-  await page.locator('[data-skill=wind]:enabled').waitFor();await aim(0,1);await page.keyboard.press('3');
+  await page.locator('[data-skill=wind][aria-disabled="false"]').waitFor();await aim(0,1);await page.keyboard.press('3');
   await waitFor(async()=>!!(await state(page)).own.castId,'active dash');const changed=await aim(-1,0);
   await page.waitForFunction(()=>!window.__hangNhacR01().own.castId);const afterDash=await state(page);assert.ok(afterDash.own.y-wind.own.y>150);await expectAim(changed.x,changed.y,'pointer');assert.ok(changed.y<.95,'pointer changed the next aim away from the accepted south dash');
   checks.push({acceptedDashStaysFixed:true});

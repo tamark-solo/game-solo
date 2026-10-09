@@ -25,6 +25,8 @@
     "test:skill-body": "node tests/smoke/skill-body-render-smoke.mjs",
     "test:hang-nhac-sect": "tsx tests/smoke/hang-nhac-sect-online-smoke.ts && tsx tests/smoke/hang-nhac-sect-browser-smoke.ts",
     "test:hang-nhac-reload": "tsx tests/smoke/hang-nhac-reload-interaction-smoke.ts",
+    "test:hang-nhac-hud-layers": "node tests/smoke/hang-nhac-hud-layers-smoke.mjs",
+    "test:hang-nhac-lessons": "node --import tsx tests/smoke/hang-nhac-lessons-online-smoke.mjs && node --import tsx tests/smoke/hang-nhac-lessons-browser-smoke.mjs",
     "test:browser": "node tests/smoke/browser-smoke.mjs",
     "test:movement": "node tests/smoke/movement-smoke.mjs",
     "test:gait-review": "node tests/smoke/gait-review-smoke.mjs",

@@ -46,7 +46,7 @@ try {
     await page.locator('#sect-close').click();await page.locator('#sect-dialog').waitFor({state:'hidden'});
     await talk();await page.locator('#sect-close').click();await page.locator('#sect-dialog').waitFor({state:'hidden'});
     if(i===0){
-      await page.locator('[data-skill=sword]:enabled').waitFor({state:'visible'});
+      await page.locator('[data-skill=sword][aria-disabled="false"]').waitFor({state:'visible'});
       const before=(await state(page)).r01.own.casts;await page.keyboard.press('1');
       await waitFor(async()=>(await state(page!)).r01.own.casts===before+1,'skill after reload, without NPC grant');
       await page.waitForFunction('!window.__hangNhacR01().own.castId');

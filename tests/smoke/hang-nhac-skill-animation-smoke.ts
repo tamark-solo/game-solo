@@ -92,6 +92,15 @@ try {
         const d=(window as any).__hangNhacDiagnostics(),own=d.actors.find((a:any)=>a.own),s=d.sprites.find((s:any)=>s.id===own?.id);
         return s?.animationSource==='skill'&&s.frameIndex>first;
       },first,{timeout:1500});
+      // Charge legitimately overlays the body. Compare canonical RGB after its confirmed
+      // release, with the projectile away from the caster; isolated GPU parity covers all frames.
+      if (skill === 'sword') {
+        await page.waitForFunction(() => {
+          const r = (window as any).__hangNhacR01();
+          return r.own.castId && r.vfx.trace.some((event: any) => event.type === 'release' && event.castId === r.own.castId);
+        });
+        await page.waitForTimeout(200);
+      }
       // Read GPU pixels and diagnostic pose inside one render callback. A browser screenshot can
       // finish after a short cast has ended, especially when another WebGL test is running.
       const capture:{placement:any;dataUrl:string}=await page.evaluate(()=>new Promise<{placement:any;dataUrl:string}>(resolve=>requestAnimationFrame(()=>{
@@ -136,6 +145,10 @@ try {
           }
           return best;
         },{dataUrl:'data:image/png;base64,'+shot!.toString('base64'),placement,expected});
+        if (visualMatch <= .6) {
+          await writeFile('artifacts/hang-nhac-cast-gpu-mismatch.png', shot!);
+          await writeFile('artifacts/hang-nhac-cast-gpu-mismatch.json', JSON.stringify({ expected, visualMatch, placement }, null, 2));
+        }
         assert.ok(visualMatch>.6,`GPU shows a single canonical body: ${expected}, match ${visualMatch}`);
       }
       await page.waitForFunction('!window.__hangNhacR01().own.castId');

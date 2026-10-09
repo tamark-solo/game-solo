@@ -14,6 +14,7 @@ import { SkillPresentation } from './skills/three-presentation';
 import { SkillSession } from './skills/session';
 import { SECT_STATIONS, type SectResult, type SectView } from '../../shared/sect';
 import { SectUI } from './sect-ui';
+import { LessonPresentation } from './lesson-presentation';
 
 const el = <T extends HTMLElement>(id: string) => document.getElementById(id)! as T;
 const stage = el<HTMLElement>('stage'), avatar = el<HTMLSelectElement>('avatar'), name = el<HTMLInputElement>('player-name');
@@ -25,8 +26,11 @@ const npcs: RenderActor[] = [];
 let renderer: PreviewRenderer, local: RenderActor, ready = false, previous = performance.now(), accumulator = 0;
 const endpoint = import.meta.env.VITE_SERVER_URL || `${location.protocol}//${location.hostname}:2567`;
 const profiles = new ProfileSession(endpoint);
+let lessonPresentation:LessonPresentation;
 let presentation: SkillPresentation, serverOffset = 0, opening = false, saveFailed = false;
 const skills=new SkillSession({room:()=>network.room,online:()=>network.status==='connected',now:()=>Date.now()+serverOffset,feedback,focus:()=>stage.focus(),
+  basic:()=>sect.basicAttack(skills.selectedTarget),
+  resources:()=>{const saved=profiles.profiles.find(p=>p.avatarId===avatar.value);return {hp:saved?.hp??100,mp:saved?.mp??100};},
   movement:readInput,facing:()=>network.renderMotion(network.room?.sessionId??'')?.direction??network.room?.state.players?.get(network.room.sessionId)?.direction??local?.direction??'south',
   inputSequence:()=>network.nextInputSequence(),
   event:event=>{serverOffset=event.at-Date.now();presentation.event(event);}});
@@ -54,7 +58,7 @@ const network = new NetworkSession(readInput, updateStatus, { roomName: HANG_NHA
 
   } });
 
-function feedback(message: string): void { el('skill-feedback').textContent=message; }
+function feedback(message: string): void { el('skill-feedback').textContent=message; skills.announce(message); }
 async function enter(): Promise<void> {
   if (!ready || opening || network.room) return;
   opening=true; updateStatus(); clearInput();
@@ -126,6 +130,7 @@ window.addEventListener('keydown', event => {
   if(sect.modal)return;
   // IME can report "Process" instead of "e"; the physical key still identifies E.
   if(!event.repeat&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&(event.code==='KeyE'||key==='e')){event.preventDefault();clearInput();sect.interact();return;}
+  if(!event.repeat&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&(event.code==='KeyF'||key==='f')){event.preventDefault();skills.basic();return;}
   const skill=skills.shortcut(event);if(skill){event.preventDefault();skills.cast(skill);return;}
   if (['w', 'a', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'].includes(key)) { event.preventDefault(); keys.add(key); skills.moveAim(readInput()); }
 });
@@ -134,7 +139,7 @@ window.addEventListener('blur', clearInput);
 document.addEventListener('visibilitychange', clearInput);
 stage.addEventListener('pointerdown', event => {
   if (!ready||sect.modal) return;
-  if ((event.target as HTMLElement).closest('button,.skill-panel')) return;
+  if ((event.target as HTMLElement).closest('button,.skill-panel,#hotbar-mount')) return;
   stage.focus(); const rect=stage.getBoundingClientRect(), point=new THREE.Vector3((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1,0).unproject(renderer.camera);
   const own=actors.get(network.room?.sessionId??'')??local, dx=point.x-own.x, dy=-point.y-own.y, magnitude=Math.hypot(dx,dy);
   if (magnitude>1) skills.setAim(dx,dy);
@@ -174,6 +179,7 @@ function frame(now: number): void {
   renderer.cameraCenter.x += (target.x - renderer.cameraCenter.x) * blend;
   renderer.cameraCenter.y += (target.y - renderer.cameraCenter.y) * blend;
   presentation.update(network.room?.state,Date.now()+serverOffset,visible);
+  lessonPresentation.update(network.status==='connected'?sect.view?.lessonView:undefined,Date.now()+serverOffset);
   renderer.mode = network.room ? 'online' : 'map'; renderer.render([...visible,...npcs]);
   requestAnimationFrame(frame);
 }
@@ -184,8 +190,9 @@ async function init(): Promise<void> {
   const catalog = await response.json() as { actors: ActorDefinition[] };
   const definitions = catalog.actors.filter(a => HANG_NHAC_AVATARS.some(id => id === a.id)||SECT_STATIONS.some(s=>s.avatarId===a.id));
   if (definitions.length !== 5) throw new Error('Thiếu bộ ba nhân vật hoặc mẫu NPC. Chạy lại bước chuẩn bị assets.');
-  await Promise.all([renderer.loadActors(definitions), renderer.loadBackgroundMap(HANG_NHAC.background.url, HANG_NHAC.world.width, HANG_NHAC.world.height)]);
+  await Promise.all([renderer.loadActors(definitions), renderer.loadAuthoredMap(HANG_NHAC.scene)]);
   presentation=new SkillPresentation(renderer.scene); await presentation.load(avatar.value);
+  lessonPresentation=new LessonPresentation(renderer.scene);
   for (const asset of renderer.assets.values()) {
     if (JSON.stringify(asset.atlas.frameSize) !== JSON.stringify(HANG_NHAC.character.frameSize) ||
         JSON.stringify(asset.atlas.anchor) !== JSON.stringify(HANG_NHAC.character.anchor)) throw new Error('Tỷ lệ nhân vật khác bản đã chốt.');
@@ -197,6 +204,7 @@ async function init(): Promise<void> {
   ready = true; loading.hidden = true; updateStatus(); stage.focus();
   Object.assign(window, { __hangNhacDiagnostics: () => ({ ready, mapId: HANG_NHAC.id, version: HANG_NHAC.version,
     world: HANG_NHAC.world, zoom: renderer.zoom, cameraCenter:{...renderer.cameraCenter}, blockers: HANG_NHAC.blockers.length, status: network.status,
+    mapParts:renderer.mapDiagnostics(),
     connectionDetail: network.detail,
     sessionId: network.room?.sessionId, roomId: network.room?.roomId,
     serverMapVersion: network.room?.state.mapVersion, backgroundBytes: HANG_NHAC.background.bytes,
@@ -215,5 +223,5 @@ async function init(): Promise<void> {
   const active=profiles.active(); if(active&&isAvatarId(active.avatarId)) { avatar.value=active.avatarId; local=createActor('local',avatar.value,names[avatar.value],local,true); await enter(); }
 }
 void init().catch(error => { ready = false; loading.textContent = `Không mở được Hằng Nhạc: ${error instanceof Error ? error.message : String(error)}`; renderer?.dispose(); });
-window.addEventListener('pagehide', () => { clearInput(); network.suspend(); presentation?.dispose(); renderer?.dispose(); });
+window.addEventListener('pagehide', () => { clearInput(); network.suspend(); skills.dispose(); lessonPresentation?.dispose(); presentation?.dispose(); renderer?.dispose(); });
 window.addEventListener('pageshow', event => { if (event.persisted) location.reload(); });

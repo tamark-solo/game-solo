@@ -1,6 +1,6 @@
 # Hằng Nhạc — tiếp dẫn, vận khí và thổ nạp
 
-**08/10/2026 · _MMO · runtime 0.12.0 · GDD 0.28.** Bản đầu của bước 3: HN01–HN02, nhật ký/chỉ đường, hoạt động nền và vật tư hồi phục. Tiếp nối [hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md), giữ TypeScript + Three.js / Node.js + Colyseus. HN03–HN12, ngoại vi và khảo nghiệm chưa hoàn tất.
+**08/10/2026 · _MMO · runtime 0.12.0 · GDD 0.28.** Bản đầu của bước 3: HN01–HN02, nhật ký/chỉ đường, hoạt động nền và vật tư hồi phục. Tiếp nối [hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md), giữ TypeScript + Three.js / Node.js + Colyseus. Đợt 09/10 bổ sung [HN03–HN04/đòn thường/bài né](HANG-NHAC-LESSONS-RUNTIME.md). HN05–HN12, ngoại vi và khảo nghiệm chưa hoàn tất.
 
 ## Chơi thử
 
@@ -15,7 +15,7 @@ Mở [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html), chọn nhân vật v
 3. Chọn đúng ý nghĩa tu vi/tích lũy hồi phục khác linh lực, rồi **chủ động xác nhận M01**. Thành quả +100 tích lũy ghi một lần; Vương Lâm/Lý Mộ Uyển có nhãn tầng 1 gameplay, Tư Đồ Nam có nhãn Hồi phục I.
 4. Chọn **Bắt đầu thổ nạp / hồi phục nền**. Có thể đi lại trong sân an toàn; tạm dừng khi thi triển, projectile còn chạy và khoảng nghỉ luyện thuật. Có thể dừng hoạt động qua NPC hoặc Nhật ký.
 
-Người coi luyện thuật giải thích bộ R01 và tạo mục tiêu cá nhân bằng chức năng hiện có; đánh lại không cho tu vi/loot và chưa hoàn thành HN03. Người coi chuẩn bị cho xem/dùng vật tư: +30 HP ngoài luyện thuật, không vượt 100, cooldown 10 giây; HP đầy không tiêu vật tư. Chưa có pháp khí, kho chung hoặc map đích để mở cửa.
+Người coi luyện thuật nay có [HN03–HN04](HANG-NHAC-LESSONS-RUNTIME.md): đòn thường, Kiếm/Lôi trúng target của bài; sau đó né warning bằng đi bộ rồi Phong. Credit lưu riêng, +80/bài một lần khi xác nhận; luyện tự do không nhận tu vi/loot hoặc tự hoàn tất bài. Người coi chuẩn bị cho xem/dùng vật tư: +30 HP ngoài luyện thuật, không vượt 100, cooldown 10 giây; HP đầy không tiêu vật tư. Chưa có pháp khí, kho chung hoặc map đích để mở cửa.
 
 ## Baseline đang thử
 
@@ -61,4 +61,4 @@ Nền access-v5-clean-v1, 3072 × 2048, 9 blocker, Spawn (1616,992), camera 1×,
 
 `npm.cmd run test:hang-nhac-sect` dùng DB/browser context cô lập trong `artifacts/`; không sửa DB/map/draft của owner. Kiểm proximity, thưởng một lần, ba nhịp đúng thời gian, hiểu nguồn lực, reload giữa bài, reconnect/restart, pause/no offline, vật tư, tiến trình bộ ba và mobile. Browser test đặt tọa độ bắt đầu từng chặng trong DB fixture để kiểm UI; unit test kiểm toàn đường đi tới cả bốn điểm trên blocker thật. Build/typecheck và hồi quy map/R01 cũng được chạy.
 
-Xem [biên bản](data/hang-nhac-sect-verification.json). Tiếp nối **HN03–HN04**: đòn đánh cơ bản, minh chứng Kiếm/Lôi trúng mục tiêu và bài đọc báo đòn/đi bộ/Phong. Sau đó mới nối HN05 tới map ngoại vi riêng, rồi các chặng cá nhân/chuẩn bị/bình cảnh/khảo nghiệm. Chưa báo hoàn tất toàn bước 3 hoặc toàn GDD.
+Xem [biên bản](data/hang-nhac-sect-verification.json). **HN03–HN04 đã có bản thử** với F/đòn thường 0 MP, credit hit server và warning cá nhân; xem [hướng dẫn](HANG-NHAC-LESSONS-RUNTIME.md). Tiếp nối HN05 tới map ngoại vi riêng, rồi các chặng cá nhân/chuẩn bị/bình cảnh/khảo nghiệm. Chưa báo hoàn tất toàn bước 3 hoặc toàn GDD.

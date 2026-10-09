@@ -35,18 +35,52 @@ const backgroundHash = hash(bytes);
 assert.equal(backgroundHash, metadata.sha256);
 assert.equal(hash(Buffer.from(asset.parts[0].file.split(',')[1], 'base64')), backgroundHash,
   'The released WebP must match the image saved by the owner.');
-const backgroundUrl = `/assets/hang-nhac/map-${backgroundHash.slice(0, 16)}.webp`;
+// Approved multipart review is packaged independently of the owner's authoring file.
+// Ordinary assets/build never reads another worktree or rewrites authored-maps.
+const layeredFolder = resolve(root, 'docs/design/world/hang-nhac-layered-v1');
+const packageData = JSON.parse(await readFile(resolve(layeredFolder, 'package.json'), 'utf8')) as {
+  ownerProjectSha256: string; projectSha256: string; sourceProjectSha256: string; sourceReviewSha256: string;
+  images: Array<{ file: string; url: string; sha256: string; bytes: number }>;
+  preview: { file: string; url: string; sha256: string; bytes: number };
+};
+assert.equal(hash(source), packageData.ownerProjectSha256, 'Owner navigation has changed; review the layered handoff before releasing.');
+const layeredBytes = await readFile(resolve(layeredFolder, 'project.json'));
+assert.equal(hash(layeredBytes), packageData.projectSha256, 'Packaged project hash mismatch.');
+const layeredProject = parseProject(JSON.parse(layeredBytes.toString('utf8')));
+assert.deepEqual(auditProject(layeredProject), [], 'Layered project must pass the level audit.');
+const layeredLevel = layeredProject.levels.find(l => l.id === layeredProject.activeLevelId)!;
+const layered = runtimeLevel(layeredProject, layeredLevel);
+for (const key of ['world', 'character', 'walkPolicy', 'walkable', 'blockers', 'portals'] as const)
+  assert.deepEqual(layered[key], navigation[key], `Layered ${key} differs from approved navigation.`);
+const imageUrls = new Set(packageData.images.map(image => image.url));
+for (const asset of layered.assets) for (const part of asset.parts)
+  assert.ok(imageUrls.has(part.file), `Unpackaged map part: ${part.file}`);
 const payload = {
   schema: 'game-solo-hang-nhac-runtime-1', id: 'hang-nhac', name: 'Hằng Nhạc', projectId: project.id, levelId: level.id,
-  sourceSha256: hash(source), background: { url: backgroundUrl, sha256: backgroundHash, bytes: bytes.length },
+  sourceSha256: hash(source),
+  background: { url: packageData.preview.url, sha256: packageData.preview.sha256, bytes: packageData.preview.bytes },
   world: navigation.world, character: navigation.character, movementSpeed: 80,
   walkPolicy: navigation.walkPolicy, walkable: navigation.walkable, blockers: navigation.blockers, portals: navigation.portals,
+  scene: {
+    projectId: layeredProject.id, levelId: layeredLevel.id, background: layeredLevel.background,
+    sourceProjectSha256: packageData.sourceProjectSha256, sourceReviewSha256: packageData.sourceReviewSha256,
+    world: layered.world, layers: layered.layers, assets: layered.assets, objects: layered.objects,
+    images: packageData.images.map(({ url, sha256, bytes }) => ({ url, sha256, bytes })),
+  },
 };
 const release = { ...payload, version: hash(JSON.stringify(payload)) };
 await mkdir(resolve(root, 'shared/data'), { recursive: true });
-await mkdir(resolve(root, 'client/public/assets/hang-nhac'), { recursive: true });
+await mkdir(resolve(root, 'client/public/assets/hang-nhac/layers'), { recursive: true });
+// Validate every source before publishing a manifest pointing to it.
+for (const image of [...packageData.images, packageData.preview]) {
+  assert.ok(/^\/assets\/hang-nhac\/(?:layers\/part-[a-f0-9]{20}\.(?:png|webp)|overview-[a-f0-9]{20}\.webp)$/.test(image.url));
+  assert.ok(/^(?:images\/part-[a-f0-9]{20}\.(?:png|webp)|overview\.webp)$/.test(image.file));
+  const sourcePath = resolve(layeredFolder, image.file), imageBytes = await readFile(sourcePath);
+  assert.equal(hash(imageBytes), image.sha256, `Map image hash mismatch: ${image.file}`);
+  assert.equal(imageBytes.length, image.bytes);
+  await copyFile(sourcePath, resolve(root, `client/public${image.url}`));
+}
 const json = JSON.stringify(release, null, 2) + '\n';
 await publishJson(resolve(root, 'shared/data/hang-nhac.json'), json);
-await copyFile(resolve(folder, metadata.imagePath), resolve(root, `client/public${backgroundUrl}`));
 await publishJson(resolve(root, 'client/public/assets/hang-nhac/manifest.json'), json);
-console.log(`Hằng Nhạc: ${release.world.width} × ${release.world.height}, ${release.blockers.length} blockers, WebP ${bytes.length} bytes, ${release.version.slice(0, 12)}.`);
+console.log(`Hằng Nhạc: ${release.world.width} × ${release.world.height}, ${release.blockers.length} blockers, ${layered.objects.length} objects / ${packageData.images.length} parts, ${release.version.slice(0, 12)}.`);

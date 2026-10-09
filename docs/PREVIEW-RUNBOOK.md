@@ -1,6 +1,6 @@
 # Chạy preview, backend thử và Map Editor
 
-**Cập nhật:** 08/10/2026 · **Runtime:** 0.12.0. TypeScript + Three.js / Node.js + Colyseus. Hằng Nhạc có hồ sơ khách SQLite/lưu, R01 luyện thử và [NPC/HN01–HN02/thổ nạp online](HANG-NHAC-SECT-RUNTIME.md); HN03–HN12/farm/khảo nghiệm/đăng nhập sản xuất còn tiếp tục. Nhấn E gần NPC, mở Nhật ký để xem đường. Xem [trạng thái](PROJECT-STATUS.md).
+**Cập nhật:** 08/10/2026 · **Runtime:** 0.12.0. TypeScript + Three.js / Node.js + Colyseus. Hằng Nhạc có hồ sơ khách SQLite/lưu, R01 luyện thử và [NPC/HN01–HN02/thổ nạp online](HANG-NHAC-SECT-RUNTIME.md); [HN03–HN04/đòn thường/bài né](HANG-NHAC-LESSONS-RUNTIME.md) đã có bản thử; HN05–HN12/farm/khảo nghiệm/đăng nhập sản xuất còn tiếp tục. Nhấn E gần NPC, mở Nhật ký để xem đường. Xem [trạng thái](PROJECT-STATUS.md).
 
 ## 1. Khởi động
 
@@ -16,7 +16,7 @@ Nếu đã có dependency, chỉ chạy lệnh `dev`. Một lệnh mở client l
 | URL | Nội dung thật sự |
 | --- | --- |
 | [Trang chính](http://127.0.0.1:5173/) | Animation, di chuyển cục bộ và sân online |
-| [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html) | Map owner/9 blocker/camera 1×; hồ sơ riêng bộ ba, lưu và luyện R01 bằng phím 1/2/3 |
+| [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html) | Scene 22 object/32 part/10 cover, 9 blocker/camera 1×; HUD Vân Ngọc dùng snapshot thật, hồ sơ riêng bộ ba và luyện R01 bằng phím/nút |
 | [Gallery chibi](http://127.0.0.1:5173/assets/chibi-roster/index.html) | Năm bộ chibi hiện có |
 | [Chibi pilot](http://127.0.0.1:5173/chibi-pilot.html) | Mẫu hướng Đông cũ để đối chiếu |
 | [Map Editor](http://127.0.0.1:5173/map-editor.html) | Level Design với thư viện mặc định trống sau reset |
@@ -53,6 +53,8 @@ Bộ legacy, ART Hằng Nhạc v1/v2/v3 và hai bản thử vùng đi đã [xóa
 
 [Bản ghép nhân vật/camera trên concept mới](design/world/hang-nhac-map-v1/README.md) là trang review riêng, dùng atlas gốc và khung desktop/mobile. Chạy server tài liệu theo [hướng dẫn](design/world/hang-nhac-map-v1/README.md); URL local hiện tại là http://127.0.0.1:8765/design/world/hang-nhac-map-v1/README.md Trang này chưa có va chạm/che khuất và không thay camera game.
 
+[HUD/layer được owner yêu cầu tích hợp](HANG-NHAC-HUD-LAYERS.md) lấy đúng clone v6/v7/v9 đang hiển thị tại `multipart-review-v4/review.html`, đóng gói tự chứa trong `_MMO`. Game render các part độc lập; ảnh overview chỉ cho minimap/demo. Không tự thay file authored map hoặc nháp Editor. Khởi động lại client/backend khi đổi bản release, không xóa SQLite/token/save.
+
 Hằng Nhạc dùng release owner cho client/server; room fixture cũ dùng `shared/world/map.ts`. Room state đang chạy giữ RAM, hồ sơ Hằng Nhạc lưu SQLite. Không ghi dữ liệu test vào authored-maps, DB thật hoặc nháp trình duyệt của người phát triển.
 
 ## 5. Build và kiểm tra
@@ -66,6 +68,10 @@ npm.cmd test
 npm.cmd run test:online
 npm.cmd run test:hang-nhac
 npm.cmd run test:hang-nhac-r01
+npm.cmd run test:hang-nhac-hud-layers
+npm.cmd run test:hang-nhac-lessons
+npm.cmd run test:hang-nhac-reload
+npm.cmd run test:skill-aim
 npm.cmd run test:skill-animation
 npm.cmd run test:skill-vfx
 npm.cmd run test:skill-body
