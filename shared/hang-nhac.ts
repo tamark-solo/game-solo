@@ -1,7 +1,8 @@
 import release from './data/hang-nhac.json';
 import { navigationWalkable, type NavigationSurface } from './navigation';
-import { moveUsingCollision, type Direction, type Input, type Motion, type Position } from './world';
-import type { MovementState } from './netcode';
+import { moveUsingCollision } from './world/movement';
+import { type Direction, type Input, type Motion, type Position } from './world/types';
+import type { MovementState } from './world/movement';
 
 export const HANG_NHAC = release;
 export const HANG_NHAC_ROOM = 'hang_nhac';

@@ -1,10 +1,10 @@
 import type { Room } from '@colyseus/sdk';
-import type { CourtyardState } from '../../../server/src/state';
+import type { CourtyardState } from '@shared/protocol/courtyard-state';
 import { SKILL_DEFINITIONS } from '../../../shared/skills/definitions';
 import { cooldownField } from '../../../shared/skills/commands';
 import type { SkillEvent, CastResult } from '../../../shared/skills/contracts';
 import { R01_IDS, type SkillId } from '../../../shared/profiles';
-import type { Input } from '../../../shared/world';
+import type { Input } from '@shared/world/types';
 import { SkillAim } from './aim';
 import { resolveSkillAim } from '../../../shared/skills/aim';
 

@@ -1,4 +1,5 @@
-import { moveUsingCollision, type Motion, type Input, type Position, type Rect } from './world';
+import { moveUsingCollision } from './world/movement';
+import { type Motion, type Input, type Position, type Rect } from './world/types';
 import data from '../docs/data/mvp-rpg-content.json';
 
 export const STARTER = data;

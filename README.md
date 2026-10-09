@@ -34,6 +34,8 @@ Mở [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html), [preview chính](htt
 
 [Hướng dẫn chạy và kiểm tra](docs/PREVIEW-RUNBOOK.md) ghi toàn bộ lệnh hiện có; [hợp đồng backend](docs/BACKEND-PREVIEW.md) tách rõ chức năng đã triển khai và mục tiêu online. [Bản thử vùng nhập môn cũ](http://127.0.0.1:5173/starter-region.html) giữ để kiểm tra kỹ thuật, không là map Hằng Nhạc mới hoặc vòng nhiệm vụ chơi được.
 
+Kiến trúc mã nguồn và luật phụ thuộc giữa các module: [ARCHITECTURE](docs/ARCHITECTURE.md).
+
 ## Tài liệu đang dùng
 
 - **Thiết kế:** [GDD](docs/GDD.md), [hệ thống tu tiên](docs/CULTIVATION-SYSTEM.md), [ba nhân vật](docs/CHARACTERS.md), [backlog](docs/MVP-BACKLOG.md), [online](docs/ONLINE-DIRECTION.md).

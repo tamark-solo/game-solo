@@ -1,4 +1,4 @@
-import type { Input } from '../../../shared/world';
+import type { Input } from '@shared/world/types';
 import { facingAim, normalizedAim } from '../../../shared/skills/aim';
 
 // Input intent is separate from actor motion and the server-confirmed active cast.

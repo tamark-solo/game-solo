@@ -1,6 +1,6 @@
 import {translateRegion} from './region-spline.ts';
 import {type EditorAsset,type EditorLevel,type EditorObject,type EditorRegion,type EditorProject,type EditorPrefab,newProject,parseProject,runtimeLevel,editorWalkable,regionActivity,uid} from './map-editor.ts';
-import type {Position} from './world.ts';
+import type { Position } from './world/types';
 
 export interface EntitySelection {kind:'object'|'region';id:string}
 export interface Box {left:number;top:number;w:number;h:number}

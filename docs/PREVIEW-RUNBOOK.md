@@ -53,7 +53,7 @@ Bộ legacy, ART Hằng Nhạc v1/v2/v3 và hai bản thử vùng đi đã [xóa
 
 [Bản ghép nhân vật/camera trên concept mới](design/world/hang-nhac-map-v1/README.md) là trang review riêng, dùng atlas gốc và khung desktop/mobile. Chạy server tài liệu theo [hướng dẫn](design/world/hang-nhac-map-v1/README.md); URL local hiện tại là http://127.0.0.1:8765/design/world/hang-nhac-map-v1/README.md Trang này chưa có va chạm/che khuất và không thay camera game.
 
-Hằng Nhạc dùng release owner cho client/server; room fixture cũ dùng `shared/world.ts`. Room state đang chạy giữ RAM, hồ sơ Hằng Nhạc lưu SQLite. Không ghi dữ liệu test vào authored-maps, DB thật hoặc nháp trình duyệt của người phát triển.
+Hằng Nhạc dùng release owner cho client/server; room fixture cũ dùng `shared/world/map.ts`. Room state đang chạy giữ RAM, hồ sơ Hằng Nhạc lưu SQLite. Không ghi dữ liệu test vào authored-maps, DB thật hoặc nháp trình duyệt của người phát triển.
 
 ## 5. Build và kiểm tra
 
@@ -89,7 +89,7 @@ Browser smoke dùng Chrome headless đã cài, mặc định `C:/Program Files/G
 | --- | --- |
 | [client/src](../client/src/) | UI, atlas/animation, renderer, network và editor |
 | [server/src](../server/src/) | Phòng thử, state và phiên trong RAM |
-| [shared/world.ts](../shared/world.ts) / [netcode.ts](../shared/netcode.ts) | Fixture online và luật di chuyển/input dùng chung |
+| [shared/protocol](../shared/protocol/) / [shared/world](../shared/world/) | Hợp đồng input/state online, fixture và luật di chuyển/va chạm dùng chung |
 | [shared/hang-nhac.ts](../shared/hang-nhac.ts) / [navigation.ts](../shared/navigation.ts) | Release Hằng Nhạc và va chạm polygon dùng chung Editor/client/server |
 | [shared/map-editor.ts](../shared/map-editor.ts) / [level-design.ts](../shared/level-design.ts) | Model editor, vùng/portal, audit và export |
 | [scripts/map-editor-api.ts](../scripts/map-editor-api.ts) | API lưu dự án/level trong Vite dev/preview; không phải lưu tiến trình người chơi |

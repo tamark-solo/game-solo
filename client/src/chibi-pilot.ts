@@ -1,7 +1,8 @@
 import './style.css';
-import { AnimationPlayer, type ActorDefinition } from './atlas';
-import { PreviewRenderer, type RenderActor } from './renderer';
-import { move } from '../../shared/world';
+import type { ActorDefinition } from './assets/atlas';
+import { AnimationPlayer } from './assets/animation';
+import { PreviewRenderer, type RenderActor } from './render/renderer';
+import { move } from '@shared/world/movement';
 
 function el<T extends HTMLElement = HTMLElement>(id: string): T { return document.getElementById(id) as T; }
 const stage = el('stage'), renderer = new PreviewRenderer(stage, el('world-labels'));

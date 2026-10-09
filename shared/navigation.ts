@@ -1,4 +1,4 @@
-import type { Position } from './world.ts';
+import type { Position } from './world/types';
 
 export interface NavigationSurface {
   width: number; height: number; walkPolicy: 'full' | 'regions';

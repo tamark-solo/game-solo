@@ -3,7 +3,7 @@ import type { AvatarId } from '../../shared/profiles';
 import { CYCLE_PHASE_MS, CULTIVATION_GATE, LEVEL_THRESHOLDS, SECT_STATIONS, guideText, nearStation, progressionLabel,
   type SectAction, type SectCommand, type SectResult, type SectView, type StationId } from '../../shared/sect';
 import { sectRoute } from '../../shared/sect-route';
-import type { Position } from '../../shared/world';
+import type { Position } from '@shared/world/types';
 
 const element=<K extends keyof HTMLElementTagNameMap>(tag:K,text?:string):HTMLElementTagNameMap[K]=>{const node=document.createElement(tag);if(text)node.textContent=text;return node;};
 const reasons:Record<string,string>={ distance:'Tiến lại gần người hướng dẫn, trên cùng lối đi, rồi nhấn E.',profile:'Vào sân chung để lưu hành trình.',inactive:'Nhân vật chưa sẵn sàng.',

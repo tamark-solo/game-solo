@@ -1,11 +1,11 @@
 import * as THREE from 'three';
-import type { CourtyardState } from '../../../server/src/state';
+import type { CourtyardState } from '@shared/protocol/courtyard-state';
 import type { SkillEvent } from '../../../shared/skills/contracts';
 import { SkillTimeline, type SpriteSample, type PresentationActor } from '../../../shared/skills/presentation';
-import type { RenderActor } from '../renderer';
+import type { RenderActor } from '../render/renderer';
 import { SkillAssets } from './assets';
 import { TrainingTargetView } from './training-target-view';
-import {atlasSprite,setSpriteFrame} from '../sprite-frame';
+import { atlasSprite, setSpriteFrame } from '../render/sprite-frame';
 
 interface EffectSprite {sprite:THREE.Sprite;clip:string}
 export class SkillPresentation {

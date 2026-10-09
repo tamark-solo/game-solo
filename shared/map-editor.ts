@@ -1,6 +1,7 @@
 import {parseExtraction,type AssetExtraction} from './asset-extraction.ts';
 import {sampleSpline,MAX_SPLINE_ANCHORS,MAX_SPLINE_SAMPLES,type RegionSpline} from './region-spline.ts';
-import { moveUsingCollision, type Motion, type Input, type Position } from './world.ts';
+import { moveUsingCollision } from './world/movement';
+import { type Motion, type Input, type Position } from './world/types';
 import { inside, navigationWalkable } from './navigation.ts';
 export { inside, edgeDistance } from './navigation.ts';
 

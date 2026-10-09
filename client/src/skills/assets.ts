@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { SkillTimeline, type SkillPresentationCatalog } from '../../../shared/skills/presentation';
-import { imageAlpha, cropAlpha, type AlphaMask } from '../occlusion';
-import type { ActorSpriteFrame } from '../renderer';
+import { imageAlpha, cropAlpha, type AlphaMask } from '../render/occlusion';
+import type { ActorSpriteFrame } from '../render/renderer';
 
 export class SkillAssets {
   catalog!:SkillPresentationCatalog;

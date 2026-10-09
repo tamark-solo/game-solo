@@ -1,5 +1,5 @@
 import { uid, type EditorAsset, type EditorObject } from '../../shared/map-editor';
-import type { Position } from '../../shared/world';
+import type { Position } from '@shared/world/types';
 import { sampleSpline, nearestSplineEdge } from '../../shared/region-spline';
 import { cutOutline, cutBounds, type AssetExtraction, type CutShape } from '../../shared/asset-extraction';
 

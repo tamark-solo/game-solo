@@ -1,7 +1,8 @@
-import { PreviewRenderer, type RenderActor } from './renderer';
-import { AnimationPlayer, type ActorDefinition } from './atlas';
+import { PreviewRenderer, type RenderActor } from './render/renderer';
+import { AnimationPlayer } from './assets/animation';
+import { type ActorDefinition } from './assets/atlas';
 import { STARTER, starterScene, starterZoneAt, moveInStarter, isStarterWalkable } from '../../shared/starter-region';
-import type { Direction, Position } from '../../shared/world';
+import type { Direction, Position } from '@shared/world/types';
 
 const element = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 const stage = element('stage');
