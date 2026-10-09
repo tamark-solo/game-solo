@@ -1,7 +1,7 @@
-# Sửa bộ đi bộ — tay và chân
+# Sửa bộ đi bộ — tay và chân (hồ sơ trước chibi)
 
 **Phiên bản:** 0.1, ngày 07/10/2026.  
-**Phạm vi:** Vương Lâm áo xám và hai mẫu đệ tử đang đi trong preview.  
+**Phạm vi lịch sử:** Vương Lâm áo xám và hai mẫu đệ tử ở giai đoạn preview tám pose. Bộ hiện hành theo [CHIBI-ROSTER-SPEC](CHIBI-ROSTER-SPEC.md).\
 **Trạng thái:** bản vẽ sửa để xem thử; chất lượng chuyển động và nhận diện trong các frame mới chờ người phát triển đánh giá.
 
 **Phản hồi mới:** bộ này cần chỉnh tiếp. Người phát triển chọn tỷ lệ chibi theo reference; xem [phân tích và mẫu một hướng](GAIT-REFERENCE-REVIEW.md). Các atlas trong tài liệu này được giữ để đối chiếu.
@@ -12,16 +12,16 @@ Bộ cũ có sáu frame đi mỗi hướng. Một số pha dùng tư thế tay t
 
 Bản sửa vẽ tám pha mỗi hướng: tiếp đất A → hạ thân A → chân B đi qua → chân B tiến lên → tiếp đất B → hạ thân B → chân A đi qua → chân A tiến lên. Tay cùng bên chân tiến về hướng ngược lại; bàn tay đi qua hông và đổi hướng ở nửa sau vòng bước. Tay buông tự nhiên, không giữ tư thế chỉ hoặc đánh.
 
-| Bộ dùng trong preview | Đứng tái dùng | Đi vẽ lại | Tổng frame |
+| Bộ dùng trong preview tại mốc lịch sử | Đứng tái dùng | Đi vẽ lại | Tổng frame |
 | --- | --- | --- | --- |
 | Vương Lâm áo xám | 4 | 4 hướng × 8 = 32 | 36 |
 | Đệ tử nam | 4 | 4 hướng × 8 = 32 | 36 |
 | Đệ tử nữ | 4 | 4 hướng × 8 = 32 | 36 |
 | Tư Đồ Nam linh thể | 4 hình tĩnh | Chưa có | 4 |
 | Lý Mộ Uyển áo tím | 4 hình tĩnh | Chưa có | 4 |
-| Tổng preview | 20 | 96 | **116** |
+| Tổng preview tại mốc lịch sử | 20 | 96 | **116** |
 
-116 là số frame của năm bộ đang nạp. Bộ cũ 92 frame được giữ để so sánh, không cộng vào tổng đang chạy. Ba nhân vật chính vẫn là Vương Lâm, Tư Đồ Nam và Lý Mộ Uyển; hai đệ tử là mẫu nhân vật người chơi. Mốc xuất hiện NPC giữ theo roster.
+116 là số frame tại mốc tám pose trước chibi, không là catalog hiện hành. Nay catalog có **6 bộ/136 frame**, gồm năm chibi 100 và Vương Lâm trước 36 để đối chiếu. Bộ ba đều có đứng/đi hoặc lướt bốn hướng và là lựa chọn người chơi từ đầu theo GDD 0.28; sân online vẫn dùng hai mẫu đệ tử kỹ thuật.
 
 ## 2. Nguồn và xuất native
 
@@ -40,7 +40,7 @@ Chạy `npm.cmd run dev`, mở **http://127.0.0.1:5173/** rồi chọn **So sán
 1. Chọn từng nhân vật và bốn hướng. Dừng ở pose **0 và 4** để xem hai lần tiếp đất và tay đối nhịp.
 2. Xem pose **2 và 6**: một chân đỡ, một chân đi qua; tay qua vị trí nghỉ dưới vai.
 3. Chạy chậm rồi xem nối **7 → 0**, phóng 1×/2×/4× trên nền sáng/tối.
-4. Xem trong map và sân online. Chỉnh sải bước để đánh giá chân đỡ so với mặt đất.
+4. Xem bộ đối chiếu trên map; sân online hiện dùng đệ tử chibi. Chỉnh sải bước để đánh giá chân đỡ so với mặt đất.
 
 Inspector giữ FPS thủ công 1–12, mặc định 8; tám frame tương đương vòng một giây tại chỗ. Map/online dùng quãng đường, mặc định 48 px/vòng. Ở 80 px/giây, vòng bước dài 0,6 giây và tương đương khoảng 13,33 frame/giây. Đây là thông số hiệu chỉnh trong preview; chưa là sải bước đã duyệt cho game.
 

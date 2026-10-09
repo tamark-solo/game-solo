@@ -1,16 +1,14 @@
-# Quái, nguy hiểm và chiến đấu — MVP và dài hạn
+# Quái, nguy hiểm và chiến đấu — hồ sơ lịch sử
 
-> **Hồ sơ encounter hiện hành:** [Đối thủ và khảo nghiệm Hằng Nhạc v0.1](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất HN-E01/02/03, vùng/timing/AI, ba pha HN10 và checkpoint/kết nối lại, đồng bộ với [trải nghiệm v0.4](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay](NGUNG-KHI-GAMEPLAY-SPEC.md) và [tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md). Chưa là danh tính canon hoặc combat đã triển khai; hồ sơ bên dưới giữ làm tham chiếu lịch sử.
+> **Toàn bộ hồ sơ bên dưới là tham chiếu lịch sử ngày 06/10:** ENC-001/002/003, combat tự chạy theo lượt CP-001/002/003, thông số, lộ trình A → B và đề xuất offline farm giữ để đối chiếu. Chúng không là luật nhập môn hiện hành hoặc encounter đã triển khai. Mô hình đệ tử riêng từng được xét cũng đã bị thay.
 
-> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Luật gặp gỡ/phân kỳ tầng 1/giao đấu bên dưới là tham chiếu cũ; khảo nghiệm, đối thủ và combat của nhập môn ba người còn cần hồ sơ mới. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
-
-> **Điều chỉnh online v0.7:** hổ/hang/kiếm linh và trận của Vương Lâm dưới đây thuộc hồ sơ chính truyện tham chiếu. Người chơi tạo đệ tử riêng; gặp gỡ/đối thủ/phần thưởng của đệ tử cần biên tập riêng. Không dùng sự kiện truyện để nhân vật mỗi tài khoản nhận vật phẩm độc hữu của Vương Lâm. [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md) xác định hướng mới; B vẫn sau A.
+> **Chuẩn hiện hành [GDD 0.28](GDD.md):** ba nhân vật chọn từ đầu, có sẵn Kiếm Khí/Lôi Ấn/Ngự Phong Bộ R01; Hằng Nhạc qua Ngưng Khí, phân hóa từ Trúc Cơ. Dùng [đối thủ và khảo nghiệm Hằng Nhạc](HANG-NHAC-ENCOUNTERS-TRIAL.md), [trải nghiệm](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay](NGUNG-KHI-GAMEPLAY-SPEC.md) và [tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) để đánh giá HN-E01/02/03, ba pha HN10 và checkpoint/kết nối lại. Các hồ sơ mới còn là đề xuất; idle hiện hành không tự combat khi đóng game.
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  
-**Trạng thái:** lộ trình A → B đã chốt; hồ sơ gặp gỡ và luật combat chưa được triển khai, chơi thử.  
-**Tham chiếu:** [map và lộ trình](WORLD-MAPS.md), [asset](ASSET-PLAN.md), [GDD](GDD.md).
+**Trạng thái nguồn:** lộ trình A → B của bản trước; hồ sơ gặp gỡ/luật combat chưa được triển khai, chơi thử.\
+**Tham chiếu lịch sử:** [node truyện](WORLD-MAPS.md), [asset](ASSET-PLAN.md), [GDD idle](GDD-IDLE-REFERENCE-v0.26.md).
 
-## 1. Phạm vi gặp gỡ theo lộ trình đã chốt
+## 1. Phạm vi gặp gỡ theo lộ trình lịch sử
 
 Với MVP phàm nhân → Ngưng Khí tầng 1, dùng quái như một phần của biến cố nhập môn. Vòng chính vẫn là tu luyện và tài nguyên. Phương án A có **1 sinh vật gây nguy hiểm** và **2 thử thách môi trường**, tổng cộng 3 hồ sơ gặp gỡ.
 

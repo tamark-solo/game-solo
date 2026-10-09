@@ -34,14 +34,19 @@
 <body>
   <main>
     <h1>Thư viện tạo hình nhân vật</h1>
-    <p>MMORPG tu luyện có idle; nhân vật pixel trên nền stylized 2D, portrait/truyện giữ tranh mực/giấy cổ. Vương Lâm chibi làm chuẩn. Lý Mộ Uyển native-v5 đã chấp nhận cho bản thử; hai đệ tử và Tư Đồ Nam chibi mới còn chờ đánh giá. Các bảng tạo hình trước giữ tham chiếu.</p>
+    <p>TuTiên: MMORPG tu luyện, combat chủ động và idle hỗ trợ. GDD 0.28 cho chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; cùng Hằng Nhạc–Ngưng Khí, phân hóa từ Trúc Cơ. Nhân vật pixel trên nền stylized 2D, portrait/truyện giữ tranh mực/giấy cổ. Vương Lâm chibi làm chuẩn. Lý Mộ Uyển native-v5 đã chấp nhận cho bản thử; hai đệ tử và Tư Đồ Nam chibi mới còn chờ đánh giá. Các bảng tạo hình trước giữ tham chiếu.</p>
+    <section id="core-cast">
+      <h2>Thi triển R01 · bộ ba, bốn hướng</h2>
+      <p><a href="core-cast-v1/index.html">Xem pose cạnh nhân vật native</a> · <a href="core-cast-v1/README.md">Nguồn/prompt</a> · <a href="../../SKILL-CORE.md">Kiến trúc và debug skill</a>.</p>
+      <p class="note">36 clip / 300 frame thi triển, 10 FX R01 gốc. ART mới chờ đánh giá hình; giữ frame/collider đứng và đi hiện hành.</p>
+    </section>
     <section id="chibi-roster">
-      <h2>Dàn chibi mới · preview 0.5.1</h2>
+      <h2>Dàn chibi hiện hành · nguồn từ preview 0.5.1</h2>
       <p><a href="chibi-roster-v1/index.html">Xem năm nhân vật cùng hướng và pose</a> · <a href="http://127.0.0.1:5173/assets/chibi-roster/index.html">Mở gallery đang chạy</a> · <a href="http://127.0.0.1:5173/">Thử di chuyển trên map</a>.</p>
       <p>20 frame/mẫu, bốn hướng, frame 64 × 96. Lý Mộ Uyển: mặt mềm, tóc xanh đen buộc thấp, áo lavender hai lớp/cổ ngà. Tư Đồ Nam: linh thể đứng/lướt, chân duỗi và khoảng khuyết ở ngực. Hai đệ tử mới dùng trên sân online.</p>
       <p class="note"><a href="chibi-roster-v1/README.md">Nguồn và prompt imagegen</a> · <a href="../../CHIBI-ROSTER-SPEC.md">Quy chuẩn và trạng thái duyệt</a>.</p>
     </section>
-    <p class="note"><a href="../../WANG-LIN-VISUAL-SPEC.md">Hồ sơ Vương Lâm</a> ghi nguồn tiểu thuyết và diện mạo riêng. <a href="wang-lin-gray-walk-v1/index.html">Trang animation</a> dùng 28 frame native 64 × 96, palette 24 mục; chuyển động mới cần xem thử.</p>
+    <p class="note"><a href="../../WANG-LIN-VISUAL-SPEC.md">Hồ sơ Vương Lâm</a> ghi nguồn tiểu thuyết và diện mạo riêng. <a href="wang-lin-gray-walk-v1/index.html">Trang animation lịch sử</a> dùng 28 frame native 64 × 96, palette 24 mục; main hiện mặc định chibi 20 frame.</p>
     <nav aria-label="Tạo hình"><a href="core-ui-v1/index.html">Chân dung UI</a><a href="#core-trio">Bộ ba trọng tâm</a><a href="core-trio-v1/index.html">Tư Đồ Nam / Lý Mộ Uyển</a><a href="#avatar-pixel">Pixel đệ tử</a><a href="#male">Đệ tử nam v2</a><a href="#female">Đệ tử nữ v2</a><a href="#wang-lin-animation">Vương Lâm đứng/đi</a><a href="#wang-lin">Vương Lâm v2</a><a href="#wang-lin-expressions">Biểu cảm</a><a href="#wang-lin-pixel">Nguồn pixel</a><a href="../../CHARACTERS.md">Dàn nhân vật</a><a href="../index.html">Thư viện UX/ART</a></nav>
     <section>
       <h2>Phạm vi nhân vật đề xuất</h2>
@@ -49,10 +54,10 @@
       <table>
         <thead><tr><th>Phạm vi</th><th>Số lượng</th></tr></thead>
         <tbody>
-          <tr><td>Nhân vật điều khiển</td><td>1 đệ tử mỗi tài khoản; 2 mẫu hình dùng chung</td></tr>
-          <tr><td>Nhân vật trọng tâm dài hạn</td><td>3: Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển</td></tr>
-          <tr><td>NPC có tên trong A</td><td>7 người; cha mẹ dùng chung 1 nguồn chân dung</td></tr>
-          <tr><td>NPC sau A → B</td><td>10 người; Lý Mộ Uyển dành cho arc sau</td></tr>
+          <tr><td>Nhân vật người chơi trong thiết kế</td><td>Chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; chưa triển khai luồng chọn/tiến trình online</td></tr>
+          <tr><td>Catalog preview local</td><td>5 bộ chibi/100 frame + Vương Lâm trước 36 để đối chiếu = 6 bộ/136 frame</td></tr>
+          <tr><td>Sân online hiện có</td><td>2 mẫu đệ tử chibi kỹ thuật, 40 frame; tên tạm và di chuyển</td></tr>
+          <tr><td>Hồ sơ nguồn trước</td><td>Các concept/tĩnh và dự toán NPC A → B giữ lịch sử; mốc nguyên tác không khóa quyền chọn bộ ba</td></tr>
         </tbody>
       </table>
     </section>
@@ -60,11 +65,11 @@
       <h2>Bộ ba trọng tâm · Nhận diện trước NPC phụ</h2>
       <p><a href="core-ui-v1/index.html">Chân dung UI 512/160/64</a>: Vương Lâm áo xám, Tư Đồ Nam linh thể, Lý Mộ Uyển áo tím; PNG/WebP, một biểu cảm cơ bản mỗi người, hình mới chờ đánh giá. <a href="../../CORE-CHARACTER-MOTION-PLAN.md">Kế hoạch động tác</a> ghi phần đã có và phần cần vẽ.</p>
       <p><a href="core-trio-v1/index.html">Mở trang tạo hình và mẫu pixel của Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển</a>. Hai nhận diện mới dùng nguyên tác làm căn cứ, mặt/tóc/đường áo là thiết kế riêng của game.</p>
-      <p>Tư Đồ Nam đứng v3 có mặt/tóc v2, dáng lơ lửng và linh thể ít sương; Lý Mộ Uyển có áo tím, biến thể áo đỏ và tóc buộc đuôi. Mỗi người thêm bốn mẫu tĩnh để xem camera; thời điểm xuất hiện vẫn theo B/arc sau.</p>
-      <p class="note"><a href="../../CORE-CHARACTER-VISUAL-SPEC.md">Hồ sơ và nguồn chương</a> · <a href="core-trio-v1/README.md">Nguồn/prompt</a>. Lý Mộ Uyển v1 đã chấp nhận; Tư Đồ Nam đứng v3 tạm chấp nhận.</p>
+      <p>Gói trước chibi: Tư Đồ Nam đứng v3 giữ mặt/tóc v2, linh thể ít sương; Lý Mộ Uyển có áo tím/đỏ và tóc buộc đuôi, mỗi người bốn mẫu tĩnh. Bộ chibi hiện hành của cả ba có đứng/đi hoặc lướt bốn hướng; Lý Mộ Uyển native-v5 đã chọn, portrait v1 cần đồng bộ.</p>
+      <p class="note"><a href="../../CORE-CHARACTER-VISUAL-SPEC.md">Hồ sơ và nguồn chương</a> · <a href="core-trio-v1/README.md">Nguồn/prompt</a>. Duyệt nguồn tại mốc trước: Lý Mộ Uyển v1 đã chấp nhận; Tư Đồ Nam đứng v3 tạm chấp nhận. Bộ chibi Tư Đồ Nam vẫn chờ đánh giá.</p>
     </section>
     <section id="avatar-pixel">
-      <h2>Hai đệ tử · Pixel đứng và đi thử</h2>
+      <h2>Hai đệ tử · Bộ 28 frame trước chibi</h2>
       <p><a href="player-avatars-v2/index.html">Mở trang so sánh cùng Vương Lâm và thử hai mẫu trên sân</a>: đổi hướng, dừng ở từng frame, xem 1×/2×/4×/8×, đổi nền và chọn mẫu thử đi.</p>
       <div class="avatar-atlases">
         <article><h3>Đệ tử nam · Búi cao</h3><div class="native-scroll"><a href="player-avatars-v2/male/native-v2/atlas.png"><img class="native-atlas" src="player-avatars-v2/male/native-v2/atlas.png" width="448" height="384" alt="Atlas nam: bốn hàng hướng, mỗi hàng một frame đứng và sáu frame đi, tóc búi cao và đai xanh"></a></div></article>
@@ -74,12 +79,12 @@
     </section>
     <section id="wang-lin-chibi">
       <h2>Vương Lâm · Chibi đứng và đi bốn hướng</h2>
-      <p><a href="http://127.0.0.1:5173/">Mở preview Three.js</a>, chọn Thử trên map và dùng WASD hoặc nút hướng. Bộ này được chọn mặc định; mẫu hướng Đông đã được đánh giá tốt, ba hướng mới chờ duyệt chuyển động.</p>
+      <p><a href="http://127.0.0.1:5173/">Mở preview Three.js</a>, chọn Thử trên map và dùng WASD hoặc nút hướng. Bộ này được chọn mặc định; sau sửa pose Đông cuối người phát triển phản hồi khá ổn và yêu cầu áp dụng tỷ lệ cho dàn tiếp theo.</p>
       <div class="native-scroll"><a href="wang-lin-chibi-walk-v1/native-v2/atlas.png"><img src="wang-lin-chibi-walk-v1/native-v2/atlas.png" width="320" height="384" style="width:320px;max-width:none;image-rendering:pixelated" alt="Vương Lâm chibi: bốn hàng xuống, trái, phải, lên; mỗi hàng một pose đứng và bốn pose đi"></a></div>
       <p class="note">20 frame, 64 × 96; điểm chân (32, 88), palette 24 mục. <a href="wang-lin-chibi-walk-v1/README.md">Nguồn/prompt imagegen tích hợp</a> · <a href="wang-lin-chibi-walk-v1/native-v2/atlas.json">JSON</a> · <a href="wang-lin-chibi-walk-v1/verification.json">Kiểm tra</a>.</p>
     </section>
     <section id="wang-lin-animation">
-      <h2>Vương Lâm · Bộ đứng và đi đầu tiên</h2>
+      <h2>Vương Lâm · Bộ 28 frame lịch sử</h2>
       <p><a href="wang-lin-gray-walk-v1/index.html">Mở trang animation và thử bước trên sân</a>: xem bốn hướng, dừng ở từng frame, phóng nguyên lần và đổi nền.</p>
       <div class="native-scroll"><a href="wang-lin-gray-walk-v1/native-v2/atlas.png"><img class="native-atlas" src="wang-lin-gray-walk-v1/native-v2/atlas.png" width="448" height="384" alt="Atlas đứng và đi của Vương Lâm áo xám: bốn hàng hướng xuống, trái, phải, lên; mỗi hàng một frame đứng và sáu frame đi"></a></div>
       <p class="note">Frame 64 × 96; điểm chân (32, 88); palette 24 mục gồm trong suốt. Nhận diện đã duyệt, motion là bản đầu. <a href="../../WANG-LIN-SPRITE-SPEC.md">Spec sprite</a> · <a href="wang-lin-gray-walk-v1/native-v2/atlas.json">JSON</a> · <a href="wang-lin-gray-walk-v1/README.md">Nguồn/prompt</a>.</p>
@@ -104,14 +109,14 @@
       <p class="note">Nguồn nhận diện 1.254 × 1.254 được giữ; bộ native xuất riêng trong <a href="wang-lin-gray-walk-v1/index.html">trang animation</a>. <a href="wang-lin-sprite-study/wang-lin-gray-pixel-v2.prompt.txt">Prompt đã dùng</a> · <a href="wang-lin-sprite-study/index.html">So sánh phong cách v1</a> · Nền map cũ đã xóa; dùng editor cho map mới.</p>
     </section>
     <section id="male">
-      <h2>Đệ tử nam v2 · Mẫu người chơi</h2>
+      <h2>Đệ tử nam v2 · Avatar thử nghiệm</h2>
       <a href="player-male-novice-v2.png"><img loading="lazy" src="player-male-novice-v2.png" width="1536" height="1024" alt="Đệ tử nam trưởng thành trẻ, hàm hơi vuông, vai rộng, tóc búi cao, áo xám đai xanh; ba góc thân và hai chân dung"></a>
       <p>Mặt rộng và hàm rõ hơn, tóc búi cao gọn, vai rộng hơn Vương Lâm; áo xám và đai xanh trầm. Tên do người chơi đặt, mẫu không thay đổi chỉ số.</p>
       <p class="note">Nhân vật do game bổ sung; nhận diện v2 còn chờ đánh giá. <a href="player-male-novice-v2.prompt.txt">Prompt đã dùng</a> · <a href="player-avatars-v2/index.html">Xem pixel</a>.</p>
       <details><summary>Xem mẫu nam v1</summary><a href="player-male-novice-v1.png"><img loading="lazy" src="player-male-novice-v1.png" width="1536" height="1024" alt="Mẫu nam v1 được giữ để so sánh"></a><p><a href="player-male-novice-v1.prompt.txt">Prompt v1</a>.</p></details>
     </section>
     <section id="female">
-      <h2>Đệ tử nữ v2 · Mẫu người chơi</h2>
+      <h2>Đệ tử nữ v2 · Avatar thử nghiệm</h2>
       <a href="player-female-novice-v2.png"><img loading="lazy" src="player-female-novice-v2.png" width="1536" height="1024" alt="Đệ tử nữ trưởng thành trẻ, một búi thấp sau gáy, áo xám đai xanh; ba góc thân và hai chân dung"></a>
       <p>Búi thấp sau gáy nhất quán giữa các góc, dáng gọn và mặt oval rộng. Cùng chất liệu và cấp trang bị với mẫu nam; mẫu hình không đổi chỉ số tu luyện.</p>
       <p class="note">Nhân vật do game bổ sung; nhận diện v2 còn chờ đánh giá. <a href="player-female-novice-v2.prompt.txt">Prompt chỉnh tóc</a> · <a href="player-female-novice-v2-study.prompt.txt">Prompt đầu</a> · <a href="player-avatars-v2/index.html">Xem pixel</a>.</p>

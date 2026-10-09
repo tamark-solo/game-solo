@@ -1,10 +1,10 @@
 # Tham chiếu mới — tỷ lệ chibi và bước đi nhỏ
 
-**Ngày:** 07/10/2026.  
+**Ngày nghiên cứu:** 07/10/2026; đối chiếu hiện trạng 08/10/2026.\
 **Đã chốt:** người phát triển chọn học cả tỷ lệ đầu lớn/thân gọn của reference.  
 **Bộ hiện có:** [Vương Lâm chibi bốn hướng](design/characters/wang-lin-chibi-walk-v1/README.md), 4 đứng + 16 pose đi. Xem **http://127.0.0.1:5173/**. Mẫu hướng Đông ban đầu giữ ở `/chibi-pilot.html`.
 
-**Cập nhật web:** người phát triển phản hồi mẫu Đông nhìn ổn và yêu cầu sản xuất ba hướng còn lại. Bộ đầy đủ được chọn mặc định, mở WASD và cảm ứng bốn hướng; hình Đông được giữ nguyên pixel, ba hướng mới còn chờ đánh giá. Trang đối chiếu riêng giữ mẫu Đông và có tùy chọn bật bộ trước.
+**Cập nhật web:** bộ bốn hướng native-v2 đã chọn mặc định và mở WASD/cảm ứng. Sau sửa pose Đông cuối, người phát triển phản hồi khá ổn và yêu cầu áp dụng tỷ lệ cho dàn tiếp theo; 19 frame khác giữ nguyên. Mẫu Đông đầu và bộ trước được giữ đối chiếu; [dàn chibi hiện hành](CHIBI-ROSTER-SPEC.md) có đủ bộ ba và hai đệ tử.
 
 ## 1. Quan sát reference
 
@@ -34,7 +34,7 @@ Bộ tám pose trước được ghi **cần chỉnh tiếp sau phản hồi**. 
 - Bốn pose gốc: tiếp đất A → chân B đi qua → tiếp đất B → chân A đi qua.
 - Mục tiêu tỷ lệ khoảng 2,5–3 đầu; đây là brief thử. Hình native đã xuất cao 80–82 px, frame 64 × 96, điểm chân (32,88), palette cũ 24 mục và alpha 0/255.
 - Chân nhấc thấp, tay gần thân, tóc/gấu áo dao động ít. Contact B sửa riêng tay ở nguồn v2.
-- Chỉ có hướng Đông. Loader một hướng cần khai báo rõ trong trang thử; loader actor đầy đủ vẫn yêu cầu đủ bốn hướng.
+- Pilot lịch sử chỉ có hướng Đông. Loader một hướng khai báo riêng; bộ main hiện đủ bốn hướng và loader actor đầy đủ vẫn yêu cầu đúng dữ liệu.
 
 Trang thử dùng chung **Three.js renderer**, nearest sampling, điểm neo và luật di chuyển với preview chính. Có xem tại chỗ, đứng/đi, bước pose, zoom 1×/2×/4×, nền sáng/tối/lưới và đi trên sân. Hai hình cạnh nhau giúp đối chiếu tỷ lệ; có thể ẩn bộ trước.
 
@@ -44,4 +44,4 @@ Trong inspector, hai bộ dùng cùng thời lượng chu kỳ, mặc định 0,
 
 Kiểm tra [nguồn](design/characters/wang-lin-chibi-pilot-v1/verification.json) và [preview](data/preview-verification.json) chỉ xác nhận kỹ thuật. Cần xem đầu/thân ổn định, chân trụ, sự đổi chân, tay đối nhịp, đoạn nối cuối → đầu và chuyển đứng–đi. Nếu cần sửa, ưu tiên đúng pose trong mẫu một hướng.
 
-Ba hướng còn lại đã được sản xuất theo phản hồi tích cực của người phát triển. Bộ bốn hướng có 20 frame 64 × 96, palette/điểm chân chung, 15 hình mới và 5 hình Đông giữ nguyên. Xem [nguồn, prompt và quy trình kiểm tra](design/characters/wang-lin-chibi-walk-v1/README.md). Tiếp theo đánh giá vòng đi khi đổi hướng, rồi mới áp dụng tỷ lệ cho hai đệ tử và NPC. Ngân sách dài hạn cần xét lại sau quyết định vòng đi; số nhân vật và mốc truyện giữ theo roster.
+Bộ bốn hướng có 20 frame 64 × 96; native-v1 thêm 15 hình và giữ 5 hình Đông của pilot. Native-v2 sửa riêng pose Đông cuối, giữ 19 frame còn lại. Xem [nguồn/prompt](design/characters/wang-lin-chibi-walk-v1/README.md). Tỷ lệ đã áp dụng cho hai đệ tử, Tư Đồ Nam và Lý Mộ Uyển; [kế hoạch motion](CORE-CHARACTER-MOTION-PLAN.md) hiện có 60 frame core, còn 16 bổ sung chưa vẽ. Cả bộ ba chọn từ đầu trong GDD; mốc truyện nguyên tác không khóa quyền chọn.

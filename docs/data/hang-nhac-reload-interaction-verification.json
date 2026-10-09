@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-09",
+  "branch": "_MMO",
+  "issue": "E and the on-screen NPC interaction button stop working after development rebuild/reload",
+  "reproducedBeforeFix": [
+    {
+      "sequence": "Connect, transport drop, reconnect successfully, reload",
+      "result": "The saved reconnection token is expired. Resume fails and the fallback join is denied by the reserved profile lease; the page becomes offline and both NPC entry points are disabled.",
+      "cause": "SDK 0.18.5 invokes onReconnect before assigning the newly rotated reconnectionToken. The application persisted the previous token in that callback."
+    },
+    {
+      "sequence": "Connect, restart the fixture backend without reloading the page",
+      "result": "The old room disappears and the application stays in error instead of recovering the profile."
+    }
+  ],
+  "changes": [
+    "Defer the application reconnect callback until the handshake finishes, so ProfileSession remembers the new token.",
+    "Opt Hằng Nhạc into bounded recovery after an unexpected room termination: resume first, then join the same saved profile when the old room no longer exists.",
+    "Stop recovery on explicit leave/suspend and on authentication or profile lease denial; do not replay quest, reward or supply commands.",
+    "Show connection recovery in the objective panel, enable interaction only for a connected actor, and reject an unavailable send instead of silently dropping the command.",
+    "Expose connection detail and pending NPC request diagnostics without logging account or reconnection tokens."
+  ],
+  "verification": {
+    "script": "npm.cmd run test:hang-nhac-reload",
+    "browserResult": "artifacts/hang-nhac-reload-interaction.json",
+    "screenshot": "artifacts/hang-nhac-reload-interaction.png",
+    "assetWritesThenReload": "3 passes; E and on-screen button; same saved profile; no manual refocus",
+    "transportReconnectThenReload": "3 passes; E and on-screen button; same session and saved profile",
+    "backendRestartWithoutPageReload": "passed; same profile; E and on-screen button",
+    "explicitLeaveDuringRecovery": "passed; remains offline after backend returns; active session cleared",
+    "skillWithoutNpcQuestGrant": "one confirmed sword cast with HN01/HN02 incomplete; existing R01 rights retained",
+    "pageErrors": [],
+    "buildAndTypecheck": "passed",
+    "unitTests": "84 passed",
+    "existingSectRegression": "test:hang-nhac-sect passed: proximity, IME, HN01/HN02, timed cycle, M01, supplies, trio, persistence and mobile",
+    "r01BrowserRegression": "passed: all three skills, keyboard/buttons, costs, hits, dash, remote FX, reload, account lease, character switch and mobile",
+    "r01Harness": "Use a smaller desktop viewport for two software-rendered clients and record rendered peer FX each frame before screenshot latency can outlive the effect. Wait for the first player snapshot before reading diagnostics; failure output now includes state and service logs.",
+    "livePreview": "Existing 127.0.0.1:5173 profile re-entered and reloaded successfully; 105 casts/15 hits and HN02 progress retained; three skill buttons ready. The live player is outside NPC range; NPC dialogue was verified in the isolated fixture.",
+    "liveScreenshot": "artifacts/hang-nhac-reconnect-live.png",
+    "ownerQuestProgressChangedByVerification": false,
+    "storage": "Isolated fixture SQLite, browser context and publicDir. No seeding/resetting owner profile, map or editor draft."
+  },
+  "limits": [
+    "Recovery retries are bounded; after exhaustion or server denial the player gets an error and can join manually.",
+    "Three R01 skills are available from the saved starting profile; an NPC dialogue is not an unlock requirement.",
+    "This is connection/NPC regression coverage, not an MMO capacity or ART approval claim."
+  ],
+  "ownerMapVersion": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480"
+}

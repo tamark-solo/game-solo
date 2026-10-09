@@ -4,6 +4,8 @@
 
 **Đã chốt:** sáu phần phát triển; chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu; Hằng Nhạc qua Ngưng Khí, phân hóa sâu từ hành trình Trúc Cơ. **Thiết kế cơ sở:** trạng thái, điều kiện và ví dụ dưới đây; chưa chốt số liệu, tên thuật mới hoặc schema runtime. Không có triển khai code trong tài liệu này.
 
+Bộ R01 Kiếm Khí/Lôi Ấn/Ngự Phong Bộ có sẵn cho cả ba từ lúc điều khiển; hướng dẫn và tiến triển công pháp không khóa lại quyền khởi đầu này. Ưu tiên vẫn là map trước đặc tả vận hành theo [GDD](GDD.md); ART cũ đã xóa, đang chờ kế hoạch map mới. Chưa chuyển sang triển khai tu luyện/đột phá chỉ bởi hồ sơ này đã có.
+
 ## 1. Mô hình phát triển
 
 Một nhân vật mạnh hơn nhờ nền tảng tu luyện, hiểu biết và lựa chọn vận dụng. Không gom sáu phần thành một số chiến lực thay thế mọi điều kiện.

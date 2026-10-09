@@ -1,6 +1,6 @@
 # Công cụ preview animation và di chuyển — v1
 
-**Phiên bản:** 0.6, ngày 07/10/2026.
+**Phiên bản:** 0.7, ngày 08/10/2026. Runtime công cụ hiện tại: 0.12.0.
 **Mục đích:** xem animation thật từ atlas và đánh giá cảm giác di chuyển trên map trước khi vẽ thêm bộ động tác.  
 **Công nghệ đã chọn:** TypeScript + Three.js; [quyết định client](TECH-STACK.md).  
 **Trạng thái:** đã có ứng dụng Three.js chạy được và chế độ sân chung với backend Node.js + Colyseus; [hướng dẫn](PREVIEW-RUNBOOK.md), [hợp đồng backend](BACKEND-PREVIEW.md), [kết quả kiểm tra](data/preview-verification.json).  
@@ -31,13 +31,13 @@ Phân biệt **FPS animation tại chỗ** với nhịp bước trên map và nh
 | Đệ tử nam chibi | [native-v2](design/characters/chibi-roster-v1/male/native-v2/atlas.json) | 20 | 4 đứng + 16 đi, dùng trên sân online |
 | Đệ tử nữ chibi | [native-v2](design/characters/chibi-roster-v1/female/native-v2/atlas.json) | 20 | 4 đứng + 16 đi, dùng trên sân online |
 | Tư Đồ Nam linh thể chibi | [native-v2](design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.json) | 20 | 4 đứng lơ lửng + 16 lướt |
-| Lý Mộ Uyển · diện mạo mới | [native-v5](design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.json) | 20 | 4 đứng + 16 đi; mặt/tóc/áo mới chờ đánh giá |
+| Lý Mộ Uyển · diện mạo mới | [native-v5](design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.json) | 20 | 4 đứng + 16 đi; native-v5 đã chấp nhận làm chuẩn bản thử |
 
 **6 bộ / 136 frame** đang nạp: bộ ba chibi 60 + hai đệ tử chibi 40 + Vương Lâm trước 36. Các mẫu tĩnh, bộ tám pose/hướng và pilot Đông cũ được lưu lịch sử; không cộng vào số đang dùng. [Gallery mới](design/characters/chibi-roster-v1/index.html) cho xem cùng hướng/pha/nền; [gói sửa trước](GAIT-CORRECTION.md) giữ để đối chiếu.
 
 Tư Đồ Nam có bốn pose lướt mỗi hướng, UI ghi **“Lướt”** theo `movementKind: glide`; clip dữ liệu vẫn dùng `walk_*` để chung bộ điều khiển di chuyển. Đứng lơ lửng hiện là một frame mỗi hướng; vòng dao động tại chỗ chưa được vẽ. Bộ tĩnh nếu nạp lại vẫn phải khóa động tác chưa có.
 
-Map thử là fixture ART; chọn nhân vật ở đây không mở NPC trong game hoặc đổi mốc B/arc sau.
+Theo [GDD 0.28](GDD.md), bộ ba Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển chọn được từ đầu trong thiết kế gameplay. Map thử là fixture ART có thể điều khiển cả ba; sân online hiện chỉ hỗ trợ hai mẫu đệ tử. Mốc nguyên tác B/arc sau không khóa quyền chọn bộ ba, và preview chưa triển khai luồng chọn/tiến trình gameplay.
 
 ## 3. Adapter dữ liệu atlas
 
@@ -78,7 +78,7 @@ Vị trí logic và camera giữ số thực để nền tranh cuộn liên tụ
 
 ## 5. Map thử và di chuyển
 
-Dùng sân trống tham chiếu (bộ cũ đã xóa) hoặc nền lưới để xem tỷ lệ. Không dùng ảnh đã vẽ sẵn nhân vật làm nền động. Trên map thử đặt thêm fixture tường, lối hẹp và vật cao để xét va chạm/lớp; các collider này không suy tự động từ màu ảnh.
+Dùng nền lưới và fixture sân hiện có để xem tỷ lệ. ART Hằng Nhạc v1/v2/v3 và hai bản thử vùng đi đã [xóa](MAP-ASSETS-RESET.md); đang chờ kế hoạch map mới. Không dùng ảnh đã vẽ sẵn nhân vật làm nền động. Fixture tường, lối hẹp và vật cao phục vụ kiểm va chạm/lớp của công cụ; không suy collider tự động từ màu ảnh hoặc coi fixture là bố cục map mới.
 
 Giá trị mặc định đề xuất để thử:
 
@@ -86,9 +86,9 @@ Giá trị mặc định đề xuất để thử:
 | --- | --- |
 | Khung desktop tham chiếu | 960 × 640 |
 | Zoom pixel | 1×/2×/4× |
-| FPS xem tại chỗ | 8; có thể thử 1–12 |
-| Sải bước trên map | 48 px/vòng; có thể thử 24–72, chưa là số đo giải phẫu của ART |
-| Tốc độ di chuyển | 80 px/giây; thanh chỉnh 40–160 |
+| FPS xem tại chỗ | Chibi 5; bộ đối chiếu tám pose 8; có thể thử 1–12 |
+| Sải bước trên map | Chibi local 24 px/vòng; online/bộ đối chiếu 48; có thể thử 24–72, chưa là số đo giải phẫu của ART |
+| Tốc độ di chuyển | Chibi local 40 px/giây; fixture/bộ đối chiếu 80; thanh chỉnh 40–160; online theo server |
 | Collider điểm đất thử | Bán kính 8 px, chỉ phục vụ fixture |
 | Số hình mô phỏng | 1/5/20, không là số tài khoản online |
 
@@ -117,9 +117,9 @@ Không đưa luật tu luyện, đăng nhập hoặc lưu tiến trình vào cô
 
 ## 7. Điều kiện nghiệm thu khi có ứng dụng
 
-1. Nạp đủ năm bộ; số frame là 36/36/36/4/4, không lấy ảnh nguồn lớn làm sprite native.
-2. Vương Lâm/đệ tử xem đúng bốn hướng và tám frame đi; Play/Pause/bước frame hoạt động độc lập. Xem hai tiếp đất 0/4 và tay đối nhịp trong trang so sánh.
-3. Điểm (32,88) đứng yên khi đổi frame; linh thể giữ khoảng đặt hình 4 px trong bộ tĩnh.
+1. Nạp đủ sáu bộ; số frame là 20/20/20/20/20/36, tổng 136; không lấy ảnh nguồn lớn làm sprite native.
+2. Năm bộ chibi xem đúng bốn hướng, một đứng và bốn frame đi/lướt mỗi hướng; bộ Vương Lâm đối chiếu giữ tám frame đi. Play/Pause/bước frame hoạt động độc lập; không gán động tác chưa có.
+3. Điểm (32,88) đứng yên khi đổi frame; linh thể giữ khoảng đặt hình 4 px trong cả đứng và lướt.
 4. FPS tại chỗ và tốc độ chỉnh độc lập; trên map nhịp chân tự khớp quãng đường/sải bước; đi/chuyển hướng/dừng/va chạm không làm hình đổi kích thước.
 5. Hai hình cùng atlas có thể ở hai frame khác nhau; reset/chuyển actor giải phóng input/phiên cũ.
 6. Nền không có nhân vật vẽ sẵn; fixture che khuất đúng phía trước/sau theo điểm chiếu.
@@ -127,4 +127,4 @@ Không đưa luật tu luyện, đăng nhập hoặc lưu tiến trình vào cô
 8. Ghi số frame, nhịp renderer và chi phí khi thử 1/5/20 hình; số liệu là đo preview trên thiết bị, không suy thành năng lực MMORPG.
 9. Lỗi nạp/chưa có động tác hiển thị rõ; UI không mô tả hình tĩnh như animation đã hoàn thành.
 
-Các tiêu chí đã được kiểm tra bằng source atlas, luật di chuyển và Chrome headless desktop/mobile; [kết quả bàn giao](data/preview-verification.json) ghi phạm vi cụ thể. Kết quả kỹ thuật không thay việc người phát triển duyệt chất lượng chuyển động. Sau đánh giá preview mới sản xuất bản thử lơ lửng/lướt Tư Đồ Nam một hướng, rồi mở bốn hướng và bộ đi Lý Mộ Uyển.
+Các tiêu chí đã được kiểm tra bằng source atlas, luật di chuyển và Chrome headless desktop/mobile; [kết quả bàn giao](data/preview-verification.json) ghi phạm vi cụ thể. Kết quả kỹ thuật không thay việc người phát triển duyệt chất lượng chuyển động. Tư Đồ Nam đã có lướt và Lý Mộ Uyển đã có đi bốn hướng; chỉ vòng lơ lửng tại chỗ/luyện đan và động tác gameplay bổ sung còn ở kế hoạch. Ưu tiên hiện tại là map; việc mở gameplay hoặc ART mới theo yêu cầu tiếp theo.

@@ -2,6 +2,7 @@ import { Room, type Client } from 'colyseus';
 import { CourtyardState, Disciple } from './state';
 import { WORLD } from '../../shared/world';
 import { MoveInput, INPUT_HZ, PATCH_MS, applyMovement, sanitizeMovement } from '../../shared/netcode';
+import type { MovementState } from '../../shared/netcode';
 
 export const ROOM_NAME = 'sect_courtyard';
 export const TICK_MS = 1000 / INPUT_HZ;
@@ -12,6 +13,16 @@ export class CourtyardRoom extends Room<{ state: CourtyardState; input: MoveInpu
   maxClients = 20; // A test-room limit, not a measured MMO capacity.
   maxMessagesPerSecond = 90;
   inputs = this.defineInput(MoveInput, { bufferMaxSize: 64, sanitize: sanitizeMovement });
+  protected get avatars(): readonly string[] { return AVATARS; }
+  protected spawn(slot: number): { x: number; y: number } {
+    slot %= 10;
+    return { x: WORLD.spawn.x + (slot % 5 - 2) * 34, y: WORLD.spawn.y + Math.floor(slot / 5) * 30 };
+  }
+  protected stepMovement(player: MovementState, input: MoveInput, dt: number): void { applyMovement(player, input, dt); }
+  protected get simulateWithoutInput(): boolean { return false; }
+  protected stepWithoutInput(player: MovementState, dt: number): void { this.stepMovement(player, new MoveInput({ moveX:0,moveY:0 }), dt); }
+  protected beforeSimulation(_dt: number): void {}
+  protected afterSimulation(_dt: number): void {}
 
   onCreate(): void {
     this.patchRate = PATCH_MS;
@@ -24,12 +35,15 @@ export class CourtyardRoom extends Room<{ state: CourtyardState; input: MoveInpu
     const data = options && typeof options === 'object' ? options as Record<string, unknown> : {};
     const name = (typeof data.name === 'string' ? data.name : 'Đệ tử')
       .normalize('NFC').replace(/[\u0000-\u001f\u007f<>&]/g, '').trim().slice(0, 24) || 'Đệ tử';
-    const avatarId = typeof data.avatarId === 'string' && AVATARS.includes(data.avatarId) ? data.avatarId : AVATARS[0];
-    const slot = this.state.players.size % 10;
+    const avatarId = typeof data.avatarId === 'string' && this.avatars.includes(data.avatarId) ? data.avatarId : this.avatars[0];
+    const slot = this.state.players.size % this.maxClients;
+    const spawn = this.spawn(slot);
     this.state.players.set(client.sessionId, new Disciple({
-      name, avatarId, x: WORLD.spawn.x + (slot % 5 - 2) * 34,
-      y: WORLD.spawn.y + Math.floor(slot / 5) * 30,
+      name, avatarId, x: spawn.x, y: spawn.y,
       direction: 'south', moving: false, connected: true, ack: -1,
+      id: client.sessionId, profileId: '', progressionKind: '', hp: 100, mp: 100, casts: 0, practiceHits: 0, savedAt: 0,
+      nextSwordAt: 0, nextThunderAt: 0, nextWindAt: 0, lastSpentAt: 0, castId: '', castSkill: '', castStartedAt: 0, castAimX:0, castAimY:0,
+      motionLocked: false, dashVX: 0, dashVY: 0,
     }));
   }
 
@@ -51,7 +65,7 @@ export class CourtyardRoom extends Room<{ state: CourtyardState; input: MoveInpu
     this.state.players.delete(client.sessionId);
   }
 
-  private stop(id: string): void {
+  protected stop(id: string): void {
     this.inputs.get(id).clear();
     const player = this.state.players.get(id);
     if (player) player.moving = false;
@@ -59,13 +73,16 @@ export class CourtyardRoom extends Room<{ state: CourtyardState; input: MoveInpu
 
   private simulate(dt: number): void {
     this.state.tick++;
+    this.beforeSimulation(dt);
     for (const [id, player] of this.state.players) {
       const channel = this.inputs.get(id);
       const input = player.connected ? channel.next() : undefined;
       // One command per server tick: a client cannot increase speed by flooding inputs.
-      if (input) applyMovement(player, input, dt);
+      if (input) this.stepMovement(player, input, dt);
+      else if (player.connected && this.simulateWithoutInput) this.stepWithoutInput(player, dt);
       else player.moving = false;
       player.ack = channel.consumedCount;
     }
+    this.afterSimulation(dt);
   }
 }

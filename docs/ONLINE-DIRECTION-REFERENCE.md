@@ -1,6 +1,6 @@
 # Định hướng online nhiều người — điều chỉnh GDD
 
-> **Archived reference:** current gameplay scope is [RPG-A](MVP-RPG-A.md), with the [new backlog](MVP-BACKLOG.md).
+> **Hồ sơ lịch sử — không phải luật hiện hành.** Giữ mô hình, số liệu và mốc phát triển tại thời điểm nguồn. Thiết kế mới: [GDD 0.28](GDD.md), [Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md) và [trạng thái dự án](PROJECT-STATUS.md).
 
 **Phiên bản:** 0.5, ngày 07/10/2026.  
 **Đã xác nhận:** web online, đệ tử riêng, idle kết hợp khu môn phái có nhân vật đi lại; người phát triển muốn trải nghiệm giống MMORPG.  

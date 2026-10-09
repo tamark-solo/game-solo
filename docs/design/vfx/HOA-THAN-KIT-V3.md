@@ -1,5 +1,7 @@
 # Hóa Thần V3 · Ngọc sáng, lụa khí và phù vàng · 3.0.0
 
+**Snapshot lịch sử tại mốc xuất nguồn:** số file, trạng thái chờ duyệt và thông số dưới đây được giữ để truy phiên bản. Bản hiện hành là [Hóa Thần V3/pack 3.0.1](HOA-THAN-KIT.md), đã chấp nhận và [đóng đợt ART 15 skill](STARTER-VFX-HANDOFF.md); không là backlog đang chờ motion. Preview chung hiện trỏ bản mới nhất.
+
 V3 thiết kế lại phần hình theo ảnh chủ dự án gửi. V2 nhấn lực bằng cạnh khí sắc và mảnh bật, làm lệch nền mỹ thuật đã chọn. V3 dùng kiếm ngọc trong, khí cong có khoảng trống, sét tím phân nhánh và dấu phù vàng. Uy lực đến từ tụ–xuất–chạm–tan có cấu trúc; không chỉ đổi màu, tăng bloom hoặc phóng người.
 
 [Kiếm](hoa-than-kit.html?family=sword) · [Lôi](hoa-than-kit.html?family=thunder) · [Phong](hoa-than-kit.html?family=wind) · [ZIP V3](releases/hoa-than-kit-3.0.0.zip) · [Thư viện](skill-library.html).
@@ -25,7 +27,7 @@ V3 thiết kế lại phần hình theo ảnh chủ dự án gửi. V2 nhấn l�
 
 PNG RGBA rời trong frames/ là nguồn chính. Atlas chỉ là output build. Có source, prompt, provenance, export-spec, clips.json, skill.json và review ở từng folder. Source/pack V3 là 3.0.0, **chờ chủ dự án xem motion**; không ghi duyệt thay người dùng. R04 đã được chấp nhận. Các folder/helper và ZIP V1/V2 giữ nguyên.
 
-Thư viện hiện tại 15 skill: **646 PNG / 76 atlas**. ZIP chung giữ thêm R04 V1, R05 V1/V2 để chạy hồi quy: **1032 PNG / 123 atlas**. Đây là số file, có frame dùng lại giữa cảnh giới/phiên bản. ZIP chung không lồng ZIP riêng từng skill. Giải nén, chạy `python serve-preview.py`, mở `http://127.0.0.1:4185/skill-library.html`.
+Thư viện tại mốc snapshot 15 skill: **646 PNG / 76 atlas**. ZIP chung giữ thêm R04 V1, R05 V1/V2 để chạy hồi quy: **1032 PNG / 123 atlas**. Đây là số file, có frame dùng lại giữa cảnh giới/phiên bản. ZIP chung không lồng ZIP riêng từng skill. Giải nén, chạy `python serve-preview.py`, mở `http://127.0.0.1:4185/skill-library.html`.
 
 ## Tỷ lệ và frame events
 

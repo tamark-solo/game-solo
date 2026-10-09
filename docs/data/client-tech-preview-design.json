@@ -1,8 +1,8 @@
 {
   "schemaVersion": "client-tech-preview-design-1",
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "pathBase": "workspace_root",
-  "status": "preview_and_minimal_online_backend_implemented",
+  "status": "hang_nhac_map_profiles_r01_and_hn01_hn02_sect_prototype_implemented",
   "runtimeReady": true,
   "decision": {
     "language": "TypeScript",
@@ -95,7 +95,7 @@
       {
         "characterId": "CHR-WANG-LIN",
         "role": "story_npc",
-        "plannedGamePhase": "A",
+        "plannedGamePhase": "starter_hang_nhac",
         "atlasPath": "docs/design/characters/gait-correction-v1/wang-lin/native-v1/atlas.png",
         "metadataPath": "docs/design/characters/gait-correction-v1/wang-lin/native-v1/atlas.json",
         "schemaVersion": "pixel-atlas-1",
@@ -132,12 +132,15 @@
         "walkFramesPerDirection": 8,
         "newWalkPoseCount": 32,
         "standingPixelsPreserved": true,
-        "motionApproval": "changes_requested_after_reference_feedback"
+        "motionApproval": "changes_requested_after_reference_feedback",
+        "gameplayRole": "playable_character",
+        "playableFromStartInDesign": true,
+        "onlinePlayableImplemented": false
       },
       {
         "characterId": "AVATAR-NOVICE-MALE",
         "role": "player_template",
-        "plannedGamePhase": "A",
+        "plannedGamePhase": "technical_preview_only",
         "atlasPath": "docs/design/characters/chibi-roster-v1/male/native-v2/atlas.png",
         "metadataPath": "docs/design/characters/chibi-roster-v1/male/native-v2/atlas.json",
         "schemaVersion": "pixel-atlas-1",
@@ -181,12 +184,15 @@
         ],
         "defaultGaitCycleDistancePx": 24,
         "defaultMovementSpeedPxPerSecond": 40,
-        "movementKind": "walk"
+        "movementKind": "walk",
+        "gameplayRole": "technical_preview_avatar",
+        "playableFromStartInDesign": false,
+        "onlinePlayableImplemented": true
       },
       {
         "characterId": "AVATAR-NOVICE-FEMALE",
         "role": "player_template",
-        "plannedGamePhase": "A",
+        "plannedGamePhase": "technical_preview_only",
         "atlasPath": "docs/design/characters/chibi-roster-v1/female/native-v2/atlas.png",
         "metadataPath": "docs/design/characters/chibi-roster-v1/female/native-v2/atlas.json",
         "schemaVersion": "pixel-atlas-1",
@@ -230,12 +236,15 @@
         ],
         "defaultGaitCycleDistancePx": 24,
         "defaultMovementSpeedPxPerSecond": 40,
-        "movementKind": "walk"
+        "movementKind": "walk",
+        "gameplayRole": "technical_preview_avatar",
+        "playableFromStartInDesign": false,
+        "onlinePlayableImplemented": true
       },
       {
         "characterId": "CHR-SITU-NAN",
         "role": "story_npc",
-        "plannedGamePhase": "B",
+        "plannedGamePhase": "starter_hang_nhac",
         "atlasPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.png",
         "metadataPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.json",
         "schemaVersion": "pixel-atlas-1",
@@ -279,12 +288,15 @@
         "walkFramesPerDirection": 4,
         "motionApproval": "chibi_redraw_pending_owner_review",
         "previousAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.png",
-        "previousMetadataPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.json"
+        "previousMetadataPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.json",
+        "gameplayRole": "playable_character",
+        "playableFromStartInDesign": true,
+        "onlinePlayableImplemented": false
       },
       {
         "characterId": "CHR-LI-MUWAN",
         "role": "story_npc",
-        "plannedGamePhase": "later_arc",
+        "plannedGamePhase": "starter_hang_nhac",
         "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
         "metadataPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.json",
         "schemaVersion": "pixel-atlas-1",
@@ -339,13 +351,16 @@
           "nativeVersion": "native-v5",
           "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
           "runtimeVersion": "0.5.1"
-        }
+        },
+        "gameplayRole": "playable_character",
+        "playableFromStartInDesign": true,
+        "onlinePlayableImplemented": false
       },
       {
         "characterId": "CHR-WANG-LIN-CHIBI",
         "sourceCharacterId": "CHR-WANG-LIN",
         "role": "story_npc",
-        "plannedGamePhase": "A",
+        "plannedGamePhase": "starter_hang_nhac",
         "atlasPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.png",
         "metadataPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.json",
         "schemaVersion": "pixel-atlas-1",
@@ -386,7 +401,10 @@
           "east",
           "north"
         ],
-        "walkFramesPerDirection": 4
+        "walkFramesPerDirection": 4,
+        "gameplayRole": "playable_character",
+        "playableFromStartInDesign": true,
+        "onlinePlayableImplemented": false
       }
     ],
     "entry": "client/index.html",
@@ -416,16 +434,18 @@
     "language": "TypeScript",
     "runtime": "Node.js",
     "framework": "Colyseus",
-    "scope": "minimal_online_courtyard_preview",
+    "scope": "hang_nhac_guest_profiles_and_r01_prototype_with_legacy_fixture",
     "status": "confirmed_and_implemented",
     "confirmedBy": "project_owner",
     "confirmationText": "tôi đồng ý",
     "persistentDatabaseSelected": false,
-    "authenticationSelected": false
+    "authenticationSelected": false,
+    "prototypePersistence": "node_sqlite",
+    "persistentDatabaseSelectedMeaning": "production_MMO_database_not_locked; local_prototype_uses_SQLite"
   },
   "dependencyLockPath": "package-lock.json",
-  "onlineGameplayScope": "temporary_sessions_shared_courtyard_movement_only",
-  "persistentAccountsImplemented": false,
+  "onlineGameplayScope": "hang_nhac_owner_map_separate_guest_profiles_and_server_authoritative_r01_practice",
+  "persistentAccountsImplemented": true,
   "cultivationGameplayImplemented": false,
   "verificationPath": "docs/data/preview-verification.json",
   "runtimeVersion": "0.12.0",
@@ -437,7 +457,7 @@
     "fixedTickHz": 30,
     "patchIntervalMs": 50,
     "commandsPerServerTick": 1,
-    "clientPrediction": "Colyseus_Predict_reconciler_with_shared_applyMovement",
+    "clientPrediction": "Colyseus_Predict_reconciler_with_shared_applyR01Movement_for_hang_nhac",
     "remoteInterpolationDelayMs": 100,
     "correctionSmoothMs": 35,
     "ackMeaning": "inputs_consumed",
@@ -773,5 +793,61 @@
     "preservesAuthoredMaps": true,
     "libraryStartsEmpty": true,
     "onlineConnected": false
+  },
+  "gameplayDirection": {
+    "gddVersion": "0.28",
+    "gddPath": "docs/GDD.md",
+    "playableFromStart": [
+      "CHR-WANG-LIN",
+      "CHR-SITU-NAN",
+      "CHR-LI-MUWAN"
+    ],
+    "sharedStarterScope": "hang_nhac_through_ngung_khi",
+    "characterDifferentiationStartsAt": "truc_co",
+    "trioSelectionImplemented": true,
+    "onlineAvatarIds": [
+      "CHR-WANG-LIN-CHIBI",
+      "CHR-SITU-NAN",
+      "CHR-LI-MUWAN"
+    ],
+    "previewRoleFieldMeaning": "legacy_renderer_catalog_tags_story_npc_and_player_template_not_gameplay_eligibility",
+    "historicalPlannedGamePhaseMeaning": "previousAssetSets_preserves_story_phase_tags_at_the_time_of_production",
+    "legacyFixtureAvatarIds": [
+      "AVATAR-NOVICE-MALE",
+      "AVATAR-NOVICE-FEMALE"
+    ],
+    "r01Implemented": true,
+    "r01Scope": "personal_practice_targets_no_rewards_no_PvP",
+    "questsImplemented": true,
+    "implementedQuestIds": ["HN01", "HN02"],
+    "questScope": "opening_only_not_full_hn01_hn12",
+    "cultivationImplemented": "online_only_single_chosen_activity_foundation_1_3",
+    "offlineCultivationImplemented": false
+  },
+  "persistentAccountsScope": "local_guest_token_and_sqlite_single_server_not_production_login",
+  "hangNhacRuntime": {
+    "guidePath": "docs/HANG-NHAC-R01-RUNTIME.md",
+    "verificationPath": "docs/data/hang-nhac-r01-verification.json",
+    "route": "/hang-nhac.html",
+    "profileStorage": "server/data/profiles.sqlite",
+    "profileCountPerGuest": 3,
+    "singleControlledCharacterPerGuest": true,
+    "productionLogin": false,
+    "skillBalance": "prototype_not_owner_approved",
+    "nativeFrameSizePx": [
+      64,
+      96
+    ],
+    "r01FxAtlasCount": 10,
+    "r01FxBytes": 539528,
+    "ownerGeometryModified": false,
+    "sectGuidePath": "docs/HANG-NHAC-SECT-RUNTIME.md",
+    "sectVerificationPath": "docs/data/hang-nhac-sect-verification.json",
+    "profileJsonSchema": 2,
+    "npcRoleCount": 4,
+    "npcArtScope": "existing_novice_atlas_placeholders_not_new_owner_approved_NPC_art",
+    "cultivationGate": 360,
+    "cultivationRatePerMinute": 120,
+    "balanceLocked": false
   }
 }

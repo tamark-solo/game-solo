@@ -10,7 +10,7 @@
 <body>
 <main>
   <h1>Chân dung UI · Bộ ba trọng tâm</h1>
-  <p>Một biểu cảm cơ bản mỗi người, dựa trên nhận diện đã chọn. Xem mặt và tóc ở cỡ hội thoại 160 px và danh sách 64 px.</p>
+  <p>Portrait v1 theo nhận diện trước chibi, còn chờ đánh giá; Lý Mộ Uyển cần đồng bộ với native-v5 đã chọn. Cả ba là lựa chọn người chơi từ đầu theo GDD hiện hành. Xem mặt/tóc ở 160 px và 64 px.</p>
   <nav aria-label="Thư viện ART"><a href="../core-trio-v1/index.html">Tạo hình và pixel</a><a href="../../../CORE-CHARACTER-MOTION-PLAN.md">Kế hoạch động tác</a><a href="../index.html">Thư viện nhân vật</a><a href="README.md">Nguồn và prompt</a></nav>
   <div class="controls"><label for="theme">Nền xem</label><select id="theme"><option value="paper">Giấy</option><option value="dark">Tối</option></select><label for="format">Ảnh xem</label><select id="format"><option value="webp">WebP</option><option value="png">PNG</option></select></div>
   <p id="asset-status" role="status">Đang nạp chân dung…</p>
@@ -20,7 +20,7 @@
       <div class="hero mat"><img data-slug="wang-lin" data-size="512" width="512" height="512" alt="Chân dung Vương Lâm, bản 512 px trên nền được chọn"></div>
       <div class="samples">
         <figure><div class="mat frame160"><img data-slug="wang-lin" data-size="160" width="160" height="160" alt="Vương Lâm ở cỡ hội thoại 160 px"></div><figcaption>Hội thoại · 160 px</figcaption></figure>
-        <figure><div class="mat frame64"><img data-slug="wang-lin" data-size="64" width="64" height="64" alt="Vương Lâm ở cỡ thumbnail 64 px"></div><figcaption>Thumbnail · 64 px</figcaption></figure>
+        <figure><div class="mat frame 64"><img data-slug="wang-lin" data-size="64" width="64" height="64" alt="Vương Lâm ở cỡ thumbnail 64 px"></div><figcaption>Thumbnail · 64 px</figcaption></figure>
       </div>
       <p>Tóc buộc nửa đầu, mặt thiếu niên và ánh nhìn chú ý.</p>
       <p class="review">Chân dung UI mới · Chờ đánh giá</p>
@@ -31,7 +31,7 @@
       <div class="hero mat"><img data-slug="situ-nan" data-size="512" width="512" height="512" alt="Chân dung Tư Đồ Nam, bản 512 px trên nền được chọn"></div>
       <div class="samples">
         <figure><div class="mat frame160"><img data-slug="situ-nan" data-size="160" width="160" height="160" alt="Tư Đồ Nam ở cỡ hội thoại 160 px"></div><figcaption>Hội thoại · 160 px</figcaption></figure>
-        <figure><div class="mat frame64"><img data-slug="situ-nan" data-size="64" width="64" height="64" alt="Tư Đồ Nam ở cỡ thumbnail 64 px"></div><figcaption>Thumbnail · 64 px</figcaption></figure>
+        <figure><div class="mat frame 64"><img data-slug="situ-nan" data-size="64" width="64" height="64" alt="Tư Đồ Nam ở cỡ thumbnail 64 px"></div><figcaption>Thumbnail · 64 px</figcaption></figure>
       </div>
       <p>Hàm rộng, tóc đen buộc thấp, nét cười tự tin. Chân dung cắt trên vùng ngực tổn khuyết.</p>
       <p class="review">Chân dung UI mới · Chờ đánh giá</p>
@@ -42,7 +42,7 @@
       <div class="hero mat"><img data-slug="li-muwan" data-size="512" width="512" height="512" alt="Chân dung Lý Mộ Uyển, bản 512 px trên nền được chọn"></div>
       <div class="samples">
         <figure><div class="mat frame160"><img data-slug="li-muwan" data-size="160" width="160" height="160" alt="Lý Mộ Uyển ở cỡ hội thoại 160 px"></div><figcaption>Hội thoại · 160 px</figcaption></figure>
-        <figure><div class="mat frame64"><img data-slug="li-muwan" data-size="64" width="64" height="64" alt="Lý Mộ Uyển ở cỡ thumbnail 64 px"></div><figcaption>Thumbnail · 64 px</figcaption></figure>
+        <figure><div class="mat frame 64"><img data-slug="li-muwan" data-size="64" width="64" height="64" alt="Lý Mộ Uyển ở cỡ thumbnail 64 px"></div><figcaption>Thumbnail · 64 px</figcaption></figure>
       </div>
       <p>Tóc dài buộc đuôi với dây tím, gương mặt tập trung.</p>
       <p class="review">Chân dung UI mới · Chờ đánh giá</p>
@@ -56,7 +56,7 @@
       <div><label for="speaker">Nhân vật xem thử</label><select id="speaker"><option value="wang-lin">Vương Lâm</option><option value="situ-nan">Tư Đồ Nam</option><option value="li-muwan">Lý Mộ Uyển</option></select><p id="speaker-stage"></p><p>Vùng lời thoại đặt cạnh chân dung. Tên nhân vật vẫn rõ khi đổi nền; hình giữ đúng trang phục và giai đoạn của cảnh.</p></div>
     </div>
   </section>
-  <p class="note">Chân dung mới chờ đánh giá; nhận diện Vương Lâm/Lý Mộ Uyển đã chấp nhận, linh thể đứng Tư Đồ Nam được tạm chấp nhận làm chuẩn thiết kế. <a href="manifest.json">Manifest</a> · <a href="README.md">Phạm vi và prompt</a>.</p>
+  <p class="note">Chân dung chờ đánh giá. Duyệt nhận diện nguồn tại mốc trước không thay duyệt portrait; Lý Mộ Uyển chibi native-v5 đã chọn, chibi Tư Đồ Nam còn chờ đánh giá. <a href="manifest.json">Manifest</a> · <a href="README.md">Phạm vi và prompt</a>.</p>
 </main>
 </body>
 </html>

@@ -1,9 +1,40 @@
 {
   "schemaVersion": "character-planning-1",
-  "contentVersion": "online-characters-1.3",
-  "status": "proposed_design",
-  "date": "2026-10-07",
+  "contentVersion": "characters-gdd-0.28",
+  "historicalContentVersion": "online-characters-1.3",
+  "status": "current_design_with_historical_story_and_art_references",
+  "date": "2026-10-08",
+  "currentDesignReference": {
+    "gdd": "docs/GDD.md",
+    "characters": "docs/CHARACTERS.md",
+    "gameplay": "docs/NGUNG-KHI-GAMEPLAY-SPEC.md",
+    "projectStatus": "docs/PROJECT-STATUS.md",
+    "runtimeReady": false,
+    "phaseMeaning": "storyReferencePhase and legacy production phases do not gate current character selection; art approvals retain their original scopes."
+  },
   "confirmedDecisions": {
+    "delivery": "online_multiplayer_web",
+    "genreIntent": "cultivation_mmorpg_with_idle",
+    "initialSharedSpace": "hang_nhac",
+    "playerRole": "named_playable_character",
+    "playableCharacterIdsFromStart": [
+      "CHR-WANG-LIN",
+      "CHR-SITU-NAN",
+      "CHR-LI-MUWAN"
+    ],
+    "starterSkillsFromStart": [
+      "Kiếm Khí R01",
+      "Lôi Ấn R01",
+      "Ngự Phong Bộ R01"
+    ],
+    "initialProgression": "hang_nhac_through_ngung_khi",
+    "deepDifferentiation": "truc_co_after_intro_map",
+    "artDirection": "ink_and_parchment",
+    "mapCharacterStyle": "pixel_chibi",
+    "mapEnvironmentStyle": "stylized_2d",
+    "mapCamera": "top_down_three_quarter"
+  },
+  "historicalDecisionsBeforeGdd028": {
     "delivery": "online_multiplayer_web",
     "genreIntent": "cultivation_mmorpg_with_idle",
     "initialSharedSpace": "walkable_sect_hub",
@@ -24,6 +55,12 @@
     "initialCombat": "auto_basic_attack_with_manual_skills_and_avoidance"
   },
   "counts": {
+    "playableCharacterChoicesFromStart": 3,
+    "coreChibiFrames": 60,
+    "previewCharacterSets": 6,
+    "previewFrames": 136
+  },
+  "historicalCountsBeforeGdd028": {
     "controlledCharactersPerAccount": 1,
     "avatarTemplatesA": 2,
     "coreStoryCharactersLongTerm": 3,
@@ -55,13 +92,25 @@
       960,
       640
     ],
-    "referenceScenePath": "docs/design/world/hybrid-study/sect-courtyard-empty-v1.png",
-    "referencePromptPath": "docs/design/world/hybrid-study/sect-courtyard-empty-v1.prompt.txt",
-    "referenceViewerPath": "docs/design/world/hybrid-study/index.html",
-    "referenceStatus": "hybrid_study_v1_pending_native_grid",
-    "referenceCompositePath": "docs/design/world/hybrid-study/wang-lin-courtyard-composite-v1.png",
-    "referenceCompositePromptPath": "docs/design/world/hybrid-study/wang-lin-courtyard-composite-v1.prompt.txt",
-    "studyManifestPath": "docs/design/world/hybrid-study/study.json",
+    "referenceViewerPath": "docs/design/world/hang-nhac-map-v1/index.html",
+    "referenceManifestPath": "docs/design/world/hang-nhac-map-v1/map.json",
+    "referenceStatus": "full_dressed_map_design_base_pending_owner_review_not_layered_or_game_ready",
+    "latestLocalStudyViewerPath": "docs/design/world/hang-nhac-map-v1/index.html",
+    "latestLocalStudyStatus": "full_map_native_character_scale_camera_review_not_runtime_integrated",
+    "editorLibraryManifestPath": "docs/design/world/map-asset-library/manifest.json",
+    "editorLibraryStatus": "empty_after_owner_requested_map_reset",
+    "currentChibiSpecPath": "docs/CHIBI-ROSTER-SPEC.md",
+    "currentChibiViewerPath": "docs/design/characters/chibi-roster-v1/index.html",
+    "historicalReferences": {
+      "lifecycle": "deleted_legacy_map_assets_after_owner_requested_reset",
+      "referenceScenePath": "docs/design/world/hybrid-study/sect-courtyard-empty-v1.png",
+      "referencePromptPath": "docs/design/world/hybrid-study/sect-courtyard-empty-v1.prompt.txt",
+      "referenceViewerPath": "docs/design/world/hybrid-study/index.html",
+      "referenceStatus": "hybrid_study_v1_pending_native_grid",
+      "referenceCompositePath": "docs/design/world/hybrid-study/wang-lin-courtyard-composite-v1.png",
+      "referenceCompositePromptPath": "docs/design/world/hybrid-study/wang-lin-courtyard-composite-v1.prompt.txt",
+      "studyManifestPath": "docs/design/world/hybrid-study/study.json"
+    },
     "studyCanvasHeightPxOptions": [
       80,
       96,
@@ -117,17 +166,20 @@
     "previousProposedBodyHeads": [
       4,
       5
-    ]
+    ],
+    "mapResetRecordPath": "docs/data/hang-nhac-art-removal-2026-10-08.json",
+    "referenceImagePath": "docs/design/world/hang-nhac-map-v1/map-master-detail-c-v4.png"
   },
   "notes": [
-    "Số NPC đếm theo người có tên trong roster; cha và mẹ là hai người dùng chung một nguồn chân dung.",
-    "Hai mẫu avatar dùng chung giữa tài khoản; không cộng vào số NPC.",
-    "Nhận diện Vương Lâm v2 đã duyệt; đệ tử v2 và 56 frame thử còn chờ đánh giá, chưa phải bộ ART phát hành.",
-    "Ba nhân vật trọng tâm đã được người phát triển xác nhận; số NPC A/B và 1 đệ tử/tài khoản còn là đề xuất phạm vi.",
-    "Danh mục 11 NPC hiện tại không giới hạn số nhân vật của những arc tương lai.",
+    "Bộ ba là lựa chọn gameplay từ đầu; storyCharacters giữ hồ sơ nguồn truyện/ART, không tự biến cả danh sách thành NPC thường trú.",
+    "Hai avatar là mẫu kỹ thuật sân online hiện tại, không là lựa chọn chính của GDD 0.28; role trong catalog runtime giữ theo hợp đồng preview.",
+    "Catalog preview hiện có 6 bộ/136 frame: bộ ba chibi 60, hai avatar chibi 40 và Vương Lâm trước 36. Các 56 frame avatar v2 trước là mốc lịch sử.",
+    "Số NPC/ngân sách A/B, avatarTemplatesA và controlledCharactersPerAccount của historicalCountsBeforeGdd028 là kế hoạch cũ; slot/đổi người/kho chung hiện chưa chốt.",
+    "Roster nguồn có 11 người theo truyện, gồm cả ba nhân vật chơi được; danh sách không giới hạn NPC các arc tương lai.",
     "characterEntries trong mvp-content-catalog.json là hồ sơ nhóm của bản thiết kế trước, không phải nguồn đếm số người.",
-    "Tạo hình sớm Tư Đồ Nam/Lý Mộ Uyển không chuyển thời điểm xuất hiện; mẫu nguyên anh chương 112 tách lần nghe tiếng nói 46–47.",
-    "Ba chân dung UI bộ ba đã có PNG/WebP 512/160/64; hình mới chờ đánh giá, không đổi trạng thái nhận diện nguồn hoặc mốc NPC."
+    "Tư Đồ Nam/Lý Mộ Uyển chọn từ đầu là mở đầu chuyển thể; storyReferencePhase và mốc nguyên tác vẫn giữ riêng, không là cổng lựa chọn.",
+    "Ba chân dung UI bộ ba có PNG/WebP 512/160/64, còn cần đánh giá/đồng bộ chibi. Lý Mộ Uyển native-v5 chấp nhận cho bản thử; Tư Đồ Nam chibi còn chờ đánh giá, tách mốc tạm chấp nhận identity đứng v3. Metadata duyệt nguồn giữ nguyên.",
+    "Map tổng hiện hành đã đổi sang full-map-first; concept/nền/ba asset thử trước đã xóa. Sprite/anchor/camera chơi vẫn giữ chuẩn native."
   ],
   "coreStoryCharacterIds": [
     "CHR-WANG-LIN",
@@ -141,7 +193,8 @@
       "assetId": "AS-PC-001",
       "firstPhase": "A",
       "priority": "P1",
-      "role": "player_template",
+      "role": "technical_preview_avatar",
+      "legacyRole": "player_template",
       "canonical": false,
       "displayAge": "young_adult_20_to_22",
       "statModifier": null,
@@ -243,7 +296,8 @@
       "assetId": "AS-PC-002",
       "firstPhase": "A",
       "priority": "P1",
-      "role": "player_template",
+      "role": "technical_preview_avatar",
+      "legacyRole": "player_template",
       "canonical": false,
       "displayAge": "young_adult_20_to_22",
       "statModifier": null,
@@ -344,8 +398,11 @@
     {
       "id": "CHR-WANG-LIN",
       "name": "Vương Lâm",
-      "firstPhase": "A",
-      "role": "core_story",
+      "storyReferencePhase": "A",
+      "role": "playable_character",
+      "legacyRole": "core_story",
+      "gameplayAvailability": "available_from_start",
+      "gameplaySelectionStatus": "confirmed_design_not_runtime",
       "assetId": "AS-CHR-001",
       "priority": "P1",
       "sourceRefs": [
@@ -686,8 +743,11 @@
     {
       "id": "CHR-SITU-NAN",
       "name": "Tư Đồ Nam",
-      "firstPhase": "B",
-      "role": "core_story",
+      "storyReferencePhase": "B",
+      "role": "playable_character",
+      "legacyRole": "core_story",
+      "gameplayAvailability": "available_from_start",
+      "gameplaySelectionStatus": "confirmed_design_not_runtime",
       "assetId": "AS-CHR-008",
       "priority": "B",
       "sourceRefs": [
@@ -697,7 +757,8 @@
         "https://novelfire.net/book/renegade-immortal/chapter-112"
       ],
       "artStatus": "chibi_redraw_pending_owner_review",
-      "unlockPolicy": "pending_B_story_edit",
+      "storyReferenceUnlockPolicy": "pending_B_story_edit",
+      "gameplayUnlockPolicy": "starter_choice_not_gated_by_story_arc",
       "appearanceSourceStatus": "voice_intro_46_47_separate_from_ch112_soul_reference",
       "artProductionPriority": "core_identity_now",
       "identityApprovedByProjectOwner": false,
@@ -927,8 +988,11 @@
     {
       "id": "CHR-LI-MUWAN",
       "name": "Lý Mộ Uyển",
-      "firstPhase": "later_arc",
-      "role": "core_story",
+      "storyReferencePhase": "later_arc",
+      "role": "playable_character",
+      "legacyRole": "core_story",
+      "gameplayAvailability": "available_from_start",
+      "gameplaySelectionStatus": "confirmed_design_not_runtime",
       "assetId": "AS-CHR-010",
       "priority": "later_arc",
       "sourceRefs": [
@@ -938,7 +1002,8 @@
         "https://novelfull.com/renegade-immortal/chapter-144-core-formation-1.html"
       ],
       "artStatus": "chibi_redesign_accepted_prototype_baseline",
-      "unlockPolicy": "pending_arc_edit",
+      "storyReferenceUnlockPolicy": "pending_arc_edit",
+      "gameplayUnlockPolicy": "starter_choice_not_gated_by_story_arc",
       "sourceStatus": "chapter_dossier_compiled_explicit_art_choices",
       "artProductionPriority": "core_identity_now",
       "identityApprovedByProjectOwner": true,

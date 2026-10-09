@@ -1,5 +1,7 @@
 # GDD — Tiên Nghịch: Hành Trình Vương Lâm
 
+> **Snapshot lịch sử — không phải luật hiện hành.** Giữ nội dung quyết định theo thời điểm nguồn; chỉ nhãn trạng thái và đường dẫn đọc được cập nhật khi rà soát ngày 08/10/2026. Hướng hiện hành: [GDD 0.28](../../GDD.md), [trạng thái dự án](../../PROJECT-STATUS.md) và [mục lục lịch sử](README.md).
+
 **Phiên bản:** 0.24 — đã chọn pixel art chibi đầu lớn/thân gọn theo reference. Có mẫu Vương Lâm một hướng, 1 đứng + 4 pose đi bước nhỏ trong Three.js; chờ đánh giá. Năm bộ/116 frame trước giữ để đối chiếu và cần chỉnh tiếp. Bản thử dùng phiên tạm; tài khoản/lưu tiến trình/tu luyện chưa triển khai.  
 **Ngày:** 07/10/2026.  
 **Tên dự án:** tên làm việc nội bộ.  
@@ -41,23 +43,23 @@
 
 Mọi số liệu về thời gian, sức chứa, chi phí và phần thưởng bên dưới là **số liệu thiết kế game**, có thể thay đổi sau khi chơi thử. Các sự kiện nguyên tác có nguồn tham chiếu riêng ở mục 6.
 
-Người phát triển đã chốt **A → B** ngày 06/10/2026. Phạm vi MVP hiện tại là A; B là giai đoạn tiếp theo sau khi A đạt tiêu chí hoàn thành trong [MVP-BACKLOG.md](MVP-BACKLOG.md). [WORLD-MAPS.md](WORLD-MAPS.md) ghi phạm vi từng giai đoạn; C có farm theo arc là hướng dài hạn chưa lên lịch. Các số liệu cân bằng và chi tiết triển khai vẫn cần prototype để kiểm chứng.
+Người phát triển đã chốt **A → B** ngày 06/10/2026. Phạm vi MVP hiện tại là A; B là giai đoạn tiếp theo sau khi A đạt tiêu chí hoàn thành trong [MVP-BACKLOG.md](MVP-BACKLOG.md). [WORLD-MAPS.md](../../WORLD-MAPS.md) ghi phạm vi từng giai đoạn; C có farm theo arc là hướng dài hạn chưa lên lịch. Các số liệu cân bằng và chi tiết triển khai vẫn cần prototype để kiểm chứng.
 
-Giai đoạn làm việc hiện tại là **preview ART/chuyển động chạy được và backend online tối thiểu**. [PREVIEW-RUNBOOK.md](PREVIEW-RUNBOOK.md) hướng dẫn chạy, [BACKEND-PREVIEW.md](BACKEND-PREVIEW.md) ghi phạm vi/hợp đồng. Quy tắc gameplay tham chiếu vẫn nằm trong [MVP-A-SPEC.md](MVP-A-SPEC.md); luồng màn hình, wireframe và phản hồi người chơi nằm trong [UX-MVP-A.md](UX-MVP-A.md). Những phần gameplay tài nguyên/tu luyện/tiến trình chưa triển khai.
+Giai đoạn làm việc hiện tại là **preview ART/chuyển động chạy được và backend online tối thiểu**. [PREVIEW-RUNBOOK.md](../../PREVIEW-RUNBOOK.md) hướng dẫn chạy, [BACKEND-PREVIEW.md](../../BACKEND-PREVIEW.md) ghi phạm vi/hợp đồng. Quy tắc gameplay tham chiếu vẫn nằm trong [MVP-A-SPEC.md](../../MVP-A-SPEC.md); luồng màn hình, wireframe và phản hồi người chơi nằm trong [UX-MVP-A.md](../../UX-MVP-A.md). Những phần gameplay tài nguyên/tu luyện/tiến trình chưa triển khai.
 
 **Điều chỉnh ngày 06/10/2026:** [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md) và [CHARACTERS.md](CHARACTERS.md) xác định hướng hiện tại. Các đặc tả, cảnh E01–E08, catalog/save và 14 bản phác v0.6 giữ làm tham chiếu; điều kiện/tác dụng dành cho Vương Lâm chưa được chuyển thành tuyến đệ tử người chơi. Phần 6–8 và các ví dụ cân bằng dưới đây chưa là luật runtime online. Preview dùng tạo hình đã có; tuyến P/chính truyện và UX gameplay cần được biên tập trước vòng tu luyện.
 
-**Công nghệ và bước gần nhất:** [TECH-STACK.md](TECH-STACK.md) ghi client TypeScript + Three.js và backend bản thử TypeScript + Node.js + Colyseus đã chọn. [ANIMATION-PREVIEW-SPEC.md](ANIMATION-PREVIEW-SPEC.md) và [dữ liệu](data/client-tech-preview-design.json) dùng atlas đang có, camera orthographic và điểm chiếu chung. Preview cục bộ chạy độc lập backend; chế độ online dùng hai mẫu đệ tử và vị trí server xử lý. Sau đánh giá chuyển động sẽ đặc tả tài khoản/lưu tiến trình/tuyến P trước vòng tu luyện.
+**Công nghệ và bước gần nhất:** [TECH-STACK.md](../../TECH-STACK.md) ghi client TypeScript + Three.js và backend bản thử TypeScript + Node.js + Colyseus đã chọn. [ANIMATION-PREVIEW-SPEC.md](../../ANIMATION-PREVIEW-SPEC.md) và [dữ liệu](../../data/client-tech-preview-design.json) dùng atlas đang có, camera orthographic và điểm chiếu chung. Preview cục bộ chạy độc lập backend; chế độ online dùng hai mẫu đệ tử và vị trí server xử lý. Sau đánh giá chuyển động sẽ đặc tả tài khoản/lưu tiến trình/tuyến P trước vòng tu luyện.
 
-**Chân dung và động tác:** [trang UI](design/characters/core-ui-v1/index.html) bổ sung một biểu cảm cơ bản/người trên nền giấy/tối, thumbnail 64 px và hội thoại 160 px. [Kế hoạch động tác](CORE-CHARACTER-MOTION-PLAN.md) và [dữ liệu](data/core-character-motion-plan.json) tách frame đã có khỏi phần mới; giữ nguồn Tư Đồ Nam đứng v3 tạm chấp nhận. Trang phục/mốc theo cảnh, không dùng chân dung NPC cho đệ tử người chơi.
+**Chân dung và động tác:** [trang UI](../../design/characters/core-ui-v1/index.html) bổ sung một biểu cảm cơ bản/người trên nền giấy/tối, thumbnail 64 px và hội thoại 160 px. [Kế hoạch động tác](../../CORE-CHARACTER-MOTION-PLAN.md) và [dữ liệu](../../data/core-character-motion-plan.json) tách frame đã có khỏi phần mới; giữ nguồn Tư Đồ Nam đứng v3 tạm chấp nhận. Trang phục/mốc theo cảnh, không dùng chân dung NPC cho đệ tử người chơi.
 
-**Ưu tiên bộ ba:** [CORE-CHARACTER-VISUAL-SPEC.md](CORE-CHARACTER-VISUAL-SPEC.md) và [trang tạo hình](design/characters/core-trio-v1/index.html) bổ sung Tư Đồ Nam/Lý Mộ Uyển. Nguồn truyện được tách với lựa chọn ART; lần giới thiệu tiếng nói của Tư Đồ Nam khác trạng thái nguyên anh chương 112. Lý Mộ Uyển có biến thể áo đỏ/áo tím theo cảnh. Tạo hình sớm không tự đưa hai người vào A hoặc vào map môn phái.
+**Ưu tiên bộ ba:** [CORE-CHARACTER-VISUAL-SPEC.md](../../CORE-CHARACTER-VISUAL-SPEC.md) và [trang tạo hình](../../design/characters/core-trio-v1/index.html) bổ sung Tư Đồ Nam/Lý Mộ Uyển. Nguồn truyện được tách với lựa chọn ART; lần giới thiệu tiếng nói của Tư Đồ Nam khác trạng thái nguyên anh chương 112. Lý Mộ Uyển có biến thể áo đỏ/áo tím theo cảnh. Tạo hình sớm không tự đưa hai người vào A hoặc vào map môn phái.
 
-Hướng ART đã được người phát triển chọn là tranh mực và giấy cổ. [ART-DIRECTION.md](ART-DIRECTION.md) và [UI-COMPONENTS.md](UI-COMPONENTS.md) chi tiết hóa hướng này; [thư viện bản phác](design/index.html) đặt bảng ART cạnh các snapshot UX. Màu/font/diện mạo cụ thể vẫn là đề xuất mỹ thuật.
+Hướng ART đã được người phát triển chọn là tranh mực và giấy cổ. [ART-DIRECTION.md](../../ART-DIRECTION.md) và [UI-COMPONENTS.md](../../UI-COMPONENTS.md) chi tiết hóa hướng này; [thư viện bản phác](../../design/index.html) đặt bảng ART cạnh các snapshot UX. Màu/font/diện mạo cụ thể vẫn là đề xuất mỹ thuật.
 
-**Làm rõ mục tiêu MMORPG:** [MMORPG-DIRECTION.md](MMORPG-DIRECTION.md) bổ sung map/NPC/nhiệm vụ, chiến đấu/trang bị và mở thế giới theo arc. Khu môn phái là vùng bắt đầu; phạm vi A/B cần xét lại. Sau [thử hai sprite Vương Lâm](design/characters/wang-lin-sprite-study/index.html), hướng hiện tại là nhân vật pixel art trên nền stylized 2D, cùng top-down ba phần tư. [WORLD-VISUAL-SPEC.md](WORLD-VISUAL-SPEC.md) ghi cách phối hợp; mẫu sân cũ giữ làm tham chiếu nền/bố cục. Lưới 64 × 96 của bộ Vương Lâm đã được áp dụng cho hai mẫu đệ tử thử theo [hồ sơ đệ tử](PLAYER-AVATAR-VISUAL-SPEC.md); xem [trang so sánh](design/characters/player-avatars-v2/index.html). Đây là chuẩn thử ART, chưa là lưới map/va chạm hay gameplay online.
+**Làm rõ mục tiêu MMORPG:** [MMORPG-DIRECTION.md](MMORPG-DIRECTION.md) bổ sung map/NPC/nhiệm vụ, chiến đấu/trang bị và mở thế giới theo arc. Khu môn phái là vùng bắt đầu; phạm vi A/B cần xét lại. Sau [thử hai sprite Vương Lâm](../../design/characters/wang-lin-sprite-study/index.html), hướng hiện tại là nhân vật pixel art trên nền stylized 2D, cùng top-down ba phần tư. [WORLD-VISUAL-SPEC.md](../../WORLD-VISUAL-SPEC.md) ghi cách phối hợp; mẫu sân cũ giữ làm tham chiếu nền/bố cục. Lưới 64 × 96 của bộ Vương Lâm đã được áp dụng cho hai mẫu đệ tử thử theo [hồ sơ đệ tử](../../PLAYER-AVATAR-VISUAL-SPEC.md); xem [trang so sánh](../../design/characters/player-avatars-v2/index.html). Đây là chuẩn thử ART, chưa là lưới map/va chạm hay gameplay online.
 
-[Nghiên cứu ghép v1](design/world/hybrid-study/index.html) đã có nền/sprite riêng, cỡ ảnh 80/96/112 px, cảnh 1×/2× và khung 360 px. Trang xem giữ PNG Vương Lâm gốc; ảnh ghép imagegen lưu riêng cùng prompt. Đây là thử hình trong GDD, chưa có di chuyển/animation hoặc lưới pixel sản xuất.
+Nghiên cứu ghép v1 (nguồn `design/world/hybrid-study/index.html` đã xóa; [hồ sơ reset](../../MAP-ASSETS-RESET.md)) đã có nền/sprite riêng, cỡ ảnh 80/96/112 px, cảnh 1×/2× và khung 360 px. Trang xem giữ PNG Vương Lâm gốc; ảnh ghép imagegen lưu riêng cùng prompt. Đây là thử hình trong GDD, chưa có di chuyển/animation hoặc lưới pixel sản xuất.
 
 ## 2. Ý tưởng cốt lõi
 
@@ -153,7 +155,7 @@ Mốc đủ điều kiện hiện thông báo và nút tiếp tục. Người ch
 
 ### 6.3. Nhân vật và thuật ngữ
 
-Hồ sơ chính truyện ban đầu có 7 người: Vương Lâm, cha, mẹ, tứ thúc, Vương Trác, Trương Hổ và Tôn Đại Trụ. Catalog cũ gộp cha mẹ thành một hồ sơ, nên có 6 hồ sơ/nguồn chân dung. Đệ tử người chơi có hồ sơ riêng. Số người và kế hoạch B/dài hạn nằm trong [CHARACTERS.md](CHARACTERS.md) và [roster](data/character-roster.json).
+Hồ sơ chính truyện ban đầu có 7 người: Vương Lâm, cha, mẹ, tứ thúc, Vương Trác, Trương Hổ và Tôn Đại Trụ. Catalog cũ gộp cha mẹ thành một hồ sơ, nên có 6 hồ sơ/nguồn chân dung. Đệ tử người chơi có hồ sơ riêng. Số người và kế hoạch B/dài hạn nằm trong [CHARACTERS.md](CHARACTERS.md) và [roster](../../data/character-roster.json).
 
 Dùng tên “hạt châu bí ẩn” trong trải nghiệm đầu game. Tên đầy đủ, lai lịch và nhân vật liên quan được tiết lộ theo mốc truyện đã đối chiếu. Tên Việt trong tài liệu là tên làm việc; chuẩn hóa với bản dịch tiếng Việt được chọn khi biên tập nội dung.
 
@@ -195,7 +197,7 @@ Luật hoàn thành chu kỳ:
 5. Lưu/đóng/mở trang giữ phần thời gian đã chạy của hoạt động hiện tại.
 6. Mở mốc truyện mới dừng hoạt động và hủy chu kỳ chưa hoàn thành; chi phí/phần thưởng mốc áp dụng một lần tại nút hoàn thành cuối cảnh.
 
-Trước khi xử lý một thao tác, cập nhật thời gian tới lúc bấm. Chu kỳ vừa đủ 10 giây được nhận trước thao tác đó. Bấm lại hoạt động đang chạy giữ tiến độ. Nhánh tác dụng và địa điểm trong catalog chọn nhánh đầu tiên thỏa điều kiện. Hợp đồng đầy đủ và lý do chờ nằm trong [đặc tả hệ thống](MVP-A-SPEC.md).
+Trước khi xử lý một thao tác, cập nhật thời gian tới lúc bấm. Chu kỳ vừa đủ 10 giây được nhận trước thao tác đó. Bấm lại hoạt động đang chạy giữ tiến độ. Nhánh tác dụng và địa điểm trong catalog chọn nhánh đầu tiên thỏa điều kiện. Hợp đồng đầy đủ và lý do chờ nằm trong [đặc tả hệ thống](../../MVP-A-SPEC.md).
 
 Trước E06, giao diện báo “Đã luyện thổ nạp 0/3 lần — chưa giữ được linh khí”. Sau 3 lần, chỉ dẫn chuyển sang mốc truyện tiếp theo; hoạt động này chờ cho đến E06 để tránh chạy mà không có kết quả. Nguyên nhân cụ thể được giải thích khi truyện tiết lộ.
 
@@ -318,7 +320,7 @@ Hiển thị tên tài nguyên cùng biểu tượng; trạng thái thiếu tài
 
 Ưu tiên trình duyệt desktop; bố cục vẫn đọc và thao tác được ở chiều rộng 360 px. Dùng nút bấm, không yêu cầu thao tác kéo hoặc phản xạ.
 
-Danh mục màn hình, phác thảo desktop/mobile, trạng thái thẻ và lời hướng dẫn theo E01–E08 nằm trong [UX-MVP-A.md](UX-MVP-A.md). Hạt châu, Hành trang, Cài đặt, luồng nhập save, tổng kết offline và kết thúc được chi tiết ở [UX-SCREENS-AND-STATES.md](UX-SCREENS-AND-STATES.md). Các lớp đọc truyện, tổng kết offline và kết thúc dùng cùng 5 khu vực chính.
+Danh mục màn hình, phác thảo desktop/mobile, trạng thái thẻ và lời hướng dẫn theo E01–E08 nằm trong [UX-MVP-A.md](../../UX-MVP-A.md). Hạt châu, Hành trang, Cài đặt, luồng nhập save, tổng kết offline và kết thúc được chi tiết ở [UX-SCREENS-AND-STATES.md](../../UX-SCREENS-AND-STATES.md). Các lớp đọc truyện, tổng kết offline và kết thúc dùng cùng 5 khu vực chính.
 
 Bộ UX vừa dẫn là tham chiếu v0.6. Đề xuất online thay **Hạt châu → Công pháp**, đưa châu vào chính truyện, thêm tạo đệ tử/Đồng môn và thay nhập save bằng tài khoản/phiên. Tạo hình đệ tử và portrait Vương Lâm phải có nhãn vai trò rõ.
 
@@ -357,7 +359,7 @@ Bộ UX vừa dẫn là tham chiếu v0.6. Đề xuất online thay **Hạt châ
 
 ### 12.2. Công việc để sau MVP
 
-Chiến đấu tự động và luyện thuật thuộc giai đoạn B đã chọn sau A; luật và số liệu thử nghiệm nằm trong [ENCOUNTERS.md](ENCOUNTERS.md). B mở rộng tuyến truyện, thêm 4 địa điểm, 2 mục tiêu luyện thuật và 1 đối thủ giao đấu. Luyện đan, chế tạo pháp bảo, quản lý môn phái, thú nuôi, nhân quả nhiều nhánh và các cảnh giới cao hơn thuộc những gói sau.
+Chiến đấu tự động và luyện thuật thuộc giai đoạn B đã chọn sau A; luật và số liệu thử nghiệm nằm trong [ENCOUNTERS.md](../../ENCOUNTERS.md). B mở rộng tuyến truyện, thêm 4 địa điểm, 2 mục tiêu luyện thuật và 1 đối thủ giao đấu. Luyện đan, chế tạo pháp bảo, quản lý môn phái, thú nuôi, nhân quả nhiều nhánh và các cảnh giới cao hơn thuộc những gói sau.
 
 Tài khoản, lưu máy chủ và tương tác đồng môn thuộc A online. PvP, tổ đội, bảng xếp hạng và giao dịch/kinh tế nhiều người cần phạm vi riêng sau A; B giữ mục tiêu luyện thuật/giao đấu và cần biên tập theo vai đệ tử.
 
@@ -376,16 +378,16 @@ Không coi việc đổi tên tầng và tăng hệ số là đủ cho một gia
 
 - Giao diện nền giấy sáng, chữ mực rõ và điểm nhấn xanh ngọc cho linh khí theo hướng tranh mực/giấy cổ đã chọn.
 - Hạt châu là điểm nhấn bằng hình đơn giản và hiệu ứng nhẹ; ưu tiên phân biệt trạng thái đã mở.
-- Theo [hồ sơ Vương Lâm](WANG-LIN-VISUAL-SPEC.md), duyệt tuổi thể hiện, mặt/tóc, ba bộ đồ và thần thái theo cảnh trước mẫu pixel native; đối chiếu mẫu đệ tử để giữ khác nhận diện. Chân dung nguồn/nền game được sản xuất theo gói; prototype dùng hình đã duyệt hoặc hình tạm.
+- Theo [hồ sơ Vương Lâm](../../WANG-LIN-VISUAL-SPEC.md), duyệt tuổi thể hiện, mặt/tóc, ba bộ đồ và thần thái theo cảnh trước mẫu pixel native; đối chiếu mẫu đệ tử để giữ khác nhận diện. Chân dung nguồn/nền game được sản xuất theo gói; prototype dùng hình đã duyệt hoặc hình tạm.
 - Âm thanh tùy chọn cho nhận mốc và đột phá; có thể tắt hoàn toàn.
 - Mỗi cụm sự kiện chia thành 1–3 đoạn ngắn; giữ động lực và quan hệ nhân vật, giải thích rõ khả năng vừa mở.
 - Nhật ký cho đọc lại. Thông tin tương lai chỉ xuất hiện khi người chơi tới đúng mốc.
 
-Danh mục, brief hạt châu/nhân vật/sinh vật, biến thể theo truyện, kích thước và ngân sách hình ảnh ở [ASSET-PLAN.md](ASSET-PLAN.md). Chốt vai trò asset trước; sản xuất hình theo gói nội dung đã chơi được.
+Danh mục, brief hạt châu/nhân vật/sinh vật, biến thể theo truyện, kích thước và ngân sách hình ảnh ở [ASSET-PLAN.md](../../ASSET-PLAN.md). Chốt vai trò asset trước; sản xuất hình theo gói nội dung đã chơi được.
 
-Định hướng nét vẽ, palette, chữ, bố cục tranh và hiệu ứng nằm trong [ART-DIRECTION.md](ART-DIRECTION.md). Bộ thành phần, trạng thái nút và 14 bản phác UI nằm trong [UI-COMPONENTS.md](UI-COMPONENTS.md). Bảng ART hiện tại là nguồn tham chiếu phong cách; các nguồn game P0/P1 tiếp tục theo danh mục asset.
+Định hướng nét vẽ, palette, chữ, bố cục tranh và hiệu ứng nằm trong [ART-DIRECTION.md](../../ART-DIRECTION.md). Bộ thành phần, trạng thái nút và 14 bản phác UI nằm trong [UI-COMPONENTS.md](../../UI-COMPONENTS.md). Bảng ART hiện tại là nguồn tham chiếu phong cách; các nguồn game P0/P1 tiếp tục theo danh mục asset.
 
-[Thư viện nhân vật](design/characters/index.html) giữ bộ Vương Lâm v2 theo [hồ sơ nguồn](WANG-LIN-VISUAL-SPEC.md), nhận diện đã được người phát triển duyệt làm tham chiếu. [Bộ đứng/đi đầu tiên](design/characters/wang-lin-gray-walk-v1/index.html) có 28 frame áo xám được giữ làm lịch sử. Preview dùng [bộ sửa tay/chân](GAIT-CORRECTION.md) cho Vương Lâm/hai đệ tử, mỗi bộ 36 frame, lưới 64 × 96, bốn hướng, palette 24 mục và điểm chân (32,88). Hình nguồn do imagegen vẽ; script chỉ chuẩn hóa/đóng gói, hình đứng giữ nguyên. Frame mới chờ đánh giá chuyển động/nhận diện. Preview chung đã có backend phòng thử; gameplay tu luyện/tiến trình chưa triển khai.
+[Thư viện nhân vật](../../design/characters/index.html) giữ bộ Vương Lâm v2 theo [hồ sơ nguồn](../../WANG-LIN-VISUAL-SPEC.md), nhận diện đã được người phát triển duyệt làm tham chiếu. [Bộ đứng/đi đầu tiên](../../design/characters/wang-lin-gray-walk-v1/index.html) có 28 frame áo xám được giữ làm lịch sử. Preview dùng [bộ sửa tay/chân](../../GAIT-CORRECTION.md) cho Vương Lâm/hai đệ tử, mỗi bộ 36 frame, lưới 64 × 96, bốn hướng, palette 24 mục và điểm chân (32,88). Hình nguồn do imagegen vẽ; script chỉ chuẩn hóa/đóng gói, hình đứng giữ nguyên. Frame mới chờ đánh giá chuyển động/nhận diện. Preview chung đã có backend phòng thử; gameplay tu luyện/tiến trình chưa triển khai.
 
 ## 15. Cấu trúc dữ liệu và lưu tiến trình
 
@@ -414,9 +416,9 @@ Mẫu trạng thái v0.6 lưu các trường sau để tham chiếu bộ mô ph�
 - Node đã biết, node đang xem, cảnh truyện đang đọc và gặp gỡ đã hoàn thành; địa điểm hoạt động tính từ hoạt động và mốc truyện.
 - Tùy chọn giao diện.
 
-Khả năng đã mở, trạng thái cản trở tu luyện, hình dạng hạt châu, trang phục, vật phẩm và kết thúc A suy ra từ mốc/cảnh. Hợp đồng save và kiểm tra dữ liệu nằm trong [đặc tả hệ thống](MVP-A-SPEC.md); [save minh họa](data/mvp-save-example.json) biểu diễn trạng thái sau E07 và chưa bật tự động.
+Khả năng đã mở, trạng thái cản trở tu luyện, hình dạng hạt châu, trang phục, vật phẩm và kết thúc A suy ra từ mốc/cảnh. Hợp đồng save và kiểm tra dữ liệu nằm trong [đặc tả hệ thống](../../MVP-A-SPEC.md); [save minh họa](../../data/mvp-save-example.json) biểu diễn trạng thái sau E07 và chưa bật tự động.
 
-Máy chủ lưu giao dịch sau lệnh/sự kiện/đột phá và xử lý thời gian. Mỗi lệnh có ID để gửi lại không lặp tác dụng, cùng phiên bản tiến trình để xử lý nhiều thiết bị. Trình duyệt không có quyền nhập JSON để thay tiến trình hợp lệ. Catalog/save v0.6 mang trạng thái tham chiếu chờ chuyển online; [roster mới](data/character-roster.json) theo dõi người chơi/NPC và concept riêng.
+Máy chủ lưu giao dịch sau lệnh/sự kiện/đột phá và xử lý thời gian. Mỗi lệnh có ID để gửi lại không lặp tác dụng, cùng phiên bản tiến trình để xử lý nhiều thiết bị. Trình duyệt không có quyền nhập JSON để thay tiến trình hợp lệ. Catalog/save v0.6 mang trạng thái tham chiếu chờ chuyển online; [roster mới](../../data/character-roster.json) theo dõi người chơi/NPC và concept riêng.
 
 ## 16. Các vấn đề cần kiểm chứng
 
@@ -475,4 +477,4 @@ Các bước là mốc bàn giao theo kết quả. Chưa gán thời hạn vì s
 
 Danh sách công việc cụ thể và điều kiện nghiệm thu nằm trong [MVP-BACKLOG.md](MVP-BACKLOG.md).
 
-Kế hoạch nội dung chi tiết: [đặc tả A](MVP-A-SPEC.md), [UX A](UX-MVP-A.md), [asset](ASSET-PLAN.md), [map MVP/dài hạn và lộ trình phát triển](WORLD-MAPS.md), [quái/nguy hiểm/chiến đấu](ENCOUNTERS.md). [Catalog JSON phương án A](data/mvp-content-catalog.json) chứa điều kiện/tác dụng, cảnh, vật phẩm, hồ sơ và quan hệ tham chiếu để dùng khi triển khai, hiện là dữ liệu thiết kế đề xuất.
+Kế hoạch nội dung chi tiết: [đặc tả A](../../MVP-A-SPEC.md), [UX A](../../UX-MVP-A.md), [asset](../../ASSET-PLAN.md), [map MVP/dài hạn và lộ trình phát triển](../../WORLD-MAPS.md), [quái/nguy hiểm/chiến đấu](../../ENCOUNTERS.md). [Catalog JSON phương án A](../../data/mvp-content-catalog.json) chứa điều kiện/tác dụng, cảnh, vật phẩm, hồ sơ và quan hệ tham chiếu để dùng khi triển khai, hiện là dữ liệu thiết kế đề xuất.

@@ -1,5 +1,7 @@
 # Hồ sơ gameplay Ngưng Khí — bộ kỹ năng khởi đầu
 
+**Mốc runtime 08/10/2026:** [Hằng Nhạc hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) đã dùng baseline Kiếm/Lôi/Phong trên mục tiêu luyện cá nhân và lưu SQLite. Đi bộ vẫn 80 px/s theo map hiện hành. Đây chưa là duyệt cân bằng, farm/HN01–HN12 hoặc combat production; các phần dưới giữ trạng thái đặc tả đề xuất.
+
 **Phiên bản:** 0.3 · **Ngày:** 08/10/2026 · **Trạng thái:** thiết kế tài liệu; chưa triển khai client/server.
 
 **Tham chiếu:** [GDD 0.28](GDD.md), [trải nghiệm Hằng Nhạc 0.4](HANG-NHAC-NGUNG-KHI-SPEC.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md), [tu tiên](CULTIVATION-SYSTEM.md), [nhân vật](CHARACTERS.md), [bàn giao ART/VFX](design/vfx/STARTER-VFX-HANDOFF.md).
@@ -11,14 +13,14 @@
 | Nội dung | Trạng thái |
 | --- | --- |
 | Cả ba có bộ R01 chung làm skill khởi đầu | Đã chốt trong phiên làm việc |
-| Có sẵn ba thuật khi bắt đầu điều khiển, hướng dẫn từng thuật sau đó | Cách áp dụng yêu cầu “học ngay” trong bản này |
-| R02–R05 tiếp tục mở theo tiến trình sau nhập môn | Giữ nguyên hướng GDD; không cấp cả 15 skill lúc đầu |
+| Có sẵn ba thuật khi bắt đầu điều khiển, hướng dẫn từng thuật sau đó | Quyền khởi đầu đã chốt; nhiệm vụ không là cổng skill |
+| R02–R05 không được cấp tự động tại nhập môn | ART đã có/đóng; quyền học, điều kiện và gameplay giai đoạn sau còn cần đặc tả |
 | Chức năng/hit, tài nguyên và vận hành combat bên dưới | Thiết kế đề xuất để đánh giá |
 | HP, sát thương, chi phí, cooldown, cự ly và các ngưỡng thử | Giá trị thử nghiệm v0.1; chưa phải cân bằng đã duyệt |
 
 Đây là bộ thuật nền của bản chuyển thể, không khẳng định nguyên tác có ba nhân vật cùng học ba thuật này tại Hằng Nhạc. Công pháp, cơ duyên và quyền học truyền thừa về sau vẫn khác nhau. Bộ chung không chia ba người thành class Kiếm/Lôi/Phong.
 
-Tài liệu không sửa PNG/atlas/JSON/timeline đã khóa. Quyền gameplay chung không đồng nghĩa animation nhân vật cả ba đã đủ; cần kiểm kê phần động tác/icon/SFX/hướng còn thiếu trước tích hợp.
+Tài liệu không sửa PNG/atlas/JSON/timeline đã khóa. Quyền gameplay chung không đồng nghĩa animation nhân vật cả ba đã đủ; cần kiểm kê phần động tác/icon/SFX/hướng còn thiếu trước tích hợp. Ưu tiên sản xuất vẫn là map trước vận hành gameplay theo GDD; baseline bên dưới phục vụ đánh giá sau khi chuyển sang gameplay, chưa là nhiệm vụ tích hợp đang mở.
 
 ## 2. Ba hồ sơ nhân vật ở đầu map
 

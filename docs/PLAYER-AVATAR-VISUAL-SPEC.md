@@ -1,8 +1,8 @@
-# Đệ tử người chơi — tạo hình và bộ pixel thử đầu tiên
+# Avatar đệ tử thử nghiệm — tạo hình và bộ pixel đầu tiên
 
-> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Hai mẫu đệ tử trong hồ sơ này là nghiên cứu/preview lịch sử, không là roster nhân vật người chơi chính của GDD hiện hành. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+**Hướng hiện hành — GDD 0.28:** người chơi chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, cùng Hằng Nhạc–Ngưng Khí, phân hóa từ Trúc Cơ. Hai đệ tử là avatar kỹ thuật đang dùng sân online; hồ sơ v2 dưới đây là nguồn trước chibi, không là roster nhân vật chính. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md).
 
-**Phiên bản:** 0.1, ngày 07/10/2026.  
+**Phiên bản:** 0.2, ngày 08/10/2026.\
 **Phạm vi:** hai mẫu `AVATAR-NOVICE-MALE/FEMALE`, cùng đồng phục nhập môn; tên riêng do người chơi đặt.  
 **Trạng thái:** tạo hình v2 và bộ đứng/đi thử đã dựng để đánh giá; nhận diện và chuyển động đệ tử chưa được người phát triển duyệt.  
 **Xem:** [trang so sánh và thử trên sân](design/characters/player-avatars-v2/index.html), [nguồn/prompt](design/characters/player-avatars-v2/README.md), [dữ liệu nghiên cứu](design/characters/player-avatars-v2/study.json), [roster](data/character-roster.json).
@@ -11,9 +11,9 @@
 
 ## 1. Vai trò và nguồn thiết kế
 
-Đây là hai mẫu nhân vật **do game bổ sung**, không phải người có tên trong tiểu thuyết. Hai mẫu dùng chung giữa tài khoản; một người chọn mẫu và đặt tên cho đệ tử riêng. Chọn mẫu hình không cộng/trừ chỉ số, không đổi tuyến tu luyện hoặc quyền sử dụng trang bị.
+Đây là hai mẫu nhân vật **do game bổ sung**, không phải người có tên trong tiểu thuyết. Sân online thử nghiệm cho chọn mẫu và tên tạm trong phiên; chưa có tài khoản/tiến trình. Chọn mẫu không đổi luật di chuyển. Thiết kế gameplay chính đã chuyển sang bộ ba chọn từ đầu.
 
-Giữ chất liệu, trang phục giản dị và ngôn ngữ hình ảnh nhập môn của game. Không gán tiểu sử hay vật phẩm độc hữu của Vương Lâm cho người chơi. Chưa sản xuất bộ đời thường, bộ áo đỏ hoặc ngoại hình cảnh giới cao trong gói này.
+Giữ chất liệu, trang phục giản dị và ngôn ngữ hình ảnh nhập môn của game. Hai mẫu avatar kỹ thuật không đại diện tiểu sử/vật phẩm của bộ ba; nội dung của từng lựa chọn người chơi theo GDD hiện hành. Chưa sản xuất bộ đời thường, bộ áo đỏ hoặc ngoại hình cảnh giới cao trong gói này.
 
 ## 2. Nhận diện đề xuất v2
 
@@ -30,7 +30,7 @@ Chi tiết mặt/tóc và tuổi của đệ tử là lựa chọn ART. Màu đa
 
 Bảng chân dung giữ tranh mực/giấy cổ. Sprite giản lược nếp vải, mặt và đường áo về các cụm pixel; không thu nhỏ nguyên bảng chân dung làm sprite. Gấu áo/sợi tóc dạng nét mực trong bảng là cách minh họa chất liệu, không là trạng thái hư hại của nhân vật.
 
-## 3. Chuẩn pixel dùng lại
+## 3. Hợp đồng bộ pixel v2 trước chibi
 
 Lấy bộ áo xám Vương Lâm làm chuẩn thử theo phản hồi của người phát triển. Chuẩn này quy định **frame nhân vật**, không quy định ô map hay va chạm.
 
@@ -55,9 +55,9 @@ Nam và nữ dùng chung palette, anchor và cấu trúc atlas. Palette đệ t�
 
 Ở cỡ 1×, tóc và khối người phải đọc được; chi tiết hàm/mắt chủ yếu thể hiện ở portrait. Trang so sánh cho tắt tên/vòng chọn trên sân để kiểm tra phần nhận diện đến từ ART.
 
-Hai mẫu chỉ phân biệt loại hình cơ bản. Nhiều người chọn cùng mẫu vẫn có ngoại hình giống nhau, vì A chỉ có hai mẫu và tên; đây chưa là hệ thống tùy biến đầy đủ. UI của game cần tên người chơi, chỉ báo đệ tử của mình và trạng thái đồng đội theo đặc tả online. Không thêm màu sáng/chỉ số/vũ khí vào concept chỉ để phân biệt tài khoản.
+Hai mẫu chỉ phân biệt loại hình cơ bản. Nhiều người chọn cùng mẫu vẫn có ngoại hình giống nhau, vì sân preview chỉ có hai mẫu và tên tạm; đây chưa là hệ thống tùy biến đầy đủ. UI của game cần tên người chơi, chỉ báo đệ tử của mình và trạng thái đồng đội theo đặc tả online. Không thêm màu sáng/chỉ số/vũ khí vào concept chỉ để phân biệt tài khoản.
 
-Nhãn **Vương Lâm · NPC** luôn tách với mẫu người chơi. Trang xem chỉ cho hai mẫu đệ tử thử đi; Vương Lâm đứng làm tham chiếu. Đây là công cụ xem ART, chưa phải thế giới multiplayer.
+Trang xem v2 lịch sử cho hai đệ tử thử đi và Vương Lâm làm tham chiếu; nhãn NPC cũ trong dữ liệu nguồn không quyết định quyền chọn gameplay. Trang main hiện xem đủ bộ ba local, sân online vẫn chỉ hai đệ tử thử nghiệm.
 
 ## 5. Nguồn và đóng gói
 

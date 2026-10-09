@@ -1,6 +1,6 @@
 # Quái, nguy hiểm và chiến đấu — MVP và dài hạn
 
-> **Archived reference:** current gameplay scope is [RPG-A](MVP-RPG-A.md), with the [new backlog](MVP-BACKLOG.md).
+> **Hồ sơ lịch sử — không phải luật hiện hành.** Giữ mô hình, số liệu và mốc phát triển tại thời điểm nguồn. Thiết kế mới: [GDD 0.28](GDD.md), [Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md) và [trạng thái dự án](PROJECT-STATUS.md).
 
 > **Điều chỉnh online v0.7:** hổ/hang/kiếm linh và trận của Vương Lâm dưới đây thuộc hồ sơ chính truyện tham chiếu. Người chơi tạo đệ tử riêng; gặp gỡ/đối thủ/phần thưởng của đệ tử cần biên tập riêng. Không dùng sự kiện truyện để nhân vật mỗi tài khoản nhận vật phẩm độc hữu của Vương Lâm. [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md) xác định hướng mới; B vẫn sau A.
 

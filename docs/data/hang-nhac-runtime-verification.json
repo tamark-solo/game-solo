@@ -1,0 +1,201 @@
+{
+  "date": "2026-10-08",
+  "verifiedAt": "2026-10-08T12:39:35.559Z",
+  "passed": true,
+  "branch": "_MMO",
+  "milestone": "hang_nhac_runtime_foundation",
+  "language": "TypeScript",
+  "client": "Three.js",
+  "backend": "Node.js + Colyseus",
+  "mapVersion": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+  "backgroundSha256": "6eb1aa51e23d81e2371316329531ab2415575165aeb0b83e7306443e588b3521",
+  "ownerProjectSha256": "b8571377613bf0b83997fd7087a4301955300f5ab2f3627ab9837988fb3a8256",
+  "ownerProjectUnchanged": true,
+  "ownerBlockersUnchanged": true,
+  "blockers": 9,
+  "build": {
+    "passed": true,
+    "typecheck": true,
+    "rendererChunkWarning": "existing Three.js shared chunk exceeds 500 kB uncompressed"
+  },
+  "unitTests": {
+    "passed": 47,
+    "failed": 0
+  },
+  "reports": {
+    "online": {
+      "passed": true,
+      "version": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+      "checks": [
+        "stale_map_rejected",
+        "three_appearances_same_room",
+        "owner_spawn",
+        "server_editor_prediction_same_wall",
+        "all_clients_converge",
+        "raw_teleport_rejected",
+        "drop_stops_motion",
+        "same_session_reconnect_at_wall",
+        "leave_removes_entity"
+      ],
+      "blockerStop": {
+        "x": 1989.333333333344,
+        "y": 992,
+        "direction": "east",
+        "moving": false
+      },
+      "persistentProfiles": false
+    },
+    "browser": {
+      "passed": true,
+      "version": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+      "checks": [
+        "native_camera_frame_anchor_and_owner_spawn",
+        "three_original_appearances_move_locally",
+        "two_browser_sessions_same_map",
+        "prediction_reconciles_at_owner_blocker",
+        "mobile_without_overflow",
+        "pointer_controls_move_character",
+        "leave_updates_peer"
+      ],
+      "errors": [],
+      "blockerStop": {
+        "id": "NOkV8_Di-",
+        "assetId": "CHR-WANG-LIN-CHIBI",
+        "x": 1989.3333740234375,
+        "y": 992,
+        "own": true,
+        "direction": "east",
+        "moving": false,
+        "frame": "wanglin_chibi_stand_east",
+        "walkable": true,
+        "frameSize": [
+          64,
+          96
+        ],
+        "anchor": [
+          32,
+          88
+        ]
+      }
+    },
+    "legacyOnline": {
+      "passed": true,
+      "checks": [
+        "two_clients_same_room",
+        "both_avatar_templates",
+        "reject_teleport_and_speed",
+        "native_input_axis_sanitization",
+        "authoritative_movement",
+        "processed_input_ack",
+        "packet_flood_does_not_increase_speed",
+        "shared_positions",
+        "solid_boundary",
+        "empty_input_stops_movement",
+        "drop_and_same_session_reconnect",
+        "leave_removes_entity"
+      ],
+      "persistentAccounts": false
+    },
+    "legacyBrowser": {
+      "passed": true,
+      "browserVersion": "154.0.8037.98",
+      "checks": [
+        "source_atlases_6_packs_136_frames",
+        "home_page_defaults_to_new_chibi_asset",
+        "pause_and_manual_frame_step",
+        "main_map_chibi_four_directions_walk_stop_and_normalized_diagonal",
+        "four_directions_all_actors_static_states_explicit",
+        "every_walk_pose_is_displayed_by_three_renderer",
+        "new_chibi_sets_all_directions_spirit_glide_label_explicit",
+        "paper_dark_grid_integer_zoom",
+        "local_wasd_movement_input_focus_does_not_move_actor",
+        "independent_animation_uvs_1_5_20_local_actors",
+        "mobile_360_px_dpr2_four_direction_touch_movement_no_horizontal_overflow",
+        "five_character_chibi_gallery_frames_and_mobile_no_overflow",
+        "browser_auto_reconnect_same_session",
+        "two_browser_clients_see_same_server_movement",
+        "browser_leave_updates_roster"
+      ],
+      "measurements": [
+        {
+          "simulatedActors": 1,
+          "readout": "57 FPS · 1 hình",
+          "renderer": "headless_software",
+          "mmoCapacityClaim": false
+        },
+        {
+          "simulatedActors": 5,
+          "readout": "57 FPS · 5 hình",
+          "renderer": "headless_software",
+          "mmoCapacityClaim": false
+        },
+        {
+          "simulatedActors": 20,
+          "readout": "55 FPS · 20 hình",
+          "renderer": "headless_software",
+          "mmoCapacityClaim": false
+        }
+      ],
+      "browserErrors": [],
+      "mobileInputStartX": 480
+    },
+    "editor": {
+      "passed": true,
+      "checks": [
+        "empty_library_reset_preserves_old_drafts_without_loading_deleted_presets",
+        "blank_level_and_imported_asset_drag_drop",
+        "precise_transform_duplicate_history_and_locks",
+        "editable_instance_pivot_preserves_registered_asset_parts",
+        "linked_part_layer_locks_and_visible_canopy_selection",
+        "manual_blockers_hide_separately_from_activity_and_test_controls",
+        "polygon_creation_move_add_and_remove_vertices",
+        "independent_level_data_and_authored_portal_flow",
+        "custom_png_import_and_placement",
+        "separate_level_files_and_authoritative_level_index",
+        "workspace_save_overwrite_export_import_and_browser_restore",
+        "individual_level_export_import_merges_without_replacing_other_levels"
+      ],
+      "browserErrors": [],
+      "defaultLibraryIsEmpty": true,
+      "syntheticTestAssetsOnly": true,
+      "defaultMapIsBlank": true,
+      "ownerAuthorsLayoutAndNavigation": true,
+      "storage": "isolated artifacts/map-editor-test-store",
+      "onlineConnected": false
+    },
+    "levelDesign": {
+      "passed": true,
+      "checks": [
+        "native_tileset_slicing_and_category_pivot_metadata",
+        "continuous_brush_eraser_rect_fill_and_single_stroke_undo",
+        "multi_selection_group_duplicate_alignment_and_keyboard_nudge",
+        "prefab_stamps_visuals_and_manual_blockers_on_an_independent_level",
+        "portable_library_json_merges_assets_and_prefabs_without_duplicate_definitions",
+        "asset_part_add_cover_flags_replacement_registration_and_remove",
+        "test_renders_active_level_art_independently_of_editor_hide_and_solo_views",
+        "level_audit_blocks_invalid_runtime_export_and_keeps_native_character_contract",
+        "new_design_metadata_survives_workspace_save_and_browser_restore"
+      ],
+      "browserErrors": [],
+      "libraryStartsEmpty": true,
+      "testAssetsAreSynthetic": true,
+      "ownerAuthoredMapsUntouched": true,
+      "onlineConnected": false
+    }
+  },
+  "evidence": [
+    "../../artifacts/hang-nhac-runtime-in-app.png",
+    "../../artifacts/hang-nhac-online-desktop.png",
+    "../../artifacts/hang-nhac-mobile.png"
+  ],
+  "limitations": {
+    "persistentAccounts": false,
+    "persistentProfiles": false,
+    "R01SkillsIntegrated": false,
+    "questsIntegrated": false,
+    "combatIntegrated": false,
+    "portalsIntegrated": false,
+    "layeredOcclusionIntegrated": false,
+    "mmoCapacityMeasured": false
+  }
+}

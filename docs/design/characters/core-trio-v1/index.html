@@ -13,7 +13,7 @@
 <body>
 <main>
   <h1>Vương Lâm · Tư Đồ Nam · Lý Mộ Uyển</h1>
-  <p>Ba nhân vật trọng tâm của chính truyện đã chốt trong GDD. Vương Lâm v2 và Lý Mộ Uyển v1 đã được chấp nhận; Tư Đồ Nam đứng v3 giữ mặt/tóc v2 đã được tạm chấp nhận làm chuẩn thiết kế. Người chơi điều khiển đệ tử riêng.</p>
+  <p>Gallery nguồn trước chibi: Vương Lâm v2 và Lý Mộ Uyển v1 đã chấp nhận tại mốc này; Tư Đồ Nam đứng v3 tạm chấp nhận. GDD 0.28 hiện cho chọn cả ba từ đầu. <a href="../chibi-roster-v1/index.html">Bộ chibi hiện hành</a> có 60 frame đứng/đi hoặc lướt bốn hướng; Lý Mộ Uyển native-v5 đã chọn.</p>
   <nav aria-label="Bộ ba nhân vật"><a href="../core-ui-v1/index.html">Chân dung UI</a><a href="../../../CORE-CHARACTER-MOTION-PLAN.md">Kế hoạch động tác</a><a href="#pixel">Mẫu pixel</a><a href="#situ-nan">Tư Đồ Nam</a><a href="#li-muwan">Lý Mộ Uyển</a><a href="#wang-lin">Vương Lâm</a><a href="../../../CORE-CHARACTER-VISUAL-SPEC.md">Hồ sơ và nguồn truyện</a><a href="../index.html">Thư viện nhân vật</a></nav>
   <section id="pixel">
     <h2>Đối chiếu ngôn ngữ pixel</h2>
@@ -21,11 +21,11 @@
     <fieldset><legend>Hướng</legend><button type="button" data-direction="south" aria-pressed="true">Xuống / Trước</button><button type="button" data-direction="west" aria-pressed="false">Trái</button><button type="button" data-direction="east" aria-pressed="false">Phải</button><button type="button" data-direction="north" aria-pressed="false">Lên / Sau</button></fieldset>
     <div class="line"><label for="scale">Cỡ xem</label><select id="scale"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select><label for="backdrop">Nền</label><select id="backdrop"><option value="paper">Giấy</option><option value="dark">Tối</option></select><label><input id="anchor" type="checkbox"> Hiện điểm đặt</label></div>
     <div id="comparison" class="comparison">
-      <article><h3>Vương Lâm</h3><p class="badge">NPC truyện · Nhận diện đã duyệt</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-wanglin" width="64" height="96" aria-label="Vương Lâm áo xám, frame đứng của hướng được chọn"></canvas></div></div><p>Dáng thiếu niên, tóc dài buộc nửa đầu, áo xám.</p><p class="note">64 × 96 · Điểm chân (32, 88).</p></article>
+      <article><h3>Vương Lâm</h3><p class="badge">Nguồn áo xám · Nhận diện đã duyệt</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-wanglin" width="64" height="96" aria-label="Vương Lâm áo xám, frame đứng của hướng được chọn"></canvas></div></div><p>Dáng thiếu niên, tóc dài buộc nửa đầu, áo xám.</p><p class="note">64 × 96 · Điểm chân (32, 88).</p></article>
       <article><h3>Tư Đồ Nam</h3><p class="badge">Linh thể đứng · V3 tạm chấp nhận</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-situ" width="64" height="96" aria-label="Tư Đồ Nam đứng lơ lửng dạng linh thể, theo hướng được chọn"></canvas></div></div><p>Giữ mặt/tóc v2; đứng lơ lửng, chân duỗi, tay thả tự nhiên; ngực có khoảng khuyết.</p><p class="note">64 × 96 · Điểm chiếu (32, 88), lơ lửng cao 4 px.</p></article>
       <article><h3>Lý Mộ Uyển</h3><p class="badge">Áo tím chương 144 · Nhận diện đã chấp nhận</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-muwan" width="64" height="96" aria-label="Lý Mộ Uyển áo tím, frame đứng của hướng được chọn"></canvas></div></div><p>Tóc dài buộc đuôi, áo tím, dáng tập trung và dịu.</p><p class="note">64 × 96 · Điểm chân (32, 88).</p></article>
     </div>
-    <p class="note">Tám mẫu tĩnh hiện tại cùng lưới 64 × 96. Tư Đồ Nam đứng là ART cho tương tác; animation lướt sẽ làm sau. Dạng ngồi 128 × 128 được lưu riêng cho cảnh tu luyện theo truyện.</p>
+    <p class="note">Tám mẫu tĩnh trong gói trước cùng lưới64 × 96. Bộ chibi sau đã có lướt Tư Đồ Nam và đi Lý Mộ Uyển bốn hướng; vòng lơ lửng tại chỗ còn chưa vẽ. Dạng ngồi 128 × 128 được lưu riêng cho cảnh tu luyện theo truyện.</p>
   </section>
   <section id="situ-nan">
     <h2>Tư Đồ Nam · Linh thể đứng v3</h2>
@@ -50,7 +50,7 @@
     <a href="../wang-lin-initiation-v2.png"><img loading="lazy" src="../wang-lin-initiation-v2.png" width="1536" height="1024" alt="Bảng Vương Lâm đã duyệt với đồ thường, áo xám, áo đỏ và các góc mặt/tóc"></a>
     <p><a href="../wang-lin-gray-walk-v1/index.html">Bộ đứng và đi Vương Lâm</a> vẫn dùng nguồn đã duyệt. Hai tạo hình mới bổ sung nhận diện của bộ ba, chưa thay phiên bản Vương Lâm.</p>
   </section>
-  <p class="note">Hình mới vẽ bằng imagegen tích hợp. <a href="README.md">Nguồn và bộ prompt</a> · <a href="study.json">Manifest</a> · <a href="../../../CORE-CHARACTER-VISUAL-SPEC.md">Căn cứ truyện và lựa chọn ART</a>. Lý Mộ Uyển v1 đã chấp nhận; Tư Đồ Nam đứng v3 tạm chấp nhận làm chuẩn thiết kế, tiếp tục hoàn thiện ART sau. Thời điểm mở B/arc sau theo GDD.</p>
+  <p class="note">Hình mới vẽ bằng imagegen tích hợp. <a href="README.md">Nguồn và bộ prompt</a> · <a href="study.json">Manifest</a> · <a href="../../../CORE-CHARACTER-VISUAL-SPEC.md">Căn cứ truyện và lựa chọn ART</a>. Lý Mộ Uyển v1 đã chấp nhận; Tư Đồ Nam đứng v3 tạm chấp nhận làm chuẩn thiết kế, tiếp tục hoàn thiện ART sau. Mốc nguyên tác phục vụ biên tập truyện; quyền chọn bộ ba từ đầu theo GDD hiện hành.</p>
 </main>
 </body>
 </html>

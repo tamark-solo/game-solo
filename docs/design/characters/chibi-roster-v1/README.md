@@ -2,7 +2,7 @@
 
 **Xem:** [năm nhân vật cạnh nhau](http://127.0.0.1:5173/assets/chibi-roster/index.html), [gallery trong dự án](index.html) và [preview Three.js](http://127.0.0.1:5173/). Chọn nhân vật để xem pose/đi trên sân; hai đệ tử mới cũng dùng trong sân online.
 
-**Runtime:** 0.5.1. Người phát triển dùng Vương Lâm làm chuẩn. Lý Mộ Uyển native-v5 đã được chấp nhận làm chuẩn bản thử ngày 07/10/2026: “tôi thấy ổn rồi đó.” Hai đệ tử và Tư Đồ Nam chibi mới còn chờ đánh giá; số NPC và thời điểm truyện giữ nguyên.
+**Mốc sản xuất bộ chibi:** runtime 0.5.1; công cụ hiện tại 0.12.0. Người phát triển dùng Vương Lâm làm chuẩn. Lý Mộ Uyển native-v5 đã được chấp nhận làm chuẩn bản thử ngày 07/10/2026: “tôi thấy ổn rồi đó.” Hai đệ tử và Tư Đồ Nam chibi mới còn chờ đánh giá. Theo [GDD 0.28](../../../GDD.md), bộ ba chọn được từ đầu, cùng Hằng Nhạc–Ngưng Khí; sân online hiện chỉ hai mẫu đệ tử kỹ thuật.
 
 ## Bộ đang dùng
 
@@ -15,7 +15,7 @@
 
 **80 frame mới.** Mỗi bộ: frame 64 × 96, atlas 320 × 384, bốn hướng xuống/trái/phải/lên, palette 24 mục gồm trong suốt và điểm đặt (32, 88). Người đi giữ đáy hình y = 88; linh thể có đáy y = 84. Hướng trái/phải có hình riêng. Bốn pha đi bước nhỏ/tay gần hông; lướt giữ chân duỗi và áo gợn nhẹ.
 
-Vương Lâm chibi giữ nguyên PNG và được kiểm SHA-256. Năm bộ chibi có **100 frame**, cộng bộ Vương Lâm trước 36 frame để đối chiếu thành **6 bộ/136 frame** trong catalog. Bộ ba truyện chiếm 60 frame, hai avatar chiếm 40; avatar không là NPC có tuyến truyện cố định.
+Vương Lâm chibi giữ nguyên PNG và được kiểm SHA-256. Năm bộ chibi có **100 frame**, cộng bộ Vương Lâm trước 36 frame để đối chiếu thành **6 bộ/136 frame** trong catalog. Bộ ba lựa chọn người chơi chiếm 60 frame, hai avatar kỹ thuật chiếm 40. Nhãn role trong nguồn/catalog là tag preview kế thừa, không quyết định quyền chọn gameplay.
 
 Preview mặc định 5 FPS tại chỗ, 24 px/vòng và 40 px/s trên map cục bộ. Online dùng tốc độ server và sải 48 px/vòng đã có. Số này phục vụ duyệt hình, chưa là cân bằng gameplay cuối.
 

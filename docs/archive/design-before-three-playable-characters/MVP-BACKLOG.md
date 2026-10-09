@@ -1,6 +1,8 @@
 # Backlog MVP — Tiên Nghịch: Hành Trình Vương Lâm
 
-**Tham chiếu:** [GDD phiên bản 0.23](GDD.md), [MMORPG](MMORPG-DIRECTION.md), [hình trên map](WORLD-VISUAL-SPEC.md), [định hướng online](ONLINE-DIRECTION.md), [nhân vật](CHARACTERS.md), [hồ sơ Vương Lâm](WANG-LIN-VISUAL-SPEC.md), [sprite](WANG-LIN-SPRITE-SPEC.md), [đặc tả A tham chiếu](MVP-A-SPEC.md), [UX A](UX-MVP-A.md), [màn hình/trạng thái](UX-SCREENS-AND-STATES.md), [bộ UI](UI-COMPONENTS.md), [ART](ART-DIRECTION.md), [asset](ASSET-PLAN.md), [map](WORLD-MAPS.md), [gặp gỡ](ENCOUNTERS.md).  
+> **Snapshot lịch sử — không phải luật hiện hành.** Giữ nội dung quyết định theo thời điểm nguồn; chỉ nhãn trạng thái và đường dẫn đọc được cập nhật khi rà soát ngày 08/10/2026. Hướng hiện hành: [GDD 0.28](../../GDD.md), [trạng thái dự án](../../PROJECT-STATUS.md) và [mục lục lịch sử](README.md).
+
+**Tham chiếu:** [GDD phiên bản 0.23](GDD.md), [MMORPG](MMORPG-DIRECTION.md), [hình trên map](../../WORLD-VISUAL-SPEC.md), [định hướng online](ONLINE-DIRECTION.md), [nhân vật](CHARACTERS.md), [hồ sơ Vương Lâm](../../WANG-LIN-VISUAL-SPEC.md), [sprite](../../WANG-LIN-SPRITE-SPEC.md), [đặc tả A tham chiếu](../../MVP-A-SPEC.md), [UX A](../../UX-MVP-A.md), [màn hình/trạng thái](../../UX-SCREENS-AND-STATES.md), [bộ UI](../../UI-COMPONENTS.md), [ART](../../ART-DIRECTION.md), [asset](../../ASSET-PLAN.md), [map](../../WORLD-MAPS.md), [gặp gỡ](../../ENCOUNTERS.md).\
 **Đích bàn giao:** đệ tử riêng đạt Ngưng Khí tầng 1 trên web online; hai tài khoản có thể tương tác trong khu chung.
 
 **Giai đoạn hiện tại:** đã có preview animation/map và backend online tối thiểu. PV01–PV04 đã được kiểm tra kỹ thuật; chất lượng motion cần người phát triển đánh giá. Gameplay tài nguyên/tu luyện/tài khoản/tiến trình trong B01–B20 chưa hoàn thành. Thứ tự ưu tiên theo phụ thuộc; chỉ sản xuất thêm nội dung sau khi vòng hiện tại chơi được.
@@ -14,9 +16,9 @@ Lộ trình đã chốt là **A → B**. B01–B20 là ID công việc của A, 
 | ID | Đầu ra | Trạng thái |
 | --- | --- | --- |
 | D-CHR | Roster, hồ sơ nguồn, nhận diện bộ ba trọng tâm và hai đệ tử | Ba chân dung UI/bộ đi sửa chờ đánh giá; kế hoạch core 44 → 108, 64 frame Tư Đồ Nam/Lý Mộ Uyển chưa vẽ; nhận diện giữ trạng thái riêng |
-| D-VIEW | ART/góc nhìn, lưới và bộ chuyển động đầu tiên | [Bộ đi sửa tay/chân](GAIT-CORRECTION.md) có 8 pose/hướng cho Vương Lâm/hai đệ tử; đánh giá trong preview |
+| D-VIEW | ART/góc nhìn, lưới và bộ chuyển động đầu tiên | [Bộ đi sửa tay/chân](../../GAIT-CORRECTION.md) có 8 pose/hướng cho Vương Lâm/hai đệ tử; đánh giá trong preview |
 | D-TECH | Công nghệ client và thành phần preview dùng chung | TypeScript + Three.js; backend tối thiểu TypeScript + Node.js + Colyseus đã được đồng ý; DB/auth còn mở |
-| D-PREVIEW | Adapters, map thử và nghiệm thu preview | 5 bộ/116 frame, hai chế độ cục bộ và sân online; [kết quả](data/preview-verification.json), chờ người phát triển đánh giá chuyển động |
+| D-PREVIEW | Adapters, map thử và nghiệm thu preview | 5 bộ/116 frame, hai chế độ cục bộ và sân online; [kết quả](../../data/preview-verification.json), chờ người phát triển đánh giá chuyển động |
 | D-MMO | Phạm vi map/NPC/nhiệm vụ/chiến đấu/trang bị của A/B | Định hướng MMORPG đã xác nhận, chi tiết còn đề xuất |
 | D-WORLD | Khu môn phái đi lại, điểm tương tác và vị trí người chơi | Hình thức khu chung đã chọn; cần bố cục/luật |
 | D-P | Tuyến P của đệ tử tách E chính truyện, vật phẩm và map riêng | Cần biên tập sau tạo hình |
@@ -43,7 +45,7 @@ Bản **PV01–PV04: preview chung TypeScript + Three.js** bằng các bộ spri
 | PV03 | Di chuyển trên map thử, va chạm/lớp | PV02 | Tốc độ độc lập FPS, reset/dừng/đổi hướng; vật cao che khuất theo điểm chiếu; không dùng nền vẽ sẵn nhân vật |
 | PV04 | Kiểm tra hiển thị, điều khiển và số liệu preview | PV02, PV03 | Desktop/360 px, nền sáng/tối, zoom nguyên; hai hình cùng atlas ở frame khác nhau; ghi số liệu với 1/5/20 hình |
 
-PV là công cụ duyệt ART; NET01 dùng chung renderer và luật di chuyển để thử hai client trong cùng phòng. [Hướng dẫn](PREVIEW-RUNBOOK.md) ghi thao tác, [hợp đồng backend](BACKEND-PREVIEW.md) ghi giới hạn phiên tạm. Sau phản hồi tay/chân đã có bộ đi vẽ lại để đánh giá; hai phiên thử và số đo preview không thay nghiệm thu hai tài khoản/tiến trình của A.
+PV là công cụ duyệt ART; NET01 dùng chung renderer và luật di chuyển để thử hai client trong cùng phòng. [Hướng dẫn](../../PREVIEW-RUNBOOK.md) ghi thao tác, [hợp đồng backend](../../BACKEND-PREVIEW.md) ghi giới hạn phiên tạm. Sau phản hồi tay/chân đã có bộ đi vẽ lại để đánh giá; hai phiên thử và số đo preview không thay nghiệm thu hai tài khoản/tiến trình của A.
 
 ## 2. Công việc triển khai
 
@@ -103,7 +105,7 @@ PV là công cụ duyệt ART; NET01 dùng chung renderer và luật di chuyển
 | Sau E05/E06/E07 | Lưu rồi mở lại | Trang phục, lớp châu và địa điểm chuẩn bị đúng mốc |
 | File hình thiếu hoặc chưa sản xuất | Mở node/hồ sơ tương ứng | Hiện tên và thông tin; vẫn đi tiếp được bằng luật game |
 
-Trường hợp bổ sung về cảnh chủ động, nút cuối và lựa chọn hoạt động nằm trong [MVP-A-SPEC.md](MVP-A-SPEC.md); trường hợp hướng dẫn/màn hình nằm trong [UX-MVP-A.md](UX-MVP-A.md) và [UX-SCREENS-AND-STATES.md](UX-SCREENS-AND-STATES.md). Chúng là kế hoạch nghiệm thu khi có prototype.
+Trường hợp bổ sung về cảnh chủ động, nút cuối và lựa chọn hoạt động nằm trong [MVP-A-SPEC.md](../../MVP-A-SPEC.md); trường hợp hướng dẫn/màn hình nằm trong [UX-MVP-A.md](../../UX-MVP-A.md) và [UX-SCREENS-AND-STATES.md](../../UX-SCREENS-AND-STATES.md). Chúng là kế hoạch nghiệm thu khi có prototype.
 
 ## 4. Những quyết định để lúc triển khai
 

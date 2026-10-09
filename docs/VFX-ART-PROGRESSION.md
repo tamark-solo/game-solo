@@ -1,11 +1,11 @@
 # Phân bổ ART/VFX kỹ năng theo cảnh giới
 
-**Phiên bản:** 0.15 · 07/10/2026.
-**Phạm vi:** thiết kế ART cho đệ tử người chơi trong MMORPG; sản xuất riêng với phần client/server đang được phát triển.  
+**Phiên bản:** 0.16 · 08/10/2026.
+**Phạm vi:** thư viện ART/VFX MMORPG dùng làm nền tích hợp cho ba nhân vật người chơi của [GDD 0.28](GDD.md), chọn từ đầu; bộ thi triển hiện dùng Vương Lâm chibi hướng Đông. Chưa có mapping kỹ năng/pose đầy đủ cho từng actor hoặc tích hợp client/server.\
 **Đã được người phát triển chấp nhận:** bộ ba Kiếm Khí, Lôi Ấn, Ngự Phong Bộ; chất lượng và ngôn ngữ mỹ thuật của [bảng Ngưng Khí v1](design/vfx/ngung-khi-approved-art-v1.png); cảnh giới cao tăng độ phức tạp và uy lực từ nền này.  
-**Thứ tự sản xuất đã được chấp nhận:** P1 Kiếm Khí → P2 Lôi Ấn / Ngự Phong Bộ → P3 Trúc Cơ → P4 Kết Đan → P5 Nguyên Anh / Hóa Thần. Hình thái tiến hóa và ngân sách phía dưới là brief ART, cần kiểm qua từng bản sản xuất. Chưa có VFX mới tích hợp vào runtime.
+**Đợt ART đã đóng:** P1 Kiếm Khí → P2 Lôi Ấn / Ngự Phong Bộ → P3 Trúc Cơ → P4 Kết Đan → P5 Nguyên Anh / Hóa Thần đã sản xuất/chấp nhận cả **15 skill, 646 PNG, 76 atlas** ngày 07/10. Ma trận dưới là hồ sơ ART và hợp đồng tích hợp; không mở cảnh giới/skill gameplay chỉ từ việc có asset. Ưu tiên hiện tại vẫn là map, VFX chưa tích hợp runtime.
 
-**Tiến độ P1:** chủ dự án đã duyệt bản frame-by-frame và yêu cầu lưu thành bộ. Release Kiếm Khí 1.0.0 đã đóng ZIP, đối chiếu SHA-256 từng file. [Gói Kiếm Khí mẫu](design/vfx/frame-by-frame-r01/PIPELINE.md) có 12 pose Vương Lâm hướng đông, 6 frame charge, 6 frame projectile và 12 frame hit/tan; 36 PNG, 4 atlas, timeline/frame event, adapter trình bày và preview/editor. Thân giữ cao khoảng 80 px như bộ idle 64 × 96; canvas cast 96 × 96 thêm padding cho tay/tóc. Vương Lâm là mẫu thi triển; chưa thay vai trò cốt truyện. Các hướng khác, SFX, tích hợp và benchmark runtime còn cần sản xuất/kiểm tra.
+**Mốc P1 đã bàn giao:** chủ dự án đã duyệt bản frame-by-frame và yêu cầu lưu thành bộ. Release Kiếm Khí 1.0.0 đã đóng ZIP, đối chiếu SHA-256 từng file. [Gói Kiếm Khí mẫu](design/vfx/frame-by-frame-r01/PIPELINE.md) có 12 pose Vương Lâm hướng đông, 6 frame charge, 6 frame projectile và 12 frame hit/tan; 36 PNG, 4 atlas, timeline/frame event, adapter trình bày và preview/editor. Thân giữ cao khoảng 80 px như bộ idle 64 × 96; canvas cast 96 × 96 thêm padding cho tay/tóc. Vương Lâm là mẫu thi triển; bộ pose một hướng không đại diện animation combat đầy đủ của ba lựa chọn người chơi. Các hướng khác, SFX, tích hợp và benchmark runtime còn cần sản xuất/kiểm tra.
 
 ## 1. Chuẩn mỹ thuật
 
@@ -28,7 +28,7 @@ Mức độ đẹp của nét, silhouette và điểm chạm được giữ từ
 
 Thứ tự Ngưng Khí → Trúc Cơ → Kết Đan → Nguyên Anh → Hóa Thần theo phần giới thiệu cảnh giới ở [Tiên Nghịch, chương 20 — Wuxiaworld](https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-20), cũng được ghi trong [GDD](GDD.md). Đây là năm mốc để lập kế hoạch ART đợt đầu, không phải toàn bộ hệ cảnh giới của truyện.
 
-Tên nhánh tiến hóa, hình kiếm/phù/linh ảnh, thời điểm mở kỹ năng và hiệu ứng mô tả dưới đây là **sáng tạo cho game**. Chưa gán chúng thành thuật pháp nguyên tác hoặc xác nhận năng lực của mọi tu sĩ ở từng cảnh giới. Đệ tử không nhận các vật phẩm, thuật hay cơ duyên độc hữu của Vương Lâm chỉ vì lên cảnh giới.
+Tên nhánh tiến hóa, hình kiếm/phù/linh ảnh, thời điểm mở kỹ năng và hiệu ứng mô tả dưới đây là **sáng tạo cho game**. Chưa gán chúng thành thuật pháp nguyên tác hoặc xác nhận năng lực của mọi tu sĩ ở từng cảnh giới. Vật phẩm/thuật/cơ duyên và quyền mở kỹ năng của từng nhân vật theo GDD/hệ thống tu tiên; dùng chung thư viện VFX không tự cấp năng lực nguyên tác hoặc cùng một bộ skill cho cả ba.
 
 Cảnh giới sau Hóa Thần có gói thiết kế riêng sau khi xác định phạm vi nội dung. Giai đoạn này không sản xuất trước asset cho những mốc chưa có vòng chơi.
 
@@ -110,7 +110,7 @@ Mỗi skill có metadata riêng: mã nhánh/cảnh giới, pivot/cast socket, tr
 
 Nguồn ART sạch có alpha và lớp riêng; không lấy ảnh concept tổng hợp rồi dùng trực tiếp như một kỹ năng runtime. Giữ biểu tượng phù văn là họa tiết thiết kế game, không tự ghi nhãn kinh văn có thật. Asset mới được đặt trong thư mục VFX riêng; không ghi đè sprite, nền hoặc manifest hiện có.
 
-## 7. Thứ tự sản xuất tự chủ
+## 7. Thứ tự sản xuất đã hoàn thành trong đợt ART
 
 1. **P1 — Kiếm Khí R01:** làm một chiêu đạt chuẩn trước: timing board bốn phần, pose, nguồn tách lớp, animatic trên nền sáng và tối. Dùng chiêu này kiểm nét, bloom, điểm neo và kích thước.
 2. **P2 — Lôi Ấn và Ngự Phong Bộ R01:** hoàn thiện đủ ba chiêu; kiểm đường biên trận, tiếp đất và dư ảnh. Chốt BASE bằng các thành phần thực sự dùng được ở cả ba.
@@ -118,7 +118,7 @@ Nguồn ART sạch có alpha và lớp riêng; không lấy ảnh concept tổng
 4. **P4 — Kết Đan:** thêm lõi và cơ chế khép/bung trong hình; kiểm cảm giác cô đặc, không tăng thời gian sáng phủ màn hình.
 5. **P5 — Nguyên Anh, rồi Hóa Thần:** làm theo từng mốc nội dung; gắn linh ảnh/ý cảnh với hồ sơ công pháp. Mỗi mốc được so cùng mốc trước tại một camera/cỡ người.
 
-Mỗi gói bàn giao có concept, timing board, nguồn có alpha, metadata và preview chuyển động. Tích hợp client là bước riêng sau khi gói ART đạt chuẩn; không thay đổi code trong phiên phân bổ này.
+Các bước P1–P5 trên ghi trình tự đã thực hiện, không là backlog sản xuất đang mở. Mỗi gói bàn giao có nguồn/prompt, PNG alpha, metadata, atlas, preview và checksum. Tích hợp gameplay/hướng/actor/SFX/icon/LOD là hạng mục riêng khi chuyển ưu tiên khỏi map.
 
 ## 8. Tiêu chí nghiệm thu
 
@@ -128,7 +128,7 @@ Mỗi gói bàn giao có concept, timing board, nguồn có alpha, metadata và 
 - Mỗi cảnh giới có cấu trúc khác mốc trước; không phụ thuộc tăng kích thước/màu để nhận biết.
 - Vùng nguy hiểm và vị trí mục tiêu vẫn đọc rõ khi nhiều chiêu cùng xuất hiện; kiểm cả bản đầy đủ và bản rút gọn.
 - Preview phải có một người, nhóm nhỏ và đám đông mô phỏng; cấu hình kiểm tra cụ thể chốt khi đã có render VFX để đo.
-- Mẫu nam/nữ dùng cùng chất lượng, dấu phái/công pháp và uy lực thị giác; điểm neo được kiểm riêng cho mỗi bộ.
+- Khi tích hợp bộ ba, giữ cùng chất lượng thị giác; đo socket/pivot/pose riêng theo actor và hướng. Hai mẫu đệ tử preview không quyết định roster/skill của GDD mới.
 - Concept tĩnh, animatic và VFX runtime được ghi trạng thái riêng; chỉ báo hoàn thành runtime sau khi đã tích hợp và xem trong game.
 
 ## 9. Bộ đã đóng gói và bước tiếp theo
@@ -143,7 +143,7 @@ Giữ thân Vương Lâm tối đa 80 world px và world 960×640; frame-by-fram
 
 **87 kiểm tra tự động đạt**, gồm RGBA/rect/hold/opacity, nguồn và gói cũ nguyên byte, hit/miss/trễ, vị trí boss, host movement, linh ảnh, local lighting và pool. Có 30 capture R05 cục bộ tại 1×/2× và ba bảng R04/R05; tương tác browser chưa xác minh. Chưa có SFX/icon, toàn bộ hướng, crowd LOD, benchmark hoặc tích hợp client/server.
 
-P5 đã có ART cả Nguyên Anh và Hóa Thần; **R04 được chấp nhận, R05 được chấp nhận**. Không báo hoàn tất runtime hoặc toàn bộ P5 nghiệm thu. [Trạng thái từng mốc](design/vfx/library.json), [brief P5](design/vfx/milestones/P5-NGUYEN-ANH.md). Sau motion review là hoàn thiện hướng/SFX/LOD và tích hợp theo luật combat; chưa tự mở thêm cảnh giới ngoài mô tả đã thống nhất.
+P5 đã có ART cả Nguyên Anh và Hóa Thần; **R04 được chấp nhận, R05 được chấp nhận**. ART P5 đã được chấp nhận/đóng; chưa hoàn tất tích hợp runtime hoặc các hạng mục gameplay. [Trạng thái từng mốc](design/vfx/library.json), [brief P5](design/vfx/milestones/P5-NGUYEN-ANH.md). Hướng/SFX/icon/LOD và tích hợp theo luật combat cần hạng mục riêng; đợt ART đã đóng và ưu tiên vẫn là map, không tự mở sản xuất cảnh giới mới.
 
 R05 V2 sửa phản hồi thiếu lực: silhouette áp lực có hướng, impact riêng, xuất nhanh, preview tốc độ thật 1×; camera/hit-stop chỉ bổ trợ trình bày. Các asset/ZIP V1 đã khóa giữ nguyên. R05 V2 là bản lịch sử đã được thay bằng V3 theo phản hồi mỹ thuật.
 

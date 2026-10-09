@@ -1,16 +1,16 @@
-# Hệ thống map — MVP và dài hạn
+# Hệ thống map — node truyện và kế hoạch lịch sử
 
-> **Bố cục hiện hành đang thiết kế:** [Hằng Nhạc — map và bố cục v0.1](HANG-NHAC-MAP-LAYOUT.md), bảy địa điểm/tám chức năng, khu chung 2400 × 1800 đề xuất và arena HN10 riêng. Hoàn thiện map trước đặc tả vận hành; các kích thước/tọa độ chưa khóa.
+> **Bố cục tham chiếu:** [Hằng Nhạc — map và bố cục v0.1](HANG-NHAC-MAP-LAYOUT.md) giữ đề xuất bảy địa điểm/tám chức năng, khu chung 2400 × 1800 và arena HN10 riêng. ART cùng hai bản thử vùng đi đã xóa; chờ kế hoạch map mới. Các kích thước/tọa độ chưa khóa.
 
 > **Đặc tả trải nghiệm mới:** [Hằng Nhạc — Ngưng Khí v0.4](HANG-NHAC-NGUNG-KHI-SPEC.md) đề xuất tám khu chức năng/tuyến HN01–HN12; [tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) phân bổ 15 tầng thử; [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất arena và phiên khảo nghiệm. Chưa là địa lý/ngân sách background đã khóa; bảng node ở đây giữ làm nguồn tham chiếu lịch sử.
 
-> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Các node/số map/phân kỳ A–B bên dưới là tham chiếu truyện cũ, không phải map gameplay Hằng Nhạc hoàn chỉnh; map nhập môn hiện hành đi qua Ngưng Khí. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+> **Đối chiếu GDD 0.28 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, có sẵn cả ba thuật R01, Hằng Nhạc qua Ngưng Khí và phân hóa từ hành trình Trúc Cơ. Toàn bộ node, phân kỳ, ngân sách và ID MAP-001… bên dưới là hồ sơ lịch sử của tuyến Vương Lâm; không là địa lý/ngân sách map gameplay đã khóa. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md).
 
-> **Điều chỉnh MMORPG v0.10:** khu môn phái là vùng khởi đầu; nhân vật pixel art trên nền stylized 2D/top-down ba phần tư đã chọn sau thử Vương Lâm. [Sân v2](design/world/index.html) giữ tham chiếu nền/bố cục; cần thử cách ghép pixel theo [WORLD-VISUAL-SPEC](WORLD-VISUAL-SPEC.md). Các 9/13 node dưới đây chỉ tham chiếu chính truyện. Phạm vi A/B và ngân sách map/sprite/animation cần xét lại.
+> **ART và map:** bộ sân legacy, ART Hằng Nhạc v1/v2/v3 và hai bản thử vùng đi đã [xóa](MAP-ASSETS-RESET.md). Đang chờ kế hoạch map mới. Không dùng đồ thị node cũ để tự bố trí level, thay tọa độ bản lưu của người phát triển hoặc khôi phục ART.
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  
-**Trạng thái:** lộ trình A → B đã chốt; chi tiết map là thiết kế chờ triển khai và chơi thử.  
-**Tham chiếu:** [GDD](GDD.md), [asset](ASSET-PLAN.md), [gặp gỡ](ENCOUNTERS.md).
+**Trạng thái nguồn:** lộ trình A → B/ngân sách của bản trước; chưa là map đi lại được nghiệm thu.\
+**Tham chiếu lịch sử:** [GDD idle](GDD-IDLE-REFERENCE-v0.26.md), [asset](ASSET-PLAN.md), [gặp gỡ cũ](ENCOUNTERS.md).
 
 ## 0. Phân biệt map thế giới và map chính truyện
 
@@ -22,7 +22,7 @@
 
 Vị trí NPC/đạo cụ ở khu đi lại là bố cục game cần biên tập, chưa là bản đồ địa lý được xác minh từ nguyên tác.
 
-## 1. Phạm vi theo lộ trình A → B
+## 1. Phạm vi theo lộ trình A → B lịch sử
 
 | Giai đoạn | Nội dung | Khối lượng chính | Vị trí trong lộ trình |
 | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ Vị trí NPC/đạo cụ ở khu đi lại là bố cục game cần biên tậ
 | B — Mở rộng có giao đấu | Thêm luyện thuật, hậu sơn và mốc giao lưu đầu; 13 địa điểm tổng cộng; 2 mẫu mục tiêu luyện thuật và 1 đối thủ giao đấu thực | Thêm độ thành thạo, HP/linh lực khi giao đấu, bộ mô phỏng combat, kết quả trận; tối đa 28 nguồn đồ họa tổng cộng | Giai đoạn kế tiếp đã chọn, sau khi A hoàn thành |
 | C — Bản nhỏ có săn/farm | Thêm một gói arc với 6–8 địa điểm nữa, khoảng 4 mẫu đối thủ thường, 2 biến thể tinh anh và 1 gặp gỡ lớn | Combat lặp, phần thưởng, hồi phục, cân bằng tài nguyên và ngữ cảnh cốt truyện từng khu | Hướng dài hạn, chưa lên lịch |
 
-**Đã chốt: A → B.** A kiểm chứng vòng tài nguyên và hành trình; B bổ sung luyện thuật và trận đấu nhỏ sau đó. Điều kiện chuyển giai đoạn gồm hoàn thành hành trình, kiểm tra save/offline và chơi thử, được ghi trong [MVP-BACKLOG.md](MVP-BACKLOG.md).
+**Quyết định của bản trước: A → B.** A kiểm chứng vòng tài nguyên và hành trình; B bổ sung luyện thuật và trận đấu nhỏ sau đó. Điều kiện chuyển giai đoạn cũ được giữ trong [backlog lịch sử](archive/design-before-three-playable-characters/MVP-BACKLOG.md). Phân kỳ hiện hành xem [backlog thiết kế mới](MVP-BACKLOG.md).
 
 C là hướng có thể phát triển sau hai bước trên. Địa điểm và nhân vật của phần farm phải được biên tập theo arc; số mẫu trong bảng là ngân sách hệ thống, chưa phải danh sách sinh vật nguyên tác đã duyệt.
 

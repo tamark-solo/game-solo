@@ -1,6 +1,8 @@
 # Bộ đi sửa tay/chân v1
 
-Ba bộ đi dùng trong preview: **Vương Lâm áo xám, đệ tử nam và đệ tử nữ**. Mỗi bộ có 4 hình đứng cũ và 32 pose đi mới, bốn hướng × tám pha, tổng 36 frame. Xem [so sánh cũ/mới](index.html), [quy tắc ART](../../../GAIT-CORRECTION.md) và [kết quả kiểm tra](verification.json). Bản sửa đang chờ người phát triển đánh giá chuyển động/nhận diện.
+**Hồ sơ nguồn lịch sử:** Bộ tám pose thuộc giai đoạn trước chibi; yêu cầu chỉnh tiếp sau reference. Main hiện có năm chibi 100 frame và Vương Lâm trước 36 để đối chiếu. Xem [chuẩn chibi hiện hành](../../../CHIBI-ROSTER-SPEC.md).
+
+Ba bộ đi dùng trong preview tại mốc lịch sử: **Vương Lâm áo xám, đệ tử nam và đệ tử nữ**. Mỗi bộ có 4 hình đứng cũ và 32 pose đi mới, bốn hướng × tám pha, tổng 36 frame. Xem [so sánh cũ/mới](index.html), [quy tắc ART](../../../GAIT-CORRECTION.md) và [kết quả kiểm tra](verification.json). Bản sửa đang chờ người phát triển đánh giá chuyển động/nhận diện.
 
 ## Nguồn được chọn
 

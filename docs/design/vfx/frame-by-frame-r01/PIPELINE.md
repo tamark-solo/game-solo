@@ -1,6 +1,6 @@
 # Pipeline Frame-by-Frame — Kiếm Khí R01
 
-**Gói sản xuất v1 · 07/10/2026.** Phạm vi: một kỹ năng mẫu hướng đông cho Vương Lâm chibi, nguồn PNG/atlas, metadata, thư viện trình bày và preview kiểm frame tách khỏi game. Chưa tích hợp combat/client/server. Chuẩn màu/nét kế thừa [ART đã duyệt](../ngung-khi-approved-art-v1.png); bộ frame mới cần người phát triển xem chuyển động.
+**Gói sản xuất v1 · 07/10/2026.** Phạm vi: một kỹ năng mẫu hướng đông cho Vương Lâm chibi, nguồn PNG/atlas, metadata, thư viện trình bày và preview kiểm frame tách khỏi game. Chưa tích hợp combat/client/server. Chuẩn màu/nét kế thừa [ART đã duyệt](../ngung-khi-approved-art-v1.png); bộ đã được chủ dự án chấp nhận và khóa release 1.0.0. Đợt ART hiện hành 15 skill đã [đóng bàn giao](../STARTER-VFX-HANDOFF.md); nguồn/metadata giữ đúng trạng thái lúc sản xuất.
 
 ## 1. Kết luận kiến trúc
 

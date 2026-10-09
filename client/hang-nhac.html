@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hằng Nhạc · Tiên Nghịch</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23315747'/%3E%3Cpath d='M16 46L32 16l16 30M23 35h18' fill='none' stroke='%23f3ebdd' stroke-width='4'/%3E%3C/svg%3E"></head>
+<body>
+  <main>
+    <header>
+      <div><p class="eyebrow">TIÊN NGHỊCH</p><h1>Hằng Nhạc</h1></div>
+      <form id="entry">
+        <label>Nhân vật<select id="avatar"><option value="CHR-WANG-LIN-CHIBI">Vương Lâm</option><option value="CHR-SITU-NAN">Tư Đồ Nam</option><option value="CHR-LI-MUWAN">Lý Mộ Uyển</option></select></label>
+        <label>Tên trong sân<input id="player-name" maxlength="24" placeholder="Tên nhân vật" autocomplete="off"></label>
+        <button id="join" type="submit" disabled>Vào sân chung</button>
+        <button id="leave" type="button" hidden>Rời sân</button>
+      </form>
+    </header>
+    <p id="profile-summary" class="profile-summary" role="status">Ba nhân vật có hồ sơ riêng · Kiếm Khí, Lôi Ấn và Ngự Phong Bộ có từ đầu.</p>
+    <div id="sect-objective" class="sect-objective" aria-label="Hành trình môn phái">
+      <div><b id="quest-title">HN01 · Bước vào Hằng Nhạc</b><span id="quest-hint">Vào sân chung để bắt đầu.</span><small id="cultivation-summary">Hành trình riêng cho từng nhân vật</small><span id="sect-feedback" role="status" hidden></span></div>
+      <button id="interact" type="button" disabled>E · Nói chuyện</button><button id="journal" type="button">Nhật ký / Bản đồ</button>
+    </div>
+    <section id="stage" tabindex="0" aria-label="Map Hằng Nhạc. Di chuyển bằng WASD hoặc phím mũi tên.">
+      <div id="world-labels"></div>
+      <div id="loading" role="status">Đang nạp Hằng Nhạc…</div>
+      <div class="touch-pad" aria-label="Di chuyển">
+        <button data-input="north" aria-label="Đi lên">↑</button>
+        <button data-input="west" aria-label="Đi trái">←</button>
+        <button data-input="south" aria-label="Đi xuống">↓</button>
+        <button data-input="east" aria-label="Đi phải">→</button>
+      </div>
+      <aside class="skill-panel" aria-label="Thuật R01">
+        <div class="resource"><span id="resources">Linh lực 100 / 100</span><button id="training" type="button" disabled>Mục tiêu luyện</button></div>
+        <div class="skill-bar"><button data-skill="sword" disabled><b>1 · Kiếm Khí</b><span>10 linh lực</span></button><button data-skill="thunder" disabled><b>2 · Lôi Ấn</b><span>25 linh lực</span></button><button data-skill="wind" disabled><b>3 · Ngự Phong Bộ</b><span>10 linh lực</span></button></div>
+        <div id="skill-aim" class="skill-aim">Kiếm / Phong ↓ · hướng nhân vật</div>
+        <p id="skill-feedback" role="status">Di chuyển để đổi hướng thuật · chạm map để ngắm · Lôi theo mục tiêu.</p>
+      </aside>
+    </section>
+    <footer><span id="status" role="status">Khám phá Hằng Nhạc</span><span>WASD / phím mũi tên · camera 1×</span><a href="/map-editor.html" target="_blank">Map Editor</a></footer>
+    <p class="note">Hồ sơ và hành trình lưu tự động. Hằng Nhạc là sân an toàn; thổ nạp và linh lực là hai nguồn riêng. NPC dùng hình đệ tử có sẵn để thử luồng nhập môn.</p>
+    <dialog id="sect-dialog" aria-labelledby="sect-title"><div class="sect-dialog-heading"><h2 id="sect-title">Hành trình Hằng Nhạc</h2><button id="sect-close" type="button" aria-label="Đóng đối thoại">Đóng</button></div><div id="sect-body"></div><p id="sect-message" role="status"></p></dialog>
+  </main>
+  <script type="module" src="/src/hang-nhac.ts"></script>
+</body></html>

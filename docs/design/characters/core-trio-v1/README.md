@@ -1,8 +1,8 @@
-# Bộ ba trọng tâm — Linh thể đứng Tư Đồ Nam v3
+# Bộ ba trọng tâm — nguồn nhận diện và mẫu tĩnh trước chibi
 
 Mở [trang xem](index.html) trực tiếp trong trình duyệt để đối chiếu bốn hướng pixel với Vương Lâm và Lý Mộ Uyển, phóng 1×/2×/4×, đổi nền và hiện điểm đặt.
 
-**Trạng thái:** Vương Lâm v2 và Lý Mộ Uyển v1 đã chấp nhận nhận diện. Người phát triển chọn Tư Đồ Nam **đứng dạng linh thể** cho tương tác MMORPG; bảng đứng v3 giữ mặt/tóc v2 đã được tạm chấp nhận làm chuẩn thiết kế qua phản hồi “tạm chấp nhận được rồi”. Mức duyệt là tạm thời để tiếp tục GDD/ART. [Hồ sơ](../../../CORE-CHARACTER-VISUAL-SPEC.md), [manifest](study.json) và [roster](../../../data/character-roster.json) ghi nguồn/trạng thái riêng từng nhân vật.
+**Phạm vi gói lịch sử:** concept và mẫu tĩnh trước chibi, không là motion/catalog đang dùng. Bộ ba hiện có [60 frame chibi](../../../CORE-CHARACTER-MOTION-PLAN.md), đủ đứng/đi hoặc lướt bốn hướng và chọn từ đầu trong GDD 0.28. Lý Mộ Uyển native-v5 đã chấp nhận cho bản thử; chibi Tư Đồ Nam chờ đánh giá. **Trạng thái nguồn tại mốc trước:** Vương Lâm v2 và Lý Mộ Uyển v1 đã chấp nhận nhận diện. Người phát triển chọn Tư Đồ Nam **đứng dạng linh thể** cho tương tác MMORPG; bảng đứng v3 giữ mặt/tóc v2 đã được tạm chấp nhận làm chuẩn thiết kế qua phản hồi “tạm chấp nhận được rồi”. Mức duyệt là tạm thời để tiếp tục GDD/ART. [Hồ sơ](../../../CORE-CHARACTER-VISUAL-SPEC.md), [manifest](study.json) và [roster](../../../data/character-roster.json) ghi nguồn/trạng thái riêng từng nhân vật.
 
 ## Tạo hình và prompt
 
@@ -23,12 +23,12 @@ Nhận diện đứng lấy [Tư Đồ Nam v2](situ-nan-spirit-identity-v2.png) 
 
 ## Native và điểm đặt
 
-| Mẫu hiện tại | Khung | Điểm đặt | Native |
+| Mẫu trong gói tĩnh này | Khung | Điểm đặt | Native |
 | --- | --- | --- | --- |
 | Tư Đồ Nam linh thể đứng | 64 × 96 | Điểm chiếu (32, 88); đáy hình y = 84, cao 4 px | [Atlas 256 × 96](situ-nan/native-v4/atlas.png), [JSON](situ-nan/native-v4/atlas.json), [spec/palette](situ-nan/pixel-spec.json) |
 | Lý Mộ Uyển áo tím | 64 × 96 | Điểm chân (32, 88) | [Atlas 256 × 96](li-muwan/native-v2/atlas.png), [JSON](li-muwan/native-v2/atlas.json), [spec/palette](li-muwan/pixel-spec.json) |
 
-Mỗi mẫu có **4 frame tĩnh**: xuống/trước, trái, phải, lên/sau; tổng hiện tại tám frame. PNG indexed, alpha 0/255, palette 24 mục gồm trong suốt, PNG rời trong `frames/`. Bộ đứng Tư Đồ Nam là bản tương tác; animation lơ lửng/lướt chưa được sản xuất.
+Mỗi mẫu có **4 frame tĩnh**: xuống/trước, trái, phải, lên/sau; tổng tám frame trong gói tĩnh này. PNG indexed, alpha 0/255, palette 24 mục gồm trong suốt, PNG rời trong `frames/`. Bộ đứng Tư Đồ Nam là bản tương tác; gói này chưa có diễn hoạt. Bộ chibi sau đã có lướt bốn hướng; chỉ vòng lơ lửng tại chỗ còn ở kế hoạch.
 
 Điểm chiếu của linh thể dùng để đặt và sắp lớp nhân vật. Phần hình nằm cao hơn điểm này, không biến thành chân đang tiếp đất. Kích thước sprite tương tác không quyết định quy mô nguyên anh trong cảnh truyện.
 

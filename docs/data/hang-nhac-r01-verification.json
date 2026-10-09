@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-08T14:09:36.825592+00:00",
+  "branch": "_MMO",
+  "milestone": "separate_guest_profiles_persistence_and_r01_practice",
+  "language": "TypeScript",
+  "client": "Three.js",
+  "server": "Node.js + Colyseus",
+  "nodeVersion": "24.18.0",
+  "minimumNodeVersion": "22.13.0",
+  "passed": true,
+  "unitTests": {
+    "passed": 59,
+    "failed": 0
+  },
+  "typecheck": true,
+  "build": true,
+  "buildWarnings": [
+    "existing_shared_renderer_chunk_above_500KB_no_MMO_performance_claim"
+  ],
+  "map": {
+    "id": "hang-nhac",
+    "version": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+    "sourceSha256": "b8571377613bf0b83997fd7087a4301955300f5ab2f3627ab9837988fb3a8256",
+    "backgroundSha256": "6eb1aa51e23d81e2371316329531ab2415575165aeb0b83e7306443e588b3521",
+    "backgroundBytes": 2939564,
+    "blockerCount": 9,
+    "spawn": {
+      "x": 1616,
+      "y": 992
+    },
+    "ownerGeometryUnchanged": true
+  },
+  "profiles": {
+    "storage": "SQLite local guest",
+    "countPerGuest": 3,
+    "oneControlledCharacterPerGuest": true,
+    "restartAndReloadVerified": true,
+    "castReceiptsAtomic": true,
+    "productionLogin": false,
+    "freshSpawnAvoidsOccupiedArrivals": true,
+    "heldMovementSurvivesPacketGap": true
+  },
+  "r01Fx": {
+    "atlases": 10,
+    "bytes": 539528,
+    "sourceHashes": [
+      {
+        "path": "docs/design/vfx/frame-by-frame-r01/clips.json",
+        "sha256": "34925c7ae52a9ce9205249bc49e26f2a1fefb816ea82476ff222bd6c2e01f716"
+      },
+      {
+        "path": "docs/design/vfx/r01-thunder-v1/clips.json",
+        "sha256": "c123008e77c75354aaf9030ce0d0f4713eb09f34766a4894778428f85b3d2fd7"
+      },
+      {
+        "path": "docs/design/vfx/r01-wind-v1/clips.json",
+        "sha256": "6f94b443d8aa6027f4ec411524f9b1ac6f8ef67b0cb2bd0c232c032fee41050c"
+      }
+    ],
+    "sourcesModified": false,
+    "nativeActorFrameSize": [
+      64,
+      96
+    ],
+    "nativeActorAnchor": [
+      32,
+      88
+    ],
+    "castActorClipsIntegrated": false
+  },
+  "checks": {
+    "r01Online": {
+      "passed": true,
+      "checks": [
+        "fresh_profiles_spread_around_owner_spawn",
+        "input_gap_does_not_cancel_an_already_held_cast",
+        "three_separate_profiles_and_account_lease",
+        "sword_single_cost_and_hit_no_pvp",
+        "thunder_selected_target_and_wind_actual_travel",
+        "same_profile_reconnect",
+        "switching_characters_preserves_independent_resources_and_progression_kind",
+        "process_restart_preserves_position_resources_deadlines_and_idempotency"
+      ],
+      "artifactPath": "artifacts/hang-nhac-r01-online-verification.json"
+    },
+    "r01Browser": {
+      "passed": true,
+      "checks": [
+        "three_r01_from_start_keyboard_buttons_costs_hits_and_dash",
+        "remote_client_shows_fx_without_player_damage",
+        "reload_resumes_same_session_profile_and_position",
+        "second_tab_cannot_control_same_account",
+        "character_switch_keeps_separate_saves",
+        "mobile_skill_and_movement_controls_fit"
+      ],
+      "artifactPath": "artifacts/hang-nhac-r01-browser-verification.json"
+    },
+    "foundationOnline": {
+      "passed": true,
+      "checks": [
+        "stale_map_rejected",
+        "three_appearances_same_room",
+        "owner_spawn",
+        "server_editor_prediction_same_wall",
+        "all_clients_converge",
+        "raw_teleport_rejected",
+        "drop_stops_motion",
+        "same_session_reconnect_at_wall",
+        "leave_removes_entity"
+      ],
+      "artifactPath": "artifacts/hang-nhac-online-verification.json"
+    },
+    "foundationBrowser": {
+      "passed": true,
+      "checks": [
+        "native_camera_frame_anchor_and_owner_spawn",
+        "three_original_appearances_move_locally",
+        "two_browser_sessions_same_map",
+        "prediction_reconciles_at_owner_blocker",
+        "mobile_without_overflow",
+        "pointer_controls_move_character",
+        "leave_updates_peer"
+      ],
+      "artifactPath": "artifacts/hang-nhac-browser-verification.json"
+    },
+    "legacyOnline": {
+      "passed": true,
+      "checks": [
+        "two_clients_same_room",
+        "both_avatar_templates",
+        "reject_teleport_and_speed",
+        "native_input_axis_sanitization",
+        "authoritative_movement",
+        "processed_input_ack",
+        "packet_flood_does_not_increase_speed",
+        "shared_positions",
+        "solid_boundary",
+        "empty_input_stops_movement",
+        "drop_and_same_session_reconnect",
+        "leave_removes_entity"
+      ],
+      "artifactPath": "artifacts/online-verification.json"
+    },
+    "legacyBrowser": {
+      "passed": true,
+      "checks": [
+        "source_atlases_6_packs_136_frames",
+        "home_page_defaults_to_new_chibi_asset",
+        "pause_and_manual_frame_step",
+        "main_map_chibi_four_directions_walk_stop_and_normalized_diagonal",
+        "four_directions_all_actors_static_states_explicit",
+        "every_walk_pose_is_displayed_by_three_renderer",
+        "new_chibi_sets_all_directions_spirit_glide_label_explicit",
+        "paper_dark_grid_integer_zoom",
+        "local_wasd_movement_input_focus_does_not_move_actor",
+        "independent_animation_uvs_1_5_20_local_actors",
+        "mobile_360_px_dpr2_four_direction_touch_movement_no_horizontal_overflow",
+        "five_character_chibi_gallery_frames_and_mobile_no_overflow",
+        "browser_auto_reconnect_same_session",
+        "two_browser_clients_see_same_server_movement",
+        "browser_leave_updates_roster"
+      ],
+      "artifactPath": "artifacts/browser-verification.json"
+    }
+  },
+  "limitations": [
+    "prototype_balance_not_owner_locked",
+    "personal_practice_targets_no_loot_XP_or_PvP",
+    "production_login_and_distributed_leases_pending",
+    "trio_cast_motion_and_directional_hand_sockets_pending",
+    "NPC_quests_cultivation_farm_and_trial_pending",
+    "map_occlusion_parts_pending",
+    "normal_position_and_hit_counter_autosave_window_about_one_second"
+  ]
+}

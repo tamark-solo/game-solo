@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-09",
+  "branch": "_MMO",
+  "issue": "NPC interaction has no response when pressing E",
+  "reproducedBeforeFix": "An IME-style keydown with key=Process and code=KeyE did not open dialogue while online and within range.",
+  "fix": [
+    "Recognize physical KeyE, with an e-key fallback; preserve text input and modifier shortcuts.",
+    "Show offline, pending, rejected and timed-out interaction feedback outside unopened dialogue."
+  ],
+  "verification": {
+    "browserRegression": "artifacts/hang-nhac-sect-browser-verification.json",
+    "imeEventSimulated": true,
+    "ordinaryELivePage": "Passed on the existing 127.0.0.1:5173/hang-nhac.html tab: opened Người tiếp dẫn dialogue.",
+    "liveScreenshot": "artifacts/hang-nhac-npc-e-live.jpg",
+    "buildAndTypecheck": "passed",
+    "fixtureDatabaseOnly": true,
+    "ownerQuestProgressChangedByVerification": false
+  },
+  "ownerMapVersion": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480"
+}

@@ -1,0 +1,222 @@
+{
+  "verifiedAt": "2026-10-09T02:18:56.509Z",
+  "branch": "_MMO",
+  "stack": "TypeScript / Three.js / Node.js + Colyseus",
+  "scope": "R01 casting animation, authored VFX playback and skill core separation",
+  "technicalPassed": true,
+  "artApproved": false,
+  "casting": {
+    "avatars": 3,
+    "directions": 4,
+    "skills": 3,
+    "bindings": 36,
+    "totalFrames": 300,
+    "newClips": 33,
+    "newFrames": 264,
+    "originalWangEastClips": 3,
+    "originalFrames": 36,
+    "originalWangEastKept": true,
+    "newPoseReview": "pending owner visual review; new socket placements estimated from poses"
+  },
+  "sourceParity": {
+    "canonicalSourceFolders": [
+      "frame-by-frame-r01",
+      "r01-thunder-v1",
+      "r01-wind-v1"
+    ],
+    "originalAtlasesByteIdentical": true,
+    "holdsRectsPivotsSocketsRetained": true,
+    "oracles": [
+      "SequencePlayer",
+      "SkillVfxController",
+      "P2VfxController"
+    ],
+    "sourceSamplingChecks": [
+      30,
+      60,
+      144
+    ],
+    "representativeGpuClips": 10,
+    "gpuAlphaMatch": [
+      {
+        "clip": "sword-charge",
+        "frame": 2,
+        "alpha": 1,
+        "rgb": 1
+      },
+      {
+        "clip": "sword-projectile",
+        "frame": 3,
+        "alpha": 1,
+        "rgb": 1
+      },
+      {
+        "clip": "qi-impact",
+        "frame": 1,
+        "alpha": 1,
+        "rgb": 1
+      },
+      {
+        "clip": "thunder-seal",
+        "frame": 2,
+        "alpha": 1,
+        "rgb": 1
+      },
+      {
+        "clip": "thunder-ring",
+        "frame": 6,
+        "alpha": 1,
+        "rgb": 1
+      },
+      {
+        "clip": "thunder-bolt",
+        "frame": 1,
+        "alpha": 1,
+        "rgb": 1
+      },
+      {
+        "clip": "thunder-impact",
+        "frame": 3,
+        "alpha": 1,
+        "rgb": 1
+      },
+      {
+        "clip": "wind-depart",
+        "frame": 2,
+        "alpha": 1,
+        "rgb": 1
+      },
+      {
+        "clip": "wind-trail",
+        "frame": 5,
+        "alpha": 1,
+        "rgb": 1
+      },
+      {
+        "clip": "wind-arrival",
+        "frame": 3,
+        "alpha": 1,
+        "rgb": 1
+      }
+    ],
+    "previewSimulationDifference": "Host retains gameplay trajectory/range/confirmed collision. Preview initialTipAhead 100 is illustrative, not added to server range.",
+    "feedbackNotIntegrated": [
+      "optional sword preview camera shake and hit-stop",
+      "SFX assets not produced in source"
+    ]
+  },
+  "fixes": [
+    "replace GPU texture allocation when switching between different atlas dimensions",
+    "absolute server-time frame holds, no per-render frame counter",
+    "do not hold final frames of non-looping FX except authored thunder ring while unresolved",
+    "thunder ring finishes its natural sequence before ending after resolution",
+    "wind trail follows host foot and persists until real arrival",
+    "sword release socket projection is shared by projectile/hit/miss",
+    "sword miss uses original impact frames 009-012",
+    "thunder contact follows confirmed hit by exactly two authored ticks",
+    "effect debug exposes clip/index/point/rect/UV/pivot"
+  ],
+  "checks": {
+    "unit": {
+      "passed": true,
+      "count": 84
+    },
+    "authoredRuntimeParity": {
+      "passed": true,
+      "count": 6
+    },
+    "gpu": {
+      "passed": true,
+      "clips": 10,
+      "report": "artifacts/skill-vfx-gpu-parity.json"
+    },
+    "onlineAnimation": {
+      "passed": true,
+      "cases": 36,
+      "errors": [],
+      "report": "artifacts/hang-nhac-skill-animation-verification.json"
+    },
+    "buildTypecheck": {
+      "passed": true,
+      "warnings": [
+        "shared renderer chunk >500 KB; not a crowd performance benchmark"
+      ]
+    },
+    "r01OnlineBrowser": {
+      "passed": true
+    },
+    "sectOnlineBrowser": {
+      "passed": true
+    },
+    "legacyAuthoring": {
+      "passed": 19,
+      "total": 20,
+      "failure": "historical frozen-release source hash check: Windows CRLF text checkout and updated PIPELINE.md; binary atlas/frame preservation passes independent runtime checks"
+    }
+  },
+  "assets": {
+    "atlasCount": 46,
+    "atlasBytes": 2609030,
+    "firstAvatarPreload": 22,
+    "ownAvatarPoseAtlases": 12,
+    "fxAtlases": 10,
+    "otherAvatarPoseAtlases": "lazy",
+    "catalogSha256": "3f6357ff86154d709848a58cbcc61821f415130c3a2b96bb7ba1df603b27b009"
+  },
+  "ownerMap": {
+    "version": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+    "sourceSha256": "b8571377613bf0b83997fd7087a4301955300f5ab2f3627ab9837988fb3a8256",
+    "background": {
+      "url": "/assets/hang-nhac/map-6eb1aa51e23d81e2.webp",
+      "sha256": "6eb1aa51e23d81e2371316329531ab2415575165aeb0b83e7306443e588b3521",
+      "bytes": 2939564
+    },
+    "world": {
+      "width": 3072,
+      "height": 2048,
+      "spawn": {
+        "x": 1616,
+        "y": 992
+      },
+      "playerRadius": 8
+    },
+    "blockers": 9,
+    "nativeFrame": [
+      64,
+      96
+    ],
+    "nativeAnchor": [
+      32,
+      88
+    ],
+    "camera": 1
+  },
+  "testIsolation": {
+    "fixtureTestsUseIsolatedStorage": true,
+    "ownerProfileReseeded": false,
+    "authoredMapWritten": false,
+    "browserEditorDraftWritten": false,
+    "livePreview": "Verified through ordinary UI earlier, then reloaded current preview; no fixture data seeded into owner profiles."
+  },
+  "proofs": [
+    "artifacts/skill-vfx-gpu-parity.png",
+    "artifacts/hang-nhac-cast-wang-sword.png",
+    "artifacts/hang-nhac-cast-wang-thunder.png",
+    "artifacts/hang-nhac-cast-wang-wind.png",
+    "artifacts/hang-nhac-cast-situ-sword.png",
+    "artifacts/hang-nhac-cast-situ-thunder.png",
+    "artifacts/hang-nhac-cast-situ-wind.png",
+    "artifacts/hang-nhac-cast-li-sword.png",
+    "artifacts/hang-nhac-cast-li-thunder.png",
+    "artifacts/hang-nhac-cast-li-wind.png",
+    "artifacts/hang-nhac-skill-core-live.jpg"
+  ],
+  "documentation": "docs/SKILL-CORE.md",
+  "livePreview": {
+    "url": "http://127.0.0.1:5173/hang-nhac.html",
+    "reloaded": true,
+    "connected": true,
+    "browserErrors": [],
+    "screenshot": "artifacts/hang-nhac-skill-core-live.jpg"
+  }
+}

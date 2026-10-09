@@ -1,6 +1,6 @@
 # Đặc tả trải nghiệm Hằng Nhạc — Ngưng Khí
 
-**Phiên bản:** 0.4 · **Ngày:** 08/10/2026 · **Trạng thái:** bộ skill khởi đầu chung đã chốt; tiến trình/encounter và chi tiết trải nghiệm để đánh giá, chưa triển khai gameplay.
+**Phiên bản:** 0.4 · **Ngày:** 08/10/2026 · **Trạng thái:** bộ skill khởi đầu chung đã chốt; chi tiết tiến trình/encounter để đánh giá. [R01](HANG-NHAC-R01-RUNTIME.md) và [mở đầu HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) đã có bản thử; HN03–HN12 và khảo nghiệm chưa triển khai đầy đủ.
 
 **Tham chiếu:** [GDD 0.28](GDD.md), [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md), [hệ thống tu tiên](CULTIVATION-SYSTEM.md), [nhân vật](CHARACTERS.md), [định hướng online](ONLINE-DIRECTION.md), [backlog](MVP-BACKLOG.md).
 
@@ -49,7 +49,9 @@ Thiên Nghịch Châu chỉ được giới thiệu/sử dụng khi tuyến Vư�
 
 Các khu dưới đây là chức năng thiết kế, chưa là địa lý nguyên tác hoặc yêu cầu tám background mới. Có thể ghép nhiều chức năng trong sân chung và dùng lại nền cho phiên khảo nghiệm.
 
-[Bố cục map v0.1](HANG-NHAC-MAP-LAYOUT.md) giữ tám mã chức năng, ghép Z01/Z08 vào một sơn môn và bố trí sân trung tâm cùng hai vòng đi lại. Đây là đề xuất để duyệt trong đợt sửa map; đặc tả vận hành làm sau khi hoàn thiện map.
+**Chủ dự án chốt chia cảnh 08/10/2026:** khu môn phái theo concept hiện tại phục vụ NPC/nhiệm vụ/tu luyện/luyện thuật/chuẩn bị; map ngoại vi riêng phục vụ khám phá, đánh quái và thu tài nguyên, nối lối ra–quay về trong giai đoạn Ngưng Khí; khảo nghiệm vào phiên riêng. Không đồng nhất lối ra ngoại vi với xuất hành HN12. Vị trí cổng, điều kiện mở nội dung, quyền credit/loot/spawn và cách chia sẻ map farm chưa khóa; chưa có map ngoại vi hoặc chuyển scene MMO được tích hợp.
+
+[Bố cục map v0.1](HANG-NHAC-MAP-LAYOUT.md) giữ tám mã chức năng; vị trí/kích thước cũ chỉ là tham chiếu. Chủ dự án yêu cầu [map đầy đủ mới](design/world/hang-nhac-map-v1/README.md) đúng tỷ lệ người trước, sau đó tự vẽ luồng đi/chặn và mới làm asset rời. Bộ concept/nền/ba asset thử trước đã xóa; map mới chưa có collider hoặc chuyển scene. Quy trình theo [quy tắc xây map](MAP-BUILDING-GUIDE.md).
 
 | Mã khu | Khu chức năng đề xuất | Người chơi làm gì | Cách chia sẻ |
 | --- | --- | --- | --- |
@@ -57,7 +59,7 @@ Các khu dưới đây là chức năng thiết kế, chưa là địa lý nguy�
 | HN-Z02 | Sân môn phái | Gặp người chơi, nhận nhiệm vụ, thử di chuyển | Khu chung; điểm tương tác không tranh lượt |
 | HN-Z03 | Điểm thổ nạp | Học công pháp nền, tích lũy và xem bình cảnh | Không gian chung; tiến trình riêng |
 | HN-Z04 | Sân luyện thuật | Học khoảng cách, báo đòn và thử kỹ năng | Vùng luyện riêng/phiên nhỏ để tránh VFX che bài học |
-| HN-Z05 | Tuyến ngoại vi | Khám phá, chiến đấu đơn giản, thu tài nguyên | Khu chung có quyền mục tiêu cá nhân hoặc phiên; cần prototype chọn phương án |
+| HN-Z05 | Map ngoại vi riêng, nối lối ra khu môn phái | Khám phá, chiến đấu, farm và thu tài nguyên; có đường quay về | Đã chốt tách scene; khu chung/quyền mục tiêu cá nhân/phiên và loot cần prototype chọn phương án |
 | HN-Z06 | Điểm chuẩn bị và luyện hóa | Xem vật phẩm, chuẩn bị, thử pháp khí | Khu chung; vật phẩm/tiêu hao riêng |
 | HN-Z07 | Khu khảo nghiệm | Vượt bình cảnh và khảo nghiệm cuối | Phiên cá nhân bắt buộc; tổ đội là nội dung tùy chọn về sau |
 | HN-Z08 | Điểm xuất hành | Tổng kết, biết điều kiện và mục tiêu kế tiếp | Khu chung; cổng mở theo hồ sơ |
@@ -223,7 +225,7 @@ Khu chung hiển thị biệt danh tài khoản cùng nhân vật đã chọn. H
 
 Thu nhận mục tiêu tutorial theo quyền cá nhân: không tranh last-hit, không chặn người khác ở điểm tương tác. Với HN-Z05 cần chọn cách dùng spawn riêng, quyền credit riêng hoặc phiên nhỏ; không coi lựa chọn kỹ thuật nào đã chốt. Nhiệm vụ bắt buộc có đường solo; tổ đội, PvP và giao dịch không là điều kiện xuất hành.
 
-Khi triển khai, máy chủ xác nhận tiến trình HN, nguồn lực, quyền học/luyện hóa, vị trí, cast/hit/damage và kết quả. Một lần nhận thưởng/vượt mốc/xuất hành có định danh và kết quả lưu, gửi lại lệnh không lặp tiêu hao/thưởng. Thay nhân vật hoặc mở tab khác không chuyển tiến trình sang hồ sơ khác.
+Khi triển khai, máy chủ xác nhận tiến trình HN, nguồn lực, quyền học/luyện hóa, vị trí, cast/hit/damage và kết quả. Một lần nhận thưởng/vượt mốc/xuất hành có định danh và kết quả lưu, gửi lại lệnh không lặp tiêu hao/thưởng. Thay nhân vật hoặc mở tab khác không chuyển tiến trình sang hồ sơ khác. HN-Z05 đã chốt ở scene ngoại vi riêng; lựa chọn chia sẻ/credit không còn là lựa chọn giữ toàn tuyến farm trong sân môn phái.
 
 Mất kết nối trong trận: dừng nhận input từ client đó; chính sách timeout/checkpoint phải được công bố. Đề xuất không công nhận chiến thắng mới do client tự báo khi offline; kết quả đã được máy chủ ghi trước mất mạng được phục hồi đúng. Kết nối lại hiển thị trạng thái đã lưu, không mặc định một lần thất bại/trừ chi phí nữa. Chiến đấu và offline chỉ được tích lũy theo thời gian máy chủ, không nhân theo số tab.
 

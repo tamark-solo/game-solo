@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-09T03:55:07Z",
+  "branch": "_MMO",
+  "scope": "Synchronize skill facing with movement, pointer aim and selected target",
+  "passed": true,
+  "rules": {
+    "standing": "Use the loaded actor facing until an aim intent is supplied",
+    "movement": "WASD, arrows and mobile use one controller; stopping preserves aim",
+    "pointer": "Overrides unchanged held movement; a new movement intent restores movement aim",
+    "swordAndWind": "Use directional aim; accepted cast direction is fixed",
+    "thunder": "Face the selected valid target at authoritative server acceptance",
+    "inputBoundary": "Wait for the next consumed movement input, rather than inserting a physics step",
+    "pendingLimits": {"perActor": 8, "maxSequenceAhead": 65, "timeoutMs": 3000},
+    "dropOrLeave": "Discard pending casts; do not replay them on reconnect",
+    "receipts": "Legacy command keys preserved; new keys include inputSeq; durable retries bypass the input wait"
+  },
+  "validation": [
+    {"command": "npm.cmd test", "passed": true, "tests": 92, "evidence": "artifacts/skill-aim-unit.log"},
+    {"command": "npm.cmd run build", "passed": true, "typecheck": true, "evidence": "artifacts/skill-aim-build.log"},
+    {"command": "npm.cmd run test:skill-aim", "passed": true, "evidence": ["artifacts/hang-nhac-skill-input-verification.json", "artifacts/hang-nhac-skill-aim-verification.json"]},
+    {"command": "npm.cmd run test:hang-nhac-reload", "passed": true, "evidence": "artifacts/hang-nhac-reload-interaction.json"},
+    {"command": "tsx tests/hang-nhac-r01-online-smoke.ts (online phase of test:hang-nhac-r01)", "passed": true, "evidence": "artifacts/hang-nhac-r01-online-verification.json"},
+    {"command": "node tests/hang-nhac-r01-browser-smoke.mjs", "passed": true, "evidence": "artifacts/hang-nhac-r01-browser-verification.json"},
+    {"command": "npm.cmd run test:skill-animation", "passed": true, "combinations": 36, "evidence": "artifacts/hang-nhac-skill-animation-verification.json"}
+  ],
+  "browserChecks": [
+    "Loaded facing without a default east aim",
+    "Four rendered cast directions for all three actors via movement controls",
+    "Movement and skill handlers in the same frame reach release without self-cancel",
+    "Pointer priority while movement is held, stop retention and repress behavior",
+    "Thunder turns toward and hits the selected target independently of directional aim",
+    "Wind travels along accepted aim and does not retarget during its active cast",
+    "Mobile direction button and HUD fit",
+    "Diagonal input is normalized",
+    "Reload uses the saved actor facing",
+    "E and screen NPC button after asset build/reload, reconnect and backend restart",
+    "Remote client renders confirmed VFX, independent profiles, costs, hits and dash"
+  ],
+  "fixtureNotes": {
+    "isolatedDatabaseAndBrowserContexts": true,
+    "realOwnerStorageWritten": false,
+    "r01TwoClientViewport": [720, 720],
+    "softwareWebGLBackgroundTimersEnabled": true,
+    "reason": "Keep two software-rendered clients connected and observable without inactive-tab throttling"
+  },
+  "preserved": {
+    "mapVersion": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+    "blockers": 9,
+    "nativeFrame": [64, 96],
+    "nativeAnchor": [32, 88],
+    "cameraScale": 1,
+    "castArtOrVfxFramesChanged": false,
+    "gameplayCostsAndTimelinesChanged": false,
+    "newArtApprovalClaimed": false
+  }
+}

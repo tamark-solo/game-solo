@@ -2,11 +2,19 @@ import * as THREE from 'three';
 import { WORLD, type Motion } from '../../shared/world';
 import { AnimationPlayer, normalizeAtlas, type ActorDefinition, type Atlas } from './atlas';
 import { imageAlpha, cropAlpha, opaqueMasksOverlap, type AlphaMask, type PlacedMask } from './occlusion';
+import {atlasSprite,setSpriteFrame} from './sprite-frame';
 
 export interface LoadedActor { definition: ActorDefinition; atlas: Atlas; texture: THREE.Texture; alpha: AlphaMask; frameMasks: Map<string,AlphaMask> }
+export interface ActorSpriteFrame {
+  clip:string;index:number;texture:THREE.Texture;rect:{x:number;y:number;w:number;h:number};
+  atlasSize:[number,number];frameSize:[number,number];anchor:[number,number];mask?:AlphaMask;
+  crop?:{x:number;y:number;w:number;h:number};
+  cutouts?:Array<{x:number;y:number;w:number;h:number}>;
+}
 export interface RenderActor extends Motion {
   id: string; name: string; assetId: string; own: boolean; connected?: boolean;
   animation: AnimationPlayer;
+  pose?:ActorSpriteFrame;
 }
 export interface MapLayout {
   width: number; height: number; color: string;
@@ -17,6 +25,7 @@ interface Visual {
   actor: RenderActor; sprite: THREE.Sprite; texture: THREE.Texture;
   shadow: THREE.Sprite; collider: THREE.LineLoop; anchor: THREE.LineSegments;
   label: HTMLDivElement;
+  sourceTexture?:string;
 }
 export interface MapDepthItem {
   mesh: THREE.Mesh | THREE.Sprite; y: number;
@@ -136,7 +145,11 @@ export class PreviewRenderer {
     if (this.mapLayout) {
       this.scene.remove(this.mapLayout);
       this.mapLayout.traverse(object => {
-        if (object instanceof THREE.Mesh) { object.geometry.dispose(); (object.material as THREE.Material).dispose(); }
+        if (object instanceof THREE.Mesh) {
+          object.geometry.dispose();
+          const materials = Array.isArray(object.material) ? object.material : [object.material];
+          for (const material of materials) { (material as THREE.MeshBasicMaterial).map?.dispose(); material.dispose(); }
+        }
       });
     }
     this.mapLayout = new THREE.Group(); this.mapDepthItems = [];
@@ -158,6 +171,21 @@ export class PreviewRenderer {
   }
 
   setMapDepthItems(items: MapDepthItem[]): void { this.mapDepthItems = items; }
+
+  async loadBackgroundMap(url: string, width: number, height: number): Promise<void> {
+    const texture = await new THREE.TextureLoader().loadAsync(url);
+    if (texture.image.width !== width || texture.image.height !== height) {
+      texture.dispose(); throw new Error('Nền khác kích thước thế giới đã chốt.');
+    }
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.generateMipmaps = false;
+    texture.minFilter = texture.magFilter = THREE.LinearFilter;
+    this.setMapLayout({ width, height, color: '#efe6d3', ground: [], obstacles: [] });
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(width, height),
+      new THREE.MeshBasicMaterial({ map: texture, depthTest: false, depthWrite: false, toneMapped: false }));
+    mesh.position.set(width / 2, -height / 2, 0); mesh.renderOrder = -10000;
+    this.mapLayout!.add(mesh);
+  }
 
   private resize(): void {
     this.width = Math.max(1, this.stage.clientWidth); this.height = Math.max(1, this.stage.clientHeight);
@@ -193,9 +221,10 @@ export class PreviewRenderer {
     let ownMask:PlacedMask|undefined;
     if(ownActor){
       const asset=this.assets.get(ownActor.assetId)!;
-      let mask=asset.frameMasks.get(ownActor.animation.frameId);
+      let mask=ownActor.pose?.mask??asset.frameMasks.get(ownActor.animation.frameId);
       if(!mask){mask=cropAlpha(asset.alpha,asset.atlas.frames[ownActor.animation.frameId]);asset.frameMasks.set(ownActor.animation.frameId,mask);}
-      ownMask={mask,left:ownActor.x-asset.atlas.anchor[0],top:ownActor.y-asset.atlas.anchor[1]};
+      const anchor=ownActor.pose?.anchor??asset.atlas.anchor;
+      ownMask={mask,left:ownActor.x-anchor[0],top:ownActor.y-anchor[1]};
     }
     this.mapDepthItems.forEach((item, i) => {
       item.mesh.renderOrder = orders.get(`__map-${i}`) ?? 0;
@@ -211,9 +240,16 @@ export class PreviewRenderer {
       if (visual && visual.actor.assetId !== actor.assetId) { this.remove(visual); this.visuals.delete(actor.id); visual = undefined; }
       if (!visual) { visual = this.createVisual(actor, asset); this.visuals.set(actor.id, visual); }
       visual.actor = actor;
-      const frame = asset.atlas.frames[actor.animation.frameId];
-      visual.texture.repeat.set(frame.w / asset.atlas.width, frame.h / asset.atlas.height);
-      visual.texture.offset.set(frame.x / asset.atlas.width, 1 - (frame.y + frame.h) / asset.atlas.height);
+      const pose=actor.pose,source=pose?.texture??asset.texture,frame=pose?.rect??asset.atlas.frames[actor.animation.frameId];
+      if(visual.sourceTexture!==source.uuid){
+        // GPU textures keep their allocated dimensions. Cast atlases can differ from locomotion atlases.
+        const previous=visual.texture;visual.texture=source.clone();visual.sprite.material.map=visual.texture;
+        visual.sprite.material.needsUpdate=true;visual.sourceTexture=source.uuid;previous.dispose();
+      }
+      const [aw,ah]=pose?.atlasSize??[asset.atlas.width,asset.atlas.height],size=pose?.frameSize??asset.atlas.frameSize,anchor=pose?.anchor??asset.atlas.anchor;
+      setSpriteFrame(visual.sprite,frame,[aw,ah],size,anchor,pose?.crop,pose?.cutouts);
+      visual.sprite.userData.clip=pose?.clip??actor.animation.frameId;visual.sprite.userData.frameIndex=pose?.index??actor.animation.frameIndex;
+      visual.sprite.userData.anchor=anchor;visual.sprite.userData.animationSource=pose?'skill':'locomotion';
       const screenX = (actor.x - this.cameraCenter.x) * this.zoom + this.width / 2;
       const screenY = (actor.y - this.cameraCenter.y) * this.zoom + this.height / 2;
       const renderedX = this.cameraCenter.x + (Math.round(screenX) - this.width / 2) / this.zoom;
@@ -237,7 +273,7 @@ export class PreviewRenderer {
   private createVisual(actor: RenderActor, asset: LoadedActor): Visual {
     const texture = asset.texture.clone();
     const material = new THREE.SpriteMaterial({ map: texture, transparent: true, depthTest: false, depthWrite: false, toneMapped: false });
-    const sprite = new THREE.Sprite(material);
+    const sprite = atlasSprite(material);
     sprite.userData.entityId = actor.id;
     sprite.scale.set(...asset.atlas.frameSize, 1);
     sprite.center.set(asset.atlas.anchor[0] / asset.atlas.frameSize[0], 1 - asset.atlas.anchor[1] / asset.atlas.frameSize[1]);
@@ -250,12 +286,12 @@ export class PreviewRenderer {
     ]), new THREE.LineBasicMaterial({ color: 0xb6533c, depthTest: false, transparent: true })); anchor.renderOrder = 12001;
     const label = document.createElement('div'); label.className = 'world-label'; this.labels.append(label);
     this.scene.add(sprite, shadow, collider, anchor);
-    return { actor, sprite, texture, shadow, collider, anchor, label };
+    return { actor, sprite, texture, shadow, collider, anchor, label,sourceTexture:asset.texture.uuid };
   }
 
   private remove(v: Visual): void {
     this.scene.remove(v.sprite, v.shadow, v.collider, v.anchor); v.label.remove();
-    v.sprite.material.dispose(); v.texture.dispose(); v.shadow.material.dispose();
+    v.sprite.geometry.dispose();v.sprite.material.dispose(); v.texture.dispose(); v.shadow.material.dispose();
     v.collider.geometry.dispose(); (v.collider.material as THREE.Material).dispose();
     v.anchor.geometry.dispose(); (v.anchor.material as THREE.Material).dispose();
   }

@@ -1,16 +1,16 @@
 # Hồ sơ tạo hình Vương Lâm — giai đoạn nhập môn
 
-**Phiên bản:** 0.4, ngày 07/10/2026.  
-**Nhân vật:** `CHR-WANG-LIN`, NPC trung tâm chính truyện; nguồn chân dung `AS-CHR-001`.  
+**Phiên bản:** 0.5, ngày 08/10/2026.\
+**Nhân vật:** `CHR-WANG-LIN`, lựa chọn người chơi từ đầu theo [GDD 0.28](GDD.md); nguồn chân dung `AS-CHR-001`. Mốc nguyên tác trong hồ sơ phục vụ diện mạo/cảnh truyện, không quyết định quyền chọn.\
 **Đã chốt:** dùng mô tả tiểu thuyết, thiết kế diện mạo riêng cho game. Nhân vật trên map dùng pixel art; nền stylized 2D; camera top-down ba phần tư; portrait/truyện giữ tranh mực và giấy cổ.  
-**Trạng thái:** nhận diện v2 đã được người phát triển duyệt; bộ áo xám đầu tiên đã có 28 frame native 64 × 96, palette 24 mục và trang xem chuyển động. Các hình trước đó giữ làm nguồn.  
+**Trạng thái:** nhận diện v2 đã duyệt; [chibi áo xám native-v2](design/characters/wang-lin-chibi-walk-v1/README.md) có 20 frame đứng/đi bốn hướng làm chuẩn tỷ lệ theo phản hồi tích cực. Bộ 28 frame đầu và bản sửa 36 frame được giữ lịch sử/đối chiếu. Portrait UI v1 còn chờ đánh giá.\
 **Tham chiếu:** [dàn nhân vật](CHARACTERS.md), [ART](ART-DIRECTION.md), [asset](ASSET-PLAN.md), [hình trên map](WORLD-VISUAL-SPEC.md), [roster](data/character-roster.json).
 
 ## 1. Cách dùng mô tả nguyên tác
 
 Mục tiêu là nhìn thấy cùng một người qua tuổi, thân phận, trải nghiệm và biểu cảm. Mỗi chi tiết có hai loại căn cứ: **chi tiết truyện đã kiểm tra** và **lựa chọn ART của game**. Phần truyện giữ đúng mốc; phần ART được phép thiết kế riêng rồi dùng nhất quán giữa chân dung và sprite.
 
-Nguồn đối chiếu hiện tại là bản dịch tiểu thuyết trên Wuxiaworld. Tên Việt và các ID E dùng theo GDD hiện có. E01–E08 là nhóm sự kiện chuyển thể, không phải số chương và không phải nhiệm vụ của đệ tử người chơi. Các nguồn dưới đây chỉ xác minh giai đoạn nhập môn; diện mạo của arc sau cần hồ sơ mới.
+Nguồn đối chiếu hiện tại là bản dịch tiểu thuyết trên Wuxiaworld. Tên Việt và ID E01–E08 thuộc hồ sơ chuyển thể trước, không phải số chương hoặc chuỗi nhiệm vụ HN01–HN12 hiện hành. Các nguồn dưới đây chỉ xác minh giai đoạn nhập môn; diện mạo của arc sau cần hồ sơ mới.
 
 | Nguồn | Chi tiết truyện đã kiểm tra | Hệ quả cho brief |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ Nguồn đối chiếu hiện tại là bản dịch tiểu thuyết trên Wuxia
 
 Các chương đã kiểm tra chưa đủ căn cứ để chốt hình mắt, mũi, độ dài tóc, kiểu buộc tóc, màu đồ đời thường hoặc từng đường cắt áo. Những chi tiết này ở phần 2–3 là đề xuất ART, không ghi thành mô tả nguyên tác.
 
-## 2. Một diện mạo xuyên suốt A — đề xuất ART
+## 2. Diện mạo nhập môn — đề xuất ART
 
 | Thành phần | Chỉ đạo hình ảnh |
 | --- | --- |
@@ -31,7 +31,7 @@ Các chương đã kiểm tra chưa đủ căn cứ để chốt hình mắt, m�
 | Mắt và miệng | Ánh nhìn chú ý, có thể bộc lộ hy vọng hoặc lo lắng; nét miệng vừa đủ thay biểu cảm. Không dùng một nét cau mày cho mọi cảnh |
 | Tóc | Đen, buộc nửa đầu bằng dây vải giản dị, phần tóc sau gọn. Hình tóc phải nhận ra ở hướng trước, bên và sau |
 | Dáng người | Mảnh, vai hẹp, trang phục nhẹ; tư thế đứng tự nhiên, không mặc định tư thế chiến đấu |
-| Dấu nhận diện | Đường tóc, hình đầu và cổ áo nhất quán qua ba bộ đồ; khác mẫu đệ tử nam của người chơi |
+| Dấu nhận diện | Đường tóc, hình đầu và cổ áo nhất quán qua ba bộ đồ; khác mẫu đệ tử nam thử nghiệm |
 | Đạo cụ | Sách/bầu/túi chỉ xuất hiện theo cảnh đã biên tập. Châu được vẽ riêng trong cảnh phát hiện hoặc kiểm tra vật phẩm |
 
 Các cỡ hiển thị 80/96/112 px trong nghiên cứu ghép (bộ cũ đã xóa) giữ là lịch sử thử tỷ lệ. Nhận diện đã duyệt; [spec sprite](WANG-LIN-SPRITE-SPEC.md) chọn frame 64 × 96 cho bộ áo xám đầu tiên, hình trong frame cao khoảng 80–82 px. PNG nghiên cứu lớn tiếp tục làm nguồn tạo hình.
@@ -48,7 +48,7 @@ Các cỡ hiển thị 80/96/112 px trong nghiên cứu ghép (bộ cũ đã xó
 
 E08 không cấp bộ đồ mới trong hồ sơ tạo hình. Vết bẩn lúc đột phá và hiệu ứng hơi thở chỉ thuộc diễn tiến cảnh; hình mặc định sau cảnh trở về bộ đỏ. Hình ảnh của cảnh giới cao, phụ kiện mới hoặc thay màu tóc cần nguồn đúng arc trước khi bổ sung.
 
-Khi đọc lại, chọn hình theo thời điểm của cảnh đang xem. Trong map chung, trang phục NPC theo mốc nội dung của khu vực đã biên tập; không đổi toàn thế giới khi một người chơi đạt cảnh giới mới. Cách bố trí Vương Lâm trong khu chung còn thuộc đặc tả map/nhiệm vụ online.
+Khi đọc lại truyện, chọn hình theo thời điểm cảnh đang xem. Trên map, hình của người chơi theo nhân vật/trang phục được phép dùng trong tiến trình; NPC và cảnh truyện theo nội dung khu vực đã biên tập. Biến thể truyện không tự đổi hình toàn thế giới hoặc cấp trang phục gameplay.
 
 ## 4. Thể hiện tính cách bằng chân dung và sprite
 
@@ -88,16 +88,16 @@ Tạo bằng **imagegen tích hợp**. [Manifest](design/characters/wang-lin-v2-
 ## 6. Điểm cần duyệt và bước kế tiếp
 
 1. **Nhận diện v2:** đã được người phát triển duyệt ngày 07/10/2026; dùng làm nguồn cho bộ native.
-2. **Bộ đứng/đi:** đã xuất 4 hướng, 28 frame áo xám; xem nhịp bước, đổi chân, tóc/áo và vòng lặp trên trang animation.
+2. **Bộ đứng/đi hiện hành:** chibi 20 frame bốn hướng; xem nhịp bước, đổi chân, tóc/áo và vòng lặp ở 1×. Bộ 28/36 frame trước được giữ đối chiếu.
 3. **Portrait:** đánh giá chân dung áo xám cơ bản đã xuất ở 64/160 px; biểu cảm và đồ thường/đỏ thêm theo cảnh thật sự cần.
-4. **Bộ tiếp theo:** sau đánh giá motion, áp dụng chuẩn cho đệ tử và biến thể trang phục; động tác tương tác/tu luyện có spec riêng.
+4. **Bộ tiếp theo:** cả bộ ba đã có đi/lướt bốn hướng; tương tác/tu luyện/combat và biến thể trang phục cần gói riêng khi chuyển ưu tiên khỏi map.
 
-Một bảng tạo hình đạt yêu cầu khi thể hiện rõ tuổi, giữ cùng gương mặt qua ba bộ đồ, dùng đúng trạng thái cảnh và phân biệt được Vương Lâm với đệ tử người chơi. Chân dung phải đọc được cảm xúc; sprite phải đọc được dáng trên nền sáng/tối mà không cần zoom. Mỗi chi tiết viện dẫn nguyên tác có chương hỗ trợ, mỗi chi tiết thiết kế riêng được ghi là đề xuất.
+Một bảng tạo hình đạt yêu cầu khi thể hiện rõ tuổi, giữ cùng gương mặt qua ba bộ đồ, dùng đúng trạng thái cảnh và phân biệt được Vương Lâm với hai đệ tử thử nghiệm. Chân dung phải đọc được cảm xúc; sprite phải đọc được dáng trên nền sáng/tối mà không cần zoom. Mỗi chi tiết viện dẫn nguyên tác có chương hỗ trợ, mỗi chi tiết thiết kế riêng được ghi là đề xuất.
 
 ## 7. Mở rộng hồ sơ sang các nhân vật khác
 
-Số lượng vẫn theo [CHARACTERS.md](CHARACTERS.md): A đề xuất 7 NPC; sau B tổng 10; danh mục arc sau hiện có 11. Hai mẫu đệ tử là hình người chơi. Hướng tạo hình này không thêm nhân vật truyện mới.
+Roster hiện hành theo [CHARACTERS.md](CHARACTERS.md): bộ ba chọn được từ đầu; NPC phụ theo nhu cầu Hằng Nhạc. Các tổng 7/10/11 và A → B trước là dự toán lịch sử, không là số NPC/gameplay đã triển khai. Hai đệ tử vẫn là avatar kỹ thuật trong preview online.
 
-Ưu tiên tiếp theo sau Vương Lâm: đối chiếu hai mẫu đệ tử để giữ khác nhận diện; làm hồ sơ cha mẹ → Trương Hổ → Tôn Đại Trụ. Tư Đồ Nam và Lý Mộ Uyển có hồ sơ riêng ở đúng giai đoạn xuất hiện trước khi vẽ.
+Ưu tiên hiện tại là map. Bộ ba có [hồ sơ riêng](CORE-CHARACTER-VISUAL-SPEC.md) và chibi đủ bốn hướng; portrait cần đồng bộ. NPC phụ chỉ lập/sản xuất khi nội dung Hằng Nhạc cần, dùng chương nguồn để giữ đúng chi tiết và tiết lộ.
 
 Mẫu hồ sơ dùng lại gồm: ID/vai trò, tuổi ở đoạn truyện, chương nguồn, chi tiết ngoại hình đã xác minh, phần ART đề xuất, trang phục/đạo cụ, thần thái theo cảnh, điều kiện tiết lộ, hình tham chiếu và trạng thái duyệt. Nhân vật có ít mô tả ngoại hình vẫn có thể được thiết kế riêng, với nhãn rõ về căn cứ.

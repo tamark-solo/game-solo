@@ -1,0 +1,52 @@
+const $=id=>document.getElementById(id),canvas=$('map'),ctx=canvas.getContext('2d',{alpha:false});
+const state={ready:false,width:1,height:1,dpr:1,zoom:1,mode:'native',center:[1536,1050],foot:[1536,1180],direction:'south',moving:false,animationTime:0,draws:0,framePending:false,lastFrame:0,rafIntervals:[],lastMovingFrame:0,actorDraws:[],keys:new Set(),loadedActors:new Map(),actorPromises:new Map()};
+let drag=null;
+async function image(path){const img=new Image();img.decoding='async';img.src=path;await img.decode();return img;}
+const screen=p=>[(p[0]-state.center[0])*state.zoom+state.width/2,(p[1]-state.center[1])*state.zoom+state.height/2];
+const world=p=>[(p[0]-state.width/2)/state.zoom+state.center[0],(p[1]-state.height/2)/state.zoom+state.center[1]];
+async function actor(id){if(!state.actorPromises.has(id)){const source=state.meta.characterSources.find(a=>a.id===id);state.actorPromises.set(id,(async()=>{const [atlas,texture]=await Promise.all([fetch(source.path+'atlas.json').then(r=>r.json()),image(source.path+'atlas.png')]);if(atlas.frameSizePx.join(',')!=='64,96'||atlas.footAnchorPx.join(',')!=='32,88')throw Error('Sai chuẩn nhân vật '+source.name);const frames=Object.entries(atlas.frames);const result={...source,atlas,texture,stand:direction=>frames.find(([n])=>n.endsWith('_stand_'+direction))[1],walk:direction=>frames.filter(([n])=>n.includes('_walk_'+direction+'_')).sort((a,b)=>a[0].localeCompare(b[0])).map(([,f])=>f)};state.loadedActors.set(id,result);return result;})());}return state.actorPromises.get(id);}
+function fit(){if(!state.ready)return;state.mode='overview';state.center=state.meta.worldSizePx.map(n=>n/2);state.zoom=Math.min(state.width/state.meta.worldSizePx[0],state.height/state.meta.worldSizePx[1]);invalidate();}
+function native(){if(!state.ready)return;state.mode='native';state.zoom=1;state.center=[state.foot[0],state.foot[1]-100];invalidate();}
+function focus(point,foot){state.mode='native';state.zoom=1;state.center=[...point];state.foot=[...foot];state.keys.clear();state.animationTime=0;state.direction='south';invalidate();}
+function resize(){state.width=Math.max(1,Math.floor(canvas.parentElement.clientWidth));state.height=Math.max(400,Math.min(800,Math.round(state.width*.64)));state.dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(state.width*state.dpr);canvas.height=Math.round(state.height*state.dpr);canvas.style.height=state.height+'px';if(state.ready){if(state.mode==='overview')fit();else invalidate();}}
+function tag(text,point,color){const p=screen(point);if(p[0]<-120||p[0]>state.width+120||p[1]<-30||p[1]>state.height+30)return;ctx.font='600 12px system-ui';const w=ctx.measureText(text).width+14,x=Math.max(3,Math.min(state.width-w-3,p[0]-w/2)),y=Math.max(20,Math.min(state.height-8,p[1]));ctx.fillStyle=color;ctx.fillRect(x,y-17,w,23);ctx.fillStyle='#fffaf0';ctx.fillText(text,x+7,y);}
+function pose(a,moving){if(!moving)return a.stand(state.direction);const frames=a.walk(state.direction);return frames[Math.floor(state.animationTime*(a.atlas.fps||5))%frames.length];}
+function paint(){
+ ctx.setTransform(state.dpr,0,0,state.dpr,0,0);ctx.fillStyle='#b8c6b3';ctx.fillRect(0,0,state.width,state.height);
+ const pos=screen([0,0]),[w,h]=state.meta.worldSizePx;ctx.imageSmoothingEnabled=state.zoom<1;ctx.imageSmoothingQuality='high';ctx.drawImage(state.texture,Math.round(pos[0]),Math.round(pos[1]),w*state.zoom,h*state.zoom);
+ if($('zones').checked)for(const zone of state.meta.zones)tag(zone.id+' · '+zone.name,zone.focusPx,zone.color);
+ const chosen=$('actor').value,ids=$('all-actors').checked?state.meta.characterSources.map(s=>s.id):[chosen];state.actorDraws=[];
+ ids.forEach((id,i)=>{const a=state.loadedActors.get(id);if(!a)return;const offset=ids.length===1?0:(i-ids.indexOf(chosen))*86,p=screen([state.foot[0]+offset,state.foot[1]]),f=pose(a,state.moving).frame;
+  ctx.fillStyle='#293a302a';ctx.beginPath();ctx.ellipse(p[0],p[1]-2*state.zoom,13*state.zoom,4*state.zoom,0,0,Math.PI*2);ctx.fill();
+  ctx.imageSmoothingEnabled=false;ctx.drawImage(a.texture,f.x,f.y,f.w,f.h,Math.round(p[0]-32*state.zoom),Math.round(p[1]-88*state.zoom),f.w*state.zoom,f.h*state.zoom);
+  state.actorDraws.push({id,framePx:[f.w,f.h],anchorPx:[32,88],worldFootPx:[state.foot[0]+offset,state.foot[1]],screenFramePx:[f.w*state.zoom,f.h*state.zoom]});
+ });
+ if($('ruler').checked){const p=screen(state.foot),x=Math.round(p[0]+48*state.zoom),y=Math.round(p[1]),top=y-80*state.zoom;ctx.strokeStyle='#7d3333';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(x,top);ctx.lineTo(x,y);ctx.moveTo(x-5,top);ctx.lineTo(x+5,top);ctx.moveTo(x-5,y);ctx.lineTo(x+5,y);ctx.stroke();ctx.font='12px system-ui';ctx.fillStyle='#7d3333';ctx.fillText('80 px',x+8,top+14);}
+ state.draws++;$('camera-label').textContent=`Camera ${state.zoom.toFixed(2)}× · người 1× trong world · chân (${Math.round(state.foot[0])}, ${Math.round(state.foot[1])})`;
+}
+function invalidate(){if(state.ready&&!state.framePending){state.framePending=true;requestAnimationFrame(tick);}}
+function tick(time){state.framePending=false;if(!state.ready||document.hidden)return;const dt=state.lastFrame?Math.max(0,Math.min((time-state.lastFrame)/1000,.05)):0;state.lastFrame=time;
+ const x=Number(state.keys.has('d')||state.keys.has('ArrowRight'))-Number(state.keys.has('a')||state.keys.has('ArrowLeft')),y=Number(state.keys.has('s')||state.keys.has('ArrowDown'))-Number(state.keys.has('w')||state.keys.has('ArrowUp'));
+ state.moving=Boolean(x||y);if(state.moving){const length=Math.hypot(x,y);state.foot[0]=Math.max(8,Math.min(3064,state.foot[0]+x/length*80*dt));state.foot[1]=Math.max(8,Math.min(2040,state.foot[1]+y/length*80*dt));state.direction=Math.abs(x)>Math.abs(y)?(x>0?'east':'west'):(y>0?'south':'north');state.animationTime+=dt;
+  if($('follow').checked){state.mode='native';state.zoom=1;const blend=1-Math.exp(-dt*12);state.center[0]+=(state.foot[0]-state.center[0])*blend;state.center[1]+=(state.foot[1]-100-state.center[1])*blend;}
+  if(state.lastMovingFrame){state.rafIntervals.push(time-state.lastMovingFrame);if(state.rafIntervals.length>300)state.rafIntervals.shift();}state.lastMovingFrame=time;
+ }else state.lastMovingFrame=0;
+ paint();if(state.moving)invalidate();
+}
+canvas.addEventListener('keydown',e=>{if(['w','a','s','d','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();if(!state.keys.size)state.lastFrame=performance.now();state.keys.add(e.key);if(state.mode==='overview'&&$('follow').checked)native();invalidate();}});
+window.addEventListener('keyup',e=>{if(state.keys.delete(e.key))invalidate();});
+canvas.addEventListener('blur',()=>{state.keys.clear();invalidate();});document.addEventListener('visibilitychange',()=>{state.keys.clear();state.lastFrame=0;state.lastMovingFrame=0;if(!document.hidden)invalidate();});
+canvas.addEventListener('pointerdown',e=>{if(!state.ready)return;canvas.focus({preventScroll:true});canvas.setPointerCapture(e.pointerId);drag={id:e.pointerId,start:[e.clientX,e.clientY],center:[...state.center],distance:0};});
+canvas.addEventListener('pointermove',e=>{if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.start[0],dy=e.clientY-drag.start[1];drag.distance=Math.max(drag.distance,Math.hypot(dx,dy));if(drag.distance>4){state.mode='manual';state.center=[drag.center[0]-dx/state.zoom,drag.center[1]-dy/state.zoom];invalidate();}});
+canvas.addEventListener('pointerup',e=>{if(!drag||drag.id!==e.pointerId)return;if(drag.distance<=4){const b=canvas.getBoundingClientRect(),p=world([e.clientX-b.left,e.clientY-b.top]);state.foot=[Math.max(8,Math.min(3064,p[0])),Math.max(8,Math.min(2040,p[1]))];state.direction='south';invalidate();}drag=null;});
+canvas.addEventListener('pointercancel',()=>{drag=null;});
+$('native').addEventListener('click',native);$('fit').addEventListener('click',fit);
+for(const [id,factor] of [['zoom-in',2],['zoom-out',.5]])$(id).addEventListener('click',()=>{state.mode='manual';state.zoom=Math.max(.125,Math.min(2,state.zoom*factor));invalidate();});
+for(const id of ['zones','ruler','follow'])$(id).addEventListener('change',invalidate);
+$('actor').addEventListener('change',async()=>{try{await actor($('actor').value);invalidate();}catch(e){failure(e);}});
+$('all-actors').addEventListener('change',async()=>{try{if($('all-actors').checked)await Promise.all(state.meta.characterSources.map(s=>actor(s.id)));invalidate();}catch(e){failure(e);}});
+function failure(e){$('status').classList.add('error');$('status').textContent='Không tải được bản xem: '+e.message;console.error(e);}
+function buttons(list,entries){for(const entry of entries){const b=document.createElement('button');b.textContent=(entry.id.startsWith('HN-')?entry.id+' · ':'')+entry.name;if(entry.description){const small=document.createElement('span');small.textContent=entry.description;b.append(small);}b.addEventListener('click',()=>focus(entry.focusPx,entry.reviewFootPx));$(list).append(b);}}
+new ResizeObserver(resize).observe(canvas.parentElement);
+window.__hangNhacMapReview=()=>({ready:state.ready,imageSizePx:state.ready?[state.texture.naturalWidth,state.texture.naturalHeight]:null,worldSizePx:state.meta?.worldSizePx,zoom:state.zoom,centerPx:[...state.center],footPx:[...state.foot],moving:state.moving,actorDraws:state.actorDraws,draws:state.draws,framePending:state.framePending,rafIntervalsMs:[...state.rafIntervals],loadedActorIds:[...state.loadedActors.keys()],imageBytes:state.meta?.bytes,collision:false,occlusion:false,authoredMapsModified:false});
+try{state.meta=await(await fetch('map.json')).json();const [texture]=await Promise.all([image(state.meta.imagePath),actor($('actor').value)]);if(texture.naturalWidth!==3072||texture.naturalHeight!==2048)throw Error('Sai kích thước ảnh');state.texture=texture;state.foot=[...state.meta.initialActorFootPx];state.center=[...state.meta.initialCameraCenterPx];state.ready=true;buttons('zone-list',state.meta.zones);buttons('review-list',state.meta.reviewPoints);resize();$('status').textContent=`Đã tải map ${(state.meta.bytes/1e6).toFixed(2).replace('.',',')} MB · 3072 × 2048 · nền và người scale 1.`;$('delivery').textContent=`Bản web: WebP quality ${state.meta.compression.quality}, nén màu có mất mát; PNG master giữ nguyên để đối chiếu. Giải mã nền khoảng 24 MiB. ${state.meta.sourceSummary||'Nguồn imagegen 1536 × 1024 được phục hồi chi tiết cục bộ và xuất 2×; không gọi là nguồn vẽ native 3072 mới.'}`;}catch(e){failure(e);}

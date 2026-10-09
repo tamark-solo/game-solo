@@ -1,16 +1,20 @@
 # Hằng Nhạc — map và bố cục v0.1
 
-**Ngày:** 08/10/2026 · **Trạng thái:** đề xuất bố cục để duyệt; chưa là map chơi được hoặc nền mỹ thuật cuối.
+**Ngày:** 08/10/2026 · **Trạng thái:** đề xuất bố cục HN-Z01–Z08 giữ làm tham chiếu, chưa là kế hoạch map mới hoặc map vận hành. ART Hằng Nhạc v1/v2/v3 và hai bản thử vùng đi đã [xóa](MAP-ASSETS-RESET.md); chờ chỉ dẫn mới của chủ dự án.
 
 **Tham chiếu:** [GDD](GDD.md), [trải nghiệm nhập môn](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay R01](NGUNG-KHI-GAMEPLAY-SPEC.md), [khảo nghiệm](HANG-NHAC-ENCOUNTERS-TRIAL.md), [tọa độ nguồn](design/world/hang-nhac-layout-v1/layout.json).
 
+**Quyết định hiện hành sau đề xuất này, 08/10/2026:** chủ dự án chọn concept mới làm khu môn phái, nối map ngoại vi farm riêng và phiên khảo nghiệm riêng. Các nhánh/tọa độ Z05 bên dưới chỉ mô tả đề xuất cũ, không là kế hoạch đặt tuyến farm vào scene môn phái. Concept giữ tỷ lệ vật thể/nhân vật đã chọn ở nền 2×; không khóa kích thước world theo bảng v0.1.
+
 ## 1. Mục tiêu lần thiết kế này
 
-Chốt cấu trúc không gian trước đặc tả vận hành: người chơi biết đi đâu, sân đủ chỗ nhìn skill, có vòng quay về chuẩn bị và nhận ra điểm kết thúc nhập môn. Chủ dự án ưu tiên sửa map Hằng Nhạc; đặc tả vận hành được làm sau khi map hoàn thiện.
+Mục tiêu của đề xuất v0.1 là làm rõ cấu trúc không gian trước đặc tả vận hành: người chơi biết đi đâu, sân đủ chỗ nhìn skill, có vòng quay về chuẩn bị và nhận ra điểm kết thúc nhập môn. Sau yêu cầu xóa ART và hai bản thử vùng đi, đề xuất này chỉ giữ để tham chiếu khi chủ dự án đưa kế hoạch map mới.
 
 Tám mã chức năng HN-Z01–Z08 được giữ. Z01 và Z08 dùng cùng sơn môn, tạo bảy địa điểm vật lý. Hằng Nhạc chung là chuyển thể cho ba nhân vật; các vị trí/kiến trúc mới không được giới thiệu là địa lý nguyên tác đã xác minh.
 
 Không thay runtime, camera đang chạy, ART nhân vật hoặc gói VFX đã bàn giao. JSON bên cạnh là nguồn thiết kế để giữ sơ đồ và bảng tọa độ nhất quán; không là schema máy chủ hoặc dữ liệu map đã tích hợp.
+
+Đề xuất này được tạo sau reset thư viện legacy, từng thay vai trò định hướng của vùng nhập môn 3840 × 2560/Q01–Q10 và các kế hoạch MP01–MP07/MAP03 cũ. Sau đợt xóa ART Hằng Nhạc, các vị trí tương tác, polygon/footprint và điều kiện nhiệm vụ ở đây vẫn chưa được duyệt để vận hành; không dùng để tự dựng lại map.
 
 ## 2. Bố cục được đề xuất
 
@@ -44,6 +48,8 @@ Sơ đồ trên mô tả kết nối; hướng và khoảng cách nằm trong ng
 | Đường vòng | Rộng 140 world px | Đi lại an toàn, không đặt bài né bắt buộc ở đây |
 
 Mọi tọa độ là mặt đất, x sang phải, y xuống dưới. Độ cao sườn núi/bậc thang do ART biểu đạt; sơ đồ không thêm cơ chế nhảy, bay, rơi vực hoặc tầng va chạm 3D. Việc camera bám người và clamp mép map chỉ được thử bằng khung xem trong sơ đồ, chưa quyết định runtime.
+
+Runtime/editor hiện giữ frame 64 × 96, chân (32,88), collider chân 8 px và tốc độ thử 80 px/s. VFX R01 dùng canvas 96 × 96/body 80/chân (48,88); các giá trị body trong đề xuất này là thước tham chiếu, chưa thay hợp đồng runtime hoặc khóa thông số map mới.
 
 ## 4. Bảy địa điểm, tám chức năng
 
@@ -94,15 +100,11 @@ Tại Z04, khung xem tỷ lệ minh họa chiều cao body 80, đường Kiếm 
 
 Ba nhánh dùng lại không gian và nền chiến đấu, chưa mở ba vùng nghề/cây skill khác nhau. Tên hoạt động và đạo cụ là chuyển thể cần biên tập trước ART.
 
-## 8. Chỉ dẫn mỹ thuật sau duyệt bố cục
+## 8. Chỉ dẫn mỹ thuật tham chiếu
 
-Đã có [nền mỹ thuật Hằng Nhạc v1](design/world/hang-nhac-art-v1/README.md) và [bản xem toàn map/khung game](design/world/hang-nhac-art-v1/index.html). Tranh giữ cấu trúc bảy địa điểm nhưng chưa khớp footprint blockout; neo xem tranh không là collider/spawn. Cần duyệt mỹ thuật, hiệu chỉnh mặt đất và tách lớp trước khi coi map hoàn thiện.
+ART Hằng Nhạc v1/v2/v3, các nguồn/prompt/trang duyệt và hai bản thử vùng đi đã xóa theo yêu cầu mới nhất ngày 08/10/2026. [Biên bản](data/hang-nhac-art-removal-2026-10-08.json) lưu danh sách file đã dọn. Mốc chấp nhận mỹ thuật v3 trước đó là lịch sử của bộ đã xóa; không còn là nguồn sản xuất hiện hành.
 
-Chủ dự án đánh giá nền v1 mờ so với nhân vật trong camera 1×. [Sân chính native v2](design/world/hang-nhac-art-v2/README.md) kiểm chứng nguồn đủ chi tiết cho vùng camera; chưa sửa toàn map. Chất lượng nền ở tỷ lệ chơi thật phải đạt trước khi chuyển sang các vấn đề khác hoặc đặc tả vận hành.
-
-[Toàn nền v3](design/world/hang-nhac-art-v3/index.html) đã mở rộng phần vẽ chi tiết ra bảy địa điểm: bốn vùng 1448 × 1086 đặt vào vùng world 1320 × 990 và năm phần vẽ sửa các mép ghép lớn. Có toàn cảnh, camera 1× ở từng khu, khung hẹp giữ body 80 và [ảnh toàn nền 2400 × 1800](design/world/hang-nhac-art-v3/full-map-review-native.png) xuất từ bản ghép. [Nguồn/prompt và giới hạn](design/world/hang-nhac-art-v3/README.md) được lưu cùng bộ. Đây vẫn là bản duyệt ART; chưa tách lớp, khớp collider, tích hợp runtime hoặc được duyệt là map hoàn thiện. Số vùng ART không khóa cách chia/tải map trong game.
-
-**Mốc duyệt 08/10/2026:** chủ dự án chấp nhận toàn nền v3 và yêu cầu commit bộ thiết kế lên nhánh. Mốc này xác nhận mỹ thuật đang xem; các phần tách lớp, hình học đi lại và vận hành vẫn cần hoàn thiện trước đặc tả vận hành.
+Các gợi ý dưới đây thuộc đề xuất bố cục v0.1. Chờ kế hoạch và tham chiếu mới của chủ dự án trước khi tạo ART, tách lớp hoặc thiết kế vùng đi.
 
 Điểm nhấn xa: chính điện hai bên trục, đài khảo nghiệm phía bắc, mây/vực ở ngoài vùng đi được. Điểm nhấn gần: đình và thông của Z03, giá kiếm của Z04, bàn dược liệu/luyện hóa của Z06, dấu cổng của Z01/Z08. Không dùng glow dày làm biển chỉ dẫn toàn map.
 
@@ -110,7 +112,7 @@ Nền di chuyển dùng khối màu lớn, texture vừa phải. Đường khôn
 
 Tách lớp source dự kiến: nền mặt đất; đạo cụ thấp; vật cao/tiền cảnh; vùng đi được; collider; điểm tương tác/spawn; trang trí ngoài biên. Không vẽ nhân vật, tên người chơi, UI hoặc VFX cố định vào nền.
 
-Chưa khóa số ảnh nền, kích thước atlas, chunk streaming hoặc ngân sách crowd. Bảy địa điểm không yêu cầu bảy tranh riêng: ưu tiên một khu chung liền mạch, nền phiên luyện/khảo nghiệm tái sử dụng theo nhu cầu. Các ảnh sân cũ giữ làm tham chiếu, không thay bằng sơ đồ này.
+Chưa khóa số ảnh nền, kích thước atlas, chunk streaming hoặc ngân sách crowd. Bảy địa điểm không yêu cầu bảy tranh riêng. Cách ghép khu chung và phiên luyện/khảo nghiệm sẽ được xét lại theo kế hoạch map mới; các ảnh sân Hằng Nhạc cũ đã xóa.
 
 ## 9. Kiểm tra trước khi duyệt map
 
@@ -129,6 +131,6 @@ Các kiểm tra hình học trong nguồn chỉ xác nhận khung/neo/kết nố
 
 ## 10. Điểm cần chốt tiếp
 
-Sau khi duyệt vị trí bảy địa điểm và tuyến đi: chỉnh khoảng cách bằng đi thử trên blockout, đặt collider/đạo cụ/NPC, duyệt camera và cảnh ghép nhân vật/VFX, rồi hoàn thiện nền. Chỉ khi map này hoàn thiện mới viết đặc tả vận hành theo yêu cầu chủ dự án.
+Chờ chủ dự án cung cấp kế hoạch map mới sau khi đã xóa ART v1/v2/v3 và hai walk study. Khi có kế hoạch, đối chiếu lại nhu cầu không gian, tham chiếu hình ảnh và hợp đồng tỷ lệ trước khi sản xuất. Không tiếp tục tách prop hoặc dựng vùng đi từ bộ đã xóa.
 
-Các giá trị 2400 × 1800, chiều rộng đường và tọa độ hiện tại là phương án đầu để phản hồi; không tự thay thế các quyết định runtime/ART đã khóa.
+Các giá trị 2400 × 1800, chiều rộng đường và tọa độ trong đề xuất này giữ để tham chiếu, chưa khóa kế hoạch map mới hoặc thay quyết định runtime.

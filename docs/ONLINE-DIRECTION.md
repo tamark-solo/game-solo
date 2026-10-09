@@ -6,9 +6,12 @@ Quyết định mới thay mô hình đệ tử riêng: người chơi chọn V�
 
 ## 1. Tài khoản, nhân vật và tiến trình
 
+Code local hiện có ba hồ sơ khách SQLite, R01 và [mở đầu HN01–HN02/thổ nạp online](HANG-NHAC-SECT-RUNTIME.md), cùng lease một nhân vật/tài khoản. Đây là phạm vi thử hẹp; chưa có đăng nhập/khóa phân tán MMO, offline, farm hoặc khảo nghiệm.
+
 | Phần | Thiết kế hiện hành |
 | --- | --- |
 | Lựa chọn ban đầu | Cả ba nhân vật có sẵn tại màn chọn; không chờ arc sau mới mở |
+| Quyền skill khởi đầu | Kiếm Khí, Lôi Ấn, Ngự Phong Bộ R01 có sẵn cho cả ba từ lúc điều khiển; nhiệm vụ chỉ hướng dẫn |
 | Đang điều khiển | Đề xuất một nhân vật mỗi lần; số slot và cách đổi còn mở |
 | Danh tính online | ID hồ sơ + tên tài khoản/biệt danh + nhãn nhân vật; cùng chọn Vương Lâm không cùng một save |
 | Tiến trình riêng | Mốc/cảnh giới hoặc hồi phục, tu vi, công pháp, thuật, pháp bảo, lĩnh ngộ, chương và tài nguyên |
@@ -49,4 +52,4 @@ Tu luyện vắng mặt chỉ tiếp tục hoạt động đã chọn theo đi�
 
 Lát A đề xuất: ba lựa chọn từ đầu, hai tài khoản vào Hằng Nhạc, di chuyển/tương tác, nhiệm vụ/tu luyện đầu và combat đơn giản, lưu riêng. Lát B hoàn thiện Ngưng Khí và khảo nghiệm cuối. Lát C mở phân hóa Trúc Cơ. Đây là phân kỳ thiết kế, chưa là lịch phát hành.
 
-Tài khoản, DB, loot/tổ đội/PvP/giao dịch, quy mô phòng/server và khóa/chuyển nhân vật còn mở. Backend phiên tạm hiện có chỉ chứng minh phần trong [hợp đồng preview](BACKEND-PREVIEW.md), không chứng minh sáu hệ tu tiên đã hoạt động.
+Đăng nhập/DB sản xuất, loot/tổ đội/PvP/giao dịch và quy mô nhiều server còn mở. [Bản thử hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) đã có ba hồ sơ SQLite riêng, một nhân vật điều khiển/tài khoản khách, lưu/khôi phục và thuật do server xác nhận. Đây là hợp đồng local cho kiểm gameplay, không tự khóa slot/kho chung/DB MMO. Map owner đã tích hợp; tiếp theo tương tác môn phái rồi farm/khảo nghiệm riêng theo [kế hoạch](HANG-NHAC-IMPLEMENTATION-PLAN.md). Chưa chứng minh sáu hệ tu tiên hoạt động.

@@ -13,7 +13,7 @@ Return curl dùng 12 frame thay vì ngân sách dự kiến 10 để tách rõ c
 
 ## Xem và tải
 
-[Thư viện sáu skill](skill-library.html) · [Preview Trúc Cơ](truc-co-kit.html?family=sword) · [ZIP chung, kèm Ngưng Khí để so sánh](releases/truc-co-kit-1.0.0.zip).
+[Thư viện hiện hành 15 skill](skill-library.html) · [Preview Trúc Cơ](truc-co-kit.html?family=sword) · [ZIP chung, kèm Ngưng Khí để so sánh](releases/truc-co-kit-1.0.0.zip).
 
 Mỗi skill có ZIP độc lập dưới `releases/skill-packs/`, kèm source, prompt, PNG, atlas, timeline, helper trình bày và manifest SHA-256. ZIP từng skill không kèm trang preview. ZIP chung có đủ sáu skill, các trang preview, ảnh so sánh, hồ sơ và server xem cục bộ. Không đóng ZIP vào chính ZIP chung; các liên kết tải trong bản giải nén cần file release ở workspace gốc. Chạy `python serve-preview.py` tại thư mục giải nén, rồi mở `http://127.0.0.1:4185/skill-library.html`. Nếu server preview đã chạy ở cổng này, dừng phiên cũ trước khi chạy bản giải nén.
 
@@ -56,8 +56,8 @@ node --test docs/design/vfx/production/r02.test.mjs docs/design/vfx/production/p
 
 `production/r02-controller.mjs` là adapter trình bày, chưa nối client. Caller gọi `beginCast`, cập nhật `setActorFoot` / `setProjectilePose`, chuyển hit vào `confirmHit` hoặc hụt vào `expireProjectile`, chuyển đáp vào `confirmArrival`, lấy draw records bằng `update`, và kết thúc bằng `endCast` / `dispose`. Mỗi actor một cast; pool giới hạn mặc định 32. Host quyết định damage, range, cooldown, movement, hit-stop và camera. Clip không cấp damage, miễn nhiễm hay teleport. Chưa có file SFX, icon, LOD đông người hoặc benchmark runtime.
 
-## Kiểm và mốc tiếp theo
+## Kiểm tại mốc bàn giao và hiện trạng sau P5
 
 31 kiểm tra tự động qua. 24 ảnh R02 được render cục bộ từ atlas tại zoom 1×/2×, cùng ba bảng R01/R02; đây không phải xác minh tương tác trình duyệt. 84 PNG dùng lại và snapshot Kiếm R01 đã được kiểm byte/hash. Bộ mới cần xem motion thực trong preview, rồi các hướng và integration/hiệu năng trong game.
 
-P4 Kết Đan tiếp tục bằng **Kiếm Luân / Lôi Hạch / Phong Luân**: thêm lõi, cấu trúc khép và nhịp xả lực. P4 đã sản xuất ba skill, xem [hồ sơ Kết Đan](KET-DAN-KIT.md); chưa duyệt motion mới. Nguyên Anh/Hóa Thần giữ mốc linh ảnh/ý cảnh đã phân bổ.
+P4 Kết Đan đã sản xuất/chấp nhận **Kiếm Luân / Lôi Hạch / Phong Luân**; xem [hồ sơ](KET-DAN-KIT.md). Nguyên Anh và Hóa Thần cũng đã chấp nhận; toàn đợt ART 15 skill đã [đóng bàn giao](STARTER-VFX-HANDOFF.md) ngày 07/10. Runtime/hướng/SFX/icon/LOD chưa tích hợp.

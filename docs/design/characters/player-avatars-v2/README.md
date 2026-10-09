@@ -1,5 +1,7 @@
 # Đệ tử người chơi v2 — tạo hình và sprite thử
 
+**Hồ sơ nguồn lịch sử:** Bộ 28 frame/mẫu giữ để truy nguồn. Sân online main hiện dùng hai đệ tử chibi 20 frame/mẫu; gameplay chính thiết kế cho chọn bộ ba từ đầu. Xem [chuẩn chibi hiện hành](../../../CHIBI-ROSTER-SPEC.md).
+
 Mở [trang xem](index.html) trực tiếp trong trình duyệt. So sánh nam/nữ với Vương Lâm, đổi bốn hướng, đứng/đi, nhịp 6/8/10 FPS, xem từng frame và phóng nguyên lần. Sân cho chọn nam hoặc nữ để thử dịch chuyển, tắt tên/vòng chọn để xem nhận diện ở 1×.
 
 **Trạng thái:** nhận diện v2 và chuyển động đệ tử là bộ thử, chưa được người phát triển duyệt. Bộ Vương Lâm đã có phản hồi tích cực và được dùng làm chuẩn thử. Đây là công cụ ART; chưa có gameplay online.

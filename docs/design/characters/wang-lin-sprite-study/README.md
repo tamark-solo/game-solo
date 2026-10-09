@@ -1,5 +1,7 @@
 # Vương Lâm — thử sprite nét mịn và pixel art
 
+**Hồ sơ nguồn lịch sử:** Hai mẫu phong cách trước native được giữ lịch sử; chuẩn hiện hành pixel chibi 64 × 96, anchor (32,88), có đủ bộ ba bốn hướng. Xem [chuẩn chibi hiện hành](../../../CHIBI-ROSTER-SPEC.md).
+
 **Ngày:** 07/10/2026.  
 **Yêu cầu:** tạo thử hai cách thể hiện Vương Lâm trước khi quyết định phần hình tiếp theo.  
 **Trạng thái:** sau so sánh, người phát triển ưu tiên pixel art cho nhân vật và chọn nền stylized 2D. Hai mẫu tĩnh được giữ làm tham chiếu, chưa là sprite native/animation sản xuất.  

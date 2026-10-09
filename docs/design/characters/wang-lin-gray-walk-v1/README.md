@@ -1,5 +1,7 @@
 # Vương Lâm áo xám — đứng và đi v1
 
+**Hồ sơ nguồn lịch sử:** Bộ 28 frame đầu giữ để truy nguồn. Main mặc định chibi 20 frame; bản sửa 36 frame vẫn có để đối chiếu. Xem [chuẩn chibi hiện hành](../../../CHIBI-ROSTER-SPEC.md).
+
 Nhận diện Vương Lâm v2 đã được người phát triển duyệt. Bộ đầu tiên có **28 frame native 64 × 96**: 4 đứng và 24 đi, theo bốn hướng xuống/trái/phải/lên. Palette có 24 mục tính cả trong suốt; điểm chân `(32, 88)`, nhịp đi mặc định 8 FPS. Chuyển động là bản đầu để xem thử.
 
 Mở [index.html](index.html) trực tiếp trong trình duyệt. Trang có bốn hướng cùng nhịp, xem từng frame/phóng nguyên lần và thử bước trên sân. Metadata nạp bằng script tĩnh nên không cần server để xem bộ hình. Đặc tả: [WANG-LIN-SPRITE-SPEC.md](../../../WANG-LIN-SPRITE-SPEC.md).

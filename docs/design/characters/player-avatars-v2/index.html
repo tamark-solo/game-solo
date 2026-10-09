@@ -13,7 +13,7 @@
 <body>
 <main>
   <h1>Đệ tử nam và nữ · Bộ thử đầu tiên</h1>
-  <p>Hai mẫu người chơi cùng đồng phục nhập môn; tóc và dáng tách biệt với Vương Lâm. Tạo hình và chuyển động của hai mẫu còn ở bản thử để xem xét.</p>
+  <p>Gallery bộ 28 frame lịch sử của hai avatar đệ tử, còn chờ đánh giá. Sân online main hiện dùng hai bộ chibi 20 frame/mẫu; GDD 0.28 cho chọn bộ ba Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu trong gameplay dự kiến.</p>
   <nav aria-label="Các phần"><a href="#sprites">So sánh pixel</a><a href="#courtyard">Xem trên sân</a><a href="#identity">Tạo hình</a><a href="../../../PLAYER-AVATAR-VISUAL-SPEC.md">Hồ sơ hai mẫu</a><a href="../index.html">Thư viện nhân vật</a></nav>
   <section id="sprites">
     <h2>Cùng lưới 64 × 96, bốn hướng</h2>
@@ -26,9 +26,9 @@
     <label class="frame-label" for="frame">Frame đi <output id="frame-value" for="frame">0 / 5</output></label><input id="frame" type="range" min="0" max="5" value="0" step="1">
     <div class="checks"><label><input id="grid" type="checkbox"> Hiện lưới 8 px</label><label><input id="anchor" type="checkbox"> Hiện điểm chân</label></div>
     <div class="comparison" id="comparison">
-      <article data-character="wanglin"><h3>Vương Lâm</h3><p class="badge">NPC truyện · Nhận diện đã duyệt</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-wanglin" width="64" height="96" aria-label="Sprite Vương Lâm theo hướng và frame đang chọn"></canvas></div></div><p>Tóc dài buộc nửa đầu, đai tối, dáng thiếu niên.</p></article>
-      <article data-character="male"><h3>Đệ tử nam</h3><p class="badge">Mẫu người chơi · Tạo hình v2</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-male" width="64" height="96" aria-label="Sprite đệ tử nam theo hướng và frame đang chọn"></canvas></div></div><p>Búi cao gọn, mặt góc cạnh, vai rộng, đai xanh.</p></article>
-      <article data-character="female"><h3>Đệ tử nữ</h3><p class="badge">Mẫu người chơi · Tạo hình v2</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-female" width="64" height="96" aria-label="Sprite đệ tử nữ theo hướng và frame đang chọn"></canvas></div></div><p>Búi thấp sau gáy, dáng gọn, đai xanh.</p></article>
+      <article data-character="wanglin"><h3>Vương Lâm</h3><p class="badge">Nguồn áo xám · Nhận diện đã duyệt</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-wanglin" width="64" height="96" aria-label="Sprite Vương Lâm theo hướng và frame đang chọn"></canvas></div></div><p>Tóc dài buộc nửa đầu, đai tối, dáng thiếu niên.</p></article>
+      <article data-character="male"><h3>Đệ tử nam</h3><p class="badge">Avatar thử nghiệm · Tạo hình v2</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-male" width="64" height="96" aria-label="Sprite đệ tử nam theo hướng và frame đang chọn"></canvas></div></div><p>Búi cao gọn, mặt góc cạnh, vai rộng, đai xanh.</p></article>
+      <article data-character="female"><h3>Đệ tử nữ</h3><p class="badge">Avatar thử nghiệm · Tạo hình v2</p><div class="canvas-scroll"><div class="mat"><canvas id="sprite-female" width="64" height="96" aria-label="Sprite đệ tử nữ theo hướng và frame đang chọn"></canvas></div></div><p>Búi thấp sau gáy, dáng gọn, đai xanh.</p></article>
     </div>
     <p class="note" id="frame-status">Mỗi mẫu người chơi có 4 frame đứng và 24 frame đi; 8 FPS là nhịp thử. 64 × 96 là khung sprite.</p>
   </section>
@@ -43,7 +43,7 @@
   </section>
   <section id="identity">
     <h2>Nhận diện người chơi v2</h2>
-    <p>Hai mẫu là nhân vật do game thiết kế, tên thuộc người chơi. Mẫu hình không thay đổi chỉ số tu luyện; trang phục chính truyện của Vương Lâm có luật riêng.</p>
+    <p>Hai mẫu do game thiết kế để thử ART và kết nối; sân online dùng tên tạm theo phiên. Chọn mẫu không đổi luật di chuyển; chưa có chỉ số tu luyện/tài khoản/tiến trình.</p>
     <div class="identities">
       <article><h3>Đệ tử nam · Tóc búi cao</h3><a href="../player-male-novice-v2.png"><img src="../player-male-novice-v2.png" alt="Bảng tạo hình đệ tử nam trưởng thành trẻ, áo xám đai xanh, tóc búi cao, ba góc thân và hai chân dung"></a><p><a href="../player-male-novice-v2.prompt.txt">Prompt tạo hình</a> · <a href="male/source-sheet-v2.png">Nguồn pixel</a> · <a href="male/source-sheet-v2.prompt.txt">Prompt chỉnh bước</a> · <a href="male/native-v2/atlas.png">Atlas</a> · <a href="male/native-v2/atlas.json">JSON</a></p></article>
       <article><h3>Đệ tử nữ · Tóc búi thấp</h3><a href="../player-female-novice-v2.png"><img src="../player-female-novice-v2.png" alt="Bảng tạo hình đệ tử nữ trưởng thành trẻ, áo xám đai xanh, tóc búi thấp, ba góc thân và hai chân dung"></a><p><a href="../player-female-novice-v2.prompt.txt">Prompt chỉnh tóc</a> · <a href="female/source-sheet-v2.png">Nguồn pixel</a> · <a href="female/source-sheet-v2.prompt.txt">Prompt chỉnh bước</a> · <a href="female/native-v2/atlas.png">Atlas</a> · <a href="female/native-v2/atlas.json">JSON</a></p></article>

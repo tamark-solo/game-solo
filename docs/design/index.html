@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bản phác UX và ART — Tiên Nghịch</title>
+  <title>Thư viện bản phác UX idle — lịch sử Tiên Nghịch</title>
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; background: #F3EBDD; color: #252722; font: 18px/1.6 'Segoe UI', Arial, sans-serif; }
@@ -25,11 +25,11 @@
 </head>
 <body>
   <main>
-    <h1>Bản phác UX và ART</h1>
-    <p><strong>GDD v0.20:</strong> ưu tiên <a href="characters/core-trio-v1/index.html">bộ ba Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển</a>; Lý Mộ Uyển đã chấp nhận nhận diện v1; Tư Đồ Nam đứng v3 tạm chấp nhận làm chuẩn thiết kế. Vương Lâm đã duyệt; <a href="characters/player-avatars-v2/index.html">hai đệ tử</a> giữ bộ thử. Bộ 14 UI v0.6 là tham chiếu.</p>
-    <p>Tiên Nghịch: Hành Trình Vương Lâm · MVP nhập môn. Hướng hình: tranh mực, giấy cổ và điểm sáng ngọc. Bộ 14 bản vẽ UI dùng snapshot độc lập để duyệt bố cục và thứ tự thông tin. Các nút trong hình là bản vẽ tĩnh.</p>
-    <p><a href="characters/core-ui-v1/index.html">Chân dung UI bộ ba 512/160/64</a> đã có bản đầu; <a href="../CORE-CHARACTER-MOTION-PLAN.md">kế hoạch động tác</a> tách 36 frame hiện có và 64 frame chưa vẽ.</p>
-    <p>Client đã chọn <strong>TypeScript + Three.js</strong>; <a href="../ANIMATION-PREVIEW-SPEC.md">preview chung animation/map</a> có đặc tả, là bước trước bộ động tác mới. <a href="../TECH-STACK.md">Thiết kế công nghệ</a>.</p>
+    <h1>Thư viện bản phác UX idle — lịch sử</h1>
+    <p><strong>Thiết kế hiện hành — <a href="../GDD.md">GDD 0.28</a>:</strong> chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; có sẵn Kiếm Khí, Lôi Ấn và Ngự Phong Bộ R01; nhập môn Hằng Nhạc qua Ngưng Khí rồi phân hóa từ Trúc Cơ. Xem <a href="../HANG-NHAC-NGUNG-KHI-SPEC.md">trải nghiệm Hằng Nhạc</a> và <a href="../UX-MVP-A.md">mapping UX hiện hành</a>. Ưu tiên sản xuất vẫn là map trước vận hành gameplay.</p>
+    <p><strong>Các hình bên dưới thuộc UX idle v0.6:</strong> 14 bản vẽ tĩnh với snapshot E01–E08, hạt châu/nước/linh dịch, 480 tu vi, offline 8 giờ, import save và kết thúc tầng 1. Giữ để tham khảo bố cục; chúng không là bộ UX online hiện hành hoặc ảnh gameplay đã triển khai. Hình/nút và số liệu nguyên bản được giữ làm lịch sử.</p>
+    <p><a href="characters/core-trio-v1/index.html">Nhận diện bộ ba</a> và <a href="characters/core-ui-v1/index.html">chân dung UI</a> có trạng thái ART riêng; <a href="../CORE-CHARACTER-MOTION-PLAN.md">kế hoạch động tác</a> theo dõi nguồn/animation. <a href="characters/player-avatars-v2/index.html">Hai đệ tử</a> là bộ thử lịch sử, không là lựa chọn chơi chính của GDD mới.</p>
+    <p>Client <strong>TypeScript + Three.js</strong> đã có preview ART/chuyển động và phòng online tối thiểu. Phạm vi chạy theo <a href="../PREVIEW-RUNBOOK.md">runbook</a>; tài liệu/bản vẽ này không xác nhận tài khoản, lưu lâu dài hoặc gameplay tu tiên đã hoàn thành.</p>
     <nav aria-label="Các bản phác"><a href="#art">ART</a><a href="#cultivation">Tu luyện</a><a href="#mobile">Mobile</a><a href="#journey">Hành trình</a><a href="#story">Đọc truyện</a><a href="#bead">Hạt châu</a><a href="#inventory">Hành trang</a><a href="#settings">Cài đặt</a><a href="#import">Nhập save</a><a href="#offline">Offline</a><a href="#end">Kết thúc A</a><a href="#activity-states">Trạng thái</a></nav>
     <section id="art"><h2>Bảng tham chiếu ART</h2><a href="art-reference-v1.png"><img src="art-reference-v1.png" alt="Bảng tranh mực: đường núi và suối, phòng đệ tử, Vương Lâm áo xám và áo đỏ, mộng cảnh có ánh ngọc"></a><p class="caption">Tham chiếu phong cách cho các nguồn hình trong kế hoạch asset.</p></section>
     <section id="cultivation"><h2>Tu luyện · Desktop</h2><a href="cultivation-desktop.svg"><img src="cultivation-desktop.png" alt="Bản phác Tu luyện desktop sau khi mở mộng cảnh"></a><p class="caption">Phàm nhân; tu vi 120/480; còn 6 linh dịch; mộng cảnh thủ công đang chạy.</p></section>
@@ -46,7 +46,7 @@
     <section id="activity-states"><h2>Trạng thái hoạt động và mục tiêu</h2><a href="activity-states.svg"><img loading="lazy" src="activity-states.png" alt="Tám ví dụ: thiếu nước, thiếu linh dịch, đầy kho, đủ luyện thử, mốc sẵn sàng, đã dừng và đủ đột phá"></a><p class="caption">Các ô là ví dụ độc lập của thành phần; mỗi lý do chờ có hướng xử lý hợp lệ.</p></section>
     <section id="story-states"><h2>Trạng thái truyện, vật phẩm và hạt châu</h2><a href="story-bead-states.svg"><img loading="lazy" src="story-bead-states.png" alt="Đọc sau, xem lịch sử, E08 trước nút cuối, vật phẩm chưa nhận và bốn hình dạng châu theo mốc"></a><p class="caption">Hình châu là nét phác SVG. Hình trong lịch sử và hình vật phẩm hiện tại có quy tắc riêng.</p></section>
     <section id="system-states"><h2>Offline, bản lưu và tab chỉ xem</h2><a href="system-states.svg"><img loading="lazy" src="system-states.png" alt="Tổng kết khi đã dừng hoặc đang đọc truyện, lỗi lưu và nhập, phiên bản chưa hỗ trợ, tab chỉ xem"></a><p class="caption">Phản hồi bằng chữ và hành động phù hợp với trạng thái đang dùng.</p></section>
-    <p>Luồng thao tác và nghiệm thu: <a href="../UX-SCREENS-AND-STATES.md">Chi tiết màn hình và trạng thái</a>. Bản vẽ này thuộc giai đoạn GDD/UX; hành vi sẽ kiểm chứng khi có prototype.</p>
+    <p>Luồng và snapshot lịch sử: <a href="../UX-SCREENS-AND-STATES.md">Chi tiết màn hình idle</a>. Các yêu cầu UX mới phải được biên tập/kiểm chứng theo <a href="../GDD.md">GDD 0.28</a>, <a href="../HANG-NHAC-NGUNG-KHI-SPEC.md">trải nghiệm Hằng Nhạc</a> và hợp đồng online; bản vẽ tĩnh không là nghiệm thu runtime.</p>
   </main>
 </body>
 </html>

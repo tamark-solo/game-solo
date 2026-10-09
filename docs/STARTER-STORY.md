@@ -1,51 +1,61 @@
-# Kịch bản nhập môn — đệ tử mới ở Hằng Nhạc
+# Kịch bản nhập môn — ba nhân vật tại Hằng Nhạc
 
-**Bản:** 1.0. Đây là lời dẫn/thoại gốc viết cho game; nhiệm vụ và quái là nội dung chuyển thể. Các nguồn và luật nằm trong [MVP mới](MVP-RPG-A.md). Người chơi đi cùng bối cảnh Vương Lâm, giữ hành trình và cơ duyên của ông trong chương cá nhân.
+**Bản:** 2.0 · **Ngày:** 08/10/2026 · **Trạng thái:** brief biên tập theo [GDD 0.28](GDD.md) và [trải nghiệm Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md); lời dẫn/thoại chi tiết chưa được duyệt hoặc triển khai.
 
-## Mở đầu, khoảng 30 giây
+Bản này thay kịch bản đệ tử mới Q01–Q10 ngày 07/10. [Nguyên bản 1.0](archive/design-before-three-playable-characters/STARTER-STORY.md) được giữ để đối chiếu, không dùng thoại “bạn đến đây với tên của mình”, Vương Lâm là NPC và boss/tầng 3 làm mở đầu hiện hành.
 
-“Cánh cổng Hằng Nhạc mở ra trước những người mong đổi vận. Trong hàng đệ tử áo xám, có người mang theo kỳ vọng gia đình, có người chỉ mong được học một pháp quyết. Bạn đến đây với tên của mình. Con đường phía sau cổng sẽ được viết bằng việc bạn làm.”
+## 1. Quyết định cần giữ khi viết
 
-Hiện tên đệ tử và mục tiêu **gặp quản sự**; không phát thuyết minh dài. Máy ảnh giữ cỡ hiện tại, đi qua cổng thấy phòng ở, bảng việc và đồng môn.
+Người chơi chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; cả ba học nền gameplay tại Hằng Nhạc qua Ngưng Khí, có đoạn cá nhân nhẹ, rồi phân hóa sâu từ hành trình Trúc Cơ. Kiếm Khí, Lôi Ấn và Ngự Phong Bộ R01 có sẵn khi bắt đầu điều khiển. Nhiệm vụ hướng dẫn cách vận dụng, không đóng vai cổng nhận ba thuật.
 
-## Hồi 1 — Áo xám và đường lấy nước, Q01–Q03
+Hằng Nhạc chung là mở đầu chuyển thể của game. Các chương theo nguyên tác vẫn giữ nguồn và niên biểu riêng; không kể ba người vốn cùng nhập môn, không chuyển lần gặp đầu của Lý Mộ Uyển sang Hằng Nhạc hoặc xóa kiến thức/cảnh giới của Tư Đồ Nam để đồng bộ level. Nhiệm vụ, lời dẫn và đối thủ sáng tạo phải ghi rõ phần chuyển thể.
 
-**Q01 — Tên trên danh sách.** Quản sự: “Nhận áo và kiếm trước. Ở ngoại viện, làm đúng việc được giao cũng là một bước vào đạo.” Người chơi nhận đồ, trang bị, thấy đường sang suối. NPC quản sự này là vai game bổ sung.
+## 2. Lời dẫn theo nhân vật cần biên tập
 
-**Q02 — Đường lấy nước.** Trương Hổ: “Ta còn phải kiếm củi. Ngươi đi suối phía đông thì chú ý lũ chuột ở bờ đá; bình nước đừng để chúng làm đổ.” Mục tiêu lấy nước một lượt và hạ hai sơn thử. Nhắc chọn mục tiêu, đánh thường khi tới gần, vùng quái và quyền loot cá nhân. Đây là nhiệm vụ mới cho đệ tử; không thay việc Vương Lâm phải gánh nước hay Trương Hổ phải kiếm củi trong nguyên tác.
+| Nhân vật | Nội dung phải làm rõ lúc vào game | Ranh giới |
+| --- | --- | --- |
+| Vương Lâm | Danh tính, động lực tu luyện đầu và mục tiêu học vận dụng linh lực | Thiên Nghịch Châu/cơ duyên thuộc tuyến riêng đúng mốc; không phát cho mọi hồ sơ |
+| Tư Đồ Nam | Trạng thái linh thể bị hạn chế, kiến thức vốn có và phần năng lực hiện đang phục hồi | Tutorial là thử/khôi phục vận dụng; không kể ông mới học Ngưng Khí lần đầu |
+| Lý Mộ Uyển | Mở đầu gameplay chuyển thể; khả năng tự chiến đấu và nét chuẩn bị đan–trận | Không giới thiệu là người chỉ chữa/hỗ trợ Vương Lâm; không đổi lịch sử gặp gỡ nguyên tác |
 
-Thẻ truyện sau Q02: “Trong số những người mặc áo xám có Vương Lâm. Nhập môn không khiến đời sống của cậu dễ hơn: tạp vụ và những cái nhìn lạnh nhạt vẫn còn. Bạn chưa biết điều gì giúp cậu bền sức qua những ngày dài.” Không tiết lộ/handover hạt châu cho người chơi; xem lại ở Nhật ký.
+Nguồn neo/biểu hiện linh thể Tư Đồ Nam, thoại mở đầu và danh tính NPC tiếp dẫn còn cần biên tập/duyệt. Brief không tự tạo một vật phẩm canon hoặc pháp quyết chung mới để giải thích preset.
 
-**Q03 — Dẫn khí đầu tiên.** Quản sự: “Pháp quyết chỉ cho đường vào. Giữ tâm ổn định, rồi tự cảm nhận hơi linh khí đầu tiên.” Đánh mục tiêu tập, thử thổ nạp 15 giây, nhận pháp quyết của người chơi, bấm đột phá tầng 1. Động tác lấy từ gói tu luyện tương lai, preview hiện chưa có. Không nói mọi đệ tử trở thành môn sinh của Tôn Đại Trụ.
+## 3. Khung tuyến HN01–HN12 đề xuất
 
-## Hồi 2 — Người giữ vườn và việc tuần sơn, Q04–Q07
+Các ID, điều kiện và phần thưởng theo [đặc tả trải nghiệm](HANG-NHAC-NGUNG-KHI-SPEC.md); bảng này chỉ dẫn biên tập, chưa là script runtime.
 
-**Q04 — Giữ sạch nguồn nước.** Trương Hổ: “Đường này không chỉ có mình ngươi đi. Dọn chỗ nước đọng để đồng môn sau còn dùng được.” Hạ bốn sơn thử, có tiền/cống hiến; giới thiệu nhiệm vụ được trả một lần và món thưởng vật liệu.
+| Chặng | Mục đích lời dẫn | Điều không được kể thành mở khóa mới |
+| --- | --- | --- |
+| HN01 — Tiếp dẫn | Nhận diện người đang điều khiển, di chuyển/tương tác và mục tiêu trước mắt | Tạo đệ tử vô danh thay nhân vật đã chọn |
+| HN02 — Vận hành đầu | Giải thích tích lũy khác linh lực; diễn giải hồi phục riêng cho Tư Đồ Nam | Nhận toàn bộ R01 sau thổ nạp hoặc nhận châu chung |
+| HN03–HN04 — Luyện thuật/đổi vị trí | Học định hướng Kiếm, mục tiêu/điểm khóa Lôi, Phong/đi bộ theo báo đòn | Nhiệm vụ mới cấp quyền một skill vốn có |
+| HN05 — Trận nhỏ | Vận dụng nền trong encounter có đường solo | Cần người khác hoặc một class bắt buộc để tiến |
+| HN06 — Đoạn riêng | Cho thấy một nét nhận diện nhẹ của người đã chọn | Mở cả nghề/cây kỹ năng riêng ngay nhập môn |
+| HN07 — Bình cảnh | Nêu phần thiếu và bài vận dụng để tự giải | Đầy tu vi tự vượt mốc hoặc trivia đổi lấy lĩnh ngộ |
+| HN08–HN09 — Chuẩn bị/phối hợp | Sở hữu khác luyện hóa/vận dụng; kiểm năng lực nền ổn định | Tự cấp R02–R05 hoặc thuật đặc trưng chưa có hồ sơ |
+| HN10 — Khảo nghiệm cuối | Kiểm phối hợp điều đã học, có thử lại/khôi phục rõ | Boss nguyên tác bị đánh bại theo stat chuyển thể chưa duyệt |
+| HN11–HN12 — Tổng kết/xuất hành | Giải thích thành quả và mục tiêu riêng tiếp theo; xác nhận đi tiếp | Qua cổng tự có Trúc Cơ hoặc báo map sau đã có khi chưa triển khai |
 
-**Q05 — Lối ngoài dược viên.** Người giữ lối: “Luống trong vườn do Tôn trưởng lão trông coi. Muốn lấy dược liệu thì tìm sơn thảo ở bãi ngoài; đừng động tới linh dược của ông.” Người chơi dẹp giáp trùng và hái hai lượt; mở chế bình máu/cường hóa +1. Khi đứng trước cổng, đọc thẻ ngắn về dược viên và cảnh giới trong pháp quyết của Vương Lâm. Phân biệt bãi hái công khai với vườn hạn chế.
+Mốc 1/3/9/15 và phạm vi hết 15 tầng trong Hằng Nhạc là đề xuất cần đánh giá; lời dẫn không biến cách phân bổ game thành niên biểu nguyên tác. Bản thử có thể dừng ở lát nhỏ, nhưng phải gọi đúng phạm vi đã có.
 
-**Q06 — Củi và dấu chân.** Trương Hổ: “Dạo này đường kiếm củi có dấu chân thú lớn. Nếu ngươi đã dẫn được khí, giúp ta nhìn qua.” Người chơi lấy nhựa mộc và hạ sơn trư. Vật liệu để chế hộ phù không phụ thuộc drop hiếm. Về điểm nghỉ đột phá tầng 2, mở hộ thân; chọn trở lại nhiệm vụ bằng một thao tác.
+## 4. HN06 và HN07: dấu nhận diện nhẹ
 
-**Q07 — Tuần đường hậu sơn.** Đệ tử tuần sơn: “Bầy sói đã tràn xuống đường rừng. Dẹp những con ở lối đi, rồi báo lại dấu vết ở khe đá.” Hạ bốn sói và mở waypoint khe đá; dẫn sang vùng nguy hiểm hơn. Nhiệm vụ lặp săn sói mở sau hoàn thành, không hiện trước bài hướng dẫn.
+Theo [HN06/HN07](HANG-NHAC-NGUNG-KHI-SPEC.md):
 
-## Hồi 3 — Chuẩn bị và thử thách, Q08–Q10
+- Vương Lâm quan sát mục tiêu/đường thuật và chọn khoảng cách/góc; bình cảnh được giải bằng đọc nhịp vận dụng. Không tự mở thần thức/cấm chế cao.
+- Tư Đồ Nam nhận ra “biết” khác “hiện thi triển được”; ổn định biểu hiện linh thể và thử lại năng lực nền. Không xóa tri thức truyện.
+- Lý Mộ Uyển nhận biết nhu cầu, chọn chuẩn bị phù hợp rồi tự thử trận; không bắt chữa cho người khác. Vật tư/công thức mẫu là chuyển thể chưa khóa.
 
-**Q08 — Con đầu đàn.** Đệ tử tuần sơn: “Con đầu đàn không lao ngay. Thấy nó hạ vai thì tránh khỏi đường trước mặt.” Mini-boss dạy đòn báo trước 0,9 giây. Quái chia credit cho người cùng đánh, mỗi người nhận vật liệu riêng. Đường tới hang được giới thiệu, nhưng vào boss cần hoàn tất chuẩn bị Q09.
+Mỗi đoạn giữ một nét riêng và dùng lại nền nhập môn. Lời kết ghi điều đã hiểu hoặc khả năng đã ổn định, không biến mọi trải nghiệm thành một thanh EXP mới. Tác dụng/số liệu và bài kiểm chứng chi tiết cần chơi thử theo hồ sơ gameplay.
 
-**Q09 — Chuẩn bị vào hang.** Người giữ lối dược viên: “Đừng dùng mạng mình để thử một bình thuốc. Chế sẵn một bình hồi phục, kiểm tra hộ phù rồi hãy đi.” Chế một bình máu và trang bị hộ phù; UI nêu rõ thiếu vật liệu ở đâu. Không bắt cường hóa hoặc rơi kiếm hiếm để vào hang.
+## 5. Luật trình bày và quyền nội dung
 
-**Q10 — Bình yên dưới chân núi.** Lời dẫn tại cửa: “Dấu chân đứt đoạn trên nền đá rồi biến mất trong hang. Tiếng gầm từ bên trong khiến bụi trên vách rung xuống. Đây là việc của một đệ tử đã biết tự chuẩn bị.” Vào phiên boss một người; giữ camera đủ khoảng né, không zoom làm nhân vật nhỏ hơn.
+Thoại ngắn, mục tiêu hiện tại và phần còn thiếu phải dễ tìm; UI mở dần theo nhiệm vụ. Tu vi là tích lũy dài hạn, linh lực là nguồn dùng thuật trong trận; nhãn Tư Đồ Nam ưu tiên trạng thái/hồi phục. Khu chung không công bố cơ duyên hoặc chương riêng của tài khoản khác.
 
-Boss lần lượt dạy quét vuốt hình quạt, lao theo đường thẳng, rồi tiếng hống vòng tròn khi còn nửa máu. Hình báo vùng đi trước sát thương; không chồng hai vùng bắt buộc không thể thoát. Chết cho thử lại, giữ nhiệm vụ và đồ.
+Đọc/bỏ qua lời dẫn không tự nhận thưởng hay xác nhận vượt mốc. Máy chủ xác nhận kết quả, chi phí và thưởng một lần; replay chỉ xem/luyện theo luật riêng. Idle không tiếp tục truyện, combat, lĩnh ngộ then chốt hoặc xác nhận đột phá khi vắng mặt. Các tương tác, khoảng cách tới điểm chân, marker và kiểm đường nhìn cần hợp đồng UX/kỹ thuật trước triển khai.
 
-Kết: Đệ tử tuần sơn: “Đường đã thông. Ngoại viện sẽ nhớ phần việc ngươi làm hôm nay.” Người chơi chọn một đồ hiếm chắc chắn, nhận lệnh, bấm đột phá tầng 3. Thẻ cuối: “Trong môn phái, mỗi người tìm một cách tiến bước. Vương Lâm vẫn giữ những điều chưa thể kể với đồng môn. Còn bạn đã có pháp quyết, trang bị và một con đường để tiếp tục.” Mở nhiệm vụ lặp và boss farm, không khóa mọi hoạt động như màn kết thúc idle cũ.
+## 6. Việc còn cần chốt
 
-## Nhiệm vụ phụ và lặp
+Biên tập/đối chiếu nguồn lời mở và ba tuyến cá nhân; chọn danh tính NPC; khóa điều kiện/mốc với [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md); khớp khảo nghiệm với [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md); xác định đoạn xuất hành và tuyến Trúc Cơ đầu. Thoại Q01–Q10, tên quái/boss và số liệu của bản 1.0 không được chép sang tuyến mới như quyết định đã duyệt.
 
-S01 cho nói chuyện ngắn với Vương Lâm, xem lại thẻ truyện và nhận chút tiền; không tiết lộ bí mật châu, không cấp vật phẩm độc hữu. S02 cho thử thu nhựa và nhận vật liệu hộ phù; giúp người thích khám phá nhưng không là cổng bắt buộc.
-
-R01 săn năm sói, R02 hái ba lượt sơn thảo; tiền/cống hiến nhỏ, nhận lại sau khi trả. Không có nhiệm vụ ngày ép giờ đăng nhập trong A. Hệ thống có thể thêm bảng việc theo arc khi đủ nội dung B.
-
-## Luật trình bày
-
-Thoại chính một đến hai đoạn ngắn, có nút nhận/trả và mục tiêu hiện trên map. Bỏ qua đọc không tự nhận thưởng; thao tác hoàn thành được server xác nhận. NPC giữ tiến trình theo người đang tương tác, không công bố bí mật chương của người này cho người khác. Marker tương tác dùng khoảng cách tới điểm chân và đường nhìn; mobile có nút tương tác rõ ở ngoài vùng di chuyển.
+Ưu tiên vẫn là map trước vận hành gameplay theo [MVP RPG](MVP-RPG-A.md); ART cũ đã xóa, đang chờ kế hoạch map mới. Brief này cung cấp ngữ cảnh để biên tập sau map, không xác nhận nhiệm vụ/combat/lưu tài khoản đã hoạt động.

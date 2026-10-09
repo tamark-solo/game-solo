@@ -1,7 +1,20 @@
 {
   "schemaVersion": "core-character-motion-plan-1",
-  "date": "2026-10-07",
-  "status": "chibi_stand_and_move_produced_new_roster_pending_owner_review",
+  "date": "2026-10-09",
+  "status": "chibi_trio_locomotion_and_r01_cast_runtime_extra_motion_planned",
+  "frameCountScope": "locomotion_only_casting_production_counted_separately",
+  "castingProduction": {
+    "sourcePath": "docs/design/characters/core-cast-v1",
+    "architecturePath": "docs/SKILL-CORE.md",
+    "runtimeBindings": 36,
+    "runtimeCastingFrames": 300,
+    "newClips": 33,
+    "newFrames": 264,
+    "originalWangLinEastClips": 3,
+    "directions": ["south", "west", "east", "north"],
+    "skills": ["sword", "thunder", "wind"],
+    "artApproved": false
+  },
   "specPath": "docs/CORE-CHARACTER-MOTION-PLAN.md",
   "frameSizePx": [
     64,
@@ -27,7 +40,7 @@
     {
       "characterId": "CHR-WANG-LIN",
       "costume": "gray",
-      "firstPhase": "A",
+      "firstPhase": "starter_hang_nhac",
       "existingAtlasPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.png",
       "anchorKind": "feet",
       "currentUniqueFrames": 20,
@@ -75,12 +88,15 @@
       "previousAtlasPath": "docs/design/characters/gait-correction-v1/wang-lin/native-v1/atlas.png",
       "motionApproval": "positive_visual_feedback_reference_for_roster",
       "metadataPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/atlas.json",
-      "movementKind": "walk"
+      "movementKind": "walk",
+      "gameplayRole": "playable_character",
+      "playableFromStartInDesign": true,
+      "onlinePlayableImplemented": true
     },
     {
       "characterId": "CHR-SITU-NAN",
       "form": "standing_spirit_game_adaptation",
-      "firstPhase": "B",
+      "firstPhase": "starter_hang_nhac",
       "existingAtlasPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.png",
       "anchorKind": "ground_projection",
       "hoverHeightPx": 4,
@@ -124,12 +140,15 @@
       "previousAtlasPath": "docs/design/characters/core-trio-v1/situ-nan/native-v4/atlas.png",
       "motionApproval": "pending_owner_review",
       "metadataPath": "docs/design/characters/chibi-roster-v1/situ-nan/native-v2/atlas.json",
-      "movementKind": "glide"
+      "movementKind": "glide",
+      "gameplayRole": "playable_character",
+      "playableFromStartInDesign": true,
+      "onlinePlayableImplemented": true
     },
     {
       "characterId": "CHR-LI-MUWAN",
       "costume": "lavender_two_layer_redesign",
-      "firstPhase": "later_arc",
+      "firstPhase": "starter_hang_nhac",
       "existingAtlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
       "anchorKind": "feet",
       "currentUniqueFrames": 20,
@@ -182,7 +201,10 @@
         "nativeVersion": "native-v5",
         "atlasPath": "docs/design/characters/chibi-roster-v1/li-muwan/native-v5/atlas.png",
         "runtimeVersion": "0.5.1"
-      }
+      },
+      "gameplayRole": "playable_character",
+      "playableFromStartInDesign": true,
+      "onlinePlayableImplemented": true
     }
   ],
   "originalCurrentUniqueFrames": 36,
@@ -326,7 +348,26 @@
       ]
     }
   ],
-  "runtimeVersion": "0.5.1",
+  "runtimeVersion": "0.12.0",
   "productionPriority": "map_art_review_then_gameplay_design_then_animation_production",
-  "currentMvpSpecPath": "docs/MVP-RPG-A.md"
+  "currentMvpSpecPath": "docs/MVP-RPG-A.md",
+  "gameplayDirection": {
+    "gddVersion": "0.28",
+    "gddPath": "docs/GDD.md",
+    "playableFromStart": [
+      "CHR-WANG-LIN",
+      "CHR-SITU-NAN",
+      "CHR-LI-MUWAN"
+    ],
+    "sharedStarterScope": "hang_nhac_through_ngung_khi",
+    "characterDifferentiationStartsAt": "truc_co",
+    "onlineTrioSelectionImplemented": true,
+    "currentOnlineAvatarIds": [
+      "CHR-WANG-LIN-CHIBI",
+      "CHR-SITU-NAN",
+      "CHR-LI-MUWAN"
+    ]
+  },
+  "runtimeReadinessScope": "hang_nhac_guest_profiles_r01_training_36_cast_bindings_hn01_hn02_online_cultivation",
+  "frameBudgetReestimationScope": "interaction_cultivation_combat_costumes_after_gameplay_design_not_existing_60_frames"
 }

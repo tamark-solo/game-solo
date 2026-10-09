@@ -1,5 +1,7 @@
 # Định hướng online nhiều người — điều chỉnh GDD
 
+> **Snapshot lịch sử — không phải luật hiện hành.** Giữ nội dung quyết định theo thời điểm nguồn; chỉ nhãn trạng thái và đường dẫn đọc được cập nhật khi rà soát ngày 08/10/2026. Hướng hiện hành: [GDD 0.28](../../GDD.md), [trạng thái dự án](../../PROJECT-STATUS.md) và [mục lục lịch sử](README.md).
+
 **Phiên bản:** 0.5, ngày 07/10/2026.  
 **Đã xác nhận:** web online, đệ tử riêng, idle kết hợp khu môn phái có nhân vật đi lại; người phát triển muốn trải nghiệm giống MMORPG.  
 **ART/góc nhìn hiện tại:** nhân vật pixel art trên nền stylized 2D, top-down ba phần tư.  
@@ -79,7 +81,7 @@ Mất mạng hiện trạng thái chờ kết nối; lệnh hoạt động/độ
 - Thay màn nhập save bằng luồng tài khoản/phiên; đổi nhãn tổng kết thành **Tu luyện khi vắng mặt**.
 - Hai nguồn hình đệ tử được cộng vào ngân sách nhân vật; trang phục xám/đỏ của Vương Lâm không tự áp dụng cho mọi người chơi.
 
-Các bản phác v0.6 vẫn hữu ích để tham chiếu bố cục mực/giấy, nhưng chưa thể dùng làm UX hoàn chỉnh cho online. Đã có preview chạy được và backend phòng tối thiểu, ghi tại [BACKEND-PREVIEW.md](BACKEND-PREVIEW.md); chưa triển khai tài khoản/tiến trình và luật tu luyện.
+Các bản phác v0.6 vẫn hữu ích để tham chiếu bố cục mực/giấy, nhưng chưa thể dùng làm UX hoàn chỉnh cho online. Đã có preview chạy được và backend phòng tối thiểu, ghi tại [BACKEND-PREVIEW.md](../../BACKEND-PREVIEW.md); chưa triển khai tài khoản/tiến trình và luật tu luyện.
 
 ## 7. Phần thiết kế tiếp theo
 

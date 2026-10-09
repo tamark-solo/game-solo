@@ -1,97 +1,100 @@
-# Chạy preview animation và sân chung online
+# Chạy preview, backend thử và Map Editor
 
-**Phiên bản:** 0.11.0, ngày08/10/2026.
-**Trạng thái:** đã triển khai bản thử TypeScript + Three.js và backend TypeScript + Node.js + Colyseus.  
-**Phạm vi:** duyệt ART, thử chuyển động và đồng bộ map bằng phiên tạm. Tài khoản, lưu tiến trình, tu luyện và chiến đấu thuộc mốc tiếp theo.
-
-**Công cụ map hiện tại:** http://127.0.0.1:5173/map-editor.html, hoặc đường cũ `/map-design.html`. Người phát triển tự kéo asset/layer/vùng; trợ lý không tiếp tục tự ghép. Có nhiều level/portal/Spawn riêng, Test1× WASD/E, lưu workspace và file riêng từng level, xuất/nhập JSON. [Hướng dẫn editor](MAP-EDITOR.md) và [phân công](MAP-ASSET-PRODUCTION-NOTES.md). Bản toàn vùng trước giữ tại `/layered-map.html`.
-
-**Ưu tiên map sau review0.9.0:** đọc [quy tắc xây map](MAP-BUILDING-GUIDE.md) và [kế hoạch đoạn ngoại viện native mẫu](MAP-COURTYARD-PILOT-PLAN.md). Trang **http://127.0.0.1:5173/map-design.html** mở `/layered-map.html`: năm khu3840 × 2560 theo ảnh tổng phóng, 12 chunk/8 phần che, sprite64 × 96, WASD/nút cảm ứng. Bản này còn mờ/mask thô/nền dưới sai, ảnh lỗi đã lưu (bộ cũ đã xóa); kết quả test chỉ là kỹ thuật. Dùng để đối chiếu bố cục; làm một đoạn native trước khi mở rộng. [MAP03](MAP-LAYERED-DESIGN.md), nguồn/prompt (bộ cũ đã xóa). Vùng này hiện cục bộ, chưa nối server.
-
-[Gallery concept](http://127.0.0.1:5173/assets/map-art/index.html) và gallery local (bộ cũ đã xóa) vẫn cho đặt PNG người lên tranh để so tỷ lệ; không có di chuyển/va chạm. ART và map đi thử cần duyệt trước nhiệm vụ/combat/loot/đột phá.
-
-**Map mới:** mở **http://127.0.0.1:5173/starter-region.html** để đi thử vùng 3840 × 2560 với 5 khu nối nhau và hang boss 960 × 640. Giữ sprite 64 × 96, cỡ 1× như map trước; camera cuộn theo người. Chọn khu rồi bấm Đến khu để duyệt; WASD/phím mũi tên hoặc nút cảm ứng để đi, E ở cửa hang để vào/trở lại. Nhiệm vụ/quái là điểm thiết kế; phòng online hiện vẫn sân cũ. [Kịch bản/MVP mới](MVP-RPG-A.md) và [map](STARTER-REGION-MAP.md) ghi phần tiếp theo.
+**Cập nhật:** 08/10/2026 · **Runtime:** 0.12.0. TypeScript + Three.js / Node.js + Colyseus. Hằng Nhạc có hồ sơ khách SQLite/lưu, R01 luyện thử và [NPC/HN01–HN02/thổ nạp online](HANG-NHAC-SECT-RUNTIME.md); HN03–HN12/farm/khảo nghiệm/đăng nhập sản xuất còn tiếp tục. Nhấn E gần NPC, mở Nhật ký để xem đường. Xem [trạng thái](PROJECT-STATUS.md).
 
 ## 1. Khởi động
 
-Cần Node.js >= 22.12.0 và npm. Mở terminal trong thư mục dự án:
+Cần Node.js >= 22.13.0 và npm; dependency khóa trong [package-lock.json](../package-lock.json). Chạy trong checkout của nhánh muốn xem:
 
 ```powershell
 npm.cmd ci
 npm.cmd run dev
 ```
 
-Mở **http://127.0.0.1:5173/**. Một lệnh chạy client và backend; giữ terminal mở khi xem. Dừng bằng Ctrl+C. Dependency đã khóa trong [package-lock.json](../package-lock.json).
+Nếu đã có dependency, chỉ chạy lệnh `dev`. Một lệnh mở client localhost:5173 và backend localhost:2567; giữ terminal mở, dừng bằng Ctrl+C. Dùng `npm.cmd` trên Windows để tránh vướng chính sách thực thi `npm.ps1`.
 
-Nếu dependency đã có, chỉ cần `npm.cmd run dev`. PowerShell có thể chặn file npm.ps1; các ví dụ dùng npm.cmd để chạy đúng công cụ trên Windows.
+| URL | Nội dung thật sự |
+| --- | --- |
+| [Trang chính](http://127.0.0.1:5173/) | Animation, di chuyển cục bộ và sân online |
+| [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html) | Map owner/9 blocker/camera 1×; hồ sơ riêng bộ ba, lưu và luyện R01 bằng phím 1/2/3 |
+| [Gallery chibi](http://127.0.0.1:5173/assets/chibi-roster/index.html) | Năm bộ chibi hiện có |
+| [Chibi pilot](http://127.0.0.1:5173/chibi-pilot.html) | Mẫu hướng Đông cũ để đối chiếu |
+| [Map Editor](http://127.0.0.1:5173/map-editor.html) | Level Design với thư viện mặc định trống sau reset |
+| [Starter region](http://127.0.0.1:5173/starter-region.html) | Prototype di chuyển/điểm thiết kế trước GDD 0.28; chưa có combat hoặc nhiệm vụ |
 
-Client mặc định ở cổng 5173, backend ở cổng 2567, chỉ lắng nghe localhost. Đây là môi trường phát triển nhiều client; chưa phải bản được đưa lên internet.
+`/map-design.html`, `/layered-map.html` và `/map-pilot.html` hiện chuyển sang `/map-editor.html`. Gallery map-art, MAP03/native pilot, lệnh `test:map-art` và `map:overview` của bộ cũ đã bỏ; không dùng hướng dẫn lịch sử để khôi phục.
 
-## 2. Xem animation
+## 2. Xem animation và di chuyển cục bộ
 
-Trang chính **http://127.0.0.1:5173/** mặc định chọn **Vương Lâm · chibi bốn hướng**: 4 đứng + 16 pose đi, vòng mặc định 0,8 giây (5 FPS). Chọn Thử trên map, bấm vào sân và giữ WASD/phím mũi tên hoặc nút hướng cảm ứng. Sải mặc định 24 px/vòng, tốc độ 40 px/s. Đủ bốn hướng xuống, trái, phải và lên; đổi hướng giữ pha bước, thả phím về hình đứng cùng hướng. [Nguồn và prompt](design/characters/wang-lin-chibi-walk-v1/README.md).
+Trang chính mặc định dùng **Vương Lâm chibi bốn hướng**: 4 đứng + 16 pose đi. Catalog có **6 bộ/136 frame**: năm bộ chibi 100 frame và Vương Lâm bộ trước 36 frame. Tư Đồ Nam có đứng lơ lửng/lướt; Lý Mộ Uyển có đứng/đi. Lý Mộ Uyển chibi native-v5 đã được chấp nhận cho bản thử; Tư Đồ Nam chibi và hai avatar đệ tử còn chờ đánh giá. [Hồ sơ roster](CHIBI-ROSTER-SPEC.md) ghi nguồn và mức duyệt riêng.
 
-Trang **http://127.0.0.1:5173/chibi-pilot.html** giữ mẫu hướng Đông ban đầu để đối chiếu; bật Hiện bộ trước để xem hai tỷ lệ cạnh nhau. Asset và metadata trong trang chính có URL theo hash nội dung, catalog được nạp mới mỗi lần mở. Khi đang mở phiên cũ, tải lại trang để chọn bộ mặc định mới. Xem [phân tích reference](GAIT-REFERENCE-REVIEW.md).
+Chọn nhân vật, đứng/đi, hướng và FPS; pause để xem từng frame, zoom 1×/2×/4×, đổi nền và bật điểm neo. Frame runtime 64 × 96, neo (32,88). Bộ chibi mặc định 5 FPS khi xem tại chỗ; chuyển động cục bộ 40 px/s và sải 24 px/vòng là tham số duyệt, không phải cân bằng gameplay.
 
-- Chọn một trong sáu bộ preview: Vương Lâm chibi, Vương Lâm bộ trước, đệ tử nam/nữ, Tư Đồ Nam và Lý Mộ Uyển. Đây là các bộ hình của dàn nhân vật, không thêm nhân vật chính.
-- Năm bộ chibi có một đứng và bốn pose chuyển động mỗi hướng. Mở **http://127.0.0.1:5173/assets/chibi-roster/index.html** để xem cạnh nhau. Vương Lâm bộ trước có tám pose/hướng, giữ đối chiếu; trang gait-review là lịch sử trước tỷ lệ chibi.
-- Chọn đứng/đi và bốn hướng; nhịp animation 1–12 FPS.
-- Tạm dừng để xem frame trước/sau; zoom nguyên lần 1×/2×/4× và nền giấy/tối/lưới.
-- Điểm neo (32,88) được đánh dấu khi bật debug; khung native là 64 × 96.
-- Tư Đồ Nam có **Đứng lơ lửng/Lướt**, chân giữ duỗi và điểm chiếu cách đáy hình 4 px. Lý Mộ Uyển có **Đứng/Đi bộ** và diện mạo mới: mặt mềm, tóc xanh đen buộc thấp, áo lavender. Mỗi bộ 20 frame; đang chờ đánh giá hình.
+Chọn **Thử trên map**, bấm vào sân rồi giữ WASD/mũi tên hoặc nút hướng mobile. Chỉnh tốc độ/sải bước để duyệt nhịp; khi di chuyển, animation theo quãng đường. Camera bám/cố định và pause scene là công cụ xem. Fixture sân/collider/trụ dựng bằng code kiểm tra kỹ thuật; chưa phải map Hằng Nhạc mới. Mô phỏng 1/5/20 hình không là đo tải MMO.
 
-## 3. Di chuyển cục bộ
-
-Chuyển sang **Thử trên map**, bấm vào sân và dùng WASD/phím mũi tên. Trên mobile dùng nút hướng phía dưới sân. Chỉnh tốc độ 40–160 px/s; nhịp chân tự khớp quãng đường. **Sải bước** 24–72 px/vòng cho so sánh, mặc định 24 cho bộ chibi, 48 cho bộ trước/online; FPS thủ công chỉ dùng cho xem tại chỗ. Nhập/chọn trong bảng điều khiển không làm nhân vật đi; rời cửa sổ sẽ xóa input đang giữ.
-
-Tùy chọn camera bám giúp nhìn nhân vật khi zoom hoặc dùng màn nhỏ; tắt để xem camera cố định. Pause scene dừng cả chuyển động và animation. Đặt lại đưa hình về điểm xuất phát.
-
-Nền sân đã có ART được dùng cùng collider thử biên sân, bệ trái, bảng thông báo và một trụ nhỏ giữa sân. Trụ mới là hình fixture dựng bằng code để xem va chạm/che khuất, chưa là asset ART sản xuất. Những vật cản khác trong ảnh chưa được biên tập thành map gameplay.
-
-1/5/20 hình mô phỏng phục vụ xem chuyển động và đọc nhịp renderer trên thiết bị. Chúng không phải tài khoản hoặc kết quả thử tải MMORPG.
-
-## 4. Hai người cùng vào sân
+## 3. Hai client online
 
 1. Chọn **Sân chung online**, nhập tên và chọn đệ tử nam/nữ.
-2. Giữ địa chỉ `http://127.0.0.1:2567`, bấm **Vào sân**.
-3. Bấm **Mở cửa sổ người chơi thứ hai**, vào sân bằng tên/mẫu hình khác.
-4. Điều khiển từng cửa sổ để thấy chuyển động trên cửa sổ còn lại. Danh sách Đồng môn cho biết ai là người đang điều khiển.
-5. Bấm Rời sân để kết thúc phiên; người đó biến mất khỏi map còn lại.
+2. Giữ endpoint `http://127.0.0.1:2567`, bấm **Vào sân**.
+3. Mở cửa sổ người chơi thứ hai và vào bằng tên/avatar khác.
+4. Điều khiển hai cửa sổ để đối chiếu vị trí; bấm **Rời sân** khi xong.
 
-Vị trí, tốc độ 80 px/s và va chạm do server tính ở fixed tick 30 Hz. Client gửi MoveInput qua SDK, dự đoán người đang điều khiển bằng cùng luật, rồi reconcile/replay theo xác nhận server. Người khác nội suy snapshot với buffer 100 ms. Nhịp chân theo quãng đường và giữ pha khi đổi hướng; camera giữ số thực, sprite căn pixel trong màn hình. Hai đệ tử chibi có bốn pose đi/hướng; chất lượng ART còn chờ đánh giá.
+Server tính vị trí 30 Hz, tốc độ 80 px/s, va chạm và ack input; client prediction/reconciliation và nội suy người khác. Phòng giữ phiên bị rơi tối đa 15 giây để reconnect trong cùng trang. Reload hoặc restart server chưa đảm bảo phục hồi vì chưa có tài khoản/DB. Bộ ba playable theo GDD chưa được nối vào luồng chọn online này. [Hợp đồng backend](BACKEND-PREVIEW.md) mô tả chính xác các giới hạn.
 
-SDK tự thử kết nối lại trong cùng trang. Server giữ chỗ 15 giây khi kết nối bị rơi; thành công giữ ID/tạo hình/vị trí. Vào lại bằng nút sau khi phiên kết thúc tạo một phiên mới. Reload hoặc khởi động lại server chưa đảm bảo giữ nhân vật vì chưa có tài khoản/cơ sở dữ liệu.
+Đoạn trên mô tả fixture trang chính. Tại **Hằng Nhạc**, chọn bộ ba rồi vào sân; dùng browser context riêng để kiểm người thứ hai. Cùng tài khoản chỉ điều khiển một người, rời sân trước khi đổi. Hồ sơ Hằng Nhạc tự lưu trong `server/data/profiles.sqlite` (hoặc `GAME_DB_PATH`), giữ vị trí/MP/cooldown/counter qua reload/restart; không xóa file DB hoặc dữ liệu trình duyệt khi muốn tiếp tục save. Di chuyển đổi hướng Kiếm/Phong, dừng giữ hướng; chạm map ngắm riêng cho đến khi đổi input đi. Lôi quay về mục tiêu đã chọn. Bấm **Mục tiêu luyện**, dùng 1/2/3 hoặc nút thuật; mũi tên HUD cho biết hướng Kiếm/Phong. [Hướng dẫn/giới hạn](HANG-NHAC-R01-RUNTIME.md).
+
+Hằng Nhạc tự nối lại khi backend restart trong lúc phát triển. Chờ trạng thái sân chung và lời nhắc E gần NPC hiện trở lại; nếu hết lượt thử hoặc hồ sơ bị từ chối, trang hiện lỗi và cho vào lại thủ công. Rời sân hủy phục hồi. `npm.cmd run test:hang-nhac-reload` kiểm luồng này bằng DB và assets fixture riêng, gồm cả reload ngay sau reconnect; đây là hồi quy bắt buộc khi sửa lifecycle kết nối/NPC.
+
+## 4. Làm việc với map
+
+Đọc [Level Design](MAP-LEVEL-DESIGN.md), [Map Editor](MAP-EDITOR.md), [quy tắc xây](MAP-BUILDING-GUIDE.md) và [phân công](MAP-ASSET-PRODUCTION-NOTES.md). Người phát triển tự bố trí level/layer/navigation. Editor có chọn nhiều/nhóm/căn chỉnh, PNG/tileset/brush, prefab, multipart, minimap, audit, Test va chạm/portal và xuất runtime JSON. API Vite lưu workspace hoạt động khi chạy `npm.cmd run dev` hoặc `npm.cmd run preview`; bản `dist/client` chỉ phục vụ bằng máy chủ tĩnh khác không có API này.
+
+Bộ legacy, ART Hằng Nhạc v1/v2/v3 và hai bản thử vùng đi đã [xóa](MAP-ASSETS-RESET.md); manifest thư viện vẫn trống. Các URL/trang duyệt của bộ đã xóa không còn dùng được. Map mới đã lưu và [tích hợp runtime Hằng Nhạc](HANG-NHAC-RUNTIME.md). Actor giữ frame 64 × 96, neo (32,88); VFX R01 canvas 96 × 96/body 80/neo (48,88) vẫn là hợp đồng ART riêng.
+
+[Bản ghép nhân vật/camera trên concept mới](design/world/hang-nhac-map-v1/README.md) là trang review riêng, dùng atlas gốc và khung desktop/mobile. Chạy server tài liệu theo [hướng dẫn](design/world/hang-nhac-map-v1/README.md); URL local hiện tại là http://127.0.0.1:8765/design/world/hang-nhac-map-v1/README.md Trang này chưa có va chạm/che khuất và không thay camera game.
+
+Hằng Nhạc dùng release owner cho client/server; room fixture cũ dùng `shared/world.ts`. Room state đang chạy giữ RAM, hồ sơ Hằng Nhạc lưu SQLite. Không ghi dữ liệu test vào authored-maps, DB thật hoặc nháp trình duyệt của người phát triển.
 
 ## 5. Build và kiểm tra
 
+Các lệnh dưới đây có trong [package.json](../package.json):
+
 ```powershell
+npm.cmd run typecheck
 npm.cmd run build
 npm.cmd test
 npm.cmd run test:online
+npm.cmd run test:hang-nhac
+npm.cmd run test:hang-nhac-r01
+npm.cmd run test:skill-animation
+npm.cmd run test:skill-vfx
+npm.cmd run test:skill-body
+npm.cmd run test:hang-nhac-sect
 npm.cmd run test:browser
 npm.cmd run test:movement
 npm.cmd run test:gait-review
 npm.cmd run test:chibi-pilot
 npm.cmd run test:starter-region
-npm.cmd run test:map-art
+npm.cmd run test:map-editor
+npm.cmd run test:level-design
 ```
 
-`build` chuẩn bị asset, kiểm tra TypeScript và build client vào dist/client. Xem client build bằng `npm.cmd run preview` ở cổng 4173; backend chạy riêng bằng `npm.cmd run start:server`. Chạy hai lệnh trong hai terminal nếu muốn thử online bằng bản build.
+Chọn checks phù hợp phần vừa sửa. `build` chuẩn bị asset, kiểm TypeScript và xuất `dist/client`. Chạy `npm.cmd run preview` để xem client build ở localhost:4173; backend cần terminal riêng với `npm.cmd run start:server`. Đây là môi trường phát triển, chưa có triển khai internet hoặc năng lực MMO được đo.
 
-Kiểm tra browser dùng Chrome headless đã có trên Windows, không tải browser tự động. Mặc định: `C:/Program Files/Google/Chrome/Application/chrome.exe`. Có thể đặt biến CHROME_PATH trỏ đến Chrome/Chromium khác. Kiểm tra online/browser tự tạo server ở cổng 2577 hoặc 2579; Vite kiểm tra dùng 5179 và được dừng khi kết thúc.
+Browser smoke dùng Chrome headless đã cài, mặc định `C:/Program Files/Google/Chrome/Application/chrome.exe`; có thể đặt `CHROME_PATH`. Test tự dùng cổng riêng và dừng dịch vụ khi xong. Test editor dùng kho cô lập trong `artifacts/`, không dùng authored-maps. Kết quả mới được ghi trong `artifacts/`; [preview-verification.json](data/preview-verification.json), [map-editor-verification.json](data/map-editor-verification.json) và [level-design-verification.json](data/level-design-verification.json) là hồ sơ kiểm tra đã lưu, không tự cập nhật khi sửa tài liệu.
 
-Kiểm tra movement dùng cổng 2581/5182, thêm độ trễ WebSocket thực 100 ms mỗi chiều và jitter để đo nhấn/thả phím, tư thế khi dừng và va chạm. Kết quả JSON và screenshot nằm trong artifacts/ và không đưa vào Git. Bản kết quả bàn giao được tóm tắt ở [preview-verification.json](data/preview-verification.json).
-
-## 6. Cấu trúc nguồn
+## 6. Nguồn dùng chung
 
 | Nơi | Vai trò |
 | --- | --- |
-| [client/src](../client/src/) | Giao diện, atlas, animation, Three.js renderer và kết nối online |
-| [server/src](../server/src/) | Phòng môn phái, state đồng bộ, xử lý input và phiên tạm |
-| [shared/world.ts](../shared/world.ts) | Mặt bằng fixture, collider và luật di chuyển dùng chung |
-| [scripts/sync-preview-assets.mjs](../scripts/sync-preview-assets.mjs) | Copy 6 atlas/JSON, gallery chibi và nền vào public để chạy/build |
-| [tests](../tests/) | Kiểm tra atlas/di chuyển, hai client thật và browser desktop/mobile |
+| [client/src](../client/src/) | UI, atlas/animation, renderer, network và editor |
+| [server/src](../server/src/) | Phòng thử, state và phiên trong RAM |
+| [shared/world.ts](../shared/world.ts) / [netcode.ts](../shared/netcode.ts) | Fixture online và luật di chuyển/input dùng chung |
+| [shared/hang-nhac.ts](../shared/hang-nhac.ts) / [navigation.ts](../shared/navigation.ts) | Release Hằng Nhạc và va chạm polygon dùng chung Editor/client/server |
+| [shared/map-editor.ts](../shared/map-editor.ts) / [level-design.ts](../shared/level-design.ts) | Model editor, vùng/portal, audit và export |
+| [scripts/map-editor-api.ts](../scripts/map-editor-api.ts) | API lưu dự án/level trong Vite dev/preview; không phải lưu tiến trình người chơi |
+| [scripts/sync-preview-assets.mjs](../scripts/sync-preview-assets.mjs) | Sinh catalog 6 bộ/136 frame, gallery chibi và map-kit theo manifest |
+| [shared/skills](../shared/skills/) / [client/src/skills](../client/src/skills/) | Core gameplay, timeline pose/VFX, loader và UI; [hướng dẫn thêm/debug skill](SKILL-CORE.md) |
+| [tests](../tests/) | Kiểm tra atlas, di chuyển, online, browser và editor |
 
-Nguồn ART cũ dưới docs/design giữ nguyên. [Bộ sửa tay/chân](GAIT-CORRECTION.md) có nguồn/prompt/manifest và atlas ở thư mục mới; client/public/assets được tạo lại khi chạy dev/build. Quyết định backend và hợp đồng bản thử: [BACKEND-PREVIEW.md](BACKEND-PREVIEW.md).
-
-Map mới dùng [dữ liệu RPG-A](data/mvp-rpg-content.json) cùng [shared/starter-region.ts](../shared/starter-region.ts) cho bố trí/va chạm và [client/src/starter-region.ts](../client/src/starter-region.ts) cho preview. `npm.cmd run map:overview` xuất lại sơ đồ SVG (bộ cũ đã xóa). Test mới kiểm kết nối tới mọi POI, va chạm, tuyến chính đủ tu vi/vật liệu; browser kiểm cỡ nhân vật, portal, điều khiển, desktop/360 px. Không dùng kết quả này làm nghiệm thu combat chưa triển khai.
+`client/public/assets/` được sinh lại khi chạy assets/dev/build. Script sync catalog/gallery/map-kit và [release Hằng Nhạc](../scripts/build-hang-nhac-runtime.ts) từ map đã chốt; không tạo lại ART cũ hoặc sinh ảnh mới. [sync-skill-assets](../scripts/sync-skill-assets.mjs) đóng catalog v2 từ 10 FX R01 và 36 clip thi triển đã có, giữ nguồn/hashes và nạp theo avatar. `node scripts/verify-core-cast-assets.mjs` kiểm alpha/điểm chân/pose mới và cập nhật provenance kỹ thuật, không cấp duyệt ART.

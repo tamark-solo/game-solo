@@ -6,7 +6,7 @@
 
 Người chơi chọn **Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển ngay đầu game**. Cả ba trải qua Hằng Nhạc/Ngưng Khí chung về nền gameplay, có khác biệt nhẹ; lối chơi phân hóa sâu từ hành trình Trúc Cơ sau map nhập môn.
 
-Vai “đệ tử người chơi riêng, bộ ba là NPC chỉ mở ở arc sau” đã bị thay. [Hồ sơ trước](archive/design-before-three-playable-characters/CHARACTERS.md) giữ nguồn hình, nghiên cứu đệ tử và roster cũ. Chưa thay ID/role trong JSON runtime; dữ liệu cũ không là quyết định sản phẩm hiện hành.
+Vai “đệ tử người chơi riêng, bộ ba là NPC chỉ mở ở arc sau” đã bị thay. [Hồ sơ trước](archive/design-before-three-playable-characters/CHARACTERS.md) giữ nguồn hình, nghiên cứu đệ tử và roster cũ. [Roster thiết kế](data/character-roster.json) phân biệt quyền chọn gameplay từ đầu với mốc xuất hiện theo truyện/ngân sách cũ; không là schema runtime hoặc bằng chứng đã triển khai màn chọn ba người. ID và metadata/duyệt ART nguồn được giữ để truy nguyên.
 
 ## 2. Phạm vi lựa chọn
 
@@ -38,15 +38,15 @@ Giữ concept linh thể đứng v3 tạm chấp nhận, mặt/tóc v2; tư th�
 
 Giữ nền luyện đan/trận pháp; nguồn [143](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-143), [224](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-224). Nhập môn Hằng Nhạc là chuyển thể, không kể rằng lần gặp đầu nguyên tác xảy ra tại đây.
 
-Giữ nhận diện v1 đã chấp nhận: tạo hình áo tím/biến thể đỏ theo hồ sơ cảnh. Tự chơi được, không chỉ cung cấp đan cho Vương Lâm. Số phận/sinh mệnh và cách tiếp tục chơi ở arc sau phải biên tập riêng; không mặc định bất tử hay một kết thúc mới.
+Nhận diện concept/tĩnh v1 áo tím đã được chấp nhận trước đây; hiện giữ làm đối chiếu nguồn, cùng biến thể đỏ theo cảnh. Bộ chibi hiện hành **native-v5** có 20 frame đứng/đi bốn hướng, mặt/tóc/trang phục đã làm lại; tóc xanh đen rẽ lệch/buộc thấp, áo lavender hai lớp/cổ ngà, đã được chấp nhận làm chuẩn bản thử ngày 07/10. Portrait trước cần đồng bộ, không suy thành duyệt ART phát hành. Tự chơi được, không chỉ cung cấp đan cho Vương Lâm. Số phận/sinh mệnh và cách tiếp tục chơi ở arc sau phải biên tập riêng; không mặc định bất tử hay một kết thúc mới.
 
 ## 4. Diện mạo, NPC và nguồn cũ
 
-Nhận diện Vương Lâm v2, Lý Mộ Uyển v1 đã duyệt; Tư Đồ Nam đứng v3 tạm chấp nhận. Vai chơi được không tự đổi khuôn mặt/trang phục đã chọn. Các mẫu/tư thế theo chương được dùng theo ngữ cảnh, không suy trang phục NPC từ level của mọi người chơi.
+Nhận diện Vương Lâm v2 đã duyệt, chibi Vương Lâm dùng làm chuẩn tỷ lệ. Lý Mộ Uyển chibi native-v5 đã chấp nhận cho bản thử; concept/tĩnh v1 là mốc trước. Tư Đồ Nam đứng v3 trước được tạm chấp nhận, còn bộ chibi native-v2 đứng/lướt mới chờ đánh giá. Phân biệt duyệt identity, chuẩn bản thử và duyệt animation/phát hành; vai chơi được không tự đổi các trạng thái nguồn. Các mẫu/tư thế theo chương dùng đúng ngữ cảnh, không suy trang phục từ level của mọi người chơi.
 
-Hai mẫu đệ tử nam/nữ giữ làm nghiên cứu/preview lịch sử, không là lựa chọn người chơi chính của GDD mới. Roster A=7/B=10/arc=11 và ngân sách portrait cũ là tham chiếu, chưa là roster NPC đã duyệt cho onboarding ba người. NPC hướng dẫn/nhiệm vụ cần lập theo tuyến chung và đoạn cá nhân.
+Catalog preview hiện có **6 bộ/136 frame**: năm bộ chibi 100 frame và Vương Lâm trước 36 frame; bộ ba chibi có 60 frame. Runtime Hằng Nhạc đã chọn/lưu ba hồ sơ riêng và dùng R01 từ đầu; [mở đầu HN01–HN02](HANG-NHAC-SECT-RUNTIME.md) có lời dẫn theo nhân vật. Sân fixture cũ giữ hai avatar kỹ thuật. Hai mẫu đệ tử không là lựa chọn chính của GDD mới; đang dùng làm hình thử cho bốn vai NPC tiếp dẫn/vận khí/luyện thuật/chuẩn bị. Đây chưa là tạo hình NPC production được duyệt. Roster A=7/B=10/arc=11 và ngân sách portrait cũ là tham chiếu; source/manifest/duyệt ART giữ nguyên.
 
-[Thư viện nhận diện](design/characters/core-trio-v1/index.html), [chân dung](design/characters/core-ui-v1/index.html), [kế hoạch động tác cũ](CORE-CHARACTER-MOTION-PLAN.md) lưu tiến độ ART. Phạm vi xuất hiện trong các hồ sơ trước là lịch sử, cần đọc cùng GDD mới; source/manifest/asset đã khóa giữ nguyên.
+[Dàn chibi hiện hành](CHIBI-ROSTER-SPEC.md), [thư viện concept trước](design/characters/core-trio-v1/index.html), [chân dung](design/characters/core-ui-v1/index.html) và [kế hoạch động tác](CORE-CHARACTER-MOTION-PLAN.md) tách tiến độ ART. Kế hoạch hiện có 60 frame core, dự toán thêm 16 thành 76 (chưa vẽ); tương tác/tu luyện/combat đầy đủ còn cần hồ sơ riêng và ưu tiên hiện tại vẫn là map. Phạm vi xuất hiện/ngân sách trước chibi được giữ lịch sử, cần đọc cùng GDD; source/manifest/duyệt ART đã khóa giữ nguyên.
 
 ## 5. Việc cần biên tập
 

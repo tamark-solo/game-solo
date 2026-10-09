@@ -1,4 +1,5 @@
-import {type EditorAsset,type EditorLevel,type EditorObject,type EditorRegion,type EditorProject,type EditorPrefab,newProject,parseProject,runtimeLevel,editorWalkable,uid} from './map-editor.ts';
+import {translateRegion} from './region-spline.ts';
+import {type EditorAsset,type EditorLevel,type EditorObject,type EditorRegion,type EditorProject,type EditorPrefab,newProject,parseProject,runtimeLevel,editorWalkable,regionActivity,uid} from './map-editor.ts';
 import type {Position} from './world.ts';
 
 export interface EntitySelection {kind:'object'|'region';id:string}
@@ -13,7 +14,7 @@ export function entityBounds(project:EditorProject,level:EditorLevel,s:EntitySel
 const union=(boxes:Box[]):Box=>{const left=Math.min(...boxes.map(b=>b.left)),top=Math.min(...boxes.map(b=>b.top));return {left,top,w:Math.max(...boxes.map(b=>b.left+b.w))-left,h:Math.max(...boxes.map(b=>b.top+b.h))-top};};
 export function selectionBounds(p:EditorProject,l:EditorLevel,items:EntitySelection[]):Box {return union(items.map(s=>entityBounds(p,l,s)));}
 export function groupMembers(l:EditorLevel,s:EntitySelection):EntitySelection[] {const groupId=entity(l,s)?.groupId;if(!groupId)return [s];return [...l.objects.filter(o=>o.groupId===groupId).map(o=>({kind:'object' as const,id:o.id})),...l.regions.filter(r=>r.groupId===groupId).map(r=>({kind:'region' as const,id:r.id}))];}
-export function translateEntities(l:EditorLevel,items:EntitySelection[],dx:number,dy:number):void {for(const s of items){if(s.kind==='object'){const o=l.objects.find(o=>o.id===s.id)!;o.x+=dx;o.y+=dy;}else {const r=l.regions.find(r=>r.id===s.id)!;r.points=r.points.map(p=>({x:p.x+dx,y:p.y+dy}));}}}
+export function translateEntities(l:EditorLevel,items:EntitySelection[],dx:number,dy:number):void {for(const s of items){if(s.kind==='object'){const o=l.objects.find(o=>o.id===s.id)!;o.x+=dx;o.y+=dy;}else {const r=l.regions.find(r=>r.id===s.id)!;translateRegion(r,dx,dy);}}}
 export function duplicateEntities(l:EditorLevel,items:EntitySelection[],dx=32,dy=32):EntitySelection[] {
   const groups=new Map<string,string>(),out:EntitySelection[]=[];
   for(const s of items){const source=entity(l,s);if(!source)continue;const copy=structuredClone(source);copy.id=uid();copy.name+=' (bản sao)';if(copy.groupId){if(!groups.has(copy.groupId))groups.set(copy.groupId,uid());copy.groupId=groups.get(copy.groupId)!;}
@@ -30,7 +31,7 @@ export function alignEntities(p:EditorProject,l:EditorLevel,items:EntitySelectio
 export function capturePrefab(p:EditorProject,l:EditorLevel,items:EntitySelection[],name:string):EditorPrefab {
   if(!items.length)throw new Error('Chọn vật thể/vùng trước khi lưu prefab.');const b=selectionBounds(p,l,items),origin={x:b.left,y:b.top};
   const f:EditorPrefab={id:uid(),name,layers:structuredClone(l.layers),objects:items.filter(s=>s.kind==='object').map(s=>structuredClone(l.objects.find(o=>o.id===s.id)!)),regions:items.filter(s=>s.kind==='region').map(s=>structuredClone(l.regions.find(r=>r.id===s.id)!))};
-  for(const o of f.objects){o.x-=origin.x;o.y-=origin.y;delete o.groupId;}for(const r of f.regions){r.points=r.points.map(p=>({x:p.x-origin.x,y:p.y-origin.y}));delete r.groupId;}return f;
+  for(const o of f.objects){o.x-=origin.x;o.y-=origin.y;delete o.groupId;}for(const r of f.regions){translateRegion(r,-origin.x,-origin.y);delete r.groupId;}return f;
 }
 export function instantiatePrefab(p:EditorProject,l:EditorLevel,f:EditorPrefab,point:Position):EntitySelection[] {
   if(f.objects.some(o=>!p.assets.some(a=>a.id===o.assetId)))throw new Error('Prefab thiếu asset. Nhập thư viện cùng prefab trước.');
@@ -38,9 +39,16 @@ export function instantiatePrefab(p:EditorProject,l:EditorLevel,f:EditorPrefab,p
   for(const source of f.layers.filter(x=>needed.has(x.id))){let dest=l.layers.find(x=>x.kind===source.kind&&x.name===source.name)??l.layers.find(x=>x.kind===source.kind);if(dest?.locked)throw new Error(`Layer đang khóa: ${dest.name}`);if(!dest){dest={...source,id:uid(),locked:false};added.push(dest);}mapped.set(source.id,dest.id);}
   l.layers.push(...added);const groupId=uid(),items:EntitySelection[]=[];
   for(const source of f.objects){const o={...structuredClone(source),id:uid(),groupId,locked:false,layerId:mapped.get(source.layerId)!,coverLayerId:mapped.get(source.coverLayerId)!,x:source.x+point.x,y:source.y+point.y};l.objects.push(o);items.push({kind:'object',id:o.id});}
-  for(const source of f.regions){const r={...structuredClone(source),id:uid(),groupId,layerId:mapped.get(source.layerId)!,points:source.points.map(v=>({x:v.x+point.x,y:v.y+point.y}))};l.regions.push(r);items.push({kind:'region',id:r.id});}return items;
+  for(const source of f.regions){const r={...structuredClone(source),id:uid(),groupId,layerId:mapped.get(source.layerId)!,points:source.points.map(v=>({x:v.x+point.x,y:v.y+point.y}))};if(r.spline)r.spline.anchors=r.spline.anchors.map(v=>({x:v.x+point.x,y:v.y+point.y}));l.regions.push(r);items.push({kind:'region',id:r.id});}return items;
 }
 export function gridStroke(a:Position,b:Position,step:number):Position[] {if(!Number.isFinite(step)||step<1)throw new Error('Ô cọ phải lớn hơn 0.');const ax=Math.round(a.x/step),ay=Math.round(a.y/step),bx=Math.round(b.x/step),by=Math.round(b.y/step),n=Math.max(Math.abs(bx-ax),Math.abs(by-ay)),out=new Map<string,Position>();for(let i=0;i<=n;i++){const t=n?i/n:0,p={x:Math.round(ax+(bx-ax)*t)*step,y:Math.round(ay+(by-ay)*t)*step};out.set(`${p.x},${p.y}`,p);}return [...out.values()];}
+export function duplicateAsset(project:EditorProject,assetId:string):EditorAsset {
+  if(project.assets.length>=200)throw new Error('Thư viện tối đa 200 asset.');
+  const source=project.assets.find(a=>a.id===assetId);if(!source)throw new Error('Chọn asset trong thư viện để nhân bản.');
+  const stem=source.name.replace(/ · bản sao(?: \d+)?$/,'');let index=1,name:string;
+  do {const suffix=` · bản sao${index===1?'':` ${index}`}`;name=stem.slice(0,120-suffix.length)+suffix;index++;}while(project.assets.some(a=>a.name===name));
+  const copy:EditorAsset={...structuredClone(source),id:uid(),name};project.assets.push(copy);return copy;
+}
 export function exportAssetLibrary(p:EditorProject){return {schema:'game-solo-asset-library-1',assets:structuredClone(p.assets),prefabs:structuredClone(p.prefabs??[])};}
 export function mergeAssetLibrary(p:EditorProject,value:unknown):EditorProject {
   if(!value||typeof value!=='object'||(value as any).schema!=='game-solo-asset-library-1')throw new Error('File không phải thư viện asset.');const raw=value as any,incoming=parseProject({...newProject(raw.assets),prefabs:raw.prefabs??[]}),out=structuredClone(p),ids=new Map<string,string>();
@@ -53,7 +61,7 @@ export function auditProject(p:EditorProject):LevelIssue[] {
   const issues:LevelIssue[]=[];
   for(const l of p.levels){const add=(severity:LevelIssue['severity'],message:string,entity?:EntitySelection)=>issues.push({severity,levelId:l.id,message,entity});if(!editorWalkable(l,l.spawn))add('error','Spawn nằm ngoài vùng đi hoặc bị chặn.');
     for(const o of l.objects){const a=p.assets.find(a=>a.id===o.assetId)!,b=objectBounds(o,a);if(b.left<0||b.top<0||b.left+b.w>l.width||b.top+b.h>l.height)add('warning',`${o.name}: hình vượt mép level.`,{kind:'object',id:o.id});}
-    for(const r of l.regions){const s={kind:'region' as const,id:r.id},active=r.enabled&&l.layers.some(x=>x.id===r.layerId&&x.enabled);if(r.points.some(q=>q.x<0||q.y<0||q.x>l.width||q.y>l.height))add('warning',`${r.name}: vùng vượt mép level.`,s);
+    for(const r of l.regions){const s={kind:'region' as const,id:r.id},active=regionActivity(l,r)==='active';if(regionActivity(l,r)==='layer-disabled')add('warning',`${r.name}: layer “${l.layers.find(x=>x.id===r.layerId)?.name??'thiếu layer'}” đang tắt Hoạt động trong game; vùng không có hiệu lực khi Test / xuất runtime.`,s);if(r.points.some(q=>q.x<0||q.y<0||q.x>l.width||q.y>l.height))add('warning',`${r.name}: vùng vượt mép level.`,s);
       const cross=(a:Position,b:Position,c:Position)=>(b.x-a.x)*(c.y-a.y)-(b.y-a.y)*(c.x-a.x);let intersect=false;
       for(let i=0;i<r.points.length&&!intersect;i++)for(let j=i+2;j<r.points.length;j++){if(i===0&&j===r.points.length-1)continue;const a=r.points[i],b=r.points[(i+1)%r.points.length],c=r.points[j],d=r.points[(j+1)%r.points.length];if(cross(a,b,c)*cross(a,b,d)<0&&cross(c,d,a)*cross(c,d,b)<0){intersect=true;break;}}
       if(intersect)add('error',`${r.name}: các cạnh đa giác cắt nhau.`,s);

@@ -11,7 +11,11 @@ Backlog hiện hành thay tuyến đệ tử P và kết thúc A tại Ngưng Kh
 - Sáu phần phát triển tu tiên và hướng theo truyện rồi chuyển thể/mở rộng.
 - Bộ R01 Kiếm Khí/Lôi Ấn/Ngự Phong Bộ có sẵn cho cả ba khi bắt đầu điều khiển; nhiệm vụ dạy vận dụng, không khóa quyền skill.
 - Đợt ART/VFX R01–R05 đã đóng; không mở thêm sản xuất cảnh giới trong bước tài liệu này.
-- Preview/client/backend tối thiểu giữ hiện trạng theo runbook; không suy là tài khoản, lưu và tu tiên đã hoàn tất.
+- Preview local dùng 6 bộ/136 frame. Hằng Nhạc đã có ba hồ sơ khách SQLite/lưu và R01 luyện thử; fixture online cũ giữ hai avatar đệ tử. Level Design/Map Editor 0.12.0 biên tập map; save người chơi nằm ở server. Đăng nhập sản xuất, nhiệm vụ/combat farm/tu tiên còn tiếp tục.
+
+**Ưu tiên hiện tại:** nền owner, [hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) và [mở đầu HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) đã có bản thử; tiếp nối HN03–HN04 theo [kế hoạch](HANG-NHAC-IMPLEMENTATION-PLAN.md), rồi farm/khảo nghiệm riêng. Chủ dự án bố trí level/vùng; không sửa blocker đã chốt hoặc mở lại ART cũ. GDxx vẫn là hồ sơ thiết kế; các mốc thử không xác nhận toàn lát A/B/C.
+
+[Biên bản xóa ART cũ](data/hang-nhac-art-removal-2026-10-08.json) giữ danh sách 203 file. [Map hiện hành](design/world/hang-nhac-map-v1/README.md) đã được owner chốt và tích hợp.
 
 ## 2. Đặc tả trước triển khai
 

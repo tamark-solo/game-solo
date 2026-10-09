@@ -2,7 +2,7 @@
 
 **Preview:** [trang chính](http://127.0.0.1:5173/) sau `npm.cmd run dev`, chọn **Vương Lâm · chibi bốn hướng**. Đây là bộ mặc định. Chọn **Thử trên map**, bấm vào sân và dùng WASD/phím mũi tên hoặc nút hướng trên điện thoại.
 
-**Trạng thái:** sau khi sửa frame cuối Đông, người phát triển thấy bộ này khá ổn và yêu cầu áp dụng tỷ lệ cho nhân vật tiếp theo. `native-v2` là chuẩn cho [dàn chibi mới](../chibi-roster-v1/README.md), PNG Vương Lâm giữ nguyên. Trong sửa Đông trước đó, chỉ `wanglin_chibi_walk_east_03` thay đổi; 19 frame khác không đổi. Bộ này là hình Vương Lâm; avatar đệ tử dùng bộ riêng.
+**Trạng thái:** sau khi sửa frame cuối Đông, người phát triển thấy bộ này khá ổn và yêu cầu áp dụng tỷ lệ cho nhân vật tiếp theo. `native-v2` là chuẩn cho [dàn chibi mới](../chibi-roster-v1/README.md), PNG Vương Lâm giữ nguyên. Trong sửa Đông trước đó, chỉ `wanglin_chibi_walk_east_03` thay đổi; 19 frame khác không đổi. Bộ này là hình Vương Lâm, một trong ba lựa chọn người chơi từ đầu theo [GDD 0.28](../../../GDD.md); avatar đệ tử vẫn dùng bộ riêng trong sân online kỹ thuật hiện tại.
 
 ## Gói hình
 

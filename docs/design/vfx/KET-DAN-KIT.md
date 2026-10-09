@@ -13,7 +13,7 @@ Vòng kiếm được chọn có năm kiếm đọc rõ ở đỉnh; prompt ban 
 
 ## Xem / lấy bộ nguồn
 
-[Thư viện 12 skill](skill-library.html) · [Preview Kết Đan](ket-dan-kit.html?family=sword) · [ZIP chung R01 → R03](releases/ket-dan-kit-1.0.0.zip).
+[Thư viện hiện hành 15 skill](skill-library.html) · [Preview Kết Đan](ket-dan-kit.html?family=sword) · [ZIP chung R01 → R03](releases/ket-dan-kit-1.0.0.zip).
 
 ZIP chung chứa đủ nguồn và các trang preview của ba cảnh giới, tổng **376 PNG / 43 atlas**, có nội dung dùng lại giữa phiên bản. Giải nén, chạy `python serve-preview.py` trong thư mục bộ, mở `http://127.0.0.1:4185/skill-library.html`. Dừng server cũ trước nếu cổng 4185 đang được dùng. ZIP không chứa chính các file ZIP release; tải từng gói ở thư viện workspace gốc.
 
@@ -62,6 +62,6 @@ Tái dùng adapter trình bày `production/r02-controller.mjs` và model preview
 
 38 kiểm tra đã qua: 31 kiểm cũ cùng bảy kiểm R03. Kiểm mới xác minh 130 PNG, 84 file dùng lại nguyên byte, toàn bộ payload pack R02 1.0.0 giữ nguyên, hold/end, frame event bỏ qua render tick, nối mũi kiếm từ formation sang flight, hit/arrival host và tắt transient FX cuối preview. Có 30 ảnh kiểm R03 từ atlas tại zoom 1×/2× và ba bảng R02/R03. Đây là render cục bộ; tương tác browser mới chưa được xác minh.
 
-P5 kế tiếp là **Nguyên Anh trước, rồi Hóa Thần**: linh ảnh đồng bộ thủ quyết, sau đó ý cảnh theo công pháp. Nguyên Anh hiện đã sản xuất 156 PNG / 19 atlas, chờ xem motion; Hóa Thần vẫn là kế hoạch. [Hồ sơ Nguyên Anh](NGUYEN-ANH-KIT.md).
+P5 đã hoàn thành ART: **Nguyên Anh 156 PNG / 19 atlas** và **Hóa Thần 114 PNG / 14 atlas**, cả hai đã chấp nhận. Thư viện hiện hành 15 skill/646 PNG / 76 atlas đã [đóng bàn giao](STARTER-VFX-HANDOFF.md) ngày 07/10; chưa tích hợp gameplay. [Nguyên Anh](NGUYEN-ANH-KIT.md) · [Hóa Thần](HOA-THAN-KIT.md).
 
 Ba gói R03 1.0.1 ghi duyệt, source và ZIP 1.0.0 giữ nguyên. [Hồ sơ duyệt](releases/ket-dan-approval-1.0.1.json). ZIP chung R01 → R03 1.0.0 là snapshot lịch sử, trạng thái mới ở library/pack 1.0.1.

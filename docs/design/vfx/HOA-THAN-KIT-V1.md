@@ -1,5 +1,7 @@
 # Bộ Hóa Thần · Ý cảnh theo công pháp · 1.0.0
 
+**Snapshot lịch sử tại mốc xuất nguồn:** số file, trạng thái chờ duyệt và thông số dưới đây được giữ để truy phiên bản. Bản hiện hành là [Hóa Thần V3/pack 3.0.1](HOA-THAN-KIT.md), đã chấp nhận và [đóng đợt ART 15 skill](STARTER-VFX-HANDOFF.md); không là backlog đang chờ motion. Preview chung hiện trỏ bản mới nhất.
+
 Ba kỹ năng phát triển từ Nguyên Anh đã được chủ dự án chấp nhận: **Ý Cảnh Kiếm / Ý Cảnh Lôi / Ý Cảnh Phong**. Tăng uy lực bằng khoảng tĩnh, đường nét cô đọng và phản hồi mực/sương, giữ nguyên cỡ Vương Lâm chibi. Ba chủ đề ART Tĩnh Kiếm, Định Lôi, Phong Du là thiết kế cho game; chưa phải hệ thống công pháp gameplay hoặc thuật pháp được xác nhận trong nguyên tác.
 
 [Preview Kiếm](hoa-than-kit.html?family=sword) · [Lôi](hoa-than-kit.html?family=thunder) · [Phong](hoa-than-kit.html?family=wind) · [Thư viện 15 skill](skill-library.html) · [ZIP chung R01 → R05](releases/hoa-than-kit-1.0.0.zip).
@@ -15,7 +17,7 @@ Ba kỹ năng phát triển từ Nguyên Anh đã được chủ dự án chấp
 
 Mỗi skill có source sheet, prompt, provenance, PNG RGBA rời, atlas, clips.json, skill.json, export-spec.json và ảnh review. PNG rời là nguồn chỉnh sửa chính; atlas là output. Bộ R05 mới chờ xem motion, chưa tích hợp game. Nguyên Anh được khóa bằng pack **2.0.1**, nguồn **2.0.0** không đổi; các gói lịch sử giữ nguyên.
 
-Thư viện hiện tại 15 skill có **650 PNG / 76 atlas**, tính cả frame dùng lại giữa cảnh giới. ZIP chung giữ thêm ba folder R04 V1 để kiểm hồi quy và so sánh, nên nội dung archive là **806 PNG / 95 atlas**. Không coi đây là số hình độc nhất. ZIP chung không lồng ZIP riêng; tải từng skill từ thư viện workspace gốc. Mỗi archive có manifest và SHA-256.
+Thư viện tại mốc snapshot 15 skill có **650 PNG / 76 atlas**, tính cả frame dùng lại giữa cảnh giới. ZIP chung giữ thêm ba folder R04 V1 để kiểm hồi quy và so sánh, nên nội dung archive là **806 PNG / 95 atlas**. Không coi đây là số hình độc nhất. ZIP chung không lồng ZIP riêng; tải từng skill từ thư viện workspace gốc. Mỗi archive có manifest và SHA-256.
 
 Giải nén, chạy `python serve-preview.py`, mở `http://127.0.0.1:4185/skill-library.html`. Server dùng cổng 4185; nếu cổng đang được dùng, chạy bằng server hiện có hoặc đổi cổng trong bản giải nén. ZIP riêng chỉ có skill và các helper cần thiết, không có preview web.
 

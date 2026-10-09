@@ -1,6 +1,6 @@
 # GDD — Tiên Nghịch: Hành Trình Vương Lâm
 
-> **Archived reference:** current gameplay scope is [RPG-A](MVP-RPG-A.md), with the [new backlog](MVP-BACKLOG.md).
+> **Hồ sơ lịch sử — không phải luật hiện hành.** Giữ mô hình, số liệu và mốc phát triển tại thời điểm nguồn. Thiết kế mới: [GDD 0.28](GDD.md), [Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md) và [trạng thái dự án](PROJECT-STATUS.md).
 
 **Phiên bản:** 0.26 — runtime 0.5.1 có năm bộ chibi/100 frame: Vương Lâm làm chuẩn, hai đệ tử, Tư Đồ Nam đứng/lướt và Lý Mộ Uyển đứng/đi. Lý Mộ Uyển native-v5 được chấp nhận làm chuẩn bản thử; hai đệ tử và Tư Đồ Nam mới còn chờ đánh giá. Sân online dùng hai đệ tử chibi; bộ Vương Lâm trước 36 frame giữ đối chiếu. Tài khoản/lưu tiến trình/tu luyện chưa triển khai.
 **Ngày:** 07/10/2026.  

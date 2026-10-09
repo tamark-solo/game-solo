@@ -6,6 +6,8 @@ Người chơi chọn **Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển ngay 
 
 GDD này thay hướng “tạo đệ tử riêng, Vương Lâm là NPC trung tâm” và phạm vi “kết thúc tại Ngưng Khí tầng 1” của bản trước. [Bản cũ](archive/design-before-three-playable-characters/GDD.md) được giữ làm lịch sử. Lần biên tập này không triển khai gameplay hay thay các gói ART đã khóa.
 
+**Trạng thái code 08/10/2026:** nền map owner, ba hồ sơ/R01 và [NPC/HN01–HN02/thổ nạp online](HANG-NHAC-SECT-RUNTIME.md) đã có bản thử. Số liệu vẫn baseline; HN03–HN12, map farm/khảo nghiệm riêng, offline và đăng nhập sản xuất còn tiếp tục. Trạng thái code không biến toàn bộ đề xuất GDD thành tính năng đã hoàn tất.
+
 ## 1. Quyết định đã chốt và phần còn thiết kế
 
 | Nội dung | Hướng hiện hành | Trạng thái |
@@ -13,6 +15,7 @@ GDD này thay hướng “tạo đệ tử riêng, Vương Lâm là NPC trung t�
 | Thể loại/nền tảng | MMORPG tu tiên có idle, trình duyệt web | Đã chốt |
 | Nhân vật | Vương Lâm / Tư Đồ Nam / Lý Mộ Uyển đều chọn được từ đầu | Đã chốt; không chờ arc sau mới mở lựa chọn |
 | Map đầu | Hằng Nhạc, học game và tiến triển qua Ngưng Khí | Đã chốt |
+| Chia cảnh Hằng Nhạc | Khu môn phái sinh hoạt/chuẩn bị → map ngoại vi farm riêng; khảo nghiệm vào phiên riêng | Chủ dự án chốt 08/10/2026; chưa triển khai chuyển cảnh hoặc khóa loot/spawn |
 | Phân hóa | Nền nhập môn chung, dấu nhận diện nhẹ; phân hóa sâu sau map đầu, từ Trúc Cơ | Đã chốt về hướng; kỹ năng cụ thể chưa khóa |
 | Skill khởi đầu | Cả ba có Kiếm Khí, Lôi Ấn, Ngự Phong Bộ R01 khi bắt đầu điều khiển | Đã chốt bộ chung; tutorial dạy vận dụng, không giữ quyền skill sau nhiệm vụ |
 | Tu tiên | Cảnh giới, công pháp, thuật pháp, pháp bảo, lĩnh ngộ, hành trình cá nhân | Đã chốt khung; luật chi tiết là thiết kế cơ sở để đánh giá |
@@ -80,7 +83,9 @@ Trải nghiệm, tuyến nhiệm vụ, bình cảnh, khảo nghiệm và điều
 
 Hằng Nhạc là vùng có thể đi lại, gặp người chơi/NPC, nhận nhiệm vụ, tu luyện và thử chiến đấu. Đồ thị chín node truyện cũ không phải map online đã hoàn thiện.
 
-Ưu tiên hiện tại là hoàn thiện map trước đặc tả vận hành. [Bố cục Hằng Nhạc v0.1](HANG-NHAC-MAP-LAYOUT.md) đề xuất sân trung tâm, bảy địa điểm/tám chức năng, hai vòng đi lại và lối vào khảo nghiệm riêng; vị trí/kích thước mới chưa khóa và chưa thay runtime.
+**Quyết định bổ sung 08/10/2026:** concept hiện tại là khu môn phái sinh hoạt: NPC, nhiệm vụ, tu luyện, luyện thuật và chuẩn bị. Khám phá/đánh quái/thu tài nguyên nằm trong map ngoại vi riêng, nối qua lối ra và cho quay lại môn phái ngay trong giai đoạn Ngưng Khí; không phải đợi hoàn thành Hằng Nhạc. Khảo nghiệm dùng phiên riêng. Lối ra ngoại vi khác với xuất hành HN12 sang hành trình sau nhập môn; quyền mở khu/nhiệm vụ, spawn, loot và hình thức chia sẻ farm vẫn cần thiết kế. Chủ dự án chọn tỷ lệ vật thể/nhân vật tương ứng nền concept 2×, giữ sprite/camera chơi 1×; không lấy hệ số này làm quyết định kích thước map cuối.
+
+Ưu tiên hiện tại là map trước đặc tả vận hành. Chủ dự án đổi quy trình ngày 08/10/2026: trợ lý tạo [map tổng đầy đủ](design/world/hang-nhac-map-v1/README.md) theo GDD, đúng tỷ lệ nhân vật → chủ dự án vẽ luồng đi/chặn và chốt footprint → sản xuất asset rời sau. Bộ concept/nền sạch/ba asset thử đã [xóa](data/hang-nhac-review-reset-2026-10-08.json), không khôi phục. Bản đồ hiện đã có 9 vùng chặn do chủ dự án hoàn tất và lưu, Spawn sân trung tâm đã kiểm hợp lệ; [kế hoạch tích hợp](HANG-NHAC-IMPLEMENTATION-PLAN.md) bắt đầu từ dữ liệu này. Chưa có che người hoặc tích hợp MMO; [bố cục v0.1](HANG-NHAC-MAP-LAYOUT.md) cũ chỉ là tham chiếu.
 
 | Chặng | Nội dung cần học | Kết quả |
 | --- | --- | --- |
@@ -192,7 +197,9 @@ Nghiệm thu toàn map: ba người chơi được từ đầu; vòng chuẩn b�
 
 ## 12. Hiện trạng, câu hỏi mở và tài liệu
 
-Đã có preview ART/chuyển động và backend phòng tối thiểu theo [runbook](PREVIEW-RUNBOOK.md), [hợp đồng preview](BACKEND-PREVIEW.md). Mẫu đệ tử trong preview là lịch sử thử, không xác nhận mô hình hiện hành. Tài khoản/lưu bền vững và tu tiên chưa được triển khai chỉ bởi việc sửa GDD.
+Đã có catalog **6 bộ/136 frame**: bộ ba chibi 60 frame, hai đệ tử chibi 40 frame và Vương Lâm trước 36 frame. [Runtime Hằng Nhạc](HANG-NHAC-RUNTIME.md) nạp nền/navigation owner; [bước hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) có ba hồ sơ khách SQLite riêng, lưu/khôi phục và thuật luyện thử từ đầu. Fixture online cũ giữ hai avatar đệ tử kỹ thuật. Level Design/Map Editor **0.12.0** lưu dữ liệu biên tập/export; save người chơi ở server. Đăng nhập sản xuất, nhiệm vụ/tu luyện/combat farm còn tiếp tục; xem [trạng thái](PROJECT-STATUS.md). Bản thử số liệu không tự khóa cân bằng GDD.
+
+ART Hằng Nhạc v1/v2/v3 và cả hai walk study đã xóa trong đợt dọn ngày 08/10/2026; [biên bản](data/hang-nhac-art-removal-2026-10-08.json) ghi 203 file, gồm 121 PNG. Đợt concept/nền/asset thử sau đó cũng đã xóa theo chỉ dẫn mới; [map đầy đủ hiện hành](design/world/hang-nhac-map-v1/README.md) phục vụ thiết kế navigation trước, asset rời sau. Editor và dữ liệu biên tập của chủ dự án được giữ.
 
 Đợt ART R01–R05 đã chốt **15 skill / 646 PNG / 76 atlas**, gồm frame dùng lại; các gói duyệt giữ nguyên. ART chủ yếu dùng Vương Lâm, chưa đủ animation chiến đấu ba nhân vật. Quyền dùng bộ R01 chung đã chốt; công pháp/tác dụng/cân bằng và quyền học các giai đoạn sau còn cần hồ sơ gameplay.
 
@@ -208,6 +215,7 @@ Tài liệu hiện hành:
 - [Nhân vật](CHARACTERS.md): ba lựa chọn từ đầu và hành trình riêng.
 - [Online](ONLINE-DIRECTION.md), [MMORPG](MMORPG-DIRECTION.md): tổ chức thế giới và tiến trình.
 - [Backlog](MVP-BACKLOG.md): việc cần đặc tả trước triển khai.
+- [Phạm vi MVP RPG](MVP-RPG-A.md), [brief kịch bản nhập môn](STARTER-STORY.md): tổng hợp theo tuyến ba nhân vật; nguyên bản đệ tử/Q01–Q10 giữ trong lịch sử.
 - [Nguồn tạo hình bộ ba](CORE-CHARACTER-VISUAL-SPEC.md), [ART](ART-DIRECTION.md), [công nghệ](TECH-STACK.md).
 
-MVP-A-SPEC, UX cũ, node WORLD-MAPS và catalog/save minh họa là tham chiếu lịch sử cần biên tập lại. Thông báo đầu tài liệu chỉ rõ phần bị thay. Không sửa JSON/code để giả định đã triển khai hướng mới.
+MVP-A-SPEC, UX idle, node WORLD-MAPS và catalog/save minh họa đã được ghi rõ là tham chiếu lịch sử và dẫn đặc tả hiện hành. Bộ UX online ba nhân vật còn cần đặc tả/chơi thử; mapping thành phần không là bộ màn hình mới đã duyệt. Metadata thiết kế có thể ghi hướng mới, nhưng ID/số liệu/schema của snapshot hoặc preview cũ không chứng minh gameplay, tài khoản/lưu đã triển khai.

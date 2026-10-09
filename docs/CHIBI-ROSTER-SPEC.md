@@ -1,6 +1,6 @@
 # Chuẩn chibi trên map — năm nhân vật
 
-**Phiên bản:** 0.2, ngày 07/10/2026. **Runtime:** 0.5.1. Vương Lâm chibi làm chuẩn theo phản hồi tích cực. Lý Mộ Uyển native-v5 đã được người phát triển chấp nhận làm chuẩn bản thử: “tôi thấy ổn rồi đó.” Hai đệ tử và Tư Đồ Nam chibi mới còn chờ đánh giá.
+**Phiên bản:** 0.3, ngày 08/10/2026. **Mốc sản xuất bộ chibi:** runtime 0.5.1; runtime công cụ hiện tại 0.12.0. Vương Lâm chibi làm chuẩn theo phản hồi tích cực. Lý Mộ Uyển native-v5 đã được người phát triển chấp nhận làm chuẩn bản thử: “tôi thấy ổn rồi đó.” Hai đệ tử và Tư Đồ Nam chibi mới còn chờ đánh giá.
 
 ## Chuẩn dùng chung
 
@@ -10,7 +10,7 @@
 - Đi: tiếp đất A → đi qua B → tiếp đất B → đi qua A; tay gần hông/ngược chân, hai pha đi qua đổi chân trụ.
 - Lướt: chân Tư Đồ Nam giữ duỗi, áo gợn nhẹ, đáy cách điểm chiếu 4 px và ngực có lỗ trong suốt.
 
-Vương Lâm là NPC trọng tâm; hai đệ tử là avatar. Chuyển tỷ lệ sprite không đổi số nhân vật hoặc mốc truyện. Tư Đồ Nam đứng/lướt là chuyển thể cho game, dạng ngồi giữ riêng. Lý Mộ Uyển native-v5 được chấp nhận làm chuẩn bản thử; chân dung UI cần đồng bộ với mặt, tóc và trang phục mới.
+Theo [GDD 0.28](GDD.md), Vương Lâm, Tư Đồ Nam và Lý Mộ Uyển là ba lựa chọn người chơi từ đầu, cùng trải qua Hằng Nhạc–Ngưng Khí và phân hóa từ Trúc Cơ. Hai đệ tử là mẫu thử còn dùng trong sân online hiện tại; quyền chọn bộ ba trong gameplay chưa được triển khai. Tư Đồ Nam đứng/lướt là chuyển thể cho game, dạng ngồi giữ riêng. Lý Mộ Uyển native-v5 được chấp nhận làm chuẩn bản thử; chân dung UI cần đồng bộ với mặt, tóc và trang phục mới.
 
 ## Dữ liệu và preview
 
@@ -18,7 +18,7 @@ Vương Lâm là NPC trọng tâm; hai đệ tử là avatar. Chuyển tỷ lệ
 
 Engine dùng trạng thái chuyển động chung `walk_*`; `movementKind: glide` chỉ rõ clip linh thể và UI ghi **Lướt**. Đứng là một hình mỗi hướng, chưa phải vòng thở/lơ lửng tại chỗ. [Kế hoạch động tác](CORE-CHARACTER-MOTION-PLAN.md) ghi phần cần vẽ tiếp.
 
-[Preview](http://127.0.0.1:5173/) xem animation/di chuyển; [gallery](http://127.0.0.1:5173/assets/chibi-roster/index.html) đặt năm người cạnh nhau trên nền sáng/tối. Sân online dùng hai avatar mới, giữ cùng ID và luật server. Tư Đồ Nam/Lý Mộ Uyển xuất hiện trong map thử để duyệt ART, không mở NPC trong nội dung A.
+[Preview](http://127.0.0.1:5173/) xem animation/di chuyển; [gallery](http://127.0.0.1:5173/assets/chibi-roster/index.html) đặt năm người cạnh nhau trên nền sáng/tối. Sân online dùng hai avatar mới, giữ cùng ID và luật server. Cả ba chibi được điều khiển trong map thử để duyệt ART; bước này chưa triển khai luồng chọn nhân vật, nhiệm vụ hoặc tiến trình gameplay theo GDD.
 
 ## Duyệt hình
 

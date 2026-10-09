@@ -1,8 +1,8 @@
 # Vương Lâm — lưới pixel và bộ đứng/đi đầu tiên
 
-**Phiên bản:** 0.1, ngày 07/10/2026.  
+**Phiên bản:** 0.2, ngày 08/10/2026. Hợp đồng bộ đầu tiên được giữ lịch sử.\
 **Nhận diện:** Vương Lâm v2 đã được người phát triển duyệt; giữ mặt/tóc và ba bộ đồ theo [hồ sơ tạo hình](WANG-LIN-VISUAL-SPEC.md).  
-**Bộ đầu tiên:** `gray`, Vương Lâm là NPC chính truyện. Bộ sáu pose/hướng dưới đây được giữ làm lịch sử. Preview hiện dùng [bản sửa tay/chân](GAIT-CORRECTION.md), 4 đứng giữ nguyên + 32 đi; frame mới chờ đánh giá.  
+**Bộ đầu tiên:** `gray`, sáu pose đi/hướng, 28 frame; đây là hợp đồng nguồn lịch sử. Preview hiện mặc định [chibi bốn hướng 20 frame](design/characters/wang-lin-chibi-walk-v1/README.md), giữ [bản sửa 36 frame](GAIT-CORRECTION.md) để đối chiếu. Vương Lâm là một trong ba lựa chọn người chơi từ đầu theo [GDD 0.28](GDD.md).\
 **Tham chiếu:** [trang animation](design/characters/wang-lin-gray-walk-v1/index.html), [atlas PNG](design/characters/wang-lin-gray-walk-v1/native-v2/atlas.png), [atlas JSON](design/characters/wang-lin-gray-walk-v1/native-v2/atlas.json), [lưới/palette](design/characters/wang-lin-gray-walk-v1/pixel-spec.json), [quy trình và prompt](design/characters/wang-lin-gray-walk-v1/README.md).
 
 ## 1. Chuẩn dùng cho bộ đầu tiên
@@ -17,9 +17,9 @@
 | Phóng | 1× trên sân; 2×/4×/8× để xem | Phóng nguyên lần, tránh làm mờ cạnh pixel |
 | Camera | Top-down ba phần tư | Cùng hướng dựng cảnh đã chọn |
 
-Đây là lưới **frame nhân vật**, không quy định kích thước ô map hoặc lưới va chạm. Chuẩn 64 × 96 được chọn cho bộ thử này trong phạm vi công việc người phát triển đã giao. Nhận diện đã duyệt; chuyển động và cách dùng chuẩn này cho toàn bộ dàn nhân vật còn cần đánh giá qua bộ đầu tiên.
+Đây là lưới **frame nhân vật**, không quy định kích thước ô map hoặc lưới va chạm. Chuẩn 64 × 96 được chọn cho bộ thử này trong phạm vi công việc người phát triển đã giao. Nhận diện v2 đã duyệt; các bộ chibi hiện hành đã áp dụng cùng frame/anchor. Bộ 28 frame dưới đây không còn là bộ mặc định hoặc ngân sách motion hiện hành.
 
-Palette khóa trong `pixel-spec.json`: tóc/mực, áo xám, lớp trong ngà, da, đai/quần và giày/quấn chân. Mỗi pixel xuất thuộc palette đó. Bộ đỏ/đời thường và hai mẫu đệ tử người chơi có gói tiếp theo riêng; bộ hiện tại không tăng số NPC hoặc số nguồn chân dung.
+Palette khóa trong `pixel-spec.json`: tóc/mực, áo xám, lớp trong ngà, da, đai/quần và giày/quấn chân. Mỗi pixel xuất thuộc palette đó. Bộ đỏ/đời thường có gói riêng; hai đệ tử đã có chibi để thử online. Số frame của bộ này tách khỏi số nguồn portrait và số nhân vật.
 
 ## 2. Hướng và ngân sách frame
 
@@ -59,7 +59,7 @@ Mở [trang animation](design/characters/wang-lin-gray-walk-v1/index.html). Hàn
 
 Khi xem bộ đầu tiên, đánh giá: hai chân luân phiên rõ; vòng cuối → đầu ít giật; thân/đầu và tóc/áo ổn định; đổi sang đứng giữ vị trí chân; hướng lên thật sự là mặt sau; hướng ngang đọc được ở cỡ gốc. Các PNG đã có đủ frame khác nhau không tự chứng minh chất lượng động tác đạt mức phát hành.
 
-Trang sân là **công cụ xem ART** dùng nền tham chiếu, chưa có va chạm, nhiệm vụ, người chơi khác hoặc máy chủ. Vương Lâm giữ vai trò NPC truyện; thao tác dịch chuyển ở đây phục vụ kiểm tra hình.
+Trang sân là **công cụ xem ART** dùng nền tham chiếu, chưa có va chạm, nhiệm vụ, người chơi khác hoặc máy chủ. Trang lịch sử vẫn dùng Vương Lâm làm mẫu kiểm ART; vai trò người chơi trong thiết kế hiện hành theo GDD, chưa triển khai trong sân online.
 
 ## 6. Gói bàn giao và bước tiếp theo
 
@@ -67,4 +67,4 @@ Trang sân là **công cụ xem ART** dùng nền tham chiếu, chưa có va ch�
 - Nguồn: hai PNG source, prompt chính xác, hình nhận diện v2 và script xuất.
 - Xem thử: HTML/CSS/JS, bốn hướng đồng thời, frame tĩnh và sân tham chiếu.
 
-Sau phản hồi về chuyển động, chỉnh bộ áo xám theo phiên bản mới nếu cần, rồi áp dụng chuẩn cho hai mẫu đệ tử người chơi. Biến thể đời thường/đỏ và động tác tu luyện/tương tác mở theo nội dung được biên tập. Tám hướng, chiến đấu và trang bị tách thành gói tiếp theo, chưa cộng vào 28 frame hiện tại.
+Chuẩn đi lại hiện hành theo [CHIBI-ROSTER-SPEC](CHIBI-ROSTER-SPEC.md); cả bộ ba đã có bốn hướng đứng/đi hoặc lướt. Tương tác/tu luyện/combat, đồ đời thường/đỏ và trang bị cần ngân sách riêng khi chuyển ưu tiên khỏi map. Các mục này không cộng vào 28 frame lịch sử.

@@ -1,47 +1,42 @@
-# Thư viện UX và ART — MVP A
+# Thư viện ART và bản phác UX
 
-**Trạng thái:** bản phác và tham chiếu trong giai đoạn GDD. Hướng tranh mực/giấy cổ đã được người phát triển chọn; chi tiết UI là đề xuất để kiểm tra bằng prototype.
+**Cập nhật:** 08/10/2026. Xem [trạng thái dự án](../PROJECT-STATUS.md) và [GDD 0.28](../GDD.md) để phân biệt thiết kế hiện hành, ART đã duyệt và prototype đã chạy. Client Three.js/Colyseus và Map Editor 0.12.0 đã triển khai; gameplay MMO chưa triển khai.
 
-**Hướng hiện tại v0.20:** nhân vật pixel trên nền stylized 2D/top-down, diện mạo theo tiểu thuyết và thiết kế riêng của game. [Bộ ba trọng tâm](characters/core-trio-v1/index.html) là ưu tiên: Vương Lâm và Lý Mộ Uyển đã duyệt; Tư Đồ Nam đứng v3 tạm chấp nhận làm chuẩn thiết kế. [Hai đệ tử v2](characters/player-avatars-v2/index.html) giữ bộ 56 frame thử. Các thử ghép/source trước đó và bộ 14 hình UX v0.6 giữ làm tham chiếu.
+## ART đang dùng để duyệt
 
-Client đã chốt TypeScript + Three.js. [Đặc tả preview chung](../ANIMATION-PREVIEW-SPEC.md) là bước trước animation mới; dùng 5 bộ/92 frame đang có, chưa khởi tạo ứng dụng Three.js. [Công nghệ](../TECH-STACK.md) ghi phần dùng chung với client sau này.
-
-Mở [thư viện bản phác](index.html) trong trình duyệt, hoặc mở từng SVG bên dưới. Tranh trong bản phác được cắt khung từ cùng bảng ART để xem phối hợp hình/UI; các nút thuộc bản vẽ thiết kế.
-
-| Tài liệu/hình | Vai trò |
+| Bộ | Phạm vi và trạng thái |
 | --- | --- |
-| [ART reference v1](art-reference-v1.png) | Bảng phong cách mực/giấy, môi trường và trang phục |
-| [Prompt ART](art-reference-v1.prompt.txt) | Prompt chính xác đã dùng với imagegen tích hợp |
-| [Chân dung UI bộ ba](characters/core-ui-v1/index.html) | Một biểu cảm/người, PNG/WebP 512/160/64 trên nền giấy/tối; [nguồn/prompt](characters/core-ui-v1/README.md), hình mới chờ đánh giá |
-| [Kế hoạch động tác](../CORE-CHARACTER-MOTION-PLAN.md) | 36 frame hiện có, mục tiêu 100; 64 frame mới còn thiết kế |
-| [Bộ ba trọng tâm](characters/core-trio-v1/index.html) | Hai bảng nhận diện mới, tám mẫu tĩnh và đối chiếu cùng Vương Lâm; [hồ sơ](../CORE-CHARACTER-VISUAL-SPEC.md), [nguồn/prompt](characters/core-trio-v1/README.md) |
-| [Vương Lâm tạo hình v2](characters/wang-lin-initiation-v2.png) | Ba bộ đồ, góc mặt/tóc và một biến thể cảnh; [prompt](characters/wang-lin-initiation-v2.prompt.txt) |
-| [Vương Lâm biểu cảm v2](characters/wang-lin-expressions-v2.png) | Bốn sắc thái nghiên cứu; [prompt](characters/wang-lin-expressions-v2.prompt.txt) |
-| [Vương Lâm pixel đứng v2](characters/wang-lin-sprite-study/wang-lin-gray-pixel-v2.png) | Nguồn nhận diện lớn được giữ; native xuất riêng; [prompt](characters/wang-lin-sprite-study/wang-lin-gray-pixel-v2.prompt.txt) |
-| [Vương Lâm đứng/đi native](characters/wang-lin-gray-walk-v1/index.html) | 4 hướng, 28 frame, xem từng frame/nhịp và thử bước trên sân; [nguồn/prompt](characters/wang-lin-gray-walk-v1/README.md) |
-| [Đệ tử nam/nữ v2 và sprite thử](characters/player-avatars-v2/index.html) | 28 frame/mẫu, chung palette và lưới 64 × 96; so sánh cùng Vương Lâm và thử trên sân; [nguồn/prompt](characters/player-avatars-v2/README.md) |
-| [Tu luyện desktop](cultivation-desktop.svg) | Phân cấp mục tiêu, tài nguyên, hoạt động và tranh |
-| [Tu luyện mobile](cultivation-mobile.svg) | Bố cục một cột ở chiều rộng 360 px |
-| [Hành trình desktop](journey-desktop.svg) | Đang xem thôn; hoạt động vẫn ở suối |
-| [Cảnh truyện desktop](story-desktop.svg) | Nút cuối E05 và xem trước chi phí/tác dụng |
-| [Hạt châu desktop](bead-desktop.svg) | Hình sau E07 và cách dùng đã khám phá |
-| [Hành trang desktop](inventory-desktop.svg) | Bốn vật phẩm sau E05 và chi tiết công pháp |
-| [Cài đặt desktop](settings-desktop.svg) | Cỡ chữ, giảm chuyển động, trạng thái bản lưu |
-| [Xem trước bản nhập](save-import-desktop.svg) | So sánh tiến trình trước khi thay save |
-| [Offline desktop](offline-desktop.svg) | 10 giờ vắng mặt, 8 giờ trong giới hạn, 24 phút hoạt động |
-| [Offline mobile](offline-mobile.svg) | Cùng tổng kết tự động ở 360 px |
-| [Kết thúc A](end-desktop.svg) | Ngưng Khí tầng 1, giữ tài nguyên, xem hành trình/xuất |
-| [Trạng thái hoạt động](activity-states.svg) | Tám tình huống thiếu/chờ/dừng/sẵn sàng |
-| [Trạng thái truyện/vật phẩm](story-bead-states.svg) | Đọc sau, lịch sử, E08 trước nút cuối, trạng thái trống và hình châu |
-| [Trạng thái lưu/offline](system-states.svg) | Offline không hoạt động, lỗi và quyền chơi |
-| [UI tokens](ui-tokens.json) | Màu, chữ, khoảng cách và kích thước |
-| [Fixture](mockup-fixtures.json) | Snapshot thiết kế dùng vẽ bản phác |
+| [Năm bộ chibi](characters/chibi-roster-v1/index.html) / [hồ sơ](characters/chibi-roster-v1/README.md) | 100 frame cho Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển và hai avatar đệ tử; thêm Vương Lâm bộ trước 36 frame thành catalog 136 frame |
+| [Vương Lâm chibi bốn hướng](characters/wang-lin-chibi-walk-v1/README.md) | Mẫu mặc định preview; nguồn/native bốn hướng đứng/đi |
+| [Kế hoạch động tác bộ ba](../CORE-CHARACTER-MOTION-PLAN.md) | Bộ ba đã có 60 frame chibi; động tác riêng và combat còn cần thiết kế/sản xuất |
+| [Chân dung UI bộ ba](characters/core-ui-v1/index.html) / [hồ sơ](characters/core-ui-v1/README.md) | Bộ chân dung trước còn chờ đánh giá/đồng bộ với nhận diện chibi mới |
+| [Nhận diện tĩnh bộ ba](characters/core-trio-v1/index.html) | Snapshot concept trước chibi; không đại diện đủ motion hiện có |
+| Map Hằng Nhạc | ART v1/v2/v3 và hai bản thử vùng đi đã [xóa](../MAP-ASSETS-RESET.md) |
+| [Map đầy đủ Hằng Nhạc v1](world/hang-nhac-map-v1/README.md) / [xem cạnh nhân vật](world/hang-nhac-map-v1/index.html) | Map tổng theo GDD, 3072 × 2048/scale 1; WebP 3,01 MB, dự án Editor 4,01 MB. Chủ dự án vẽ navigation trước, asset sau; bộ concept/nền/ba mẫu cũ đã xóa. Chưa là map MMO có va chạm/che người |
+| [Bàn giao VFX](vfx/STARTER-VFX-HANDOFF.md) / [library](vfx/skill-library.html) | 15 skill, 646 PNG rời, 76 atlas đã duyệt; chưa tích hợp combat |
+| [Thư viện map editor](world/map-asset-library/README.md) | Manifest mặc định trống; gói một nền đầy đủ bàn giao riêng |
 
-Có **14 bản vẽ UI tham chiếu v0.6**: 11 bản màn hình/lớp, bao gồm 2 bản mobile, và 3 bảng trạng thái. Mẫu màn thế giới v1 được theo dõi riêng. Các ô trong bảng trạng thái là ví dụ độc lập, không phải một màn chơi xuất hiện đồng thời.
+[Hướng dẫn chạy](../PREVIEW-RUNBOOK.md) ghi URL preview/editor, [CHIBI-ROSTER-SPEC](../CHIBI-ROSTER-SPEC.md) ghi phiên bản và mức duyệt từng nhân vật. Danh tính playable hiện hành do GDD quyết định; tag `story_npc` trong catalog preview là tag kỹ thuật lịch sử, không khóa bộ ba thành NPC.
 
-Chi tiết yêu cầu ở [ART-DIRECTION](../ART-DIRECTION.md), [UI-COMPONENTS](../UI-COMPONENTS.md), [UX-MVP-A](../UX-MVP-A.md) và [UX-SCREENS-AND-STATES](../UX-SCREENS-AND-STATES.md).
+## Bản phác UX idle được giữ làm lịch sử
 
-Nguồn SVG có thể dựng lại từ thư mục dự án:
+[Thư viện 14 bản phác](index.html) thuộc MVP idle v0.6, trước hướng ba nhân vật playable. Giữ SVG/PNG, token và fixture để truy nguồn bố cục mực/giấy; không dùng mốc kết thúc tầng 1, save cục bộ hoặc giới hạn offline 8 giờ trong hình làm luật hiện hành. UI nhập môn/online mới cần đặc tả theo [GDD](../GDD.md) và [Hằng Nhạc](../HANG-NHAC-NGUNG-KHI-SPEC.md).
+
+| Hình/dữ liệu lịch sử | Nội dung trong snapshot |
+| --- | --- |
+| [ART reference v1](art-reference-v1.png) / [prompt](art-reference-v1.prompt.txt) | Bảng phong cách UI mực/giấy, giữ nguyên nguồn |
+| [Tu luyện desktop](cultivation-desktop.svg) / [mobile](cultivation-mobile.svg) | Bố cục tài nguyên/hoạt động của mô hình idle cũ |
+| [Hành trình](journey-desktop.svg) / [truyện](story-desktop.svg) | Node/cảnh E của tuyến Vương Lâm cũ |
+| [Hạt châu](bead-desktop.svg) / [hành trang](inventory-desktop.svg) | Cơ duyên và vật phẩm theo snapshot E |
+| [Cài đặt](settings-desktop.svg) / [nhập save](save-import-desktop.svg) | Luồng save local cũ, chưa là hợp đồng online |
+| [Offline desktop](offline-desktop.svg) / [mobile](offline-mobile.svg) | Minh họa cap 8 giờ của thiết kế cũ |
+| [Kết thúc A](end-desktop.svg) | Mốc tầng 1 của phạm vi cũ |
+| [Trạng thái hoạt động](activity-states.svg) / [truyện/châu](story-bead-states.svg) / [lưu/offline](system-states.svg) | Ví dụ trạng thái UX cũ |
+| [UI tokens](ui-tokens.json) / [fixture](mockup-fixtures.json) | Dữ liệu dựng hình lịch sử, không là balance/runtime game |
+
+Có 11 bản màn hình/lớp và 3 bảng trạng thái. Các ô trạng thái là ví dụ độc lập. Nguồn tài liệu: [UX-MVP-A](../UX-MVP-A.md), [màn hình/trạng thái](../UX-SCREENS-AND-STATES.md), [UI components](../UI-COMPONENTS.md). Các file này ghi rõ phần giữ lịch sử và phần cần thiết kế lại.
+
+Dựng lại chính snapshot cũ, không tạo UI mới:
 
 ```powershell
 $env:PYTHONDONTWRITEBYTECODE = '1'
@@ -49,9 +44,10 @@ python docs/design/build_mockups.py
 & docs/design/render_mockups.ps1
 ```
 
-Script Python dùng thư viện chuẩn, dựng bản vẽ từ token/fixture và [module màn hình bổ sung](build_ux_screens.py). Script PowerShell dùng Chrome đã cài để render PNG, với profile tạm riêng và cửa sổ ẩn. Có thể truyền Edge/Chrome khác qua `-BrowserPath` hoặc chỉ dựng một số PNG bằng `-MockupNames @('offline-desktop','offline-mobile')`.
+Script Python dùng thư viện chuẩn; PowerShell render bằng Chrome/Edge đã cài với profile tạm/cửa sổ ẩn. Các script không triển khai luật game. Chỉnh định hướng tài liệu không sửa các ảnh nguồn, prompt, fixture hoặc kết quả kiểm tra đã lưu.
 
-Các script chỉ phục vụ tài liệu thiết kế. Luật gameplay, lưu và offline chưa được triển khai trong dự án. Nét icon/châu trong SVG là hình phác; catalog asset game vẫn giữ trạng thái cần sản xuất.
+## Nghiên cứu trước và map đã reset
 
+[Bộ Vương Lâm trước](characters/wang-lin-gray-walk-v1/README.md), [hai avatar trước chibi](characters/player-avatars-v2/README.md), [sửa gait](characters/gait-correction-v1/README.md) và [sprite study](characters/wang-lin-sprite-study/README.md) là nguồn so sánh. Đọc nhãn trạng thái từng bộ trước sử dụng.
 
-Map cũ đã xóa theo yêu cầu. Xem [thư viện mới](world/map-asset-library/README.md) và [Map Editor](../MAP-EDITOR.md).
+Các ART map/hybrid/MP01–MP07/MAP03 legacy và ART Hằng Nhạc v1/v2/v3 cùng hai bản thử vùng đi đã xóa. [Hồ sơ reset](../MAP-ASSETS-RESET.md) ghi hai đợt dọn. Chờ kế hoạch map mới; không khôi phục source hoặc dùng lịch sử duyệt bộ đã xóa làm nguồn sản xuất.

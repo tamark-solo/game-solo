@@ -1,0 +1,276 @@
+{
+  "verifiedAt": "2026-10-08T15:47:43.207746+00:00",
+  "branch": "_MMO",
+  "runtimeVersion": "0.12.0",
+  "gddVersion": "0.28",
+  "step": "3_opening_hn01_hn02",
+  "stack": "TypeScript / Three.js / Node.js + Colyseus",
+  "profileStorage": "SQLite schema 2, compatible with v1 JSON",
+  "features": {
+    "questIds": [
+      "HN01",
+      "HN02"
+    ],
+    "npcRoleCount": 4,
+    "questRewardsOncePerProfile": true,
+    "placeholderNpcAtlases": [
+      "AVATAR-NOVICE-MALE",
+      "AVATAR-NOVICE-FEMALE"
+    ],
+    "interactivePhases": 3,
+    "serverValidSecondsPerPhase": 3,
+    "milestone": "M01",
+    "cultivationRatePerMinute": 120,
+    "cultivationGate": 360,
+    "offlineCultivation": false,
+    "fullGddComplete": false
+  },
+  "ownerRelease": {
+    "version": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+    "sourceSha256": "b8571377613bf0b83997fd7087a4301955300f5ab2f3627ab9837988fb3a8256",
+    "backgroundSha256": "6eb1aa51e23d81e2371316329531ab2415575165aeb0b83e7306443e588b3521",
+    "backgroundBytes": 2939564,
+    "blockers": 9,
+    "spawn": {
+      "x": 1616,
+      "y": 992
+    },
+    "character": {
+      "frameSize": [
+        64,
+        96
+      ],
+      "anchor": [
+        32,
+        88
+      ]
+    },
+    "cameraZoom": 1,
+    "modified": false
+  },
+  "checks": {
+    "unitTestsPassed": 69,
+    "typecheckPassed": true,
+    "productionBuildPassed": true,
+    "commands": [
+      "npm.cmd run build",
+      "npm.cmd test",
+      "npm.cmd run test:hang-nhac-sect",
+      "npm.cmd run test:hang-nhac",
+      "npm.cmd run test:hang-nhac-r01",
+      "npm.cmd run test:online",
+      "npm.cmd run test:browser"
+    ]
+  },
+  "isolatedTests": {
+    "dbRoot": "artifacts/hn-sect-*",
+    "browserContexts": "isolated",
+    "ownerDbOrEditorDraftWritten": false,
+    "browserPositionFixtures": true,
+    "routeConnectivity": "unit test validates all path segments on owner collision to four stations"
+  },
+  "results": {
+    "hang-nhac-sect-online": {
+      "passed": true,
+      "date": "2026-10-08T15:45:03.131Z",
+      "checks": [
+        "proximity_and_one_time_intro_supplies",
+        "three_timed_phases_resume_understanding_and_one_time_m01",
+        "server_timed_cultivation_practice_pause_and_old_receipt_never_restarts_activity",
+        "recovery_spend_atomic_restart_restores_progress_no_offline_reward",
+        "trio_separate_tutorial_and_spirit_foundation"
+      ],
+      "mapVersion": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+      "realOwnerDbWritten": false
+    },
+    "hang-nhac-sect-browser": {
+      "passed": true,
+      "date": "2026-10-08T15:45:22.450Z",
+      "checks": [
+        "npc_keyboard_interaction_intro_once_journal_and_owner_route",
+        "timed_cycle_disabled_until_ready_reload_resume_understanding_and_m01",
+        "online_cultivation_pauses_for_cast_and_same_profile_resumes",
+        "independent_trio_and_character_specific_dialogue",
+        "mobile_dialog_native_scale_recovery_and_no_browser_errors"
+      ],
+      "errors": [],
+      "fixturePositions": true,
+      "realOwnerStorageWritten": false,
+      "screenshots": [
+        "hang-nhac-sect-guide.png",
+        "hang-nhac-sect-m01.png",
+        "hang-nhac-sect-mobile.png"
+      ]
+    },
+    "hang-nhac-online": {
+      "passed": true,
+      "version": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+      "checks": [
+        "stale_map_rejected",
+        "three_appearances_same_room",
+        "owner_spawn",
+        "server_editor_prediction_same_wall",
+        "all_clients_converge",
+        "raw_teleport_rejected",
+        "drop_stops_motion",
+        "same_session_reconnect_at_wall",
+        "leave_removes_entity"
+      ],
+      "blockerStop": {
+        "x": 1989.333333333344,
+        "y": 992,
+        "direction": "east",
+        "moving": false
+      },
+      "persistentProfiles": false
+    },
+    "hang-nhac-browser": {
+      "passed": true,
+      "version": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+      "checks": [
+        "native_camera_frame_anchor_and_owner_spawn",
+        "three_original_appearances_move_locally",
+        "two_browser_sessions_same_map",
+        "prediction_reconciles_at_owner_blocker",
+        "mobile_without_overflow",
+        "pointer_controls_move_character",
+        "leave_updates_peer"
+      ],
+      "errors": [],
+      "blockerStop": {
+        "id": "FHirkJAz4",
+        "assetId": "CHR-WANG-LIN-CHIBI",
+        "x": 1989.3333740234375,
+        "y": 992,
+        "own": true,
+        "direction": "east",
+        "moving": false,
+        "frame": "wanglin_chibi_stand_east",
+        "walkable": true,
+        "frameSize": [
+          64,
+          96
+        ],
+        "anchor": [
+          32,
+          88
+        ]
+      }
+    },
+    "hang-nhac-r01-online": {
+      "passed": true,
+      "version": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+      "checks": [
+        "fresh_profiles_spread_around_owner_spawn",
+        "input_gap_does_not_cancel_an_already_held_cast",
+        "three_separate_profiles_and_account_lease",
+        "sword_single_cost_and_hit_no_pvp",
+        "thunder_selected_target_and_wind_actual_travel",
+        "same_profile_reconnect",
+        "switching_characters_preserves_independent_resources_and_progression_kind",
+        "process_restart_preserves_position_resources_deadlines_and_idempotency"
+      ],
+      "profileCount": 3,
+      "casts": 3,
+      "practiceHits": 2,
+      "storage": "sqlite",
+      "ownerGeometryUnchanged": true
+    },
+    "hang-nhac-r01-browser": {
+      "passed": true,
+      "checks": [
+        "three_r01_from_start_keyboard_buttons_costs_hits_and_dash",
+        "remote_client_shows_fx_without_player_damage",
+        "reload_resumes_same_session_profile_and_position",
+        "second_tab_cannot_control_same_account",
+        "character_switch_keeps_separate_saves",
+        "mobile_skill_and_movement_controls_fit"
+      ],
+      "errors": [],
+      "vfxAtlases": 10,
+      "characterScale": [
+        64,
+        96
+      ],
+      "casts": 3,
+      "practiceHits": 2
+    },
+    "online": {
+      "passed": true,
+      "checks": [
+        "two_clients_same_room",
+        "both_avatar_templates",
+        "reject_teleport_and_speed",
+        "native_input_axis_sanitization",
+        "authoritative_movement",
+        "processed_input_ack",
+        "packet_flood_does_not_increase_speed",
+        "shared_positions",
+        "solid_boundary",
+        "empty_input_stops_movement",
+        "drop_and_same_session_reconnect",
+        "leave_removes_entity"
+      ],
+      "persistentAccounts": false
+    },
+    "browser": {
+      "passed": true,
+      "browserVersion": "154.0.8037.98",
+      "checks": [
+        "source_atlases_6_packs_136_frames",
+        "home_page_defaults_to_new_chibi_asset",
+        "pause_and_manual_frame_step",
+        "main_map_chibi_four_directions_walk_stop_and_normalized_diagonal",
+        "four_directions_all_actors_static_states_explicit",
+        "every_walk_pose_is_displayed_by_three_renderer",
+        "new_chibi_sets_all_directions_spirit_glide_label_explicit",
+        "paper_dark_grid_integer_zoom",
+        "local_wasd_movement_input_focus_does_not_move_actor",
+        "independent_animation_uvs_1_5_20_local_actors",
+        "mobile_360_px_dpr2_four_direction_touch_movement_no_horizontal_overflow",
+        "five_character_chibi_gallery_frames_and_mobile_no_overflow",
+        "browser_auto_reconnect_same_session",
+        "two_browser_clients_see_same_server_movement",
+        "browser_leave_updates_roster"
+      ],
+      "measurements": [
+        {
+          "simulatedActors": 1,
+          "readout": "58 FPS · 1 hình",
+          "renderer": "headless_software",
+          "mmoCapacityClaim": false
+        },
+        {
+          "simulatedActors": 5,
+          "readout": "56 FPS · 5 hình",
+          "renderer": "headless_software",
+          "mmoCapacityClaim": false
+        },
+        {
+          "simulatedActors": 20,
+          "readout": "56 FPS · 20 hình",
+          "renderer": "headless_software",
+          "mmoCapacityClaim": false
+        }
+      ],
+      "browserErrors": [],
+      "mobileInputStartX": 480
+    }
+  },
+  "screenshots": [
+    "artifacts/hang-nhac-sect-guide.png",
+    "artifacts/hang-nhac-sect-m01.png",
+    "artifacts/hang-nhac-sect-mobile.png"
+  ],
+  "remaining": [
+    "HN03 basic attack and valid Sword/Thunder evidence",
+    "HN04 telegraph, walking and Wind exercise",
+    "HN05 separate farm scene",
+    "HN06-HN12 individual progression, preparation, gates and trial",
+    "production login",
+    "offline cultivation",
+    "production NPC art",
+    "native trio cast animation",
+    "occlusion parts"
+  ]
+}

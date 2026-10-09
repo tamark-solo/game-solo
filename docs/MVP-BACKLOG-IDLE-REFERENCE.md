@@ -1,6 +1,6 @@
 # Backlog MVP — Tiên Nghịch: Hành Trình Vương Lâm
 
-> **Archived reference:** current gameplay scope is [RPG-A](MVP-RPG-A.md), with the [new backlog](MVP-BACKLOG.md).
+> **Hồ sơ lịch sử — không phải luật hiện hành.** Giữ mô hình, số liệu và mốc phát triển tại thời điểm nguồn. Thiết kế mới: [GDD 0.28](GDD.md), [Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md) và [trạng thái dự án](PROJECT-STATUS.md).
 
 **Tham chiếu:** [GDD phiên bản 0.23](GDD.md), [MMORPG](MMORPG-DIRECTION.md), [hình trên map](WORLD-VISUAL-SPEC.md), [định hướng online](ONLINE-DIRECTION.md), [nhân vật](CHARACTERS.md), [hồ sơ Vương Lâm](WANG-LIN-VISUAL-SPEC.md), [sprite](WANG-LIN-SPRITE-SPEC.md), [đặc tả A tham chiếu](MVP-A-SPEC.md), [UX A](UX-MVP-A.md), [màn hình/trạng thái](UX-SCREENS-AND-STATES.md), [bộ UI](UI-COMPONENTS.md), [ART](ART-DIRECTION.md), [asset](ASSET-PLAN.md), [map](WORLD-MAPS.md), [gặp gỡ](ENCOUNTERS.md).  
 **Đích bàn giao:** đệ tử riêng đạt Ngưng Khí tầng 1 trên web online; hai tài khoản có thể tương tác trong khu chung.

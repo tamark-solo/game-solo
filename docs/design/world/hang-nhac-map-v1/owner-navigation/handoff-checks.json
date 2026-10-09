@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-08",
+  "checks": [
+    "project_handoff_matches_workspace_save",
+    "level_mirror_and_index_match_owner",
+    "runtime_export_roundtrip_exact",
+    "navigation_export_roundtrip_exact",
+    "audit_zero_errors_zero_warnings",
+    "all_9_blockers_effective",
+    "spawn_walkable",
+    "web_and_master_hashes_match",
+    "embedded_owner_image_matches_selected_web",
+    "104_trials_absent_from_workspace",
+    "owner_file_unchanged_by_cleanup"
+  ],
+  "blockerSamples": [
+    {
+      "regionId": "d615d648-1d95-4fac-80ff-02e5160ef2da",
+      "sample": {
+        "x": 1144,
+        "y": 904
+      },
+      "walkable": false
+    },
+    {
+      "regionId": "52d975de-48f2-4c88-a7a0-10d58e639a88",
+      "sample": {
+        "x": 2248,
+        "y": 936
+      },
+      "walkable": false
+    },
+    {
+      "regionId": "3a30ce53-57f0-4d63-b768-c122b31b1a4b",
+      "sample": {
+        "x": 2760,
+        "y": 264
+      },
+      "walkable": false
+    },
+    {
+      "regionId": "ce7383bd-1267-4f3a-9968-8db3c1826cf7",
+      "sample": {
+        "x": 3000,
+        "y": 1512
+      },
+      "walkable": false
+    },
+    {
+      "regionId": "5fa71c8f-c28e-4a6e-8cf7-6dda63266177",
+      "sample": {
+        "x": 8,
+        "y": 8
+      },
+      "walkable": false
+    },
+    {
+      "regionId": "409d1a7c-28f0-4b28-8fc1-eeacaadf3555",
+      "sample": {
+        "x": 376,
+        "y": 632
+      },
+      "walkable": false
+    },
+    {
+      "regionId": "27dca4c3-af42-47e8-b18e-9e12779f6f59",
+      "sample": {
+        "x": 328,
+        "y": 280
+      },
+      "walkable": false
+    },
+    {
+      "regionId": "ebec76ee-23f3-4279-bfe4-dc9b00855892",
+      "sample": {
+        "x": 728,
+        "y": 8
+      },
+      "walkable": false
+    },
+    {
+      "regionId": "e97500ab-12d9-4179-98bb-a89587e90301",
+      "sample": {
+        "x": 1976,
+        "y": 520
+      },
+      "walkable": false
+    }
+  ],
+  "retiredFiles": 104,
+  "retiredBytes": 226636033,
+  "projectSha256": "b8571377613bf0b83997fd7087a4301955300f5ab2f3627ab9837988fb3a8256",
+  "runtimeIntegrated": false
+}

@@ -1,6 +1,6 @@
 # Bộ kỹ năng Ngưng Khí · nguồn 1.1.0 / duyệt 07-10-2026
 
-Kiếm Khí 1.0.0 đã được chủ dự án duyệt mỹ thuật/preview và đóng release ngày 07/10/2026. Lôi Ấn và Ngự Phong Bộ dùng cùng pipeline PNG sequence → atlas → timeline → preview. Chủ dự án đã xem bộ P2, nhận xét khá tốt và yêu cầu đóng gói/nâng cấp. Cả ba R01 được ghi duyệt trong library và manifest ZIP từng skill; ZIP chung 1.1.0 là snapshot lịch sử và giữ nguyên metadata lúc xuất. [Thư viện sáu skill](skill-library.html) có các ZIP mới và nâng cấp Trúc Cơ.
+Kiếm Khí 1.0.0 đã được chủ dự án duyệt mỹ thuật/preview và đóng release ngày 07/10/2026. Lôi Ấn và Ngự Phong Bộ dùng cùng pipeline PNG sequence → atlas → timeline → preview. Chủ dự án đã xem bộ P2, nhận xét khá tốt và yêu cầu đóng gói/nâng cấp. Cả ba R01 được ghi duyệt trong library và manifest ZIP từng skill; ZIP chung 1.1.0 là snapshot lịch sử và giữ nguyên metadata lúc xuất. [Thư viện hiện hành 15 skill](skill-library.html) có các ZIP mới và nâng cấp Trúc Cơ.
 
 ## Nguồn và cách dùng
 
@@ -42,17 +42,17 @@ Atlas có 4 cột, padding trong 2 px, chưa extrude mép. Render atlas bằng �
 
 VFX hit dùng linh quang, điện hoặc khí thuần; không chứa bụi đá/mảnh bia. Preview PvP dùng sprite thử; quái/boss dùng vùng chạm để kiểm anchor. Ground FX riêng của Lôi/Phong chỉ phủ trên nền, không mặc định phá vật liệu.
 
-## Release và các mốc tiếp theo
+## Release và các mốc đã hoàn thành
 
 - **P1:** Kiếm Khí art đã duyệt; release `releases/kiem-khi-r01-1.0.0/` có ZIP và SHA-256 từng file. Chỉnh tiếp vào version mới, không tái xuất đè nguồn đã duyệt.
-- **P2:** sản xuất Lôi Ấn + Ngự Phong Bộ; đánh giá motion/độ đọc ở zoom game trước khi duyệt bản mới. Bộ ba R01 xuất chung ở `releases/ngung-khi-kit-1.1.0.zip`.
-- **P3 · Trúc Cơ:** Ngự Kiếm / Liên Lôi Ấn / Hồi Phong Bộ. Ưu tiên Ngự Kiếm đầu tiên: ba kiếm có đội hình, một nhịp xuất và một điểm chạm; không tự tăng số hit. Hồ sơ bắt đầu tại `milestones/P3-TRUC-CO.md`.
-- **P4 · Kết Đan:** Kiếm Luân / Lôi Hạch / Phong Luân, hình tổ chức quanh lõi.
-- **P5 · Nguyên Anh → Hóa Thần:** linh ảnh đồng bộ rồi ý cảnh cục bộ; tăng cấu trúc/nhịp, không chỉ tăng bloom hoặc kích thước.
+- **P2:** Lôi Ấn + Ngự Phong Bộ đã sản xuất/chấp nhận. Bộ ba R01 xuất chung ở `releases/ngung-khi-kit-1.1.0.zip`, giữ snapshot nguồn tại mốc P2.
+- **P3 · Trúc Cơ:** Ngự Kiếm / Liên Lôi Ấn / Hồi Phong Bộ đã chấp nhận, 132 PNG / 15 atlas; xem [hồ sơ](TRUC-CO-KIT.md).
+- **P4 · Kết Đan:** Kiếm Luân / Lôi Hạch / Phong Luân đã chấp nhận, 130 PNG / 15 atlas; xem [hồ sơ](KET-DAN-KIT.md).
+- **P5 · Nguyên Anh → Hóa Thần:** cả R04/R05 đã chấp nhận và đóng; thư viện hiện hành 15 skill/646 PNG / 76 atlas. Xem [bàn giao](STARTER-VFX-HANDOFF.md).
 
 `library.json` là mục lục và trạng thái; `releases/ngung-khi-kit-1.1.0.manifest.json` kiểm SHA-256 của bộ giao. Tên tiến hóa là thiết kế game, không khẳng định thuật pháp nguyên tác. Chưa tích hợp client/server, chưa đủ các hướng, chưa có file SFX hoặc benchmark MMO nhiều người. Chỉ asset có đánh giá thực tế mới chuyển sang runtime-ready.
 
 
-## Kết quả kiểm bản giao
+## Kết quả kiểm bản giao tại mốc P2
 
 20 kiểm tra tự động đã qua. 16 ảnh kiểm được render từ atlas cục bộ theo timeline/anchor, có nhãn phương pháp trên ảnh. Kiếm Khí được đối chiếu SHA-256 với bản đóng release; PNG nguồn không thay sau khi pack. Quyền mở localhost bằng trình duyệt bị từ chối nên chưa kiểm tương tác preview P2; không coi ảnh kiểm cục bộ là screenshot hoặc xác nhận trình duyệt.

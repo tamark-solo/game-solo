@@ -1,15 +1,15 @@
-# Đặc tả hệ thống MVP A
+# Đặc tả hệ thống MVP A — lịch sử idle
 
-> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Luật E01–E08, đệ tử riêng, kết thúc tầng 1 và số liệu bên dưới là tham chiếu cũ; không là đặc tả tu tiên/server của GDD mới. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+> **Hồ sơ lịch sử, đối chiếu ngày 08/10/2026:** toàn bộ luật E01–E08, nước/linh dịch/480 tu vi, chu kỳ 10 giây, giới hạn 8 giờ, save cục bộ/import JSON và kết thúc tầng 1 bên dưới thuộc thiết kế idle trước. Chúng được giữ để truy nguồn, không là đặc tả runtime hoặc hợp đồng máy chủ hiện hành. Hướng đệ tử riêng từng được xét sau bản idle cũng đã bị thay.
 
-> **Tham chiếu v0.6, chờ điều chỉnh online.** Người phát triển đã chọn nhiều người chơi và đệ tử riêng. Quy tắc dành cho Vương Lâm, save cục bộ, nhập JSON và quyền ghi theo tab bên dưới chưa là đặc tả máy chủ hiện tại. [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md) xác định điều chỉnh; [CHARACTERS.md](CHARACTERS.md) xác định vai và tạo hình. Phải tách tuyến đệ tử/chính truyện trước triển khai; bộ số liệu vẫn là giả thuyết cân bằng.
+> **Chuẩn hiện hành là [GDD 0.28](GDD.md):** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, có sẵn cả ba thuật R01, Hằng Nhạc qua Ngưng Khí và phân hóa từ hành trình Trúc Cơ. Dùng [trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay R01](NGUNG-KHI-GAMEPLAY-SPEC.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md) và [online](ONLINE-DIRECTION.md) khi đặc tả mới; các số liệu mới vẫn là đề xuất chưa khóa.
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  
-**Trạng thái:** đặc tả thiết kế; chưa có bộ mô phỏng hoặc prototype.  
-**Phạm vi:** E01–E08, phàm nhân → Ngưng Khí tầng 1, thuộc lộ trình A → B đã chọn.  
-**Tham chiếu:** [GDD](GDD.md), [UX](UX-MVP-A.md), [catalog](data/mvp-content-catalog.json), [save minh họa](data/mvp-save-example.json).
+**Trạng thái nguồn:** đặc tả thiết kế ngày 06/10; không có gameplay idle được nghiệm thu bởi tài liệu này.\
+**Phạm vi lịch sử:** E01–E08, phàm nhân → Ngưng Khí tầng 1, phân kỳ A → B của bản trước.\
+**Tham chiếu lịch sử:** [GDD idle](GDD-IDLE-REFERENCE-v0.26.md), [UX idle](UX-MVP-A.md), [catalog cũ](data/mvp-content-catalog.json), [save minh họa cũ](data/mvp-save-example.json).
 
-Tài liệu này chi tiết hóa luật game đã đề xuất. Khi sửa luật, cập nhật cả GDD, catalog và trường hợp nghiệm thu tương ứng. Nguồn nguyên tác nằm trong GDD, kế hoạch map và asset; các quy tắc thời gian, số lượng và trạng thái dưới đây là thiết kế game.
+Giữ nguyên bảng số liệu, trạng thái và trường hợp nghiệm thu của bản trước để đối chiếu. Không dùng các ID/schema này để giả định tuyến HN01–HN12 hoặc tài khoản/lưu lâu dài đã triển khai. Hợp đồng gameplay mới cần đặc tả và prototype riêng; không sửa snapshot cũ thành bằng chứng của thiết kế mới.
 
 ## 1. Mục tiêu của bản A
 

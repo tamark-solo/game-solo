@@ -1,14 +1,14 @@
-# Chi tiết màn hình và trạng thái — MVP A
+# Chi tiết màn hình và trạng thái — lịch sử UX idle
 
-> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Các màn save/import, mô hình đệ tử và trạng thái kết thúc A bên dưới là tham chiếu cũ, không phải UX hiện hành của ba nhân vật. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+> **Hồ sơ lịch sử, đối chiếu ngày 08/10/2026:** toàn bộ màn Hạt châu, import/thay save cục bộ, snapshot offline 8 giờ, kết thúc E08/tầng 1 và các con số bên dưới là UX idle v0.6. Giữ chúng để đối chiếu bản vẽ, không là màn hình/hợp đồng máy chủ hiện hành. Hướng tạo đệ tử riêng cũng đã bị thay; không có một khu Hạt châu mặc định dùng chung cho cả ba.
 
-> **Tham chiếu UX v0.6.** Game đã chuyển hướng online nhiều người, đệ tử riêng. Luồng xuất/nhập/thay save cục bộ bên dưới được thay bằng tài khoản và lưu máy chủ; hồ sơ châu thuộc chính truyện. Các màn cần điều chỉnh theo [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md), sau khi duyệt [tạo hình nhân vật](CHARACTERS.md).
+> **Chuẩn hiện hành [GDD 0.28](GDD.md):** cả ba chọn từ đầu, có sẵn Kiếm Khí/Lôi Ấn/Ngự Phong Bộ R01; Hằng Nhạc qua Ngưng Khí, phân hóa từ hành trình Trúc Cơ. UX mới cần [trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [hệ thống tu tiên](CULTIVATION-SYSTEM.md), [online](ONLINE-DIRECTION.md) và [mapping UX](UX-MVP-A.md#0-điểm-cần-biên-tập-cho-ux-hiện-hành). Lưu/import client bên dưới không cấp tiến trình hợp lệ; cơ chế tài khoản/lưu bền vững còn cần đặc tả.
 
 **Phiên bản:** 0.1, ngày 06/10/2026.  
-**Trạng thái:** thiết kế GDD/UX; các hình là bản vẽ tĩnh, hành vi cần kiểm chứng khi có prototype.  
+**Trạng thái nguồn:** thiết kế UX idle; các hình là bản vẽ tĩnh, chưa chứng minh hành vi runtime.\
 **Tham chiếu:** [luồng UX](UX-MVP-A.md), [luật hệ thống](MVP-A-SPEC.md), [bộ UI](UI-COMPONENTS.md), [thư viện bản phác](design/index.html), [fixture](design/mockup-fixtures.json).
 
-Tài liệu hoàn thiện các màn Hạt châu, Hành trang, Cài đặt, tổng kết offline và kết thúc A. Những màn này dùng chung năm khu vực chính, token và ngân sách 18 nguồn hình P0/P1 cùng 2 nguồn P2. Icon/hình châu trong bản vẽ là nét phác SVG phục vụ duyệt UX; nguồn game trong catalog vẫn cần sản xuất.
+Phần lịch sử này mô tả các màn Hạt châu, Hành trang, Cài đặt, tổng kết offline và kết thúc A của bản idle. Năm khu vực, ngân sách 18 nguồn P0/P1 cùng 2 nguồn P2 và fixture E đều là phạm vi cũ; không dùng làm ngân sách UX/ART của tuyến ba người. Icon/hình châu là nét phác SVG; xem [bộ UI](UI-COMPONENTS.md) để phân biệt ý tưởng thành phần có thể dùng lại với nội dung chưa được biên tập.
 
 ## 1. Danh mục bản phác bổ sung
 

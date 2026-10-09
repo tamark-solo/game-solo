@@ -6,6 +6,8 @@
 
 MMORPG web có idle. Người chơi chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, dùng map Hằng Nhạc để học game và tiến triển qua Ngưng Khí; sau map đầu mới mở sâu công pháp, tổ hợp và hành trình riêng từ Trúc Cơ.
 
+Cả ba có Kiếm Khí, Lôi Ấn và Ngự Phong Bộ R01 ngay khi bắt đầu điều khiển. Tutorial dạy dùng thuật, không khóa quyền sau nhiệm vụ; chức năng và số liệu theo [hồ sơ gameplay](NGUNG-KHI-GAMEPLAY-SPEC.md) còn là đề xuất. Ưu tiên vẫn là map trước vận hành gameplay; ART cũ đã xóa, đang chờ kế hoạch map mới. Không tự chuyển sang lát A chỉ vì phân kỳ bên dưới đã có.
+
 Không dùng mô hình tạo đệ tử mới hoặc chờ arc sau mới mở nhân vật. [Bản trước](archive/design-before-three-playable-characters/MMORPG-DIRECTION.md) giữ làm lịch sử. Pixel art chibi trên nền stylized 2D/top-down ba phần tư, UI/truyện tranh mực–giấy cổ giữ theo quyết định ART.
 
 ## 2. Nền nhập môn và phân hóa

@@ -1,11 +1,13 @@
 # Định hướng MMORPG tu luyện có cơ chế idle
 
+> **Snapshot lịch sử — không phải luật hiện hành.** Giữ nội dung quyết định theo thời điểm nguồn; chỉ nhãn trạng thái và đường dẫn đọc được cập nhật khi rà soát ngày 08/10/2026. Hướng hiện hành: [GDD 0.28](../../GDD.md), [trạng thái dự án](../../PROJECT-STATUS.md) và [mục lục lịch sử](README.md).
+
 **Phiên bản:** 0.7, ngày 07/10/2026.  
 **Người phát triển đã xác nhận:** MMORPG có idle, đệ tử riêng, khu môn phái đi lại; nhân vật pixel art trên nền stylized 2D, góc top-down ba phần tư.  
 **Đang đề xuất:** phạm vi thế giới/chiến đấu, phân bổ A → B, tỷ lệ nhân vật và bộ hướng/động tác.  
-**Tham chiếu:** [GDD](GDD.md), [online](ONLINE-DIRECTION.md), [nhân vật](CHARACTERS.md), [map tham chiếu](WORLD-MAPS.md), [ART](ART-DIRECTION.md).
+**Tham chiếu:** [GDD](GDD.md), [online](ONLINE-DIRECTION.md), [nhân vật](CHARACTERS.md), [map tham chiếu](../../WORLD-MAPS.md), [ART](../../ART-DIRECTION.md).
 
-**Công nghệ client đã chốt:** TypeScript + Three.js; [phân công công nghệ](TECH-STACK.md). Bước tiếp theo trước animation mới là [preview chung](ANIMATION-PREVIEW-SPEC.md) để kiểm tra bộ có sẵn trong hai chế độ. Giữ ART 2D/camera cố định; framework máy chủ và giao thức online được thiết kế riêng.
+**Công nghệ client đã chốt:** TypeScript + Three.js; [phân công công nghệ](../../TECH-STACK.md). Bước tiếp theo trước animation mới là [preview chung](../../ANIMATION-PREVIEW-SPEC.md) để kiểm tra bộ có sẵn trong hai chế độ. Giữ ART 2D/camera cố định; framework máy chủ và giao thức online được thiết kế riêng.
 
 ## 1. Trải nghiệm mục tiêu
 
@@ -44,9 +46,9 @@ A là mốc kiểm chứng nhập môn và thế giới online ban đầu. Muố
 
 MMORPG là định hướng thể loại. Pixel art hoặc stylized là phong cách hình; top-down hoặc isometric là góc nhìn; 2D/2.5D là cách dựng cảnh. Các lựa chọn có thể kết hợp, không phải những thể loại loại trừ nhau. [Curse of Aros](https://www.curseofaros.com/) là ví dụ sản phẩm được nhà phát triển giới thiệu là MMORPG 2D; [IdleOn](https://www.legendsofidleon.com/) là tham chiếu cho việc kết hợp idle với trải nghiệm MMO.
 
-Sau [thử sprite Vương Lâm](design/characters/wang-lin-sprite-study/index.html), ngày 07/10/2026 người phát triển ưu tiên **nhân vật pixel art** và chọn **giữ nền stylized 2D**, cùng góc **top-down ba phần tư**. Portrait/cảnh truyện/UI giữ tranh mực/giấy cổ. [WORLD-VISUAL-SPEC.md](WORLD-VISUAL-SPEC.md) ghi cách phối hợp; mẫu sân cũ giữ tham chiếu nền/bố cục. Lưới pixel, tỷ lệ, kích thước và animation cần duyệt riêng.
+Sau [thử sprite Vương Lâm](../../design/characters/wang-lin-sprite-study/index.html), ngày 07/10/2026 người phát triển ưu tiên **nhân vật pixel art** và chọn **giữ nền stylized 2D**, cùng góc **top-down ba phần tư**. Portrait/cảnh truyện/UI giữ tranh mực/giấy cổ. [WORLD-VISUAL-SPEC.md](../../WORLD-VISUAL-SPEC.md) ghi cách phối hợp; mẫu sân cũ giữ tham chiếu nền/bố cục. Lưới pixel, tỷ lệ, kích thước và animation cần duyệt riêng.
 
-Tỷ lệ khoảng **4–5 đầu chiều cao** là hướng nghiên cứu để đọc silhouette ở cỡ nhỏ. Nhận diện Vương Lâm v2 đã duyệt; [bộ áo xám đầu tiên](WANG-LIN-SPRITE-SPEC.md) có frame 64 × 96 và bốn hướng đứng/đi. Hai [mẫu đệ tử thử](PLAYER-AVATAR-VISUAL-SPEC.md) đã áp dụng cùng frame/anchor, 28 frame/mẫu; nhận diện và motion còn chờ đánh giá. Lưới nhân vật này độc lập kích thước ô/va chạm của map.
+Tỷ lệ khoảng **4–5 đầu chiều cao** là hướng nghiên cứu để đọc silhouette ở cỡ nhỏ. Nhận diện Vương Lâm v2 đã duyệt; [bộ áo xám đầu tiên](../../WANG-LIN-SPRITE-SPEC.md) có frame 64 × 96 và bốn hướng đứng/đi. Hai [mẫu đệ tử thử](../../PLAYER-AVATAR-VISUAL-SPEC.md) đã áp dụng cùng frame/anchor, 28 frame/mẫu; nhận diện và motion còn chờ đánh giá. Lưới nhân vật này độc lập kích thước ô/va chạm của map.
 
 ## 4. Phần việc hình ảnh tăng thêm
 
@@ -59,4 +61,4 @@ Ngân sách 20/22 nguồn A và 30 sau B trong tài liệu trước là **dự t
 
 ## 5. Bước thiết kế gần nhất
 
-Hướng kết hợp giữ [thử ghép v1](design/world/hybrid-study/index.html) làm lịch sử nghiên cứu. [Trang animation Vương Lâm](design/characters/wang-lin-gray-walk-v1/index.html) có 28 frame native; [trang đệ tử v2](design/characters/player-avatars-v2/index.html) bổ sung 56 frame, nhận diện nam/nữ và thử chung trên sân. Tiếp theo triển khai preview chung TypeScript + Three.js bằng năm bộ/92 frame có sẵn; đánh giá đặt hình/chuyển động trước khi vẽ animation mới. Biên tập map/nhiệm vụ/online tiếp tục theo phạm vi riêng. Công việc vẫn ở GDD/ART, gameplay online chưa triển khai.
+Hướng kết hợp giữ thử ghép v1 (nguồn `design/world/hybrid-study/index.html` đã xóa; [hồ sơ reset](../../MAP-ASSETS-RESET.md)) làm lịch sử nghiên cứu. [Trang animation Vương Lâm](../../design/characters/wang-lin-gray-walk-v1/index.html) có 28 frame native; [trang đệ tử v2](../../design/characters/player-avatars-v2/index.html) bổ sung 56 frame, nhận diện nam/nữ và thử chung trên sân. Tiếp theo triển khai preview chung TypeScript + Three.js bằng năm bộ/92 frame có sẵn; đánh giá đặt hình/chuyển động trước khi vẽ animation mới. Biên tập map/nhiệm vụ/online tiếp tục theo phạm vi riêng. Công việc vẫn ở GDD/ART, gameplay online chưa triển khai.

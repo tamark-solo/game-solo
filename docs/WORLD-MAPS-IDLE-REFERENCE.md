@@ -1,6 +1,6 @@
 # Hệ thống map — MVP và dài hạn
 
-> **Archived reference:** current gameplay scope is [RPG-A](MVP-RPG-A.md), with the [new backlog](MVP-BACKLOG.md).
+> **Hồ sơ lịch sử — không phải luật hiện hành.** Giữ mô hình, số liệu và mốc phát triển tại thời điểm nguồn. Thiết kế mới: [GDD 0.28](GDD.md), [Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md) và [trạng thái dự án](PROJECT-STATUS.md).
 
 > **Điều chỉnh MMORPG v0.10:** khu môn phái là vùng khởi đầu; nhân vật pixel art trên nền stylized 2D/top-down ba phần tư đã chọn sau thử Vương Lâm. Sân v2 (bộ cũ đã xóa) giữ tham chiếu nền/bố cục; cần thử cách ghép pixel theo [WORLD-VISUAL-SPEC](WORLD-VISUAL-SPEC.md). Các 9/13 node dưới đây chỉ tham chiếu chính truyện. Phạm vi A/B và ngân sách map/sprite/animation cần xét lại.
 

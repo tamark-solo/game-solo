@@ -1,5 +1,7 @@
 # Bàn giao skill/VFX nhập môn và nâng cấp
 
+**Liên hệ GDD 0.28:** ba nhân vật Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển chọn từ đầu, cùng Hằng Nhạc–Ngưng Khí và phân hóa từ Trúc Cơ. Bộ VFX này dùng Vương Lâm hướng Đông làm mẫu thi triển; quyền mở skill, socket/pose từng actor và luật combat cần tích hợp riêng. Thư viện năm cảnh giới đã có ART, gameplay hiện chưa chạy các cảnh giới này.
+
 Đợt ART P1–P5 đã kết thúc ngày **07/10/2026** theo yêu cầu chủ dự án. Chốt ba nhánh Kiếm/Lôi/Phong qua Ngưng Khí, Trúc Cơ, Kết Đan, Nguyên Anh và Hóa Thần: **15 skill, 646 PNG RGBA rời, 76 atlas**, tất cả đã được chấp nhận. Các con số gồm frame dùng lại, không phải số hình độc nhất.
 
 [Tải bộ chung được duyệt 3.0.1](releases/hoa-than-kit-3.0.1.zip) · [Checksum](releases/hoa-than-kit-3.0.1.sha256) · [Thư viện xem và tải](skill-library.html) · [Inventory 15 gói](releases/starter-vfx-inventory-1.0.0.json).

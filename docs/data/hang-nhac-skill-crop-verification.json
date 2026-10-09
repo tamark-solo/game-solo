@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-09T04:39:40.487Z",
+  "branch": "_MMO",
+  "passed": true,
+  "scope": "Fix character cast frames containing detached pieces from adjacent sheet rows/columns",
+  "rootCause": "Uniform source-sheet extraction included neighbouring hands/feet inside canonical frame PNGs. Pure GPU UV sampling alone matched those contaminated PNGs and did not detect the source-crop problem.",
+  "fix": {
+    "newFrameCrops": 264,
+    "affectedFrames": 108,
+    "cutoutFrames": 11,
+    "excludedOpaquePixels": 6782,
+    "metadataOnly": true,
+    "mainCharacterOpaquePixelsProtected": true,
+    "bodyAndWindGhostAdapter": "client/src/sprite-frame.ts",
+    "independentGeometry": true,
+    "scaleAndFootAnchorPreserved": true,
+    "occlusionMaskAndReviewUseSameCrop": true,
+    "poolClipChangesReplaceSprite": true
+  },
+  "validation": [
+    {
+      "command": "npm.cmd test",
+      "passed": true,
+      "tests": 93,
+      "evidence": "artifacts/skill-crop-unit.log"
+    },
+    {
+      "command": "npm.cmd run build",
+      "passed": true,
+      "typecheck": true,
+      "evidence": "artifacts/skill-crop-build.log"
+    },
+    {
+      "command": "npm.cmd run test:skill-body",
+      "passed": true,
+      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "totalChecks": 568,
+      "castFrames": 300,
+      "locomotionFrames": 60,
+      "uncroppedRegressionProbes": 3,
+      "evidence": "artifacts/skill-body-gpu-parity.json"
+    },
+    {
+      "command": "npm.cmd run test:skill-body",
+      "passed": true,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 (0x00002544) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "totalChecks": 568,
+      "castFrames": 300,
+      "locomotionFrames": 60,
+      "uncroppedRegressionProbes": 3,
+      "evidence": "artifacts/skill-body-gpu-parity-native.json"
+    },
+    {
+      "command": "npm.cmd run test:skill-vfx",
+      "passed": true,
+      "clips": 10,
+      "evidence": "artifacts/skill-vfx-gpu-parity.json"
+    },
+    {
+      "command": "npm.cmd run test:skill-animation",
+      "passed": true,
+      "combinations": 36,
+      "windDashDirections": 12,
+      "bodyAndHistoricalGhostCropsVerified": true,
+      "evidence": "artifacts/hang-nhac-skill-animation-verification.json"
+    },
+    {
+      "command": "npm.cmd run test:hang-nhac-reload",
+      "passed": true,
+      "checks": 8,
+      "evidence": "artifacts/hang-nhac-reload-interaction.json"
+    },
+    {
+      "check": "Canonical PNG/atlas hashes preserved",
+      "passed": true,
+      "evidence": "artifacts/skill-crop-art-preservation.json"
+    }
+  ],
+  "proof": [
+    "artifacts/skill-body-crop-review.png",
+    "artifacts/hang-nhac-wind-crop-wang-south.png",
+    "artifacts/hang-nhac-wind-crop-wang-west.png",
+    "artifacts/hang-nhac-wind-crop-wang-east.png",
+    "artifacts/hang-nhac-wind-crop-wang-north.png",
+    "artifacts/hang-nhac-wind-crop-situ-south.png",
+    "artifacts/hang-nhac-wind-crop-situ-west.png",
+    "artifacts/hang-nhac-wind-crop-situ-east.png",
+    "artifacts/hang-nhac-wind-crop-situ-north.png",
+    "artifacts/hang-nhac-wind-crop-li-south.png",
+    "artifacts/hang-nhac-wind-crop-li-west.png",
+    "artifacts/hang-nhac-wind-crop-li-east.png",
+    "artifacts/hang-nhac-wind-crop-li-north.png"
+  ],
+  "preserved": {
+    "canonicalNewPNGs": 264,
+    "unchangedAtlasHashes": 46,
+    "originalEastWangClips": 3,
+    "originalVfxClips": 10,
+    "mapVersion": "1c33e4d1b33eb5af690972393179925504c5684cc1507d59c213f3615501e480",
+    "sourceSha256": "b8571377613bf0b83997fd7087a4301955300f5ab2f3627ab9837988fb3a8256",
+    "backgroundSha256": "6eb1aa51e23d81e2371316329531ab2415575165aeb0b83e7306443e588b3521",
+    "blockers": 9,
+    "nativeFrame": [
+      64,
+      96
+    ],
+    "nativeAnchor": [
+      32,
+      88
+    ],
+    "cameraScale": 1,
+    "gameplayCostsTimelinesSocketsChanged": false,
+    "realOwnerStorageWritten": false,
+    "newArtApprovalClaimed": false
+  }
+}

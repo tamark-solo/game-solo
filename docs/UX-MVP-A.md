@@ -1,14 +1,27 @@
-# Luồng màn hình và tương tác MVP A
+# Luồng màn hình MVP A — tham chiếu UX idle
 
-> **Đối chiếu GDD 0.25 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, Hằng Nhạc qua Ngưng Khí, phân hóa sau map đầu. Luồng tạo đệ tử, khu Hạt châu chung và kết thúc tầng 1 bên dưới là UX cũ; cần thiết kế màn chọn ba nhân vật và UX tu tiên mở dần. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md). Quyết định mới được ưu tiên khi nội dung bên dưới mâu thuẫn.
+> **Hồ sơ lịch sử, đối chiếu ngày 08/10/2026:** năm khu Tu luyện/Hạt châu/Hành trình/Hành trang/Cài đặt, E01–E08, import save cục bộ, 480 tu vi/8 giờ và màn kết thúc tầng 1 ở các mục 1–11 bên dưới là UX idle v0.6. Các wireframe/bản vẽ được giữ để tham khảo bố cục, chưa là UX online hiện hành. Hướng tạo đệ tử riêng từng được xét cũng đã bị thay.
 
-> **Bộ UX v0.6 giữ làm tham chiếu.** Hướng hiện tại là online nhiều người và đệ tử riêng. Cần thay portrait người chơi, khu Hạt châu, tài khoản/nhập save và nhãn vắng mặt theo [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md); thêm tạo đệ tử và tương tác đồng môn. [Concept nhân vật v1](design/characters/index.html) là đầu ra thiết kế mới; chưa có bộ UX online hoàn chỉnh.
+> **Chuẩn hiện hành [GDD 0.28](GDD.md):** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, cả ba có Kiếm Khí/Lôi Ấn/Ngự Phong Bộ R01 khi bắt đầu điều khiển, học tại Hằng Nhạc qua Ngưng Khí và phân hóa từ Trúc Cơ. UI cần được đặc tả theo [trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [tu tiên](CULTIVATION-SYSTEM.md), [online](ONLINE-DIRECTION.md) và [backlog](MVP-BACKLOG.md); không ghép bộ idle vào sản phẩm mới như luồng đã duyệt.
 
 **Phiên bản:** 0.3, ngày 06/10/2026.  
-**Trạng thái:** đặc tả UX, sơ đồ và bản phác hình; tương tác chờ kiểm chứng trong prototype.  
-**Tham chiếu:** [GDD](GDD.md), [đặc tả hệ thống](MVP-A-SPEC.md), [chi tiết màn hình/trạng thái](UX-SCREENS-AND-STATES.md), [ART](ART-DIRECTION.md), [bộ UI](UI-COMPONENTS.md), [map](WORLD-MAPS.md), [asset](ASSET-PLAN.md).
+**Trạng thái nguồn:** UX/sơ đồ/bản vẽ tĩnh của bản idle; tương tác chưa được nghiệm thu bởi các bản phác.\
+**Tham chiếu lịch sử:** [GDD idle](GDD-IDLE-REFERENCE-v0.26.md), [đặc tả hệ thống idle](MVP-A-SPEC.md), [chi tiết màn hình cũ](UX-SCREENS-AND-STATES.md), [ART](ART-DIRECTION.md), [bộ UI](UI-COMPONENTS.md), [node truyện](WORLD-MAPS.md), [asset](ASSET-PLAN.md).
 
-## 1. Cấu trúc điều hướng
+## 0. Điểm cần biên tập cho UX hiện hành
+
+| Trải nghiệm | Yêu cầu theo GDD 0.28 | Phần còn cần đặc tả |
+| --- | --- | --- |
+| Vào game | Cả ba lựa chọn có sẵn; danh tính/trạng thái/hướng tương lai rõ | Slot/đổi nhân vật, tài khoản và luồng vào lại |
+| Thế giới | Nhân vật điều khiển, mục tiêu/tương tác, ba thuật R01 và linh lực | HUD/input/mobile, marker và phản hồi cast/miss |
+| Tu tiên | Phân biệt tu vi/linh lực; điều kiện bình cảnh và nhãn hồi phục Tư Đồ Nam | Cách mở dần sáu phần, số liệu/luồng xác nhận mốc |
+| Hành trình | Chung nền HN và đoạn riêng, nhãn nguyên tác/chuyển thể | Thoại/chương, replay và quyền nội dung |
+| Trở lại game | Trạng thái máy chủ, hoạt động hợp lệ, mục tiêu cần tương tác | UX mất mạng/khôi phục/offline; cap thử chưa khóa |
+| Hoàn tất nhập môn | Khảo nghiệm, tổng kết và quyền xuất hành; không tự có Trúc Cơ | Trạng thái lát thử/map tiếp và mục tiêu riêng |
+
+Các yêu cầu trên dẫn từ tài liệu hiện hành, không xác nhận đã có bộ màn hình mới hoặc gameplay. Ưu tiên hiện tại là map trước đặc tả vận hành. Phần lịch sử bên dưới giữ nguyên snapshot và các con số để đối chiếu.
+
+## 1. Cấu trúc điều hướng của UX idle lịch sử
 
 Có 5 khu vực chính: **Tu luyện · Hạt châu · Hành trình · Hành trang · Cài đặt**. Màn vào game và các lớp đọc truyện/tổng kết/kết thúc không tính thành khu vực chính mới.
 

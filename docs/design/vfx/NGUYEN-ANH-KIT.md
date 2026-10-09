@@ -15,7 +15,7 @@ Thiết kế lại linh ảnh sau phản hồi về thẩm mỹ và trải nghi�
 
 Tính so với nền R03, R04 vẫn có 40 frame bổ sung và 116 PNG dùng lại. Riêng lần redesign này thay cả 18 frame linh ảnh; 22 frame kiếm bay/lôi dệt/phong hai tầng của R04 và 116 PNG R03 giữ nguyên. Linh ảnh là ART trang trí, không tạo actor, AI, collider, damage hoặc miễn nhiễm. Tên chiêu/hình thái là thiết kế game, không xác nhận thuật pháp nguyên tác.
 
-Các folder V1, helper V1 và archive 1.0.0/1.0.1 giữ nguyên. Preview hiện trỏ V2; ba pack skill **2.0.1** ghi duyệt, asset giữ nguyên từ 2.0.0. [Hồ sơ duyệt](releases/nguyen-anh-approval-2.0.1.json). ZIP chung 2.0.0 chứa thư viện hiện tại **532 PNG / 62 atlas** và bản R04 V1 để kiểm/so sánh: tổng nội dung archive **688 PNG / 81 atlas**. Các con số có phần dùng lại giữa cảnh giới/phiên bản, không phải số hình độc nhất. ZIP không lồng các ZIP release; nút tải gói trên bản giải nén cần workspace gốc.
+Các folder V1, helper V1 và archive 1.0.0/1.0.1 giữ nguyên. Preview hiện trỏ V2; ba pack skill **2.0.1** ghi duyệt, asset giữ nguyên từ 2.0.0. [Hồ sơ duyệt](releases/nguyen-anh-approval-2.0.1.json). ZIP chung 2.0.0 giữ snapshot tại mốc Nguyên Anh **532 PNG /62 atlas** và bản R04 V1 để kiểm/so sánh: tổng nội dung archive **688 PNG / 81 atlas**. Các con số có phần dùng lại giữa cảnh giới/phiên bản, không phải số hình độc nhất. ZIP không lồng các ZIP release; nút tải gói trên bản giải nén cần workspace gốc.
 
 Giải nén, chạy `python serve-preview.py`, mở `http://127.0.0.1:4185/skill-library.html`. Nếu cổng đang được dùng, dừng server cũ hoặc chọn cổng khác. ZIP riêng có một skill/helper, không có preview web. R04 V2 đã được chủ dự án chấp nhận trong yêu cầu đóng gói và nâng cấp; chưa tích hợp game.
 
@@ -58,8 +58,8 @@ Draw record có clip/sample/point/angle/layer/scale. Renderer áp dụng scale q
 
 ## Kiểm và giới hạn thực tế
 
-**50 kiểm tra đạt**: 38 kiểm R01–R03 và 12 kiểm R04 V2. Xác minh 156 PNG/19 atlas, rect/hold/alpha/opacity, 18 PNG linh ảnh thực sự thay đổi, 138 PNG còn lại nguyên byte, payload R04 V1 đã khóa, silhouette/lớp, hit/arrival thật, merge vào vùng thân, render trễ và giới hạn pool. Đã xem ảnh ghép Kiếm ở 1×/2×, Lôi tụ, Phong lướt/nhập. Có 30 capture V2, ba bảng R03/R04 và ba bảng trước/sau linh ảnh, render cục bộ từ atlas. Tương tác browser chưa được xác minh.
+**50 kiểm tra đạt**: 38 kiểm R01–R03 và 12 kiểm R04 V2. Xác minh 156 PNG / 19 atlas, rect/hold/alpha/opacity, 18 PNG linh ảnh thực sự thay đổi, 138 PNG còn lại nguyên byte, payload R04 V1 đã khóa, silhouette/lớp, hit/arrival thật, merge vào vùng thân, render trễ và giới hạn pool. Đã xem ảnh ghép Kiếm ở 1×/2×, Lôi tụ, Phong lướt/nhập. Có 30 capture V2, ba bảng R03/R04 và ba bảng trước/sau linh ảnh, render cục bộ từ atlas. Tương tác browser chưa được xác minh.
 
-R04 V2 đã được chủ dự án chấp nhận, khóa bằng ba pack 2.0.1; source và ZIP 2.0.0 giữ nguyên. Chưa có hướng đầy đủ, SFX/icon, crowd LOD, benchmark hoặc runtime. [Bộ Hóa Thần R05](HOA-THAN-KIT.md) đã sản xuất theo mốc kế tiếp, 114 PNG/14 atlas, bản V2 tăng lực, chờ xem motion. Thư viện hiện tại 15 skill, 646 PNG/76 atlas.
+R04 V2 đã được chủ dự án chấp nhận, khóa bằng ba pack 2.0.1; source và ZIP 2.0.0 giữ nguyên. Chưa có hướng đầy đủ, SFX/icon, crowd LOD, benchmark hoặc runtime. [Bộ Hóa Thần R05](HOA-THAN-KIT.md) hiện dùng V3, 114 PNG / 14 atlas, đã chấp nhận/khóa pack 3.0.1. Thư viện hiện hành 15 skill, 646 PNG / 76 atlas đã [đóng bàn giao](STARTER-VFX-HANDOFF.md); V1/V2 giữ lịch sử, chưa tích hợp gameplay.
 
 R05 V3 quay về ngọc sáng, khí lụa, sét tím và phù vàng theo ảnh chủ dự án gửi. 58 frame mới / 56 frame giữ nguyên; Phong có tối đa hai tàn ảnh từ vị trí host có timestamp, không tạo actor. Camera feedback mặc định tắt. [Hồ sơ V3](HOA-THAN-KIT.md).

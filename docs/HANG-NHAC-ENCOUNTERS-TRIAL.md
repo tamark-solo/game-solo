@@ -81,7 +81,7 @@ AI không đi trong windup/recovery. Người chơi có thể lùi khỏi cự l
 
 Ở baseline đầu map, hai Kiếm trúng = 60 damage, hoặc sáu đòn thường trúng = 60; đây là đối chiếu số học, không phải thời gian hạ đã đo. Trong HN10 tại sức mạnh 12, hai Kiếm =72, năm đòn thường =60; không tăng HP E01 riêng để phủ nhận tiến bộ của người chơi.
 
-HN05 bản đầu đề xuất lần đối luyện cá nhân được kích hoạt trên tuyến ngoại vi, trở về khu chung sau kết quả. Quyền tài nguyên nhiệm vụ theo hồ sơ, người ngoài không kết thúc trận thay mình. Đây là lựa chọn phiên nhỏ để kiểm lát A; nội dung combat chung/farm sau đó cần threat/credit/leash/loot riêng, không suy rằng mọi encounter MMORPG đều cá nhân.
+HN05 bản đầu đề xuất lần đối luyện cá nhân được kích hoạt trên tuyến ngoại vi, trở về khu chung sau kết quả. Chủ dự án chốt ngày 08/10/2026 rằng ngoại vi/farm là scene riêng nối khu môn phái; cấu trúc scene này không tự chốt mọi encounter là phiên cá nhân. Quyền tài nguyên nhiệm vụ theo hồ sơ, người ngoài không kết thúc trận thay mình. Đây là lựa chọn phiên nhỏ để kiểm lát A; nội dung combat chung/farm sau đó cần threat/credit/leash/loot riêng, không suy rằng mọi encounter MMORPG đều cá nhân.
 
 ## 6. HN-E02 — đối luyện thi triển
 
@@ -239,4 +239,4 @@ Thu thập điểm bị hạ theo đòn, thời gian pha, số miss, linh lực,
 
 Đánh giá tạo hình/danh tính đối thủ chuyển thể, bố cục arena/collider, warning và đường né tại góc, nhịp boss A/B, phạm vi checkpoint/reset/pause 30 giây, input/cast của người chơi và khả năng đọc trên viewport nhỏ. Kỹ thuật cần hợp đồng trạng thái phiên/tick/resolve/lưu/migration; ART cần kiểm kê sprite/telegraph/impact/SFX/pose cả ba và enemy.
 
-GD06/GD10/GD09 có bản encounter cơ sở tại đây; chưa hoàn tất cân bằng/triển khai. Lát A ưu tiên E01 + HN01–HN05, lát B bổ sung E02/E03/HN10; không sản xuất toàn bộ nội dung cao hơn để kiểm trận đầu.
+GD06/GD10/GD09 có bản encounter cơ sở tại đây; chưa hoàn tất cân bằng/triển khai. Khi chuyển sang gameplay, đề xuất kiểm lát A bằng E01 + HN01–HN05 rồi lát B bổ sung E02/E03/HN10; phạm vi cụ thể cần duyệt và chơi thử. Ưu tiên vẫn là map trước vận hành gameplay theo GDD; ART cũ đã xóa, đang chờ kế hoạch map mới. Không tự mở combat hoặc toàn bộ encounter vì hồ sơ này đã có.

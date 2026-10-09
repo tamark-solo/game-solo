@@ -1,12 +1,27 @@
-# Bộ thành phần UI — MVP A
+# Bộ thành phần UI — tham chiếu và yêu cầu biên tập
 
-> **Bản v0.6 dùng tham chiếu bố cục/thành phần.** Hướng online/đệ tử riêng đã xác nhận; nội dung về Vương Lâm điều khiển, save cục bộ, nhập JSON và một tab tự ghi cần thay theo [ONLINE-DIRECTION.md](ONLINE-DIRECTION.md). Các thành phần tài khoản/Đồng môn chưa được vẽ; [tạo hình nhân vật v1](design/characters/index.html) đã có.
+> **Chuẩn hiện hành [GDD 0.28](GDD.md):** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, có sẵn cả ba thuật R01, Hằng Nhạc qua Ngưng Khí và phân hóa từ hành trình Trúc Cơ. Vai đệ tử riêng/bộ ba chỉ là NPC đã bị thay. [Trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [tu tiên](CULTIVATION-SYSTEM.md) và [online](ONLINE-DIRECTION.md) xác định ngữ nghĩa cần dùng khi biên tập UI mới.
+
+> **Các mục 1–5 giữ bộ thành phần/bản vẽ idle v0.6 để tham khảo:** điều hướng năm khu, E01–E08, import client, 480 tu vi/8 giờ và kết thúc tầng 1 không là UX hiện hành. C14 ở mục 6 nêu cách dùng chân dung theo vai chơi mới; không nâng trạng thái duyệt ART hoặc xác nhận hội thoại đã tích hợp.
 
 **Phiên bản:** 0.3, ngày 07/10/2026.  
-**Trạng thái:** đặc tả thiết kế; bản phác SVG là hình tĩnh để xem bố cục.  
+**Trạng thái:** bộ bản phác lịch sử và yêu cầu biên tập; SVG là hình tĩnh, chưa là bộ UI online hoàn chỉnh.\
 **Tham chiếu:** [UX](UX-MVP-A.md), [chi tiết màn hình/trạng thái](UX-SCREENS-AND-STATES.md), [ART](ART-DIRECTION.md), [hệ thống](MVP-A-SPEC.md), [token](design/ui-tokens.json), [thư viện bản phác](design/README.md).
 
-## 1. Các thành phần dùng lại
+## 0. Mapping thành phần sang trải nghiệm hiện hành
+
+| Nhóm | Điều cần giữ/biên tập |
+| --- | --- |
+| Chọn nhân vật | Cả ba từ đầu; danh tính/trạng thái riêng; không dùng hai mẫu đệ tử làm lựa chọn chính |
+| Mục tiêu và điều kiện | Nhiệm vụ HN, bình cảnh, phần thiếu và thao tác chủ động; không gán E08 là kết thúc Hằng Nhạc |
+| Tài nguyên/hoạt động | Tách tu vi khỏi linh lực; nhãn hồi phục Tư Đồ Nam; sản lượng/cap mới là đề xuất |
+| Thế giới/thuật | Bộ R01 sẵn có, cooldown/linh lực/cast/hit/miss; input/HUD và mobile còn cần đặc tả |
+| Hành trình/hồ sơ | Nội dung theo người đã chọn và nguồn nguyên tác/chuyển thể; châu chỉ thuộc tuyến Vương Lâm |
+| Lưu/kết nối | Máy chủ xác nhận tiến trình; không dùng C12 import client để cấp quyền/tài nguyên |
+
+Màu/chữ/nút và cách giải thích phần thiếu có thể được dùng làm tham chiếu; ngữ nghĩa, bố cục và tương tác cần kiểm chứng trong UX/prototype mới. Ưu tiên sản xuất vẫn là map trước vận hành gameplay.
+
+## 1. Các thành phần trong bộ idle lịch sử
 
 | ID | Thành phần | Nội dung/trạng thái bắt buộc | Quy tắc tương tác |
 | --- | --- | --- | --- |
@@ -74,18 +89,18 @@ Fixture trong [mockup-fixtures.json](design/mockup-fixtures.json) ghi trạng th
 - Đã có bản vẽ C01/C03/C07/C08/C09/C10 cho thiếu đầu vào, đầy kho, đủ luyện thử, dừng, đọc tiếp/lịch sử, hình châu, offline, lỗi và quyền chơi.
 - C11/C12/C13 bổ sung thiết lập đọc, so sánh bản lưu và kết quả cuối A. Luồng và nhãn hành động chi tiết nằm trong [UX-SCREENS-AND-STATES](UX-SCREENS-AND-STATES.md).
 - Bảng trạng thái phục vụ duyệt từng thành phần; giao diện chơi chỉ hiện trạng thái phù hợp tại thời điểm đó.
-- Bản phác đủ để bắt đầu ghép UI vào prototype. Màn vào game/hồ sơ có đặc tả trong UX; bản vẽ riêng có thể bổ sung nếu cần duyệt cách trình bày.
+- Bộ bản phác đủ tham khảo bố cục idle; trước khi ghép UI hiện hành cần biên tập màn chọn ba người, HUD/thế giới, tu tiên và lưu máy chủ theo mapping mục 0.
 - Chữ 22 px, reflow, focus, thao tác bàn phím, tải lại, quyền chơi và hành vi lỗi cần kiểm chứng trong giao diện thật.
 
 Kiểm tra hình tĩnh và dữ liệu thiết kế không thay cho chơi thử. Các nguồn hình game vẫn theo ngân sách A và trạng thái sản xuất trong catalog.
 
-## 6. Chân dung NPC truyện — C14
+## 6. Chân dung nhân vật — C14 theo vai hiện hành
 
 [Ba chân dung UI](design/characters/core-ui-v1/index.html) là gói thử đầu: 512 px lưu ART, 160 px hội thoại, 64 px danh sách; hình mới chờ đánh giá. Có alpha, PNG/master và WebP giao web; [manifest](design/characters/core-ui-v1/manifest.json) ghi trang phục/mốc.
 
 - Hội thoại: ảnh 160 × 160 cạnh tên nhân vật và lời thoại; màn nhỏ có thể xếp ảnh/tên phía trên, không thu nhỏ chữ để giữ ảnh.
 - Danh sách: thumbnail 64 × 64 với tên/nhãn vai trò. Giữ toàn khung vuông để không cắt tóc; chưa dùng mask tròn.
-- Vương Lâm là NPC truyện, người chơi dùng tên/portrait đệ tử riêng. Chọn hình đúng trang phục của cảnh: bản xám không thay bản đỏ/đồ thường.
-- Tư Đồ Nam crop đầu/vai theo nhận diện linh thể đứng; Lý Mộ Uyển áo tím dùng trong arc tương ứng. File ART không tự mở hồ sơ trước mốc.
+- Vương Lâm, Tư Đồ Nam và Lý Mộ Uyển đều là lựa chọn chơi từ đầu. UI đang điều khiển dùng đúng danh tính/trạng thái người đã chọn; nhiều tài khoản chọn cùng người vẫn có ID/biệt danh và tiến trình riêng.
+- Portrait/cảnh truyện dùng đúng trang phục và trạng thái nguồn: bản xám không thay bản đỏ/đồ thường; Tư Đồ Nam giữ nhận diện linh thể; Lý Mộ Uyển dùng biến thể phù hợp cảnh. Nguồn ART hoặc thời điểm xuất hiện trong tuyến nguyên tác không là cổng khóa lựa chọn gameplay.
 - Tên vẫn có mặt khi hình chưa tải/thiếu; trạng thái chưa mở dùng hình trống theo luật nội dung.
 - [Trang xem](design/characters/core-ui-v1/index.html) có nền giấy/tối và ví dụ chọn nhân vật để đối chiếu. Đây là thiết kế thành phần, chưa là hội thoại online đã tích hợp.

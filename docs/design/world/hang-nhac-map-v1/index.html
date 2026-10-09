@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hằng Nhạc · Map đầy đủ để thiết kế level</title><link rel="stylesheet" href="map.css"><script type="module" src="map.js"></script></head>
+<body><main>
+<header><p class="eyebrow">HẰNG NHẠC · MAP ĐẦY ĐỦ V1</p><h1>Hằng Nhạc đã lưu · sẵn sàng triển khai GDD</h1><p>Cảnh môn phái đầy đủ công trình, sân và đường nối. Nhân vật gốc là lớp riêng: frame 64 × 96, chân (32,88), tỷ lệ 1×.</p></header>
+<section class="toolbar" aria-label="Điều khiển bản đồ">
+<label>Nhân vật <select id="actor"><option value="wanglin">Vương Lâm</option><option value="situ">Tư Đồ Nam</option><option value="muwan">Lý Mộ Uyển</option></select></label>
+<button id="native">Cạnh nhân vật · 1×</button><button id="fit">Toàn cảnh</button><button id="zoom-out" aria-label="Thu nhỏ">−</button><button id="zoom-in" aria-label="Phóng lớn">+</button>
+<label><input id="zones" type="checkbox"> Mốc khu vực</label><label><input id="ruler" type="checkbox"> Thước body 80 px</label><label><input id="all-actors" type="checkbox"> So cả ba</label><label><input id="follow" type="checkbox" checked> Camera theo người</label>
+</section>
+<p id="status" role="status">Đang tải bản đồ…</p>
+<section class="map-host"><div class="map-caption"><span id="camera-label">Camera 1×</span><span>Kéo để xem · bấm đặt người · WASD/mũi tên khi chọn khung</span></div><canvas id="map" tabindex="0" aria-label="Bản đồ Hằng Nhạc và nhân vật để đối chiếu tỷ lệ"></canvas></section>
+<p class="note">Di chuyển ở đây chỉ để xem camera và tỷ lệ, trang xem không áp dụng vùng chặn. Bản lưu Editor đã có 9 vùng chặn. Nhà, mái và cây đang nằm trong một ảnh. Bạn vẽ vùng đi/chặn trong Editor; phần che người sẽ được tách ở đợt asset sau.</p>
+<section class="columns"><div><h2>Tám khu theo GDD</h2><div id="zone-list" class="buttons"></div><p>Môn phái là khu sinh hoạt. Lối ngoại vi nối map farm riêng; cổng khảo nghiệm vào phiên riêng; xuất hành là lối khác sau nhập môn.</p></div><div><h2>Kiểm tỷ lệ cạnh công trình</h2><div id="review-list" class="buttons"></div><p>Body người khoảng 80–82 px; camera 1× giữ cỡ thật. Mốc khu vực và điểm xem là hướng dẫn hình ảnh, chưa định nghĩa portal hoặc collider.</p></div></section>
+<section><h2>Bản owner đã lưu</h2><p>Đã lưu 9 vùng chặn có hiệu lực và Spawn tại sân trung tâm. Kiểm dữ liệu: 0 lỗi, 0 lưu ý. Dùng Test map trong Editor để kiểm va chạm.</p><p><a href="editor-project.json" download>Dự án có vùng chặn</a> · <a href="owner-navigation/runtime-project.json" download>Runtime export</a> · <a href="owner-navigation/navigation.json" download>Navigation</a> · <a href="map-web-access-v5-clean-v1.webp" download>Ảnh WebP</a> · <a href="map-master-access-v5-clean-v1.png" download>PNG master</a></p><p>Nền đã dùng trong dự án owner là bản access-v5 đã xóa cụm cây/bồn lỗi. Các bản map thử cũ đã dọn; nguồn sáu khu và prompt giữ để sản xuất tiếp. <a href="../../../HANG-NHAC-IMPLEMENTATION-PLAN.md">Kế hoạch triển khai theo GDD</a>.</p><p id="delivery"></p></section>
+<footer><a href="README.md">Hướng dẫn và giới hạn</a> · <a href="map.json">Metadata</a> · <a href="detail-c-v4/regions.json">Prompt các khu C</a> · <a href="../../../GDD.md">GDD</a></footer>
+</main></body></html>

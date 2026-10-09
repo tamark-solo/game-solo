@@ -1,6 +1,6 @@
 # Định hướng MMORPG tu luyện có cơ chế idle
 
-> **Archived reference:** current gameplay scope is [RPG-A](MVP-RPG-A.md), with the [new backlog](MVP-BACKLOG.md).
+> **Hồ sơ lịch sử — không phải luật hiện hành.** Giữ mô hình, số liệu và mốc phát triển tại thời điểm nguồn. Thiết kế mới: [GDD 0.28](GDD.md), [Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md) và [trạng thái dự án](PROJECT-STATUS.md).
 
 **Phiên bản:** 0.7, ngày 07/10/2026.  
 **Người phát triển đã xác nhận:** MMORPG có idle, đệ tử riêng, khu môn phái đi lại; nhân vật pixel art trên nền stylized 2D, góc top-down ba phần tư.  

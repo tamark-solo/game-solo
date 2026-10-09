@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {newProject,newLevel,uid,editorWalkable,moveInEditor,portalAt,parseProject,runtimeLevel,exportEditorLevel,mergeEditorLevel,type EditorRegion} from '../shared/map-editor';
+import {newProject,newLevel,uid,editorWalkable,regionActivity,regionsOnDisabledLayers,enableRegionLayers,activeRegions,moveInEditor,portalAt,parseProject,runtimeLevel,exportEditorLevel,mergeEditorLevel,type EditorRegion} from '../shared/map-editor';
 const rectangle=(level:ReturnType<typeof newLevel>,kind:EditorRegion['kind'],x:number,y:number,w:number,h:number):EditorRegion=>({id:uid(),name:kind,layerId:level.layers.find(l=>l.kind==='regions')!.id,kind,points:[{x,y},{x:x+w,y},{x:x+w,y:y+h},{x,y:y+h}],enabled:true,targetLevelId:'',target:null});
 
 test('authored walk regions join at shared edges and blockers keep a foot-radius clearance',()=>{
@@ -31,4 +31,23 @@ test('standalone level export/import preserves inactive editing data without rep
  const p=newProject([]),l=p.levels[0],r=rectangle(l,'block',200,200,120,90);r.enabled=false;l.regions.push(r);
  const file=exportEditorLevel(p,l),merged=mergeEditorLevel(p,JSON.parse(JSON.stringify(file)));
  assert.equal(merged.levels.length,2);assert.equal(merged.id,p.id);assert.notEqual(merged.levels[0].id,merged.levels[1].id);assert.deepEqual(merged.levels[1].regions[0].points,r.points);assert.equal(merged.levels[1].regions[0].enabled,false);assert.deepEqual(p.levels,[l]);
+});
+
+test('PNG and WebP assets roundtrip while remote and executable data URLs stay rejected',()=>{
+ const project=newProject([{id:'ground',name:'Ground',width:3072,height:2048,pivot:{x:0,y:0},parts:[{id:'ground',file:'data:image/webp;base64,UklGRg==',cover:false}]}]);
+ assert.deepEqual(parseProject(JSON.parse(JSON.stringify(project))),project);
+ assert.equal(runtimeLevel(project,project.levels[0]).assets.length,0);
+ for(const file of ['data:image/svg+xml;base64,PHN2Zz4=','data:text/html;base64,PHNjcmlwdD4=','https://example.com/map.webp','javascript:alert(1)','data:image/webp;base64,not-valid!']){
+  const bad=structuredClone(project);bad.assets[0].parts[0].file=file;assert.throws(()=>parseProject(bad));
+ }
+ project.assets[0].parts[0].file='data:image/png;base64,iVBORw==';assert.equal(parseProject(project).assets[0].parts[0].file,project.assets[0].parts[0].file);
+});
+
+
+test('enabled blockers on a disabled layer report their effective state and explicit repair preserves geometry and individual switches',()=>{
+ const l=newLevel(),first=rectangle(l,'block',600,300,50,300),off=rectangle(l,'block',750,300,50,300);off.enabled=false;l.regions=[first,off];const layer=l.layers.find(x=>x.id===first.layerId)!;layer.enabled=false;layer.visible=false;layer.locked=true;
+ const before=structuredClone(l);assert.equal(regionActivity(l,first),'layer-disabled');assert.equal(regionActivity(l,off),'region-disabled');assert.deepEqual(regionsOnDisabledLayers(l),[first]);assert.deepEqual(activeRegions(l),[]);
+ assert.equal(editorWalkable(l,{x:625,y:448}),true);enableRegionLayers(l);assert.equal(regionActivity(l,first),'active');assert.equal(editorWalkable(l,{x:625,y:448}),false);assert.equal(editorWalkable(l,{x:775,y:448}),true);
+ before.layers.find(x=>x.id===layer.id)!.enabled=true;assert.deepEqual(l,before);assert.deepEqual(regionsOnDisabledLayers(l),[]);
+ let m={...l.spawn,direction:'east' as const,moving:false};for(let i=0;i<180;i++)m=moveInEditor(l,m,{x:1,y:0},1/60) as typeof m;assert.ok(m.x<=592&&m.x>=590);assert.equal(m.moving,false);
 });

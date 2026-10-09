@@ -1,6 +1,6 @@
 # Tiến trình tu luyện và phần thưởng Hằng Nhạc
 
-**Phiên bản:** 0.2 · **Ngày:** 08/10/2026 · **Trạng thái:** đề xuất thiết kế/số liệu để đánh giá; chưa triển khai hoặc khóa cân bằng.
+**Phiên bản:** 0.2 · **Ngày:** 08/10/2026 · **Trạng thái:** đề xuất thiết kế/số liệu để đánh giá; chưa khóa cân bằng. [Bản thử HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) đã dùng các giá trị nền 1–3, vật tư HN01, thưởng HN02 và tích lũy online. Các chặng sau, stat mốc cao, pháp khí và offline 30 phút chưa triển khai.
 
 **Tham chiếu:** [GDD 0.28](GDD.md), [trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md), [hệ thống tu tiên](CULTIVATION-SYSTEM.md), [nhân vật](CHARACTERS.md), [backlog](MVP-BACKLOG.md).
 
@@ -38,7 +38,7 @@ Tu vi là giá trị tích lũy dài hạn; linh lực là nguồn dùng trong t
 
 Với Tư Đồ Nam, 15 ngưỡng thử bên dưới là mức **tiến triển hồi phục** dùng để phân bổ độ dài/nội dung; UI chỉ ưu tiên bốn nhãn hồi phục và điều kiện tiếp. Không ghi “Ngưng Khí tầng 15” là cảnh giới truyện của ông hoặc tạo tỉ lệ quy đổi sức mạnh canon. Kiến thức vốn có được giữ, khả năng hiện dùng được theo giới hạn gameplay.
 
-Tầng đạt được và mốc trải nghiệm là hai trạng thái: có thể tích lũy tới tầng 3 nhưng chưa qua HN05, khi đó chưa nhận M02. Khi ngưỡng và nhiệm vụ cùng đủ, chỉ ghi nhận một lần. Đặc tả Hằng Nhạc cần đặt M03 ở HN09 thay vì HN08 theo phân bổ mới này.
+Tầng đạt được và mốc trải nghiệm là hai trạng thái: có thể tích lũy tới tầng 3 nhưng chưa qua HN05, khi đó chưa nhận M02. Khi ngưỡng và nhiệm vụ cùng đủ, chỉ ghi nhận một lần. Đặc tả Hằng Nhạc hiện đồng bộ M03 ở HN09, sau HN08 và bài tích hợp tại ngưỡng 9 đề xuất.
 
 ## 4. Bảng tu vi thử nghiệm
 

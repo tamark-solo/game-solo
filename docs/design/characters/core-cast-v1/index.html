@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Core cast — kiểm pose bộ ba</title>
+<style>
+*{box-sizing:border-box}body{margin:24px;background:#eeeade;color:#183b36;font:15px system-ui}h1{font:30px Georgia}label,button,select{font:inherit}header,p{max-width:1000px}nav{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}select,button{padding:8px;border:1px solid #abb4a0;border-radius:6px;background:#faf9f2;color:inherit}canvas{image-rendering:pixelated;max-width:100%;height:auto;border:1px solid #899589;background:#f9f8ef}#strip{display:flex;gap:8px;overflow:auto;padding:12px 0}#strip canvas{flex:none}#info{font:14px monospace}a{color:#125b65}
+</style>
+<header><h1>Animation thi triển bộ ba</h1><p>Đứng native bên trái, pose thi triển bên phải, cùng điểm chân. ART mới chờ đánh giá hình; frame chạy theo hold 24 FPS. <a href="../../../SKILL-CORE.md">Kiến trúc</a> · <a href="README.md">Nguồn/prompt</a> · <a href="http://127.0.0.1:5173/hang-nhac.html">Thử trong game</a></p></header>
+<nav>
+<label>Nhân vật <select id="actor"><option value="wang">Vương Lâm</option><option value="situ">Tư Đồ Nam</option><option value="li">Lý Mộ Uyển</option></select></label>
+<label>Thuật <select id="skill"><option value="sword">Kiếm Khí</option><option value="thunder">Lôi Ấn</option><option value="wind">Ngự Phong Bộ</option></select></label>
+<label>Hướng <select id="direction"><option value="south">Nam</option><option value="west">Tây</option><option value="east">Đông</option><option value="north">Bắc</option></select></label>
+<label>Cỡ xem <select id="scale"><option>1</option><option selected>3</option></select>×</label>
+<label>Nền <select id="background"><option value="#f9f8ef">Sáng</option><option value="#243236">Tối</option></select></label>
+<button id="pause">Tạm dừng</button><label>Frame <input id="frame" type="range" min="0" max="7" value="0"></label>
+</nav>
+<p id="info">Đang nạp…</p><canvas id="view" width="640" height="330"></canvas><div id="strip"></div>
+<script type="module">
+const byId=id=>document.getElementById(id),controls=['actor','skill','direction','scale'],cache=new Map();
+const loadImage=url=>{if(!cache.has(url))cache.set(url,new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=reject;i.src=url;}));return cache.get(url);};
+const data=await fetch('clips.json').then(r=>r.json()),original={};
+for(const [skill,folder] of Object.entries({sword:'frame-by-frame-r01',thunder:'r01-thunder-v1',wind:'r01-wind-v1'})){
+ const base='../../vfx/'+folder+'/',d=await fetch(base+'clips.json').then(r=>r.json()),s=await fetch(base+'skill.json').then(r=>r.json());
+ original[skill]={...d.clips[s.character.clip],id:s.character.clip,atlas:base+d.clips[s.character.clip].atlas};
+}
+let clip,atlas,native,playing=true,started=performance.now(),sequence=0;
+function paint(canvas,index,scale=1,compare=false){
+ canvas.style.background=byId('background').value;
+ const ctx=canvas.getContext('2d');ctx.clearRect(0,0,canvas.width,canvas.height);ctx.imageSmoothingEnabled=false;
+ const foot=compare?[Math.round(canvas.width*.7),Math.round(98*scale)]:[Math.round(canvas.width/2),Math.round(90*scale)];
+ const r=clip.frames[index].rect||clip.frames[index];
+ if(compare)ctx.drawImage(native,0,0,native.width,native.height,Math.round(canvas.width*.25)-32*scale,foot[1]-88*scale,64*scale,96*scale);
+ const crop=clip.frameCrops?.[index]||{x:0,y:0,w:r.w,h:r.h};
+ ctx.drawImage(atlas,r.x+crop.x,r.y+crop.y,crop.w,crop.h,foot[0]+(crop.x-clip.anchor[0])*scale,foot[1]+(crop.y-clip.anchor[1])*scale,crop.w*scale,crop.h*scale);
+ for(const cut of clip.frameCutouts?.[index]||[])ctx.clearRect(foot[0]+(cut.x-clip.anchor[0])*scale,foot[1]+(cut.y-clip.anchor[1])*scale,cut.w*scale,cut.h*scale);
+ ctx.fillStyle='#ba6639';for(const x of compare?[Math.round(canvas.width*.25),foot[0]]:[foot[0]]){ctx.fillRect(x-4,foot[1],9,1);ctx.fillRect(x,foot[1]-4,1,9);}
+}
+async function select(){
+ const order=++sequence,actor=byId('actor').value,skill=byId('skill').value,direction=byId('direction').value;
+ const id=actor+'-'+skill+'-'+direction,selected=actor==='wang'&&direction==='east'?original[skill]:{...data.clips[id],id};
+ const images=await Promise.all([loadImage(selected.atlas),loadImage('references/'+actor+'-'+direction+'.png')]);if(order!==sequence)return;
+ clip=selected;[atlas,native]=images;started=performance.now();byId('frame').max=clip.frames.length-1;byId('frame').value=0;
+ byId('info').textContent=clip.id+' · canvas '+clip.frameSize.join(' × ')+' · chân '+clip.anchor.join(',')+' · '+clip.frames.length+' pose / '+clip.durations.reduce((s,n)=>s+n,0)+' tick';
+ const scale=Number(byId('scale').value),view=byId('view');view.width=Math.max(320,(clip.frameSize[0]*2+120)*scale);view.height=112*scale;
+ byId('strip').replaceChildren(...clip.frames.map((_,i)=>{const c=document.createElement('canvas');c.width=clip.frameSize[0];c.height=96;c.title='Pose '+(i+1);paint(c,i);return c;}));
+}
+controls.forEach(id=>byId(id).addEventListener('change',()=>void select()));
+byId('background').addEventListener('change',()=>{byId('strip').querySelectorAll('canvas').forEach((c,i)=>paint(c,i));});
+byId('pause').onclick=()=>{playing=!playing;started=performance.now();byId('pause').textContent=playing?'Tạm dừng':'Chạy lại';};
+byId('frame').oninput=()=>{playing=false;byId('pause').textContent='Chạy lại';};
+function frame(now){if(clip){let index=Number(byId('frame').value);if(playing){let tick=Math.floor((now-started)*clip.fps/1000)%clip.durations.reduce((s,n)=>s+n,0);index=0;while(tick>=clip.durations[index])tick-=clip.durations[index++];byId('frame').value=index;}paint(byId('view'),index,Number(byId('scale').value),true);}requestAnimationFrame(frame);}
+await select();requestAnimationFrame(frame);
+</script></html>

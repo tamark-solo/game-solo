@@ -1,13 +1,15 @@
 # Phân công xây map — 08/10/2026
 
-**Reset 08/10/2026:** bộ map/asset cũ đã xóa theo yêu cầu. [Thư viện mới](design/world/map-asset-library/README.md) trống; chưa chốt ART tham chiếu mới. Giữ editor và dữ liệu người phát triển. Xem [biên bản](MAP-ASSETS-RESET.md).
+**Quy trình hiện hành được chủ dự án yêu cầu:** map đầy đủ trước, thiết kế navigation tiếp, asset rời sau. [Map Hằng Nhạc mới](design/world/hang-nhac-map-v1/README.md) dùng một ảnh đủ công trình để chủ dự án có căn cứ vẽ luồng đi/chặn. Concept, nền sạch và ba asset thử vừa tạo đã [xóa](data/hang-nhac-review-reset-2026-10-08.json); không dùng lại nguồn hoặc builder của bộ đó.
 
-Người phát triển chọn **tự ghép map, sắp layer và vẽ vùng hoạt động trong editor của dự án**. Trợ lý sản xuất asset rời theo tham chiếu và xây/sửa công cụ. Không tiếp tục tự thiết kế bố cục/vùng chặn như các bản thử trước.
+Trợ lý được yêu cầu dựng map tổng theo GDD, lấy nhân vật native làm chuẩn tỷ lệ và chuẩn bị ảnh/gói Editor nhẹ. Chủ dự án vẽ/chỉnh vùng đi/chặn, Spawn và cửa nối, kiểm luồng và quyết định footprint. Việc này thay lựa chọn trước là bắt đầu bằng các asset rời rồi tự ghép; không thay quyền sở hữu map đã biên tập.
 
-[Map Editor](MAP-EDITOR.md) là nơi làm việc hiện tại. Gói asset (bộ cũ đã xóa) có PNG native/part, nguồn/prompt, metadata và ZIP. Cây/cổng có frame chung để bớt mask tay; bụi/hoa/đá thấp có thể thành cụm, giữ nguồn chỉnh lại.
+Quy trình: trợ lý tạo map tổng → ghép sprite 64 × 96/chân (32,88) ở camera 1× để kiểm tỷ lệ → bàn giao nền đầy đủ và dự án Editor riêng → chủ dự án tạo vùng đi/chặn và kiểm Test → chốt footprint → trợ lý sản xuất asset cần thiết với cùng tọa độ/pivot và dựng đủ nền phía sau → thay dần phần bake, kiểm thứ tự che người.
 
-Quy trình: người phát triển chọn nhóm/khu và mẫu → trợ lý tạo/chỉnh asset bám chính crop tham chiếu → bàn giao PNG/source/part → người phát triển đặt trong editor, chọn pivot/layer và tự vẽ vùng → Test/lưu/xuất → kiểm map cụ thể. Chất lượng ART và kỹ thuật lưu riêng; đồng ý cách làm không tự duyệt mọi PNG.
+Nhà/cây/cổng cần phần che sẽ dùng alpha đúng mép và các part có canvas/pivot chung. Không lấy polygon gameplay làm mask ART. Cụm thấp có thể gộp khi cùng quan hệ trước/sau. Giữ prompt/nguồn/metadata và đánh giá mỹ thuật riêng với kiểm kỹ thuật.
 
-Dữ liệu trong `docs/data/authored-maps/` thuộc bố cục do người phát triển biên tập. Khi sửa engine/editor, dùng fixture/test storage riêng; không sửa hoặc thay các map đó để né lỗi công cụ. Nếu người phát triển yêu cầu chỉnh chính map, làm trong đúng phạm vi yêu cầu.
+Dữ liệu trong `docs/data/authored-maps/` và nháp trình duyệt thuộc chủ dự án. Khi phát triển công cụ hoặc kiểm nhập map mới, dùng profile/storage test riêng; không ghi đè map của chủ dự án. Gói map mới là file bàn giao, không tự nhập vào browser Editor đang mở.
 
-MP01–MP07 và MAP03 cũ giữ lịch sử về tham chiếu/tỷ lệ/lỗi. Ưu tiên hiện tại là công cụ và thư viện; gameplay/online và chân dung tiếp tục sau map. Không tự quay về sinh một map ghép mới thay phần việc người phát triển đã chọn làm.
+Hằng Nhạc là hub sinh hoạt/tu luyện/luyện thuật/chuẩn bị. Farm ngoại vi và khảo nghiệm thuộc scene riêng; lối farm không đồng nhất với xuất hành HN12. Chưa mở nhiệm vụ/combat/loot/server hoặc chân dung UI trong đợt này.
+
+Xem [GDD](GDD.md), [quy tắc xây map](MAP-BUILDING-GUIDE.md), [Map Editor](MAP-EDITOR.md), [Level Design](MAP-LEVEL-DESIGN.md) và [reset](MAP-ASSETS-RESET.md). MP01–MP07/MAP03, ART Hằng Nhạc v1/v2/v3 và các walk study trước đều đã dừng; không khôi phục từ lịch sử duyệt.
