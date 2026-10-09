@@ -1,4 +1,4 @@
-import type { Position } from './world.ts';
+import type { Position } from './world/types';
 
 export interface RegionSpline { anchors: Position[]; smoothness: number }
 export const MAX_SPLINE_ANCHORS = 64;

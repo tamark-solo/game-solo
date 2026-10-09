@@ -1,7 +1,7 @@
 import { SKILL_DEFINITIONS } from './definitions';
 import type { SkillEvent } from './contracts';
 import { R01_IDS, type SkillId } from '../profiles';
-import type { Direction, Position } from '../world';
+import type { Direction, Position } from '../world/types';
 
 export interface ClipRect {x:number;y:number;w:number;h:number}
 export interface SkillClip {

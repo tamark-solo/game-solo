@@ -4,7 +4,7 @@ import type { SkillDefinition } from './definitions';
 import { commandKey, cooldownField } from './commands';
 import { clearPath } from './movement';
 import type { CombatActor, CastCommand, CastResult, ActiveCast, Receipt, TrainingTarget, Projectile, SkillEvent } from './contracts';
-import type { Input, Position } from '../world';
+import type { Input, Position } from '../world/types';
 import { hangNhacWalkable } from '../hang-nhac';
 import { normalizedAim, resolveSkillAim } from './aim';
 

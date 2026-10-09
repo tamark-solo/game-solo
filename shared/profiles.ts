@@ -1,5 +1,5 @@
 import { HANG_NHAC, HANG_NHAC_AVATARS } from './hang-nhac';
-import type { Direction } from './world';
+import type { Direction } from './world/types';
 import { initialSectProgress, type SectProgress } from './sect';
 
 export type AvatarId = typeof HANG_NHAC_AVATARS[number];

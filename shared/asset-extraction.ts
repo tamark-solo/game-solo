@@ -1,4 +1,4 @@
-import type { Position } from './world.ts';
+import type { Position } from './world/types';
 import type { EditorAsset, EditorObject } from './map-editor.ts';
 import { sampleSpline } from './region-spline.ts';
 

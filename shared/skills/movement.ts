@@ -1,5 +1,6 @@
 import { HANG_NHAC, hangNhacWalkable } from '../hang-nhac';
-import { moveUsingCollision, type Position, type Direction } from '../world';
+import { moveUsingCollision } from '../world/movement';
+import { type Position, type Direction } from '../world/types';
 import type { R01MotionState } from './contracts';
 
 export function applyR01Movement(state: R01MotionState, command: { moveX: number; moveY: number }, dt: number): void {

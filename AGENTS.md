@@ -8,7 +8,7 @@
 
 **Hướng thuật 09/10:** WASD/mũi tên/mobile đổi hướng Kiếm/Phong, dừng giữ hướng; chạm map ngắm riêng đến khi đổi input đi. Lôi quay về mục tiêu trên server lúc nhận cast. `SkillAim` tách ý định input khỏi `castAimX/Y` đã xác nhận; `inputSeq` nối cast vào tick di chuyển để không tự hủy khi nhấn cùng frame. Room giới hạn/hết hạn lệnh chờ, xóa khi drop/leave; giữ khóa receipt cũ. Xem `docs/SKILL-CORE.md`; khi sửa hướng/input chạy `test:skill-aim`, hồi quy R01 và NPC/reload phù hợp, chỉ dùng fixture riêng.
 
-**Crop sprite 09/10:** 108 frame cast mới chứa mảnh hàng/cột bên cạnh do chia đều sheet. `frameCrops/frameCutouts` cục bộ mỗi frame + `client/src/sprite-frame.ts` giới hạn geometry/UV cho thân và bóng Phong, giữ canvas/anchor/bitmap gốc. Sprite phải có geometry riêng; không sửa quad mặc định dùng chung. Khi đổi PNG/trích source, tạo lại metadata bằng `build-core-cast-crops.mjs` và xem crop; khi sửa renderer/presentation chạy `test:skill-body`, `test:skill-vfx`, hồi quy 36 cast và NPC/reload phù hợp. Không tái vẽ hoặc sửa gameplay để che lỗi crop.
+**Crop sprite 09/10:** 108 frame cast mới chứa mảnh hàng/cột bên cạnh do chia đều sheet. `frameCrops/frameCutouts` cục bộ mỗi frame + `client/src/render/sprite-frame.ts` giới hạn geometry/UV cho thân và bóng Phong, giữ canvas/anchor/bitmap gốc. Sprite phải có geometry riêng; không sửa quad mặc định dùng chung. Khi đổi PNG/trích source, tạo lại metadata bằng `build-core-cast-crops.mjs` và xem crop; khi sửa renderer/presentation chạy `test:skill-body`, `test:skill-vfx`, hồi quy 36 cast và NPC/reload phù hợp. Không tái vẽ hoặc sửa gameplay để che lỗi crop.
 
 Trước khi sửa ART môi trường, layer, thứ tự vẽ, camera, va chạm, đường đi hoặc quy trình xuất asset, đọc:
 

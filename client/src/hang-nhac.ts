@@ -1,10 +1,11 @@
 import './hang-nhac.css';
-import { AnimationPlayer, type ActorDefinition } from './atlas';
-import { PreviewRenderer, type RenderActor } from './renderer';
-import { NetworkSession } from './network';
-import { INPUT_HZ } from '../../shared/netcode';
+import { AnimationPlayer } from './assets/animation';
+import { type ActorDefinition } from './assets/atlas';
+import { PreviewRenderer, type RenderActor } from './render/renderer';
+import { NetworkSession } from './net/session';
+import { INPUT_HZ } from '@shared/protocol/constants';
 import { HANG_NHAC, HANG_NHAC_ROOM, HANG_NHAC_AVATARS, moveInHangNhac, hangNhacWalkable } from '../../shared/hang-nhac';
-import type { Input, Motion } from '../../shared/world';
+import type { Input, Motion } from '@shared/world/types';
 import * as THREE from 'three';
 import { ProfileSession } from './profiles';
 import { CHARACTER_INFO, isAvatarId, type AvatarId } from '../../shared/profiles';

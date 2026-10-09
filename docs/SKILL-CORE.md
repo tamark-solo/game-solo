@@ -17,8 +17,8 @@
 | `client/src/skills/aim.ts` | Ưu tiên hướng di chuyển/ngắm, giữ hướng khi dừng, reset theo hồ sơ | Đổi hướng cast đã được server nhận |
 | `assets.ts` | Catalog, tải atlas theo avatar, kiểm kích thước, alpha mask, lỗi tải | Luật skill |
 | `three-presentation.ts` | Descriptor → sprite, UV, pool FX, marker luyện | Physics |
-| `client/src/sprite-frame.ts` | Quad riêng, UV và vùng vẽ hợp lệ của frame; dùng chung cho thân/FX/bóng | Timing, damage, sửa bitmap ART |
-| `client/src/renderer.ts` | Pose ưu tiên hơn locomotion, cùng điểm chân, depth/occlusion | Khi nào skill trúng |
+| `client/src/render/sprite-frame.ts` | Quad riêng, UV và vùng vẽ hợp lệ của frame; dùng chung cho thân/FX/bóng | Timing, damage, sửa bitmap ART |
+| `client/src/render/renderer.ts` | Pose ưu tiên hơn locomotion, cùng điểm chân, depth/occlusion | Khi nào skill trúng |
 | `server/src/HangNhacRoom.ts` | Quyền skill, phiên, schema sync, lưu và vận hành engine | Số frame ART |
 
 `shared/r01.ts` và `client/src/r01-presentation.ts` là facade tương thích cho code/test cũ. Không thêm mechanic hoặc render vào facade.

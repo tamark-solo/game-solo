@@ -1,6 +1,6 @@
 import { hangNhacWalkable } from './hang-nhac';
 import type { AvatarId, CharacterProfile } from './profiles';
-import type { Position } from './world';
+import type { Position } from './world/types';
 
 // Runtime interaction points on owner-authored walkable ground, not new map geometry.
 export const SECT_STATIONS = [

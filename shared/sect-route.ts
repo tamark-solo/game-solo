@@ -1,6 +1,6 @@
 import { HANG_NHAC, hangNhacWalkable } from './hang-nhac';
 import { clearSectPath } from './sect';
-import type { Position } from './world';
+import type { Position } from './world/types';
 
 // Hints only: the player still walks, and the server still applies owner collision.
 const CELL=16, width=Math.ceil(HANG_NHAC.world.width/CELL),height=Math.ceil(HANG_NHAC.world.height/CELL);

@@ -11,7 +11,8 @@ export async function waitFor(predicate, description, timeout = 12000) {
   throw new Error(`Timeout: ${description}`);
 }
 export async function startService(args, url, env = {}) {
-  const child = spawn(process.execPath, args, { cwd: root, env: { ...process.env, ...env }, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
+  // Plain logs keep readiness markers matchable; Windows tools colorize piped output by default.
+  const child = spawn(process.execPath, args, { cwd: root, env: { ...process.env, NO_COLOR: '1', ...env }, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
   let output = '';
   child.stdout.on('data', data => { output += data.toString(); });
   child.stderr.on('data', data => { output += data.toString(); });

@@ -1,7 +1,8 @@
 import { SKILL_DEFINITIONS as skills, type SkillDefinition } from './definitions';
 import type { ActiveCast, CombatActor, Projectile, SkillEvent, TrainingTarget } from './contracts';
-import type { Position } from '../world';
-import { moveUsingCollision, type Direction } from '../world';
+import type { Position } from '../world/types';
+import { moveUsingCollision } from '../world/movement';
+import { type Direction } from '../world/types';
 import { hangNhacWalkable } from '../hang-nhac';
 
 interface Validation {actor:CombatActor;dx:number;dy:number;target?:TrainingTarget;definition:SkillDefinition;walkable:typeof hangNhacWalkable;clearPath:(a:Position,b:Position)=>boolean}

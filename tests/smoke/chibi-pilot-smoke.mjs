@@ -1,0 +1,43 @@
+import assert from 'node:assert/strict';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { chromium } from 'playwright';
+import { startService } from '../support/services.mjs';
+const url='http://127.0.0.1:5191';
+const service=await startService(['node_modules/vite/bin/vite.js','--config','vite.config.ts','--port','5191'],url);
+let browser;const errors=[];
+try{
+ browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
+ const page=await browser.newPage({viewport:{width:1440,height:1100}});
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(url+'/chibi-pilot.html');await page.waitForFunction(()=>typeof window.__chibiPilotDiagnostics==='function');
+ const initial=await page.evaluate(()=>window.__chibiPilotDiagnostics());
+ assert.equal(initial.nativeFrames,5);assert.deepEqual(initial.availableDirections,['east']);assert.deepEqual(initial.anchors,[[32,88],[32,88]]);
+ await page.locator('#play-pause').click();
+ const shown=new Set();
+ for(let i=0;i<4;i++){shown.add((await page.evaluate(()=>window.__chibiPilotDiagnostics())).actors[1].frame);await page.locator('#next-frame').click();}
+ assert.equal(shown.size,4);
+ assert.equal(await page.locator('#pose-strip canvas').count(),5);
+ await page.locator('#motion-state').selectOption('stand');
+ assert.match((await page.evaluate(()=>window.__chibiPilotDiagnostics())).actors[1].frame,/stand_east$/);
+ await mkdir('artifacts',{recursive:true});await page.screenshot({path:'artifacts/chibi-pilot-inspector.png',fullPage:true});
+ await page.locator('[data-pilot-mode=map]').click();await page.locator('#stage').click();
+ const before=(await page.evaluate(()=>window.__chibiPilotDiagnostics())).actors[1].x;
+ await page.keyboard.down('d');await page.waitForTimeout(600);await page.keyboard.up('d');await page.waitForTimeout(80);
+ const after=(await page.evaluate(()=>window.__chibiPilotDiagnostics())).actors[1];
+ assert.ok(after.x>before+10&&after.x<before+40);assert.equal(after.state,'stand');
+ await page.waitForTimeout(160);assert.ok(Math.abs((await page.evaluate(()=>window.__chibiPilotDiagnostics())).actors[1].x-after.x)<.01);
+ await page.screenshot({path:'artifacts/chibi-pilot-map.png',fullPage:true});
+ const phoneContext=await browser.newContext({viewport:{width:360,height:900},deviceScaleFactor:2,isMobile:true,hasTouch:true});
+ const phone=await phoneContext.newPage();phone.on('pageerror',e=>errors.push(e.message));await phone.goto(url+'/chibi-pilot.html');
+ await phone.waitForFunction(()=>typeof window.__chibiPilotDiagnostics==='function');await phone.locator('[data-pilot-mode=map]').click();
+ assert.ok(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ const phoneBefore=(await phone.evaluate(()=>window.__chibiPilotDiagnostics())).actors[1].x;
+ await phone.locator('#move-east').scrollIntoViewIfNeeded();const rect=await phone.locator('#move-east').boundingBox();const session=await phoneContext.newCDPSession(phone);
+ await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:rect.x+rect.width/2,y:rect.y+rect.height/2}]});await phone.waitForTimeout(400);
+ await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await phone.waitForTimeout(80);
+ assert.ok((await phone.evaluate(()=>window.__chibiPilotDiagnostics())).actors[1].x>phoneBefore+5);
+ await phone.screenshot({path:'artifacts/chibi-pilot-mobile.png',fullPage:true});await session.detach();
+ assert.deepEqual(errors,[]);
+ const result={passed:true,nativeFrames:5,walkingPoses:4,directions:['east'],checks:['shared_three_renderer_loads_partial_asset_explicitly','all_four_poses_and_stand','distance_based_map_motion','stop_keeps_new_standing_proportions','mobile_360_touch_no_overflow'],browserErrors:errors,ownerVisualApproval:'pending_review'};
+ await writeFile('artifacts/chibi-pilot-verification.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+}finally{await browser?.close();service.stop();}

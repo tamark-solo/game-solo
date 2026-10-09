@@ -1,4 +1,4 @@
-import type { Input, Position } from '../world';
+import type { Input, Position } from '../world/types';
 
 export type SkillAimPolicy = 'direction' | 'target';
 

@@ -1,10 +1,12 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { mapEditorApi } from './scripts/map-editor-api.ts';
 
 export default defineConfig({
   plugins: [mapEditorApi()],
   root: 'client',
+  resolve: { alias: { '@shared': fileURLToPath(new URL('./shared', import.meta.url)) } },
   server: { host: '127.0.0.1', port: 5173, strictPort: true },
   preview: { host: '127.0.0.1', port: 4173, strictPort: true },
   build: { outDir: '../dist/client', emptyOutDir: true,

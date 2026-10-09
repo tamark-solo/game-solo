@@ -1,11 +1,12 @@
 import { ServerError, type Client } from 'colyseus';
-import { CourtyardRoom } from './CourtyardRoom';
+import { CourtyardRoom } from './rooms/courtyard/room';
 import { HANG_NHAC, HANG_NHAC_AVATARS, hangNhacSpawn, hangNhacWalkable } from '../../shared/hang-nhac';
-import type { MovementState, MoveInput } from '../../shared/netcode';
+import type { MovementState } from '@shared/world/movement';
+import type { MoveInput } from '@shared/protocol/input';
 import { CHARACTER_INFO, cleanPlayerName, isAvatarId, type CharacterProfile } from '../../shared/profiles';
 import { R01Engine, applyR01Movement, commandKey, readCastCommand, type CombatActor, type CastCommand, type CastResult } from '../../shared/r01';
-import { DIRECTIONS, type Direction, type Input } from '../../shared/world';
-import { ProjectileState, TrainingTargetState, type Disciple } from './state';
+import { DIRECTIONS, type Direction, type Input } from '@shared/world/types';
+import { ProjectileState, TrainingTargetState, type Disciple } from '@shared/protocol/courtyard-state';
 import type { ProfileStore, ProfileLeases } from './profile-store';
 import { CYCLE_PHASE_MS, nearStation, readSectCommand, sectCommandKey, type SectResult } from '../../shared/sect';
 import { advanceCultivation, isPractising, performSectCommand, sectView } from './sect-progress';

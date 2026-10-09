@@ -11,7 +11,7 @@ Client [Hằng Nhạc](HANG-NHAC-RUNTIME.md) vào room `hang_nhac`, điều khi�
 
 State phòng gồm người, cast, projectile và mục tiêu luyện, nằm trong RAM; SQLite lưu riêng vị trí/hướng/map/HP/MP/quyền R01/cooldown/counter và tiến trình HN01–HN02/thổ nạp/vật tư của hồ sơ Hằng Nhạc. [Bước mở đầu môn phái](HANG-NHAC-SECT-RUNTIME.md) dùng lệnh `sect:command`, state riêng `sect:state`, ledger transaction và schema 2 tương thích save cũ. Restart đọc bản lưu, không tiếp tục cast/projectile hoặc tính thời gian vắng mặt. Chưa có đăng nhập sản xuất, HN03–HN12, combat farm hoặc pháp khí. Fixture không token vẫn là phiên tạm và không nhận tiến trình nhiệm vụ.
 
-Room Hằng Nhạc dùng release owner; Editor/client/server gọi cùng phép kiểm polygon trong `shared/navigation.ts`, prediction/server dùng `applyR01Movement` để thêm khóa cast/đường Phong vào bước đi. Nền 3072 × 2048, 9 blocker và Spawn (1616,992) giữ nguyên. Map/trụ fixture cũ vẫn dùng `shared/world.ts`. Người chơi chưa chặn nhau; nhà/mái còn baked. ART cũ đã [xóa](MAP-ASSETS-RESET.md).
+Room Hằng Nhạc dùng release owner; Editor/client/server gọi cùng phép kiểm polygon trong `shared/navigation.ts`, prediction/server dùng `applyR01Movement` để thêm khóa cast/đường Phong vào bước đi. Nền 3072 × 2048, 9 blocker và Spawn (1616,992) giữ nguyên. Map/trụ fixture cũ vẫn dùng `shared/world/map.ts`. Người chơi chưa chặn nhau; nhà/mái còn baked. ART cũ đã [xóa](MAP-ASSETS-RESET.md).
 
 ## 2. Luồng di chuyển
 
@@ -39,7 +39,7 @@ Server là nơi thay đổi state phòng; client gửi yêu cầu, nhận thay �
 | Input | Schema MoveInput gồm moveX/moveY; SDK gửi trên WebSocket reliable; không gửi vị trí/tốc độ. Axis không hữu hạn hoặc ngoài [-1,1] được đổi cả hai về 0 tại server |
 | Thứ tự | SDK quản lý input và ack; server tiêu thụ từng input theo thứ tự. JSON input cũ không còn được dùng để di chuyển |
 | Tính vị trí | Mỗi tick xử lý tối đa một input; tốc độ server 80 px/s, chuẩn hóa đường chéo, dùng collider đất bán kính 8 px |
-| Va chạm | Hằng Nhạc: biên world/9 polygon owner từ cùng release. Fixture: rect trong shared/world.ts. Chia bước không quá 4 px để tránh xuyên vật cản |
+| Va chạm | Hằng Nhạc: biên world/9 polygon owner từ cùng release. Fixture: rect trong shared/world/map.ts. Chia bước không quá 4 px để tránh xuyên vật cản |
 | Nhịp | Fixed tick/input 30 Hz; patch 50 ms; client dùng đúng bước thời gian server cung cấp |
 | Input vắng mặt | Hết input trong hàng đợi thì dừng đi; một tick chỉ áp dụng một input, không cộng tốc độ theo số gói gửi |
 | Giới hạn thử | 20 client/phòng, tối đa 90 message/s/client, payload WebSocket tối đa 8 KiB, buffer 64 input/client |

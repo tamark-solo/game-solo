@@ -10,7 +10,10 @@
     "esModuleInterop": true,
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "types": ["node", "vite/client"]
+    "types": ["node", "vite/client"],
+    "paths": {
+      "@shared/*": ["./shared/*"]
+    }
   },
-  "include": ["client/src", "server/src", "shared", "tests/*.ts", "scripts/build-hang-nhac-runtime.ts", "vite.config.ts"]
+  "include": ["client/src", "server/src", "shared", "tests/**/*.ts", "scripts/*.ts", "vite.config.ts"]
 }
