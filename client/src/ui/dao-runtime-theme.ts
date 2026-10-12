@@ -30,6 +30,7 @@ const TU_DAO_LAYOUT: DaoHotbarLayout = {
 export function initializeDaoRuntimeTheme(shell: HTMLElement): void {
   shell.dataset.daoTheme = 'tu-dao';
   shell.dataset.skin = 'tu-dao';
+  shell.dataset.daoUx = '05';
   shell.style.setProperty('--dao-skill-icon-atlas', `url("${SKILL_ICONS}")`);
   for (const part of MASK_PARTS) {
     shell.style.setProperty(`--mask-${part}`, `url("${ART}/tu-dao/frame-aperture-${part}.svg")`);

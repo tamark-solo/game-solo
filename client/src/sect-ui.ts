@@ -21,7 +21,7 @@ const reasons:Record<string,string>={ distance:'Tiến lại gần người hư�
   lesson_running:'Đang có vùng báo trước; đợi kết quả bài luyện rồi thử lại.',lesson_reward:'Bài đã xác nhận · nhận 80 tích lũy một lần.',
   resource:'Chưa đủ linh lực cho Phong; đợi hồi tự nhiên rồi thử lại.',skill_cooldown:'Phong đang hồi; đợi hết cooldown rồi thử lại.',blocked:'Chưa có khoảng trống hợp lệ cho bài luyện.',
   save:'Chưa lưu được kết quả. Hãy thử lại; phần thưởng chưa cấp.',request_reused:'Mã thao tác đã được dùng cho nội dung khác.',invalid:'Thao tác không hợp lệ.' };
-interface UIOptions { send:(command:SectCommand)=>void; avatar:()=>AvatarId; position:()=>Position; online:()=>boolean; connectionMessage?:()=>string|undefined; mapBackground?:()=>string; clock:()=>number; focus:()=>void; training:()=>void; enter:()=>void;chapter?:()=>void; }
+interface UIOptions { send:(command:SectCommand)=>void; avatar:()=>AvatarId; position:()=>Position; online:()=>boolean; connectionMessage?:()=>string|undefined; mapBackground?:()=>string; clock:()=>number; focus:()=>void; training:()=>void; enter:()=>void;chapter?:(station:StationId)=>void; }
 export class SectUI {
   view?:SectView;
   private dialog=document.getElementById('sect-dialog') as HTMLDialogElement;
@@ -154,7 +154,7 @@ export class SectUI {
     this.title.textContent=s.name;this.body.replaceChildren();this.playerDot=undefined;
     this.dialog.dataset.mode='npc';document.getElementById('sect-category')!.textContent=`HẰNG NHẠC · ${s.area.toLocaleUpperCase('vi-VN')}`;
     this.actions=element('div');this.actions.className='dialog-actions';
-    if(v?.lessons.hn04&&this.options.chapter){const button=element('button','HN05–HN12 / Nguyên liệu / Luyện chế');button.type='button';button.addEventListener('click',()=>{this.dialog.close();this.options.chapter?.();});this.body.append(button);}
+    if(v?.lessons.hn04&&this.options.chapter){const button=element('button',s.id==='preparation'?'Mở bàn luyện chế':s.id==='cultivation'?'Mốc tu luyện & chuẩn bị':'Tiếp tục đạo trình');button.type='button';button.className='sect-chapter-route';button.dataset.chapterRoute=s.id;button.addEventListener('click',()=>{this.dialog.close();this.options.chapter?.(s.id);});this.body.append(button);}
     if(s.id==='guide'){
       this.paragraph(guideText(this.options.avatar()));
       if(!v?.hn01){this.paragraph('HN01 · Nhận hướng dẫn và 2 vật tư hồi phục. Sau đó tới vườn thổ nạp ở phía tây.');this.button('Nhận hướng dẫn nhập môn','accept_intro');}

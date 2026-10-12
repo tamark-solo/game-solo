@@ -64,11 +64,13 @@ function setupWorkbench(){
  }
  function choose(id:string){
   current=m.recipes.find(recipe=>recipe.id===id)!;select.value=id;
+  root.querySelectorAll<HTMLButtonElement>('[data-workbench-recipe]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.workbenchRecipe===id)));
   ids=[...new Set([...Object.keys(current.consume),...Object.keys(current.keep),...Object.keys(current.produce)])];
   fields.innerHTML=`<fieldset class="preview-quantities"><legend>Số lượng trong túi mẫu</legend>${ids.map(id=>`<label class="quantity-row">${icon(id,current.transform?.item===id?current.transform.from:undefined)}<span>${safe(itemName(id))}<small>${current.consume[id]?`Tiêu ${current.consume[id]}`:current.keep[id]?`Giữ ${current.keep[id]}`:'Kết quả nhận thêm'}${current.produce[id]?` · nhận ${current.produce[id]}`:''}</small></span><input type="number" min="0" step="1" max="${Number.MAX_SAFE_INTEGER}" value="0" data-quantity="${safe(id)}" aria-label="Số lượng ${safe(itemName(id))}"></label>`).join('')}${current.transform?'<label class="preview-state">Trạng thái ngọc<select id="preview-jade-state"><option value="raw">Phôi chưa luyện hóa</option><option value="refined">Đã luyện hóa</option></select></label>':''}</fieldset><fieldset class="preview-progress"><legend>Giả định tiến trình</legend>${current.requires.map(key=>`<label><input type="checkbox" data-requirement="${safe(key)}"><span>${safe(unlocks[key]??key)}</span></label>`).join('')}${current.effect?'<label><input type="checkbox" id="preview-sealed"><span>Hộp đã niêm cho chuyến này</span></label>':''}</fieldset>`;
   sourcePreset.hidden=id!=='hn-refine-training-jade';update();
  }
  select.addEventListener('change',()=>choose(select.value));
+ root.querySelectorAll<HTMLButtonElement>('[data-workbench-recipe]').forEach(button=>button.addEventListener('click',()=>choose(button.dataset.workbenchRecipe!)));
  fields.addEventListener('input',update);fields.addEventListener('change',update);fields.addEventListener('submit',event=>event.preventDefault());
  preset.addEventListener('click',()=>{
   fields.querySelectorAll<HTMLInputElement>('input[data-quantity]').forEach(input=>input.value=String((current.consume[input.dataset.quantity!]??0)+(current.keep[input.dataset.quantity!]??0)));
@@ -103,6 +105,15 @@ async function start(){
  root.querySelector('#recipes')!.insertAdjacentHTML('beforeend',`<article id="recipe-workbench" class="recipe-workbench"><div class="workbench-heading"><div><p class="eyebrow">KIỂM TRA NGUYÊN LIỆU & KẾT QUẢ</p><h3>Bàn thử công thức</h3><p>Chỉnh túi mẫu và tiến trình để xem lượng tiêu, món giữ lại và kết quả dự kiến. Mẫu thử không thay đổi hành trang trong game.</p></div><label>Công thức<select id="preview-recipe">${m.recipes.map(r=>`<option value="${r.id}">${safe(labels[r.id])}</option>`).join('')}</select></label></div><div class="preview-actions"><button type="button" id="preview-enough">Mẫu đủ điều kiện</button><button type="button" id="preview-hn-source">Mẫu nguồn HN05–HN08</button><button type="button" id="preview-clear">Xóa mẫu</button></div><div class="preview-layout"><form id="preview-inputs"></form><div id="preview-result" class="preview-result" aria-live="polite" aria-atomic="true"></div></div></article>`);
  root.querySelector('#props h2')!.textContent='Đạo cụ dự phòng';
  root.querySelector('#props .section-copy')!.textContent='Hằng Nhạc đã có các khu và đạo cụ tĩnh trên nền chuẩn. Các mẫu rời dưới đây giữ trong thư viện, dùng khi cần tương tác hoặc thay thế riêng. Khóm dược dành cho EX01. So với người 64 × 96 ở camera 1×; chưa đặt vào map.';
+ const workbench=root.querySelector<HTMLElement>('#recipe-workbench')!;
+ const recipeRail=document.createElement('nav');recipeRail.className='workbench-recipe-rail';recipeRail.setAttribute('aria-label','Sổ công thức mẫu');
+ recipeRail.innerHTML=m.recipes.map(r=>`<button type="button" data-workbench-recipe="${r.id}" aria-pressed="false">${icon(r.transform?.item??Object.keys(r.produce)[0]??'vh-sealed-case',r.transform?.to)}<span>${safe(labels[r.id])}<small>${safe(stages[r.stage])}</small></span></button>`).join('');
+ workbench.querySelector('.preview-layout')!.prepend(recipeRail);
+ root.querySelector('#recipes .recipe-grid')!.before(workbench);
+ root.querySelector('.hero nav')!.insertAdjacentHTML('afterbegin','<a href="#recipe-workbench">Bàn luyện chế</a>');
+ root.querySelector('.hero h1')!.textContent='Tư Vật Các';
+ root.querySelector('.hero>p:not(.eyebrow)')!.textContent='Sổ nguyên liệu và công thức Hằng Nhạc. Thử lượng tiêu và kết quả, hoặc vào game để luyện chế bằng hành trang của bạn.';
+ root.querySelector('.page-footer')!.textContent='Thư viện đối chiếu GDD · ART chờ đánh giá. Hằng Nhạc đã có luyện chế qua server; bàn thử ở đây chỉ dùng túi mẫu và không thay đổi hồ sơ game.';
  setupWorkbench();
  root.querySelector<HTMLButtonElement>('#theme-toggle')!.addEventListener('click',event=>{const button=event.currentTarget as HTMLButtonElement,light=root.dataset.theme!=='light';root.dataset.theme=light?'light':'dark';button.setAttribute('aria-pressed',String(light));button.textContent=light?'Nền tối':'Nền sáng';});
  root.querySelector<HTMLSelectElement>('#stage-filter')!.addEventListener('change',event=>{const stage=(event.target as HTMLSelectElement).value;root.querySelectorAll<HTMLElement>('.item-card,.recipe-card').forEach(card=>card.hidden=stage!=='all'&&card.dataset.stage!==stage);});

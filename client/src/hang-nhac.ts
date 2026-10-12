@@ -36,6 +36,7 @@ import {ChapterPresentation} from './chapter-presentation';
 import chapterMinimapUrl from './chapter-activity-minimap.svg?url';
 import {applyChapterMovement,CHAPTER_WORLD} from '@shared/chapter';
 import './ui/dao-runtime-theme.css';
+import './ui/dao-player-ux.css';
 
 const el = <T extends HTMLElement>(id: string) => document.getElementById(id)! as T;
 const stage = el<HTMLElement>('stage'), avatar = el<HTMLSelectElement>('avatar'), name = el<HTMLInputElement>('player-name');
@@ -82,7 +83,7 @@ const sect = new SectUI({send:command=>{
   online:()=>network.status==='connected'&&!!network.room?.state.players?.get(network.room.sessionId)?.connected,
   connectionMessage:()=>network.status==='connecting'||network.status==='reconnecting'?'Đang kết nối lại sân chung… NPC và thuật sẽ sẵn sàng khi khôi phục xong.':undefined,
   clock:()=>Date.now()+serverOffset,focus:()=>{clearInput();shell.focus();},
-  chapter:()=>chapter.open(),
+  chapter:station=>chapter.openAtStation(station),
   training:()=>skills.practice(),enter:()=>{void enter().catch(error=>entry?.failed(error));}});
 const attached = new WeakSet<object>();
 const network = new NetworkSession(readInput, updateStatus, { roomName: HANG_NHAC_ROOM,
@@ -104,7 +105,7 @@ const network = new NetworkSession(readInput, updateStatus, { roomName: HANG_NHA
 
   } });
 const character=new CharacterSession({room:()=>network.room,online:()=>network.status==='connected',avatar:()=>avatar.value as AvatarId,clock:()=>Date.now()+serverOffset,
-  craft:()=>chapter.open(),
+  craft:()=>chapter.open('crafting'),
   opened:()=>{clearInput();},closed:()=>{clearInput();if(!sect.modal&&!daoHud?.modal)shell.focus();},journal:questId=>{
     clearInput();characterJournalProfile=network.room?.state.players?.get(network.room.sessionId)?.profileId;sect.journal(questId);
   }});
@@ -129,6 +130,7 @@ daoHud=new DaoRuntimeHud(stage,{
   openCharacter:tab=>{if(shell.blocking||sect.modal)return;clearInput();character.open(tab);},
   openJournal:()=>{if(shell.blocking)return;clearInput();sect.journal();},
   openSettings:()=>shell.openMenu(),feedback,focus:()=>{if(!character.panel.modal&&!sect.modal)shell.focus();},
+  openCrafting:()=>{if(shell.blocking||sect.modal)return;chapter.open('crafting');},
   modalChanged:()=>clearInput(),
 });
 daoHud.update({connected:false,map:mapArtSnapshot()});

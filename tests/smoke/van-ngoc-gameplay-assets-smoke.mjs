@@ -60,6 +60,9 @@ try{
  assert.equal(await page.locator('[data-quantity="recovery"]').inputValue(),'7');
  await page.locator('#preview-clear').click();assert.equal(await page.locator('[data-quantity="recovery"]').inputValue(),'0');assert.equal(await result.getAttribute('data-ready'),'false');
  await page.locator('#preview-recipe').selectOption('hn-refine-training-jade');await page.locator('#preview-hn-source').click();await page.locator('[data-requirement="hn-guard-method"]').check();
+ assert.equal(await page.locator('[data-workbench-recipe="hn-refine-training-jade"]').getAttribute('aria-pressed'),'true');
+ await page.locator('[data-workbench-recipe="vh-recipe-ink"]').click();assert.equal(await page.locator('#preview-recipe').inputValue(),'vh-recipe-ink');
+ await page.locator('[data-workbench-recipe="hn-refine-training-jade"]').click();await page.locator('#preview-hn-source').click();await page.locator('[data-requirement="hn-guard-method"]').check();
  await workbench.screenshot({path:resolve(folder,'desktop-workbench.png')});
  assert.deepEqual(await page.evaluate(()=>({local:{...localStorage},session:{...sessionStorage}})),storageBefore);
  checks.push('Six interactive recipe previews: shortages, unlocks, HN remainder, refined state, unique tools, seal/trip rules, recovery and invalid input; no bag/storage mutation');
@@ -74,6 +77,9 @@ try{
  await page.screenshot({path:resolve(folder,'mobile-items.png')});
  await page.locator('#recipes').scrollIntoViewIfNeeded();await page.screenshot({path:resolve(folder,'mobile-recipes.png')});
  await workbench.scrollIntoViewIfNeeded();assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ assert.equal(await page.locator('.workbench-recipe-rail').evaluate(n=>getComputedStyle(n).flexWrap),'nowrap');
+ await page.locator('[data-workbench-recipe="vh-recipe-seal"]').click();assert.equal(await page.locator('#preview-recipe').inputValue(),'vh-recipe-seal');
+ await page.locator('[data-workbench-recipe="hn-refine-training-jade"]').click();await page.locator('#preview-hn-source').click();await page.locator('[data-requirement="hn-guard-method"]').check();
  assert.ok(await page.locator('.quantity-row>span').first().evaluate(span=>span.getBoundingClientRect().width>120));
  assert.ok(await page.locator('.preview-table-scroll').evaluate(element=>element.scrollWidth<=element.clientWidth));
  await workbench.screenshot({path:resolve(folder,'mobile-workbench.png')});checks.push('Recipe workbench works on mobile without page overflow');

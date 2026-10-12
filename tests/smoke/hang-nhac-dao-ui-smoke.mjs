@@ -57,7 +57,8 @@ try {
   assert.equal(initial.name, 'Thanh Ngọc Live');
   assert.equal(await page.locator('#character-name').textContent(), initial.name);
   assert.equal(await page.locator('#game-shell').getAttribute('data-dao-theme'), 'tu-dao');
-  assert.equal(await page.locator('#stage').getAttribute('data-dao-hud'), '04');
+  assert.equal(await page.locator('#stage').getAttribute('data-dao-hud'), '05');
+  assert.equal(await page.locator('#game-shell').getAttribute('data-dao-ux'), '05');
   assert.equal(await page.locator('[data-hotbar-skill]').count(), 3);
   assert.equal(await page.locator('.hotbar-reserved').count(), 7);
   assert.equal(await page.locator('.hotbar-reserved button').count(), 0);
@@ -87,8 +88,24 @@ try {
   assert.doesNotMatch(art.minimap, /concept/);
   assert.equal(art.mapParts, 32); assert.equal(art.coverParts, 10);
   assert.equal(Number(art.hp), initial.hp); assert.equal(Number(art.mp), initial.mp);
+  // Review the new HUD against the owner's current baked ART, after checking
+  // the unchanged default layered release above. Only fixture preferences change.
+  await page.locator('#menu-button').click();
+  await page.locator('#map-art').selectOption('van-ngoc-detail');
+  await page.waitForFunction(() => window.__hangNhacDiagnostics().mapArt?.id === 'van-ngoc-detail' && !document.querySelector('#map-art').disabled);
+  await page.locator('#menu-close').click();
   await shot('desktop-live-hud');
-  checks.push('Real account registration, realm and explicit character creation enter live HUD04 with confirmed identity, resources and current world image');
+  assert.equal(await page.locator('#sect-objective').getAttribute('data-details'), 'compact');
+  assert.equal(await page.locator('#quest-reward').isVisible(), false);
+  await page.locator('#quest-details-toggle').click();
+  assert.equal(await page.locator('#quest-details-toggle').getAttribute('aria-expanded'), 'true');
+  assert.equal(await page.locator('#quest-reward').isVisible(), true);
+  await page.locator('#quest-details-toggle').click();
+  await page.locator('#quest-title').focus(); await page.keyboard.press('Enter');
+  await page.waitForSelector('#sect-dialog[open]'); await page.keyboard.press('Escape');
+  assert.equal(await page.locator('.dao-world-dock .chapter-launch').count(), 1);
+  await page.locator('.dao-world-dock .chapter-launch').click(); await page.waitForSelector('.chapter-dialog[open]'); await page.keyboard.press('Escape');
+  checks.push('Live HUD05 uses confirmed identity and resources; compact quest disclosure, keyboard journal and docked journey launcher work without gameplay commands');
 
   await openSystems();
   assert.equal(await page.locator('.dao-directory-group').count(), 7);
@@ -119,6 +136,13 @@ try {
   await page.locator('#dao-hud-dialog [data-dao-close]').click();
   checks.push('38 shared glyphs, seven groups, accent-insensitive search, maximum five persistent pins, honest unavailable features and blocked gameplay under directory modal');
 
+  await openSystems();await page.locator('.dao-directory-item[data-dao-feature=crafting]').click();
+  await page.waitForSelector('.chapter-dialog[open]');assert.equal(await page.locator('[data-chapter-tab=crafting]').getAttribute('aria-selected'),'true');
+  assert.equal(await page.locator('#dao-hud-dialog').getAttribute('open'),null);
+  const beforeCraftModal=await own();await page.keyboard.down('w');await page.keyboard.press('1');await page.keyboard.press('f');await page.waitForTimeout(250);await page.keyboard.up('w');
+  const afterCraftModal=await own();assert.equal(afterCraftModal.x,beforeCraftModal.x);assert.equal(afterCraftModal.y,beforeCraftModal.y);assert.equal(afterCraftModal.casts,beforeCraftModal.casts);
+  await shot('desktop-crafting');await page.keyboard.press('Escape');checks.push('HUD Luyện chế opens real chapter tab; movement and casts remain blocked under the player workspace');
+
   for (const [feature, tab] of [['character', 'overview'], ['inventory', 'inventory'], ['equipment', 'equipment'], ['cultivation', 'cultivation'], ['spells', 'spells']]) {
     await openSystems();
     await page.locator(`.dao-directory-item[data-dao-feature=${feature}]`).click();
@@ -144,17 +168,17 @@ try {
   await shot('desktop-world-map'); await page.keyboard.press('Escape');
   checks.push('Directory routes to real character tabs, inventory, journal and settings; world map reads position and four current NPCs; reduced motion remains a presentation preference');
 
-  for (const [width, height] of [[1440, 980], [1366, 768], [980, 780], [390, 844], [320, 740], [844, 390]]) {
+  for (const [width, height] of [[1440, 980], [1366, 768], [1280, 720], [980, 780], [390, 844], [320, 740], [844, 390]]) {
     await page.setViewportSize({ width, height });
     await page.waitForTimeout(100);
     const metrics = await page.evaluate(() => {
       const visible = node => { const r = node.getBoundingClientRect(), s = getComputedStyle(node); return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none'; };
       const areas = ['.dao-live-identity', '.dao-live-target', '#sect-objective', '.dao-hud-map', '.dao-main-dock', '.dao-mobile-dock', '.game-hotbar'];
       const rectangles = Object.fromEntries(areas.map(selector => { const node = document.querySelector(selector), r = node.getBoundingClientRect(); return [selector, visible(node) ? { x: r.x, y: r.y, width: r.width, height: r.height, right: r.right, bottom: r.bottom } : null]; }));
-      const controls = [...document.querySelectorAll('.dao-runtime-hud button,#character-open,#quest-toggle,#quest-guide,#interact,#journal,#training,#basic-attack')].filter(visible);
+      const controls = [...document.querySelectorAll('.dao-runtime-hud button,#character-open,#leave,.dao-identity-cultivation,#quest-toggle,#quest-details-toggle,#quest-title,#quest-guide,#interact,#journal,#training,#basic-attack')].filter(visible);
       const obstructed = controls.filter(node => { const r = node.getBoundingClientRect(), hit = document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2); return !hit || !node.contains(hit); }).map(node => node.id || node.dataset.daoFeature || 'systems');
       const small = controls.filter(node => { const r = node.getBoundingClientRect(); return r.width < 43.9 || r.height < 43.9; }).map(node => node.id || node.dataset.daoFeature);
-      const blankQuestLabels = [...document.querySelectorAll('.quest-actions button')].filter(node => {
+      const blankQuestLabels = [...document.querySelectorAll('.quest-actions button')].filter(visible).filter(node => {
         const text = getComputedStyle(node);
         if (node.textContent.trim() && parseFloat(text.fontSize) >= 10) return false;
         return !['::before', '::after'].some(pseudo => {
@@ -170,9 +194,13 @@ try {
     assert.deepEqual(metrics.obstructed, [], `${width}x${height}: ${JSON.stringify(metrics)}`);
     assert.deepEqual(metrics.small, [], `${width}x${height}: ${JSON.stringify(metrics)}`);
     assert.deepEqual(metrics.blankQuestLabels, [], `${width}x${height}: quest actions must have readable labels`);
+    if (width >= 1366) assert.ok(metrics.rectangles['.dao-main-dock'].x >= metrics.rectangles['.game-hotbar'].right - .1, `${width}x${height}: function seals must leave the native orb frame clear`);
     for (const id of ['quest-guide', 'interact', 'journal']) assert.match(await page.locator(`#${id}`).ariaSnapshot(), /button "[^"]*\S[^"]*"/, `${width}x${height}: ${id} must have an accessible name`);
     layouts.push({ width, height, ...metrics });
-    if (width === 390 || width === 844) await shot(`hud-${width}x${height}`);
+    await shot(`hud-${width}x${height}`);
+    if (height < 521) {
+      await page.locator('#quest-details-toggle').click(); await page.waitForSelector('#sect-dialog[open]'); await page.keyboard.press('Escape');
+    }
     await openSystems();
     const modal = await page.locator('#dao-hud-dialog').boundingBox();
     assert.ok(modal.x >= 0 && modal.y >= 0 && modal.x + modal.width <= width + 1 && modal.y + modal.height <= height + 1);
@@ -193,7 +221,7 @@ try {
   assert.equal(await page.locator('.dao-main-dock [data-dao-feature=quest]').count(), 1);
   assert.equal(await hash(ownerPath), ownerBefore);
   assert.deepEqual(errors, []);
-  checks.push('Six desktop/mobile/landscape HUD layouts keep controls reachable and within viewport, minimum 44px targets, modal search usable, pins and profile retained after reload; owner map bytes unchanged');
+  checks.push('Seven desktop/mobile/landscape HUD layouts keep controls reachable and within viewport, minimum 44px targets, native orb frame clear, modal search usable, pins and profile retained after reload; owner map bytes unchanged');
   await writeFile(resolve(captures, 'verification.json'), JSON.stringify({ passed: true, checks, layouts, art, orbCenters, errors, fixtureDb: dbPath, ownerMapSha256: ownerBefore, ownerDataUsed: false }, null, 2) + '\n');
   console.log(`Dao runtime UI: ${checks.length} groups, ${layouts.length} HUD layouts passed.`);
 } catch (error) {

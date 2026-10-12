@@ -4,9 +4,13 @@
 
 ## Phần đang hoạt động
 
+**13/10 · bản 05:** sau phản hồi owner, [UI người chơi Vân Ngọc 05](XIANXIA-PLAYER-UX-V5.md) dùng hồ sơ huy hiệu, icon ngọc phù, nhiệm vụ gọn có disclosure và cửa sổ giấy ấm. Adapter live và khung kỹ năng native giữ nguồn hiện hành; trang review 04 vẫn là nguồn tham khảo trước đợt này.
+
+**13/10:** [Đạo trình và Tư Vật Các](PLAYER-WORKSPACE-UI.md) đã dùng cùng khung/nút; ba tab Đạo trình/Luyện chế/Chuẩn bị, lối vào HUD/NPC/Hành trang và bố cục responsive đã nối dữ liệu thật.
+
 - Luồng đăng nhập → chọn server → tạo/chọn nhân vật → Hằng Nhạc giữ nguyên. Khung, nút, bảng NPC, nhật ký và thiết lập dùng vật liệu Thanh Ngọc hiện hành.
 - HUD có danh tính, tu vi, mục tiêu luyện, nhiệm vụ, minimap theo bản đồ đang chạy và nhật ký thông báo trong phiên. Vị trí/tài nguyên/tiến trình đọc snapshot máy chủ; không lấy tên, mốc tu luyện hoặc map fixture của trang review.
-- Menu có 38 lối trong bảy nhóm, tìm tên không dấu và ghim tối đa năm lối desktop. Nhân vật, Hành trang, Trang bị, Tu luyện, Thuật, Nhiệm vụ, Bản đồ và Thiết lập nối vào màn thật. Các hệ chưa triển khai hiện “Chưa mở”; không cấp vật phẩm, quyền hoặc tiến trình mẫu.
+- Menu có 38 lối trong bảy nhóm, tìm tên không dấu và ghim tối đa năm lối desktop. Nhân vật, Hành trang, Trang bị, Tu luyện, Thuật, Nhiệm vụ, Bản đồ, Thiết lập và Luyện chế nối vào màn thật. Các hệ chưa triển khai hiện “Chưa mở”; không cấp vật phẩm, quyền hoặc tiến trình mẫu.
 - Nhân vật có Tổng quan, Thuộc tính, Tu luyện và reader từng thuật. Hành trang đọc đồ đang có, tìm/lọc vị trí, so sánh, mang/tháo, bảo vệ và dùng vật tư qua callback `CharacterSession`. Liên kết nguồn nhiệm vụ mở đúng bài và điểm NPC.
 - Thanh kỹ năng giữ 760 × 140, ba thuật hoạt động và bảy ô chưa gán; HP/MP đặt theo số đo `dao-dual-theme-v1/layout.json`. Icon dùng chung atlas R01 v2 với reader Thuật. Mobile giữ ba nút kỹ năng 48 px.
 - Cửa sổ modal chặn di chuyển, chọn hướng trên map và phím thi triển. Các thao tác đồ vẫn đợi snapshot sau xác nhận; mất kết nối không tự gửi lại lệnh.

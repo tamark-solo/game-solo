@@ -8,6 +8,7 @@ export interface DaoRuntimeHudOptions {
   openCharacter: (tab: DaoRuntimeCharacterTab) => void;
   openJournal: () => void;
   openSettings: () => void;
+  openCrafting: () => void;
   feedback: (message: string) => void;
   focus: () => void;
   attachSurface: (frame: HTMLElement) => void;
@@ -27,7 +28,7 @@ export interface DaoRuntimeHudSnapshot {
 const esc = (text: string) => text.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 const folded = (text: string) => text.toLocaleLowerCase('vi').normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/đ/g, 'd');
 const PIN_KEY = 'game-solo.dao-hud.pins.v1';
-const available = new Set<HudFeatureId>(['character', 'inventory', 'equipment', 'cultivation', 'spells', 'quest', 'map', 'settings']);
+const available = new Set<HudFeatureId>(['character', 'inventory', 'equipment', 'cultivation', 'spells', 'quest', 'map', 'settings', 'crafting']);
 const shortcuts: Partial<Record<HudFeatureId, string>> = { character: 'C', inventory: 'I', quest: 'J', map: 'M' };
 const iconButton = (id: HudFeatureId) => `<button type="button" class="dao-hud-icon" data-dao-feature="${id}" aria-label="${hudFeature(id)!.label}" title="${hudFeature(id)!.label}${shortcuts[id] ? ` · ${shortcuts[id]}` : ''}">${hudGlyph(id)}<span>${hudFeature(id)!.label}</span>${shortcuts[id] ? `<kbd>${shortcuts[id]}</kbd>` : ''}</button>`;
 const systemsButton = () => '<button type="button" class="dao-hud-icon dao-hud-systems" data-dao-systems aria-label="Mở toàn bộ chức năng"><span class="dao-hud-menu-mark" aria-hidden="true">☷</span><span>Chức năng</span></button>';
@@ -48,7 +49,7 @@ export class DaoRuntimeHud {
   private transferFocus = false;
 
   constructor(private stage: HTMLElement, private options: DaoRuntimeHudOptions) {
-    stage.dataset.daoHud = '04';
+    stage.dataset.daoHud = '05';
     this.root = document.createElement('div');
     this.root.className = 'dao-runtime-hud';
     this.root.dataset.gameUi = '';
@@ -60,6 +61,8 @@ export class DaoRuntimeHud {
     stage.append(this.root);
     this.renderPins();
     this.enhanceExistingNodes();
+    const journey = stage.closest('#game-shell')!.querySelector<HTMLElement>('.chapter-launch');
+    if (journey) { journey.classList.add('dao-hud-icon'); this.root.querySelector('.dao-world-dock')!.append(journey); }
     this.dialog = document.createElement('dialog');
     this.dialog.id = 'dao-hud-dialog';
     this.dialog.className = 'dao-runtime-dialog van-panel';
@@ -122,6 +125,7 @@ export class DaoRuntimeHud {
     if (skillPanel) {
       const target = document.createElement('b'); target.className = 'dao-live-target-name'; target.textContent = 'Chưa chọn mục tiêu';
       skillPanel.prepend(target);
+      skillPanel.dataset.hasTarget = 'false';
     }
     const mapTools = this.root.querySelector('.dao-map-tools')!;
     const settings = document.getElementById('menu-button');
@@ -140,6 +144,7 @@ export class DaoRuntimeHud {
     if (snapshot.realm !== undefined) this.setText(realm, snapshot.realm || 'ĐẠO HỮU');
     if (snapshot.target !== undefined) {
       const target = snapshot.target;
+      this.stage.querySelector<HTMLElement>('.dao-live-target')!.dataset.hasTarget = String(!!target);
       this.setText(this.stage.querySelector('.dao-live-target-name'), target ? `${target.name}${target.hp !== undefined && target.maxHp !== undefined ? ` · ${Math.ceil(target.hp)}/${target.maxHp}` : ''}` : 'Chưa chọn mục tiêu');
     }
     this.renderMapState();
@@ -164,11 +169,12 @@ export class DaoRuntimeHud {
   private openFeature(id: HudFeatureId): void {
     const characterTabs: Partial<Record<HudFeatureId, DaoRuntimeCharacterTab>> = { character: 'overview', inventory: 'inventory', equipment: 'equipment', cultivation: 'cultivation', spells: 'spells' };
     const tab = characterTabs[id];
-    if (tab || id === 'quest' || id === 'settings') {
+    if (tab || id === 'quest' || id === 'settings' || id === 'crafting') {
       this.transferFocus = this.modal;
       this.close();
       if (tab) this.options.openCharacter(tab);
       else if (id === 'quest') this.options.openJournal();
+      else if (id === 'crafting') this.options.openCrafting();
       else this.options.openSettings();
       return;
     }

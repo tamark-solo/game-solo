@@ -56,13 +56,16 @@ try {
   const profileId = (await game()).own.profileId;
   const aimBefore = await page.locator('#skill-aim').textContent(), castsBefore = (await game()).own.casts;
   await page.locator('#quest-title').click();
+  await page.locator('#sect-dialog').waitFor({ state: 'visible' });
   assert.equal(await page.locator('#skill-aim').textContent(), aimBefore);
   assert.equal((await game()).own.casts, castsBefore);
+  await page.keyboard.press('Escape');
+  await page.locator('#sect-dialog').waitFor({ state: 'hidden' });
   await page.locator('#quest-guide').click(); await page.locator('[data-action=accept_intro]').click();
   await page.waitForFunction(() => window.__hangNhacSect().view?.hn01);
   await page.locator('#sect-close').click();
   assert.equal(await page.locator('#quest-title').textContent(), 'HN02 · Một vòng vận hành');
-  assert.equal(await page.locator('#quest-chapter-progress').textContent(), '1/4 nhiệm vụ');
+  assert.equal(await page.locator('#quest-chapter-progress').textContent(), '1/16 nhiệm vụ');
   await page.locator('#quest-guide').click();
   await page.locator('#sect-dialog').waitFor({ state: 'visible' });
   assert.equal((await sect()).station, undefined, 'distant guide opens the journal, not remote NPC dialogue');
@@ -70,7 +73,7 @@ try {
   await page.locator('#sect-close').click();
   await page.reload(); await page.waitForFunction(() => window.__hangNhacSect?.().view?.hn01);
   assert.equal((await game()).own.profileId, profileId);
-  assert.equal(await page.locator('#quest-chapter-progress').textContent(), '1/4 nhiệm vụ');
+  assert.equal(await page.locator('#quest-chapter-progress').textContent(), '1/16 nhiệm vụ');
   checks.push('entry_from_tracker_real_HN01_confirmation_route_reload_and_no_cast_from_UI');
 
   const switchAvatar = async avatar => {
@@ -98,7 +101,7 @@ try {
   await page.locator('#sect-close').click();
   assert.equal((await sect()).view.cultivation, 180);
   assert.equal(await page.locator('#quest-title').textContent(), 'HN04 · Nhìn đòn mà tiến');
-  assert.equal(await page.locator('#quest-chapter-progress').textContent(), '3/4 nhiệm vụ');
+  assert.equal(await page.locator('#quest-chapter-progress').textContent(), '3/16 nhiệm vụ');
   checks.push('ready_is_not_rewarded_until_NPC_server_confirmation_and_next_quest');
 
   await page.setViewportSize({ width: 390, height: 844 });

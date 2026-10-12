@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-12T17:55:55.636Z",
+  "design": "Van Ngoc 05 / jade, warm bronze and scroll paper",
+  "runtimeUrl": "http://127.0.0.1:5173/hang-nhac.html?mapArt=van-ngoc-detail",
+  "presentationOnly": true,
+  "paidImageGeneration": false,
+  "externalArtworkCopied": false,
+  "artApprovalChanged": false,
+  "build": {
+    "passed": true,
+    "source": "artifacts/hang-nhac-dao-ui/player-ux-v5-build.log",
+    "typecheckFiles": 348,
+    "boundaryModules": 23,
+    "boundaryViolations": 0,
+    "warnings": [
+      "Existing Vite future native loader extension warning",
+      "Existing renderer chunk above 500 kB"
+    ]
+  },
+  "evidence": {
+    "daoUi": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-dao-ui/verification.json",
+      "observedAt": "2026-10-12T17:54:47.944Z",
+      "sha256": "e285474173f62275f3d1a6f7013bb2c5fe072343fe26ed894bbea5e3d8c3c915",
+      "groups": 5,
+      "layouts": 7
+    },
+    "characterOnline": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-character-online-verification.json",
+      "observedAt": "2026-10-12T17:46:25.434Z",
+      "sha256": "0536eee65e8620fe732bc9b4702e2eac4d6b7e2c1f22337f24bcc42baad6dd06",
+      "groups": 4
+    },
+    "characterBrowser": {
+      "passed": true,
+      "source": "artifacts/character-runtime/verification.json",
+      "observedAt": "2026-10-12T17:49:33.604Z",
+      "sha256": "1e4c9e93777cf53c070c252a4925fd95325ed1d90307841ac6d77cbe7b5b286b",
+      "groups": 11,
+      "layouts": 21
+    },
+    "chapterBrowser": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-chapter/verification.json",
+      "observedAt": "2026-10-12T17:46:35.973Z",
+      "sha256": "6b882b61894854fc7d7de3e79fb12111020ea4240c4429dab53740984d4e5356",
+      "groups": 3
+    },
+    "hudLayers": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-hud-layers-verification.json",
+      "observedAt": "2026-10-12T17:47:45.211Z",
+      "sha256": "e43cfa56bc02a9749c6c43efbd3b86a8225da9e19b57372182c235d52c95c3f2",
+      "groups": 14
+    },
+    "quests": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-quests-verification.json",
+      "observedAt": "2026-10-12T17:52:49.777Z",
+      "sha256": "9188e54b6c41f118034b5b2e7150b738808cf37085ac707ebb3febb118b30fb9",
+      "groups": 5
+    },
+    "sectOnline": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-sect-online-verification.json",
+      "observedAt": "2026-10-12T17:49:33.058Z",
+      "sha256": "062056a1ad2cdd8f454962e065a99c3b283d609e15b628cb7e15548bb31519df",
+      "groups": 5
+    },
+    "sectBrowser": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-sect-browser-verification.json",
+      "observedAt": "2026-10-12T17:50:21.030Z",
+      "sha256": "20ee1f18b75a773398f572c14d9544d37a8ff5611ba80bef0f12c546ebcddefb",
+      "groups": 7
+    },
+    "reload": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-reload-interaction.json",
+      "observedAt": "2026-10-12T17:48:06.518Z",
+      "sha256": "117cd291fb734f74cffb3e20003d94c98e542b849b9f65f9846ffc1f6abd78b9",
+      "groups": 8
+    }
+  },
+  "visualReview": {
+    "source": "owner-approved Van Ngoc detailed baked background",
+    "screenshots": [
+      "artifacts/hang-nhac-dao-ui/desktop-live-hud.png",
+      "artifacts/hang-nhac-dao-ui/desktop-character.png",
+      "artifacts/hang-nhac-dao-ui/desktop-crafting.png",
+      "artifacts/hang-nhac-dao-ui/hud-1366x768.png",
+      "artifacts/hang-nhac-dao-ui/hud-390x844.png",
+      "artifacts/hang-nhac-dao-ui/hud-844x390.png"
+    ],
+    "ownerMapSha256": "b8571377613bf0b83997fd7087a4301955300f5ab2f3627ab9837988fb3a8256",
+    "ownerDatabaseUsed": false
+  },
+  "observations": [
+    "The first concurrent character browser run reported one undefined-x page error at its final error audit. The isolated repeat passed all 11 groups / 21 layouts with zero page errors; stack logging was retained for future diagnosis. No gameplay fix is claimed.",
+    "The quest regression expected four tasks from the earlier slice. Expectations now reflect the existing 16-task chapter; quest or reward rules were not changed."
+  ]
+}

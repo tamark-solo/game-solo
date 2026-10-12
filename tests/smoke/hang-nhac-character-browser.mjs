@@ -12,7 +12,7 @@ try{
   try{const p=store.get(account,HANG_NHAC_AVATARS[0]);p.hp=50;p.sect.hn01=true;p.sect.supplies=2;store.save(p);}finally{store.close();}
   browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-unsafe-swiftshader']});
   const context=await browser.newContext({viewport:{width:1366,height:900}});await context.addInitScript(token=>localStorage.setItem('hang-nhac.guest.v1',token),guest.token);
-  const page=await context.newPage();page.on('pageerror',error=>errors.push(error.message));page.on('response',r=>{if(r.status()>=400&&r.url().startsWith(origin))errors.push(`${r.status()} ${r.url()}`);});
+  const page=await context.newPage();page.on('pageerror',error=>{errors.push(error.message);console.error(error.stack);});page.on('response',r=>{if(r.status()>=400&&r.url().startsWith(origin))errors.push(`${r.status()} ${r.url()}`);});
   const state=()=>page.evaluate(()=>window.__hangNhacCharacter()),own=()=>page.evaluate(()=>window.__hangNhacR01().own);
   const shell=async phase=>{try{await page.waitForFunction(phase=>window.__hangNhacDiagnostics?.().shell.phase===phase,phase,{timeout:35000});}catch(error){console.log({phase,errors,loading:await page.locator('#loading').textContent()});throw error;}};
   const settled=()=>page.waitForFunction(()=>window.__hangNhacCharacter().synced&&!window.__hangNhacCharacter().pending&&window.__hangNhacCharacter().online,undefined,{timeout:15000});

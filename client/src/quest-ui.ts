@@ -8,10 +8,12 @@ const node = <K extends keyof HTMLElementTagNameMap>(tag: K, text?: string): HTM
 };
 function checklist(quest: SectQuest): HTMLOListElement {
   const list = node('ol'); list.className = 'quest-checklist';
+  const current = quest.objectives.find(objective => !objective.done) ?? quest.objectives.at(-1);
   for (const objective of quest.objectives) {
     const item = node('li'), mark = node('span', objective.done ? '✓' : '○');
     mark.className = 'quest-check'; mark.setAttribute('aria-hidden', 'true');
     item.dataset.complete = String(objective.done); item.dataset.objective = objective.id;
+    item.dataset.current = String(objective === current);
     item.append(mark, node('span', `${objective.text}${objective.done ? ' · đã xong' : ''}`)); list.append(item);
   }
   return list;
@@ -25,6 +27,24 @@ export class QuestUI {
     document.getElementById('journal')!.addEventListener('click', actions.journal);
     document.getElementById('quest-guide')!.addEventListener('click', actions.guide);
     const toggle = document.getElementById('quest-toggle') as HTMLButtonElement;
+    this.tracker.dataset.details = 'compact';
+    const details = node('button', '⋯'); details.type = 'button'; details.id = 'quest-details-toggle';
+    details.setAttribute('aria-label', 'Hiện chi tiết nhiệm vụ'); details.setAttribute('aria-expanded', 'false');
+    details.setAttribute('aria-controls', 'quest-tracker-body'); details.title = 'Chi tiết nhiệm vụ';
+    toggle.before(details);
+    details.addEventListener('click', () => {
+      // A full journal is readable on short landscape screens; a floating
+      // expanded tracker would share the native skill bar's space.
+      if (window.matchMedia('(max-height: 520px)').matches) { actions.journal(); return; }
+      const expanded = this.tracker.dataset.details !== 'full';
+      this.tracker.dataset.details = expanded ? 'full' : 'compact';
+      details.setAttribute('aria-expanded', String(expanded));
+      details.setAttribute('aria-label', expanded ? 'Rút gọn chi tiết nhiệm vụ' : 'Hiện chi tiết nhiệm vụ');
+    });
+    const title = document.getElementById('quest-title')!;
+    title.tabIndex = 0; title.setAttribute('role', 'button'); title.title = 'Mở sổ nhiệm vụ';
+    title.addEventListener('click', actions.journal);
+    title.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); actions.journal(); } });
     toggle.addEventListener('click', () => {
       const body = document.getElementById('quest-tracker-body')!;
       body.hidden = !body.hidden; toggle.setAttribute('aria-expanded', String(!body.hidden));
@@ -38,6 +58,7 @@ export class QuestUI {
     label.textContent = syncing ? 'Đang đồng bộ' : !online ? 'Chưa kết nối' : QUEST_STATUS_LABELS[current.status];
     label.dataset.state = online ? current.status : 'offline';
     this.tracker.dataset.quest = current.id;
+    this.tracker.querySelector<HTMLElement>('.quest-tracker-heading strong')!.dataset.shortLabel = current.id;
     this.tracker.dataset.online = String(online);
     const guide = document.getElementById('quest-guide') as HTMLButtonElement;
     guide.disabled = syncing || current.status === 'unreleased';
