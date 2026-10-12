@@ -1,0 +1,43 @@
+import * as THREE from 'three';
+import {imageAlpha,cropAlpha,type AlphaMask} from './occlusion';
+import {atlasSprite,setSpriteFrame} from './sprite-frame';
+import type {ActorSpriteFrame,MapDepthItem,PreviewRenderer,LoadedActor} from './renderer';
+import type {SkillClip,SpriteSample} from '@shared/skills/presentation';
+import type {ArenaWarning} from '@shared/animation-arena/contracts';
+
+interface BodyClip {id:string;atlas:string;atlasSize:[number,number];frameSize:[number,number];pivot:[number,number];frames:Array<{rect:{x:number;y:number;w:number;h:number}}>}
+interface Entry {texture:THREE.Texture;alpha:AlphaMask;masks:Map<string,AlphaMask>;bytes:number;owned:boolean}
+interface Effect {sprite:THREE.Sprite;source:string}
+export interface ArenaAura {id:string;frameSize:[number,number];pivot:[number,number];parts:Array<{layer:string;url:string}>}
+const texture=(w:number,h:number,draw:(ctx:CanvasRenderingContext2D)=>void)=>{const c=document.createElement('canvas');c.width=w;c.height=h;draw(c.getContext('2d')!);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.generateMipmaps=false;return t;};
+const dimensions=(t:THREE.Texture)=>t.image as {width:number;height:number};
+export class AnimationArenaArt {
+ private entries=new Map<string,Entry>();private loads=new Map<string,Promise<Entry>>();private effects=new Map<string,Effect>();private pins=new Set<string>();private alive=true;private errors:string[]=[];
+ readonly budget=16*1024*1024;private dropped=0;private procedural=new Map<string,THREE.Texture>();
+ constructor(private renderer:PreviewRenderer){
+  this.procedural.set('mote',texture(8,8,c=>{c.fillStyle='#91dcdb40';c.fillRect(0,0,8,8);c.fillStyle='#dafaff90';c.fillRect(2,2,4,4);c.fillStyle='#fff2ce';c.fillRect(3,3,2,2);}));
+  this.procedural.set('socket',texture(10,10,c=>{c.strokeStyle='#ffdc78';c.lineWidth=2;c.beginPath();c.moveTo(0,5);c.lineTo(10,5);c.moveTo(5,0);c.lineTo(5,10);c.stroke();}));
+  for(const action of ['attack','cast_field','cast_line'])this.procedural.set('warning-'+action,texture(256,256,c=>{c.fillStyle='#d5363050';c.strokeStyle='#f3b668';c.lineWidth=3;c.setLineDash([8,5]);c.beginPath();if(action==='cast_field')c.arc(128,128,116,0,Math.PI*2);else if(action==='cast_line')c.rect(128,106,116,44);else{c.moveTo(128,128);c.arc(128,128,116,-Math.PI/3,Math.PI/3);c.closePath();}c.fill();c.stroke();}));
+ }
+ adopt(url:string,asset:LoadedActor){const image=dimensions(asset.texture);this.entries.set(url,{texture:asset.texture,alpha:asset.alpha,masks:new Map(),bytes:image.width*image.height*4,owned:false});}
+ async load(url:string,sampling:'nearest'|'linear'='nearest'):Promise<Entry>{const old=this.entries.get(url);if(old)return old;const existing=this.loads.get(url);if(existing)return existing;
+  const p=(async()=>{const t=await new THREE.TextureLoader().loadAsync(url);if(!this.alive){t.dispose();throw Error('Art cache disposed');}t.colorSpace=THREE.SRGBColorSpace;t.generateMipmaps=false;t.minFilter=t.magFilter=sampling==='nearest'?THREE.NearestFilter:THREE.LinearFilter;const e={texture:t,alpha:imageAlpha(t.image),masks:new Map<string,AlphaMask>(),bytes:t.image.width*t.image.height*4,owned:true};this.entries.set(url,e);return e;})().finally(()=>this.loads.delete(url));this.loads.set(url,p);return p;
+ }
+ begin(){this.pins.clear();for(const e of this.effects.values())e.sprite.visible=false;}
+ private get(url:string,sampling:'nearest'|'linear'='nearest'){this.pins.add(url);const e=this.entries.get(url);if(e){this.entries.delete(url);this.entries.set(url,e);return e;}void this.load(url,sampling).catch(error=>{if(this.alive&&!this.errors.includes(url)){this.errors.push(url);console.error(error);}});return undefined;}
+ pose(c:BodyClip,index:number):ActorSpriteFrame|undefined{const e=this.get(c.atlas);if(!e)return;const frame=c.frames[index];if(!frame)throw Error('Invalid production frame '+c.id+'/'+index);const key=String(index);let mask=e.masks.get(key);if(!mask){mask=cropAlpha(e.alpha,frame.rect);e.masks.set(key,mask);}return {source:'skill',clip:c.id,index,texture:e.texture,rect:frame.rect,atlasSize:c.atlasSize,frameSize:c.frameSize,anchor:c.pivot,mask};}
+ private sprite(id:string,source:string,t:THREE.Texture){let effect=this.effects.get(id);if(!effect){if(this.effects.size>=64){this.dropped++;return;}const map=t.clone(),sprite=atlasSprite(new THREE.SpriteMaterial({map,transparent:true,depthTest:false,depthWrite:false,toneMapped:false}));sprite.userData.productionFx=id;this.renderer.scene.add(sprite);effect={sprite,source};this.effects.set(id,effect);}else if(effect.source!==source){effect.sprite.material.map!.dispose();effect.sprite.material.map=t.clone();effect.sprite.material.needsUpdate=true;effect.source=source;}effect.sprite.visible=true;effect.sprite.userData.productionSource=source;return effect.sprite;}
+ effect(s:SpriteSample,c:SkillClip,depthY:number,items:MapDepthItem[]){const e=this.get(c.atlasUrl,c.sampling);if(!e)return;const sprite=this.sprite(s.id,c.atlasUrl,e.texture);if(!sprite)return;setSpriteFrame(sprite,c.frames[s.index],c.atlasSize,c.frameSize,c.anchor,c.frameCrops?.[s.index],c.frameCutouts?.[s.index]);sprite.position.set(s.x,-s.y,0);sprite.material.rotation=s.rotation;sprite.material.opacity=s.opacity;items.push({mesh:sprite,y:depthY,sortPriority:s.layer==='ground'?8:11,baseOpacity:s.opacity});}
+ private stamp(id:string,key:string,tX:number,tY:number,size:[number,number],anchor:[number,number],opacity:number,rotation:number,priority:number,items:MapDepthItem[],depthY=tY){const t=this.procedural.get(key)!,image=dimensions(t),sprite=this.sprite(id,key,t);if(!sprite)return;setSpriteFrame(sprite,{x:0,y:0,w:image.width,h:image.height},[image.width,image.height],[image.width,image.height],[anchor[0]/size[0]*image.width,anchor[1]/size[1]*image.height]);sprite.scale.set(size[0],size[1],1);sprite.position.set(tX,-tY,0);sprite.material.opacity=opacity;sprite.material.rotation=rotation;items.push({mesh:sprite,y:depthY,sortPriority:priority,baseOpacity:opacity});}
+ warning(w:ArenaWarning,now:number,items:MapDepthItem[]){const r=w.action==='cast_field'?w.radius:w.range,scale=r/116,sy=w.action==='cast_line'?1:scale;this.stamp('warning:'+w.id,'warning-'+w.action,w.x,w.y,[256*scale,256*sy],[128*scale,128*sy],.7+Math.sin(Math.max(0,w.releaseAt-now)/70)*.15,w.action==='cast_field'?0:-Math.atan2(w.dy,w.dx),5,items);}
+ socket(id:string,x:number,y:number,depthY:number,items:MapDepthItem[]){this.stamp('socket:'+id,'socket',x,y,[10,10],[5,5],1,0,12,items,depthY);}
+ aura(a:ArenaAura,x:number,y:number,clock:number,reduced:boolean,items:MapDepthItem[]){const t=reduced?0:clock/1000;
+  for(const p of a.parts){const e=this.get(p.url,'linear');if(!e)continue;const sprite=this.sprite('aura:'+p.layer,p.url,e.texture);if(!sprite)continue;setSpriteFrame(sprite,{x:0,y:0,w:128,h:176},[128,176],a.frameSize,a.pivot);const pulse=reduced?1:1+.025*Math.sin(t*2+(p.layer==='front'?1:0));sprite.scale.set(128*pulse,176,1);sprite.position.set(x+(p.layer==='rear'?Math.sin(t)*1.2:0),-y,0);sprite.material.opacity=.90+.07*Math.sin(t*2);sprite.material.rotation=0;items.push({mesh:sprite,y,sortPriority:p.layer==='ground'?6:p.layer==='rear'?9:11,baseOpacity:sprite.material.opacity});}
+  for(let i=0;i<10;i++){const phase=reduced?i/10:((t*.22+i/10)%1),angle=i*2.399,px=x+Math.cos(angle)*[46,39,35][i%3]*(1-phase*.3),py=y-12-phase*114;this.stamp('aura:mote:'+i,'mote',px,py,[3,3],[1.5,1.5],Math.sin(phase*Math.PI)*.8,0,i%2?9:11,items,y);}
+ }
+ finish(items:MapDepthItem[]){for(const [id,e] of this.effects)if(!e.sprite.visible){this.renderer.scene.remove(e.sprite);e.sprite.geometry.dispose();e.sprite.material.map!.dispose();e.sprite.material.dispose();this.effects.delete(id);}this.renderer.setPresentationDepthItems(items);
+  let bytes=[...this.entries.values()].reduce((n,e)=>n+e.bytes,0);for(const [url,e] of this.entries){if(bytes<=this.budget)break;if(!e.owned||this.pins.has(url))continue;bytes-=e.bytes;e.texture.dispose();this.entries.delete(url);}
+ }
+ diagnostics(){return {atlasRGBABytes:[...this.entries.values()].reduce((n,e)=>n+e.bytes,0),atlasCount:this.entries.size,loading:this.loads.size,effects:this.effects.size,dropped:this.dropped,errors:[...this.errors],budget:this.budget};}
+ dispose(){this.alive=false;for(const e of this.effects.values()){this.renderer.scene.remove(e.sprite);e.sprite.geometry.dispose();e.sprite.material.map!.dispose();e.sprite.material.dispose();}this.effects.clear();for(const e of this.entries.values())if(e.owned)e.texture.dispose();this.entries.clear();for(const t of this.procedural.values())t.dispose();this.renderer.setPresentationDepthItems([]);}
+}

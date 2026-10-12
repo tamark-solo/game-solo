@@ -1,0 +1,657 @@
+{
+  "passed": true,
+  "frames": 48,
+  "mapParts": 32,
+  "viewports": [
+    [
+      1366,
+      1180
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      844
+    ]
+  ],
+  "maxAtlas": 10320640,
+  "maxCanvasImages": 8284032,
+  "autoTurnDirections": 8,
+  "phases": [
+    "Đứng",
+    "Hồi thế",
+    "Lướt",
+    "Lấy thế"
+  ],
+  "offlineStopped": true,
+  "reducedMotionStopped": true,
+  "fxSeparate": true,
+  "historyGhosts": true,
+  "travel160": true,
+  "errors": [],
+  "scope": "All48 frame seeks and physical foot, R01 phase/arrival, separate FX and history ghosts, map/native switches, cache budgets, responsive layout and playback lifecycle. ART review only, no server gameplay integration.",
+  "checks": [
+    {
+      "direction": "south",
+      "index": 0,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "south",
+      "index": 1,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "south",
+      "index": 2,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wind-depart",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "south",
+      "index": 3,
+      "foot": {
+        "x": 1806,
+        "y": 1072
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wang-pixel-wind-south",
+        "wang-pixel-wind-south",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "south",
+      "index": 4,
+      "foot": {
+        "x": 1806,
+        "y": 1152
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wang-pixel-wind-south",
+        "wang-pixel-wind-south",
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "south",
+      "index": 5,
+      "foot": {
+        "x": 1806,
+        "y": 1152
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "southwest",
+      "index": 0,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "southwest",
+      "index": 1,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "southwest",
+      "index": 2,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wind-depart",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "southwest",
+      "index": 3,
+      "foot": {
+        "x": 1749.4314575050762,
+        "y": 1048.5685424949238
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wang-pixel-wind-southwest",
+        "wang-pixel-wind-southwest",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "southwest",
+      "index": 4,
+      "foot": {
+        "x": 1692.8629150101524,
+        "y": 1105.1370849898476
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wang-pixel-wind-southwest",
+        "wang-pixel-wind-southwest",
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "southwest",
+      "index": 5,
+      "foot": {
+        "x": 1692.8629150101524,
+        "y": 1105.1370849898476
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "west",
+      "index": 0,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "west",
+      "index": 1,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "west",
+      "index": 2,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wind-depart",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "west",
+      "index": 3,
+      "foot": {
+        "x": 1726,
+        "y": 992
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wang-pixel-wind-west",
+        "wang-pixel-wind-west",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "west",
+      "index": 4,
+      "foot": {
+        "x": 1646,
+        "y": 992
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wang-pixel-wind-west",
+        "wang-pixel-wind-west",
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "west",
+      "index": 5,
+      "foot": {
+        "x": 1646,
+        "y": 992
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "northwest",
+      "index": 0,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "northwest",
+      "index": 1,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "northwest",
+      "index": 2,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wind-depart",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "northwest",
+      "index": 3,
+      "foot": {
+        "x": 1749.4314575050762,
+        "y": 935.4314575050762
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wang-pixel-wind-northwest",
+        "wang-pixel-wind-northwest",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "northwest",
+      "index": 4,
+      "foot": {
+        "x": 1692.8629150101524,
+        "y": 878.8629150101524
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wang-pixel-wind-northwest",
+        "wang-pixel-wind-northwest",
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "northwest",
+      "index": 5,
+      "foot": {
+        "x": 1692.8629150101524,
+        "y": 878.8629150101524
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "north",
+      "index": 0,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "north",
+      "index": 1,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "north",
+      "index": 2,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wind-depart",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "north",
+      "index": 3,
+      "foot": {
+        "x": 1806,
+        "y": 912
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wang-pixel-wind-north",
+        "wang-pixel-wind-north",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "north",
+      "index": 4,
+      "foot": {
+        "x": 1806,
+        "y": 832
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wang-pixel-wind-north",
+        "wang-pixel-wind-north",
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "north",
+      "index": 5,
+      "foot": {
+        "x": 1806,
+        "y": 832
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "northeast",
+      "index": 0,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "northeast",
+      "index": 1,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "northeast",
+      "index": 2,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wind-depart",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "northeast",
+      "index": 3,
+      "foot": {
+        "x": 1862.5685424949238,
+        "y": 935.4314575050762
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wang-pixel-wind-northeast",
+        "wang-pixel-wind-northeast",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "northeast",
+      "index": 4,
+      "foot": {
+        "x": 1919.1370849898476,
+        "y": 878.8629150101524
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wang-pixel-wind-northeast",
+        "wang-pixel-wind-northeast",
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "northeast",
+      "index": 5,
+      "foot": {
+        "x": 1919.1370849898476,
+        "y": 878.8629150101524
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "east",
+      "index": 0,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "east",
+      "index": 1,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "east",
+      "index": 2,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wind-depart",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "east",
+      "index": 3,
+      "foot": {
+        "x": 1886,
+        "y": 992
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wang-pixel-wind-east",
+        "wang-pixel-wind-east",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "east",
+      "index": 4,
+      "foot": {
+        "x": 1966,
+        "y": 992
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wang-pixel-wind-east",
+        "wang-pixel-wind-east",
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "east",
+      "index": 5,
+      "foot": {
+        "x": 1966,
+        "y": 992
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "southeast",
+      "index": 0,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "southeast",
+      "index": 1,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lấy thế",
+      "fx": [
+        "wind-depart"
+      ]
+    },
+    {
+      "direction": "southeast",
+      "index": 2,
+      "foot": {
+        "x": 1806,
+        "y": 992
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wind-depart",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "southeast",
+      "index": 3,
+      "foot": {
+        "x": 1862.5685424949238,
+        "y": 1048.5685424949238
+      },
+      "phase": "Lướt",
+      "fx": [
+        "wang-pixel-wind-southeast",
+        "wang-pixel-wind-southeast",
+        "wind-trail"
+      ]
+    },
+    {
+      "direction": "southeast",
+      "index": 4,
+      "foot": {
+        "x": 1919.1370849898476,
+        "y": 1105.1370849898476
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wang-pixel-wind-southeast",
+        "wang-pixel-wind-southeast",
+        "wind-arrival"
+      ]
+    },
+    {
+      "direction": "southeast",
+      "index": 5,
+      "foot": {
+        "x": 1919.1370849898476,
+        "y": 1105.1370849898476
+      },
+      "phase": "Hồi thế",
+      "fx": [
+        "wind-arrival"
+      ]
+    }
+  ]
+}

@@ -20,8 +20,11 @@ export interface PresentationTrack {
   holdLastUntilResolve?:boolean;frameStart?:number;frameCount?:number;projectileAnchor?:boolean;
   resolveOn?:SkillEvent['type'][];
 }
+export type BodyDirection=Direction|'southwest'|'southeast'|'northwest'|'northeast';
+const BODY_DIRECTIONS:BodyDirection[]=['east','southeast','south','southwest','west','northwest','north','northeast'];
 export interface SkillPresentationDefinition {
-  fps:number;characterEnd:number;bindings:Record<string,Partial<Record<Direction,string>>>;
+  bodyDirectionCount?:4|8;
+  fps:number;characterEnd:number;bindings:Record<string,Partial<Record<BodyDirection,string>>>;
   tracks:PresentationTrack[];projectileClip?:string;
   ghosts?:{lagMs:number[];opacity:number[]};
 }
@@ -31,12 +34,12 @@ export interface PresentationActor extends Position {
   castId?:string;castSkill?:string;castStartedAt?:number;castAimX?:number;castAimY?:number;
 }
 export interface PresentationProjectile extends Position {id:string;ownerId:string;castId:string;dx:number;dy:number;startedAt:number;skillId?:string}
-export interface SpriteSample extends Position {id:string;clip:string;index:number;layer:'ground'|'air'|'impact'|'body';rotation:number;opacity:number;actorId?:string}
+export interface SpriteSample extends Position {id:string;clip:string;index:number;layer:'ground'|'air'|'impact'|'body';rotation:number;opacity:number;actorId?:string;/** Physical world-foot depth before socket/height offsets. */groundY?:number}
 interface Cast extends SkillEvent {type:'cast';snapshot:boolean}
 interface Effect {id:string;castId:string;actorId:string;track:PresentationTrack;start:number;end:number;x:number;y:number;dx:number;dy:number;resolved:boolean}
 export interface PresentationFrame {poses:Map<string,SpriteSample>;effects:SpriteSample[]}
 const direction=(dx:number,dy:number):Direction=>Math.abs(dx)>Math.abs(dy)?dx>0?'east':'west':dy>0?'south':'north';
-const aimFromDirection=(d:string):[number,number]=>d==='east'?[1,0]:d==='west'?[-1,0]:d==='north'?[0,-1]:[0,1];
+const aimFromDirection=(d:string):[number,number]=>d==='east'?[1,0]:d==='west'?[-1,0]:d==='north'?[0,-1]:d==='northwest'?[-Math.SQRT1_2,-Math.SQRT1_2]:d==='northeast'?[Math.SQRT1_2,-Math.SQRT1_2]:d==='southwest'?[-Math.SQRT1_2,Math.SQRT1_2]:d==='southeast'?[Math.SQRT1_2,Math.SQRT1_2]:[0,1];
 export function clipFrame(clip:SkillClip,age:number,hold=false):number|undefined {
   if(!Number.isFinite(age)||age<0)return;
   const total=clip.durations.reduce((s,v)=>s+v,0);
@@ -60,6 +63,8 @@ export function validatePresentationCatalog(catalog:SkillPresentationCatalog):vo
   }
   for(const id of R01_IDS)if(!catalog.skills[id])throw new Error(`Missing skill presentation: ${id}`);
   for(const [id,skill] of Object.entries(catalog.skills)){
+    if(skill.bodyDirectionCount!==undefined&&skill.bodyDirectionCount!==4&&skill.bodyDirectionCount!==8)throw new Error('Invalid body direction count: '+id);
+    if(skill.bodyDirectionCount===8&&Object.values(skill.bindings).some(bindings=>BODY_DIRECTIONS.some(d=>!bindings[d])))throw new Error('Incomplete eight-direction body binding: '+id);
     if(!SKILL_DEFINITIONS[id as SkillId]||Math.abs(skill.characterEnd-SKILL_DEFINITIONS[id as SkillId].end)>.01)throw new Error(`Gameplay/presentation timing mismatch: ${id}`);
     const referenced=[...Object.values(skill.bindings).flatMap(d=>Object.values(d)),...skill.tracks.map(t=>t.clip),...(skill.projectileClip?[skill.projectileClip]:[])];
     if(referenced.some(c=>!catalog.clips[c!]))throw new Error(`Missing clip in ${id}.`);
@@ -126,7 +131,7 @@ export class SkillTimeline {
     if(this.terminal.size>512)this.terminal.delete(this.terminal.values().next().value!);
   }
   private binding(cast:Cast,actor:PresentationActor):string|undefined {
-    const facing=direction(cast.dx,cast.dy),clip=this.catalog.skills[cast.skillId]?.bindings[actor.avatarId]?.[facing];
+    const definition=this.catalog.skills[cast.skillId],facing=definition?.bodyDirectionCount===8?BODY_DIRECTIONS[(Math.round(Math.atan2(cast.dy,cast.dx)/(Math.PI/4))+8)%8]:direction(cast.dx,cast.dy),clip=this.catalog.skills[cast.skillId]?.bindings[actor.avatarId]?.[facing];
     if(!clip)this.missing.add(`${actor.avatarId}:${cast.skillId}:${facing}`);
     return clip;
   }
@@ -154,7 +159,7 @@ export class SkillTimeline {
       }
       if(age>=def.characterEnd){this.casts.delete(id);continue;}
       const index=clipFrame(this.catalog.clips[clip],age,true);if(index===undefined)continue;
-      this.poses.set(id,{id:`${cast.castId}:body`,clip,index,x:actor.x,y:actor.y,layer:'body',rotation:0,opacity:1,actorId:id});
+      this.poses.set(id,{id:`${cast.castId}:body`,clip,index,x:actor.x,y:actor.y,layer:'body',rotation:0,opacity:1,actorId:id,groundY:actor.y});
       const history=this.history.get(id)??[];
       history.push({at:now,castId:cast.castId,pose:{...this.poses.get(id)!}});
       while(history.length>90||history[0]?.at<now-1000)history.shift();this.history.set(id,history);
@@ -183,7 +188,7 @@ export class SkillTimeline {
         }
       }
       if(e.track.projectileAnchor){const offset=this.projectileAnchors.get(e.castId)?.offset??[0,-36];x+=offset[0];y+=offset[1];}
-      this.samples.push({id,clip:e.track.clip,index,x,y,layer:e.track.layer,rotation:e.track.rotate?-Math.atan2(e.dy,e.dx):0,opacity:1,actorId:e.actorId});
+      this.samples.push({id,clip:e.track.clip,index,x,y,layer:e.track.layer,rotation:e.track.rotate?-Math.atan2(e.dy,e.dx):0,opacity:1,actorId:e.actorId,groundY:e.track.anchor==='body'||e.track.anchor==='hand'?actor?.y:e.y});
       const sample=this.samples[this.samples.length-1];sample.x+=e.track.offset?.[0]??0;sample.y+=e.track.offset?.[1]??0;
     }
     for(const projectile of projectiles){
@@ -191,7 +196,7 @@ export class SkillTimeline {
       const projection=this.projectileAnchors.get(projectile.castId),offset=projection?.offset??[0,-36];
       const start=projection?projection.at+SKILL_DEFINITIONS[skill].release:projectile.startedAt;
       const index=clipFrame(this.catalog.clips[clip],now-start);if(index===undefined)continue;
-      this.samples.push({id:`projectile:${projectile.id}`,clip,index,x:projectile.x+offset[0],y:projectile.y+offset[1],layer:'air',rotation:-Math.atan2(projectile.dy,projectile.dx),opacity:1,actorId:projectile.ownerId});
+      this.samples.push({id:`projectile:${projectile.id}`,clip,index,x:projectile.x+offset[0],y:projectile.y+offset[1],layer:'air',rotation:-Math.atan2(projectile.dy,projectile.dx),opacity:1,actorId:projectile.ownerId,groundY:projectile.y});
     }
     if(this.samples.length>this.capacity){this.dropped+=this.samples.length-this.capacity;this.samples.length=this.capacity;}
     for(const id of this.history.keys())if(!byId.has(id))this.history.delete(id);

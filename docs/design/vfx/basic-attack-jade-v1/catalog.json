@@ -1,0 +1,1156 @@
+{
+  "version": 1,
+  "id": "basic-attack-jade-v1",
+  "date": "2026-10-12",
+  "status": "candidate-art-review",
+  "artApproved": false,
+  "tool": "built-in ImageGen",
+  "pixelsResampled": true,
+  "alpha": "Soft original alpha, not body binary threshold; all shards preserved within measured regions.",
+  "clips": {
+    "palm-stroke": {
+      "fps": 40,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        24,
+        48
+      ],
+      "loop": false,
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "atlases/palm-stroke.png",
+      "sampling": "linear",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "sourceFrames": [
+        {
+          "file": "frames/palm-stroke/001.png",
+          "sha256": "da0933f2780b91763663800b3491ea93537cd5d3ca01660f50a9f28b785f26a0",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 480,
+            "h": 512
+          },
+          "sourceOrigin": [
+            148,
+            261
+          ],
+          "offset": [
+            6,
+            17
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/palm-stroke/002.png",
+          "sha256": "db82291bb95d56515fa8232c663160ad12dd22696aa3618b707599b6e1d23226",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 480,
+            "y": 0,
+            "w": 450,
+            "h": 512
+          },
+          "sourceOrigin": [
+            578,
+            260
+          ],
+          "offset": [
+            12,
+            17
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/palm-stroke/003.png",
+          "sha256": "160b85a0670c30b465a756da8ded12bb84eec81f09010619dbe5ae436782852e",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 930,
+            "y": 0,
+            "w": 606,
+            "h": 512
+          },
+          "sourceOrigin": [
+            1024,
+            260
+          ],
+          "offset": [
+            13,
+            17
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/palm-stroke/004.png",
+          "sha256": "12cc36f3e60438c8a002e773e9d1e0a8a6c8aa76941bc52ec86d59822eb3d6ee",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            118,
+            757
+          ],
+          "offset": [
+            10,
+            19
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/palm-stroke/005.png",
+          "sha256": "a3846ae57820ee97519326c17f7b12e415def12efa04b7d3d5177dc68e513918",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 512,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            631,
+            762
+          ],
+          "offset": [
+            10,
+            18
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/palm-stroke/006.png",
+          "sha256": "4f4cdc0315cd88103a209c74982119da32aa02b926c147203948a63b00de86f4",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 1024,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            1131,
+            756
+          ],
+          "offset": [
+            11,
+            19
+          ],
+          "scale": 0.12
+        }
+      ],
+      "sha256": "9fe52abd4636891d5ab5a202d09bc9934785e4b86d48656211f117cbb9a85191",
+      "source": "sources/palm-stroke-v1.png",
+      "bytes": 12475
+    },
+    "rising-arc": {
+      "fps": 40,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        24,
+        48
+      ],
+      "loop": false,
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "atlases/rising-arc.png",
+      "sampling": "linear",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "sourceFrames": [
+        {
+          "file": "frames/rising-arc/001.png",
+          "sha256": "facbdb9c0eed9e12496c4cdb17a781880f86ea0a5e45db7280f4fd137d2213f7",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            118,
+            295
+          ],
+          "offset": [
+            10,
+            13
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/rising-arc/002.png",
+          "sha256": "69ae67966b333edb3acceec89e2eeaff1fc4132b39c3e625236ca4ff99a43c13",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 512,
+            "y": 0,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            621,
+            296
+          ],
+          "offset": [
+            11,
+            12
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/rising-arc/003.png",
+          "sha256": "82c9e8891dd3023eea51cd4be4f01dd37085387da6a8e4ae6eb3668207c0e1a7",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 1024,
+            "y": 0,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            1124,
+            297
+          ],
+          "offset": [
+            12,
+            12
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/rising-arc/004.png",
+          "sha256": "8485828b9713f21a31f2a554bc238d6f326a1dbc6cfb846fc9cfa93b1a9eeb6d",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            118,
+            807
+          ],
+          "offset": [
+            10,
+            13
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/rising-arc/005.png",
+          "sha256": "69dcd80a22dcd9a069a7076ecc1251009cec240532b9941919619ee3f233f978",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 512,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            621,
+            807
+          ],
+          "offset": [
+            11,
+            13
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/rising-arc/006.png",
+          "sha256": "f268cecce4b10d7056f2469bdab0a13cd45b9052bf13576e749cfba8ed043a2a",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 1024,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            1124,
+            807
+          ],
+          "offset": [
+            12,
+            13
+          ],
+          "scale": 0.12
+        }
+      ],
+      "sha256": "6fb3fb6d52eb1350bdde3e9d9d115a631d87b0c1bdee46dd83cb5a761d7fc561",
+      "source": "sources/rising-arc-v1.png",
+      "bytes": 11608
+    },
+    "finger-seal": {
+      "fps": 40,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        24,
+        48
+      ],
+      "loop": false,
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "atlases/finger-seal.png",
+      "sampling": "linear",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "sourceFrames": [
+        {
+          "file": "frames/finger-seal/001.png",
+          "sha256": "f50a2dce3b16b3d1b5f8c694e50fe4863cd38eea11c24d45a56f84dd7dc3132a",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 480,
+            "h": 512
+          },
+          "sourceOrigin": [
+            108,
+            274
+          ],
+          "offset": [
+            11,
+            15
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/finger-seal/002.png",
+          "sha256": "aa2942194b349f2371b44ee72597e7b649adee1865ba5a2ec7aa8b4bc03ecf4a",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 480,
+            "y": 0,
+            "w": 490,
+            "h": 512
+          },
+          "sourceOrigin": [
+            626,
+            274
+          ],
+          "offset": [
+            6,
+            15
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/finger-seal/003.png",
+          "sha256": "0e8ffed1a111f39beb6a3c13f1aa52606651ddb1673da2e72e40ec0b38b6d74d",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 970,
+            "y": 0,
+            "w": 566,
+            "h": 512
+          },
+          "sourceOrigin": [
+            1131,
+            274
+          ],
+          "offset": [
+            5,
+            15
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/finger-seal/004.png",
+          "sha256": "1a1416e5604914a5ebb929b9c696f8a7d080f8c69ad961763b1514d8db314707",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 512,
+            "w": 490,
+            "h": 512
+          },
+          "sourceOrigin": [
+            105,
+            764
+          ],
+          "offset": [
+            11,
+            18
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/finger-seal/005.png",
+          "sha256": "8fbde0d9e0a0b1dce1e1bf358dc1eb4d3afabd8d92c19514a8e5317892f2a1f1",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 490,
+            "y": 512,
+            "w": 535,
+            "h": 512
+          },
+          "sourceOrigin": [
+            604,
+            764
+          ],
+          "offset": [
+            10,
+            18
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/finger-seal/006.png",
+          "sha256": "0126c8269b69b6c0fef5bc35e183b52cf5b74730ae7d5cbfa0f1c87a954d1f16",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 1025,
+            "y": 512,
+            "w": 511,
+            "h": 512
+          },
+          "sourceOrigin": [
+            1124,
+            765
+          ],
+          "offset": [
+            12,
+            18
+          ],
+          "scale": 0.12
+        }
+      ],
+      "sha256": "69bb0933fcde2090e1d58cd0873c7842983e71d7ae8ca8e01967316a409cc2f9",
+      "source": "sources/finger-seal-v1.png",
+      "bytes": 22469
+    },
+    "impact-small": {
+      "fps": 40,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "frameSize": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "loop": false,
+      "atlasSize": [
+        408,
+        68
+      ],
+      "atlasUrl": "atlases/impact-small.png",
+      "sampling": "linear",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 70,
+          "y": 2,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 138,
+          "y": 2,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 206,
+          "y": 2,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 274,
+          "y": 2,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 342,
+          "y": 2,
+          "w": 64,
+          "h": 64
+        }
+      ],
+      "sourceFrames": [
+        {
+          "file": "frames/impact-small/001.png",
+          "sha256": "6dc27fed393fb61c03fd44bfcae8ef094d892606b9f0073122ac19b91624cb68",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 64,
+            "h": 64
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            256,
+            287
+          ],
+          "offset": [
+            6,
+            3
+          ],
+          "scale": 0.1
+        },
+        {
+          "file": "frames/impact-small/002.png",
+          "sha256": "35701e09ca4a41b2165c6a60651b00288e56af50abbbbfbc207c5499c0719480",
+          "rect": {
+            "x": 70,
+            "y": 2,
+            "w": 64,
+            "h": 64
+          },
+          "sourceRect": {
+            "x": 512,
+            "y": 0,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            768,
+            287
+          ],
+          "offset": [
+            6,
+            3
+          ],
+          "scale": 0.1
+        },
+        {
+          "file": "frames/impact-small/003.png",
+          "sha256": "018da3245c3d504e8b0c75d6e7f677293e912ffdaaf11e874438adeb257992cc",
+          "rect": {
+            "x": 138,
+            "y": 2,
+            "w": 64,
+            "h": 64
+          },
+          "sourceRect": {
+            "x": 1024,
+            "y": 0,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            1280,
+            287
+          ],
+          "offset": [
+            6,
+            3
+          ],
+          "scale": 0.1
+        },
+        {
+          "file": "frames/impact-small/004.png",
+          "sha256": "af8af2336b4afe1516ce88ae87fc54f1e22101c08123a7245c7ee1bc3f859b6f",
+          "rect": {
+            "x": 206,
+            "y": 2,
+            "w": 64,
+            "h": 64
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            256,
+            775
+          ],
+          "offset": [
+            6,
+            6
+          ],
+          "scale": 0.1
+        },
+        {
+          "file": "frames/impact-small/005.png",
+          "sha256": "ccfac03b424e15ff502fb153a2b2b950c557972547bf89fe182f1fd9cb3a16b9",
+          "rect": {
+            "x": 274,
+            "y": 2,
+            "w": 64,
+            "h": 64
+          },
+          "sourceRect": {
+            "x": 512,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            768,
+            778
+          ],
+          "offset": [
+            6,
+            5
+          ],
+          "scale": 0.1
+        },
+        {
+          "file": "frames/impact-small/006.png",
+          "sha256": "58cbd4ce06e21839901b62b03ff9a833d849b0cf67b32773f2f66f0b40ce6d82",
+          "rect": {
+            "x": 342,
+            "y": 2,
+            "w": 64,
+            "h": 64
+          },
+          "sourceRect": {
+            "x": 1024,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            1280,
+            775
+          ],
+          "offset": [
+            6,
+            6
+          ],
+          "scale": 0.1
+        }
+      ],
+      "sha256": "02d3ee8e993342ed08ff08359fb371b5c1533bd4eab5d1feec95af7a19ad5670",
+      "source": "sources/impact-small-v1.png",
+      "bytes": 6972
+    },
+    "impact-finish": {
+      "fps": 40,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        48
+      ],
+      "loop": false,
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "atlases/impact-finish.png",
+      "sampling": "linear",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "sourceFrames": [
+        {
+          "file": "frames/impact-finish/001.png",
+          "sha256": "754b6c8467b9cfac42075c8c67a10964b87636be445c1db8b19802d271ee3c09",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            256,
+            258
+          ],
+          "offset": [
+            17,
+            17
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/impact-finish/002.png",
+          "sha256": "da50b8693c05bfff0be0225043ce5edc4b8051a02cea631ac1785884e40dd1b6",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 512,
+            "y": 0,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            768,
+            258
+          ],
+          "offset": [
+            17,
+            17
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/impact-finish/003.png",
+          "sha256": "5cf0ccf9a358373c5b16f25fd92312788d958b4d32a67e134f97dc6dc120ff0a",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 1024,
+            "y": 0,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            1280,
+            258
+          ],
+          "offset": [
+            17,
+            17
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/impact-finish/004.png",
+          "sha256": "e14d79bdd366a264e4b1fd0ca399f5db210cb6f153ac52f428d3cdd8f33a40d5",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 0,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            256,
+            762
+          ],
+          "offset": [
+            17,
+            18
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/impact-finish/005.png",
+          "sha256": "d9d4f8b5d27205007382b637a16e2a69ceb2af9ed8a9a517cab91161945efbb5",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 512,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            768,
+            762
+          ],
+          "offset": [
+            17,
+            18
+          ],
+          "scale": 0.12
+        },
+        {
+          "file": "frames/impact-finish/006.png",
+          "sha256": "eb9e3a597664826d4bbed552f2ddf33bf199a7be6df803eab7b03f919a06d4e8",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "sourceRect": {
+            "x": 1024,
+            "y": 512,
+            "w": 512,
+            "h": 512
+          },
+          "sourceOrigin": [
+            1280,
+            762
+          ],
+          "offset": [
+            17,
+            18
+          ],
+          "scale": 0.12
+        }
+      ],
+      "sha256": "2316fa47d49436bf666cf44f7ffe94c1acc3284320adb413ee7aee234d51f899",
+      "source": "sources/impact-finish-v1.png",
+      "bytes": 27654
+    }
+  },
+  "attacks": {
+    "attack": {
+      "trail": "palm-stroke",
+      "impact": "impact-small"
+    },
+    "attack_2": {
+      "trail": "rising-arc",
+      "impact": "impact-small"
+    },
+    "attack_3": {
+      "trail": "finger-seal",
+      "impact": "impact-finish"
+    }
+  },
+  "sources": [
+    {
+      "file": "sources/palm-stroke-v1.png",
+      "sha256": "39e9cc2abd5c764d03ace57f18e10b4db61377de7c6b490c42246b2ca8cc2b88",
+      "prompt": "sources/palm-stroke.prompt.txt",
+      "promptSha256": "08df3fa33f824a9181ed968168de1f3358b37f95ddd39342e09d69fb0f896a98"
+    },
+    {
+      "file": "sources/rising-arc-v1.png",
+      "sha256": "13816a0ab7b9876f4a6fac58d33313e634f45947821c649a20cac48672554f8e",
+      "prompt": "sources/rising-arc.prompt.txt",
+      "promptSha256": "f62271529e073a6eca54841a95463b414819e19665c5cce521f4fbb5abb2e6c2"
+    },
+    {
+      "file": "sources/finger-seal-v1.png",
+      "sha256": "13a9bd41358d32fb17f6cdb55173fd1ed0e6d249727acc92f7aa275d4a247c22",
+      "prompt": "sources/finger-seal.prompt.txt",
+      "promptSha256": "f9256b5b4ee6eaf0120dedfde61eb9efe8ac0bed7ae9029a4ff2afd9bd8a5f69"
+    },
+    {
+      "file": "sources/impact-small-v1.png",
+      "sha256": "0c6908b8a673fdc5900ea13b4ffe5e406ad7ba41fcad3a253c7254475083f6a3",
+      "prompt": "sources/impact-small.prompt.txt",
+      "promptSha256": "62c1194027191d07594c576ffdaec5bfac5ddbea9001802c1ec9b6b79513768d"
+    },
+    {
+      "file": "sources/impact-finish-v1.png",
+      "sha256": "ea5daf6fc4d8933fd786d8d87f854d7ca8e78630077e5c102d16a9f44fe446e1",
+      "prompt": "sources/impact-finish.prompt.txt",
+      "promptSha256": "bbd18116fa427f879e56413d829e1e3c0d2c03fbd6ef375c903580389676db68"
+    }
+  ],
+  "bodyBasis": "body-basis.json",
+  "handSockets": "hand-sockets.json",
+  "registration": "registration.json"
+}

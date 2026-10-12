@@ -7,7 +7,7 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "assets": "node scripts/sync-preview-assets.mjs && tsx scripts/build-hang-nhac-runtime.ts && node scripts/sync-r01-vfx.mjs && node scripts/sync-skill-hud.mjs && node scripts/sync-dao-dual-ui.mjs && node scripts/sync-quest-motion.mjs && node scripts/sync-quest-qi.mjs && node scripts/sync-character-ui-art.mjs && node scripts/sync-van-hai-player-study.mjs && node scripts/sync-title-art.mjs",
+    "assets": "node scripts/sync-preview-assets.mjs && tsx scripts/build-hang-nhac-runtime.ts && node scripts/sync-r01-vfx.mjs && node scripts/sync-skill-hud.mjs && node scripts/sync-dao-dual-ui.mjs && node scripts/sync-quest-motion.mjs && node scripts/sync-quest-qi.mjs && node scripts/sync-character-ui-art.mjs && node scripts/sync-van-hai-player-study.mjs && node scripts/sync-title-art.mjs && node scripts/sync-pixel-actor-review.mjs",
     "dev": "npm run assets && concurrently -k -n SERVER,CLIENT npm:dev:server npm:dev:client",
     "dev:client": "vite --config vite.config.ts",
     "dev:server": "tsx watch server/src/index.ts",
@@ -51,7 +51,12 @@
     "test:map-asset-backup": "node tests/smoke/map-asset-backup-smoke.mjs",
     "check:boundaries": "node scripts/check-boundaries.mjs",
     "check:content-catalog": "tsx server/src/content-catalog-check.ts",
-    "test:content-catalog": "tsx --test tests/unit/content-catalog.test.ts && node --import tsx tests/smoke/content-catalog-browser.mjs"
+    "test:content-catalog": "tsx --test tests/unit/content-catalog.test.ts && node --import tsx tests/smoke/content-catalog-browser.mjs",
+    "dev:animation-arena": "tsx server/src/animation-production-fixture.ts",
+    "assets:actor-animation-production": "node scripts/sync-pixel-actor-review.mjs",
+    "test:actor-animation-combat": "node scripts/verify-wang-pixel-combat.mjs && tsx --test tests/unit/pixel-locomotion.test.ts tests/unit/animation-arena.test.ts && node tests/smoke/wang-pixel-combat-gpu.mjs && node tests/smoke/wang-pixel-combat-browser.mjs",
+    "test:basic-attack-vfx": "node scripts/verify-basic-attack-vfx.mjs && tsx --test tests/unit/basic-attack-presentation.test.ts && node tests/smoke/basic-attack-vfx-gpu.mjs && node tests/smoke/basic-attack-vfx-browser.mjs",
+    "test:actor-animation-production": "node scripts/verify-wang-pixel-production.mjs && node scripts/verify-wang-pixel-wind.mjs && tsx --test tests/unit/actor-animation-pilot.test.ts tests/unit/pixel-actor-production.test.ts tests/unit/animation-arena.test.ts && node tests/smoke/wang-pixel-production-gpu.mjs && node tests/smoke/wang-pixel-wind-gpu.mjs && node tests/smoke/wang-pixel-production-browser.mjs && node tests/smoke/wang-pixel-wind-browser.mjs"
   },
   "dependencies": {
     "@colyseus/schema": "5.0.36",

@@ -128,3 +128,6 @@ server/data/
 
 # Generated VFX delivery archives; source PNGs, atlases and pack scripts are tracked.
 /docs/design/vfx/**/*.zip
+
+# Durable actor source archive is tracked in three sub50MiB parts; materialized ZIP stays local.
+/docs/archive/actor-animation-pre-pixel02-2026-10-12/sources.zip

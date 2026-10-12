@@ -1,5 +1,7 @@
 # Kiến trúc mã nguồn
 
+**Actor pixel chuẩn02 ·12/10:** [Bộ đã chốt40clip/240pose](design/characters/actor-animation-standard-v2/README.md) giữ facts → timeline → catalog → Three. UI/ART demo cũ đã archive; Core8direction/groundY và fixture model thuần giữ để tích hợp tiếp. Review mới không room/DB; không suy visual approval là full/runtime readiness.
+
 **Character sheet review 04:** `core/dao-character-sheet-model.ts` đọc `SectView`/avatar, dùng `progressionLabel`, ngưỡng và quest projection shared. Core state giữ tab/thuật và nguồn quay lại nhiệm vụ; presenter/CSS chỉ trình bày. Không sở hữu xác nhận tầng, cast, quyền Đọa Ma, transport hoặc save. [Thiết kế và kiểm](CHARACTER-SHEET-UX-V4.md).
 
 **Character UX review 03:** `core/ui-material-review-state.ts` giữ inventory fixture/filters/request/result; `core/dao-character-review-model.ts` chỉ phục vụ projection và transition mẫu, không nhập vào live runtime. Presenter `ui/dao-character-review.ts` đọc shared/Core; adapter trang ghép clock/callback/focus. Dùng `CharacterInventory` hiện có và `sect.supplies` duy nhất, không mở schema/save/catalog mới. [Contract/phạm vi](CHARACTER-INVENTORY-UX-V3.md).

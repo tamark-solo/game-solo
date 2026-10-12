@@ -19,6 +19,7 @@ export interface RenderActor extends Motion {
   id: string; name: string; assetId: string; own: boolean; connected?: boolean;
   animation: AnimationPlayer;
   pose?:ActorSpriteFrame;
+  labelHeight?:number;drawRadius?:number;shadowSize?:[number,number];
 }
 export interface MapLayout {
   width: number; height: number; color: string;
@@ -59,6 +60,7 @@ export class PreviewRenderer {
   private visuals = new Map<string, Visual>();
   private mapLayout?: THREE.Group;
   private mapDepthItems: MapDepthItem[] = [];
+  private presentationDepthItems: MapDepthItem[] = [];
   private background?: THREE.Mesh;
   private grid: THREE.Mesh;
   private fixture: THREE.Sprite;
@@ -176,6 +178,8 @@ export class PreviewRenderer {
   }
 
   setMapDepthItems(items: MapDepthItem[]): void { this.mapDepthItems = items; }
+  /** Transient FX join the same world-foot sort; authored map items stay owned by the map. */
+  setPresentationDepthItems(items: MapDepthItem[]): void { this.presentationDepthItems = items; }
 
   async loadAuthoredMap(map: AuthoredMapScene): Promise<void> {
     const parts = authoredMapParts(map), loader = new THREE.TextureLoader();
@@ -272,7 +276,8 @@ export class PreviewRenderer {
     const sorted = [...actors].sort((a, b) => a.y - b.y || a.id.localeCompare(b.id));
     const depthItems = sorted.map(a => ({ id: a.id, y: a.y, priority:10 }));
     if (isMap && !this.mapLayout) depthItems.push({ id: '__pillar', y: 351,priority:0 });
-    this.mapDepthItems.forEach((item, i) => depthItems.push({ id: `__map-${i}`, y: item.y,priority:item.sortPriority??0 }));
+    const sceneDepthItems=[...this.mapDepthItems,...this.presentationDepthItems];
+    sceneDepthItems.forEach((item, i) => depthItems.push({ id: `__map-${i}`, y: item.y,priority:item.sortPriority??0 }));
     depthItems.sort((a, b) => a.y - b.y || a.priority-b.priority || a.id.localeCompare(b.id));
     const orders = new Map(depthItems.map((a, i) => [a.id, i]));
     this.fixture.renderOrder = orders.get('__pillar') ?? 0;
@@ -285,7 +290,7 @@ export class PreviewRenderer {
       const anchor=ownActor.pose?.anchor??asset.atlas.anchor;
       ownMask={mask,left:ownActor.x-anchor[0],top:ownActor.y-anchor[1]};
     }
-    this.mapDepthItems.forEach((item, i) => {
+    sceneDepthItems.forEach((item, i) => {
       item.mesh.renderOrder = orders.get(`__map-${i}`) ?? 0;
       const r = item.fadeRegion;
       const overlaps = ownActor && ownActor.y < item.y && (item.occlusionMask&&ownMask ? opaqueMasksOverlap(item.occlusionMask,ownMask) :
@@ -317,12 +322,13 @@ export class PreviewRenderer {
       visual.sprite.renderOrder = orders.get(actor.id) ?? 0;
       visual.sprite.material.opacity = actor.connected === false ? .5 : 1;
       visual.shadow.position.set(actor.x, -actor.y, 0); visual.shadow.visible = isMap;
+      visual.shadow.scale.set(...(actor.shadowSize??[28,10]),1);
       visual.collider.position.set(actor.x, -actor.y, 0); visual.collider.visible = this.debug && isMap;
       visual.anchor.position.set(renderedX, -renderedY, 0); visual.anchor.visible = this.debug;
       visual.label.textContent = `${actor.name}${actor.own && this.mode === 'online' ? ' · bạn' : ''}`;
       visual.label.className = `world-label${actor.own ? ' own' : ''}${actor.connected === false ? ' offline' : ''}`;
       visual.label.hidden = !isMap;
-      const projected = new THREE.Vector3(renderedX, -renderedY + asset.atlas.anchor[1] + 8, 0).project(this.camera);
+      const projected = new THREE.Vector3(renderedX, -renderedY + (actor.labelHeight??asset.atlas.anchor[1]) + 8, 0).project(this.camera);
       visual.label.style.left = `${Math.round((projected.x + 1) * this.width / 2)}px`;
       visual.label.style.top = `${Math.round((1 - projected.y) * this.height / 2)}px`;
     }
@@ -341,7 +347,8 @@ export class PreviewRenderer {
     sprite.center.set(asset.atlas.anchor[0] / asset.atlas.frameSize[0], 1 - asset.atlas.anchor[1] / asset.atlas.frameSize[1]);
     const shadow = new THREE.Sprite(new THREE.SpriteMaterial({ map: this.shadowTexture, transparent: true, depthTest: false, depthWrite: false }));
     shadow.scale.set(28, 10, 1); shadow.renderOrder = -1000;
-    const collider = line(Array.from({ length: 32 }, (_, i) => new THREE.Vector3(Math.cos(i * Math.PI / 16) * WORLD.radius, Math.sin(i * Math.PI / 16) * WORLD.radius, 0)), 0x1c6f5c);
+    const drawRadius=actor.drawRadius??WORLD.radius;
+    const collider = line(Array.from({ length: 32 }, (_, i) => new THREE.Vector3(Math.cos(i * Math.PI / 16) * drawRadius, Math.sin(i * Math.PI / 16) * drawRadius, 0)), 0x1c6f5c);
     collider.renderOrder = 12000;
     const anchor = new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints([
       new THREE.Vector3(-5, 0, 0), new THREE.Vector3(5, 0, 0), new THREE.Vector3(0, -5, 0), new THREE.Vector3(0, 5, 0),

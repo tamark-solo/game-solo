@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-12",
+  "status": "owner-design-decision",
+  "ownerRequest": "bỏ đi bộ ... dùng chạy để đi bộ ... chạy nhanh thì ấn thêm nút shift",
+  "scope": "Player appearances using the accepted Pixel02 production style; NPC/monster gait requirements remain actor-specific.",
+  "movingBodyAction": "run",
+  "walkClipRequired": false,
+  "sprintClipRequired": false,
+  "directions": 8,
+  "modes": {
+    "normal": {"clip": "run", "input": "movement"},
+    "fast": {"clip": "run", "input": "movement + Shift"}
+  },
+  "phase": "actual world distance traveled / common stride; preserve phase when Shift changes",
+  "blocked": "no actual distance means no foot-phase advancement",
+  "bodyScale": "unchanged across both modes",
+  "speedBalance": "No new speed, resource cost or balance locked by this ART decision.",
+  "savedProduction": {"clips": 8, "poses": 48},
+  "remainingCoreActions": ["hit", "death", "attack", "attack_2", "attack_3"],
+  "liveIntegration": "pending complete accepted ART and integration review"
+}

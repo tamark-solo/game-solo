@@ -1,0 +1,2296 @@
+{
+  "id": "wang-lin-pixel-wind-v1",
+  "version": 1,
+  "date": "2026-10-12",
+  "tool": "built-in ImageGen",
+  "pixelsResampled": true,
+  "status": "candidate-wind-art-review",
+  "ownerApproved": false,
+  "artApproved": false,
+  "directions": [
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east",
+    "southeast"
+  ],
+  "actions": [
+    "dash"
+  ],
+  "clips": {
+    "dash-south": {
+      "id": "wang-pixel-wind-south",
+      "actor": "wang",
+      "action": "dash",
+      "direction": "south",
+      "registrationSource": "south",
+      "frameSize": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "atlas": "atlases/dash-south.png",
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasSha256": "cbc6d517876acfaa52399c2c92ce3c44af8b539b0ebc944c3a7d1ce7b547441f",
+      "atlasPadding": 2,
+      "frames": [
+        {
+          "file": "frames/dash-south/001.png",
+          "sha256": "c5c770078eaa3448846a91f3b1794fe65fd997b615473939bf02687929faecf0",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-south/002.png",
+          "sha256": "4973feff80019f6b74ea7ec53f324fe4fd9c7c4de32a9f3188b5a3639f487262",
+          "rect": {
+            "x": 118,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-south/003.png",
+          "sha256": "f5127bf3beb9794c7ab44d5eeb035ab48e918c38518e78bf221cca5097160515",
+          "rect": {
+            "x": 234,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-south/004.png",
+          "sha256": "ef08b45d1c972fa95ff20df28cc54d1c98759f8f7e3cda1dcec3fd1160ff47ee",
+          "rect": {
+            "x": 350,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-south/005.png",
+          "sha256": "ccae46d3f019785a0546c48d06ce9c77e71b377628ad013b2a9397b28c7a5311",
+          "rect": {
+            "x": 466,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-south/006.png",
+          "sha256": "9890db4eeb74a6870ad83ed9f3c74e8cf1a17c4b27cd3f2d781dda83956f5e66",
+          "rect": {
+            "x": 582,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        }
+      ],
+      "fps": 24,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "bodyLift": [
+        0,
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "phases": [
+        {
+          "at": 0,
+          "label": "Lấy thế"
+        },
+        {
+          "at": 166.667,
+          "label": "Lướt"
+        },
+        {
+          "at": 416.667,
+          "label": "Hồi thế"
+        }
+      ],
+      "loop": false,
+      "holdLast": true,
+      "artApproved": false
+    },
+    "dash-southwest": {
+      "id": "wang-pixel-wind-southwest",
+      "actor": "wang",
+      "action": "dash",
+      "direction": "southwest",
+      "registrationSource": "southwest",
+      "frameSize": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "atlas": "atlases/dash-southwest.png",
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasSha256": "88922fc9cbacc7e75e5a94ea4ea316aa61d9fb9935d43f2ee3e8841a9e99616f",
+      "atlasPadding": 2,
+      "frames": [
+        {
+          "file": "frames/dash-southwest/001.png",
+          "sha256": "aaaf734fb7691a93f5da629870a1380c8cef649f53e2de528b37793750e513fb",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-southwest/002.png",
+          "sha256": "a12579fcd53225dbee858db34fe70115208448060b6404cbf928ed3cde5faf42",
+          "rect": {
+            "x": 118,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-southwest/003.png",
+          "sha256": "721ec150595613607f7f88857d4fc80a343c194f3960ca35eaed99207575a51c",
+          "rect": {
+            "x": 234,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-southwest/004.png",
+          "sha256": "9f46efbd23f14442c457bf034e7cbf33995399873a28aa955f213a1980f2bc53",
+          "rect": {
+            "x": 350,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-southwest/005.png",
+          "sha256": "d0fa3d421214f825f13a6c3a2167a86a6254b4d50323032854e92969c3ddd6b0",
+          "rect": {
+            "x": 466,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-southwest/006.png",
+          "sha256": "3ddba4593b2d0bde312cb5c2323c5ca2a49d3a216e1931052c7855af7f173abe",
+          "rect": {
+            "x": 582,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        }
+      ],
+      "fps": 24,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "bodyLift": [
+        0,
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "phases": [
+        {
+          "at": 0,
+          "label": "Lấy thế"
+        },
+        {
+          "at": 166.667,
+          "label": "Lướt"
+        },
+        {
+          "at": 416.667,
+          "label": "Hồi thế"
+        }
+      ],
+      "loop": false,
+      "holdLast": true,
+      "artApproved": false
+    },
+    "dash-west": {
+      "id": "wang-pixel-wind-west",
+      "actor": "wang",
+      "action": "dash",
+      "direction": "west",
+      "registrationSource": "west",
+      "frameSize": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "atlas": "atlases/dash-west.png",
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasSha256": "749bdb0964e07e226f171f84935a2da4d7ac9d42bf55c3ac702110ffe675bc02",
+      "atlasPadding": 2,
+      "frames": [
+        {
+          "file": "frames/dash-west/001.png",
+          "sha256": "3ea3b199eff1e7e50bea65e3ddf302afcec7dd2f7d8864099ee9953fcc9f9231",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-west/002.png",
+          "sha256": "2f881b12567584734fbfda6a8ba9aa9cdf9273825053101bdc1ecd2482b52538",
+          "rect": {
+            "x": 118,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-west/003.png",
+          "sha256": "38f6d0299f9864e7b38e731917b393f0bb856ba1cb096e4808af341a18287dc0",
+          "rect": {
+            "x": 234,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-west/004.png",
+          "sha256": "8a7a4a36552e9b9ef6e7e770693c645cc0f04574086a447f40e92a36157b148e",
+          "rect": {
+            "x": 350,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-west/005.png",
+          "sha256": "227692476916d5b184ac9349f4399b9a7b19c24b437043305b1b1727405ed031",
+          "rect": {
+            "x": 466,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-west/006.png",
+          "sha256": "e6a72d91c8a76be5f15975f1efeecb3cb94aaedf84298074ff419ab18b7e6b16",
+          "rect": {
+            "x": 582,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        }
+      ],
+      "fps": 24,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "bodyLift": [
+        0,
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "phases": [
+        {
+          "at": 0,
+          "label": "Lấy thế"
+        },
+        {
+          "at": 166.667,
+          "label": "Lướt"
+        },
+        {
+          "at": 416.667,
+          "label": "Hồi thế"
+        }
+      ],
+      "loop": false,
+      "holdLast": true,
+      "artApproved": false
+    },
+    "dash-northwest": {
+      "id": "wang-pixel-wind-northwest",
+      "actor": "wang",
+      "action": "dash",
+      "direction": "northwest",
+      "registrationSource": "northwest",
+      "frameSize": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "atlas": "atlases/dash-northwest.png",
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasSha256": "0d4bf9312acad3c52733bf7ff8698e9488a645be41e58261babb3ec890caa652",
+      "atlasPadding": 2,
+      "frames": [
+        {
+          "file": "frames/dash-northwest/001.png",
+          "sha256": "36f7357043c8402066d6e651e33d31cab13517a285a8fa7e9c1c9025ca61d018",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-northwest/002.png",
+          "sha256": "9b7b40ede4c2e1c912c2a04df08a96b1b160a9a50c7d6689302c182a6f1c37e7",
+          "rect": {
+            "x": 118,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-northwest/003.png",
+          "sha256": "c3e35ac4f8c412265c2c63a418ef420c09881811c2de89768e3fc3bdf00b7935",
+          "rect": {
+            "x": 234,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-northwest/004.png",
+          "sha256": "6d19e4990ee58d522e1d0f559205b48d5cc03a69f3598361fafe2b9f0c7960f3",
+          "rect": {
+            "x": 350,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-northwest/005.png",
+          "sha256": "198862e229b9a8a7ee90ab9741dbdbc0992e79d9d870c676411d182f845ca4ab",
+          "rect": {
+            "x": 466,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-northwest/006.png",
+          "sha256": "e4cde354b24e73d641e4cc0f4376879c83261ba44b1af0b7543ccaccf731a31e",
+          "rect": {
+            "x": 582,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        }
+      ],
+      "fps": 24,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "bodyLift": [
+        0,
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "phases": [
+        {
+          "at": 0,
+          "label": "Lấy thế"
+        },
+        {
+          "at": 166.667,
+          "label": "Lướt"
+        },
+        {
+          "at": 416.667,
+          "label": "Hồi thế"
+        }
+      ],
+      "loop": false,
+      "holdLast": true,
+      "artApproved": false
+    },
+    "dash-north": {
+      "id": "wang-pixel-wind-north",
+      "actor": "wang",
+      "action": "dash",
+      "direction": "north",
+      "registrationSource": "north",
+      "frameSize": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "atlas": "atlases/dash-north.png",
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasSha256": "cf1b61c59ed544dbf0da4caac236fa741bc621b9810ae5804ae80ad6d163e607",
+      "atlasPadding": 2,
+      "frames": [
+        {
+          "file": "frames/dash-north/001.png",
+          "sha256": "4c9a4f66c91380c03055b78d6ca2ce96d9ad1dd80322d391c7791979880cbaee",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-north/002.png",
+          "sha256": "7cab97df2060c7b93f2d1780f432040ae21c8ab35787f95edd525d5ab2c07a9e",
+          "rect": {
+            "x": 118,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-north/003.png",
+          "sha256": "08220845e9316ca9233dcf8aace074aa0217b0fb391f7fdaf62f0e947d30163b",
+          "rect": {
+            "x": 234,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-north/004.png",
+          "sha256": "c65791c89bada66832e3c4cf4d1cd6e78191cb77f6b4ff2f6eb4eaecaa89e2af",
+          "rect": {
+            "x": 350,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-north/005.png",
+          "sha256": "fc16d2830e8c187d9bb3f41334077df722f1962fb98cf5eeb4cdff6d6cac777c",
+          "rect": {
+            "x": 466,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-north/006.png",
+          "sha256": "0c4f439138d30e4f4f2bd8f9e954b90a7619251c60851db4f273417e7b56bbce",
+          "rect": {
+            "x": 582,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        }
+      ],
+      "fps": 24,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "bodyLift": [
+        0,
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "phases": [
+        {
+          "at": 0,
+          "label": "Lấy thế"
+        },
+        {
+          "at": 166.667,
+          "label": "Lướt"
+        },
+        {
+          "at": 416.667,
+          "label": "Hồi thế"
+        }
+      ],
+      "loop": false,
+      "holdLast": true,
+      "artApproved": false
+    },
+    "dash-northeast": {
+      "id": "wang-pixel-wind-northeast",
+      "actor": "wang",
+      "action": "dash",
+      "direction": "northeast",
+      "registrationSource": "northeast",
+      "frameSize": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "atlas": "atlases/dash-northeast.png",
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasSha256": "4d0b84ce10595d60dabd29761de86229e8636ef8da303592bb3f8a6c6084acc8",
+      "atlasPadding": 2,
+      "frames": [
+        {
+          "file": "frames/dash-northeast/001.png",
+          "sha256": "97916911b592927b1faad7e47c44797933562eafea5b936f009e01592c0a8500",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-northeast/002.png",
+          "sha256": "7a7025c4dee7a46bf2182217832f83f2910759ce772a932bbc83ebb40baafb3b",
+          "rect": {
+            "x": 118,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-northeast/003.png",
+          "sha256": "4a226e7d6f505373441be8eba661d132ff1ae163dcf4b3d6027d75f2a46f081f",
+          "rect": {
+            "x": 234,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-northeast/004.png",
+          "sha256": "1f3743e7f6594ee76386ae7f36290aa078f526a4e366dbb3dea952196e3267ef",
+          "rect": {
+            "x": 350,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-northeast/005.png",
+          "sha256": "c976c492e832a6555f0baa6128cd2094130104e2b2240eb1b3abb587ae18a950",
+          "rect": {
+            "x": 466,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-northeast/006.png",
+          "sha256": "13b3c4498f593dcdd5e03ceee143ac386fccde7b81b48509b8bdc83e1796b39c",
+          "rect": {
+            "x": 582,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        }
+      ],
+      "fps": 24,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "bodyLift": [
+        0,
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "phases": [
+        {
+          "at": 0,
+          "label": "Lấy thế"
+        },
+        {
+          "at": 166.667,
+          "label": "Lướt"
+        },
+        {
+          "at": 416.667,
+          "label": "Hồi thế"
+        }
+      ],
+      "loop": false,
+      "holdLast": true,
+      "artApproved": false
+    },
+    "dash-east": {
+      "id": "wang-pixel-wind-east",
+      "actor": "wang",
+      "action": "dash",
+      "direction": "east",
+      "registrationSource": "east",
+      "frameSize": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "atlas": "atlases/dash-east.png",
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasSha256": "e4d2c712deadd6e090cf5d297a8ab44a255d647cbd1ba8043f29ac095b97a06b",
+      "atlasPadding": 2,
+      "frames": [
+        {
+          "file": "frames/dash-east/001.png",
+          "sha256": "195c9e805c628fdbf097fd252a328b68a9d83797c3e1ad8701c3623dfe39925e",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-east/002.png",
+          "sha256": "dcbac29725ce4db65a8e6a6328b21ffdd6f5a23b5e89151424c45289bdd58e4b",
+          "rect": {
+            "x": 118,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-east/003.png",
+          "sha256": "99cd38acf2ac2b2d97a530d34204972ce4e49dc48a7d8c456ad9aaa905d0fcc7",
+          "rect": {
+            "x": 234,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-east/004.png",
+          "sha256": "8120c17b36d3cf735d7e4582b426e426d49d8199c8d019cd40d185b2629b3210",
+          "rect": {
+            "x": 350,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-east/005.png",
+          "sha256": "0cd3bd41feaeff5f04add6bcc02c2296b8d7ca97084f259024aacefa228e000d",
+          "rect": {
+            "x": 466,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-east/006.png",
+          "sha256": "f8f9c54bba9e654eda0dd36958365af66cbc1fb61881f31ca9017f5abe428c1e",
+          "rect": {
+            "x": 582,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        }
+      ],
+      "fps": 24,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "bodyLift": [
+        0,
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "phases": [
+        {
+          "at": 0,
+          "label": "Lấy thế"
+        },
+        {
+          "at": 166.667,
+          "label": "Lướt"
+        },
+        {
+          "at": 416.667,
+          "label": "Hồi thế"
+        }
+      ],
+      "loop": false,
+      "holdLast": true,
+      "artApproved": false
+    },
+    "dash-southeast": {
+      "id": "wang-pixel-wind-southeast",
+      "actor": "wang",
+      "action": "dash",
+      "direction": "southeast",
+      "registrationSource": "southeast",
+      "frameSize": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "atlas": "atlases/dash-southeast.png",
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasSha256": "b4471eb1a220cc1caaf961fa20f979eea20a65bdda67480551c1bbf7821e0d60",
+      "atlasPadding": 2,
+      "frames": [
+        {
+          "file": "frames/dash-southeast/001.png",
+          "sha256": "829b9c62da0eb9febeb76d39c9aa6e3c8892de3e5ae9c5f0ea5be1904402a325",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-southeast/002.png",
+          "sha256": "332744d748e0cf07f65e0e03ffb3faf4149dce009fd1bbbf91af2b14995a9969",
+          "rect": {
+            "x": 118,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-southeast/003.png",
+          "sha256": "8f7f242237300a28d9001c99f6e1411e9fea4e1364877bc440da6207feaa20ff",
+          "rect": {
+            "x": 234,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-southeast/004.png",
+          "sha256": "280ff5b7fb0037e896db619c1e310e59efe5f0a17164eb68f5666b918f263417",
+          "rect": {
+            "x": 350,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-southeast/005.png",
+          "sha256": "0247c162f0a17310e0f8b303c2995ad2bd9d944961ae43bc7949eb2d8fbb2fb1",
+          "rect": {
+            "x": 466,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        },
+        {
+          "file": "frames/dash-southeast/006.png",
+          "sha256": "a219b9a482aa64434f39630859dce950413aee71ce0fa06c370b912c9a89dbbd",
+          "rect": {
+            "x": 582,
+            "y": 2,
+            "w": 112,
+            "h": 96
+          }
+        }
+      ],
+      "fps": 24,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "bodyLift": [
+        0,
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "phases": [
+        {
+          "at": 0,
+          "label": "Lấy thế"
+        },
+        {
+          "at": 166.667,
+          "label": "Lướt"
+        },
+        {
+          "at": 416.667,
+          "label": "Hồi thế"
+        }
+      ],
+      "loop": false,
+      "holdLast": true,
+      "artApproved": false
+    }
+  },
+  "sources": [
+    {
+      "file": "sources/south-v2.png",
+      "sha256": "01c60a61173534036669e24e4c7f555e1fc19b66b5d7ee573aedc29f70b7c70e",
+      "prompt": "sources/south-v2.prompt.txt",
+      "promptSha256": "fd6adf2b0d697951bb89e14071277c50cade455985b9ba73e3e5db3862aee698",
+      "inputHashes": [
+        {
+          "file": "inputs/master-south-4x.png",
+          "sha256": "2dd7278a8ca3393321fcedc6bbfb6979a1b5e1208792ce16fb2283cfcac865cf"
+        },
+        {
+          "file": "../wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "file": "sources/southwest-v1.png",
+      "sha256": "11f81c9dc0a4117561899993f13a3bc7e9552960dd32366e697673b7212cc186",
+      "prompt": "sources/southwest.prompt.txt",
+      "promptSha256": "e1f79b6ab77f572ed9b28f79d57793a678ff7b0e4299c0b4d154a3e11495a0f1",
+      "inputHashes": [
+        {
+          "file": "inputs/master-southwest-4x.png",
+          "sha256": "fa203ad3baf5fefad9074df2203542ce4b1f835924c35937a7a093d28f159205"
+        },
+        {
+          "file": "../wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "size": [
+        2172,
+        724
+      ]
+    },
+    {
+      "file": "sources/west-v1.png",
+      "sha256": "3472296731832fb6ffe6dbfa77c535d93e0d4acc90bccf16ee60e753d46222ee",
+      "prompt": "sources/west.prompt.txt",
+      "promptSha256": "542482b035f902f6aef85abc1a6f3156553ecbebcc2b93c92493d60ae65c6386",
+      "inputHashes": [
+        {
+          "file": "inputs/master-west-4x.png",
+          "sha256": "a54428427b1f40e9c98b1e6ecc0c8ac7dbb65ea7073bfda3d6a92f01da0c7a2d"
+        },
+        {
+          "file": "../wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "size": [
+        2172,
+        724
+      ]
+    },
+    {
+      "file": "sources/northwest-v1.png",
+      "sha256": "c1d3abefedfd1a2913c909a0e96eafd7e753b12b1dbd10cae92636252735bc0d",
+      "prompt": "sources/northwest.prompt.txt",
+      "promptSha256": "d3d3c41b669ad4dd8b25a5718d6470e1992f6330832900aee445e5c054abf83d",
+      "inputHashes": [
+        {
+          "file": "inputs/master-northwest-4x.png",
+          "sha256": "1cf481906942a72ede90cb1dc30460b8d5f47fd9f93eb1d5e29c90e912eb62e6"
+        },
+        {
+          "file": "../wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "size": [
+        2172,
+        724
+      ]
+    },
+    {
+      "file": "sources/north-v2.png",
+      "sha256": "d43cb1adbd2658d4c5b375b98f162e817d1ece027f93ee3ac3ceda2538a273fc",
+      "prompt": "sources/north-v2.prompt.txt",
+      "promptSha256": "0b18897291e45b0a3541b3ffae133ee2506ad69a1058704307c46259a6fd9e9a",
+      "inputHashes": [
+        {
+          "file": "inputs/master-north-4x.png",
+          "sha256": "1e0d4d0b3c1d5d4021c9a49c825f9a181a28708ad7b9685f934650bcd55106d3"
+        },
+        {
+          "file": "../wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "size": [
+        1774,
+        887
+      ]
+    },
+    {
+      "file": "sources/northeast-v1.png",
+      "sha256": "12cb5255ab850d399f4662e4661bda9bc5c7cd4c423945e3e684651bc47d68a6",
+      "prompt": "sources/northeast.prompt.txt",
+      "promptSha256": "5dd1aad7bb588a28de074528123bd729da5ccf2090be6465bb4fbcd52e30eac2",
+      "inputHashes": [
+        {
+          "file": "inputs/master-northeast-4x.png",
+          "sha256": "9fa7a489ad3c1facb24b9de301920e41dc28c335d1b9ad6d11a6c78c1f3035f2"
+        },
+        {
+          "file": "../wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "size": [
+        2172,
+        724
+      ]
+    },
+    {
+      "file": "sources/east-v1.png",
+      "sha256": "8fa165859dc0eb7861fdf829dcc85c2bd4e450836f87e0bf2aeb26c2083df8db",
+      "prompt": "sources/east.prompt.txt",
+      "promptSha256": "e5747a568849dff84b20f978d55c03a633918e5a153f7154a8729c6e8fe53448",
+      "inputHashes": [
+        {
+          "file": "inputs/master-east-4x.png",
+          "sha256": "817a4c5c447202f48c35687cab54e40a149da9b512c91c37e0122f4d6b7edb22"
+        },
+        {
+          "file": "../wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "size": [
+        2172,
+        724
+      ]
+    },
+    {
+      "file": "sources/southeast-v1.png",
+      "sha256": "3bbcdc4e56c7069378bb4311070b3149401938d3cd429999dfac9a80d3bddd31",
+      "prompt": "sources/southeast.prompt.txt",
+      "promptSha256": "56158fe0c34e75cce465da5f046b6e0358e94f00d7e476978342daa2250e178b",
+      "inputHashes": [
+        {
+          "file": "inputs/master-southeast-4x.png",
+          "sha256": "36939bae591a6d009628cb56c06a8b339a7dc9f9d1efd66a86734250c2ddecda"
+        },
+        {
+          "file": "../wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "size": [
+        2172,
+        724
+      ]
+    }
+  ],
+  "registration": [
+    {
+      "direction": "south",
+      "scale": 0.20671834625322996,
+      "scaleReference": "Median height of six neutral poses matching accepted master, one fixed scale for all dash poses.",
+      "roots": [
+        144,
+        393.5,
+        644,
+        894,
+        1148,
+        1400.5
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "left": 27,
+            "top": 566,
+            "width": 227,
+            "height": 386,
+            "area": 59202
+          },
+          "scale": 0.20671834625322996,
+          "sourcePivot": [
+            144,
+            953
+          ],
+          "offset": [
+            32,
+            8
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "left": 276,
+            "top": 591,
+            "width": 232,
+            "height": 365,
+            "area": 55411
+          },
+          "scale": 0.20671834625322996,
+          "sourcePivot": [
+            393.5,
+            953.8125
+          ],
+          "offset": [
+            32,
+            13
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "left": 528,
+            "top": 590,
+            "width": 237,
+            "height": 367,
+            "area": 55344
+          },
+          "scale": 0.20671834625322996,
+          "sourcePivot": [
+            644,
+            957.6500000000001
+          ],
+          "offset": [
+            32,
+            12
+          ],
+          "bodyLift": 2,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "left": 774,
+            "top": 613,
+            "width": 252,
+            "height": 343,
+            "area": 56447
+          },
+          "scale": 0.20671834625322996,
+          "sourcePivot": [
+            894,
+            956.4625000000001
+          ],
+          "offset": [
+            31,
+            17
+          ],
+          "bodyLift": 3,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "left": 1031,
+            "top": 589,
+            "width": 239,
+            "height": 367,
+            "area": 56382
+          },
+          "scale": 0.20671834625322996,
+          "sourcePivot": [
+            1148,
+            956.6500000000001
+          ],
+          "offset": [
+            32,
+            12
+          ],
+          "bodyLift": 1,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "left": 1285,
+            "top": 565,
+            "width": 227,
+            "height": 387,
+            "area": 59355
+          },
+          "scale": 0.20671834625322996,
+          "sourcePivot": [
+            1400.5,
+            952
+          ],
+          "offset": [
+            32,
+            8
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        }
+      ]
+    },
+    {
+      "direction": "southwest",
+      "scale": 0.2476780185758514,
+      "scaleReference": "Median height of six neutral poses matching accepted master, one fixed scale for all dash poses.",
+      "roots": [
+        173,
+        535,
+        893.5,
+        1254,
+        1616.5,
+        1978
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "left": 90,
+            "top": 377,
+            "width": 221,
+            "height": 318,
+            "area": 46056
+          },
+          "scale": 0.2476780185758514,
+          "sourcePivot": [
+            173,
+            695.9625
+          ],
+          "offset": [
+            35,
+            9
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "left": 433,
+            "top": 384,
+            "width": 229,
+            "height": 310,
+            "area": 45352
+          },
+          "scale": 0.2476780185758514,
+          "sourcePivot": [
+            535,
+            694.8875
+          ],
+          "offset": [
+            31,
+            11
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "left": 760,
+            "top": 403,
+            "width": 252,
+            "height": 289,
+            "area": 44855
+          },
+          "scale": 0.2476780185758514,
+          "sourcePivot": [
+            893.5,
+            693.7
+          ],
+          "offset": [
+            23,
+            16
+          ],
+          "bodyLift": 2,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "left": 1112,
+            "top": 414,
+            "width": 310,
+            "height": 268,
+            "area": 46302
+          },
+          "scale": 0.2476780185758514,
+          "sourcePivot": [
+            1254,
+            680.475
+          ],
+          "offset": [
+            21,
+            22
+          ],
+          "bodyLift": 3,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "left": 1512,
+            "top": 384,
+            "width": 256,
+            "height": 311,
+            "area": 50485
+          },
+          "scale": 0.2476780185758514,
+          "sourcePivot": [
+            1616.5,
+            694.8875
+          ],
+          "offset": [
+            30,
+            11
+          ],
+          "bodyLift": 1,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "left": 1895,
+            "top": 377,
+            "width": 223,
+            "height": 321,
+            "area": 46374
+          },
+          "scale": 0.2476780185758514,
+          "sourcePivot": [
+            1978,
+            700
+          ],
+          "offset": [
+            35,
+            8
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        }
+      ]
+    },
+    {
+      "direction": "west",
+      "scale": 0.25396825396825395,
+      "scaleReference": "Median height of six neutral poses matching accepted master, one fixed scale for all dash poses.",
+      "roots": [
+        186.5,
+        533,
+        879,
+        1236,
+        1596,
+        1949
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "left": 103,
+            "top": 405,
+            "width": 220,
+            "height": 308,
+            "area": 42157
+          },
+          "scale": 0.25396825396825395,
+          "sourcePivot": [
+            186.5,
+            712.125
+          ],
+          "offset": [
+            35,
+            10
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "left": 440,
+            "top": 411,
+            "width": 245,
+            "height": 297,
+            "area": 43907
+          },
+          "scale": 0.25396825396825395,
+          "sourcePivot": [
+            533,
+            706.3125
+          ],
+          "offset": [
+            32,
+            13
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "left": 732,
+            "top": 420,
+            "width": 272,
+            "height": 288,
+            "area": 45790
+          },
+          "scale": 0.25396825396825395,
+          "sourcePivot": [
+            879,
+            707.4375
+          ],
+          "offset": [
+            19,
+            15
+          ],
+          "bodyLift": 2,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "left": 1091,
+            "top": 420,
+            "width": 314,
+            "height": 288,
+            "area": 46320
+          },
+          "scale": 0.25396825396825395,
+          "sourcePivot": [
+            1236,
+            707.4375
+          ],
+          "offset": [
+            19,
+            15
+          ],
+          "bodyLift": 3,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "left": 1496,
+            "top": 411,
+            "width": 274,
+            "height": 297,
+            "area": 49905
+          },
+          "scale": 0.25396825396825395,
+          "sourcePivot": [
+            1596,
+            706.3125
+          ],
+          "offset": [
+            31,
+            13
+          ],
+          "bodyLift": 1,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "left": 1864,
+            "top": 405,
+            "width": 222,
+            "height": 308,
+            "area": 42046
+          },
+          "scale": 0.25396825396825395,
+          "sourcePivot": [
+            1949,
+            712.125
+          ],
+          "offset": [
+            34,
+            10
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        }
+      ]
+    },
+    {
+      "direction": "northwest",
+      "scale": 0.26936026936026936,
+      "scaleReference": "Median height of six neutral poses matching accepted master, one fixed scale for all dash poses.",
+      "roots": [
+        258,
+        593.5,
+        929,
+        1263,
+        1600,
+        1936.5
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "left": 176,
+            "top": 397,
+            "width": 203,
+            "height": 289,
+            "area": 36951
+          },
+          "scale": 0.26936026936026936,
+          "sourcePivot": [
+            258,
+            686.575
+          ],
+          "offset": [
+            34,
+            10
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "left": 497,
+            "top": 397,
+            "width": 208,
+            "height": 289,
+            "area": 38049
+          },
+          "scale": 0.26936026936026936,
+          "sourcePivot": [
+            593.5,
+            686.575
+          ],
+          "offset": [
+            30,
+            10
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "left": 787,
+            "top": 409,
+            "width": 243,
+            "height": 273,
+            "area": 37347
+          },
+          "scale": 0.26936026936026936,
+          "sourcePivot": [
+            929,
+            683.725
+          ],
+          "offset": [
+            18,
+            14
+          ],
+          "bodyLift": 2,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "left": 1130,
+            "top": 419,
+            "width": 243,
+            "height": 260,
+            "area": 37212
+          },
+          "scale": 0.26936026936026936,
+          "sourcePivot": [
+            1263,
+            678.875
+          ],
+          "offset": [
+            20,
+            18
+          ],
+          "bodyLift": 3,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "left": 1500,
+            "top": 397,
+            "width": 220,
+            "height": 288,
+            "area": 39806
+          },
+          "scale": 0.26936026936026936,
+          "sourcePivot": [
+            1600,
+            686.575
+          ],
+          "offset": [
+            29,
+            10
+          ],
+          "bodyLift": 1,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "left": 1850,
+            "top": 393,
+            "width": 195,
+            "height": 297,
+            "area": 37978
+          },
+          "scale": 0.26936026936026936,
+          "sourcePivot": [
+            1936.5,
+            690
+          ],
+          "offset": [
+            33,
+            8
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        }
+      ]
+    },
+    {
+      "direction": "north",
+      "scale": 0.2247191011235955,
+      "scaleReference": "Median height of six neutral poses matching accepted master, one fixed scale for all dash poses.",
+      "roots": [
+        163,
+        457.5,
+        749.5,
+        1038.5,
+        1330.5,
+        1623
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "left": 47,
+            "top": 509,
+            "width": 217,
+            "height": 351,
+            "area": 50821
+          },
+          "scale": 0.2247191011235955,
+          "sourcePivot": [
+            163,
+            860.55
+          ],
+          "offset": [
+            30,
+            9
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "left": 356,
+            "top": 517,
+            "width": 208,
+            "height": 339,
+            "area": 46570
+          },
+          "scale": 0.2247191011235955,
+          "sourcePivot": [
+            457.5,
+            855.2
+          ],
+          "offset": [
+            33,
+            12
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "left": 623,
+            "top": 517,
+            "width": 226,
+            "height": 329,
+            "area": 44670
+          },
+          "scale": 0.2247191011235955,
+          "sourcePivot": [
+            749.5,
+            846.3
+          ],
+          "offset": [
+            28,
+            14
+          ],
+          "bodyLift": 2,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "left": 884,
+            "top": 504,
+            "width": 267,
+            "height": 338,
+            "area": 52809
+          },
+          "scale": 0.2247191011235955,
+          "sourcePivot": [
+            1038.5,
+            842.2
+          ],
+          "offset": [
+            21,
+            12
+          ],
+          "bodyLift": 3,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "left": 1213,
+            "top": 508,
+            "width": 253,
+            "height": 349,
+            "area": 51107
+          },
+          "scale": 0.2247191011235955,
+          "sourcePivot": [
+            1330.5,
+            855.1
+          ],
+          "offset": [
+            30,
+            10
+          ],
+          "bodyLift": 1,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "left": 1506,
+            "top": 509,
+            "width": 220,
+            "height": 358,
+            "area": 52160
+          },
+          "scale": 0.2247191011235955,
+          "sourcePivot": [
+            1623,
+            865
+          ],
+          "offset": [
+            30,
+            8
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        }
+      ]
+    },
+    {
+      "direction": "northeast",
+      "scale": 0.27491408934707906,
+      "scaleReference": "Median height of six neutral poses matching accepted master, one fixed scale for all dash poses.",
+      "roots": [
+        183,
+        545,
+        907.5,
+        1269.5,
+        1631.5,
+        1993.5
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "left": 85,
+            "top": 414,
+            "width": 183,
+            "height": 281,
+            "area": 33968
+          },
+          "scale": 0.27491408934707906,
+          "sourcePivot": [
+            183,
+            694.0875
+          ],
+          "offset": [
+            29,
+            11
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "left": 437,
+            "top": 414,
+            "width": 189,
+            "height": 281,
+            "area": 35103
+          },
+          "scale": 0.27491408934707906,
+          "sourcePivot": [
+            545,
+            694.0875
+          ],
+          "offset": [
+            26,
+            11
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "left": 787,
+            "top": 414,
+            "width": 242,
+            "height": 281,
+            "area": 37487
+          },
+          "scale": 0.27491408934707906,
+          "sourcePivot": [
+            907.5,
+            694.0875
+          ],
+          "offset": [
+            23,
+            11
+          ],
+          "bodyLift": 2,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "left": 1137,
+            "top": 414,
+            "width": 250,
+            "height": 281,
+            "area": 38188
+          },
+          "scale": 0.27491408934707906,
+          "sourcePivot": [
+            1269.5,
+            694.0875
+          ],
+          "offset": [
+            20,
+            11
+          ],
+          "bodyLift": 3,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "left": 1519,
+            "top": 402,
+            "width": 228,
+            "height": 293,
+            "area": 39107
+          },
+          "scale": 0.27491408934707906,
+          "sourcePivot": [
+            1631.5,
+            696.6375
+          ],
+          "offset": [
+            25,
+            7
+          ],
+          "bodyLift": 1,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "left": 1894,
+            "top": 414,
+            "width": 180,
+            "height": 290,
+            "area": 35248
+          },
+          "scale": 0.27491408934707906,
+          "sourcePivot": [
+            1993.5,
+            705
+          ],
+          "offset": [
+            29,
+            8
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        }
+      ]
+    },
+    {
+      "direction": "east",
+      "scale": 0.2484472049689441,
+      "scaleReference": "Median height of six neutral poses matching accepted master, one fixed scale for all dash poses.",
+      "roots": [
+        205,
+        564,
+        919.5,
+        1276,
+        1639,
+        2000
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "left": 55,
+            "top": 392,
+            "width": 236,
+            "height": 322,
+            "area": 47827
+          },
+          "scale": 0.2484472049689441,
+          "sourcePivot": [
+            205,
+            714
+          ],
+          "offset": [
+            19,
+            8
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "left": 411,
+            "top": 392,
+            "width": 247,
+            "height": 317,
+            "area": 51223
+          },
+          "scale": 0.2484472049689441,
+          "sourcePivot": [
+            564,
+            709.975
+          ],
+          "offset": [
+            18,
+            9
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "left": 773,
+            "top": 412,
+            "width": 284,
+            "height": 297,
+            "area": 47586
+          },
+          "scale": 0.2484472049689441,
+          "sourcePivot": [
+            919.5,
+            709.85
+          ],
+          "offset": [
+            20,
+            14
+          ],
+          "bodyLift": 2,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "left": 1119,
+            "top": 424,
+            "width": 318,
+            "height": 284,
+            "area": 48057
+          },
+          "scale": 0.2484472049689441,
+          "sourcePivot": [
+            1276,
+            709.775
+          ],
+          "offset": [
+            17,
+            17
+          ],
+          "bodyLift": 3,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "left": 1505,
+            "top": 394,
+            "width": 266,
+            "height": 315,
+            "area": 52766
+          },
+          "scale": 0.2484472049689441,
+          "sourcePivot": [
+            1639,
+            707.95
+          ],
+          "offset": [
+            23,
+            10
+          ],
+          "bodyLift": 1,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "left": 1860,
+            "top": 392,
+            "width": 226,
+            "height": 322,
+            "area": 46368
+          },
+          "scale": 0.2484472049689441,
+          "sourcePivot": [
+            2000,
+            714
+          ],
+          "offset": [
+            21,
+            8
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        }
+      ]
+    },
+    {
+      "direction": "southeast",
+      "scale": 0.25,
+      "scaleReference": "Median height of six neutral poses matching accepted master, one fixed scale for all dash poses.",
+      "roots": [
+        190,
+        552,
+        914,
+        1275.5,
+        1638,
+        1999.5
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "left": 61,
+            "top": 394,
+            "width": 215,
+            "height": 315,
+            "area": 44874
+          },
+          "scale": 0.25,
+          "sourcePivot": [
+            190,
+            710
+          ],
+          "offset": [
+            24,
+            9
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "left": 425,
+            "top": 398,
+            "width": 231,
+            "height": 308,
+            "area": 46040
+          },
+          "scale": 0.25,
+          "sourcePivot": [
+            552,
+            706
+          ],
+          "offset": [
+            24,
+            11
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "left": 772,
+            "top": 410,
+            "width": 285,
+            "height": 297,
+            "area": 49378
+          },
+          "scale": 0.25,
+          "sourcePivot": [
+            914,
+            706
+          ],
+          "offset": [
+            21,
+            14
+          ],
+          "bodyLift": 2,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "left": 1130,
+            "top": 414,
+            "width": 290,
+            "height": 295,
+            "area": 48868
+          },
+          "scale": 0.25,
+          "sourcePivot": [
+            1275.5,
+            710
+          ],
+          "offset": [
+            20,
+            14
+          ],
+          "bodyLift": 3,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "left": 1494,
+            "top": 394,
+            "width": 256,
+            "height": 315,
+            "area": 52006
+          },
+          "scale": 0.25,
+          "sourcePivot": [
+            1638,
+            710
+          ],
+          "offset": [
+            20,
+            9
+          ],
+          "bodyLift": 1,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "left": 1871,
+            "top": 394,
+            "width": 211,
+            "height": 315,
+            "area": 44768
+          },
+          "scale": 0.25,
+          "sourcePivot": [
+            1999.5,
+            710
+          ],
+          "offset": [
+            24,
+            9
+          ],
+          "bodyLift": 0,
+          "groundMethod": "Boot sole boundary at88; authored launch/glide elevation is separate presentation bodyLift, world foot stays fixed. No per-pose fitting."
+        }
+      ]
+    }
+  ],
+  "basis": "production-basis.json",
+  "contract": {
+    "frameSize": [
+      112,
+      96
+    ],
+    "pivot": [
+      56,
+      88
+    ],
+    "standingHeight": 80,
+    "layers": [
+      "body"
+    ],
+    "vfx": "Existing R01 wind trails, launch/arrival rings and history ghosts are separate. Body lift does not change physical foot/collider.",
+    "timing": {
+      "release": 166.667,
+      "recovery": 416.667,
+      "end": 583.333
+    }
+  },
+  "coverage": {
+    "required": [
+      "dash-south",
+      "dash-southwest",
+      "dash-west",
+      "dash-northwest",
+      "dash-north",
+      "dash-northeast",
+      "dash-east",
+      "dash-southeast"
+    ],
+    "missing": [],
+    "fullPlayerActions": false
+  }
+}

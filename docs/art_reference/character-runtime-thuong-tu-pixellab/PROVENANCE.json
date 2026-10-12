@@ -1,0 +1,978 @@
+{
+  "tool": "PixelLab MCP (Pro Flash character, animate_character, animate_with_skeleton_v3)",
+  "builder": "game/scripts/build-pixellab-runtime-pack.py",
+  "pixellab": {
+    "account": "pixellab-2",
+    "bodyCharacterId": "52d344d4-40a2-4e98-9a58-1297998e0978",
+    "baseImageId": "7a7436c0-f436-5d51-8ab7-f53a97b29ec3",
+    "styleReference": "d23691c7-c4e7-4c7f-bb4b-da4631a95d13 (rendering style only)",
+    "premiumSkinCandidates": {
+      "B": "341e8f06-cd3d-5bdb-9403-b6e7e1ce5d82",
+      "C": "ed9bcb54-dc7f-58a3-97b3-b9a049ff4aaf"
+    },
+    "groups": "_asset-source/thuong-tu-pixellab-20261001/groups.md"
+  },
+  "frames": "<local>",
+  "pixelsResampled": false,
+  "standingHeight": 116,
+  "scale": 0.458,
+  "displayHeight": 42.502,
+  "offsets": {
+    "idle/south": [
+      4,
+      14
+    ],
+    "idle/southwest": [
+      3,
+      12
+    ],
+    "idle/west": [
+      14,
+      14
+    ],
+    "idle/northwest": [
+      19,
+      14
+    ],
+    "idle/north": [
+      -9,
+      16
+    ],
+    "idle/northeast": [
+      -12,
+      13
+    ],
+    "idle/east": [
+      -4,
+      14
+    ],
+    "idle/southeast": [
+      9,
+      13
+    ],
+    "walk/south": [
+      4,
+      13
+    ],
+    "walk/southwest": [
+      1,
+      12
+    ],
+    "walk/west": [
+      13,
+      14
+    ],
+    "walk/northwest": [
+      17,
+      16
+    ],
+    "walk/north": [
+      -8,
+      16
+    ],
+    "walk/northeast": [
+      -10,
+      14
+    ],
+    "walk/east": [
+      -1,
+      14
+    ],
+    "walk/southeast": [
+      11,
+      12
+    ],
+    "run/south": [
+      1,
+      19
+    ],
+    "run/southwest": [
+      2,
+      19
+    ],
+    "run/west": [
+      21,
+      18
+    ],
+    "run/northwest": [
+      18,
+      14
+    ],
+    "run/north": [
+      -8,
+      13
+    ],
+    "run/northeast": [
+      -11,
+      10
+    ],
+    "run/east": [
+      -6,
+      10
+    ],
+    "run/southeast": [
+      8,
+      15
+    ],
+    "hurt/south": [
+      3,
+      11
+    ],
+    "hurt/southwest": [
+      5,
+      11
+    ],
+    "hurt/west": [
+      21,
+      14
+    ],
+    "hurt/northwest": [
+      15,
+      18
+    ],
+    "hurt/north": [
+      -9,
+      16
+    ],
+    "hurt/northeast": [
+      -13,
+      13
+    ],
+    "hurt/east": [
+      -8,
+      14
+    ],
+    "hurt/southeast": [
+      9,
+      14
+    ],
+    "attack/south": [
+      7,
+      14
+    ],
+    "attack/southwest": [
+      10,
+      10
+    ],
+    "attack/west": [
+      10,
+      14
+    ],
+    "attack/northwest": [
+      15,
+      14
+    ],
+    "attack/north": [
+      0,
+      16
+    ],
+    "attack/northeast": [
+      -10,
+      14
+    ],
+    "attack/east": [
+      0,
+      14
+    ],
+    "attack/southeast": [
+      12,
+      13
+    ],
+    "dash/south": [
+      3,
+      20
+    ],
+    "dash/southwest": [
+      0,
+      17
+    ],
+    "dash/west": [
+      13,
+      16
+    ],
+    "dash/northwest": [
+      20,
+      17
+    ],
+    "dash/north": [
+      -8,
+      16
+    ],
+    "dash/northeast": [
+      -13,
+      14
+    ],
+    "dash/east": [
+      -3,
+      14
+    ],
+    "dash/southeast": [
+      11,
+      13
+    ],
+    "jump/south": [
+      6,
+      10
+    ],
+    "jump/southwest": [
+      0,
+      9
+    ],
+    "jump/west": [
+      15,
+      14
+    ],
+    "jump/northwest": [
+      18,
+      16
+    ],
+    "jump/north": [
+      -10,
+      12
+    ],
+    "jump/northeast": [
+      -11,
+      10
+    ],
+    "jump/east": [
+      -6,
+      9
+    ],
+    "jump/southeast": [
+      9,
+      14
+    ],
+    "combat/south": [
+      7,
+      14
+    ],
+    "combat/southwest": [
+      3,
+      13
+    ],
+    "combat/west": [
+      10,
+      14
+    ],
+    "combat/northwest": [
+      15,
+      14
+    ],
+    "combat/north": [
+      0,
+      16
+    ],
+    "combat/northeast": [
+      -10,
+      14
+    ],
+    "combat/east": [
+      0,
+      14
+    ],
+    "combat/southeast": [
+      12,
+      13
+    ],
+    "skill_melee/south": [
+      7,
+      14
+    ],
+    "skill_melee/southwest": [
+      11,
+      11
+    ],
+    "skill_melee/west": [
+      10,
+      14
+    ],
+    "skill_melee/northwest": [
+      15,
+      14
+    ],
+    "skill_melee/north": [
+      0,
+      16
+    ],
+    "skill_melee/northeast": [
+      -10,
+      14
+    ],
+    "skill_melee/east": [
+      0,
+      14
+    ],
+    "skill_melee/southeast": [
+      12,
+      13
+    ],
+    "skill_ranged/south": [
+      7,
+      14
+    ],
+    "skill_ranged/southwest": [
+      11,
+      10
+    ],
+    "skill_ranged/west": [
+      10,
+      14
+    ],
+    "skill_ranged/northwest": [
+      15,
+      14
+    ],
+    "skill_ranged/north": [
+      0,
+      16
+    ],
+    "skill_ranged/northeast": [
+      -10,
+      14
+    ],
+    "skill_ranged/east": [
+      0,
+      14
+    ],
+    "skill_ranged/southeast": [
+      12,
+      13
+    ],
+    "consumable/south": [
+      3,
+      14
+    ],
+    "consumable/southwest": [
+      1,
+      13
+    ],
+    "consumable/west": [
+      12,
+      14
+    ],
+    "consumable/northwest": [
+      18,
+      14
+    ],
+    "consumable/north": [
+      -3,
+      16
+    ],
+    "consumable/northeast": [
+      -8,
+      14
+    ],
+    "consumable/east": [
+      3,
+      14
+    ],
+    "consumable/southeast": [
+      10,
+      13
+    ],
+    "block/south": [
+      7,
+      14
+    ],
+    "block/southwest": [
+      11,
+      11
+    ],
+    "block/west": [
+      10,
+      14
+    ],
+    "block/northwest": [
+      15,
+      14
+    ],
+    "block/north": [
+      0,
+      16
+    ],
+    "block/northeast": [
+      -10,
+      14
+    ],
+    "block/east": [
+      0,
+      14
+    ],
+    "block/southeast": [
+      12,
+      13
+    ],
+    "death/south": [
+      5,
+      7
+    ],
+    "death/southwest": [
+      8,
+      7
+    ],
+    "death/west": [
+      20,
+      15
+    ],
+    "death/northwest": [
+      15,
+      18
+    ],
+    "death/north": [
+      -18,
+      10
+    ],
+    "death/northeast": [
+      -10,
+      12
+    ],
+    "death/east": [
+      -9,
+      12
+    ],
+    "death/southeast": [
+      10,
+      13
+    ]
+  },
+  "frameOverrides": [],
+  "sha256": {
+    "idle.png": "1fbada344f253569142fab2b5b86fa8be08bcae11152672891e6362b417d5464",
+    "idle-weapon.png": "75d09e54e0b8010ef605323ee96c4e00148da34fc53af2414ed5b61d9469f39d",
+    "idle-weapon@tung-cham-thuong.png": "7b5addbb67983262047f2659e8582d397cea7459de0a7f68b77726a98f662707",
+    "idle-weapon-fx@tung-cham-thuong.png": "085d73a4a2276bd7effda66651156f24ee23673ebb81eb9c5fb90927ec189499",
+    "idle-weapon@hac-can-cau-hoan-thuong.png": "11feea6cd60c9d444608f07f5dfb26df1afd1f22e021e433f1fd4cc81affdb0d",
+    "idle-weapon-fx@hac-can-cau-hoan-thuong.png": "2b666d72995f555449c7084af2e2ad6f7071e033fed3380948f2e6a2b6a2b0d0",
+    "idle-weapon@u-xa-mau.png": "d59069e4a2fe01e25614ac2a4cf78cee895771c59e0afaf34a4378e25702e295",
+    "idle-weapon-fx@u-xa-mau.png": "674747bcf1cfad575e155e64bb2fe356b11d3142cf168d3c94e3b2509cab49ab",
+    "idle-weapon@quy-dang-le-hoa-thuong.png": "312c1ae585f6a34c6b3516163d800dc90a3c374f4bd4d4eec2f2a7225fb0eb1f",
+    "idle-weapon-fx@quy-dang-le-hoa-thuong.png": "051140b195eb4d1e253c66fefe5c2f409963277f001078f922f60e9ef50cf33f",
+    "idle-weapon@huyen-thiet-ma-soc.png": "ca160b454ef64873b75b7b24ea49fda575ec4a0994cc0e96318b0a1efede361e",
+    "idle-weapon-fx@huyen-thiet-ma-soc.png": "af907ea0a6bee3cf61094c72b91bd5952172520652de5a80e69719667dcf4693",
+    "idle-weapon@song-dau-phe-hon-thuong.png": "159471fa18add8296a21eb7be4690abf2294a431da22a1deb71de5ed27292894",
+    "idle-weapon-fx@song-dau-phe-hon-thuong.png": "1b9c383ded5480357b8360190952d0dd560937c6c4161b466e52adbf94f64fb1",
+    "idle-weapon@pha-giap-tam-lang-thuong.png": "06fec711f335c837cac1e1d253c62ba9c3b094420900bfd68af8feb7c9fa3a82",
+    "idle-weapon-fx@pha-giap-tam-lang-thuong.png": "60d76d1a8af49ac6473176a85a75d1367b3544644619fb998f8fbd695f3ff314",
+    "idle-weapon@minh-long-dam-thuong.png": "a651edca73a3dd76cf7fd878ba9a519706e2d2408d4c9e7274f8fa4f566c103d",
+    "idle-weapon-fx@minh-long-dam-thuong.png": "43dae0e93b9833adb412f886762f5adad127b1f5596a667de525d7896013c8a8",
+    "idle-weapon@tbc-so-nguyet-thuong.png": "41de23cc90e0c28a0eac5b34d0c9c590214d06f50f5296c89a989e9b9f3dda18",
+    "idle-weapon-fx@tbc-so-nguyet-thuong.png": "36d81c304bcf33101770ecf20062624d976612da8d858172fa72dd0da6b6dcb8",
+    "idle-weapon@tbc-bich-lac-thuong.png": "bc519f434933c98e01ffbbcea2cad089ad1ab069d211d2c47c82206dbf68c26e",
+    "idle-weapon-fx@tbc-bich-lac-thuong.png": "8292a1930b67c216f3f2d9bfce9d784b3576ec86c18472b0016eab866a83ffb0",
+    "idle-weapon@tbc-tu-van-thuong.png": "cb706a7b47de80a58aabfe656ff798cf7ea13fb4432195b9dbcdbf1a3298e294",
+    "idle-weapon-fx@tbc-tu-van-thuong.png": "b7f594a31dc5b145742f35499f4889ef62fd6ac0eda42b8376c0a715706e53ed",
+    "idle-weapon@tbc-kim-o-thuong.png": "fda182ac24a1e049f598a6f8904bf93e502bfad2ca58a203ae2429b3ce824e58",
+    "idle-weapon-fx@tbc-kim-o-thuong.png": "910f02376abb90811c4586bd61b2f54ed17449ea4d44066f51bce0f898b23b3f",
+    "idle-weapon@tbc-han-suong-thuong.png": "dbb64ad7c3d7a6e9680218b9109872e5062fcf103a76e546b433b4d988711282",
+    "idle-weapon-fx@tbc-han-suong-thuong.png": "3395724fb1ed7d13d9f4baeae3996d42c7e7ace27ebef4f462163047d76ba09f",
+    "idle-weapon@tbc-chu-tuoc-thuong.png": "0ddbaaf2f99a927cecb38d202590d92a074370f09367509d17ac6011fa184921",
+    "idle-weapon-fx@tbc-chu-tuoc-thuong.png": "2790ebd140601e5ac59a590491642b04d232edf9fc0f57696c9a0c32ba1ec04c",
+    "idle-weapon@tu-tieu-thuong.png": "586b1baccb1cda25a6ada34509c1e583b45b328183e48893cb217d9c39e21336",
+    "idle-weapon-fx@tu-tieu-thuong.png": "9a69823660bbd426f776f8c44e61600130557d76df8ea920aee52578f9822808",
+    "idle-weapon@luu-thuy-thuong.png": "57aca0df8289de1a521efea5b048f4ab16bf85572ad0ab820580dea9ded110f2",
+    "idle-weapon-fx@luu-thuy-thuong.png": "41b5f54ea4275200249d24f4c83c514917517ac144c25dd7ca9af8ecb6123f99",
+    "idle-weapon@phien-giang-thuong.png": "cac57f157aae4451c63bfa9ed49b6f1eb44b797792f11d4cc47a30537458878d",
+    "idle-weapon-fx@phien-giang-thuong.png": "04e65d259f186f2006ca558e9e638bd7fc2328ac19dac2f78f93ca8963047079",
+    "idle-weapon@thanh-khe-truc-thuong.png": "37ece277401e4db0273ffacbb83f44ef1eb505799f76d0aae0e98bc714ad7f9d",
+    "idle-weapon@thanh-khe-thiet-thuong.png": "cf2e2bf99d8c469872d67acc1f8cd6d49100bad77e025056375417f00cc4d7c3",
+    "idle-weapon@tbc-han-tinh-bang-phach-thuong.png": "b614df83048bb245658d6ae7bb1ef479dbeb578c868af27f3fa043f9e98cc759",
+    "idle-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "7ad99b1429a76d2bb8310bbdd9205e2bb03c9be8ee2e9a8368225da7a1d20dac",
+    "idle-weapon@tan-hoa-thuong.png": "f64599562da396fce6f8ef3724bf8e69971f51635c54d2005cdd805f4faac6c5",
+    "idle-weapon-fx@tan-hoa-thuong.png": "dd22818170b6118954d37b55e933004e1e743b550e874970b33640b365d67f58",
+    "idle-weapon@tung-van-truong-thuong.png": "91dcc6752ae606772432f2a906d16ee8437bf21ab887034a4f4e6186e983008d",
+    "idle-weapon-fx@tung-van-truong-thuong.png": "f17f56e46d3ff70e1b003a5e94039b1301b5eb78156dc6f044d6cdbcc96edccb",
+    "walk.png": "ad6a043beaf1e549de5278da16037b6c5eb0af5af535e28e5a0107e899bb9423",
+    "walk-weapon.png": "a61d8c8cadb864c360a1938b7f0820bca4ed086b58589c9c815d1f2d83266a50",
+    "walk-weapon@tung-cham-thuong.png": "fe794c70ec65b8293b70be2585e518eefde84f18c52b6b71b761d4b80bb70d5b",
+    "walk-weapon-fx@tung-cham-thuong.png": "a64bc7cf462162c4cf199f4fc6570763e3ff14631a273172299e4c302fc13394",
+    "walk-weapon@hac-can-cau-hoan-thuong.png": "43219f21b8703581e6c87a3c5309edaec4d03c0faeb8cd3a8fc3163ccbb4add3",
+    "walk-weapon-fx@hac-can-cau-hoan-thuong.png": "7d23b94e2554f688e16881b2f9924194f20a4f05ad48deb5309a19e24bd16669",
+    "walk-weapon@u-xa-mau.png": "5e9ff13ebccbd30d7d4764704cb0828069080249b08feda509cb4ae244878e5c",
+    "walk-weapon-fx@u-xa-mau.png": "8a8da4e083aeda4f81542e7faced244f91bc72a2c6ea6cc6875ecdcc81cc529b",
+    "walk-weapon@quy-dang-le-hoa-thuong.png": "d778ad48120bc53e3b0da6686e79f1f5e4020513f91e8d448ca51d449f6129ea",
+    "walk-weapon-fx@quy-dang-le-hoa-thuong.png": "5cd92e8260fde939846894688644a05965001934916989f3980fa7f46abfc05d",
+    "walk-weapon@huyen-thiet-ma-soc.png": "9fdbf47afd142d3c31187c2c4c1a630710dec9f7163dba40a55fbc83cade5c7f",
+    "walk-weapon-fx@huyen-thiet-ma-soc.png": "3a4a2d5c099afb92673f3075bb871e7da470ff492e5582af392694c14d25a2c8",
+    "walk-weapon@song-dau-phe-hon-thuong.png": "ad3243a42094c62d226123aa6ebeee6e8c851cdf906d9a6cb5d85643b53b4eb2",
+    "walk-weapon-fx@song-dau-phe-hon-thuong.png": "eaab6bb837bcb40895f82ad50337ad1ec28a465495a42e3afa7cc41bbed97844",
+    "walk-weapon@pha-giap-tam-lang-thuong.png": "c4dd1c21bd385f5d98f0e240579618d240b53113e0088438ea078e50c36b414f",
+    "walk-weapon-fx@pha-giap-tam-lang-thuong.png": "59c317ef376db319c02fbabe849cd0a5437abc56076471f58e93b871aebd9777",
+    "walk-weapon@minh-long-dam-thuong.png": "fb1fe3d62b578800d5157da39d67bf2c547ccc0ded867dec41fd57cb01002b83",
+    "walk-weapon-fx@minh-long-dam-thuong.png": "335503440ee69f72dd6d0b633b65719eb5a5e669d0667c76db7eba7f13a033ea",
+    "walk-weapon@tbc-so-nguyet-thuong.png": "561cbb8449f431301480da3a2aac293c9a537ff6465a2348193ca92ce59b1406",
+    "walk-weapon-fx@tbc-so-nguyet-thuong.png": "4806edf312d94747a610bc14e0176b4f16fb5ae52f6afc558a150e31f305e947",
+    "walk-weapon@tbc-bich-lac-thuong.png": "93cce857becda7a1bb93a655ae8f974c2c09cb567e4496f59b02524d96b86c63",
+    "walk-weapon-fx@tbc-bich-lac-thuong.png": "ae9c14b14acd422e108b016b6bff2d4d5b822544e076622d64d91e635c16c082",
+    "walk-weapon@tbc-tu-van-thuong.png": "3fe9bd7fdef1f10da8d907380c7f7b44d34c97af26e561a27666641df9978952",
+    "walk-weapon-fx@tbc-tu-van-thuong.png": "bce8a1ea1b63cb043d5f30da889b2f60688d0455d1ab79d9f2e8edcf5f4d1056",
+    "walk-weapon@tbc-kim-o-thuong.png": "dc86aebe503da0d95ffd67ff2d71daf918a095c58d318cba00283e1b791655d2",
+    "walk-weapon-fx@tbc-kim-o-thuong.png": "4005c30bdff534fe1de99cd895939d339d8e49068d437361e9442bc0da9b9458",
+    "walk-weapon@tbc-han-suong-thuong.png": "856c6e2a32ec4b370a8eb7c718cebf6e7b22ef65021c0103ed681370ea256d99",
+    "walk-weapon-fx@tbc-han-suong-thuong.png": "1ca35210e9a8a1f70a6f3bcdacdda32de07142deb9f6b8f1fcfe4115766cf3d0",
+    "walk-weapon@tbc-chu-tuoc-thuong.png": "2c1eee078b954249cd2c321c92b195da27b7f5d85189038d5fe62e21e4b7c2ba",
+    "walk-weapon-fx@tbc-chu-tuoc-thuong.png": "c3d23b88b937035eddadf36134fea8fa56d61c094eec8e3c7cac55274fc1b3fe",
+    "walk-weapon@tu-tieu-thuong.png": "25ee9d00e2dae023fc2fc5a1768663f10ce4bcb7f2a59892e31a8749e1eb1775",
+    "walk-weapon-fx@tu-tieu-thuong.png": "d3dd4d34b95166d083f5fefbb17e6ae1e9eddc8b76516fd3aa0a59d75c5cc135",
+    "walk-weapon@luu-thuy-thuong.png": "d317a991710a2f6cbda797bd1d932f40d4382b82ee3c5999c51c925dcdea5ade",
+    "walk-weapon-fx@luu-thuy-thuong.png": "18aacd6529b24a42d7372931f158e7d9c235f8a5eead7c33302986988a295ed1",
+    "walk-weapon@phien-giang-thuong.png": "3d7cbd780cf1d1dd3001a368feac8404c5f7588f8dca4fcdff6267e2b6141e95",
+    "walk-weapon-fx@phien-giang-thuong.png": "5c83eff69b115de1b31c63cbbc4a0b46370a9306e8fc020a42a5bf440b151c54",
+    "walk-weapon@thanh-khe-truc-thuong.png": "fe35d7f2c50aa232eef922666dfc244311965f48ee5e4a0cec7f216780140c29",
+    "walk-weapon@thanh-khe-thiet-thuong.png": "e9be30cb21d108459999fd03ef91620add6415575c8321b5996035d520b78d77",
+    "walk-weapon@tbc-han-tinh-bang-phach-thuong.png": "9b898423242135e5fbe450eada1cca149539127c1b7ae8336bcb01bb6a45093f",
+    "walk-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "168c4c068edf2027102784425304f53aaedddd4ba1f160de6e500d461384d80f",
+    "walk-weapon@tan-hoa-thuong.png": "ec321eb4983d124702bb34267e1a00405f5359d55fe5193f2b0375d47a5c14cb",
+    "walk-weapon-fx@tan-hoa-thuong.png": "d7b849e76bc2cb7ff464db861d07ea88dae4663c4a34cebdc03e1eecdc510ee9",
+    "walk-weapon@tung-van-truong-thuong.png": "d38a796fdcc09b45c95709669e6d858ff6e90e196e50a83dcb5e1220dcb73ac3",
+    "walk-weapon-fx@tung-van-truong-thuong.png": "2113172406c4440d5f55df4737560525c0ef88a63149ab453ac19d4c87f15966",
+    "run.png": "4bb6f2da69dfb6f13e86ac9ac3a41a39a558bae1ee6d0b28fe32d142489dce71",
+    "run-weapon.png": "95a6a9ff7cb9cce23e5bc1bb2fa515a87204a74a3cac8790e2dc56b09f9d8e18",
+    "run-weapon@tung-cham-thuong.png": "7fe8d65b4315c8bd48e722327fd7095fdae787011e29fb0d07a1f38760df50f1",
+    "run-weapon-fx@tung-cham-thuong.png": "5df951ef95d7271d3c2f335134720899c4b99923970e672cae9b0d7d4815f2ce",
+    "run-weapon@hac-can-cau-hoan-thuong.png": "c07c2d16c79202b01ee47fc69f96a9a07273a96a306f19986ad11adb41bada51",
+    "run-weapon-fx@hac-can-cau-hoan-thuong.png": "9f7c6d26b4011526a253e0c85e96568ddbd4af51f864cac7e821033a1462df3d",
+    "run-weapon@u-xa-mau.png": "c270b514917e2c10f0c54b021b9b458dd7ef2f3b484ee7cac2e1dd729fb8b181",
+    "run-weapon-fx@u-xa-mau.png": "363af22d28071b3828de7a3ec02f4f3fbb6f094827efa7024a3657f77ee2f7d8",
+    "run-weapon@quy-dang-le-hoa-thuong.png": "af45c5d28f09f499938bef36f021cb8528850389bd6a115c617657b1787ff045",
+    "run-weapon-fx@quy-dang-le-hoa-thuong.png": "170274f7f8ab9e2e7c2cb06b76e7e7a7bf39bb7cbae047b7505fea13138c840b",
+    "run-weapon@huyen-thiet-ma-soc.png": "738b25e2f8db49e3c99c295ac56595bf081273e197b4805d08efa7ff940f3756",
+    "run-weapon-fx@huyen-thiet-ma-soc.png": "8ea3d0f6dbb09d104e1e077d2f532fe1aec483be2f2fead4da9260c7b9eb8ffd",
+    "run-weapon@song-dau-phe-hon-thuong.png": "bdc88c06a4b76e158fa516b12dfe375e35220d1c27d4f79356e4fd0fd7684793",
+    "run-weapon-fx@song-dau-phe-hon-thuong.png": "256d8a1e26bb995a56d768655d424b63d997d8a5c5ec22000ae30f39d5f9eb8b",
+    "run-weapon@pha-giap-tam-lang-thuong.png": "d2e9c572f51dd9eebb6e91a92f1669ed8a8ad7b034423105fce07cb43aeb462d",
+    "run-weapon-fx@pha-giap-tam-lang-thuong.png": "9f3625274c4715e9d89bbf738411545d219e48cde69cace3a8fbe44da6bfc05d",
+    "run-weapon@minh-long-dam-thuong.png": "4c5208aaa6120c7335571986aabe166106d5444f69ae5e81dcb5f7e5faabfc04",
+    "run-weapon-fx@minh-long-dam-thuong.png": "f4808688cff12216ee36177b85e659b6ae358497a7b3e263116be8cef67faefa",
+    "run-weapon@tbc-so-nguyet-thuong.png": "cfa4ceb06f0dc193e8a4d173ffc1d18b869c3a9b02be20667662767f33d506b8",
+    "run-weapon-fx@tbc-so-nguyet-thuong.png": "881d3956250a4141a943db367d8a0c97a76770cf1f636c9bee42ca50500324be",
+    "run-weapon@tbc-bich-lac-thuong.png": "1e517312b4cf0edc1388ac1ec3acae1f65dc729aa170d79dea1aaa91fe53eddd",
+    "run-weapon-fx@tbc-bich-lac-thuong.png": "b8e95b0a8e79f89c7086afe593899707dfc6e7b92026a3359c531370bff84ad8",
+    "run-weapon@tbc-tu-van-thuong.png": "60078c9441d41c9969615e64c59714fbfc741340e541b406f8393c020dda4fe3",
+    "run-weapon-fx@tbc-tu-van-thuong.png": "9c1621c2bed21d7f530839ed18071b6b1ba65025ae37b2746a50e456e3e5cc02",
+    "run-weapon@tbc-kim-o-thuong.png": "b027114eb6390bdf0d7c1dbb7a490ebdb34229634856ae191363e3d9db124eb1",
+    "run-weapon-fx@tbc-kim-o-thuong.png": "6991b8ce10aca77aa8e7a9972e8426a6aafad11f683e60b3aedcae34ebe347f4",
+    "run-weapon@tbc-han-suong-thuong.png": "b2108749ee667edc2b507aecb80be25327a8cc05519691eaa31f7ad90265f9de",
+    "run-weapon-fx@tbc-han-suong-thuong.png": "ae5c4923674affea83a760c0b123ba341d8437ea1ccf0a0a1c4dffa07db15851",
+    "run-weapon@tbc-chu-tuoc-thuong.png": "66ebba0e5c1920342c44f89959b8617bcbd432455f2cca209a444fcb6132645b",
+    "run-weapon-fx@tbc-chu-tuoc-thuong.png": "fd30d567a066f6a3d0c4e7f80df297e2c04f3ad65238b6bec719f8f8d615dab5",
+    "run-weapon@tu-tieu-thuong.png": "f6e40cf2c693f2c07d1ea759f09677c5c35a087c5e3ffdc29fd02ce8ff17c2a4",
+    "run-weapon-fx@tu-tieu-thuong.png": "aff37186157db09e60258bbfbfe31491eeeaff24f67563bb2b59f8f97bcd35d5",
+    "run-weapon@luu-thuy-thuong.png": "f8a02abe3c7eb0332cf85dae754ee980eb2b1351eb2eb5e6789c62a783c639e2",
+    "run-weapon-fx@luu-thuy-thuong.png": "c34474c70db03d31e746a6b0fe015d739547d49248cf2a346bae86e10e7f216c",
+    "run-weapon@phien-giang-thuong.png": "db40915ac26235d5f7d04ef08b0880fca208320c27a2d9252613b1d5388a0280",
+    "run-weapon-fx@phien-giang-thuong.png": "bae1fd429c30d246788c65b51944170e1a90da26e10e60eead9089af6e254139",
+    "run-weapon@thanh-khe-truc-thuong.png": "557fa609781488944ad77eb4941c1670352dadb134086986e789a77d21260f68",
+    "run-weapon@thanh-khe-thiet-thuong.png": "42a46e10c418041c961f4add3ada1d6b13e91f98640d0b0e5d631a92168026d7",
+    "run-weapon@tbc-han-tinh-bang-phach-thuong.png": "167a2097db7932003fb330cd7fcad8fa96820e59f603d33fc895088ba8056d4a",
+    "run-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "0811ab7b48a16f5d5304d92ffc779bdbaf9c0c90622b2401de1fb1a67494fc82",
+    "run-weapon@tan-hoa-thuong.png": "3e2e379f0fc53d8006e6f7bbdcaa4ef2951871291bcf1f6d0d24c8d37c1fc395",
+    "run-weapon-fx@tan-hoa-thuong.png": "0881adac9d6278b3e2303c36caa92d05aa400f9a46a75e5f6bb03b80455d3dd9",
+    "run-weapon@tung-van-truong-thuong.png": "50258f1764953b1bf1fc20c6d5f941a47994f47202d6042b76079b17670f0967",
+    "run-weapon-fx@tung-van-truong-thuong.png": "cb08cc2ae53d47a253150b058e8769c3d88c05d22cf1be0539abfeb25fbfc093",
+    "run-vfx-behind.png": "c19aa0783f5b67427d4ba542f235b032bd0b521d3be070abfa82216adfa4230b",
+    "hurt.png": "0b2d8cf98a25dc7ad247320615fe2f8dc67fbd6984ffefbf701caa7eb93641e8",
+    "hurt-weapon.png": "f7571c48677b4df4ea57c7cd6da90caf92f88f4490862a42a13947d3c10582e7",
+    "hurt-weapon@tung-cham-thuong.png": "89974a03fdea35acd00008410df439241cb5b4aecfe188920056607c30582df4",
+    "hurt-weapon-fx@tung-cham-thuong.png": "3aefff251b10f5778ef34bd1bb2cee6fab5fd7a9a93f45adeb8663c2ac0a61bf",
+    "hurt-weapon@hac-can-cau-hoan-thuong.png": "c262115267999664299ce1d44691489d1a72793b5790dfa82c224a7cbb711a68",
+    "hurt-weapon-fx@hac-can-cau-hoan-thuong.png": "f0e3b71b547f429975364dd00f70fdbddd5c415b0af2336d70539281646ea659",
+    "hurt-weapon@u-xa-mau.png": "20bdfbb3654e04cd857b25c0d929f8537f33917f904bad24340bf4fcd758fb1d",
+    "hurt-weapon-fx@u-xa-mau.png": "4dcdb3be4d791049b40f827217b9aac68f386c62d8dfaf8b4d72257407142d9c",
+    "hurt-weapon@quy-dang-le-hoa-thuong.png": "737e284dc2bcaaa159dd389836c805375919901ee8305390829e6cc2247026bc",
+    "hurt-weapon-fx@quy-dang-le-hoa-thuong.png": "3da42e1e5b3280fb292090953dd4240426e6b8a8acd2ae15398dca47c909cc28",
+    "hurt-weapon@huyen-thiet-ma-soc.png": "a96710764cf51fcb93f3be33f220d0f05fd0d107444f50dd52aafec291afcde5",
+    "hurt-weapon-fx@huyen-thiet-ma-soc.png": "a7d9076015f68a92f98a61ddb73965719932dc02bf75bbc03ba54780547cd814",
+    "hurt-weapon@song-dau-phe-hon-thuong.png": "ca81a0b8fb5366936d8dcedc3c206486866d2042ef035fccad2e2a83a8f0662f",
+    "hurt-weapon-fx@song-dau-phe-hon-thuong.png": "4f51eec898b1e35d53de682dd7a904ec877987b47e8e788101bd42e740851a21",
+    "hurt-weapon@pha-giap-tam-lang-thuong.png": "fa35c5edbfaddb10bf467cc5e82defbd664aa9925272b90764b7f6ff70628b2e",
+    "hurt-weapon-fx@pha-giap-tam-lang-thuong.png": "d3e0ede6936484e27b43f075ef74aed0f33036297ec1546f268ebb8dfec21f36",
+    "hurt-weapon@minh-long-dam-thuong.png": "abb22e24998daa2d59b3f6fcca09d20d9ac99ee61d705ec7284102f3454e8158",
+    "hurt-weapon-fx@minh-long-dam-thuong.png": "38473eb12b48fcb3ae84a5bf4abbb0ebf070485d82dac9bf27141f7a77d5e9eb",
+    "hurt-weapon@tbc-so-nguyet-thuong.png": "96f5c9cb8ac58a39d1be60958d49db6187ae7653c2e53c557a34dec566515a31",
+    "hurt-weapon-fx@tbc-so-nguyet-thuong.png": "1613075f338abc4ca363bcc62f547e45c030467bfa004f04c22b6bceceae36f2",
+    "hurt-weapon@tbc-bich-lac-thuong.png": "df155fe1a6c90d0f2411c15aa8786597b8018be6f2365197256200d2ee9b6493",
+    "hurt-weapon-fx@tbc-bich-lac-thuong.png": "1efee67cd0b3adef419138378b976ddc49e928e676fb919b049788b608c4aca9",
+    "hurt-weapon@tbc-tu-van-thuong.png": "b8258a5164a2d0268a3ab9ec5656d3abd14121475af5afaaa3431a1e4f5e6eba",
+    "hurt-weapon-fx@tbc-tu-van-thuong.png": "fef7d8711d2e5d0f73d5d373af3ffd9d9d5cc2e0abeece95a4268b3d732ae54a",
+    "hurt-weapon@tbc-kim-o-thuong.png": "0f8f7de8964a0d46fe2a7680c5bf377bbb88fe13b9374c426087a3b95268ad13",
+    "hurt-weapon-fx@tbc-kim-o-thuong.png": "5461434d131765760d64812cfc435aef0e0d397fe70a85d12de45d765d8e6090",
+    "hurt-weapon@tbc-han-suong-thuong.png": "c4b48e7a36e4628991d4adbf54d523f9720302781a11c43066a709023c00bbd5",
+    "hurt-weapon-fx@tbc-han-suong-thuong.png": "cd61e92812fc1eac23355c5daa84147c30582038a8e6eabaa1bfe9ac088519d7",
+    "hurt-weapon@tbc-chu-tuoc-thuong.png": "a3e57daa59df4ddd994e11898ae8383c61f67aafdb10453de301925119b43fff",
+    "hurt-weapon-fx@tbc-chu-tuoc-thuong.png": "88727baf51b2eaa2cd7f61ce828b5dbf63b7247f223428fb8fce1b40ee1f8eb6",
+    "hurt-weapon@tu-tieu-thuong.png": "6672c5971756c7527fcf8a7d219f0029727f1d21f112107b7955b17b4c13cd9a",
+    "hurt-weapon-fx@tu-tieu-thuong.png": "9dec220f4d2aab37d8c937e7ba9ae98265f33e8ef09c97eafaaea27c469af76c",
+    "hurt-weapon@luu-thuy-thuong.png": "2a9acf113bcb796052f41f10ba3790f2bd50daca2039f4a60e1b416c3513b9cb",
+    "hurt-weapon-fx@luu-thuy-thuong.png": "e3e94c9f8d56534d8d37e30751309fc53d12f8a06c5b379decbd4b2e5e6a62f0",
+    "hurt-weapon@phien-giang-thuong.png": "e453f38882e601940d2a98b0ad3f9439fe025e89f677d297cc3bd8b0c10b1375",
+    "hurt-weapon-fx@phien-giang-thuong.png": "cd4ef6c82e2815b1201123d20e115dc9264fe0385f36d100417917a4525c5359",
+    "hurt-weapon@thanh-khe-truc-thuong.png": "72b32769265afa310cf5ffd14f47d38425788b52749a0eb98ffbc0243207d173",
+    "hurt-weapon@thanh-khe-thiet-thuong.png": "dd31e5ad788bdabea67276ef7243b8ec3a7cf6e5ff189d7995caa8b0a4421df3",
+    "hurt-weapon@tbc-han-tinh-bang-phach-thuong.png": "196db78d56c4ca9efebfb9d8cb30eebb85a69f561bb1470d81c205e23adc05ce",
+    "hurt-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "c07d0dda9b9998fbcb84e6562e41494fc669eb700e7a5b9d66835c56820861c5",
+    "hurt-weapon@tan-hoa-thuong.png": "255be29af657160104858c000cc3a32ef78ac6d53731e11f7e3c7e44f0cc95c3",
+    "hurt-weapon-fx@tan-hoa-thuong.png": "b308cd9fcb2a7f6f35f75a0321eb52dfb92efa592c992b96c8d45a2abb089ead",
+    "hurt-weapon@tung-van-truong-thuong.png": "0d7ffc965c5585b53818a750711868bbbf85b5b4df4239f2383fe112a866773f",
+    "hurt-weapon-fx@tung-van-truong-thuong.png": "40213d8d663d68b642edf90a26e13865c6a2e54f6cb4b789c371f9430ef98f01",
+    "attack.png": "16b85a1d3a0ef226e00a11a888060ac70d5c621e6fb5ba45225ffe505ae3673f",
+    "attack-weapon.png": "59bd0f6b550cf6bf28f03c517c0b0c872f6a09b2b7531137b70d56659596f1df",
+    "attack-weapon@tung-cham-thuong.png": "71200e4e9748c4c5de40960ed8c2f59c18fc736caeb920e468cb345a570a6da1",
+    "attack-weapon-fx@tung-cham-thuong.png": "04349f0f2d60566da00937e539eefd3c1296bdbcb9e2d4aa70921df08595bbf1",
+    "attack-weapon@hac-can-cau-hoan-thuong.png": "894feb20133656619900aae9566fac7471a0d80cf461764ff2312bf795f4a15f",
+    "attack-weapon-fx@hac-can-cau-hoan-thuong.png": "76bf6016d0f4648c9a85cb80a1ae26e890098e53692067a5271803e5b529a953",
+    "attack-weapon@u-xa-mau.png": "d435d5a4cc1c038b856cb4491eadf14e91fa4cb701cba4d51b9f40792975e907",
+    "attack-weapon-fx@u-xa-mau.png": "d2e6e1f62e95cc9b67c8653ae176c4509975cd78ae591386719a3951873befae",
+    "attack-weapon@quy-dang-le-hoa-thuong.png": "5a8d9304353f90f43a1f1440204b9b4e28f9eea379e5ece45a780ba31d40cb4c",
+    "attack-weapon-fx@quy-dang-le-hoa-thuong.png": "162ed59131486bc12d9574174bfff0237fd448af64a9d90efe29d34f1c27d24c",
+    "attack-weapon@huyen-thiet-ma-soc.png": "5c03492fb9e15d7642a0894ff08b7801a6e2b43260ce06ec4721286e5e7b89a3",
+    "attack-weapon-fx@huyen-thiet-ma-soc.png": "ece05de492432911198fcee7be81e450110223070d2fafa1bf7984e0d2d7347d",
+    "attack-weapon@song-dau-phe-hon-thuong.png": "0ecbf216346b5e2ad751f65916f6e1d03d19cf64b1ec4c0862b1306bd3c96de5",
+    "attack-weapon-fx@song-dau-phe-hon-thuong.png": "76a94197ff34c75609cc24591eb906ef4c669e712f5193ba6e976a25b35b468f",
+    "attack-weapon@pha-giap-tam-lang-thuong.png": "01e440d5a9d485caa41140525635fe7e40d2131e92ec3ea8086583162166bfda",
+    "attack-weapon-fx@pha-giap-tam-lang-thuong.png": "2fa1adebdb8e22d7f2ed9c61fba42ed9cdd8a172ec36a46d27cbd4d12e4adb07",
+    "attack-weapon@minh-long-dam-thuong.png": "7e462dcaff9771c5d649331f2bd16cbbb31cd4271d8277b0770b0e33a46c90f0",
+    "attack-weapon-fx@minh-long-dam-thuong.png": "f848a73f42d11b97f171a9d42f8c9a0def10cb9d1e8f77dc5ebf76e32b5ed3c1",
+    "attack-weapon@tbc-so-nguyet-thuong.png": "f5d7c0b0694ff18e70c5903825c64a48aeacdad2d1dcd59973b5931fe0c1902e",
+    "attack-weapon-fx@tbc-so-nguyet-thuong.png": "1b5a9eb3148c1d89dbda5ea215d92d61dc1f3b73dd193925cdc55f5ee70cd4a3",
+    "attack-weapon@tbc-bich-lac-thuong.png": "c7483600ff492b3930f7f5be72f52dbad8dace5805121f1b16c51cfbc7474b68",
+    "attack-weapon-fx@tbc-bich-lac-thuong.png": "c6d390ce4c64350ea2cea10d142a6cba2be456754840452856fa58d22667eaac",
+    "attack-weapon@tbc-tu-van-thuong.png": "8b2ac2990155c0140aa63b8b4e30ef46ffb62c3d694c290c066f7f66da64eddd",
+    "attack-weapon-fx@tbc-tu-van-thuong.png": "f53af0ef908720e87eeac61d3aa1c9817fcf6287954c5eeead875ec87f20e9d7",
+    "attack-weapon@tbc-kim-o-thuong.png": "3316187450bf39038423a5bda395403a59943c81e192d9770abb8e9f60f77ee4",
+    "attack-weapon-fx@tbc-kim-o-thuong.png": "749fc64f091e044538879282757d1e344be9fd7ee5b75ea036dcc72d1d8a3310",
+    "attack-weapon@tbc-han-suong-thuong.png": "bbc3116c1b64d40769b2141f888f3b3c6a1642e76e34aaf57d3bb7921b208bb2",
+    "attack-weapon-fx@tbc-han-suong-thuong.png": "1072ac0bf35fac6d9f8bd26dc0d6e3750a1b73bd4f414546ca9e2bc247560439",
+    "attack-weapon@tbc-chu-tuoc-thuong.png": "cee1bf12503fab452811222bfe357ea8ea4a49c4ca219d92e0307b46d2cd9bf8",
+    "attack-weapon-fx@tbc-chu-tuoc-thuong.png": "fa81475a41e1e9f2d7e39e06a134d2e8f098ff580a97017ba5d2df3ed66608c1",
+    "attack-weapon@tu-tieu-thuong.png": "ca4913b35cecc2d1bc6cc7fdeb61fd7f57f7fe00302cf1f2f6dcc266aff7e50b",
+    "attack-weapon-fx@tu-tieu-thuong.png": "4cb05670800a736410fa522a18d061748c4a138133dd6dcf45cf5a5ff044c6ed",
+    "attack-weapon@luu-thuy-thuong.png": "a3b8af0ee3734f675ac58a39bdc31aec38fb484bf18ac700a7061378cb18d306",
+    "attack-weapon-fx@luu-thuy-thuong.png": "4a169716388c3d913008e5953908638fa72e6bd0a3abd2b0be273fd921270cf7",
+    "attack-weapon@phien-giang-thuong.png": "618635435a8aaafb1f38cb9baa84fdd7d516a051b668bf8fcac952c37bee33d9",
+    "attack-weapon-fx@phien-giang-thuong.png": "36e1a287a517127602853d57d6049fb7c261f21ebfeb980587eef470e9caedc6",
+    "attack-weapon@thanh-khe-truc-thuong.png": "e813383df09b082c6c3a07eb7f4d948029966f42745f32a51ee058ae4a33ebd7",
+    "attack-weapon@thanh-khe-thiet-thuong.png": "395d42c7fb92197746ca75b58e1483e7735192d7ee90b291a052e182472c697c",
+    "attack-weapon@tbc-han-tinh-bang-phach-thuong.png": "ee76a67433f728d7e37df53189fe7571c3d0631bf2db968c4849102bf278fbf3",
+    "attack-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "049070d0ff84a30408d1fb391ed7f12e474851391fc68c1f2b7cf3bc96e02dce",
+    "attack-weapon@tan-hoa-thuong.png": "d564c0028098bd96d9cfb461240b02317c1d53521eca880c0af017e36cadcdd4",
+    "attack-weapon-fx@tan-hoa-thuong.png": "8908815de92ddbafbc34d76126ff09811f1d4427424ff7b27a9b545bb7ef648f",
+    "attack-weapon@tung-van-truong-thuong.png": "b240da7a812e72ff3598c8933d1f7a1316585f01b5fd85fca8fa57cb66b6a0ef",
+    "attack-weapon-fx@tung-van-truong-thuong.png": "44b175cfda23812c11f61a83b10db7fdee918b932e18fab776f52ba85e1dd150",
+    "attack-vfx-over.png": "c59e9ff85b2756320d6fc96098f83eae0d212e0f1b188debc55cbe50704d7f07",
+    "dash.png": "1e642fe1e15a210a94a021dfd858f645db765ab69794c5f0d7b5808281659b2d",
+    "dash-weapon.png": "6aaf61794beb35e89de0ff71a564ecf94534c10464d6b2662eb41876fa17922a",
+    "dash-weapon@tung-cham-thuong.png": "27ce8b7fa0aebeed6ec57dca2c51db05eb1fd1d2ac2d0459e10cafee36b5caf5",
+    "dash-weapon-fx@tung-cham-thuong.png": "a42a00b82560355669b15499f46b40357929e2b17de6f7c79cb1db6b284ada10",
+    "dash-weapon@hac-can-cau-hoan-thuong.png": "4698fc4a86e1122f4675b14b9b0a516d1c97d9c7d702468792f1246bf72ce3af",
+    "dash-weapon-fx@hac-can-cau-hoan-thuong.png": "fbe7091260aaea3dbe9519ce60ba6986d3364960b97a2149d87ea3d7dc59c7db",
+    "dash-weapon@u-xa-mau.png": "80ef2083d4465c22e08928cf75804ce0b3044fe893286ebd7c10368da44da1c0",
+    "dash-weapon-fx@u-xa-mau.png": "e638271e7bd7689b1a6b6b59eae082c196093f161a8d85ae4e80c0d78f8613b7",
+    "dash-weapon@quy-dang-le-hoa-thuong.png": "d9cd87c22277924553f008e49bfb14f97b323b8f437f45e4ca55814cf60c2f02",
+    "dash-weapon-fx@quy-dang-le-hoa-thuong.png": "92f99e878ea3030ce7db98e56681533a6183fd3db9ef24e9e040f27c257d755f",
+    "dash-weapon@huyen-thiet-ma-soc.png": "2dc20089d10c8c24f95b7b9296dbefa4af51cd03d69f50faf4d240960d0f5e4e",
+    "dash-weapon-fx@huyen-thiet-ma-soc.png": "1f025187552ef6c1576b3b73b1390ed32f9955beda366d8ea9bc5d4b7be21ed9",
+    "dash-weapon@song-dau-phe-hon-thuong.png": "d2daa28809730d189fe1246603d5b7e2b8fcb841f11556886a3a1cbd0f172eb3",
+    "dash-weapon-fx@song-dau-phe-hon-thuong.png": "b5cac7a6992a205c1e33426d55cf2562532876ef1d3a84fd2a638265b1a9f46a",
+    "dash-weapon@pha-giap-tam-lang-thuong.png": "620e266ab5c3ea576cc6983d41e5ea2094e41ac6372e9ba473bd973bd5828f0b",
+    "dash-weapon-fx@pha-giap-tam-lang-thuong.png": "5efbfe03e3f0aa324315f63a9e77493a364a2ae3a3f3dac50b0206e0472dcb2e",
+    "dash-weapon@minh-long-dam-thuong.png": "48b3b8fb6e93b71cedbd1d274db4b2a5bf4cb66dd8c5c560835594c74b24397b",
+    "dash-weapon-fx@minh-long-dam-thuong.png": "b6baaf4e65145535a99f909100bed0aaa2e377ab1a64c65e9ead3c0aa8fe8b2d",
+    "dash-weapon@tbc-so-nguyet-thuong.png": "58b752a27a7fc60cf795dd2c8a2e028ffe65d4e1c917021e739693965c16ebab",
+    "dash-weapon-fx@tbc-so-nguyet-thuong.png": "e8419d2d1f3817c95fc84ca061e7a0dc518b6c28b1d61964d73dc6faf37a670a",
+    "dash-weapon@tbc-bich-lac-thuong.png": "764c669369b1a1769e71e04f4e5fc1f6fdabdd1c2612d115a9a47ab820f8f804",
+    "dash-weapon-fx@tbc-bich-lac-thuong.png": "b2c6961cdc90b49add63aefff49d29f5521093cccb6a33d7866b6fa2cd878b52",
+    "dash-weapon@tbc-tu-van-thuong.png": "87e6879fcd18c8e970e4b08720a4053fd7666d5c8ae47bc21270c7b5a5b54986",
+    "dash-weapon-fx@tbc-tu-van-thuong.png": "bd56cb9b4ee720ceca192076397b1940ba2d7fca88663f230e0bd0b9010b7253",
+    "dash-weapon@tbc-kim-o-thuong.png": "9d5e02a37d634dbf98d3599eb6e850a35aafac522fe2dd41b1c06434ea491dc7",
+    "dash-weapon-fx@tbc-kim-o-thuong.png": "68ae5f5c0e5f5f50e2af927d7a68b8edfadfe9bdf917d3b590c696464256b949",
+    "dash-weapon@tbc-han-suong-thuong.png": "e443bc7567a809c5a1b992e2e7011aa11b8139eb86dae4291448bf08e3ee7f27",
+    "dash-weapon-fx@tbc-han-suong-thuong.png": "0716fcc3bcb35b78d13afac95d0eb8954f4ff9c6409e87f5d2336eb3fb9eb34a",
+    "dash-weapon@tbc-chu-tuoc-thuong.png": "8a223d2583e44e96c7e43d4d1c01076bd96af435ed78fc34120cc60b93134d7f",
+    "dash-weapon-fx@tbc-chu-tuoc-thuong.png": "90b2b3e30e17900c1579aa23b5ee93cbf31ac2771cb66ff22986e2f4e4dd37ef",
+    "dash-weapon@tu-tieu-thuong.png": "b63c93f679b2789745d02b57efb381a054303b5c600f667c8c6330025e3cb2a6",
+    "dash-weapon-fx@tu-tieu-thuong.png": "2d11445960b8964b571bccc2bcd509be578099fff7399d7b4958455509f731f3",
+    "dash-weapon@luu-thuy-thuong.png": "02d3863bcb062a4d6467ab146668b8edbe1c2a58ee12d2445c63ea631259fa2a",
+    "dash-weapon-fx@luu-thuy-thuong.png": "812d3d36d731d95b588a78eb8601bcc01a2d09cf3d2bf1a88ae5fe5cdd18460a",
+    "dash-weapon@phien-giang-thuong.png": "f0af56d46f62deeb0a66fa5228f6ef0e5abc16effaa7635d5b1bfdf88c829885",
+    "dash-weapon-fx@phien-giang-thuong.png": "45f9ba7c3a69a7ffdc11ea2659f48872c232b68d417679a6f8fe893b32846dcc",
+    "dash-weapon@thanh-khe-truc-thuong.png": "1c65c6cff328ab513219c2ea99926042f17c76668e27b5fbb6b10f98cf31c397",
+    "dash-weapon@thanh-khe-thiet-thuong.png": "83ba2cb17007a0b30195e639b07898bd11ef7245e99f1f58d041f6504f111ffd",
+    "dash-weapon@tbc-han-tinh-bang-phach-thuong.png": "734f1dd91fd3ff50d80a8b0078d377dc696a9a83655f1258b9bb90a422e1f08a",
+    "dash-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "b245d4f4b9b62c5385f5c523be4fdf81b0df240a79f5be145e1264de0131057a",
+    "dash-weapon@tan-hoa-thuong.png": "41bfb334b5397ee999e7604a0d4254ac9810bc6d42f4e8eb698bae2c2d5728fd",
+    "dash-weapon-fx@tan-hoa-thuong.png": "33046b191f0ee59c29dd0f97a422a1b02ffd2ae4fec7469e44ac281fd6928ebb",
+    "dash-weapon@tung-van-truong-thuong.png": "3dc1c24ffa3e2287933463c9ed3766656a5d8438775acaa768597c71eba95db5",
+    "dash-weapon-fx@tung-van-truong-thuong.png": "196db7f1eabadc48206e9ff8529004cf030b88608253b0951c42b668b13ffb5d",
+    "dash-vfx-behind.png": "dd7627ec6a628c9700a79bcef0300d66326194a537bfe7b723c112c22dd74b3b",
+    "jump.png": "efbb0a02584813886a0be2add6011572cbda17fd60f6ca9096b7cd74dbd4c41f",
+    "jump-weapon.png": "626b9b7d217c36f079a6c4228901dd161d554300895bdd048936abded0d588bc",
+    "jump-weapon@tung-cham-thuong.png": "b29e4ad045667af9e0bc6abbcd9e76b0cf34734ecc56632e78eb0c394b80b71d",
+    "jump-weapon-fx@tung-cham-thuong.png": "c03882db7fa53aff9e729c92365370e999d639ff93f9a0609ab0d2bad8402c5c",
+    "jump-weapon@hac-can-cau-hoan-thuong.png": "1ab460c2d27309b1fa3a1129a56ff574a12e18515ed130db42ee55fb989489a5",
+    "jump-weapon-fx@hac-can-cau-hoan-thuong.png": "468f6901de7cd922db00ca82fb282f3bc07ba84d30fe2187d494b27c7245d1fa",
+    "jump-weapon@u-xa-mau.png": "75bc0a6bf4109702edbf5e824b9122fdf895a56da96b8d7bc6e3842f241d5689",
+    "jump-weapon-fx@u-xa-mau.png": "b981091c09af6345d67a06008eefb35a623819731226d16cef5cda2712219d58",
+    "jump-weapon@quy-dang-le-hoa-thuong.png": "70e6909509e6092487baa643968df62ee4d30fd52bf2ce32029a1635f14a42e5",
+    "jump-weapon-fx@quy-dang-le-hoa-thuong.png": "6db6784bbd82a960086c6e0e385ef01fc5e2055f36a56b695a852883ca6cb090",
+    "jump-weapon@huyen-thiet-ma-soc.png": "4751e5c68530fa8960a3f83b48d6e0008fe82f206683fc4d4bf688feea898f9d",
+    "jump-weapon-fx@huyen-thiet-ma-soc.png": "60dc2565bf2dccb6d228e2f502e07d44c0a002a340944bce5dc345ce961bc96f",
+    "jump-weapon@song-dau-phe-hon-thuong.png": "98d0ff5428157e0d76cd5eeed6cac19bb261347f87edb015de4950fa915aeb61",
+    "jump-weapon-fx@song-dau-phe-hon-thuong.png": "c6f78e4560f3ed680e6631e389dbe7ced0cb0ced5f81dc0ec70da75e2ce65d68",
+    "jump-weapon@pha-giap-tam-lang-thuong.png": "a553b9df7e854891cc0d5d4676268884bcf0cd3f4d7d17c3c9f433fb8861d074",
+    "jump-weapon-fx@pha-giap-tam-lang-thuong.png": "e70845a12383923e06eaac26ec1a434fc1dd8aada50264fc119e68ef02f15868",
+    "jump-weapon@minh-long-dam-thuong.png": "2d649cd59806b2ca64eb3024317fe8a5f4682f04c2f019d49460622e5c6bd479",
+    "jump-weapon-fx@minh-long-dam-thuong.png": "7a264e56bafc750b88fb0b7b7073086f711515df5f55a6a5bb471715b499b2cf",
+    "jump-weapon@tbc-so-nguyet-thuong.png": "6de25b416f55925d1fc3d2f58e4a1917422ee2376c8dd9c8cef01b2e09970d34",
+    "jump-weapon-fx@tbc-so-nguyet-thuong.png": "7f91b428a4f9e5fc08a439a1359a01d56dabd03ce37f1cca6d6159ff60476fff",
+    "jump-weapon@tbc-bich-lac-thuong.png": "0ad440d8bc4de06f71bec9728a1d3581be0a59a8cd3ec525c7f030c2d363550c",
+    "jump-weapon-fx@tbc-bich-lac-thuong.png": "38ab4ee5c7255513575444b4edb47de017a581a2d830c0a78ebbcd138ce86011",
+    "jump-weapon@tbc-tu-van-thuong.png": "d591d7d12683bbedb50774259e624a6addfb775988440a4b1396ed906db2276a",
+    "jump-weapon-fx@tbc-tu-van-thuong.png": "d09b7efb5f738b58264dba5cc976e2bbc66bc1fccdca6db76f13bf967fa78d48",
+    "jump-weapon@tbc-kim-o-thuong.png": "1b83ded9ec709a8d6ea5af8afa73c5acc9a58d607021f5cc87e56a69bf8f733c",
+    "jump-weapon-fx@tbc-kim-o-thuong.png": "586868d5eae4b660e0aed50abfaa3e9641a835bca0b95ca0555e471302a92919",
+    "jump-weapon@tbc-han-suong-thuong.png": "c98efec898a3358ed44b248226ffc4bda10a8d63b09a5945a4c39c4960a62f34",
+    "jump-weapon-fx@tbc-han-suong-thuong.png": "997be67943c618011e8aca301891b70159891b0eee17e86f31d961ef29ee1229",
+    "jump-weapon@tbc-chu-tuoc-thuong.png": "922d11ae6febd39cf87b14440f3bb142d39a941bcf1e54cb82f3d394b9695b2e",
+    "jump-weapon-fx@tbc-chu-tuoc-thuong.png": "88ecb9eac4e77ce841582d1251cdc21d6981b462a969cd083dc133346a4ac829",
+    "jump-weapon@tu-tieu-thuong.png": "2ee7afbe19a1e9a907181680f9b746be690f09f41af4323a1d77ac2b0b57d242",
+    "jump-weapon-fx@tu-tieu-thuong.png": "8c0315cdaa0648c3365ce8e0b10ccb2db7999693de5257e84cfe7fa8714fbef0",
+    "jump-weapon@luu-thuy-thuong.png": "dfbdf3b577ce9f26f8771272cdfe135cb2efe9649278283fc7df738b98d676c9",
+    "jump-weapon-fx@luu-thuy-thuong.png": "1b33fa6b1fc835c8aba1f911bc6b14368e1773aeba45a06a23059da174892b3d",
+    "jump-weapon@phien-giang-thuong.png": "96f49af18cf71498fbc6fb2ebf2d816af1ca2bf67fa310d88ebb9f60a92f4ea3",
+    "jump-weapon-fx@phien-giang-thuong.png": "52a754bdedb00fdf045b409c12b74f457b33fc3e63364bb2cf8cf720bf01b422",
+    "jump-weapon@thanh-khe-truc-thuong.png": "3f28e4dc5d8cebcbc7cd1ad377a41d009361efe41606c147498954969cc02f89",
+    "jump-weapon@thanh-khe-thiet-thuong.png": "24db413d237d501287868ce3242597e0ae85ef2add20475a50f927636fa9ae8e",
+    "jump-weapon@tbc-han-tinh-bang-phach-thuong.png": "3d093d94f82df68d70b94d240a03c2e759492caad2bafad5fd7a1c9fce00941f",
+    "jump-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "bc7a4df6b0988e2a37966b788b859c9ac69b614b282dd75ac05c66cd69e7e7c4",
+    "jump-weapon@tan-hoa-thuong.png": "99c5c87f7044bcc0979c170fff38781d694060dcdab43437929e0404b7b20c48",
+    "jump-weapon-fx@tan-hoa-thuong.png": "8f8fd6e895ef745a05403e70cfc297e8e939031da59f20e9ab7672e63977c895",
+    "jump-weapon@tung-van-truong-thuong.png": "81178abcb2770da3795edc894b7be966c9ac76778408aeed79e5f664cdf7edea",
+    "jump-weapon-fx@tung-van-truong-thuong.png": "386195eec0f965f2e9f37a7abac888302fd3a5d0b37b8ca28386e4d6c5c80c06",
+    "jump-vfx-behind.png": "403b5a5fe6c1a0284b60388d05d108e3bfac95dd99aaa81324bd2662db1b1a31",
+    "combat.png": "c9e45fa5c75df6ab0eff2d0084ac9d756e236f5a2df20bd5353581555c4d3bb8",
+    "combat-weapon.png": "3b590a077d713aab88b8230d4b27cb3deec9c10ca5483603319c43d50c108e2a",
+    "combat-weapon@tung-cham-thuong.png": "3312b26ae66f887f6570d65b4280bbcd57ae538303a590de35fee090dec56035",
+    "combat-weapon-fx@tung-cham-thuong.png": "cfa9e8ebc8f3d99f580f60e3cb607ed3e06394a1ddf7896c18eba37f21e74a86",
+    "combat-weapon@hac-can-cau-hoan-thuong.png": "a80aae215586ba90aaa25c0d5f620513e4f1e96606a092288339ca9118d1650b",
+    "combat-weapon-fx@hac-can-cau-hoan-thuong.png": "d7b59049dd3da7c931b1803c49b67370e964175d0507ad609c23b103e682bc26",
+    "combat-weapon@u-xa-mau.png": "822f8752dd741057ee210732c0c6b7ef0da42fc2f78c709938df52a1af9f1d97",
+    "combat-weapon-fx@u-xa-mau.png": "1b8caed49c7c33d36de9cbb97413106d3a7fd665dde6e5a4deba0dd8afba524d",
+    "combat-weapon@quy-dang-le-hoa-thuong.png": "4366b4ce8ce1166b3d274091d475426f7a76eb219eae856df7a89a42b6786d7d",
+    "combat-weapon-fx@quy-dang-le-hoa-thuong.png": "0aa50cc38fcf490920cfed1c01c5e6fb26c555e9b0774d7cc6289fcd215dab85",
+    "combat-weapon@huyen-thiet-ma-soc.png": "c143e6f09b00a10a5de9bad34ceb67183a61df727291546d83a7bda416182e7e",
+    "combat-weapon-fx@huyen-thiet-ma-soc.png": "f44301279952b9ef0d06db21c686393661c3b6fc1b2d49df651aff9ea85c6da9",
+    "combat-weapon@song-dau-phe-hon-thuong.png": "4e764ec4361c5c00568565e248a00b7e5f375752e1a34fda20edd8d7b6b87724",
+    "combat-weapon-fx@song-dau-phe-hon-thuong.png": "96276ce7be2aa6fb1562fc9f67ee759c8617b6d19964a5ec05ab8d94ec9d78f2",
+    "combat-weapon@pha-giap-tam-lang-thuong.png": "b967dc123c38bf3f6cfbae461789bc3fdd5867c20b60c2fcb696638fe9f1f8bf",
+    "combat-weapon-fx@pha-giap-tam-lang-thuong.png": "e150c3084217359a1a5925d0d1d74534d5f359db5b64e2c62a4b979803d25f06",
+    "combat-weapon@minh-long-dam-thuong.png": "7ab49f153198bfb7c3d7a1316aa93329a14ee533893538e8a9ec826842074665",
+    "combat-weapon-fx@minh-long-dam-thuong.png": "365373a32ecc1b5b186da3cc9262df4452d17bba9e8206824599928181214d7a",
+    "combat-weapon@tbc-so-nguyet-thuong.png": "db0cf777f6a4f94af60271324eea4bd7c74d284c809c02abda50237fc3ef0986",
+    "combat-weapon-fx@tbc-so-nguyet-thuong.png": "e15313173b43b294838cebdcaea4400f74fd572264d7c08fa62f201951da2cbc",
+    "combat-weapon@tbc-bich-lac-thuong.png": "9b783e711d8d4792abd8ea13158d13afc92b78999131bdb9da3e7cf4aaa4ddeb",
+    "combat-weapon-fx@tbc-bich-lac-thuong.png": "df9de73af17533e76d096e777c9e9e0b77ec0d7140f24e106276758c43c537fc",
+    "combat-weapon@tbc-tu-van-thuong.png": "8fce708f354080fab4b8a50e5680e0057582929f01ee875b282010edbbd0a69e",
+    "combat-weapon-fx@tbc-tu-van-thuong.png": "8c5428cd95330d780691eaeea6df6ab884b7452ff8351f8e27c197ce8437ce1d",
+    "combat-weapon@tbc-kim-o-thuong.png": "5cb5a270279f8443be81eee726497b6021dc4f08d1814acddc15715209b004ff",
+    "combat-weapon-fx@tbc-kim-o-thuong.png": "3e6054a07216a26bd81c9881eea337533c35125b638d16aa28aef8c3bb77f9ff",
+    "combat-weapon@tbc-han-suong-thuong.png": "885240c2dbcab5b38b37c3f45caf2107e346223c11922ebd84d52b91e5482f32",
+    "combat-weapon-fx@tbc-han-suong-thuong.png": "9ec27eb7b19144480731b9049b25674624c40dbb48afab9786803a39040db710",
+    "combat-weapon@tbc-chu-tuoc-thuong.png": "c20599dd19a90d7b30f79ad93548e3c2d842869f9cc2099ee4299b708eaa437c",
+    "combat-weapon-fx@tbc-chu-tuoc-thuong.png": "523d951899c911cdeb6fd524aa9b07c2a3db6b83e2e07cca34e98a17f6809017",
+    "combat-weapon@tu-tieu-thuong.png": "6313610520311c03aea041ac96d216b857a1c6129028ffd41b2a602571f7217b",
+    "combat-weapon-fx@tu-tieu-thuong.png": "e60e13474ee7488207bc408d586520a416f0043b9efe45d2cb90b26f7dba9e1b",
+    "combat-weapon@luu-thuy-thuong.png": "9d4204044a12d61cb691c467824b1cfcb2aafb3c10fd6954b65896737805ea99",
+    "combat-weapon-fx@luu-thuy-thuong.png": "4c3b63baca42ad50614eb90c427a68e7ea12b448a343ad65f52e668c555cdb78",
+    "combat-weapon@phien-giang-thuong.png": "8dc0c58c5d8e954b59b4a030982fb58fdc35f700237f264b3f98f9c0c1479b4f",
+    "combat-weapon-fx@phien-giang-thuong.png": "a77377322354eb10e0188c4e5c81caa6f4e2a7a142ec2eadf858b104118c69a9",
+    "combat-weapon@thanh-khe-truc-thuong.png": "130c1a6f821cbc4db9493856e26ba429231c826f782785bd04e591c337503540",
+    "combat-weapon@thanh-khe-thiet-thuong.png": "ce2e5b89246c72d620224175ecb82b1c198598315ae3c48fd42339bfcb1a7091",
+    "combat-weapon@tbc-han-tinh-bang-phach-thuong.png": "2236307e5fb901b218309543a434058eef566454cffa64255744a5999978d11d",
+    "combat-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "1437ef98722993ac324b86d1f912e6101c7a28c4ac05c52a91c85d5cd5fa5ea4",
+    "combat-weapon@tan-hoa-thuong.png": "a5b3bc0fe0b10fba5cdff3cfcadb114e653fe4a474ef950165eb94f26859ea4c",
+    "combat-weapon-fx@tan-hoa-thuong.png": "d09f3cb00eb3f67d01ec03f59e0a6874c67a715a399b24900073b69d9b354d16",
+    "combat-weapon@tung-van-truong-thuong.png": "843ae931ab2ab6203ca6ad63fa7fc01cdf5eb5d6cf7781a000f1d36a878e9eca",
+    "combat-weapon-fx@tung-van-truong-thuong.png": "f6069d58dac862fdedfd9c8b452cebd434a2bbe13108493b63dfddeadd92609d",
+    "combat-vfx-over.png": "eb99095512caa58ed0ad88c1809d6d6d0aae770383f347887cde007806ea5dcd",
+    "skill_melee.png": "3abdecf4bc1043e24b00b251af312c3b98b726661f3c6538e37f90a47850947a",
+    "skill_melee-weapon.png": "0864ad6a498cb58a22e6444c832e7e85e4c9a679f0ae6b2aa12511152221f568",
+    "skill_melee-weapon@tung-cham-thuong.png": "7cd87e8a79f6a5e83ffe0a742740a972fb9586b4eb9bab11ea559471fa7de738",
+    "skill_melee-weapon-fx@tung-cham-thuong.png": "249e65341e1441fcaa8167f2260556d33be9907ccffe93a41f76def61b27a914",
+    "skill_melee-weapon@hac-can-cau-hoan-thuong.png": "673f906ec1ef3c926fac2fd78f016c33ef0623c7cc413ae67dba4a1c8717923f",
+    "skill_melee-weapon-fx@hac-can-cau-hoan-thuong.png": "d8574dc1b8d0a4894cadc83b1d2186cfee866f0789f36c33782a4b24f36f9544",
+    "skill_melee-weapon@u-xa-mau.png": "5b262b8fa54027170b4ca808ce50123a04e8294c01d0cebaa332c5cac6338e71",
+    "skill_melee-weapon-fx@u-xa-mau.png": "ea9ef157af8e17976793540c31012c872a986296fb7ed2dd897fd47b55dfda53",
+    "skill_melee-weapon@quy-dang-le-hoa-thuong.png": "5cf9fecbd1425af9482ff0ad2378d6c4342ae66451f346744c144cc1dd628ef5",
+    "skill_melee-weapon-fx@quy-dang-le-hoa-thuong.png": "2884edc5eef6de57f6e5905d994f968b74695ec0a6b825095afd3530dea57e1e",
+    "skill_melee-weapon@huyen-thiet-ma-soc.png": "af8a55368d5f7c69eb79e57adb3d900b53067f8e035dc12537452916ea2fc7ae",
+    "skill_melee-weapon-fx@huyen-thiet-ma-soc.png": "a04c911a58a650db38ebafd342fe04c6920a75791e3bef8b25b7a1a90e577246",
+    "skill_melee-weapon@song-dau-phe-hon-thuong.png": "a77d39d187bdbc76af8332ce5040f1b1f33700210219d0198bc709a77473c312",
+    "skill_melee-weapon-fx@song-dau-phe-hon-thuong.png": "99ed705c2d2a0d11e2ba7177bb6718c8f79fefccab84a120a26b742b51b44cdc",
+    "skill_melee-weapon@pha-giap-tam-lang-thuong.png": "a38666ac82127ba6c4780af20c101a2de9ed579dbed0f95649b6affcdeaa4ffb",
+    "skill_melee-weapon-fx@pha-giap-tam-lang-thuong.png": "bd23a4cf1aeedf0685ddca9842928309286072f9f6ea94ce690fbce7ebda8c47",
+    "skill_melee-weapon@minh-long-dam-thuong.png": "acf192f1384544768dde77fa861932b0865f78141c563463d6aee69556d2543f",
+    "skill_melee-weapon-fx@minh-long-dam-thuong.png": "3cb9baf7ffd40429364783d0239415a8213ab3f438be9a9a95eec7c47be1de01",
+    "skill_melee-weapon@tbc-so-nguyet-thuong.png": "f31bfc99384abf729b7e3f3c6ff6c3336014c6bddf8541b09cd26034652b01b3",
+    "skill_melee-weapon-fx@tbc-so-nguyet-thuong.png": "9a9f8617ca90aac7c51019d264a7a90da1ba5cca82d1cd9c81129c8f790148ff",
+    "skill_melee-weapon@tbc-bich-lac-thuong.png": "500a8ec88ef4767fde9e43ee2679df8766e2f8f925cd4e3563da3ee35daad0a0",
+    "skill_melee-weapon-fx@tbc-bich-lac-thuong.png": "b0532075acf4684946b4054a33f251f1d272363fcf663fa3bbcf9a977867e193",
+    "skill_melee-weapon@tbc-tu-van-thuong.png": "a1c67f5bebfd4767972cd07a4639cc2230ce2f8a56b5c6e4e1faf8586a72ccd0",
+    "skill_melee-weapon-fx@tbc-tu-van-thuong.png": "7becc0a66b4c909d078990a211e947992efa7d080d6fb840cc6611c1f720f20d",
+    "skill_melee-weapon@tbc-kim-o-thuong.png": "d2d00c5599ead49305d31480aabc20ec5368b1e131466f1352f1414a95f9f0e6",
+    "skill_melee-weapon-fx@tbc-kim-o-thuong.png": "153feab23bb704140ea19c62d090a152e347ab20b45fae4d4b0646b412104f7f",
+    "skill_melee-weapon@tbc-han-suong-thuong.png": "8fc54dc217df9529bb604567eac9d5191423a6be67331c249da220654f4a491d",
+    "skill_melee-weapon-fx@tbc-han-suong-thuong.png": "529b149d4b4eafda4382f97049b57800a500ebe95fdd60568396bd9e2af83979",
+    "skill_melee-weapon@tbc-chu-tuoc-thuong.png": "6879c459d293c0d5f796485ad11822a05bc78d2bc54ab2b515fdebba243f3a87",
+    "skill_melee-weapon-fx@tbc-chu-tuoc-thuong.png": "3008d40230494dbe495bc9758ca9eeabc8c54092fbd3021af52be1bc30cf3b4c",
+    "skill_melee-weapon@tu-tieu-thuong.png": "9e7b79bc05e457141292ddf912b39df221731183bf5cf218ddeb40521a1503d7",
+    "skill_melee-weapon-fx@tu-tieu-thuong.png": "a61a16a0ece8871f278b2052748131b142cc68739365d382e51a197288e779f7",
+    "skill_melee-weapon@luu-thuy-thuong.png": "d8ebb5564831391e444495726c805d83af4a69d6cadf223b3ae59a2b77da474d",
+    "skill_melee-weapon-fx@luu-thuy-thuong.png": "48e3b77c9e7d9b4e1fa4a7f1e8fa21896170d5ea95d9c95d33f4c605b1971b85",
+    "skill_melee-weapon@phien-giang-thuong.png": "dc1f5e688deb36d964d9ec2aff4d7d2c8707d78580f0c036b4e159dfe8e76228",
+    "skill_melee-weapon-fx@phien-giang-thuong.png": "d48add9c5a2d29e106763759880351dfa604690a710ad46df8f1559457fea303",
+    "skill_melee-weapon@thanh-khe-truc-thuong.png": "209758f8a1f041303a299e1f55bd508b767a6d7b56d4d769508b608654104a93",
+    "skill_melee-weapon@thanh-khe-thiet-thuong.png": "407f22e8dd607ebb846011d8dbbe853e35af625fa1032efd30544ddf627e5d10",
+    "skill_melee-weapon@tbc-han-tinh-bang-phach-thuong.png": "9a3c3476863a234b7d186031e27559b4c6ada2863c3dbb494da3e9cdc06f9528",
+    "skill_melee-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "0a32f438b831b43b2cdee0eb794e96c81f746d540d57546f6c2004360bedf7fa",
+    "skill_melee-weapon@tan-hoa-thuong.png": "fb93a254ffc2c0b472e62eec3074d0b2baff90e66975fbd4ce7c25499d491bc7",
+    "skill_melee-weapon-fx@tan-hoa-thuong.png": "20a0eabc29e29363929b1ae124e09bddb18c03112c8a76a57e40292704c5bc1b",
+    "skill_melee-weapon@tung-van-truong-thuong.png": "d02ff4c083ae5c1abfa5886731b99b52133997f2da9d8a373b516f89bbeca973",
+    "skill_melee-weapon-fx@tung-van-truong-thuong.png": "482b0584760e802e40bc2181b70ee36ef9bee230deb0cc515d117e9f40752092",
+    "skill_melee-vfx-over.png": "5f413e661907f6e9bc82a370e3b08df6de6b7db3a89f4a107cbd206a5dc585f1",
+    "skill_ranged.png": "c241140f7474fa09c5a36f7c83567a1a095e47a7b5ed0277d73ee32c01e36142",
+    "skill_ranged-weapon.png": "c61b09ba387719b2d09bc6f01468c904965e26f3ca489aa6784cb5b7efc2a34d",
+    "skill_ranged-weapon@tung-cham-thuong.png": "9934f65e2631585f82582d4218becd87a073b8a8f3efc69e368c7ec2c99c03e2",
+    "skill_ranged-weapon-fx@tung-cham-thuong.png": "43193d25c276bb078cff4b610964835fa0f66fa9422e511a133480c4fb7cc0d0",
+    "skill_ranged-weapon@hac-can-cau-hoan-thuong.png": "5c64326c9e5f51be3826aa882dfd778e52a43080ca0d5a6b7b30a225a98c92ee",
+    "skill_ranged-weapon-fx@hac-can-cau-hoan-thuong.png": "071e1481ead4657e7e4a7fd9e7d075b891790424beb72780abc2d8d530580858",
+    "skill_ranged-weapon@u-xa-mau.png": "cb074f6b849d28b6146fc80d2b405f28a7ba2b66fabd171900a46f0fbfdfa5f1",
+    "skill_ranged-weapon-fx@u-xa-mau.png": "4a83be8241d14689cddad9c917e9d0a70c9bc824901ae4dc0c3afed2867d1857",
+    "skill_ranged-weapon@quy-dang-le-hoa-thuong.png": "dc4a5268e7f1573bf847d79fdb2b0c0c31cbd98527a067fe8d4902a5a587d5dc",
+    "skill_ranged-weapon-fx@quy-dang-le-hoa-thuong.png": "c4e4a0a3b5f6d8728a76c9def62a53a095cf9f23efeda0e2726d9ee8184a9541",
+    "skill_ranged-weapon@huyen-thiet-ma-soc.png": "d37ac95fa2916415c4ffec69e041d92b8de133542f989bbd94ed051717e828a7",
+    "skill_ranged-weapon-fx@huyen-thiet-ma-soc.png": "154f126ec670e9f4706739b7bbb7bbdd05459f8d83b0c3c00df6a2de6ff64df4",
+    "skill_ranged-weapon@song-dau-phe-hon-thuong.png": "d96106f61ef60f866231faa52b53b9d52f88470b32919ad2bfe9d33da65aed49",
+    "skill_ranged-weapon-fx@song-dau-phe-hon-thuong.png": "a1fac4b81b9a1d6d19a12a91f55d27bff1c249ff4a05929b9cf967a5e058e63e",
+    "skill_ranged-weapon@pha-giap-tam-lang-thuong.png": "52078441b3f4838038400ec2ffe7701d510e5e1b5ac6ce0a8e54ae182b2cc908",
+    "skill_ranged-weapon-fx@pha-giap-tam-lang-thuong.png": "a24d3d3e145228794ae08552f69fcc728b9acf806b1bf987442e569b9ecf6f25",
+    "skill_ranged-weapon@minh-long-dam-thuong.png": "4bb4c915d3b47934798b5dd4c8f70b9e6e43a33019ca7c28209c83427f2d9ac6",
+    "skill_ranged-weapon-fx@minh-long-dam-thuong.png": "0f58ce8636dc7ce1dacd57ce8fc56b9b07a61c0cffbd732095f3f9e1ec6a5be3",
+    "skill_ranged-weapon@tbc-so-nguyet-thuong.png": "ca240abf455632d4471e7770609a0ad474e0a98d9e775c82a14245296cc1d2b9",
+    "skill_ranged-weapon-fx@tbc-so-nguyet-thuong.png": "62e4133c9a464fe65ed5805869a4da655e46c151712ebbbb0a2696e10723ffea",
+    "skill_ranged-weapon@tbc-bich-lac-thuong.png": "ddccd9e31171273febda7c5ccda48fe837646723a9615d6dce576f966f2e081e",
+    "skill_ranged-weapon-fx@tbc-bich-lac-thuong.png": "3528e1b8dff2d148ff95f663356fdf24b6b6d51907a8c75f0e1668a14b9959bc",
+    "skill_ranged-weapon@tbc-tu-van-thuong.png": "3cb4835a4465c29cdb121a7465035a913bcd929ecbc8954ae6c24e24e1bf8d80",
+    "skill_ranged-weapon-fx@tbc-tu-van-thuong.png": "1cc2f82537923d8d69bbfd5d1e8653d5a6097c4edb23f3730e5cf886678b6b23",
+    "skill_ranged-weapon@tbc-kim-o-thuong.png": "a4f3cfea4c7600894d9be7556dbfac87be3a94e066d5e79f516eab5bd0e315ab",
+    "skill_ranged-weapon-fx@tbc-kim-o-thuong.png": "6a7e64f1a56e17e25272e4c981211860222c440d7067e8483651296f859a385d",
+    "skill_ranged-weapon@tbc-han-suong-thuong.png": "31701aa507eed38745bf9444f91ae42edfe091f7d1017e3c3fe2449691dd74ed",
+    "skill_ranged-weapon-fx@tbc-han-suong-thuong.png": "a9954a898af0a0b2c59f430ffeaed4d5babc76da678f39f787c8ecf4068854d2",
+    "skill_ranged-weapon@tbc-chu-tuoc-thuong.png": "76f637dcccf275bbee31f8b9ed4bc9f83e4350877dec1c6ac47c53bb571aabc3",
+    "skill_ranged-weapon-fx@tbc-chu-tuoc-thuong.png": "addacfa6ebeddf810b242f606218df077a7d460161255976f146b4182754d7c8",
+    "skill_ranged-weapon@tu-tieu-thuong.png": "eae8f5fa99442cd9e4326825055983b6ee9b222dec8d3e38a7f5b24a14e30572",
+    "skill_ranged-weapon-fx@tu-tieu-thuong.png": "0c0a9609b8d020a5ca410ff182e5395a83e31ed39e077c452fca3859e5ac45d8",
+    "skill_ranged-weapon@luu-thuy-thuong.png": "edbe78f54a32dfd18124bd105f8045dd083957998294f2ec0d1a19c425b382b8",
+    "skill_ranged-weapon-fx@luu-thuy-thuong.png": "899c374cfae348e77bb5d17dc134428f683419297f2c6372bc02a78cb5a217dc",
+    "skill_ranged-weapon@phien-giang-thuong.png": "e6ecd94124837d934478f241900addc901f642c2287a9b027b48ef55eb4211d0",
+    "skill_ranged-weapon-fx@phien-giang-thuong.png": "bc68f09c4c637edfac9ae87acf3ab2701858a597e6b7ad84da53b950ee541272",
+    "skill_ranged-weapon@thanh-khe-truc-thuong.png": "824c91e1adf96363f3b442e1ce9b810e61a2e4814290bd121177fd3fe7170dc8",
+    "skill_ranged-weapon@thanh-khe-thiet-thuong.png": "ca41867930c4ed41a6cb5ecb73e8a4b2dbcec4a289664df41093279efb9db1d5",
+    "skill_ranged-weapon@tbc-han-tinh-bang-phach-thuong.png": "56ae42b935896e757b226be19f8246abca9964c5e934a40871f5e18ff38b3841",
+    "skill_ranged-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "d23fccb73b2c3a1d6e5a87b7fd6cc645447e0ae88e002ade9d99ed3ca8f3b7c7",
+    "skill_ranged-weapon@tan-hoa-thuong.png": "0dc90de309bbb57c3307c2bf22e6c3986c55f34615ef753cdac85be115b2bdb0",
+    "skill_ranged-weapon-fx@tan-hoa-thuong.png": "acc6014ed306d9d10722a15f959936d310c46555942a1371b76acce4607a1d27",
+    "skill_ranged-weapon@tung-van-truong-thuong.png": "be188bff1d06b0aa1c50d591e95e280412dd301353b22a192f4905b199926a83",
+    "skill_ranged-weapon-fx@tung-van-truong-thuong.png": "be26c32ff3f6c6fde9ec902964f340a91075485d5a46cc38872a531bfad8f481",
+    "skill_ranged-vfx-over.png": "1e75ec28c4a33525b5c18aaa67198c5de8085723160c80aa1d95920f777242d0",
+    "consumable.png": "b1d9c997e8244ddf02653df975a26ca0e44780f8a442f1ebc834e2b4e03db50d",
+    "consumable-weapon.png": "b00537f27f39e8215cdec45677a14aa074424fc7c0a02192f4eabc4767139bd7",
+    "consumable-weapon@tung-cham-thuong.png": "c4e99d01cce5cba41d6bcb9dea31eb8cc7d11e1019004f1821b7554822cba1f0",
+    "consumable-weapon-fx@tung-cham-thuong.png": "71c4b442758fd23cffafb09601a07873cdc01013e0396dc67d635a424d8a1fed",
+    "consumable-weapon@hac-can-cau-hoan-thuong.png": "a8ca4f2c7bd2ac50bb172a34f1a1c156b654c8767be544c1f47e94ddee1fd9e2",
+    "consumable-weapon-fx@hac-can-cau-hoan-thuong.png": "d9e30f5bbdfd627b068c0a063c9e0eeea2b9b8627a4f0b6f75f1e95f525414bd",
+    "consumable-weapon@u-xa-mau.png": "ab6cde244237a5792fcf678eba2addc31950488a2ed2f010c46f62f8108473ad",
+    "consumable-weapon-fx@u-xa-mau.png": "a0585ff1b58b0fabe0502394b9cd42d1d417565cb33095069e3db607d4b1bb2a",
+    "consumable-weapon@quy-dang-le-hoa-thuong.png": "d73d24269dde88b314f85d1e1c4d89088a64282ef6817d1099be517e6ed5b6ba",
+    "consumable-weapon-fx@quy-dang-le-hoa-thuong.png": "526c6be61f4aa75409ba5941c67c96cc59a1378559bd9f7507224aa933dddcac",
+    "consumable-weapon@huyen-thiet-ma-soc.png": "02fbdf356d1229f73761faccc110a8a440c222b381e7f098fdf0f0c92f49bc9c",
+    "consumable-weapon-fx@huyen-thiet-ma-soc.png": "37435eae4085a86966395d41baf81286323eae7637c9e7b2637532770b36f951",
+    "consumable-weapon@song-dau-phe-hon-thuong.png": "e3c17237a87cccfc13117fab59c924dfc6b686398e4cb9950e5d350c1a140551",
+    "consumable-weapon-fx@song-dau-phe-hon-thuong.png": "0c60b8a57e6fed9876c991b00578f3ae2102924e0e19f6d8b4d840434a619b27",
+    "consumable-weapon@pha-giap-tam-lang-thuong.png": "2908047fa02d864652ca54cd161a5542a90cfb352e219abdae012c42024e6209",
+    "consumable-weapon-fx@pha-giap-tam-lang-thuong.png": "42aa4af272533a0a975b4c91a82a4b4a82b979c0886e0d3864e3631f1dbb2c18",
+    "consumable-weapon@minh-long-dam-thuong.png": "28eb13c7576add5f16fe0a79a9a173603a7b437bd1ec9882aa410dcd4e10f370",
+    "consumable-weapon-fx@minh-long-dam-thuong.png": "a489bd4bc6a6c60096740f66bbee9cd7344d6610447a8f7f24d291fdb793cc72",
+    "consumable-weapon@tbc-so-nguyet-thuong.png": "3d2daf019cb084d0ac6b0895a5c1e410524583f281788818bd0bbf98d1788e1e",
+    "consumable-weapon-fx@tbc-so-nguyet-thuong.png": "6468a2256ca6a64bb1c35618eaefde44da541cac77efc07b016a78b4fa14b9f0",
+    "consumable-weapon@tbc-bich-lac-thuong.png": "0d51bf0bd1b0151b5d06c16b71d5cbd8b5928ee19dac1ec2696ed64a44c1669a",
+    "consumable-weapon-fx@tbc-bich-lac-thuong.png": "4ec1eb2fd5a4504b7b962b42a81169ba45fcd2f62a5399af803236540412d149",
+    "consumable-weapon@tbc-tu-van-thuong.png": "5cb11d6f7f7ea1f73814b0fde2ad4c74d7aea615592cb606f8e376424f7680e7",
+    "consumable-weapon-fx@tbc-tu-van-thuong.png": "c13c3fc07a1d396070b8ac97d19c8811c5f9ce6ad1f588118255ad7072dae0f2",
+    "consumable-weapon@tbc-kim-o-thuong.png": "644c05f014f65d185e04f4e591284f07eaad067c6961ddf7858b5e5d0713fda3",
+    "consumable-weapon-fx@tbc-kim-o-thuong.png": "1c3e13c7fe0953eb455257b2ec31e1485c289ac606c0f3297717a2be1616cc5a",
+    "consumable-weapon@tbc-han-suong-thuong.png": "2ae2905d1f443b37749ef525c0d7490325428f423623a7fac75d2fc22f28d8e8",
+    "consumable-weapon-fx@tbc-han-suong-thuong.png": "1c9c4d34fe3e7e086d1953d7111ab6c3ae994e5f9f3b802140dccc19d98132ff",
+    "consumable-weapon@tbc-chu-tuoc-thuong.png": "42179a67fe6232f28395a222e1d37b16f88cb86d7e8abab1681046f6359e1acb",
+    "consumable-weapon-fx@tbc-chu-tuoc-thuong.png": "6df6cf7b6ca74cc0b1f0ce8e6cc201486826f980b135bfb3bb0eaa1f34895c0c",
+    "consumable-weapon@tu-tieu-thuong.png": "038ddfeb421cc17d1dff720e628967efd3b11fefed0fd74923cf9e0db42e42a5",
+    "consumable-weapon-fx@tu-tieu-thuong.png": "7aa07580c1f03ee91a091b00c4e6b121ceccdb1edc0e52b3cb34f46ad04882d9",
+    "consumable-weapon@luu-thuy-thuong.png": "20dc3b799816599dfa7aabd3c580e564bd0868a8f63c8fd55c7b23fb0f3d1850",
+    "consumable-weapon-fx@luu-thuy-thuong.png": "fe9f52fd9af1d899380d0b4342801fe306810564d81842181bc4cf4b0e45537f",
+    "consumable-weapon@phien-giang-thuong.png": "eeb57f098c8dab036eec9addaa70991fdd045b933c92fde469751bd58922c09f",
+    "consumable-weapon-fx@phien-giang-thuong.png": "778e8be2b01b9c795806d3159c8db54ea53c4c86873c5c34b68608dc962c869c",
+    "consumable-weapon@thanh-khe-truc-thuong.png": "7cffb42fc3fd7739cb85435740a665024706194b467aceccc535212d914285f9",
+    "consumable-weapon@thanh-khe-thiet-thuong.png": "be468afa3d3e25e9b6be51d0d15ef2afb7a6a2a032c4a89e57caa742518592b3",
+    "consumable-weapon@tbc-han-tinh-bang-phach-thuong.png": "827ddb757ab589edbb0731b872850e7a1051a1eecb8e347d431a09455ec97147",
+    "consumable-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "c93cf33906eb5004b164f102d3a7a078eaf28a47d3e29d3c13a20953d6bfc4be",
+    "consumable-weapon@tan-hoa-thuong.png": "dadc0ddbf422732c90c59e1733842f9d9a541e0ea30e1c26c3f8058731805b80",
+    "consumable-weapon-fx@tan-hoa-thuong.png": "2934f6a789084d9766878ec3abcf3136c473647c721d93fad5b4906b8e2ac458",
+    "consumable-weapon@tung-van-truong-thuong.png": "361de25aeba761379dcc11ea7976a89a5bd0370fda067a64be78544d8a677d68",
+    "consumable-weapon-fx@tung-van-truong-thuong.png": "7fae1eb8fa07cff0e5144ed663729990383bc7f72c01e732fc8b81788466d8ca",
+    "consumable-vfx-over.png": "fe8482113974990197cdcf6d5428e8068af8a71c6981f8ffabdd44a71115423f",
+    "block.png": "d1cc5914c0cd7448ff2a226ababa7dba5aefaf10b1b003bcdfa7d4992e31ff6d",
+    "block-weapon.png": "c23ccc31d4deeaa8368be4dcd4ecd48a39be17608b253343a8047661640b5e71",
+    "block-weapon@tung-cham-thuong.png": "d5a4f6ae1012d8b01f1e67c843daefa91909211de36bcaf391283b4d36afbe39",
+    "block-weapon-fx@tung-cham-thuong.png": "108b3ab46ff5a0e52786014b6fbd32d5fd15a20014848f5877baaa37f3e0a046",
+    "block-weapon@hac-can-cau-hoan-thuong.png": "391a49ea16c35df3fa0c588a53bb6f6e5bc5ff60cd5cf87fc805a085998e8aa7",
+    "block-weapon-fx@hac-can-cau-hoan-thuong.png": "1432d920e462dced83496b741e9adaaed1f04ec0119d4ccbb038e2d62340231e",
+    "block-weapon@u-xa-mau.png": "d9672394f797f6e1e6494eb50755d2c55637ef609d8be47c7920394c57eb6a2b",
+    "block-weapon-fx@u-xa-mau.png": "8e3dc149a83b6ea98f965f5c0d76335f00a4d62b08404f94abf18d236c8d7a1c",
+    "block-weapon@quy-dang-le-hoa-thuong.png": "26080dced99ff492f3d7f146882e3f2c279cb00e40240535ef026fb55c338f58",
+    "block-weapon-fx@quy-dang-le-hoa-thuong.png": "af40c07cbc860a291089afa18e1ad1a973ee9d15a7f79fa8a92df1a7e4af8894",
+    "block-weapon@huyen-thiet-ma-soc.png": "cfdfa1ab3dac69f6b1ab52b7d47283c92a4ddd36837a38273bac412395f8edc4",
+    "block-weapon-fx@huyen-thiet-ma-soc.png": "29c0da2ed663621904406e5b86bbf07c720850bada6e4f616eae19dd1c4249d6",
+    "block-weapon@song-dau-phe-hon-thuong.png": "4994df80b059f2fe498810167d6efdf4835c2ec1302cb884faedf7be0cae1b57",
+    "block-weapon-fx@song-dau-phe-hon-thuong.png": "a416d6b3587490d958bc9e81d99a33dcf02bc9479429f5b2dc9208d05c3c854f",
+    "block-weapon@pha-giap-tam-lang-thuong.png": "dee344a35ca661861e49fde7f5fd189e709fc3c84936595f1c08f4f81e8b719f",
+    "block-weapon-fx@pha-giap-tam-lang-thuong.png": "4e03957e5e45f872253659aa068bbaba9de6bde7768c1a6fe024df12a42b225f",
+    "block-weapon@minh-long-dam-thuong.png": "f321cf82061fcf70cbfdec6e9a255986b3ea8df3cf46f688cd1d78dd8b7e9f56",
+    "block-weapon-fx@minh-long-dam-thuong.png": "9adb4491502bcfeb1046c25fe572897d60332de3123f31108436a998ed665dbb",
+    "block-weapon@tbc-so-nguyet-thuong.png": "dd6e25827ff19bd08a45b1bb344a27c0c59017d5f163be7e1991a7a55b76d096",
+    "block-weapon-fx@tbc-so-nguyet-thuong.png": "49684e7b2c41da2be4244163f52a00d51a248e62cee22afc3a93c6d2de7f8fed",
+    "block-weapon@tbc-bich-lac-thuong.png": "d534633eea6b4b0a8974a5ad558ac8ee8450a964de09a095243707452d4da56c",
+    "block-weapon-fx@tbc-bich-lac-thuong.png": "c0d613958d99b9fc70344355c61488575265f3ace92547d6cd97d1a084fd7d3e",
+    "block-weapon@tbc-tu-van-thuong.png": "b0b6082d6e3d29a4c470199515d9690436e92f91ff90c708ea6e884f483e720d",
+    "block-weapon-fx@tbc-tu-van-thuong.png": "182d398650e3faf5ad4b0fd5c5a6b67b7a98b3fd21860b0926d1a714495a6a7c",
+    "block-weapon@tbc-kim-o-thuong.png": "fc897a52cc4cbaded946279fd795f5524d358fe6c6384fc143a0ea7266f553d0",
+    "block-weapon-fx@tbc-kim-o-thuong.png": "ce7e126f0f4c01a37b82045b0fb676c1aee7481fec3ce653992b2f9c5afcb7c1",
+    "block-weapon@tbc-han-suong-thuong.png": "239612184bb958dd9ea55281ca985c51fa4de13e21908b046a6afae62e61a82e",
+    "block-weapon-fx@tbc-han-suong-thuong.png": "27ee7609d35b28e8a063b92e18bb3d2821ca12b6a7bf9b2edffd662594e97126",
+    "block-weapon@tbc-chu-tuoc-thuong.png": "434d1672f9e35db5c0fb2a757c1a4dfcccd17c0230bcfd77bf018540af7ba2b9",
+    "block-weapon-fx@tbc-chu-tuoc-thuong.png": "8b41a9a3dee404d69650184f3ab5d752a97e87c44278551a35a1351aab4e9d98",
+    "block-weapon@tu-tieu-thuong.png": "8b04e3bd30fbc0ae951dd709fcac570eab9e2b7bbec83ba0ed2acc5e038fe11d",
+    "block-weapon-fx@tu-tieu-thuong.png": "b8405aacdf716a54e16dfb0dc1704c0386ea64d6b9f43c91eb13c1c9089b8345",
+    "block-weapon@luu-thuy-thuong.png": "9a0403ae7938ffe65ff98e6e36ff0641b39b9334868155e8c2ee61585b96b98b",
+    "block-weapon-fx@luu-thuy-thuong.png": "c9cc3bd5809771edd27ff02aeeb9cdcb313288568a356edd9e1413021ffdf565",
+    "block-weapon@phien-giang-thuong.png": "6018efec6bd3bdf5e1a7fc1b5050810345ffd0ce83afe2aaec2d5b2d6aebac18",
+    "block-weapon-fx@phien-giang-thuong.png": "08c96e1b9e10fb47e68f259015e280ba1a6b4babb4eef932cc83a25f4fbbed35",
+    "block-weapon@thanh-khe-truc-thuong.png": "bdb01aa5c1abe371a14a376cf00717d121a237bc856b66702d94276a79dce188",
+    "block-weapon@thanh-khe-thiet-thuong.png": "63485b2d4ebadb64d6c82ddf0fa1cffd6f5f86d6f77d17af1bc226b4722fb507",
+    "block-weapon@tbc-han-tinh-bang-phach-thuong.png": "c90825b4c7d7501ee0e837ed7ff2c7b9f7a3ebbbdb9bce956e5c1bf1b21c2d9c",
+    "block-weapon-fx@tbc-han-tinh-bang-phach-thuong.png": "d44c6b974ce508d33918b0f2cde831aaf04e2ae01613d158b3351e58e3eba211",
+    "block-weapon@tan-hoa-thuong.png": "8855c5258cd972866c340fa7e4e677870b1ee63cd327e26ebd0f4ef831331301",
+    "block-weapon-fx@tan-hoa-thuong.png": "f74b8bdf45bd082a12545de37572e1c1f1b63fea6bdcbd5fbff4ba0784920c97",
+    "block-weapon@tung-van-truong-thuong.png": "f49520ab468476dc9abb0143efd12a9a979cbbbd347b51deee4bd49fd79ff92c",
+    "block-weapon-fx@tung-van-truong-thuong.png": "8ffb9a49de518bdee368ebeee18167d6ac2e19050b735349e8954e4822d35fbf",
+    "death.png": "2170def42816128bc38aba029af88c35a34722d9a89d7596c6cdefc8b858e256"
+  }
+}

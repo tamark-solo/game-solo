@@ -1,0 +1,682 @@
+{
+  "id": "character_quyen_tu",
+  "name": "Quyền Tu · Nộ Quyền Phá Sơn",
+  "lineage": "character-lineage_quyen_tu",
+  "cell": {
+    "width": 128,
+    "height": 128
+  },
+  "pivot": {
+    "x": 0.5,
+    "y": 0.875
+  },
+  "scale": 0.6178,
+  "motions": [
+    {
+      "key": "idle",
+      "frames": 4,
+      "fps": 6,
+      "loop": true,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "complete",
+          "frame": 3,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "idle.png"
+        }
+      ]
+    },
+    {
+      "key": "walk",
+      "frames": 7,
+      "fps": 8,
+      "loop": true,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "step-left",
+          "frame": 1,
+          "kind": "footstep",
+          "socket": "",
+          "gameplayRef": ""
+        },
+        {
+          "id": "step-right",
+          "frame": 4,
+          "kind": "footstep",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "walk.png"
+        }
+      ]
+    },
+    {
+      "key": "run",
+      "frames": 7,
+      "fps": 11,
+      "loop": true,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "step-left",
+          "frame": 1,
+          "kind": "footstep",
+          "socket": "",
+          "gameplayRef": ""
+        },
+        {
+          "id": "step-right",
+          "frame": 5,
+          "kind": "footstep",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "frameDurations": [
+        90,
+        80,
+        80,
+        78,
+        80,
+        114,
+        114
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "run.png"
+        }
+      ]
+    },
+    {
+      "key": "hurt",
+      "frames": 3,
+      "fps": 10,
+      "loop": false,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "complete",
+          "frame": 2,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "hurt.png"
+        }
+      ]
+    },
+    {
+      "key": "attack",
+      "frames": 6,
+      "fps": 12,
+      "loop": false,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "attack-start",
+          "frame": 0,
+          "kind": "attack_start",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "trail-on",
+          "frame": 2,
+          "kind": "weapon_trail_start",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "contact",
+          "frame": 3,
+          "kind": "contact",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "trail-off",
+          "frame": 4,
+          "kind": "weapon_trail_end",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "complete",
+          "frame": 5,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "frameDurations": [
+        140,
+        110,
+        80,
+        120,
+        117,
+        100
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "attack.png"
+        }
+      ]
+    },
+    {
+      "key": "dash",
+      "frames": 7,
+      "fps": 12,
+      "loop": false,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "invuln-on",
+          "frame": 0,
+          "kind": "invulnerability_start",
+          "socket": "",
+          "gameplayRef": ""
+        },
+        {
+          "id": "invuln-off",
+          "frame": 4,
+          "kind": "invulnerability_end",
+          "socket": "",
+          "gameplayRef": ""
+        },
+        {
+          "id": "complete",
+          "frame": 6,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "dash.png"
+        }
+      ]
+    },
+    {
+      "key": "jump",
+      "frames": 3,
+      "fps": 8,
+      "loop": false,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "land",
+          "frame": 2,
+          "kind": "land",
+          "socket": "",
+          "gameplayRef": ""
+        },
+        {
+          "id": "complete",
+          "frame": 2,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "jump.png"
+        }
+      ]
+    },
+    {
+      "key": "combat",
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "attack-start",
+          "frame": 0,
+          "kind": "attack_start",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "trail-on",
+          "frame": 1,
+          "kind": "weapon_trail_start",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "contact-a",
+          "frame": 2,
+          "kind": "contact",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "contact-b",
+          "frame": 6,
+          "kind": "contact",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "trail-off",
+          "frame": 6,
+          "kind": "weapon_trail_end",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "complete",
+          "frame": 7,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "frameDurations": [
+        130,
+        120,
+        45,
+        45,
+        45,
+        37,
+        165,
+        80
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "combat.png"
+        }
+      ]
+    },
+    {
+      "key": "skill_melee",
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "attack-start",
+          "frame": 0,
+          "kind": "attack_start",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "release",
+          "frame": 3,
+          "kind": "release",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "contact",
+          "frame": 4,
+          "kind": "contact",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "trail-off",
+          "frame": 6,
+          "kind": "weapon_trail_end",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "complete",
+          "frame": 7,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "skill_melee.png"
+        },
+        {
+          "slot": "vfx-over",
+          "order": 1,
+          "base": false,
+          "asset": "character_quyen_tu",
+          "file": "skill_melee-vfx.png"
+        }
+      ]
+    },
+    {
+      "key": "skill_ranged",
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "attack-start",
+          "frame": 0,
+          "kind": "attack_start",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "release",
+          "frame": 3,
+          "kind": "release",
+          "socket": "main-hand",
+          "gameplayRef": ""
+        },
+        {
+          "id": "complete",
+          "frame": 7,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "sequence": [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5,
+        6,
+        7
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "skill_ranged.png"
+        },
+        {
+          "slot": "vfx-over",
+          "order": 1,
+          "base": false,
+          "asset": "character_quyen_tu",
+          "file": "skill_ranged-vfx.png"
+        }
+      ]
+    },
+    {
+      "key": "consumable",
+      "frames": 6,
+      "fps": 10,
+      "loop": false,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "release",
+          "frame": 3,
+          "kind": "release",
+          "socket": "",
+          "gameplayRef": ""
+        },
+        {
+          "id": "complete",
+          "frame": 5,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "consumable.png"
+        }
+      ]
+    },
+    {
+      "key": "block",
+      "frames": 4,
+      "fps": 10,
+      "loop": false,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "complete",
+          "frame": 3,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "block.png"
+        }
+      ]
+    },
+    {
+      "key": "death",
+      "frames": 9,
+      "fps": 8,
+      "loop": false,
+      "directions": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "events": [
+        {
+          "id": "complete",
+          "frame": 8,
+          "kind": "animation_end",
+          "socket": "",
+          "gameplayRef": ""
+        }
+      ],
+      "layers": [
+        {
+          "slot": "skin",
+          "order": 0,
+          "base": true,
+          "asset": "character_quyen_tu",
+          "file": "death.png"
+        }
+      ]
+    }
+  ],
+  "sockets": [
+    {
+      "id": "main-hand",
+      "role": "main-hand",
+      "x": 31,
+      "y": -43
+    }
+  ]
+}

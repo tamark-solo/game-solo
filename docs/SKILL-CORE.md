@@ -1,5 +1,11 @@
 # Skill core — gameplay, animation và VFX
 
+**VFX đòn thường ·12/10:** [Thanh Ngọc01](design/vfx/basic-attack-jade-v1/README.md) gồm5sequence/30frame ghép vào combat review, body không đổi. `shared/animation-arena/basic-presentation.ts` dùng release/hit/cancel facts riêng, absolute clock, dedup per strike/target, capacity64/seen256/terminal128; impact không suy từ release. Hand socket24 điểm, target groundY tách contact. Đây là presentation + ART review, chưa mở ID/gameplay/save hoặc nhận event từ room. Adapter đòn thường cần facts riêng, không dùng skillId sword của fixture damage để kích VFX R01.
+
+**Animation pixel08 hướng ·12/10:** [Chuẩn đã chốt02](design/characters/actor-animation-standard-v2/README.md) có24binding Kiếm/Lôi/Phong tám hướng trong review; `bodyDirectionCount:8` opt-in, world groundY độc lập lift/socket. ART/UI demo cũ đã archive, không đổi R01/save/map hoặc live actor. Fixture Core/combat thuần vẫn giữ để tích hợp player full sau.
+
+**Chuẩn sản xuất actor 12/10:** owner chốt [pilot làm production basis](ACTOR-ANIMATION-PRODUCTION.md) và [skill sản xuất animation](skills/game-actor-animation-production/SKILL.md). ART/body/timing/socket chuẩn hóa theo bộ; nhãn phase ở review không thay release/hit/cancel/receipt server dưới đây.
+
 **Khí tức nhân vật · 12/10:** [Appearance aura/layer](CHARACTER-AURA-LAYERS.md) là bộ FX riêng khi sản xuất sprite tám hướng; [review Hóa Thần 02](design/characters/wang-lin-hoa-than-review-v2/README.md) mới thử texture/motion trong DOM. Không là skill, không thay R01/atlas/pivot/pose hoặc quyền gameplay. Định hướng tích hợp tiếp dùng facts → presentation → catalog → renderer theo trách nhiệm dưới đây.
 
 **09/10/2026 · TypeScript · _MMO.** Ba thuật R01 đã nối động tác cho cả ba nhân vật, bốn hướng. [Chơi trong Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html), [xem pose riêng](design/characters/core-cast-v1/index.html), [nguồn ART](design/characters/core-cast-v1/README.md). Đây là nền mở rộng skill; chưa triển khai R02–R05 hoặc combat trên map farm.

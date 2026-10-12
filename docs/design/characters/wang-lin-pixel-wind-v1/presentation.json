@@ -1,0 +1,2515 @@
+{
+  "version": 2,
+  "skills": {
+    "sword": {
+      "fps": 24,
+      "characterEnd": 666.6666666666666,
+      "bindings": {
+        "CHR-WANG-LIN-CHIBI": {
+          "south": "wang-pixel-cast_forward-south",
+          "southwest": "wang-pixel-cast_forward-southwest",
+          "west": "wang-pixel-cast_forward-west",
+          "northwest": "wang-pixel-cast_forward-northwest",
+          "north": "wang-pixel-cast_forward-north",
+          "northeast": "wang-pixel-cast_forward-northeast",
+          "east": "wang-pixel-cast_forward-east",
+          "southeast": "wang-pixel-cast_forward-southeast"
+        }
+      },
+      "tracks": [
+        {
+          "id": "anticipation",
+          "clip": "sword-charge",
+          "trigger": "cast",
+          "delay": 0,
+          "duration": 250,
+          "anchor": "hand",
+          "layer": "air",
+          "stopOn": [
+            "cancel"
+          ]
+        },
+        {
+          "id": "impact",
+          "clip": "qi-impact",
+          "trigger": "hit",
+          "delay": 0,
+          "duration": 500,
+          "anchor": "hit",
+          "layer": "impact",
+          "rotate": true,
+          "projectileAnchor": true
+        },
+        {
+          "id": "miss-dissolve",
+          "clip": "qi-impact",
+          "trigger": "miss",
+          "delay": 0,
+          "duration": 166.66666666666666,
+          "anchor": "hit",
+          "layer": "air",
+          "rotate": true,
+          "projectileAnchor": true,
+          "frameStart": 8,
+          "frameCount": 4
+        }
+      ],
+      "projectileClip": "sword-projectile",
+      "bodyDirectionCount": 8
+    },
+    "thunder": {
+      "fps": 24,
+      "characterEnd": 708.3333333333334,
+      "bindings": {
+        "CHR-WANG-LIN-CHIBI": {
+          "south": "wang-pixel-cast_point-south",
+          "southwest": "wang-pixel-cast_point-southwest",
+          "west": "wang-pixel-cast_point-west",
+          "northwest": "wang-pixel-cast_point-northwest",
+          "north": "wang-pixel-cast_point-north",
+          "northeast": "wang-pixel-cast_point-northeast",
+          "east": "wang-pixel-cast_point-east",
+          "southeast": "wang-pixel-cast_point-southeast"
+        }
+      },
+      "tracks": [
+        {
+          "id": "thunder-seal",
+          "clip": "thunder-seal",
+          "trigger": "cast",
+          "delay": 0,
+          "duration": 333.3333333333333,
+          "anchor": "hand",
+          "layer": "air",
+          "stopOn": [
+            "cancel"
+          ]
+        },
+        {
+          "id": "thunder-ring",
+          "clip": "thunder-ring",
+          "trigger": "cast",
+          "delay": 250,
+          "duration": 8000,
+          "anchor": "target",
+          "layer": "ground",
+          "stopOn": [
+            "cancel"
+          ],
+          "holdLastUntilResolve": true,
+          "resolveOn": [
+            "hit",
+            "miss"
+          ]
+        },
+        {
+          "id": "bolt",
+          "clip": "thunder-bolt",
+          "trigger": "hit",
+          "delay": 0,
+          "duration": 250,
+          "anchor": "hit",
+          "layer": "air"
+        },
+        {
+          "id": "impact",
+          "clip": "thunder-impact",
+          "trigger": "hit",
+          "delay": 83.33333333333333,
+          "duration": 500,
+          "anchor": "hit",
+          "layer": "impact"
+        }
+      ],
+      "bodyDirectionCount": 8
+    },
+    "wind": {
+      "fps": 24,
+      "characterEnd": 583.3333333333334,
+      "bindings": {
+        "CHR-WANG-LIN-CHIBI": {
+          "south": "wang-pixel-wind-south",
+          "southwest": "wang-pixel-wind-southwest",
+          "west": "wang-pixel-wind-west",
+          "northwest": "wang-pixel-wind-northwest",
+          "north": "wang-pixel-wind-north",
+          "northeast": "wang-pixel-wind-northeast",
+          "east": "wang-pixel-wind-east",
+          "southeast": "wang-pixel-wind-southeast"
+        }
+      },
+      "tracks": [
+        {
+          "id": "wind-depart",
+          "clip": "wind-depart",
+          "trigger": "cast",
+          "delay": 0,
+          "duration": 250,
+          "anchor": "origin",
+          "layer": "ground",
+          "stopOn": [
+            "cancel"
+          ]
+        },
+        {
+          "id": "wind-trail",
+          "clip": "wind-trail",
+          "trigger": "cast",
+          "delay": 166.66666666666666,
+          "duration": 8000,
+          "anchor": "body",
+          "layer": "ground",
+          "stopOn": [
+            "arrival",
+            "cancel"
+          ],
+          "rotate": true
+        },
+        {
+          "id": "arrival",
+          "clip": "wind-arrival",
+          "trigger": "arrival",
+          "delay": 0,
+          "duration": 500,
+          "anchor": "hit",
+          "layer": "air"
+        }
+      ],
+      "ghosts": {
+        "lagMs": [
+          83.33333333333333,
+          166.66666666666666
+        ],
+        "opacity": [
+          0.3,
+          0.18
+        ]
+      },
+      "bodyDirectionCount": 8
+    }
+  },
+  "clips": {
+    "wang-pixel-cast_forward-south": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_forward-south.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_forward-southwest": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_forward-southwest.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_forward-west": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_forward-west.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_forward-northwest": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_forward-northwest.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_forward-north": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_forward-north.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_forward-northeast": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_forward-northeast.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_forward-east": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_forward-east.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_forward-southeast": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_forward-southeast.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "sword-charge": {
+      "fps": 24,
+      "frameSize": [
+        48,
+        48
+      ],
+      "anchor": [
+        24,
+        24
+      ],
+      "sampling": "linear",
+      "loop": false,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "atlasSize": [
+        208,
+        104
+      ],
+      "atlasUrl": "/assets/r01/sword-charge-61994bafe492ea22-sword-charge.png",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "x": 54,
+          "y": 2,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "x": 106,
+          "y": 2,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "x": 158,
+          "y": 2,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "x": 2,
+          "y": 54,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "x": 54,
+          "y": 54,
+          "w": 48,
+          "h": 48
+        }
+      ],
+      "sha256": "61994bafe492ea220058dcc64914a2b745258b40082c6f26701074a95e9db3fe",
+      "bytes": 11168
+    },
+    "qi-impact": {
+      "fps": 24,
+      "frameSize": [
+        128,
+        128
+      ],
+      "anchor": [
+        64,
+        64
+      ],
+      "sampling": "linear",
+      "loop": false,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "atlasSize": [
+        528,
+        396
+      ],
+      "atlasUrl": "/assets/r01/qi-impact-c32fe76a333bd42b-qi-impact.png",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 134,
+          "y": 2,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 266,
+          "y": 2,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 398,
+          "y": 2,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 2,
+          "y": 134,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 134,
+          "y": 134,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 266,
+          "y": 134,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 398,
+          "y": 134,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 2,
+          "y": 266,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 134,
+          "y": 266,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 266,
+          "y": 266,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 398,
+          "y": 266,
+          "w": 128,
+          "h": 128
+        }
+      ],
+      "sha256": "c32fe76a333bd42be9857feaaf8f3d68374a016fe7f364158041fb8b4a4ecee2",
+      "bytes": 81927
+    },
+    "sword-projectile": {
+      "fps": 24,
+      "frameSize": [
+        128,
+        64
+      ],
+      "anchor": [
+        116,
+        32
+      ],
+      "sampling": "linear",
+      "loop": true,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "atlasSize": [
+        528,
+        136
+      ],
+      "atlasUrl": "/assets/r01/sword-projectile-fdc7a2cc4928fb96-sword-projectile.png",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 128,
+          "h": 64
+        },
+        {
+          "x": 134,
+          "y": 2,
+          "w": 128,
+          "h": 64
+        },
+        {
+          "x": 266,
+          "y": 2,
+          "w": 128,
+          "h": 64
+        },
+        {
+          "x": 398,
+          "y": 2,
+          "w": 128,
+          "h": 64
+        },
+        {
+          "x": 2,
+          "y": 70,
+          "w": 128,
+          "h": 64
+        },
+        {
+          "x": 134,
+          "y": 70,
+          "w": 128,
+          "h": 64
+        }
+      ],
+      "sha256": "fdc7a2cc4928fb96958b65cb4899c0557d8d30aeb5fd51f64d46c37d444e40ae",
+      "bytes": 78556
+    },
+    "wang-pixel-cast_point-south": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        3,
+        3,
+        6,
+        2,
+        1
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_point-south.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_point-southwest": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        3,
+        3,
+        6,
+        2,
+        1
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_point-southwest.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_point-west": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        3,
+        3,
+        6,
+        2,
+        1
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_point-west.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_point-northwest": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        3,
+        3,
+        6,
+        2,
+        1
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_point-northwest.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_point-north": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        3,
+        3,
+        6,
+        2,
+        1
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_point-north.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_point-northeast": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        3,
+        3,
+        6,
+        2,
+        1
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_point-northeast.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_point-east": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        3,
+        3,
+        6,
+        2,
+        1
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_point-east.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-cast_point-southeast": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        96
+      ],
+      "anchor": [
+        48,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        3,
+        3,
+        6,
+        2,
+        1
+      ],
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/cast_point-southeast.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96
+        }
+      ]
+    },
+    "thunder-seal": {
+      "fps": 24,
+      "frameSize": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "sampling": "linear",
+      "loop": false,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "atlasSize": [
+        272,
+        136
+      ],
+      "atlasUrl": "/assets/r01/thunder-seal-0f4892a37fc6ecc1-thunder-seal.png",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 70,
+          "y": 2,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 138,
+          "y": 2,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 206,
+          "y": 2,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 2,
+          "y": 70,
+          "w": 64,
+          "h": 64
+        },
+        {
+          "x": 70,
+          "y": 70,
+          "w": 64,
+          "h": 64
+        }
+      ],
+      "sha256": "0f4892a37fc6ecc14520fb2cbcc393667cc34a2543328ee9ff0a7bb513134be9",
+      "bytes": 22943
+    },
+    "thunder-ring": {
+      "fps": 24,
+      "frameSize": [
+        128,
+        80
+      ],
+      "anchor": [
+        64,
+        44
+      ],
+      "sampling": "linear",
+      "loop": false,
+      "durations": [
+        1,
+        1,
+        1,
+        2,
+        7,
+        2
+      ],
+      "atlasSize": [
+        528,
+        168
+      ],
+      "atlasUrl": "/assets/r01/thunder-ring-78b9234228dbfbe2-thunder-ring.png",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 128,
+          "h": 80
+        },
+        {
+          "x": 134,
+          "y": 2,
+          "w": 128,
+          "h": 80
+        },
+        {
+          "x": 266,
+          "y": 2,
+          "w": 128,
+          "h": 80
+        },
+        {
+          "x": 398,
+          "y": 2,
+          "w": 128,
+          "h": 80
+        },
+        {
+          "x": 2,
+          "y": 86,
+          "w": 128,
+          "h": 80
+        },
+        {
+          "x": 134,
+          "y": 86,
+          "w": 128,
+          "h": 80
+        }
+      ],
+      "sha256": "78b9234228dbfbe223d0ac436fb5034b7d24e333f1736183dcb4b00074bacdfc",
+      "bytes": 55945
+    },
+    "thunder-bolt": {
+      "fps": 24,
+      "frameSize": [
+        128,
+        192
+      ],
+      "anchor": [
+        64,
+        156
+      ],
+      "sampling": "linear",
+      "loop": false,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "atlasSize": [
+        528,
+        392
+      ],
+      "atlasUrl": "/assets/r01/thunder-bolt-d9d467c7fb57aff4-thunder-bolt.png",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 128,
+          "h": 192
+        },
+        {
+          "x": 134,
+          "y": 2,
+          "w": 128,
+          "h": 192
+        },
+        {
+          "x": 266,
+          "y": 2,
+          "w": 128,
+          "h": 192
+        },
+        {
+          "x": 398,
+          "y": 2,
+          "w": 128,
+          "h": 192
+        },
+        {
+          "x": 2,
+          "y": 198,
+          "w": 128,
+          "h": 192
+        },
+        {
+          "x": 134,
+          "y": 198,
+          "w": 128,
+          "h": 192
+        }
+      ],
+      "sha256": "d9d467c7fb57aff4ad8ecd32b1b1712e05ebde1a045b91e8477466d0ea7cbe9b",
+      "bytes": 39076
+    },
+    "thunder-impact": {
+      "fps": 24,
+      "frameSize": [
+        128,
+        128
+      ],
+      "anchor": [
+        64,
+        64
+      ],
+      "sampling": "linear",
+      "loop": false,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "atlasSize": [
+        528,
+        396
+      ],
+      "atlasUrl": "/assets/r01/thunder-impact-8cdeb4e1d246c883-thunder-impact.png",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 134,
+          "y": 2,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 266,
+          "y": 2,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 398,
+          "y": 2,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 2,
+          "y": 134,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 134,
+          "y": 134,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 266,
+          "y": 134,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 398,
+          "y": 134,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 2,
+          "y": 266,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 134,
+          "y": 266,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 266,
+          "y": 266,
+          "w": 128,
+          "h": 128
+        },
+        {
+          "x": 398,
+          "y": 266,
+          "w": 128,
+          "h": 128
+        }
+      ],
+      "sha256": "8cdeb4e1d246c883263d048de5908261b0e049f2e72c5836f273ac7ab8538b10",
+      "bytes": 71768
+    },
+    "wang-pixel-wind-south": {
+      "fps": 24,
+      "frameSize": [
+        112,
+        96
+      ],
+      "anchor": [
+        56,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/dash-south.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 118,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 234,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 350,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 466,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 582,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-wind-southwest": {
+      "fps": 24,
+      "frameSize": [
+        112,
+        96
+      ],
+      "anchor": [
+        56,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/dash-southwest.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 118,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 234,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 350,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 466,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 582,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-wind-west": {
+      "fps": 24,
+      "frameSize": [
+        112,
+        96
+      ],
+      "anchor": [
+        56,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/dash-west.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 118,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 234,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 350,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 466,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 582,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-wind-northwest": {
+      "fps": 24,
+      "frameSize": [
+        112,
+        96
+      ],
+      "anchor": [
+        56,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/dash-northwest.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 118,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 234,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 350,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 466,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 582,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-wind-north": {
+      "fps": 24,
+      "frameSize": [
+        112,
+        96
+      ],
+      "anchor": [
+        56,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/dash-north.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 118,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 234,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 350,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 466,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 582,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-wind-northeast": {
+      "fps": 24,
+      "frameSize": [
+        112,
+        96
+      ],
+      "anchor": [
+        56,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/dash-northeast.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 118,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 234,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 350,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 466,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 582,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-wind-east": {
+      "fps": 24,
+      "frameSize": [
+        112,
+        96
+      ],
+      "anchor": [
+        56,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/dash-east.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 118,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 234,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 350,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 466,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 582,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      ]
+    },
+    "wang-pixel-wind-southeast": {
+      "fps": 24,
+      "frameSize": [
+        112,
+        96
+      ],
+      "anchor": [
+        56,
+        88
+      ],
+      "loop": false,
+      "durations": [
+        2,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "atlasSize": [
+        696,
+        100
+      ],
+      "atlasUrl": "/assets/pixel-actor-production-v2/atlases/dash-southeast.png",
+      "sampling": "nearest",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 118,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 234,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 350,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 466,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        },
+        {
+          "x": 582,
+          "y": 2,
+          "w": 112,
+          "h": 96
+        }
+      ]
+    },
+    "wind-depart": {
+      "fps": 24,
+      "frameSize": [
+        96,
+        64
+      ],
+      "anchor": [
+        48,
+        36
+      ],
+      "sampling": "linear",
+      "loop": false,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "atlasSize": [
+        400,
+        136
+      ],
+      "atlasUrl": "/assets/r01/wind-depart-948c9f99236768c7-wind-depart.png",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 64
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 64
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 64
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 64
+        },
+        {
+          "x": 2,
+          "y": 70,
+          "w": 96,
+          "h": 64
+        },
+        {
+          "x": 102,
+          "y": 70,
+          "w": 96,
+          "h": 64
+        }
+      ],
+      "sha256": "948c9f99236768c7931dc3d96b768de556be913a3a27109ce7da611b7f11b433",
+      "bytes": 28056
+    },
+    "wind-trail": {
+      "fps": 24,
+      "frameSize": [
+        176,
+        128
+      ],
+      "anchor": [
+        146,
+        68
+      ],
+      "sampling": "linear",
+      "loop": true,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "atlasSize": [
+        720,
+        264
+      ],
+      "atlasUrl": "/assets/r01/wind-trail-7732381dba2355b5-wind-trail.png",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 176,
+          "h": 128
+        },
+        {
+          "x": 182,
+          "y": 2,
+          "w": 176,
+          "h": 128
+        },
+        {
+          "x": 362,
+          "y": 2,
+          "w": 176,
+          "h": 128
+        },
+        {
+          "x": 542,
+          "y": 2,
+          "w": 176,
+          "h": 128
+        },
+        {
+          "x": 2,
+          "y": 134,
+          "w": 176,
+          "h": 128
+        },
+        {
+          "x": 182,
+          "y": 134,
+          "w": 176,
+          "h": 128
+        }
+      ],
+      "sha256": "7732381dba2355b5facb54f4728908a72b513976bd0441c296eecb10d8e3ddad",
+      "bytes": 99338
+    },
+    "wind-arrival": {
+      "fps": 24,
+      "frameSize": [
+        112,
+        80
+      ],
+      "anchor": [
+        56,
+        44
+      ],
+      "sampling": "linear",
+      "loop": false,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "atlasSize": [
+        464,
+        252
+      ],
+      "atlasUrl": "/assets/r01/wind-arrival-3626443d58f6c692-wind-arrival.png",
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 118,
+          "y": 2,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 234,
+          "y": 2,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 350,
+          "y": 2,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 2,
+          "y": 86,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 118,
+          "y": 86,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 234,
+          "y": 86,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 350,
+          "y": 86,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 2,
+          "y": 170,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 118,
+          "y": 170,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 234,
+          "y": 170,
+          "w": 112,
+          "h": 80
+        },
+        {
+          "x": 350,
+          "y": 170,
+          "w": 112,
+          "h": 80
+        }
+      ],
+      "sha256": "3626443d58f6c69268d5a5186989f224f9baa4f984ec936f4c926325ffc634c8",
+      "bytes": 50751
+    }
+  }
+}

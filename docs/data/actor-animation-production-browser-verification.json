@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-12",
+  "clips": 195,
+  "frames": 1104,
+  "artApproved": false,
+  "checks": [
+    "195 explicit bindings / 1104 frame seeks and drawn unique poses; bounded16MiB review cache",
+    "Server movement in all eight directions; run uses64x96; gait follows physical travel",
+    "Core-confirmed MP/cooldown/target damage and terminal enemy death",
+    "Three aura concepts partitioned into13 independent drawables; Phong travels on navigation and returns control",
+    "Responsive four viewports; offline/visibility stop presentation and input; no storage writes",
+    "SDK duplicate/forged input/reused id/old-round rejection; one MP debit and one cast event"
+  ],
+  "layouts": [
+    {
+      "width": 1366,
+      "height": 900,
+      "noPageOverflow": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "noPageOverflow": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "noPageOverflow": true
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "noPageOverflow": true
+    }
+  ],
+  "performance": [
+    {
+      "viewport": [
+        1366,
+        900
+      ],
+      "frames": 180,
+      "medianMs": 16.69999999999891,
+      "calls": 42,
+      "textures": 32,
+      "atlasRGBABytes": 14008192
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "frames": 180,
+      "medianMs": 16.69999999999891,
+      "calls": 34,
+      "textures": 32,
+      "atlasRGBABytes": 14008192
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "frames": 180,
+      "medianMs": 16.700000000000728,
+      "calls": 33,
+      "textures": 32,
+      "atlasRGBABytes": 14008192
+    },
+    {
+      "viewport": [
+        320,
+        740
+      ],
+      "frames": 180,
+      "medianMs": 16.700000000000728,
+      "calls": 33,
+      "textures": 32,
+      "atlasRGBABytes": 14008192
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "performanceScope": "Local desktop Chrome, emulated viewport sizes; not physical H5 device/MMO load certification"
+}
