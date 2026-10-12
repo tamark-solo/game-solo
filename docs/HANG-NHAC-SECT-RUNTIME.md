@@ -1,5 +1,7 @@
 # Hằng Nhạc — tiếp dẫn, vận khí và thổ nạp
 
+**Animation nhiệm vụ 10/10/2026:** đã bổ sung cử chỉ chào, loop vận khí đứng/thổ nạp và dùng vật tư cho cả bộ ba; Tư Đồ Nam có động tác ổn định linh thể. [Bàn giao](HANG-NHAC-QUEST-MOTION.md) ghi luồng server/pose, giới hạn và trang xem ART mới. Không đổi timer, tích lũy, thưởng hoặc schema save.
+
 **08/10/2026 · _MMO · runtime 0.12.0 · GDD 0.28.** Bản đầu của bước 3: HN01–HN02, nhật ký/chỉ đường, hoạt động nền và vật tư hồi phục. Tiếp nối [hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md), giữ TypeScript + Three.js / Node.js + Colyseus. Đợt 09/10 bổ sung [HN03–HN04/đòn thường/bài né](HANG-NHAC-LESSONS-RUNTIME.md). HN05–HN12, ngoại vi và khảo nghiệm chưa hoàn tất.
 
 ## Chơi thử

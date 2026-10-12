@@ -2,6 +2,8 @@
 
 **Bản:** 2.0 · **Ngày:** 08/10/2026 · **Trạng thái:** brief biên tập theo [GDD 0.28](GDD.md) và [trải nghiệm Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md); lời dẫn/thoại chi tiết chưa được duyệt hoặc triển khai.
 
+**Bổ sung nghiên cứu 10/10:** [nguồn game/truyện](XIANXIA-GAME-RESEARCH.md) đối chiếu một số chương và năm game tu tiên; [hướng sáng tạo](VAN-HAI-CREATIVE-DIRECTION.md) đề xuất trục “Dấu sai trên vân lộ”, Đạo đồ và một hệ quả nhân duyên nhỏ. Đây là ứng viên bổ sung động lực cho HN05–HN12, **chưa thay tuyến/canon hoặc duyệt thoại**. Chọn D09–D10 và hoàn thiện ND1–ND2 trong [kế hoạch nội dung](RPG-CONTENT-PLAN.md) trước sản xuất.
+
 Bản này thay kịch bản đệ tử mới Q01–Q10 ngày 07/10. [Nguyên bản 1.0](archive/design-before-three-playable-characters/STARTER-STORY.md) được giữ để đối chiếu, không dùng thoại “bạn đến đây với tên của mình”, Vương Lâm là NPC và boss/tầng 3 làm mở đầu hiện hành.
 
 ## 1. Quyết định cần giữ khi viết
@@ -58,4 +60,4 @@ Thoại ngắn, mục tiêu hiện tại và phần còn thiếu phải dễ tì
 
 Biên tập/đối chiếu nguồn lời mở và ba tuyến cá nhân; chọn danh tính NPC; khóa điều kiện/mốc với [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md); khớp khảo nghiệm với [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md); xác định đoạn xuất hành và tuyến Trúc Cơ đầu. Thoại Q01–Q10, tên quái/boss và số liệu của bản 1.0 không được chép sang tuyến mới như quyết định đã duyệt.
 
-Ưu tiên vẫn là map trước vận hành gameplay theo [MVP RPG](MVP-RPG-A.md); ART cũ đã xóa, đang chờ kế hoạch map mới. Brief này cung cấp ngữ cảnh để biên tập sau map, không xác nhận nhiệm vụ/combat/lưu tài khoản đã hoạt động.
+Ưu tiên hiện tại theo [roadmap](DEVELOPMENT-ROADMAP.md): RM0 chốt nội dung/hệ thống, sau đó nền tối thiểu và HN05. Map owner/layer, entry và HN01–HN04 đã có runtime; brief này không phủ nhận các phần đã có, cũng không chứng minh HN05–HN12 đã chạy. Giữ lịch sử hoàn tất và ART, không yêu cầu làm lại mở đầu chỉ để ghép ý tưởng mới.

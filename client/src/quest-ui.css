@@ -1,0 +1,30 @@
+/* Quest presentation only. Preserve the approved native skill HUD and map release. */
+#sect-objective.quest-tracker{position:absolute;left:auto;right:var(--game-right);top:86px;z-index:7;width:310px;max-height:calc(100% - 220px);margin:0;padding:12px;display:flex;flex-direction:column;overflow:hidden;touch-action:pan-y;border:1px solid #a99558;border-radius:10px;background:linear-gradient(145deg,#173a32f5,#112921ed);color:#f6efda;box-shadow:0 5px 24px #081f2655;font-size:12px}
+.quest-tracker .quest-tracker-heading{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.quest-tracker-heading{flex:none}.quest-tracker-heading strong{font:600 16px Cambria,serif;color:#f2d79e}.quest-tracker-heading small{font-size:10px;color:#c5cbbb}
+.quest-tracker button{background:#284d40;border-color:#9a8e61;color:#faf1dc;cursor:pointer;font-size:11px;height:32px;padding:0 9px}
+.quest-tracker button:disabled{cursor:default}.quest-tracker-heading button{height:26px;font-size:10px;padding:0 7px}
+#quest-tracker-body{display:block;min-height:0;max-height:280px;overflow:auto;touch-action:pan-y;padding-right:3px}#quest-title{display:block;font:600 17px Cambria,serif;line-height:1.35;color:#ffe5aa;margin:7px 0}
+#quest-state{display:inline-block;border:1px solid #8c9b79;border-radius:4px;padding:2px 7px;font-size:10px;color:#e3eacb;background:#354b32}
+#quest-state[data-state=ready]{color:#ffe9ad;background:#665122;border-color:#cfb36b}#quest-state[data-state=offline],#quest-state[data-state=unreleased]{background:#31453f;color:#c7d0c3}
+.quest-tracker .quest-checklist{margin:10px 0;padding:0;list-style:none;display:grid;gap:7px;font-size:11px;line-height:1.5}
+.quest-checklist li{display:flex;gap:8px;align-items:flex-start}.quest-check{flex:none;color:#e6c582}.quest-checklist [data-complete=true]{color:#99c9a0}.quest-checklist [data-complete=true] .quest-check{color:#99c9a0}
+#quest-next{line-height:1.55;margin:8px 0;color:#f1ead6;font-size:11px}#quest-reward{border-top:1px solid #84957255;padding-top:8px;font-size:10px;line-height:1.5;color:#efd79b;margin:8px 0}
+.quest-tracker #quest-hint{display:block;font-size:10px;line-height:1.5;color:#c9d3be}.quest-tracker #cultivation-summary{display:block;margin-top:8px;color:#c3d6be;font-size:10px;line-height:1.5}
+#cultivation-meter{display:block;width:100%;height:5px;margin:5px 0 10px;border:0;border-radius:5px;overflow:hidden;accent-color:#b6cc90;background:#14271d}
+#cultivation-meter::-webkit-progress-bar{background:#14271d}#cultivation-meter::-webkit-progress-value{background:linear-gradient(90deg,#6d9564,#d5ce94)}#cultivation-meter::-moz-progress-bar{background:#b6cc90}
+.quest-tracker .quest-actions{display:flex;flex:none;flex-direction:row;flex-wrap:wrap;gap:7px;margin-top:8px}.quest-actions button{flex:1}.quest-actions #quest-guide{flex-basis:100%}
+.quest-tracker .lesson-panel{margin:10px 0 0;padding:8px;background:#213e32;border-color:#72825d;color:#f2efd8;font-size:11px}.quest-tracker .lesson-panel p{font-size:10px}.quest-tracker .lesson-panel button{font-size:10px;margin-top:4px}
+#sect-dialog:has(.quest-journal){width:min(860px,calc(100vw - 28px))}.quest-journal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0 16px}
+.quest-card{color:#243d32;border:1px solid #c2c9b2;border-radius:8px;background:#f3f1e3;padding:12px}.quest-card[data-state=ready]{border-color:#b08d3a;background:#fff6d9}.quest-card[data-state=active],.quest-card[data-state=available]{border-color:#66885d}.quest-card[data-state=unreleased]{grid-column:1/-1;color:#677465}
+.quest-card-heading{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px}.quest-card h3{font:600 17px Cambria,serif;margin:0}.quest-card-heading>span{font-size:10px;border:1px solid #bac3ab;border-radius:4px;padding:2px 6px;white-space:nowrap}
+#sect-body .quest-card p{font-size:12px;line-height:1.5;margin:8px 0}.quest-card .quest-checklist{padding:0;list-style:none;font-size:11px;line-height:1.5;display:grid;gap:5px}.quest-card .quest-checklist [data-complete=true]{color:#477440}.quest-card .quest-checklist [data-complete=true] .quest-check{color:#477440}.quest-card .quest-check{color:#826b31}
+.quest-card[data-state=completed] .quest-checklist,.quest-card[data-state=locked] .quest-checklist{display:none}.quest-card-reward{border-top:1px solid #ccd1be;padding-top:7px;color:#826325}
+@media(max-width:760px){
+  #sect-objective.quest-tracker{left:auto;right:var(--game-right);top:86px;width:clamp(160px,calc(100% - 206px),180px);max-height:min(194px,calc(50% - 132px));padding:9px;font-size:11px}
+  .quest-tracker .quest-tracker-heading{margin-bottom:5px}.quest-tracker-heading strong{font-size:13px;line-height:1.2}.quest-tracker-heading small{display:none}
+  #quest-tracker-body{max-height:78px;overflow:auto;touch-action:pan-y;padding-right:3px}#quest-title{font-size:14px;margin:5px 0}
+  .quest-tracker .quest-actions{margin-top:5px;gap:5px;flex-wrap:nowrap}.quest-actions #quest-guide{flex-basis:0}.quest-tracker button{font-size:10px;height:44px;min-height:44px;min-width:44px;padding:0 7px}.quest-tracker #quest-hint{font-size:10px}
+  .quest-tracker .quest-actions button{font-size:0}.quest-actions button::after{font-size:10px}#quest-guide::after{content:'NPC'}#sect-objective[data-online=false] #quest-guide::after{content:'Vào sân'}#interact::after{content:'E'}#journal::after{content:'Sổ'}
+  .quest-journal{grid-template-columns:1fr}.quest-card h3{font-size:16px}
+}

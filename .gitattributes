@@ -1,2 +1,32 @@
 # Release source hashes refer to exact bytes, including on Windows autocrlf checkouts.
+docs/data/authored-maps/**/*.json -text
 docs/design/world/hang-nhac-layered-v1/*.json -text
+# New reviewed packs hash source, prompt and SVG bytes exactly; keep legacy packs unchanged.
+docs/design/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/design/characters/character-customization-library-v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/design/characters/quest-motion-v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/design/characters/van-hai-player-chibi-v1/** -text
+docs/design/characters/van-hai-player-v1/** -text
+docs/design/characters/van-hai-player-v2/** -text
+docs/design/characters/wang-lin-costume-review-v1/** -text
+docs/design/characters/wang-lin-costume-review-v2/** -text
+docs/design/characters/wang-lin-hoa-than-review-v1/** -text
+docs/design/characters/wang-lin-hoa-than-review-v2/** -text
+docs/design/characters/wang-lin-pixel-review-v1/** -text
+docs/design/characters/wang-lin-pixel-review-v2/** -text
+docs/design/items/raw-stable-jade-preview-v1/** -text
+docs/design/systems/content-registry-v1/** -text
+docs/design/systems/items-v1/** -text
+docs/design/ui/character-van-ngoc-v2/** -text
+docs/design/ui/dao-character-v3/** -text
+docs/design/ui/dao-character-v4/** -text
+docs/design/ui/dao-dual-theme-v1/** -text
+docs/design/ui/dao-hud-navigation-v2/** -text
+docs/design/ui/dao-system-hud-v1/** -text
+docs/design/ui/title-tien-mon-v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/design/ui/van-ngoc-co-dong-v1/** -text
+docs/design/ui/van-ngoc-kit-v1/** -text
+docs/design/ui/van-ngoc-kit-v2/** -text
+docs/design/vfx/hoa-than-aura-concepts-v4/** -text
+docs/design/vfx/quest-qi-v1/** -text
+docs/design/world/hang-nhac-van-ngoc-concept-v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

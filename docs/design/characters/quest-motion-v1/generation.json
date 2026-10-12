@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-10",
+  "tool": "built_in_imagegen",
+  "artApproved": false,
+  "ownerApproved": false,
+  "inputsAreReferencesExceptSituV2EditTarget": true,
+  "generations": [
+    {
+      "source": "wang-source-v1.png",
+      "sha256": "54cec8c6094a609cf7245e6c028a580d79f09cc3f7110d06a566db576fe0a956",
+      "prompt": "wang.prompt.txt",
+      "inputImages": [
+        "../core-cast-v1/references/wang-south.png",
+        "../core-cast-v1/references/wang-west.png",
+        "../core-cast-v1/references/wang-east.png",
+        "../core-cast-v1/references/wang-north.png"
+      ],
+      "selection": "selected"
+    },
+    {
+      "source": "situ-source-v1.png",
+      "sha256": "dda023839f6282a9b34b02c271b410c4779e3c2633484bb267d28cd0bd13e37b",
+      "prompt": "situ.prompt.txt",
+      "inputImages": [
+        "../core-cast-v1/references/situ-south.png",
+        "../core-cast-v1/references/situ-west.png",
+        "../core-cast-v1/references/situ-east.png",
+        "../core-cast-v1/references/situ-north.png"
+      ],
+      "selection": "rejected_west_direction"
+    },
+    {
+      "source": "li-source-v1.png",
+      "sha256": "0fcbef769f0a4caae538cee327381d8b64e3ff7e99dc79f9159bdeed67724abd",
+      "prompt": "li.prompt.txt",
+      "inputImages": [
+        "../core-cast-v1/references/li-south.png",
+        "../core-cast-v1/references/li-west.png",
+        "../core-cast-v1/references/li-east.png",
+        "../core-cast-v1/references/li-north.png"
+      ],
+      "selection": "selected"
+    },
+    {
+      "source": "situ-source-v2.png",
+      "sha256": "199805d4d40151382c2f2dda5b6fcb169ff3859e2c3e43e94fae4fda52d182e3",
+      "prompt": "situ-correction.prompt.txt",
+      "inputImages": [
+        "situ-source-v1.png",
+        "../core-cast-v1/references/situ-south.png",
+        "../core-cast-v1/references/situ-west.png",
+        "../core-cast-v1/references/situ-east.png",
+        "../core-cast-v1/references/situ-north.png"
+      ],
+      "selection": "selected_rows_1_3_4_5_other_rows_replaced"
+    },
+    {
+      "source": "situ-west-source-v3.png",
+      "sha256": "fc46eea42b831c50f09280c3e179e385a00a76cedbbe82d794126d817ab2797e",
+      "prompt": "situ-west.prompt.txt",
+      "inputImages": [
+        "../core-cast-v1/references/situ-west.png"
+      ],
+      "selection": "selected"
+    },
+    {
+      "source": "situ-loops-source-v3.png",
+      "sha256": "ff3306763836b3e023b00016cebc348864ea3e3344dc1d108b2a6719e7755a00",
+      "prompt": "situ-loops.prompt.txt",
+      "inputImages": [
+        "../core-cast-v1/references/situ-south.png",
+        "situ-west-source-v3.png"
+      ],
+      "selection": "selected"
+    }
+  ]
+}

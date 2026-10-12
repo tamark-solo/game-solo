@@ -1,6 +1,20 @@
 # Bộ thành phần UI — tham chiếu và yêu cầu biên tập
 
-**Thanh kỹ năng 09/10/2026:** [bản desktop 03 Vân Ngọc](DESKTOP-SKILL-HUD.md) theo mẫu khung liền / cầu tài nguyên / dãy thuật của chủ dự án: đồng/ngọc/mây, HP trái / MP phải, 10 ô 36 px, ba thuật R01 và bảy chỗ chưa gán. Khung/icon ImageGen, số/nút/cooldown/tooltip là UI. Bản phác riêng chờ duyệt hình trước khi ghép game; desktop trước, mobile sau. Ảnh 01/02 giữ làm lịch sử.
+**Runtime nhân vật 10/10/2026:** [Linh Đài trong game](HANG-NHAC-CHARACTER-RUNTIME.md) mở bằng C/I/nút Nhân vật, dùng snapshot riêng và lưu SQLite. Hai món nhập môn, vật tư hiện có, trang bị/tháo/bảo vệ/dùng đã nối server; HP/MP giữ nguyên theo lựa chọn owner. Các đoạn prototype dưới đây giữ lịch sử sản xuất và fixture.
+
+**Nhân vật/hành trang 10/10/2026:** owner đồng ý [hướng thiết kế/reference](CHARACTER-INVENTORY-UI-DESIGN.md). [Prototype Vân Ngọc 01](CHARACTER-UI-PREVIEW.md) ở `/character-ui.html` tái sử dụng khung/mask/chữ/HUD và sprite hiện hành, có Tổng quan/Hành trang/Trang bị tương tác fixture. Icon item, ba slot và số liệu là mẫu; chưa nối inventory/equip backend/save thật.
+
+**Linh Đài 02:** tiếp nối phản hồi 01 dùng được nhưng chưa có cảm giác tu tiên. [Nghiên cứu/phát triển](CHARACTER-UI-CULTIVATION-DIRECTION.md) bổ sung artwork shrine/12 icon painterly, khí quanh sprite, Xem vận khí, chặng nhập môn và điểm nhìn pháp bảo; 42 cấu hình đã kiểm. Owner xác nhận phần nhìn “nhìn ổn rồi đó” ngày 10/10; dữ liệu và gameplay giữ giới hạn prototype.
+
+**Trạng thái chốt 10/10/2026:** các vấn đề UI được owner phản hồi trong đợt hiện tại đã xử lý, owner xác nhận tốt. [Bảng tổng hợp hiện hành](HANG-NHAC-VAN-NGOC-UI.md#trạng-thái-chốt-ngày-10102026) ghi sửa mỹ thuật, resize khung/nền và chữ nhiệm vụ. Các đoạn chờ đánh giá của 09/10 bên dưới giữ trạng thái lịch sử lúc ghép, không phải lỗi UI còn mở.
+
+**Vùng đọc 10/10/2026:** các màn mới dùng [quy tắc chữ/bố cục chung](GAME-UI-READING.md) trong `ui-reading.css`: token chữ, cột co được, nhóm nội dung, lề khung và cuộn trong cửa sổ. Sổ nhiệm vụ/NPC/thiết lập đã áp dụng; không thu nhỏ chữ để ép nội dung vào thẻ.
+
+**UI H5 09/10/2026:** [bộ Vân Ngọc runtime](HANG-NHAC-VAN-NGOC-UI.md) đã ghép các màn đang có: chọn hồ sơ, danh tính, tracker/sổ/chỉ đường, NPC, thổ nạp/luyện thuật, thiết lập và phản hồi. Khung đồng/ngọc dùng chung, giấy cổ dành vùng đọc; giữ HUD gốc. Crest và cửa sổ mới chờ owner đánh giá hình; kiểm kỹ thuật không là duyệt ART.
+
+**Sửa mỹ thuật 02:** sau phản hồi owner rằng bản trước thô sơ, [khung chạm/nút ngọc/giấy lụa mới](design/ui/van-ngoc-kit-v2/README.md) đã thay viền phẳng của các cửa sổ. Nguồn và prompt riêng cho cả ba loại asset; desktop/mobile được xem lại trong game. Bộ mới tiếp tục chờ đánh giá hình riêng.
+
+**Thanh kỹ năng 09/10/2026:** [bản desktop 03 Vân Ngọc](DESKTOP-SKILL-HUD.md) theo mẫu khung liền / cầu tài nguyên / dãy thuật của chủ dự án: đồng/ngọc/mây, HP trái / MP phải, 10 ô 36 px, ba thuật R01 và bảy chỗ chưa gán. Khung/icon ImageGen, số/nút/cooldown/tooltip là UI. Owner đã duyệt và yêu cầu ghép game; HUD/Khí quang đang dùng trong Hằng Nhạc, demo giữ riêng. Desktop trước, mobile sau. Ảnh 01/02 giữ làm lịch sử.
 
 [Khí quang 02](design/ui/desktop-skill-hud-v3/qi-v2/README.md) bổ sung material khí xoáy đỏ/ngọc, vòng trận pháp và ánh hắt khung sau phản hồi FX đầu chưa rõ. Có đối chiếu bật/tắt; giữ kích thước 03, tách FX khỏi skill core.
 

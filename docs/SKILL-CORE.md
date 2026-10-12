@@ -1,5 +1,7 @@
 # Skill core — gameplay, animation và VFX
 
+**Khí tức nhân vật · 12/10:** [Appearance aura/layer](CHARACTER-AURA-LAYERS.md) là bộ FX riêng khi sản xuất sprite tám hướng; [review Hóa Thần 02](design/characters/wang-lin-hoa-than-review-v2/README.md) mới thử texture/motion trong DOM. Không là skill, không thay R01/atlas/pivot/pose hoặc quyền gameplay. Định hướng tích hợp tiếp dùng facts → presentation → catalog → renderer theo trách nhiệm dưới đây.
+
 **09/10/2026 · TypeScript · _MMO.** Ba thuật R01 đã nối động tác cho cả ba nhân vật, bốn hướng. [Chơi trong Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html), [xem pose riêng](design/characters/core-cast-v1/index.html), [nguồn ART](design/characters/core-cast-v1/README.md). Đây là nền mở rộng skill; chưa triển khai R02–R05 hoặc combat trên map farm.
 
 ## Trách nhiệm

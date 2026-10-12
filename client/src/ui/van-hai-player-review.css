@@ -1,0 +1,9 @@
+/* Proposed original identity is visible in the review only; no runtime avatar migration. */
+.material-review .dao-player-study{position:relative}
+.material-review .dao-player-figure{position:absolute;top:28px;bottom:31px;left:8%;width:84%;height:calc(100% - 59px);object-fit:contain;object-position:center bottom;filter:drop-shadow(0 5px 6px #111b1770);pointer-events:none}
+.material-review .dao-player-concept-link{position:absolute;bottom:6px;left:8px;right:8px;color:var(--dao-muted);text-align:center;font:10px/1.5 'Segoe UI',sans-serif;min-height:23px;text-decoration:none;padding:3px 0;z-index:1}
+.material-review .dao-player-concept-link:hover{color:var(--dao-text)}
+.material-review .dao-player-concept-link:focus-visible{outline:2px solid var(--dao-accent);outline-offset:1px}
+.material-review .dao-sheet-identity .dao-player-study{min-height:290px}
+.material-review .dao-equipment-figure .dao-player-figure{top:28px;bottom:34px;height:calc(100% - 62px)}
+@media(max-width:760px){.material-review .dao-sheet-identity .dao-player-study{min-height:210px}.material-review .dao-player-figure{left:5%;width:90%;top:12px;height:calc(100% - 43px)}.material-review .dao-player-concept-link{font-size:9px}}

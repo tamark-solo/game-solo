@@ -1,0 +1,304 @@
+{
+  "date": "2026-10-10",
+  "status": "passed",
+  "scope": "First live personal inventory: starter gear and existing recovery supplies, unchanged max HP/MP",
+  "ownerDecision": "Đồ nhập môn và vật tư thật trước; giữ HP/MP hiện tại",
+  "unit": {
+    "totalPassed": 194,
+    "log": "artifacts/hn-character-unit.log",
+    "inventoryTests": 8
+  },
+  "online": {
+    "checks": [
+      "private snapshots, real supplies, per-profile ownership, injection rejection, one committed use/FX, durable command identity and cooldown",
+      "same-session reconnect restores real inventory without replay",
+      "three independent profiles and stable starter gear",
+      "process restart preserves equipment/protection/supplies/receipts without starter duplication or repeated use"
+    ],
+    "report": "artifacts/hang-nhac-character-online-verification.json",
+    "groups": 4
+  },
+  "browser": {
+    "errors": [],
+    "groups": 9,
+    "layouts": [
+      {
+        "width": 320,
+        "height": 740,
+        "scale": 1,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "scale": 1.5,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "scale": 2,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 1,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 1.5,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 2,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "scale": 1,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "scale": 1.5,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "scale": 2,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "scale": 1,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "scale": 1.5,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "scale": 2,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "scale": 1,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "scale": 1.5,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "scale": 2,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 1366,
+        "height": 900,
+        "scale": 1,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 1366,
+        "height": 900,
+        "scale": 1.5,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 1366,
+        "height": 900,
+        "scale": 2,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "scale": 1,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "scale": 1.5,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "scale": 2,
+        "aligned": true,
+        "inside": true,
+        "overflow": []
+      }
+    ],
+    "checks": [
+      "Live pose honors reduced motion and does not start cultivation or spend resources",
+      "Live C dialog, real profile/resources/progress/items, no fixture items, world movement/cast blocked",
+      "Confirmed unequip/equip/protect/use updates only after server snapshot, unchanged max HP/MP, shared supplies/cooldown",
+      "Real SQLite failure rolls back receipt/candidate; live UI retains confirmed equipment",
+      "Search/filter and Escape/I focus and direct inventory navigation",
+      "21 live responsive/text configurations, frame backing, native modal, mobile detail back focus",
+      "Offline/reconnect and reload preserve inventory/protection/quantity without replay",
+      "Backend restart restores same profile and committed gear/supplies; no automatic inventory commands",
+      "Switching avatars reads separate live inventory; spirit progression remains recovery"
+    ],
+    "report": "artifacts/character-runtime/verification.json",
+    "layoutCount": 21,
+    "screenshots": [
+      "desktop-overview.png",
+      "desktop-inventory.png",
+      "mobile-inventory.png",
+      "mobile-detail.png"
+    ]
+  },
+  "regression": [
+    {
+      "report": "artifacts/hang-nhac-lessons-online-verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:23:22.2751751+07:00"
+    },
+    {
+      "report": "artifacts/hang-nhac-lessons-browser-verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:25:31.6768992+07:00"
+    },
+    {
+      "report": "artifacts/hang-nhac-r01-online-verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:26:03.2333022+07:00"
+    },
+    {
+      "report": "artifacts/hang-nhac-r01-browser-verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:26:31.7148880+07:00"
+    },
+    {
+      "report": "artifacts/hang-nhac-sect-online-verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:26:52.5119685+07:00"
+    },
+    {
+      "report": "artifacts/hang-nhac-sect-browser-verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:27:36.6952381+07:00"
+    },
+    {
+      "report": "artifacts/hang-nhac-reload-interaction.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:28:10.3864750+07:00"
+    },
+    {
+      "report": "artifacts/hang-nhac-skill-input-verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:29:06.2849882+07:00"
+    },
+    {
+      "report": "artifacts/hang-nhac-skill-aim-verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:29:43.4814123+07:00"
+    },
+    {
+      "report": "artifacts/hang-nhac-hud-layers-verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:30:03.4966126+07:00"
+    },
+    {
+      "report": "artifacts/van-ngoc-ui/verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:31:40.8207547+07:00"
+    },
+    {
+      "report": "artifacts/hang-nhac-game-shell-verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:32:03.6731920+07:00"
+    },
+    {
+      "report": "artifacts/character-ui/verification.json",
+      "passed": true,
+      "checkedAt": "2026-10-10T12:22:40.5176220+07:00"
+    }
+  ],
+  "build": {
+    "typecheck": true,
+    "passed": true,
+    "boundaries": true,
+    "log": "artifacts/hn-character-build.log"
+  },
+  "fixes": [
+    "Ignore delayed native close events after reopen",
+    "Desktop Escape closes; mobile detail Escape restores list focus",
+    "Tab selectors exclude decorative frame so focus and arrow navigation target real tabs",
+    "Native frame/backing alignment and readable scroll regions retained"
+  ],
+  "testHarnessNotes": [
+    "Timing-sensitive HN04 and skill-aim checks use Chrome default renderer with SwiftShader fallback instead of forcing software rendering; gameplay assertions retained"
+  ],
+  "ownerMapEditedByTests": false,
+  "ownerDatabaseUsedByTests": false,
+  "visualApproval": {
+    "prototypeAppearanceAccepted": true,
+    "receipt": "docs/design/ui/character-van-ngoc-v2/visual-review.json",
+    "runtimeReview": "Technical verification only; direct runtime feedback remains separate",
+    "historicalArtManifestsChanged": false
+  }
+}

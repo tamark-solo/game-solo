@@ -28,7 +28,7 @@ try {
   const context=await browser.newContext({viewport:{width:960,height:720}});
   await context.addInitScript(token=>localStorage.setItem('hang-nhac.guest.v1',token),guest.token);
   page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(origin+'/hang-nhac.html');await page.waitForFunction('window.__hangNhacDiagnostics?.().ready');
+  await page.goto(origin+'/hang-nhac.html?devGuest=1');await page.waitForFunction('window.__hangNhacDiagnostics?.().ready');
   await page.locator('#join').click();await waitFor(async()=>!!(await state(page!)).sect.view,'initial sect state');
   const initial=await state(page);
   const talk=async()=>{await page!.keyboard.press('e');await page!.locator('#sect-dialog').waitFor({state:'visible',timeout:15000});};

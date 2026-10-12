@@ -1,6 +1,6 @@
 # Đặc tả trải nghiệm Hằng Nhạc — Ngưng Khí
 
-**Phiên bản:** 0.4 · **Ngày:** 08/10/2026 · **Trạng thái:** bộ skill khởi đầu chung đã chốt; chi tiết tiến trình/encounter để đánh giá. [R01](HANG-NHAC-R01-RUNTIME.md) và [mở đầu HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) đã có bản thử; HN03–HN12 và khảo nghiệm chưa triển khai đầy đủ.
+**Phiên bản:** 0.4 · **Ngày bản cơ sở:** 08/10/2026 · **Trạng thái đối chiếu 10/10:** bộ skill khởi đầu chung đã chốt; R01, HN01–HN04 đã có bản thử. HN05–HN12, ngoại vi và khảo nghiệm vẫn là thiết kế. [GDD 0.30](GDD.md), [roadmap](DEVELOPMENT-ROADMAP.md) và [kế hoạch nội dung](RPG-CONTENT-PLAN.md) bổ sung nghiên cứu/trục truyện ứng viên trước mở rộng, không khóa lại toàn bộ chi tiết bên dưới.
 
 **Tham chiếu:** [GDD 0.28](GDD.md), [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md), [hệ thống tu tiên](CULTIVATION-SYSTEM.md), [nhân vật](CHARACTERS.md), [định hướng online](ONLINE-DIRECTION.md), [backlog](MVP-BACKLOG.md).
 
@@ -51,7 +51,7 @@ Các khu dưới đây là chức năng thiết kế, chưa là địa lý nguy�
 
 **Chủ dự án chốt chia cảnh 08/10/2026:** khu môn phái theo concept hiện tại phục vụ NPC/nhiệm vụ/tu luyện/luyện thuật/chuẩn bị; map ngoại vi riêng phục vụ khám phá, đánh quái và thu tài nguyên, nối lối ra–quay về trong giai đoạn Ngưng Khí; khảo nghiệm vào phiên riêng. Không đồng nhất lối ra ngoại vi với xuất hành HN12. Vị trí cổng, điều kiện mở nội dung, quyền credit/loot/spawn và cách chia sẻ map farm chưa khóa; chưa có map ngoại vi hoặc chuyển scene MMO được tích hợp.
 
-[Bố cục map v0.1](HANG-NHAC-MAP-LAYOUT.md) giữ tám mã chức năng; vị trí/kích thước cũ chỉ là tham chiếu. Chủ dự án yêu cầu [map đầy đủ mới](design/world/hang-nhac-map-v1/README.md) đúng tỷ lệ người trước, sau đó tự vẽ luồng đi/chặn và mới làm asset rời. Bộ concept/nền/ba asset thử trước đã xóa; map mới chưa có collider hoặc chuyển scene. Quy trình theo [quy tắc xây map](MAP-BUILDING-GUIDE.md).
+[Bố cục map v0.1](HANG-NHAC-MAP-LAYOUT.md) giữ tám mã chức năng; vị trí/kích thước cũ chỉ là tham chiếu. Chủ dự án yêu cầu [map đầy đủ mới](design/world/hang-nhac-map-v1/README.md) đúng tỷ lệ người trước, sau đó tự vẽ luồng đi/chặn và mới làm asset rời. Bộ concept/nền/ba asset thử trước đã xóa; map owner hiện đã có 9 blocker và scene layer/runtime, nhưng chưa có chuyển scene ngoại vi. Quy trình theo [quy tắc xây map](MAP-BUILDING-GUIDE.md).
 
 | Mã khu | Khu chức năng đề xuất | Người chơi làm gì | Cách chia sẻ |
 | --- | --- | --- | --- |
@@ -73,7 +73,7 @@ NPC tối thiểu theo vai chức năng: tiếp dẫn, coi luyện thuật, qu�
 | Mốc | Năng lực cần đạt | Nội dung mở | Minh chứng vận dụng |
 | --- | --- | --- | --- |
 | HN-M01 — Cảm nhận | Biết nguồn lực hiện tại và cách tích lũy/hồi phục | Công pháp nền; thổ nạp hoặc diễn giải hồi phục | Hoàn thành lần chuẩn bị đầu và nhận ra tu vi khác linh lực |
-| HN-M02 — Vận dụng | Tấn công, đọc báo đòn, giữ khoảng cách/di chuyển | Bài luyện bộ thuật đã có và tuyến ngoại vi | Tự hoàn thành một trận đơn giản bằng năng lực hiện có |
+| HN-M02 — Vận dụng | Tấn công, đọc báo đòn, giữ khoảng cách/di chuyển | Bước tiến triển sau trận đầu; không khóa lối vào encounter HN05 phía sau M02 | Tự hoàn thành một trận đơn giản bằng năng lực hiện có |
 | HN-M03 — Thông suốt | Hiểu giới hạn vận hành, biết chuẩn bị/luyện hóa, đạt ngưỡng 9 | Tiếp cận nền vận hành 10–15 sau HN09 | Giải bình cảnh, dùng pháp khí và qua bài tích hợp |
 | HN-M04 — Hoàn tất nhập môn | Vận dụng ổn định trong khảo nghiệm tổng hợp | Tổng kết và quyền xuất hành | Hoàn thành tuyến/đoạn riêng, mốc tu luyện và khảo nghiệm cuối |
 
@@ -106,7 +106,7 @@ ID dùng trong tài liệu thiết kế, chưa là ID JSON/runtime. Phần thư�
 | HN02 — Một vòng vận hành | HN01 | Nhận vật tư hướng dẫn, chọn nền tu luyện và hoàn thành vòng có tương tác; xem giải thích tu vi/linh lực | Đạt M01; mở hoạt động tích lũy phù hợp nhân vật |
 | HN03 — Vận dụng thuật nền | HN02 | Hướng dẫn đòn thường, Kiếm Khí và Lôi Ấn; thử hướng/target và hit hợp lệ trong bài luyện | Hiểu các thuật vốn có, mở bài luyện lại; không cấp lại quyền skill hoặc yêu cầu tối ưu damage |
 | HN04 — Nhìn đòn mà tiến | HN03 | Qua làn báo đòn bằng di chuyển thường, sau đó thử Ngự Phong Bộ trong bài an toàn | Hiểu di chuyển/cooldown/tài nguyên; không cấp lại quyền Phong |
-| HN05 — Ra khỏi sân luyện | HN04 | Hoàn thành encounter đơn giản và lấy tài nguyên nhiệm vụ; không tranh last-hit với người khác | M02 khi đủ ngưỡng 3; mở tuyến ngoại vi và chuẩn bị hồi phục |
+| HN05 — Ra khỏi sân luyện | HN04; lối vào ngoại vi theo policy D05, không cần M02 | Hoàn thành encounter đơn giản và lấy tài nguyên nhiệm vụ; không tranh last-hit với người khác | M02 khi đủ ngưỡng 3 và xác nhận; không coi M02 là điều kiện để tới chính trận mở mốc |
 | HN06 — Dấu riêng | HN05 | Chạy một nhánh WL/TDN/LMW tại mục 8; ghi nhận bằng hành động và kết luận | Mốc cá nhân; không cấp pháp bảo/cảnh giới cao |
 | HN07 — Vì sao chưa tiến? | HN06 và ngưỡng 3 đã xác nhận | Xem phần thiếu, luyện cách giải, kiểm chứng bài ngắn; chủ động xác nhận nền tiếp | Ghi nhận hiểu/vận hành 4–9 và giải bình cảnh; không tự vượt khi offline |
 | HN08 — Vật trong tay | HN07 | Nhận pháp khí luyện tập, nhận biết, luyện hóa theo hướng dẫn và thử tác dụng | Mở pháp khí nền; biết sở hữu khác vận dụng; M03 chưa nhận ở HN08 |

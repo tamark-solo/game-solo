@@ -1,0 +1,37 @@
+{
+  "revision": "frame_surface_alignment_fix",
+  "passed": true,
+  "issue": "Rectangular UI backing extends past the painted frame across resizes/aspect ratios.",
+  "ownerScreenshot": "codex-clipboard-1e7c0f8a-e4c8-4e4e-b25f-3afff6852624.png",
+  "artworkChanged": false,
+  "ownerMapEdited": false,
+  "ownerDatabaseUsed": false,
+  "gameplayOrTransportChanged": false,
+  "apertureMetadata": "docs/design/ui/van-ngoc-kit-v2/frame-aperture.json",
+  "pixelVerification": {
+    "evidence": "artifacts/hang-nhac-ui-resize-verification.json",
+    "cases": 28,
+    "escapedPixelsEachCase": 0,
+    "legacyRectangleEscapedPixels": 16139,
+    "comparisonRgbTolerance": 12,
+    "deviceScaleFactors": [1, 1.25, 1.5, 2],
+    "backendStarted": false
+  },
+  "runtimeVerification": {
+    "evidence": "artifacts/van-ngoc-ui/verification.json",
+    "backingMatchesFrameBox": true,
+    "resizeAndBreakpointChecks": true,
+    "dialogScrollAlignment": true,
+    "maskDecodedBeforeCapture": true
+  },
+  "passedCommands": [
+    "npm.cmd run test:hang-nhac-ui-resize",
+    "npm.cmd run test:hang-nhac-ui",
+    "npm.cmd run test:hang-nhac-game-shell",
+    "npm.cmd run test:hang-nhac-hud-layers",
+    "npm.cmd run test:hang-nhac-quests",
+    "npm.cmd run test:hang-nhac-reload",
+    "npm.cmd run typecheck",
+    "npm.cmd run build"
+  ]
+}

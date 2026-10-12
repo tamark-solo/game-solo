@@ -2,6 +2,8 @@
 
 **Phiên bản:** 0.1 · **Ngày:** 08/10/2026 · **Trạng thái:** đề xuất thiết kế để đánh giá; chưa có AI/combat/checkpoint được triển khai.
 
+**Cảnh báo đối chiếu 10/10:** bảng cũ bên dưới dùng đi bộ 160 px/s/collider 18 px, khác nền runtime 80 px/s/chân 8 px. Phải tính lại timing/vùng thoát trước HN05/E02; không đổi tốc độ hoặc blocker owner để làm khớp bảng. [Nghiên cứu](XIANXIA-GAME-RESEARCH.md) có ví dụ dấu tròn không đủ thời gian đi bộ theo runtime. E01 ở HN05 và toàn khảo nghiệm còn là đề xuất; HN03–HN04 an toàn đã triển khai theo [bàn giao riêng](HANG-NHAC-LESSONS-RUNTIME.md).
+
 **Tham chiếu:** [GDD 0.28](GDD.md), [trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay R01](NGUNG-KHI-GAMEPLAY-SPEC.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [backlog](MVP-BACKLOG.md), [bàn giao VFX](design/vfx/STARTER-VFX-HANDOFF.md).
 
 ## 1. Phạm vi và mục tiêu

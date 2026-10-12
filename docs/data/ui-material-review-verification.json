@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-11",
+  "route": "/ui-material-review.html",
+  "status": "prototype-pending-visual-review",
+  "builtInImageGenAssets": 3,
+  "ownerApproved": false,
+  "artApproved": false,
+  "runtimeIntegrated": false,
+  "sourceManifest": "docs/design/ui/van-ngoc-co-dong-v1/assets.json",
+  "browserEvidence": "artifacts/ui-material-review/verification.json",
+  "screens": [
+    "quest",
+    "inventory",
+    "hud"
+  ],
+  "viewports": [
+    [
+      320,
+      740
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      1366,
+      1000
+    ]
+  ],
+  "layoutCasesPassed": 12,
+  "pageErrors": 0,
+  "desktopHudSize": [
+    760,
+    140
+  ],
+  "desktopSlots": 10,
+  "assignedSkills": 3,
+  "noninteractiveReservedSlots": 7,
+  "mobileSkillTargetPx": 48,
+  "typecheck": "passed; 266 files, 23 modules, no boundary violations/cycles",
+  "viteBuild": "passed; direct Vite build after syncing isolated review assets",
+  "hudLayerRegression": "passed; 14 checks, fixture only",
+  "gameApiRequests": false,
+  "characterArtworkModified": false,
+  "ownerMapModified": false,
+  "ownerDatabaseUsed": false,
+  "artifacts": [
+    "artifacts/ui-material-review/quest-desktop.png",
+    "artifacts/ui-material-review/inventory-desktop.png",
+    "artifacts/ui-material-review/mobile-quest.png"
+  ],
+  "manualReducedMotionKeepsStaticMaterial": true,
+  "operatingSystemReducedMotion": true
+}

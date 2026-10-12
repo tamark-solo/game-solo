@@ -114,6 +114,13 @@ node_modules/
 dist/
 client/public/assets/
 artifacts/
+# Retained character design sources are durable; other QA fixtures/captures stay local.
+!artifacts/
+artifacts/*
+!artifacts/archive/
+artifacts/archive/*
+!artifacts/archive/character-studies-2026-10-12.zip
+output/
 *.tsbuildinfo
 .env
 .env.local

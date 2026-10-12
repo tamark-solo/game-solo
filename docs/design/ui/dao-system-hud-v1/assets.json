@@ -1,0 +1,1385 @@
+{
+  "date": "2026-10-11",
+  "tool": "built-in image_gen",
+  "ownerApproved": false,
+  "artApproved": false,
+  "runtimeIntegrated": false,
+  "status": "full-hud-design-pending-review",
+  "processing": "Original PNG retained unchanged. Per-cell delivery crop from alpha bounds; uniform contain downsample to 96px and WebP. No repaint/filter/mask/alpha removal.",
+  "sources": [
+    {
+      "file": "tu-dao/dao-source.png",
+      "sha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "width": 1448,
+      "height": 1086,
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": [
+          "character",
+          "inventory",
+          "equipment",
+          "cultivation",
+          "method",
+          "spells",
+          "artifact",
+          "crafting",
+          "appearance",
+          "mount",
+          "beast",
+          "map"
+        ]
+      },
+      "promptFile": "tu-dao/dao.prompt.txt",
+      "promptSha256": "16954ce1733f75639473b6bc65e95b33fd4ed03fa9d7bff05f57a2be524a16fd",
+      "inputs": [
+        {
+          "path": "docs/design/ui/dao-system-hud-v1/guides/icon-grid.png",
+          "role": "geometry guide only; not final art",
+          "sha256": "4577a19317c4e74acf4c98e23ffb17bbedce1fa627f3c003372a013874d2a8fc"
+        },
+        {
+          "path": "docs/design/ui/dao-dual-theme-v1/tu-dao/window.webp",
+          "role": "style reference",
+          "sha256": "b8fcd72ffdb449f566c2281eaeff011c7b862d9f03a4e6f4b9e9c79b4ed142ae"
+        },
+        {
+          "path": "docs/design/world/hang-nhac-van-ngoc-concept-v1/concept.webp",
+          "role": "style reference",
+          "sha256": "f5bd95bc1cbe5e67b5ed064b6238c94eaa21ca3bca9a9d00ad2ffbff5e0bad22"
+        }
+      ]
+    },
+    {
+      "file": "tu-dao/mmo-source.png",
+      "sha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "width": 1448,
+      "height": 1086,
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": [
+          "quest",
+          "party",
+          "friends",
+          "sect",
+          "mail",
+          "chat",
+          "activities",
+          "pve",
+          "pvp",
+          "achievement",
+          "market",
+          "settings"
+        ]
+      },
+      "promptFile": "tu-dao/mmo.prompt.txt",
+      "promptSha256": "bab24ca57594246154b6ba5326b9c64dab9af5079e67707bfb16c8641bf2b54a",
+      "inputs": [
+        {
+          "path": "docs/design/ui/dao-system-hud-v1/guides/icon-grid.png",
+          "role": "geometry guide only; not final art",
+          "sha256": "4577a19317c4e74acf4c98e23ffb17bbedce1fa627f3c003372a013874d2a8fc"
+        },
+        {
+          "path": "docs/design/ui/dao-dual-theme-v1/tu-dao/window.webp",
+          "role": "style reference",
+          "sha256": "b8fcd72ffdb449f566c2281eaeff011c7b862d9f03a4e6f4b9e9c79b4ed142ae"
+        },
+        {
+          "path": "docs/design/world/hang-nhac-van-ngoc-concept-v1/concept.webp",
+          "role": "style reference",
+          "sha256": "f5bd95bc1cbe5e67b5ed064b6238c94eaa21ca3bca9a9d00ad2ffbff5e0bad22"
+        }
+      ]
+    },
+    {
+      "file": "doa-ma/dao-source.png",
+      "sha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "width": 1448,
+      "height": 1086,
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": [
+          "character",
+          "inventory",
+          "equipment",
+          "cultivation",
+          "method",
+          "spells",
+          "artifact",
+          "crafting",
+          "appearance",
+          "mount",
+          "beast",
+          "map"
+        ]
+      },
+      "promptFile": "doa-ma/dao.prompt.txt",
+      "promptSha256": "9a1dd10f6664a86fd14193f94eed38324293f8232b1a03024435b3cf9012ebd0",
+      "inputs": [
+        {
+          "path": "docs/design/ui/dao-system-hud-v1/tu-dao/dao-source.png",
+          "role": "edit target",
+          "sha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670"
+        },
+        {
+          "path": "docs/design/ui/dao-dual-theme-v1/doa-ma/window.webp",
+          "role": "style reference",
+          "sha256": "39784c4d3e6ec8833895b0f889569f1485f5b01f73c7fcdbf9f8f9f0c5993494"
+        },
+        {
+          "path": "docs/design/world/hang-nhac-van-ngoc-concept-v1/concept.webp",
+          "role": "style reference",
+          "sha256": "f5bd95bc1cbe5e67b5ed064b6238c94eaa21ca3bca9a9d00ad2ffbff5e0bad22"
+        }
+      ]
+    },
+    {
+      "file": "doa-ma/mmo-source.png",
+      "sha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "width": 1448,
+      "height": 1086,
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": [
+          "quest",
+          "party",
+          "friends",
+          "sect",
+          "mail",
+          "chat",
+          "activities",
+          "pve",
+          "pvp",
+          "achievement",
+          "market",
+          "settings"
+        ]
+      },
+      "promptFile": "doa-ma/mmo.prompt.txt",
+      "promptSha256": "9a1dd10f6664a86fd14193f94eed38324293f8232b1a03024435b3cf9012ebd0",
+      "inputs": [
+        {
+          "path": "docs/design/ui/dao-system-hud-v1/tu-dao/mmo-source.png",
+          "role": "edit target",
+          "sha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4"
+        },
+        {
+          "path": "docs/design/ui/dao-dual-theme-v1/doa-ma/window.webp",
+          "role": "style reference",
+          "sha256": "39784c4d3e6ec8833895b0f889569f1485f5b01f73c7fcdbf9f8f9f0c5993494"
+        },
+        {
+          "path": "docs/design/world/hang-nhac-van-ngoc-concept-v1/concept.webp",
+          "role": "style reference",
+          "sha256": "f5bd95bc1cbe5e67b5ed064b6238c94eaa21ca3bca9a9d00ad2ffbff5e0bad22"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "character",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 0,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 0,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 21,
+        "top": 20,
+        "width": 276,
+        "height": 341
+      },
+      "file": "tu-dao/character.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "c2626a79cb5ffdada4c1a53a898a840fdd18726e4fcc83a418a1b0ab4930e555",
+      "bytes": 6562
+    },
+    {
+      "id": "inventory",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 1,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 362,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 367,
+        "top": 37,
+        "width": 344,
+        "height": 320
+      },
+      "file": "tu-dao/inventory.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "e1601f73b1246bd55ffe817368f381ba0db6caffe4750dab6d7f2d2a69c4fbfc",
+      "bytes": 7144
+    },
+    {
+      "id": "equipment",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 2,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 724,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 741,
+        "top": 37,
+        "width": 334,
+        "height": 321
+      },
+      "file": "tu-dao/equipment.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "2d97dd91d3a797a3493cf41f77447c34f62b88cba150865632c1dba5effb0bae",
+      "bytes": 8158
+    },
+    {
+      "id": "cultivation",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 3,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 1086,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1092,
+        "top": 45,
+        "width": 348,
+        "height": 308
+      },
+      "file": "tu-dao/cultivation.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "d80fbebd7d7c0953d6276c9f8a879cadbc178441c430e32de7de49a6b4bf2b24",
+      "bytes": 8018
+    },
+    {
+      "id": "method",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 4,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 0,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 15,
+        "top": 403,
+        "width": 347,
+        "height": 321
+      },
+      "file": "tu-dao/method.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "67ed781938a55645b4cebd806968a716ade9e30c40cf66f3eb87dc3b5f6a2ec4",
+      "bytes": 7420
+    },
+    {
+      "id": "spells",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 5,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 362,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 362,
+        "top": 371,
+        "width": 362,
+        "height": 340
+      },
+      "file": "tu-dao/spells.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "65f71cb6f352a5bc15d001e0ee3973a900ef4c6bac232ed7d8660fe1114f276a",
+      "bytes": 7600
+    },
+    {
+      "id": "artifact",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 6,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 724,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 772,
+        "top": 370,
+        "width": 268,
+        "height": 349
+      },
+      "file": "tu-dao/artifact.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "5f65f9c8037e28d04b76fb1ca8029f8ef86a47a4268a01b28690cac5a94844a2",
+      "bytes": 7994
+    },
+    {
+      "id": "crafting",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 7,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 1086,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1110,
+        "top": 370,
+        "width": 322,
+        "height": 350
+      },
+      "file": "tu-dao/crafting.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "7666e7580d561b9d32c47780cfab2d48e68bb1a0676fdd7d16a9a870e263ee51",
+      "bytes": 7686
+    },
+    {
+      "id": "appearance",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 8,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 0,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 19,
+        "top": 724,
+        "width": 316,
+        "height": 342
+      },
+      "file": "tu-dao/appearance.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "2f18fbdd29cf15dbbbf35e905261c591dd2cbb88a3468b2b26269b92411bf764",
+      "bytes": 8056
+    },
+    {
+      "id": "mount",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 9,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 362,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 364,
+        "top": 729,
+        "width": 359,
+        "height": 331
+      },
+      "file": "tu-dao/mount.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "36dbfeb96e738b8c3eeab9345257089dc14d780d4be75d579c137c2cffa8f092",
+      "bytes": 9420
+    },
+    {
+      "id": "beast",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 10,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 724,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 735,
+        "top": 724,
+        "width": 333,
+        "height": 342
+      },
+      "file": "tu-dao/beast.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "e3c0a3de04fcf1d37c8e64db364c47df361807634013121acb255ffdba2cf42e",
+      "bytes": 8290
+    },
+    {
+      "id": "map",
+      "theme": "tu-dao",
+      "sheet": "dao",
+      "cell": 11,
+      "source": "tu-dao/dao-source.png",
+      "sourceSha256": "b44a3ca5038ff94d07e6f10ce73650d91537b111fcb0f8bca51571e546174670",
+      "cellRect": {
+        "left": 1086,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1094,
+        "top": 751,
+        "width": 346,
+        "height": 314
+      },
+      "file": "tu-dao/map.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "c5d7ee033d941a179bebdc1c2ef428e75afaf9b98e6ce5f4e7307498357f2261",
+      "bytes": 7676
+    },
+    {
+      "id": "quest",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 0,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 0,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 20,
+        "top": 37,
+        "width": 325,
+        "height": 319
+      },
+      "file": "tu-dao/quest.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "2d2325e3885e0023d9325621bc82ea2688644674224d0be4633e55929b7988d5",
+      "bytes": 6974
+    },
+    {
+      "id": "party",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 1,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 362,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 373,
+        "top": 68,
+        "width": 351,
+        "height": 274
+      },
+      "file": "tu-dao/party.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "c4bbb88c1336c5ac7ee6661e61ab250ba3f636abdefd3321e4d60e2220075782",
+      "bytes": 5526
+    },
+    {
+      "id": "friends",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 2,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 724,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 753,
+        "top": 67,
+        "width": 294,
+        "height": 294
+      },
+      "file": "tu-dao/friends.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "3bf5d63129631d3ef6a82201864024d50159c3d17b847dec5b2afa7389874244",
+      "bytes": 8070
+    },
+    {
+      "id": "sect",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 3,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 1086,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1099,
+        "top": 30,
+        "width": 330,
+        "height": 316
+      },
+      "file": "tu-dao/sect.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "66be0c2a26fd7ab85e9755d269ea26423485219a9640cc58bf931d128d959e53",
+      "bytes": 9012
+    },
+    {
+      "id": "mail",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 4,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 0,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 20,
+        "top": 403,
+        "width": 338,
+        "height": 307
+      },
+      "file": "tu-dao/mail.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "7e6aaa6e006f588a040877b929a207f9fc2842f038d1da052cc18386bb76aca9",
+      "bytes": 7298
+    },
+    {
+      "id": "chat",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 5,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 362,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 391,
+        "top": 432,
+        "width": 333,
+        "height": 292
+      },
+      "file": "tu-dao/chat.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "c47bb427cdd8d9774cecf2b5d7d7238cbff4de3b70880d0c357e7f8ede552e1e",
+      "bytes": 5810
+    },
+    {
+      "id": "activities",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 6,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 724,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 724,
+        "top": 377,
+        "width": 357,
+        "height": 347
+      },
+      "file": "tu-dao/activities.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "cc7d0e7f5c35dc38e86ace75b1155b3964cf7f837ca6b818bbf95102dc9354d9",
+      "bytes": 7236
+    },
+    {
+      "id": "pve",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 7,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 1086,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1103,
+        "top": 378,
+        "width": 331,
+        "height": 346
+      },
+      "file": "tu-dao/pve.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "a17d0c959f00b572625d501c97f26af2c15d05a302f29b0610ab1e2baaaf3bf0",
+      "bytes": 7466
+    },
+    {
+      "id": "pvp",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 8,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 0,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 19,
+        "top": 724,
+        "width": 343,
+        "height": 309
+      },
+      "file": "tu-dao/pvp.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "08137674e911e7b45430d26e343b7858936654cc67608172cd374d9b9164bd0a",
+      "bytes": 7856
+    },
+    {
+      "id": "achievement",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 9,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 362,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 459,
+        "top": 724,
+        "width": 265,
+        "height": 339
+      },
+      "file": "tu-dao/achievement.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "99d26b8b81d1417695217d19984dffb1d5c71e1db7f7ad8c5d1e14acb839e66e",
+      "bytes": 5298
+    },
+    {
+      "id": "market",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 10,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 724,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 724,
+        "top": 724,
+        "width": 362,
+        "height": 322
+      },
+      "file": "tu-dao/market.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "aa48ccafb7baef03e1fb9738ab104fb532800ab7f2310ffd42b202dad184a35a",
+      "bytes": 7788
+    },
+    {
+      "id": "settings",
+      "theme": "tu-dao",
+      "sheet": "mmo",
+      "cell": 11,
+      "source": "tu-dao/mmo-source.png",
+      "sourceSha256": "6f91b2fc5d8ada62fd182cecdeeb621ed51e41063de4ebc66bf57126779bbca4",
+      "cellRect": {
+        "left": 1086,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1086,
+        "top": 724,
+        "width": 337,
+        "height": 304
+      },
+      "file": "tu-dao/settings.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "983a001b86f3e377cb116c6b425c51c4cbeb68399b93e59106523149b658e2af",
+      "bytes": 6428
+    },
+    {
+      "id": "character",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 0,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 0,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 12,
+        "top": 16,
+        "width": 298,
+        "height": 346
+      },
+      "file": "doa-ma/character.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "a58344e4342eece254e21a99a6708ae6963bd02c9d48877203cddbd678f2ef88",
+      "bytes": 6248
+    },
+    {
+      "id": "inventory",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 1,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 362,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 375,
+        "top": 33,
+        "width": 349,
+        "height": 329
+      },
+      "file": "doa-ma/inventory.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "e18cc11de62c78b4203ac627242b1329c22f139d25f5f7997a88517a2f9f432b",
+      "bytes": 6254
+    },
+    {
+      "id": "equipment",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 2,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 724,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 724,
+        "top": 36,
+        "width": 362,
+        "height": 326
+      },
+      "file": "doa-ma/equipment.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "688140ed90103fd9c3c0ecaeade10c6924967872f3b572b05254be1e18a14403",
+      "bytes": 6696
+    },
+    {
+      "id": "cultivation",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 3,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 1086,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1086,
+        "top": 35,
+        "width": 362,
+        "height": 327
+      },
+      "file": "doa-ma/cultivation.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "930466bf7882f329c8981577710bc484eff02408bf2c0984ca9405bb5780ba36",
+      "bytes": 7644
+    },
+    {
+      "id": "method",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 4,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 0,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 9,
+        "top": 362,
+        "width": 353,
+        "height": 362
+      },
+      "file": "doa-ma/method.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "fbbdef184ac6f160a10ededf243cc0fb494903a496739942aae264148ea17866",
+      "bytes": 7148
+    },
+    {
+      "id": "spells",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 5,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 362,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 362,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "file": "doa-ma/spells.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "fc1f12b34aa921dd923b24f8c7b1450937a71e0628fbb9b9aebaf98e4bf1d1f6",
+      "bytes": 7602
+    },
+    {
+      "id": "artifact",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 6,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 724,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 724,
+        "top": 362,
+        "width": 349,
+        "height": 362
+      },
+      "file": "doa-ma/artifact.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "1158f9acc6d54f872956e357dd03cfe09d8537d84b93f57cd907acbe69d2bcba",
+      "bytes": 7932
+    },
+    {
+      "id": "crafting",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 7,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 1086,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1117,
+        "top": 368,
+        "width": 321,
+        "height": 356
+      },
+      "file": "doa-ma/crafting.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "5cf2ce29fadcff26a9ee10efaecfca53487c10a496b99b2eda1dc770f31d17bf",
+      "bytes": 7294
+    },
+    {
+      "id": "appearance",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 8,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 0,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 12,
+        "top": 724,
+        "width": 342,
+        "height": 344
+      },
+      "file": "doa-ma/appearance.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "802d39aac98d562c06c3d615066c3b0c2fb16d6ef2cd6b6c6f5e659ccccf70bc",
+      "bytes": 7276
+    },
+    {
+      "id": "mount",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 9,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 362,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 367,
+        "top": 724,
+        "width": 357,
+        "height": 341
+      },
+      "file": "doa-ma/mount.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "d614f7444a59aebcbad0b70201009171d65f20b2b3f8f55a3b59efd0f18323f5",
+      "bytes": 8842
+    },
+    {
+      "id": "beast",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 10,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 724,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 724,
+        "top": 724,
+        "width": 362,
+        "height": 351
+      },
+      "file": "doa-ma/beast.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "7061001685d9d3df5e3c258b8d3b402d5b73b1b454799daddc0f7f2ef0855d9e",
+      "bytes": 7874
+    },
+    {
+      "id": "map",
+      "theme": "doa-ma",
+      "sheet": "dao",
+      "cell": 11,
+      "source": "doa-ma/dao-source.png",
+      "sourceSha256": "cc8d7fca018fca7db0072a548bb3d6536e4babd99b48f71023ebf5a7a1bc849c",
+      "cellRect": {
+        "left": 1086,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1086,
+        "top": 746,
+        "width": 358,
+        "height": 326
+      },
+      "file": "doa-ma/map.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "4242f5f579498f205cc18a365f626fca80cca3e0966d015ad9284d4627bb6929",
+      "bytes": 6906
+    },
+    {
+      "id": "quest",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 0,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 0,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 19,
+        "top": 37,
+        "width": 337,
+        "height": 323
+      },
+      "file": "doa-ma/quest.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "fd62f4b55694246a2d783121c0cd7da1c025fac1c8118dc2f58589d56d9bb201",
+      "bytes": 6076
+    },
+    {
+      "id": "party",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 1,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 362,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 369,
+        "top": 64,
+        "width": 355,
+        "height": 284
+      },
+      "file": "doa-ma/party.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "664c6310f412a0c3d2e90239c7ed840ffadfaa3410139866c4b060cda04f9cb4",
+      "bytes": 5040
+    },
+    {
+      "id": "friends",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 2,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 724,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 754,
+        "top": 63,
+        "width": 298,
+        "height": 299
+      },
+      "file": "doa-ma/friends.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "1971f115362de8f785cf2b36645f30e124872427852c3754985cf976ce3be14b",
+      "bytes": 7266
+    },
+    {
+      "id": "sect",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 3,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 1086,
+        "top": 0,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1104,
+        "top": 25,
+        "width": 333,
+        "height": 324
+      },
+      "file": "doa-ma/sect.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "3becbacea527cfb49ebe810e61aca481241945f061603e6cb8954a022c4bf887",
+      "bytes": 8030
+    },
+    {
+      "id": "mail",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 4,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 0,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 21,
+        "top": 399,
+        "width": 341,
+        "height": 325
+      },
+      "file": "doa-ma/mail.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "4524eb4aa9180e7ccc8d67515f7b44840f9273ed96e801fed90a4b4df41cd31e",
+      "bytes": 6844
+    },
+    {
+      "id": "chat",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 5,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 362,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 390,
+        "top": 427,
+        "width": 334,
+        "height": 297
+      },
+      "file": "doa-ma/chat.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "25da8a7b3059b8b2e7de55509133d9b8037c29785b25a2c83b13437858cc5d38",
+      "bytes": 5684
+    },
+    {
+      "id": "activities",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 6,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 724,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 724,
+        "top": 370,
+        "width": 362,
+        "height": 354
+      },
+      "file": "doa-ma/activities.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "1912f4bb54a71d77d2e18a6af56f97ed14be91a7700743fa0a1f72b1a2271f22",
+      "bytes": 6820
+    },
+    {
+      "id": "pve",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 7,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 1086,
+        "top": 362,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1106,
+        "top": 377,
+        "width": 334,
+        "height": 347
+      },
+      "file": "doa-ma/pve.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "ce27ebc13b55c579c3d61566d50d5a6b54aec131b42c212ca4bd602370403e45",
+      "bytes": 6920
+    },
+    {
+      "id": "pvp",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 8,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 0,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 14,
+        "top": 724,
+        "width": 348,
+        "height": 309
+      },
+      "file": "doa-ma/pvp.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "ef1b21cd1938f95aeede56479dbec76ec3d644e136c1aabfef9c2096e1196621",
+      "bytes": 7340
+    },
+    {
+      "id": "achievement",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 9,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 362,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 362,
+        "top": 724,
+        "width": 362,
+        "height": 346
+      },
+      "file": "doa-ma/achievement.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "8fd09b64c82766a1a1aee0f176a0236bab4f6c3e19475de671e3aa01c67809b2",
+      "bytes": 4558
+    },
+    {
+      "id": "market",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 10,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 724,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 724,
+        "top": 724,
+        "width": 362,
+        "height": 325
+      },
+      "file": "doa-ma/market.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "23cc8b8327ab914fbc4db1ccfd1ade991ee1bb673c481e8a75078a1b8eea1b8b",
+      "bytes": 7302
+    },
+    {
+      "id": "settings",
+      "theme": "doa-ma",
+      "sheet": "mmo",
+      "cell": 11,
+      "source": "doa-ma/mmo-source.png",
+      "sourceSha256": "0b329dc882356f8ec54858eb11eef949e0f95a86c282077213fda7584839d720",
+      "cellRect": {
+        "left": 1086,
+        "top": 724,
+        "width": 362,
+        "height": 362
+      },
+      "crop": {
+        "left": 1086,
+        "top": 724,
+        "width": 346,
+        "height": 302
+      },
+      "file": "doa-ma/settings.webp",
+      "width": 96,
+      "height": 96,
+      "sha256": "b258f7f71fdd89d7cfc06e2ac19db2517b22cd7ee386ac732df9d8adaad1cd96",
+      "bytes": 5970
+    }
+  ]
+}

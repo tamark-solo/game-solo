@@ -1,0 +1,154 @@
+/* Character 04: identity / cultivation / active build. Review page only. */
+.material-review[data-screen=character] .dao-flow-status[data-idle=true]{display:none}
+.material-review[data-screen=character]:not([data-character-tab=equipment]) .review-panel[data-workspace=true]{top:43px;height:calc(100% - 100px)}
+.material-review[data-screen=character]:not([data-character-tab=equipment]) .review-heading{padding-bottom:6px;margin-bottom:6px}
+.material-review[data-screen=character]:not([data-character-tab=equipment]) .review-heading h2{font-size:26px;margin-block:3px 5px}
+.material-review[data-screen=character]:not([data-character-tab=equipment]) .review-heading p{display:none}
+.material-review[data-screen=character]:not([data-character-tab=equipment]) .review-content{padding-top:25px;padding-bottom:22px}
+.material-review[data-screen=character]:not([data-character-tab=equipment]) .dao-workspace-nav{padding-bottom:6px;margin-bottom:9px}
+.material-review[data-screen=character]:not([data-character-tab=equipment]) .dao-workspace-nav button{min-height:40px;padding-block:8px}
+.material-review .dao-character-sheet{display:grid;grid-template-columns:minmax(0,.74fr) minmax(0,1.12fr) minmax(0,1fr);gap:15px;min-width:0;align-items:start}
+.material-review .dao-character-sheet :is(section,div,button){min-width:0}
+.material-review .dao-character-sheet :is(p,b,span,small,h3,h4){overflow-wrap:anywhere}
+.material-review .dao-sheet-identity{padding:15px 13px 13px;background:linear-gradient(165deg,#81907b12,transparent 65%);border-top:1px solid var(--dao-line);color:var(--dao-text)}
+.material-review .dao-sheet-identity>h3{font:500 31px/1.25 Cambria,Georgia,serif;margin:6px 0;color:var(--dao-text)}
+.material-review .dao-sheet-identity>p{font:12px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted);margin:0 0 12px}
+.material-review .dao-sheet-identity .dao-image-well{min-height:238px;border:0;background:radial-gradient(ellipse at 50% 70%,#b6c7a822,transparent 60%),linear-gradient(165deg,#2d362b,#1e2723);border-bottom:1px solid var(--dao-line)}
+.material-review[data-skin=doa-ma] .dao-sheet-identity .dao-image-well{background:radial-gradient(ellipse at 50% 70%,#bb9b8e22,transparent 60%),linear-gradient(165deg,#332c32,#23262c)}
+.material-review .dao-sheet-identity .dao-image-well:after{content:'';position:absolute;bottom:40px;width:82%;height:28px;border:1px solid var(--dao-accent);border-radius:50%;opacity:.2;transform:perspective(120px) rotateX(35deg);z-index:-1}
+.material-review .dao-sheet-identity .dao-image-seal{width:160px;opacity:.2}
+.material-review .dao-sheet-identity .dao-image-reserve b{font-size:25px}
+.material-review .dao-sheet-identity .dao-well-foot{display:none}
+.material-review .dao-sheet-identity .dao-well-caption{font-size:8px;letter-spacing:.12em}
+.material-review .dao-sheet-identity-foot{display:flex;justify-content:space-between;gap:8px;margin:12px 0;font:11px/1.65 'Segoe UI',sans-serif;color:var(--dao-muted)}
+.material-review .dao-sheet-identity-foot b{display:block;color:var(--dao-text);font-weight:500}
+.material-review .dao-sheet-outline{display:flex;align-items:center;gap:8px;justify-content:space-between;width:100%;min-height:44px;padding:7px 10px;border:1px solid var(--dao-line);background:transparent;color:var(--dao-text);font:12px/1.5 'Segoe UI',sans-serif;cursor:pointer}
+.material-review .dao-sheet-outline .hud-glyph{--glyph-size:24px}
+.material-review .dao-sheet-cultivation{padding:16px 17px;overflow:visible}
+.material-review .dao-realm-heading{display:flex;align-items:center;gap:12px;margin-bottom:11px}
+.material-review .dao-realm-heading>div{min-width:0}
+.material-review .dao-realm-heading h3{font:600 24px/1.4 Cambria,Georgia,serif;margin:3px 0 5px;overflow-wrap:anywhere}
+.material-review .dao-realm-seal{position:relative;flex:none;display:grid;place-items:center;width:62px;height:62px;border:1px solid #818c6570;outline:1px solid #818c6540;outline-offset:4px;border-radius:50%;font:28px Cambria,serif;color:#546344;background:radial-gradient(circle,#81916c17,transparent 70%)}
+.material-review .dao-realm-seal:after{content:'';position:absolute;inset:7px;border:1px dashed #818c6570;border-radius:50%}
+.material-review .dao-sheet-confirmed{font:11px/1.5 'Segoe UI',sans-serif;color:#4b624a}
+.material-review .dao-accumulation{border-bottom:1px solid #7d89614d;padding-bottom:8px;margin-bottom:8px;font:12px/1.6 'Segoe UI',sans-serif}
+.material-review .dao-accumulation>div:first-child{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.material-review .dao-accumulation>div:first-child>b{font:28px/1.4 Cambria,serif}
+.material-review .dao-accumulation small{font:12px/1.5 'Segoe UI',sans-serif;opacity:.8}
+.material-review .dao-accumulation p{font:11px/1.6 'Segoe UI',sans-serif;margin:7px 0 0}
+.material-review .dao-qi-track{position:relative;height:7px;margin:8px 0;background:#68785426;border:1px solid #7d89614d;border-radius:8px;overflow:hidden}
+.material-review .dao-qi-track i{display:block;height:100%;background:linear-gradient(90deg,#667b59,#96a887);border-radius:8px}
+.material-review .dao-sheet-cultivation .dao-resource-pair{gap:9px;padding-bottom:10px;margin-bottom:2px}
+.material-review .dao-sheet-cultivation .dao-resource-pair dd{font-size:24px}
+.material-review .dao-sheet-attribute-link{font-size:11px;min-height:36px;padding:5px 0}
+.material-review .dao-sheet-next{border-top:1px solid #7d89614d;margin-top:6px;padding-top:10px}
+.material-review .dao-sheet-section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}
+.material-review .dao-sheet-section-head :is(h3,h4){margin:0;font:600 18px/1.4 Cambria,Georgia,serif}
+.material-review .dao-sheet-section-head>small{font:10px/1.5 'Segoe UI',sans-serif;opacity:.8}
+.material-review .dao-sheet-section-head .dao-text-button{font-size:10px;min-height:32px;padding:5px 0;flex:none}
+.material-review .dao-sheet-next>.dao-sheet-section-head h4{font:11px/1.5 'Segoe UI',sans-serif;text-transform:uppercase;letter-spacing:.06em}
+.material-review .dao-sheet-next>b{display:block;margin:6px 0;font:600 19px/1.45 Cambria,serif}
+.material-review .dao-sheet-quest-count{display:block;font:11px/1.5 'Segoe UI',sans-serif;color:#536c4a}
+.material-review .dao-sheet-next>p{font:12px/1.65 'Segoe UI',sans-serif;margin:6px 0}
+.material-review .dao-sheet-next>small{display:block;font:10px/1.6 'Segoe UI',sans-serif;opacity:.8;margin-bottom:9px}
+.material-review .dao-sheet-primary{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;min-height:44px;border:1px solid #647853;background:#344638;color:#f0eedc;padding:9px 12px;cursor:pointer;font:12px/1.5 'Segoe UI',sans-serif}
+.material-review .dao-sheet-build{color:var(--dao-text);padding:11px 12px 0;border-top:1px solid var(--dao-line)}
+.material-review .dao-sheet-build>h4{font:600 15px/1.5 Cambria,serif;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:11px 0 7px}
+.material-review .dao-sheet-build>h4>small{font:10px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted)}
+.material-review .dao-sheet-foundation{display:flex;align-items:center;gap:10px;min-height:57px;width:100%;padding:8px 0;margin:6px 0;border:0;border-bottom:1px solid var(--dao-line);background:transparent;color:var(--dao-text);text-align:left;cursor:pointer}
+.material-review .dao-sheet-foundation>span:nth-child(2){display:grid;gap:3px;flex:1}
+.material-review .dao-sheet-foundation small{font:9px/1.4 'Segoe UI',sans-serif;color:var(--dao-muted);letter-spacing:.05em}
+.material-review .dao-sheet-foundation b{font:500 16px/1.45 Cambria,serif}
+.material-review .dao-sheet-glyph{display:grid;place-items:center;flex:none;width:36px;height:36px}
+.material-review .dao-sheet-glyph .hud-glyph{--glyph-size:29px}
+.material-review .dao-sheet-skills{display:grid;gap:5px;margin-bottom:9px}
+.material-review .dao-sheet-skills button{display:flex;align-items:center;gap:9px;min-height:45px;width:100%;background:#303a2e;border:1px solid var(--dao-line);color:var(--dao-text);padding:6px;text-align:left;cursor:pointer}
+.material-review .dao-sheet-spell-icon{display:block;width:32px;height:32px;flex:none;background-image:var(--dao-skill-icon-atlas);background-size:300% 100%;background-repeat:no-repeat}
+.material-review .dao-sheet-spell-icon[data-skill=sword]{background-position:0% 50%}
+.material-review .dao-sheet-spell-icon[data-skill=thunder]{background-position:50% 50%}
+.material-review .dao-sheet-spell-icon[data-skill=wind]{background-position:100% 50%}
+.material-review .dao-sheet-skills button>span:nth-child(2){flex:1;display:grid;gap:3px}
+.material-review .dao-sheet-skills b{font:500 14px/1.4 Cambria,serif}
+.material-review .dao-sheet-skills small{font:10px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted)}
+.material-review .dao-sheet-skills kbd{font:12px/1.4 Cambria,serif;border:1px solid var(--dao-line);padding:3px 6px;color:var(--dao-accent)}
+.material-review .dao-sheet-equipment{display:grid;gap:0}
+.material-review .dao-sheet-equipment button{display:flex;align-items:center;gap:8px;text-align:left;min-height:48px;width:100%;background:transparent;border:0;border-bottom:1px solid var(--dao-line);color:var(--dao-text);padding:5px 0;cursor:pointer}
+.material-review .dao-sheet-equipment button>span:nth-child(2){display:grid;gap:3px;flex:1}
+.material-review .dao-sheet-equipment img{width:36px;height:36px;object-fit:contain;flex:none}
+.material-review .dao-sheet-equipment small{font:9px/1.4 'Segoe UI',sans-serif;color:var(--dao-muted)}
+.material-review .dao-sheet-equipment b{font:500 14px/1.45 Cambria,serif}
+.material-review .dao-sheet-equipment [data-filled=false] b{color:var(--dao-muted)}
+.material-review .dao-sheet-build-note{font:10px/1.65 'Segoe UI',sans-serif;color:var(--dao-muted);margin:9px 0 0}
+.material-review .dao-cultivation-v4{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:18px}
+.material-review .dao-cultivation-v4 .dao-plain-data{font-size:12px;margin-top:15px}
+.material-review .dao-confirm-conditions{list-style:none;padding:0;margin:10px 0 16px;display:grid;gap:10px;font:12px/1.7 'Segoe UI',sans-serif}
+.material-review .dao-confirm-conditions li{display:flex;align-items:flex-start;gap:9px}
+.material-review .dao-confirm-conditions li>span:first-child{flex:none;color:#735e42}
+.material-review .dao-confirm-conditions [data-met=true]>span:first-child{color:#4b624a}
+.material-review .dao-confirm-conditions li>span:last-child{min-width:0;overflow-wrap:anywhere}
+.material-review .dao-cultivation-v4 .dao-cultivation-explanation{font:12px/1.75 'Segoe UI',sans-serif;margin:14px 0}
+.material-review .dao-long-path{border-top:1px solid #7d89614d;padding:10px 0 0;margin-top:13px;font:11px/1.7 'Segoe UI',sans-serif}
+.material-review .dao-long-path summary{min-height:36px;cursor:pointer}
+.material-review .dao-long-path p{font-size:12px;line-height:1.75}
+.material-review .dao-sheet-journey{color:var(--dao-text);min-width:0}
+.material-review .dao-journey-intro{font:12px/1.7 'Segoe UI',sans-serif;color:var(--dao-muted);margin:9px 0 15px}
+.material-review .dao-cultivation-v4 .dao-path-list{overflow:visible}
+.material-review .dao-cultivation-v4 .dao-path-list [data-current=true]{border-color:var(--dao-accent);box-shadow:inset 3px 0 var(--dao-accent)}
+.material-review .dao-arts-grid{display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1fr);gap:18px;align-items:start;min-width:0}
+.material-review .dao-arts-list{display:grid;gap:8px;min-width:0;color:var(--dao-text)}
+.material-review .dao-arts-list button{display:flex;align-items:center;gap:12px;min-height:64px;background:#303a2e;border:1px solid var(--dao-line);color:var(--dao-text);padding:10px;text-align:left;cursor:pointer}
+.material-review .dao-arts-list button[aria-pressed=true]{border-color:var(--dao-accent);box-shadow:inset 3px 0 var(--dao-accent)}
+.material-review .dao-arts-list button>span:last-child{display:grid;gap:5px;min-width:0}
+.material-review .dao-arts-list b{font:500 18px/1.5 Cambria,serif;overflow-wrap:anywhere}
+.material-review .dao-arts-list small,.material-review .dao-arts-list p{font:12px/1.7 'Segoe UI',sans-serif;color:var(--dao-muted);overflow-wrap:anywhere}
+.material-review .dao-art-reader{overflow:visible;min-width:0}
+.material-review .dao-art-reader p{font:13px/1.75 'Segoe UI',sans-serif}
+.material-review .dao-art-reader .dao-plain-data{margin:20px 0}
+.material-review[data-skin=doa-ma] .dao-arts-list button{background:#342e33}
+.material-review[data-skin=doa-ma] .dao-realm-seal{color:#ceac94;border-color:#b2927666;outline-color:#b2927640;background:radial-gradient(circle,#b2927617,transparent 70%)}
+.material-review[data-skin=doa-ma] .dao-realm-seal:after{border-color:#b2927670}
+.material-review[data-skin=doa-ma] :is(.dao-sheet-confirmed,.dao-sheet-quest-count){color:#d0bca1}
+.material-review[data-skin=doa-ma] .dao-sheet-primary{background:#513b3b;border-color:#a07c69}
+.material-review[data-skin=doa-ma] .dao-sheet-skills button{background:#342e33}
+.material-review[data-skin=doa-ma] .dao-qi-track i{background:linear-gradient(90deg,#826353,#b69778)}
+.material-review[data-skin=doa-ma] .dao-confirm-conditions li>span:first-child{color:#cab096}
+.material-review :is(.dao-sheet-primary,.dao-sheet-outline,.dao-sheet-foundation,.dao-sheet-skills button,.dao-sheet-equipment button):hover{filter:brightness(1.13)}
+.material-review :is(.dao-sheet-primary,.dao-sheet-outline,.dao-sheet-foundation,.dao-sheet-skills button,.dao-sheet-equipment button,.dao-long-path summary):focus-visible{outline:2px solid var(--dao-accent);outline-offset:2px}
+@media(max-width:1100px){
+ .material-review .dao-character-sheet{grid-template-columns:minmax(0,.65fr) minmax(0,1fr)}
+ .material-review .dao-sheet-build{grid-column:2;grid-row:2}
+ .material-review .dao-sheet-cultivation{grid-column:2;grid-row:1}
+ .material-review .dao-sheet-identity{grid-column:1;grid-row:1 / span 2}
+ .material-review .dao-sheet-build{display:grid;grid-template-columns:1fr 1fr;gap:6px 15px}
+ .material-review .dao-sheet-build>.dao-sheet-section-head:first-child,.material-review .dao-sheet-foundation{grid-column:1 / -1}
+ .material-review .dao-sheet-build>h4{grid-column:1;grid-row:3}
+ .material-review .dao-sheet-skills{grid-column:1;grid-row:4}
+ .material-review .dao-sheet-build>.dao-sheet-section-head:nth-of-type(3){grid-column:2;grid-row:3}
+ .material-review .dao-sheet-equipment{grid-column:2;grid-row:4}
+ .material-review .dao-sheet-build-note{grid-column:1 / -1}
+}
+@media(max-width:760px){
+ .material-review .dao-arts-grid{grid-template-columns:1fr;gap:12px}
+ .material-review .dao-arts-list{grid-template-columns:1fr}
+ .material-review .dao-character-sheet{display:flex;flex-direction:column;gap:13px}
+ .material-review .dao-character-sheet>section{width:100%}
+ .material-review .dao-sheet-cultivation{order:1}
+ .material-review .dao-sheet-build{order:2;display:block;padding:10px 8px}
+ .material-review .dao-sheet-identity{order:3;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:10px;align-content:start}
+ .material-review .dao-sheet-identity>.review-eyebrow,.material-review .dao-sheet-identity>h3,.material-review .dao-sheet-identity>p,.material-review .dao-sheet-identity-foot,.material-review .dao-sheet-outline{grid-column:1}
+ .material-review .dao-sheet-identity .dao-image-well{grid-column:2;grid-row:1 / span 5;min-height:210px}
+ .material-review .dao-sheet-identity .dao-image-reserve{padding:15px 5px}
+ .material-review .dao-sheet-identity .dao-image-reserve b{font-size:20px}
+ .material-review .dao-sheet-identity .dao-well-caption{display:none}
+ .material-review .dao-sheet-identity .dao-image-reserve>span{font-size:10px}
+ .material-review .dao-sheet-identity-foot{flex-direction:column;gap:7px}
+ .material-review .dao-sheet-identity-foot b{display:inline}
+ .material-review .dao-sheet-outline{padding:6px;font-size:11px;gap:5px}
+ .material-review .dao-sheet-outline .hud-glyph{display:none}
+ .material-review .dao-sheet-cultivation{padding:16px}
+ .material-review .dao-realm-heading{gap:12px}
+ .material-review .dao-realm-heading h3{font-size:23px}
+ .material-review .dao-realm-seal{width:49px;height:49px;font-size:24px}
+ .material-review .dao-cultivation-v4{grid-template-columns:1fr;gap:17px}
+ .material-review .dao-sheet-identity>h3{font-size:26px}
+}

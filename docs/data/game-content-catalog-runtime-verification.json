@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-11",
+  "scope": "Authoring registry management; no gameplay definition release",
+  "records": 48,
+  "typedRelations": 45,
+  "implementedReferences": 12,
+  "unreleased": 36,
+  "catalogSha256": "8acbd06c5bd3ab2c852db1daaf21610d6b4f6e6047a73c64d982d955323a637b",
+  "unitCases": 7,
+  "unitSuitePassed": 252,
+  "catalogBrowser": {
+    "checks": [
+      "Authenticated admin read only; anonymous/player denied; no catalog mutation route or player profile changes",
+      "Vietnamese accent-insensitive search, domain/status filtering, empty domain and typed source/use navigation",
+      "4 responsive layouts; invalid JSON/source fail closed and recover; content strings render safely",
+      "Existing operations tab, session reload and logout remain functional; fixtures never touch owner catalog/DB"
+    ],
+    "layouts": [
+      {
+        "width": 320,
+        "height": 740,
+        "overflow": false,
+        "small": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "overflow": false,
+        "small": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "overflow": false,
+        "small": []
+      },
+      {
+        "width": 1366,
+        "height": 900,
+        "overflow": false,
+        "small": []
+      }
+    ],
+    "pageErrors": [],
+    "fixtureOnly": true,
+    "ownerDataWritten": false
+  },
+  "typecheck": "260 files, 23 modules, no boundary violations or cycles",
+  "viteBuild": "passed",
+  "gameEntryRegression": {
+    "onlineGroups": 7,
+    "browserGroups": 4,
+    "layouts": 12
+  },
+  "live": {
+    "backend": "http://127.0.0.1:2568",
+    "admin": "http://127.0.0.1:5174/admin.html?view=catalog",
+    "ready": true,
+    "anonymousCatalogStatus": 401
+  },
+  "databaseBackup": "server/data/backups/pre-content-catalog-1791690482419.sqlite",
+  "profileMigration": false,
+  "ownerDataTestedOrSeeded": false,
+  "authoredMapWritten": false,
+  "newArtCreated": false,
+  "artApprovalInferred": false
+}

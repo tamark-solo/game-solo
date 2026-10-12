@@ -1,5 +1,11 @@
 # Hồ sơ tạo hình Vương Lâm — giai đoạn nhập môn
 
+**Sửa Hóa Thần 02 · 12/10:** [Sinh Tử](design/characters/wang-lin-hoa-than-review-v2/README.md) tăng mảng ngà sáng, giảm tro xám theo phản hồi chìm; giữ 0 pixel phần người đổi. Áo Huyền Tử giữ nguồn 01, khí hai đạo đã tách ground/rear/front/mote và thử motion. [Ghép VFX độc lập khi làm tám hướng](CHARACTER-AURA-LAYERS.md); chưa làm bộ người/áo đa hướng hoặc thay runtime.
+
+**Tiếp nối Hóa Thần 12/10:** [Hai mẫu áo và khí tức 01](design/characters/wang-lin-hoa-than-review-v1/README.md) giữ đúng người native-v2, chỉ đổi mask 471 pixel vải; 0 pixel ngoài vải/đầu/mặt/da/giày/alpha đổi. Sinh Tử ngà bạc–tro mực, Huyền Tử xanh đen–huyết đồng là đề xuất ART, chưa trang phục canon/chỉ số hoặc gameplay. Khí tĩnh riêng không đổi frame người hay hợp đồng R01; chờ đánh giá hình.
+
+**Áo nhập môn 12/10 — giữ chibi, thiết kế áo:** owner xác nhận khóa người hiện hành đã đúng, muốn thêm trang phục và dọn asset cũ. [Ba áo 02](design/characters/wang-lin-costume-review-v2/README.md) giữ nguyên pixel phần người native-v2, body 45 × 80/frame 64 × 96/neo (32,88), chỉ ghép vùng vải. Source/ImageGen/prompt riêng mỗi bộ, không vẽ lại người. Các bản vẽ lại mặt/người và áo 01 đã dọn khỏi nguồn hoạt động/web, lưu ZIP. Giữ người được xác nhận; ba áo mới chưa ART approval, một pose Nam, chưa đổi game.
+
 **Phiên bản:** 0.5, ngày 08/10/2026.\
 **Nhân vật:** `CHR-WANG-LIN`, lựa chọn người chơi từ đầu theo [GDD 0.28](GDD.md); nguồn chân dung `AS-CHR-001`. Mốc nguyên tác trong hồ sơ phục vụ diện mạo/cảnh truyện, không quyết định quyền chọn.\
 **Đã chốt:** dùng mô tả tiểu thuyết, thiết kế diện mạo riêng cho game. Nhân vật trên map dùng pixel art; nền stylized 2D; camera top-down ba phần tư; portrait/truyện giữ tranh mực và giấy cổ.  

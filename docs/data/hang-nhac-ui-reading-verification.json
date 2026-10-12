@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-10",
+  "timezone": "Asia/Bangkok",
+  "passedTechnicalChecks": true,
+  "request": "Improve crowded/overflowing quest text and provide a reusable reading/layout contract across game UI.",
+  "implementation": [
+    "client/src/ui-reading.css",
+    "client/src/quest-ui.ts",
+    "client/hang-nhac.html",
+    "client/src/sect-ui.ts"
+  ],
+  "documentation": "docs/GAME-UI-READING.md",
+  "readingCases": [
+    {
+      "width": 320,
+      "textScale": 1,
+      "quests": 5
+    },
+    {
+      "width": 320,
+      "textScale": 1.5,
+      "quests": 5
+    },
+    {
+      "width": 320,
+      "textScale": 2,
+      "quests": 5
+    },
+    {
+      "width": 390,
+      "textScale": 1,
+      "quests": 5
+    },
+    {
+      "width": 390,
+      "textScale": 1.5,
+      "quests": 5
+    },
+    {
+      "width": 390,
+      "textScale": 2,
+      "quests": 5
+    },
+    {
+      "width": 760,
+      "textScale": 1,
+      "quests": 5
+    },
+    {
+      "width": 760,
+      "textScale": 1.5,
+      "quests": 5
+    },
+    {
+      "width": 760,
+      "textScale": 2,
+      "quests": 5
+    },
+    {
+      "width": 980,
+      "textScale": 1,
+      "quests": 5
+    },
+    {
+      "width": 980,
+      "textScale": 1.5,
+      "quests": 5
+    },
+    {
+      "width": 980,
+      "textScale": 2,
+      "quests": 5
+    },
+    {
+      "width": 1024,
+      "textScale": 1,
+      "quests": 5
+    },
+    {
+      "width": 1024,
+      "textScale": 1.5,
+      "quests": 5
+    },
+    {
+      "width": 1024,
+      "textScale": 2,
+      "quests": 5
+    },
+    {
+      "width": 1366,
+      "textScale": 1,
+      "quests": 5
+    },
+    {
+      "width": 1366,
+      "textScale": 1.5,
+      "quests": 5
+    },
+    {
+      "width": 1366,
+      "textScale": 2,
+      "quests": 5
+    }
+  ],
+  "questReadingChecks": 90,
+  "fontScaleMethod": "Shared reading tokens at 100%, 150%, 200%; not browser zoom.",
+  "uiChecks": [
+    "three_real_profile_choices_native_sprite_preview_no_transport_or_fake_unlock",
+    "journal_accordion_route_selection_preserves_focus_and_sends_no_gameplay",
+    "manual_and_OS_reduced_motion_static_HUD_persisted_without_changing_gameplay",
+    "profile_specific_spirit_cultivation_and_training_dialogs_keep_real_actions",
+    "18_reading_layouts_all_five_quests_long_Vietnamese_and_unbroken_text_100_150_200_percent_no_clipping",
+    "six_H5_viewports_native_hotbar_no_document_scroll_entry_and_dialogs_accessible",
+    "surface_and_frame_aligned_through_resizes_breakpoints_and_dialog_scroll"
+  ],
+  "framePixelCases": 28,
+  "escapedBackingPixels": 0,
+  "checks": [
+    {
+      "command": "npm.cmd run test:hang-nhac-ui",
+      "passed": true,
+      "evidence": "artifacts/van-ngoc-ui/verification.json"
+    },
+    {
+      "command": "npm.cmd run test:hang-nhac-ui-resize",
+      "passed": true,
+      "evidence": "artifacts/hang-nhac-ui-resize-verification.json"
+    },
+    {
+      "command": "npm.cmd run test:hang-nhac-quests",
+      "passed": true,
+      "evidence": "artifacts/hang-nhac-quests-verification.json"
+    },
+    {
+      "command": "npm.cmd run test:hang-nhac-game-shell",
+      "passed": true,
+      "evidence": "artifacts/hang-nhac-game-shell-verification.json"
+    },
+    {
+      "command": "npm.cmd run test:hang-nhac-hud-layers",
+      "passed": true,
+      "evidence": "artifacts/hang-nhac-hud-layers-verification.json"
+    },
+    {
+      "command": "npm.cmd run typecheck",
+      "passed": true
+    },
+    {
+      "command": "npm.cmd run build",
+      "passed": true
+    }
+  ],
+  "visualQA": [
+    "artifacts/van-ngoc-ui/journal-active.png",
+    "artifacts/van-ngoc-ui/journal-long-text-mobile.png",
+    "artifacts/van-ngoc-ui/training-dialog.png"
+  ],
+  "ownerDatabaseUsed": false,
+  "ownerMapEdited": false,
+  "gameplayOrServerChanged": false,
+  "newArtworkCreated": false
+}

@@ -1,8 +1,14 @@
 # Chạy preview, backend thử và Map Editor
 
+**Catalog quản trị 11/10:** mở `/admin.html?view=catalog` bằng role admin. `npm.cmd run check:content-catalog` kiểm sổ bằng validator/reader, không mở DB; `npm.cmd run test:content-catalog` kiểm unit và browser/API trên fixture. [Hướng dẫn/API/triển khai](GAME-CONTENT-CATALOG-RUNTIME.md). Catalog là authoring registry chỉ đọc; chưa compiler/CRUD hoặc gameplay definitions mới.
+
 **Cập nhật:** 08/10/2026 · **Runtime:** 0.12.0. TypeScript + Three.js / Node.js + Colyseus. Hằng Nhạc có hồ sơ khách SQLite/lưu, R01 luyện thử và [NPC/HN01–HN02/thổ nạp online](HANG-NHAC-SECT-RUNTIME.md); [HN03–HN04/đòn thường/bài né](HANG-NHAC-LESSONS-RUNTIME.md) đã có bản thử; HN05–HN12/farm/khảo nghiệm/đăng nhập sản xuất còn tiếp tục. Nhấn E gần NPC, mở Nhật ký để xem đường. Xem [trạng thái](PROJECT-STATUS.md).
 
+**Entry thật 10/10:** `/hang-nhac.html` mặc định yêu cầu đăng ký/đăng nhập bằng tên tài khoản + mật khẩu, chọn server rồi tạo/chọn nhân vật. Tài khoản mới rỗng; không tự tạo ba hồ sơ. `/admin.html` quản lý tài khoản/server, xem audit và trạng thái backend; admin bootstrap qua biến môi trường, không có mật khẩu mặc định. Xem [hướng dẫn/config/debug](GAME-ENTRY-BACKEND.md). Save khách cũ giữ riêng, chưa tự nhận vào tài khoản mới. Mô tả chọn hồ sơ khách bên dưới là pilot DEV, dùng `?devGuest=1`; production tắt guest API/room fixture. Kiểm bằng `npm.cmd run test:game-entry`, dùng DB/cache/browser fixture.
+
 ## 1. Khởi động
+
+Màn mở đầu mới ở [5174/hang-nhac.html?screen=title](http://127.0.0.1:5174/hang-nhac.html?screen=title), gồm Bắt đầu/Tiếp tục và Thiết lập. Title/entry dùng nền tiên môn riêng; có thể về title từ menu trong game. [Reference/ART/Core](GAME-TITLE-SCREEN.md). `npm.cmd run test:game-title` kiểm bằng fixture riêng.
 
 Cần Node.js >= 22.13.0 và npm; dependency khóa trong [package-lock.json](../package-lock.json). Chạy trong checkout của nhánh muốn xem:
 
@@ -16,7 +22,8 @@ Nếu đã có dependency, chỉ chạy lệnh `dev`. Một lệnh mở client l
 | URL | Nội dung thật sự |
 | --- | --- |
 | [Trang chính](http://127.0.0.1:5173/) | Animation, di chuyển cục bộ và sân online |
-| [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html) | Scene 22 object/32 part/10 cover, 9 blocker/camera 1×; HUD Vân Ngọc dùng snapshot thật, hồ sơ riêng bộ ba và luyện R01 bằng phím/nút |
+| [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html) | Game shell toàn viewport; chọn/tiếp tục hồ sơ, HUD/nhiệm vụ trong map, C/I mở nhân vật/hành trang thật, Escape mở menu; scene 22 object/32 part/10 cover, 9 blocker/camera 1× |
+| [Nhân vật / hành trang Vân Ngọc](http://127.0.0.1:5173/character-ui.html) | Prototype tương tác fixture riêng; ba nhân vật, hành trang, trang bị/so sánh, trạng thái; không cần backend, chưa là đồ trong game |
 | [Gallery chibi](http://127.0.0.1:5173/assets/chibi-roster/index.html) | Năm bộ chibi hiện có |
 | [Chibi pilot](http://127.0.0.1:5173/chibi-pilot.html) | Mẫu hướng Đông cũ để đối chiếu |
 | [Map Editor](http://127.0.0.1:5173/map-editor.html) | Level Design với thư viện mặc định trống sau reset |
@@ -42,6 +49,10 @@ Chọn **Thử trên map**, bấm vào sân rồi giữ WASD/mũi tên hoặc n�
 Server tính vị trí 30 Hz, tốc độ 80 px/s, va chạm và ack input; client prediction/reconciliation và nội suy người khác. Phòng giữ phiên bị rơi tối đa 15 giây để reconnect trong cùng trang. Reload hoặc restart server chưa đảm bảo phục hồi vì chưa có tài khoản/DB. Bộ ba playable theo GDD chưa được nối vào luồng chọn online này. [Hợp đồng backend](BACKEND-PREVIEW.md) mô tả chính xác các giới hạn.
 
 Đoạn trên mô tả fixture trang chính. Tại **Hằng Nhạc**, chọn bộ ba rồi vào sân; dùng browser context riêng để kiểm người thứ hai. Cùng tài khoản chỉ điều khiển một người, rời sân trước khi đổi. Hồ sơ Hằng Nhạc tự lưu trong `server/data/profiles.sqlite` (hoặc `GAME_DB_PATH`), giữ vị trí/MP/cooldown/counter qua reload/restart; không xóa file DB hoặc dữ liệu trình duyệt khi muốn tiếp tục save. Di chuyển đổi hướng Kiếm/Phong, dừng giữ hướng; chạm map ngắm riêng cho đến khi đổi input đi. Lôi quay về mục tiêu đã chọn. Bấm **Mục tiêu luyện**, dùng 1/2/3 hoặc nút thuật; mũi tên HUD cho biết hướng Kiếm/Phong. [Hướng dẫn/giới hạn](HANG-NHAC-R01-RUNTIME.md).
+
+[Game shell H5](HANG-NHAC-GAME-SHELL.md) giữ preview/editor riêng. Màn chọn chặn đi/cast; bấm Vào Hằng Nhạc hoặc Tiếp tục hành trình để vào phiên. J mở sổ nhiệm vụ, Escape trên map mở thiết lập; Đổi nhân vật rời phiên và quay về màn chọn, không xóa save. CSS shell link từ HTML để màn nạp hiển thị trước JavaScript.
+
+Nếu HTML trả 200 nhưng màn trắng, kiểm stylesheet và bounding box canvas trên đúng cổng live; lỗi CSS/cache Vite chỉ cần dừng/mở lại **client** bằng `npm.cmd run dev:client -- --force` rồi tải lại trang. Không reset token, SQLite hoặc authored map, không restart backend chỉ để sửa CSS.
 
 Hằng Nhạc tự nối lại khi backend restart trong lúc phát triển. Chờ trạng thái sân chung và lời nhắc E gần NPC hiện trở lại; nếu hết lượt thử hoặc hồ sơ bị từ chối, trang hiện lỗi và cho vào lại thủ công. Rời sân hủy phục hồi. `npm.cmd run test:hang-nhac-reload` kiểm luồng này bằng DB và assets fixture riêng, gồm cả reload ngay sau reconnect; đây là hồi quy bắt buộc khi sửa lifecycle kết nối/NPC.
 
@@ -69,6 +80,10 @@ npm.cmd run test:online
 npm.cmd run test:hang-nhac
 npm.cmd run test:hang-nhac-r01
 npm.cmd run test:hang-nhac-hud-layers
+npm.cmd run test:hang-nhac-game-shell
+npm.cmd run test:hang-nhac-character
+npm.cmd run test:character-ui
+npm.cmd run test:hang-nhac-quests
 npm.cmd run test:hang-nhac-lessons
 npm.cmd run test:hang-nhac-reload
 npm.cmd run test:skill-aim

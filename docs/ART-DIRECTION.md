@@ -1,5 +1,11 @@
 # Định hướng ART — TuTiên
 
+**Khí Hóa Thần theo lớp · 12/10:** [Bản 02](design/characters/wang-lin-hoa-than-review-v2/README.md) sửa Sinh Tử sáng ngà/nẹp ngọc, thêm khí rear/front và hạt động; Tu Đạo ngọc bạc, Đọa Ma xanh tím/huyết sắc. [Quy ước layer riêng](CHARACTER-AURA-LAYERS.md) giữ cùng chân và body hiện hành khi làm hướng/animation sau này. Review motion texture, chưa atlas FX từng frame/người tám hướng; chờ owner đánh giá.
+
+**Hóa Thần 01 · 12/10:** [Sinh Tử/Tu Đạo, Huyền Tử/Đọa Ma và hai khí tức](design/characters/wang-lin-hoa-than-review-v1/README.md) có bốn source ImageGen/prompt riêng. Áo giữ nguyên chibi, chỉ ghép vùng vải; khí tĩnh tách canvas/pivot, không làm người lớn hơn. Gallery/map cùng năm áo và mốc gốc, mặc định tắt khí để so áo. Chờ duyệt hình, chưa animation hoặc thay ART runtime.
+
+**Giữ người gốc, ba thiết kế áo · 12/10:** owner xác nhận cách khóa chibi đúng nhưng áo 01 chưa đẹp. [Gói 02](design/characters/wang-lin-costume-review-v2/README.md) có áo ngà-ngọc, xanh mực/viền bạc và đỏ trầm/đồng; ba ImageGen/source/prompt riêng. Giữ mọi pixel ngoài mask vải, đầu/mặt/da/giày/alpha và body 45 × 80. Các nghiên cứu đổi người trước đã dọn source/public và builder, giữ archive; không dùng lại làm chuẩn hình. Mỗi áo mới vẫn chờ owner đánh giá.
+
 **Phiên bản:** 1.8, ngày 08/10/2026.\
 **Hướng hiện tại:** nhân vật pixel chibi trên nền stylized 2D, top-down ba phần tư; portrait/truyện/UI giữ tranh mực và giấy cổ. Frame nhân vật **64 × 96**, chân/điểm chiếu **(32,88)**, cỡ chơi mặc định **1×**.\
 **Gameplay:** [GDD 0.28](GDD.md) cho chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; cùng Hằng Nhạc đến hết Ngưng Khí, phân hóa từ Trúc Cơ. Combat chủ động, idle hỗ trợ. Hai mẫu đệ tử còn dùng làm avatar kỹ thuật trong sân online, không là roster người chơi chính của hướng mới.\

@@ -11,6 +11,12 @@ const aliases = { '@shared': 'shared' };
 // A file belongs to the module with the longest matching path prefix (listed first).
 const moduleRoots = [
   ['shared/', 'shared'],
+  ['server/src/core/', 'server/core'],
+  ['server/src/application/', 'server/application'],
+  ['server/src/persistence/', 'server/persistence'],
+  ['server/src/security/', 'server/security'],
+  ['server/src/observability/', 'server/observability'],
+  ['server/src/http/game/', 'server/http-game'],
   ['server/', 'server'],
   ['client/src/core/', 'client/core'],
   ['client/src/app/', 'client/app'],
@@ -21,6 +27,8 @@ const moduleRoots = [
   ['client/src/net/', 'client/net'],
   ['client/src/features/preview/', 'client/feature-preview'],
   ['client/src/features/courtyard/', 'client/feature-courtyard'],
+  ['client/src/features/entry/', 'client/feature-entry'],
+  ['client/src/features/admin/', 'client/feature-admin'],
   ['client/src/', 'client'],
   ['tests/', 'tests'],
   ['scripts/', 'scripts'],
@@ -30,7 +38,13 @@ const moduleRoots = [
 // Which module may import which. Files under tests/ may import everything.
 const allowed = {
   shared: [],
-  server: ['shared'],
+  server: ['shared','server/core','server/application','server/persistence','server/security','server/observability','server/http-game'],
+  'server/core':['shared'],
+  'server/application':['shared','server/core'],
+  'server/persistence':['shared','server/core'],
+  'server/security':['shared','server/core'],
+  'server/observability':['shared','server/core'],
+  'server/http-game':['shared','server/core','server/application'],
   'client/core': ['shared', 'client/render', 'client/assets', 'client/net'],
   'client/app': ['shared', 'client/core', 'client/ui', 'client/hud', 'client/render', 'client/assets', 'client/net', 'client/feature-preview', 'client/feature-courtyard'],
   'client/ui': ['shared', 'client/core', 'client/feature-preview', 'client/feature-courtyard'],
@@ -40,7 +54,9 @@ const allowed = {
   'client/net': ['shared'],
   'client/feature-preview': ['shared', 'client/core', 'client/render', 'client/ui'],
   'client/feature-courtyard': ['shared', 'client/core', 'client/render', 'client/net'],
-  client: ['shared', 'client/app', 'client/core', 'client/ui', 'client/hud', 'client/render', 'client/assets', 'client/net', 'client/feature-preview', 'client/feature-courtyard'],
+  'client/feature-entry':['shared','client/core','client/assets','client/net'],
+  'client/feature-admin':['shared','client/core','client/net'],
+  client: ['shared', 'client/app', 'client/core', 'client/ui', 'client/hud', 'client/render', 'client/assets', 'client/net', 'client/feature-preview', 'client/feature-courtyard','client/feature-entry','client/feature-admin'],
   scripts: ['shared'],
   config: ['scripts'],
 };
@@ -50,6 +66,8 @@ const forbiddenPackages = {
   shared: ['three', 'colyseus', '@colyseus/sdk', '@colyseus/ws-transport'],
   client: ['colyseus', '@colyseus/ws-transport'],
   server: ['three', '@colyseus/sdk'],
+  'server/core':['express','colyseus','@colyseus/ws-transport','node:sqlite','three','@colyseus/sdk'],
+  'server/application':['express','colyseus','@colyseus/ws-transport','node:sqlite','three','@colyseus/sdk'],
 };
 
 const importPattern = /\b(?:from|import)\s*\(?\s*['"]([^'"]+)['"]/g;
@@ -96,7 +114,7 @@ for (const file of files) {
     const line = text.slice(0, match.index).split('\n').length;
     if (!isInternal(specifier)) {
       const pkg = specifier.startsWith('@') ? specifier.split('/').slice(0, 2).join('/') : specifier.split('/')[0];
-      if ((forbiddenPackages[module.split('/')[0]] ?? []).includes(pkg)) violations.push(`${file}:${line} ${module} không được dùng gói "${pkg}"`);
+      if ([...(forbiddenPackages[module.split('/')[0]]??[]),...(forbiddenPackages[module]??[])].includes(pkg)) violations.push(`${file}:${line} ${module} không được dùng gói "${pkg}"`);
       continue;
     }
     const target = resolveTarget(file, specifier);

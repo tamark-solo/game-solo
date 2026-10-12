@@ -1,0 +1,13 @@
+#character-dialog.character-runtime { height:auto;display:block;padding:0;border:0;background:none;overflow:visible;width:min(1120px,calc(100vw - 32px));max-width:none;max-height:none;margin:20px auto 0;top:0;bottom:auto;color:#eee5cc; }
+#character-dialog.character-runtime:not([open]) { display:none; }
+#character-dialog::backdrop { background:#071e2459; }
+#character-dialog { outline:none; }
+#character-dialog .character-heading > div { flex:1;min-width:0; }
+#character-dialog .character-window { width:100%;height:min(740px,calc(100dvh - 180px));max-height:none; }
+#character-dialog .current-quest { color:#c7d7bd;font-size:var(--ui-text-small);line-height:1.7;margin-top:10px; }
+#character-dialog .live-overview-gear { margin-top:20px; }.character-runtime .live-supplies { border-top:1px solid #9b885e55;padding-top:14px; }.character-runtime .overview-note .equipment-entry { color:#3d5e4c;background:#79967416; }.character-runtime .overview-note .equipment-entry small { color:#697e5d; }
+#character-dialog[data-motion=reduce] *,#character-dialog[data-motion=reduce] *::before { animation:none !important;transition:none !important; }
+#character-dialog .shrine-art { pointer-events:none; }
+.hang-nhac-game #character-open { width:44px;min-width:44px;min-height:44px; }
+@media(max-width:759px){#character-dialog.character-runtime{width:calc(100vw - 20px);margin-top:12px;}#character-dialog .character-window{height:calc(100dvh - 140px);}.character-runtime .detail-title{min-width:0;}.character-runtime .current-quest{margin-top:8px;}}
+@media(max-height:650px){#character-dialog.character-runtime{margin-top:12px;}#character-dialog .character-window{height:calc(100dvh - 24px);}}

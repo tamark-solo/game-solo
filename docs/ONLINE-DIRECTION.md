@@ -1,19 +1,21 @@
 # Định hướng online — ba nhân vật chơi được
 
-**Phiên bản:** 0.8 · **Ngày:** 08/10/2026 · **Chuẩn hiện hành:** [GDD 0.28](GDD.md), [tu tiên](CULTIVATION-SYSTEM.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md).
+**Phiên bản:** 0.9 · **Ngày:** 11/10/2026 · **Chuẩn hiện hành:** [GDD 0.32](GDD.md), [tu tiên](CULTIVATION-SYSTEM.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md).
 
-Quyết định mới thay mô hình đệ tử riêng: người chơi chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; cùng vào Hằng Nhạc qua Ngưng Khí, phân hóa sau map nhập môn từ hành trình Trúc Cơ. Bản trước giữ trong [lịch sử](archive/design-before-three-playable-characters/ONLINE-DIRECTION.md). Tài liệu này là định hướng, không báo đã triển khai tài khoản/gameplay.
+Owner làm rõ mục tiêu xuyên chặng: farm/build để mạnh, vận dụng trong PvE/PvP và thể hiện nhân vật bằng trang bị/thời trang/tọa kỵ/pháp bảo. [Ma trận MMORPG](MMORPG-PROGRESSION-PLAN.md) và [hợp đồng Core/backend](MMORPG-SYSTEM-CONTRACTS.md) nối mục tiêu đó vào lộ trình từng gói; cụ thể loot/credit/ruleset/ART còn là thiết kế. Pilot farm/tỷ thí/diện mạo có thể được chọn sau nền RM2 đủ ổn, trước khi hoàn tất toàn tiện ích MMO.
+
+Quyết định mới thay mô hình đệ tử riêng: người chơi chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; cùng vào Hằng Nhạc qua Ngưng Khí, phân hóa sau map nhập môn từ hành trình Trúc Cơ. Bản trước giữ trong [lịch sử](archive/design-before-three-playable-characters/ONLINE-DIRECTION.md). Đây là định hướng; phần đã có local được ghi riêng dưới đây, không xác nhận mọi mục tiêu đã triển khai.
 
 ## 1. Tài khoản, nhân vật và tiến trình
 
-Code local hiện có ba hồ sơ khách SQLite, R01 và [mở đầu HN01–HN02/thổ nạp online](HANG-NHAC-SECT-RUNTIME.md), cùng lease một nhân vật/tài khoản. Đây là phạm vi thử hẹp; chưa có đăng nhập/khóa phân tán MMO, offline, farm hoặc khảo nghiệm.
+Code local đã có [entry tài khoản/server/tạo/chọn nhân vật](GAME-ENTRY-BACKEND.md), SQLite account/realm/character, play ticket/lease, admin/audit; save khách giữ riêng. R01, HN01–HN04/thổ nạp online và [hành trang nhập môn](HANG-NHAC-CHARACTER-RUNTIME.md) đã có pilot. Chưa farm/loot/duel/party/appearance/tọa kỵ hoặc khảo nghiệm cuối; distributed routing/khóa nhiều host và offline vẫn cần đặc tả/triển khai.
 
 | Phần | Thiết kế hiện hành |
 | --- | --- |
 | Lựa chọn ban đầu | Cả ba nhân vật có sẵn tại màn chọn; không chờ arc sau mới mở |
 | Quyền skill khởi đầu | Kiếm Khí, Lôi Ấn, Ngự Phong Bộ R01 có sẵn cho cả ba từ lúc điều khiển; nhiệm vụ chỉ hướng dẫn |
-| Đang điều khiển | Đề xuất một nhân vật mỗi lần; số slot và cách đổi còn mở |
-| Danh tính online | ID hồ sơ + tên tài khoản/biệt danh + nhãn nhân vật; cùng chọn Vương Lâm không cùng một save |
+| Đang điều khiển | Entry local đã có một nhân vật điều khiển/tài khoản, mặc định 3 slot/realm có admin cấu hình; đổi qua luồng chọn, chuyển realm/kho chung còn mở |
+| Danh tính online | ID hồ sơ + tên hồ sơ/biệt danh + nhãn nhân vật; cùng chọn Vương Lâm không cùng một save; tên đăng nhập không cần công khai |
 | Tiến trình riêng | Mốc/cảnh giới hoặc hồi phục, tu vi, công pháp, thuật, pháp bảo, lĩnh ngộ, chương và tài nguyên |
 | Dùng chung tài khoản | Chưa chốt kho/tri thức/tiện ích chung; không tự chuyển tu vi, cơ duyên hoặc đồ độc hữu giữa nhân vật |
 | Máy chủ | Xác nhận trạng thái, hoạt động, kết quả và quyền truy cập của hồ sơ |
@@ -42,7 +44,7 @@ Không lấy một trường “cảnh giới” duy nhất để quy đổi s�
 
 Máy chủ sở hữu thời gian, chi phí, phần thưởng, vị trí hợp lệ, damage, học/luyện hóa và mốc truyện. Trình duyệt chỉ giữ tùy chọn/cache. Import JSON cũ không thay trạng thái hợp lệ.
 
-Mỗi lệnh cần quyền hồ sơ và cách xử lý một lần; gửi lại hoặc nhiều tab không nhân thưởng, đột phá hay thời gian. Kết nối lại khôi phục hoạt động/cảnh đang đọc và kết quả đã xác nhận. Một phiên điều khiển mỗi hồ sơ là đề xuất; hợp đồng thiết bị/phiên cần đặc tả.
+Mỗi lệnh cần quyền hồ sơ và cách xử lý một lần; gửi lại hoặc nhiều tab không nhân thưởng, đột phá hay thời gian. Kết nối lại khôi phục trạng thái và kết quả theo contract của từng hoạt động. Lease điều khiển đã có trong entry local; chuyển room cần handoff một writer, lock nhiều host/thiết bị cần mở rộng theo [hợp đồng Core](MMORPG-SYSTEM-CONTRACTS.md).
 
 Riêng [HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất checkpoint sau pha 1/2, reset hai actor khi thử lại pha chưa qua và pause tối đa 30 giây sau khi server phát hiện mất kết nối. Pause chỉ mô phỏng phiên cá nhân, không thế giới chung; không regen/offline thưởng khi pause. Kết quả đã lưu quyết định checkpoint/M04, event pha cũ không tác động pha mới. Luật này cần đánh giá/hợp đồng kỹ thuật, không áp ngầm cho PvP hoặc mọi encounter.
 
@@ -52,4 +54,4 @@ Tu luyện vắng mặt chỉ tiếp tục hoạt động đã chọn theo đi�
 
 Lát A đề xuất: ba lựa chọn từ đầu, hai tài khoản vào Hằng Nhạc, di chuyển/tương tác, nhiệm vụ/tu luyện đầu và combat đơn giản, lưu riêng. Lát B hoàn thiện Ngưng Khí và khảo nghiệm cuối. Lát C mở phân hóa Trúc Cơ. Đây là phân kỳ thiết kế, chưa là lịch phát hành.
 
-Đăng nhập/DB sản xuất, loot/tổ đội/PvP/giao dịch và quy mô nhiều server còn mở. [Bản thử hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) đã có ba hồ sơ SQLite riêng, một nhân vật điều khiển/tài khoản khách, lưu/khôi phục và thuật do server xác nhận. Đây là hợp đồng local cho kiểm gameplay, không tự khóa slot/kho chung/DB MMO. Map owner đã tích hợp; tiếp theo tương tác môn phái rồi farm/khảo nghiệm riêng theo [kế hoạch](HANG-NHAC-IMPLEMENTATION-PLAN.md). Chưa chứng minh sáu hệ tu tiên hoạt động.
+Entry local đã có đăng nhập và DB hồ sơ; vận hành production, loot/tổ đội/PvP/giao dịch và quy mô nhiều server còn mở. [Bản thử hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) giữ hợp đồng guest riêng. Map owner, tương tác môn phái và HN01–HN04 đã tích hợp; nội dung kế tiếp là HN05/ngoại vi/M02 theo [roadmap](DEVELOPMENT-ROADMAP.md), rồi các pilot MMORPG khi gate đủ. Chưa chứng minh sáu hệ tu tiên hoặc kinh tế MMO hoạt động.

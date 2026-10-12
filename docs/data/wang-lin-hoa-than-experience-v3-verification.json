@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-12",
+  "scope": "Appearance experience review, no gameplay implementation",
+  "ownerFeedback": "ART/motion 02 tạm ổn nhưng trải nghiệm chưa tốt",
+  "assumption": "Prototype stronger phase/interaction feedback while priority question remains open",
+  "artApproved": false,
+  "ownerApproved": false,
+  "assets": {
+    "sourcePack": "docs/design/characters/wang-lin-hoa-than-review-v2",
+    "files": 15,
+    "sourcePublicDistHashMatch": true,
+    "newRasterAssets": false,
+    "bodyFrame": [
+      64,
+      96
+    ],
+    "bodyAnchor": [
+      32,
+      88
+    ],
+    "protectedPixelChanges": [
+      0,
+      0
+    ]
+  },
+  "core": {
+    "model": "client/src/core/character-qi-timeline.ts",
+    "modelHash": "0ed546b1d5b0bc80a94e141bfb02b2d67801f2086b7632a017164bafe7e7819f",
+    "unitCommand": "npx.cmd tsx --test tests/unit/character-qi-timeline.test.ts",
+    "tests": 3,
+    "passed": true
+  },
+  "browser": {
+    "viewports": 6,
+    "layouts": 48,
+    "checks": 1470,
+    "errors": [],
+    "gameplayRequests": [],
+    "websockets": [],
+    "detail": "artifacts/wang-lin-hoa-than-review-v3/verification.json"
+  },
+  "commands": {
+    "typecheck": {
+      "passed": true,
+      "files": 257,
+      "modules": 23
+    },
+    "viteBuild": {
+      "passed": true,
+      "direct": true
+    }
+  },
+  "visualCapture": [
+    "artifacts/wang-lin-hoa-than-review-v3/quiet-sinhTu-1x.png",
+    "artifacts/wang-lin-hoa-than-review-v3/charged-sinhTu-1x.png",
+    "artifacts/wang-lin-hoa-than-review-v3/charged-huyenTu-1x.png",
+    "artifacts/wang-lin-hoa-than-review-v3/flow-sinhTu.gif",
+    "artifacts/wang-lin-hoa-than-review-v3/flow-huyenTu.gif"
+  ],
+  "limits": {
+    "singleSouthIdleBody": true,
+    "frameByFrameFxAtlas": false,
+    "bodyAnimation": false,
+    "audio": false,
+    "runtimeThreeIntegrated": false,
+    "serverGameplay": false,
+    "mapOrDbWritten": false
+  }
+}

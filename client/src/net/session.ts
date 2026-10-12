@@ -12,7 +12,7 @@ export interface OnlinePlayer extends Motion {
 export type ConnectionStatus = 'idle' | 'connecting' | 'connected' | 'reconnecting' | 'error';
 export interface SessionOptions {
   roomName?: string;
-  joinOptions?: Record<string, unknown> | (() => Record<string, unknown>);
+  joinOptions?: Record<string, unknown> | (() => Record<string, unknown>|Promise<Record<string,unknown>>);
   movementStep?: (state: MovementState, command: { moveX: number; moveY: number }, dt: number) => void;
   motionFields?: Array<'motionLocked' | 'dashVX' | 'dashVY'>;
   resumeToken?: () => string | undefined;
@@ -44,7 +44,7 @@ export class NetworkSession {
     this.detail = recoveryAttempt === undefined ? 'Đang vào sân chung…' : 'Đang khôi phục sân chung từ bản lưu…'; this.changed();
     try {
       const client = new Client(endpoint);
-      const joinOptions = typeof this.options.joinOptions === 'function' ? this.options.joinOptions() : this.options.joinOptions;
+      const joinOptions = typeof this.options.joinOptions === 'function' ? await this.options.joinOptions() : this.options.joinOptions;
       const resume = this.options.resumeToken?.();
       let room: Room<CourtyardState>;
       try { if (!resume) throw new Error('Fresh session'); room = await client.reconnect<CourtyardState>(resume); }

@@ -1,0 +1,1666 @@
+{
+  "documentSchema": 1,
+  "id": "vh-content-design-index-v1",
+  "date": "2026-10-12",
+  "status": "design-reference",
+  "runtimeConsumable": false,
+  "pathBase": "workspace-root",
+  "scope": "Partial index of current pilot, HN/EX item plans and retained character appearance designs; not a runtime catalog or source of balance.",
+  "authorityNote": "Source code/docs own values and policies. Relations support browsing, not prerequisite/effect execution. Pending/see-source fields must be resolved in the slice schema before release; missing fields do not imply no restriction or unlimited capacity.",
+  "approvalNote": "Statuses do not infer ownerApproved, balanceApproved or artApproved.",
+  "taxonomyDoc": "docs/GAME-CONTENT-TAXONOMY.md",
+  "controlDoc": "docs/GAME-CONTENT-CONTROL-PLAN.md",
+  "notInventoriedDomains": [
+    "mount",
+    "companion",
+    "method",
+    "npc",
+    "encounter",
+    "loot",
+    "unlock",
+    "achievement",
+    "title",
+    "social",
+    "currency"
+  ],
+  "records": [
+    {
+      "domain": "item",
+      "id": "wood-sword",
+      "displayName": "Mộc kiếm nhập môn",
+      "classification": {
+        "subtype": "equipment",
+        "functionTags": [
+          "equipment"
+        ],
+        "materialFamily": "not_applicable",
+        "gradeRef": "not_applicable",
+        "requirementsStatus": "see-source"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/character-inventory.ts",
+        "symbol": "CHARACTER_ITEMS",
+        "recordId": "wood-sword"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "instance",
+      "stage": "existing",
+      "runtimeNotes": "Starter gear has no bonus; keep current instance IDs."
+    },
+    {
+      "domain": "item",
+      "id": "plain-robe",
+      "displayName": "Áo vải môn phái",
+      "classification": {
+        "subtype": "equipment",
+        "functionTags": [
+          "equipment"
+        ],
+        "materialFamily": "not_applicable",
+        "gradeRef": "not_applicable",
+        "requirementsStatus": "see-source"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/character-inventory.ts",
+        "symbol": "CHARACTER_ITEMS",
+        "recordId": "plain-robe"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "instance",
+      "stage": "existing",
+      "runtimeNotes": "Starter gear has no bonus; keep current instance IDs."
+    },
+    {
+      "domain": "item",
+      "id": "recovery",
+      "displayName": "Vật tư hồi phục",
+      "classification": {
+        "subtype": "consumable",
+        "functionTags": [
+          "recovery"
+        ],
+        "materialFamily": "not_applicable",
+        "gradeRef": "not_applicable",
+        "requirementsStatus": "see-source"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/character-inventory.ts",
+        "symbol": "CHARACTER_ITEMS",
+        "recordId": "recovery"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "sect.supplies",
+      "stage": "existing",
+      "runtimeNotes": "Quantity authority is sect.supplies; no second stack."
+    },
+    {
+      "domain": "item",
+      "id": "hn-refining-material",
+      "displayName": "Nguyên liệu luyện hóa nhập môn",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "craft-input"
+        ],
+        "materialFamily": "pending",
+        "gradeRef": "pending",
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "items",
+        "recordId": "hn-refining-material"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "quest-stack",
+      "stage": "VP0",
+      "runtimeNotes": "Proposed ID/state/storage; not accepted by the runtime inventory codec."
+    },
+    {
+      "domain": "item",
+      "id": "hn-training-jade",
+      "displayName": "Ngọc hộ thân luyện tập",
+      "classification": {
+        "subtype": "artifact",
+        "functionTags": [
+          "active-defense"
+        ],
+        "materialFamily": "not_applicable",
+        "gradeRef": "pending",
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "items",
+        "recordId": "hn-training-jade"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "instance",
+      "stage": "VP1",
+      "runtimeNotes": "Proposed ID/state/storage; not accepted by the runtime inventory codec."
+    },
+    {
+      "domain": "item",
+      "id": "vh-clean-herb",
+      "displayName": "Dược thảo sơ chế",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "craft-input"
+        ],
+        "materialFamily": "herb",
+        "gradeRef": "pending",
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "items",
+        "recordId": "vh-clean-herb"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "stack",
+      "stage": "VP2",
+      "runtimeNotes": "Proposed ID/state/storage; not accepted by the runtime inventory codec."
+    },
+    {
+      "domain": "item",
+      "id": "vh-clear-water",
+      "displayName": "Linh tuyền đã lọc",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "craft-input"
+        ],
+        "materialFamily": "solvent",
+        "gradeRef": "pending",
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "items",
+        "recordId": "vh-clear-water"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "stack",
+      "stage": "VP2",
+      "runtimeNotes": "Proposed ID/state/storage; not accepted by the runtime inventory codec."
+    },
+    {
+      "domain": "item",
+      "id": "vh-soft-fiber",
+      "displayName": "Sợi vân bố",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "craft-input"
+        ],
+        "materialFamily": "fiber",
+        "gradeRef": "pending",
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "items",
+        "recordId": "vh-soft-fiber"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "stack",
+      "stage": "VP2",
+      "runtimeNotes": "Proposed ID/state/storage; not accepted by the runtime inventory codec."
+    },
+    {
+      "domain": "item",
+      "id": "vh-conductive-sand",
+      "displayName": "Cát dẫn khí",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "craft-input"
+        ],
+        "materialFamily": "qi-conductor",
+        "gradeRef": "pending",
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "items",
+        "recordId": "vh-conductive-sand"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "stack",
+      "stage": "VP2",
+      "runtimeNotes": "Proposed ID/state/storage; not accepted by the runtime inventory codec."
+    },
+    {
+      "domain": "item",
+      "id": "vh-stable-jade",
+      "displayName": "Ngọc thô ổn khí",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "craft-input"
+        ],
+        "materialFamily": "substrate",
+        "gradeRef": "pending",
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "items",
+        "recordId": "vh-stable-jade"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "stack",
+      "stage": "VP2",
+      "runtimeNotes": "Proposed ID/state/storage; not accepted by the runtime inventory codec."
+    },
+    {
+      "domain": "item",
+      "id": "vh-guiding-ink",
+      "displayName": "Mực dẫn khí",
+      "classification": {
+        "subtype": "intermediate",
+        "functionTags": [
+          "craft-input",
+          "trip-seal-input"
+        ],
+        "materialFamily": "not_applicable",
+        "gradeRef": "pending",
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "items",
+        "recordId": "vh-guiding-ink"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "stack",
+      "stage": "VP2",
+      "runtimeNotes": "Proposed ID/state/storage; not accepted by the runtime inventory codec."
+    },
+    {
+      "domain": "item",
+      "id": "vh-sealed-case",
+      "displayName": "Hộp giữ khí",
+      "classification": {
+        "subtype": "tool",
+        "functionTags": [
+          "context-action"
+        ],
+        "materialFamily": "not_applicable",
+        "gradeRef": "pending",
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "items",
+        "recordId": "vh-sealed-case"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "instance",
+      "stage": "VP2",
+      "runtimeNotes": "Proposed ID/state/storage; not accepted by the runtime inventory codec."
+    },
+    {
+      "domain": "item",
+      "id": "vh-flow-compass",
+      "displayName": "Định Lưu Bàn",
+      "classification": {
+        "subtype": "tool",
+        "functionTags": [
+          "context-action"
+        ],
+        "materialFamily": "not_applicable",
+        "gradeRef": "pending",
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "items",
+        "recordId": "vh-flow-compass"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "instance",
+      "stage": "VP3",
+      "runtimeNotes": "Proposed ID/state/storage; not accepted by the runtime inventory codec."
+    },
+    {
+      "domain": "quest",
+      "id": "HN01",
+      "displayName": "Bước vào Hằng Nhạc",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/sect-quests.ts",
+        "symbol": "sectQuests",
+        "recordId": "HN01"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "existing",
+      "runtimeNotes": "sectQuests is a read-only view; server sect/lesson code owns progress and rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN02",
+      "displayName": "Một vòng vận hành",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/sect-quests.ts",
+        "symbol": "sectQuests",
+        "recordId": "HN02"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "existing",
+      "runtimeNotes": "sectQuests is a read-only view; server sect/lesson code owns progress and rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN03",
+      "displayName": "Vận dụng thuật nền",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/sect-quests.ts",
+        "symbol": "sectQuests",
+        "recordId": "HN03"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "existing",
+      "runtimeNotes": "sectQuests is a read-only view; server sect/lesson code owns progress and rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN04",
+      "displayName": "Nhìn đòn mà tiến",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/sect-quests.ts",
+        "symbol": "sectQuests",
+        "recordId": "HN04"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "existing",
+      "runtimeNotes": "sectQuests is a read-only view; server sect/lesson code owns progress and rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN05",
+      "displayName": "Ra khỏi sân luyện",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/HANG-NHAC-CHAPTER-PLAN.md",
+        "section": "HN05"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM2",
+      "runtimeNotes": "Chapter A is proposed; this index does not execute prerequisites or rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN06",
+      "displayName": "Dấu riêng",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/HANG-NHAC-CHAPTER-PLAN.md",
+        "section": "HN06"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM3",
+      "runtimeNotes": "Chapter A is proposed; this index does not execute prerequisites or rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN07",
+      "displayName": "Vì sao chưa tiến?",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/HANG-NHAC-CHAPTER-PLAN.md",
+        "section": "HN07"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM3",
+      "runtimeNotes": "Chapter A is proposed; this index does not execute prerequisites or rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN08",
+      "displayName": "Vật trong tay",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/HANG-NHAC-CHAPTER-PLAN.md",
+        "section": "HN08"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM3",
+      "runtimeNotes": "Chapter A is proposed; this index does not execute prerequisites or rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN09",
+      "displayName": "Vận dụng ổn định",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/HANG-NHAC-CHAPTER-PLAN.md",
+        "section": "HN09"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM3",
+      "runtimeNotes": "Chapter A is proposed; this index does not execute prerequisites or rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN10",
+      "displayName": "Khảo nghiệm nhập môn",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/HANG-NHAC-CHAPTER-PLAN.md",
+        "section": "HN10"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM4",
+      "runtimeNotes": "Chapter A is proposed; this index does not execute prerequisites or rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN11",
+      "displayName": "Nhìn lại con đường",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/HANG-NHAC-CHAPTER-PLAN.md",
+        "section": "HN11"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM4",
+      "runtimeNotes": "Chapter A is proposed; this index does not execute prerequisites or rewards."
+    },
+    {
+      "domain": "quest",
+      "id": "HN12",
+      "displayName": "Xuất hành",
+      "classification": {
+        "subtype": "main-story"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/HANG-NHAC-CHAPTER-PLAN.md",
+        "section": "HN12"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM4",
+      "runtimeNotes": "Chapter A is proposed; this index does not execute prerequisites or rewards."
+    },
+    {
+      "domain": "activity",
+      "id": "EX01",
+      "displayName": "EX01 — hoạt động hậu nhập môn",
+      "classification": {
+        "subtype": "finite-quest-activity"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "activities",
+        "recordId": "EX01"
+      },
+      "relations": [
+        {
+          "domain": "quest",
+          "id": "HN12",
+          "relation": "requires-progress"
+        },
+        {
+          "domain": "source",
+          "id": "ex01-first",
+          "relation": "uses-grant-source"
+        }
+      ],
+      "ownershipScope": "character",
+      "stage": "VP2"
+    },
+    {
+      "domain": "activity",
+      "id": "EX02",
+      "displayName": "EX02 — hoạt động hậu nhập môn",
+      "classification": {
+        "subtype": "finite-quest-activity"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "activities",
+        "recordId": "EX02"
+      },
+      "relations": [
+        {
+          "domain": "activity",
+          "id": "EX01",
+          "relation": "requires-progress"
+        },
+        {
+          "domain": "source",
+          "id": "ex02-first",
+          "relation": "uses-grant-source"
+        }
+      ],
+      "ownershipScope": "character",
+      "stage": "VP2"
+    },
+    {
+      "domain": "activity",
+      "id": "EX03",
+      "displayName": "EX03 — hoạt động hậu nhập môn",
+      "classification": {
+        "subtype": "finite-quest-activity"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "activities",
+        "recordId": "EX03"
+      },
+      "relations": [
+        {
+          "domain": "activity",
+          "id": "EX02",
+          "relation": "requires-progress"
+        }
+      ],
+      "ownershipScope": "character",
+      "stage": "VP2"
+    },
+    {
+      "domain": "activity",
+      "id": "EX04",
+      "displayName": "EX04 — hoạt động hậu nhập môn",
+      "classification": {
+        "subtype": "finite-quest-activity"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "activities",
+        "recordId": "EX04"
+      },
+      "relations": [
+        {
+          "domain": "activity",
+          "id": "EX03",
+          "relation": "requires-progress"
+        }
+      ],
+      "ownershipScope": "character",
+      "stage": "VP3"
+    },
+    {
+      "domain": "source",
+      "id": "hn05-first",
+      "displayName": "hn05-first",
+      "classification": {
+        "subtype": "first-time-grant"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "sources",
+        "recordId": "hn05-first"
+      },
+      "relations": [
+        {
+          "domain": "quest",
+          "id": "HN05",
+          "relation": "requires-progress"
+        },
+        {
+          "domain": "item",
+          "id": "hn-refining-material",
+          "relation": "grants"
+        },
+        {
+          "domain": "item",
+          "id": "recovery",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "character",
+      "repeatable": false
+    },
+    {
+      "domain": "source",
+      "id": "hn06-first",
+      "displayName": "hn06-first",
+      "classification": {
+        "subtype": "first-time-grant"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "sources",
+        "recordId": "hn06-first"
+      },
+      "relations": [
+        {
+          "domain": "quest",
+          "id": "HN06",
+          "relation": "requires-progress"
+        },
+        {
+          "domain": "item",
+          "id": "hn-refining-material",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "character",
+      "repeatable": false
+    },
+    {
+      "domain": "source",
+      "id": "hn08-first-blank",
+      "displayName": "hn08-first-blank",
+      "classification": {
+        "subtype": "first-time-grant"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "sources",
+        "recordId": "hn08-first-blank"
+      },
+      "relations": [
+        {
+          "domain": "quest",
+          "id": "HN08",
+          "relation": "requires-progress"
+        },
+        {
+          "domain": "item",
+          "id": "hn-training-jade",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "character",
+      "repeatable": false
+    },
+    {
+      "domain": "source",
+      "id": "ex01-first",
+      "displayName": "ex01-first",
+      "classification": {
+        "subtype": "first-time-grant"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "sources",
+        "recordId": "ex01-first"
+      },
+      "relations": [
+        {
+          "domain": "activity",
+          "id": "EX01",
+          "relation": "requires-progress"
+        },
+        {
+          "domain": "item",
+          "id": "vh-clean-herb",
+          "relation": "grants"
+        },
+        {
+          "domain": "item",
+          "id": "vh-clear-water",
+          "relation": "grants"
+        },
+        {
+          "domain": "item",
+          "id": "vh-conductive-sand",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "character",
+      "repeatable": false
+    },
+    {
+      "domain": "source",
+      "id": "ex02-first",
+      "displayName": "ex02-first",
+      "classification": {
+        "subtype": "first-time-grant"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "sources",
+        "recordId": "ex02-first"
+      },
+      "relations": [
+        {
+          "domain": "activity",
+          "id": "EX02",
+          "relation": "requires-progress"
+        },
+        {
+          "domain": "item",
+          "id": "vh-soft-fiber",
+          "relation": "grants"
+        },
+        {
+          "domain": "item",
+          "id": "vh-stable-jade",
+          "relation": "grants"
+        },
+        {
+          "domain": "item",
+          "id": "vh-conductive-sand",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "character",
+      "repeatable": false
+    },
+    {
+      "domain": "recipe",
+      "id": "hn-refine-training-jade",
+      "displayName": "hn-refine-training-jade",
+      "classification": {
+        "subtype": "craft-or-transform"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "recipes",
+        "recordId": "hn-refine-training-jade"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "hn-refining-material",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "hn-training-jade",
+          "relation": "keeps"
+        },
+        {
+          "domain": "item",
+          "id": "hn-training-jade",
+          "relation": "transforms-same-instance"
+        },
+        {
+          "domain": "quest",
+          "id": "HN08",
+          "relation": "requires-progress"
+        }
+      ],
+      "ownershipScope": "character",
+      "stage": "VP1",
+      "runtimeNotes": "Costs, outputs and unlock semantics remain in the source plan; quantities are not copied here."
+    },
+    {
+      "domain": "recipe",
+      "id": "vh-recipe-ink",
+      "displayName": "vh-recipe-ink",
+      "classification": {
+        "subtype": "craft-or-transform"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "recipes",
+        "recordId": "vh-recipe-ink"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "vh-conductive-sand",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "vh-clear-water",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "vh-guiding-ink",
+          "relation": "produces"
+        },
+        {
+          "domain": "activity",
+          "id": "EX01",
+          "relation": "requires-progress"
+        }
+      ],
+      "ownershipScope": "character",
+      "stage": "VP2",
+      "runtimeNotes": "Costs, outputs and unlock semantics remain in the source plan; quantities are not copied here."
+    },
+    {
+      "domain": "recipe",
+      "id": "vh-recipe-recovery",
+      "displayName": "vh-recipe-recovery",
+      "classification": {
+        "subtype": "craft-or-transform"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "recipes",
+        "recordId": "vh-recipe-recovery"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "vh-clean-herb",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "vh-clear-water",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "recovery",
+          "relation": "produces"
+        },
+        {
+          "domain": "activity",
+          "id": "EX01",
+          "relation": "requires-progress"
+        }
+      ],
+      "ownershipScope": "character",
+      "stage": "VP2",
+      "runtimeNotes": "Costs, outputs and unlock semantics remain in the source plan; quantities are not copied here."
+    },
+    {
+      "domain": "recipe",
+      "id": "vh-recipe-case",
+      "displayName": "vh-recipe-case",
+      "classification": {
+        "subtype": "craft-or-transform"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "recipes",
+        "recordId": "vh-recipe-case"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "vh-soft-fiber",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "vh-stable-jade",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "vh-sealed-case",
+          "relation": "produces"
+        },
+        {
+          "domain": "activity",
+          "id": "EX02",
+          "relation": "requires-progress"
+        }
+      ],
+      "ownershipScope": "character",
+      "stage": "VP2",
+      "runtimeNotes": "Costs, outputs and unlock semantics remain in the source plan; quantities are not copied here."
+    },
+    {
+      "domain": "recipe",
+      "id": "vh-recipe-compass",
+      "displayName": "vh-recipe-compass",
+      "classification": {
+        "subtype": "craft-or-transform"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "recipes",
+        "recordId": "vh-recipe-compass"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "vh-soft-fiber",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "vh-stable-jade",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "vh-conductive-sand",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "vh-flow-compass",
+          "relation": "produces"
+        },
+        {
+          "domain": "activity",
+          "id": "EX03",
+          "relation": "requires-progress"
+        }
+      ],
+      "ownershipScope": "character",
+      "stage": "VP3",
+      "runtimeNotes": "Costs, outputs and unlock semantics remain in the source plan; quantities are not copied here."
+    },
+    {
+      "domain": "recipe",
+      "id": "vh-recipe-seal",
+      "displayName": "vh-recipe-seal",
+      "classification": {
+        "subtype": "craft-or-transform"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/systems/items-v1/plan.json",
+        "collection": "recipes",
+        "recordId": "vh-recipe-seal"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "vh-guiding-ink",
+          "relation": "consumes"
+        },
+        {
+          "domain": "item",
+          "id": "vh-sealed-case",
+          "relation": "keeps"
+        },
+        {
+          "domain": "activity",
+          "id": "EX03",
+          "relation": "requires-progress"
+        }
+      ],
+      "ownershipScope": "character",
+      "stage": "VP2",
+      "runtimeNotes": "Effect belongs to an activity/trip; not a duplicate output item."
+    },
+    {
+      "domain": "skill",
+      "id": "sword",
+      "displayName": "Kiếm Khí",
+      "classification": {
+        "subtype": "projectile"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/skills/definitions.ts",
+        "symbol": "SKILL_DEFINITIONS",
+        "recordId": "sword"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "R01",
+      "runtimeNotes": "Gameplay definitions/behavior/timeline remain in skill Core; tier is not the skill ID."
+    },
+    {
+      "domain": "skill",
+      "id": "thunder",
+      "displayName": "Lôi Ấn",
+      "classification": {
+        "subtype": "targeted-strike"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/skills/definitions.ts",
+        "symbol": "SKILL_DEFINITIONS",
+        "recordId": "thunder"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "R01",
+      "runtimeNotes": "Gameplay definitions/behavior/timeline remain in skill Core; tier is not the skill ID."
+    },
+    {
+      "domain": "skill",
+      "id": "wind",
+      "displayName": "Ngự Phong Bộ",
+      "classification": {
+        "subtype": "dash"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/skills/definitions.ts",
+        "symbol": "SKILL_DEFINITIONS",
+        "recordId": "wind"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "R01",
+      "runtimeNotes": "Gameplay definitions/behavior/timeline remain in skill Core; tier is not the skill ID."
+    },
+    {
+      "domain": "cultivation",
+      "id": "M01",
+      "displayName": "M01 — mốc vận hành",
+      "classification": {
+        "subtype": "gameplay-milestone"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/CHARACTER-SYSTEM.md",
+        "section": "5"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "existing",
+      "runtimeNotes": "Milestone differs from accumulated cultivation, confirmed layer and story canon realm."
+    },
+    {
+      "domain": "cultivation",
+      "id": "M02",
+      "displayName": "M02 — mốc vận hành",
+      "classification": {
+        "subtype": "gameplay-milestone"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/CHARACTER-SYSTEM.md",
+        "section": "5"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM2",
+      "runtimeNotes": "Milestone differs from accumulated cultivation, confirmed layer and story canon realm."
+    },
+    {
+      "domain": "cultivation",
+      "id": "M03",
+      "displayName": "M03 — mốc vận hành",
+      "classification": {
+        "subtype": "gameplay-milestone"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/CHARACTER-SYSTEM.md",
+        "section": "5"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM3",
+      "runtimeNotes": "Milestone differs from accumulated cultivation, confirmed layer and story canon realm."
+    },
+    {
+      "domain": "cultivation",
+      "id": "M04",
+      "displayName": "M04 — mốc vận hành",
+      "classification": {
+        "subtype": "gameplay-milestone"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "pending",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/CHARACTER-SYSTEM.md",
+        "section": "5"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "stage": "RM4",
+      "runtimeNotes": "Milestone differs from accumulated cultivation, confirmed layer and story canon realm."
+    },
+    {
+      "domain": "map",
+      "id": "hang-nhac",
+      "displayName": "Hằng Nhạc",
+      "classification": {
+        "subtype": "runtime-world"
+      },
+      "status": {
+        "implementation": "implemented-local",
+        "decision": "see-source",
+        "balance": "baseline-see-source",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "shared/data/hang-nhac.json",
+        "recordId": "hang-nhac"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "existing",
+      "runtimeNotes": "Reference only; navigation/map version/hash and owner-authored data remain unchanged."
+    },
+    {
+      "domain": "cosmetic",
+      "id": "outfit-wang-lin-van-ngoc-v2",
+      "displayName": "Vân Ngọc",
+      "classification": {
+        "subtype": "outfit",
+        "functionTags": [
+          "character-customization"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "not_applicable",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/characters/character-customization-library-v1/catalog.json",
+        "collection": "records",
+        "recordId": "outfit-wang-lin-van-ngoc-v2"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "appearance-definition-reference",
+      "stage": "initiation",
+      "runtimeNotes": "Retained for character customization and progression appearance. One south standing pose only; creation selection and runtime outfit binding are not implemented."
+    },
+    {
+      "domain": "cosmetic",
+      "id": "outfit-wang-lin-huyen-van-v2",
+      "displayName": "Huyền Vân",
+      "classification": {
+        "subtype": "outfit",
+        "functionTags": [
+          "character-customization"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "not_applicable",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/characters/character-customization-library-v1/catalog.json",
+        "collection": "records",
+        "recordId": "outfit-wang-lin-huyen-van-v2"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "appearance-definition-reference",
+      "stage": "initiation",
+      "runtimeNotes": "Retained for character customization and progression appearance. One south standing pose only; creation selection and runtime outfit binding are not implemented."
+    },
+    {
+      "domain": "cosmetic",
+      "id": "outfit-wang-lin-xich-tieu-v2",
+      "displayName": "Xích Tiêu",
+      "classification": {
+        "subtype": "outfit",
+        "functionTags": [
+          "character-customization"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "not_applicable",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/characters/character-customization-library-v1/catalog.json",
+        "collection": "records",
+        "recordId": "outfit-wang-lin-xich-tieu-v2"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "appearance-definition-reference",
+      "stage": "initiation",
+      "runtimeNotes": "Retained for character customization and progression appearance. One south standing pose only; creation selection and runtime outfit binding are not implemented."
+    },
+    {
+      "domain": "cosmetic",
+      "id": "outfit-wang-lin-sinh-tu-v2",
+      "displayName": "Sinh Tử",
+      "classification": {
+        "subtype": "outfit",
+        "functionTags": [
+          "character-customization"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "not_applicable",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/characters/character-customization-library-v1/catalog.json",
+        "collection": "records",
+        "recordId": "outfit-wang-lin-sinh-tu-v2"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "appearance-definition-reference",
+      "stage": "hoa-than",
+      "runtimeNotes": "Retained for character customization and progression appearance. One south standing pose only; creation selection and runtime outfit binding are not implemented."
+    },
+    {
+      "domain": "cosmetic",
+      "id": "outfit-wang-lin-huyen-tu-v2",
+      "displayName": "Huyền Tử",
+      "classification": {
+        "subtype": "outfit",
+        "functionTags": [
+          "character-customization"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "not_applicable",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/characters/character-customization-library-v1/catalog.json",
+        "collection": "records",
+        "recordId": "outfit-wang-lin-huyen-tu-v2"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "appearance-definition-reference",
+      "stage": "hoa-than",
+      "runtimeNotes": "Retained for character customization and progression appearance. One south standing pose only; creation selection and runtime outfit binding are not implemented."
+    },
+    {
+      "domain": "cosmetic",
+      "id": "aura-sinh-tu-wheel-v4",
+      "displayName": "Luân Sinh Tử",
+      "classification": {
+        "subtype": "aura",
+        "functionTags": [
+          "cultivation-appearance"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "not_applicable",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/characters/character-customization-library-v1/catalog.json",
+        "collection": "records",
+        "recordId": "aura-sinh-tu-wheel-v4"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "appearance-definition-reference",
+      "stage": "hoa-than",
+      "runtimeNotes": "Owner approved the static concept on 2026-10-12. Retain source/prompt/PNG; production layers/animation and server unlocks are not implemented."
+    },
+    {
+      "domain": "cosmetic",
+      "id": "aura-jade-sword-domain-v4",
+      "displayName": "Kiếm Vực Huyền Ngọc",
+      "classification": {
+        "subtype": "aura",
+        "functionTags": [
+          "cultivation-appearance"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "not_applicable",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/characters/character-customization-library-v1/catalog.json",
+        "collection": "records",
+        "recordId": "aura-jade-sword-domain-v4"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "appearance-definition-reference",
+      "stage": "hoa-than",
+      "runtimeNotes": "Owner approved the static concept on 2026-10-12. Retain source/prompt/PNG; production layers/animation and server unlocks are not implemented."
+    },
+    {
+      "domain": "cosmetic",
+      "id": "aura-blood-moon-domain-v4",
+      "displayName": "Huyết Nguyệt Ma Vực",
+      "classification": {
+        "subtype": "aura",
+        "functionTags": [
+          "cultivation-appearance"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "see-source",
+        "balance": "not_applicable",
+        "art": "see-source"
+      },
+      "source": {
+        "path": "docs/design/characters/character-customization-library-v1/catalog.json",
+        "collection": "records",
+        "recordId": "aura-blood-moon-domain-v4"
+      },
+      "relations": [],
+      "ownershipScope": "character",
+      "storage": "appearance-definition-reference",
+      "stage": "hoa-than",
+      "runtimeNotes": "Owner approved the static concept on 2026-10-12. Retain source/prompt/PNG; production layers/animation and server unlocks are not implemented."
+    }
+  ]
+}

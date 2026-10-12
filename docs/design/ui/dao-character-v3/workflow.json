@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-11",
+  "status": "UX proposal; review-only",
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "sources": [
+    {
+      "path": "client/src/core/ui-material-review-state.ts",
+      "sha256": "455621d1d3feec0dabe49f665b7969452817e3ae530527067fad0e168edd1c99"
+    },
+    {
+      "path": "client/src/core/dao-character-review-model.ts",
+      "sha256": "f34c04fd465a7e92e03a734e17b3c681583ef193d90b01cd0ab484d460eb61f0"
+    },
+    {
+      "path": "client/src/ui/dao-character-review.ts",
+      "sha256": "be88637b77546aa6fd6cb12e469d3ba4a61505cbae2f77f3345dc606d686b2ac"
+    },
+    {
+      "path": "client/src/ui/dao-character-review-v3.css",
+      "sha256": "442f47d7968ae533ed084ac41b2ca78ee2ec24a208c12fab927ab468d7a1fc02"
+    },
+    {
+      "path": "client/src/ui-material-review.ts",
+      "sha256": "a3f943f959696f4e77d9065cd0df5bf5f14d86093e6894c0ca61cf2a0e18515b"
+    },
+    {
+      "path": "client/ui-material-review.html",
+      "sha256": "d56a3ec3d74ae4ac09c1cb2d7b451ea4e1efa014627715a1f062ef65e8b39ee3"
+    }
+  ],
+  "screens": [
+    "overview",
+    "attributes",
+    "equipment",
+    "inventory"
+  ],
+  "inventoryScenarios": [
+    "ready",
+    "combat",
+    "offline",
+    "pending",
+    "rejected",
+    "empty"
+  ],
+  "nativeSlots": [
+    "weapon",
+    "robe",
+    "charm"
+  ],
+  "actions": [
+    "equip",
+    "unequip",
+    "use",
+    "protect"
+  ],
+  "flows": [
+    [
+      "character",
+      "equipment",
+      "item detail",
+      "compare",
+      "pending",
+      "result",
+      "inventory"
+    ],
+    [
+      "inventory",
+      "recovery source",
+      "HN01",
+      "selected item",
+      "use",
+      "HP and quantity result",
+      "cooldown"
+    ],
+    [
+      "inventory last stack consumed",
+      "empty list",
+      "source direction"
+    ]
+  ],
+  "integration": {
+    "reads": "CharacterView",
+    "writes": "CharacterCommand via existing session",
+    "authority": "existing server policy/receipt/private snapshot",
+    "reviewModelExcludedFromLive": true
+  }
+}

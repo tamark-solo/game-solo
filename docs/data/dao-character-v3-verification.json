@@ -1,0 +1,3232 @@
+{
+  "date": "2026-10-11",
+  "revision": "Linh Dai 03 after HUD 04",
+  "scope": "Isolated character/inventory/equipment UX; shared starter definitions and memory fixture, no live profile writes",
+  "ownerApproved": false,
+  "artApproved": false,
+  "runtimeIntegrated": false,
+  "sources": [
+    {
+      "path": "client/src/core/ui-material-review-state.ts",
+      "sha256": "455621d1d3feec0dabe49f665b7969452817e3ae530527067fad0e168edd1c99"
+    },
+    {
+      "path": "client/src/core/dao-character-review-model.ts",
+      "sha256": "f34c04fd465a7e92e03a734e17b3c681583ef193d90b01cd0ab484d460eb61f0"
+    },
+    {
+      "path": "client/src/ui/dao-character-review.ts",
+      "sha256": "be88637b77546aa6fd6cb12e469d3ba4a61505cbae2f77f3345dc606d686b2ac"
+    },
+    {
+      "path": "client/src/ui/dao-character-review-v3.css",
+      "sha256": "442f47d7968ae533ed084ac41b2ca78ee2ec24a208c12fab927ab468d7a1fc02"
+    },
+    {
+      "path": "client/src/ui-material-review.ts",
+      "sha256": "a3f943f959696f4e77d9065cd0df5bf5f14d86093e6894c0ca61cf2a0e18515b"
+    },
+    {
+      "path": "client/ui-material-review.html",
+      "sha256": "d56a3ec3d74ae4ac09c1cb2d7b451ea4e1efa014627715a1f062ef65e8b39ee3"
+    }
+  ],
+  "appearanceRegression": [
+    "tu-dao palette visibly changes",
+    "tu-dao reset restores material",
+    "doa-ma palette visibly changes",
+    "doa-ma reset restores material"
+  ],
+  "summary": {
+    "presentationLayouts": 171,
+    "presentationAssertions": 97,
+    "conditionLayouts": 48,
+    "workflowAssertions": 108,
+    "hudRegressionLayouts": 249,
+    "hudRegressionRoutes": 152,
+    "hudRegressionAssertions": 587,
+    "errors": 0,
+    "gameplayRequests": 0
+  },
+  "presentation": {
+    "date": "2026-10-11",
+    "scope": "Isolated UX review; no gameplay authority or character ART approval",
+    "layouts": [
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "doa-ma",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "doa-ma",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "doa-ma",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "doa-ma",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "doa-ma",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "doa-ma",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "doa-ma",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "doa-ma",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "character",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "doa-ma",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "doa-ma",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "doa-ma",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "doa-ma",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "doa-ma",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "doa-ma",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "doa-ma",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "doa-ma",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "character",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "doa-ma",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "doa-ma",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "doa-ma",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "doa-ma",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "doa-ma",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "doa-ma",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "doa-ma",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "doa-ma",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "character",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 760,
+        "height": 760,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "doa-ma",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "doa-ma",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "doa-ma",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "doa-ma",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "doa-ma",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "doa-ma",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "doa-ma",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "doa-ma",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "character",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "doa-ma",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "doa-ma",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "doa-ma",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "doa-ma",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "doa-ma",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "doa-ma",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "doa-ma",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "doa-ma",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "character",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 980,
+        "height": 780,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "doa-ma",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "doa-ma",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "doa-ma",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "doa-ma",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "doa-ma",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "doa-ma",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "doa-ma",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "doa-ma",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "character",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1100,
+        "height": 800,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "doa-ma",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "doa-ma",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "doa-ma",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "doa-ma",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "doa-ma",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "doa-ma",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "doa-ma",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "doa-ma",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "character",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "character",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1366,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "overview",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "attributes",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "equipment",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "cultivation",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "artifact",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "inventory",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "appearance",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "doa-ma",
+        "view": "quest",
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "character",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "inventory",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "tu-dao",
+        "view": "appearance",
+        "readingScale": 2,
+        "page": false,
+        "regions": [],
+        "text": []
+      }
+    ],
+    "checks": [
+      "recovery description 320",
+      "mobile list hidden 320",
+      "mobile back focus 320",
+      "accent independent search 320",
+      "search keeps focus 320",
+      "empty search 320",
+      "no fake materials 320",
+      "theme preserves review state 320",
+      "seven reserved slots 320",
+      "storage untouched 320",
+      "recovery description 390",
+      "mobile list hidden 390",
+      "mobile back focus 390",
+      "accent independent search 390",
+      "search keeps focus 390",
+      "empty search 390",
+      "no fake materials 390",
+      "theme preserves review state 390",
+      "seven reserved slots 390",
+      "storage untouched 390",
+      "recovery description 760",
+      "mobile list hidden 760",
+      "mobile back focus 760",
+      "accent independent search 760",
+      "search keeps focus 760",
+      "empty search 760",
+      "no fake materials 760",
+      "theme preserves review state 760",
+      "seven reserved slots 760",
+      "storage untouched 760",
+      "recovery description 844",
+      "accent independent search 844",
+      "search keeps focus 844",
+      "empty search 844",
+      "no fake materials 844",
+      "theme preserves review state 844",
+      "seven reserved slots 844",
+      "storage untouched 844",
+      "recovery description 980",
+      "accent independent search 980",
+      "search keeps focus 980",
+      "empty search 980",
+      "no fake materials 980",
+      "theme preserves review state 980",
+      "seven reserved slots 980",
+      "storage untouched 980",
+      "recovery description 1100",
+      "accent independent search 1100",
+      "search keeps focus 1100",
+      "empty search 1100",
+      "no fake materials 1100",
+      "theme preserves review state 1100",
+      "seven reserved slots 1100",
+      "storage untouched 1100",
+      "recovery description 1280",
+      "accent independent search 1280",
+      "search keeps focus 1280",
+      "empty search 1280",
+      "no fake materials 1280",
+      "theme preserves review state 1280",
+      "seven reserved slots 1280",
+      "storage untouched 1280",
+      "recovery description 1366",
+      "accent independent search 1366",
+      "search keeps focus 1366",
+      "empty search 1366",
+      "no fake materials 1366",
+      "theme preserves review state 1366",
+      "seven reserved slots 1366",
+      "storage untouched 1366",
+      "recovery description 1600",
+      "accent independent search 1600",
+      "search keeps focus 1600",
+      "empty search 1600",
+      "no fake materials 1600",
+      "theme preserves review state 1600",
+      "seven reserved slots 1600",
+      "storage untouched 1600",
+      "artifact study does not consume resource",
+      "appearance preview isolated",
+      "theme preserves palette preview",
+      "appearance reset reversible",
+      "flight has no invented owned items",
+      "mount has no invented owned items",
+      "title has no invented owned items",
+      "HUD preset ready",
+      "HUD preset health",
+      "HUD preset resource",
+      "HUD preset cooldown",
+      "HUD preset target",
+      "HUD preset casting",
+      "HUD preset offline",
+      "manual reduced motion",
+      "OS reduced motion",
+      "gear slot opens matching item",
+      "no browser errors",
+      "no gameplay API or gameplay WebSocket requests (Vite HMR excluded)"
+    ],
+    "errors": [],
+    "network": []
+  },
+  "conditions": {
+    "layouts": [
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "ready",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "ready",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "combat",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "combat",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "offline",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "offline",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "pending",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "pending",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "rejected",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "rejected",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "empty",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "scenario": "empty",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "ready",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "ready",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "combat",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "combat",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "offline",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "offline",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "pending",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "pending",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "rejected",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "rejected",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "empty",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "scenario": "empty",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "ready",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "ready",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "combat",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "combat",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "offline",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "offline",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "pending",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "pending",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "rejected",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "rejected",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "empty",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "scenario": "empty",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "ready",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "ready",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "combat",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "combat",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "offline",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "offline",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "pending",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "pending",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "rejected",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "rejected",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "empty",
+        "view": "inventory",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "scenario": "empty",
+        "view": "equipment",
+        "horizontal": [],
+        "outside": [],
+        "pageOverflow": false
+      }
+    ],
+    "errors": []
+  },
+  "workflow": {
+    "date": "2026-10-11",
+    "checks": [
+      "pending keeps equipment 320",
+      "pending blocks duplicate 320",
+      "unequip moves same owned item to bag 320",
+      "confirmed change explained 320",
+      "comparison sees empty slot 320",
+      "bag has sword and supplies 320",
+      "equip restores owned instance 320",
+      "two worn items without copies 320",
+      "combat blocks changing gear 320",
+      "protection permitted during lesson 320",
+      "offline blocks commands 320",
+      "pending scenario blocks commands 320",
+      "rejection preserves worn item 320",
+      "rejection explains preserved result 320",
+      "cancelled pending is not replayed 320",
+      "theme preserves operation outcome 320",
+      "empty native slot has source direction 320",
+      "empty scenario has no fabricated items 320",
+      "full HP keeps supplies 320",
+      "source opens correct quest 320",
+      "source returns to selected item 320",
+      "source return restores focus 320",
+      "pending recovery does not consume 320",
+      "recovery consumes once and heals 30 320",
+      "cooldown prevents repeat 320",
+      "last supply removes stack 320",
+      "no storage mutations 320",
+      "pending keeps equipment 390",
+      "pending blocks duplicate 390",
+      "unequip moves same owned item to bag 390",
+      "confirmed change explained 390",
+      "comparison sees empty slot 390",
+      "bag has sword and supplies 390",
+      "equip restores owned instance 390",
+      "two worn items without copies 390",
+      "combat blocks changing gear 390",
+      "protection permitted during lesson 390",
+      "offline blocks commands 390",
+      "pending scenario blocks commands 390",
+      "rejection preserves worn item 390",
+      "rejection explains preserved result 390",
+      "cancelled pending is not replayed 390",
+      "theme preserves operation outcome 390",
+      "empty native slot has source direction 390",
+      "empty scenario has no fabricated items 390",
+      "full HP keeps supplies 390",
+      "source opens correct quest 390",
+      "source returns to selected item 390",
+      "source return restores focus 390",
+      "pending recovery does not consume 390",
+      "recovery consumes once and heals 30 390",
+      "cooldown prevents repeat 390",
+      "last supply removes stack 390",
+      "no storage mutations 390",
+      "pending keeps equipment 844",
+      "pending blocks duplicate 844",
+      "unequip moves same owned item to bag 844",
+      "confirmed change explained 844",
+      "comparison sees empty slot 844",
+      "bag has sword and supplies 844",
+      "equip restores owned instance 844",
+      "two worn items without copies 844",
+      "combat blocks changing gear 844",
+      "protection permitted during lesson 844",
+      "offline blocks commands 844",
+      "pending scenario blocks commands 844",
+      "rejection preserves worn item 844",
+      "rejection explains preserved result 844",
+      "cancelled pending is not replayed 844",
+      "theme preserves operation outcome 844",
+      "empty native slot has source direction 844",
+      "empty scenario has no fabricated items 844",
+      "full HP keeps supplies 844",
+      "source opens correct quest 844",
+      "source returns to selected item 844",
+      "source return restores focus 844",
+      "pending recovery does not consume 844",
+      "recovery consumes once and heals 30 844",
+      "cooldown prevents repeat 844",
+      "last supply removes stack 844",
+      "no storage mutations 844",
+      "pending keeps equipment 1366",
+      "pending blocks duplicate 1366",
+      "unequip moves same owned item to bag 1366",
+      "confirmed change explained 1366",
+      "comparison sees empty slot 1366",
+      "bag has sword and supplies 1366",
+      "equip restores owned instance 1366",
+      "two worn items without copies 1366",
+      "combat blocks changing gear 1366",
+      "protection permitted during lesson 1366",
+      "offline blocks commands 1366",
+      "pending scenario blocks commands 1366",
+      "rejection preserves worn item 1366",
+      "rejection explains preserved result 1366",
+      "cancelled pending is not replayed 1366",
+      "theme preserves operation outcome 1366",
+      "empty native slot has source direction 1366",
+      "empty scenario has no fabricated items 1366",
+      "full HP keeps supplies 1366",
+      "source opens correct quest 1366",
+      "source returns to selected item 1366",
+      "source return restores focus 1366",
+      "pending recovery does not consume 1366",
+      "recovery consumes once and heals 30 1366",
+      "cooldown prevents repeat 1366",
+      "last supply removes stack 1366",
+      "no storage mutations 1366"
+    ],
+    "errors": [],
+    "network": []
+  },
+  "hudRegression": {
+    "scope": "Full HUD design preview; not gameplay integration",
+    "layouts": 249,
+    "routes": [
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "character",
+        "screen": "character"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "inventory",
+        "screen": "inventory"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "equipment",
+        "screen": "character"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "appearance",
+        "screen": "appearance"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "mount",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "beast",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "cultivation",
+        "screen": "character"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "method",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "spells",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "artifact",
+        "screen": "character"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "breakthrough",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "loadout",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "crafting",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "market",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "alchemy",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "forging",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "gathering",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "storage",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "map",
+        "screen": "map"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "quest",
+        "screen": "quest"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "activities",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "pve",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "dungeon",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "world-boss",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "bounty",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "pvp",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "duel",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "ranking",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "party",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "friends",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "sect",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "mail",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "chat",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "abode",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "achievement",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "settings",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "codex",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "tu-dao",
+        "id": "notifications",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "character",
+        "screen": "character"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "inventory",
+        "screen": "inventory"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "equipment",
+        "screen": "character"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "appearance",
+        "screen": "appearance"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "mount",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "beast",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "cultivation",
+        "screen": "character"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "method",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "spells",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "artifact",
+        "screen": "character"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "breakthrough",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "loadout",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "crafting",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "market",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "alchemy",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "forging",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "gathering",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "storage",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "map",
+        "screen": "map"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "quest",
+        "screen": "quest"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "activities",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "pve",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "dungeon",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "world-boss",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "bounty",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "pvp",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "duel",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "ranking",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "party",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "friends",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "sect",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "mail",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "chat",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "abode",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "achievement",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "settings",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "codex",
+        "screen": "feature"
+      },
+      {
+        "width": 320,
+        "theme": "doa-ma",
+        "id": "notifications",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "character",
+        "screen": "character"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "inventory",
+        "screen": "inventory"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "equipment",
+        "screen": "character"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "appearance",
+        "screen": "appearance"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "mount",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "beast",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "cultivation",
+        "screen": "character"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "method",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "spells",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "artifact",
+        "screen": "character"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "breakthrough",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "loadout",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "crafting",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "market",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "alchemy",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "forging",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "gathering",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "storage",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "map",
+        "screen": "map"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "quest",
+        "screen": "quest"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "activities",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "pve",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "dungeon",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "world-boss",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "bounty",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "pvp",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "duel",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "ranking",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "party",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "friends",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "sect",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "mail",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "chat",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "abode",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "achievement",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "settings",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "codex",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "tu-dao",
+        "id": "notifications",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "character",
+        "screen": "character"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "inventory",
+        "screen": "inventory"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "equipment",
+        "screen": "character"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "appearance",
+        "screen": "appearance"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "mount",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "beast",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "cultivation",
+        "screen": "character"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "method",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "spells",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "artifact",
+        "screen": "character"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "breakthrough",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "loadout",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "crafting",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "market",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "alchemy",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "forging",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "gathering",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "storage",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "map",
+        "screen": "map"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "quest",
+        "screen": "quest"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "activities",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "pve",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "dungeon",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "world-boss",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "bounty",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "pvp",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "duel",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "ranking",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "party",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "friends",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "sect",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "mail",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "chat",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "abode",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "achievement",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "settings",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "codex",
+        "screen": "feature"
+      },
+      {
+        "width": 1366,
+        "theme": "doa-ma",
+        "id": "notifications",
+        "screen": "feature"
+      }
+    ],
+    "assertions": 587,
+    "errors": [],
+    "gameplayRequests": []
+  },
+  "hudLayerRegression": {
+    "passed": true,
+    "fixtureOnly": true,
+    "ownerNavigationEdited": false,
+    "ownerDatabaseUsed": false,
+    "log": "artifacts/dao-character-v3/hud-layers.log"
+  },
+  "typecheckAndBoundaries": {
+    "passed": true,
+    "log": "artifacts/dao-character-v3/typecheck.log"
+  },
+  "viteBuild": {
+    "passed": true,
+    "log": "artifacts/dao-character-v3/build.log",
+    "existingRendererChunkWarning": true
+  },
+  "fixedIssues": [
+    "Zero-item view returns mobile to list",
+    "Preset changes re-evaluate item eligibility",
+    "Related navigation does not overlap artifact controls",
+    "Equipment actions remain inside desktop window",
+    "Item primary action contrasts with light paper"
+  ],
+  "reviewOnly": {
+    "singleSupplyCounter": "state.sect.supplies",
+    "nativeInventoryVersion": 1,
+    "maxHp": 100,
+    "maxMp": 100,
+    "commandDelayMs": 450,
+    "recoveryHp": 30,
+    "recoveryCooldownMs": 10000,
+    "newRasterAssets": 0,
+    "gddRulesEdited": false,
+    "characterArtEdited": false
+  }
+}

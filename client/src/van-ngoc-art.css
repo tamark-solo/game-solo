@@ -1,0 +1,275 @@
+/* Vân Ngọc 02: authored raster materials and nine-slice chrome.
+   Decorative parts never receive input and never change native hotbar geometry. */
+.hang-nhac-game {
+  --vn-window-art: url('/assets/van-ngoc-ui/window-frame-v2.webp');
+  --vn-button-art: url('/assets/van-ngoc-ui/jade-button-v2.webp');
+  --vn-paper-art: url('/assets/van-ngoc-ui/silk-paper-v2.webp');
+  --vn-bronze: #c6a66a;
+  --vn-bronze-light: #f0d8a1;
+}
+.hang-nhac-game .van-panel,
+.hang-nhac-game #sect-objective.quest-tracker,
+.hang-nhac-game #sect-dialog,
+.hang-nhac-game #game-menu {
+  border: 0;
+  border-radius: 9px;
+  background: linear-gradient(#132c2ceb, #10262af5), var(--vn-paper-art) center / cover;
+  box-shadow: inset 0 0 35px #081a2280, 0 10px 32px #07182280;
+}
+.hang-nhac-game .van-panel::after {
+  content: ''; position: absolute; inset: 0; z-index: 3;
+  border: 34px solid transparent;
+  border-image: var(--vn-window-art) 36% / 34px stretch;
+  pointer-events: none;
+}
+.hang-nhac-game :is(.entry-card, #sect-dialog, #game-menu)::after {
+  display: none;
+}
+.hang-nhac-game :is(#sect-dialog, #game-menu) { border: 26px solid transparent; border-image: var(--vn-window-art) 36% / 84px stretch; background-clip: padding-box; padding: 32px 12px 18px; }
+.hang-nhac-game :is(.entry-card, #sect-dialog, #game-menu)::before { display: none; }
+.hang-nhac-game :is(.sect-dialog-heading, .game-menu-heading) {
+  padding-bottom: 18px; margin-bottom: 20px; border-color: #ceb27b77;
+}
+.hang-nhac-game :is(.sect-dialog-heading, .game-menu-heading) h2 {
+  color: #f7e3b5; font-size: 30px; text-shadow: 0 2px 2px #071e20;
+}
+.hang-nhac-game :is(.sect-dialog-heading, .game-menu-heading) .ui-eyebrow { color: #ddc28b; font-size: 11px; letter-spacing: 1.5px; }
+.hang-nhac-game #sect-body {
+  border: 0; border-radius: 7px; padding: 24px;
+  background: var(--vn-paper-art) center / cover;
+  color: #273c34; box-shadow: inset 0 0 22px #a3874630, 0 0 0 1px #c5b18177;
+}
+.hang-nhac-game #sect-body > p { font-size: 15px; line-height: 1.8; }
+.hang-nhac-game #sect-body .station-intro { font-size: 20px; color: #2a5140; }
+.hang-nhac-game #sect-message { font-size: 14px; color: #f2d6a0; }
+.hang-nhac-game .dialog-actions { margin-top: 20px; border-color: #a78c5766; gap: 10px; }
+
+/* The opaque jade button face is painted behind live text through border-image fill. */
+.hang-nhac-game .game-button,
+.hang-nhac-game .resource button,
+.hang-nhac-game .quest-tracker button,
+.hang-nhac-game .lesson-panel button,
+.hang-nhac-game .sect-dialog-heading button,
+.hang-nhac-game #sect-body button:not(.sect-pin):not(.quest-card-select) {
+  border: 2px solid transparent; border-radius: 0; padding: 0 20px;
+  border-image: var(--vn-button-art) 24% fill / 12px 30px stretch;
+  background: transparent; box-shadow: none; color: #fff1d4;
+  font: 500 13px/1.4 'Segoe UI', sans-serif; text-shadow: 0 1px 3px #001f21, 0 0 3px #001f21;
+}
+.hang-nhac-game .game-button.primary,
+.hang-nhac-game #quest-guide,
+.hang-nhac-game #sect-body .dialog-actions button:first-child {
+  border-image: var(--vn-button-art) 24% fill / 14px 36px stretch;
+  background: transparent; color: #fff0b7;
+  filter: drop-shadow(0 0 3px #d9bd5d70);
+}
+.hang-nhac-game .game-button:hover:not(:disabled),
+.hang-nhac-game .resource button:hover:not(:disabled),
+.hang-nhac-game .quest-tracker button:hover:not(:disabled),
+.hang-nhac-game .lesson-panel button:hover:not(:disabled),
+.hang-nhac-game .sect-dialog-heading button:hover:not(:disabled),
+.hang-nhac-game #sect-body button:not(.sect-pin):not(.quest-card-select):hover:not(:disabled) {
+  background: transparent; border-color: transparent; box-shadow: none;
+  filter: brightness(1.16) drop-shadow(0 0 4px #addbc648);
+}
+.hang-nhac-game .game-button:active:not(:disabled), .hang-nhac-game #sect-body .dialog-actions button:active:not(:disabled) { filter: brightness(.9); }
+.hang-nhac-game #sect-body .dialog-actions button { padding: 10px 24px; min-height: 48px; font-size: 14px; }
+.hang-nhac-game :is(#sect-close, #menu-close) { min-width: 78px; height: 44px; padding: 0 18px; }
+.hang-nhac-game .entry-card .primary { height: 52px; font: 600 21px Cambria, serif; }
+.hang-nhac-game .entry-tools button { height: 44px; font-size: 13px; }
+.hang-nhac-game .shell-actions button { border-image-width: 10px 12px; padding: 0; font-size: 24px; }
+.hang-nhac-game .player-hud .game-button { border-image-width: 9px 12px; padding: 0 5px; width: 60px; font-size: 11px; }
+.hang-nhac-game .quest-tracker-heading button { border-image-width: 8px 12px; padding: 0 7px; height: 34px; }
+.hang-nhac-game .quest-actions button { min-height: 38px; }
+.hang-nhac-game .resource button { padding: 0 14px; border-image-width: 9px 18px; }
+
+/* Entry reads as a framed cultivation folio rather than a web form. */
+.hang-nhac-game .entry-card {
+  width: min(880px, 100%); border: 26px solid transparent; border-image: var(--vn-window-art) 36% / 94px stretch; padding: 32px 18px 2px;
+  background: var(--vn-paper-art) center / cover; background-clip: padding-box; color: #293d35;
+  box-shadow: inset 0 0 40px #977b4330, 0 16px 70px #00161c99;
+}
+.hang-nhac-game #entry-screen { padding: 28px; }
+.hang-nhac-game .entry-heading { padding-bottom: 24px; }
+.hang-nhac-game .entry-card h1 { color: #254d40; font-size: 46px; text-shadow: 0 1px #fffbe1; }
+.hang-nhac-game .entry-card .entry-brand { color: #826936; font-size: 12px; letter-spacing: 5px; }
+.hang-nhac-game .entry-subtitle { color: #576b55; font-size: 14px; }
+.hang-nhac-game .entry-layout { gap: 28px; }
+.hang-nhac-game .entry-showcase { border-color: #92784766; padding-right: 22px; }
+.hang-nhac-game .entry-showcase .ui-eyebrow, .hang-nhac-game .entry-card form .ui-eyebrow { color: #856a37; font-size: 11px; }
+.hang-nhac-game .entry-showcase h2 { color: #34543e; font-size: 28px; }
+.hang-nhac-game #entry-description { color: #5b6e57; font-size: 14px; }
+.hang-nhac-game .avatar-pedestal { background: radial-gradient(ellipse at 50% 86%, #94b6a35c, transparent 70%); }
+.hang-nhac-game .avatar-pedestal::after { height: 27px; bottom: 4px; border: 2px solid #ae9155; box-shadow: 0 0 0 4px #b8ad7922, 0 0 0 7px #7fa08b22; background: #cddbc54d; }
+.hang-nhac-game .entry-skill { color: #475f4f; font-size: 11px; }
+.hang-nhac-game .entry-skill i { width: 38px; height: 38px; border-color: #a08344; box-shadow: 0 0 0 2px #c2b07888; }
+.hang-nhac-game .showcase-note { color: #667357; font-size: 12px; }
+.hang-nhac-game .avatar-choice { border: 0; border-radius: 5px; background: #cdd8c58c; padding: 14px 4px 12px; color: #36503d; }
+.hang-nhac-game .avatar-choice::before {
+  content: ''; position: absolute; inset: 0; z-index: 2;
+  border: 25px solid transparent; border-image: var(--vn-window-art) 36% / 25px stretch; pointer-events: none;
+}
+.hang-nhac-game .avatar-choice b { position: relative; z-index: 1; margin-top: 7px; font-size: 15px; }
+.hang-nhac-game .avatar-choice[aria-pressed=true] { background: radial-gradient(ellipse at top, #e1eed3, #a9c3a0); color: #28472f; box-shadow: 0 0 14px #73956d44; }
+.hang-nhac-game .avatar-choice[aria-pressed=true]::after { color: #3d715c; z-index: 4; top: 8px; right: 8px; }
+.hang-nhac-game .entry-card label { font-size: 14px; color: #3d5546; }
+.hang-nhac-game .entry-card input { background: #fffae8c9; color: #2b4235; border: 1px solid #a7915c; border-radius: 3px; box-shadow: inset 0 2px 7px #91794022; font-size: 15px; }
+.hang-nhac-game .entry-card input::placeholder { color: #79816b; }
+.hang-nhac-game #entry-profile { color: #776137; font-size: 13px; line-height: 1.65; }
+.hang-nhac-game #entry-status { color: #9b3c28; font-size: 14px; }
+.hang-nhac-game .entry-tools { border-color: #a58c5766; }
+.hang-nhac-game .entry-card > small { color: #687358; font-size: 11px; }
+
+/* In-world companion plaques keep the darker material, with actual carved borders. */
+.hang-nhac-game .player-hud { padding: 12px 15px; width: 336px; gap: 10px; }
+.hang-nhac-game .player-hud::after { border-image-width: 32px; }
+.hang-nhac-game .player-hud b { font-size: 20px; color: #fae5b8; }
+.hang-nhac-game .player-hud span { font-size: 12px; color: #d7e3cf; }
+.hang-nhac-game .player-hud small { font-size: 11px; color: #b5d2bc; }
+.hang-nhac-game .skill-panel { padding: 15px 16px; width: 246px; }
+.hang-nhac-game .skill-panel::after { border-image-width: 30px; }
+.hang-nhac-game .skill-aim { font-size: 12px; line-height: 1.5; color: #d0dfc9; }
+.hang-nhac-game #sect-objective.quest-tracker { padding: 20px 18px; width: 316px; }
+.hang-nhac-game #sect-objective.quest-tracker::after { border-image-width: 43px; border-width: 43px; }
+.hang-nhac-game .quest-tracker-heading strong { color: #f6dfab; font-size: 21px; }
+.hang-nhac-game .quest-tracker-heading small { font-size: 11px; }
+.hang-nhac-game #quest-title { font-size: 21px; color: #f8e0aa; }
+.hang-nhac-game #quest-state { font-size: 11px; padding: 4px 8px; border-color: #b5b481; }
+.hang-nhac-game .quest-tracker .quest-checklist, .hang-nhac-game #quest-next { font-size: 13px; line-height: 1.65; }
+.hang-nhac-game #quest-hint, .hang-nhac-game #quest-reward { font-size: 12px; line-height: 1.6; }
+.hang-nhac-game .quest-objective-progress, .hang-nhac-game #cultivation-summary { font-size: 11px; }
+.hang-nhac-game #connection-indicator { border: 0; background: #18392bec; border-radius: 12px; color: #d5e3ce; padding: 8px 16px; }
+.hang-nhac-game #loading { color: #f4dfb2; }
+.hang-nhac-game .touch-pad button { border: 2px solid transparent; border-image: var(--vn-button-art) 24% fill / 9px 12px stretch; background: none; border-radius: 0; }
+
+/* Journal and settings share the folio material and larger, quieter text areas. */
+.hang-nhac-game #sect-body:has(.journal-layout) { padding: 0; background: transparent; box-shadow: none; }
+.hang-nhac-game .journal-intro { font-size: 14px; color: #d6e1ca; line-height: 1.7; }
+.hang-nhac-game .quest-card { border: 1px solid #bda26688; background: #132e2bcc; border-radius: 5px; }
+.hang-nhac-game .quest-card-select { min-height: 68px; padding: 14px; }
+.hang-nhac-game .quest-card-select h3 { font-size: 19px; color: #efdfb7; }
+.hang-nhac-game .quest-card-select small { font-size: 11px; color: #bfd5bd; }
+.hang-nhac-game .quest-card-id { font-size: 14px; color: #edd7a4; }
+.hang-nhac-game .quest-card-detail { background: var(--vn-paper-art) center / cover; padding: 20px; color: #334737; }
+.hang-nhac-game #sect-body .quest-card-detail p { font-size: 14px; line-height: 1.75; }
+.hang-nhac-game .quest-card-detail .quest-checklist { font-size: 13px; line-height: 1.7; }
+.hang-nhac-game .journal-map-panel { border: 0; background: #112d298c; padding: 20px; border-radius: 6px; }
+.hang-nhac-game .journal-map-panel::after { content: ''; position: absolute; inset: 0; border: 32px solid transparent; border-image: var(--vn-window-art) 36% / 32px stretch; pointer-events: none; }
+.hang-nhac-game .journal-map-panel h3 { font-size: 24px; color: #f1d9a6; }
+.hang-nhac-game .journal-map-panel p { font-size: 13px; line-height: 1.7; margin: 6px 0; }
+.hang-nhac-game .sect-minimap { border-color: #d6b475; }
+.hang-nhac-game .journal-map-panel .sect-minimap { width: min(100%, 380px); aspect-ratio: 3 / 2; margin: 14px auto 0; }
+.hang-nhac-game .map-legend { font-size: 12px; gap: 10px; }
+.hang-nhac-game #game-menu { width: min(750px, calc(100vw - 40px)); }
+.hang-nhac-game .menu-section { border: 0; border-radius: 6px; padding: 20px; background: var(--vn-paper-art) center / cover; color: #344a38; box-shadow: inset 0 0 18px #a3864d22; }
+.hang-nhac-game #game-menu h3 { font-size: 25px; color: #345642; }
+.hang-nhac-game .setting-row b { font-size: 15px; color: #36533e; }
+.hang-nhac-game .setting-row small { font-size: 12px; color: #64775c; }
+.hang-nhac-game #game-menu .setting-row { border-color: #b5a06c66; }
+.hang-nhac-game .control-guide dd { color: #526349; font-size: 12px; }
+.hang-nhac-game .control-guide > div { border-color: #b5a06c55; }
+.hang-nhac-game .control-guide kbd { background: #e4e5cf; color: #345642; border-color: #9e925b; }
+.hang-nhac-game #game-menu .menu-note { font-size: 13px; color: #d0ddc9; }
+
+@media (max-height: 850px) and (min-width: 761px) {
+  .hang-nhac-game .entry-card { padding: 20px 16px 18px; }
+  .hang-nhac-game .entry-heading { padding-bottom: 18px; }
+  .hang-nhac-game .entry-card h1 { font-size: 40px; }
+  .hang-nhac-game .avatar-pedestal { height: 158px; }
+}
+@media (max-width: 760px) {
+  .hang-nhac-game .van-panel::after { inset: 0; border-image-width: 24px; border-width: 24px; }
+  .hang-nhac-game :is(.entry-card, #sect-dialog, #game-menu) { border-image-width: 51px; }
+  .hang-nhac-game .entry-card { border-width: 14px; padding: 32px 6px 8px; }
+  .hang-nhac-game #entry-screen { padding: 20px 12px; }
+  .hang-nhac-game .entry-card h1 { font-size: 35px; }.hang-nhac-game .entry-subtitle { font-size: 13px; }
+  .hang-nhac-game .entry-card label { font-size: 13px; }.hang-nhac-game #entry-profile { font-size: 12px; }
+  .hang-nhac-game .entry-tools button { font-size: 12px; padding: 0 12px; border-image-width: 10px 20px; }
+  .hang-nhac-game .entry-card > small { font-size: 10px; }
+  .hang-nhac-game .avatar-choice b { font-size: 13px; }.hang-nhac-game .avatar-choice::before { border-image-width: 21px; }
+  .hang-nhac-game .player-hud { padding: 9px; width: calc(100% - 82px); max-width: 280px; }
+  .hang-nhac-game .player-hud::after { border-image-width: 25px; }
+  .hang-nhac-game .player-hud b { font-size: 17px; }.hang-nhac-game .player-hud span { font-size: 10px; }.hang-nhac-game .player-hud small { font-size: 10px; }
+  .hang-nhac-game .player-hud .game-button { width: 44px; font-size: 0; padding: 0 2px; border-image-width: 8px 10px; }
+  .hang-nhac-game .skill-panel { width: min(150px, calc(100% - 194px)); padding: 8px; }
+  .hang-nhac-game .skill-panel::after { border-image-width: 24px; }
+  .hang-nhac-game .resource button { font-size: 10px; padding: 0 6px; border-image-width: 9px 15px; }
+  .hang-nhac-game .skill-aim { font-size: 10px; }
+  .hang-nhac-game #sect-objective.quest-tracker { width: clamp(160px, calc(100% - 206px), 180px); padding: 8px; }
+  .hang-nhac-game #sect-objective.quest-tracker::after { border-image-width: 25px; }
+  .hang-nhac-game .quest-tracker-heading strong { font-size: 15px; }
+  .hang-nhac-game .quest-tracker-heading button { padding: 0 4px; height: 44px; border-image-width: 8px 10px; }
+  .hang-nhac-game #quest-title { font-size: 15px; }.hang-nhac-game #quest-state { font-size: 10px; }
+  .hang-nhac-game .quest-actions button, .hang-nhac-game #quest-guide { height: 44px; font-size: 0; padding: 0 3px; border-image-width: 8px 10px; }
+  .hang-nhac-game #quest-next, .hang-nhac-game .quest-tracker .quest-checklist { font-size: 11px; }
+  .hang-nhac-game #quest-hint, .hang-nhac-game #quest-reward, .hang-nhac-game .quest-objective-progress { font-size: 10px; }
+  .hang-nhac-game :is(#sect-dialog, #game-menu) { border-width: 14px; padding: 30px 4px 6px; width: calc(100vw - 32px); }
+  .hang-nhac-game :is(.sect-dialog-heading, .game-menu-heading) h2 { font-size: 24px; }
+  .hang-nhac-game :is(.sect-dialog-heading, .game-menu-heading) .ui-eyebrow { font-size: 9px; }
+  .hang-nhac-game :is(#sect-close, #menu-close) { min-width: 63px; padding: 0 9px; border-image-width: 9px 15px; }
+  .hang-nhac-game #sect-body { padding: 17px; }.hang-nhac-game #sect-body > p { font-size: 14px; }
+  .hang-nhac-game #sect-body .station-intro { font-size: 18px; }
+  .hang-nhac-game .quest-card-select h3 { font-size: 17px; }
+  .hang-nhac-game .menu-section { padding: 16px; }.hang-nhac-game #game-menu h3 { font-size: 23px; }
+}
+
+/* One frame box for artwork and backing. The SVG aperture uses the same nine
+   source slices and destination corner sizes as border-image, including curves. */
+.hang-nhac-game :where(.van-panel, .avatar-choice, .journal-map-panel) {
+  --vn-frame-size: 34px;
+  --vn-frame-border: 0px;
+  --vn-frame-fill: linear-gradient(#132c2ceb, #10262af5), var(--vn-paper-art) center / cover;
+}
+.hang-nhac-game :is(.van-panel, #sect-objective.quest-tracker, #sect-dialog, #game-menu, .avatar-choice, .journal-map-panel) {
+  isolation: isolate;
+  background: none;
+  box-shadow: none;
+  filter: drop-shadow(0 6px 12px #06182055);
+}
+.hang-nhac-game :is(.van-panel, .avatar-choice, .journal-map-panel) > .vn-frame-surface {
+  position: absolute; inset: calc(0px - var(--vn-frame-border)); z-index: -1;
+  margin: 0; padding: 0; border: 0;
+  display: block; pointer-events: none;
+  background: var(--vn-frame-fill);
+  mask-image:
+    url('/assets/van-ngoc-ui/frame-aperture-tl.svg'), url('/assets/van-ngoc-ui/frame-aperture-t.svg'), url('/assets/van-ngoc-ui/frame-aperture-tr.svg'),
+    url('/assets/van-ngoc-ui/frame-aperture-l.svg'), url('/assets/van-ngoc-ui/frame-aperture-c.svg'), url('/assets/van-ngoc-ui/frame-aperture-r.svg'),
+    url('/assets/van-ngoc-ui/frame-aperture-bl.svg'), url('/assets/van-ngoc-ui/frame-aperture-b.svg'), url('/assets/van-ngoc-ui/frame-aperture-br.svg');
+  mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-composite: add;
+  mask-size:
+    var(--vn-frame-size) var(--vn-frame-size), calc(100% - var(--vn-frame-size) - var(--vn-frame-size)) var(--vn-frame-size), var(--vn-frame-size) var(--vn-frame-size),
+    var(--vn-frame-size) calc(100% - var(--vn-frame-size) - var(--vn-frame-size)), calc(100% - var(--vn-frame-size) - var(--vn-frame-size)) calc(100% - var(--vn-frame-size) - var(--vn-frame-size)), var(--vn-frame-size) calc(100% - var(--vn-frame-size) - var(--vn-frame-size)),
+    var(--vn-frame-size) var(--vn-frame-size), calc(100% - var(--vn-frame-size) - var(--vn-frame-size)) var(--vn-frame-size), var(--vn-frame-size) var(--vn-frame-size);
+  mask-position: left top, center top, right top, left center, center, right center, left bottom, center bottom, right bottom;
+}
+.hang-nhac-game .van-panel::after { inset: 0; border-width: var(--vn-frame-size); border-image-width: var(--vn-frame-size); }
+.hang-nhac-game .player-hud { --vn-frame-size: 32px; }
+.hang-nhac-game .skill-panel { --vn-frame-size: 30px; }
+.hang-nhac-game #sect-objective.quest-tracker { --vn-frame-size: 43px; }
+.hang-nhac-game :is(#sect-dialog, #game-menu) { --vn-frame-size: 84px; --vn-frame-border: 26px; border-image-width: var(--vn-frame-size); }
+.hang-nhac-game :is(#sect-dialog, #game-menu) {
+  --vn-window-top: 32px; --vn-window-bottom: 18px; --vn-window-clearance: 40px;
+  overflow: visible;
+}
+.hang-nhac-game .vn-frame-scroll {
+  overflow: auto; scrollbar-width: thin; scrollbar-color: #8a9571 #10242a;
+  max-height: calc(100dvh - var(--vn-window-clearance) - var(--vn-frame-border) - var(--vn-frame-border) - var(--vn-window-top) - var(--vn-window-bottom));
+}
+.hang-nhac-game .entry-card { --vn-frame-size: 94px; --vn-frame-border: 26px; --vn-frame-fill: var(--vn-paper-art) center / cover; border-image-width: var(--vn-frame-size); }
+.hang-nhac-game .avatar-choice { --vn-frame-size: 25px; --vn-frame-fill: #cdd8c58c; }
+.hang-nhac-game .avatar-choice[aria-pressed=true] { --vn-frame-fill: radial-gradient(ellipse at top, #e1eed3, #a9c3a0); }
+.hang-nhac-game .avatar-choice::before { inset: 0; border-image-width: var(--vn-frame-size); }
+.hang-nhac-game .journal-map-panel { --vn-frame-size: 32px; --vn-frame-fill: #112d298c; }
+.hang-nhac-game .journal-map-panel::after { inset: 0; border-image-width: var(--vn-frame-size); }
+@media (max-width: 760px) {
+  .hang-nhac-game .van-panel { --vn-frame-size: 24px; }
+  .hang-nhac-game .player-hud { --vn-frame-size: 25px; }
+  .hang-nhac-game .skill-panel { --vn-frame-size: 24px; }
+  .hang-nhac-game #sect-objective.quest-tracker { --vn-frame-size: 25px; }
+  .hang-nhac-game :is(.entry-card, #sect-dialog, #game-menu) { --vn-frame-size: 51px; --vn-frame-border: 14px; border-image-width: var(--vn-frame-size); }
+  .hang-nhac-game :is(#sect-dialog, #game-menu) { --vn-window-top: 30px; --vn-window-bottom: 6px; --vn-window-clearance: 24px; }
+  .hang-nhac-game .avatar-choice { --vn-frame-size: 21px; }
+  .hang-nhac-game .journal-map-panel { position: relative; }
+}

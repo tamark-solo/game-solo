@@ -8,20 +8,34 @@ import { R01Engine, applyR01Movement, commandKey, readCastCommand, type CombatAc
 import { DIRECTIONS, type Direction, type Input } from '@shared/world/types';
 import { ProjectileState, TrainingTargetState, type Disciple } from '@shared/protocol/courtyard-state';
 import type { ProfileStore, ProfileLeases } from './profile-store';
+import type {ProfilePersistence,PlayGateway,PlayGrant} from './core/ports';
+import {GameError} from './core/errors';
 import { CYCLE_PHASE_MS, nearStation, readSectCommand, sectCommandKey, type SectResult } from '../../shared/sect';
+import { cultivationMotion, type QuestMotionEvent } from '../../shared/quest-motion';
 import { advanceCultivation, isPractising, performSectCommand, sectView } from './sect-progress';
+import { characterItems,characterCommandKey,readCharacterCommand,type CharacterView,type CharacterResult } from '../../shared/character-inventory';
+import { performCharacterCommand } from './character-inventory';
 import { clearSectPath } from '../../shared/sect';
 import type { SkillEvent } from '../../shared/skills/contracts';
 import { observeAvoidMotion, observeAvoidSkill, resolveAvoidAttempt } from '../../shared/lesson-contracts';
 import { basicDamage, copyLessonProfile, creditLessonHit, lessonView, performLessonCommand,
   type LessonRuntime, type LessonOutcome } from './training-lessons';
 
-interface ProfileAuth { accountId: string; profile: CharacterProfile }
+interface ProfileAuth { accountId: string; profile: CharacterProfile; grant?:PlayGrant }
 
 export class HangNhacRoom extends CourtyardRoom {
+  private characterWatchers=new Set<string>();
+  private characterSent=new Map<string,string>();
   private static store: ProfileStore;
   private static leases: ProfileLeases;
-  static configure(store: ProfileStore, leases: ProfileLeases): void { this.store = store; this.leases = leases; }
+  private static gateway?:PlayGateway;
+  private static allowGuest=true;
+  private realmId?:string;
+  private grants=new Map<string,PlayGrant>();
+  private persistence=new Map<string,ProfilePersistence>();
+  private nextAuthAt=0;
+  static configure(store: ProfileStore, leases: ProfileLeases,gateway?:PlayGateway,allowGuest=true): void { this.store = store; this.leases = leases;this.gateway=gateway;this.allowGuest=allowGuest; }
+  private storeFor(id:string):ProfilePersistence{return this.persistence.get(id)??HangNhacRoom.store;}
   private profiles = new Map<string, CharacterProfile>();
   private held = new Map<string, Input>();
   private pendingCasts=new Map<string,Array<{client:Client;command:CastCommand;expires:number}>>();
@@ -31,9 +45,18 @@ export class HangNhacRoom extends CourtyardRoom {
   private lessons = new Map<string,LessonRuntime>();
   private sectSent = new Map<string,string>();
   private sectWatchers = new Set<string>();
+  private questLoops = new Map<string,QuestMotionEvent>();
   private nextSectAt = 0;
   onAuth(client: Client, options: Record<string, unknown>): boolean | ProfileAuth {
     if (!options || options.mapVersion !== HANG_NHAC.version) return false;
+    if(options.entryTicket){
+      try{
+        if(!HangNhacRoom.gateway||options.realmId!==this.realmId)throw new ServerError(401,'Server vào game chưa hợp lệ.');
+        const grant=HangNhacRoom.gateway.claim(options.entryTicket,options.realmId,client.sessionId);
+        return {accountId:grant.accountId,profile:grant.profile,grant};
+      }catch(error){if(error instanceof GameError)throw new ServerError(error.status,error.publicMessage);throw error;}
+    }
+    if(!HangNhacRoom.allowGuest||this.realmId)throw new ServerError(401,'Vui lòng đăng nhập và chọn nhân vật trước khi vào game.');
     // Token-free sessions retain the isolated movement fixture used by the foundation checks.
     if (!options.accountToken) return true;
     const accountId = HangNhacRoom.store.authenticate(options.accountToken);
@@ -42,7 +65,9 @@ export class HangNhacRoom extends CourtyardRoom {
     try { return { accountId, profile: HangNhacRoom.store.get(accountId, options.avatarId) }; }
     catch (error) { HangNhacRoom.leases.release(accountId, client.sessionId); throw error; }
   }
-  onCreate(): void {
+  onCreate(options:Record<string,unknown>={}): void {
+    this.realmId=typeof options.realmId==='string'?options.realmId:undefined;
+    if(this.realmId)this.setMetadata({realmId:this.realmId});
     this.engine = new R01Engine(Date.now(), event => this.skillEvent(event), (actor, command, result) => this.commitCast(actor, command, result));
     super.onCreate();
     this.state.mapId = HANG_NHAC.id;
@@ -53,7 +78,7 @@ export class HangNhacRoom extends CourtyardRoom {
       if (!command || !actor) { client.send('skill:result', { accepted: false, reason: 'invalid' }); return; }
       const profile=this.profiles.get(client.sessionId);
       // Durable retries can outlive the input channel (reconnect/restart resets its sequence).
-      if(profile&&HangNhacRoom.store.receipt(profile.id,command.id)){this.cast(client,command);return;}
+      if(profile&&this.storeFor(client.sessionId).receipt(profile.id,command.id)){this.cast(client,command);return;}
       const consumed=this.inputs.get(client.sessionId).consumedCount;
       if(command.inputSeq!==undefined&&command.inputSeq>consumed){
         const pending=this.pendingCasts.get(client.sessionId)??[];
@@ -71,13 +96,31 @@ export class HangNhacRoom extends CourtyardRoom {
       client.send('training:result', { ok: !!target, targetId: target?.id });
     });
     this.onMessage('profile:save', client => this.save(client.sessionId));
-    this.onMessage('sect:sync',client=>{this.sectWatchers.add(client.sessionId);this.sendSect(client,true);});
+    this.onMessage('character:sync',client=>{this.characterWatchers.add(client.sessionId);this.sendCharacter(client,true);});
+    this.onMessage('character:command',(client,raw:unknown)=>{
+      const command=readCharacterCommand(raw),actor=this.state.players.get(client.sessionId),profile=this.profiles.get(client.sessionId);
+      if(!command||!actor?.connected||!profile){client.send('character:result',{ok:false,reason:profile?'invalid':'profile'});return;}
+      this.characterWatchers.add(client.sessionId);
+      const key=characterCommandKey(command),old=this.storeFor(client.sessionId).characterReceipt(profile.id,command.id) as {command:string;result:CharacterResult}|undefined;
+      if(old){client.send('character:result',old.command===key?{...old.result,duplicate:true}:{requestId:command.id,ok:false,reason:'request_reused'});this.sendCharacter(client,true);return;}
+      const outcome=performCharacterCommand(this.snapshot(profile,actor),actor,command,this.engine.now,this.hasProjectile(actor.id));
+      try{
+        if(outcome.candidate){
+          this.storeFor(client.sessionId).commitCharacter(outcome.candidate,command.id,{command:key,result:outcome.result});
+          this.profiles.set(actor.id,outcome.candidate);actor.hp=outcome.candidate.hp;actor.savedAt=outcome.candidate.updatedAt;
+        }
+        client.send('character:result',outcome.result);
+        if(outcome.result.ok&&command.action==='use')this.broadcast('sect:animation',{id:`character:${actor.id}:${command.id}`,actorId:actor.id,kind:'recovery',direction:actor.direction as Direction,at:this.engine.now} satisfies QuestMotionEvent);
+      }catch{client.send('character:result',{requestId:command.id,ok:false,reason:'save'});}
+      this.sendCharacter(client,true);this.sendSect(client,true);
+    });
+    this.onMessage('sect:sync',client=>{this.sectWatchers.add(client.sessionId);this.sendSect(client,true);for(const event of this.questLoops.values())client.send('sect:animation',event);});
     this.onMessage('sect:command',(client,raw:unknown)=>{
       const command=readSectCommand(raw),actor=this.state.players.get(client.sessionId),profile=this.profiles.get(client.sessionId);
       if(!command||!actor||!profile){client.send('sect:result',{ok:false,reason:profile?'invalid':'profile'});return;}
       this.sectWatchers.add(client.sessionId);
       const key=sectCommandKey(command);
-      const old=HangNhacRoom.store.sectReceipt(profile.id,command.id) as {command:string;result:SectResult}|undefined;
+      const old=this.storeFor(client.sessionId).sectReceipt(profile.id,command.id) as {command:string;result:SectResult}|undefined;
       if(old){client.send('sect:result',old.command===key?{...old.result,duplicate:true}:{requestId:command.id,ok:false,reason:'request_reused'});this.sendSect(client,true);return;}
       const lessonCommand=command.action.startsWith('lesson_')||command.action==='basic_attack';
       const outcome:LessonOutcome&{startCycle?:boolean;finishCycle?:boolean}=lessonCommand?
@@ -85,7 +128,7 @@ export class HangNhacRoom extends CourtyardRoom {
         performSectCommand(this.snapshot(profile,actor),actor,command,this.engine.now,this.cycles.get(actor.id)??0,this.hasProjectile(actor.id));
       try {
         if(outcome.candidate){
-          HangNhacRoom.store.commitSect(outcome.candidate,command.id,{command:key,result:outcome.result});
+          this.storeFor(client.sessionId).commitSect(outcome.candidate,command.id,{command:key,result:outcome.result});
           this.profiles.set(actor.id,outcome.candidate);actor.hp=outcome.candidate.hp;actor.savedAt=outcome.candidate.updatedAt;
           if(outcome.startCycle)this.cycles.set(actor.id,this.engine.now+CYCLE_PHASE_MS);
           if(outcome.finishCycle)this.cycles.delete(actor.id);
@@ -95,15 +138,26 @@ export class HangNhacRoom extends CourtyardRoom {
           if(outcome.basicTarget){outcome.basicTarget.hp=Math.max(0,outcome.basicTarget.hp-basicDamage);actor.practiceHits=outcome.candidate.practiceHits;}
         }
         client.send('sect:result',outcome.result);
+        if(outcome.result.ok&&outcome.result.reason!=='already_complete'){
+          const kind=command.action==='basic_attack'?'basic':command.action==='use_recovery'?'recovery':
+            command.action==='accept_intro'||command.action==='talk'?'greeting':undefined;
+          if(kind){
+            const target=outcome.basicTarget,dx=target?target.x-actor.x:0,dy=target?target.y-actor.y:1;
+            const direction:Direction=Math.abs(dx)>Math.abs(dy)?dx>0?'east':'west':dy<0?'north':'south';
+            this.broadcast('sect:animation',{id:`${actor.id}:${command.id}`,actorId:actor.id,kind,direction,at:this.engine.now} satisfies QuestMotionEvent);
+          }
+        }
       }catch{client.send('sect:result',{requestId:command.id,ok:false,reason:'save'});}
       this.sendSect(client,true);
     });
   }
   onJoin(client: Client, options: unknown): void {
-    super.onJoin(client, options);
-    const actor = this.state.players.get(client.sessionId)!;
     const auth = client.auth as ProfileAuth | boolean;
     const profile = auth && typeof auth === 'object' ? auth.profile : undefined;
+    const grant=auth&&typeof auth==='object'?auth.grant:undefined;
+    super.onJoin(client, grant?{avatarId:profile!.avatarId,name:profile!.name}:options);
+    const actor = this.state.players.get(client.sessionId)!;
+    if(grant){this.grants.set(client.sessionId,grant);this.persistence.set(client.sessionId,grant.persistence);}
     actor.id = client.sessionId; actor.profileId = profile?.id ?? `temporary-${client.sessionId}`;
     actor.progressionKind = CHARACTER_INFO[actor.avatarId as keyof typeof CHARACTER_INFO].progressionKind;
     actor.hp = actor.mp = 100; actor.casts = actor.practiceHits = actor.savedAt = 0;
@@ -113,9 +167,9 @@ export class HangNhacRoom extends CourtyardRoom {
       if (profile.revision>0 && profile.mapId === HANG_NHAC.id && hangNhacWalkable(profile)) { actor.x = profile.x; actor.y = profile.y; }
       actor.direction = DIRECTIONS.includes(profile.direction as Direction) ? profile.direction : 'south';
       const data = options as Record<string, unknown>;
-      actor.name = cleanPlayerName(data.name, profile.name);
+      actor.name = grant?profile.name:cleanPlayerName(data.name, profile.name);
       for (const key of ['hp','mp','casts','practiceHits','nextSwordAt','nextThunderAt','nextWindAt','lastSpentAt'] as const) actor[key] = profile[key];
-      this.profiles.set(client.sessionId, profile); HangNhacRoom.leases.activate(profile.accountId, client.sessionId);
+      this.profiles.set(client.sessionId, profile);if(!grant)HangNhacRoom.leases.activate(profile.accountId, client.sessionId);
     }
     this.engine.add(actor as CombatActor); this.save(client.sessionId);
   }
@@ -136,7 +190,17 @@ export class HangNhacRoom extends CourtyardRoom {
     // A missing packet stops walking but is not a newly released keyboard command.
     applyR01Movement(player as Disciple, { moveX:0,moveY:0 }, dt);
   }
-  protected beforeSimulation(dt: number): void { this.engine.prepare(dt); }
+  protected beforeSimulation(dt: number): void {
+    this.engine.prepare(dt);
+    if(Date.now()<this.nextAuthAt)return;this.nextAuthAt=Date.now()+1000;
+    for(const [id,grant] of this.grants){
+      const actor=this.state.players.get(id),client=this.clients.find(value=>value.sessionId===id);
+      if(actor?.connected&&!HangNhacRoom.gateway?.renew(grant,id)){
+        actor.connected=false;this.stop(id);this.engine.cancel(id);this.pendingCasts.delete(id);this.save(id);
+        client?.send('entry:revoked',{message:'Phiên điều khiển đã kết thúc. Vui lòng kiểm tra tài khoản và server.'});client?.leave(4000);
+      }
+    }
+  }
   protected afterSimulation(dt: number): void {
     // Match a skill to the consumed movement stream, so movement + cast in one frame does not self-cancel.
     for(const [id,requests] of this.pendingCasts){
@@ -166,7 +230,7 @@ export class HangNhacRoom extends CourtyardRoom {
       advanceCultivation(profile,actor,dt,this.engine.now,projectile);
     }
     if (this.engine.now >= this.nextSaveAt) { this.nextSaveAt = this.engine.now + 1000; for (const id of this.profiles.keys()) this.save(id); }
-    if(this.engine.now>=this.nextSectAt){this.nextSectAt=this.engine.now+250;for(const client of this.clients)this.sendSect(client);}
+    if(this.engine.now>=this.nextSectAt){this.nextSectAt=this.engine.now+250;for(const client of this.clients){this.sendSect(client);this.sendCharacter(client);}}
   }
   private clearLesson(id:string):void {
     const runtime=this.lessons.get(id);if(runtime?.kind==='arts')this.engine.targets.delete(runtime.targetId);
@@ -174,7 +238,7 @@ export class HangNhacRoom extends CourtyardRoom {
   }
   private persistLesson(id:string,candidate:CharacterProfile):boolean {
     try {
-      HangNhacRoom.store.save(candidate);this.profiles.set(id,candidate);
+      this.storeFor(id).save(candidate);this.profiles.set(id,candidate);
       const actor=this.state.players.get(id);if(actor)actor.savedAt=candidate.updatedAt;
       return true;
     }catch{this.clients.find(client=>client.sessionId===id)?.send('sect:result',{ok:false,reason:'save'});return false;}
@@ -207,7 +271,7 @@ export class HangNhacRoom extends CourtyardRoom {
     const actor=this.state.players.get(client.sessionId);if(!actor?.connected){client.send('skill:result',{requestId:command.id,accepted:false,reason:'inactive'});return;}
     const profile=this.profiles.get(client.sessionId);
     if(profile&&!profile.skills.includes(command.skillId)){client.send('skill:result',{requestId:command.id,accepted:false,reason:'rights'});return;}
-    const old=profile?HangNhacRoom.store.receipt(profile.id,command.id) as {command:string;result:CastResult}|undefined:undefined;
+    const old=profile?this.storeFor(client.sessionId).receipt(profile.id,command.id) as {command:string;result:CastResult}|undefined:undefined;
     const result=old?old.command===commandKey(command)?{...old.result,duplicate:true}:{requestId:command.id,accepted:false,reason:'request_reused'}:
       this.engine.cast(client.sessionId,command,this.held.get(client.sessionId));
     client.send('skill:result',result);
@@ -218,6 +282,22 @@ export class HangNhacRoom extends CourtyardRoom {
     const view={...sectView(profile,actor,this.engine.now,this.cycles.get(actor.id)??0,this.hasProjectile(actor.id)),
       lessonView:lessonView(this.lessons.get(actor.id))},key=JSON.stringify(view);
     if(force||this.sectSent.get(actor.id)!==key){client.send('sect:state',view);this.sectSent.set(actor.id,key);}
+    const active=cultivationMotion(view,actor.moving),previous=this.questLoops.get(actor.id);
+    if(active&&!previous){const event:QuestMotionEvent={id:`loop:${actor.id}:${this.engine.now}`,actorId:actor.id,kind:'cultivation',direction:'south',at:this.engine.now};
+      this.questLoops.set(actor.id,event);this.broadcast('sect:animation',event);
+    }else if(!active&&previous)this.stopQuestLoop(actor.id);
+  }
+  private sendCharacter(client:Client,force=false):void{
+    if(!force&&!this.characterWatchers.has(client.sessionId))return;
+    const profile=this.profiles.get(client.sessionId),actor=this.state.players.get(client.sessionId);if(!profile||!actor?.connected)return;
+    const view:CharacterView={profileId:profile.id,avatarId:profile.avatarId,name:actor.name,hp:actor.hp,mp:actor.mp,maxHp:100,maxMp:100,skills:[...profile.skills],
+      items:characterItems(profile),equipment:{...profile.inventory.equipment},sect:{...sectView(profile,actor,this.engine.now,this.cycles.get(actor.id)??0,this.hasProjectile(actor.id)),lessonView:lessonView(this.lessons.get(actor.id))},
+      serverNow:this.engine.now,savedAt:profile.updatedAt,revision:profile.revision};
+    const key=JSON.stringify({...view,serverNow:0});
+    if(force||this.characterSent.get(actor.id)!==key){client.send('character:state',view);this.characterSent.set(actor.id,key);}
+  }
+  private stopQuestLoop(id:string):void {
+    if(this.questLoops.delete(id))this.broadcast('sect:animation',{id:`idle:${id}:${this.engine.now}`,actorId:id,kind:'idle',direction:'south',at:this.engine.now} satisfies QuestMotionEvent);
   }
   private snapshot(profile: CharacterProfile, actor: Disciple): CharacterProfile {
     return { ...profile, name: actor.name, x: actor.x, y: actor.y, direction: actor.direction as Direction, mapId: HANG_NHAC.id, mapVersion: HANG_NHAC.version,
@@ -227,45 +307,55 @@ export class HangNhacRoom extends CourtyardRoom {
   private commitCast(actor: CombatActor, command: CastCommand, result: CastResult): void {
     const profile = this.profiles.get(actor.id); if (!profile) return;
     const candidate = this.snapshot(profile, actor as Disciple);
-    HangNhacRoom.store.commitCast(candidate, command.id, { command: commandKey(command), result });
+    this.storeFor(actor.id).commitCast(candidate, command.id, { command: commandKey(command), result });
     this.profiles.set(actor.id, candidate); (actor as Disciple).savedAt = candidate.updatedAt;
   }
   private save(id: string): void {
     const profile = this.profiles.get(id), actor = this.state.players.get(id); if (!profile || !actor) return;
     const client = this.clients.find(c => c.sessionId === id);
     try {
-      const candidate = this.snapshot(profile, actor); HangNhacRoom.store.save(candidate); this.profiles.set(id, candidate); actor.savedAt = candidate.updatedAt;
+      const candidate = this.snapshot(profile, actor); this.storeFor(id).save(candidate); this.profiles.set(id, candidate); actor.savedAt = candidate.updatedAt;
       client?.send('profile:saved', { ok: true, savedAt: candidate.updatedAt });
     } catch { client?.send('profile:saved', { ok: false }); }
   }
   async onDrop(client: Client): Promise<void> {
+    this.characterWatchers.delete(client.sessionId);this.characterSent.delete(client.sessionId);
+    this.stopQuestLoop(client.sessionId);
     this.clearLesson(client.sessionId);
     this.pendingCasts.delete(client.sessionId);
     this.cycles.delete(client.sessionId);this.sectSent.delete(client.sessionId);this.sectWatchers.delete(client.sessionId);
     this.engine.cancel(client.sessionId); this.held.delete(client.sessionId); this.save(client.sessionId);
-    const p = this.profiles.get(client.sessionId); if (p) HangNhacRoom.leases.dropped(p.accountId, client.sessionId);
+    const p = this.profiles.get(client.sessionId),grant=this.grants.get(client.sessionId);if(grant)HangNhacRoom.gateway?.drop(grant,client.sessionId);else if(p)HangNhacRoom.leases.dropped(p.accountId, client.sessionId);
     await super.onDrop(client);
   }
   onReconnect(client: Client): void {
     this.held.set(client.sessionId,{x:0,y:0});
     const p = this.profiles.get(client.sessionId);
-    if (p) {
+    const grant=this.grants.get(client.sessionId);
+    if(grant){if(!HangNhacRoom.gateway?.renew(grant,client.sessionId))throw new ServerError(401,'Phiên đăng nhập hoặc server không còn cho phép chơi.');}
+    else if (p) {
       if (!HangNhacRoom.leases.acquire(p.accountId, client.sessionId)) throw new ServerError(409, 'Hồ sơ đang ở phiên khác.');
       HangNhacRoom.leases.activate(p.accountId, client.sessionId);
     }
     super.onReconnect(client);
   }
   onLeave(client: Client): void {
+    this.characterWatchers.delete(client.sessionId);this.characterSent.delete(client.sessionId);
+    this.stopQuestLoop(client.sessionId);
     this.clearLesson(client.sessionId);
     this.pendingCasts.delete(client.sessionId);
     this.cycles.delete(client.sessionId);this.sectSent.delete(client.sessionId);this.sectWatchers.delete(client.sessionId);
     this.engine.cancel(client.sessionId); this.save(client.sessionId); this.engine.remove(client.sessionId); this.held.delete(client.sessionId);
-    const p = this.profiles.get(client.sessionId); if (p) HangNhacRoom.leases.release(p.accountId, client.sessionId);
+    const p = this.profiles.get(client.sessionId),grant=this.grants.get(client.sessionId);if(grant)HangNhacRoom.gateway?.release(grant,client.sessionId);else if(p)HangNhacRoom.leases.release(p.accountId, client.sessionId);
+    this.grants.delete(client.sessionId);this.persistence.delete(client.sessionId);
     this.profiles.delete(client.sessionId); super.onLeave(client);
   }
   onDispose(): void {
+    this.characterWatchers.clear();this.characterSent.clear();
+    this.questLoops.clear();
     for(const id of this.lessons.keys())this.clearLesson(id);
     this.pendingCasts.clear();
-    for (const [id, p] of this.profiles) { this.save(id); HangNhacRoom.leases.release(p.accountId, id); }
+    for (const [id, p] of this.profiles) { this.save(id);const grant=this.grants.get(id);if(grant)HangNhacRoom.gateway?.release(grant,id);else HangNhacRoom.leases.release(p.accountId,id); }
+    this.grants.clear();this.persistence.clear();
   }
 }

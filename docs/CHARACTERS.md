@@ -1,5 +1,11 @@
 # Nhân vật — ba lựa chọn chơi được từ đầu
 
+**Review Hóa Thần 02 · 12/10:** [Sinh Tử sáng hơn và khí động hai đạo](design/characters/wang-lin-hoa-than-review-v2/README.md) giữ đúng người; [VFX tách atlas người/hướng/động tác](CHARACTER-AURA-LAYERS.md). Chưa thêm cảnh giới/trang bị/đạo/ngoại hình vào hồ sơ hoặc làm sprite tám hướng.
+
+**ART Hóa Thần · 12/10:** [Sinh Tử/Tu Đạo và Huyền Tử/Đọa Ma](design/characters/wang-lin-hoa-than-review-v1/README.md) đã có mẫu áo một pose trên đúng Vương Lâm hiện hành, cùng hai vòng khí tĩnh tách rời. Gallery/map giữ ba áo nhập môn và mẫu gốc; khí mặc định tắt. Chưa duyệt ART, thêm trang bị/chuyển đạo hoặc đổi avatar/gameplay/save.
+
+**Vương Lâm chỉ thay áo · 12/10:** owner xác nhận giữ nguyên người và yêu cầu thêm áo. [Ba trang phục 02](design/characters/wang-lin-costume-review-v2/README.md) dùng nguyên native-v2, không thay mặt/tóc/tỷ lệ/pose; mỗi bộ một hình đứng Nam để chọn concept. Gallery/map đồng bộ ba mẫu, các bộ vẽ lại người cũ đã dọn. Chưa duyệt hình áo hoặc thêm item/quyền mặc; GDD/roster/ID/profile/save/animation runtime không đổi.
+
 **Phiên bản:** 1.5 · **Ngày:** 08/10/2026 · **Tham chiếu:** [GDD](GDD.md), [tu tiên](CULTIVATION-SYSTEM.md), [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), [nguồn nhận diện bộ ba](CORE-CHARACTER-VISUAL-SPEC.md).
 
 ## 1. Vai trò hiện hành

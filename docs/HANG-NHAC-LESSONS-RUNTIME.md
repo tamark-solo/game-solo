@@ -1,5 +1,7 @@
 # Hằng Nhạc — HN03, HN04 và đòn thường
 
+**Animation 10/10/2026:** F/đòn thường đã có bốn hướng × bốn frame riêng cho mỗi nhân vật, phát từ hit server sau commit; không đổi damage, 0 MP, cooldown hay thời hạn né. [Gói nhiệm vụ](HANG-NHAC-QUEST-MOTION.md) giữ ưu tiên pose R01 và các chuỗi Kiếm/Lôi/Phong hiện hành.
+
 **09/10/2026 · nhánh `_MMO` · runtime 0.12.0 · GDD 0.28.** Nối tiếp HN01–HN02/M01 bằng hai bài luyện an toàn. Không thay map, navigation, artwork, bộ R01, HUD đã duyệt hoặc cơ chế tài khoản khách.
 
 ## Chơi thử

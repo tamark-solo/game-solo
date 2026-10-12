@@ -31,15 +31,16 @@ try {
     } finally {store.close();}
   };
   browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',
-    headless:true,args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
-  const context=await browser.newContext({viewport:{width:1440,height:980},deviceScaleFactor:1});
+    headless:true,args:['--enable-unsafe-swiftshader',...(process.env.SKILL_GPU_NATIVE==='0'||process.env.SKILL_GPU_SOFTWARE==='1'?['--use-angle=swiftshader']:[])]});
+  // Native 1px bodies need no giant framebuffer; keep PNG capture inside short cast windows.
+  const context=await browser.newContext({viewport:{width:1000,height:800},deviceScaleFactor:1});
   await context.addInitScript(token=>localStorage.setItem('hang-nhac.guest.v1',token),guest.token);
   // tsx preserves names for nested callbacks; those functions run in the fixture browser.
   await context.addInitScript('window.__name = (fn) => fn;');
   page=await context.newPage();
   page.on('pageerror',error=>errors.push(error.message));
   page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
-  await page.goto(`${origin}/hang-nhac.html`);
+  await page.goto(`${origin}/hang-nhac.html?devGuest=1`);
   await page.waitForFunction('window.__hangNhacDiagnostics?.().ready');
   assert.equal((await state(page)).vfx.loadedAtlases,22,'initial load includes FX and only the selected avatar');
   for(const avatar of HANG_NHAC_AVATARS) for(const direction of ['south','west','east','north'] as Direction[]) {
@@ -76,11 +77,31 @@ try {
           if(performance.now()<deadline)requestAnimationFrame(sample);else monitor.done=true;
         };requestAnimationFrame(sample);
       });
-      await page.locator('#stage').focus();
-      await page.keyboard.press(String(index+1));
       const expected=avatar==='CHR-WANG-LIN-CHIBI'&&direction==='east'?
         {sword:'wanglin-cast-east',thunder:'wanglin-thunder-east',wind:'wanglin-wind-east'}[skill]:
         `${short[avatar]}-${skill}-${direction}`;
+      // Observe a pose while it is rendered, rather than ask Node to capture after
+      // multiple round trips have spent most of a sub-second cast's lifetime.
+      await page.evaluate(({expected,skill})=>{
+        const fixture={capture:undefined as {placement:any;dataUrl:string}|undefined,done:false,samples:[] as unknown[]};(window as any).__castPixels=fixture;
+        const deadline=performance.now()+4000;let releasedAt:number|undefined;
+        const sample=()=>{
+          const placement=(window as any).__hangNhacDiagnostics(),r=(window as any).__hangNhacR01(),own=placement.actors.find((a:any)=>a.own);
+          const body=placement.sprites.find((s:any)=>s.id===own?.id);
+          if(r.own?.castId&&r.vfx.trace.some((e:any)=>e.type==='release'&&e.castId===r.own.castId))releasedAt??=performance.now();
+          // Kiếm's 96px air FX can still cover the canonical body after release.
+          // Wait for its actual rendered position, rather than assume wall time means distance.
+          const clearProjectile=r.vfx.renderedEffects.filter((e:any)=>e.id.startsWith('projectile:')).every((e:any)=>Math.hypot(e.point[0]-own.x,e.point[1]-own.y)>=120);
+          if(body?.clip===expected&&fixture.samples.length<30)fixture.samples.push({index:body.frameIndex,released:releasedAt!==undefined,fx:r.vfx.renderedEffects.map((e:any)=>({id:e.id,point:e.point,clip:e.clip,anchor:e.anchor,rotation:e.rotation}))});
+          const windHistoryReady=skill!=='wind'||r.vfx.renderedEffects.some((e:any)=>e.id.includes(':ghost:'));
+          if(body?.clip===expected&&body.animationSource==='skill'&&body.frameIndex>0&&
+            windHistoryReady&&(skill!=='sword'||releasedAt!==undefined&&clearProjectile)){
+            fixture.capture={placement,dataUrl:(document.querySelector('#stage canvas') as HTMLCanvasElement).toDataURL('image/png')};fixture.done=true;
+          }else if(performance.now()<deadline)requestAnimationFrame(sample);else fixture.done=true;
+        };requestAnimationFrame(sample);
+      },{expected,skill});
+      await page.locator('#stage').focus();
+      await page.keyboard.press(String(index+1));
       await page.waitForFunction(expected=>{
         const d=(window as any).__hangNhacDiagnostics(),own=d.actors.find((a:any)=>a.own);
         return d.sprites.some((s:any)=>s.id===own?.id&&s.animationSource==='skill'&&s.clip===expected);
@@ -92,21 +113,9 @@ try {
         const d=(window as any).__hangNhacDiagnostics(),own=d.actors.find((a:any)=>a.own),s=d.sprites.find((s:any)=>s.id===own?.id);
         return s?.animationSource==='skill'&&s.frameIndex>first;
       },first,{timeout:1500});
-      // Charge legitimately overlays the body. Compare canonical RGB after its confirmed
-      // release, with the projectile away from the caster; isolated GPU parity covers all frames.
-      if (skill === 'sword') {
-        await page.waitForFunction(() => {
-          const r = (window as any).__hangNhacR01();
-          return r.own.castId && r.vfx.trace.some((event: any) => event.type === 'release' && event.castId === r.own.castId);
-        });
-        await page.waitForTimeout(200);
-      }
-      // Read GPU pixels and diagnostic pose inside one render callback. A browser screenshot can
-      // finish after a short cast has ended, especially when another WebGL test is running.
-      const capture:{placement:any;dataUrl:string}=await page.evaluate(()=>new Promise<{placement:any;dataUrl:string}>(resolve=>requestAnimationFrame(()=>{
-        const placement=(window as any).__hangNhacDiagnostics(),canvas=document.querySelector('#stage canvas') as HTMLCanvasElement;
-        resolve({placement,dataUrl:canvas.toDataURL('image/png')});
-      })));
+      await page.waitForFunction('window.__castPixels?.done');
+      const capture:{placement:any;dataUrl:string}|undefined=await page.evaluate(()=>(window as any).__castPixels.capture);
+      assert.ok(capture,JSON.stringify({expected,message:'observed an active GPU pose, after confirmed release for Kiếm',samples:await page.evaluate(()=>(window as any).__castPixels.samples)}));
       const placement:any=capture.placement;
       assert.ok(placement.sprites.some((s:any)=>s.clip===expected&&s.animationSource==='skill'),'capture still belongs to the active cast');
       const shot:Buffer|undefined=skill==='sword'||direction==='east'?Buffer.from(capture.dataUrl.split(',')[1],'base64'):undefined;
@@ -130,8 +139,11 @@ try {
           const capture=ctx.getImageData(footX-clip.anchor[0]-2,footY-clip.anchor[1]-2,clip.frameSize[0]+4,clip.frameSize[1]+4);
           canvas.width=clip.frameSize[0];canvas.height=clip.frameSize[1];ctx.imageSmoothingEnabled=false;
           let best=0;
-          for(const r of clip.frames){
-            ctx.clearRect(0,0,clip.frameSize[0],clip.frameSize[1]);ctx.drawImage(atlas,r.x,r.y,r.w,r.h,0,0,r.w,r.h);
+          for(const [index,r] of clip.frames.entries()){
+            const crop=clip.frameCrops?.[index]??{x:0,y:0,w:r.w,h:r.h};
+            ctx.clearRect(0,0,clip.frameSize[0],clip.frameSize[1]);
+            ctx.drawImage(atlas,r.x+crop.x,r.y+crop.y,crop.w,crop.h,crop.x,crop.y,crop.w,crop.h);
+            for(const cut of clip.frameCutouts?.[index]??[])ctx.clearRect(cut.x,cut.y,cut.w,cut.h);
             const pixels=ctx.getImageData(0,0,clip.frameSize[0],clip.frameSize[1]).data;
           // Permit subpixel rasterization at the body edges, while checking the canonical interior.
             for(let oy=0;oy<=4;oy++)for(let ox=0;ox<=4;ox++){

@@ -4,7 +4,9 @@
 
 **Đã chốt:** sáu phần phát triển; chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu; Hằng Nhạc qua Ngưng Khí, phân hóa sâu từ hành trình Trúc Cơ. **Thiết kế cơ sở:** trạng thái, điều kiện và ví dụ dưới đây; chưa chốt số liệu, tên thuật mới hoặc schema runtime. Không có triển khai code trong tài liệu này.
 
-Bộ R01 Kiếm Khí/Lôi Ấn/Ngự Phong Bộ có sẵn cho cả ba từ lúc điều khiển; hướng dẫn và tiến triển công pháp không khóa lại quyền khởi đầu này. Ưu tiên vẫn là map trước đặc tả vận hành theo [GDD](GDD.md); ART cũ đã xóa, đang chờ kế hoạch map mới. Chưa chuyển sang triển khai tu luyện/đột phá chỉ bởi hồ sơ này đã có.
+Bộ R01 Kiếm Khí/Lôi Ấn/Ngự Phong Bộ có sẵn cho cả ba từ lúc điều khiển; hướng dẫn và tiến triển công pháp không khóa lại quyền khởi đầu này.
+
+**Điểm nối 10/10 — GDD 0.29:** map/layer, HN01–HN04, entry và hành trang nhập môn đã có bản thử. Owner đồng ý thiết kế hệ thống trước mở rộng HN05: [CHARACTER-SYSTEM](CHARACTER-SYSTEM.md) cụ thể hóa ownership/state/nguồn stat/mốc/đồ; [QUEST-SYSTEM](QUEST-SYSTEM.md) nối tiến trình vào hoạt động; [roadmap](DEVELOPMENT-ROADMAP.md) quy định thứ tự. Hồ sơ này giữ ý nghĩa sáu phần và nguồn tham khảo, không là schema runtime mới hoặc yêu cầu làm lại map. Chưa mở tu luyện/đột phá cao hơn chỉ bởi đã viết thiết kế.
 
 ## 1. Mô hình phát triển
 
@@ -129,7 +131,7 @@ Mốc nhập môn hoàn tất Ngưng Khí không tự cho Trúc Cơ khi qua cổ
 
 Idle chỉ hỗ trợ hoạt động đã chọn và được phép: tích lũy hoặc chuẩn bị có luật. Không auto truyện, combat, lĩnh ngộ then chốt hay đại đột phá; không có offline battle mặc định. [Hồ sơ tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) đề xuất nền 120/phút, tạm dừng combat/bài tương tác, cổng tích lũy và cap offline thử 30 phút. Các số/luật này cần đánh giá, không kế thừa 8 giờ hoặc 10 giây như quyết định đã duyệt.
 
-Tiến trình gắn hồ sơ nhân vật, tài nguyên không tự chuyển giữa ba người. Số slot, đổi người, kho chung và phần khám phá dùng chung còn mở. Cảnh giới hiển thị không đủ để xác định sức mạnh ghép nhóm Tư Đồ Nam: cần mốc gameplay/năng lực hiện dùng được trong luật sau.
+Tiến trình gắn hồ sơ nhân vật, tài nguyên không tự chuyển giữa các hồ sơ. [Entry local](GAME-ENTRY-BACKEND.md) đã có tạo/chọn/đổi nhân vật, mặc định 3 slot/realm có cấu hình và cho nhiều hồ sơ cùng avatar. Kho chung, chuyển realm và phần khám phá dùng chung chưa mở; không lấy avatar làm khóa tiến trình. Cảnh giới hiển thị không đủ để xác định sức mạnh ghép nhóm Tư Đồ Nam: cần mốc gameplay/năng lực hiện dùng được trong luật sau.
 
 Đề xuất PvP theo nhóm mốc hoặc tỷ thí cân bằng; không ép chuẩn hóa PvE. Giới hạn, khả năng đối phó và luật phiên chơi cần làm rõ trước khi chuyển sức mạnh độc hữu từ truyện sang combat. Lợi thế chuẩn bị không được đồng nghĩa một nhân vật bắt buộc để người khác tiến triển. Đan/pháp bảo có giao dịch và quyền thưởng nhóm hay không còn mở.
 

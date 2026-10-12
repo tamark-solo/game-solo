@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nhân vật · Vân Ngọc · Bản thiết kế</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%231b3836' d='M0 0h32v32H0z'/%3E%3Cpath stroke='%23d4b677' fill='none' d='m16 5 8 11-8 11-8-11Z'/%3E%3C/svg%3E">
+</head>
+<body class="hang-nhac-game character-review">
+  <header class="review-top">
+    <div><span class="review-eyebrow">VÂN NGỌC · LINH ĐÀI / 02</span><p>Hồ sơ & hành trang <span class="sample-badge">Dữ liệu mẫu</span></p></div>
+    <div class="review-tools">
+      <details id="review-controls"><summary>Thử trạng thái</summary><div class="review-popover">
+        <label>Trạng thái mẫu<select id="scenario"><option value="ready">Sẵn sàng</option><option value="empty">Hành trang rỗng</option><option value="many">Nhiều vật phẩm</option><option value="long">Tên và mô tả dài</option><option value="loading">Đang nạp</option><option value="offline">Mất kết nối</option><option value="save-error">Lỗi lưu thao tác</option></select></label>
+        <label>Cỡ chữ đọc<select id="reading-size"><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option></select></label>
+        <button id="reset-preview" type="button">Đặt lại dữ liệu mẫu</button>
+        <p>Thay đồ và dùng vật phẩm chỉ diễn ra trong bản mẫu này. Ba vị trí trang bị và số liệu minh họa chưa chốt luật game.</p>
+      </div></details>
+      <a href="/hang-nhac.html" target="_blank" rel="noopener">Mở game ↗</a>
+    </div>
+  </header>
+  <main id="stage" class="character-stage">
+    <div class="review-map" aria-hidden="true"></div>
+    <button id="open-character" class="game-button open-character" type="button" hidden>Nhân vật <kbd>C</kbd></button>
+    <section id="character-window" class="character-window van-panel" role="dialog" aria-modal="false" aria-labelledby="window-title">
+      <header class="character-heading"><div><span class="review-eyebrow">HẰNG NHẠC · HỒ SƠ MẪU</span><h1 id="window-title">Nhân vật</h1></div>
+        <label class="avatar-select-label"><span>Đang xem</span><select id="preview-avatar"><option value="CHR-WANG-LIN-CHIBI">Vương Lâm</option><option value="CHR-SITU-NAN">Tư Đồ Nam</option><option value="CHR-LI-MUWAN">Lý Mộ Uyển</option></select></label>
+        <button id="close-character" class="close-character" type="button" aria-label="Đóng cửa sổ nhân vật">✕</button>
+      </header>
+      <nav class="character-tabs" role="tablist" aria-label="Hồ sơ và chuẩn bị">
+        <button id="tab-overview" role="tab" aria-selected="true" aria-controls="character-content" data-tab="overview" type="button">Tổng quan</button>
+        <button id="tab-inventory" role="tab" aria-selected="false" aria-controls="character-content" tabindex="-1" data-tab="inventory" type="button">Hành trang</button>
+        <button id="tab-equipment" role="tab" aria-selected="false" aria-controls="character-content" tabindex="-1" data-tab="equipment" type="button">Trang bị</button>
+      </nav>
+      <p id="connection-notice" class="connection-notice" role="status" hidden></p>
+      <div id="character-content" class="character-content" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
+        <aside id="profile-pane" class="profile-pane ui-reading"></aside>
+        <section id="primary-pane" class="primary-pane ui-reading"></section>
+        <aside id="detail-pane" class="detail-pane ui-reading" aria-label="Chi tiết vật phẩm" hidden></aside>
+      </div>
+      <footer class="character-footer"><p id="preview-status" role="status" aria-live="polite">Bản mẫu · mọi thay đổi chỉ giữ trong phiên xem này.</p><span>Vân Ngọc <i aria-hidden="true">✦</i> 02</span></footer>
+    </section>
+    <div id="hotbar-mount"></div>
+  </main>
+  <script type="module" src="/src/character-preview/main.ts"></script>
+</body>
+</html>

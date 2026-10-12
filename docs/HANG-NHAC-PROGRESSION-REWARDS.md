@@ -4,6 +4,8 @@
 
 **Tham chiếu:** [GDD 0.28](GDD.md), [trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md), [hệ thống tu tiên](CULTIVATION-SYSTEM.md), [nhân vật](CHARACTERS.md), [backlog](MVP-BACKLOG.md).
 
+**Đối chiếu nội dung 10/10:** [Chương phương án A](HANG-NHAC-CHAPTER-PLAN.md) dùng nguyên ngân sách thử dưới đây để kiểm đồ thị; [catalog nhập môn](HANG-NHAC-CONTENT-CATALOG.md) cụ thể hóa cùng một instance phôi/refined và một nguồn supplies. Hai nguyên liệu dư tạm giữ chưa có recipe tiếp, không tự đổi tiền. HN09 phải đủ 1.620 trước khi nhận +360: đường chỉ tuyến chính cần thêm 600 trước HN09 và 1.620 sau đó tới ngưỡng cuối (nếu không tích lũy nền trước); không lấy reward tương lai để mở chính quest đó. Những đối chiếu này không khóa balance hoặc sửa runtime.
+
 ## 1. Quyết định nền và phần đề xuất mới
 
 Đã chốt: chọn một trong ba nhân vật từ đầu; trải nghiệm Hằng Nhạc qua Ngưng Khí; có sẵn Kiếm Khí/Lôi Ấn/Ngự Phong Bộ R01; phân hóa sâu sau nhập môn. Tài liệu này đề xuất cách tích lũy, tiến tầng, phần thưởng, chuẩn bị và điều kiện rời map để vòng chơi có nhịp rõ.

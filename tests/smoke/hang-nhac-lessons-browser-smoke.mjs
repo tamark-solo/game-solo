@@ -11,8 +11,8 @@ const origin='http://127.0.0.1:5202',endpoint='http://127.0.0.1:2598';
 await mkdir('artifacts',{recursive:true});const folder=await mkdtemp(resolve('artifacts/hn-lessons-browser-')),dbPath=resolve(folder,'profiles.sqlite');
 const backend=await startService(['--import','tsx','server/src/index.ts'],endpoint+'/health',{PORT:'2598',GAME_DB_PATH:dbPath});
 let vite,browser,page;const checks=[],errors=[];
-const game=p=>p.evaluate(()=>window.__hangNhacR01());
-const sect=p=>p.evaluate(()=>window.__hangNhacSect());
+const game=p=>p.evaluate(()=>window.__hangNhacR01?.());
+const sect=p=>p.evaluate(()=>window.__hangNhacSect?.());
 try{
   vite=await startService(['node_modules/vite/bin/vite.js','--config','vite.config.ts','--port','5202'],origin,
     {VITE_SERVER_URL:endpoint,MAP_EDITOR_STORAGE:resolve(folder,'map-store')});
@@ -23,13 +23,13 @@ try{
     Object.assign(p.sect,{hn01:true,hn02:true,foundation:avatar==='CHR-SITU-NAN'?'spirit':'breathing',cycleStep:4,level:1});store.save(p);
   }}finally{store.close();}
   browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,
-    args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
+    args:['--enable-unsafe-swiftshader']});
   const context=await browser.newContext({viewport:{width:1440,height:980}});
   await context.addInitScript(token=>localStorage.setItem('hang-nhac.guest.v1',token),guest.token);
   await context.addInitScript('window.__name = (fn) => fn;');
   page=await context.newPage();page.on('pageerror',error=>errors.push(error.message));
   page.on('response',response=>{if(response.status()>=400)errors.push(`HTTP ${response.status()}: ${response.url()}`);});
-  await page.goto(origin+'/hang-nhac.html');await page.waitForFunction(()=>window.__hangNhacDiagnostics?.().ready);
+  await page.goto(origin+'/hang-nhac.html?devGuest=1');await page.waitForFunction(()=>window.__hangNhacDiagnostics?.().ready);
   await page.locator('#join').click();await page.waitForFunction(()=>window.__hangNhacR01().own?.connected&&window.__hangNhacSect().view?.hn02);
   const original=await game(page);assert.equal(await page.locator('#quest-title').textContent(),'HN03 · Vận dụng thuật nền');
   await page.locator('#interact').click();
@@ -53,7 +53,7 @@ try{
   assert.equal((await sect(page)).view.lessonView,undefined,'reload cannot resume an expired runtime target');
   await page.locator('#lesson-retry:enabled').waitFor();await page.locator('#lesson-retry').click();
   await page.waitForFunction(old=>window.__hangNhacR01().selectedTarget!==old&&window.__hangNhacSect().view?.lessonView?.kind==='arts',oldTarget);
-  await aimTarget();await page.locator('[data-skill=thunder][aria-disabled="false"]').waitFor();await page.locator('[data-skill=thunder]').click();
+  await aimTarget();await page.locator('button[data-skill=thunder][aria-disabled="false"]').waitFor();await page.locator('button[data-skill=thunder][aria-disabled="false"]').click();
   await page.waitForFunction(()=>window.__hangNhacSect().view.lessons.thunder&&!window.__hangNhacSect().view.practising);
   await page.locator('#interact').click();await page.locator('[data-action=lesson_confirm]:enabled').click();
   await page.waitForFunction(()=>window.__hangNhacSect().view.lessons.hn03);assert.equal((await sect(page)).view.cultivation,180);

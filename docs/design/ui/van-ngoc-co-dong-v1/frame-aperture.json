@@ -1,0 +1,57 @@
+{
+  "type": "derived-vector-aperture",
+  "source": "window.webp",
+  "sourceSha256": "b4f718286cda78dc4fb7507c987cf784966fca75eb80f4d49fcc2263aa8ee186",
+  "slice": 0.22,
+  "alphaThreshold": 32,
+  "enclosed": true,
+  "filledPixels": 609698,
+  "tiles": [
+    {
+      "file": "frame-aperture-tl.svg",
+      "sha256": "871f045bd9312a093ae0dbbfa53a91ac9416166920db19c08683db558c24b66b",
+      "bytes": 3106
+    },
+    {
+      "file": "frame-aperture-t.svg",
+      "sha256": "2f9b81633c03dd5df1db607740335eed91f2c8b474398605628511139b05b2f5",
+      "bytes": 3281
+    },
+    {
+      "file": "frame-aperture-tr.svg",
+      "sha256": "2f5d9151147395dc01674bacea6ff07e98c131e4a10c6fd6d1ecc2f2f5b14086",
+      "bytes": 5965
+    },
+    {
+      "file": "frame-aperture-l.svg",
+      "sha256": "d088dd7887d385973d8aaffafd79af55bb4d2afcc0b494fb76a9c3366ccf7717",
+      "bytes": 14428
+    },
+    {
+      "file": "frame-aperture-c.svg",
+      "sha256": "8649fe8f3ca93463a3a4221177cf2b627e77e94dffa59a83443908bba3ad442a",
+      "bytes": 16077
+    },
+    {
+      "file": "frame-aperture-r.svg",
+      "sha256": "847b069ecc9591c14ac76044c4761f5a15df8376eda0e75a79149f8669e6d10d",
+      "bytes": 29241
+    },
+    {
+      "file": "frame-aperture-bl.svg",
+      "sha256": "cb060f64930b370d5eb1deb614d805524d8fb6cc506586d7427f37925a68ebe1",
+      "bytes": 3177
+    },
+    {
+      "file": "frame-aperture-b.svg",
+      "sha256": "26023b81e9728ca2f1d12a4b0f8153e619074e6bbf8f52178ad1462645f7fc9a",
+      "bytes": 3331
+    },
+    {
+      "file": "frame-aperture-br.svg",
+      "sha256": "885da6420334010896e043968f6683813838c11d91ef47a6461d3dd432d6e018",
+      "bytes": 6021
+    }
+  ],
+  "processing": "Trace the center-connected transparent hole into nine SVG viewBoxes. Artwork pixels unchanged; same slices as the displayed frame."
+}

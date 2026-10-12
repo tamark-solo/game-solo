@@ -9,6 +9,7 @@ import { authoredMapParts, type AuthoredMapScene } from '@shared/map-presentatio
 
 export interface LoadedActor { definition: ActorDefinition; atlas: Atlas; texture: THREE.Texture; alpha: AlphaMask; frameMasks: Map<string,AlphaMask> }
 export interface ActorSpriteFrame {
+  source?:'skill'|'quest';
   clip:string;index:number;texture:THREE.Texture;rect:{x:number;y:number;w:number;h:number};
   atlasSize:[number,number];frameSize:[number,number];anchor:[number,number];mask?:AlphaMask;
   crop?:{x:number;y:number;w:number;h:number};
@@ -307,7 +308,7 @@ export class PreviewRenderer {
       const [aw,ah]=pose?.atlasSize??[asset.atlas.width,asset.atlas.height],size=pose?.frameSize??asset.atlas.frameSize,anchor=pose?.anchor??asset.atlas.anchor;
       setSpriteFrame(visual.sprite,frame,[aw,ah],size,anchor,pose?.crop,pose?.cutouts);
       visual.sprite.userData.clip=pose?.clip??actor.animation.frameId;visual.sprite.userData.frameIndex=pose?.index??actor.animation.frameIndex;
-      visual.sprite.userData.anchor=anchor;visual.sprite.userData.animationSource=pose?'skill':'locomotion';
+      visual.sprite.userData.anchor=anchor;visual.sprite.userData.animationSource=pose?(pose.source??'skill'):'locomotion';
       const screenX = (actor.x - this.cameraCenter.x) * this.zoom + this.width / 2;
       const screenY = (actor.y - this.cameraCenter.y) * this.zoom + this.height / 2;
       const renderedX = this.cameraCenter.x + (Math.round(screenX) - this.width / 2) / this.zoom;
@@ -325,6 +326,9 @@ export class PreviewRenderer {
       visual.label.style.left = `${Math.round((projected.x + 1) * this.width / 2)}px`;
       visual.label.style.top = `${Math.round((1 - projected.y) * this.height / 2)}px`;
     }
+    // Cosmetic attachments share the actor's depth without owning map layers.
+    for(const object of this.scene.children)if(typeof object.userData.orderWithActor==='string')
+      object.renderOrder=(orders.get(object.userData.orderWithActor)??0)+(object.userData.actorOrderOffset??0);
     this.webgl.render(this.scene, this.camera);
   }
 

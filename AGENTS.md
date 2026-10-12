@@ -14,6 +14,8 @@
 
 **Crop sprite 09/10:** 108 frame cast mới chứa mảnh hàng/cột bên cạnh do chia đều sheet. `frameCrops/frameCutouts` cục bộ mỗi frame + `client/src/render/sprite-frame.ts` giới hạn geometry/UV cho thân và bóng Phong, giữ canvas/anchor/bitmap gốc. Sprite phải có geometry riêng; không sửa quad mặc định dùng chung. Khi đổi PNG/trích source, tạo lại metadata bằng `build-core-cast-crops.mjs` và xem crop; khi sửa renderer/presentation chạy `test:skill-body`, `test:skill-vfx`, hồi quy 36 cast và NPC/reload phù hợp. Không tái vẽ hoặc sửa gameplay để che lỗi crop.
 
+**Nhân vật/khí tức 12/10:** owner đã chốt cả ba concept khí 04 (Luân Sinh Tử, Kiếm Vực Huyền Ngọc, Huyết Nguyệt Ma Vực) và yêu cầu giữ các concept nhân vật để làm tùy biến lúc tạo nhân vật vào server. [Thư viện giữ nguồn](docs/design/characters/character-customization-library-v1/README.md) có năm áo/ba khí, bảy gói hiện hành và ZIP nguồn sáu gói đã dọn; không dọn tiếp hoặc tự khôi phục bộ bị từ chối vào runtime. [Duyệt theo hash](docs/design/vfx/hoa-than-aura-concepts-v4/approval.json) áp cho concept tĩnh, không suy animation/production đã duyệt. Tạo nhân vật tùy biến chưa tích hợp; áo nhập môn là nguồn màn tạo, Hóa Thần/Đọa Ma theo quyền server. Giữ người/neo 64 × 96/(32,88), khí tách riêng; catalog quản trị có 8 record diện mạo `unreleased`.
+
 Trước khi sửa ART môi trường, layer, thứ tự vẽ, camera, va chạm, đường đi hoặc quy trình xuất asset, đọc:
 
 1. [Quy tắc xây map](docs/MAP-BUILDING-GUIDE.md).

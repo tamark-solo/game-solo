@@ -1,0 +1,2 @@
+export const GAME_ENTRY_IDS={mount:'account-entry',form:'account-entry-form',login:'account-login',password:'account-password',characterName:'new-character-name',message:'account-entry-message',trace:'account-entry-trace',titleStart:'entry-title-start',titleLogo:'title-game-name'} as const;
+export function entryElement<T extends HTMLElement=HTMLElement>(id:string):T{return document.getElementById(id)! as T;}

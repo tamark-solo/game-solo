@@ -1,0 +1,718 @@
+{
+  "date": "2026-10-12",
+  "id": "CHR-WANG-LIN-HOA-THAN-ART-02",
+  "sourceCharacterId": "CHR-WANG-LIN",
+  "scope": "Higher-contrast Sinh Tử on the exact native sprite; retained Huyền Tử and separate moving qi layers",
+  "tool": "built-in image_gen",
+  "ownerApproved": false,
+  "artApproved": false,
+  "preservationDecision": {
+    "accepted": true,
+    "evidence": "Keep-current-body direction accepted earlier; current request: hãy triển khai art cho tôi xem nhé để so sánh",
+    "scope": "Preserve the accepted native character; Sinh Tử correction and moving qi layers are pending art review"
+  },
+  "status": "pending-owner-costume-review",
+  "inputs": [
+    {
+      "file": "edit-target-16x.png",
+      "sha256": "924bac4039c5b93e6950ecbc8f6158602f8ed0e7b90e69e120499ccd67d27e59",
+      "originalPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/frames/wanglin_chibi_stand_south.png",
+      "originalSha256": "ae9cfddb7505b91bc0225942841f1e65df13d7e8913da62380c09997ad53a325",
+      "role": "Current native sprite enlarged 16x as edit target"
+    },
+    {
+      "file": "garment-mask-16x.png",
+      "sha256": "26ad43e217db15d7d448b539acffee3bbc8387149898c3e79c0d36ac7f7f29d8",
+      "role": "Exact garment edit guide"
+    }
+  ],
+  "mask": {
+    "file": "garment-mask.png",
+    "sha256": "de4787df804ee6fc28e0a4dad896d007a334fbb868e90c4a32cc9d8f7bae3edd",
+    "regionsFile": "edit-regions.json",
+    "editablePixels": 471
+  },
+  "identityReference": {
+    "originalPath": "docs/design/characters/wang-lin-initiation-v2.png",
+    "originalSha256": "9a957a0b793888fa1191f084d5a0bd330b2b3664be5a9bb3c2231ac92d54967f"
+  },
+  "contract": {
+    "framePx": [
+      64,
+      96
+    ],
+    "anchorPx": [
+      32,
+      88
+    ],
+    "bodyPx": [
+      45,
+      80
+    ],
+    "boundsPx": [
+      9,
+      9,
+      45,
+      80
+    ],
+    "defaultCameraZoom": 1,
+    "bodyResampling": false,
+    "sourceSampling": "Full-frame nearest, only masked fabric copied",
+    "alphaValues": [
+      0,
+      255
+    ],
+    "format": "rgba_png",
+    "runtimeIntegrated": false,
+    "animation": false,
+    "availableDirections": [
+      "south"
+    ]
+  },
+  "variants": [
+    {
+      "id": "sinh-tu",
+      "key": "sinhTu",
+      "name": "Sinh Tử",
+      "description": "Hóa Thần · Tu Đạo. Ngà sáng chiếm phần vải chính, nẹp ngọc sâu giữ nét; ít tro xám hơn bản 01.",
+      "stage": "hoa-than",
+      "branch": "Tu Đạo",
+      "palette": [
+        "#243D43",
+        "#3C6A68",
+        "#69A79B",
+        "#9BD3BF",
+        "#D3EED9",
+        "#EEE9CF",
+        "#FFFDF0",
+        "#FFFFFF",
+        "#B8DAD3",
+        "#80BCAF"
+      ],
+      "inputFiles": [
+        {
+          "file": "sinh-tu-edit-target-16x.png",
+          "sha256": "1aef6d5b606840fcd955d36a6d56d1c15bd3dc32dbceb353d400fc054948284a"
+        },
+        {
+          "file": "garment-mask-16x.png",
+          "sha256": "26ad43e217db15d7d448b539acffee3bbc8387149898c3e79c0d36ac7f7f29d8"
+        }
+      ],
+      "source": {
+        "file": "sinh-tu-source.png",
+        "size": [
+          1024,
+          1536
+        ],
+        "sha256": "83091cbbf17e6dcfdb228ee2e4cdc0e69802b84e0b9933f8d2e6ab757e7cd09d",
+        "role": "Generated fabric paint; non-garment pixels discarded"
+      },
+      "prompt": "sinh-tu.prompt.txt",
+      "promptSha256": "e840696d2b467794748a46945b4e5f6a653d4f8ab4e5fab8af5d30b16282734c",
+      "ownerApproved": false,
+      "artApproved": false,
+      "status": "pending-owner-costume-review",
+      "checks": {
+        "editablePixels": 471,
+        "changedFabricPixels": 471,
+        "protectedPixelChanges": 0,
+        "headPixelChanges": 0,
+        "skinPixelChanges": 0,
+        "shoePixelChanges": 0,
+        "alphaPixelChanges": 0,
+        "exactNativeBounds": [
+          9,
+          9,
+          45,
+          80
+        ],
+        "usedColors": 32,
+        "losslessRgba": true
+      },
+      "native": "sinh-tu.png",
+      "preview": "sinh-tu-preview.png"
+    },
+    {
+      "id": "huyen-tu",
+      "key": "huyenTu",
+      "name": "Huyền Tử",
+      "description": "Hóa Thần · Đọa Ma. Áo xanh đen, tro lạnh và nẹp huyết đồng tiết chế.",
+      "stage": "hoa-than",
+      "branch": "Đọa Ma",
+      "palette": [
+        "#171F2C",
+        "#243347",
+        "#3D4B60",
+        "#596474",
+        "#8F9A9F",
+        "#BCC6C0",
+        "#E3DECB",
+        "#532831",
+        "#803D43",
+        "#AF6660",
+        "#A57C59"
+      ],
+      "inputFiles": [
+        {
+          "file": "edit-target-16x.png",
+          "sha256": "924bac4039c5b93e6950ecbc8f6158602f8ed0e7b90e69e120499ccd67d27e59"
+        },
+        {
+          "file": "garment-mask-16x.png",
+          "sha256": "26ad43e217db15d7d448b539acffee3bbc8387149898c3e79c0d36ac7f7f29d8"
+        }
+      ],
+      "sourceOrigin": "Retained Huyền Tử garment source from review v1; unchanged",
+      "source": {
+        "file": "huyen-tu-source.png",
+        "size": [
+          1024,
+          1536
+        ],
+        "sha256": "91b4b4ab89f0dd12bcb9af581d86fb4ed7005b3f21a2b0a8d17b085fb1cd5570",
+        "role": "Generated fabric paint; non-garment pixels discarded"
+      },
+      "prompt": "huyen-tu.prompt.txt",
+      "promptSha256": "f1bcfe5ff8c5c780f47ba48b6b32bf9a1a5e2921c0cca971e32779ce17f5c260",
+      "ownerApproved": false,
+      "artApproved": false,
+      "status": "pending-owner-costume-review",
+      "checks": {
+        "editablePixels": 471,
+        "changedFabricPixels": 471,
+        "protectedPixelChanges": 0,
+        "headPixelChanges": 0,
+        "skinPixelChanges": 0,
+        "shoePixelChanges": 0,
+        "alphaPixelChanges": 0,
+        "exactNativeBounds": [
+          9,
+          9,
+          45,
+          80
+        ],
+        "usedColors": 35,
+        "losslessRgba": true
+      },
+      "native": "huyen-tu.png",
+      "preview": "huyen-tu-preview.png"
+    }
+  ],
+  "assets": [
+    {
+      "id": "baseline",
+      "file": "baseline.png",
+      "size": [
+        64,
+        96
+      ],
+      "sha256": "ae9cfddb7505b91bc0225942841f1e65df13d7e8913da62380c09997ad53a325",
+      "bytes": 2515,
+      "role": "Current Wang Lin, byte-identical"
+    },
+    {
+      "id": "baseline-preview",
+      "file": "baseline-preview.png",
+      "size": [
+        512,
+        768
+      ],
+      "sha256": "fc341150647e9bd5ed7dcac38990570f7466392a59e647d5f608b299cd40ef49",
+      "bytes": 9631,
+      "role": "Current Wang Lin nearest 8x"
+    },
+    {
+      "id": "identity-reference",
+      "file": "identity-reference.webp",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "a4cf116f60fdb0ca345e9df2e069d6a2ce34788ab8668f44471694b8f8b1e011",
+      "bytes": 334404,
+      "role": "Approved identity source, retained after cleanup"
+    },
+    {
+      "id": "sinh-tu",
+      "file": "sinh-tu.png",
+      "size": [
+        64,
+        96
+      ],
+      "sha256": "9ab8cab5ccebaacada8a512c504c3c52600905902f10b87c0b026fec24c50754",
+      "bytes": 2091,
+      "role": "Costume-only south idle, pending visual review"
+    },
+    {
+      "id": "sinh-tu-preview",
+      "file": "sinh-tu-preview.png",
+      "size": [
+        512,
+        768
+      ],
+      "sha256": "8f4261bc434d6026c8e7f4ae41367a622cad2d29206c208a267369a3c1c800a9",
+      "bytes": 9591,
+      "role": "Final native costume nearest 8x, not raw generated face"
+    },
+    {
+      "id": "huyen-tu",
+      "file": "huyen-tu.png",
+      "size": [
+        64,
+        96
+      ],
+      "sha256": "a84d33f854c7e514e59ca603918749dd11eafdb6f7620a49009dd064034a736c",
+      "bytes": 2157,
+      "role": "Costume-only south idle, pending visual review"
+    },
+    {
+      "id": "huyen-tu-preview",
+      "file": "huyen-tu-preview.png",
+      "size": [
+        512,
+        768
+      ],
+      "sha256": "b38794c37b3ab465e13b03a06dde244839eba29797718cca93fbda83d2341dae",
+      "bytes": 9769,
+      "role": "Final native costume nearest 8x, not raw generated face"
+    },
+    {
+      "id": "sinh-tu-qi",
+      "file": "sinh-tu-qi.png",
+      "size": [
+        96,
+        32
+      ],
+      "sha256": "a6666fb31b2945e39285762a1039d46f3abfa26e909bc2499b1e7e40262501ba",
+      "bytes": 4608,
+      "role": "Retained ground ART, animated independently in review"
+    },
+    {
+      "id": "sinh-tu-back",
+      "file": "sinh-tu-back.png",
+      "size": [
+        96,
+        128
+      ],
+      "sha256": "0de8583bdb2bbeb59f328212b7f8954e39175d56a33bbec47fae7d17ac718189",
+      "bytes": 17487,
+      "role": "Separate back qi texture, no body pixels"
+    },
+    {
+      "id": "sinh-tu-front",
+      "file": "sinh-tu-front.png",
+      "size": [
+        96,
+        64
+      ],
+      "sha256": "31ad607c773b1e38a287869672e796465332eb7316f1301213873d0881a3ff61",
+      "bytes": 5114,
+      "role": "Separate front qi texture, no body pixels"
+    },
+    {
+      "id": "huyen-tu-qi",
+      "file": "huyen-tu-qi.png",
+      "size": [
+        96,
+        32
+      ],
+      "sha256": "5075d6f0550cdc8b2340bdf720288bfb1edf2ae279cafd02826473c347759f4d",
+      "bytes": 4860,
+      "role": "Retained ground ART, animated independently in review"
+    },
+    {
+      "id": "huyen-tu-back",
+      "file": "huyen-tu-back.png",
+      "size": [
+        96,
+        128
+      ],
+      "sha256": "66f525db7e2d0d9f0423e4c82a367b77de2e34c7acba17f343a3dc72a081149a",
+      "bytes": 21297,
+      "role": "Separate back qi texture, no body pixels"
+    },
+    {
+      "id": "huyen-tu-front",
+      "file": "huyen-tu-front.png",
+      "size": [
+        96,
+        64
+      ],
+      "sha256": "813af644f97745bbe430eb0888ea19049eb2eb72f3d0deba60cd2ba05da1c938",
+      "bytes": 5848,
+      "role": "Separate front qi texture, no body pixels"
+    },
+    {
+      "id": "sinh-tu-mote",
+      "file": "sinh-tu-mote.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "77a50225bf76731ab9ba07ce95adc1e64ade088ef2ca0a3025ad5067a62e6f34",
+      "bytes": 214,
+      "role": "Isolated generated mote crop for orbit motion"
+    },
+    {
+      "id": "huyen-tu-mote",
+      "file": "huyen-tu-mote.png",
+      "size": [
+        8,
+        8
+      ],
+      "sha256": "6e41622f1616e129c3ed8b7fd9c807ad1495ff56be8d3a9c9f3c7f93cd6819e7",
+      "bytes": 234,
+      "role": "Isolated generated mote crop for orbit motion"
+    }
+  ],
+  "qiEffects": {
+    "tool": "built-in image_gen",
+    "scope": "Independent ground/rear/front qi layers for review motion; no R01 VFX change",
+    "defaultEnabled": true,
+    "themes": [
+      {
+        "id": "sinh-tu",
+        "layers": [
+          {
+            "id": "sinh-tu-qi",
+            "kind": "ground",
+            "file": "sinh-tu-qi.png",
+            "framePx": [
+              96,
+              32
+            ],
+            "pivotPx": [
+              48,
+              16
+            ],
+            "offsetFromBodyPx": [
+              -16,
+              72
+            ],
+            "sourceOrigin": "docs/design/characters/wang-lin-hoa-than-review-v1/sinh-tu-qi-source.png",
+            "sha256": "a6666fb31b2945e39285762a1039d46f3abfa26e909bc2499b1e7e40262501ba"
+          },
+          {
+            "id": "sinh-tu-back",
+            "kind": "back",
+            "file": "sinh-tu-back.png",
+            "framePx": [
+              96,
+              128
+            ],
+            "pivotPx": [
+              48,
+              112
+            ],
+            "offsetFromBodyPx": [
+              -16,
+              -24
+            ],
+            "source": {
+              "file": "sinh-tu-back-source.png",
+              "size": [
+                1215,
+                1295
+              ],
+              "sha256": "e4b65d0a8545bff8dcac4dbbb525139b3a976e88bd06ad618014ee28712be45c"
+            },
+            "prompt": "sinh-tu-back.prompt.txt",
+            "promptSha256": "68286dd42053644160f8ef9aaf8479d6ccec357fa2040d7f85c3fdbf3fa22486",
+            "crop": {
+              "left": 18,
+              "top": 17,
+              "width": 1197,
+              "height": 1263
+            },
+            "resample": {
+              "kernel": "lanczos3",
+              "size": [
+                90,
+                95
+              ],
+              "offset": [
+                3,
+                18
+              ]
+            },
+            "visibleBoundsPx": {
+              "left": 3,
+              "top": 18,
+              "width": 90,
+              "height": 95
+            },
+            "groundReferenceY": 112,
+            "softAlpha": true,
+            "sha256": "0de8583bdb2bbeb59f328212b7f8954e39175d56a33bbec47fae7d17ac718189"
+          },
+          {
+            "id": "sinh-tu-front",
+            "kind": "front",
+            "file": "sinh-tu-front.png",
+            "framePx": [
+              96,
+              64
+            ],
+            "pivotPx": [
+              48,
+              48
+            ],
+            "offsetFromBodyPx": [
+              -16,
+              40
+            ],
+            "source": {
+              "file": "sinh-tu-front-source.png",
+              "size": [
+                1774,
+                887
+              ],
+              "sha256": "61823b0efc045dac8f0262dd989800f7225e8dc3e02f2cf6cabb40a517f5f3f9"
+            },
+            "prompt": "sinh-tu-front.prompt.txt",
+            "promptSha256": "aef7532968155a49b08806318f898fe0ce91dfbffe1bf9febe2a346fc6a40e68",
+            "crop": {
+              "left": 60,
+              "top": 137,
+              "width": 1666,
+              "height": 698
+            },
+            "resample": {
+              "kernel": "lanczos3",
+              "size": [
+                90,
+                38
+              ],
+              "offset": [
+                3,
+                11
+              ]
+            },
+            "visibleBoundsPx": {
+              "left": 3,
+              "top": 11,
+              "width": 90,
+              "height": 38
+            },
+            "groundReferenceY": 48,
+            "softAlpha": true,
+            "sha256": "31ad607c773b1e38a287869672e796465332eb7316f1301213873d0881a3ff61"
+          }
+        ],
+        "animation": {
+          "method": "Independent texture layers with presentation transforms/opacity, not frame-by-frame atlas",
+          "cycleMs": 3800,
+          "groundPulse": true,
+          "backFlowCopies": 2,
+          "frontDrift": true,
+          "orbitMotes": 3
+        },
+        "directions": "omnidirectional-camera-facing",
+        "attachment": "ground",
+        "ownerApproved": false,
+        "artApproved": false,
+        "runtimeIntegrated": false,
+        "mote": {
+          "file": "sinh-tu-mote.png",
+          "framePx": [
+            8,
+            8
+          ],
+          "pivotPx": [
+            4,
+            4
+          ],
+          "source": "sinh-tu-front-source.png",
+          "sourceSha256": "61823b0efc045dac8f0262dd989800f7225e8dc3e02f2cf6cabb40a517f5f3f9",
+          "sourceCrop": {
+            "left": 669,
+            "top": 625,
+            "width": 76,
+            "height": 73
+          },
+          "selection": {
+            "left": 672,
+            "top": 628,
+            "width": 70,
+            "height": 67,
+            "pixels": 2584,
+            "score": 120.09081418836885
+          },
+          "mechanicalExtractionOnly": true
+        }
+      },
+      {
+        "id": "huyen-tu",
+        "layers": [
+          {
+            "id": "huyen-tu-qi",
+            "kind": "ground",
+            "file": "huyen-tu-qi.png",
+            "framePx": [
+              96,
+              32
+            ],
+            "pivotPx": [
+              48,
+              16
+            ],
+            "offsetFromBodyPx": [
+              -16,
+              72
+            ],
+            "sourceOrigin": "docs/design/characters/wang-lin-hoa-than-review-v1/huyen-tu-qi-source.png",
+            "sha256": "5075d6f0550cdc8b2340bdf720288bfb1edf2ae279cafd02826473c347759f4d"
+          },
+          {
+            "id": "huyen-tu-back",
+            "kind": "back",
+            "file": "huyen-tu-back.png",
+            "framePx": [
+              96,
+              128
+            ],
+            "pivotPx": [
+              48,
+              112
+            ],
+            "offsetFromBodyPx": [
+              -16,
+              -24
+            ],
+            "source": {
+              "file": "huyen-tu-back-source.png",
+              "size": [
+                1214,
+                1295
+              ],
+              "sha256": "18929899249a6f9e9e45573324c0e382f233cc860eb289c7477c822e2aabda38"
+            },
+            "prompt": "huyen-tu-back.prompt.txt",
+            "promptSha256": "36a9fb4eb4ffc8012ed4a1e0dd4eb21848fe0785d6da2d15009c19d896a5309b",
+            "crop": {
+              "left": 0,
+              "top": 0,
+              "width": 1214,
+              "height": 1295
+            },
+            "resample": {
+              "kernel": "lanczos3",
+              "size": [
+                90,
+                96
+              ],
+              "offset": [
+                3,
+                17
+              ]
+            },
+            "visibleBoundsPx": {
+              "left": 3,
+              "top": 17,
+              "width": 90,
+              "height": 96
+            },
+            "groundReferenceY": 112,
+            "softAlpha": true,
+            "sha256": "66f525db7e2d0d9f0423e4c82a367b77de2e34c7acba17f343a3dc72a081149a"
+          },
+          {
+            "id": "huyen-tu-front",
+            "kind": "front",
+            "file": "huyen-tu-front.png",
+            "framePx": [
+              96,
+              64
+            ],
+            "pivotPx": [
+              48,
+              48
+            ],
+            "offsetFromBodyPx": [
+              -16,
+              40
+            ],
+            "source": {
+              "file": "huyen-tu-front-source.png",
+              "size": [
+                1774,
+                887
+              ],
+              "sha256": "7ee8aef79df0d5e007f4cb9b13b28de5a332223b68c22a596dcf3e95fbb9f0d5"
+            },
+            "prompt": "huyen-tu-front.prompt.txt",
+            "promptSha256": "7ec5b5f804802505ef62142bd1e10bfba98d56983511e72c1011e0655c4ac7c6",
+            "crop": {
+              "left": 13,
+              "top": 134,
+              "width": 1761,
+              "height": 711
+            },
+            "resample": {
+              "kernel": "lanczos3",
+              "size": [
+                90,
+                36
+              ],
+              "offset": [
+                3,
+                13
+              ]
+            },
+            "visibleBoundsPx": {
+              "left": 3,
+              "top": 13,
+              "width": 90,
+              "height": 36
+            },
+            "groundReferenceY": 48,
+            "softAlpha": true,
+            "sha256": "813af644f97745bbe430eb0888ea19049eb2eb72f3d0deba60cd2ba05da1c938"
+          }
+        ],
+        "animation": {
+          "method": "Independent texture layers with presentation transforms/opacity, not frame-by-frame atlas",
+          "cycleMs": 2600,
+          "groundPulse": true,
+          "backFlowCopies": 2,
+          "frontDrift": true,
+          "orbitMotes": 3
+        },
+        "directions": "omnidirectional-camera-facing",
+        "attachment": "ground",
+        "ownerApproved": false,
+        "artApproved": false,
+        "runtimeIntegrated": false,
+        "mote": {
+          "file": "huyen-tu-mote.png",
+          "framePx": [
+            8,
+            8
+          ],
+          "pivotPx": [
+            4,
+            4
+          ],
+          "source": "huyen-tu-front-source.png",
+          "sourceSha256": "7ee8aef79df0d5e007f4cb9b13b28de5a332223b68c22a596dcf3e95fbb9f0d5",
+          "sourceCrop": {
+            "left": 1220,
+            "top": 503,
+            "width": 42,
+            "height": 43
+          },
+          "selection": {
+            "left": 1223,
+            "top": 506,
+            "width": 36,
+            "height": 37,
+            "pixels": 1056,
+            "score": 18.576923083036338
+          },
+          "mechanicalExtractionOnly": true
+        }
+      }
+    ]
+  }
+}

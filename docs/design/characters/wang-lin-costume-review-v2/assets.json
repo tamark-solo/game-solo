@@ -1,0 +1,328 @@
+{
+  "date": "2026-10-12",
+  "id": "CHR-WANG-LIN-COSTUME-REVIEW-02",
+  "sourceCharacterId": "CHR-WANG-LIN",
+  "scope": "Three independently generated garment designs on the exact current native sprite",
+  "tool": "built-in image_gen",
+  "ownerApproved": false,
+  "artApproved": false,
+  "preservationDecision": {
+    "accepted": true,
+    "evidence": "đúng rồi. Nhưng tranh phụcl chưa đẹp cần thêm một vài trang phục nữa. dọn các asset cũ đã lên",
+    "scope": "Accepts preservation of current character; previous and new outfits are not art-approved"
+  },
+  "status": "pending-owner-costume-review",
+  "inputs": [
+    {
+      "file": "edit-target-16x.png",
+      "sha256": "924bac4039c5b93e6950ecbc8f6158602f8ed0e7b90e69e120499ccd67d27e59",
+      "originalPath": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/frames/wanglin_chibi_stand_south.png",
+      "originalSha256": "ae9cfddb7505b91bc0225942841f1e65df13d7e8913da62380c09997ad53a325",
+      "role": "Current native sprite enlarged 16x as edit target"
+    },
+    {
+      "file": "garment-mask-16x.png",
+      "sha256": "26ad43e217db15d7d448b539acffee3bbc8387149898c3e79c0d36ac7f7f29d8",
+      "role": "Exact garment edit guide"
+    }
+  ],
+  "mask": {
+    "file": "garment-mask.png",
+    "sha256": "de4787df804ee6fc28e0a4dad896d007a334fbb868e90c4a32cc9d8f7bae3edd",
+    "regionsFile": "edit-regions.json",
+    "editablePixels": 471
+  },
+  "identityReference": {
+    "originalPath": "docs/design/characters/wang-lin-initiation-v2.png",
+    "originalSha256": "9a957a0b793888fa1191f084d5a0bd330b2b3664be5a9bb3c2231ac92d54967f"
+  },
+  "contract": {
+    "framePx": [
+      64,
+      96
+    ],
+    "anchorPx": [
+      32,
+      88
+    ],
+    "bodyPx": [
+      45,
+      80
+    ],
+    "boundsPx": [
+      9,
+      9,
+      45,
+      80
+    ],
+    "defaultCameraZoom": 1,
+    "bodyResampling": false,
+    "sourceSampling": "Full-frame nearest, only masked fabric copied",
+    "alphaValues": [
+      0,
+      255
+    ],
+    "format": "rgba_png",
+    "runtimeIntegrated": false,
+    "animation": false,
+    "availableDirections": [
+      "south"
+    ]
+  },
+  "variants": [
+    {
+      "id": "van-ngoc",
+      "key": "wang",
+      "name": "Vân Ngọc",
+      "description": "Áo ngà sáng, nẹp ngọc sâu và viền đồng mảnh; thanh nhã giữa biển mây.",
+      "palette": [
+        "#999587",
+        "#C8C2AF",
+        "#EBE6D6",
+        "#F3EDDB",
+        "#1E443F",
+        "#2F6259",
+        "#4D8272",
+        "#8B7650",
+        "#BBA16F",
+        "#D8C18F"
+      ],
+      "source": {
+        "file": "van-ngoc-source.png",
+        "size": [
+          1024,
+          1536
+        ],
+        "sha256": "a7d85368642b1e04f4dd27be76efe71d886f6dc326a03044c70121af9625ff41",
+        "role": "Generated fabric paint; non-garment pixels discarded"
+      },
+      "prompt": "van-ngoc.prompt.txt",
+      "promptSha256": "bb89143c755efb544be081b03204aa70f1c2aa59028cbd3b79736f825264051b",
+      "ownerApproved": false,
+      "artApproved": false,
+      "status": "pending-owner-costume-review",
+      "checks": {
+        "editablePixels": 471,
+        "changedFabricPixels": 471,
+        "protectedPixelChanges": 0,
+        "headPixelChanges": 0,
+        "skinPixelChanges": 0,
+        "shoePixelChanges": 0,
+        "alphaPixelChanges": 0,
+        "exactNativeBounds": [
+          9,
+          9,
+          45,
+          80
+        ],
+        "usedColors": 32,
+        "losslessRgba": true
+      },
+      "native": "van-ngoc.png",
+      "preview": "van-ngoc-preview.png"
+    },
+    {
+      "id": "huyen-van",
+      "key": "huyen",
+      "name": "Huyền Vân",
+      "description": "Áo xanh mực, cổ bạc ngà và đường nẹp lam; trầm, rõ khối.",
+      "palette": [
+        "#172A3A",
+        "#263D53",
+        "#3D5770",
+        "#5A7790",
+        "#8BA2B4",
+        "#B7C6CD",
+        "#DCE1D7",
+        "#ECEBDD",
+        "#718B94",
+        "#ABB7B8"
+      ],
+      "source": {
+        "file": "huyen-van-source.png",
+        "size": [
+          1024,
+          1536
+        ],
+        "sha256": "aa5b05f935d6f18ccb610f360864c87f98b49eca773ea187b18ac8487ab97ca3",
+        "role": "Generated fabric paint; non-garment pixels discarded"
+      },
+      "prompt": "huyen-van.prompt.txt",
+      "promptSha256": "b06fb3c996df00c7029221fe29bf167dc357b9289cbc1fa7dd9b7ce3a7206799",
+      "ownerApproved": false,
+      "artApproved": false,
+      "status": "pending-owner-costume-review",
+      "checks": {
+        "editablePixels": 471,
+        "changedFabricPixels": 471,
+        "protectedPixelChanges": 0,
+        "headPixelChanges": 0,
+        "skinPixelChanges": 0,
+        "shoePixelChanges": 0,
+        "alphaPixelChanges": 0,
+        "exactNativeBounds": [
+          9,
+          9,
+          45,
+          80
+        ],
+        "usedColors": 34,
+        "losslessRgba": true
+      },
+      "native": "huyen-van.png",
+      "preview": "huyen-van-preview.png"
+    },
+    {
+      "id": "xich-tieu",
+      "key": "xich",
+      "name": "Xích Tiêu",
+      "description": "Áo đỏ trầm, cổ ngà và nẹp đồng; nổi bật, giữ vẻ áo vải.",
+      "palette": [
+        "#452126",
+        "#6D2C34",
+        "#99423F",
+        "#B95E51",
+        "#D38B6B",
+        "#B79F79",
+        "#D8C6A5",
+        "#F0E3C8",
+        "#8A663E",
+        "#B68B4F"
+      ],
+      "source": {
+        "file": "xich-tieu-source.png",
+        "size": [
+          1024,
+          1536
+        ],
+        "sha256": "fead51cb648dcca24deee2c324c9de7734244e1ff13f263f93a8d460ce5483b9",
+        "role": "Generated fabric paint; non-garment pixels discarded"
+      },
+      "prompt": "xich-tieu.prompt.txt",
+      "promptSha256": "695a39fffa9416c520d2f1526ad189130097a54571662118c70e1f57c2ffabf5",
+      "ownerApproved": false,
+      "artApproved": false,
+      "status": "pending-owner-costume-review",
+      "checks": {
+        "editablePixels": 471,
+        "changedFabricPixels": 471,
+        "protectedPixelChanges": 0,
+        "headPixelChanges": 0,
+        "skinPixelChanges": 0,
+        "shoePixelChanges": 0,
+        "alphaPixelChanges": 0,
+        "exactNativeBounds": [
+          9,
+          9,
+          45,
+          80
+        ],
+        "usedColors": 34,
+        "losslessRgba": true
+      },
+      "native": "xich-tieu.png",
+      "preview": "xich-tieu-preview.png"
+    }
+  ],
+  "assets": [
+    {
+      "id": "baseline",
+      "file": "baseline.png",
+      "size": [
+        64,
+        96
+      ],
+      "sha256": "ae9cfddb7505b91bc0225942841f1e65df13d7e8913da62380c09997ad53a325",
+      "bytes": 2515,
+      "role": "Current Wang Lin, byte-identical"
+    },
+    {
+      "id": "baseline-preview",
+      "file": "baseline-preview.png",
+      "size": [
+        512,
+        768
+      ],
+      "sha256": "fc341150647e9bd5ed7dcac38990570f7466392a59e647d5f608b299cd40ef49",
+      "bytes": 9631,
+      "role": "Current Wang Lin nearest 8x"
+    },
+    {
+      "id": "identity-reference",
+      "file": "identity-reference.webp",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "a4cf116f60fdb0ca345e9df2e069d6a2ce34788ab8668f44471694b8f8b1e011",
+      "bytes": 334404,
+      "role": "Approved identity source, retained after cleanup"
+    },
+    {
+      "id": "van-ngoc",
+      "file": "van-ngoc.png",
+      "size": [
+        64,
+        96
+      ],
+      "sha256": "09ce12cfe55142d6d7f2928d129a096bd89f31d64d90a65d2e0ea2730c994a7a",
+      "bytes": 2087,
+      "role": "Costume-only south idle, pending visual review"
+    },
+    {
+      "id": "van-ngoc-preview",
+      "file": "van-ngoc-preview.png",
+      "size": [
+        512,
+        768
+      ],
+      "sha256": "064380afbd87dd5fe8c38c7bb8fe8a92dbd086cb69826100ea423d110e5e5472",
+      "bytes": 9650,
+      "role": "Final native costume nearest 8x, not raw generated face"
+    },
+    {
+      "id": "huyen-van",
+      "file": "huyen-van.png",
+      "size": [
+        64,
+        96
+      ],
+      "sha256": "f89cd6af0cdc52810e0f72cf54a49a9b939b379803e7bfdc2554336a43959570",
+      "bytes": 2126,
+      "role": "Costume-only south idle, pending visual review"
+    },
+    {
+      "id": "huyen-van-preview",
+      "file": "huyen-van-preview.png",
+      "size": [
+        512,
+        768
+      ],
+      "sha256": "92e3cbc17813a6012b2c56abe2432905b801c04b331a5dcc3099dc64f9e3389a",
+      "bytes": 9712,
+      "role": "Final native costume nearest 8x, not raw generated face"
+    },
+    {
+      "id": "xich-tieu",
+      "file": "xich-tieu.png",
+      "size": [
+        64,
+        96
+      ],
+      "sha256": "d0650533b59db04efdcb6a4a534e780c17f00379d4e45b54fd1e919084c47764",
+      "bytes": 2093,
+      "role": "Costume-only south idle, pending visual review"
+    },
+    {
+      "id": "xich-tieu-preview",
+      "file": "xich-tieu-preview.png",
+      "size": [
+        512,
+        768
+      ],
+      "sha256": "3725164db9722c2ca992ee4dea0d2d0356576d4773cdcb0d654c4fdc97e21b37",
+      "bytes": 9617,
+      "role": "Final native costume nearest 8x, not raw generated face"
+    }
+  ]
+}

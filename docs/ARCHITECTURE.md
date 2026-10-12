@@ -1,8 +1,18 @@
 # Kiến trúc mã nguồn
 
+**Character sheet review 04:** `core/dao-character-sheet-model.ts` đọc `SectView`/avatar, dùng `progressionLabel`, ngưỡng và quest projection shared. Core state giữ tab/thuật và nguồn quay lại nhiệm vụ; presenter/CSS chỉ trình bày. Không sở hữu xác nhận tầng, cast, quyền Đọa Ma, transport hoặc save. [Thiết kế và kiểm](CHARACTER-SHEET-UX-V4.md).
+
+**Character UX review 03:** `core/ui-material-review-state.ts` giữ inventory fixture/filters/request/result; `core/dao-character-review-model.ts` chỉ phục vụ projection và transition mẫu, không nhập vào live runtime. Presenter `ui/dao-character-review.ts` đọc shared/Core; adapter trang ghép clock/callback/focus. Dùng `CharacterInventory` hiện có và `sect.supplies` duy nhất, không mở schema/save/catalog mới. [Contract/phạm vi](CHARACTER-INVENTORY-UX-V3.md).
+
+**HUD system review 04:** `core/dao-hud-system.ts` sở hữu index 38 lối UI hữu hạn, nhóm theo mục đích và liên kết hệ; không definition/entitlement gameplay. State Core giữ tìm/ghim/nguồn mở, `ui/dao-system-hud-review.ts` đọc state/shared và `ui/dao-hud-glyph.ts` giữ SVG gốc; adapter gốc ghép route/theme/focus. CSS `dao-system-hud-v4.css` chỉ scope review. [Phạm vi và hướng thiết kế trước GDD](XIANXIA-FUNCTION-UX-REDESIGN.md).
+
 **Trạng thái:** đã tách `shared/`, `server/` và `client/` theo ranh giới; `client/src/main.ts` chia theo lớp và tính năng. Nhánh `_MMO` (Hằng Nhạc, Map Editor, skill) đã được gộp vào cấu trúc này. Các tính năng đó vẫn giữ vị trí cũ, xem mục 8.
 
 ## 1. Nguyên tắc
+
+**Catalog quản trị 11/10:** `shared/content/catalog.ts` giữ contract/validator/lookup thuần; `server/core/content-ports.ts` là port reader; `application/content-catalog-service.ts` kiểm quyền; `persistence/content-catalog-file.ts` đọc/hash/kiểm source; composition/HTTP ghép. Feature admin đọc snapshot, state/DOM IDs ở Core. Registry quản trị không import vào gameplay và không mở quyền thưởng/đồ từ dữ liệu thiết kế. [Contract/API/kiểm](GAME-CONTENT-CATALOG-RUNTIME.md).
+
+**UI material review 11/10:** state/DOM IDs ở `core/ui-material-review-state.ts`; adapter trang riêng reuse `SkillHotbar` và `attachFrameSurface`, đọc quest/item thuần, không import transport hoặc ghi lưu. CSS chỉ scope `.material-review`; builder/sync quản lý ART mới riêng và giữ hash/alpha/aperture. [Phạm vi/debug](CHARACTER-INVENTORY-UI-DESIGN.md). Presenter nhân vật/hành trang/diện mạo ở `ui/dao-character-review.ts` đọc state Core và định nghĩa nhập môn; fixture/ý tưởng palette không nhập catalog/gameplay, adapter gốc giữ tương tác riêng.
 
 - **Một package, nhiều module có ranh giới rõ.** Chưa tách thành service. Khi cần scale, mỗi module đã có đường biên để tách sau.
 - **Luật thuần không phụ thuộc framework.** `shared/` và `features/*/model.ts` không dùng Colyseus, Three.js hay DOM, nên test được trực tiếp.
@@ -28,7 +38,12 @@ Client (`client/src/`), mỗi module chỉ được import các module sau:
 
 Các module khác:
 
-- `server`: shared
+- `server` (composition và adapter runtime cũ): shared, server/core, server/application, server/persistence, server/security, server/observability, server/http-game
+- `server/core`: shared; port và lỗi application, không framework/DB
+- `server/application`: shared, server/core; chính sách entry, không Express/Colyseus/SQLite
+- `server/persistence`, `server/security`, `server/observability`: shared, server/core; adapter theo port
+- `server/http-game`: shared, server/core, server/application; HTTP adapter
+- `client/feature-entry`: shared, core, assets, net; `client/feature-admin`: shared, core, net. Hai feature không import nhau, lớp client gốc ghép nối chúng.
 - `shared`: chỉ import nội bộ `shared` (và `@colyseus/schema` cho hợp đồng mạng)
 - `scripts` (sinh asset, release, API Map Editor): shared
 - `config` (`vite.config.ts`): scripts
@@ -64,6 +79,8 @@ client/src/
   main.ts                       điểm vào trang chính
   chibi-pilot.ts, hang-nhac.ts, map-editor*.ts, sect-ui.ts, starter-region.ts, profiles.ts, r01-presentation.ts
                                 trang và tính năng `_MMO`, đặt ở gốc client/src
+  game-shell.ts/.css            phase chọn/kết nối/chơi, viewport/menu/fullscreen Hằng Nhạc; CSS link từ HTML
+  quest-ui.ts/.css               trình bày nhiệm vụ từ snapshot qua shared/sect-quests.ts
   skills/                       trình bày skill phía client (aim, session, Three.js)
   app/
     boot.ts                     startApp(): gắn sự kiện, nạp catalog và asset
@@ -139,6 +156,8 @@ docs/ARCHITECTURE.md            tài liệu này
 | Không vào được sân, sai tên phòng | `server/src/config.ts`, `shared/protocol/constants.ts`, `server/src/rooms/courtyard/room.ts` (`onJoin`) |
 | Mất kết nối, không vào lại được | `server/src/rooms/courtyard/room.ts` (`onDrop`, `onReconnect`) |
 | `/health` thiếu trường hoặc sai số liệu | `server/src/http/health.ts` |
+| Hằng Nhạc: màn trắng, viewport/menu hoặc chọn nhân vật | `client/hang-nhac.html`, `client/src/game-shell.ts/.css`; đối chiếu stylesheet/canvas trên đúng URL live, xem [game shell](HANG-NHAC-GAME-SHELL.md) |
+| Hằng Nhạc: nhiệm vụ không hiện hoặc sai trạng thái UI | `client/src/sect-ui.ts`, `client/src/quest-ui.ts`, `shared/sect-quests.ts`; tiến độ và thưởng vẫn do server xác nhận |
 | Hằng Nhạc: vào phòng, hồ sơ, lưu sau reload | `server/src/HangNhacRoom.ts`, `server/src/profile-store.ts` |
 | Skill: hướng, ngắm, cast, hiệu ứng | `shared/skills/`, `client/src/skills/` |
 | Hook kiểm thử thiếu hoặc sai trường | `client/src/app/debug.ts` |
@@ -166,7 +185,7 @@ Ví dụ tính năng `cultivation`:
 - Chuyển tính năng `_MMO` ở gốc `client/src/` vào `features/<tên>/`, và phòng/hồ sơ Hằng Nhạc ở gốc `server/src/` vào `rooms/` hoặc thư mục riêng. Khi chuyển, cập nhật đầu vào HTML trong `client/`, các import và luật trong `scripts/check-boundaries.mjs`.
 - Tách các file `shared/*.ts` của `_MMO` theo tính năng khi tính năng ổn định.
 - Luật tu luyện: thêm `shared/game/` khi bắt đầu engine.
-- Lưu bền và tài khoản: thêm `server/src/persistence/` khi chọn cơ sở dữ liệu. Hiện hồ sơ dùng SQLite trong `profile-store.ts`.
+- Lưu bền và tài khoản đã tách `server/src/core/`, `application/`, `persistence/`, `security/`, `observability/`, `http/game/`; xem [Game entry backend](GAME-ENTRY-BACKEND.md). `profile-store.ts` giữ compatibility hồ sơ khách; codec dùng chung, bảng `game_*` riêng. Thay PostgreSQL/Redis cần adapter và kiểm transaction/lease/routing tương đương, chưa được triển khai.
 - Khi thêm tính năng thứ ba, cân nhắc tách `ui/mode-view.ts` để mỗi tính năng tự đồng bộ giao diện của mình.
 
 ## 9. Kiểm tra khi đổi cấu trúc
@@ -175,3 +194,11 @@ Ví dụ tính năng `cultivation`:
 - Chạm lifecycle, input, renderer hoặc level design thì chạy các smoke tương ứng trong [PREVIEW-RUNBOOK](PREVIEW-RUNBOOK.md) và [AGENTS.md](../AGENTS.md).
 - Smoke test dùng Chrome; đặt `CHROME_PATH` nếu Chrome không ở vị trí mặc định.
 - Trên Windows với `core.autocrlf=true`, file dữ liệu có khóa băm (ví dụ `docs/data/authored-maps/*.json`) có thể bị đổi sang CRLF và làm sai hash. Giữ file ở đúng byte đã commit.
+
+## 10. Entry và quản trị 10/10
+
+Màn mở đầu đã bổ sung phase `title` trong entry: state/DOM ID ở Core, `title-view.ts` trình bày và `title-effects.ts` trang trí/visibility, coordinator gọi xác nhận phiên hoặc return-home qua callback. Nền title độc lập, build kiểm hash; không ghép ART title vào renderer/map. [Hợp đồng và reference](GAME-TITLE-SCREEN.md).
+
+`shared/game/entry.ts` chứa hợp đồng/validation thuần; `server/src/application/entry-service.ts` kiểm quyền sở hữu, tạo hồ sơ có receipt, vé chơi và lease qua port. `game-runtime.ts` ghép SQLite/scrypt/identity/logger. `HangNhacRoom` chọn `ProfilePersistence` theo grant, giữ gameplay R01/sect/inventory; client giữ state/DOM ID trong Core và view/controls/coordinator trong `features/entry`, `features/admin`. Không mở C/I/J/E/đi/cast trước entry hợp lệ.
+
+Debug theo `requestId`/accountId/realmId/characterId, `/ready` và admin status/audit; không ghi body hoặc secret. [Hợp đồng, bản đồ module và bảng triệu chứng](GAME-ENTRY-BACKEND.md) là điểm đọc chi tiết. `npm.cmd run test:game-entry` kiểm API/room/browser thật trên fixture; hồi quy khách dùng `?devGuest=1` ngoài production. SQLite lease đã kiểm hai tiến trình một host; chưa có distributed Colyseus presence/driver hay khả năng MMO nhiều máy được đo.

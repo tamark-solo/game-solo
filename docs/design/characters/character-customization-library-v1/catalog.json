@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "id": "vh-character-design-library-v1",
+  "date": "2026-10-12",
+  "status": "retained-design-library",
+  "runtimeConsumable": false,
+  "pathBase": "workspace-root",
+  "retentionDecision": {
+    "retain": true,
+    "by": "project-owner",
+    "date": "2026-10-12",
+    "evidence": "đẹp chốt 3 concept mới gửi. giữ lại các nhân vật concept đã lên để làm custom nhân vật khi khách hàng vào server tạo nhân vật",
+    "policy": "Keep current character concepts, sources, prompts and metadata; keep prior archived studies recoverable. Cleanup is not authorized by this decision."
+  },
+  "approvalRecord": "docs/design/vfx/hoa-than-aura-concepts-v4/approval.json",
+  "bodyBaseline": {
+    "path": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/frames/wanglin_chibi_stand_south.png",
+    "sha256": "ae9cfddb7505b91bc0225942841f1e65df13d7e8913da62380c09997ad53a325",
+    "framePx": [
+      64,
+      96
+    ],
+    "pivotPx": [
+      32,
+      88
+    ]
+  },
+  "retainedPacks": [
+    "docs/design/characters/wang-lin-chibi-walk-v1",
+    "docs/design/characters/player-avatars-v2",
+    "docs/design/characters/chibi-roster-v1",
+    "docs/design/characters/wang-lin-costume-review-v2",
+    "docs/design/characters/wang-lin-hoa-than-review-v1",
+    "docs/design/characters/wang-lin-hoa-than-review-v2",
+    "docs/design/vfx/hoa-than-aura-concepts-v4"
+  ],
+  "retainedIdentityReference": {
+    "path": "docs/design/characters/wang-lin-initiation-v2.png",
+    "sha256": "9a957a0b793888fa1191f084d5a0bd330b2b3664be5a9bb3c2231ac92d54967f"
+  },
+  "archivedStudies": {
+    "path": "artifacts/archive/character-studies-2026-10-12.zip",
+    "sha256": "f2a74a3345cea17eb0b488759bcc20799684d012ae054c95be36a6f8926e4dbf",
+    "packs": [
+      "van-hai-player-v1",
+      "van-hai-player-v2",
+      "van-hai-player-chibi-v1",
+      "wang-lin-pixel-review-v1",
+      "wang-lin-pixel-review-v2",
+      "wang-lin-costume-review-v1"
+    ],
+    "policy": "Retain recoverable sources; do not restore rejected studies into active runtime by default."
+  },
+  "records": [
+    {
+      "id": "outfit-wang-lin-van-ngoc-v2",
+      "name": "Vân Ngọc",
+      "kind": "outfit",
+      "sourceCharacterId": "CHR-WANG-LIN-CHIBI",
+      "reviewKey": "wang",
+      "retain": true,
+      "intendedUse": "character-creation-candidate",
+      "stage": "initiation",
+      "sourceManifest": "docs/design/characters/wang-lin-costume-review-v2/assets.json",
+      "files": [
+        {
+          "path": "docs/design/characters/wang-lin-costume-review-v2/van-ngoc-source.png",
+          "sha256": "a7d85368642b1e04f4dd27be76efe71d886f6dc326a03044c70121af9625ff41"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-costume-review-v2/van-ngoc.prompt.txt",
+          "sha256": "bb89143c755efb544be081b03204aa70f1c2aa59028cbd3b79736f825264051b"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-costume-review-v2/van-ngoc.png",
+          "sha256": "09ce12cfe55142d6d7f2928d129a096bd89f31d64d90a65d2e0ea2730c994a7a"
+        }
+      ],
+      "artStatus": "retained-design-reference",
+      "productionReady": false,
+      "creationEnabled": false,
+      "bodyContract": {
+        "framePx": [
+          64,
+          96
+        ],
+        "pivotPx": [
+          32,
+          88
+        ],
+        "protectedPixelChanges": 0
+      },
+      "remaining": [
+        "standing/walk/cast directions and actions",
+        "appearance binding and server validation",
+        "creation preview and save/reconnect integration"
+      ]
+    },
+    {
+      "id": "outfit-wang-lin-huyen-van-v2",
+      "name": "Huyền Vân",
+      "kind": "outfit",
+      "sourceCharacterId": "CHR-WANG-LIN-CHIBI",
+      "reviewKey": "huyen",
+      "retain": true,
+      "intendedUse": "character-creation-candidate",
+      "stage": "initiation",
+      "sourceManifest": "docs/design/characters/wang-lin-costume-review-v2/assets.json",
+      "files": [
+        {
+          "path": "docs/design/characters/wang-lin-costume-review-v2/huyen-van-source.png",
+          "sha256": "aa5b05f935d6f18ccb610f360864c87f98b49eca773ea187b18ac8487ab97ca3"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-costume-review-v2/huyen-van.prompt.txt",
+          "sha256": "b06fb3c996df00c7029221fe29bf167dc357b9289cbc1fa7dd9b7ce3a7206799"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-costume-review-v2/huyen-van.png",
+          "sha256": "f89cd6af0cdc52810e0f72cf54a49a9b939b379803e7bfdc2554336a43959570"
+        }
+      ],
+      "artStatus": "retained-design-reference",
+      "productionReady": false,
+      "creationEnabled": false,
+      "bodyContract": {
+        "framePx": [
+          64,
+          96
+        ],
+        "pivotPx": [
+          32,
+          88
+        ],
+        "protectedPixelChanges": 0
+      },
+      "remaining": [
+        "standing/walk/cast directions and actions",
+        "appearance binding and server validation",
+        "creation preview and save/reconnect integration"
+      ]
+    },
+    {
+      "id": "outfit-wang-lin-xich-tieu-v2",
+      "name": "Xích Tiêu",
+      "kind": "outfit",
+      "sourceCharacterId": "CHR-WANG-LIN-CHIBI",
+      "reviewKey": "xich",
+      "retain": true,
+      "intendedUse": "character-creation-candidate",
+      "stage": "initiation",
+      "sourceManifest": "docs/design/characters/wang-lin-costume-review-v2/assets.json",
+      "files": [
+        {
+          "path": "docs/design/characters/wang-lin-costume-review-v2/xich-tieu-source.png",
+          "sha256": "fead51cb648dcca24deee2c324c9de7734244e1ff13f263f93a8d460ce5483b9"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-costume-review-v2/xich-tieu.prompt.txt",
+          "sha256": "695a39fffa9416c520d2f1526ad189130097a54571662118c70e1f57c2ffabf5"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-costume-review-v2/xich-tieu.png",
+          "sha256": "d0650533b59db04efdcb6a4a534e780c17f00379d4e45b54fd1e919084c47764"
+        }
+      ],
+      "artStatus": "retained-design-reference",
+      "productionReady": false,
+      "creationEnabled": false,
+      "bodyContract": {
+        "framePx": [
+          64,
+          96
+        ],
+        "pivotPx": [
+          32,
+          88
+        ],
+        "protectedPixelChanges": 0
+      },
+      "remaining": [
+        "standing/walk/cast directions and actions",
+        "appearance binding and server validation",
+        "creation preview and save/reconnect integration"
+      ]
+    },
+    {
+      "id": "outfit-wang-lin-sinh-tu-v2",
+      "name": "Sinh Tử",
+      "kind": "outfit",
+      "sourceCharacterId": "CHR-WANG-LIN-CHIBI",
+      "reviewKey": "sinhTu",
+      "retain": true,
+      "intendedUse": "cultivation-appearance-candidate",
+      "stage": "hoa-than",
+      "sourceManifest": "docs/design/characters/wang-lin-hoa-than-review-v2/assets.json",
+      "files": [
+        {
+          "path": "docs/design/characters/wang-lin-hoa-than-review-v2/sinh-tu-source.png",
+          "sha256": "83091cbbf17e6dcfdb228ee2e4cdc0e69802b84e0b9933f8d2e6ab757e7cd09d"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-hoa-than-review-v2/sinh-tu.prompt.txt",
+          "sha256": "e840696d2b467794748a46945b4e5f6a653d4f8ab4e5fab8af5d30b16282734c"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-hoa-than-review-v2/sinh-tu.png",
+          "sha256": "9ab8cab5ccebaacada8a512c504c3c52600905902f10b87c0b026fec24c50754"
+        }
+      ],
+      "artStatus": "retained-design-reference",
+      "productionReady": false,
+      "creationEnabled": false,
+      "bodyContract": {
+        "framePx": [
+          64,
+          96
+        ],
+        "pivotPx": [
+          32,
+          88
+        ],
+        "protectedPixelChanges": 0
+      },
+      "remaining": [
+        "standing/walk/cast directions and actions",
+        "appearance binding and server validation",
+        "creation preview and save/reconnect integration"
+      ]
+    },
+    {
+      "id": "outfit-wang-lin-huyen-tu-v2",
+      "name": "Huyền Tử",
+      "kind": "outfit",
+      "sourceCharacterId": "CHR-WANG-LIN-CHIBI",
+      "reviewKey": "huyenTu",
+      "retain": true,
+      "intendedUse": "cultivation-appearance-candidate",
+      "stage": "hoa-than",
+      "sourceManifest": "docs/design/characters/wang-lin-hoa-than-review-v2/assets.json",
+      "files": [
+        {
+          "path": "docs/design/characters/wang-lin-hoa-than-review-v2/huyen-tu-source.png",
+          "sha256": "91b4b4ab89f0dd12bcb9af581d86fb4ed7005b3f21a2b0a8d17b085fb1cd5570"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-hoa-than-review-v2/huyen-tu.prompt.txt",
+          "sha256": "f1bcfe5ff8c5c780f47ba48b6b32bf9a1a5e2921c0cca971e32779ce17f5c260"
+        },
+        {
+          "path": "docs/design/characters/wang-lin-hoa-than-review-v2/huyen-tu.png",
+          "sha256": "a84d33f854c7e514e59ca603918749dd11eafdb6f7620a49009dd064034a736c"
+        }
+      ],
+      "artStatus": "retained-design-reference",
+      "productionReady": false,
+      "creationEnabled": false,
+      "bodyContract": {
+        "framePx": [
+          64,
+          96
+        ],
+        "pivotPx": [
+          32,
+          88
+        ],
+        "protectedPixelChanges": 0
+      },
+      "remaining": [
+        "standing/walk/cast directions and actions",
+        "appearance binding and server validation",
+        "creation preview and save/reconnect integration"
+      ]
+    },
+    {
+      "id": "aura-sinh-tu-wheel-v4",
+      "name": "Luân Sinh Tử",
+      "kind": "aura",
+      "reviewKey": "lifeDeath",
+      "retain": true,
+      "intendedUse": "cultivation-appearance-candidate",
+      "stage": "hoa-than",
+      "sourceManifest": "docs/design/vfx/hoa-than-aura-concepts-v4/assets.json",
+      "files": [
+        {
+          "path": "docs/design/vfx/hoa-than-aura-concepts-v4/sinh-tu-wheel-source.png",
+          "sha256": "5a523ed5c4fab3ff98e9dbdd0d84c00148d34bc2f20668d04f0abdfd6afc85a0"
+        },
+        {
+          "path": "docs/design/vfx/hoa-than-aura-concepts-v4/sinh-tu-wheel.prompt.txt",
+          "sha256": "903f897006e98ba8ed60547734794d313f1be516ca750bd3b57e308dbd051e70"
+        },
+        {
+          "path": "docs/design/vfx/hoa-than-aura-concepts-v4/sinh-tu-wheel.png",
+          "sha256": "b5fdc4feed8ce645a2c4348236f47239655686d47f75467ae4575305228fc075"
+        }
+      ],
+      "artStatus": "concept-art-approved",
+      "approvalRecord": "docs/design/vfx/hoa-than-aura-concepts-v4/approval.json",
+      "productionReady": false,
+      "creationEnabled": false,
+      "compatibleReviewOutfitId": "outfit-wang-lin-sinh-tu-v2",
+      "fxContract": {
+        "framePx": [
+          128,
+          176
+        ],
+        "pivotPx": [
+          64,
+          152
+        ],
+        "bodyOffsetPx": [
+          32,
+          64
+        ],
+        "staticBackplate": true
+      },
+      "remaining": [
+        "ground/rear/front production layers and timing",
+        "8-direction body attachment and runtime occlusion",
+        "crowd quality/culling and realm/right validation"
+      ]
+    },
+    {
+      "id": "aura-jade-sword-domain-v4",
+      "name": "Kiếm Vực Huyền Ngọc",
+      "kind": "aura",
+      "reviewKey": "swordDomain",
+      "retain": true,
+      "intendedUse": "cultivation-appearance-candidate",
+      "stage": "hoa-than",
+      "sourceManifest": "docs/design/vfx/hoa-than-aura-concepts-v4/assets.json",
+      "files": [
+        {
+          "path": "docs/design/vfx/hoa-than-aura-concepts-v4/jade-sword-domain-source.png",
+          "sha256": "1ec9b9f76efbe3d14bec22e1d5c9ef6ed675ed3a59cb9f23b1288f161079711e"
+        },
+        {
+          "path": "docs/design/vfx/hoa-than-aura-concepts-v4/jade-sword-domain.prompt.txt",
+          "sha256": "76912ec08862a60bbf051fcfef9bf807dcc76a276b227328de345de03033f8fb"
+        },
+        {
+          "path": "docs/design/vfx/hoa-than-aura-concepts-v4/jade-sword-domain.png",
+          "sha256": "a3959eaee310f0ab6b68df4efac9fd61bec37febae985389a0f51e9f6b40491d"
+        }
+      ],
+      "artStatus": "concept-art-approved",
+      "approvalRecord": "docs/design/vfx/hoa-than-aura-concepts-v4/approval.json",
+      "productionReady": false,
+      "creationEnabled": false,
+      "compatibleReviewOutfitId": "outfit-wang-lin-sinh-tu-v2",
+      "fxContract": {
+        "framePx": [
+          128,
+          176
+        ],
+        "pivotPx": [
+          64,
+          152
+        ],
+        "bodyOffsetPx": [
+          32,
+          64
+        ],
+        "staticBackplate": true
+      },
+      "remaining": [
+        "ground/rear/front production layers and timing",
+        "8-direction body attachment and runtime occlusion",
+        "crowd quality/culling and realm/right validation"
+      ]
+    },
+    {
+      "id": "aura-blood-moon-domain-v4",
+      "name": "Huyết Nguyệt Ma Vực",
+      "kind": "aura",
+      "reviewKey": "bloodMoon",
+      "retain": true,
+      "intendedUse": "cultivation-appearance-candidate",
+      "stage": "hoa-than",
+      "sourceManifest": "docs/design/vfx/hoa-than-aura-concepts-v4/assets.json",
+      "files": [
+        {
+          "path": "docs/design/vfx/hoa-than-aura-concepts-v4/blood-moon-domain-source.png",
+          "sha256": "de4ccc6cda081a44e3980b94605ed58acb8cf6a3539d18067fcfd8f03648228d"
+        },
+        {
+          "path": "docs/design/vfx/hoa-than-aura-concepts-v4/blood-moon-domain.prompt.txt",
+          "sha256": "b8591a18f3d3ca80e1001a75f86003e05c68b6301c53f37e3dc7f89b10f1cdfc"
+        },
+        {
+          "path": "docs/design/vfx/hoa-than-aura-concepts-v4/blood-moon-domain.png",
+          "sha256": "86fc157717388723b4fa2686bdc5e723f3f7a4f470752e2c6480d2d012579170"
+        }
+      ],
+      "artStatus": "concept-art-approved",
+      "approvalRecord": "docs/design/vfx/hoa-than-aura-concepts-v4/approval.json",
+      "productionReady": false,
+      "creationEnabled": false,
+      "compatibleReviewOutfitId": "outfit-wang-lin-huyen-tu-v2",
+      "fxContract": {
+        "framePx": [
+          128,
+          176
+        ],
+        "pivotPx": [
+          64,
+          152
+        ],
+        "bodyOffsetPx": [
+          32,
+          64
+        ],
+        "staticBackplate": true
+      },
+      "remaining": [
+        "ground/rear/front production layers and timing",
+        "8-direction body attachment and runtime occlusion",
+        "crowd quality/culling and realm/right validation"
+      ]
+    }
+  ],
+  "entryPlan": {
+    "phase": "login -> realm -> character creation -> game",
+    "separateIdentityAndAppearance": true,
+    "plannedAppearanceSlots": [
+      "outfitId",
+      "auraId"
+    ],
+    "plannedCreationPalette": [
+      "outfit-wang-lin-van-ngoc-v2",
+      "outfit-wang-lin-huyen-van-v2",
+      "outfit-wang-lin-xich-tieu-v2"
+    ],
+    "requiresProductionAssets": true,
+    "requiresServerAllowlist": true,
+    "saveAppearanceIdsOnly": true,
+    "creationImplementation": "not-yet-implemented",
+    "hoaThanAndDaoMaUnlocks": "server-authoritative; not granted at creation"
+  }
+}

@@ -33,7 +33,7 @@ try {
   page = await context.newPage();
   page.on('pageerror', error => errors.push(error.message));
   page.on('response', response => { if (response.status() >= 400) errors.push(`HTTP ${response.status()}: ${response.url()}`); });
-  await page.goto(`${origin}/hang-nhac.html`);
+  await page.goto(`${origin}/hang-nhac.html?devGuest=1`);
   await page.waitForFunction(() => window.__hangNhacDiagnostics?.().ready);
   assert.equal(await page.locator('[data-hotbar-skill]').count(), 3);
   assert.equal(await page.locator('.hotbar-reserved').count(), 7);
@@ -44,8 +44,8 @@ try {
   await page.locator('#join').click();
   await page.waitForFunction(() => window.__hangNhacDiagnostics().status === 'connected' && window.__hangNhacR01().own?.connected);
   await page.waitForFunction(() => document.querySelector('.game-hotbar').dataset.online === 'true');
-  assert.equal(await page.locator('[data-skill=thunder]').getAttribute('data-state'), 'target');
-  await page.locator('[data-skill=thunder]').focus();
+  assert.equal(await page.locator('button[data-skill=thunder]').getAttribute('data-state'), 'target');
+  await page.locator('button[data-skill=thunder]').focus();
   assert.equal(await page.locator('.hotbar-tooltip').isVisible(), true);
   await page.keyboard.press('Escape');
   assert.equal(await page.locator('.hotbar-tooltip').isVisible(), false);
@@ -59,11 +59,11 @@ try {
   checks.push('handshake_before_first_snapshot_safe', 'three_live_slots_seven_noninteractive_reservations',
     'missing_target_and_orb_click_do_not_send_cast_or_change_aim', 'tooltip_focus_and_escape');
   await page.locator('#training').click();
-  await page.waitForFunction(() => document.querySelector('[data-skill=thunder]').dataset.state === 'ready');
-  await page.locator('[data-skill=sword]').click();
+  await page.waitForFunction(() => document.querySelector('button[data-skill=thunder]').dataset.state === 'ready');
+  await page.locator('button[data-skill=sword][aria-disabled="false"]').click();
   await page.waitForFunction(() => window.__hangNhacR01().own?.casts === 1);
   await page.waitForFunction(() => window.__hangNhacR01().own?.practiceHits === 1 && !window.__hangNhacR01().own.castId);
-  await page.locator('[data-skill=thunder]').click();
+  await page.locator('button[data-skill=thunder][aria-disabled="false"]').click();
   await page.waitForFunction(() => window.__hangNhacR01().own?.practiceHits === 2 && !window.__hangNhacR01().own.castId);
   await page.locator('#stage').focus(); await page.keyboard.press('3');
   await page.waitForFunction(() => window.__hangNhacR01().own?.casts === 3 && !window.__hangNhacR01().own.castId);
@@ -72,10 +72,12 @@ try {
     return document.querySelector('.hotbar-hp-value').textContent === String(Math.floor(own.hp)) &&
       document.querySelector('.hotbar-mp-value').textContent === String(Math.floor(own.mp));
   }), 'HUD resources match authoritative snapshot');
-  assert.equal(await page.locator('[data-skill=wind]').getAttribute('data-state'), 'cooldown');
+  assert.equal(await page.locator('button[data-skill=wind]').getAttribute('data-state'), 'cooldown');
+  await page.locator('#menu-button').click();
   await page.locator('#hud-effects').uncheck();
   assert.equal(await page.locator('.game-hotbar').getAttribute('data-effects'), 'off');
   await page.locator('#hud-effects').check();
+  await page.locator('#menu-close').click();
   const desktop = await page.locator('.game-hotbar').boundingBox();
   assert.equal(desktop.width, 760); assert.equal(desktop.height, 140);
   await page.screenshot({ path: 'artifacts/hang-nhac-hud-desktop.png' });
@@ -92,7 +94,7 @@ try {
   const mobile = await page.locator('.game-hotbar').boundingBox();
   assert.ok(mobile.x >= 0 && mobile.x + mobile.width <= 390);
   for (const id of ['sword', 'thunder', 'wind']) {
-    const button = await page.locator(`[data-skill=${id}]`).boundingBox();
+    const button = await page.locator(`button[data-skill=${id}]`).boundingBox();
     assert.ok(button.width >= 44 && button.height >= 44);
   }
   await page.emulateMedia({ reducedMotion: 'reduce' });

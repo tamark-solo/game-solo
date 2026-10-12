@@ -3,6 +3,9 @@ import type { AvatarId } from '../../shared/profiles';
 import { CYCLE_PHASE_MS, CULTIVATION_GATE, LEVEL_THRESHOLDS, SECT_STATIONS, guideText, nearStation, progressionLabel,
   type SectAction, type SectCommand, type SectResult, type SectView, type StationId } from '../../shared/sect';
 import { sectRoute } from '../../shared/sect-route';
+import { currentSectQuest, sectQuests, type SectQuest } from '../../shared/sect-quests';
+import { QuestUI } from './quest-ui';
+import { attachFrameSurface } from './frame-surface';
 import type { Position } from '@shared/world/types';
 
 const element=<K extends keyof HTMLElementTagNameMap>(tag:K,text?:string):HTMLElementTagNameMap[K]=>{const node=document.createElement(tag);if(text)node.textContent=text;return node;};
@@ -12,12 +15,12 @@ const reasons:Record<string,string>={ distance:'Tiến lại gần người hư�
   understanding:'Linh lực được tiêu khi dùng thuật. Tu vi là tiến trình tích lũy dài hạn; hãy chọn lại.',cultivation:'Chưa đủ tích lũy cho ngưỡng tiếp.',
   gate:'Đã tới cổng nền 1–3. Cần bài bình cảnh để mở nền tiếp.',supplies:'Đã hết vật tư hồi phục.',full_hp:'HP đã đầy, vật tư được giữ lại.',cooldown:'Vật tư đang hồi.',
   hn03:'Hoàn thành bài đòn thường, Kiếm và Lôi trước.',target:'Chọn mục tiêu luyện còn sức bền thuộc về bạn.',
-  basic_range:'Tiến lại gần mục tiêu trong 90 px; không đánh xuyên vùng chặn.',basic_cooldown:'Đòn thường đang hồi trong 0,8 giây.',
+  basic_range:'Tiến lại gần mục tiêu; cần đứng trong tầm đánh và không có vật cản.',basic_cooldown:'Đòn thường đang hồi trong 0,8 giây.',
   basic_hit:'Đánh thường trúng mục tiêu · 10 sát thương · không tốn linh lực.',lesson_incomplete:'Bài còn thiếu thao tác hợp lệ; xem hướng dẫn đang hiện.',
-  lesson_running:'Đang có vùng báo trước; đợi server xét kết quả rồi thử lại.',lesson_reward:'Bài đã xác nhận · nhận 80 tích lũy một lần.',
+  lesson_running:'Đang có vùng báo trước; đợi kết quả bài luyện rồi thử lại.',lesson_reward:'Bài đã xác nhận · nhận 80 tích lũy một lần.',
   resource:'Chưa đủ linh lực cho Phong; đợi hồi tự nhiên rồi thử lại.',skill_cooldown:'Phong đang hồi; đợi hết cooldown rồi thử lại.',blocked:'Chưa có khoảng trống hợp lệ cho bài luyện.',
   save:'Chưa lưu được kết quả. Hãy thử lại; phần thưởng chưa cấp.',request_reused:'Mã thao tác đã được dùng cho nội dung khác.',invalid:'Thao tác không hợp lệ.' };
-interface UIOptions { send:(command:SectCommand)=>void; avatar:()=>AvatarId; position:()=>Position; online:()=>boolean; connectionMessage?:()=>string|undefined; clock:()=>number; focus:()=>void; training:()=>void; }
+interface UIOptions { send:(command:SectCommand)=>void; avatar:()=>AvatarId; position:()=>Position; online:()=>boolean; connectionMessage?:()=>string|undefined; clock:()=>number; focus:()=>void; training:()=>void; enter:()=>void; }
 export class SectUI {
   view?:SectView;
   private dialog=document.getElementById('sect-dialog') as HTMLDialogElement;
@@ -34,9 +37,11 @@ export class SectUI {
   private pendingAt=0;
   private pendingAction?:SectAction;
   private playerDot?:HTMLElement;
+  private quests:QuestUI;
+  private actions?:HTMLElement;
   constructor(private options:UIOptions){
+    this.quests=new QuestUI({journal:()=>this.journal(),guide:()=>this.guide()});
     this.interaction.addEventListener('click',()=>this.interact());
-    document.getElementById('journal')!.addEventListener('click',()=>this.journal());
     document.getElementById('sect-close')!.addEventListener('click',()=>this.dialog.close());
     document.getElementById('lesson-retry')!.addEventListener('click',()=>this.command('lesson_start',{lesson:this.view?.lessons.active==='arts'?'arts':'avoid'}));
     document.getElementById('lesson-stop')!.addEventListener('click',()=>this.command('lesson_stop'));
@@ -60,7 +65,7 @@ export class SectUI {
   reset():void {this.view=undefined;this.pending='';this.destination=undefined;this.signature='';if(this.dialog.open)this.dialog.close();this.feedback('');this.update();}
   state(view:SectView):void {
     if(this.view?.profileId!==view.profileId)this.destination=undefined;
-    if(this.view&&!this.view.hn01&&view.hn01||this.view&&!this.view.hn02&&view.hn02)this.destination=undefined;
+    if(this.view&&this.objective().id!==currentSectQuest(sectQuests(view)).id)this.destination=undefined;
     this.view=view;this.update();
   }
   result(result:SectResult):void {
@@ -71,16 +76,21 @@ export class SectUI {
     this.feedback(result.ok?result.duplicate?'Kết quả đã lưu trước đó.':result.reason==='already_complete'?'Thành quả đã được ghi nhận.':reasons[result.reason??'']??'Đã ghi nhận.':reasons[result.reason??'']??'Chưa thể thực hiện lúc này.');
     this.update();
   }
-  private objective():{id:string;title:string;stationId:StationId;hint:string} {
-    if(!this.view?.hn01)return {id:'HN01',title:'Bước vào Hằng Nhạc',stationId:'guide',hint:'Gặp người tiếp dẫn và nhận hướng dẫn.'};
-    if(!this.view.hn02)return {id:'HN02',title:'Một vòng vận hành',stationId:'cultivation',hint:'Tới vườn thổ nạp, vận khí và xác nhận mốc đầu.'};
-    if(!this.view.lessons.hn03)return {id:'HN03',title:'Vận dụng thuật nền',stationId:'training',hint:'Nhận bài tại sân luyện: đòn thường, Kiếm định hướng và Lôi theo mục tiêu.'};
-    if(!this.view.lessons.hn04)return {id:'HN04',title:'Nhìn đòn mà tiến',stationId:'training',hint:'Ra khỏi vùng báo trước bằng đi bộ, rồi luyện Phong.'};
-    return {id:'Tiếp theo',title:'HN05 · Ra khỏi sân luyện',stationId:'training',hint:'HN03–HN04 đã xong. Ngoại vi và HN05 chưa mở trong bản này.'};
+  private objective():SectQuest {return currentSectQuest(sectQuests(this.view));}
+  private guide():void {
+    if(this.modal)return;
+    if(!this.options.online()){this.options.enter();return;}
+    const goal=this.objective();
+    if(goal.status==='unreleased'){this.feedback(goal.nextStep);return;}
+    this.destination=goal.stationId;
+    if(nearStation(this.options.position(),goal.stationId))this.command('talk',{stationId:goal.stationId});
+    else this.journal();
   }
   basicAttack(targetId:string):void {this.command('basic_attack',{targetId});}
   update():void {
-    const online=this.options.online(),position=this.options.position(),now=this.options.clock(),goal=this.objective();
+    const online=this.options.online(),position=this.options.position(),now=this.options.clock(),goal=this.quests.update(this.view,online,this.options.avatar());
+    this.dialog.dataset.pending=String(!!this.pending);
+    this.body.setAttribute('aria-busy',String(!!this.pending));
     if(this.pending&&(!online||Date.now()-this.pendingAt>5000)){this.pending='';this.feedback('Chưa nhận xác nhận. Kiểm tra kết nối và trạng thái đã lưu trước khi tiếp tục.');}
     const destination=SECT_STATIONS.find(s=>s.id===(this.destination??goal.stationId))!;
     const nearby=SECT_STATIONS.filter(s=>nearStation(position,s.id)).sort((a,b)=>Math.hypot(a.x-position.x,a.y-position.y)-Math.hypot(b.x-position.x,b.y-position.y))[0];
@@ -88,7 +98,7 @@ export class SectUI {
     const compass=`${Math.abs(vertical)>50?vertical>0?'nam':'bắc':''}${Math.abs(horizontal)>50?horizontal>0?' đông':' tây':''}`.trim();
     document.getElementById('quest-title')!.textContent=`${goal.id} · ${goal.title}`;
     document.getElementById('quest-hint')!.textContent=online?nearby?`E · nói chuyện với ${nearby.name}`:`${destination.area}${compass?' · hướng '+compass:''} · xem đường trong Nhật ký`: this.options.connectionMessage?.()??'Vào sân chung để bắt đầu hoặc tiếp tục bản lưu.';
-    document.getElementById('cultivation-summary')!.textContent=this.view?`${progressionLabel(this.options.avatar(),this.view.level)} · ${this.options.avatar()==='CHR-SITU-NAN'?'Tích lũy hồi phục':'Tu vi'} ${this.view.cultivation}`:'Hành trình riêng cho từng nhân vật';
+    if(online&&goal.status!=='unreleased')document.getElementById('quest-guide')!.textContent=nearStation(position,goal.stationId)?goal.status==='ready'?'Xác nhận với NPC':'Nói chuyện với NPC':goal.status==='ready'?'Chỉ đường về NPC':'Xem đường tới NPC';
     this.interaction.disabled=!online||!nearby||!!this.pending;
     this.interaction.textContent=nearby?'E · Nói chuyện':'E · Tới gần NPC';
     this.panel.dataset.quest=goal.id;
@@ -97,8 +107,8 @@ export class SectUI {
     if(progress&&progress.active!=='none'){
       const warning=exercise?.kind==='avoid'&&exercise.status==='warning';
       document.getElementById('lesson-title')!.textContent=progress.active==='arts'?'HN03 · Vận dụng thuật nền':'HN04 · Nhìn đòn mà tiến';
-      const arts=`Đòn thường ${progress.basic?'✓':'chưa'} · Kiếm ${progress.sword?'✓':'chưa'} · Lôi ${progress.thunder?'✓':'chưa'}. Chạm mục tiêu để ngắm; F / Đánh thường ở cự ly 90 px, 1 Kiếm, 2 Lôi.`;
-      const avoidance=warning?`${exercise!.method==='walk'?'Đi bộ ra ngoài vòng, không dùng Phong':'Ngắm lối trống và dùng phím 3 / Phong ra ngoài vòng'} · còn ${Math.max(0,(exercise!.resolveAt!-now)/1000).toFixed(1)} giây · bài an toàn, không gây damage.`:
+      const arts=`Đòn thường ${progress.basic?'✓':'chưa'} · Kiếm ${progress.sword?'✓':'chưa'} · Lôi ${progress.thunder?'✓':'chưa'}. Chạm mục tiêu để ngắm; tới gần và nhấn F để đánh thường, 1 Kiếm, 2 Lôi.`;
+      const avoidance=warning?`${exercise!.method==='walk'?'Đi bộ ra ngoài vòng, không dùng Phong':'Ngắm lối trống và dùng phím 3 / Phong ra ngoài vòng'} · còn ${Math.max(0,(exercise!.resolveAt!-now)/1000).toFixed(1)} giây · bài an toàn, không mất sinh lực.`:
         progress.walk&&progress.wind?'Đã né bằng đi bộ và Phong. Quay lại người coi luyện thuật, nhấn E để xác nhận HN04.':
         exercise?.status==='failed'?'Chưa ra ngoài vòng đúng cách ở thời điểm đánh. Tới gần NPC luyện thuật rồi bấm thử lại; không mất HP hoặc thành quả đã lưu.':
         exercise?.status==='save_failed'?'Kết quả chưa lưu được. Tới gần NPC để thử lại; chưa nhận credit hoặc phần thưởng.':
@@ -134,12 +144,14 @@ export class SectUI {
     if(station)this.command('talk',{stationId:station.id});else this.journal();
   }
   private button(text:string,action:SectAction,extra:Partial<SectCommand>={}):HTMLButtonElement {
-    const button=element('button',text);button.type='button';button.dataset.action=action;button.addEventListener('click',()=>this.command(action,extra));this.body.append(button);return button;
+    const button=element('button',text);button.type='button';button.dataset.action=action;button.addEventListener('click',()=>this.command(action,extra));(this.actions??this.body).append(button);return button;
   }
   private paragraph(text:string):void{this.body.append(element('p',text));}
   private renderStation():void {
     const s=SECT_STATIONS.find(s=>s.id===this.station)!,v=this.view;
     this.title.textContent=s.name;this.body.replaceChildren();this.playerDot=undefined;
+    this.dialog.dataset.mode='npc';document.getElementById('sect-category')!.textContent=`HẰNG NHẠC · ${s.area.toLocaleUpperCase('vi-VN')}`;
+    this.actions=element('div');this.actions.className='dialog-actions';
     if(s.id==='guide'){
       this.paragraph(guideText(this.options.avatar()));
       if(!v?.hn01){this.paragraph('HN01 · Nhận hướng dẫn và 2 vật tư hồi phục. Sau đó tới vườn thổ nạp ở phía tây.');this.button('Nhận hướng dẫn nhập môn','accept_intro');}
@@ -169,8 +181,8 @@ export class SectUI {
       }
     }else if(s.id==='training'){
       this.paragraph('Kiếm Khí theo hướng ngắm; Lôi Ấn cần chọn mục tiêu; Ngự Phong Bộ lướt theo hướng và dừng tại vùng chặn.');
-      this.paragraph(this.options.avatar()==='CHR-SITU-NAN'?'Vận dụng mức hiện diện hiện có; không học lại kiến thức đã biết. Các bài ghi minh chứng vận hành của linh thể.':this.options.avatar()==='CHR-LI-MUWAN'?'Luyện cách tự vận dụng thuật trước khi chuẩn bị đan–trận. Không cần một nhân vật khác hoàn thành thay.':'Quan sát hướng, khoảng cách và kết quả server xác nhận; hiểu hit và miss trước khi rời sân luyện.');
-      this.paragraph('Phím F / Đánh thường: 10 damage, 0 MP, cự ly 90 px, hồi 0,8 giây. Chạm mục tiêu để ngắm; 1 Kiếm, 2 Lôi, 3 Phong. Mục tiêu tự do không cho tu vi/loot; chỉ bài đã nhận được xét credit. Đòn thường hiện dùng phản hồi chữ và HP mục tiêu, chưa có animation attack production.');
+      this.paragraph(this.options.avatar()==='CHR-SITU-NAN'?'Vận dụng mức hiện diện hiện có; không học lại kiến thức đã biết. Các bài ghi minh chứng vận hành của linh thể.':this.options.avatar()==='CHR-LI-MUWAN'?'Luyện cách tự vận dụng thuật trước khi chuẩn bị đan–trận. Không cần một nhân vật khác hoàn thành thay.':'Quan sát hướng, khoảng cách và đòn trúng hoặc hụt trước khi rời sân luyện.');
+      this.paragraph('Tới gần mục tiêu và nhấn F để đánh thường: 10 sát thương, không tốn linh lực, hồi 0,8 giây. Chạm mục tiêu để ngắm; 1 Kiếm, 2 Lôi, 3 Phong. Luyện tự do không cho tu vi hoặc vật phẩm; nhận bài trước để ghi nhận kết quả.');
       const lessons=v?.lessons;
       if(!v?.hn02)this.paragraph('Hoàn thành HN02 và M01 trước khi nhận bài. Ba thuật vẫn dùng được từ đầu.');
       else if(!lessons?.hn03){
@@ -178,36 +190,50 @@ export class SectUI {
         this.button('Nhận / tiếp tục bài HN03','lesson_start',{lesson:'arts'});
         if(lessons?.basic&&lessons.sword&&lessons.thunder)this.button('Xác nhận HN03 · +80 tích lũy','lesson_confirm',{lesson:'arts'});
       }else if(!lessons.hn04){
-        this.paragraph(`HN03 đã lưu. HN04 · Đi bộ ${lessons.walk?'✓':'—'} · Phong ${lessons.wind?'✓':'—'}. Vòng màu vàng báo trước 1,5 giây; tới lúc xét đòn, chân phải ra ngoài cả vòng. Phong không miễn nhiễm và không xuyên blocker. Bài an toàn không gây damage.`);
+        this.paragraph(`HN03 đã lưu. HN04 · Đi bộ ${lessons.walk?'✓':'—'} · Phong ${lessons.wind?'✓':'—'}. Vòng màu vàng báo trước 1,5 giây; tới lúc đòn tới, chân phải ra ngoài cả vòng. Phong không miễn nhiễm và không xuyên vật cản. Bài an toàn không mất sinh lực.`);
         if(!lessons.walk||!lessons.wind)this.button(lessons.walk?'Luyện né bằng Phong':'Luyện né bằng đi bộ','lesson_start',{lesson:'avoid'});
         else this.button('Xác nhận HN04 · +80 tích lũy','lesson_confirm',{lesson:'avoid'});
       }else this.paragraph('HN03–HN04 đã hoàn thành. Xem lại hướng dẫn hoặc luyện tự do không nhận thưởng thêm. HN05, map ngoại vi và M02 chưa mở.');
       if(lessons?.active!=='none')this.button('Tạm dừng bài luyện','lesson_stop');
-      const button=element('button','Tạo mục tiêu riêng để luyện');button.addEventListener('click',()=>{this.dialog.close();this.options.training();});this.body.append(button);
+      const button=element('button','Tạo mục tiêu riêng để luyện');button.type='button';button.addEventListener('click',()=>{this.dialog.close();this.options.training();});this.actions.append(button);
     }else{
       this.paragraph(`HP ${v?.hp??100} / 100 · Vật tư hồi phục thường: ${v?.supplies??0}. Dùng ngoài luyện thuật để hồi 30 HP, tối đa 100; hồi dùng 10 giây. HP đầy sẽ giữ vật tư.`);
       this.button('Dùng 1 vật tư hồi phục','use_recovery');
       const timer=element('p');timer.dataset.recoveryTimer='';this.body.append(timer);
       this.paragraph('Vật tư nhập môn nhận một lần từ HN01. Chuẩn bị pháp khí và nguyên liệu sẽ theo tuyến nhiệm vụ tiếp; cửa ngoại vi chưa mở.');
     }
+    this.body.querySelector('p')?.classList.add('station-intro');
+    if(this.actions.childElementCount)this.body.append(this.actions);
   }
+  toggleJournal():void {if(this.dialog.open)this.dialog.close();else this.journal();}
   journal():void {
+    const focusedPin=(document.activeElement as HTMLElement)?.dataset.station;
     this.station=undefined;this.signature='';this.title.textContent='Nhật ký Hằng Nhạc';this.body.replaceChildren();this.feedback('');
-    const goal=this.objective();this.paragraph(`${goal.id} · ${goal.title}. ${goal.hint}`);
-    this.paragraph(`HN01: ${this.view?.hn01?'đã xong':'chưa xong'} · HN02: ${this.view?.hn02?'đã xong':'chưa xong'} · HN03: ${this.view?.lessons.hn03?'đã xong':'chưa xong'} · HN04: ${this.view?.lessons.hn04?'đã xong':'chưa xong'} · R01: Kiếm / Lôi / Phong có từ đầu.`);
+    this.dialog.dataset.mode='journal';document.getElementById('sect-category')!.textContent='HÀNH TRÌNH NHẬP MÔN';this.actions=undefined;
+    const goal=this.objective(),intro=element('p',`${goal.id} · ${goal.title}`);intro.className='journal-intro';this.body.append(intro);
+    const layout=element('div');layout.className='journal-layout';const left=element('div');this.quests.journal(left,this.view);
+    const right=element('section');right.className='journal-map-panel';right.setAttribute('aria-label','Bản đồ chỉ đường');
+    attachFrameSurface(right);
+    const station=SECT_STATIONS.find(s=>s.id===(this.destination??goal.stationId))!;
+    right.append(element('h3','Đường tu hành'),element('p',`Đi tới ${station.name} · ${station.area}`));
+    layout.append(left,right);this.body.append(layout);
     const map=element('div');map.className='sect-minimap';map.style.backgroundImage=`url(${HANG_NHAC.background.url})`;
     const route=sectRoute(this.options.position(),SECT_STATIONS.find(s=>s.id===(this.destination??goal.stationId))!);
     if(route){const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox',`0 0 ${HANG_NHAC.world.width} ${HANG_NHAC.world.height}`);
       const line=document.createElementNS(svg.namespaceURI,'polyline');line.setAttribute('points',route.map(p=>`${p.x},${p.y}`).join(' '));line.setAttribute('fill','none');line.setAttribute('stroke','#ffda6a');line.setAttribute('stroke-width','12');svg.append(line);map.append(svg);}
     for(const s of SECT_STATIONS){const pin=element('button',s.id==='guide'?'1':s.id==='cultivation'?'2':s.id==='training'?'3':'4');pin.title=s.name;pin.className='sect-pin';pin.style.left=`${s.x/HANG_NHAC.world.width*100}%`;pin.style.top=`${s.y/HANG_NHAC.world.height*100}%`;
+      pin.type='button';pin.dataset.station=s.id;pin.setAttribute('aria-label',s.name);pin.setAttribute('aria-pressed',String(s.id===station.id));
       pin.addEventListener('click',()=>{this.destination=s.id;this.journal();});map.append(pin);}
-    this.playerDot=element('span');this.playerDot.className='sect-player-dot';this.playerDot.title='Vị trí của bạn';map.append(this.playerDot);this.body.append(map);
-    this.paragraph('1 · Tiếp dẫn   2 · Thổ nạp   3 · Luyện thuật   4 · Chuẩn bị. Chấm trắng là bạn; đường vàng bám vùng đi hiện có. Chọn điểm để xem đường, đóng nhật ký rồi di chuyển tới gần và nhấn E.');
-    if(!route)this.paragraph('Chưa tìm được đường gợi ý từ vị trí này. Di chuyển ra khoảng trống rồi xem lại.');
+    this.playerDot=element('span');this.playerDot.className='sect-player-dot';this.playerDot.title='Vị trí của bạn';map.append(this.playerDot);right.append(map);
+    const legend=element('div');legend.className='map-legend';
+    for(const [index,s] of SECT_STATIONS.entries()){const label=element('span');label.append(element('b',String(index+1)),s.name);legend.append(label);}right.append(legend);
+    right.append(element('p','Chấm trắng là bạn. Chọn điểm để xem đường, đóng sổ rồi di chuyển tới gần NPC và nhấn E.'));
+    if(!route)right.append(element('p','Chưa tìm được đường gợi ý từ vị trí này. Di chuyển ra khoảng trống rồi xem lại.'));
     if(this.view?.activity)this.button('Dừng hoạt động nền','activity_stop');
     if(!this.dialog.open)this.dialog.showModal();this.update();
+    if(focusedPin)this.body.querySelector<HTMLButtonElement>(`[data-station="${focusedPin}"]`)?.focus({preventScroll:true});
   }
-  diagnostics():unknown{return {view:this.view,stations:SECT_STATIONS,destination:this.destination,modal:this.modal,station:this.station,
+  diagnostics():unknown{return {view:this.view,quests:sectQuests(this.view),stations:SECT_STATIONS,destination:this.destination,modal:this.modal,station:this.station,
     online:this.options.online(),pending:this.pending?{requestId:this.pending,ageMs:Date.now()-this.pendingAt}:undefined,
     interactionDisabled:this.interaction.disabled,feedback:this.notice.textContent};}
 }

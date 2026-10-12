@@ -26,7 +26,7 @@ try {
   const context=await browser.newContext({viewport:{width:1440,height:980},deviceScaleFactor:1});
   await context.addInitScript(token=>localStorage.setItem('hang-nhac.guest.v1',token),guest.token);
   const page=await context.newPage();debugPage=page;page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
-  await page.goto(`${origin}/hang-nhac.html`);await page.waitForFunction('window.__hangNhacDiagnostics?.().ready');
+  await page.goto(`${origin}/hang-nhac.html?devGuest=1`);await page.waitForFunction('window.__hangNhacDiagnostics?.().ready');
   await page.locator('#player-name').focus();
   await page.evaluate(()=>window.dispatchEvent(new KeyboardEvent('keydown',{key:'Process',code:'KeyE',isComposing:true,bubbles:true,cancelable:true})));
   assert.equal(await page.locator('#sect-feedback').isVisible(),false);assert.equal((await state(page)).modal,false);
@@ -72,7 +72,7 @@ try {
   await page.locator('#stage').focus();await page.keyboard.press('1');await waitFor(async()=>(await state(page)).view.activityStatus==='paused','cast pauses accumulation');
   const beforeReload=await player(page);await page.reload();await waitFor(async()=>(await state(page)).view?.hn02,'M01 after reload');
   assert.equal((await player(page)).id,beforeReload.id);assert.equal((await player(page)).profileId,beforeReload.profileId);
-  assert.equal(await page.locator('[data-skill]').count(),3);checks.push('online_cultivation_pauses_for_cast_and_same_profile_resumes');
+  assert.equal(await page.locator('button[data-skill]').count(),3);checks.push('online_cultivation_pauses_for_cast_and_same_profile_resumes');
   for(const avatarId of HANG_NHAC_AVATARS.slice(1)){
     await leave();seed(avatarId,0);await page.locator('#avatar').selectOption(avatarId);await enter();await talk();
     assert.equal((await state(page)).view.hn01,false);assert.equal((await state(page)).view.cultivation,0);

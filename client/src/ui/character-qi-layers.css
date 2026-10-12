@@ -1,0 +1,15 @@
+.player-review .character-qi{display:contents}
+.player-review .qi-layer{position:absolute;display:block;pointer-events:none;user-select:none}
+.player-review .qi-layer img{position:absolute;inset:0;width:100%;height:100%;display:block;image-rendering:auto;animation:none;animation-play-state:paused}
+.player-review .qi-ground,.player-review .qi-burst{z-index:0}
+.player-review .qi-ground img,.player-review .qi-burst img{transform-origin:50% 50%}
+.player-review .qi-burst img{opacity:0}
+.player-review .qi-back{z-index:1}
+.player-review .qi-back img{transform-origin:50% 87.5%}
+.player-review .qi-front{z-index:3}
+.player-review .qi-front img{transform-origin:50% 75%}
+.player-review .qi-orbit-rear{z-index:1}
+.player-review .qi-orbit-front{z-index:4}
+.player-review .qi-orbit .qi-mote{inset:auto;left:50%;top:50%;width:8.333333%;height:25%}
+.player-review .character-qi[data-active=true] .qi-layer img{animation-play-state:running}
+.player-review .character-qi[data-enabled=false] .qi-layer,.player-review .character-qi[hidden] .qi-layer{display:none}

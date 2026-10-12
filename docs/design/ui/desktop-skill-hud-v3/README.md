@@ -2,7 +2,7 @@
 
 [Mở bản thử trên map](http://127.0.0.1:5173/skill-bar-desktop.html) · [Đặc tả](../../../DESKTOP-SKILL-HUD.md) · [Kiểm kỹ thuật](../../../data/desktop-skill-hud-v3-verification.json).
 
-Hướng theo Type 2 trong mẫu chủ dự án: khung liền, cầu sinh lực bên trái, linh lực bên phải, dãy 10 ô ở giữa. Đồng cổ / ngọc / mây / sen thay chất gothic; ô 36 px, khung 760 × 140 px, nhân vật native 1×. Ba thuật hiện có thao tác thử được, bảy ô chưa gán không có hành động. Desktop trước; mobile làm sau. Chưa ghi nhận duyệt hình hoặc tích hợp game.
+Hướng theo Type 2 trong mẫu chủ dự án: khung liền, cầu sinh lực bên trái, linh lực bên phải, dãy 10 ô ở giữa. Đồng cổ / ngọc / mây / sen thay chất gothic; ô 36 px, khung 760 × 140 px, nhân vật native 1×. Ba thuật hiện có thao tác thử được, bảy ô chưa gán không có hành động. Desktop trước; mobile làm sau. Owner đã duyệt HUD và yêu cầu ghép game; xem [bàn giao runtime](../../../HANG-NHAC-HUD-LAYERS.md). Gói [companion UI mới](../van-ngoc-kit-v1/README.md) dùng cùng hướng chất liệu nhưng có trạng thái đánh giá riêng.
 
 **Bản tương tác hiện có [Khí quang 02](qi-v2/README.md):** vật liệu khí xoáy ImageGen trong hai cầu, vòng trận pháp, ánh hắt khung và phản hồi dùng thuật. Có nút Linh quang để đối chiếu với nền 03; các ảnh dưới đây giữ bản khung trước khi thêm FX.
 

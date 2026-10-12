@@ -1,0 +1,49 @@
+{
+  "date":"2026-10-10",
+  "scope":"Independent xianxia MMORPG title scene and integration with real account entry",
+  "ownerRequest":"Create a separate opening screen with cultivation MMO-RPG atmosphere and researched references",
+  "implemented":["Scenic title before account entry","Start or authenticated Continue with backend session validation","Shared independent background for login/realm/character screens","Existing settings and readable lore disclosure","Home from game releases room and preserves account/profile","Explicit screen=title route verifies active pointer without auto-joining","CSS atmosphere, hidden-tab pause and system/player reduced motion"],
+  "checks":{
+    "build":{"passed":true,"log":"artifacts/game-title-regression/final-build.log"},
+    "core":{"files":237,"modules":23,"cycles":0,"boundaryViolations":0},
+    "unit":{"passed":227,"failed":0,"log":"artifacts/game-title-regression/final-unit.log"},
+    "title":{"passed":true,"groups":3,"configurations":12,"configurationMeaning":"Six viewports, plus CSS viewport sizes equivalent to 150% browser zoom","pageErrors":0,"report":"artifacts/game-title-verification.json"},
+    "entry":{"passed":true,"apiGroups":7,"browserGroups":4,"configurations":12,"log":"artifacts/game-title-regression/final-test-game-entry.log"},
+    "regressions":[
+      {"command":"test:hang-nhac-game-shell","passed":true},
+      {"command":"test:hang-nhac-reload","passed":true},
+      {"command":"test:hang-nhac-hud-layers","passed":true},
+      {"command":"test:hang-nhac-sect","passed":true},
+      {"command":"test:hang-nhac-r01","passed":true},
+      {"command":"test:skill-body","passed":true,"report":"artifacts/skill-body-gpu-parity.json","mode":"SwiftShader"},
+      {"command":"test:skill-vfx","passed":true,"report":"artifacts/skill-vfx-gpu-parity.json","mode":"SwiftShader"},
+      {"command":"test:skill-animation","passed":true,"casts":36,"mode":"SKILL_GPU_NATIVE=1, same launch arguments as the new integration default","report":"artifacts/hang-nhac-skill-animation-verification.json","log":"artifacts/game-title-regression/final-test-skill-animation-native.log"}
+    ],
+    "castFixtureRepair":"Reference now honors frameCrops/frameCutouts, native 1px viewport 1000x800, in-frame capture after confirmed release and actual projectile clearance, Phong capture only after ghost observation. Game art, cast duration and match threshold remain unchanged. Earlier failed timing/crop fixture attempts are retained in regression logs."
+  },
+  "art":{
+    "tool":"image_gen built-in via imagegen skill",
+    "source":"docs/design/ui/title-tien-mon-v1/source.png",
+    "runtime":"docs/design/ui/title-tien-mon-v1/sect-gate.webp",
+    "prompt":"docs/design/ui/title-tien-mon-v1/prompt.txt",
+    "manifest":"docs/design/ui/title-tien-mon-v1/assets.json",
+    "dimensions":[1672,941],
+    "runtimeBytes":274698,
+    "review":"Source and desktop/mobile/landscape screenshots inspected; legibility, focal crop, controls and absence of window frame on title checked",
+    "ownerApproved":false,
+    "artApproved":false
+  },
+  "livePreview":{
+    "url":"http://127.0.0.1:5174/hang-nhac.html?screen=title",
+    "backend":"http://127.0.0.1:2568",
+    "report":"artifacts/game-title-live-verification.json",
+    "screenshot":"artifacts/game-title/live-title.png",
+    "phase":"title",
+    "pageErrors":0,
+    "apiRequests":"GET only, fresh isolated browser context",
+    "readOnly":true
+  },
+  "invariants":{"ownerDatabaseUsedForTests":false,"ownerMapWritten":false,"ownerBrowserDraftWritten":false,"blockers":9,"cameraScale":1,"locomotionFrame":[64,96],"desktopHud":[760,140],"backendAuthorityPreserved":true},
+  "references":["https://na.finalfantasyxiv.com/game_manual/start/","https://store.steampowered.com/app/1189490/","https://store.steampowered.com/app/1468810/"],
+  "limits":["New title ART awaits owner visual review","No new gameplay map, portal, loot/social system, video cinematic or music added","MMO-RPG remains product direction; production multi-node infrastructure is outside this UI milestone"]
+}

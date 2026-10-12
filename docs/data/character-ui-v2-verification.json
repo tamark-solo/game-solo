@@ -1,0 +1,422 @@
+{
+  "date": "2026-10-10",
+  "version": 2,
+  "status": "passed",
+  "scope": "Isolated character-ui prototype, fixture memory only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "checks": [
+    "Original HUD 760 × 140 and three native 64 × 96 sprites at integer 2×",
+    "Equip/compare/resources/use/protection and three isolated in-memory profiles",
+    "Search/no results/category filters and explicit unavailable artifact condition",
+    "Loading/empty/offline/error/recovery preserves data and does not replay operations",
+    "Keyboard tab navigation, close/reopen, focus restoration",
+    "21 resize/long Vietnamese copy/font scale configurations with aligned backing and no horizontal text/page overflow",
+    "120-item mobile scroll restoration/detail back focus/reduced motion",
+    "V2 cultivation body: three actors, >=3 distinct authored frames each, native 2×, no resource/item changes",
+    "V2 motion freezes offline/hidden/closed, resumes without gameplay, and remains static under reduced motion",
+    "Six GDD growth dimensions and artifact shortcut retain explicit refinement condition",
+    "V2 overview: 21 additional responsive/text configurations, no horizontal overflow",
+    "No gameplay API requests or browser save/storage writes"
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "height": 740,
+      "scale": 1,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "15px"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "scale": 1.5,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "22.5px"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "scale": 2,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "30px"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scale": 1,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "15px"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scale": 1.5,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "22.5px"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scale": 2,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "30px"
+    },
+    {
+      "width": 760,
+      "height": 760,
+      "scale": 1,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "15px"
+    },
+    {
+      "width": 760,
+      "height": 760,
+      "scale": 1.5,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "22.5px"
+    },
+    {
+      "width": 760,
+      "height": 760,
+      "scale": 2,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "30px"
+    },
+    {
+      "width": 980,
+      "height": 780,
+      "scale": 1,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "15px"
+    },
+    {
+      "width": 980,
+      "height": 780,
+      "scale": 1.5,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "22.5px"
+    },
+    {
+      "width": 980,
+      "height": 780,
+      "scale": 2,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "30px"
+    },
+    {
+      "width": 1100,
+      "height": 800,
+      "scale": 1,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "15px"
+    },
+    {
+      "width": 1100,
+      "height": 800,
+      "scale": 1.5,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "22.5px"
+    },
+    {
+      "width": 1100,
+      "height": 800,
+      "scale": 2,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "30px"
+    },
+    {
+      "width": 1366,
+      "height": 900,
+      "scale": 1,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "15px"
+    },
+    {
+      "width": 1366,
+      "height": 900,
+      "scale": 1.5,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "22.5px"
+    },
+    {
+      "width": 1366,
+      "height": 900,
+      "scale": 2,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "30px"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "scale": 1,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "15px"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "scale": 1.5,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "22.5px"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "scale": 2,
+      "overflow": [],
+      "pageOverflow": false,
+      "backing": true,
+      "inside": true,
+      "readable": "30px"
+    },
+    {
+      "view": "v2-overview",
+      "width": 320,
+      "height": 740,
+      "scale": 1,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 320,
+      "height": 740,
+      "scale": 1.5,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 320,
+      "height": 740,
+      "scale": 2,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 390,
+      "height": 844,
+      "scale": 1,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 390,
+      "height": 844,
+      "scale": 1.5,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 390,
+      "height": 844,
+      "scale": 2,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 760,
+      "height": 760,
+      "scale": 1,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 760,
+      "height": 760,
+      "scale": 1.5,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 760,
+      "height": 760,
+      "scale": 2,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 980,
+      "height": 780,
+      "scale": 1,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 980,
+      "height": 780,
+      "scale": 1.5,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 980,
+      "height": 780,
+      "scale": 2,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 1100,
+      "height": 800,
+      "scale": 1,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 1100,
+      "height": 800,
+      "scale": 1.5,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 1100,
+      "height": 800,
+      "scale": 2,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 1366,
+      "height": 900,
+      "scale": 1,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 1366,
+      "height": 900,
+      "scale": 1.5,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 1366,
+      "height": 900,
+      "scale": 2,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 844,
+      "height": 390,
+      "scale": 1,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 844,
+      "height": 390,
+      "scale": 1.5,
+      "overflow": []
+    },
+    {
+      "view": "v2-overview",
+      "width": 844,
+      "height": 390,
+      "scale": 2,
+      "overflow": []
+    }
+  ],
+  "requests": [],
+  "errors": [],
+  "storage": {
+    "local": 0,
+    "session": 0
+  },
+  "artSources": [
+    {
+      "file": "shrine-source-v2.png",
+      "sha256": "ebbd0af8abff0b9609d509359b36e167c31fdcb8858ef2105cfbe1144426c682",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "clearPixels": 595776,
+      "opaquePixels": 0
+    },
+    {
+      "file": "items-source-v2.png",
+      "sha256": "701b5f34a5db40b7c761b84c2c0cca8dbc6bc66a505797669c2ce4e6eed62502",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "clearPixels": 923955,
+      "opaquePixels": 0
+    }
+  ],
+  "references": [
+    {
+      "path": "../desktop-skill-hud-v3/cultivation-frame-v3.webp",
+      "role": "palette/material/style only",
+      "sha256": "38e8efea0997d77c42e9b55ea6e8b0c13cbaf4d01a34017c18acf45a7b32fab0"
+    },
+    {
+      "path": "../desktop-skill-hud-v2/skill-icons-v2.webp",
+      "role": "painterly icon style only",
+      "sha256": "7e90fd361878ac6ba14e0712b40a8ac2dd29e41cc1f382356817e8f9c6749a67"
+    }
+  ],
+  "evidence": "artifacts/character-ui/verification.json",
+  "sourcePack": "docs/design/ui/character-van-ngoc-v2",
+  "runtime": "client/character-ui.html"
+}

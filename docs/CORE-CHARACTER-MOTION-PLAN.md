@@ -1,5 +1,7 @@
 # Bộ ba người chơi — kế hoạch động tác
 
+**Bổ sung theo yêu cầu owner 10/10/2026:** [animation nhiệm vụ](HANG-NHAC-QUEST-MOTION.md) đã sản xuất và ghép 21 clip / 84 frame: chào, vận khí đứng/ổn định linh thể, đòn thường đủ bốn hướng và hồi phục cho cả ba nhân vật. Đây là ngân sách riêng, không cộng vào 60 frame locomotion hoặc 300 frame core cast. ART mới chờ owner xem chuyển động; các dự toán 09/10 bên dưới giữ lịch sử lúc chưa sản xuất.
+
 **Phiên bản:** 0.5, ngày 09/10/2026.\
 **Hướng gameplay:** [GDD 0.28](GDD.md) cho chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; cả ba trải qua Hằng Nhạc đến hết Ngưng Khí, phân hóa từ Trúc Cơ. Mốc xuất hiện trong nguyên tác là căn cứ biên tập truyện, không khóa quyền chọn nhân vật.\
 **Hiện trạng:** bộ ba chibi có **60 frame đứng/đi/lướt**, chọn được trong sân Hằng Nhạc với hồ sơ riêng, R01 luyện thử và HN01–HN02/thổ nạp. [Core cast v1](design/characters/core-cast-v1/README.md) bổ sung **36 clip / 300 frame thi triển** cho ba thuật × ba nhân vật × bốn hướng; ART mới chờ đánh giá. Frame cast tính riêng với locomotion.\
@@ -37,7 +39,7 @@ Inspector chibi mặc định 5 FPS. Map local thử 24 px/vòng và 40 px/s; s�
 
 12 frame lơ lửng và 4 frame luyện đan **chưa được vẽ**. Đây là dự toán ART cho thử nghiệm; ưu tiên hiện tại vẫn là map. Lò/bàn/dược liệu tách khỏi frame nhân vật, cần bố cục trước gói luyện đan. Vương Lâm có tùy chọn tương tác 4 frame và tu luyện 4 frame một hướng; nếu chọn cả hai thì thêm 8 vào 76, không coi là đầu ra đã có.
 
-Thi triển ba thuật R01/bộ ba/bốn hướng đã sản xuất và nối [skill core](SKILL-CORE.md): 33 clip mới × 8 pose, cộng ba chuỗi Vương Lâm Đông × 12 pose đã bàn giao. Canvas cast riêng cao 96/anchor y88/body tối đa 80, Tư Đồ Nam giữ hover 4 px; không thay frame 64 × 96 của đứng/đi/lướt. Trúng đòn, đòn thường, trang phục/cảnh giới khác và thân thể phục hồi Tư Đồ Nam chưa có ngân sách motion đầy đủ.
+Thi triển ba thuật R01/bộ ba/bốn hướng đã sản xuất và nối [skill core](SKILL-CORE.md): 33 clip mới × 8 pose, cộng ba chuỗi Vương Lâm Đông × 12 pose đã bàn giao. Canvas cast riêng cao 96/anchor y88/body tối đa 80, Tư Đồ Nam giữ hover 4 px; không thay frame 64 × 96 của đứng/đi/lướt. Đòn thường đã có gói nhiệm vụ 10/10 phía trên; trúng đòn, trang phục/cảnh giới khác và thân thể phục hồi Tư Đồ Nam chưa có ngân sách motion đầy đủ.
 
 ## 4. Chuyển trạng thái và nhận diện
 

@@ -1,0 +1,141 @@
+/* Shared companion UI text/layout contract. Artwork and the native hotbar own
+   their geometry; reading components use these tokens instead of fixed text boxes. */
+.hang-nhac-game {
+  --ui-font-copy: 'Segoe UI', Arial, sans-serif;
+  --ui-font-heading: Cambria, Georgia, serif;
+  --ui-text-body: 15px;
+  --ui-text-small: 12px;
+  --ui-text-title: 20px;
+  --ui-leading: 1.7;
+  --ui-space: 8px;
+  --ui-copy-measure: 60ch;
+}
+.hang-nhac-game :is(.ui-reading, .ui-text-stack) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  white-space: normal;
+}
+.hang-nhac-game .ui-reading {
+  font: 400 var(--ui-text-body)/var(--ui-leading) var(--ui-font-copy);
+  text-align: start;
+}
+.hang-nhac-game :is(#sect-body, #game-menu) .ui-reading p,
+.hang-nhac-game #sect-body .quest-card-detail.ui-reading p,
+.hang-nhac-game #sect-body.ui-reading > p {
+  font: inherit;
+  max-width: var(--ui-copy-measure);
+  margin: 0 0 calc(2 * var(--ui-space));
+}
+.hang-nhac-game .ui-copy-section + .ui-copy-section { margin-top: calc(2.5 * var(--ui-space)); }
+.hang-nhac-game .ui-copy-section > :last-child { margin-bottom: 0; }
+.hang-nhac-game .ui-reading .ui-section-title {
+  font: 600 var(--ui-text-small)/1.5 var(--ui-font-copy);
+  color: #4c6347;
+  margin: 0 0 var(--ui-space);
+}
+.hang-nhac-game .ui-reading .quest-checklist {
+  display: grid; list-style: none; padding: 0; margin: 0;
+  font: inherit; gap: calc(1.25 * var(--ui-space));
+}
+.hang-nhac-game .quest-checklist li { display: grid; grid-template-columns: 1em minmax(0, 1fr); gap: var(--ui-space); }
+.hang-nhac-game .quest-checklist li > span { min-width: 0; overflow-wrap: anywhere; }
+.hang-nhac-game .ui-reading .quest-checklist [data-complete=true] { color: #41643c; }
+.hang-nhac-game .quest-card:is([data-state=completed], [data-state=locked]) .quest-checklist { display: grid; }
+
+/* The three columns keep long Vietnamese titles inside the clickable tab. */
+.hang-nhac-game .quest-card-select {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) 1em;
+  gap: 12px; align-items: center; padding: 16px; height: auto;
+  white-space: normal; min-width: 0;
+}
+.hang-nhac-game .quest-card-title {
+  display: block; font: 500 var(--ui-text-title)/1.45 var(--ui-font-heading);
+  color: #efdfb7; overflow-wrap: anywhere;
+}
+.hang-nhac-game .quest-card-select small { font-size: var(--ui-text-small); line-height: 1.5; margin-top: 4px; }
+.hang-nhac-game .quest-card-select::after { margin: 0; text-align: center; }
+.hang-nhac-game .quest-card-detail { padding: 24px; }
+.hang-nhac-game #sect-body .quest-card-detail .quest-card-reward {
+  border: 0; padding: 0; margin: 0; color: #735c2d;
+}
+.hang-nhac-game :is(.journal-layout, .menu-sections) > * { min-width: 0; }
+.hang-nhac-game :is(.sect-dialog-heading, .game-menu-heading) {
+  gap: 16px; align-items: start; position: sticky; top: 0; z-index: 2;
+  background: #15322f; padding-top: 8px;
+}
+.hang-nhac-game :is(.sect-dialog-heading, .game-menu-heading) > div { min-width: 0; overflow-wrap: anywhere; }
+.hang-nhac-game :is(#sect-close, #menu-close) { flex: none; }
+
+/* Safe horizontal inset follows the displayed frame, including real borders. */
+.hang-nhac-game :is(#sect-dialog, #game-menu) {
+  padding-inline: max(12px, calc(var(--vn-frame-size) * .48 - var(--vn-frame-border)));
+}
+.hang-nhac-game .journal-map-panel {
+  padding: max(20px, calc(var(--vn-frame-size) * .7));
+  overflow-wrap: anywhere;
+}
+.hang-nhac-game #sect-body.ui-reading .station-intro {
+  font: 500 var(--ui-text-title)/1.6 var(--ui-font-heading);
+}
+.hang-nhac-game #sect-body .dialog-actions button {
+  min-width: 0; height: auto; white-space: normal; overflow-wrap: anywhere;
+  font-size: var(--ui-text-body); line-height: 1.5; padding: 12px 24px;
+}
+.hang-nhac-game .setting-row > span { min-width: 0; }
+.hang-nhac-game #game-menu .setting-row b { font-size: var(--ui-text-body); line-height: 1.5; }
+.hang-nhac-game #game-menu .setting-row small { font-size: var(--ui-text-small); line-height: 1.65; }
+.hang-nhac-game .control-guide > div { flex-wrap: wrap; }
+.hang-nhac-game .control-guide dd { overflow-wrap: anywhere; }
+
+/* Overlay is a compact scrollable reader. Footer actions never scroll away. */
+.hang-nhac-game #sect-objective.quest-tracker {
+  padding: max(20px, calc(var(--vn-frame-size) * .58));
+}
+.hang-nhac-game .quest-tracker-heading { flex-wrap: wrap; }
+.hang-nhac-game .quest-tracker-heading strong { min-width: 0; }
+.hang-nhac-game .quest-tracker-heading small { margin-left: auto; }
+.hang-nhac-game #quest-tracker-body {
+  flex: 1 1 auto; min-width: 0; overscroll-behavior: contain;
+  overflow-x: hidden; scrollbar-gutter: stable; padding-right: 6px;
+  overflow-wrap: anywhere;
+}
+.hang-nhac-game #quest-title { font-size: var(--ui-text-title); line-height: 1.45; margin: 0 0 10px; }
+.hang-nhac-game #quest-state { margin-bottom: 4px; max-width: 100%; white-space: normal; }
+.hang-nhac-game #quest-next, .hang-nhac-game .quest-tracker .quest-checklist { font-size: 13px; line-height: var(--ui-leading); }
+.hang-nhac-game .quest-tracker .quest-actions button {
+  min-width: 0; height: auto; min-height: 44px; white-space: normal;
+  overflow-wrap: anywhere; padding: 8px 14px;
+}
+.hang-nhac-game .quest-tracker .lesson-panel button { height: auto; min-height: 44px; white-space: normal; }
+
+@media (max-width: 980px) {
+  .hang-nhac-game .journal-layout { grid-template-columns: minmax(0, 1fr); }
+  .hang-nhac-game .journal-map-panel { position: relative; }
+}
+@media (max-width: 760px) {
+  .hang-nhac-game { --ui-text-title: 18px; }
+  .hang-nhac-game .quest-card-select { padding: 12px; gap: 8px; }
+  .hang-nhac-game .quest-card-id { font-size: var(--ui-text-small); }
+  .hang-nhac-game .quest-card-detail { padding: 18px 16px; }
+  .hang-nhac-game #sect-objective.quest-tracker { padding: 12px; max-height: min(194px, calc(50% - 123px)); }
+  .hang-nhac-game .quest-tracker-heading { flex-wrap: nowrap; gap: 4px; padding-bottom: 0; margin-bottom: 4px; }
+  .hang-nhac-game .quest-tracker-heading strong { font-size: 14px; }
+  .hang-nhac-game #quest-title { font-size: 15px; line-height: 1.3; margin-bottom: 8px; }
+  .hang-nhac-game #quest-tracker-body { scrollbar-gutter: auto; padding-right: 4px; }
+  .hang-nhac-game .quest-tracker .quest-actions { gap: 2px; margin-top: 4px; }
+  .hang-nhac-game .quest-tracker .quest-actions button { font-size: 0; height: 44px; min-width: 44px; padding: 0 3px; }
+  .hang-nhac-game :is(#sect-dialog, #game-menu) { --vn-window-bottom: 12px; padding-bottom: var(--vn-window-bottom); }
+}
+@media (max-height: 520px) and (min-width: 761px) {
+  .hang-nhac-game #sect-objective.quest-tracker { --vn-frame-size: 30px; padding: 18px; }
+  .hang-nhac-game .quest-tracker-heading { flex-wrap: nowrap; }
+  .hang-nhac-game .quest-tracker-heading strong { font-size: 17px; }
+  .hang-nhac-game #quest-chapter-progress { display: none; }
+  .hang-nhac-game .quest-tracker .quest-actions { flex-wrap: nowrap; }
+  .hang-nhac-game .quest-tracker .quest-actions button { flex: 1 1 0; height: 44px; padding: 0 4px; font-size: 0; }
+  .hang-nhac-game .quest-tracker .quest-actions button::after { font-size: 12px; }
+  .hang-nhac-game #quest-guide::after { content: 'NPC'; }
+  .hang-nhac-game #interact::after { content: 'E'; }
+  .hang-nhac-game #journal::after { content: 'Sổ'; }
+}

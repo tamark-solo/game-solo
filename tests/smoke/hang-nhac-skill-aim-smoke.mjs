@@ -16,7 +16,7 @@ try {
   const guest=await(await fetch(`${endpoint}/api/profile-session`,{method:'POST'})).json();
   const avatars=['CHR-WANG-LIN-CHIBI','CHR-SITU-NAN','CHR-LI-MUWAN'];
   const store=new ProfileStore(dbPath);try{for(const avatar of avatars){const profile=store.get(store.authenticate(guest.token),avatar);Object.assign(profile,HANG_NHAC.world.spawn,{direction:'north'});store.save(profile);}}finally{store.close();}
-  browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
+  browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-unsafe-swiftshader']});
   const context=await browser.newContext({viewport:{width:960,height:720}});
   await context.addInitScript(token=>localStorage.setItem('hang-nhac.guest.v1',token),guest.token);
   page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
@@ -55,7 +55,7 @@ try {
     assert.ok(item.clips.includes(catalog.skills[skill].bindings[s.own.avatarId][direction]),'actual rendered pose uses the accepted direction');
     checks.push({avatar:s.own.avatarId,skill,direction,aim:[x,y],renderedClip:item.clips[0],released:true});return s;
   };
-  await page.goto(origin+'/hang-nhac.html');await page.waitForFunction(()=>window.__hangNhacDiagnostics?.().ready);await page.locator('#join').click();await load();
+  await page.goto(origin+'/hang-nhac.html?devGuest=1');await page.waitForFunction(()=>window.__hangNhacDiagnostics?.().ready);await page.locator('#join').click();await load();
   await expectAim(0,-1,'facing');await cast('sword',0,-1,'north');
   // Two handlers in one frame: a newly held movement key and a skill key must not self-cancel.
   await cast('sword',1,0,'east',()=>page.evaluate(()=>{

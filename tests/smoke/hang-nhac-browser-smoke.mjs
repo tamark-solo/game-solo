@@ -19,7 +19,7 @@ try {
   a.on('pageerror', e => errors.push(e.message));
   a.on('response', r => { if (r.status() >= 400) errors.push(`HTTP ${r.status()}: ${r.url()}`); });
   a.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
-  await a.goto(`${origin}/hang-nhac.html`); await a.waitForFunction(() => window.__hangNhacDiagnostics?.().ready);
+  await a.goto(`${origin}/hang-nhac.html?devGuest=1`); await a.waitForFunction(() => window.__hangNhacDiagnostics?.().ready);
   const initial = await diagnostic(a);
   assert.equal(initial.zoom, 1); assert.equal(initial.blockers, 9); assert.equal(initial.backgroundBytes, release.background.bytes);
   assert.deepEqual(own(initial).frameSize, [64, 96]); assert.deepEqual(own(initial).anchor, [32, 88]);
@@ -30,13 +30,13 @@ try {
     await a.locator('#avatar').selectOption(id); await a.locator('#stage').focus();
     const before = own(await diagnostic(a)); await a.keyboard.down('d'); await a.waitForTimeout(350); await a.keyboard.up('d');
     await a.waitForTimeout(100); const after = own(await diagnostic(a));
-    assert.equal(after.assetId, id); assert.ok(after.x > before.x + 10); assert.ok(after.walkable);
+    assert.equal(after.assetId, id); assert.equal(after.x, before.x); assert.equal(after.y, before.y); assert.ok(after.walkable);
   }
-  checks.push('three_original_appearances_move_locally');
+  checks.push('three_original_appearances_and_entry_blocks_movement');
   await a.locator('#join').click(); await a.waitForFunction(() => window.__hangNhacDiagnostics().status === 'connected');
   const peerContext = await browser.newContext({ viewport: { width: 1440, height: 980 } });
   const b = await peerContext.newPage(); b.on('pageerror', e => errors.push(e.message));
-  await b.goto(`${origin}/hang-nhac.html`); await b.waitForFunction(() => window.__hangNhacDiagnostics?.().ready);
+  await b.goto(`${origin}/hang-nhac.html?devGuest=1`); await b.waitForFunction(() => window.__hangNhacDiagnostics?.().ready);
   await b.locator('#avatar').selectOption('CHR-LI-MUWAN'); await b.locator('#join').click();
   await waitFor(async () => (await diagnostic(a)).actors.length === 2 && (await diagnostic(b)).actors.length === 2, 'two browsers see each other');
   assert.equal((await diagnostic(a)).roomId, (await diagnostic(b)).roomId);
@@ -53,6 +53,7 @@ try {
   await a.setViewportSize({ width: 390, height: 844 }); await a.waitForTimeout(150);
   const overflow = await a.evaluate(() => document.documentElement.scrollWidth > innerWidth);
   assert.equal(overflow, false);
+  await a.locator('#join:enabled').click(); await a.waitForFunction(() => window.__hangNhacDiagnostics().shell.phase === 'playing');
   const start = own(await diagnostic(a));
   const button = await a.locator('[data-input=west]').boundingBox();
   await a.mouse.move(button.x + button.width / 2, button.y + button.height / 2); await a.mouse.down(); await a.waitForTimeout(450); await a.mouse.up();

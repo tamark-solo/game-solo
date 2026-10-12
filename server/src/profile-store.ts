@@ -2,10 +2,9 @@ import { DatabaseSync } from 'node:sqlite';
 import { createHash, randomBytes, randomUUID } from 'node:crypto';
 import { mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
-import { CHARACTER_INFO, R01_IDS, initialProfile, isAvatarId, publicProfile, type AvatarId, type CharacterProfile } from '../../shared/profiles';
+import { initialProfile, publicProfile, type AvatarId, type CharacterProfile } from '../../shared/profiles';
 import { HANG_NHAC_AVATARS } from '../../shared/hang-nhac';
-import { initialSectProgress, validSectProgress } from '../../shared/sect';
-import { initialLessonProgress } from '../../shared/lesson-contracts';
+import { decodeProfile } from './persistence/profile-codec';
 
 const hashToken = (token: string) => createHash('sha256').update(token).digest('hex');
 export class ProfileStore {
@@ -22,6 +21,8 @@ export class ProfileStore {
       CREATE TABLE IF NOT EXISTS cast_receipts (profile_id TEXT NOT NULL REFERENCES profiles(id), request_id TEXT NOT NULL, result TEXT NOT NULL,
         PRIMARY KEY(profile_id,request_id));
       CREATE TABLE IF NOT EXISTS sect_receipts (profile_id TEXT NOT NULL REFERENCES profiles(id), request_id TEXT NOT NULL, result TEXT NOT NULL,
+        PRIMARY KEY(profile_id,request_id));
+      CREATE TABLE IF NOT EXISTS character_receipts (profile_id TEXT NOT NULL REFERENCES profiles(id), request_id TEXT NOT NULL, result TEXT NOT NULL,
         PRIMARY KEY(profile_id,request_id)); PRAGMA user_version=2;`);
   }
   createGuest(): { token: string; accountId: string } {
@@ -42,19 +43,7 @@ export class ProfileStore {
   get(accountId: string, avatarId: AvatarId): CharacterProfile {
     const row = this.db.prepare('SELECT id,data,revision FROM profiles WHERE account_id=? AND avatar_id=?').get(accountId, avatarId) as { id:string;data: string;revision:number } | undefined;
     if (!row) throw new Error('Profile does not belong to this account.');
-    const raw = JSON.parse(row.data) as Omit<CharacterProfile,'schema'> & {schema:number};
-    if (![1,2].includes(raw.schema)) throw new Error('Saved profile failed validation.');
-    const p = raw as CharacterProfile;
-    if (!isAvatarId(p.avatarId) || p.accountId !== accountId || p.avatarId !== avatarId || p.id!==row.id || p.revision!==row.revision ||
-        ![p.x,p.y,p.hp,p.mp,p.casts,p.practiceHits,p.revision,p.nextSwordAt,p.nextThunderAt,p.nextWindAt,p.lastSpentAt,p.createdAt,p.updatedAt].every(Number.isFinite) ||
-        p.hp<0 || p.hp>100 || p.mp<0 || p.mp>100 || ![p.casts,p.practiceHits,p.revision,p.cultivation].every(n=>Number.isInteger(n)&&n>=0) ||
-        !Array.isArray(p.skills) || p.skills.length!==3 || !R01_IDS.every(id=>p.skills.includes(id)) ||
-        (raw.schema===1 ? p.milestone!=='introduction' : !validSectProgress(p.sect,p)) ||
-        p.progressionKind!==CHARACTER_INFO[avatarId].progressionKind || typeof p.name!=='string' || typeof p.mapId!=='string' || typeof p.mapVersion!=='string')
-      throw new Error('Saved profile failed validation.');
-    // Upgrade old JSON lazily. Its identity, coordinates, R01, receipts and resources survive.
-    return raw.schema===1 ? {...p,schema:2,sect:initialSectProgress()} :
-      {...p,sect:{...p.sect,lessons:p.sect.lessons??initialLessonProgress()}};
+    return decodeProfile(row.data,{id:row.id,accountId,avatarId,revision:row.revision});
   }
   list(accountId: string) { return HANG_NHAC_AVATARS.map(id => publicProfile(this.get(accountId, id))); }
   save(profile: CharacterProfile): void {
@@ -79,7 +68,12 @@ export class ProfileStore {
   commitSect(profile:CharacterProfile,requestId:string,result:unknown):void {
     this.commitReceipt('sect_receipts',profile,requestId,result);
   }
-  private commitReceipt(table:'cast_receipts'|'sect_receipts',profile:CharacterProfile,requestId:string,result:unknown):void {
+  characterReceipt(profileId:string,requestId:string):unknown|undefined {
+    const row=this.db.prepare('SELECT result FROM character_receipts WHERE profile_id=? AND request_id=?').get(profileId,requestId) as {result:string}|undefined;
+    return row?JSON.parse(row.result):undefined;
+  }
+  commitCharacter(profile:CharacterProfile,requestId:string,result:unknown):void{this.commitReceipt('character_receipts',profile,requestId,result);}
+  private commitReceipt(table:'cast_receipts'|'sect_receipts'|'character_receipts',profile:CharacterProfile,requestId:string,result:unknown):void {
     const revision = profile.revision, updatedAt = profile.updatedAt;
     try {
       this.transaction(() => {
