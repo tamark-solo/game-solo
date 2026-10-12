@@ -1,5 +1,7 @@
 # Bộ Nguyên Anh · Linh ảnh khí ấn · source 2.0.0 / pack 2.0.1
 
+**Workspace 12/10/2026:** đã dọn R04 V1/R05 V1/V2; giữ đầy đủ 15 gói hiện hành và manifest lịch sử. Các mô tả archive/bản cũ bên dưới ghi lại lần bàn giao; xem [quy tắc dọn và dựng hiện tại](CLEANUP-2026-10-12.md).
+
 Thiết kế lại linh ảnh sau phản hồi về thẩm mỹ và trải nghiệm: **nửa thân gợi bằng nét linh khí, mặt và thân rỗng, không tóc/da/áo/giày như một nhân vật thứ hai**. Cùng nét ngọc/ngà/vàng của VFX đã chọn; Kiếm có ba tia kiếm tại thủ quyết, Lôi có phù kim cương bạc tím, Phong có dải khí lụa. Nhân vật chính và các hiệu ứng đánh giữ nguồn đã sản xuất.
 
 [Preview Kiếm](nguyen-anh-kit.html?family=sword) · [Lôi](nguyen-anh-kit.html?family=thunder) · [Phong](nguyen-anh-kit.html?family=wind) · [Thư viện 15 skill](skill-library.html) · [ZIP 2.0.0](releases/nguyen-anh-kit-2.0.0.zip).

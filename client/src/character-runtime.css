@@ -1,13 +1,254 @@
-#character-dialog.character-runtime { height:auto;display:block;padding:0;border:0;background:none;overflow:visible;width:min(1120px,calc(100vw - 32px));max-width:none;max-height:none;margin:20px auto 0;top:0;bottom:auto;color:#eee5cc; }
-#character-dialog.character-runtime:not([open]) { display:none; }
-#character-dialog::backdrop { background:#071e2459; }
-#character-dialog { outline:none; }
-#character-dialog .character-heading > div { flex:1;min-width:0; }
-#character-dialog .character-window { width:100%;height:min(740px,calc(100dvh - 180px));max-height:none; }
-#character-dialog .current-quest { color:#c7d7bd;font-size:var(--ui-text-small);line-height:1.7;margin-top:10px; }
-#character-dialog .live-overview-gear { margin-top:20px; }.character-runtime .live-supplies { border-top:1px solid #9b885e55;padding-top:14px; }.character-runtime .overview-note .equipment-entry { color:#3d5e4c;background:#79967416; }.character-runtime .overview-note .equipment-entry small { color:#697e5d; }
-#character-dialog[data-motion=reduce] *,#character-dialog[data-motion=reduce] *::before { animation:none !important;transition:none !important; }
-#character-dialog .shrine-art { pointer-events:none; }
-.hang-nhac-game #character-open { width:44px;min-width:44px;min-height:44px; }
-@media(max-width:759px){#character-dialog.character-runtime{width:calc(100vw - 20px);margin-top:12px;}#character-dialog .character-window{height:calc(100dvh - 140px);}.character-runtime .detail-title{min-width:0;}.character-runtime .current-quest{margin-top:8px;}}
-@media(max-height:650px){#character-dialog.character-runtime{margin-top:12px;}#character-dialog .character-window{height:calc(100dvh - 24px);}}
+/* Live Linh Dai 04: confirmed CharacterView data in the reviewed sheet layout. */
+#character-dialog.character-runtime{--dao-line:var(--dao-border,#9baa8866);--dao-muted:#b6c5b0;--dao-card:#27382e;--dao-selected:#405440;--dao-skill-icon-atlas:url('/assets/skill-hud/skill-icons-v2.webp');height:auto;display:block;padding:0;border:0;background:none;overflow:visible;width:min(1160px,calc(100vw - 28px));max-width:none;max-height:none;margin:14px auto 0;top:0;bottom:auto;color:var(--dao-text,#e5ead8);font-family:'Segoe UI',Arial,sans-serif;color-scheme:dark;outline:0}
+#character-dialog:not([open]),#character-dialog [hidden]{display:none!important}
+#character-dialog::backdrop{background:#06191a80;backdrop-filter:blur(2px)}
+#character-dialog *,#character-dialog *::before,#character-dialog *::after{box-sizing:border-box}
+#character-dialog :is(button,input,select){font:inherit;min-width:0}
+#character-dialog button{cursor:pointer;color:inherit}
+#character-dialog button:disabled{opacity:.58;cursor:default}
+#character-dialog :is(button,input,select,summary,a):focus-visible{outline:2px solid var(--dao-accent,#d1ce9f);outline-offset:3px}
+#character-dialog :is(h1,h2,h3,h4,p){margin:0;overflow-wrap:anywhere}
+#character-dialog h2{font:500 24px/1.35 Cambria,Georgia,serif}
+#character-dialog h3{font:600 18px/1.5 Cambria,Georgia,serif}
+#character-dialog p{font-size:var(--ui-text-small,12px);line-height:1.7}
+#character-dialog .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#character-dialog .character-window{--vn-frame-size:42px;position:relative;isolation:isolate;display:flex;flex-direction:column;gap:0;width:100%;height:min(790px,calc(100dvh - 28px));min-height:0;padding:30px 30px 28px;overflow:hidden}
+#character-dialog .character-heading{display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--dao-line);padding:0 0 10px;flex:none}
+#character-dialog .character-heading>div{flex:1;min-width:0}
+#character-dialog h1{font:500 28px/1.3 Cambria,Georgia,serif;margin-top:3px}
+#character-dialog :is(.review-eyebrow,.pane-eyebrow){display:block;font:600 10px/1.7 'Segoe UI',sans-serif;letter-spacing:.09em;color:var(--dao-accent,#c6cbaa)}
+#character-dialog .close-character{display:grid;place-items:center;min-width:44px;min-height:44px;border:1px solid var(--dao-line);background:var(--dao-card);font-size:21px;border-radius:2px}
+#character-dialog .character-tabs{display:flex;gap:7px;border-bottom:1px solid var(--dao-line);padding:9px 0;flex:none;min-width:0}
+#character-dialog .character-tabs button{min-height:40px;min-width:105px;padding:7px 16px;border:1px solid var(--dao-line);background:transparent;color:var(--dao-muted);font:15px/1.5 Cambria,serif}
+#character-dialog .character-tabs button[aria-selected=true]{color:var(--dao-text,#e5ead8);background:var(--dao-selected);border-color:var(--dao-accent,#c6cbaa)}
+#character-dialog .dao-character-subnav{display:flex;gap:5px;flex:none;padding:8px 0 0;flex-wrap:wrap}
+#character-dialog .dao-character-subnav button{min-height:36px;padding:6px 12px;border:1px solid transparent;background:transparent;font:12px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted)}
+#character-dialog .dao-character-subnav button[aria-pressed=true]{border-color:var(--dao-line);background:var(--dao-selected);color:var(--dao-text,#e5ead8)}
+#character-dialog .connection-notice{padding:8px 10px;margin-top:9px;border:1px solid var(--dao-line);color:var(--dao-muted);background:var(--dao-card);flex:none}
+#character-dialog .character-content{display:grid;grid-template-columns:minmax(0,.74fr) minmax(0,1.12fr) minmax(0,1fr);gap:15px;min-height:0;min-width:0;flex:1;overflow:auto;scrollbar-width:thin;padding:14px 2px 2px;margin-top:0;align-items:start}
+#character-dialog :is(.profile-pane,.primary-pane,.detail-pane){min-width:0;min-height:0;overflow-wrap:anywhere}
+#character-dialog .profile-pane{padding:14px 12px;background:linear-gradient(165deg,#81907b12,transparent 65%);border-top:1px solid var(--dao-line)}
+#character-dialog .profile-pane>h2{font-size:30px;margin:5px 0}
+#character-dialog .dao-identity-caption{color:var(--dao-muted);font-size:11px;margin-bottom:12px}
+#character-dialog .dao-live-likeness{position:relative;display:grid;place-items:center;min-height:260px;border-bottom:1px solid var(--dao-line);background:radial-gradient(ellipse at 50% 70%,#b6c7a822,transparent 60%),linear-gradient(165deg,#2d362b,#1e2723);overflow:hidden;isolation:isolate}
+#character-dialog .dao-well-caption{position:absolute;left:0;right:0;top:13px;text-align:center;letter-spacing:.16em;font:9px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted)}
+#character-dialog .dao-live-seal{position:absolute;width:160px;height:160px;border:1px solid #abbca755;border-radius:50%;top:40px;opacity:.55}
+#character-dialog .dao-live-seal::before,#character-dialog .dao-live-seal::after{content:'';position:absolute;inset:13px;border:1px solid #abbca733;transform:rotate(45deg)}
+#character-dialog .dao-live-seal::after{inset:30px;transform:rotate(0deg)}
+#character-dialog .profile-sprite{position:relative;width:192px;height:192px;max-width:100%;object-fit:contain;image-rendering:pixelated;align-self:center;margin-top:18px}
+#character-dialog .pose-toggle{position:absolute;bottom:10px;min-height:36px;padding:5px 12px;background:#17261de0;border:1px solid var(--dao-line);font-size:11px}
+#character-dialog .dao-identity-foot{display:flex;justify-content:space-between;gap:10px;font:11px/1.6 'Segoe UI',sans-serif;margin:12px 0;color:var(--dao-muted)}
+#character-dialog .dao-identity-foot b{display:block;color:var(--dao-text,#e5ead8);font-weight:500}
+#character-dialog .dao-outline{display:flex;align-items:center;gap:8px;justify-content:space-between;width:100%;min-height:44px;padding:7px 9px;border:1px solid var(--dao-line);background:transparent;font-size:12px}
+#character-dialog .dao-outline svg{width:24px;height:24px}
+#character-dialog .dao-paper{padding:16px;background:var(--dao-paper,linear-gradient(#e0e5da,#e8eadd));border:1px solid var(--dao-line);color:var(--dao-ink,#293e37);color-scheme:light}
+#character-dialog .dao-paper .pane-eyebrow{color:var(--dao-ink,#486346);opacity:.8}
+#character-dialog .dao-paper p{margin:9px 0}
+#character-dialog .dao-paper .text-action{color:var(--dao-ink,#3e644c)}
+#character-dialog .dao-realm-heading{display:flex;align-items:center;gap:12px;margin-bottom:11px}
+#character-dialog .dao-realm-heading>div{min-width:0}
+#character-dialog .dao-realm-heading h2{font-size:24px;margin:3px 0 5px}
+#character-dialog .dao-realm-seal{position:relative;flex:none;display:grid;place-items:center;width:57px;height:57px;border:1px solid #818c6570;outline:1px solid #818c6540;outline-offset:4px;border-radius:50%;font:28px Cambria,serif;background:radial-gradient(circle,#81916c17,transparent 70%)}
+#character-dialog .dao-realm-seal::after{content:'';position:absolute;inset:7px;border:1px dashed #818c6570;border-radius:50%}
+#character-dialog .dao-sheet-confirmed{font:11px/1.5 'Segoe UI',sans-serif}
+#character-dialog .dao-accumulation{border-bottom:1px solid #7d89614d;padding-bottom:8px;margin-bottom:8px;font:12px/1.6 'Segoe UI',sans-serif}
+#character-dialog .dao-accumulation>div:first-child{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+#character-dialog .dao-accumulation>div:first-child>b{font:28px/1.4 Cambria,serif;flex:none}
+#character-dialog .dao-accumulation small{font:12px/1.5 'Segoe UI',sans-serif;opacity:.8}
+#character-dialog .dao-accumulation p{font-size:11px;margin:7px 0 0}
+#character-dialog .dao-qi-track{height:7px;margin:8px 0;background:#68785426;border:1px solid #7d89614d;border-radius:8px;overflow:hidden}
+#character-dialog .dao-qi-track i{display:block;height:100%;background:linear-gradient(90deg,#667b59,#96a887);border-radius:8px}
+#character-dialog .dao-resource-pair{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding-bottom:10px;margin:12px 0 2px}
+#character-dialog .dao-resource-pair>div{position:relative;padding-bottom:10px;min-width:0}
+#character-dialog .dao-resource-pair dt{font-size:11px}
+#character-dialog .dao-resource-pair dd{font:24px/1.5 Cambria,serif;margin:0;white-space:nowrap}
+#character-dialog .dao-resource-pair dd small{font:11px 'Segoe UI',sans-serif;opacity:.75}
+#character-dialog .resource-line{position:absolute;bottom:0;left:0;right:0;height:4px;background:#647d6533}
+#character-dialog .resource-line::after{content:'';display:block;width:var(--fill);height:100%;background:#9f765d}
+#character-dialog .resource-line.mp::after{background:#568187}
+#character-dialog .text-action{min-height:36px;padding:5px 0;background:none;border:0;color:var(--dao-accent,#ced4b4);font:12px/1.6 'Segoe UI',sans-serif;text-align:left}
+#character-dialog .text-action:hover{text-decoration:underline}
+#character-dialog .dao-section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;margin:5px 0}
+#character-dialog .dao-section-head h2{font-size:21px}
+#character-dialog .dao-section-head h3{font-size:17px}
+#character-dialog .dao-section-head small{font-size:10px;opacity:.8;flex:none}
+#character-dialog .dao-section-head .text-action{font-size:10px;flex:none}
+#character-dialog .dao-sheet-next{border-top:1px solid #7d89614d;margin-top:6px;padding-top:10px}
+#character-dialog .dao-sheet-next>.dao-section-head h3{font:11px/1.5 'Segoe UI',sans-serif;text-transform:uppercase;letter-spacing:.06em}
+#character-dialog .dao-sheet-next>b{display:block;margin:6px 0;font:600 19px/1.45 Cambria,serif}
+#character-dialog .dao-sheet-quest-count{display:block;font:11px/1.5 'Segoe UI',sans-serif}
+#character-dialog .dao-sheet-next>small{display:block;font:10px/1.6 'Segoe UI',sans-serif;opacity:.8;margin-bottom:9px}
+#character-dialog .game-button{min-height:44px;min-width:0;padding:9px 12px;font:12px/1.5 'Segoe UI',sans-serif;white-space:normal;overflow-wrap:anywhere}
+#character-dialog .dao-sheet-next>.game-button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:8px}
+#character-dialog .overview-note{padding:11px 12px 0;border-top:1px solid var(--dao-line)}
+#character-dialog .overview-note.dao-paper{padding:16px}
+#character-dialog .dao-foundation{display:flex;align-items:center;gap:10px;min-height:57px;width:100%;padding:8px 0;margin:6px 0;border:0;border-bottom:1px solid var(--dao-line);background:transparent;text-align:left}
+#character-dialog .dao-foundation>span:nth-child(2){display:grid;gap:3px;flex:1}
+#character-dialog .dao-foundation small{font:9px/1.4 'Segoe UI',sans-serif;color:var(--dao-muted);letter-spacing:.05em}
+#character-dialog .dao-foundation b{font:500 16px/1.45 Cambria,serif}
+#character-dialog .dao-glyph{display:grid;place-items:center;flex:none;width:36px;height:36px}
+#character-dialog .dao-glyph svg{width:29px;height:29px}
+#character-dialog .hud-glyph{fill:var(--dao-accent,#ced4b4);color:var(--dao-accent,#ced4b4);stroke:none}
+#character-dialog .hud-glyph .glyph-detail{fill:none;stroke:var(--dao-panel,#1a3033);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+#character-dialog .hud-glyph .glyph-line{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+#character-dialog .hud-glyph .glyph-cut{fill:var(--dao-panel,#1a3033)}
+#character-dialog .dao-build-heading{font:600 15px/1.5 Cambria,serif;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:11px 0 7px}
+#character-dialog .dao-build-heading small{font:10px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted)}
+#character-dialog .dao-sheet-skills{display:grid;gap:5px;margin-bottom:9px}
+#character-dialog .dao-sheet-skills button{display:flex;align-items:center;gap:9px;min-height:45px;width:100%;background:var(--dao-card);border:1px solid var(--dao-line);padding:6px;text-align:left}
+#character-dialog .dao-sheet-spell-icon{display:block;width:32px;height:32px;flex:none;background-image:var(--dao-skill-icon-atlas);background-size:300% 100%;background-repeat:no-repeat}
+#character-dialog .dao-sheet-spell-icon[data-skill=sword]{background-position:0% 50%}
+#character-dialog .dao-sheet-spell-icon[data-skill=thunder]{background-position:50% 50%}
+#character-dialog .dao-sheet-spell-icon[data-skill=wind]{background-position:100% 50%}
+#character-dialog .dao-sheet-skills button>span:nth-child(2){flex:1;display:grid;gap:3px;min-width:0}
+#character-dialog .dao-sheet-skills b{font:500 14px/1.4 Cambria,serif}
+#character-dialog .dao-sheet-skills small{font:10px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted)}
+#character-dialog .dao-sheet-skills kbd{font:12px/1.4 Cambria,serif;border:1px solid var(--dao-line);padding:3px 6px;color:var(--dao-accent,#ced4b4)}
+#character-dialog .dao-sheet-equipment{display:grid}
+#character-dialog .dao-sheet-equipment button{display:flex;align-items:center;gap:8px;text-align:left;min-height:48px;width:100%;background:transparent;border:0;border-bottom:1px solid var(--dao-line);padding:5px 0}
+#character-dialog .dao-sheet-equipment button>span:nth-child(2){display:grid;gap:3px;flex:1;min-width:0}
+#character-dialog .dao-sheet-equipment img{width:36px;height:36px;object-fit:contain;flex:none}
+#character-dialog .dao-sheet-equipment small{font:9px/1.4 'Segoe UI',sans-serif;color:var(--dao-muted)}
+#character-dialog .dao-sheet-equipment b{font:500 14px/1.45 Cambria,serif}
+#character-dialog .dao-sheet-equipment [data-filled=false] b{color:var(--dao-muted)}
+#character-dialog .quiet-copy{font:11px/1.65 'Segoe UI',sans-serif;color:var(--dao-muted);margin:9px 0 0}
+#character-dialog .dao-plain-data{display:grid;gap:0;font:12px/1.6 'Segoe UI',sans-serif;margin:16px 0}
+#character-dialog .dao-plain-data>div{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid #7d896133;padding:8px 0}
+#character-dialog .dao-plain-data dt{min-width:0}
+#character-dialog .dao-plain-data dd{margin:0;text-align:right;font-weight:600;min-width:0}
+#character-dialog .dao-confirm-conditions{list-style:none;padding:0;margin:10px 0 16px;display:grid;gap:10px;font:12px/1.7 'Segoe UI',sans-serif}
+#character-dialog .dao-confirm-conditions li{display:flex;align-items:flex-start;gap:9px}
+#character-dialog .dao-path-list{display:grid;gap:9px;margin-top:14px}
+#character-dialog .dao-path-list button{display:flex;align-items:start;gap:10px;background:var(--dao-card);border:1px solid var(--dao-line);padding:11px;text-align:left}
+#character-dialog .dao-path-list [data-current=true]{border-color:var(--dao-accent,#ced4b4);box-shadow:inset 3px 0 var(--dao-accent,#ced4b4)}
+#character-dialog .dao-path-list button>span:nth-child(2){display:grid;gap:4px;min-width:0;flex:1}
+#character-dialog .dao-path-number{font:20px Cambria,serif;color:var(--dao-accent,#ced4b4)}
+#character-dialog .dao-path-list small{font:10px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted)}
+#character-dialog .dao-path-list b{font:17px/1.4 Cambria,serif}
+#character-dialog .dao-path-list em{font:11px/1.6 'Segoe UI',sans-serif;color:var(--dao-muted)}
+#character-dialog .dao-arts-list{display:grid;gap:8px;margin-top:12px}
+#character-dialog .dao-arts-list button{display:flex;align-items:center;gap:12px;min-height:64px;background:var(--dao-card);border:1px solid var(--dao-line);padding:10px;text-align:left}
+#character-dialog .dao-arts-list [aria-pressed=true]{border-color:var(--dao-accent,#ced4b4);box-shadow:inset 3px 0 var(--dao-accent,#ced4b4)}
+#character-dialog .dao-arts-list button>span:last-child{display:grid;gap:5px;min-width:0}
+#character-dialog .dao-arts-list b{font:500 18px/1.5 Cambria,serif}
+#character-dialog .dao-arts-list small{font:11px/1.7 'Segoe UI',sans-serif;color:var(--dao-muted)}
+#character-dialog .dao-source-list{padding-left:20px;display:grid;gap:16px;font:12px/1.7 'Segoe UI',sans-serif}
+#character-dialog .dao-source-list :is(b,span){display:block}
+#character-dialog .character-window:is([data-tab=cultivation],[data-tab=spells],[data-tab=attributes]) .character-content{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+#character-dialog .character-window:is([data-tab=cultivation],[data-tab=spells],[data-tab=attributes]) .profile-pane{display:none}
+#character-dialog .character-window[data-tab=inventory] .character-content{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+#character-dialog .character-window[data-tab=inventory] .profile-pane{display:none}
+#character-dialog .character-window[data-tab=equipment] .character-content{grid-template-columns:minmax(0,.65fr) minmax(0,.95fr) minmax(0,1fr)}
+#character-dialog .pane-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}
+#character-dialog .pane-heading h2{font-size:24px;margin-top:3px}
+#character-dialog .small-seal{flex:none;border:1px solid var(--dao-line);padding:4px 8px;font:11px/1.6 'Segoe UI',sans-serif}
+#character-dialog .inventory-tools{display:grid;grid-template-columns:minmax(0,1fr) 100px;gap:8px;margin:10px 0}
+#character-dialog .inventory-tools>label{min-width:0}
+#character-dialog .search-field{display:flex;align-items:center;gap:8px;padding:0 9px;background:#162a22;border:1px solid var(--dao-line);min-width:0}
+#character-dialog .search-field>span[aria-hidden]{font-size:23px}
+#character-dialog .search-field input{width:100%;min-width:0;min-height:44px;border:0;background:transparent;color:var(--dao-text,#e5ead8);font:13px/1.5 'Segoe UI',sans-serif;padding:8px 0}
+#character-dialog .search-field input::placeholder{color:var(--dao-muted)}
+#character-dialog .inventory-tools select{width:100%;min-height:44px;border:1px solid var(--dao-line);background:#162a22;color:var(--dao-text,#e5ead8);font:11px/1.5 'Segoe UI',sans-serif;padding:6px}
+#character-dialog :is(.inventory-filters,.dao-bag-locations){display:flex;gap:5px;flex-wrap:wrap;margin:10px 0}
+#character-dialog :is(.inventory-filters,.dao-bag-locations) button{min-height:36px;border:1px solid var(--dao-line);background:transparent;font:11px/1.5 'Segoe UI',sans-serif;padding:6px 10px;color:var(--dao-muted)}
+#character-dialog .dao-bag-locations button{flex:1;padding:6px 4px}
+#character-dialog :is(.inventory-filters,.dao-bag-locations) [aria-pressed=true]{background:var(--dao-selected);color:var(--dao-text,#e5ead8);border-color:var(--dao-accent,#ced4b4)}
+#character-dialog .item-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;align-content:start;min-width:0}
+#character-dialog .item-grid>div{min-width:0}
+#character-dialog .item-cell{position:relative;display:flex;flex-direction:column;align-items:center;gap:7px;width:100%;min-width:44px;min-height:120px;padding:9px 6px 11px;border:1px solid var(--dao-line);background:var(--dao-card);text-align:center;overflow-wrap:anywhere}
+#character-dialog .item-cell[aria-pressed=true]{background:var(--dao-selected);border-color:var(--dao-accent,#ced4b4);box-shadow:inset 0 -2px var(--dao-accent,#ced4b4)}
+#character-dialog .item-cell i{width:64px;height:64px;display:block;max-width:100%}
+#character-dialog .painted-item-icon{display:block;width:100%;height:100%;object-fit:contain}
+#character-dialog .item-cell b{font:500 15px/1.45 Cambria,serif}
+#character-dialog .item-cell small{font:10px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted)}
+#character-dialog :is(.item-equipped,.item-protected){position:absolute;top:4px;font-size:11px;color:var(--dao-accent,#ced4b4)}
+#character-dialog .item-equipped{left:6px}#character-dialog .item-protected{right:6px}
+#character-dialog .inventory-hint{font:11px/1.7 'Segoe UI',sans-serif;color:var(--dao-muted);margin:12px 0}
+#character-dialog .equipment-slots{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+#character-dialog .equip-slot{display:flex;align-items:center;gap:10px;min-width:0;min-height:64px;border:1px solid var(--dao-line);background:var(--dao-card);padding:7px 10px;text-align:left}
+#character-dialog .equip-slot[aria-pressed=true]{border-color:var(--dao-accent,#ced4b4);background:var(--dao-selected)}
+#character-dialog .equip-slot>i{width:44px;height:44px;flex:none;display:grid;place-items:center;font:25px Cambria,serif}
+#character-dialog .equip-slot>span{display:grid;gap:4px;min-width:0}
+#character-dialog .equip-slot small{font:10px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted)}
+#character-dialog .equip-slot b{font:15px/1.5 Cambria,serif}
+#character-dialog .empty-inventory{text-align:center;padding:24px 12px;border:1px dashed var(--dao-line);color:var(--dao-muted)}
+#character-dialog .empty-inventory>span{font:36px Cambria,serif}
+#character-dialog .empty-inventory h3{margin:8px 0}
+#character-dialog .empty-inventory p{margin-bottom:12px}
+#character-dialog .detail-title{display:flex;gap:10px;align-items:start;margin-bottom:15px;min-width:0}
+#character-dialog .detail-title>i{width:56px;height:56px;display:block;flex:none}
+#character-dialog .detail-title>div{min-width:0}
+#character-dialog .detail-title h2{font-size:23px;margin-top:5px}
+#character-dialog .detail-title h2:focus{outline:0}
+#character-dialog .ui-copy-section{min-width:0;padding:0 0 12px;margin-bottom:9px}
+#character-dialog .ui-section-title{font:600 13px/1.6 'Segoe UI',sans-serif;letter-spacing:.02em}
+#character-dialog .detail-copy p{font-size:var(--ui-text-body,13px);line-height:1.7;margin:6px 0 0}
+#character-dialog .comparison{border-block:1px solid #7d896144;padding-block:12px}
+#character-dialog .comparison>div{padding:8px 10px;margin-top:8px;border-left:2px solid #7c9a6d66;background:#71875912;min-width:0}
+#character-dialog .comparison :is(span,b){display:block;font:12px/1.6 'Segoe UI',sans-serif}
+#character-dialog .comparison b{font-weight:600}
+#character-dialog .dao-item-source{border-top:1px solid #7d896144;border-bottom:1px solid #7d896144;padding:10px 0;margin:10px 0;font:12px/1.7 'Segoe UI',sans-serif}
+#character-dialog .dao-item-source summary{min-height:32px;cursor:pointer;font-weight:600}
+#character-dialog .detail-actions{display:grid;grid-template-columns:1fr;gap:8px;border-top:1px solid #7d896144;padding-top:12px;margin-top:12px}
+#character-dialog .protect-button{min-height:44px;padding:8px 10px;border:1px solid #7d896166;background:#71875912;color:inherit;font:12px/1.5 'Segoe UI',sans-serif}
+#character-dialog .protect-button[aria-pressed=true]{background:#7a99662a}
+#character-dialog .item-condition{font:var(--ui-text-small,12px)/1.6 'Segoe UI',sans-serif;overflow-wrap:anywhere}
+#character-dialog .detail-back{display:none;margin-bottom:10px;min-height:44px}
+#character-dialog .detail-placeholder{text-align:center;padding:35px 0}
+#character-dialog .detail-placeholder>span{font:38px Cambria,serif;opacity:.65}
+#character-dialog .detail-placeholder h2{margin:12px 0}
+#character-dialog .character-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;flex:none;border-top:1px solid var(--dao-line);margin-top:10px;padding-top:9px;font:11px/1.5 'Segoe UI',sans-serif;color:var(--dao-muted);min-width:0}
+#character-dialog .character-footer p{font-size:11px;min-width:0}
+#character-dialog .character-footer>span{flex:none;font:12px Cambria,serif;color:var(--dao-accent,#ced4b4)}
+#character-dialog .character-footer i{font-style:normal;margin:0 6px}
+#character-dialog[data-motion=reduce] *,#character-dialog[data-motion=reduce] *::before{animation:none!important;transition:none!important}
+#game-shell[data-dao-theme=doa-ma] #character-dialog{--dao-muted:#c3b6ac;--dao-card:#342e33;--dao-selected:#493a3e}
+#game-shell[data-dao-theme=doa-ma] #character-dialog :is(.search-field,.inventory-tools select){background:#24242c}
+@media(min-width:1100px) and (min-height:700px){
+ #character-dialog .character-content{overflow:hidden;align-items:stretch}
+ #character-dialog :is(.profile-pane,.primary-pane,.detail-pane){overflow:auto;scrollbar-width:thin}
+ #character-dialog .detail-pane:not(.overview-note){display:flex;flex-direction:column}
+ #character-dialog .detail-copy{flex:1;min-height:65px;overflow:auto;scrollbar-width:thin;padding-right:2px}
+ #character-dialog .detail-title,#character-dialog .detail-actions{flex:none}
+}
+@media(min-width:760px) and (max-width:1099px){
+ #character-dialog .character-content{grid-template-columns:minmax(0,.65fr) minmax(0,1fr)}
+ #character-dialog .character-window[data-tab=overview] .profile-pane{grid-row:span 2}
+ #character-dialog .character-window[data-tab=overview] .detail-pane{grid-column:2}
+ #character-dialog .character-window[data-tab=equipment] .character-content{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ #character-dialog .character-window[data-tab=equipment] .profile-pane{display:none}
+ #character-dialog .item-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:759px){
+ #character-dialog.character-runtime{width:calc(100vw - 16px);margin:8px auto 0}
+ #character-dialog .character-window{--vn-frame-size:32px;padding:21px 17px 22px;height:calc(100dvh - 16px)}
+ #character-dialog .character-heading{padding-bottom:7px}#character-dialog h1{font-size:24px}
+ #character-dialog .character-heading .review-eyebrow{font-size:9px}
+ #character-dialog .character-tabs{gap:4px;padding:7px 0}
+ #character-dialog .character-tabs button{flex:1;min-width:0;padding:7px 3px;font-size:14px}
+ #character-dialog .dao-character-subnav{gap:2px;padding-top:6px;flex-wrap:nowrap}
+ #character-dialog .dao-character-subnav button{flex:1;padding:6px 3px;font-size:11px}
+ #character-dialog .character-window .character-content{display:flex;flex-direction:column;gap:13px;padding-top:12px;overflow:auto}
+ #character-dialog .character-content>aside,#character-dialog .character-content>section{width:100%;flex:none}
+ #character-dialog .character-window[data-tab=overview] .primary-pane{order:1}
+ #character-dialog .character-window[data-tab=overview] .detail-pane{order:2}
+ #character-dialog .character-window[data-tab=overview] .profile-pane{order:3}
+ #character-dialog .dao-paper{padding:14px}
+ #character-dialog .dao-realm-heading h2{font-size:22px}
+ #character-dialog .dao-realm-seal{width:48px;height:48px;font-size:24px}
+ #character-dialog .dao-live-likeness{min-height:240px}
+ #character-dialog .character-window:is([data-tab=inventory],[data-tab=equipment]) .profile-pane{display:none}
+ #character-dialog .character-window:is([data-tab=inventory],[data-tab=equipment]) .detail-pane{display:none}
+ #character-dialog .character-window:is([data-tab=inventory],[data-tab=equipment]) .detail-open .detail-pane{display:block}
+ #character-dialog .character-window:is([data-tab=inventory],[data-tab=equipment]) .detail-open .primary-pane{display:none}
+ #character-dialog .detail-back{display:block}
+ #character-dialog .item-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ #character-dialog .item-cell{padding:8px 4px;gap:5px}
+ #character-dialog .item-cell b{font-size:14px}
+ #character-dialog .item-cell small{font-size:9px}
+ #character-dialog .inventory-tools{grid-template-columns:minmax(0,1fr) 87px;gap:6px}
+ #character-dialog .detail-title h2{font-size:22px}
+ #character-dialog .character-footer>span{display:none}
+}
+@media(max-width:370px){#character-dialog .character-window{padding-inline:14px}#character-dialog .item-cell i{width:52px;height:56px}#character-dialog .item-cell b{font-size:13px}#character-dialog .detail-title>i{width:44px;height:44px}}
+@media(max-height:650px){#character-dialog .character-window{padding-block:19px 22px}#character-dialog .character-heading .review-eyebrow{display:none}#character-dialog .character-heading{padding-bottom:6px}#character-dialog .character-tabs{padding-block:6px}#character-dialog .character-content{padding-top:10px}#character-dialog .character-footer{padding-top:6px;margin-top:6px}}

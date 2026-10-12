@@ -1,5 +1,7 @@
 # Hóa Thần V2 · Áp lực và nhịp bật · 2.0.0
 
+**Tài liệu lịch sử:** payload phiên bản này đã dọn ngày 12/10/2026. Các đường dẫn nguồn/lệnh bên dưới mô tả snapshot trong Git tại lần bàn giao; không chạy cho workspace hiện hành. Dùng [bản đã duyệt](HOA-THAN-KIT.md) và [hướng dẫn dọn](CLEANUP-2026-10-12.md).
+
 **Snapshot lịch sử tại mốc xuất nguồn:** số file, trạng thái chờ duyệt và thông số dưới đây được giữ để truy phiên bản. Bản hiện hành là [Hóa Thần V3/pack 3.0.1](HOA-THAN-KIT.md), đã chấp nhận và [đóng đợt ART 15 skill](STARTER-VFX-HANDOFF.md); không là backlog đang chờ motion. Preview chung hiện trỏ bản mới nhất.
 
 V2 xử lý phản hồi **bản trước chỉ khác màu/chất liệu và thiếu lực**. V1 dùng toàn bộ pose/impact cũ, kiếm/phong có nhiều đường cong mềm, chuyển động đều và preview mặc định 0,5×. V2 giữ nhận diện ngọc/ngà/vàng, đổi silhouette attack, vẽ impact riêng, rút ngắn nhịp xuất và dùng tốc độ thật 1×. Cảm giác lực không dựa riêng vào glow hoặc phóng cỡ người.

@@ -1,0 +1,585 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-12T07:39:48.539Z",
+  "integration": "Tu Dao / Thanh Ngoc + HUD04 + Character04 + Linh Dai inventory03",
+  "runtime": {
+    "game": "http://127.0.0.1:5173/hang-nhac.html?screen=title",
+    "backend": "http://127.0.0.1:2567",
+    "theme": "tu-dao",
+    "hud": "04",
+    "character": "04",
+    "source": "server snapshots and existing command callbacks",
+    "previewFixtureImported": false,
+    "artApprovalChanged": false
+  },
+  "build": {
+    "passed": true,
+    "source": "artifacts/hang-nhac-dao-ui/final-build.log",
+    "typecheckFiles": 262,
+    "modules": 23,
+    "boundaryViolations": 0,
+    "warnings": [
+      "Existing Vite future native config loader extension warning",
+      "Renderer chunk above 500 kB"
+    ]
+  },
+  "unit": {
+    "passed": 157,
+    "failed": 0,
+    "command": "npm.cmd test",
+    "evidence": "Successful command output recorded during this integration session"
+  },
+  "evidence": {
+    "daoUi": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-dao-ui/verification.json",
+      "sha256": "de264e8539147e7e3a00c8f7c2ac1a171a81b6301a392657b831619f030f764e",
+      "observedAt": "2026-10-12T06:57:11.628Z",
+      "groups": 4,
+      "layouts": 6,
+      "checks": [
+        "Real account registration, realm and explicit character creation enter live HUD04 with confirmed identity, resources and current world image",
+        "38 shared glyphs, seven groups, accent-insensitive search, maximum five persistent pins, honest unavailable features and blocked gameplay under directory modal",
+        "Directory routes to real character tabs, inventory, journal and settings; world map reads position and four current NPCs; reduced motion remains a presentation preference",
+        "Six desktop/mobile/landscape HUD layouts keep controls reachable and within viewport, minimum 44px targets, modal search usable, pins and profile retained after reload; owner map bytes unchanged"
+      ]
+    },
+    "characterOnline": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-character-online-verification.json",
+      "sha256": "097234cb0774cd30f6b48ca009b025b416d65e7fe34ecaf15d1f42c8f027562f",
+      "observedAt": "2026-10-12T06:52:21.618Z",
+      "groups": 4,
+      "checks": [
+        "private snapshots, real supplies, per-profile ownership, injection rejection, one committed use/FX, durable command identity and cooldown",
+        "same-session reconnect restores real inventory without replay",
+        "three independent profiles and stable starter gear",
+        "process restart preserves equipment/protection/supplies/receipts without starter duplication or repeated use"
+      ]
+    },
+    "characterBrowser": {
+      "passed": true,
+      "source": "artifacts/character-runtime/verification.json",
+      "sha256": "1e4c9e93777cf53c070c252a4925fd95325ed1d90307841ac6d77cbe7b5b286b",
+      "observedAt": "2026-10-12T06:55:03.537Z",
+      "groups": 11,
+      "layouts": 21,
+      "checks": [
+        "Live pose honors reduced motion and does not start cultivation or spend resources",
+        "Live C dialog, real profile/resources/progress/items, no fixture items, world movement/cast blocked",
+        "Live cultivation and spell readers use shared progress; journal returns to same tab, selected spell and focus without casting",
+        "Confirmed unequip/equip/protect/use updates only after server snapshot, unchanged max HP/MP, shared supplies/cooldown",
+        "Real SQLite failure rolls back receipt/candidate; live UI retains confirmed equipment",
+        "Diacritic-free search, bag/equipped filters, consistent equipment slot, disclosure and source focus survive confirmed snapshot and journal roundtrip",
+        "Search/filter and Escape/I focus and direct inventory navigation",
+        "21 live responsive/text configurations, frame backing, native modal, mobile detail back focus",
+        "Offline/reconnect and reload preserve inventory/protection/quantity without replay",
+        "Backend restart restores same profile and committed gear/supplies; no automatic inventory commands",
+        "Switching avatars reads separate live inventory; spirit progression remains recovery"
+      ]
+    },
+    "hudLayers": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-hud-layers-verification.json",
+      "sha256": "e43cfa56bc02a9749c6c43efbd3b86a8225da9e19b57372182c235d52c95c3f2",
+      "observedAt": "2026-10-12T05:07:34.650Z",
+      "groups": 14,
+      "checks": [
+        "handshake_before_first_snapshot_safe",
+        "three_live_slots_seven_noninteractive_reservations",
+        "missing_target_and_orb_click_do_not_send_cast_or_change_aim",
+        "tooltip_focus_and_escape",
+        "keyboard_and_hotbar_buttons_use_server_casts",
+        "resources_and_cooldown_from_snapshot",
+        "approved_desktop_dimensions_and_effect_toggle",
+        "reload_preserves_profile_and_cast_count",
+        "mobile_no_horizontal_overflow_and_minimum_touch_targets",
+        "reduced_motion_view",
+        "32_gpu_parts_loaded",
+        "behind_canopy_alpha_overlap_fades_only_cover",
+        "in_front_of_canopy_restores_opacity_and_actor_order",
+        "transparent_rectangle_overlap_does_not_fade"
+      ]
+    },
+    "r01Online": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-r01-online-verification.json",
+      "sha256": "b059f6b63ce67a8f689f5103b27b0190e1be42e1cdb195a5936212914b3e9f12",
+      "observedAt": "2026-10-12T05:04:03.801Z",
+      "groups": 8,
+      "checks": [
+        "fresh_profiles_spread_around_owner_spawn",
+        "input_gap_does_not_cancel_an_already_held_cast",
+        "three_separate_profiles_and_account_lease",
+        "sword_single_cost_and_hit_no_pvp",
+        "thunder_selected_target_and_wind_actual_travel",
+        "same_profile_reconnect",
+        "switching_characters_preserves_independent_resources_and_progression_kind",
+        "process_restart_preserves_position_resources_deadlines_and_idempotency"
+      ]
+    },
+    "r01Browser": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-r01-browser-verification.json",
+      "sha256": "7ede850d4013b42ea457fc6549b7b389b4921b1fa8314051601d99c2e8f51afd",
+      "observedAt": "2026-10-12T07:37:22.014Z",
+      "groups": 6,
+      "checks": [
+        "three_r01_from_start_keyboard_buttons_costs_hits_and_dash",
+        "remote_client_shows_fx_without_player_damage",
+        "reload_resumes_same_session_profile_and_position",
+        "second_tab_cannot_control_same_account",
+        "character_switch_keeps_separate_saves",
+        "mobile_skill_and_movement_controls_fit"
+      ]
+    },
+    "skillInput": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-skill-input-verification.json",
+      "sha256": "aceac3666757bc7bf400bc13b5aabb7d673c14620441dcfd91078aa8ca8c98ac",
+      "observedAt": "2026-10-12T05:04:22.648Z",
+      "groups": 4,
+      "checks": [
+        "waits_for_consumed_input_without_extra_physics_or_self_cancel",
+        "missing_or_distant_input_rejects_without_cost",
+        "leave_discards_pending_cast_and_durable_retry_survives_reset_input_channel",
+        "direction_change_after_acceptance_still_cancels_unreleased_sword"
+      ]
+    },
+    "skillAim": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-skill-aim-verification.json",
+      "sha256": "50d997299a3ca7024e59ab25461f3b697867980c9112d48f16141eebb7180a9a",
+      "observedAt": "2026-10-12T05:22:46.309Z",
+      "groups": 22,
+      "checks": [
+        {
+          "avatar": "CHR-WANG-LIN-CHIBI",
+          "skill": "sword",
+          "direction": "north",
+          "aim": [
+            0,
+            -1
+          ],
+          "renderedClip": "wang-sword-north",
+          "released": true
+        },
+        {
+          "avatar": "CHR-WANG-LIN-CHIBI",
+          "skill": "sword",
+          "direction": "east",
+          "aim": [
+            1,
+            0
+          ],
+          "renderedClip": "wanglin-cast-east",
+          "released": true
+        },
+        {
+          "movementAndCastSameFrame": true
+        },
+        {
+          "avatar": "CHR-WANG-LIN-CHIBI",
+          "skill": "sword",
+          "direction": "east",
+          "aim": [
+            1,
+            0
+          ],
+          "renderedClip": "wanglin-cast-east",
+          "released": true
+        },
+        {
+          "avatar": "CHR-WANG-LIN-CHIBI",
+          "skill": "sword",
+          "direction": "south",
+          "aim": [
+            0,
+            1
+          ],
+          "renderedClip": "wang-sword-south",
+          "released": true
+        },
+        {
+          "avatar": "CHR-WANG-LIN-CHIBI",
+          "skill": "sword",
+          "direction": "west",
+          "aim": [
+            -1,
+            0
+          ],
+          "renderedClip": "wang-sword-west",
+          "released": true
+        },
+        {
+          "avatar": "CHR-WANG-LIN-CHIBI",
+          "skill": "sword",
+          "direction": "north",
+          "aim": [
+            0,
+            -1
+          ],
+          "renderedClip": "wang-sword-north",
+          "released": true
+        },
+        {
+          "avatar": "CHR-SITU-NAN",
+          "skill": "sword",
+          "direction": "east",
+          "aim": [
+            1,
+            0
+          ],
+          "renderedClip": "situ-sword-east",
+          "released": true
+        },
+        {
+          "avatar": "CHR-SITU-NAN",
+          "skill": "sword",
+          "direction": "south",
+          "aim": [
+            0,
+            1
+          ],
+          "renderedClip": "situ-sword-south",
+          "released": true
+        },
+        {
+          "avatar": "CHR-SITU-NAN",
+          "skill": "sword",
+          "direction": "west",
+          "aim": [
+            -1,
+            0
+          ],
+          "renderedClip": "situ-sword-west",
+          "released": true
+        },
+        {
+          "avatar": "CHR-SITU-NAN",
+          "skill": "sword",
+          "direction": "north",
+          "aim": [
+            0,
+            -1
+          ],
+          "renderedClip": "situ-sword-north",
+          "released": true
+        },
+        {
+          "avatar": "CHR-LI-MUWAN",
+          "skill": "sword",
+          "direction": "east",
+          "aim": [
+            1,
+            0
+          ],
+          "renderedClip": "li-sword-east",
+          "released": true
+        },
+        {
+          "avatar": "CHR-LI-MUWAN",
+          "skill": "sword",
+          "direction": "south",
+          "aim": [
+            0,
+            1
+          ],
+          "renderedClip": "li-sword-south",
+          "released": true
+        },
+        {
+          "avatar": "CHR-LI-MUWAN",
+          "skill": "sword",
+          "direction": "west",
+          "aim": [
+            -1,
+            0
+          ],
+          "renderedClip": "li-sword-west",
+          "released": true
+        },
+        {
+          "avatar": "CHR-LI-MUWAN",
+          "skill": "sword",
+          "direction": "north",
+          "aim": [
+            0,
+            -1
+          ],
+          "renderedClip": "li-sword-north",
+          "released": true
+        },
+        {
+          "pointerOverridesHeldMovement": true,
+          "releaseRetainsAim": true,
+          "repressRestoresMovement": true
+        },
+        {
+          "avatar": "CHR-LI-MUWAN",
+          "skill": "thunder",
+          "direction": "west",
+          "aim": [
+            -1,
+            0
+          ],
+          "renderedClip": "li-thunder-west",
+          "released": true
+        },
+        {
+          "avatar": "CHR-LI-MUWAN",
+          "skill": "wind",
+          "direction": "north",
+          "aim": [
+            -5.197120521592714e-9,
+            -1
+          ],
+          "renderedClip": "li-wind-north",
+          "released": true
+        },
+        {
+          "acceptedDashStaysFixed": true
+        },
+        {
+          "avatar": "CHR-LI-MUWAN",
+          "skill": "sword",
+          "direction": "west",
+          "aim": [
+            -1,
+            0
+          ],
+          "renderedClip": "li-sword-west",
+          "released": true
+        },
+        {
+          "mobileMovementAndHud": true
+        },
+        {
+          "reloadUsesSavedFacing": true,
+          "diagonalNormalized": true
+        }
+      ]
+    },
+    "sectOnline": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-sect-online-verification.json",
+      "sha256": "f8abc96868a13197202ed8706aac5f9a6cd315fa7b01025df0ba3554d04e5263",
+      "observedAt": "2026-10-12T05:04:56.502Z",
+      "groups": 5,
+      "checks": [
+        "proximity_and_one_time_intro_supplies",
+        "three_timed_phases_resume_understanding_and_one_time_m01",
+        "server_timed_cultivation_practice_pause_and_old_receipt_never_restarts_activity",
+        "recovery_spend_atomic_restart_restores_progress_no_offline_reward",
+        "trio_separate_tutorial_and_spirit_foundation"
+      ]
+    },
+    "sectBrowser": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-sect-browser-verification.json",
+      "sha256": "6bf5a752df67d278732d56953e7ba31b4cd2da29cb797c40314f1006f0fc6552",
+      "observedAt": "2026-10-12T07:20:32.518Z",
+      "groups": 7,
+      "checks": [
+        "physical_e_with_ime_and_visible_offline_feedback",
+        "npc_keyboard_interaction_intro_once_journal_and_owner_route",
+        "timed_cycle_disabled_until_ready_reload_resume_understanding_and_m01",
+        "online_cultivation_pauses_for_cast_and_same_profile_resumes",
+        "independent_trio_and_character_specific_dialogue",
+        "NPC_recovery_disabled_during_idle_lesson_after_reload_without_resource_spend",
+        "mobile_dialog_native_scale_recovery_and_no_browser_errors"
+      ]
+    },
+    "reload": {
+      "passed": true,
+      "source": "artifacts/hang-nhac-reload-interaction.json",
+      "sha256": "bf964c4799349ddd70dc124bab99cac287eacc01c15d62871f771188ca271f1a",
+      "observedAt": "2026-10-12T07:05:06.581Z",
+      "groups": 8,
+      "checks": [
+        {
+          "type": "asset-build-reload",
+          "cycle": 1,
+          "sameProfile": true,
+          "physicalEWithoutRefocus": true,
+          "screenButton": true,
+          "skillWithoutNpcGrant": "cast verified"
+        },
+        {
+          "type": "asset-build-reload",
+          "cycle": 2,
+          "sameProfile": true,
+          "physicalEWithoutRefocus": true,
+          "screenButton": true,
+          "skillWithoutNpcGrant": "same saved rights"
+        },
+        {
+          "type": "asset-build-reload",
+          "cycle": 3,
+          "sameProfile": true,
+          "physicalEWithoutRefocus": true,
+          "screenButton": true,
+          "skillWithoutNpcGrant": "same saved rights"
+        },
+        {
+          "type": "transport-reconnect",
+          "cycle": 1,
+          "physicalE": true,
+          "screenButton": true
+        },
+        {
+          "type": "transport-reconnect",
+          "cycle": 2,
+          "physicalE": true,
+          "screenButton": true
+        },
+        {
+          "type": "transport-reconnect",
+          "cycle": 3,
+          "physicalE": true,
+          "screenButton": true
+        },
+        {
+          "type": "backend-restart-without-reload",
+          "sameProfile": true,
+          "physicalEWithoutRefocus": true,
+          "screenButton": true
+        },
+        {
+          "type": "explicit-leave-during-recovery",
+          "staysOffline": true
+        }
+      ]
+    },
+    "entryOnline": {
+      "passed": true,
+      "source": "artifacts/game-entry-online-verification.json",
+      "sha256": "0c16689451c93457c30b5fd85499ad04c40882f681f36a88f9d5794ae7e98284",
+      "observedAt": "2026-10-12T05:57:54.639Z",
+      "groups": 7,
+      "checks": [
+        "HttpOnly session, empty new account, strict input/CSRF/origin and admin access checks",
+        "Explicit named characters, same archetype twice, one-time creation, slots, ownership",
+        "Registered profile uses existing NPC/inventory ports; confirmed supplies/HP and forced SQL failure rollback with safe debug event",
+        "One-use ticket, server-owned name/avatar, durable multi-node lease, server R01",
+        "Management role, audit trace, account block revokes sessions and maintenance saves/disconnects",
+        "Restart preserves account/session/characters/resources and original cast receipt",
+        "Production uses Secure __Host cookie, disables guest API/auth despite flag, and shared Colyseus CORS allows real H5 headers"
+      ]
+    },
+    "entryBrowser": {
+      "passed": true,
+      "source": "artifacts/game-entry-browser-verification.json",
+      "sha256": "2163a1f198dae2f39b385ed5b36079bb1d78688a86c47b2b3112a606b7030dac",
+      "observedAt": "2026-10-12T05:58:23.499Z",
+      "groups": 4,
+      "layouts": 12,
+      "checks": [
+        "Fresh H5 defaults to login; pre-auth input cannot open gameplay; real account has no automatic characters",
+        "Explicit three-archetype creation, custom names, two separate IDs for same archetype, persistence and existing live inventory",
+        "HttpOnly session; no credentials in JS storage/diagnostics; reload, offline reconnect and server restart retain selected character without replay",
+        "Leave/switch/logout retain distinct profiles; admin role gate, metrics/audit, maintenance saves and disconnects, account lock revokes session"
+      ]
+    },
+    "titleBrowser": {
+      "passed": true,
+      "source": "artifacts/game-title-verification.json",
+      "sha256": "d489e179cf6170630c25f0513c4a4f2171393938c7abcb79894901acdcfcd425",
+      "observedAt": "2026-10-12T07:26:48.377Z",
+      "groups": 3,
+      "layouts": 12,
+      "checks": [
+        "Dedicated scenic title before authentication; no guest creation, gameplay input or map/camera contract change",
+        "12 viewport/zoom layouts; readable controls; functional settings/lore and system/player reduced motion",
+        "Start/keyboard/return, authenticated Continue, explicit create, in-game Home releases room and retains profile; reload after Home stays out of gameplay"
+      ]
+    }
+  },
+  "screenshots": [
+    "artifacts/hang-nhac-dao-ui/desktop-live-hud.png",
+    "artifacts/hang-nhac-dao-ui/desktop-character.png",
+    "artifacts/hang-nhac-dao-ui/desktop-directory.png",
+    "artifacts/hang-nhac-dao-ui/desktop-world-map.png",
+    "artifacts/hang-nhac-dao-ui/hud-390x844.png",
+    "artifacts/hang-nhac-dao-ui/hud-844x390.png",
+    "artifacts/character-runtime/desktop-inventory.png",
+    "artifacts/character-runtime/mobile-detail.png"
+  ],
+  "corrections": [
+    "Landscape controls no longer cover character or quest controls",
+    "Compact quest controls keep visible labels and accessible full names",
+    "Journal returns to the same character tab, selection, disclosure and focus",
+    "Equipment slot follows selected inventory equipment",
+    "Dao reload fixture leaves the explicit title route before testing gameplay resume",
+    "R01 denied-join assertion reads the entry error shown to the player"
+  ],
+  "diagnostics": [
+    {
+      "test": "reload",
+      "initial": "Transient input acknowledgement delay and timeout under fixture software rendering",
+      "final": "Unchanged gameplay and lifecycle assertions passed all 8 groups",
+      "stableRuntimeFaultEstablished": false
+    },
+    {
+      "test": "R01 browser",
+      "initial": "Local browser HTTP 522/524 and transient timeouts",
+      "final": "Direct localhost Chrome fixture passed all 6 groups with no browser errors",
+      "testEnvironmentChange": "--no-proxy-server; bounded HTTP error trace excludes query values",
+      "definitiveGatewayRootCauseEstablished": false
+    },
+    {
+      "test": "historical frozen VFX",
+      "issue": "Pre-existing PIPELINE.md hash mismatch from e481c09; expected hashes preserved",
+      "record": "docs/data/recovery-and-cleanup-verification-2026-10-12.json",
+      "scope": "Historical asset cleanup diagnostic, not a UI integration test"
+    }
+  ],
+  "invariants": {
+    "ownerMap": "docs/data/authored-maps/294813fd-a175-49ae-ba45-849d726c4984.json",
+    "ownerMapSha256": "b8571377613bf0b83997fd7087a4301955300f5ab2f3627ab9837988fb3a8256",
+    "release": "c0ae305432f4762200ee6de399fd9f8f40d6814fd46688276b7983f6b60ee9a9",
+    "blockers": 9,
+    "objects": 22,
+    "parts": 32,
+    "covers": 10,
+    "spawn": [
+      1616,
+      992
+    ],
+    "cameraScale": 1,
+    "characterFrame": [
+      64,
+      96
+    ],
+    "foot": [
+      32,
+      88
+    ],
+    "desktopHotbar": [
+      760,
+      140
+    ],
+    "mobileSkillTarget": [
+      48,
+      48
+    ],
+    "fixtureStorageOnly": true,
+    "ownerDatabaseUsedByTests": false,
+    "browserDraftUsedByTests": false,
+    "saveSchemaChanged": false,
+    "ownerMapAndReleaseDiffEmpty": true,
+    "packageLockDiffEmpty": true
+  },
+  "localServices": {
+    "verifiedAt": "2026-10-12T07:41:47.423Z",
+    "backendReady": true,
+    "clientReady": true,
+    "hudSourceReady": true,
+    "httpStatus": 200,
+    "persistentUserSessionLeftRunning": true,
+    "ownerAccountCreatedByVerification": false
+  },
+  "diffCheck": {
+    "passed": true
+  }
+}

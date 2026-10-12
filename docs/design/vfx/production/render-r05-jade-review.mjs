@@ -6,7 +6,6 @@ import {readFile,writeFile} from 'node:fs/promises';
 import {SequencePlayer,frameSeconds,sortLayers} from '../frame-by-frame-r01/sequence-system.mjs';
 import * as r02 from './r02-model.mjs';
 import * as r04 from './r04-sigil-model.mjs';
-import * as r05old from './r05-force-model.mjs';
 import * as r05 from './r05-jade-model.mjs';
 import {drawIntentLighting} from './r05-lighting.mjs';
 import * as p2 from './p2-model.mjs';
@@ -14,10 +13,10 @@ import {makePreviewPlan,projectileTip} from '../frame-by-frame-r01/preview-model
 const require=createRequire(import.meta.url),{createCanvas,loadImage}=require(join(homedir(),'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@napi-rs/canvas'));
 const root=resolve('docs/design/vfx'),scene=await loadImage(join(root,'sect-courtyard-game-reference-v1.png')),target=await loadImage(join(root,'pvp-target-stand-west-native-v1.png'));
 const configs=[];
-for(const realm of['R05-V2','R05-V3'])for(const family of['sword','thunder','wind']){
- const folder=`r05-${family}-${realm==='R05-V2'?'v2':'v3'}`,base=join(root,folder),skill=JSON.parse(await readFile(join(base,'skill.json'),'utf8')),clips=JSON.parse(await readFile(join(base,'clips.json'),'utf8')).clips,textures=Object.fromEntries(await Promise.all(Object.entries(clips).map(async([id,c])=>[id,await loadImage(join(base,c.atlas))])));
+for(const realm of['R05-V3'])for(const family of['sword','thunder','wind']){
+ const folder=`r05-${family}-v3`,base=join(root,folder),skill=JSON.parse(await readFile(join(base,'skill.json'),'utf8')),clips=JSON.parse(await readFile(join(base,'clips.json'),'utf8')).clips,textures=Object.fromEntries(await Promise.all(Object.entries(clips).map(async([id,c])=>[id,await loadImage(join(base,c.atlas))])));
  skill.family??=family;skill.name??='Kiếm Khí';
- const model=realm==='R05-V3'?r05:r05old,plan=model.makePlan(skill,clips),sample=age=>model.samplePresentation(skill,clips,plan,age);
+ const model=r05,plan=model.makePlan(skill,clips),sample=age=>model.samplePresentation(skill,clips,plan,age);
  const frames=realm==='R05-V3'?family==='sword'?[9,11,13,plan.confirmFrame+2,plan.confirmFrame+7]:family==='thunder'?[7,11,16,18,24]:[7,10,13,16,22]:[];
  configs.push({realm,family,base,skill,clips,textures,plan,sample,frames});
 }
@@ -31,5 +30,4 @@ function render(config,frame,zoom=2,w=960,h=640){
 }
 const report=[];
 for(const config of configs.filter(c=>c.realm==='R05-V3'))for(const zoom of[1,2])for(const frame of config.frames){const{canvas,state}=render(config,frame,zoom),file=join(config.base,'review',`F${frame}-${zoom}x.png`);await writeFile(file,canvas.toBuffer('image/png'));report.push({realm:config.realm,family:config.family,frame,zoom,file,active:state.items.map(f=>({clip:f.id,frame:f.sample?.index===undefined?null:f.sample.index+1,point:f.point}))});}
-for(const family of['sword','thunder','wind']){const pair=configs.filter(c=>c.family===family),canvas=createCanvas(960,1280),ctx=canvas.getContext('2d');for(let i=0;i<2;i++){const c=pair[i],frame=({'R05-V2':{sword:13,thunder:18,wind:11},'R05-V3':{sword:13,thunder:18,wind:13}})[c.realm][family],image=render(c,frame,2).canvas;ctx.drawImage(image,0,i*640);}await writeFile(join(root,'review-r05-jade-'+family+'.png'),canvas.toBuffer('image/png'));}
-await writeFile(join(root,'production/r05-jade-review-report.json'),JSON.stringify({method:'local_atlas_sprite_render',browserInteractionVerified:false,captures:report},null,2));console.log('Rendered',report.length,'V3 captures and 3 V2/V3 visual comparisons.');
+await writeFile(join(root,'production/r05-jade-review-report.json'),JSON.stringify({method:'local_atlas_sprite_render',browserInteractionVerified:false,captures:report},null,2));console.log('Rendered',report.length,'current V3 captures; historical comparison boards preserved.');

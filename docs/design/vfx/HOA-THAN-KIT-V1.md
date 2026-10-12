@@ -1,5 +1,7 @@
 # Bộ Hóa Thần · Ý cảnh theo công pháp · 1.0.0
 
+**Tài liệu lịch sử:** payload phiên bản này đã dọn ngày 12/10/2026. Các đường dẫn nguồn/lệnh bên dưới mô tả snapshot trong Git tại lần bàn giao; không chạy cho workspace hiện hành. Dùng [bản đã duyệt](HOA-THAN-KIT.md) và [hướng dẫn dọn](CLEANUP-2026-10-12.md).
+
 **Snapshot lịch sử tại mốc xuất nguồn:** số file, trạng thái chờ duyệt và thông số dưới đây được giữ để truy phiên bản. Bản hiện hành là [Hóa Thần V3/pack 3.0.1](HOA-THAN-KIT.md), đã chấp nhận và [đóng đợt ART 15 skill](STARTER-VFX-HANDOFF.md); không là backlog đang chờ motion. Preview chung hiện trỏ bản mới nhất.
 
 Ba kỹ năng phát triển từ Nguyên Anh đã được chủ dự án chấp nhận: **Ý Cảnh Kiếm / Ý Cảnh Lôi / Ý Cảnh Phong**. Tăng uy lực bằng khoảng tĩnh, đường nét cô đọng và phản hồi mực/sương, giữ nguyên cỡ Vương Lâm chibi. Ba chủ đề ART Tĩnh Kiếm, Định Lôi, Phong Du là thiết kế cho game; chưa phải hệ thống công pháp gameplay hoặc thuật pháp được xác nhận trong nguyên tác.

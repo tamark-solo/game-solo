@@ -1,5 +1,7 @@
 # Thư viện skill / VFX tu tiên
 
+**Workspace 12/10/2026:** đã dọn R04 V1/R05 V1/V2; giữ đầy đủ 15 gói hiện hành và manifest lịch sử. Các mô tả archive/bản cũ bên dưới ghi lại lần bàn giao; xem [quy tắc dọn và dựng hiện tại](CLEANUP-2026-10-12.md).
+
 **Liên hệ GDD 0.28:** ba nhân vật Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển chọn từ đầu, cùng Hằng Nhạc–Ngưng Khí và phân hóa từ Trúc Cơ. Bộ VFX này dùng Vương Lâm hướng Đông làm mẫu thi triển; quyền mở skill, socket/pose từng actor và luật combat cần tích hợp riêng. Thư viện năm cảnh giới đã có ART, gameplay hiện chưa chạy các cảnh giới này.
 
 [Thư viện xem và tải](skill-library.html) · [Ngưng Khí](ngung-khi-kit.html?family=wind) · [Trúc Cơ](truc-co-kit.html?family=sword) · [Kết Đan](ket-dan-kit.html?family=sword) · [Nguyên Anh](nguyen-anh-kit.html?family=sword) · [Hóa Thần](hoa-than-kit.html?family=sword)

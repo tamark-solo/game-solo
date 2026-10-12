@@ -1,5 +1,7 @@
 # Hóa Thần V3 · Ngọc sáng, lụa khí và phù vàng · pack 3.0.1 / source 3.0.0
 
+**Workspace 12/10/2026:** đã dọn R04 V1/R05 V1/V2; giữ đầy đủ 15 gói hiện hành và manifest lịch sử. Các mô tả archive/bản cũ bên dưới ghi lại lần bàn giao; xem [quy tắc dọn và dựng hiện tại](CLEANUP-2026-10-12.md).
+
 V3 thiết kế lại phần hình theo ảnh chủ dự án gửi. V2 nhấn lực bằng cạnh khí sắc và mảnh bật, làm lệch nền mỹ thuật đã chọn. V3 dùng kiếm ngọc trong, khí cong có khoảng trống, sét tím phân nhánh và dấu phù vàng. Uy lực đến từ tụ–xuất–chạm–tan có cấu trúc; không chỉ đổi màu, tăng bloom hoặc phóng người.
 
 [Kiếm](hoa-than-kit.html?family=sword) · [Lôi](hoa-than-kit.html?family=thunder) · [Phong](hoa-than-kit.html?family=wind) · [ZIP V3](releases/hoa-than-kit-3.0.1.zip) · [Thư viện](skill-library.html).

@@ -1,5 +1,7 @@
 # Hóa Thần V3 · Ngọc sáng, lụa khí và phù vàng · 3.0.0
 
+**Workspace 12/10/2026:** đã dọn R04 V1/R05 V1/V2; giữ đầy đủ 15 gói hiện hành và manifest lịch sử. Các mô tả archive/bản cũ bên dưới ghi lại lần bàn giao; xem [quy tắc dọn và dựng hiện tại](CLEANUP-2026-10-12.md).
+
 **Snapshot lịch sử tại mốc xuất nguồn:** số file, trạng thái chờ duyệt và thông số dưới đây được giữ để truy phiên bản. Bản hiện hành là [Hóa Thần V3/pack 3.0.1](HOA-THAN-KIT.md), đã chấp nhận và [đóng đợt ART 15 skill](STARTER-VFX-HANDOFF.md); không là backlog đang chờ motion. Preview chung hiện trỏ bản mới nhất.
 
 V3 thiết kế lại phần hình theo ảnh chủ dự án gửi. V2 nhấn lực bằng cạnh khí sắc và mảnh bật, làm lệch nền mỹ thuật đã chọn. V3 dùng kiếm ngọc trong, khí cong có khoảng trống, sét tím phân nhánh và dấu phù vàng. Uy lực đến từ tụ–xuất–chạm–tan có cấu trúc; không chỉ đổi màu, tăng bloom hoặc phóng người.

@@ -43,8 +43,10 @@ for(const [id,clip] of Object.entries(data.clips)){
 assert.equal(inputs.length,11);assert.equal(Object.keys(data.clips).length,33);assert.equal(frames.length,264);
 const selected=new Set(sources.map(s=>s.file.split('/').pop()));
 const historicalCandidates=(await readdir(join(root,'source'))).filter(name=>!selected.has(name)).map(name=>'source/'+name);
+const previousProvenance=JSON.parse(await readFile(join(root,'provenance.json'),'utf8'));
 await writeFile(join(root,'provenance.json'),JSON.stringify({date:'2026-10-09',generator:'built_in_imagegen',
   artApproved:false,ownerApproved:false,selectedInputs:inputs,historicalCandidates,
+  ...(previousProvenance.historicalCandidateCleanup?{historicalCandidateCleanup:previousProvenance.historicalCandidateCleanup}:{}),
   processing:'crop / one scale per source sheet / foot registration / lossless atlas; no painted poses or background removal',
   nativeSources:{wang:'docs/design/characters/wang-lin-chibi-walk-v1/native-v2',situ:'docs/design/characters/chibi-roster-v1/situ-nan/native-v2',li:'docs/design/characters/chibi-roster-v1/li-muwan/native-v5'},
   runtimeOriginalEastSources:['docs/design/vfx/frame-by-frame-r01','docs/design/vfx/r01-thunder-v1','docs/design/vfx/r01-wind-v1']},null,2)+'\n');

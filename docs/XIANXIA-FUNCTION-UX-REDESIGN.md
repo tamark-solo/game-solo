@@ -1,10 +1,12 @@
 # Thiết kế lại chức năng và HUD tu tiên — 04
 
+**Tích hợp 12/10:** [HUD runtime](HANG-NHAC-DAO-UI-RUNTIME.md) đã dùng bố cục 04, 38 glyph, tìm/ghim và các lối vào màn hiện có. Hệ chưa có backend hiện “Chưa mở”; không lấy dữ liệu mẫu làm gameplay. Phần dưới ghi quá trình thiết kế 11/10.
+
 **Tiếp nối tab Nhân vật:** [Nhân vật 04](CHARACTER-SHEET-UX-V4.md) làm rõ nền đã xác nhận, bộ đang dùng và mục tiêu; thêm reader thuật cùng luồng quay lại từ nhiệm vụ. HUD và 38 lối giữ cấu trúc 04.
 
 **11/10/2026 · Theo yêu cầu owner.** Owner nhận xét bộ icon 03 khó nhìn, cách đặt/ghép chức năng khó sử dụng, muốn nghiên cứu game tu tiên và làm lại. Owner cũng làm rõ GDD hiện chưa đủ: cần thiết kế thêm thông tin và luồng, rồi dùng kết quả để phát triển GDD. Tài liệu này là **bản thiết kế để đối chiếu**, không sửa luật GDD hoặc tự xác nhận các hệ đã có backend.
 
-[Bản thử tương tác](http://127.0.0.1:5174/ui-material-review.html): HUD 04, Chức năng → tìm/ghim, chi tiết hệ và đối chiếu icon mới/cũ ở 24/32/40 px. Các màn nhập môn đã làm được giữ làm nền; map và hình nhân vật thuộc bản owner hiện hành.
+[Bản thử tương tác](http://127.0.0.1:5174/ui-material-review.html): HUD 04, Chức năng → tìm/ghim, chi tiết hệ và màn Biểu tượng ở 24/32/40 px. Các màn nhập môn đã làm được giữ làm nền; map và hình nhân vật thuộc bản owner hiện hành.
 
 ## 1. Reference và điều đã quan sát
 
@@ -28,7 +30,7 @@
 | Mỗi mục là điểm kết thúc, phải quay HUD rồi mở menu lần nữa | Trang hệ có liên kết bước tiếp; đóng trang mở từ menu trở lại menu, giữ lọc/tìm; trả focus hợp lệ |
 | Lối mở cố định cho mọi người chơi/chặng | Desktop ghim tối đa 5 lối; mobile giữ Nhân vật/Túi/Nhiệm vụ/Map/Menu. Ghim chỉ thay vị trí UI |
 
-Icon nhỏ là **ngôn ngữ điều hướng**, không miniature của vật phẩm. Bản 04 dùng SVG nguyên bản trong `ui/dao-hud-glyph.ts`, 38 hình; cùng nhận diện trên Tu Đạo/Đọa Ma, khác màu/vật liệu. Không tạo raster mới, không phủ filter lên pack 03. Pack cũ giữ để so trực tiếp, không xóa nguồn.
+Icon nhỏ là **ngôn ngữ điều hướng**, không miniature của vật phẩm. Bản 04 dùng SVG nguyên bản trong `ui/dao-hud-glyph.ts`, 38 hình; cùng nhận diện trên Tu Đạo/Đọa Ma, khác màu/vật liệu. Không tạo raster mới, không phủ filter lên pack 03. Ngày 12/10/2026 owner yêu cầu dọn asset cũ: pack bitmap 03 và phần so ảnh cũ đã bỏ, [ghi chú pack](design/ui/dao-system-hud-v1/README.md) giữ đường truy vết. Màn Biểu tượng tiếp tục kiểm các glyph hiện hành ở ba kích cỡ.
 
 ## 3. Những thông tin cần thiết kế trước khi viết thêm GDD
 
@@ -119,6 +121,6 @@ Làm mỗi lát đủ hành trình để chơi thử và điều chỉnh. GDD nh
 
 ## 9. Trạng thái bàn giao
 
-Đã có index 38 lối, 38 glyph SVG gốc, menu theo mục đích, tìm kiếm, năm ghim desktop, liên kết hệ, trả về menu và bảng so icon cũ/mới. Giữ nền đọc identity/tracker của 03.2, hai theme, HUD skill và các màn nhập môn. Các điều chỉnh chỉ ở review, chưa đổi runtime/map/DB/nhân vật/GDD. Duyệt hình và usability với người chơi vẫn là bước đối chiếu, khác kiểm kỹ thuật.
+Đã có index 38 lối, 38 glyph SVG gốc, menu theo mục đích, tìm kiếm, năm ghim desktop, liên kết hệ, trả về menu và màn xem glyph ở ba kích cỡ. Phần so bitmap cũ đã dọn ngày 12/10/2026. Giữ nền đọc identity/tracker của 03.2, hai theme, HUD skill và các màn nhập môn. Các điều chỉnh chỉ ở review, chưa đổi runtime/map/DB/nhân vật/GDD. Duyệt hình và usability với người chơi vẫn là bước đối chiếu, khác kiểm kỹ thuật.
 
 Kiểm tại [verification 04](data/dao-system-hud-v4-verification.json): **249 cấu hình trình bày / 152 lượt mở hệ / 587 assertion browser**, thêm **96 kiểm tương tác** và **8 bố cục ghim tên dài**. Hai theme, chín viewport từ 320 đến 1600px; không lỗi/tràn chữ/chồng vùng hoặc yêu cầu gameplay. Kiểm tìm không dấu, rỗng, giới hạn/thay/giữ thứ tự ghim, route riêng trang bị/tọa kỵ, liên kết hệ, quay menu/focus và phím mở/đóng kể cả khi nút đang có focus. Hồi quy nhân vật/hành trang 60 cấu hình/55 kiểm, HUD/layer fixture, typecheck/boundary và direct Vite build qua. Build giữ cảnh báo chunk renderer lớn đã có.

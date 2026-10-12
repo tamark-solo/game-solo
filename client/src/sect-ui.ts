@@ -126,13 +126,13 @@ export class SectUI {
       this.body.querySelectorAll<HTMLButtonElement>('[data-action]').forEach(button=>{
         const action=button.dataset.action as SectAction;
         button.disabled=!!this.pending||!online||action!=='activity_stop'&&!!v?.practising||action==='cycle_step'&&v?.cycleStatus!=='ready'||action==='confirm_level'&&(v?.level===3||(v?.cultivation??0)<LEVEL_THRESHOLDS[(v?.level??0)+1]!)||
-          action==='use_recovery'&&(!v?.supplies||v.nextRecoveryAt>now||v.hp>=100)||action==='lesson_start'&&v?.lessonView?.status==='warning';
-        button.title=v?.practising?'Đợi thi triển và luyện thuật kết thúc':action==='use_recovery'&&v?.hp===100?'HP đã đầy · giữ vật tư':'';
+          action==='use_recovery'&&(!v?.supplies||v.lessons.active!=='none'||v.nextRecoveryAt>now||v.hp>=100)||action==='lesson_start'&&v?.lessonView?.status==='warning';
+        button.title=v?.practising||action==='use_recovery'&&v?.lessons.active!=='none'?'Đợi thi triển và bài luyện kết thúc':action==='use_recovery'&&v?.hp===100?'HP đã đầy · giữ vật tư':'';
       });
       const timer=this.body.querySelector<HTMLElement>('[data-cycle-timer]');
       if(timer&&v){const left=Math.max(0,v.cycleReadyAt-now);timer.textContent=v.cycleStatus==='ready'?'Nhịp đã ổn định · hãy xác nhận':v.cycleStatus==='combat'?'Tạm dừng khi luyện thuật':v.cycleStatus==='away'?'Quay lại người hướng dẫn để tiếp tục':`Đứng yên · ${(left/1000).toFixed(1)} / ${CYCLE_PHASE_MS/1000} giây`;}
       const activity=this.body.querySelector<HTMLElement>('[data-activity]');if(activity&&v)activity.textContent=online?({locked:'Chưa mở',stopped:'Chưa chọn hoạt động nền',running:'Đang tích lũy · 120/phút',paused:'Tạm dừng khi luyện thuật',gate:'Chạm cổng 360 · cần nền vận hành tiếp',offline:'Đang mất kết nối · không tích lũy'} as const)[v.activityStatus]:'Đang mất kết nối · không tích lũy';
-      const recovery=this.body.querySelector<HTMLElement>('[data-recovery-timer]');if(recovery&&v)recovery.textContent=v.practising?'Đợi luyện thuật kết thúc':v.hp>=100?'HP đã đầy · giữ vật tư':v.nextRecoveryAt>now?`Vật tư đang hồi · ${((v.nextRecoveryAt-now)/1000).toFixed(1)} giây`:v.supplies?'Sẵn sàng dùng':'Đã hết vật tư';
+      const recovery=this.body.querySelector<HTMLElement>('[data-recovery-timer]');if(recovery&&v)recovery.textContent=v.practising||v.lessons.active!=='none'?'Đợi thi triển và bài luyện kết thúc':v.hp>=100?'HP đã đầy · giữ vật tư':v.nextRecoveryAt>now?`Vật tư đang hồi · ${((v.nextRecoveryAt-now)/1000).toFixed(1)} giây`:v.supplies?'Sẵn sàng dùng':'Đã hết vật tư';
       this.body.querySelectorAll<HTMLElement>('[data-cultivation]').forEach(node=>{node.textContent=String(v?.cultivation??0);});
     }
     if(this.playerDot){this.playerDot.style.left=`${position.x/HANG_NHAC.world.width*100}%`;this.playerDot.style.top=`${position.y/HANG_NHAC.world.height*100}%`;}
@@ -206,12 +206,14 @@ export class SectUI {
     if(this.actions.childElementCount)this.body.append(this.actions);
   }
   toggleJournal():void {if(this.dialog.open)this.dialog.close();else this.journal();}
-  journal():void {
+  journal(questId?:SectQuest['id']):void {
     const focusedPin=(document.activeElement as HTMLElement)?.dataset.station;
     this.station=undefined;this.signature='';this.title.textContent='Nhật ký Hằng Nhạc';this.body.replaceChildren();this.feedback('');
     this.dialog.dataset.mode='journal';document.getElementById('sect-category')!.textContent='HÀNH TRÌNH NHẬP MÔN';this.actions=undefined;
-    const goal=this.objective(),intro=element('p',`${goal.id} · ${goal.title}`);intro.className='journal-intro';this.body.append(intro);
-    const layout=element('div');layout.className='journal-layout';const left=element('div');this.quests.journal(left,this.view);
+    const goal=sectQuests(this.view).find(quest=>quest.id===questId)??this.objective();
+    if(questId)this.destination=goal.stationId;
+    const intro=element('p',`${goal.id} · ${goal.title}`);intro.className='journal-intro';this.body.append(intro);
+    const layout=element('div');layout.className='journal-layout';const left=element('div');this.quests.journal(left,this.view,questId);
     const right=element('section');right.className='journal-map-panel';right.setAttribute('aria-label','Bản đồ chỉ đường');
     attachFrameSurface(right);
     const station=SECT_STATIONS.find(s=>s.id===(this.destination??goal.stationId))!;

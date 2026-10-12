@@ -18,9 +18,9 @@ const checks:string[]=[],errors:string[]=[];
 const state=(page:Page):Promise<{view:SectView;modal:boolean}>=>page.evaluate('window.__hangNhacSect()');
 const player=(page:Page):Promise<{profileId:string;id:string;hp:number;mp:number;x:number;y:number}>=>page.evaluate('window.__hangNhacR01().own');
 try {
-  vite=await startService(['node_modules/vite/bin/vite.js','--config','vite.config.ts','--port','5193'],origin,{VITE_SERVER_URL:endpoint});
+  vite=await startService(['node_modules/vite/bin/vite.js','--config','vite.config.ts','--port','5193'],origin,{VITE_SERVER_URL:endpoint,MAP_EDITOR_STORAGE:resolve(folder,'map-store')});
   const guest=await(await fetch(`${endpoint}/api/profile-session`,{method:'POST'})).json() as {token:string};
-  const seed=(avatarId:AvatarId,stationIndex:number,hp?:number)=>{const store=new ProfileStore(dbPath);try{const p=store.get(store.authenticate(guest.token)!,avatarId);p.x=SECT_STATIONS[stationIndex]!.x+24;p.y=SECT_STATIONS[stationIndex]!.y;if(hp!==undefined)p.hp=hp;store.save(p);}finally{store.close();}};
+  const seed=(avatarId:AvatarId,stationIndex:number,hp?:number,lesson?:'arts'|'none')=>{const store=new ProfileStore(dbPath);try{const p=store.get(store.authenticate(guest.token)!,avatarId);p.x=SECT_STATIONS[stationIndex]!.x+24;p.y=SECT_STATIONS[stationIndex]!.y;if(hp!==undefined)p.hp=hp;if(lesson!==undefined)p.sect.lessons.active=lesson;store.save(p);}finally{store.close();}};
   seed(HANG_NHAC_AVATARS[0],0);
   browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
   const context=await browser.newContext({viewport:{width:1440,height:980},deviceScaleFactor:1});
@@ -81,7 +81,13 @@ try {
     await page.locator('[data-action=accept_intro]').click();await waitFor(async()=>(await state(page)).view.hn01,'individual intro');
   }
   checks.push('independent_trio_and_character_specific_dialogue');
-  await leave();seed(HANG_NHAC_AVATARS[0],3,50);await page.locator('#avatar').selectOption(HANG_NHAC_AVATARS[0]);await enter();
+  await leave();seed(HANG_NHAC_AVATARS[0],3,50,'arts');await page.locator('#avatar').selectOption(HANG_NHAC_AVATARS[0]);await enter();await talk();
+  assert.equal((await state(page)).view.practising,false);assert.equal((await state(page)).view.lessons.active,'arts');
+  assert.equal(await page.locator('[data-action=use_recovery]').isDisabled(),true);
+  assert.match(await page.locator('[data-recovery-timer]').innerText(),/bài luyện kết thúc/);
+  assert.equal((await player(page)).hp,50);assert.equal((await state(page)).view.supplies,2);
+  checks.push('NPC_recovery_disabled_during_idle_lesson_after_reload_without_resource_spend');
+  await leave();seed(HANG_NHAC_AVATARS[0],3,50,'none');await enter();
   await page.setViewportSize({width:390,height:844});await talk();await page.locator('[data-action=use_recovery]:enabled').waitFor({state:'visible'});await page.locator('[data-action=use_recovery]').click();await waitFor(async()=>(await player(page)).hp===80,'supply heal');assert.equal((await state(page)).view.supplies,1);
   await page.screenshot({path:'artifacts/hang-nhac-sect-mobile.png'});
   const fit=await page.evaluate<{width:number;scroll:number;dialog:{x:number;right:number;top:number;bottom:number};zoom:number;actors:Array<{frameSize:number[];anchor:number[]}>}>('({width:innerWidth,scroll:document.documentElement.scrollWidth,dialog:document.querySelector("#sect-dialog").getBoundingClientRect().toJSON(),zoom:window.__hangNhacDiagnostics().zoom,actors:window.__hangNhacDiagnostics().actors})');

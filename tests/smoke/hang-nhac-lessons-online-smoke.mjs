@@ -7,6 +7,7 @@ import { ProfileStore } from '../../server/src/profile-store.ts';
 import { HANG_NHAC, HANG_NHAC_AVATARS } from '../../shared/hang-nhac.ts';
 import { MoveInput } from '../../shared/protocol/input.ts';
 import { SECT_STATIONS } from '../../shared/sect.ts';
+import { ownedItemId } from '../../shared/character-inventory.ts';
 import { startService, waitFor } from '../support/services.mjs';
 
 const endpoint='http://127.0.0.1:2597';
@@ -18,7 +19,7 @@ async function guest(){
   const store=new ProfileStore(dbPath);
   try{for(const avatar of HANG_NHAC_AVATARS){const p=store.get(store.authenticate(guest.token),avatar);
     Object.assign(p,{x:SECT_STATIONS[2].x,y:SECT_STATIONS[2].y,milestone:'M01',cultivation:100});
-    Object.assign(p.sect,{hn01:true,hn02:true,foundation:avatar==='CHR-SITU-NAN'?'spirit':'breathing',cycleStep:4,level:1});store.save(p);
+    Object.assign(p.sect,{hn01:true,hn02:true,foundation:avatar==='CHR-SITU-NAN'?'spirit':'breathing',cycleStep:4,level:1,supplies:2});store.save(p);
   }}finally{store.close();}return guest;
 }
 async function connect(token,avatar){
@@ -27,6 +28,8 @@ async function connect(token,avatar){
   const p={room,view:undefined,held:{x:0,y:0},pending:new Map(),targetId:'',events:[]};
   room.onMessage('sect:state',view=>p.view=view);
   room.onMessage('sect:result',result=>p.pending.get(result.requestId)?.(result));
+  room.onMessage('character:result',result=>p.pending.get(result.requestId)?.(result));
+  room.onMessage('character:state',()=>{});
   room.onMessage('training:result',result=>{if(result.ok)p.targetId=result.targetId;});
   room.onMessage('profile:saved',()=>{});room.onMessage('skill:result',()=>{});room.onMessage('skill:event',event=>p.events.push(event));
   room.send('sect:sync');
@@ -34,10 +37,16 @@ async function connect(token,avatar){
   const input=room.input({type:MoveInput,mode:'reliable'});
   p.timer=setInterval(()=>{if(room.connection.isOpen){input.data.moveX=p.held.x;input.data.moveY=p.held.y;input.send();}},1000/30);
   p.actor=()=>room.state.players.get(room.sessionId);
-  p.command=(action,extra={},id=randomUUID())=>new Promise((resolve,reject)=>{
+  p.command=(action,extra={},id=randomUUID(),channel='sect:command')=>new Promise((resolve,reject)=>{
     const timer=setTimeout(()=>{p.pending.delete(id);reject(new Error('Command timeout '+action));},6000);
-    p.pending.set(id,result=>{clearTimeout(timer);p.pending.delete(id);resolve(result);});room.send('sect:command',{id,action,...extra});
+    p.pending.set(id,result=>{clearTimeout(timer);p.pending.delete(id);resolve(result);});room.send(channel,{id,action,...extra});
   });
+  p.checkRecoveryBlocked=async()=>{
+    const before={hp:p.actor().hp,supplies:p.view.supplies,nextRecoveryAt:p.view.nextRecoveryAt};
+    assert.equal((await p.command('use_recovery')).reason,'combat');
+    assert.equal((await p.command('use',{itemId:ownedItemId(p.actor().profileId,'recovery')},randomUUID(),'character:command')).reason,'combat');
+    assert.deepEqual({hp:p.actor().hp,supplies:p.view.supplies,nextRecoveryAt:p.view.nextRecoveryAt},before);
+  };
   p.cast=skill=>room.send('skill:cast',{id:randomUUID(),skillId:skill,aimX:0,aimY:1,targetId:p.targetId});
   p.close=async()=>{clearInterval(p.timer);await room.leave(true);};peers.push(p);return p;
 }
@@ -54,6 +63,7 @@ try{
     assert.equal((await p.command('lesson_start',{lesson:'avoid'})).reason,'hn03');
     assert.equal((await p.command('lesson_start',{lesson:'arts'})).ok,true);
     await waitFor(()=>p.room.state.targets?.has(p.targetId),'lesson target replicated');
+    await p.checkRecoveryBlocked();
     const target=p.targetId,baseMp=p.actor().mp;
     assert.equal((await peer.command('basic_attack',{targetId:target})).reason,'target');
     const basicId=randomUUID();assert.equal((await p.command('basic_attack',{targetId:target},basicId)).ok,true);
@@ -71,6 +81,7 @@ try{
     assert.equal((await p.command('lesson_confirm',{lesson:'arts'})).reason,'already_complete');
     assert.equal(p.view.cultivation,180);assert.equal(peer.view.lessons.hn03,false);
     assert.equal((await p.command('lesson_start',{lesson:'avoid'})).ok,true);
+    await p.checkRecoveryBlocked();
     await waitFor(()=>p.view.lessonView?.status==='failed','standing inside warning fails safely');
     assert.equal(p.actor().hp,100);assert.equal(p.view.lessons.walk,false);
     assert.equal((await p.command('lesson_start',{lesson:'avoid'})).ok,true);
@@ -86,7 +97,7 @@ try{
     assert.equal((await p.command('lesson_confirm',{lesson:'avoid'})).reason,'already_complete');
     assert.equal(p.view.cultivation,260);assert.equal(p.view.milestone,'M01');assert.equal(p.actor().hp,100);
     assert.equal(p.actor().practiceHits,hits+2);assert.equal(peer.view.lessons.hn04,false);
-    checks.push({avatar,basicZeroMp:true,peerTargetRejected:true,hn03:true,hn04:true,oneTimeRewards:true,totalCultivation:260,noM02:true});
+    checks.push({avatar,basicZeroMp:true,peerTargetRejected:true,hn03:true,hn04:true,recoveryBlockedThroughBothCommands:true,oneTimeRewards:true,totalCultivation:260,noM02:true});
     await p.close();
   }
   await peer.close();backend.stop();

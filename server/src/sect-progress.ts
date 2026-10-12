@@ -70,6 +70,8 @@ export function performSectCommand(profile: CharacterProfile, actor: CombatActor
       t.level++;return accepted();
     }
     case 'use_recovery':
+      // Both the NPC and inventory route use this policy, including idle lesson attempts.
+      if(t.lessons.active!=='none') return reject('combat');
       if(!t.supplies) return reject('supplies');
       if(t.nextRecoveryAt>now) return reject('cooldown');
       if(actor.hp>=100) return reject('full_hp');

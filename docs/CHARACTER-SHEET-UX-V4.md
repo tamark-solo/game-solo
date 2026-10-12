@@ -1,5 +1,7 @@
 # Nhân vật 04 · Linh Đài
 
+**Tích hợp 12/10:** [bản runtime](HANG-NHAC-DAO-UI-RUNTIME.md) đã nối Tổng quan/Thuộc tính/Tu luyện/Thuật với hồ sơ thật; Hành trang/Trang bị dùng giao dịch server hiện có. Sprite native thay linh ảnh review, không khôi phục portrait bị từ chối. Phần dưới giữ lịch sử thiết kế 11/10.
+
 **Hình mặc định đã điều chỉnh:** concept người chơi 01 chưa được owner chấp nhận. Linh Đài đã gỡ hình đó, dẫn tới [bảng concept 02 và mẫu cũ đối chiếu](design/characters/van-hai-player-v2/README.md) trong khi chốt nhận diện. Các layout/nguồn 01 giữ lịch sử.
 
 **Linh ảnh mới 11/10:** [nhận diện người chơi Vân Hải 01](VAN-HAI-PLAYER-IDENTITY-V1.md) đã thay vùng chờ ảnh trong Tổng quan/Trang bị review. Hình độc lập mới theo yêu cầu owner, không migration avatar/profile; phối chất liệu Diện mạo giữ riêng. Chờ đánh giá hình và bộ chuyển động native.

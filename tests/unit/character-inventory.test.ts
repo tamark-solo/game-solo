@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';import {test} from 'node:test';
 import {DatabaseSync} from 'node:sqlite';import {mkdtempSync,rmSync} from 'node:fs';import {tmpdir} from 'node:os';import {join,resolve,dirname,basename} from 'node:path';
 import {initialProfile} from '../../shared/profiles';import {initialCharacterInventory,validCharacterInventory,characterItems,ownedItemId,readCharacterCommand,characterCommandKey} from '../../shared/character-inventory';
 import {performCharacterCommand} from '../../server/src/character-inventory';import {ProfileStore} from '../../server/src/profile-store';
+import {performSectCommand} from '../../server/src/sect-progress';
 import type {CombatActor} from '../../shared/r01';
 const actor=(hp=72)=>({connected:true,hp,castId:'',lastSpentAt:0} as CombatActor);
 const profile=()=>initialProfile('profile1','account1','CHR-WANG-LIN-CHIBI',1000);
@@ -36,6 +37,34 @@ test('recovery reuses real supply count, full-HP guard and cooldown; no optimist
   const out=performCharacterCommand(p,actor(),command,10000);assert.equal(out.candidate!.hp,100);assert.equal(out.candidate!.sect.supplies,1);assert.equal(out.candidate!.sect.nextRecoveryAt,20000);assert.equal(p.hp,72);assert.equal(p.sect.supplies,2);
   assert.equal(performCharacterCommand(out.candidate!,actor(72),{...command,id:'twice'},11000).result.reason,'cooldown');
   assert.equal(performCharacterCommand(p,actor(100),command,10000).result.reason,'full_hp');
+});
+test('NPC and inventory share recovery eligibility and preserve resources on every rejection',()=>{
+  const cases: Array<{name:string;reason?:string;change?:(p:ReturnType<typeof profile>,a:CombatActor)=>void;projectile?:boolean}>=[
+    {name:'ready'},
+    {name:'HN03 idle',reason:'combat',change:p=>{p.sect.lessons.active='arts';}},
+    {name:'HN04 idle',reason:'combat',change:p=>{p.sect.lessons.active='avoid';}},
+    {name:'casting',reason:'combat',change:(_p,a)=>{a.castId='cast';}},
+    {name:'projectile',reason:'combat',projectile:true},
+    {name:'cast recovery',reason:'combat',change:(_p,a)=>{a.lastSpentAt=9000;}},
+    {name:'basic recovery',reason:'combat',change:p=>{p.sect.lessons.nextBasicAt=9500;}},
+    {name:'cooldown',reason:'cooldown',change:p=>{p.sect.nextRecoveryAt=10001;}},
+    {name:'full HP',reason:'full_hp',change:(_p,a)=>{a.hp=100;}},
+    {name:'no supplies',reason:'supplies',change:p=>{p.sect.supplies=0;}},
+    {name:'no supplies during lesson',reason:'combat',change:p=>{p.sect.supplies=0;p.sect.lessons.active='arts';}},
+    {name:'disconnected',reason:'inactive',change:(_p,a)=>{a.connected=false;}},
+    {name:'dead',reason:'inactive',change:(_p,a)=>{a.hp=0;}},
+  ];
+  for(const scenario of cases){
+    const p=profile(),a=actor(72);p.hp=72;p.sect.supplies=2;scenario.change?.(p,a);
+    const before=structuredClone(p),beforeActor=structuredClone(a),id='parity';
+    const npc=performSectCommand(p,a,{id,action:'use_recovery'},10000,0,scenario.projectile);
+    const inventory=performCharacterCommand(p,a,{id,action:'use',itemId:ownedItemId(p.id,'recovery')},10000,scenario.projectile);
+    assert.deepEqual(inventory,npc,scenario.name);
+    assert.equal(npc.result.ok,!scenario.reason,scenario.name);assert.equal(npc.result.reason,scenario.reason,scenario.name);
+    if(scenario.reason)assert.equal(npc.candidate,undefined,scenario.name);
+    else{assert.equal(npc.candidate!.hp,100);assert.equal(npc.candidate!.sect.supplies,1);assert.equal(npc.candidate!.sect.nextRecoveryAt,20000);}
+    assert.deepEqual(p,before,scenario.name);assert.deepEqual(a,beforeActor,scenario.name);
+  }
 });
 test('invalid inventory is rejected: duplicate gear, wrong slot, foreign equipment and invalid protection',()=>{
   const v=initialCharacterInventory('p');

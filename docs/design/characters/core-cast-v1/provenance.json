@@ -181,11 +181,19 @@
       "referenceSha256": "d8d9b01d35dab2809575c8d823f99a6f3232161704aef90fb5309e16203d54d1"
     }
   ],
-  "historicalCandidates": [
-    "source/li_south.png",
-    "source/situ_north.png",
-    "source/situ_south.png"
-  ],
+  "historicalCandidates": [],
+  "historicalCandidateCleanup": {
+    "status": "removed-superseded-source-pngs",
+    "date": "2026-10-12",
+    "record": "docs/data/asset-cleanup-2026-10-12.json",
+    "removed": [
+      "source/li_south.png",
+      "source/situ_north.png",
+      "source/situ_south.png"
+    ],
+    "promptsRetained": true,
+    "selectedSourcesAndRuntimeFramesUnchanged": true
+  },
   "processing": "crop / one scale per source sheet / foot registration / lossless atlas; no painted poses or background removal",
   "nativeSources": {
     "wang": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2",

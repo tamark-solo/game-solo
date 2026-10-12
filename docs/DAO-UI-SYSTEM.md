@@ -1,5 +1,7 @@
 # Hai bộ UI–HUD theo đạo lộ
 
+**Tích hợp game 12/10:** theo yêu cầu owner, [HUD 04 / Nhân vật 04 / Thanh Ngọc](HANG-NHAC-DAO-UI-RUNTIME.md) đã nối vào `/hang-nhac.html` qua snapshot và callback hiện có. Các ghi chú “chưa runtime” bên dưới mô tả đợt thiết kế 11/10; Đọa Ma và các hệ chưa triển khai vẫn chưa mở gameplay.
+
 **Bộ HUD toàn hệ 03:** [24 lối chức năng và đủ vùng HUD](FULL-HUD-SYSTEM-DESIGN.md) theo yêu cầu ưu tiên mới của owner đã ghép vào trang đối chiếu. [48 icon/prompt](design/ui/dao-system-hud-v1/README.md) có hai bộ Tu Đạo/Đọa Ma; chưa gameplay/skin runtime.
 
 **Bố cục màn chơi chính:** [tư vấn HUD/UX tổng thể](MAIN-GAME-HUD-UX-DIRECTION.md) bổ sung danh tính/định hướng/tiến trình/target/tracker/giao tiếp/lối chức năng sau phản hồi ảnh chế độ chỉ HUD. Dùng chung bố cục cho hai theme; mới là đề xuất, chưa đổi game.
@@ -39,6 +41,6 @@ Desktop giữ khung 760 × 140, 10 ô 36 px/ba skill R01; bảy ô chưa gán kh
 
 ## Bản có thể xem
 
-[Trang đối chiếu](http://127.0.0.1:5174/ui-material-review.html) có Tu Đạo, Đọa Ma và HUD hiện hành để tham chiếu; dùng cùng dữ liệu fixture, sổ nhiệm vụ và hành trang. [ART/prompt/metadata và kiểm](design/ui/dao-dual-theme-v1/README.md). Bản Cổ đồng trước giữ làm lịch sử, đã được thay trong route đối chiếu theo phản hồi owner.
+[Trang đối chiếu](http://127.0.0.1:5174/ui-material-review.html) có Tu Đạo, Đọa Ma và HUD hiện hành để tham chiếu; dùng cùng dữ liệu fixture, sổ nhiệm vụ và hành trang. [ART/prompt/metadata và kiểm](design/ui/dao-dual-theme-v1/README.md). Bản Cổ đồng đã được thay theo phản hồi owner; asset và builder riêng đã dọn ngày 12/10/2026, [ghi chú lịch sử](design/ui/van-ngoc-co-dong-v1/README.md) giữ quyết định và đường truy vết.
 
 Nhân vật đang được owner làm lại; không sản xuất/sửa portrait/atlas hoặc suy tỷ lệ cuối. Map owner, navigation, backend/save và skin game hiện hành không thay trong đợt tạo hai bộ ART này.

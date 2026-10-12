@@ -1,5 +1,7 @@
 # Kiếm Khí R01 — Vương Lâm chibi, preview v2
 
+**Tài liệu lịch sử:** animatic V1/capture V2 đã dọn 12/10/2026; trang thử chuyển sang [frame-by-frame đã duyệt](kiem-khi-preview.html). Nguồn chuẩn/timing V2 và metadata lịch sử giữ nguyên. [Biên bản](CLEANUP-2026-10-12.md).
+
 **Hồ sơ lịch sử:** mở [animatic v2](http://127.0.0.1:4185/kiem-khi-preview-v2.html). Bản hiện hành nằm ở [README](README.md) và dùng sprite sequence.
 
 **Trạng thái:** bản thử ART/VFX đúng tỷ lệ renderer, chưa tích hợp combat. V2 thực hiện ba điều chỉnh của người phát triển: dùng Vương Lâm chibi hiện có, thay phản hồi bia đá bằng linh quang/dư khí dùng chung và giữ cỡ skill theo camera game. Bảng concept đã duyệt vẫn là chuẩn nét và palette; nhân vật/bia trong bảng cũ không còn là bố cục sản xuất.
@@ -51,7 +53,7 @@ Bản thử dùng socket tay tương đối `[16,-30]` so với chân Vương L�
 | [Mẫu PvP](pvp-target-stand-west-native-v1.png) | Bản sao frame nữ đứng hướng tây | 64 × 96 RGBA |
 | [Sân game](sect-courtyard-game-reference-v1.png) | Bản sao sân trống, render world 960 × 640 | 1536 × 1024 PNG |
 | [Metadata](kiem-khi-r01-source-manifest.json) | Source rect, cỡ world, anchor, camera, prompt | JSON v0.2 |
-| [Xuất kiếm](kiem-khi-r01-wanglin-pvp-release-v2.png), [chạm](kiem-khi-r01-wanglin-pvp-impact-v2.png), [dư khí](kiem-khi-r01-wanglin-pvp-residue-v2.png) | Xuất trực tiếp từ canvas ở zoom 1× | 946 × 640 PNG |
+| Capture tĩnh V2 (đã dọn; xem Git tại mốc bàn giao) | Xuất trực tiếp từ canvas ở zoom 1× | 946 × 640 PNG |
 
 Atlas hit mới được tạo bằng **imagegen tích hợp**, tham chiếu FX kiếm đã có. [Prompt chính xác](kiem-khi-r01-universal-hit-v1.prompt.txt) được lưu cạnh nguồn. Atlas trong generated_images được giữ; sprite và map là bản sao nguyên vẹn của asset dự án. Renderer đọc source rect trực tiếp, không chỉnh bitmap bằng mã.
 

@@ -1,6 +1,6 @@
 # Toàn bộ vùng HUD và hệ icon — thiết kế 03.2
 
-**Đã được tiếp nối bằng thiết kế 04:** owner yêu cầu làm lại icon và nghiên cứu kỹ chức năng; [thiết kế lại HUD/chức năng tu tiên](XIANXIA-FUNCTION-UX-REDESIGN.md) nay là hướng hiện hành trên trang review: 38 lối trong bảy nhóm, glyph rõ ở cỡ nhỏ, tìm/ghim/liên kết hệ. Owner yêu cầu phát triển thông tin và luồng trước rồi bổ sung GDD. Tài liệu 03.2 dưới đây giữ quyết định và kiểm chứng của phiên bản cũ; 48 bitmap vẫn giữ để đối chiếu.
+**Đã được tiếp nối bằng thiết kế 04:** owner yêu cầu làm lại icon và nghiên cứu kỹ chức năng; [thiết kế lại HUD/chức năng tu tiên](XIANXIA-FUNCTION-UX-REDESIGN.md) nay là hướng hiện hành trên trang review: 38 lối trong bảy nhóm, glyph rõ ở cỡ nhỏ, tìm/ghim/liên kết hệ. Owner yêu cầu phát triển thông tin và luồng trước rồi bổ sung GDD. Tài liệu 03.2 dưới đây giữ quyết định và kiểm chứng của phiên bản cũ; 48 bitmap cùng nguồn/builder riêng đã dọn ngày 12/10/2026 theo yêu cầu làm nhẹ dự án. [Ghi chú dọn pack](design/ui/dao-system-hud-v1/README.md) chỉ cách truy vết; mô tả ART và kiểm chứng bên dưới là lịch sử.
 
 **11/10/2026 · Ưu tiên trực tiếp của owner.** Sau bản tư vấn màn chơi, owner làm rõ phải **thiết kế toàn bộ vùng HUD của cả hệ thống trước**, hiện mới thấy thanh kỹ năng, chưa có icon ba lô/bản đồ và nhiều lối chức năng MMORPG. Đợt này làm bản tổng thể có ART icon và tương tác trên trang đối chiếu; tích hợp gameplay/shell vào game thực đi sau.
 

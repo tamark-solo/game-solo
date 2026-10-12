@@ -2,9 +2,10 @@ import type {Room} from '@colyseus/sdk';
 import type {CourtyardState} from '../../shared/protocol/courtyard-state';
 import type {AvatarId} from '../../shared/profiles';
 import type {CharacterView,CharacterResult,CharacterCommand,CharacterItemView} from '../../shared/character-inventory';
-import {CharacterPanel} from './character-panel';
+import {CharacterPanel,type CharacterPanelTab} from './character-panel';
+import type {SectQuest} from '../../shared/sect-quests';
 
-interface Options {room:()=>Room<CourtyardState>|undefined;online:()=>boolean;avatar:()=>AvatarId;clock:()=>number;opened:()=>void;closed:()=>void;journal:()=>void}
+interface Options {room:()=>Room<CourtyardState>|undefined;online:()=>boolean;avatar:()=>AvatarId;clock:()=>number;opened:()=>void;closed:()=>void;journal:(questId?:SectQuest['id'])=>void}
 const REASONS:Record<string,string>={save:'Chưa lưu được thay đổi. Hành trang được giữ nguyên.',combat:'Chờ kết thúc luyện thuật trước khi dùng hoặc thay đồ.',item:'Vật phẩm không có trong hành trang hiện tại.',kind:'Vật phẩm không dùng được theo cách này.',not_equipped:'Món này chưa được trang bị.',full_hp:'Sinh lực đã đầy; vật tư được giữ lại.',cooldown:'Vật tư đang hồi.',supplies:'Đã hết vật tư hồi phục.',inactive:'Nhân vật chưa sẵn sàng.',invalid:'Thao tác chưa hợp lệ.',profile:'Chưa đọc được hồ sơ.',request_reused:'Mã thao tác đã được dùng cho một yêu cầu khác.'};
 // Transport only. No command queue, replay or optimistic item/HP update.
 export class CharacterSession {
@@ -41,8 +42,15 @@ export class CharacterSession {
     }
     room.send('character:sync');
   }
-  open(tab:'overview'|'inventory'|'equipment'='overview'){
+  open(tab:CharacterPanelTab='overview'){
     this.panel.open(tab);
+    this.sync();
+  }
+  resumeFromJournal(){
+    this.panel.resumeFromJournal();
+    this.sync();
+  }
+  private sync(){
     const room=this.options.room();if(this.options.online()&&room?.connection.isOpen){this.synced=false;this.update();room.send('character:sync');}
   }
   update(){

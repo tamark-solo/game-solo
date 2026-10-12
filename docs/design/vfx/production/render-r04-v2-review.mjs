@@ -36,8 +36,4 @@ for(const config of configs.filter(c=>c.realm==='R04'))for(const zoom of[1,2])fo
 for(const family of['sword','thunder','wind']){const pair=configs.filter(c=>c.family===family),canvas=createCanvas(960,1280),ctx=canvas.getContext('2d');for(let i=0;i<2;i++){const c=pair[i],frame=({R03:{sword:7,thunder:12,wind:13},R04:{sword:7,thunder:12,wind:13}})[c.realm][family],image=render(c,frame,2).canvas;ctx.drawImage(image,0,i*640);}await writeFile(join(root,'review-r03-r04-'+family+'.png'),canvas.toBuffer('image/png'));}
 await writeFile(join(root,'production/r04-review-report.json'),JSON.stringify({method:'local_atlas_sprite_render',browserInteractionVerified:false,captures:report},null,2));console.log('Rendered',report.length,'R04 captures and 3 R03/R04 comparisons.');
 
-for(const family of ['sword','thunder','wind']){
- const frame={sword:7,thunder:12,wind:13}[family],canvas=createCanvas(960,1280),ctx=canvas.getContext('2d');
- for(const [i,version]of ['v1','v2'].entries()){const picture=await loadImage(join(root,`r04-${family}-${version}/review/F${frame}-2x.png`));ctx.drawImage(picture,0,i*640);ctx.fillStyle='#13292bf2';ctx.fillRect(18,i*640+18,520,68);ctx.fillStyle='#efdfb8';ctx.font='23px serif';ctx.fillText(i?'Sau · Linh ảnh khí ấn':'Trước · Linh ảnh hình nhân vật',32,i*640+47);ctx.font='12px sans-serif';ctx.fillText('Cùng camera, frame và cỡ Vương Lâm · render cục bộ',32,i*640+69);}
- await writeFile(join(root,`review-r04-spirit-redesign-${family}.png`),canvas.toBuffer('image/png'));
-}
+// Historical V1/V2 comparison boards remain snapshots; removed V1 inputs are not regenerated.

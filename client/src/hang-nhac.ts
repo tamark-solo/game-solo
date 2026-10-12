@@ -26,9 +26,13 @@ import {GameApi} from './net/game-api';
 import {createGameEntryState} from './core/game-entry-state';
 import {EntryCoordinator} from './features/entry/coordinator';
 import {attachFrameSurface} from './frame-surface';
+import {initializeDaoRuntimeTheme} from './ui/dao-runtime-theme';
+import {DaoRuntimeHud} from './ui/dao-runtime-hud';
+import './ui/dao-runtime-theme.css';
 
 const el = <T extends HTMLElement>(id: string) => document.getElementById(id)! as T;
 const stage = el<HTMLElement>('stage'), avatar = el<HTMLSelectElement>('avatar'), name = el<HTMLInputElement>('player-name');
+initializeDaoRuntimeTheme(el('game-shell'));
 const join = el<HTMLButtonElement>('join'), leave = el<HTMLButtonElement>('leave'), loading = el<HTMLElement>('loading');
 const names: Record<string, string> = { 'CHR-WANG-LIN-CHIBI': 'Vương Lâm', 'CHR-SITU-NAN': 'Tư Đồ Nam', 'CHR-LI-MUWAN': 'Lý Mộ Uyển' };
 const keys = new Set<string>(), touch = new Set<string>();
@@ -45,6 +49,8 @@ const profiles = entry?.profiles??new ProfileSession(endpoint);
 let lessonPresentation:LessonPresentation;
 let questMotion:QuestMotionPresentation;
 let presentation: SkillPresentation, serverOffset = 0, opening = false, saveFailed = false;
+let daoHud: DaoRuntimeHud | undefined;
+let characterJournalProfile: string | undefined;
 const shell = new GameShell({clearInput,focus:()=>stage.focus(),entryFocus:()=>{if(!entry)return false;entry.view.focus();return true;}});
 const gameUI = new VanNgocUI();
 const skills=new SkillSession({room:()=>network.room,online:()=>network.status==='connected',now:()=>Date.now()+serverOffset,feedback,focus:()=>stage.focus(),
@@ -81,7 +87,22 @@ const network = new NetworkSession(readInput, updateStatus, { roomName: HANG_NHA
 
   } });
 const character=new CharacterSession({room:()=>network.room,online:()=>network.status==='connected',avatar:()=>avatar.value as AvatarId,clock:()=>Date.now()+serverOffset,
-  opened:()=>{clearInput();},closed:()=>{clearInput();shell.focus();},journal:()=>{clearInput();sect.journal();}});
+  opened:()=>{clearInput();},closed:()=>{clearInput();if(!sect.modal&&!daoHud?.modal)shell.focus();},journal:questId=>{
+    clearInput();characterJournalProfile=network.room?.state.players?.get(network.room.sessionId)?.profileId;sect.journal(questId);
+  }});
+el('sect-dialog').addEventListener('close',()=>{
+  const profileId=characterJournalProfile;characterJournalProfile=undefined;
+  const own=network.room?.state.players?.get(network.room.sessionId);
+  if(profileId&&own?.profileId===profileId&&own.connected&&!shell.blocking&&!sect.modal&&!daoHud?.modal)character.resumeFromJournal();
+});
+daoHud=new DaoRuntimeHud(stage,{
+  attachSurface:attachFrameSurface,
+  openCharacter:tab=>{if(shell.blocking||sect.modal)return;clearInput();character.open(tab);},
+  openJournal:()=>{if(shell.blocking)return;clearInput();sect.journal();},
+  openSettings:()=>shell.openMenu(),feedback,focus:()=>{if(!character.panel.modal&&!sect.modal)shell.focus();},
+  modalChanged:()=>clearInput(),
+});
+daoHud.update({connected:false,map:{name:HANG_NHAC.name,width:HANG_NHAC.world.width,height:HANG_NHAC.world.height,backgroundUrl:HANG_NHAC.background.url}});
 el('character-open').addEventListener('click',()=>{if(!shell.blocking&&!sect.modal)character.open();});
 el<HTMLButtonElement>('game-logout').hidden=!entry;
 el('game-logout').addEventListener('click',()=>{el<HTMLDialogElement>('game-menu').close();void entry?.logout();});
@@ -102,7 +123,7 @@ function clearInput(): void {
   document.querySelectorAll('.touch-pad button').forEach(b => b.classList.remove('active'));
 }
 function readInput(): Input {
-  if (document.hidden || !document.hasFocus() || sect.modal || character.panel.modal || shell.blocking || document.activeElement?.matches('input,select,textarea')) return { x: 0, y: 0 };
+  if (document.hidden || !document.hasFocus() || sect.modal || character.panel.modal || daoHud?.modal || shell.blocking || document.activeElement?.matches('input,select,textarea')) return { x: 0, y: 0 };
   return { x: Number(keys.has('d') || keys.has('arrowright') || touch.has('east')) - Number(keys.has('a') || keys.has('arrowleft') || touch.has('west')),
     y: Number(keys.has('s') || keys.has('arrowdown') || touch.has('south')) - Number(keys.has('w') || keys.has('arrowup') || touch.has('north')) };
 }
@@ -143,10 +164,15 @@ function updateStatus(): void {
   shell.sync({ready,opening,status:network.status,ownConnected:!!own?.connected});
   gameUI.sync(avatar.value as AvatarId, network.status, saveFailed);
   character.update();
+  const selectedTarget=network.room?.state.targets?.get(skills.selectedTarget);
+  daoHud?.update({connected:network.status==='connected'&&!!own?.connected,name:playerName,cultivation:sect.view?.cultivation??0,
+    realm:avatar.value==='CHR-SITU-NAN'?'Linh thể · Hằng Nhạc':'Tu đạo · Hằng Nhạc',x:own?.x,y:own?.y,
+    target:selectedTarget?{name:'Mục tiêu luyện',x:selectedTarget.x,y:selectedTarget.y,hp:selectedTarget.hp,maxHp:selectedTarget.maxHp}:null});
   entry?.syncNetwork(!!own?.connected,opening||connecting||network.status==='connected'&&!own?.connected,network.status==='error'?network.detail:undefined);
   el<HTMLButtonElement>('game-logout').disabled=!entry?.state.session;
 }
 avatar.addEventListener('change', () => {
+  characterJournalProfile=undefined;
   character.reset();
   if (ready && !network.room) local = createActor('local', avatar.value, names[avatar.value], local, true);
   sect.reset();
@@ -160,6 +186,8 @@ el<HTMLFormElement>('entry').addEventListener('submit', event => {
 });
 el('entry-journal').addEventListener('click',()=>{clearInput();sect.journal();});
 async function leaveGame():Promise<void> {
+  characterJournalProfile=undefined;
+  daoHud?.close();
   character.reset();
   const own = actors.get(network.room?.sessionId ?? '');
   if (own && hangNhacWalkable(own)) Object.assign(local, { x: own.x, y: own.y, direction: own.direction, moving: false });
@@ -176,6 +204,7 @@ window.addEventListener('keydown', event => {
   if (document.activeElement?.matches('input,select,textarea,[contenteditable="true"]')) return;
   const key = event.key.toLowerCase();
   if(shell.menuOpen)return;
+  if(daoHud?.modal)return;
   if(character.panel.modal)return;
   if(entry&&shell.blocking)return;
   if(!event.repeat&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&(event.code==='KeyC'||event.code==='KeyI')&&!shell.blocking&&!sect.modal){event.preventDefault();clearInput();character.open(event.code==='KeyI'?'inventory':'overview');return;}
@@ -183,6 +212,10 @@ window.addEventListener('keydown', event => {
     event.preventDefault();clearInput();sect.toggleJournal();return;
   }
   if(sect.modal)return;
+  if(!event.repeat&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&!shell.blocking){
+    if(event.code==='KeyM'){event.preventDefault();clearInput();daoHud?.openMap();return;}
+    if(event.code==='KeyV'||event.code==='KeyK'||event.code==='KeyB'){event.preventDefault();clearInput();character.open(event.code==='KeyV'?'cultivation':event.code==='KeyK'?'spells':'inventory');return;}
+  }
   if(key==='escape'&&!shell.blocking&&document.activeElement===stage){event.preventDefault();shell.openMenu();return;}
   // IME can report "Process" instead of "e"; the physical key still identifies E.
   if(!event.repeat&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&(event.code==='KeyE'||key==='e')){event.preventDefault();clearInput();sect.interact();return;}
@@ -195,7 +228,7 @@ window.addEventListener('keyup', event => {keys.delete(event.key.toLowerCase());
 window.addEventListener('blur', clearInput);
 document.addEventListener('visibilitychange', clearInput);
 stage.addEventListener('pointerdown', event => {
-  if (!ready||sect.modal||character.panel.modal||shell.blocking) return;
+  if (!ready||sect.modal||character.panel.modal||daoHud?.modal||shell.blocking) return;
   if ((event.target as HTMLElement).closest('button,[data-game-ui],#hotbar-mount')) return;
   stage.focus(); const rect=stage.getBoundingClientRect(), point=new THREE.Vector3((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1,0).unproject(renderer.camera);
   const own=actors.get(network.room?.sessionId??'')??local, dx=point.x-own.x, dy=-point.y-own.y, magnitude=Math.hypot(dx,dy);
@@ -204,7 +237,7 @@ stage.addEventListener('pointerdown', event => {
 });
 document.querySelectorAll<HTMLButtonElement>('[data-input]').forEach(button => {
   const direction = button.dataset.input!;
-  button.addEventListener('pointerdown', event => { if(sect.modal||character.panel.modal||shell.blocking)return;event.preventDefault();stage.focus();button.setPointerCapture(event.pointerId); touch.add(direction); button.classList.add('active');skills.moveAim(readInput()); });
+  button.addEventListener('pointerdown', event => { if(sect.modal||character.panel.modal||daoHud?.modal||shell.blocking)return;event.preventDefault();stage.focus();button.setPointerCapture(event.pointerId); touch.add(direction); button.classList.add('active');skills.moveAim(readInput()); });
   for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) button.addEventListener(type, () => { touch.delete(direction); button.classList.remove('active');skills.moveAim(readInput()); });
 });
 
@@ -296,5 +329,5 @@ void init().catch(error => {
   shell.sync({ready:false,opening:false,status:network.status,ownConnected:false});
   renderer?.dispose();
 });
-window.addEventListener('pagehide', () => { clearInput(); entry?.dispose();character.dispose(); gameUI.dispose(); shell.dispose(); network.suspend(); skills.dispose(); questMotion?.dispose(); lessonPresentation?.dispose(); presentation?.dispose(); renderer?.dispose(); });
+window.addEventListener('pagehide', () => { clearInput(); daoHud?.dispose();entry?.dispose();character.dispose(); gameUI.dispose(); shell.dispose(); network.suspend(); skills.dispose(); questMotion?.dispose(); lessonPresentation?.dispose(); presentation?.dispose(); renderer?.dispose(); });
 window.addEventListener('pageshow', event => { if (event.persisted) location.reload(); });

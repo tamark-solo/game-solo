@@ -6,7 +6,7 @@ Ba bộ đi dùng trong preview tại mốc lịch sử: **Vương Lâm áo xám
 
 ## Nguồn được chọn
 
-Hình được vẽ/sửa bằng **imagegen tích hợp**; không dùng CLI. Tất cả nguồn và prompt chính xác đã được lưu tại thư mục này. Các nguồn v1–v4 tạo thành lịch sử chỉnh sửa; manifest chọn phiên bản cuối cho từng hướng.
+Hình được vẽ/sửa bằng **imagegen tích hợp**; không dùng CLI. Giữ nguồn được manifest chọn cho từng hướng và prompt chính xác tại thư mục này. Ngày 12/10 đã dọn 11 PNG bị loại hoặc đã có bản thay thế, theo [biên bản đường dẫn/dung lượng/hash](../../../data/asset-cleanup-2026-10-12.json). Prompt lịch sử, nguồn được chọn, atlas, palette và helper xuất cho bộ chibi hiện hành giữ nguyên.
 
 | Nhân vật | Manifest | PNG nguồn đang dùng | Prompt cuối mỗi hướng |
 | --- | --- | --- | --- |

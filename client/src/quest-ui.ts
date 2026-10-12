@@ -66,9 +66,9 @@ export class QuestUI {
     }
     return current;
   }
-  journal(container: HTMLElement, view?: SectView): void {
+  journal(container: HTMLElement, view?: SectView, questId?: SectQuest['id']): void {
     const list = node('section'); list.className = 'quest-journal'; list.setAttribute('aria-label', 'Danh sách nhiệm vụ Hằng Nhạc');
-    this.selectedQuest = currentSectQuest(sectQuests(view)).id;
+    this.selectedQuest = questId??currentSectQuest(sectQuests(view)).id;
     this.journalList = list; container.append(list); this.renderCards(sectQuests(view));
   }
   private renderCards(quests: SectQuest[]): void {

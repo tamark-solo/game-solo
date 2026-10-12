@@ -6,7 +6,7 @@
 
 ## Nguồn và trạng thái
 
-ImageGen tích hợp vẽ từng pose từ reference native đúng nhân vật/hướng. `references/` là crop nguồn native phóng nearest 6× để đưa vào công cụ; không phải ART mới. `source/` giữ ảnh trả về có alpha, `prompts/` giữ prompt chính xác, `sources.json` chọn 11 sheet hiện hành, `provenance.json` ghi hash và nguồn. Ba sheet đầu cho Lý Mộ Uyển Nam/Tư Đồ Nam Nam/Bắc được giữ làm lịch sử; bản v2 sửa hướng pose/lướt.
+ImageGen tích hợp vẽ từng pose từ reference native đúng nhân vật/hướng. `references/` là crop nguồn native phóng nearest 6× để đưa vào công cụ; không phải ART mới. `source/` giữ 11 sheet hiện hành có alpha được chọn trong `sources.json`, `prompts/` giữ prompt chính xác, `provenance.json` ghi hash và nguồn. Ngày 12/10 đã dọn ba PNG đầu cho Lý Mộ Uyển Nam/Tư Đồ Nam Nam/Bắc vì bản v2 đã thay thế để sửa hướng pose/lướt. Giữ prompt lịch sử và [biên bản đường dẫn/dung lượng/hash](../../../data/asset-cleanup-2026-10-12.json); nguồn được chọn, frame và atlas không đổi.
 
 Không mirror hướng, đổi màu nhân vật hoặc dùng pose của người khác. Ba clip Vương Lâm Đông ưu tiên nguồn `../../vfx/frame-by-frame-r01`, `r01-thunder-v1`, `r01-wind-v1`, giữ hash gốc. 10 FX đã bàn giao cũng giữ nguyên.
 

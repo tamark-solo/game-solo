@@ -1,12 +1,16 @@
 # Nhân vật và hành trang Hằng Nhạc — đợt đầu
 
+**UI 12/10:** [Thanh Ngọc / Nhân vật 04](HANG-NHAC-DAO-UI-RUNTIME.md) đã thay presentation Linh Đài 02. Nhóm Nhân vật có Tổng quan/Thuộc tính/Tu luyện/Thuật; Hành trang thêm tìm không dấu và lọc vị trí. Các hợp đồng đồ/server/lưu bên dưới giữ nguyên.
+
+**12/10 · Hồi phục thống nhất:** NPC và Hành trang dùng cùng luật server trong `performSectCommand`: 1 vật tư hồi 30 HP, tối đa 100, cooldown chung 10 giây. Chặn suốt bài HN03/HN04 còn mở, kể cả đang đứng yên; cũng chặn khi thi triển, projectile còn chạy hoặc chưa hết khoảng nghỉ đòn/thuật. HP đầy, hết vật tư, đang cooldown, mất kết nối hoặc HP bằng 0 đều không tiêu vật tư. Hai đường trả cùng lý do từ chối, kể cả hết vật tư trong bài luyện. UI NPC hiện lý do chờ bài luyện; nguồn vật tư, schema, transaction và receipt cũ giữ nguyên. Unit kiểm cùng kết quả/candidate và không sửa đầu vào; smoke lessons/sect kiểm cả server lẫn nút NPC sau reload trên fixture.
+
 **Cập nhật 10/10:** [entry thật](GAME-ENTRY-BACKEND.md) đã có đăng nhập/server/tạo/chọn nhân vật trước game. C/I và các thao tác dưới đây được dùng lại trên hồ sơ đăng ký qua `ProfilePersistence`; đồ nhập môn/vật tư và max HP/MP giữ nguyên. Phần kiểm khách bên dưới là bằng chứng pilot ban đầu; chưa là ba lô tổng quát/kho/loot. Không tự nhận save khách vào tài khoản mới.
 
 Ngày 10/10/2026, owner yêu cầu bắt đầu triển khai sau khi chấp nhận diện mạo [Linh Đài 02](CHARACTER-UI-PREVIEW.md). Owner chọn: **“Đồ nhập môn và vật tư thật trước; giữ HP/MP hiện tại để hoàn thiện hành trang, trang bị và lưu hồ sơ”**. Bản runtime dùng dữ liệu của hồ sơ đang chơi, qua server và SQLite.
 
 ## Mở và sử dụng
 
-Vào [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html), nhấn **C** để xem Tổng quan, **I** để mở Hành trang, hoặc nút Nhân vật cạnh menu. Ba tab Tổng quan / Hành trang / Trang bị dùng khung Vân Ngọc, giấy lụa, Linh Đài và sprite 2× đã có. Đang mở cửa sổ thì phím di chuyển/cast và chạm map không điều khiển nhân vật. Escape đóng cửa sổ; trên mobile, Escape ở chi tiết quay về danh sách và giữ vị trí/focus trước.
+Vào [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html), nhấn **C** để xem Tổng quan, **I/B** để mở Hành trang, **V** để xem Tu luyện, **K** để đọc Thuật hoặc dùng menu Chức năng. Ba nhóm Nhân vật / Hành trang / Trang bị dùng chất liệu Thanh Ngọc và sprite native từ atlas hiện hành. Đang mở cửa sổ thì phím di chuyển/cast và chạm map không điều khiển nhân vật. Escape đóng cửa sổ; trên mobile, Escape ở chi tiết quay về danh sách và giữ vị trí/focus trước.
 
 - Tổng quan đọc tên, avatar, HP/MP, tu vi, mốc nhập môn và nhiệm vụ thật. Tư Đồ Nam dùng nhãn tiến trình hồi phục hiện diện. Ba thuật R01 vẫn có từ đầu.
 - Hành trang có tìm tên, lọc, sắp xếp, chọn món, xem số lượng/tác dụng/nguồn/điều kiện. Vùng đọc và các thao tác giữ quy tắc `ui-reading.css`; khung và nền chung box qua `attachFrameSurface`.
@@ -33,6 +37,8 @@ Receipt khóa theo hồ sơ + UUID yêu cầu, lưu fingerprint thao tác. Gửi
 Client giữ trạng thái đang xử lý đến khi nhận snapshot sau kết quả. Mất kết nối hoặc timeout chỉ đọc lại snapshot; **không queue/replay lệnh trang bị hoặc dùng đồ**, không tự trừ vật tư/đổi HP. Đổi nhân vật xóa view cũ; ba hồ sơ có đồ, bảo vệ và vật tư riêng. Reload/reconnect/backend restart phục hồi trạng thái đã ghi.
 
 ## Nguồn và kiểm chứng
+
+Đợt thống nhất hồi phục 12/10: [biên bản mới](data/recovery-and-cleanup-verification-2026-10-12.json) ghi 157 unit test đạt, ma trận 13 trường hợp hai đường hồi phục, cùng smoke lessons/sect/character/reload/R01/HUD. Các số liệu bên dưới thuộc biên bản triển khai ban đầu.
 
 | Phần | Nguồn |
 | --- | --- |

@@ -1,5 +1,7 @@
 # Bàn giao skill/VFX nhập môn và nâng cấp
 
+**Workspace 12/10/2026:** đã dọn R04 V1/R05 V1/V2; giữ đầy đủ 15 gói hiện hành và manifest lịch sử. Các mô tả archive/bản cũ bên dưới ghi lại lần bàn giao; xem [quy tắc dọn và dựng hiện tại](CLEANUP-2026-10-12.md).
+
 **Liên hệ GDD 0.28:** ba nhân vật Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển chọn từ đầu, cùng Hằng Nhạc–Ngưng Khí và phân hóa từ Trúc Cơ. Bộ VFX này dùng Vương Lâm hướng Đông làm mẫu thi triển; quyền mở skill, socket/pose từng actor và luật combat cần tích hợp riêng. Thư viện năm cảnh giới đã có ART, gameplay hiện chưa chạy các cảnh giới này.
 
 Đợt ART P1–P5 đã kết thúc ngày **07/10/2026** theo yêu cầu chủ dự án. Chốt ba nhánh Kiếm/Lôi/Phong qua Ngưng Khí, Trúc Cơ, Kết Đan, Nguyên Anh và Hóa Thần: **15 skill, 646 PNG RGBA rời, 76 atlas**, tất cả đã được chấp nhận. Các con số gồm frame dùng lại, không phải số hình độc nhất.

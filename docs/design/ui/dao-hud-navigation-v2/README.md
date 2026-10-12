@@ -1,13 +1,13 @@
 # Navigation và chức năng HUD 04
 
-**11/10/2026 · bản thiết kế mới, chờ đối chiếu.** [Lý do/reference/luồng/thông tin cần phát triển](../../../XIANXIA-FUNCTION-UX-REDESIGN.md). [Trang thử](http://127.0.0.1:5174/ui-material-review.html) có HUD, menu tìm/ghim và Đối chiếu icon.
+**11/10/2026 · bản thiết kế mới, chờ đối chiếu.** [Lý do/reference/luồng/thông tin cần phát triển](../../../XIANXIA-FUNCTION-UX-REDESIGN.md). [Trang thử](http://127.0.0.1:5174/ui-material-review.html) có HUD, menu tìm/ghim và màn Biểu tượng ở 24/32/40 px.
 
 ## Nguồn gốc
 
 - 38 glyph SVG nguyên bản viết trong [dao-hud-glyph.ts](../../../../client/src/ui/dao-hud-glyph.ts); không dùng hình hoặc đường path của game khác.
 - Canvas 64×64, hình chính lớn và khoảng trống rộng, nét phụ 3.5–4 đơn vị; kiểm ở 24/32/40px. Theme giữ hình nhận diện, đổi màu vật liệu qua token presentation.
 - Tu Đạo: mảng ngà `#f7eed7`, chi tiết âm `#202620`, điểm ngọc `#a7d3c0`. Đọa Ma: ngà `#f5e9d6`, chi tiết âm `#28232a`, điểm huyết đồng `#e5a18a`.
-- Đây là code-native navigation, không ImageGen/raster. ART vật phẩm/skill và khung cũ vẫn là nguồn riêng. [48 bitmap 03](../dao-system-hud-v1/README.md) giữ để so trực tiếp.
+- Đây là code-native navigation, không ImageGen/raster. ART vật phẩm/skill và khung đang dùng vẫn là nguồn riêng. [48 bitmap 03](../dao-system-hud-v1/README.md) đã dọn ngày 12/10/2026 theo yêu cầu làm nhẹ dự án; màn Biểu tượng giữ 38 glyph hiện hành.
 
 ## Index và ownership
 

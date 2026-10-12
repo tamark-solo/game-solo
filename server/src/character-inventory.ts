@@ -8,13 +8,13 @@ export function performCharacterCommand(profile:CharacterProfile,actor:CombatAct
   if(!actor.connected||actor.hp<=0)return reject('inactive');
   const recovery=command.itemId===ownedItemId(profile.id,'recovery');
   const gear=profile.inventory.gear.find(item=>item.id===command.itemId);
-  if(!gear&&(!recovery||!profile.sect.supplies))return reject('item');
-  if(command.action!=='protect'&&(profile.sect.lessons.active!=='none'||isPractising(actor,now,projectile,profile.sect.lessons.nextBasicAt)))return reject('combat');
-  if(command.action==='use'){
-    if(!recovery)return reject('kind');
-    // Reuse the only supply counter, +30 HP, full-HP guard and 10s cooldown.
+  if(command.action==='use'&&recovery){
+    // One recovery policy for NPC and inventory: lessons, practice, supplies, HP and cooldown.
     return performSectCommand(profile,actor,{id:command.id,action:'use_recovery'},now,0,projectile);
   }
+  if(!gear&&(!recovery||!profile.sect.supplies))return reject('item');
+  if(command.action!=='protect'&&(profile.sect.lessons.active!=='none'||isPractising(actor,now,projectile,profile.sect.lessons.nextBasicAt)))return reject('combat');
+  if(command.action==='use')return reject('kind');
   const p=structuredClone(profile),item=p.inventory.gear.find(item=>item.id===command.itemId);
   if(command.action==='protect'){
     if(item)item.protected=command.protected;else p.inventory.recoveryProtected=command.protected;

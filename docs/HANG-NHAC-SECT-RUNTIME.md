@@ -1,5 +1,7 @@
 # Hằng Nhạc — tiếp dẫn, vận khí và thổ nạp
 
+**12/10 · Hồi phục thống nhất:** `use_recovery` ở NPC và `use` vật tư trong Hành trang cùng đi qua `performSectCommand`. Mỗi lần hợp lệ trừ 1 vật tư, hồi 30 HP đến tối đa 100 và đặt cooldown chung 10 giây. Server chặn cả HN03/HN04 đang mở dù nhân vật đứng yên, thi triển/projectile/khoảng nghỉ đòn–thuật, HP đầy, hết vật tư, cooldown, offline hoặc HP bằng 0. Từ chối không đổi HP/vật tư/cooldown; UI NPC hiển thị chờ bài luyện. Không đổi schema, receipt, thổ nạp, hồi MP hoặc số liệu cân bằng. Xem [hành trang](HANG-NHAC-CHARACTER-RUNTIME.md); kiểm bằng unit parity, lessons/sect/character/reload/R01 với fixture riêng.
+
 **Animation nhiệm vụ 10/10/2026:** đã bổ sung cử chỉ chào, loop vận khí đứng/thổ nạp và dùng vật tư cho cả bộ ba; Tư Đồ Nam có động tác ổn định linh thể. [Bàn giao](HANG-NHAC-QUEST-MOTION.md) ghi luồng server/pose, giới hạn và trang xem ART mới. Không đổi timer, tích lũy, thưởng hoặc schema save.
 
 **08/10/2026 · _MMO · runtime 0.12.0 · GDD 0.28.** Bản đầu của bước 3: HN01–HN02, nhật ký/chỉ đường, hoạt động nền và vật tư hồi phục. Tiếp nối [hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md), giữ TypeScript + Three.js / Node.js + Colyseus. Đợt 09/10 bổ sung [HN03–HN04/đòn thường/bài né](HANG-NHAC-LESSONS-RUNTIME.md). HN05–HN12, ngoại vi và khảo nghiệm chưa hoàn tất.
@@ -60,6 +62,8 @@ Nền access-v5-clean-v1, 3072 × 2048, 9 blocker, Spawn (1616,992), camera 1×,
 - `sect:sync` đăng ký nhận `sect:state` riêng cho hồ sơ của phiên; `sect:result` xác nhận thao tác. Tiến trình nhiệm vụ không broadcast cho người khác. Lease một nhân vật/tài khoản của bước 2 tiếp tục ngăn chạy nhiều tab để nhân tích lũy.
 
 ## Kiểm chứng và phần tiếp nối
+
+Đợt hồi phục 12/10 có [biên bản riêng](data/recovery-and-cleanup-verification-2026-10-12.json): chặn cả hai lệnh hồi phục trong HN03/HN04, nút NPC sau reload bị khóa khi bài còn mở và HP/vật tư/cooldown không đổi khi bị từ chối. Build, unit và các hồi quy lessons/sect/character/reload/R01/HUD đạt; mọi hồ sơ dùng cho kiểm đều là fixture.
 
 `npm.cmd run test:hang-nhac-sect` dùng DB/browser context cô lập trong `artifacts/`; không sửa DB/map/draft của owner. Kiểm proximity, thưởng một lần, ba nhịp đúng thời gian, hiểu nguồn lực, reload giữa bài, reconnect/restart, pause/no offline, vật tư, tiến trình bộ ba và mobile. Browser test đặt tọa độ bắt đầu từng chặng trong DB fixture để kiểm UI; unit test kiểm toàn đường đi tới cả bốn điểm trên blocker thật. Build/typecheck và hồi quy map/R01 cũng được chạy.
 

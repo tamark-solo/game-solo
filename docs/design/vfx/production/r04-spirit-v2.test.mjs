@@ -53,8 +53,19 @@ test('spirit stays behind the opaque actor with a smaller, restrained silhouette
  for(const k of kits){const plan=makePlan(k.skill,k.clips),state=samplePresentation(k.skill,k.clips,plan,at(7)),ghost=state.items.find(r=>r.kind==='decorativeSpirit');assert.ok(ghost);assert.equal(ghost.scale,1);assert.ok(ghost.layer<1);assert.ok(ghost.point[0]<=state.foot[0]-40);assert.ok(Math.max(...ghost.sample.clip.opacities)<=.85);const ordered=sortLayers([{id:'actor',layer:1,sortY:state.foot[1],order:0},{id:'spirit',layer:ghost.layer,sortY:ghost.point[1],order:1}]);assert.deepEqual(ordered.map(r=>r.id),['spirit','actor']);assert.ok(Math.max(...ghost.sample.clip.frames.map(f=>f.registeredBounds.h))*ghost.scale<=48);}
 });
 
-test('redesign replaces all 18 spirit PNGs, keeps the remaining 138 PNGs and sealed V1 payloads unchanged',async()=>{
- let fresh=0,retained=0;for(const k of kits){for(const [id,c]of Object.entries(k.clips))for(const f of c.frames){const a=await readFile(new URL(`../r04-${k.family}-v2/${f.file}`,import.meta.url)),b=await readFile(new URL(`../r04-${k.family}-v1/${f.file}`,import.meta.url));if(id===k.skill.spirit.clip){assert.notEqual(hash(a),hash(b));assert.ok(f.registeredBounds.h<=48);fresh++;}else{assert.deepEqual(a,b);retained++;}}const m=await read(`../releases/skill-packs/r04-${k.family}-1.0.1.manifest.json`);for(const e of m.files)assert.equal(hash(await readFile(new URL('../'+e.file,import.meta.url))),e.sha256,e.file);}assert.equal(fresh,18);assert.equal(retained,138);
+test('redesign replaces 18 spirit PNGs and retains 138 PNGs against sealed V1 digests',async()=>{
+ let fresh=0,retained=0;
+ for(const k of kits){
+  const historical=await read(`../releases/skill-packs/r04-${k.family}-1.0.1.manifest.json`);
+  const hashes=new Map(historical.files.map(e=>[e.file,e.sha256]));
+  for(const [id,c]of Object.entries(k.clips))for(const f of c.frames){
+   const digest=hash(await readFile(new URL(`../r04-${k.family}-v2/${f.file}`,import.meta.url)));
+   const original=hashes.get(`r04-${k.family}-v1/${f.file}`);assert.ok(original, f.file);
+   if(id===k.skill.spirit.clip){assert.notEqual(digest,original);assert.ok(f.registeredBounds.h<=48);fresh++;}
+   else{assert.equal(digest,original,f.file);retained++;}
+  }
+ }
+ assert.equal(fresh,18);assert.equal(retained,138);
 });
 
 test('wind sigil merges toward the torso without adding opaque body echoes',()=>{

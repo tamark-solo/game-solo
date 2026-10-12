@@ -1,0 +1,139 @@
+/* Live Tu Đạo skin. Domain state and the input/transport adapters own all actions. */
+#game-shell[data-dao-theme=tu-dao] {
+  --dao-panel: #1a3033;
+  --dao-paper: #e0e5da;
+  --dao-ink: #293e37;
+  --dao-text: #dde6d9;
+  --dao-muted: #b6c9b9;
+  --dao-border: #9baf94;
+  --dao-accent: #b7c8ac;
+  --game-text: var(--dao-text);
+  --vn-window-art: url('/assets/dao-dual-theme-v1/tu-dao/window.webp');
+  --vn-button-art: url('/assets/dao-dual-theme-v1/tu-dao/button.webp');
+  --vn-paper-art: linear-gradient(#e0e5da, #e8eadd);
+  --vn-bronze: #9d9b7b;
+  --vn-bronze-light: #d6ddbf;
+  --review-frame: var(--vn-window-art);
+  --review-button: var(--vn-button-art);
+  --review-slice: 22%;
+  --review-frame-size: 48px;
+  --review-light: var(--dao-text);
+  --review-gold: #9d9b7b;
+}
+
+/* The nine backing masks use the same source slices and destination corner sizes
+   as the painted window. Existing attachFrameSurface wrappers retain scrolling. */
+#game-shell[data-dao-theme=tu-dao] :is(.van-panel, .avatar-choice, .journal-map-panel) {
+  --vn-frame-size: 48px;
+  --vn-frame-border: 0px;
+  --vn-frame-fill: linear-gradient(#1a3033fc, #1a2d31fc);
+  color: var(--dao-text);
+}
+#game-shell[data-dao-theme=tu-dao] :is(.van-panel, .journal-map-panel)::after,
+#game-shell[data-dao-theme=tu-dao] .avatar-choice::before {
+  border-image-source: var(--vn-window-art);
+  border-image-slice: 22%;
+  border-image-width: var(--vn-frame-size);
+  border-width: var(--vn-frame-size);
+}
+#game-shell[data-dao-theme=tu-dao] :is(.van-panel, .avatar-choice, .journal-map-panel) > .vn-frame-surface {
+  background: var(--vn-frame-fill);
+  mask-image: var(--mask-tl), var(--mask-t), var(--mask-tr), var(--mask-l), var(--mask-c), var(--mask-r), var(--mask-bl), var(--mask-b), var(--mask-br);
+}
+#game-shell[data-dao-theme=tu-dao] :is(.entry-card, #sect-dialog, #game-menu) {
+  --vn-frame-size: 48px;
+  --vn-frame-border: 16px;
+  border: var(--vn-frame-border) solid transparent;
+  border-image: var(--vn-window-art) 22% / var(--vn-frame-size) stretch;
+}
+#game-shell[data-dao-theme=tu-dao] :is(#sect-dialog, #game-menu) {
+  --vn-window-top: 24px;
+  --vn-window-bottom: 18px;
+  --vn-window-clearance: 32px;
+  padding: var(--vn-window-top) 18px var(--vn-window-bottom);
+}
+#game-shell[data-dao-theme=tu-dao] :is(.entry-card, .avatar-choice) { --vn-frame-fill: var(--vn-paper-art); color: var(--dao-ink); }
+#game-shell[data-dao-theme=tu-dao] .entry-card { padding: 28px 24px 14px; }
+#game-shell[data-dao-theme=tu-dao] .avatar-choice { --vn-frame-size: 22px; }
+#game-shell[data-dao-theme=tu-dao] .avatar-choice[aria-pressed=true] { --vn-frame-fill: linear-gradient(#e3ecda, #bfd1b7); }
+#game-shell[data-dao-theme=tu-dao] .player-hud { --vn-frame-size: 28px; }
+#game-shell[data-dao-theme=tu-dao] .skill-panel { --vn-frame-size: 26px; }
+#game-shell[data-dao-theme=tu-dao] #sect-objective.quest-tracker { --vn-frame-size: 32px; }
+#game-shell[data-dao-theme=tu-dao] .journal-map-panel { --vn-frame-size: 28px; }
+#game-shell[data-dao-theme=tu-dao] .account-entry[data-phase=title] { --vn-frame-fill: transparent; }
+#game-shell[data-dao-theme=tu-dao] .account-entry[data-phase=title]::after { display: none; }
+
+/* One current button material across entry, live controls, journal and settings. */
+#game-shell[data-dao-theme=tu-dao] :is(.game-button, .resource button, .quest-tracker button, .lesson-panel button, .sect-dialog-heading button, .touch-pad button),
+#game-shell[data-dao-theme=tu-dao] #sect-body button:not(.sect-pin):not(.quest-card-select) {
+  border-image-source: var(--vn-button-art);
+  border-image-slice: 15% fill;
+  border-image-width: 9px 18px;
+  color: #f1efe0;
+  text-shadow: 0 1px 3px #08181e;
+}
+#game-shell[data-dao-theme=tu-dao] :is(.game-button.primary, #quest-guide) { filter: none; color: #f0f1da; }
+#game-shell[data-dao-theme=tu-dao] .shell-actions button { border-image-width: 9px 12px; }
+#game-shell[data-dao-theme=tu-dao] .vn-frame-scroll { scrollbar-color: #8fa18c #1a3033; }
+#game-shell[data-dao-theme=tu-dao] :is(.sect-dialog-heading, .game-menu-heading) { background: var(--dao-panel); border-color: #9baf945e; }
+#game-shell[data-dao-theme=tu-dao] :is(.sect-dialog-heading, .game-menu-heading) h2,
+#game-shell[data-dao-theme=tu-dao] :is(.quest-tracker-heading strong, #quest-title, .player-hud b, .journal-map-panel h3) { color: var(--dao-text); }
+#game-shell[data-dao-theme=tu-dao] :is(.ui-eyebrow, .sect-dialog-heading .ui-eyebrow, .game-menu-heading .ui-eyebrow, .skill-aim, .player-hud span, .player-hud small) { color: var(--dao-muted); }
+#game-shell[data-dao-theme=tu-dao] :is(#sect-message, .game-notice, #connection-banner) { color: #e0e7cd; }
+#game-shell[data-dao-theme=tu-dao] :is(.game-notice, #connection-banner, #connection-indicator) { background: #1a3033ed; border-color: #9baf9480; }
+#game-shell[data-dao-theme=tu-dao] :is(#sect-body, .menu-section, .quest-card-detail) { background: var(--vn-paper-art); color: var(--dao-ink); border-color: #c2c9b6; box-shadow: inset 0 0 18px #6b816314; }
+#game-shell[data-dao-theme=tu-dao] #sect-body:has(.journal-layout) { background: none; box-shadow: none; }
+#game-shell[data-dao-theme=tu-dao] :is(.quest-card, .lesson-panel) { background: #20383af2; border-color: #9baf945e; }
+#game-shell[data-dao-theme=tu-dao] .quest-card-select :is(h3, .quest-card-id) { color: #e6ead9; }
+#game-shell[data-dao-theme=tu-dao] .quest-card-select small { color: var(--dao-muted); }
+#game-shell[data-dao-theme=tu-dao] :is(.journal-intro, .journal-map-panel p, #game-menu .menu-note) { color: var(--dao-muted); }
+#game-shell[data-dao-theme=tu-dao] #game-menu :is(h3, .setting-row b) { color: var(--dao-ink); }
+#game-shell[data-dao-theme=tu-dao] #game-menu :is(.setting-row small, .control-guide dd) { color: #52664f; }
+#game-shell[data-dao-theme=tu-dao] #game-menu .control-guide kbd { background: #d8dfce; color: var(--dao-ink); border-color: #a7b196; }
+
+/* Account entry keeps its real coordinator and title screen; only material changes. */
+#game-shell[data-dao-theme=tu-dao] .account-entry { color: var(--dao-text); }
+#game-shell[data-dao-theme=tu-dao] .account-entry :is(h1:not(.title-logo), h2, h3) { color: #e6ead9; }
+#game-shell[data-dao-theme=tu-dao] .account-entry :is(label, .entry-link) { color: #cddbc8; }
+#game-shell[data-dao-theme=tu-dao] .account-entry :is(.entry-help, .entry-trace, .entry-slot-count, .entry-account-label) { color: var(--dao-muted); }
+#game-shell[data-dao-theme=tu-dao] :is(.entry-auth-tabs, .account-entry-intro, .entry-account-label, .entry-character-note) { border-color: #9baf945e; }
+#game-shell[data-dao-theme=tu-dao] :is(.entry-steps li[data-current=true], .entry-auth-tabs button[aria-pressed=true]) { color: #e0e7cc; border-color: #b7c8ac; }
+#game-shell[data-dao-theme=tu-dao] .account-entry input { background: #152c30; border-color: #9baf9477; color: #e6ead9; }
+#game-shell[data-dao-theme=tu-dao] :is(.entry-password button, .realm-choice, .entry-character-choice, .entry-archetype) { background: #20383af2; border-color: #9baf945e; color: #e0e7cd; }
+#game-shell[data-dao-theme=tu-dao] :is(.entry-character-choice, .entry-archetype)[aria-pressed=true] { background: #385247; border-color: #b9c6a8; box-shadow: inset 0 0 12px #c7dbb518; }
+#game-shell[data-dao-theme=tu-dao] .account-entry-content { scrollbar-color: #8fa18c #1a3033; }
+
+/* Native desktop geometry follows the measured new painting. Mobile retains 3 × 48px. */
+@media (min-width: 761px) {
+  #game-shell[data-dao-theme=tu-dao] .hotbar-health { left: var(--dao-hp-left); top: var(--dao-hp-top); width: var(--dao-hp-size); height: var(--dao-hp-size); }
+  #game-shell[data-dao-theme=tu-dao] .hotbar-mana { right: auto; left: var(--dao-mp-left); top: var(--dao-mp-top); width: var(--dao-mp-size); height: var(--dao-mp-size); }
+  #game-shell[data-dao-theme=tu-dao] .hotbar-rail { left: var(--dao-tray-left); top: var(--dao-tray-top); width: var(--dao-tray-width); height: var(--dao-tray-height); }
+  #game-shell[data-dao-theme=tu-dao] .hotbar-slots { left: var(--dao-slot-left); top: var(--dao-slot-top); }
+  #game-shell[data-dao-theme=tu-dao] .hud-fx-health-seal { left: calc(var(--dao-hp-x) - 55.5px); top: calc(var(--dao-hp-y) - 55.5px); }
+  #game-shell[data-dao-theme=tu-dao] :is(.hud-fx-mana-seal, .hud-fx-mana-flare) { right: auto; left: calc(var(--dao-mp-x) - 55.5px); top: calc(var(--dao-mp-y) - 55.5px); }
+  #game-shell[data-dao-theme=tu-dao] .hud-fx-health-aura { left: calc(var(--dao-hp-x) - 68.5px); top: calc(var(--dao-hp-y) - 68.5px); }
+  #game-shell[data-dao-theme=tu-dao] .hud-fx-mana-aura { right: auto; left: calc(var(--dao-mp-x) - 68.5px); top: calc(var(--dao-mp-y) - 68.5px); }
+}
+#game-shell[data-dao-theme=tu-dao] :is(.hud-fx-frame-light, .hud-fx-frame-sheen, .hud-fx-center-seal, .hud-fx-glint, .hud-fx-gem, .hotbar-empty svg) { display: none; }
+#game-shell[data-dao-theme=tu-dao] .hud-fx-orb-aura { opacity: .13; }
+#game-shell[data-dao-theme=tu-dao] .hud-fx-mandala { opacity: .22; filter: none; }
+#game-shell[data-dao-theme=tu-dao] .hud-fx-health-seal { --seal-color: #ba9b7a; }
+#game-shell[data-dao-theme=tu-dao] .hud-fx-mana-seal { --seal-color: #b9ccbc; }
+#game-shell[data-dao-theme=tu-dao] .hotbar-orb-liquid::before { opacity: .6; }
+#game-shell[data-dao-theme=tu-dao] .hotbar-orb-glass::after { background: radial-gradient(ellipse at 29% 17%, #ffffff60, transparent 20%), radial-gradient(ellipse at 50% 50%, transparent 44%, #01080b88 87%); box-shadow: inset 0 0 0 1px #cedbca55, inset 1px -2px 8px #0009; }
+#game-shell[data-dao-theme=tu-dao] .hotbar-slot { border-color: #9ba38b; background: #203439; }
+#game-shell[data-dao-theme=tu-dao] .hotbar-slot[data-state=casting] { border-color: #d6edc5; }
+#game-shell[data-dao-theme=tu-dao] .hotbar-slot[data-state=offline] { border-color: #77837b; }
+#game-shell[data-dao-theme=tu-dao] .hotbar-rail { background: #1b3034; }
+#game-shell[data-dao-theme=tu-dao] .hotbar-tooltip { background: #1a3033f7; border-color: #9baf94; }
+#game-shell[data-dao-theme=tu-dao] .game-hotbar[data-dao-art=fallback] .hotbar-tray { background: #1a3033eb; border: 1px solid #9baf9480; border-radius: 6px; }
+#game-shell[data-dao-theme=tu-dao] .game-hotbar[data-dao-art=fallback] .hotbar-frame::after { content: 'Chưa tải được hình khung HUD'; position: absolute; top: 8px; width: 100%; text-align: center; color: var(--dao-muted); font-size: 10px; }
+
+@media (max-width: 760px) {
+  #game-shell[data-dao-theme=tu-dao] :is(.van-panel, .journal-map-panel) { --vn-frame-size: 30px; }
+  #game-shell[data-dao-theme=tu-dao] :is(.entry-card, #sect-dialog, #game-menu) { --vn-frame-size: 34px; --vn-frame-border: 10px; }
+  #game-shell[data-dao-theme=tu-dao] :is(#sect-dialog, #game-menu) { --vn-window-top: 22px; --vn-window-bottom: 12px; --vn-window-clearance: 24px; padding-inline: 12px; }
+  #game-shell[data-dao-theme=tu-dao] .entry-card { padding: 24px 14px 12px; }
+  #game-shell[data-dao-theme=tu-dao] :is(.player-hud, .skill-panel, #sect-objective.quest-tracker) { --vn-frame-size: 24px; }
+  #game-shell[data-dao-theme=tu-dao] #stage .hotbar-tray { border-radius: 3px; border-color: #99a18b; background: #1a3034ed; }
+}

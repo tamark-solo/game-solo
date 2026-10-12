@@ -15,7 +15,7 @@ const config=resolve(folder,'vite.config.mjs');
 await writeFile(config,`import config from '../../vite.config.ts';\nexport default {...config,publicDir:${JSON.stringify(publicDir)},cacheDir:${JSON.stringify(resolve(folder,'vite-cache'))},server:{...config.server,port:5198}};\n`);
 let backend=await startService(['--import','tsx','server/src/index.ts'],`${endpoint}/health`,{PORT:'2596',GAME_DB_PATH:dbPath});
 let vite:Awaited<ReturnType<typeof startService>>|undefined,browser:Browser|undefined,page:Page|undefined;
-const errors:string[]=[],checks:unknown[]=[];
+const errors:string[]=[],checks:unknown[]=[],sectMessages:unknown[]=[];
 const state=(p:Page):Promise<any>=>p.evaluate('({game:window.__hangNhacDiagnostics(),sect:window.__hangNhacSect(),r01:window.__hangNhacR01(),focus:document.activeElement?.id})');
 try {
   vite=await startService(['node_modules/vite/bin/vite.js','--config',config,'--port','5198'],origin,{VITE_SERVER_URL:endpoint});
@@ -28,6 +28,16 @@ try {
   const context=await browser.newContext({viewport:{width:960,height:720}});
   await context.addInitScript(token=>localStorage.setItem('hang-nhac.guest.v1',token),guest.token);
   page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+  // Keep a bounded, fixture-only command trace for reconnect failures. Never log handshake tokens.
+  page.on('websocket',socket=>{
+    const record=(direction:string,frame:{payload:string|Buffer})=>{
+      const payload=typeof frame.payload==='string'?frame.payload:frame.payload.toString('utf8');
+      if(!payload.includes('sect:command')&&!payload.includes('sect:result'))return;
+      sectMessages.push({direction,at:Date.now(),payload});if(sectMessages.length>40)sectMessages.shift();
+    };
+    socket.on('framesent',frame=>record('sent',frame));
+    socket.on('framereceived',frame=>record('received',frame));
+  });
   await page.goto(origin+'/hang-nhac.html?devGuest=1');await page.waitForFunction('window.__hangNhacDiagnostics?.().ready');
   await page.locator('#join').click();await waitFor(async()=>!!(await state(page!)).sect.view,'initial sect state');
   const initial=await state(page);
@@ -86,5 +96,5 @@ try {
   checks.push({type:'explicit-leave-during-recovery',staysOffline:true});
   await writeFile('artifacts/hang-nhac-reload-interaction.json',JSON.stringify({passed:true,date:new Date().toISOString(),checks,errors,fixturePublicDir:true,realOwnerStorageWritten:false},null,2)+'\n');
   console.log(JSON.stringify({passed:true,checks,errors},null,2));
-}catch(error){console.error(JSON.stringify({checks,errors,state:page?await state(page):undefined,vite:vite?.output(),backend:backend.output()},null,2));await page?.screenshot({path:'artifacts/hang-nhac-reload-interaction-failure.png'});throw error;}
+}catch(error){const failure={checks,errors,sectMessages,state:page?await state(page):undefined,vite:vite?.output(),backend:backend.output()};await writeFile('artifacts/hang-nhac-reload-interaction-failure.json',JSON.stringify(failure,null,2)+'\n');console.error(JSON.stringify(failure,null,2));await page?.screenshot({path:'artifacts/hang-nhac-reload-interaction-failure.png'});throw error;}
 finally{await browser?.close();vite?.stop();backend.stop();}

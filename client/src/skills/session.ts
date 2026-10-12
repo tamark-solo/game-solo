@@ -8,6 +8,7 @@ import type { Input } from '@shared/world/types';
 import { SkillAim } from './aim';
 import { resolveSkillAim } from '../../../shared/skills/aim';
 import { SkillHotbar } from './hotbar';
+import { attachDaoHotbarTheme } from '../ui/dao-runtime-theme';
 
 interface Options {
   room:()=>Room<CourtyardState>|undefined;online:()=>boolean;now:()=>number;
@@ -21,6 +22,7 @@ const rejected:Record<string,string>={cooldown:'Thuật đang hồi.',resource:'
 export class SkillSession {
   private aiming=new SkillAim();
   private hotbar:SkillHotbar;
+  private disposeTheme:()=>void;
   private feedbackTimer?:ReturnType<typeof setTimeout>;
   get aim():Input {return this.aiming.value(this.options.facing());}
   selectedTarget='';
@@ -29,9 +31,7 @@ export class SkillSession {
     this.hotbar=new SkillHotbar(document.getElementById('hotbar-mount')!,{
       cast:id=>this.sendCast(id),blocked:reason=>{this.options.feedback(reason);this.options.focus();},
     });
-    this.hotbar.setIconAtlas('/assets/skill-hud/skill-icons-v2.webp');
-    this.hotbar.setFrame('/assets/skill-hud/cultivation-frame-v3.webp');
-    this.hotbar.setOrbTexture('/assets/skill-hud/orb-textures-v2.webp');
+    this.disposeTheme=attachDaoHotbarTheme(this.hotbar);
     this.hotbar.update({now:0,hp:100,maxHp:100,mp:100,maxMp:100,online:false,hasTarget:false,cooldownEnds:{},aimLabel:'Kiếm / Phong ↓'});
     document.getElementById('training')!.addEventListener('click',()=>this.practice());
     document.getElementById('basic-attack')!.addEventListener('click',()=>this.basic());
@@ -115,5 +115,5 @@ export class SkillSession {
     });
   }
   reset():void {this.selectedTarget='';this.aiming.reset();this.hotbar.hideTooltip();this.updateAim();}
-  dispose():void {clearTimeout(this.feedbackTimer);this.hotbar.dispose();}
+  dispose():void {clearTimeout(this.feedbackTimer);this.disposeTheme();this.hotbar.dispose();}
 }

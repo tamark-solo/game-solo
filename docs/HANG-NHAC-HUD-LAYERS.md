@@ -1,5 +1,7 @@
 # Hằng Nhạc — HUD Vân Ngọc và map nhiều layer
 
+**Cập nhật 12/10:** lớp HUD trong game đã chuyển sang [Thanh Ngọc/HUD 04](HANG-NHAC-DAO-UI-RUNTIME.md) theo yêu cầu owner. Hợp đồng kỹ năng, kích thước native và toàn bộ scene/map bên dưới giữ nguyên. Các mô tả Vân Ngọc là mốc ghép 09/10.
+
 **09/10/2026 · nhánh `_MMO`.** Chủ dự án xác nhận HUD demo đã được duyệt, yêu cầu ghép game và chỉ định nguồn map:
 `C:/Users/AnhLT/Documents/GM/game-solo/docs/design/world/hang-nhac-layer-split-v1/multipart-review-v4/review.html`.
 Trang này hiện hiển thị clone **main-route-v6, cột/đèn v7, cây v9**, không phải project v4 trước cập nhật.

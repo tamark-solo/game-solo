@@ -1,4 +1,5 @@
 """Seal the R01-R05 V2 source and preview library; existing releases are immutable."""
+raise SystemExit('Historical release builder retired after asset cleanup. Use package-approved-jade-library.py for a current workspace snapshot; sealed release metadata is immutable.')
 import hashlib
 import json
 from pathlib import Path

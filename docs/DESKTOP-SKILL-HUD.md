@@ -1,5 +1,7 @@
 # Thanh HUD desktop — Vân Ngọc, bản 03
 
+**Game 12/10:** `/hang-nhac.html` đã chuyển sang [Thanh Ngọc / HUD 04](HANG-NHAC-DAO-UI-RUNTIME.md), giữ hợp đồng 760 × 140, icon R01 v2 và snapshot server. Trang demo 03 và hồ sơ duyệt mỹ thuật bên dưới giữ riêng để đối chiếu lịch sử.
+
 **09/10/2026 · _MMO.** Chủ dự án cung cấp mẫu HUD MMO có khung mỹ thuật liền, cầu tài nguyên và dãy kỹ năng. Bản 03 chuyển theo cấu trúc **Type 2** trong mẫu, phối đồng cổ / ngọc / mây cuộn để hợp chất tu tiên và map Hằng Nhạc. Chủ dự án đã xác nhận duyệt HUD và yêu cầu ghép vào game. HUD đã nối vào `/hang-nhac.html` qua snapshot server và SkillSession; trang demo giữ riêng để đối chiếu. Desktop giữ artwork 760 × 140; màn hình hẹp có fallback chức năng với ba nút 48 px. Xem [bàn giao HUD/layer](HANG-NHAC-HUD-LAYERS.md).
 
 [Mở bản thử](http://127.0.0.1:5173/skill-bar-desktop.html) · [Ảnh / artwork / prompt](design/ui/desktop-skill-hud-v3/README.md) · [Skill core](SKILL-CORE.md).
@@ -57,4 +59,4 @@ Trong game, SkillSession lấy HP/MP/cooldown/cast/target từ snapshot server, 
 
 [Bản ghi 03](data/desktop-skill-hud-v3-verification.json) · [ảnh 03](design/ui/desktop-skill-hud-v3/README.md). Kiểm kỹ thuật không thay duyệt hình.
 
-[Bản 01](design/ui/desktop-skill-hud-v1/README.md) giữ ảnh thanh lớn ban đầu; [bản 02](design/ui/desktop-skill-hud-v2/README.md) giữ ba lựa chọn icon nhỏ trước khi chủ dự án làm rõ cấu trúc mong muốn bằng mẫu. Trang tương tác hiện dùng bản 03.
+[Bản 01](design/ui/desktop-skill-hud-v1/README.md) và ảnh ba phương án thanh [bản 02](design/ui/desktop-skill-hud-v2/README.md) đã được dọn ngày 12/10/2026 theo yêu cầu làm nhẹ dự án. Nguồn/icon 02 đang được bản 03 dùng lại vẫn giữ đủ prompt, PNG và metadata. Trang tương tác hiện dùng bản 03.

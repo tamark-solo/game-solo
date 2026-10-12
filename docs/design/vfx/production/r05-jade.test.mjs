@@ -15,10 +15,20 @@ test('R05 V3 has 114 distinct-within-clip RGBA frames in 14 atlases with valid s
   for(const c of Object.values(k.clips)){assert.equal(c.frames.length,c.durations.length);if(c.opacities)assert.equal(c.opacities.length,c.frames.length);const hashes=new Set();for(const f of c.frames){const p=await readFile(new URL(`../r05-${k.family}-v3/${f.file}`,import.meta.url));assert.equal(p[25],6);assert.deepEqual([p.readUInt32BE(16),p.readUInt32BE(20)],c.frameSize);hashes.add(hash(p));assert.ok(f.rect.x+f.rect.w<=c.atlasSize[0]&&f.rect.y+f.rect.h<=c.atlasSize[1]);}assert.equal(hashes.size,c.frames.length);}
  }
 });
-test('56 PNGs retain V2 artwork unchanged, 58 FX PNGs are new, and sealed V2 packs stay unchanged',async()=>{
- let reused=0,fresh=0;for(const k of kits)for(const c of Object.values(k.clips)){if(!c.reusedFrom){fresh+=c.frames.length;continue;}for(const f of c.frames){assert.deepEqual(await readFile(new URL(`../r05-${k.family}-v3/${f.file}`,import.meta.url)),await readFile(new URL(`../r05-${k.family}-v2/${f.file}`,import.meta.url)));reused++;}}
+test('56 PNGs retain V2 artwork against sealed digests and 58 FX PNGs are new',async()=>{
+ let reused=0,fresh=0;
+ for(const k of kits){
+  const historical=await json(`../releases/skill-packs/r05-${k.family}-2.0.0.manifest.json`);
+  const hashes=new Map(historical.files.map(e=>[e.file,e.sha256]));
+  for(const c of Object.values(k.clips)){
+   if(!c.reusedFrom){fresh+=c.frames.length;continue;}
+   for(const f of c.frames){
+    const original=hashes.get(`r05-${k.family}-v2/${f.file}`);assert.ok(original,f.file);
+    assert.equal(hash(await readFile(new URL(`../r05-${k.family}-v3/${f.file}`,import.meta.url))),original,f.file);reused++;
+   }
+  }
+ }
  assert.equal(reused,56);assert.equal(fresh,58);
- for(const k of kits){const m=await json(`../releases/skill-packs/r05-${k.family}-2.0.0.manifest.json`);for(const e of m.files)assert.equal(hash(await readFile(new URL('../'+e.file,import.meta.url))),e.sha256,e.file);}
 });
 test('quiet hold timings match pose ends and one release survives a dropped render without actor growth',()=>{
  for(const k of kits){const c=k.clips[k.skill.character.clip],end=k.skill.events.find(e=>e.type==='character.end').frame;assert.equal(c.durations.reduce((a,b)=>a+b,0),end-1);assert.equal(new SequencePlayer(c).sample(at(end)),null);assert.equal(k.skill.character.bodyHeightMax,80);assert.equal(k.skill.authority.vfxAppliesDamage,false);assert.equal(k.skill.authority.vfxMovesActor,false);assert.equal(k.skill.spirit,undefined);const cursor=new FrameEventCursor(24,k.skill.events),events=cursor.advance(at(end));assert.equal(events.filter(e=>e.type==='release'||e.type==='movement.request').length,1);assert.deepEqual(cursor.advance(at(end)),[]);}
