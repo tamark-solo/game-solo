@@ -16,7 +16,7 @@
     "assetgen:prepare": "node scripts/game-asset-prepare.mjs",
     "assetgen:mcp": "node scripts/game-assetgen-mcp.mjs",
     "test:assetgen": "node --test tests/unit/imagegen-router.test.mjs tests/unit/game-assetgen.test.mjs tests/unit/game-assetgen-mcp.test.mjs tests/unit/game-asset-prepare.test.mjs",
-    "assets": "node scripts/sync-preview-assets.mjs && tsx scripts/build-hang-nhac-runtime.ts && node scripts/sync-r01-vfx.mjs && node scripts/sync-skill-hud.mjs && node scripts/sync-dao-dual-ui.mjs && node scripts/sync-hang-nhac-van-ngoc-clarity.mjs && node scripts/sync-quest-motion.mjs && node scripts/sync-quest-qi.mjs && node scripts/sync-character-ui-art.mjs && node scripts/sync-van-hai-player-study.mjs && node scripts/sync-title-art.mjs && node scripts/sync-van-ngoc-gameplay-assets.mjs && node scripts/sync-pixel-actor-review.mjs && node scripts/sync-hang-nhac-pixel-player.mjs",
+    "assets": "node scripts/sync-preview-assets.mjs && tsx scripts/build-hang-nhac-runtime.ts && node scripts/sync-r01-vfx.mjs && node scripts/sync-skill-hud.mjs && node scripts/sync-dao-dual-ui.mjs && node scripts/sync-hang-nhac-van-ngoc-clarity.mjs && node scripts/sync-quest-motion.mjs && node scripts/sync-quest-qi.mjs && node scripts/sync-character-ui-art.mjs && node scripts/sync-van-hai-player-study.mjs && node scripts/sync-title-art.mjs && node scripts/sync-van-ngoc-gameplay-assets.mjs && node scripts/sync-pixel-actor-review.mjs && node scripts/sync-hang-nhac-pixel-player.mjs && node scripts/sync-game-actor-actions.mjs",
     "dev": "npm run assets && concurrently -k -n SERVER,CLIENT npm:dev:server npm:dev:client",
     "dev:client": "vite --config vite.config.ts",
     "dev:server": "tsx watch server/src/index.ts",
@@ -68,7 +68,9 @@
     "assets:actor-animation-production": "node scripts/sync-pixel-actor-review.mjs",
     "test:actor-animation-combat": "node scripts/verify-wang-pixel-combat.mjs && tsx --test tests/unit/pixel-locomotion.test.ts tests/unit/animation-arena.test.ts && node tests/smoke/wang-pixel-combat-gpu.mjs && node tests/smoke/wang-pixel-combat-browser.mjs",
     "test:basic-attack-vfx": "node scripts/verify-basic-attack-vfx.mjs && tsx --test tests/unit/basic-attack-presentation.test.ts && node tests/smoke/basic-attack-vfx-gpu.mjs && node tests/smoke/basic-attack-vfx-browser.mjs",
-    "test:actor-animation-production": "node scripts/verify-wang-pixel-production.mjs && node scripts/verify-wang-pixel-wind.mjs && tsx --test tests/unit/actor-animation-pilot.test.ts tests/unit/pixel-actor-production.test.ts tests/unit/animation-arena.test.ts && node tests/smoke/wang-pixel-production-gpu.mjs && node tests/smoke/wang-pixel-wind-gpu.mjs && node tests/smoke/wang-pixel-production-browser.mjs && node tests/smoke/wang-pixel-wind-browser.mjs"
+    "test:actor-animation-production": "node scripts/verify-wang-pixel-production.mjs && node scripts/verify-wang-pixel-wind.mjs && tsx --test tests/unit/actor-animation-pilot.test.ts tests/unit/pixel-actor-production.test.ts tests/unit/animation-arena.test.ts && node tests/smoke/wang-pixel-production-gpu.mjs && node tests/smoke/wang-pixel-wind-gpu.mjs && node tests/smoke/wang-pixel-production-browser.mjs && node tests/smoke/wang-pixel-wind-browser.mjs",
+    "assets:game-actor-actions": "node scripts/sync-r01-vfx.mjs && node scripts/sync-hang-nhac-pixel-player.mjs && node scripts/sync-game-actor-actions.mjs",
+    "test:game-actor-actions": "node scripts/verify-game-actor-actions.mjs && tsx --test tests/unit/actor-runtime.test.ts && node tests/smoke/game-actor-actions-gpu.mjs && node --import tsx tests/smoke/game-actor-runtime-browser.mjs"
   },
   "dependencies": {
     "@colyseus/schema": "5.0.36",

@@ -34,7 +34,7 @@ try {
   page = await context.newPage();
   page.on('pageerror', error => errors.push(error.message));
   page.on('response', response => { if (response.status() >= 400) errors.push(`HTTP ${response.status()}: ${response.url()}`); });
-  await page.goto(`${origin}/hang-nhac.html?devGuest=1`);
+  await page.goto(`${origin}/hang-nhac.html?devGuest=1&mapArt=current`);
   await page.waitForFunction(() => window.__hangNhacDiagnostics?.().ready);
   assert.equal(await page.locator('[data-hotbar-skill]').count(), 3);
   assert.equal(await page.locator('.hotbar-reserved').count(), 7);

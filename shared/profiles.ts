@@ -19,6 +19,7 @@ export function cleanPlayerName(value: unknown, fallback: string): string {
 export interface CharacterProfile {
   schema: 2; id: string; accountId: string; avatarId: AvatarId; name: string;
   mapId: string; mapVersion: string; x: number; y: number; direction: Direction;
+  facing?:{x:number;y:number};
   progressionKind: 'cultivation' | 'recovery'; milestone: 'introduction' | 'M01' | 'M02' | 'M03' | 'M04'; cultivation: number; sect: SectProgress;
   skills: SkillId[]; hp: number; mp: number; casts: number; practiceHits: number;
   nextSwordAt: number; nextThunderAt: number; nextWindAt: number; lastSpentAt: number;

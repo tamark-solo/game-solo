@@ -9,7 +9,7 @@ import { authoredMapParts, type AuthoredMapScene } from '@shared/map-presentatio
 
 export interface LoadedActor { definition: ActorDefinition; atlas: Atlas; texture: THREE.Texture; alpha: AlphaMask; frameMasks: Map<string,AlphaMask> }
 export interface ActorSpriteFrame {
-  source?:'skill'|'quest';
+  source?:'skill'|'quest'|'locomotion';
   clip:string;index:number;texture:THREE.Texture;rect:{x:number;y:number;w:number;h:number};
   atlasSize:[number,number];frameSize:[number,number];anchor:[number,number];mask?:AlphaMask;
   crop?:{x:number;y:number;w:number;h:number};

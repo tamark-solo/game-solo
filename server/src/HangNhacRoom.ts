@@ -21,8 +21,9 @@ import { observeAvoidMotion, observeAvoidSkill, resolveAvoidAttempt } from '../.
 import { basicDamage, copyLessonProfile, creditLessonHit, lessonView, performLessonCommand,
   type LessonRuntime, type LessonOutcome } from './training-lessons';
 import {ChapterActivity} from './chapter-activity';
+import type {ActorActionFact} from '../../shared/actor-actions';
 import {chapterAvailable,performChapterCommand} from './chapter-progress';
-import {applyChapterMovement,chapterCommandKey,initialChapter,readChapterCommand,type ChapterView,type ChapterResult} from '../../shared/chapter';
+import {CHAPTER_WORLD,applyChapterMovement,chapterCommandKey,initialChapter,readChapterCommand,type ChapterView,type ChapterResult} from '../../shared/chapter';
 import {ownedItemId} from '../../shared/character-inventory';
 
 interface ProfileAuth { accountId: string; profile: CharacterProfile; grant?:PlayGrant }
@@ -47,6 +48,7 @@ export class HangNhacRoom extends CourtyardRoom {
   private activities=new Map<string,ChapterActivity>();
   private chapterSent=new Map<string,string>();
   private chapterWatchers=new Set<string>();
+  private pendingBasics=new Map<string,Array<{client:Client;id:string;inputSeq:number;expires:number}>>();
   private engineFor(id:string):R01Engine{return this.activities.get(id)?.engine??this.engine;}
   private nextSaveAt = 0;
   private cycles = new Map<string,number>();
@@ -158,6 +160,9 @@ export class HangNhacRoom extends CourtyardRoom {
             const target=outcome.basicTarget,dx=target?target.x-actor.x:0,dy=target?target.y-actor.y:1;
             const direction:Direction=Math.abs(dx)>Math.abs(dy)?dx>0?'east':'west':dy<0?'north':'south';
             this.broadcast('sect:animation',{id:`${actor.id}:${command.id}`,actorId:actor.id,kind,direction,at:this.engine.now} satisfies QuestMotionEvent);
+            if(kind==='basic'&&target){const length=Math.hypot(dx,dy)||1,base={strikeId:actor.id+':'+command.id,actorId:actor.id,action:'attack' as const,at:this.engine.now,x:actor.x,y:actor.y,dx:dx/length||0,dy:dy/length||(dx?0:1)};
+              this.actorAction({...base,type:'start'});this.actorAction({...base,type:'release'});this.actorAction({...base,type:'hit',targetId:target.id,targetX:target.x,targetY:target.y,targetHeight:26});}
+
           }
         }
       }catch{client.send('sect:result',{requestId:command.id,ok:false,reason:'save'});}
@@ -179,6 +184,8 @@ export class HangNhacRoom extends CourtyardRoom {
     if (profile) {
       if (profile.revision>0 && profile.mapId === HANG_NHAC.id && hangNhacWalkable(profile)) { actor.x = profile.x; actor.y = profile.y; }
       actor.direction = DIRECTIONS.includes(profile.direction as Direction) ? profile.direction : 'south';
+      const fallback={south:[0,1],north:[0,-1],west:[-1,0],east:[1,0]}[actor.direction]??[0,1];
+      actor.facingX=profile.facing?.x??fallback[0];actor.facingY=profile.facing?.y??fallback[1];
       const data = options as Record<string, unknown>;
       actor.name = grant?profile.name:cleanPlayerName(data.name, profile.name);
       for (const key of ['hp','mp','casts','practiceHits','nextSwordAt','nextThunderAt','nextWindAt','lastSpentAt'] as const) actor[key] = profile[key];
@@ -186,7 +193,7 @@ export class HangNhacRoom extends CourtyardRoom {
     }
     actor.scene='hub';
     if(profile?.chapter&&profile.chapter.scene!=='hub'){
-      this.activities.set(actor.id,new ChapterActivity(actor,profile,this.engine.now,e=>this.privateSkill(e),(a,c,r)=>this.commitCast(a,c,r)));actor.scene=actor.id;
+      this.activities.set(actor.id,new ChapterActivity(actor,profile,this.engine.now,e=>this.privateSkill(e),(a,c,r)=>this.commitCast(a,c,r),e=>this.actorAction(e)));actor.scene=actor.id;
     }else this.engine.add(actor as CombatActor);
     this.save(client.sessionId);
   }
@@ -203,6 +210,8 @@ export class HangNhacRoom extends CourtyardRoom {
   protected stepMovement(player: MovementState, input: MoveInput, dt: number): void {
     const actor = player as Disciple, command = { x: input.moveX, y: input.moveY };
     this.engineFor(actor.id).movement(actor.id, command); this.held.set(actor.id, command);
+    this.activities.get(actor.id)?.movement(command);
+    if(actor.hp>0&&Math.hypot(command.x,command.y)>.001&&!actor.motionLocked){const length=Math.hypot(command.x,command.y);actor.facingX=command.x/length;actor.facingY=command.y/length;}
     (this.activities.has(actor.id)?applyChapterMovement:applyR01Movement)(actor,input,dt);
   }
   protected stepWithoutInput(player: MovementState, dt: number): void {
@@ -216,7 +225,7 @@ export class HangNhacRoom extends CourtyardRoom {
     for(const [id,grant] of this.grants){
       const actor=this.state.players.get(id),client=this.clients.find(value=>value.sessionId===id);
       if(actor?.connected&&!HangNhacRoom.gateway?.renew(grant,id)){
-        actor.connected=false;this.stop(id);this.engine.cancel(id);this.pendingCasts.delete(id);this.save(id);
+        actor.connected=false;this.stop(id);this.engine.cancel(id);this.pendingCasts.delete(id);this.pendingBasics.delete(id);this.save(id);
         client?.send('entry:revoked',{message:'Phiên điều khiển đã kết thúc. Vui lòng kiểm tra tài khoản và server.'});client?.leave(4000);
       }
     }
@@ -233,6 +242,10 @@ export class HangNhacRoom extends CourtyardRoom {
       if(waiting.length)this.pendingCasts.set(id,waiting);else this.pendingCasts.delete(id);
     }
     this.engine.finish(dt); this.state.serverTime = this.engine.now;
+    for(const [id,pending]of this.pendingBasics){const consumed=this.inputs.get(id).consumedCount,waiting:typeof pending=[];
+      for(const request of pending){if(request.inputSeq<=consumed)this.chapterBasic(request.client,{id:request.id});else if(this.engine.now>=request.expires)request.client.send('chapter:result',{requestId:request.id,ok:false,reason:'input'});else waiting.push(request);}
+      if(waiting.length)this.pendingBasics.set(id,waiting);else this.pendingBasics.delete(id);
+    }
     for(const [id,activity] of this.activities){const p=this.profiles.get(id);if(!p)continue;activity.after(dt,p);this.finishChapterActivity(id,activity);}
     this.advanceLessons(dt);
     const targets=new Map(this.engine.targets),projectiles=new Map(this.engine.projectiles);
@@ -295,6 +308,7 @@ export class HangNhacRoom extends CourtyardRoom {
     const profile=this.profiles.get(client.sessionId);
     if(profile&&!profile.skills.includes(command.skillId)){client.send('skill:result',{requestId:command.id,accepted:false,reason:'rights'});return;}
     const old=profile?this.storeFor(client.sessionId).receipt(profile.id,command.id) as {command:string;result:CastResult}|undefined:undefined;
+    if(!old&&this.activities.get(actor.id)?.basicLocked){client.send('skill:result',{requestId:command.id,accepted:false,reason:'active'});return;}
     if(!old&&this.activities.has(actor.id)&&this.activities.get(actor.id)!.view(profile!).status!=='running'){client.send('skill:result',{requestId:command.id,accepted:false,reason:'inactive'});return;}
     const result=old?old.command===commandKey(command)?{...old.result,duplicate:true}:{requestId:command.id,accepted:false,reason:'request_reused'}:
       this.engineFor(client.sessionId).cast(client.sessionId,command,this.held.get(client.sessionId));
@@ -330,7 +344,7 @@ export class HangNhacRoom extends CourtyardRoom {
   private sendChapter(client:Client,force=false):void{
     if(!force&&!this.chapterWatchers.has(client.sessionId))return;
     const p=this.profiles.get(client.sessionId),a=this.state.players.get(client.sessionId);if(!p||!a?.connected)return;
-    const view=this.chapterView(p,a.id),key=JSON.stringify({...view,now:0});
+    const view=this.chapterView(p,a.id),key=JSON.stringify({...view,now:view.status==='running'?Math.floor(view.now/100):0});
     if(force||this.chapterSent.get(a.id)!==key){client.send('chapter:state',view);this.chapterSent.set(a.id,key);}
   }
   private chapterCommand(client:Client,raw:unknown):void{
@@ -346,7 +360,7 @@ export class HangNhacRoom extends CourtyardRoom {
       const effect=outcome.effect;
       if(effect==='enter'){
         this.clearLesson(actor.id);this.engine.remove(actor.id);this.stopQuestLoop(actor.id);
-        this.activities.set(actor.id,new ChapterActivity(actor,candidate,this.engine.now,e=>this.privateSkill(e),(a,c,r)=>this.commitCast(a,c,r)));actor.scene=actor.id;
+        this.activities.set(actor.id,new ChapterActivity(actor,candidate,this.engine.now,e=>this.privateSkill(e),(a,c,r)=>this.commitCast(a,c,r),e=>this.actorAction(e)));actor.scene=actor.id;
       }else if(effect==='leave'){
         this.activities.get(actor.id)?.engine.remove(actor.id);this.activities.delete(actor.id);this.engine.add(actor);
         Object.assign(actor,{x:candidate.x,y:candidate.y,scene:'hub',hp:Math.max(1,actor.hp)});candidate.hp=actor.hp;
@@ -355,20 +369,30 @@ export class HangNhacRoom extends CourtyardRoom {
       }else if(effect==='trip_cancel')this.activities.get(actor.id)?.stop('ready');
       if(effect==='guard'){actor.mp=candidate.mp;actor.lastSpentAt=candidate.lastSpentAt;}
       this.activities.get(actor.id)?.apply(candidate.chapter!);
-      if(effect&&effect!=='guard'){this.stop(actor.id);this.pendingCasts.delete(actor.id);this.held.set(actor.id,{x:0,y:0});}
+      if(effect&&effect!=='guard'){this.stop(actor.id);this.pendingCasts.delete(actor.id);this.pendingBasics.delete(actor.id);this.held.set(actor.id,{x:0,y:0});}
       // Non-movement interactions can change activity state (e.g. preparation), but not the server clock.
       candidate=this.snapshot(candidate,actor);
       this.storeFor(actor.id).commitSect(candidate,cmd.id,{command:key,result:outcome.result});this.profiles.set(actor.id,candidate);actor.savedAt=candidate.updatedAt;
       client.send('chapter:result',outcome.result);
+      if(cmd.action==='interact'&&['EX01','EX02'].includes(candidate.chapter?.activity??'')&&cmd.node){
+        const n=CHAPTER_WORLD.nodes.find(n=>n.id===cmd.node);if(n){const dx=n.x-actor.x,dy=n.y-actor.y,length=Math.hypot(dx,dy)||1;
+          this.actorAction({type:'gather',strikeId:'gather:'+actor.id+':'+cmd.id,actorId:actor.id,action:'gather',at:this.engine.now,x:actor.x,y:actor.y,dx:dx/length||0,dy:dy/length||(dx?0:1)});}
+      }
       const enemy=this.activities.get(actor.id)?.view(candidate).enemy;
       if(enemy&&outcome.effect==='start')client.send('training:result',{ok:true,targetId:enemy.id});
     }catch{
       this.activities.get(actor.id)?.engine.remove(actor.id);this.activities.delete(actor.id);this.engine.remove(actor.id);Object.assign(actor,actorBefore);
-      if(before.chapter?.scene!=='hub'&&before.chapter){this.activities.set(actor.id,new ChapterActivity(actor,before,this.engine.now,e=>this.privateSkill(e),(a,c,r)=>this.commitCast(a,c,r)));}
+      if(before.chapter?.scene!=='hub'&&before.chapter){this.activities.set(actor.id,new ChapterActivity(actor,before,this.engine.now,e=>this.privateSkill(e),(a,c,r)=>this.commitCast(a,c,r),e=>this.actorAction(e)));}
       else this.engine.add(actor);
       client.send('chapter:result',{requestId:cmd.id,ok:false,reason:'save'});
     }
     this.sendChapter(client,true);this.sendCharacter(client,true);this.sendSect(client,true);
+  }
+  private actorAction(event:ActorActionFact):void {
+    const actor=this.state.players.get(event.actorId);if(!actor)return;
+    event={...event,avatarId:actor.avatarId};
+    if(actor.scene&&actor.scene!=='hub')this.clients.find(c=>c.sessionId===event.actorId)?.send('actor:action',event);
+    else this.broadcast('actor:action',event);
   }
   private chapterBasic(client:Client,raw:unknown):void{
     const p=this.profiles.get(client.sessionId),a=this.state.players.get(client.sessionId),activity=this.activities.get(client.sessionId);
@@ -376,14 +400,21 @@ export class HangNhacRoom extends CourtyardRoom {
     if(!p||!a?.connected||!activity||typeof id!=='string'||!/^[A-Za-z0-9_-]{1,80}$/.test(id))return;
     const key=JSON.stringify(['chapter-v1','basic']),old=this.storeFor(a.id).sectReceipt(p.id,id) as {command:string;result:ChapterResult}|undefined;
     if(old){client.send('chapter:result',old.command===key?{...old.result,duplicate:true}:{requestId:id,ok:false,reason:'request_reused'});return;}
+    const seq=(raw as {inputSeq?:unknown}).inputSeq;
+    if(seq!==undefined){if(!Number.isSafeInteger(seq)||Number(seq)<0){client.send('chapter:result',{requestId:id,ok:false,reason:'input'});return;}
+      const consumed=this.inputs.get(a.id).consumedCount;if(Number(seq)>consumed){const queue=this.pendingBasics.get(a.id)??[];
+        if(Number(seq)>consumed+65||queue.length>=8){client.send('chapter:result',{requestId:id,ok:false,reason:'input'});return;}
+        if(!queue.some(r=>r.id===id))queue.push({client,id,inputSeq:Number(seq),expires:this.engine.now+3000});this.pendingBasics.set(a.id,queue);return;}
+    }
     const enemy=activity.view(p).enemy;if(!enemy)return;
-    const before=this.snapshot(p,a),dx=enemy.x-a.x,dy=enemy.y-a.y;
-    if(!activity.basic(p,{x:dx,y:dy})){client.send('chapter:result',{requestId:id,ok:false,reason:'cooldown'});return;}
+    const before=this.snapshot(p,a),actorBefore=a.toJSON(),dx=enemy.x-a.x,dy=enemy.y-a.y;
+    if(!activity.basic(p,{x:dx,y:dy},`chapter:${a.id}:${id}`,this.held.get(a.id))){client.send('chapter:result',{requestId:id,ok:false,reason:'cooldown'});return;}
     try{
+      const length=Math.hypot(dx,dy)||1;a.facingX=dx/length;a.facingY=dy/length;
       const candidate=this.snapshot(p,a),result={requestId:id,ok:true};this.storeFor(a.id).commitSect(candidate,id,{command:key,result});this.profiles.set(a.id,candidate);
-      client.send('chapter:result',result);client.send('sect:animation',{id:`chapter:${a.id}:${id}`,actorId:a.id,kind:'basic',direction:Math.abs(dx)>Math.abs(dy)?dx>0?'east':'west':dy<0?'north':'south',at:activity.engine.now} satisfies QuestMotionEvent);
+      client.send('chapter:result',result);activity.flushActions();
     }catch{
-      this.activities.set(a.id,new ChapterActivity(a,before,this.engine.now,e=>this.privateSkill(e),(actor,c,r)=>this.commitCast(actor,c,r)));client.send('chapter:result',{requestId:id,ok:false,reason:'save'});
+      Object.assign(a,actorBefore);this.activities.set(a.id,new ChapterActivity(a,before,this.engine.now,e=>this.privateSkill(e),(actor,c,r)=>this.commitCast(actor,c,r),e=>this.actorAction(e)));client.send('chapter:result',{requestId:id,ok:false,reason:'save'});
     }
   }
   private finishChapterActivity(id:string,activity:ChapterActivity):void{
@@ -403,13 +434,15 @@ export class HangNhacRoom extends CourtyardRoom {
   private snapshot(profile: CharacterProfile, actor: Disciple): CharacterProfile {
     const activity=this.activities.get(actor.id);
     return { ...profile,...(profile.chapter?{chapter:{...profile.chapter,...(activity?{activitySave:activity.snapshot()}:{})}}:{}), name: actor.name, x: activity?profile.x:actor.x, y: activity?profile.y:actor.y, direction: actor.direction as Direction, mapId: HANG_NHAC.id, mapVersion: HANG_NHAC.version,
-      hp: actor.hp, mp: actor.mp, casts: actor.casts, practiceHits: actor.practiceHits, nextSwordAt: actor.nextSwordAt,
+      facing:{x:actor.facingX,y:actor.facingY},hp: actor.hp, mp: actor.mp, casts: actor.casts, practiceHits: actor.practiceHits, nextSwordAt: actor.nextSwordAt,
       nextThunderAt: actor.nextThunderAt, nextWindAt: actor.nextWindAt, lastSpentAt: actor.lastSpentAt };
   }
   private commitCast(actor: CombatActor, command: CastCommand, result: CastResult): void {
     const profile = this.profiles.get(actor.id); if (!profile) return;
-    const candidate = this.snapshot(profile, actor as Disciple);
+    const length=Math.hypot(actor.castAimX??0,actor.castAimY??0);
+    const candidate = this.snapshot(profile, actor as Disciple);if(length>.001)candidate.facing={x:actor.castAimX!/length,y:actor.castAimY!/length};
     this.storeFor(actor.id).commitCast(candidate, command.id, { command: commandKey(command), result });
+    if(candidate.facing){(actor as Disciple).facingX=candidate.facing.x;(actor as Disciple).facingY=candidate.facing.y;}
     this.profiles.set(actor.id, candidate); (actor as Disciple).savedAt = candidate.updatedAt;
   }
   private save(id: string): void {
@@ -426,6 +459,7 @@ export class HangNhacRoom extends CourtyardRoom {
     this.stopQuestLoop(client.sessionId);
     this.clearLesson(client.sessionId);
     this.pendingCasts.delete(client.sessionId);
+    this.pendingBasics.delete(client.sessionId);
     this.cycles.delete(client.sessionId);this.sectSent.delete(client.sessionId);this.sectWatchers.delete(client.sessionId);
     this.engine.cancel(client.sessionId); this.held.delete(client.sessionId); this.save(client.sessionId);
     const p = this.profiles.get(client.sessionId),grant=this.grants.get(client.sessionId),reserveMs=this.reconnectWindow(client.sessionId)*1000;
@@ -452,6 +486,7 @@ export class HangNhacRoom extends CourtyardRoom {
     this.stopQuestLoop(client.sessionId);
     this.clearLesson(client.sessionId);
     this.pendingCasts.delete(client.sessionId);
+    this.pendingBasics.delete(client.sessionId);
     this.cycles.delete(client.sessionId);this.sectSent.delete(client.sessionId);this.sectWatchers.delete(client.sessionId);
     this.engine.cancel(client.sessionId); this.save(client.sessionId); this.engine.remove(client.sessionId); this.held.delete(client.sessionId);
     this.activities.delete(client.sessionId);this.chapterSent.delete(client.sessionId);this.chapterWatchers.delete(client.sessionId);
@@ -465,6 +500,7 @@ export class HangNhacRoom extends CourtyardRoom {
     this.questLoops.clear();
     for(const id of this.lessons.keys())this.clearLesson(id);
     this.pendingCasts.clear();
+    this.pendingBasics.clear();
     for (const [id, p] of this.profiles) { this.save(id);const grant=this.grants.get(id);if(grant)HangNhacRoom.gateway?.release(grant,id);else HangNhacRoom.leases.release(p.accountId,id); }
     this.grants.clear();this.persistence.clear();
     this.activities.clear();this.chapterSent.clear();this.chapterWatchers.clear();

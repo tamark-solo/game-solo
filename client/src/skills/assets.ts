@@ -10,8 +10,8 @@ export class SkillAssets {
   private masks=new Map<string,AlphaMask>();
   private frameMasks=new Map<string,AlphaMask>();
   readonly failures=new Map<string,string>();
-  async load():Promise<void> {
-    const response=await fetch('/assets/r01/clips.json');if(!response.ok)throw new Error('Thiếu catalog animation/FX skill.');
+  async load(catalogUrl='/assets/r01/clips.json'):Promise<void> {
+    const response=await fetch(catalogUrl);if(!response.ok)throw new Error('Thiếu catalog animation/FX skill.');
     this.catalog=await response.json();new SkillTimeline(this.catalog);
     await Promise.all(this.fxClips().map(id=>this.texture(id)));
   }

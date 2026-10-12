@@ -107,16 +107,16 @@ try {
   page.on('pageerror', error => errors.push(error.message));
   page.on('response', response => { if (response.status() >= 400) errors.push(`HTTP ${response.status()}: ${response.url()}`); });
   await page.goto(`${origin}/hang-nhac.html?devGuest=1&review=map-art-smoke#fixture`);
-  const initial = await selectedArt('current');
+  const initial = await selectedArt('van-ngoc-detail');
   assert.equal(own(initial).x, release.world.spawn.x);
   assert.equal(own(initial).y, release.world.spawn.y);
-  checks.push('default_preserves_current_32_parts_and_10_covers', 'native_character_camera_world_and_owner_spawn');
+  checks.push('default_loads_owner_selected_v2_without_legacy_layers', 'native_character_camera_world_and_owner_spawn');
 
   await page.locator('#join').click();
   await page.waitForFunction(() => window.__hangNhacDiagnostics().status === 'connected' && window.__hangNhacR01().own?.profileId);
   const connected = await diagnostic();
   const profileId = await page.evaluate(() => window.__hangNhacR01().own.profileId);
-  const timeOrigin = await page.evaluate(() => performance.timeOrigin);
+  let timeOrigin = await page.evaluate(() => performance.timeOrigin);
   const assertSameSession = async state => {
     assert.equal(state.status, 'connected');
     assert.equal(state.sessionId, connected.sessionId);
@@ -153,7 +153,14 @@ try {
   checks.push('minimap_expanded_map_and_journal_follow_selected_artwork');
 
   await assertSameSession(await switchArt('current'));
-  assert.notEqual(new URL(page.url()).searchParams.get('mapArt'), 'van-ngoc');
+  assert.equal(new URL(page.url()).searchParams.get('mapArt'), 'current');
+  await page.reload();
+  await selectedArt('current');
+  await page.waitForFunction(() => window.__hangNhacDiagnostics().status === 'connected' && window.__hangNhacR01().own?.profileId);
+  assert.equal(await page.evaluate(() => window.__hangNhacR01().own.profileId), profileId);
+  Object.assign(connected, await diagnostic());
+  timeOrigin = await page.evaluate(() => performance.timeOrigin);
+  checks.push('explicit_legacy_selection_survives_reload_after_default_change');
   await assertSameSession(await switchArt('van-ngoc'));
   checks.push('switch_back_restores_original_layered_runtime_and_returns_to_preview');
 

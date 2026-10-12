@@ -52,7 +52,8 @@ try {
     assert.equal(item.casts,before+1,'release belongs to this command, not an older cast');
     assert.ok(Math.abs(item.x-x)<.001&&Math.abs(item.y-y)<.001,JSON.stringify(item));assert.equal(item.direction,direction);
     const catalog=await page.evaluate(()=>fetch('/assets/r01/clips.json').then(r=>r.json()));
-    assert.ok(item.clips.includes(catalog.skills[skill].bindings[s.own.avatarId][direction]),'actual rendered pose uses the accepted direction');
+    const expected=s.own.avatarId==='CHR-WANG-LIN-CHIBI'?await page.evaluate(async([skill,direction])=>{const pixel=await fetch('/assets/hang-nhac-pixel-player/catalog.json').then(r=>r.json());return pixel.clips[({sword:'cast_forward',thunder:'cast_point',wind:'dash'})[skill]+'-'+direction].id;},[skill,direction]):catalog.skills[skill].bindings[s.own.avatarId][direction];
+    assert.ok(item.clips.includes(expected),'actual rendered pose uses the accepted direction');
     checks.push({avatar:s.own.avatarId,skill,direction,aim:[x,y],renderedClip:item.clips[0],released:true});return s;
   };
   await page.goto(origin+'/hang-nhac.html?devGuest=1');await page.waitForFunction(()=>window.__hangNhacDiagnostics?.().ready);await page.locator('#join').click();await load();

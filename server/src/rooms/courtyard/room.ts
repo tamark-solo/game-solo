@@ -19,7 +19,7 @@ export class CourtyardRoom extends Room<{ state: CourtyardState; input: MoveInpu
   protected stepMovement(player: MovementState, input: MoveInput, dt: number): void { applyMovement(player, input, dt); }
   protected get simulateWithoutInput(): boolean { return false; }
   protected reconnectWindow(_id:string):number{return courtyardLimits.reconnectSeconds;}
-  protected stepWithoutInput(player: MovementState, dt: number): void { this.stepMovement(player, new MoveInput({ moveX:0,moveY:0 }), dt); }
+  protected stepWithoutInput(player: MovementState, dt: number): void { this.stepMovement(player, new MoveInput({ moveX:0,moveY:0,fast:false }), dt); }
   protected beforeSimulation(_dt: number): void {}
   protected afterSimulation(_dt: number): void {}
 
@@ -39,7 +39,7 @@ export class CourtyardRoom extends Room<{ state: CourtyardState; input: MoveInpu
     const spawn = this.spawn(slot);
     this.state.players.set(client.sessionId, new Disciple({
       name, avatarId, x: spawn.x, y: spawn.y,
-      direction: 'south', moving: false, connected: true, ack: -1,
+      direction: 'south', moving: false, connected: true, ack: -1,facingX:0,facingY:1,
       id: client.sessionId, profileId: '', progressionKind: '', scene:'hub', hp: 100, mp: 100, casts: 0, practiceHits: 0, savedAt: 0,
       nextSwordAt: 0, nextThunderAt: 0, nextWindAt: 0, lastSpentAt: 0, castId: '', castSkill: '', castStartedAt: 0, castAimX:0, castAimY:0,
       motionLocked: false, dashVX: 0, dashVY: 0,

@@ -29,8 +29,10 @@ import {attachFrameSurface} from './frame-surface';
 import {initializeDaoRuntimeTheme} from './ui/dao-runtime-theme';
 import {DaoRuntimeHud} from './ui/dao-runtime-hud';
 import { hangNhacMapArt, loadHangNhacMapArt, parseHangNhacMapArt, type HangNhacMapArtId } from './hang-nhac-map-art';
-import { PixelPlayerPresentation } from './pixel-player-presentation';
+import { PixelPlayerPresentation } from './pixel-player-runtime';
+import {EncounterActorPresentation} from './encounter-actor-presentation';
 import { readQuestMotion } from '@shared/quest-motion';
+import {readActorAction} from '@shared/actor-actions';
 import {ChapterUI} from './chapter-ui';
 import {ChapterPresentation} from './chapter-presentation';
 import chapterMinimapUrl from './chapter-activity-minimap.svg?url';
@@ -62,6 +64,7 @@ const profiles = entry?.profiles??new ProfileSession(endpoint);
 let lessonPresentation:LessonPresentation;
 let questMotion:QuestMotionPresentation;
 let pixelPlayer:PixelPlayerPresentation;
+let encounterActor:EncounterActorPresentation;
 let chapterPresentation:ChapterPresentation,activityVisible=false;
 let presentation: SkillPresentation, serverOffset = 0, opening = false, saveFailed = false;
 let daoHud: DaoRuntimeHud | undefined;
@@ -89,9 +92,11 @@ const attached = new WeakSet<object>();
 const network = new NetworkSession(readInput, updateStatus, { roomName: HANG_NHAC_ROOM,
   recover: true,
   joinOptions: () => entry?entry.profiles.joinOptions():({ mapVersion: HANG_NHAC.version, accountToken: profiles.token }), movementStep:(state,input,dt)=>((state as {scene?:string}).scene&&(state as {scene?:string}).scene!=='hub'?applyChapterMovement:applyR01Movement)(state,input,dt),
-  motionFields: ['motionLocked','dashVX','dashVY','scene'], resumeToken: () => profiles.active()?.avatarId === avatar.value ? profiles.active()?.reconnectionToken : undefined,
+  motionFields: ['motionLocked','dashVX','dashVY','scene','hp'], resumeToken: () => profiles.active()?.avatarId === avatar.value ? profiles.active()?.reconnectionToken : undefined,
   connected: room => {
     questMotion.reset();
+    pixelPlayer.reset();
+    encounterActor.reset();
     profiles.remember(avatar.value as AvatarId,room.reconnectionToken);skills.attach(room);
     character.attach(room);
     chapter.attach(room);
@@ -100,6 +105,7 @@ const network = new NetworkSession(readInput, updateStatus, { roomName: HANG_NHA
     room.onMessage('sect:state',(view:SectView)=>sect.state(view));
     room.onMessage('sect:result',(result:SectResult)=>sect.result(result));
     room.onMessage('sect:animation',(event:unknown)=>{questMotion.event(event);const motion=readQuestMotion(event);if(motion)pixelPlayer.event(motion);});
+    room.onMessage('actor:action',(raw:unknown)=>{const e=readActorAction(raw);if(!e)return;if(e.avatarId&&e.avatarId!=='CHR-WANG-LIN-CHIBI'){if(e.type==='start')questMotion.event({id:e.strikeId,actorId:e.actorId,kind:'basic',direction:Math.abs(e.dx)>Math.abs(e.dy)?e.dx>0?'east':'west':e.dy<0?'north':'south',at:e.at});}else pixelPlayer.action(e);});
     room.send('sect:sync');
     room.onMessage('profile:saved',(result:{ok:boolean}) => { saveFailed=!result.ok; });
 
@@ -110,11 +116,12 @@ const character=new CharacterSession({room:()=>network.room,online:()=>network.s
     clearInput();characterJournalProfile=network.room?.state.players?.get(network.room.sessionId)?.profileId;sect.journal(questId);
   }});
 const chapter=new ChapterUI({room:()=>network.room,position:()=>network.room?.state.players?.get(network.room.sessionId)??local??HANG_NHAC.world.spawn,
-  sect:()=>sect.view,online:()=>network.status==='connected',focus:()=>stage.focus(),clear:clearInput,feedback,select:id=>{skills.selectedTarget=id;},changed:()=>syncChapterScene()});
+  sect:()=>sect.view,online:()=>network.status==='connected',focus:()=>stage.focus(),clear:clearInput,feedback,select:id=>{skills.selectedTarget=id;},changed:()=>syncChapterScene(),inputSequence:()=>network.nextInputSequence()});
 function syncChapterScene(){
   if(!chapterPresentation)return;
   const active=chapter.inActivity&&!!network.room;if(active===activityVisible)return;
   activityVisible=active;clearInput();skills.reset();
+  pixelPlayer.reset();encounterActor?.reset();
   if(active){chapterPresentation.enter();renderer.cameraCenter={x:CHAPTER_WORLD.spawn.x,y:CHAPTER_WORLD.spawn.y-50};mapArtSelect.disabled=true;}
   else{chapterPresentation.leave();void loadHangNhacMapArt(renderer,mapArtId).then(()=>{mapArtSelect.disabled=false;}).catch(error=>feedback(String(error)));}
   el('sect-objective').hidden=active;
@@ -151,8 +158,7 @@ async function changeMapArt(): Promise<void> {
     mapArtId = next;
     daoHud?.update({connected:network.status==='connected',map:mapArtSnapshot()});
     const url = new URL(location.href);
-    if (next !== 'current') url.searchParams.set('mapArt', next);
-    else url.searchParams.delete('mapArt');
+    url.searchParams.set('mapArt', next);
     history.replaceState(history.state, '', url);
     mapArtNote.textContent = hangNhacMapArt(next).note;
   } catch (error) {
@@ -184,7 +190,7 @@ function clearInput(): void {
 function readInput(): Input {
   if (document.hidden || !document.hasFocus() || sect.modal || chapter.modal || character.panel.modal || daoHud?.modal || shell.blocking || document.activeElement?.matches('input,select,textarea')) return { x: 0, y: 0 };
   return { x: Number(keys.has('d') || keys.has('arrowright') || touch.has('east')) - Number(keys.has('a') || keys.has('arrowleft') || touch.has('west')),
-    y: Number(keys.has('s') || keys.has('arrowdown') || touch.has('south')) - Number(keys.has('w') || keys.has('arrowup') || touch.has('north')) };
+    y: Number(keys.has('s') || keys.has('arrowdown') || touch.has('south')) - Number(keys.has('w') || keys.has('arrowup') || touch.has('north')),fast:keys.has('shift') };
 }
 function createActor(id: string, assetId: string, title: string, motion: Motion, own: boolean): RenderActor {
   const asset = renderer.assets.get(assetId);
@@ -287,7 +293,7 @@ window.addEventListener('keydown', event => {
   if(shell.blocking)return;
   if(!event.repeat&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&(event.code==='KeyF'||key==='f')){event.preventDefault();skills.basic();return;}
   const skill=skills.shortcut(event);if(skill){event.preventDefault();skills.cast(skill);return;}
-  if (['w', 'a', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'].includes(key)) { event.preventDefault(); keys.add(key); skills.moveAim(readInput()); }
+  if (['shift','w', 'a', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'].includes(key)) { event.preventDefault(); keys.add(key); skills.moveAim(readInput()); }
 });
 window.addEventListener('keyup', event => {keys.delete(event.key.toLowerCase());skills.moveAim(readInput());});
 window.addEventListener('blur', clearInput);
@@ -337,10 +343,9 @@ function frame(now: number): void {
   renderer.cameraCenter.y += (target.y - renderer.cameraCenter.y) * blend;
   presentation.update(network.room?.state,Date.now()+serverOffset,visible);
   questMotion.update(visible,Date.now()+serverOffset,network.status==='connected',sect.view);
-  pixelPlayer.update(visible,network.room?.state,Date.now()+serverOffset);
+  pixelPlayer.update(visible,network.room?.state,Date.now()+serverOffset,sect.view,chapter.view,network.status==='connected');
   lessonPresentation.update(network.status==='connected'?sect.view?.lessonView:undefined,Date.now()+serverOffset);
-  let enemyActor:RenderActor|undefined;
-  if(activityVisible&&chapter.view?.enemy){const e=chapter.view.enemy;enemyActor=createActor(e.id,'AVATAR-NOVICE-MALE',`Đối luyện ${e.maxHp===60?'E01':e.maxHp===80?'E02':'E03'} · ${Math.ceil(e.hp)}/${e.maxHp}`,{x:e.x,y:e.y,direction:own.x>e.x?'east':'west',moving:false},false);}
+  const enemyActor=encounterActor.update(activityVisible?chapter.view:undefined,Date.now()+serverOffset);
   renderer.mode = network.room ? 'online' : 'map'; if(!entry||network.room)renderer.render([...visible,...(activityVisible?enemyActor?[enemyActor]:[]:npcs)]);
   chapterPresentation.update(activityVisible?chapter.view:undefined,own);chapter.update();
   character.update();
@@ -356,10 +361,11 @@ async function init(): Promise<void> {
   await Promise.all([renderer.loadActors(definitions), loadHangNhacMapArt(renderer, mapArtId)]);
   gameUI.prepare(renderer.assets);
   entry?.prepare(Object.fromEntries([...renderer.assets.values()].filter(asset=>isAvatarId(asset.definition.id)).map(asset=>[asset.definition.id,{url:asset.definition.atlasUrl,atlasWidth:asset.atlas.width,atlasHeight:asset.atlas.height,frame:asset.atlas.frames[asset.atlas.animations.stand_south[0]]}])));
-  presentation=new SkillPresentation(renderer.scene); await presentation.load(avatar.value);
+  presentation=new SkillPresentation(renderer.scene); await presentation.load(avatar.value,'/assets/hang-nhac-pixel-player/skill-presentation.json');
   lessonPresentation=new LessonPresentation(renderer.scene);
   questMotion=new QuestMotionPresentation(renderer.scene);await questMotion.load();
   pixelPlayer=new PixelPlayerPresentation(renderer);await pixelPlayer.load();
+  encounterActor=new EncounterActorPresentation(renderer);await encounterActor.load();
   chapterPresentation=new ChapterPresentation(renderer,el('world-labels'));await chapterPresentation.load();
   for (const asset of renderer.assets.values()) {
     if (JSON.stringify(asset.atlas.frameSize) !== JSON.stringify(HANG_NHAC.character.frameSize) ||
@@ -375,7 +381,7 @@ async function init(): Promise<void> {
     mapParts:renderer.mapDiagnostics(),mapArt:hangNhacMapArt(mapArtId),mapBackground:renderer.backgroundMapDiagnostics(),
     connectionDetail: network.detail,
     sessionId: network.room?.sessionId, roomId: network.room?.roomId,
-    serverMapVersion: network.room?.state.mapVersion, backgroundBytes: hangNhacMapArt(mapArtId).bytes,
+    serverMapVersion: network.room?.state.mapVersion, backgroundBytes: hangNhacMapArt(mapArtId).bytes,input:network.movementDiagnostics(),
     actors: (network.room ? [...actors.values()] : [local]).map(a => ({ id: a.id, assetId: a.assetId, x: a.x, y: a.y,
       own: a.own, direction: a.direction, moving: a.moving, frame: a.animation.frameId, walkable: hangNhacWalkable(a),
       frameSize: a.animation.atlas.frameSize, anchor: a.animation.atlas.anchor })),
@@ -387,6 +393,7 @@ async function init(): Promise<void> {
     __hangNhacSkills:()=>presentation.diagnostics(),
     __hangNhacQuestMotion:()=>questMotion.diagnostics(),
     __hangNhacPixelPlayer:()=>pixelPlayer.diagnostics(),
+    __hangNhacEncounterActor:()=>encounterActor.diagnostics(),
     __hangNhacChapter:()=>chapter.diagnostics(),
     __hangNhacCharacter:()=>character.diagnostics(),
   });
@@ -404,5 +411,5 @@ void init().catch(error => {
   shell.sync({ready:false,opening:false,status:network.status,ownConnected:false});
   renderer?.dispose();
 });
-window.addEventListener('pagehide', () => { clearInput(); daoHud?.dispose();entry?.dispose();character.dispose(); chapter.dispose();chapterPresentation?.dispose();gameUI.dispose(); shell.dispose(); network.suspend(); skills.dispose(); questMotion?.dispose(); pixelPlayer?.dispose();lessonPresentation?.dispose(); presentation?.dispose(); renderer?.dispose(); });
+window.addEventListener('pagehide', () => { clearInput(); daoHud?.dispose();entry?.dispose();character.dispose(); chapter.dispose();chapterPresentation?.dispose();encounterActor?.dispose();gameUI.dispose(); shell.dispose(); network.suspend(); skills.dispose(); questMotion?.dispose(); pixelPlayer?.dispose();lessonPresentation?.dispose(); presentation?.dispose(); renderer?.dispose(); });
 window.addEventListener('pageshow', event => { if (event.persisted) location.reload(); });

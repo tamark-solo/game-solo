@@ -1,5 +1,7 @@
 # Kiến trúc mã nguồn
 
+**Actor runtime13/10:** [hợp đồng/bàn giao](GAME-ACTOR-RUNTIME.md) giữ `shared/actor-actions.ts` thuần → `ChapterActivity`/writer room → facts/snapshot → `core/pixel-player-model.ts`/`encounter-pose-model.ts` → catalog/Three adapters. Đòn F có input barrier/lifecycle tương ứng R01, release/hit riêng và timing độc lập raster. R01 `bodyDirectionCountByAvatar` cho phép pixel8 cạnh native4, bóng/socket cùng clip đúng avatar. Facing vector tùy chọn trong save2, chapter clock heartbeat100ms, atlas cache có budget. Client không quyết định damage/grant/quest; map owner không sửa. Các mốc review/approval cũ dưới đây là lịch sử, không phủ nhận runtime mới hoặc mở rộng duyệt ART.
+
 **Actor pixel chuẩn02 ·12/10:** [Bộ đã chốt40clip/240pose](design/characters/actor-animation-standard-v2/README.md) giữ facts → timeline → catalog → Three. UI/ART demo cũ đã archive; Core8direction/groundY và fixture model thuần giữ để tích hợp tiếp. Review mới không room/DB; không suy visual approval là full/runtime readiness.
 
 **Character sheet review 04:** `core/dao-character-sheet-model.ts` đọc `SectView`/avatar, dùng `progressionLabel`, ngưỡng và quest projection shared. Core state giữ tab/thuật và nguồn quay lại nhiệm vụ; presenter/CSS chỉ trình bày. Không sở hữu xác nhận tầng, cast, quyền Đọa Ma, transport hoặc save. [Thiết kế và kiểm](CHARACTER-SHEET-UX-V4.md).

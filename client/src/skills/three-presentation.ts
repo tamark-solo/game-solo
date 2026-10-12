@@ -16,7 +16,7 @@ export class SkillPresentation {
   private prepared=new Set<string>();
   private targets:TrainingTargetView;
   constructor(private scene:THREE.Scene){this.targets=new TrainingTargetView(scene);}
-  async load(avatar='CHR-WANG-LIN-CHIBI'):Promise<void> {await this.assets.load();this.timeline=new SkillTimeline(this.assets.catalog);await this.prepareAvatar(avatar);}
+  async load(avatar='CHR-WANG-LIN-CHIBI',catalogUrl='/assets/r01/clips.json'):Promise<void> {await this.assets.load(catalogUrl);this.timeline=new SkillTimeline(this.assets.catalog);await this.prepareAvatar(avatar);}
   async prepareAvatar(avatar:string):Promise<void> {await this.assets.prepareAvatar(avatar);this.prepared.add(avatar);}
   event(event:SkillEvent):void {this.timeline.event(event);}
   private acquire(clip:string):EffectSprite|undefined {

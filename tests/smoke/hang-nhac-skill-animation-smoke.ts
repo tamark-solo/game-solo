@@ -42,13 +42,14 @@ try {
   page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
   await page.goto(`${origin}/hang-nhac.html?devGuest=1`);
   await page.waitForFunction('window.__hangNhacDiagnostics?.().ready');
-  assert.equal((await state(page)).vfx.loadedAtlases,22,'initial load includes FX and only the selected avatar');
+  assert.equal((await state(page)).vfx.loadedAtlases,34,'initial load includes FX and 24 pixel clips of only the selected avatar');
   for(const avatar of HANG_NHAC_AVATARS) for(const direction of ['south','west','east','north'] as Direction[]) {
     seed(avatar);
     await page.locator('#avatar').selectOption(avatar);
     await page.locator('#join').click();
     await page.waitForFunction('window.__hangNhacDiagnostics().status === "connected"');
     await waitFor(async()=>!!(await state(page!)).own?.profileId,'profile ready');
+    await page.bringToFront();await page.waitForFunction('window.__hangNhacDiagnostics().actors.some(a=>a.own)');
     await page.waitForTimeout(300);
     const d=await diagnostics(page),actor=d.actors.find((a:any)=>a.own),box=(await page.locator('#stage').boundingBox())!;
     const [dx,dy]=vectors[direction];
@@ -77,8 +78,7 @@ try {
           if(performance.now()<deadline)requestAnimationFrame(sample);else monitor.done=true;
         };requestAnimationFrame(sample);
       });
-      const expected=avatar==='CHR-WANG-LIN-CHIBI'&&direction==='east'?
-        {sword:'wanglin-cast-east',thunder:'wanglin-thunder-east',wind:'wanglin-wind-east'}[skill]:
+      const expected:string=avatar==='CHR-WANG-LIN-CHIBI'?await page.evaluate(async({skill,direction})=>{const c=await fetch('/assets/hang-nhac-pixel-player/catalog.json').then(r=>r.json());return c.clips[({sword:'cast_forward',thunder:'cast_point',wind:'dash'})[skill]+'-'+direction].id;},{skill,direction}):
         `${short[avatar]}-${skill}-${direction}`;
       // Observe a pose while it is rendered, rather than ask Node to capture after
       // multiple round trips have spent most of a sub-second cast's lifetime.
@@ -127,7 +127,7 @@ try {
       if(skill==='sword'){
         // Read rendered pixels as well as metadata: changing atlas dimensions once broke GPU UV sampling.
         visualMatch=await page.evaluate(async({dataUrl,placement,expected})=>{
-          const catalog=await fetch('/assets/r01/clips.json').then(r=>r.json()),clip=catalog.clips[expected];
+          const catalog=await fetch('/assets/hang-nhac-pixel-player/skill-presentation.json').then(r=>r.json()),clip=catalog.clips[expected];
           const screen=new Image(),atlas=new Image();screen.src=dataUrl;atlas.src=clip.atlasUrl;
           await Promise.all([screen.decode(),atlas.decode()]);
           const canvas=document.createElement('canvas');canvas.width=screen.width;canvas.height=screen.height;
@@ -171,7 +171,7 @@ try {
           const m=(window as any).__windCropFixture;return {samples:m.samples,pictures:m.pictures};
         });
         assert.ok(monitored.samples.length>0,'observed active Phong poses');
-        const c:any=await page.evaluate(()=>fetch('/assets/r01/clips.json').then(r=>r.json()));
+        const c:any=await page.evaluate(()=>fetch('/assets/hang-nhac-pixel-player/skill-presentation.json').then(r=>r.json()));
         const cropFor=(clip:string,index:number):{x:number;y:number;w:number;h:number}=>c.clips[clip].frameCrops?.[index]??{x:0,y:0,w:c.clips[clip].frameSize[0],h:c.clips[clip].frameSize[1]};
         for(const sample of monitored.samples){
           assert.equal(sample.body.clip,expected);assert.deepEqual(sample.body.crop,cropFor(expected,sample.body.index));assert.deepEqual(sample.body.cutouts,c.clips[expected].frameCutouts?.[sample.body.index]??[]);

@@ -1,0 +1,1801 @@
+{
+  "version": 1,
+  "date": "2026-10-12",
+  "pack": "actor-animation-production-v1",
+  "basis": "docs/design/characters/actor-animation-pilot-v1/production-basis.json",
+  "directions": [
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east",
+    "southeast"
+  ],
+  "actors": {
+    "wang": {
+      "baseSize": [
+        64,
+        96
+      ],
+      "basePivot": [
+        32,
+        88
+      ],
+      "bodyHeight": 80,
+      "actions": [
+        "idle",
+        "walk",
+        "run",
+        "attack",
+        "attack_2",
+        "attack_3",
+        "cast_forward",
+        "cast_point",
+        "dash",
+        "hit",
+        "death"
+      ],
+      "optionalSingleDirection": [
+        "greeting",
+        "cultivation",
+        "recovery"
+      ]
+    },
+    "wolf": {
+      "baseSize": [
+        112,
+        96
+      ],
+      "basePivot": [
+        56,
+        88
+      ],
+      "bodyHeight": 50,
+      "actions": [
+        "idle",
+        "walk",
+        "attack",
+        "hit",
+        "death"
+      ]
+    },
+    "boss": {
+      "baseSize": [
+        176,
+        176
+      ],
+      "basePivot": [
+        88,
+        160
+      ],
+      "bodyHeight": 104,
+      "actions": [
+        "idle",
+        "walk",
+        "attack",
+        "hit",
+        "death",
+        "appear",
+        "cast_line",
+        "cast_field"
+      ]
+    }
+  },
+  "stages": [
+    "north-west",
+    "diagonals",
+    "motion-and-combos",
+    "independent-fx-and-sockets",
+    "three-gameplay-fixture"
+  ],
+  "ownerApproved": false,
+  "artApproved": false,
+  "requests": [
+    {
+      "id": "wang-north-basic",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "north",
+          "motion": "idle4"
+        },
+        {
+          "action": "run",
+          "direction": "north",
+          "motion": "run4"
+        },
+        {
+          "action": "hit",
+          "direction": "north",
+          "motion": "hit4"
+        },
+        {
+          "action": "death",
+          "direction": "north",
+          "motion": "death4"
+        }
+      ],
+      "columns": 4,
+      "prompt": "Create a clean TRANSPARENT pixel-chibi animation sprite sheet for the EXACT approved Wang Lin gray-robed character in the provided reference. Image 1 is his exact NORTH back-facing identity reference, Image 2 shows the same identity from four cardinal angles for proportion/style only. Keep the same small/slim chibi head-to-body proportions, very long charcoal half-up ponytail with ivory hair tie, ivory-gray modest robe, charcoal belt, slim boots and pixel-art shading. No new face, armor, cape, weapons, ornaments or redesign. NORTH means the back of the head and robe face the viewer, walking away toward the top of the screen, never front-facing. Camera remains the same three-quarter top-down view. All 16 WHOLE bodies are strictly NORTH, not mirrored west/east. 4 columns x 4 rows, ordered poses left-to-right. Row 1 idle breathing: neutral, tiny inhale, tiny exhale, return-neutral; tiny robe/hair motion while both planted feet stay registered. Row 2 run: contact left, passing, contact right, passing; short quick stride, bent elbows held close, ponytail close to silhouette. Row 3 taking a hit: brace, recoil, regain balance, ready; physical reaction only. Row 4 death: stumble, kneel, sag, fallen body facing away. Death genuinely lowers the body and keeps the same anatomy. Entire body, hair and feet visible in every pose, no cropping. Very compact standing width and strides: the neutral body is destined for 80px tall inside a 64px-wide native canvas, hands/hair must remain compact for idle/run/hit. Use consistent anatomy and body scale across ALL poses; no per-pose enlargement and no enlarged heads. Keep vertical registration within each row and even columns. At least 28 transparent pixels around each figure; separated rows, no touching hair/clothes/body between cells, no overlap from adjacent poses. NO labels, text, dividers, grid lines, background, ground shadows, glow, VFX, floating dust or detached props. Output only the sixteen isolated sprites, crisp restrained pixel rendering like the reference.\n",
+      "refs": [
+        "docs/design/characters/core-cast-v1/references/wang-north.png",
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-6c8b79b4-06f2-4b98-9998-17ec6090adbf.png",
+      "sourceFile": "sources/wang-north-basic-source.png",
+      "promptFile": "sources/wang-north-basic.prompt.txt",
+      "sourceSha256": "f08dd5a66e4fab17597cece98476071f3c72ded85d862d422a9f5f9dbada2a5e",
+      "promptSha256": "a9dcbf0638339e4ac84dad0cf37acd519933f896ff8a811b43aae4848d1bdb32",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/core-cast-v1/references/wang-north.png",
+          "sha256": "fa996df7a41e21da0e6a2c15854259effa4c00ba31a5a91284d163afc49ce3f2"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ]
+    },
+    {
+      "id": "wang-west-basic",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "west",
+          "motion": "idle4"
+        },
+        {
+          "action": "run",
+          "direction": "west",
+          "motion": "run4"
+        },
+        {
+          "action": "hit",
+          "direction": "west",
+          "motion": "hit4"
+        },
+        {
+          "action": "death",
+          "direction": "west",
+          "motion": "death4"
+        }
+      ],
+      "columns": 4,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 4 columns x 4 rows, exactly 16 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: WEST: left-facing side profile, moving toward the left of the screen. Action idle: neutral -> small inhale -> small exhale -> neutral; tiny breathing/cloth/hair or shoulder motion, planted feet. Row 2: WEST: left-facing side profile, moving toward the left of the screen. Action run: left contact -> passing -> right contact -> passing, quick compact bent-elbow running stride, no horizontal leap. Row 3: WEST: left-facing side profile, moving toward the left of the screen. Action hit: brace -> short recoil -> regain balance -> ready; no turn to face a different direction. Row 4: WEST: left-facing side profile, moving toward the left of the screen. Action death: stumble -> kneel/fold legs -> slump -> fully fallen body. Body truly lowers without enlargement; same anatomy and lying hair/body entirely visible. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/core-cast-v1/references/wang-west.png",
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-west-basic-source.png",
+      "promptFile": "sources/wang-west-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-5ef631fa-fbbc-4891-a4fa-fd4648d1403b.png",
+      "sourceSha256": "0c22bb503881f39080d189a8aab08c7747668932cb9a8e0d46d838f96581750c",
+      "promptSha256": "94e4c1fbf97ebc313db90d35a2b41ec51d07ffbb54cfaacf286c7dfc184ab9f2",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/core-cast-v1/references/wang-west.png",
+          "sha256": "d3c9dc801be0677e3d8de606588183511c2a65d73a75766f72e726829abd75ba"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ],
+      "selectedRows": [
+        3
+      ]
+    },
+    {
+      "id": "wang-front-idle",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "south",
+          "motion": "idle4"
+        },
+        {
+          "action": "idle",
+          "direction": "east",
+          "motion": "idle4"
+        }
+      ],
+      "columns": 4,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 4 columns x 2 rows, exactly 8 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTH: front-facing, moving toward the bottom of the screen; face visible. Action idle: neutral -> small inhale -> small exhale -> neutral; tiny breathing/cloth/hair or shoulder motion, planted feet. Row 2: EAST: right-facing side profile, moving toward the right of the screen. Action idle: neutral -> small inhale -> small exhale -> neutral; tiny breathing/cloth/hair or shoulder motion, planted feet. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-front-idle-source.png",
+      "promptFile": "sources/wang-front-idle.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-33e67d4f-6fa3-4a92-a7b1-1985a4b69106.png",
+      "sourceSha256": "c700a9aa69ce776fd3a54dd04c2a87fe4e80785df2dc04c4775845137c11f44e",
+      "promptSha256": "139b199237d75ffcac680113fb3931f5937a955d4005033fbcc172d6c1803149",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ]
+    },
+    {
+      "id": "wang-southwest-basic",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "southwest",
+          "motion": "idle4"
+        },
+        {
+          "action": "walk",
+          "direction": "southwest",
+          "motion": "walk4"
+        },
+        {
+          "action": "run",
+          "direction": "southwest",
+          "motion": "run4"
+        },
+        {
+          "action": "attack",
+          "direction": "southwest",
+          "motion": "attack4"
+        },
+        {
+          "action": "hit",
+          "direction": "southwest",
+          "motion": "hit4"
+        },
+        {
+          "action": "death",
+          "direction": "southwest",
+          "motion": "death4"
+        }
+      ],
+      "columns": 4,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 4 columns x 6 rows, exactly 24 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action idle: neutral -> small inhale -> small exhale -> neutral; tiny breathing/cloth/hair or shoulder motion, planted feet. Row 2: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action walk: left contact -> passing -> right contact -> passing; opposite arm/leg rhythm, short steps. Row 3: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action run: left contact -> passing -> right contact -> passing, quick compact bent-elbow running stride, no horizontal leap. Row 4: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action attack: ready -> clear windup -> contact thrust/bite/strike -> recover; aimed in the requested direction. Row 5: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action hit: brace -> short recoil -> regain balance -> ready; no turn to face a different direction. Row 6: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action death: stumble -> kneel/fold legs -> slump -> fully fallen body. Body truly lowers without enlargement; same anatomy and lying hair/body entirely visible. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-southwest-basic-source.png",
+      "promptFile": "sources/wang-southwest-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-a845cf91-f59e-4457-943e-e3782561f511.png",
+      "sourceSha256": "2b6af35a55fbf42f6c2ce4b26502d8b4dd0b04b7752279cec185758590fea507",
+      "promptSha256": "8c9256f253a3957d2a34f3494a453bbfffc99cd89f97d66d737a1685f746375e",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ],
+      "selectedRows": [],
+      "excludedReason": "Idle crosses native edge and run/hit hair too broad; retained source, replaced by native-guide edit"
+    },
+    {
+      "id": "wang-southeast-basic",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "southeast",
+          "motion": "idle4"
+        },
+        {
+          "action": "walk",
+          "direction": "southeast",
+          "motion": "walk4"
+        },
+        {
+          "action": "run",
+          "direction": "southeast",
+          "motion": "run4"
+        },
+        {
+          "action": "attack",
+          "direction": "southeast",
+          "motion": "attack4"
+        },
+        {
+          "action": "hit",
+          "direction": "southeast",
+          "motion": "hit4"
+        },
+        {
+          "action": "death",
+          "direction": "southeast",
+          "motion": "death4"
+        }
+      ],
+      "columns": 4,
+      "prompt": "EDIT Image1, an exact24-sprite layout of the approved native Wang Lin, into24 animated poses with the requested DIAGONAL facing. Image1 fixes original slim proportions, head/face/hair size, compact physical width and planted foot positions; Image2 supplies four-angle identity only. Change facing and limbs/cloth for the requested poses while retaining this original anatomy. Keep the ponytail falling downward close to the back and curling behind the shoulder, NEVER extend it as a horizontal flag. Hair volume and running strides stay as compact as the original native sprites. Idle/walk/run/hit physical body remains no wider than60 native pixels in a64px frame; small short stride and close elbows. Do not inflate hair/head/face. No background; transparent sprite bodies only. Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 4 columns x 6 rows, exactly 24 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action idle: neutral -> small inhale -> small exhale -> neutral; tiny breathing/cloth/hair or shoulder motion, planted feet. Row 2: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action walk: left contact -> passing -> right contact -> passing; opposite arm/leg rhythm, short steps. Row 3: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action run: left contact -> passing -> right contact -> passing, quick compact bent-elbow running stride, no horizontal leap. Row 4: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action attack: ready -> clear windup -> contact thrust/bite/strike -> recover; aimed in the requested direction. Row 5: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action hit: brace -> short recoil -> regain balance -> ready; no turn to face a different direction. Row 6: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action death: stumble -> kneel/fold legs -> slump -> fully fallen body. Body truly lowers without enlargement; same anatomy and lying hair/body entirely visible. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-southeast-guide.png",
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-southeast-basic-source.png",
+      "promptFile": "sources/wang-southeast-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-43ac2ee5-f6be-4e61-aad9-1d47f2ee755d.png",
+      "sourceSha256": "4dcd6c6df8ebe1498a7f0915912cccb8602f5dca2a85e081c98e73e3028e8f52",
+      "promptSha256": "ccbbc9dc431ed235dea64fcfc820bb681dc500cf3ef5fba324c59f99596cdc7b",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-southeast-guide.png",
+          "sha256": "4640737038c7c888e9b7e60fc688a4e8d4bb7850fd885a3a7eb1ae016efaf3fb"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ],
+      "columnTranslationNativeX": [
+        2,
+        0,
+        -1,
+        -1
+      ],
+      "registrationNote": "Measured fixed column-origin calibration, applied to every selected row at one source scale; no per-pose resize, clipping or bitmap edits."
+    },
+    {
+      "id": "wang-northwest-basic",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "northwest",
+          "motion": "idle4"
+        },
+        {
+          "action": "walk",
+          "direction": "northwest",
+          "motion": "walk4"
+        },
+        {
+          "action": "run",
+          "direction": "northwest",
+          "motion": "run4"
+        },
+        {
+          "action": "attack",
+          "direction": "northwest",
+          "motion": "attack4"
+        },
+        {
+          "action": "hit",
+          "direction": "northwest",
+          "motion": "hit4"
+        },
+        {
+          "action": "death",
+          "direction": "northwest",
+          "motion": "death4"
+        }
+      ],
+      "columns": 4,
+      "prompt": "EDIT Image1, an exact24-sprite layout of the approved native Wang Lin, into24 animated poses with the requested DIAGONAL facing. Image1 fixes original slim proportions, head/face/hair size, compact physical width and planted foot positions; Image2 supplies four-angle identity only. Change facing and limbs/cloth for the requested poses while retaining this original anatomy. Keep the ponytail falling downward close to the back and curling behind the shoulder, NEVER extend it as a horizontal flag. Hair volume and running strides stay as compact as the original native sprites. Idle/walk/run/hit physical body remains no wider than60 native pixels in a64px frame; small short stride and close elbows. Do not inflate hair/head/face. No background; transparent sprite bodies only. Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 4 columns x 6 rows, exactly 24 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action idle: neutral -> small inhale -> small exhale -> neutral; tiny breathing/cloth/hair or shoulder motion, planted feet. Row 2: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action walk: left contact -> passing -> right contact -> passing; opposite arm/leg rhythm, short steps. Row 3: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action run: left contact -> passing -> right contact -> passing, quick compact bent-elbow running stride, no horizontal leap. Row 4: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action attack: ready -> clear windup -> contact thrust/bite/strike -> recover; aimed in the requested direction. Row 5: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action hit: brace -> short recoil -> regain balance -> ready; no turn to face a different direction. Row 6: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action death: stumble -> kneel/fold legs -> slump -> fully fallen body. Body truly lowers without enlargement; same anatomy and lying hair/body entirely visible. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-northwest-guide.png",
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-northwest-basic-source.png",
+      "promptFile": "sources/wang-northwest-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-d24dc9cc-6834-4479-9693-0601c0bca29b.png",
+      "sourceSha256": "67ef69e0ac9d03b15f4875e67c05b31fb253a3dc96fb6082b122406858c4d2d7",
+      "promptSha256": "510d94b4106fac9df5c6b3d59516656f681011e6524a080727c44b48a40762a4",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-northwest-guide.png",
+          "sha256": "462af0e9f80a43d1f68d23c619e8c021208cfc540e9978448dbbcc9d22e28e46"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ],
+      "selectedRows": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "columnTranslationNativeX": [
+        -3,
+        -3,
+        -2,
+        -1
+      ],
+      "excludedReason": "Hit row kneels and exceeds native64px; replaced by standing compact hit source."
+    },
+    {
+      "id": "wang-northeast-basic",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "northeast",
+          "motion": "idle4"
+        },
+        {
+          "action": "walk",
+          "direction": "northeast",
+          "motion": "walk4"
+        },
+        {
+          "action": "run",
+          "direction": "northeast",
+          "motion": "run4"
+        },
+        {
+          "action": "attack",
+          "direction": "northeast",
+          "motion": "attack4"
+        },
+        {
+          "action": "hit",
+          "direction": "northeast",
+          "motion": "hit4"
+        },
+        {
+          "action": "death",
+          "direction": "northeast",
+          "motion": "death4"
+        }
+      ],
+      "columns": 4,
+      "prompt": "EDIT Image1, an exact24-sprite layout of the approved native Wang Lin, into24 animated poses with the requested DIAGONAL facing. Image1 fixes original slim proportions, head/face/hair size, compact physical width and planted foot positions; Image2 supplies four-angle identity only. Change facing and limbs/cloth for the requested poses while retaining this original anatomy. Keep the ponytail falling downward close to the back and curling behind the shoulder, NEVER extend it as a horizontal flag. Hair volume and running strides stay as compact as the original native sprites. Idle/walk/run/hit physical body remains no wider than60 native pixels in a64px frame; small short stride and close elbows. Do not inflate hair/head/face. No background; transparent sprite bodies only. Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 4 columns x 6 rows, exactly 24 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action idle: neutral -> small inhale -> small exhale -> neutral; tiny breathing/cloth/hair or shoulder motion, planted feet. Row 2: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action walk: left contact -> passing -> right contact -> passing; opposite arm/leg rhythm, short steps. Row 3: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action run: left contact -> passing -> right contact -> passing, quick compact bent-elbow running stride, no horizontal leap. Row 4: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action attack: ready -> clear windup -> contact thrust/bite/strike -> recover; aimed in the requested direction. Row 5: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action hit: brace -> short recoil -> regain balance -> ready; no turn to face a different direction. Row 6: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action death: stumble -> kneel/fold legs -> slump -> fully fallen body. Body truly lowers without enlargement; same anatomy and lying hair/body entirely visible. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-northeast-guide.png",
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-northeast-basic-source.png",
+      "promptFile": "sources/wang-northeast-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-33d0f556-1c78-440f-96b6-2be41037067f.png",
+      "sourceSha256": "a899e2e7b5f0dead5afe2b2918b89b443f4f8b64035fc01ba9865739bffcb5d9",
+      "promptSha256": "05f4018ab0146cf81266b5c37dd4f189940f51176389033ae7217f4265685d50",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-northeast-guide.png",
+          "sha256": "462af0e9f80a43d1f68d23c619e8c021208cfc540e9978448dbbcc9d22e28e46"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ],
+      "columnTranslationNativeX": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "registrationNote": "Fixed column origin measured across native locomotion/reaction bounds; same translation for all poses in column. No per-frame fitting or body scale change."
+    },
+    {
+      "id": "wang-south-east-combos",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "attack_2",
+          "direction": "south",
+          "motion": "attack_2"
+        },
+        {
+          "action": "attack_3",
+          "direction": "south",
+          "motion": "attack_3"
+        },
+        {
+          "action": "attack_2",
+          "direction": "east",
+          "motion": "attack_2"
+        },
+        {
+          "action": "attack_3",
+          "direction": "east",
+          "motion": "attack_3"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 4 rows, exactly 24 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTH: front-facing, moving toward the bottom of the screen; face visible. Action attack_2: ready -> pull palm back close to torso -> loaded stance -> forward martial palm strike -> small follow-through -> ready, distinct from first attack, compact and no weapon. Row 2: SOUTH: front-facing, moving toward the bottom of the screen; face visible. Action attack_3: ready -> lower stance and draw forearm -> held stance -> two-finger sealing thrust -> recoil of sleeves -> ready, distinct finishing gesture, no weapon or VFX. Row 3: EAST: right-facing side profile, moving toward the right of the screen. Action attack_2: ready -> pull palm back close to torso -> loaded stance -> forward martial palm strike -> small follow-through -> ready, distinct from first attack, compact and no weapon. Row 4: EAST: right-facing side profile, moving toward the right of the screen. Action attack_3: ready -> lower stance and draw forearm -> held stance -> two-finger sealing thrust -> recoil of sleeves -> ready, distinct finishing gesture, no weapon or VFX. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-south-east-combos-source.png",
+      "promptFile": "sources/wang-south-east-combos.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-bfdc8ec9-a744-42cd-8a91-da0ff81f3549.png",
+      "sourceSha256": "ce8ca2097c060113e51e594b92805632c388c6fca564722b755221df92f94b4a",
+      "promptSha256": "0dd56bea86fef91b00a48d44019c7d963a2f74fb41f549c2563420e7aa818aba",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ]
+    },
+    {
+      "id": "wang-north-west-combos",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "attack_2",
+          "direction": "north",
+          "motion": "attack_2"
+        },
+        {
+          "action": "attack_3",
+          "direction": "north",
+          "motion": "attack_3"
+        },
+        {
+          "action": "attack_2",
+          "direction": "west",
+          "motion": "attack_2"
+        },
+        {
+          "action": "attack_3",
+          "direction": "west",
+          "motion": "attack_3"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 4 rows, exactly 24 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action attack_2: ready -> pull palm back close to torso -> loaded stance -> forward martial palm strike -> small follow-through -> ready, distinct from first attack, compact and no weapon. Row 2: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action attack_3: ready -> lower stance and draw forearm -> held stance -> two-finger sealing thrust -> recoil of sleeves -> ready, distinct finishing gesture, no weapon or VFX. Row 3: WEST: left-facing side profile, moving toward the left of the screen. Action attack_2: ready -> pull palm back close to torso -> loaded stance -> forward martial palm strike -> small follow-through -> ready, distinct from first attack, compact and no weapon. Row 4: WEST: left-facing side profile, moving toward the left of the screen. Action attack_3: ready -> lower stance and draw forearm -> held stance -> two-finger sealing thrust -> recoil of sleeves -> ready, distinct finishing gesture, no weapon or VFX. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-north-west-combos-source.png",
+      "promptFile": "sources/wang-north-west-combos.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-486721c3-7f5a-427c-9b93-4a6ff6f2c8bc.png",
+      "sourceSha256": "55124401912420bc93cd5caccad8861fc33cc025a2aaec8513251c9205af4d91",
+      "promptSha256": "570ff9c0e43d5f08d9b221c322ca1e8e7590aa67c2d020f2fc40cb5b717b8d87",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ]
+    },
+    {
+      "id": "wang-southwest-southeast-combos",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "attack_2",
+          "direction": "southwest",
+          "motion": "attack_2"
+        },
+        {
+          "action": "attack_3",
+          "direction": "southwest",
+          "motion": "attack_3"
+        },
+        {
+          "action": "attack_2",
+          "direction": "southeast",
+          "motion": "attack_2"
+        },
+        {
+          "action": "attack_3",
+          "direction": "southeast",
+          "motion": "attack_3"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 4 rows, exactly 24 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action attack_2: ready -> pull palm back close to torso -> loaded stance -> forward martial palm strike -> small follow-through -> ready, distinct from first attack, compact and no weapon. Row 2: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action attack_3: ready -> lower stance and draw forearm -> held stance -> two-finger sealing thrust -> recoil of sleeves -> ready, distinct finishing gesture, no weapon or VFX. Row 3: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action attack_2: ready -> pull palm back close to torso -> loaded stance -> forward martial palm strike -> small follow-through -> ready, distinct from first attack, compact and no weapon. Row 4: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action attack_3: ready -> lower stance and draw forearm -> held stance -> two-finger sealing thrust -> recoil of sleeves -> ready, distinct finishing gesture, no weapon or VFX. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-southwest-southeast-combos-source.png",
+      "promptFile": "sources/wang-southwest-southeast-combos.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-2acec28c-2211-4b7c-9192-a9ad7e0a8ea6.png",
+      "sourceSha256": "41f2df888c914bd98e197fc51d71839f9edbc8f85679bf230dcd664426f645e5",
+      "promptSha256": "161a13f0a9f8341ff2ed253b37e64b053ecf99433495b353cc3ab769ce629ab1",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ]
+    },
+    {
+      "id": "wang-northwest-northeast-combos",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "attack_2",
+          "direction": "northwest",
+          "motion": "attack_2"
+        },
+        {
+          "action": "attack_3",
+          "direction": "northwest",
+          "motion": "attack_3"
+        },
+        {
+          "action": "attack_2",
+          "direction": "northeast",
+          "motion": "attack_2"
+        },
+        {
+          "action": "attack_3",
+          "direction": "northeast",
+          "motion": "attack_3"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 4 rows, exactly 24 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action attack_2: ready -> pull palm back close to torso -> loaded stance -> forward martial palm strike -> small follow-through -> ready, distinct from first attack, compact and no weapon. Row 2: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action attack_3: ready -> lower stance and draw forearm -> held stance -> two-finger sealing thrust -> recoil of sleeves -> ready, distinct finishing gesture, no weapon or VFX. Row 3: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action attack_2: ready -> pull palm back close to torso -> loaded stance -> forward martial palm strike -> small follow-through -> ready, distinct from first attack, compact and no weapon. Row 4: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action attack_3: ready -> lower stance and draw forearm -> held stance -> two-finger sealing thrust -> recoil of sleeves -> ready, distinct finishing gesture, no weapon or VFX. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-northwest-northeast-combos-source.png",
+      "promptFile": "sources/wang-northwest-northeast-combos.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-cf78bfcb-5b7e-4c6a-8474-c15449c983fa.png",
+      "sourceSha256": "d78916acc53f4a0e519905d1373697df518095da700cad47abbb5ec3ae1c5854",
+      "promptSha256": "6d43346e217d7b4131b6a1c914eb5395bdf12cd49931efb052e881f5287010d9",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ]
+    },
+    {
+      "id": "wang-southwest-cast",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "cast_forward",
+          "direction": "southwest",
+          "motion": "cast_forward"
+        },
+        {
+          "action": "cast_point",
+          "direction": "southwest",
+          "motion": "cast_point"
+        },
+        {
+          "action": "dash",
+          "direction": "southwest",
+          "motion": "dash"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 3 rows, exactly 18 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action cast_forward: ready -> lead two fingers near chest -> loaded shoulder/extended forward hand -> forward two-finger release in facing direction -> lower forearm -> ready. Hand/chest height, no overhead stretching or VFX. Row 2: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action cast_point: ready -> form close two-hand seal at chest -> hold charged seal -> extended palm release at chest/shoulder height -> lower hand -> ready. Direction preserved, no VFX. Row 3: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action dash: ready -> compact forward lean -> low forward-driving launch pose -> stable leaning travel pose -> straighten -> ready. Whole physical body only, no shadows/afterimages/wind trails. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-southwest-cast-source.png",
+      "promptFile": "sources/wang-southwest-cast.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-838873e1-9ace-4ae9-8b24-bfe540dfd478.png",
+      "sourceSha256": "91c42cf93dfc6e84f5d1fef81212515075335ce9bcee42e3ab128589848c8dff",
+      "promptSha256": "f74d6b0244b830f884e88503341b25e83745cd78df624826804ebe6a60d1be6e",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ]
+    },
+    {
+      "id": "wang-southeast-cast",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "cast_forward",
+          "direction": "southeast",
+          "motion": "cast_forward"
+        },
+        {
+          "action": "cast_point",
+          "direction": "southeast",
+          "motion": "cast_point"
+        },
+        {
+          "action": "dash",
+          "direction": "southeast",
+          "motion": "dash"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 3 rows, exactly 18 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action cast_forward: ready -> lead two fingers near chest -> loaded shoulder/extended forward hand -> forward two-finger release in facing direction -> lower forearm -> ready. Hand/chest height, no overhead stretching or VFX. Row 2: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action cast_point: ready -> form close two-hand seal at chest -> hold charged seal -> extended palm release at chest/shoulder height -> lower hand -> ready. Direction preserved, no VFX. Row 3: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action dash: ready -> compact forward lean -> low forward-driving launch pose -> stable leaning travel pose -> straighten -> ready. Whole physical body only, no shadows/afterimages/wind trails. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-southeast-cast-source.png",
+      "promptFile": "sources/wang-southeast-cast.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-c8bb8f66-f3f3-4662-8209-85ae1934df1d.png",
+      "sourceSha256": "787a6e64cf25b7c667293890c515f388b3fbeed06dd271e7bf728bb13a6e8c0c",
+      "promptSha256": "ad56e3e3285478450bbb851ae56cdb4fc8c1004ae23ef9f6bcd8c4a332862d71",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ]
+    },
+    {
+      "id": "wang-northwest-cast",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "cast_forward",
+          "direction": "northwest",
+          "motion": "cast_forward"
+        },
+        {
+          "action": "cast_point",
+          "direction": "northwest",
+          "motion": "cast_point"
+        },
+        {
+          "action": "dash",
+          "direction": "northwest",
+          "motion": "dash"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 3 rows, exactly 18 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action cast_forward: ready -> lead two fingers near chest -> loaded shoulder/extended forward hand -> forward two-finger release in facing direction -> lower forearm -> ready. Hand/chest height, no overhead stretching or VFX. Row 2: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action cast_point: ready -> form close two-hand seal at chest -> hold charged seal -> extended palm release at chest/shoulder height -> lower hand -> ready. Direction preserved, no VFX. Row 3: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action dash: ready -> compact forward lean -> low forward-driving launch pose -> stable leaning travel pose -> straighten -> ready. Whole physical body only, no shadows/afterimages/wind trails. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-northwest-cast-source.png",
+      "promptFile": "sources/wang-northwest-cast.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-6fa4ad2c-a14f-45a0-a999-e1690fe30498.png",
+      "sourceSha256": "58c87e44c3cba39b8df25a0441825f62889155401a14b418ce8147e4984d8734",
+      "promptSha256": "14a99b3d5065786d016570d8074f3959e5cb9425ec8ae447b77284aafa40f895",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ]
+    },
+    {
+      "id": "wang-northeast-cast",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "cast_forward",
+          "direction": "northeast",
+          "motion": "cast_forward"
+        },
+        {
+          "action": "cast_point",
+          "direction": "northeast",
+          "motion": "cast_point"
+        },
+        {
+          "action": "dash",
+          "direction": "northeast",
+          "motion": "dash"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 3 rows, exactly 18 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action cast_forward: ready -> lead two fingers near chest -> loaded shoulder/extended forward hand -> forward two-finger release in facing direction -> lower forearm -> ready. Hand/chest height, no overhead stretching or VFX. Row 2: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action cast_point: ready -> form close two-hand seal at chest -> hold charged seal -> extended palm release at chest/shoulder height -> lower hand -> ready. Direction preserved, no VFX. Row 3: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action dash: ready -> compact forward lean -> low forward-driving launch pose -> stable leaning travel pose -> straighten -> ready. Whole physical body only, no shadows/afterimages/wind trails. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-northeast-cast-source.png",
+      "promptFile": "sources/wang-northeast-cast.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-d984eedb-3026-46c3-8d8e-b1a1f12cee9d.png",
+      "sourceSha256": "f63c090a42ceaac2b2fadb934a2b20fb0503b11f4f1b25b29aea698352f41695",
+      "promptSha256": "50e673b7c76debe99770375a05360894826a4b840c5ff80308690ba1d6903172",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ]
+    },
+    {
+      "id": "wolf-north-basic",
+      "actor": "wolf",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "north",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "north",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "north",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "north",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "north",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Thanh Nham Lang reference: compact slate-gray FOUR-LEGGED wolf, pale gray muzzle/chest/tail tip, pointed ears and dark slate/jade plate ridges over shoulders/back. Same wolf species and short sturdy quadruped proportions/pixel shading. No biped, rider, horns, extra tails, weapons or redesign. Keep paws grounded, spine horizontal, same body size in every pose. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wolf-north-basic-source.png",
+      "promptFile": "sources/wolf-north-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-201c1a27-b707-463e-b883-745c91fe2133.png",
+      "sourceSha256": "d57e0e11f12f78da8a56828339a79744667fec464afeb57f107c2c84ca5b7c60",
+      "promptSha256": "f10fe4b3b5d1e6a72c002076b9ae173e2109420c6dfa5c9131fd0c2f98320e6a",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png",
+          "sha256": "423070a1c4f167937b0956bd225443ba00d1c0993feb0602ab619ff0abe9f7a9"
+        }
+      ]
+    },
+    {
+      "id": "boss-north-basic",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "north",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "north",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "north",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "north",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "north",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-north-basic-source.png",
+      "promptFile": "sources/boss-north-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-7d281538-05a9-406c-bbdc-842787b6e6ff.png",
+      "sourceSha256": "04ffdcbfcf501fb9e19aa592f35c3317a84bc9e9bb41a9d13b94dfd152595992",
+      "promptSha256": "3dab094b2e5348e9d12fd31898266e4f2227e9517db0962fa0ef2816288c2e73",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        }
+      ]
+    },
+    {
+      "id": "boss-north-special",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "appear",
+          "direction": "north",
+          "motion": "appear"
+        },
+        {
+          "action": "cast_line",
+          "direction": "north",
+          "motion": "cast_line"
+        },
+        {
+          "action": "cast_field",
+          "direction": "north",
+          "motion": "cast_field"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 3 rows, exactly 18 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action appear: dormant low crouch -> stir shoulders -> rise halfway -> stand upright -> assume guard -> ready; physical awakening only, no floating pieces or glow. Row 2: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action cast_line: ready -> load arms -> held windup with arms raised only within complete-body margin -> directed heavy double-fist push -> follow-through -> ready, same facing, no beam/dust/stone props. Row 3: NORTH: rear/back-facing, moving away toward the top of the screen; back of head/body visible, no front-facing eyes. Action cast_field: ready -> lower stance -> brace fists -> groundward heavy slam -> recover from crouch -> ready; whole-body motion only, no ground circle, debris or shockwave. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-north-special-source.png",
+      "promptFile": "sources/boss-north-special.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-5b031bd9-6804-4219-9ee3-09bf258a2635.png",
+      "sourceSha256": "07e1f687951dd20994ea306a2942f988a3e9fe0f693edbdb2a5aa7f2f193a4b7",
+      "promptSha256": "b605942c002369af793ccc6ebcd78ead0eee826af983e84450faeb09fad793f0",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        }
+      ]
+    },
+    {
+      "id": "wolf-west-basic",
+      "actor": "wolf",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "west",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "west",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "west",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "west",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "west",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Thanh Nham Lang reference: compact slate-gray FOUR-LEGGED wolf, pale gray muzzle/chest/tail tip, pointed ears and dark slate/jade plate ridges over shoulders/back. Same wolf species and short sturdy quadruped proportions/pixel shading. No biped, rider, horns, extra tails, weapons or redesign. Keep paws grounded, spine horizontal, same body size in every pose. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: WEST: left-facing side profile, moving toward the left of the screen. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: WEST: left-facing side profile, moving toward the left of the screen. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: WEST: left-facing side profile, moving toward the left of the screen. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: WEST: left-facing side profile, moving toward the left of the screen. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: WEST: left-facing side profile, moving toward the left of the screen. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wolf-west-basic-source.png",
+      "promptFile": "sources/wolf-west-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-8e4b292a-5ec6-4874-b734-f01ed720810d.png",
+      "sourceSha256": "5fb5e7ddd8c38b88795c464896587775896284b7c370821b9ae4ae5182b4fe0d",
+      "promptSha256": "2204258dce4cd2530f0af16358f6b75724ccf1192db0fed738f28b91402fe6bd",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png",
+          "sha256": "423070a1c4f167937b0956bd225443ba00d1c0993feb0602ab619ff0abe9f7a9"
+        }
+      ]
+    },
+    {
+      "id": "boss-west-basic",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "west",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "west",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "west",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "west",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "west",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: WEST: left-facing side profile, moving toward the left of the screen. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: WEST: left-facing side profile, moving toward the left of the screen. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: WEST: left-facing side profile, moving toward the left of the screen. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: WEST: left-facing side profile, moving toward the left of the screen. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: WEST: left-facing side profile, moving toward the left of the screen. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-west-basic-source.png",
+      "promptFile": "sources/boss-west-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-ddc170b2-66d2-4560-a5cd-0d1f9634f548.png",
+      "sourceSha256": "1f4f3b63e391f390d17f2980889c322005d9e1d6729e201583d8bf2d9e315019",
+      "promptSha256": "90b9223a2c9bb7c9af15ec667f3b6888b6700e8eb72704147650b811bbd4ec68",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        }
+      ]
+    },
+    {
+      "id": "boss-west-special",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "appear",
+          "direction": "west",
+          "motion": "appear"
+        },
+        {
+          "action": "cast_line",
+          "direction": "west",
+          "motion": "cast_line"
+        },
+        {
+          "action": "cast_field",
+          "direction": "west",
+          "motion": "cast_field"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 3 rows, exactly 18 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: WEST: left-facing side profile, moving toward the left of the screen. Action appear: dormant low crouch -> stir shoulders -> rise halfway -> stand upright -> assume guard -> ready; physical awakening only, no floating pieces or glow. Row 2: WEST: left-facing side profile, moving toward the left of the screen. Action cast_line: ready -> load arms -> held windup with arms raised only within complete-body margin -> directed heavy double-fist push -> follow-through -> ready, same facing, no beam/dust/stone props. Row 3: WEST: left-facing side profile, moving toward the left of the screen. Action cast_field: ready -> lower stance -> brace fists -> groundward heavy slam -> recover from crouch -> ready; whole-body motion only, no ground circle, debris or shockwave. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-west-special-source.png",
+      "promptFile": "sources/boss-west-special.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-6be9829b-e25a-4593-928c-b1fa50e1a16f.png",
+      "sourceSha256": "602f0f27dc940bbf249e2e72f2853d22e3efc4d6a9c358561e2df17f4646baa9",
+      "promptSha256": "21b5c85b9b07679919aabed42654ab52e9e893ba40f13cac536d3122fbc745cd",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        }
+      ]
+    },
+    {
+      "id": "wolf-southwest-basic",
+      "actor": "wolf",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "southwest",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "southwest",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "southwest",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "southwest",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "southwest",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Thanh Nham Lang reference: compact slate-gray FOUR-LEGGED wolf, pale gray muzzle/chest/tail tip, pointed ears and dark slate/jade plate ridges over shoulders/back. Same wolf species and short sturdy quadruped proportions/pixel shading. No biped, rider, horns, extra tails, weapons or redesign. Keep paws grounded, spine horizontal, same body size in every pose. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wolf-southwest-basic-source.png",
+      "promptFile": "sources/wolf-southwest-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-c75f3c85-7a5f-49c9-ba06-219598cbbd80.png",
+      "sourceSha256": "2b64f3c4df5ec546dc823eb6e0c1a630a440866ef7cf953af7b487157db2a880",
+      "promptSha256": "b01a87621b920b4806a65c693d7fee37ba50b708a57f2e820dac533db4afd56a",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png",
+          "sha256": "423070a1c4f167937b0956bd225443ba00d1c0993feb0602ab619ff0abe9f7a9"
+        }
+      ]
+    },
+    {
+      "id": "boss-southwest-basic",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "southwest",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "southwest",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "southwest",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "southwest",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "southwest",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-southwest-basic-source.png",
+      "promptFile": "sources/boss-southwest-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-bf01b65c-d6be-4adb-9f6f-6fb9ec346930.png",
+      "sourceSha256": "ebc7da18a30063fa3570f3621878b07db68f7ebb3ede12e2d2620324831dbe33",
+      "promptSha256": "4fee200ae17327e25e5c7e318038b275a5b2b64e338be3cef1397cd49e8aba25",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        }
+      ]
+    },
+    {
+      "id": "boss-southwest-special",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "appear",
+          "direction": "southwest",
+          "motion": "appear"
+        },
+        {
+          "action": "cast_line",
+          "direction": "southwest",
+          "motion": "cast_line"
+        },
+        {
+          "action": "cast_field",
+          "direction": "southwest",
+          "motion": "cast_field"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 3 rows, exactly 18 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action appear: dormant low crouch -> stir shoulders -> rise halfway -> stand upright -> assume guard -> ready; physical awakening only, no floating pieces or glow. Row 2: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action cast_line: ready -> load arms -> held windup with arms raised only within complete-body margin -> directed heavy double-fist push -> follow-through -> ready, same facing, no beam/dust/stone props. Row 3: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action cast_field: ready -> lower stance -> brace fists -> groundward heavy slam -> recover from crouch -> ready; whole-body motion only, no ground circle, debris or shockwave. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-southwest-special-source.png",
+      "promptFile": "sources/boss-southwest-special.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-3eb32f12-f1e8-45d4-a1f6-4bf23f42734d.png",
+      "sourceSha256": "4be2076e3b5aa4a1c5e382820aa93189e2fd8ed57ce33855150ff658a69cb4d8",
+      "promptSha256": "2647a446ed3553e6b7baf046ec942392e994c0036b2ea2cc7c634f94391dd0df",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        }
+      ]
+    },
+    {
+      "id": "wolf-southeast-basic",
+      "actor": "wolf",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "southeast",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "southeast",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "southeast",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "southeast",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "southeast",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Thanh Nham Lang reference: compact slate-gray FOUR-LEGGED wolf, pale gray muzzle/chest/tail tip, pointed ears and dark slate/jade plate ridges over shoulders/back. Same wolf species and short sturdy quadruped proportions/pixel shading. No biped, rider, horns, extra tails, weapons or redesign. Keep paws grounded, spine horizontal, same body size in every pose. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wolf-southeast-basic-source.png",
+      "promptFile": "sources/wolf-southeast-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-5073ff84-80e4-43f4-9b4a-5086c9fdcbd9.png",
+      "sourceSha256": "d8f20490ca4e72ae9d0803bc669f30e27054f487fcd4040c9418ef05db120458",
+      "promptSha256": "8732170f85f903e4cb408e7684482e5737557c5da9bd907996d475ca4e1426b0",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png",
+          "sha256": "423070a1c4f167937b0956bd225443ba00d1c0993feb0602ab619ff0abe9f7a9"
+        }
+      ]
+    },
+    {
+      "id": "boss-southeast-basic",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "southeast",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "southeast",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "southeast",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "southeast",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "southeast",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-southeast-basic-source.png",
+      "promptFile": "sources/boss-southeast-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-d2bc02d4-6ef1-4825-8d2b-8f7d77cc32a4.png",
+      "sourceSha256": "83e47eaf9719dec15217c9a4716db14573466e6baa181314aeb4d48a77718f50",
+      "promptSha256": "c2f4699a069bf5feae1ebf3cc169cf2a57da3381f0996372c63af42cc658b536",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        }
+      ]
+    },
+    {
+      "id": "boss-southeast-special",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "appear",
+          "direction": "southeast",
+          "motion": "appear"
+        },
+        {
+          "action": "cast_line",
+          "direction": "southeast",
+          "motion": "cast_line"
+        },
+        {
+          "action": "cast_field",
+          "direction": "southeast",
+          "motion": "cast_field"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 3 rows, exactly 18 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action appear: dormant low crouch -> stir shoulders -> rise halfway -> stand upright -> assume guard -> ready; physical awakening only, no floating pieces or glow. Row 2: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action cast_line: ready -> load arms -> held windup with arms raised only within complete-body margin -> directed heavy double-fist push -> follow-through -> ready, same facing, no beam/dust/stone props. Row 3: SOUTHEAST: front-right three-quarter diagonal, moving toward bottom-right; muzzle/face points lower right. Action cast_field: ready -> lower stance -> brace fists -> groundward heavy slam -> recover from crouch -> ready; whole-body motion only, no ground circle, debris or shockwave. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-southeast-special-source.png",
+      "promptFile": "sources/boss-southeast-special.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-421783dc-cb07-4e1b-a10d-3ad43bf4640e.png",
+      "sourceSha256": "4219f55ad16520c77338a73ad10740e29288dcdb88bf9bf0d00fdda7105fd60a",
+      "promptSha256": "32ae62ef8143819f2aac3d98ec641f2533a8a19a5ecfbcf7a492851f448175d2",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        }
+      ]
+    },
+    {
+      "id": "wolf-northwest-basic",
+      "actor": "wolf",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "northwest",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "northwest",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "northwest",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "northwest",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "northwest",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Thanh Nham Lang reference: compact slate-gray FOUR-LEGGED wolf, pale gray muzzle/chest/tail tip, pointed ears and dark slate/jade plate ridges over shoulders/back. Same wolf species and short sturdy quadruped proportions/pixel shading. No biped, rider, horns, extra tails, weapons or redesign. Keep paws grounded, spine horizontal, same body size in every pose. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png",
+        "docs/design/characters/actor-animation-production-v1/sources/wolf-north-basic-source.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wolf-northwest-basic-source.png",
+      "promptFile": "sources/wolf-northwest-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-418f1280-5f83-434a-99fd-37c615ccc3c8.png",
+      "sourceSha256": "2c65e81557b623f45af5baad60366b6d23c4707d769cc3110fed039564df8612",
+      "promptSha256": "e4e771ac65cbbf6ef4bc07bee8cd15b65161b2ca961fd5e36bdb97110f99149d",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png",
+          "sha256": "423070a1c4f167937b0956bd225443ba00d1c0993feb0602ab619ff0abe9f7a9"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/sources/wolf-north-basic-source.png",
+          "sha256": "d57e0e11f12f78da8a56828339a79744667fec464afeb57f107c2c84ca5b7c60"
+        }
+      ]
+    },
+    {
+      "id": "boss-northwest-basic",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "northwest",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "northwest",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "northwest",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "northwest",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "northwest",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+        "docs/design/characters/actor-animation-production-v1/sources/boss-north-basic-source.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-northwest-basic-source.png",
+      "promptFile": "sources/boss-northwest-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-8d961742-c031-4b74-ba4e-00f316aa7c3c.png",
+      "sourceSha256": "956a2f030a80dc14e956dc71d07858ceff0314aed6712ad99e875db55892a8c9",
+      "promptSha256": "ddec18db78254f90a6f2f948c91914ae32fb71e7870329365c2792fe2eabb71b",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/sources/boss-north-basic-source.png",
+          "sha256": "04ffdcbfcf501fb9e19aa592f35c3317a84bc9e9bb41a9d13b94dfd152595992"
+        }
+      ]
+    },
+    {
+      "id": "boss-northwest-special",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "appear",
+          "direction": "northwest",
+          "motion": "appear"
+        },
+        {
+          "action": "cast_line",
+          "direction": "northwest",
+          "motion": "cast_line"
+        },
+        {
+          "action": "cast_field",
+          "direction": "northwest",
+          "motion": "cast_field"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 3 rows, exactly 18 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action appear: dormant low crouch -> stir shoulders -> rise halfway -> stand upright -> assume guard -> ready; physical awakening only, no floating pieces or glow. Row 2: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action cast_line: ready -> load arms -> held windup with arms raised only within complete-body margin -> directed heavy double-fist push -> follow-through -> ready, same facing, no beam/dust/stone props. Row 3: NORTHWEST: rear-left three-quarter diagonal, moving toward top-left; back/left side visible, mostly back of head. Action cast_field: ready -> lower stance -> brace fists -> groundward heavy slam -> recover from crouch -> ready; whole-body motion only, no ground circle, debris or shockwave. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+        "docs/design/characters/actor-animation-production-v1/sources/boss-north-basic-source.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-northwest-special-source.png",
+      "promptFile": "sources/boss-northwest-special.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-9bfc6dfe-bfc2-45fb-862d-1631875ffc47.png",
+      "sourceSha256": "1e2523b84846cfb8ac4f3cf3a24797017155b6961493842781c409b6ab9a0ada",
+      "promptSha256": "df6d807cdccaa999f7f30e49087c17eb7126d7aa623e2241a04fea8e8b7c9380",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/sources/boss-north-basic-source.png",
+          "sha256": "04ffdcbfcf501fb9e19aa592f35c3317a84bc9e9bb41a9d13b94dfd152595992"
+        }
+      ]
+    },
+    {
+      "id": "wolf-northeast-basic",
+      "actor": "wolf",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "northeast",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "northeast",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "northeast",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "northeast",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "northeast",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Thanh Nham Lang reference: compact slate-gray FOUR-LEGGED wolf, pale gray muzzle/chest/tail tip, pointed ears and dark slate/jade plate ridges over shoulders/back. Same wolf species and short sturdy quadruped proportions/pixel shading. No biped, rider, horns, extra tails, weapons or redesign. Keep paws grounded, spine horizontal, same body size in every pose. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png",
+        "docs/design/characters/actor-animation-production-v1/sources/wolf-north-basic-source.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wolf-northeast-basic-source.png",
+      "promptFile": "sources/wolf-northeast-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-2e18a81d-aba0-4cf6-8f54-980944322a13.png",
+      "sourceSha256": "6d48ba475a80210dc5beccbac964fd595934233efa7dec27eab82ea167a8f41e",
+      "promptSha256": "270b47e1778c17657bd8517681d9fb60a551401b99fcfc85fda1426c19e312b3",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wolf-identity.png",
+          "sha256": "423070a1c4f167937b0956bd225443ba00d1c0993feb0602ab619ff0abe9f7a9"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/sources/wolf-north-basic-source.png",
+          "sha256": "d57e0e11f12f78da8a56828339a79744667fec464afeb57f107c2c84ca5b7c60"
+        }
+      ]
+    },
+    {
+      "id": "boss-northeast-basic",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "northeast",
+          "motion": "idle6"
+        },
+        {
+          "action": "walk",
+          "direction": "northeast",
+          "motion": "walk6"
+        },
+        {
+          "action": "attack",
+          "direction": "northeast",
+          "motion": "attack6"
+        },
+        {
+          "action": "hit",
+          "direction": "northeast",
+          "motion": "hit6"
+        },
+        {
+          "action": "death",
+          "direction": "northeast",
+          "motion": "death6"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 5 rows, exactly 30 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action idle: neutral -> inhale1 -> inhale2 -> exhale1 -> exhale2 -> neutral; subtle breathing, stable planted feet. Row 2: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action walk: left contact -> compression -> passing -> right contact -> compression -> passing; opposite front/rear paw rhythm for wolf, heavy alternating steps for guardian. Row 3: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action attack: ready -> windup1 -> held windup2 -> contact bite for wolf or heavy fist strike for guardian -> follow-through -> ready. Row 4: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action hit: ready -> impact brace -> recoil -> settle -> regain balance -> ready; keep intended facing. Row 5: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action death: stumble -> recoil -> lose balance -> kneel/fold paws -> slump -> fully fallen body with same anatomy and no smoke/disintegration. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+        "docs/design/characters/actor-animation-production-v1/sources/boss-north-basic-source.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-northeast-basic-source.png",
+      "promptFile": "sources/boss-northeast-basic.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-2a595b19-7c7a-4a82-a1d3-55785d4b0931.png",
+      "sourceSha256": "9395b427f65341c8de0f5720a7222b0d336f018126ce65820b5c53b420a80eb9",
+      "promptSha256": "f22f859f3b33fc3af44cfa088fa03287feec09c818c8ee3b5bd220104eb35968",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/sources/boss-north-basic-source.png",
+          "sha256": "04ffdcbfcf501fb9e19aa592f35c3317a84bc9e9bb41a9d13b94dfd152595992"
+        }
+      ]
+    },
+    {
+      "id": "boss-northeast-special",
+      "actor": "boss",
+      "rows": [
+        {
+          "action": "appear",
+          "direction": "northeast",
+          "motion": "appear"
+        },
+        {
+          "action": "cast_line",
+          "direction": "northeast",
+          "motion": "cast_line"
+        },
+        {
+          "action": "cast_field",
+          "direction": "northeast",
+          "motion": "cast_field"
+        }
+      ],
+      "columns": 6,
+      "prompt": "Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT Tran Son Khoi Loi reference: stocky broad gray-blue STONE guardian, smooth dome head, heavy rounded boulder shoulders/forearms/fists/feet, aged bronze collar/shoulder bands/belt and small jade eyes only if facing allows. Same squat large torso, short thick legs, restrained stone pixel shading and few gold weathered marks. No horns, sword, cloak, wings, giant thin limbs, giant head or new armor silhouette. Physical standing body targets104px high; consistent across poses. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 6 columns x 3 rows, exactly 18 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action appear: dormant low crouch -> stir shoulders -> rise halfway -> stand upright -> assume guard -> ready; physical awakening only, no floating pieces or glow. Row 2: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action cast_line: ready -> load arms -> held windup with arms raised only within complete-body margin -> directed heavy double-fist push -> follow-through -> ready, same facing, no beam/dust/stone props. Row 3: NORTHEAST: rear-right three-quarter diagonal, moving toward top-right; back/right side visible, mostly back of head. Action cast_field: ready -> lower stance -> brace fists -> groundward heavy slam -> recover from crouch -> ready; whole-body motion only, no ground circle, debris or shockwave. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+        "docs/design/characters/actor-animation-production-v1/sources/boss-north-basic-source.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/boss-northeast-special-source.png",
+      "promptFile": "sources/boss-northeast-special.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-b66c98de-60b6-4e08-baf7-dab240f7af5e.png",
+      "sourceSha256": "5ccd442cf21f3a70cef74580331ebf195549c64cbc9e40266d83df4004669ca7",
+      "promptSha256": "8b6e2cfe521626556ddc095b4d808bbdcd8fd03fdc55ef8c5066ee8b89d05db8",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/boss-identity.png",
+          "sha256": "94669479cdb5e0abf61038178e2999cd590a03a79dfa86f167bc2fee96d54e42"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/sources/boss-north-basic-source.png",
+          "sha256": "04ffdcbfcf501fb9e19aa592f35c3317a84bc9e9bb41a9d13b94dfd152595992"
+        }
+      ],
+      "columnTranslationNativeX": [
+        0,
+        0,
+        0,
+        -9,
+        0,
+        0
+      ],
+      "registrationNote": "Measured fixed column origin for all three special rows at104px body scale; no per-pose fitting or clipping."
+    },
+    {
+      "id": "wang-west-compact-v2",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "west",
+          "motion": "idle4"
+        },
+        {
+          "action": "run",
+          "direction": "west",
+          "motion": "run4"
+        },
+        {
+          "action": "hit",
+          "direction": "west",
+          "motion": "hit4"
+        }
+      ],
+      "columns": 4,
+      "prompt": "EDIT the reference layout into exactly12 complete-body pixel-chibi poses, 4columns x3rows. Image1 is the edit target:12 repeated EXACT approved Wang Lin WEST sprites with their original narrow head/hair/body/foot registration. Image2 is the same original WEST sprite at large nearest zoom. Preserve the original head size, face, hair mass, narrow profile width, slim body, gray/ivory robe, dark sash/boots and restrained native pixel palette. Change only limbs and small cloth/hair details needed for animation. Every pose faces WEST/left. Row1 idle: neutral, subtle inhale, subtle exhale, neutral. Row2 run: contact left, passing, contact right, passing; short compact stride, elbows close to torso. Row3 hit: brace, short recoil, regain balance, neutral. Running hair MUST stay curled downward close behind the back as in the original standing sprite; never extend sideways as a long horizontal flag. The hair silhouette width stays close to the original sprite. Whole idle/run/hit body at80px native height must fit a64px-wide native frame anchored at32,88. Do not make head/face larger, do not widen the torso or inflate hair. Do not enlarge or fit each pose independently. Keep columns and registered foot floors of edit target. Leave complete empty alpha margins between figures. No text, grid, labels, shadow, glow, VFX or new ornaments; genuinely transparent background.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-west-compact-guide.png",
+        "docs/design/characters/core-cast-v1/references/wang-west.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-west-compact-v2-source.png",
+      "promptFile": "sources/wang-west-compact-v2.prompt.txt",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-5baaf896-3fd1-404b-b3ca-5b0a7fea1047.png",
+      "sourceSha256": "a0df62b341cdbe58e0f99f5fac1cd5d571e84d2cc9e0b89757d20ced895dd7bd",
+      "promptSha256": "ad73e9ad0898beb905af3ad1a4f576d029f70e13f5524241eebc809df8670355",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-west-compact-guide.png",
+          "sha256": "cfbd0a39d89ebc7705b367580f1aea35a758722f014fa35e9aa260f017ed8ba0"
+        },
+        {
+          "file": "docs/design/characters/core-cast-v1/references/wang-west.png",
+          "sha256": "d3c9dc801be0677e3d8de606588183511c2a65d73a75766f72e726829abd75ba"
+        }
+      ]
+    },
+    {
+      "id": "wang-southwest-compact-v2",
+      "actor": "wang",
+      "rows": [
+        {
+          "action": "idle",
+          "direction": "southwest",
+          "motion": "idle4"
+        },
+        {
+          "action": "walk",
+          "direction": "southwest",
+          "motion": "walk4"
+        },
+        {
+          "action": "run",
+          "direction": "southwest",
+          "motion": "run4"
+        },
+        {
+          "action": "attack",
+          "direction": "southwest",
+          "motion": "attack4"
+        },
+        {
+          "action": "hit",
+          "direction": "southwest",
+          "motion": "hit4"
+        },
+        {
+          "action": "death",
+          "direction": "southwest",
+          "motion": "death4"
+        }
+      ],
+      "columns": 4,
+      "prompt": "EDIT Image1, an exact24-sprite layout of the approved native Wang Lin, into24 animated poses with the requested DIAGONAL facing. Image1 fixes original slim proportions, head/face/hair size, compact physical width and planted foot positions; Image2 supplies four-angle identity only. Change facing and limbs/cloth for the requested poses while retaining this original anatomy. Keep the ponytail falling downward close to the back and curling behind the shoulder, NEVER extend it as a horizontal flag. Hair volume and running strides stay as compact as the original native sprites. Idle/walk/run/hit physical body remains no wider than60 native pixels in a64px frame; small short stride and close elbows. Do not inflate hair/head/face. No background; transparent sprite bodies only. Production sprite sheet on truly TRANSPARENT background. Identity and style reference images only; preserve the exact character, materials and proportions. EXACT approved Wang Lin gray-robed pixel-chibi in references. Preserve small slim head-to-body proportions, long charcoal half-up ponytail with ivory tie, ivory-gray modest robe, charcoal belt, slim dark boots and restrained pixel shading. No redesign, armor, cape, extra ornaments, new hairstyle or giant head. Neutral body targets 80 native pixels high; idle/walk/run/hit must fit a 64px-wide native canvas: compact hair, hands and short stride. Camera: same three-quarter top-down game camera as the references, no perspective change between poses. 4 columns x 6 rows, exactly 24 isolated COMPLETE BODY poses. Read each row left-to-right. Row 1: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action idle: neutral -> small inhale -> small exhale -> neutral; tiny breathing/cloth/hair or shoulder motion, planted feet. Row 2: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action walk: left contact -> passing -> right contact -> passing; opposite arm/leg rhythm, short steps. Row 3: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action run: left contact -> passing -> right contact -> passing, quick compact bent-elbow running stride, no horizontal leap. Row 4: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action attack: ready -> clear windup -> contact thrust/bite/strike -> recover; aimed in the requested direction. Row 5: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action hit: brace -> short recoil -> regain balance -> ready; no turn to face a different direction. Row 6: SOUTHWEST: front-left three-quarter diagonal, moving toward bottom-left; muzzle/face points lower left. Action death: stumble -> kneel/fold legs -> slump -> fully fallen body. Body truly lowers without enlargement; same anatomy and lying hair/body entirely visible. Consistent body scale across all poses. Even columns and row registration; death can lower naturally. Provide at least32px fully transparent margin around each figure and separated rows; do not touch adjacent cells with hair/hands/paws. Whole hair/hands/feet/tail visible, no cropping. Render crisp pixel-art shading matching references, not smooth vector or plastic3D. NO text, labels, grid, divider lines, background, ground shadows, detached decorations, particles, halo, aura, skills VFX or extra characters. Facing must visibly match requested front/side/back/diagonal, never mirror an existing sprite as a shortcut.",
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/refs/wang-southwest-guide.png",
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-southwest-compact-v2-source.png",
+      "promptFile": "sources/wang-southwest-compact-v2.prompt.txt",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-southwest-guide.png",
+          "sha256": "4640737038c7c888e9b7e60fc688a4e8d4bb7850fd885a3a7eb1ae016efaf3fb"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ],
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-89cdcd52-4f0e-4910-9cd8-d6c47e45ba3e.png",
+      "sourceSha256": "d6213a4eb0b18264f8570b7da12557c06db60415201d695c76f2d7e2fd782c19",
+      "promptSha256": "a299b1b60a12333d9476e42038be83d53509a022a02ad3171b2f6246b62428c5",
+      "columnTranslationNativeX": [
+        -1,
+        0,
+        -4,
+        0
+      ],
+      "registrationNote": "Measured fixed column-origin calibration, applied to every selected row at one source scale; no per-pose resize, clipping or bitmap edits."
+    },
+    {
+      "id": "wang-northwest-hit-v2",
+      "actor": "wang",
+      "columns": 4,
+      "rows": [
+        {
+          "action": "hit",
+          "direction": "northwest",
+          "motion": "hit4"
+        }
+      ],
+      "refs": [
+        "docs/design/characters/actor-animation-production-v1/sources/wang-northwest-basic-source.png",
+        "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png"
+      ],
+      "status": "generated",
+      "sourceFile": "sources/wang-northwest-hit-v2-source.png",
+      "promptFile": "sources/wang-northwest-hit-v2.prompt.txt",
+      "prompt": "Use case: identity-preserve. Production animation sprite strip. Image1 supplies EXACT approved gray Wang Lin chibi NORTHWEST rear-left facing identity and body size; Image2 supplies original proportions. Make ONE horizontal row of exactly FOUR isolated complete-body poses: standing brace, short standing recoil, return to balance, standing ready. Character MUST remain on both feet, upright: NO kneeling, collapsing or falling. Preserve slim small head, original head-to-body ratio and gray robes. Hair ponytail hangs downward CLOSE to back, NEVER extends horizontally. Compact elbows and short torso recoil so all FOUR poses fit original64x96 native frame at80px standing body height, body width at most58px. Neutral brace pose full80px high for scale reference. Same rear-left 3/4 NORTHWEST angle in all poses, face barely visible at left edge. Same pixel-chibi style, crisp shading, no camera change, no scaling between poses. Four even columns with matching body origins, all feet registered along one ground baseline. Transparent background,32px alpha margins. No FX, shadow, labels, text or detached objects.",
+      "generatedFile": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-30151d31-765b-4e2a-9e76-9c9f1ced566a.png",
+      "sourceSha256": "7e5cb3e01329a20ae5090e34de4965f552b020e37b0910f2722f44eabcd9ff1f",
+      "promptSha256": "cfd07c80a9ea86dfc8cfa18c7f5165e25f8ac50fea0ac354d31913347f6d14ba",
+      "referenceHashes": [
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/sources/wang-northwest-basic-source.png",
+          "sha256": "67ef69e0ac9d03b15f4875e67c05b31fb253a3dc96fb6082b122406858c4d2d7"
+        },
+        {
+          "file": "docs/design/characters/actor-animation-production-v1/refs/wang-identity.png",
+          "sha256": "052b1ae610a31b625883bbd623ed862d2a6861d405822ed2432f8b63ebbb735e"
+        }
+      ],
+      "columnTranslationNativeX": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "registrationNote": "Fixed column origin measured across native locomotion/reaction bounds; same translation for all poses in column. No per-frame fitting or body scale change."
+    }
+  ]
+}

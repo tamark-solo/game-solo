@@ -1,5 +1,7 @@
 # Chuẩn sản xuất animation nhân vật · Vân Hải02
 
+**Bàn giao runtime13/10:** [trạng thái mới](GAME-ACTOR-RUNTIME.md) đã ghép Vương Lâm96clip, thổ nạp/thu thập16clip, VFX F theo server và R01 body/ghost pixel8. Lang40clip/Khôi Lỗi64clip được lấy có chọn lọc từ nguồn archive sang gói02, đã nối encounter. Basis40/323hash nguyên; ART bổ sung vẫn candidate. Các đoạn “chưa live/chưa sinh hoạt” dưới đây giữ mốc trước merge/triển khai; cử chỉ/mount/ngự kiếm/cutscene vẫn tiếp nối. Scoped `assets:game-actor-actions` / `test:game-actor-actions` không gọi owner map builder.
+
 **Chốt12/10/2026:** owner chấp nhận bộ pixel mới và Ngự Phong, yêu cầu dọn bộ cũ và lưu skill cho nhân vật tiếp theo. [Approval pin323file](design/characters/actor-animation-standard-v2/approval.json), [chuẩn hiện hành](design/characters/actor-animation-standard-v2/README.md), [skill và recipe](skills/game-actor-animation-production/SKILL.md).
 
 **Đợt combat12/10:** [Hit/death/combo mới](design/characters/wang-lin-pixel-combat-v1/README.md) thêm40clip/240pose tám hướng, tổng80clip/480pose trong [review](design/characters/wang-lin-pixel-combat-v1/index.html). Bộ mới là ART candidate; bộ40clip đã chốt giữ nguyên. Core body đủ action/hướng của ma trận này, còn action sinh hoạt và adapter server.

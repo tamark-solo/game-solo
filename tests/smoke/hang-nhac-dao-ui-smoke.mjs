@@ -84,12 +84,11 @@ try {
   }));
   assert.match(art.frame, /dao-dual-theme-v1\/tu-dao\/window.webp/);
   assert.match(await page.locator('.hotbar-frame').evaluate(node => getComputedStyle(node).backgroundImage), /dao-dual-theme-v1\/tu-dao\/hud.webp/);
-  assert.match(art.minimap, /\/assets\/hang-nhac\//);
+  assert.equal(art.minimap, '/assets/hang-nhac-van-ngoc-detail-v2/map-web.webp');
   assert.doesNotMatch(art.minimap, /concept/);
-  assert.equal(art.mapParts, 32); assert.equal(art.coverParts, 10);
+  assert.equal(art.mapParts, 0); assert.equal(art.coverParts, 0);
   assert.equal(Number(art.hp), initial.hp); assert.equal(Number(art.mp), initial.mp);
-  // Review the new HUD against the owner's current baked ART, after checking
-  // the unchanged default layered release above. Only fixture preferences change.
+  // The owner's selected V2 is the default, shared by the world and HUD minimap.
   await page.locator('#menu-button').click();
   await page.locator('#map-art').selectOption('van-ngoc-detail');
   await page.waitForFunction(() => window.__hangNhacDiagnostics().mapArt?.id === 'van-ngoc-detail' && !document.querySelector('#map-art').disabled);

@@ -11,7 +11,7 @@ const surface: NavigationSurface = { ...release.world, walkPolicy: release.walkP
   walkable: release.walkable, blockers: release.blockers };
 export const hangNhacWalkable = (p: Position, radius = release.world.playerRadius): boolean => navigationWalkable(surface, p, radius);
 export const moveInHangNhac = (motion: Motion, input: Input, dt: number): Motion =>
-  moveUsingCollision(motion, input, dt, release.movementSpeed, hangNhacWalkable);
+  moveUsingCollision(motion, input, dt, release.movementSpeed * (input.fast === true ? 1.5 : 1), hangNhacWalkable);
 export function applyHangNhacMovement(state: MovementState, command: { moveX: number; moveY: number }, dt: number): void {
   Object.assign(state, moveInHangNhac({ x: state.x, y: state.y, direction: state.direction as Direction, moving: state.moving },
     { x: command.moveX, y: command.moveY }, dt));

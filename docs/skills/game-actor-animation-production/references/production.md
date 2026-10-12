@@ -1,5 +1,15 @@
 # Recipe pixel đã chốt và nguồn dùng lại
 
+## Bàn giao actor live13/10
+
+Sau merge chương, xem `docs/GAME-ACTOR-RUNTIME.md`. Vương Lâm80core đã live và có thêm `wang-lin-pixel-life-v1`16clip/96pose (meditate/gather×8). Life source có neutral6 + ngồi6 + cúi6, một scale/source từ neutral, cùng palette Pixel02 và chân88; ngồi đo pelvis/chân gập, không kéo chiều cao lên80. Prompt/input/raw/hash/registration ở root mới; ART life vẫn candidate.
+
+`sect-encounter-actors-v2` chỉ lấy member quái/boss cần dùng từ archive:104clip/624pose, provenance có member/hash, không khôi phục player/pipeline cũ. PNG giữ nguyên, kiểm atlas/canonical720frame cả life và encounter. Quái50px/112×96/(56,88), boss104px/176×176/(88,160); không ép hợp đồng người. Bắt đầu lại sinh lifeId mới; corpse giữ cuối, hit không xóa báo đòn đã khóa.
+
+Core R01 live dùng `bodyDirectionCountByAvatar` để pixel8 và native4 cùng tồn tại; body/socket/bóng theo cùng binding, không nạp người cũ làm bóng. FX F5sequence riêng được ghép theo server release/hit, không giả F thành Kiếm. Runtime integration và kiểm kỹ thuật không mở rộng approval40.
+
+`npm.cmd run assets:game-actor-actions` / `test:game-actor-actions` là scoped sync/asset/unit/GPU/browser, không owner map builder. Player normal/Shift cùng run80/120, phase theo quãng đường; save2 thêm facing tùy chọn. Renderer budget32MiB cho Wang/16MiB cho encounter là decoded cache, không tổng GPU memory hoặc benchmark thiết bị. Cử chỉ/cưỡi/ngự kiếm/cutscene vẫn chưa làm.
+
 Mọi đường dẫn `docs/`, `scripts/`, `client/` tính từ root game-solo. Bản repo `docs/skills/game-actor-animation-production/` và bản cài Codex cá nhân phải đồng bộ.
 
 ## Nguồn hiện hành

@@ -14,6 +14,7 @@ export function decodeProfile(data:string,identity:{id:string;accountId:string;a
     p.hp<0||p.hp>100||p.mp<0||p.mp>100||![p.casts,p.practiceHits,p.revision,p.cultivation].every(n=>Number.isInteger(n)&&n>=0)||
     !Array.isArray(p.skills)||p.skills.length!==3||!R01_IDS.every(id=>p.skills.includes(id))||
     (p.chapter!==undefined&&!validChapter(p.chapter))||
+    (p.facing!==undefined&&(!p.facing||![p.facing.x,p.facing.y].every(Number.isFinite)||Math.hypot(p.facing.x,p.facing.y)<.001||Math.hypot(p.facing.x,p.facing.y)>1.001))||
     (raw.schema===1?p.milestone!=='introduction':!validSectProgress(p.sect,p))||
     (p.inventory!==undefined&&!validCharacterInventory(p.inventory,p.id))||
     p.progressionKind!==CHARACTER_INFO[avatarId].progressionKind||typeof p.name!=='string'||typeof p.mapId!=='string'||typeof p.mapVersion!=='string')throw new Error('Saved profile failed validation.');

@@ -5,7 +5,9 @@ import type { PreviewRenderer } from './render/renderer';
 export type HangNhacMapArtId = 'current' | 'van-ngoc' | 'van-ngoc-detail';
 
 export function parseHangNhacMapArt(value: string | null): HangNhacMapArtId {
-  return value === 'van-ngoc' || value === 'van-ngoc-detail' ? value : 'current';
+  // The selected V2 background is the hub default; the layered release remains
+  // available by explicit selection while its navigation contract is retained.
+  return value === 'current' || value === 'van-ngoc' ? value : 'van-ngoc-detail';
 }
 
 // Display choices only. The server release and owner navigation stay authoritative.
@@ -29,7 +31,7 @@ export function hangNhacMapArt(id: HangNhacMapArtId) {
     note: concept
       ? 'Đang xem concept Vân Ngọc cùng nhân vật ở 1×. Mái và tán chưa có lớp che riêng; vùng đi vẫn theo map hiện hành.'
       : detail ? `Nền chuẩn ART Vân Ngọc đã được chọn, từ ${detailArt.sectorCount} vùng, ảnh 3072 × 2048 ở 1×. Mái và tán chưa tách lớp; vùng đi vẫn theo map hiện hành.`
-      : 'Nền hiện hành với mái và tán tách lớp. Chọn Vân Ngọc để đối chiếu phong cách và tỷ lệ.',
+      : 'Nền Hằng Nhạc trước với mái và tán tách lớp, giữ để đối chiếu với chuẩn Vân Ngọc.',
   };
 }
 

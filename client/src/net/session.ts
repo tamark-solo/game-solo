@@ -14,7 +14,7 @@ export interface SessionOptions {
   roomName?: string;
   joinOptions?: Record<string, unknown> | (() => Record<string, unknown>|Promise<Record<string,unknown>>);
   movementStep?: (state: MovementState, command: { moveX: number; moveY: number }, dt: number) => void;
-  motionFields?: Array<'motionLocked' | 'dashVX' | 'dashVY' | 'scene'>;
+  motionFields?: Array<'motionLocked' | 'dashVX' | 'dashVY' | 'scene' | 'hp'>;
   resumeToken?: () => string | undefined;
   recover?: boolean;
   connected?: (room: Room<CourtyardState>) => void;
@@ -161,12 +161,14 @@ export class NetworkSession {
     for (let i = 0; i < steps; i++) {
       this.inputHandle!.data.moveX = command.x;
       this.inputHandle!.data.moveY = command.y;
+      this.inputHandle!.data.fast = command.fast === true;
       this.inputHandle!.send();
     }
   }
 
   // Skills wait for the next ordinary movement tick; never send extra physics steps from a key event.
   nextInputSequence():number {return (this.inputHandle?.sentCount??0)+1;}
+  movementDiagnostics(){return {input:this.input(),fast:this.inputHandle?.data.fast,sent:this.inputHandle?.sentCount};}
 
   renderMotion(id: string): Motion | undefined {
     const entity = this.room?.state.players?.get(id);

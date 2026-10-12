@@ -13,8 +13,9 @@ const texture=(w:number,h:number,draw:(ctx:CanvasRenderingContext2D)=>void)=>{co
 const dimensions=(t:THREE.Texture)=>t.image as {width:number;height:number};
 export class AnimationArenaArt {
  private entries=new Map<string,Entry>();private loads=new Map<string,Promise<Entry>>();private effects=new Map<string,Effect>();private pins=new Set<string>();private alive=true;private errors:string[]=[];
- readonly budget=16*1024*1024;private dropped=0;private procedural=new Map<string,THREE.Texture>();
- constructor(private renderer:PreviewRenderer){
+ private dropped=0;private procedural=new Map<string,THREE.Texture>();
+ constructor(private renderer:PreviewRenderer,readonly budget=16*1024*1024){
+  if(!Number.isInteger(budget)||budget<1024||budget>64*1024*1024)throw Error('Invalid actor atlas budget');
   this.procedural.set('mote',texture(8,8,c=>{c.fillStyle='#91dcdb40';c.fillRect(0,0,8,8);c.fillStyle='#dafaff90';c.fillRect(2,2,4,4);c.fillStyle='#fff2ce';c.fillRect(3,3,2,2);}));
   this.procedural.set('socket',texture(10,10,c=>{c.strokeStyle='#ffdc78';c.lineWidth=2;c.beginPath();c.moveTo(0,5);c.lineTo(10,5);c.moveTo(5,0);c.lineTo(5,10);c.stroke();}));
   for(const action of ['attack','cast_field','cast_line'])this.procedural.set('warning-'+action,texture(256,256,c=>{c.fillStyle='#d5363050';c.strokeStyle='#f3b668';c.lineWidth=3;c.setLineDash([8,5]);c.beginPath();if(action==='cast_field')c.arc(128,128,116,0,Math.PI*2);else if(action==='cast_line')c.rect(128,106,116,44);else{c.moveTo(128,128);c.arc(128,128,116,-Math.PI/3,Math.PI/3);c.closePath();}c.fill();c.stroke();}));

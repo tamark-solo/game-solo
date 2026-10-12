@@ -1,5 +1,9 @@
 # Hằng Nhạc Vân Ngọc · chuẩn ART đã lưu
 
+**Runtime 13/10/2026:** `/hang-nhac.html` nay mặc định nạp nền Vân Ngọc V2 đã chốt; không còn cần query để xem nền này. Chọn nền trước trong Thiết lập ghi rõ `mapArt=current` để reload giữ đúng lựa chọn. Minimap và sổ nhiệm vụ theo cùng nền đã chọn. Nguồn WebP/runtime đã đối chiếu SHA-256; không thay release, navigation, 9 blocker hoặc dữ liệu owner. HUD05 từ `origin/_MMO` (`a3f2cad`) đã ghép cùng runtime actor local, giữ inputSeq của đòn thường và ba tab Đạo trình/Luyện chế/Chuẩn bị.
+
+Kiểm sau pull: 12 nhóm map-art (mặc định V2, ba nền, đổi nền giữ room/profile, reload lựa chọn, minimap/sổ và mobile); 5 nhóm HUD05 với 7 viewport; smoke Đạo trình/Luyện chế/Chuẩn bị và HUD/layers; 5 unit duyệt nền; 9 unit actor và hash 120 clip/720 frame; typecheck/build đạt. Chỉ dùng DB fixture. [Biên bản](data/hud-map-pull-2026-10-13.json) ghi commit, hash và đường dẫn ảnh/log. Vite local đã nạp lại cấu hình sau pull/apply để bỏ trạng thái import lỗi trong lúc file được tạm cất; không reset hồ sơ/draft trình duyệt.
+
 **Owner chốt ngày 12/10/2026:** “được rồi lưu lại map này làm chuẩn và dọn những map cũ đi giúp tôi.” Chuẩn mới là [V2 20 vùng](design/world/hang-nhac-van-ngoc-detail-v2/README.md), đúng ảnh đã hiển thị trong game. [Duyệt theo hash](design/world/hang-nhac-van-ngoc-detail-v2/approval.json) ghi riêng phạm vi **nền bake làm chuẩn ART**.
 
 | Mục | Giá trị |

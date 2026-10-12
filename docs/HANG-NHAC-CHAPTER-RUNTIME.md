@@ -1,5 +1,7 @@
 # Hằng Nhạc và EX01–EX04 — bản chơi thử 12/10/2026
 
+**Tiếp nối13/10:** xem [actor runtime mới](GAME-ACTOR-RUNTIME.md): Vương Lâm96clip gồm thổ nạp/thu thập, Shift, combo F và VFX server; Lang/Khôi Lỗi đã thay người đối luyện, R01 body/ghost cùng pixel8. Mô tả80clip/đòn đơn/hình người phía dưới giữ trạng thái lúc merge, luật nhiệm vụ/thưởng/crafting/checkpoint vẫn hiện hành.
+
 Theo yêu cầu owner, bản này mở tuyến HN05–HN12 cùng nguyên liệu/luyện chế EX01–EX04 trong game thật, tiếp nối HN01–HN04 và save hiện hành. Dùng [chương phương án A](HANG-NHAC-CHAPTER-PLAN.md), [thiết kế luyện chế](ITEM-CRAFTING-DESIGN.md) và [sáu công thức](design/systems/items-v1/plan.json) làm cơ sở chơi thử. Đây là bản kiểm vòng chơi; số liệu đề xuất và ART mới chưa được suy duyệt từ test.
 
 ## Vào chơi

@@ -96,9 +96,9 @@ test('private AI locks masks, phase preparation clears effects, snapshot freezes
 test('boss double pulse stays locked and guard reduces only the first positive hit',()=>{
  const p=profile();Object.assign(p.chapter!,{scene:'trial',activity:'HN10',accepted:['HN10'],checkpoint:2,jade:'refined',jadeEquipped:true});const a=actor(p);
  const activity=new ChapterActivity(a,p,10000,()=>{},()=>{});activity.prepare(p,true);activity.view(p).enemy!.hp=110;
- for(let i=0;i<30;i++){activity.before(1/30);activity.after(1/30,p);}
+ for(let i=0;i<120;i++){activity.before(1/30);activity.after(1/30,p);const warning=activity.view(p).warning;if(warning&&warning.resolveAt-activity.engine.now<=300)break;}
  const snapshot=activity.snapshot();p.chapter!.activitySave={...snapshot,guardUntil:activity.engine.now+1000,guardSpent:false};activity.apply(p.chapter!);
  // The line was locked toward spawn; both pulses touch the same collider, once each.
- for(let i=0;i<26;i++){activity.before(1/30);activity.after(1/30,p);}
+ for(let i=0;i<40;i++){activity.before(1/30);activity.after(1/30,p);}
  assert.equal(a.hp,77.5);assert.equal(activity.snapshot().guardSpent,true);
 });

@@ -4,6 +4,7 @@ import { HANG_NHAC } from './hang-nhac';
 import { moveUsingCollision } from './world/movement';
 import type { R01MotionState } from './skills/contracts';
 import type { Direction } from './world/types';
+import {validBasicStrike,type BasicStrike,type EnemyPresentation} from './actor-actions';
 
 export const CHAPTER_QUESTS=['HN05','HN06','HN07','HN08','HN09','HN10','HN11','HN12','EX01','EX02','EX03','EX04'] as const;
 export type ChapterQuestId=typeof CHAPTER_QUESTS[number];
@@ -64,12 +65,14 @@ export interface ChapterActivitySave {
  x:number;y:number;direction:Direction;guardUntil:number;guardSpent:boolean;nextBasicAt:number;stableSince:number;prepared:boolean;
  enemy?:TrainingTarget;ai:{stage:'approach'|'warning'|'recovery';at:number;turn:number;shape:'fan'|'circle'|'line';x:number;y:number;dx:number;dy:number;locked:boolean;pulses:number;double:boolean};
  engine:{active?:ActiveCast;projectiles:Projectile[]};
- basic?:{at:number;dx:number;dy:number};
+ basic?:({at:number;dx:number;dy:number}&Partial<BasicStrike>);
+ combo?:{index:number;until:number};
+ enemyPose?:EnemyPresentation;
  stabilized?:boolean;
 }
 export interface ChapterView {progress:ChapterProgress;available:ChapterQuestId[];status:ChapterActivitySave['status'];enemy?:TrainingTarget;
  warning?:{shape:'fan'|'circle'|'line';x:number;y:number;dx:number;dy:number;radius:number;length:number;width:number;resolveAt:number;pulses:number};
- stableReady:boolean;prepared:boolean;guardUntil:number;now:number;hint:string;}
+ stableReady:boolean;prepared:boolean;guardUntil:number;now:number;hint:string;basic?:BasicStrike;enemyPose?:EnemyPresentation;}
 export const initialChapter=():ChapterProgress=>({version:1,accepted:[],completed:[],facts:[],stock:{},jade:'none',jadeEquipped:false,caseOwned:false,compassOwned:false,protectedItems:[],guardReadyAt:0,scene:'hub',activity:'none',checkpoint:0,trip:'none',tripSerial:0,sealed:false,report:'none'});
 /** Read-only readiness shared by the server command and recipe presentation. */
 export function chapterRecipeBlocker(c:ChapterProgress,recipe:ChapterRecipe):'recipe_locked'|'already_complete'|'case'|'materials'|undefined{
@@ -101,6 +104,10 @@ export function validActivitySave(s:ChapterActivitySave):boolean {
   !['approach','warning','recovery'].includes(s.ai.stage)||!['fan','circle','line'].includes(s.ai.shape)||!Array.isArray(s.engine.projectiles)||s.engine.projectiles.length>8)return false;
  if(s.enemy&&(!finite([s.enemy.x,s.enemy.y,s.enemy.hp,s.enemy.maxHp,s.enemy.radius])||s.enemy.hp<0||s.enemy.hp>s.enemy.maxHp||typeof s.enemy.id!=='string'||typeof s.enemy.ownerId!=='string'))return false;
  if(s.basic&&!finite([s.basic.at,s.basic.dx,s.basic.dy]))return false;
+ if(s.basic?.id!==undefined&&!validBasicStrike(s.basic as BasicStrike))return false;
+ if(s.combo&&(!Number.isInteger(s.combo.index)||s.combo.index<0||s.combo.index>2||!Number.isFinite(s.combo.until)))return false;
+ if(s.enemyPose&&(!['wolf','boss'].includes(s.enemyPose.actor)||!['idle','walk','attack','cast_field','cast_line','hit','death','appear'].includes(s.enemyPose.action)||!finite([s.enemyPose.at,s.enemyPose.dx,s.enemyPose.dy])||typeof s.enemyPose.lifeId!=='string'))return false;
+ if(s.enemyPose?.releaseAt!==undefined&&(!Number.isFinite(s.enemyPose.releaseAt)||s.enemyPose.releaseAt<s.enemyPose.at))return false;
  const a=s.engine.active;
  if(a&&(!['sword','thunder','wind'].includes(a.skill)||typeof a.id!=='string'||typeof a.targetId!=='string'||!a.origin||!a.held||
   !finite([a.startedAt,a.dx,a.dy,a.origin.x,a.origin.y,a.held.x,a.held.y])||!['released','resolved','arrived','movementReleased'].every(k=>typeof a[k as keyof ActiveCast]==='boolean')||a.target&&!finite([a.target.x,a.target.y])))return false;
@@ -125,7 +132,8 @@ export const CHAPTER_WORLD={width:1280,height:896,spawn:{x:640,y:704},enemy:{x:6
  nodes:[{id:'sample-a',name:'Mẫu dẫn khí A',x:336,y:352},{id:'sample-b',name:'Mẫu đối chứng B',x:944,y:352},{id:'stable',name:'Điểm ổn định',x:368,y:616},{id:'herb',name:'Dược liệu được phép',x:304,y:256},{id:'water',name:'Linh tuyền',x:992,y:256},{id:'sand',name:'Mẫu cát dẫn khí',x:1008,y:640},{id:'fiber',name:'Sợi vân bố',x:464,y:448},{id:'jade',name:'Ngọc thô',x:816,y:448},{id:'deliver',name:'Điểm giao mẫu',x:640,y:152},{id:'observe-a',name:'Dấu khảo sát A',x:320,y:208},{id:'observe-b',name:'Dấu khảo sát B',x:960,y:208},{id:'verify',name:'Điểm kiểm chứng',x:640,y:264}]};
 export const chapterWalkable=(point:Position,radius=8)=>Number.isFinite(point.x)&&Number.isFinite(point.y)&&point.x>=48+radius&&point.y>=64+radius&&point.x<=CHAPTER_WORLD.width-48-radius&&point.y<=CHAPTER_WORLD.height-48-radius;
 export function chapterClearPath(a:Position,b:Position,radius=8){return chapterWalkable(a,radius)&&chapterWalkable(b,radius);}
-export function applyChapterMovement(state:R01MotionState,command:{moveX:number;moveY:number},dt:number):void{
+export function applyChapterMovement(state:R01MotionState,command:{moveX:number;moveY:number;fast?:boolean},dt:number):void{
+ if(state.hp!==undefined&&state.hp<=0){state.moving=false;return;}
  const speed=Math.hypot(state.dashVX??0,state.dashVY??0),input=speed?{x:state.dashVX!/speed,y:state.dashVY!/speed}:state.motionLocked?{x:0,y:0}:{x:command.moveX,y:command.moveY};
- Object.assign(state,moveUsingCollision({x:state.x,y:state.y,moving:state.moving,direction:state.direction as Direction},input,dt,speed||HANG_NHAC.movementSpeed,chapterWalkable));
+ Object.assign(state,moveUsingCollision({x:state.x,y:state.y,moving:state.moving,direction:state.direction as Direction},input,dt,speed||HANG_NHAC.movementSpeed*(command.fast===true?1.5:1),chapterWalkable));
 }

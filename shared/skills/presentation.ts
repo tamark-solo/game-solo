@@ -24,6 +24,7 @@ export type BodyDirection=Direction|'southwest'|'southeast'|'northwest'|'northea
 const BODY_DIRECTIONS:BodyDirection[]=['east','southeast','south','southwest','west','northwest','north','northeast'];
 export interface SkillPresentationDefinition {
   bodyDirectionCount?:4|8;
+  bodyDirectionCountByAvatar?:Record<string,4|8>;
   fps:number;characterEnd:number;bindings:Record<string,Partial<Record<BodyDirection,string>>>;
   tracks:PresentationTrack[];projectileClip?:string;
   ghosts?:{lagMs:number[];opacity:number[]};
@@ -64,7 +65,8 @@ export function validatePresentationCatalog(catalog:SkillPresentationCatalog):vo
   for(const id of R01_IDS)if(!catalog.skills[id])throw new Error(`Missing skill presentation: ${id}`);
   for(const [id,skill] of Object.entries(catalog.skills)){
     if(skill.bodyDirectionCount!==undefined&&skill.bodyDirectionCount!==4&&skill.bodyDirectionCount!==8)throw new Error('Invalid body direction count: '+id);
-    if(skill.bodyDirectionCount===8&&Object.values(skill.bindings).some(bindings=>BODY_DIRECTIONS.some(d=>!bindings[d])))throw new Error('Incomplete eight-direction body binding: '+id);
+    if(skill.bodyDirectionCountByAvatar&&Object.entries(skill.bodyDirectionCountByAvatar).some(([avatar,count])=>!skill.bindings[avatar]||(count!==4&&count!==8)))throw new Error('Invalid avatar direction count: '+id);
+    if(Object.entries(skill.bindings).some(([avatar,bindings])=>(skill.bodyDirectionCountByAvatar?.[avatar]??skill.bodyDirectionCount)===8&&BODY_DIRECTIONS.some(d=>!bindings[d])))throw new Error('Incomplete eight-direction body binding: '+id);
     if(!SKILL_DEFINITIONS[id as SkillId]||Math.abs(skill.characterEnd-SKILL_DEFINITIONS[id as SkillId].end)>.01)throw new Error(`Gameplay/presentation timing mismatch: ${id}`);
     const referenced=[...Object.values(skill.bindings).flatMap(d=>Object.values(d)),...skill.tracks.map(t=>t.clip),...(skill.projectileClip?[skill.projectileClip]:[])];
     if(referenced.some(c=>!catalog.clips[c!]))throw new Error(`Missing clip in ${id}.`);
@@ -131,7 +133,7 @@ export class SkillTimeline {
     if(this.terminal.size>512)this.terminal.delete(this.terminal.values().next().value!);
   }
   private binding(cast:Cast,actor:PresentationActor):string|undefined {
-    const definition=this.catalog.skills[cast.skillId],facing=definition?.bodyDirectionCount===8?BODY_DIRECTIONS[(Math.round(Math.atan2(cast.dy,cast.dx)/(Math.PI/4))+8)%8]:direction(cast.dx,cast.dy),clip=this.catalog.skills[cast.skillId]?.bindings[actor.avatarId]?.[facing];
+    const definition=this.catalog.skills[cast.skillId],count=definition?.bodyDirectionCountByAvatar?.[actor.avatarId]??definition?.bodyDirectionCount,facing=count===8?BODY_DIRECTIONS[(Math.round(Math.atan2(cast.dy,cast.dx)/(Math.PI/4))+8)%8]:direction(cast.dx,cast.dy),clip=definition?.bindings[actor.avatarId]?.[facing];
     if(!clip)this.missing.add(`${actor.avatarId}:${cast.skillId}:${facing}`);
     return clip;
   }

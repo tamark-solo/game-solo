@@ -2,7 +2,7 @@ import type { MovementState } from '../world/movement';
 import type { SkillId } from '../profiles';
 import type { Position, Input } from '../world/types';
 
-export interface R01MotionState extends MovementState { motionLocked?: boolean; dashVX?: number; dashVY?: number }
+export interface R01MotionState extends MovementState { motionLocked?: boolean; dashVX?: number; dashVY?: number;hp?:number }
 export interface CombatActor extends R01MotionState {
   id: string; connected: boolean; hp: number; mp: number; casts: number; practiceHits: number;
   nextSwordAt: number; nextThunderAt: number; nextWindAt: number; lastSpentAt: number;

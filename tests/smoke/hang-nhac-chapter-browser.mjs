@@ -13,7 +13,7 @@ try{
  const settled=()=>page.waitForFunction(()=>window.__hangNhacChapter?.().view&&!window.__hangNhacChapter().pending);
  const click=async selector=>{await page.locator(selector).click();await settled();};
  await page.goto(origin+'/hang-nhac.html?devGuest=1&mapArt=van-ngoc-detail');await page.waitForFunction(()=>window.__hangNhacDiagnostics?.().shell.phase==='entry',undefined,{timeout:35000});await page.locator('#join').click();await ready();await settled();
- assert.equal((await page.evaluate(()=>window.__hangNhacPixelPlayer())).clips,80);assert.equal(await page.evaluate(()=>window.__hangNhacDiagnostics().zoom),1);
+ const pack=await page.evaluate(()=>window.__hangNhacPixelPlayer());assert.equal(pack.coreClips,80);assert.equal(pack.lifeClips,16);assert.equal(pack.clips,96);assert.equal(await page.evaluate(()=>window.__hangNhacDiagnostics().zoom),1);
  await page.locator('#stage').focus();await page.keyboard.press('e');await page.waitForSelector('#sect-dialog[open]');
  await page.locator('[data-chapter-route="preparation"]').click();await page.waitForSelector('.chapter-dialog[open]');assert.equal(await page.locator('[data-chapter-tab="crafting"]').getAttribute('aria-selected'),'true');await page.keyboard.press('Escape');
  await page.locator('#stage').focus();await page.keyboard.press('h');await page.waitForSelector('.chapter-dialog[open]');
@@ -41,7 +41,7 @@ try{
  await page.locator('[data-ui-focus="dock-toggle"]').click();assert.equal(await page.locator('.chapter-dock [data-chapter-action="leave"]').isVisible(),true);await page.setViewportSize({width:1366,height:900});
  const native=await page.evaluate(()=>window.__hangNhacPixelPlayer().samples);assert.equal(native[0].id,await page.evaluate(()=>window.__hangNhacDiagnostics().sessionId));
  await click('.chapter-dock [data-chapter-action="leave"]');await page.waitForFunction(()=>!window.__hangNhacChapter().inActivity);await page.waitForFunction(()=>!!window.__hangNhacDiagnostics().mapBackground);
- checks.push('pixel80 / native1x; keyboard tabs; focus survives cultivation updates; locked recipe reason; inventory opens crafting; real recipe/guard and hub return');
+ checks.push('pixel96 / native1x; keyboard tabs; focus survives cultivation updates; locked recipe reason; inventory opens crafting; real recipe/guard and hub return');
  await page.setViewportSize({width:390,height:844});await page.locator('#stage').focus();await page.keyboard.press('h');await page.waitForSelector('.chapter-dialog[open]');await page.locator('[data-chapter-tab="crafting"]').click();
  assert.ok(await page.locator('.chapter-dialog').evaluate(n=>n.getBoundingClientRect().width<=innerWidth));assert.ok(await page.locator('.chapter-body').evaluate(n=>n.scrollWidth<=n.clientWidth));
  await page.screenshot({path:resolve(captures,'recipes-mobile.png')});checks.push('mobile recipe dialog and content fit viewport with fixed tabs/close and internal scroll');
