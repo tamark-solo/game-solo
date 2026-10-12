@@ -2,6 +2,7 @@ import { hangNhacWalkable } from './hang-nhac';
 import type { AvatarId, CharacterProfile } from './profiles';
 import type { Position } from './world/types';
 import { initialLessonProgress, validLessonProgress, type LessonProgress, type LessonView } from './lesson-contracts';
+import {chapterGate,levelThreshold,validChapter,type ChapterProgress} from './chapter';
 
 // Runtime interaction points on owner-authored walkable ground, not new map geometry.
 export const SECT_STATIONS = [
@@ -36,6 +37,7 @@ export interface SectView extends SectProgress {
   cycleStatus: 'idle' | 'settling' | 'ready' | 'away' | 'combat' | 'confirm' | 'complete';
   cycleReadyAt: number;
   lessonView?: LessonView;
+  chapter?:ChapterProgress;
 }
 export function readSectCommand(raw: unknown): SectCommand | undefined {
   if (!raw || typeof raw !== 'object') return;
@@ -47,7 +49,7 @@ export function readSectCommand(raw: unknown): SectCommand | undefined {
   if (r.action==='basic_attack' && (typeof r.targetId!=='string'||!/^[A-Za-z0-9_-]{1,100}$/.test(r.targetId))) return;
   if (r.action === 'cycle_step' && (!Number.isInteger(r.step) || (r.step as number) < 0 || (r.step as number) > 2)) return;
   if (r.action === 'understanding' && r.answer !== 'cultivation' && r.answer !== 'mp') return;
-  if (r.action === 'confirm_level' && r.level !== 1 && r.level !== 2) return;
+  if (r.action === 'confirm_level' && (!Number.isInteger(r.level)||(r.level as number)<1||(r.level as number)>14)) return;
   return { id: r.id, action: r.action as SectAction, ...(r.action === 'talk' ? { stationId: r.stationId as StationId } : {}),
     ...(r.action === 'cycle_step' ? { step: r.step as number } : {}), ...(r.action === 'understanding' ? { answer: r.answer as 'cultivation' | 'mp' } : {}),
     ...(r.action === 'confirm_level' ? { level:r.level as number } : {}),
@@ -70,7 +72,7 @@ export function nearStation(point: Position, id: StationId): boolean {
   return Math.hypot(point.x-station.x,point.y-station.y)<=INTERACTION_RANGE && clearSectPath(point,station);
 }
 export function progressionLabel(avatarId: AvatarId, level: number): string {
-  return avatarId === 'CHR-SITU-NAN' ? level ? `Hồi phục I · tiến triển ${level}/3` : 'Linh thể · chưa xác nhận hồi phục nền' :
+  return avatarId === 'CHR-SITU-NAN' ? level ? `Hồi phục ${level>=15?'IV':level>=9?'III':level>=3?'II':'I'} · tiến triển ${level}/15` : 'Linh thể · chưa xác nhận hồi phục nền' :
     level ? `Ngưng Khí tầng ${level} · mốc gameplay` : 'Chưa xác nhận tầng đầu';
 }
 export function guideText(avatarId: AvatarId): string {
@@ -78,16 +80,17 @@ export function guideText(avatarId: AvatarId): string {
   if (avatarId==='CHR-LI-MUWAN') return 'Hãy ổn định nền vận khí trước khi vận dụng đan–trận. Cô có thể tự luyện tập và chuẩn bị cho hành trình của mình. Kiếm Khí, Lôi Ấn và Ngự Phong Bộ đã dùng được từ đầu.';
   return 'Hãy bắt đầu bằng một vòng vận khí trong vườn thổ nạp. Tu vi tích lũy lâu dài, còn linh lực dùng để thi triển thuật. Kiếm Khí, Lôi Ấn và Ngự Phong Bộ đã dùng được từ đầu.';
 }
-export function validSectProgress(value: unknown, profile: Pick<CharacterProfile,'milestone'|'cultivation'|'avatarId'>): value is SectProgress {
+export function validSectProgress(value: unknown, profile: Pick<CharacterProfile,'milestone'|'cultivation'|'avatarId'>&{chapter?:ChapterProgress}): value is SectProgress {
   if (!value || typeof value!=='object') return false;
+  if (profile.chapter!==undefined && !validChapter(profile.chapter)) return false;
   const t=value as SectProgress;
   return (t.lessons===undefined || validLessonProgress(t.lessons,t.hn02)) &&
     typeof t.hn01==='boolean' && typeof t.hn02==='boolean' && typeof t.activity==='boolean' &&
     ['none','breathing','spirit'].includes(t.foundation) &&
-    [t.cycleStep,t.level,t.supplies].every(n=>Number.isInteger(n)&&n>=0) && t.cycleStep<=4 && t.level<=3 &&
+    [t.cycleStep,t.level,t.supplies].every(n=>Number.isInteger(n)&&n>=0) && t.cycleStep<=4 && t.level<=(profile.chapter?chapterGate(profile.chapter)===3600?15:chapterGate(profile.chapter)===1620?9:3:3) &&
     Number.isFinite(t.remainderMs) && t.remainderMs>=0 && t.remainderMs<500 && Number.isFinite(t.nextRecoveryAt) && t.nextRecoveryAt>=0 &&
     (t.foundation==='none' || t.hn01 && t.foundation===(profile.avatarId==='CHR-SITU-NAN'?'spirit':'breathing')) &&
     (t.cycleStep===0 || t.foundation!=='none') && (!t.activity || t.hn02) &&
-    (t.hn02 ? t.hn01 && t.cycleStep===4 && t.level>=1 && profile.milestone==='M01' && profile.cultivation>=LEVEL_THRESHOLDS[t.level]! :
+    (t.hn02 ? t.hn01 && t.cycleStep===4 && t.level>=1 && ['M01','M02','M03','M04'].includes(profile.milestone) && profile.cultivation>=levelThreshold(t.level) :
       t.level===0 && profile.milestone==='introduction');
 }

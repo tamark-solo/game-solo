@@ -1,14 +1,16 @@
 import type { AvatarId, CharacterProfile, SkillId } from './profiles';
 import type { SectView } from './sect';
+import {CHAPTER_ITEMS,type ChapterItemId} from './chapter';
 
 // Owner chose starter gear/existing supplies first, with unchanged HP/MP.
 export type GearSlot = 'weapon' | 'robe' | 'charm';
-export type CharacterItemId = 'wood-sword' | 'plain-robe' | 'recovery';
-export interface CharacterItemDefinition { name:string;kind:'gear'|'consumable';slot?:GearSlot;description:string;effect:string;art:string }
+export type CharacterItemId = 'wood-sword' | 'plain-robe' | 'recovery' | ChapterItemId;
+export interface CharacterItemDefinition { name:string;kind:'gear'|'consumable'|'material'|'tool';slot?:GearSlot;description:string;effect:string;art:string }
 export const CHARACTER_ITEMS:Record<CharacterItemId,CharacterItemDefinition>={
   'wood-sword':{name:'Mộc kiếm nhập môn',kind:'gear',slot:'weapon',description:'Kiếm gỗ dùng trong buổi luyện thuật của người nhập môn.',effect:'Trang bị nhập môn · sinh lực và linh lực giữ nguyên.',art:'wood-sword'},
   'plain-robe':{name:'Áo vải môn phái',kind:'gear',slot:'robe',description:'Áo vải giản dị dành cho hành trình tại Hằng Nhạc.',effect:'Trang bị nhập môn · sinh lực và linh lực giữ nguyên.',art:'plain-robe'},
   recovery:{name:'Vật tư hồi phục',kind:'consumable',description:'Dùng khi không luyện thuật để hồi sinh lực. Sinh lực đầy sẽ giữ lại vật tư.',effect:'Hồi 30 sinh lực · hồi dùng 10 giây.',art:'lotus-pill'},
+  ...CHAPTER_ITEMS,
 };
 export const GEAR_SLOT_NAMES:Record<GearSlot,string>={weapon:'Vũ khí',robe:'Pháp y',charm:'Ngọc sức / pháp bảo'};
 export interface OwnedGear { id:string;definitionId:'wood-sword'|'plain-robe';protected:boolean }
@@ -29,7 +31,7 @@ export function validCharacterInventory(raw:unknown,profileId:string):raw is Cha
   }
   return Object.entries(v.equipment).every(([slot,id])=>['weapon','robe','charm'].includes(slot)&&typeof id==='string'&&v.gear.some(item=>item.id===id&&CHARACTER_ITEMS[item.definitionId].slot===slot));
 }
-export interface CharacterItemView { id:string;definitionId:CharacterItemId;quantity:number;protected:boolean;equipped:boolean }
+export interface CharacterItemView { id:string;definitionId:CharacterItemId;quantity:number;protected:boolean;equipped:boolean;state?:'raw'|'refined' }
 export interface CharacterView {
   profileId:string;avatarId:AvatarId;name:string;hp:number;mp:number;maxHp:number;maxMp:number;
   skills:SkillId[];items:CharacterItemView[];equipment:Partial<Record<GearSlot,string>>;
@@ -49,5 +51,10 @@ export const characterCommandKey=(command:CharacterCommand):string=>JSON.stringi
 export function characterItems(profile:CharacterProfile):CharacterItemView[]{
   const result:CharacterItemView[]=profile.inventory.gear.map(item=>({...item,quantity:1,equipped:Object.values(profile.inventory.equipment).includes(item.id)}));
   if(profile.sect.supplies>0)result.push({id:ownedItemId(profile.id,'recovery'),definitionId:'recovery',quantity:profile.sect.supplies,protected:profile.inventory.recoveryProtected,equipped:false});
+  const c=profile.chapter;
+  if(c){
+    for(const [definitionId,quantity] of Object.entries(c.stock))if(quantity!>0)result.push({id:ownedItemId(profile.id,definitionId as ChapterItemId),definitionId:definitionId as ChapterItemId,quantity:quantity!,protected:c.protectedItems.includes(definitionId as ChapterItemId),equipped:false});
+    for(const [definitionId,owned] of [['hn-training-jade',c.jade!=='none'],['vh-sealed-case',c.caseOwned],['vh-flow-compass',c.compassOwned]] as const)if(owned)result.push({id:ownedItemId(profile.id,definitionId),definitionId,quantity:1,protected:c.protectedItems.includes(definitionId),equipped:definitionId==='hn-training-jade'&&c.jadeEquipped,...(definitionId==='hn-training-jade'?{state:c.jade as 'raw'|'refined'}:{})});
+  }
   return result;
 }

@@ -20,6 +20,18 @@ export class SkillEngine {
     private commit?: (actor: CombatActor, command: CastCommand, result: CastResult) => void,
     private world={walkable:hangNhacWalkable,clearPath}) { this.now = now;validateSkillDefinitions(); }
   add(actor: CombatActor): void { this.actors.set(actor.id, actor); }
+  checkpoint(actorId:string):{active?:ActiveCast;projectiles:Projectile[]} {
+    const active=this.active.get(actorId);
+    return structuredClone({...(active?{active}:{}),projectiles:[...this.projectiles.values()].filter(p=>p.ownerId===actorId)});
+  }
+  restore(actorId:string,snapshot:{active?:ActiveCast;projectiles:Projectile[]},shift=0):void {
+    const actor=this.actors.get(actorId);if(!actor)return;
+    if(snapshot.active){const cast=structuredClone(snapshot.active);cast.startedAt+=shift;this.active.set(actorId,cast);
+      actor.castId=cast.id;actor.castSkill=cast.skill;actor.castStartedAt=cast.startedAt;actor.castAimX=cast.dx;actor.castAimY=cast.dy;
+      actor.motionLocked=this.now-cast.startedAt<R01[cast.skill].recovery;
+    }
+    for(const p of snapshot.projectiles)this.projectiles.set(p.id,{...p,ownerId:actorId,startedAt:p.startedAt+shift});
+  }
   practice(actorId: string, aim: Input): TrainingTarget | undefined {
     const actor = this.actors.get(actorId); if (!actor?.connected || actor.castId || actor.hp <= 0) return;
     const magnitude = Math.hypot(aim.x, aim.y); if (!Number.isFinite(magnitude) || magnitude < .001) return;

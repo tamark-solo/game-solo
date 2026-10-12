@@ -7,6 +7,7 @@ import { currentSectQuest, sectQuests, type SectQuest } from '../../shared/sect-
 import { QuestUI } from './quest-ui';
 import { attachFrameSurface } from './frame-surface';
 import type { Position } from '@shared/world/types';
+import {chapterGate,initialChapter,levelThreshold} from '@shared/chapter';
 
 const element=<K extends keyof HTMLElementTagNameMap>(tag:K,text?:string):HTMLElementTagNameMap[K]=>{const node=document.createElement(tag);if(text)node.textContent=text;return node;};
 const reasons:Record<string,string>={ distance:'Tiến lại gần người hướng dẫn, trên cùng lối đi, rồi nhấn E.',profile:'Vào sân chung để lưu hành trình.',inactive:'Nhân vật chưa sẵn sàng.',
@@ -20,7 +21,7 @@ const reasons:Record<string,string>={ distance:'Tiến lại gần người hư�
   lesson_running:'Đang có vùng báo trước; đợi kết quả bài luyện rồi thử lại.',lesson_reward:'Bài đã xác nhận · nhận 80 tích lũy một lần.',
   resource:'Chưa đủ linh lực cho Phong; đợi hồi tự nhiên rồi thử lại.',skill_cooldown:'Phong đang hồi; đợi hết cooldown rồi thử lại.',blocked:'Chưa có khoảng trống hợp lệ cho bài luyện.',
   save:'Chưa lưu được kết quả. Hãy thử lại; phần thưởng chưa cấp.',request_reused:'Mã thao tác đã được dùng cho nội dung khác.',invalid:'Thao tác không hợp lệ.' };
-interface UIOptions { send:(command:SectCommand)=>void; avatar:()=>AvatarId; position:()=>Position; online:()=>boolean; connectionMessage?:()=>string|undefined; clock:()=>number; focus:()=>void; training:()=>void; enter:()=>void; }
+interface UIOptions { send:(command:SectCommand)=>void; avatar:()=>AvatarId; position:()=>Position; online:()=>boolean; connectionMessage?:()=>string|undefined; mapBackground?:()=>string; clock:()=>number; focus:()=>void; training:()=>void; enter:()=>void;chapter?:()=>void; }
 export class SectUI {
   view?:SectView;
   private dialog=document.getElementById('sect-dialog') as HTMLDialogElement;
@@ -121,17 +122,18 @@ export class SectUI {
       (document.getElementById('lesson-stop') as HTMLButtonElement).disabled=!online||!!this.pending;
     }
     if(this.modal&&this.station){
-      const v=this.view,signature=JSON.stringify([this.station,v?.hn01,v?.hn02,v?.foundation,v?.cycleStep,!!v?.cycleReadyAt,v?.activity,v?.level,v?.supplies,v?.lessons,v?.lessonView?.status]);
+      const v=this.view,signature=JSON.stringify([this.station,v?.hn01,v?.hn02,v?.foundation,v?.cycleStep,!!v?.cycleReadyAt,v?.activity,v?.level,v?.milestone,v?.chapter?.completed,v?.supplies,v?.lessons,v?.lessonView?.status]);
       if(this.signature!==signature){this.signature=signature;this.renderStation();}
       this.body.querySelectorAll<HTMLButtonElement>('[data-action]').forEach(button=>{
         const action=button.dataset.action as SectAction;
-        button.disabled=!!this.pending||!online||action!=='activity_stop'&&!!v?.practising||action==='cycle_step'&&v?.cycleStatus!=='ready'||action==='confirm_level'&&(v?.level===3||(v?.cultivation??0)<LEVEL_THRESHOLDS[(v?.level??0)+1]!)||
+        const max=chapterGate(v?.chapter??initialChapter())===3600?15:chapterGate(v?.chapter??initialChapter())===1620?9:3;
+        button.disabled=!!this.pending||!online||action!=='activity_stop'&&!!v?.practising||action==='cycle_step'&&v?.cycleStatus!=='ready'||action==='confirm_level'&&((v?.level??0)>=max||(v?.cultivation??0)<levelThreshold((v?.level??0)+1))||
           action==='use_recovery'&&(!v?.supplies||v.lessons.active!=='none'||v.nextRecoveryAt>now||v.hp>=100)||action==='lesson_start'&&v?.lessonView?.status==='warning';
         button.title=v?.practising||action==='use_recovery'&&v?.lessons.active!=='none'?'Đợi thi triển và bài luyện kết thúc':action==='use_recovery'&&v?.hp===100?'HP đã đầy · giữ vật tư':'';
       });
       const timer=this.body.querySelector<HTMLElement>('[data-cycle-timer]');
       if(timer&&v){const left=Math.max(0,v.cycleReadyAt-now);timer.textContent=v.cycleStatus==='ready'?'Nhịp đã ổn định · hãy xác nhận':v.cycleStatus==='combat'?'Tạm dừng khi luyện thuật':v.cycleStatus==='away'?'Quay lại người hướng dẫn để tiếp tục':`Đứng yên · ${(left/1000).toFixed(1)} / ${CYCLE_PHASE_MS/1000} giây`;}
-      const activity=this.body.querySelector<HTMLElement>('[data-activity]');if(activity&&v)activity.textContent=online?({locked:'Chưa mở',stopped:'Chưa chọn hoạt động nền',running:'Đang tích lũy · 120/phút',paused:'Tạm dừng khi luyện thuật',gate:'Chạm cổng 360 · cần nền vận hành tiếp',offline:'Đang mất kết nối · không tích lũy'} as const)[v.activityStatus]:'Đang mất kết nối · không tích lũy';
+      const activity=this.body.querySelector<HTMLElement>('[data-activity]');if(activity&&v)activity.textContent=online?({locked:'Chưa mở',stopped:'Chưa chọn hoạt động nền',running:'Đang tích lũy · 120/phút',paused:'Tạm dừng khi luyện thuật',gate:`Chạm cổng ${chapterGate(v.chapter??initialChapter())} · tiếp tục nhiệm vụ để mở nền`,offline:'Đang mất kết nối · không tích lũy'} as const)[v.activityStatus]:'Đang mất kết nối · không tích lũy';
       const recovery=this.body.querySelector<HTMLElement>('[data-recovery-timer]');if(recovery&&v)recovery.textContent=v.practising||v.lessons.active!=='none'?'Đợi thi triển và bài luyện kết thúc':v.hp>=100?'HP đã đầy · giữ vật tư':v.nextRecoveryAt>now?`Vật tư đang hồi · ${((v.nextRecoveryAt-now)/1000).toFixed(1)} giây`:v.supplies?'Sẵn sàng dùng':'Đã hết vật tư';
       this.body.querySelectorAll<HTMLElement>('[data-cultivation]').forEach(node=>{node.textContent=String(v?.cultivation??0);});
     }
@@ -152,6 +154,7 @@ export class SectUI {
     this.title.textContent=s.name;this.body.replaceChildren();this.playerDot=undefined;
     this.dialog.dataset.mode='npc';document.getElementById('sect-category')!.textContent=`HẰNG NHẠC · ${s.area.toLocaleUpperCase('vi-VN')}`;
     this.actions=element('div');this.actions.className='dialog-actions';
+    if(v?.lessons.hn04&&this.options.chapter){const button=element('button','HN05–HN12 / Nguyên liệu / Luyện chế');button.type='button';button.addEventListener('click',()=>{this.dialog.close();this.options.chapter?.();});this.body.append(button);}
     if(s.id==='guide'){
       this.paragraph(guideText(this.options.avatar()));
       if(!v?.hn01){this.paragraph('HN01 · Nhận hướng dẫn và 2 vật tư hồi phục. Sau đó tới vườn thổ nạp ở phía tây.');this.button('Nhận hướng dẫn nhập môn','accept_intro');}
@@ -171,13 +174,14 @@ export class SectUI {
           this.button('Linh lực dùng để thi triển thuật','understanding',{answer:'mp'});
         }else {this.paragraph('Đã hoàn thành vận hành và hiểu nguồn lực. Xác nhận để ghi M01, nhận 100 tích lũy và mở thổ nạp. Ba thuật R01 giữ quyền hiện có.');this.button(this.options.avatar()==='CHR-SITU-NAN'?'Xác nhận Hồi phục I':'Xác nhận tầng 1 · M01','confirm_m01');}
       }else{
-        this.paragraph(`${progressionLabel(this.options.avatar(),v.level)} · M01 đã ghi nhận.`);
-        const progress=element('p','Tích lũy: '),value=element('b',String(v.cultivation));value.dataset.cultivation='';progress.append(value,` / ${CULTIVATION_GATE} · cổng nền 1–3`);this.body.append(progress);
+        this.paragraph(`${progressionLabel(this.options.avatar(),v.level)} · ${v.milestone} đã ghi nhận.`);
+        const gate=chapterGate(v.chapter??initialChapter());
+        const progress=element('p','Tích lũy: '),value=element('b',String(v.cultivation));value.dataset.cultivation='';progress.append(value,` / ${gate} · cổng nền hiện tại`);this.body.append(progress);
         const activity=element('p');activity.dataset.activity='';this.body.append(activity);
         this.paragraph('Chọn một hoạt động nền. Có thể đi lại trong sân an toàn; hoạt động tạm dừng khi luyện thuật. Hiện chỉ ghi thời gian online, không tính thời gian vắng mặt.');
         this.button(v.activity?'Dừng hoạt động nền':this.options.avatar()==='CHR-SITU-NAN'?'Bắt đầu hồi phục nền':'Bắt đầu thổ nạp',v.activity?'activity_stop':'activity_start');
-        if(v.level<3)this.button(`Xác nhận ngưỡng ${v.level+1} · cần ${LEVEL_THRESHOLDS[v.level+1]}`,'confirm_level',{level:v.level});
-        else this.paragraph('Đã tới ngưỡng nền 1–3. M02 còn cần trận đầu HN05; nền 4–9 còn cần bài bình cảnh HN06–HN07. Tuyến tiếp theo chưa mở.');
+        if(v.level<(gate===3600?15:gate===1620?9:3))this.button(`Xác nhận ngưỡng ${v.level+1} · cần ${levelThreshold(v.level+1)}`,'confirm_level',{level:v.level});
+        else this.paragraph('Đã tới giới hạn nền hiện tại. Tiếp tục nhiệm vụ nhập môn để mở nền tiếp.');
       }
     }else if(s.id==='training'){
       this.paragraph('Kiếm Khí theo hướng ngắm; Lôi Ấn cần chọn mục tiêu; Ngự Phong Bộ lướt theo hướng và dừng tại vùng chặn.');
@@ -193,7 +197,7 @@ export class SectUI {
         this.paragraph(`HN03 đã lưu. HN04 · Đi bộ ${lessons.walk?'✓':'—'} · Phong ${lessons.wind?'✓':'—'}. Vòng màu vàng báo trước 1,5 giây; tới lúc đòn tới, chân phải ra ngoài cả vòng. Phong không miễn nhiễm và không xuyên vật cản. Bài an toàn không mất sinh lực.`);
         if(!lessons.walk||!lessons.wind)this.button(lessons.walk?'Luyện né bằng Phong':'Luyện né bằng đi bộ','lesson_start',{lesson:'avoid'});
         else this.button('Xác nhận HN04 · +80 tích lũy','lesson_confirm',{lesson:'avoid'});
-      }else this.paragraph('HN03–HN04 đã hoàn thành. Xem lại hướng dẫn hoặc luyện tự do không nhận thưởng thêm. HN05, map ngoại vi và M02 chưa mở.');
+      }else this.paragraph('HN03–HN04 đã hoàn thành. Mở Nhập môn / Luyện chế để nhận HN05 và tới ngoại vi.');
       if(lessons?.active!=='none')this.button('Tạm dừng bài luyện','lesson_stop');
       const button=element('button','Tạo mục tiêu riêng để luyện');button.type='button';button.addEventListener('click',()=>{this.dialog.close();this.options.training();});this.actions.append(button);
     }else{
@@ -219,7 +223,7 @@ export class SectUI {
     const station=SECT_STATIONS.find(s=>s.id===(this.destination??goal.stationId))!;
     right.append(element('h3','Đường tu hành'),element('p',`Đi tới ${station.name} · ${station.area}`));
     layout.append(left,right);this.body.append(layout);
-    const map=element('div');map.className='sect-minimap';map.style.backgroundImage=`url(${HANG_NHAC.background.url})`;
+    const map=element('div');map.className='sect-minimap';map.style.backgroundImage=`url(${this.options.mapBackground?.()??HANG_NHAC.background.url})`;
     const route=sectRoute(this.options.position(),SECT_STATIONS.find(s=>s.id===(this.destination??goal.stationId))!);
     if(route){const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox',`0 0 ${HANG_NHAC.world.width} ${HANG_NHAC.world.height}`);
       const line=document.createElementNS(svg.namespaceURI,'polyline');line.setAttribute('points',route.map(p=>`${p.x},${p.y}`).join(' '));line.setAttribute('fill','none');line.setAttribute('stroke','#ffda6a');line.setAttribute('stroke-width','12');svg.append(line);map.append(svg);}

@@ -20,7 +20,7 @@ export interface DaoRuntimeHudSnapshot {
   realm?: string;
   x?: number;
   y?: number;
-  map?: { name: string; width: number; height: number; backgroundUrl: string };
+  map?: { name: string; width: number; height: number; backgroundUrl: string;pins?:Array<{id:string;name:string;area:string;x:number;y:number}> };
   target?: { name: string; x: number; y: number; hp?: number; maxHp?: number } | null;
 }
 
@@ -153,7 +153,8 @@ export class DaoRuntimeHud {
 
   openMap(): void {
     this.screen = 'map';
-    this.setDialog('Bản đồ · Hằng Nhạc', 'Vị trí của bạn và người hướng dẫn trong khu vực', `<div class="dao-world-map" data-dao-map-plane><img alt="Bản đồ Hằng Nhạc đang chơi" draggable="false" hidden>${SECT_STATIONS.map(station => `<span class="dao-map-station" data-dao-station="${station.id}" title="${station.name} · ${station.area}"><i aria-hidden="true">◇</i><span>${station.name}</span></span>`).join('')}<i class="dao-player-dot" data-dao-player-dot hidden title="Vị trí của bạn"></i><i class="dao-target-dot" data-dao-target-dot hidden title="Mục tiêu đang chọn"></i></div><p class="dao-map-legend"><span><i class="dao-player-dot"></i> Bạn</span><span><i class="dao-target-dot"></i> Mục tiêu</span><span>◇ Người hướng dẫn</span></p><p class="dao-map-message"></p>`);
+    const pins=this.snapshot.map?.pins??SECT_STATIONS;
+    this.setDialog(`Bản đồ · ${this.snapshot.map?.name??'Hằng Nhạc'}`, 'Vị trí và điểm tương tác trong khu vực', `<div class="dao-world-map" data-dao-map-plane><img alt="Bản đồ khu vực đang chơi" draggable="false" hidden>${pins.map(station => `<span class="dao-map-station" data-dao-station="${station.id}" title="${station.name} · ${station.area}"><i aria-hidden="true">◇</i><span>${station.name}</span></span>`).join('')}<i class="dao-player-dot" data-dao-player-dot hidden title="Vị trí của bạn"></i><i class="dao-target-dot" data-dao-target-dot hidden title="Mục tiêu đang chọn"></i></div><p class="dao-map-legend"><span><i class="dao-player-dot"></i> Bạn</span><span><i class="dao-target-dot"></i> Mục tiêu</span><span>◇ Điểm tương tác</span></p><p class="dao-map-message"></p>`);
     this.mapSignature = '';
     this.renderMapState();
   }
@@ -265,8 +266,8 @@ export class DaoRuntimeHud {
       targetDot.hidden = !connected || !target;
       if (target) place(targetDot, target.x, target.y);
       plane.querySelectorAll<HTMLElement>('[data-dao-station]').forEach(node => {
-        const station = SECT_STATIONS.find(station => station.id === node.dataset.daoStation)!;
-        place(node, station.x, station.y);
+        const station = (map.pins??SECT_STATIONS).find(station => station.id === node.dataset.daoStation);
+        node.hidden=!station;if(station)place(node, station.x, station.y);
       });
     }
     this.setText(this.root.querySelector('.dao-hud-coordinates'), connected && x !== undefined && y !== undefined ? `${Math.round(x)}, ${Math.round(y)}` : 'Chưa vào sân');

@@ -5,6 +5,7 @@ export const Disciple = schema({
   x: t.number(), y: t.number(), direction: t.string(),
   moving: t.boolean(), connected: t.boolean(), ack: t.number(),
   id: t.string(), profileId: t.string(), progressionKind: t.string(),
+  scene: t.string(),
   hp: t.number(), mp: t.number(), casts: t.number(), practiceHits: t.number(), savedAt: t.number(),
   nextSwordAt: t.number(), nextThunderAt: t.number(), nextWindAt: t.number(), lastSpentAt: t.number(),
   castId: t.string(), castSkill: t.string(), castStartedAt: t.number(),

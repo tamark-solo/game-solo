@@ -1,10 +1,11 @@
 import { LESSON_REWARD } from './lesson-contracts';
 import type { SectView, StationId } from './sect';
+import {CHAPTER_QUESTS,CHAPTER_TITLES,CHAPTER_REWARDS,type ChapterQuestId} from './chapter';
 
 // Read-only presentation of server-confirmed progress. No rewards or commands are applied here.
 export type SectQuestStatus = 'locked' | 'available' | 'active' | 'ready' | 'completed' | 'unreleased';
 export interface SectQuest {
-  id: 'HN01' | 'HN02' | 'HN03' | 'HN04' | 'HN05';
+  id: 'HN01' | 'HN02' | 'HN03' | 'HN04' | ChapterQuestId;
   title: string;
   stationId: StationId;
   description: string;
@@ -26,7 +27,7 @@ export function sectQuests(view?: SectView): SectQuest[] {
   const artsReady = !!(lessons?.basic && lessons.sword && lessons.thunder);
   const avoidReady = !!(lessons?.walk && lessons.wind);
   const cycleStep = view?.cycleStep ?? 0;
-  return [
+  const quests:SectQuest[]=[
     { id: 'HN01', title: 'Bước vào Hằng Nhạc', stationId: 'guide',
       description: 'Gặp người tiếp dẫn ở sân môn phái để bắt đầu hành trình của nhân vật này.',
       reward: '2 vật tư hồi phục · mở hành trình nhập môn',
@@ -79,6 +80,16 @@ export function sectQuests(view?: SectView): SectQuest[] {
       reward: 'Chưa mở phần thưởng hoặc M02', status: 'unreleased', objectives: [],
       nextStep: 'Bản hiện tại dừng ở HN04. Có thể luyện tự do và thổ nạp; chưa có cổng ngoại vi.' },
   ];
+  if(!view?.chapter)return quests;
+  const c=view.chapter,done=(id:ChapterQuestId)=>c.completed.includes(id);
+  const unlocked=(id:ChapterQuestId)=>id==='HN05'?hn04:id==='HN06'?done('HN05')&&['M02','M03','M04'].includes(view.milestone):id==='HN07'?done('HN06')&&view.level>=3:id==='HN10'?done('HN09')&&view.level===15&&c.jade==='refined':id==='HN11'?done('HN10'):id==='EX01'?done('HN12'):done(CHAPTER_QUESTS[CHAPTER_QUESTS.indexOf(id)-1]);
+  return [...quests.slice(0,4),...CHAPTER_QUESTS.map((id):SectQuest=>{
+    const stationId:StationId=id==='HN07'?'cultivation':['HN05','HN09','HN10'].includes(id)?'training':['HN11','HN12'].includes(id)?'guide':'preparation';
+    const proof=done(id)||c.facts.includes(`${id}-proof`),ready=proof&&(id!=='HN09'||view.level>=9)||['HN11','HN12'].includes(id)&&c.accepted.includes(id);
+    return {id,title:CHAPTER_TITLES[id],stationId,description:id.startsWith('EX')?'Nhận biết nguồn, chuẩn bị và kiểm chứng công cụ; có cách thủ công thay thế.':'Vận dụng trong bài riêng rồi trở về ghi nhận kết quả.',reward:CHAPTER_REWARDS[id]?`${CHAPTER_REWARDS[id]} tích lũy · phần thưởng một lần`:'Tiến trình / quyền hoạt động · không thưởng sức mạnh',status:status(unlocked(id),done(id),c.accepted.includes(id),ready),
+      objectives:[{id:'accepted',text:'Nhận nhiệm vụ tại NPC',done:c.accepted.includes(id)},{id:'proof',text:id==='HN10'?`Khảo nghiệm: checkpoint ${c.checkpoint}/3`:'Hoàn tất bài được hướng dẫn trong Nhập môn / Luyện chế',done:proof},{id:'confirmed',text:'Ghi nhận kết quả một lần',done:done(id)}],
+      nextStep:done(id)?'Kết quả đã lưu.':!unlocked(id)?id==='HN06'?'Xác nhận M02 tại người hướng dẫn vận khí sau HN05 / tầng 3.':id==='HN10'?'Xác nhận tầng 15 sau HN09/M03.':'Hoàn tất bước trước.':id==='HN09'&&proof&&view.level<9?'Bài đã lưu. Tích lũy và xác nhận tầng 9 trước khi nhận thưởng.':'Tới NPC được chỉ đường; mở H / Nhập môn / Luyện chế để nhận, vào bài hoặc xác nhận.'};
+  })];
 }
 export function currentSectQuest(quests: SectQuest[]): SectQuest {
   return quests.find(quest => quest.status !== 'completed' && quest.status !== 'locked') ?? quests[quests.length - 1]!;

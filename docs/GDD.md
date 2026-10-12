@@ -1,5 +1,7 @@
 # GDD — Vân Hải Đạo Đồ: MMORPG Tu Tiên
 
+**Bản trải nghiệm 12/10/2026 theo phạm vi owner chọn:** đã tích hợp [Hằng Nhạc HN01–HN12 và nhánh EX01–EX04](HANG-NHAC-CHAPTER-RUNTIME.md), sáu công thức, save/proof/checkpoint server và bộ pixel Vương Lâm mới. Các đoạn “chưa mở runtime” ở ghi chú nghiên cứu 10–11/10 bên dưới ghi trạng thái lúc thiết kế; xem tài liệu bản trải nghiệm để biết phần đã triển khai và phần còn thử. Map ngoại vi/ART hai nhân vật còn lại/tăng chỉ số M03–M04 vẫn cần hoàn thiện, không suy duyệt toàn bộ GDD từ tích hợp.
+
 **Nhận diện 10/10/2026:** owner chốt tên **Vân Hải Đạo Đồ**, câu dẫn **“Đạo chưa có đường. Ta tự mở.”** Các ý tưởng mới về ân oán, mưu trí vượt cảnh giới và tự lập đạo đang ở bước thiết kế, chưa là gameplay đã triển khai. Đổi tên game chưa thay bộ ba nhân vật hoặc tuyến Hằng Nhạc hiện hành; các nhắc tới Tiên Nghịch bên dưới là nguồn truyện tham khảo.
 
 **Đạo lộ/UI 11/10 theo yêu cầu owner:** từ **Hóa Thần** có chức năng **Đọa Ma**; khi trạng thái Đọa Ma được kích hoạt, UI–HUD chuyển sang bộ tương ứng. Đã vẽ mới hai bộ [Tu Đạo/Đọa Ma](design/ui/dao-dual-theme-v1/README.md) để đối chiếu theo map, [contract trình bày/backend](DAO-UI-SYSTEM.md) giữ trạng thái do server xác nhận. Chưa gameplay/cảnh giới/migration Đọa Ma, chưa chốt chi phí/tác động/hoàn nguyên hoặc duyệt ART mới; không biến hồ sơ nhập môn thành Hóa Thần từ lựa chọn preview.
@@ -12,7 +14,7 @@
 
 **Registry catalog đã triển khai:** [schema/validator/Core/API và màn quản trị v1](GAME-CONTENT-CATALOG-RUNTIME.md) đọc sổ, kiểm ID/reference/source, tra cứu theo nhóm/nhóm con/trạng thái và xem nguồn–nơi dùng. Chỉ role admin có quyền đọc; không CRUD/publish/GM grant hoặc tự cấp gameplay từ các dòng đề xuất.
 
-**Nhánh vật phẩm/luyện chế:** [nguồn Tiên Nghịch và reference đợt 2](TIEN-NGHICH-CRAFTING-REFERENCES.md) bổ sung 3 game cùng sổ đọc 12 trang chương có giới hạn; [thiết kế item/crafting](ITEM-CRAFTING-DESIGN.md) có nguồn–công thức–công cụ–hoạt động hậu nhập môn, và [kế hoạch sản xuất VP0–VP4](ITEM-PRODUCTION-PLAN.md) chia đầu việc/asset/nghiệm thu. Nội dung mới là sáng tạo đề xuất, chưa đổi balance HN, chưa có runtime/ART mới; các gói VP là nhánh của RM, không yêu cầu làm crafting đầy đủ trước HN05.
+**Nhánh vật phẩm/luyện chế:** [nguồn Tiên Nghịch và reference đợt 2](TIEN-NGHICH-CRAFTING-REFERENCES.md) bổ sung 3 game cùng sổ đọc 12 trang chương có giới hạn; [thiết kế item/crafting](ITEM-CRAFTING-DESIGN.md) có nguồn–công thức–công cụ–hoạt động hậu nhập môn, và [kế hoạch sản xuất VP0–VP4](ITEM-PRODUCTION-PLAN.md) chia đầu việc/asset/nghiệm thu. Ngày 12/10 theo ưu tiên owner đã tạo [bộ ART Vân Ngọc đầu tiên](design/gameplay/van-ngoc-gameplay-assets-v1/README.md): 11 trạng thái icon, ba đạo cụ và sáu công thức đối chiếu đúng plan, chờ duyệt hình. Nội dung mới là sáng tạo đề xuất, chưa đổi balance HN hoặc mở runtime luyện chế; các gói VP là nhánh của RM, không yêu cầu làm crafting đầy đủ trước HN05.
 
 **Đợt nghiên cứu nội dung:** owner yêu cầu đào sâu game tu tiên và cốt truyện để thiết kế nhiệm vụ, tiến trình, đồ, thuật/pháp bảo có bản sắc. [Nghiên cứu nguồn](XIANXIA-GAME-RESEARCH.md), [hướng sáng tạo](VAN-HAI-CREATIVE-DIRECTION.md) và [kế hoạch nội dung](RPG-CONTENT-PLAN.md) bổ sung RM0. Ý tưởng mới là ứng viên để chọn, **không tự thay canon/roster, khóa số liệu hoặc trở thành feature đã duyệt**.
 

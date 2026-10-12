@@ -4,6 +4,10 @@
 
 **Owner duyệt hướng concept 11/10:** “tôi đồng ý, nhìn khá tốt”. Lấy bản này làm mẫu nét, màu, chất liệu và không khí cho các khu chi tiết. Phạm vi xác nhận là concept tổng; chưa duyệt chất lượng native của ART sản xuất, đăng ký footprint hoặc navigation/tích hợp mới.
 
+**Chuẩn ART mới 12/10:** owner đã xem và chốt [V2 20 vùng](../hang-nhac-van-ngoc-detail-v2/README.md) làm chuẩn nét/native cho map và asset tiếp theo. Concept này vẫn được giữ vì dùng chung với web/UI; phạm vi duyệt concept gốc không được mở rộng sang footprint/layer. [Hồ sơ lưu/dọn](../../../HANG-NHAC-VAN-NGOC-BASELINE.md).
+
+**Xem trong game 12/10:** theo yêu cầu owner, mở [/hang-nhac.html?mapArt=van-ngoc](http://127.0.0.1:5173/hang-nhac.html?mapArt=van-ngoc) để xem cùng nhân vật/HUD/NPC hiện tại; đổi nền ở Thiết lập. [Bàn giao xem thử](../../../HANG-NHAC-VAN-NGOC-IN-GAME-REVIEW.md) ghi rõ nguồn 1536 × 1024 được hiển thị trong world 3072 × 2048, chưa có layer che riêng và giữ navigation hiện hành. Đây là bước kiểm hình trong game; trạng thái nguồn/duyệt ART production trong `concept.json` vẫn giữ phạm vi ban đầu.
+
 ## Hướng mỹ thuật
 
 - Không gian: ngoại viện của một môn phái cổ trên núi cao; người mới cảm nhận con đường tu đạo ngay khi vào sân.
@@ -43,4 +47,4 @@ Luồng chức năng: tiếp dẫn → thổ nạp/chuẩn bị → luyện thu�
 3. Vẽ chi tiết gần kích thước dùng, kiểm cửa/đường/bậc với sprite 64 × 96; căn và ghép, kiểm đường nối. Không dùng upscale concept để thay bước này.
 4. Bàn giao nền đầy đủ và dự án Editor riêng; chủ dự án kiểm/chốt navigation. Không ghi đè dự án hoặc nháp hiện hành.
 5. Sau footprint: nền sạch có phần phía sau mái/tán đầy đủ; nhà/cây xếp theo chân; mái/tán alpha riêng, cùng canvas/pivot. Giữ nguồn/input/prompt/metadata cho từng asset.
-6. Tích hợp client/server cùng release khi ART/navigation đã khớp; kiểm hồi quy map/layer/NPC/R01/sect/lessons/reload. Concept này chưa thực hiện bước tích hợp.
+6. Tích hợp client/server cùng release khi ART/navigation đã khớp; kiểm hồi quy map/layer/NPC/R01/sect/lessons/reload. Đã có lựa chọn concept và [nền chuẩn ART 20 vùng](../hang-nhac-van-ngoc-detail-v2/README.md) trong game. V1 sáu khu đã chuyển ra kho ngoài workspace theo yêu cầu owner; chưa thay release/navigation production.

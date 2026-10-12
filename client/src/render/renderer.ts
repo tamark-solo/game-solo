@@ -235,18 +235,30 @@ export class PreviewRenderer {
     }));
   }
 
-  async loadBackgroundMap(url: string, width: number, height: number): Promise<void> {
+  backgroundMapDiagnostics() {
+    const mesh = this.mapLayout?.children.find(mesh => mesh.userData.mapBackground) as THREE.Mesh | undefined;
+    if (!mesh) return undefined;
+    const texture = (mesh.material as THREE.MeshBasicMaterial).map;
+    return { ...mesh.userData.mapBackground,
+      sampling: texture?.minFilter === THREE.NearestFilter && texture.magFilter === THREE.NearestFilter ? 'nearest' : 'linear' };
+  }
+
+  async loadBackgroundMap(url: string, width: number, height: number,
+    nativeSize: { width: number; height: number; sampling?: 'nearest' | 'linear' } = { width, height }): Promise<void> {
     const texture = await new THREE.TextureLoader().loadAsync(url);
-    if (texture.image.width !== width || texture.image.height !== height) {
+    if (texture.image.width !== nativeSize.width || texture.image.height !== nativeSize.height ||
+        width * nativeSize.height !== height * nativeSize.width) {
       texture.dispose(); throw new Error('Nền khác kích thước thế giới đã chốt.');
     }
     texture.colorSpace = THREE.SRGBColorSpace;
     texture.generateMipmaps = false;
-    texture.minFilter = texture.magFilter = THREE.LinearFilter;
+    texture.minFilter = texture.magFilter = nativeSize.sampling === 'nearest' ? THREE.NearestFilter : THREE.LinearFilter;
     this.setMapLayout({ width, height, color: '#efe6d3', ground: [], obstacles: [] });
     const mesh = new THREE.Mesh(new THREE.PlaneGeometry(width, height),
       new THREE.MeshBasicMaterial({ map: texture, depthTest: false, depthWrite: false, toneMapped: false }));
     mesh.position.set(width / 2, -height / 2, 0); mesh.renderOrder = -10000;
+    mesh.userData.mapBackground = { url, nativeWidth: texture.image.width, nativeHeight: texture.image.height,
+      width, height };
     this.mapLayout!.add(mesh);
   }
 

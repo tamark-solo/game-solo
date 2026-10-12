@@ -10,7 +10,7 @@ import * as sheet from './dao-character-runtime';
 export type CharacterPanelTab='overview'|'inventory'|'equipment'|'cultivation'|'spells'|'attributes';
 type Tab=CharacterPanelTab;
 type Action=CharacterCommand['action'];
-interface Actions {command:(action:Action,item:CharacterItemView)=>void;opened:()=>void;closed:()=>void;journal:(questId?:SectQuest['id'])=>void;clock:()=>number}
+interface Actions {command:(action:Action,item:CharacterItemView)=>void;opened:()=>void;closed:()=>void;journal:(questId?:SectQuest['id'])=>void;clock:()=>number;craft?:()=>void}
 const {escape,itemArt:art}=sheet;
 
 // Live presentation: no prototype fixtures, item mutation or transport here.
@@ -59,7 +59,7 @@ export class CharacterPanel {
     this.root.addEventListener('close',()=>{if(this.root.open)return;this.frame.hidden=true;this.shrine.refresh();this.actions.closed();},{signal});
     this.root.addEventListener('input',event=>{const target=event.target as HTMLInputElement;if(target.id==='character-item-search'){this.query=target.value;this.renderGrid();}},{signal});
     this.root.addEventListener('change',event=>{const target=event.target as HTMLSelectElement;if(target.id==='character-item-order'){this.order=target.value;this.renderGrid();}},{signal});
-    this.root.addEventListener('toggle',event=>{const source=event.target;if(source instanceof HTMLDetailsElement&&source.dataset.sourceItem){if(source.open)this.sourceOpen.add(source.dataset.sourceItem);else this.sourceOpen.delete(source.dataset.sourceItem);}},{signal,capture:true});
+    this.root.addEventListener('toggle',event=>{const source=event.target;if(source instanceof HTMLDetailsElement&&source.isConnected&&this.root.contains(source)&&source.dataset.sourceItem){if(source.open)this.sourceOpen.add(source.dataset.sourceItem);else this.sourceOpen.delete(source.dataset.sourceItem);}},{signal,capture:true});
     this.frame.hidden=true;
   }
   private find<T extends HTMLElement=HTMLElement>(selector:string):T{return this.root.querySelector<T>(selector)!;}
@@ -95,6 +95,8 @@ export class CharacterPanel {
     this.updateUseState();
   }
   private render(){
+    // Read the live disclosure before replacement; its native toggle event may still be queued.
+    this.detail.querySelectorAll<HTMLDetailsElement>('[data-source-item]').forEach(source=>{if(source.open)this.sourceOpen.add(source.dataset.sourceItem!);else this.sourceOpen.delete(source.dataset.sourceItem!);});
     const focus=document.activeElement instanceof HTMLElement&&this.root.contains(document.activeElement)?document.activeElement:undefined;
     const focusKey=this.focusKey(focus)||this.focusMemory;
     if(focusKey)this.focusMemory=focusKey;
@@ -134,7 +136,7 @@ export class CharacterPanel {
     this.primary.innerHTML=`<header class="pane-heading"><div><span class="pane-eyebrow">${this.tab==='equipment'?'CHUẨN BỊ ĐẤU PHÁP':'VẬT PHẨM MANG THEO'}</span><h2>${this.tab==='equipment'?'Trang bị':'Hành trang'}</h2></div><span class="small-seal" data-count></span></header>
       ${this.tab==='equipment'?`<div class="equipment-slots" aria-label="Vị trí trang bị">${Object.entries(GEAR_SLOT_NAMES).map(([slot,name])=>{const item=sheet.equipped(v,slot as GearSlot);return `<button class="equip-slot" type="button" data-slot="${slot}" aria-pressed="${this.slot===slot}"><i>${item?art(item):'<span>◇</span>'}</i><span><small>${name}</small><b>${item?CHARACTER_ITEMS[item.definitionId].name:'Chưa mang'}</b></span></button>`;}).join('')}</div><p class="inventory-hint">${GEAR_SLOT_NAMES[this.slot]} · các món phù hợp trong hành trang</p>`:''}
       <div class="inventory-tools"><label class="search-field"><span class="sr-only">Tìm vật phẩm</span><span aria-hidden="true">⌕</span><input id="character-item-search" type="search" placeholder="Tìm vật phẩm…" autocomplete="off" value="${escape(this.query)}"></label><label><span class="sr-only">Sắp xếp</span><select id="character-item-order"><option value="type">Theo loại</option><option value="name">Theo tên</option></select></label></div>
-      <div class="inventory-filters" role="group" aria-label="Lọc vật phẩm"><button type="button" data-category="all">Tất cả</button><button type="button" data-category="gear">Trang bị</button>${this.tab==='inventory'?'<button type="button" data-category="consumable">Vật tư</button>':''}</div><div class="dao-bag-locations" role="group" aria-label="Vị trí vật phẩm"><button type="button" data-location="all">Tất cả</button><button type="button" data-location="bag">Trong túi</button><button type="button" data-location="equipped">Đang mang</button></div><div class="item-grid" role="list" aria-label="Vật phẩm"></div><div class="empty-inventory" hidden></div><p class="inventory-hint">Mỗi món có một bản sở hữu · chọn để đọc công dụng và nguồn nhận.</p>`;
+      <div class="inventory-filters" role="group" aria-label="Lọc vật phẩm"><button type="button" data-category="all">Tất cả</button><button type="button" data-category="gear">Trang bị</button>${this.tab==='inventory'?'<button type="button" data-category="consumable">Vật tư</button><button type="button" data-category="material">Nguyên liệu</button><button type="button" data-category="tool">Công cụ</button>':''}</div><div class="dao-bag-locations" role="group" aria-label="Vị trí vật phẩm"><button type="button" data-location="all">Tất cả</button><button type="button" data-location="bag">Trong túi</button><button type="button" data-location="equipped">Đang mang</button></div><div class="item-grid" role="list" aria-label="Vật phẩm"></div><div class="empty-inventory" hidden></div><p class="inventory-hint">Mỗi món có một bản sở hữu · chọn để đọc công dụng và nguồn nhận.</p>`;
     this.find<HTMLSelectElement>('#character-item-order').value=this.order;this.renderGrid();this.renderDetail();
   }
   private renderGrid(){
@@ -151,16 +153,26 @@ export class CharacterPanel {
     const item=this.view!.items.find(item=>item.id===this.selectedId);
     if(!item){this.detailOpen=false;this.body.classList.remove('detail-open');this.detail.innerHTML='<div class="detail-placeholder"><span aria-hidden="true">◇</span><h2>Chọn một vật phẩm</h2><p>Mô tả và tác dụng sẽ xuất hiện tại đây.</p></div>';return;}
     const d=CHARACTER_ITEMS[item.definitionId],v=this.view!,current=d.slot?v.items.find(other=>other.id===v.equipment[d.slot!]):undefined;
+    const craftOnly=d.kind==='material'||d.kind==='tool'||item.state==='raw',kindLabel={gear:'Trang bị',consumable:'Vật tư',material:'Nguyên liệu',tool:'Công cụ'}[d.kind];
+    const source=item.definitionId==='wood-sword'||item.definitionId==='plain-robe'?'Đồ nhập môn':item.definitionId==='recovery'?'HN01/HN05/HN08/HN09 hoặc luyện chế':item.definitionId==='hn-refining-material'?'HN05/HN06':item.definitionId==='hn-training-jade'?'HN08 · cùng phôi luyện hóa':item.definitionId==='vh-guiding-ink'||d.kind==='tool'?'Luyện chế tại người coi chuẩn bị':'Nguồn EX01/EX02 · nhận một lần';
     this.detail.innerHTML=`<button class="detail-back text-action" type="button" data-action="back">← Quay lại hành trang</button><div class="detail-title"><i>${art(item)}</i><div><span class="pane-eyebrow">${d.kind==='gear'?'Trang bị':'Vật tư'}${item.equipped?' · Đang dùng':''}</span><h2 id="live-item-title" tabindex="-1">${d.name}</h2></div></div><div class="detail-copy"><section class="ui-copy-section"><h3 class="ui-section-title">Tác dụng</h3><p class="item-effect">${d.effect}</p>${d.kind==='consumable'?`<p class="quantity-copy">Số lượng: <b>${item.quantity}</b></p>`:''}</section>
       ${d.slot?`<section class="ui-copy-section comparison"><h3 class="ui-section-title">${item.equipped?'Khi tháo về túi':'So với món đang dùng'}</h3><div><span>${item.equipped?'Đang mang':'Đang dùng'}</span><b>${current?CHARACTER_ITEMS[current.definitionId].name:'Chưa trang bị'}</b></div><div><span>${item.equipped?'Sau khi tháo':'Món được chọn'}</span><b>${item.equipped?'Vị trí để trống':d.name}</b></div><p>Sinh lực tối đa: ${v.maxHp} → ${v.maxHp}<br>Linh lực tối đa: ${v.maxMp} → ${v.maxMp}</p></section>`:''}<section class="ui-copy-section"><h3 class="ui-section-title">Mô tả</h3><p>${d.description}</p></section><details class="dao-item-source" data-source-item="${item.id}" ${this.sourceOpen.has(item.id)?'open':''}><summary data-source-summary="${item.id}">Nguồn nhận · ${d.kind==='gear'?'Đồ nhập môn':'HN01'}</summary><p>${d.kind==='gear'?'Đồ nhập môn của nhân vật.':'Nhận từ người tiếp dẫn trong bài HN01.'}</p>${d.kind==='consumable'?'<button class="text-action" data-quest="HN01" type="button">Xem bài HN01 →</button>':''}</details></div>
       <div class="detail-actions"><button type="button" class="game-button primary" data-action="${d.kind==='consumable'?'use':item.equipped?'unequip':'equip'}" ${!this.online||this.pending?'disabled':''}>${this.pending?'Đang xử lý…':d.kind==='consumable'?'Dùng 1':item.equipped?'Tháo trang bị':'Trang bị'}</button><button class="protect-button" type="button" data-action="protect" aria-pressed="${item.protected}" ${!this.online||this.pending?'disabled':''}>${item.protected?'◆ Đã bảo vệ':'◇ Bảo vệ'}</button><small class="item-condition"></small></div>`;
+    const eyebrow=this.detail.querySelector('.pane-eyebrow');if(eyebrow)eyebrow.textContent=kindLabel+(item.equipped?' · Đang dùng':'');
+    const quantity=this.detail.querySelector('.quantity-copy');if(!quantity&&d.kind==='material'){const line=document.createElement('p');line.className='quantity-copy';line.textContent=`Số lượng: ${item.quantity}`;this.detail.querySelector('.item-effect')?.after(line);}
+    const summary=this.detail.querySelector('.dao-item-source summary');if(summary)summary.textContent=`Nguồn nhận · ${source}`;
+    const sourceCopy=this.detail.querySelector('.dao-item-source p');if(sourceCopy)sourceCopy.textContent=source;
+    const primary=this.detail.querySelector<HTMLButtonElement>('.detail-actions .primary')!;
+    if(craftOnly){primary.dataset.action='craft';primary.textContent=d.kind==='tool'?'Xem cách dùng trong EX03/EX04':'Xem công thức luyện chế';}
+    if(item.state==='raw'){this.detail.querySelector('h2')!.textContent='Phôi ngọc hộ thân';this.detail.querySelector('.item-effect')!.textContent='Chưa luyện hóa · chưa thể trang bị hoặc hộ thân.';}
     this.updateUseState();
   }
   private updateUseState(){
     if(!this.gearTab||!this.view)return;
     const item=this.view.items.find(item=>item.id===this.selectedId);if(!item)return;
     const condition=!this.online?'Chờ kết nối và đồng bộ hành trang.':this.pending?'Đang chờ máy chủ xác nhận.':this.view.hp<=0?'Nhân vật chưa sẵn sàng.':this.view.sect.practising||this.view.sect.lessons.active!=='none'?'Chờ kết thúc luyện thuật trước khi dùng hoặc thay đồ.':item.definitionId==='recovery'&&this.view.hp>=this.view.maxHp?'Sinh lực đã đầy · giữ lại vật tư.':item.definitionId==='recovery'&&this.view.sect.nextRecoveryAt>this.actions.clock()?`Vật tư đang hồi · ${Math.ceil((this.view.sect.nextRecoveryAt-this.actions.clock())/1000)} giây`:'';
-    this.find('.item-condition').textContent=condition;this.find<HTMLButtonElement>('.detail-actions .primary').disabled=!!condition;
+    const primary=this.find<HTMLButtonElement>('.detail-actions .primary');
+    this.find('.item-condition').textContent=condition;primary.disabled=primary.dataset.action==='craft'?!this.online||this.pending:!!condition;
     this.find<HTMLButtonElement>('[data-action="protect"]').disabled=!this.online||this.pending;
   }
   private click(event:Event){
@@ -180,6 +192,7 @@ export class CharacterPanel {
       case 'clear-filter':this.query='';this.category='all';this.location='all';this.find<HTMLInputElement>('#character-item-search').value='';this.renderGrid();this.find('#character-item-search').focus();break;
       case 'pose':this.pose=!this.pose;this.shrine.setState(this.pose||!!this.view&&cultivationMotion(this.view.sect,false),this.online);button.textContent=this.pose?'Xem tĩnh':'Xem vận khí';button.setAttribute('aria-pressed',String(this.pose));this.feedback('Tư thế xem hồ sơ; thổ nạp thực hiện tại người hướng dẫn vận khí.');break;
       case 'journal':this.focusMemory=this.focusKey(button);this.close();this.actions.journal();break;
+      case 'craft':this.close();this.actions.craft?.();break;
       case 'equip':case 'unequip':case 'use':case 'protect':{const item=this.view?.items.find(item=>item.id===this.selectedId);if(item)this.actions.command(button.dataset.action,item);break;}
     }
   }

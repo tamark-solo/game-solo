@@ -122,6 +122,10 @@ artifacts/archive/*
 !artifacts/archive/character-studies-2026-10-12.zip
 output/
 *.tsbuildinfo
+__pycache__/
+*.py[cod]
+# MCP executable/workspace paths are local to each machine; CLI tools are tracked.
+/.codex/config.toml
 .env
 .env.local
 server/data/

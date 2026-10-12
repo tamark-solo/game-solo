@@ -5,7 +5,7 @@ import type {CharacterView,CharacterResult,CharacterCommand,CharacterItemView} f
 import {CharacterPanel,type CharacterPanelTab} from './character-panel';
 import type {SectQuest} from '../../shared/sect-quests';
 
-interface Options {room:()=>Room<CourtyardState>|undefined;online:()=>boolean;avatar:()=>AvatarId;clock:()=>number;opened:()=>void;closed:()=>void;journal:(questId?:SectQuest['id'])=>void}
+interface Options {room:()=>Room<CourtyardState>|undefined;online:()=>boolean;avatar:()=>AvatarId;clock:()=>number;opened:()=>void;closed:()=>void;journal:(questId?:SectQuest['id'])=>void;craft?:()=>void}
 const REASONS:Record<string,string>={save:'Chưa lưu được thay đổi. Hành trang được giữ nguyên.',combat:'Chờ kết thúc luyện thuật trước khi dùng hoặc thay đồ.',item:'Vật phẩm không có trong hành trang hiện tại.',kind:'Vật phẩm không dùng được theo cách này.',not_equipped:'Món này chưa được trang bị.',full_hp:'Sinh lực đã đầy; vật tư được giữ lại.',cooldown:'Vật tư đang hồi.',supplies:'Đã hết vật tư hồi phục.',inactive:'Nhân vật chưa sẵn sàng.',invalid:'Thao tác chưa hợp lệ.',profile:'Chưa đọc được hồ sơ.',request_reused:'Mã thao tác đã được dùng cho một yêu cầu khác.'};
 // Transport only. No command queue, replay or optimistic item/HP update.
 export class CharacterSession {
@@ -18,7 +18,7 @@ export class CharacterSession {
   private timer?:ReturnType<typeof setTimeout>;
   private lastTransport=false;
   constructor(private options:Options){
-    this.panel=new CharacterPanel({command:(action,item)=>this.send(action,item),opened:options.opened,closed:options.closed,journal:options.journal,clock:options.clock});
+    this.panel=new CharacterPanel({command:(action,item)=>this.send(action,item),opened:options.opened,closed:options.closed,journal:options.journal,clock:options.clock,craft:options.craft});
   }
   private get online(){const room=this.options.room(),own=room?.state.players?.get(room.sessionId);return this.options.online()&&this.synced&&!!own?.connected&&own.profileId===this.view?.profileId;}
   attach(room:Room<CourtyardState>){

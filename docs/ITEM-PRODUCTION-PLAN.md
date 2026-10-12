@@ -1,5 +1,11 @@
 # Lộ trình xây dựng vật phẩm, nguyên liệu và pháp bảo
 
+**Cập nhật chơi thử 12/10:** owner chọn Hằng Nhạc và EX01–EX04; [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md) nay có nguồn hữu hạn/sáu công thức/công cụ thật, hành trang và lưu server. Bàn recipe-workbench vẫn là dữ liệu mẫu riêng; các ghi chú chưa mở codec/craft/EX phía dưới là lịch sử trước phạm vi mới. ART/quyền production và VP4-A farm lặp vẫn tách riêng.
+
+**Ưu tiên tiếp tục owner đồng ý 12/10:** tập trung icon/nguyên liệu/vật phẩm/công thức; map Hằng Nhạc đã đủ khu/đạo cụ tĩnh, ba mẫu rời giữ dự phòng. [Bàn thử](http://127.0.0.1:5173/gameplay-assets.html#recipe-workbench) kiểm sáu công thức trên túi/tiến trình mẫu, không craft hoặc cấp đồ thật. Đây là bước đối chiếu trước VP0/VP1, không đổi thứ tự IT01–IT04 hoặc mở VP2/3.
+
+**ART 12/10/2026 đã có bộ xem đầu:** owner ưu tiên nguyên liệu/đạo cụ/icon/công thức trong lúc làm lại nhân vật. [Vân Ngọc gameplay v1](design/gameplay/van-ngoc-gameplay-assets-v1/README.md) có 11 trạng thái icon, ba đạo cụ rời và sáu thẻ công thức theo đúng plan; nguồn/alpha/native đã giữ. ART chờ owner duyệt; chưa codec, grant, craft engine, drop hoặc nội dung EX mới. Các dòng “chưa tạo” dưới đây là snapshot kế hoạch 11/10.
+
 **Bản 0.2 · 11/10/2026 · kế hoạch, chưa thi công.** Theo [thiết kế luyện chế](ITEM-CRAFTING-DESIGN.md), [catalog HN](HANG-NHAC-CONTENT-CATALOG.md) và [nghiên cứu nguồn đợt 2](TIEN-NGHICH-CRAFTING-REFERENCES.md). Đây là nhánh chi tiết của [RM0–RM6](DEVELOPMENT-ROADMAP.md), không thêm điều kiện phải làm cả crafting/MMO trước HN05.
 
 **Hướng owner làm rõ 11/10:** farm để mạnh lên và dùng sức mạnh trong PvE/PvP là vòng chơi xuyên chặng. [Kế hoạch MMORPG](MMORPG-PROGRESSION-PLAN.md) bổ sung **VP4-A / RM5-A**: một nguồn lặp và một nơi tiêu có tác dụng thật có thể thử sau nền RM2, độc lập với thứ tự chuỗi công cụ EX hữu hạn. [Core/backend](MMORPG-SYSTEM-CONTRACTS.md) là gate codec/loot/stat/lifecycle. Đây là phạm vi đề xuất cần chọn, chưa cấp item/bonus hoặc sửa nguồn HN/EX hiện có.

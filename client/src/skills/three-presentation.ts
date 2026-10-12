@@ -43,18 +43,19 @@ export class SkillPresentation {
     // Colyseus exposes the room before its first schema snapshot has arrived.
     if(!state?.players||!state.projectiles||!state.targets){this.timeline.reset();this.targets.update([]);for(const item of this.sprites.values())this.release(item);this.sprites.clear();return;}
     const visible=new Map(renderActors.map(a=>[a.id,a]));
-    const actors:PresentationActor[]=[...state.players.values()].map(a=>({id:a.id,avatarId:a.avatarId,direction:a.direction,connected:a.connected,
+    const actors:PresentationActor[]=[...state.players.values()].filter(a=>visible.has(a.id)).map(a=>({id:a.id,avatarId:a.avatarId,direction:a.direction,connected:a.connected,
       x:visible.get(a.id)?.x??a.x,y:visible.get(a.id)?.y??a.y,castId:a.castId,castSkill:a.castSkill,castStartedAt:a.castStartedAt,castAimX:a.castAimX,castAimY:a.castAimY}));
     for(const actor of actors)if(!this.prepared.has(actor.avatarId)){
       // Keep failed remote loads out of the frame loop; explicit prepareAvatar retries them.
       this.prepared.add(actor.avatarId);void this.assets.prepareAvatar(actor.avatarId).catch(()=>undefined);
     }
-    const frame=this.timeline.sample(now,actors,[...state.projectiles.values()]);
+    const visibleIds=new Set(renderActors.map(a=>a.id));
+    const frame=this.timeline.sample(now,actors,[...state.projectiles.values()].filter(p=>visibleIds.has(p.ownerId)));
     for(const [id,sample] of frame.poses){const actor=visible.get(id);if(actor)actor.pose=this.assets.pose(sample.clip,sample.index);}
     const wanted=new Set(frame.effects.map(s=>s.id));
     for(const [id,item] of this.sprites)if(!wanted.has(id)){this.release(item);this.sprites.delete(id);}
     for(const sample of frame.effects)this.draw(sample);
-    this.targets.update([...state.targets.values()]);
+    this.targets.update([...state.targets.values()].filter(t=>visibleIds.has(t.ownerId)&&!t.id.startsWith('chapter-')));
   }
   diagnostics(){const timeline=this.timeline.diagnostics();return {...timeline,scheduledEffects:timeline.effects,effects:this.sprites.size,projectiles:[...this.sprites.keys()].filter(id=>id.startsWith('projectile:')).length,targets:this.targets.count,
     atlases:this.assets.fxClips().length,loadedAtlases:this.assets.textures.size,poseAtlases:Object.keys(this.assets.catalog.clips).length-this.assets.fxClips().length,

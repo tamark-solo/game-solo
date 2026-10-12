@@ -1,0 +1,101 @@
+{
+  "schema": "game-solo-map-clarity-study-1",
+  "status": "clarity-direction-selected-by-owner",
+  "worldRect": [
+    1200,
+    384,
+    1904,
+    1088
+  ],
+  "nativeSize": [
+    704,
+    704
+  ],
+  "guideSize": [
+    1254,
+    1254
+  ],
+  "previousMaster": {
+    "path": "regions/inputs/layout-master.png",
+    "sha256": "e79fa563084602246c475dcb8f4978e6c7eaa1226f0255023df41a838b297f81",
+    "originalPath": "../hang-nhac-van-ngoc-detail-v1/map-master.png"
+  },
+  "inputs": [
+    {
+      "path": "inputs/R01-native-layout.png",
+      "sha256": "fe3939312fe9e07f2638e55711c7d247f89577ed242c2b7b2c2c7210ec6eb882",
+      "role": "native spatial crop"
+    },
+    {
+      "path": "inputs/R01-layout-guide-1254.png",
+      "sha256": "3a859927e1edd51dad570709d4139e272d36836b02eec05e9537783f7a643994",
+      "role": "edit target; mechanical guide resize only"
+    },
+    {
+      "path": "inputs/actor-edge-reference.png",
+      "sha256": "2a44b4a693aefcfec44e5adb40d2495fd8c0891273aa8082ba78f19fd5208def",
+      "role": "contour clarity reference only; never paint actors"
+    }
+  ],
+  "prompt": {
+    "path": "prompts/R01.txt",
+    "sha256": "cf192fb6896d24a9fc920212ef4b22805708b8734af3381a79f8face4815ce3c"
+  },
+  "actors": [
+    {
+      "id": "CHR-WANG-LIN-CHIBI",
+      "frame": "wanglin_chibi_stand_south",
+      "atlasUrl": "/assets/CHR-WANG-LIN-CHIBI/atlas.png?v=b367680daa1d8831",
+      "atlasSha256": "b367680daa1d8831ea2cb924e406b91dad40e44f1aa27c572166033af5532a8a",
+      "framePx": [
+        64,
+        96
+      ],
+      "footPx": [
+        32,
+        88
+      ],
+      "referenceEnlargedOnly": 4
+    },
+    {
+      "id": "CHR-SITU-NAN",
+      "frame": "situ_nan_chibi_stand_south",
+      "atlasUrl": "/assets/CHR-SITU-NAN/atlas.png?v=65cfff4f0682c9ef",
+      "atlasSha256": "65cfff4f0682c9efce72df2f12597e8b29b2dcbf6319b384233756181f662f51",
+      "framePx": [
+        64,
+        96
+      ],
+      "footPx": [
+        32,
+        88
+      ],
+      "referenceEnlargedOnly": 4
+    },
+    {
+      "id": "CHR-LI-MUWAN",
+      "frame": "li_muwan_chibi_stand_south",
+      "atlasUrl": "/assets/CHR-LI-MUWAN/atlas.png?v=3a137ec5c92ce8eb",
+      "atlasSha256": "3a137ec5c92ce8ebe5121b1bf9bd7d63718ee14588aa3cb720019f8785bb6cb8",
+      "framePx": [
+        64,
+        96
+      ],
+      "footPx": [
+        32,
+        88
+      ],
+      "referenceEnlargedOnly": 4
+    }
+  ],
+  "ownerApproved": false,
+  "artApproved": false,
+  "runtimeModified": false,
+  "navigationModified": false,
+  "ownerSelectedStyle": {
+    "selected": true,
+    "feedback": "Nét rõ như mẫu bên phải",
+    "scope": "R01-native.png contour clarity and shading direction; no full map ART approval",
+    "sourceHash": "2fa35453b67997a787ad9747bdde4b0fd546db661cb4f41b65f167100e723dfa"
+  }
+}

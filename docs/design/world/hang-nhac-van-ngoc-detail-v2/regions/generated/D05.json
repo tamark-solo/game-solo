@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: precise environment redraw. Redraw existing Van Ngoc game map region D05, world rectangle [2368,0,3072,704].\nImage 1 is the exact 1254x1254 spatial guide of this 704x704 world region. Image 2 is the owner-selected clarity sample R01, shown at native world resolution 704x704, for LINE QUALITY, MATERIALS, PALETTE and SHADING ONLY. Never borrow its stairs, doors, objects, ground pattern or composition.\nREDRAW the materials and contours as finished hand-drawn 2D game environment art. Match the clean firm dark contour edges and controlled cel shading of Image 2. Replace fuzzy painted edges and smeared microdetail with distinct designed lines and planes. Preserve the Van Ngoc ivory/celadon stone, petrol-teal roof tiles, restrained antique bronze, pine green and warm lighting of Image 1. Make stone bevels, roof tile groups, rail posts, stair treads, trunks, planters and foliage clusters legible beside a crisp 64x96 actor at camera1x. Clouds and distant atmosphere can remain soft; nearby architecture and walkable edges must be clearly drawn.\nFinal review is at 704x704, the same native scale as Image 2. Important contours should be approximately 2 to 3 pixels on the 1254 canvas to survive reduction. Keep walkable stone calm and readable with coherent slab joints, not random grain. No bokeh, depth-of-field, mist over foreground architecture, airbrush softness, sharpening halos, noisy pseudo-detail, pixel-art conversion, or new ornamentation.\nSPATIAL LOCK: SAME 1254 square canvas, camera and framing as Image 1. Every roof, door, stair tread, bridge, railing, column, planter, tree, rock, water edge and path keeps EXACT location and size. Preserve partial objects cut by all four edges. No zoom, crop, recenter, shift, rotation, margins, redesign, moved steps, added or removed objects, characters, text, UI, logos or watermark. Neighbor regions will be registered and stitched. Return one opaque square bitmap of only this region.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: precise environment redraw. Redraw existing Van Ngoc game map region D05, world rectangle [2368,0,3072,704].\nImage 1 is the exact 1254x1254 spatial guide of this 704x704 world region. Image 2 is the owner-selected clarity sample R01, shown at native world resolution 704x704, for LINE QUALITY, MATERIALS, PALETTE and SHADING ONLY. Never borrow its stairs, doors, objects, ground pattern or composition.\nREDRAW the materials and contours as finished hand-drawn 2D game environment art. Match the clean firm dark contour edges and controlled cel shading of Image 2. Replace fuzzy painted edges and smeared microdetail with distinct designed lines and planes. Preserve the Van Ngoc ivory/celadon stone, petrol-teal roof tiles, restrained antique bronze, pine green and warm lighting of Image 1. Make stone bevels, roof tile groups, rail posts, stair treads, trunks, planters and foliage clusters legible beside a crisp 64x96 actor at camera1x. Clouds and distant atmosphere can remain soft; nearby architecture and walkable edges must be clearly drawn.\nFinal review is at 704x704, the same native scale as Image 2. Important contours should be approximately 2 to 3 pixels on the 1254 canvas to survive reduction. Keep walkable stone calm and readable with coherent slab joints, not random grain. No bokeh, depth-of-field, mist over foreground architecture, airbrush softness, sharpening halos, noisy pseudo-detail, pixel-art conversion, or new ornamentation.\nSPATIAL LOCK: SAME 1254 square canvas, camera and framing as Image 1. Every roof, door, stair tread, bridge, railing, column, planter, tree, rock, water edge and path keeps EXACT location and size. Preserve partial objects cut by all four edges. No zoom, crop, recenter, shift, rotation, margins, redesign, moved steps, added or removed objects, characters, text, UI, logos or watermark. Neighbor regions will be registered and stitched. Return one opaque square bitmap of only this region.\n",
+    "n": 1,
+    "size": "1232x1232",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-12T11:23:08.120Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\world\\hang-nhac-van-ngoc-detail-v2\\regions\\inputs\\D05-guide.png",
+      "filename": "D05-guide.png",
+      "mimeType": "image/png",
+      "bytes": 4062885,
+      "sha256": "8ed287948c9255e8a6904d951a73e5ebc80bf7add4b6cfd09697f219d6ef7b3f",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\world\\hang-nhac-van-ngoc-detail-v2\\R01-native.png",
+      "filename": "R01-native.png",
+      "mimeType": "image/png",
+      "bytes": 887256,
+      "sha256": "2fa35453b67997a787ad9747bdde4b0fd546db661cb4f41b65f167100e723dfa",
+      "dimensions": {
+        "width": 704,
+        "height": 704
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "D05.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 3088739,
+    "sha256": "552d4ea879390d38621ece5e814a564385700dfe0caf2c5d661419395fa929d6",
+    "dimensions": {
+      "width": 1254,
+      "height": 1254
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": false
+  }
+}

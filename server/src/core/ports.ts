@@ -19,7 +19,7 @@ export interface PlayGrant { accountId:string; sessionKey:string; characterId:st
 export interface PlayGateway {
   claim(ticket:unknown,realmId:unknown,clientId:string):PlayGrant;
   renew(grant:PlayGrant,clientId:string):boolean;
-  drop(grant:PlayGrant,clientId:string):void;
+  drop(grant:PlayGrant,clientId:string,reserveMs?:number):void;
   release(grant:PlayGrant,clientId:string):void;
 }
 export interface GameRepositories {

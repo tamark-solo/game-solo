@@ -1,0 +1,1662 @@
+{
+  "schema": "game-solo-gameplay-art-review-1",
+  "id": "van-ngoc-gameplay-assets-v1",
+  "status": "native-review-pending-owner",
+  "date": "2026-10-12",
+  "ownerApproved": false,
+  "artApproved": false,
+  "runtimeConsumable": false,
+  "sourcePlan": {
+    "path": "docs/design/systems/items-v1/plan.json",
+    "sha256": "0d8511147cd28d37a169612e5b1f3cba647e63c44e64c84d7a868eab1d825c84"
+  },
+  "styleBaseline": {
+    "approval": "docs/design/world/hang-nhac-van-ngoc-detail-v2/approval.json",
+    "masterSha256": "79b1935aeea27344967d573f52f13935ff832d08342b675e22493f6f1ad6d793",
+    "referenceMode": "visual-inspection-and-text-brief; no image input"
+  },
+  "character": {
+    "frame": [
+      64,
+      96
+    ],
+    "anchor": [
+      32,
+      88
+    ],
+    "scale": 1,
+    "source": "docs/design/characters/wang-lin-chibi-walk-v1/native-v2/frames/wanglin_chibi_stand_south.png",
+    "sha256": "ae9cfddb7505b91bc0225942841f1e65df13d7e8913da62380c09997ad53a325",
+    "url": "/assets/van-ngoc-gameplay-v1/actor-64x96.png"
+  },
+  "assets": [
+    {
+      "id": "hn-refining-material",
+      "label": "Nguyên liệu luyện hóa nhập môn",
+      "itemId": "hn-refining-material",
+      "stage": "VP0",
+      "state": null,
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-hn-refining-material-v1-2026-10-12T13-48-00-087Z-5978c975e2a995f8/source.png",
+        "sha256": "ad5d567adb95068a0254a33457abbe5dda7ef756fd0c1ab69047fab984831b22",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-hn-refining-material-v1-2026-10-12T13-48-00-087Z-5978c975e2a995f8/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-hn-refining-material-v1-2026-10-12T13-48-00-087Z-5978c975e2a995f8/prepared/image-01-alpha-2026-10-12T13-59-16-199Z-8bef8765.png",
+        "sha256": "058468312f6a6220cc4ea4899c3f3a0dadcb1f403bc135e72d5f3deeab44f3f4",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 167,
+        "top": 119,
+        "width": 916,
+        "height": 1002,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/hn-refining-material-32.png",
+          "filename": "hn-refining-material-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1677,
+          "sha256": "1fe1c8d9e7d37db40dee88002ea699335089dc3e18720628f35fc454adfadced",
+          "url": "/assets/van-ngoc-gameplay-v1/hn-refining-material-32.png",
+          "contentBounds": {
+            "left": 5,
+            "top": 4,
+            "width": 22,
+            "height": 24
+          },
+          "placement": {
+            "left": 5,
+            "top": 4,
+            "width": 22,
+            "height": 24
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/hn-refining-material-48.png",
+          "filename": "hn-refining-material-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 3238,
+          "sha256": "e4816e09b4029659985239135f032af3c26214e83e836770b30fd863ada24160",
+          "url": "/assets/van-ngoc-gameplay-v1/hn-refining-material-48.png",
+          "contentBounds": {
+            "left": 7,
+            "top": 6,
+            "width": 33,
+            "height": 36
+          },
+          "placement": {
+            "left": 7,
+            "top": 6,
+            "width": 33,
+            "height": 36
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/hn-refining-material-64.png",
+          "filename": "hn-refining-material-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 5571,
+          "sha256": "0f7e5be8c16731ebf67e3756fff736ea6a653d03e571036e4a2f463c783e699d",
+          "url": "/assets/van-ngoc-gameplay-v1/hn-refining-material-64.png",
+          "contentBounds": {
+            "left": 9,
+            "top": 7,
+            "width": 45,
+            "height": 49
+          },
+          "placement": {
+            "left": 9,
+            "top": 7,
+            "width": 45,
+            "height": 49
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "hn-training-jade-raw",
+      "label": "Phôi ngọc hộ thân",
+      "itemId": "hn-training-jade",
+      "stage": "VP1",
+      "state": "raw",
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-hn-training-jade-raw-v1-2026-10-12T13-49-30-733Z-bb6fa65ec2110153/source.png",
+        "sha256": "7c964550369d7b978c48f5658209fb556a7dddbc1350e8a594f6f9cb6571696e",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-hn-training-jade-raw-v1-2026-10-12T13-49-30-733Z-bb6fa65ec2110153/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-hn-training-jade-raw-v1-2026-10-12T13-49-30-733Z-bb6fa65ec2110153/prepared/image-01-alpha-2026-10-12T13-59-25-097Z-e56a7d70.png",
+        "sha256": "9f5cf25340afd1a60e9ec086d206cb5a8f41c32f865adf0c25004a2b07707b01",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 294,
+        "top": 52,
+        "width": 667,
+        "height": 1120,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/hn-training-jade-raw-32.png",
+          "filename": "hn-training-jade-raw-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1265,
+          "sha256": "709c1d65e8f9f99a6dd092df16e6d279fa90680abadb2ad3b1f806125f080afe",
+          "url": "/assets/van-ngoc-gameplay-v1/hn-training-jade-raw-32.png",
+          "contentBounds": {
+            "left": 9,
+            "top": 4,
+            "width": 14,
+            "height": 24
+          },
+          "placement": {
+            "left": 9,
+            "top": 4,
+            "width": 14,
+            "height": 24
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/hn-training-jade-raw-48.png",
+          "filename": "hn-training-jade-raw-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 2464,
+          "sha256": "87d6d75d3c3dffb01438d04cbf91121f6b4d7b6246f433dd26f1be8a71e67590",
+          "url": "/assets/van-ngoc-gameplay-v1/hn-training-jade-raw-48.png",
+          "contentBounds": {
+            "left": 13,
+            "top": 6,
+            "width": 21,
+            "height": 36
+          },
+          "placement": {
+            "left": 13,
+            "top": 6,
+            "width": 21,
+            "height": 36
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/hn-training-jade-raw-64.png",
+          "filename": "hn-training-jade-raw-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 4238,
+          "sha256": "fe090955432353426a2ea17a652ef26ecdc4864d3c9b7a0161cf872362d9f7cd",
+          "url": "/assets/van-ngoc-gameplay-v1/hn-training-jade-raw-64.png",
+          "contentBounds": {
+            "left": 17,
+            "top": 7,
+            "width": 29,
+            "height": 49
+          },
+          "placement": {
+            "left": 17,
+            "top": 7,
+            "width": 29,
+            "height": 49
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "hn-training-jade-refined",
+      "label": "Ngọc hộ thân luyện tập",
+      "itemId": "hn-training-jade",
+      "stage": "VP1",
+      "state": "refined",
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-hn-training-jade-refined-v1-2026-10-12T13-50-04-003Z-e22c3efebb46067a/source.png",
+        "sha256": "cff23bf071c74e9395ffce71d4ab2340cc55f5a3558ffdf153346286e694c2a3",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-hn-training-jade-refined-v1-2026-10-12T13-50-04-003Z-e22c3efebb46067a/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-hn-training-jade-refined-v1-2026-10-12T13-50-04-003Z-e22c3efebb46067a/prepared/image-01-alpha-2026-10-12T13-59-33-568Z-bdb23cc6.png",
+        "sha256": "eb7148a8362ba94a1c392080e7dd211a896c598be93f1c971f7165431060b8d8",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 278,
+        "top": 33,
+        "width": 699,
+        "height": 1166,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/hn-training-jade-refined-32.png",
+          "filename": "hn-training-jade-refined-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1312,
+          "sha256": "79e8e5014027f1b6d0aacada98fbacd2977c68f677978f564beff53d611aff7e",
+          "url": "/assets/van-ngoc-gameplay-v1/hn-training-jade-refined-32.png",
+          "contentBounds": {
+            "left": 9,
+            "top": 4,
+            "width": 14,
+            "height": 24
+          },
+          "placement": {
+            "left": 9,
+            "top": 4,
+            "width": 14,
+            "height": 24
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/hn-training-jade-refined-48.png",
+          "filename": "hn-training-jade-refined-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 2650,
+          "sha256": "ea1f08c98987078a76c20e994a3e49dc6ae8ed2800b8f815600d74e5d3acdcf1",
+          "url": "/assets/van-ngoc-gameplay-v1/hn-training-jade-refined-48.png",
+          "contentBounds": {
+            "left": 13,
+            "top": 6,
+            "width": 22,
+            "height": 36
+          },
+          "placement": {
+            "left": 13,
+            "top": 6,
+            "width": 22,
+            "height": 36
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/hn-training-jade-refined-64.png",
+          "filename": "hn-training-jade-refined-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 4394,
+          "sha256": "35a840921ccf6ede951e1e99f2623f51673c3109b171a64013f926198f252871",
+          "url": "/assets/van-ngoc-gameplay-v1/hn-training-jade-refined-64.png",
+          "contentBounds": {
+            "left": 17,
+            "top": 7,
+            "width": 29,
+            "height": 49
+          },
+          "placement": {
+            "left": 17,
+            "top": 7,
+            "width": 29,
+            "height": 49
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "vh-clean-herb",
+      "label": "Dược thảo sơ chế",
+      "itemId": "vh-clean-herb",
+      "stage": "VP2",
+      "state": null,
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-vh-clean-herb-v1-2026-10-12T13-51-00-769Z-7114ea468b3ff0ab/source.png",
+        "sha256": "b9e5fb3505d7f7534127b808e5edd025546f411d44ab5dbc1368a8307b26ba65",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-vh-clean-herb-v1-2026-10-12T13-51-00-769Z-7114ea468b3ff0ab/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-vh-clean-herb-v1-2026-10-12T13-51-00-769Z-7114ea468b3ff0ab/prepared/image-01-alpha-2026-10-12T13-59-42-088Z-a6c565c1.png",
+        "sha256": "bc05bf33856ce4ad3dd21126cc6ca3707ad088f632faefc05d7d1f5b4027c1c3",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 78,
+        "top": 72,
+        "width": 1124,
+        "height": 1081,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/vh-clean-herb-32.png",
+          "filename": "vh-clean-herb-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1547,
+          "sha256": "9efef616092072115da0f565a37047e42a5195830b9a5dd07d593a6d500a8c69",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-clean-herb-32.png",
+          "contentBounds": {
+            "left": 4,
+            "top": 4,
+            "width": 24,
+            "height": 23
+          },
+          "placement": {
+            "left": 4,
+            "top": 4,
+            "width": 24,
+            "height": 23
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-clean-herb-48.png",
+          "filename": "vh-clean-herb-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 2945,
+          "sha256": "2fe1b237ee06f59f19f2542a659f5bc0b9510bf0821b4b9faa5af61f4881c9d5",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-clean-herb-48.png",
+          "contentBounds": {
+            "left": 6,
+            "top": 6,
+            "width": 36,
+            "height": 35
+          },
+          "placement": {
+            "left": 6,
+            "top": 6,
+            "width": 36,
+            "height": 35
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-clean-herb-64.png",
+          "filename": "vh-clean-herb-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 4855,
+          "sha256": "1a4fa96ecfc62790d52af5274310b5ecb90d3d11cee114e575ca5950719441d0",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-clean-herb-64.png",
+          "contentBounds": {
+            "left": 7,
+            "top": 8,
+            "width": 49,
+            "height": 47
+          },
+          "placement": {
+            "left": 7,
+            "top": 8,
+            "width": 49,
+            "height": 47
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "vh-clear-water",
+      "label": "Linh tuyền đã lọc",
+      "itemId": "vh-clear-water",
+      "stage": "VP2",
+      "state": null,
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-vh-clear-water-v1-2026-10-12T13-51-55-378Z-4e86775f7f93c59d/source.png",
+        "sha256": "5fc63c3e91da82218342329baa6c616fde760c917ce59ab4ebaa700fb5859d27",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-vh-clear-water-v1-2026-10-12T13-51-55-378Z-4e86775f7f93c59d/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-vh-clear-water-v1-2026-10-12T13-51-55-378Z-4e86775f7f93c59d/prepared/image-01-alpha-2026-10-12T13-59-50-460Z-f0004684.png",
+        "sha256": "6c8f29dba6537cb48c340f04faf675cf02d736f9b824cfb5dcca1364766e8bac",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 235,
+        "top": 126,
+        "width": 774,
+        "height": 999,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/vh-clear-water-32.png",
+          "filename": "vh-clear-water-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1543,
+          "sha256": "5bfdb174774ffaf237edc2d791635b6c6573560a548cabf0fb2bad7701f45b03",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-clear-water-32.png",
+          "contentBounds": {
+            "left": 6,
+            "top": 4,
+            "width": 19,
+            "height": 24
+          },
+          "placement": {
+            "left": 6,
+            "top": 4,
+            "width": 19,
+            "height": 24
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-clear-water-48.png",
+          "filename": "vh-clear-water-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 2922,
+          "sha256": "9c24e52b7700d3f8f4fe631171ade725f7d928155fbf58d2e1a825b04b652c79",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-clear-water-48.png",
+          "contentBounds": {
+            "left": 10,
+            "top": 6,
+            "width": 28,
+            "height": 36
+          },
+          "placement": {
+            "left": 10,
+            "top": 6,
+            "width": 28,
+            "height": 36
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-clear-water-64.png",
+          "filename": "vh-clear-water-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 4984,
+          "sha256": "af1b194d7d7463aa5c426d9a3543f381ba3610d0fe0305241dc8279d6701aecc",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-clear-water-64.png",
+          "contentBounds": {
+            "left": 13,
+            "top": 7,
+            "width": 38,
+            "height": 49
+          },
+          "placement": {
+            "left": 13,
+            "top": 7,
+            "width": 38,
+            "height": 49
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "vh-soft-fiber",
+      "label": "Sợi vân bố",
+      "itemId": "vh-soft-fiber",
+      "stage": "VP2",
+      "state": null,
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-vh-soft-fiber-v1-2026-10-12T13-52-39-941Z-c2e02c7d9dd0e718/source.png",
+        "sha256": "d5c5d9ff2ca74715ed61fa4d0997aa16e7579a9667be5754a07422311fe3ad19",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-vh-soft-fiber-v1-2026-10-12T13-52-39-941Z-c2e02c7d9dd0e718/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-vh-soft-fiber-v1-2026-10-12T13-52-39-941Z-c2e02c7d9dd0e718/prepared/image-01-alpha-2026-10-12T13-59-58-676Z-d9745b8f.png",
+        "sha256": "03fbab2184999277e7492d7bf098aff138b93d2ecad6b52d0177730ee1405f02",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 153,
+        "top": 141,
+        "width": 961,
+        "height": 952,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/vh-soft-fiber-32.png",
+          "filename": "vh-soft-fiber-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1874,
+          "sha256": "7e96da95c12490bb5808cfefb3ca748658abed7cb814180e2d0e827d04d2a691",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-soft-fiber-32.png",
+          "contentBounds": {
+            "left": 4,
+            "top": 4,
+            "width": 24,
+            "height": 24
+          },
+          "placement": {
+            "left": 4,
+            "top": 4,
+            "width": 24,
+            "height": 24
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-soft-fiber-48.png",
+          "filename": "vh-soft-fiber-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 3606,
+          "sha256": "360a89bb638a148ef5bc9aea85a80d62d8dad4a3bf94c5dcd581b9eff26af90e",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-soft-fiber-48.png",
+          "contentBounds": {
+            "left": 6,
+            "top": 6,
+            "width": 36,
+            "height": 36
+          },
+          "placement": {
+            "left": 6,
+            "top": 6,
+            "width": 36,
+            "height": 36
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-soft-fiber-64.png",
+          "filename": "vh-soft-fiber-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 6119,
+          "sha256": "a7a5e31c28956c0dcb88d3733d11a0305470aed1b4f519ee446a227680ae0677",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-soft-fiber-64.png",
+          "contentBounds": {
+            "left": 7,
+            "top": 7,
+            "width": 49,
+            "height": 49
+          },
+          "placement": {
+            "left": 7,
+            "top": 7,
+            "width": 49,
+            "height": 49
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "vh-conductive-sand",
+      "label": "Cát dẫn khí",
+      "itemId": "vh-conductive-sand",
+      "stage": "VP2",
+      "state": null,
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-vh-conductive-sand-v1-2026-10-12T13-53-09-347Z-682af33269af4669/source.png",
+        "sha256": "303a9707c9ef28f3853423920c71d10e7b0b5e3bdeecd8c369e9e0cdba00fbcd",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-vh-conductive-sand-v1-2026-10-12T13-53-09-347Z-682af33269af4669/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-vh-conductive-sand-v1-2026-10-12T13-53-09-347Z-682af33269af4669/prepared/image-01-alpha-2026-10-12T14-00-07-121Z-73dda026.png",
+        "sha256": "670807cf3e25943501c24873c995c634c9c94ce2bdc3459e5a4b899b7a396604",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 56,
+        "top": 226,
+        "width": 1137,
+        "height": 776,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/vh-conductive-sand-32.png",
+          "filename": "vh-conductive-sand-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1349,
+          "sha256": "6ddbb50dd9b45586727c0f168dba823f68efe432f654eceb879bffa2e98b3919",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-conductive-sand-32.png",
+          "contentBounds": {
+            "left": 4,
+            "top": 8,
+            "width": 24,
+            "height": 16
+          },
+          "placement": {
+            "left": 4,
+            "top": 8,
+            "width": 24,
+            "height": 16
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-conductive-sand-48.png",
+          "filename": "vh-conductive-sand-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 2724,
+          "sha256": "c89a4dbec7297d098c14f256f8e3ab67c04ae895336c297d89a201fccacfcb5e",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-conductive-sand-48.png",
+          "contentBounds": {
+            "left": 6,
+            "top": 11,
+            "width": 36,
+            "height": 25
+          },
+          "placement": {
+            "left": 6,
+            "top": 11,
+            "width": 36,
+            "height": 25
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-conductive-sand-64.png",
+          "filename": "vh-conductive-sand-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 4540,
+          "sha256": "b05662e82a93d14a63309a478e5d0abfdb22da2a044ff955d9008c8f706e86fa",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-conductive-sand-64.png",
+          "contentBounds": {
+            "left": 7,
+            "top": 15,
+            "width": 49,
+            "height": 33
+          },
+          "placement": {
+            "left": 7,
+            "top": 15,
+            "width": 49,
+            "height": 33
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "vh-stable-jade",
+      "label": "Ngọc thô ổn khí",
+      "itemId": "vh-stable-jade",
+      "stage": "VP2",
+      "state": null,
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-vh-stable-jade-v1-2026-10-12T13-53-38-312Z-f3d12f9ed5951e4b/source.png",
+        "sha256": "64a423b763e619e37e51e896757958569d36d8a131f5f55a4688bb75ae87c0cf",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-vh-stable-jade-v1-2026-10-12T13-53-38-312Z-f3d12f9ed5951e4b/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-vh-stable-jade-v1-2026-10-12T13-53-38-312Z-f3d12f9ed5951e4b/prepared/image-01-alpha-2026-10-12T14-00-15-742Z-853fcbc3.png",
+        "sha256": "53682a795ad6d0be2f07864c0222de91651eabae6ca8731be347c65bb9005dd1",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 141,
+        "top": 126,
+        "width": 996,
+        "height": 1004,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/vh-stable-jade-32.png",
+          "filename": "vh-stable-jade-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1950,
+          "sha256": "405c25982df8affd1f405b3517792b0608da62bf6c56c8225d8c65117cd5d686",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-stable-jade-32.png",
+          "contentBounds": {
+            "left": 4,
+            "top": 4,
+            "width": 24,
+            "height": 24
+          },
+          "placement": {
+            "left": 4,
+            "top": 4,
+            "width": 24,
+            "height": 24
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-stable-jade-48.png",
+          "filename": "vh-stable-jade-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 3904,
+          "sha256": "c22c56b97f35057ba66f7ad80a37ca2874893838aba1d2626ed5759c28def16c",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-stable-jade-48.png",
+          "contentBounds": {
+            "left": 6,
+            "top": 6,
+            "width": 36,
+            "height": 36
+          },
+          "placement": {
+            "left": 6,
+            "top": 6,
+            "width": 36,
+            "height": 36
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-stable-jade-64.png",
+          "filename": "vh-stable-jade-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 6788,
+          "sha256": "807d0b7117b76823834e82b89f2eb4f641dc53525a8ee510f0cfcfa2c5b8938b",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-stable-jade-64.png",
+          "contentBounds": {
+            "left": 7,
+            "top": 7,
+            "width": 49,
+            "height": 49
+          },
+          "placement": {
+            "left": 7,
+            "top": 7,
+            "width": 49,
+            "height": 49
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "vh-guiding-ink",
+      "label": "Mực dẫn khí",
+      "itemId": "vh-guiding-ink",
+      "stage": "VP2",
+      "state": null,
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-vh-guiding-ink-v1-2026-10-12T13-54-40-949Z-0e9f8f7c0e03494f/source.png",
+        "sha256": "af89c39708ad12221cde7de3a3d29e01410503643d77ae69c052042ac4ae7e16",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-vh-guiding-ink-v1-2026-10-12T13-54-40-949Z-0e9f8f7c0e03494f/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-vh-guiding-ink-v1-2026-10-12T13-54-40-949Z-0e9f8f7c0e03494f/prepared/image-01-alpha-2026-10-12T14-00-24-139Z-8425a8a2.png",
+        "sha256": "a7965154b69af8e3f5d5b08a5601f11c5e345ce1594bc927d5bda45a585264f3",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 179,
+        "top": 165,
+        "width": 896,
+        "height": 905,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/vh-guiding-ink-32.png",
+          "filename": "vh-guiding-ink-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1947,
+          "sha256": "c82f195dec66f49926fdc6e9d616fcfd251c7385d0ce8b8cb7e55fd3900f52a7",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-guiding-ink-32.png",
+          "contentBounds": {
+            "left": 4,
+            "top": 4,
+            "width": 24,
+            "height": 24
+          },
+          "placement": {
+            "left": 4,
+            "top": 4,
+            "width": 24,
+            "height": 24
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-guiding-ink-48.png",
+          "filename": "vh-guiding-ink-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 3848,
+          "sha256": "e57f6ebd26d198bc9ba0e421611694b0a39af6532a8d00b02522ce4766c9626c",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-guiding-ink-48.png",
+          "contentBounds": {
+            "left": 6,
+            "top": 6,
+            "width": 36,
+            "height": 36
+          },
+          "placement": {
+            "left": 6,
+            "top": 6,
+            "width": 36,
+            "height": 36
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-guiding-ink-64.png",
+          "filename": "vh-guiding-ink-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 6611,
+          "sha256": "ad1465d8082ae9aff4357e6c49fce676b620802bcc90d488d077c2a73d870f8e",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-guiding-ink-64.png",
+          "contentBounds": {
+            "left": 7,
+            "top": 7,
+            "width": 49,
+            "height": 49
+          },
+          "placement": {
+            "left": 7,
+            "top": 7,
+            "width": 49,
+            "height": 49
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "vh-sealed-case",
+      "label": "Hộp giữ khí",
+      "itemId": "vh-sealed-case",
+      "stage": "VP2",
+      "state": null,
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-vh-sealed-case-v1-2026-10-12T13-55-13-671Z-5e8b3021cebfd15e/source.png",
+        "sha256": "6493d2fb698246525cc0fe15f44c4339acf3041ec8b599a3fdf8756b820c7997",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-vh-sealed-case-v1-2026-10-12T13-55-13-671Z-5e8b3021cebfd15e/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-vh-sealed-case-v1-2026-10-12T13-55-13-671Z-5e8b3021cebfd15e/prepared/image-01-alpha-2026-10-12T14-00-32-657Z-799d7ddf.png",
+        "sha256": "a5e08009d51ccb7b64786a33416a57a8c8f0860a4845e7abc0f4bbd0fcea2df2",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 78,
+        "top": 239,
+        "width": 1098,
+        "height": 776,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/vh-sealed-case-32.png",
+          "filename": "vh-sealed-case-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1474,
+          "sha256": "2bf7fff4756588da8a4a5a458d9510a9398468d0eb2193587ad2ee85a5c5ec70",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-sealed-case-32.png",
+          "contentBounds": {
+            "left": 4,
+            "top": 7,
+            "width": 24,
+            "height": 17
+          },
+          "placement": {
+            "left": 4,
+            "top": 7,
+            "width": 24,
+            "height": 17
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-sealed-case-48.png",
+          "filename": "vh-sealed-case-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 2742,
+          "sha256": "ac0e16485b3725da342d1426660d79c3e910b08d74e45fc00176345e3e3092b7",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-sealed-case-48.png",
+          "contentBounds": {
+            "left": 6,
+            "top": 11,
+            "width": 36,
+            "height": 25
+          },
+          "placement": {
+            "left": 6,
+            "top": 11,
+            "width": 36,
+            "height": 25
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-sealed-case-64.png",
+          "filename": "vh-sealed-case-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 4659,
+          "sha256": "ab2ed5ddd94bb47471fe5b912a3b0683f241fe092f7898f3a85359a6fd84dd3b",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-sealed-case-64.png",
+          "contentBounds": {
+            "left": 7,
+            "top": 14,
+            "width": 49,
+            "height": 35
+          },
+          "placement": {
+            "left": 7,
+            "top": 14,
+            "width": 49,
+            "height": 35
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "vh-flow-compass",
+      "label": "Định Lưu Bàn",
+      "itemId": "vh-flow-compass",
+      "stage": "VP3",
+      "state": null,
+      "assetType": "icon",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-vh-flow-compass-v1-2026-10-12T13-55-38-987Z-5b5e725d3144a680/source.png",
+        "sha256": "fb37f7cd32f03db25e2f1ddf422e5e70c10bca30672452d9532a8741d7d4fdd9",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "manifest": "output/imagegen/game-assets/vn-vh-flow-compass-v1-2026-10-12T13-55-38-987Z-5b5e725d3144a680/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-vh-flow-compass-v1-2026-10-12T13-55-38-987Z-5b5e725d3144a680/prepared/image-01-alpha-2026-10-12T14-00-40-764Z-53fb61ed.png",
+        "sha256": "2d2adbbff645bbf5626750dfc890404f59eb6bffedd1a069f8af139989c9a65d",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 94,
+        "top": 110,
+        "width": 1066,
+        "height": 994,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/vh-flow-compass-32.png",
+          "filename": "vh-flow-compass-32.png",
+          "width": 32,
+          "height": 32,
+          "bytes": 1861,
+          "sha256": "45e4a4daddf1be66fe3d4aec3c7c53ba94b4bfbfb03f80dcd0fcd0e164cc18c0",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-flow-compass-32.png",
+          "contentBounds": {
+            "left": 4,
+            "top": 5,
+            "width": 24,
+            "height": 22
+          },
+          "placement": {
+            "left": 4,
+            "top": 5,
+            "width": 24,
+            "height": 22
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-flow-compass-48.png",
+          "filename": "vh-flow-compass-48.png",
+          "width": 48,
+          "height": 48,
+          "bytes": 3820,
+          "sha256": "bb2d3a03c4e9714ab7a75a58e6b13729c774640125d98cb3766cadabf4f187b5",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-flow-compass-48.png",
+          "contentBounds": {
+            "left": 6,
+            "top": 7,
+            "width": 36,
+            "height": 34
+          },
+          "placement": {
+            "left": 6,
+            "top": 7,
+            "width": 36,
+            "height": 34
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        },
+        {
+          "path": "native/vh-flow-compass-64.png",
+          "filename": "vh-flow-compass-64.png",
+          "width": 64,
+          "height": 64,
+          "bytes": 6565,
+          "sha256": "3db5cd6e8262ae0407fd8782dfbf0eb049b133b502c2b8f516a7d06d3e4b6545",
+          "url": "/assets/van-ngoc-gameplay-v1/vh-flow-compass-64.png",
+          "contentBounds": {
+            "left": 7,
+            "top": 9,
+            "width": 49,
+            "height": 46
+          },
+          "placement": {
+            "left": 7,
+            "top": 9,
+            "width": 49,
+            "height": 46
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": null,
+      "pivotStatus": "not-applicable-ui-icon",
+      "ownerApproved": false,
+      "artApproved": false
+    },
+    {
+      "id": "preparation-table",
+      "label": "Bàn chuẩn bị",
+      "itemId": null,
+      "stage": "hub-and-VP2",
+      "state": null,
+      "assetType": "prop",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-preparation-table-v1-2026-10-12T13-56-18-770Z-b677c0e38777e394/source.png",
+        "sha256": "f1b3746e8ecb09d2e024b69b30e449803976eecb84faa4031c4ffadf3a881b3c",
+        "dimensions": {
+          "width": 1536,
+          "height": 1024
+        },
+        "manifest": "output/imagegen/game-assets/vn-preparation-table-v1-2026-10-12T13-56-18-770Z-b677c0e38777e394/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-preparation-table-v1-2026-10-12T13-56-18-770Z-b677c0e38777e394/prepared/image-01-alpha-2026-10-12T14-00-49-057Z-5425efe8.png",
+        "sha256": "6321f44691d136475c68cc57332184f5e85649b22dd4b074a902265d8f4f5f11",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 232,
+        "top": 131,
+        "width": 1078,
+        "height": 794,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/preparation-table.png",
+          "filename": "preparation-table.png",
+          "width": 192,
+          "height": 160,
+          "bytes": 33471,
+          "sha256": "e4ba32c068238df694973916523c771d1065bb4e23a48e5c6f700c35ef40875d",
+          "url": "/assets/van-ngoc-gameplay-v1/preparation-table.png",
+          "contentBounds": {
+            "left": 18,
+            "top": 22,
+            "width": 156,
+            "height": 115
+          },
+          "placement": {
+            "left": 18,
+            "top": 22,
+            "width": 156,
+            "height": 115
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": {
+        "x": 85,
+        "y": 120
+      },
+      "pivotStatus": "measured-base-reference-awaiting-owner-footprint",
+      "ownerApproved": false,
+      "artApproved": false,
+      "pivotMeasurement": {
+        "id": "preparation-table",
+        "pivot": {
+          "x": 85,
+          "y": 120
+        },
+        "points": [
+          {
+            "x": 31,
+            "y": 105
+          },
+          {
+            "x": 139,
+            "y": 135
+          }
+        ],
+        "basis": "midpoint of the two visible front support contacts",
+        "filename": "preparation-table.png",
+        "nativeSha256": "e4ba32c068238df694973916523c771d1065bb4e23a48e5c6f700c35ef40875d",
+        "evidence": "review/preparation-table-pivot-grid.png",
+        "method": "manual-visual-measurement-on-native-pixel-grid",
+        "footprintApproved": false
+      }
+    },
+    {
+      "id": "wood-sword-rack",
+      "label": "Giá mộc kiếm",
+      "itemId": null,
+      "stage": "hub",
+      "state": null,
+      "assetType": "prop",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-wood-sword-rack-v1-2026-10-12T13-56-47-117Z-5a65252b1500b32a/source.png",
+        "sha256": "e8cfef1b7f5b7e6b50cca7560b46488e68026133cabc8340b980b9e425672ac7",
+        "dimensions": {
+          "width": 1330,
+          "height": 1182
+        },
+        "manifest": "output/imagegen/game-assets/vn-wood-sword-rack-v1-2026-10-12T13-56-47-117Z-5a65252b1500b32a/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-wood-sword-rack-v1-2026-10-12T13-56-47-117Z-5a65252b1500b32a/prepared/image-01-alpha-2026-10-12T14-00-57-485Z-4d75bf8b.png",
+        "sha256": "7e981aa4c966b6cf52e829b5b2b8803171b06514638ef4d27c19a8c4f2a11e69",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 130,
+        "top": 101,
+        "width": 1064,
+        "height": 957,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/wood-sword-rack.png",
+          "filename": "wood-sword-rack.png",
+          "width": 160,
+          "height": 160,
+          "bytes": 24938,
+          "sha256": "3a046ed9e7a14944da9e0eb182d642a859123cd51173c968a493188e7575257d",
+          "url": "/assets/van-ngoc-gameplay-v1/wood-sword-rack.png",
+          "contentBounds": {
+            "left": 17,
+            "top": 24,
+            "width": 125,
+            "height": 112
+          },
+          "placement": {
+            "left": 17,
+            "top": 24,
+            "width": 125,
+            "height": 112
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": {
+        "x": 70,
+        "y": 126
+      },
+      "pivotStatus": "measured-base-reference-awaiting-owner-footprint",
+      "ownerApproved": false,
+      "artApproved": false,
+      "pivotMeasurement": {
+        "id": "wood-sword-rack",
+        "pivot": {
+          "x": 70,
+          "y": 126
+        },
+        "points": [
+          {
+            "x": 31,
+            "y": 118
+          },
+          {
+            "x": 108,
+            "y": 134
+          }
+        ],
+        "basis": "midpoint of the visible front-facing rack feet",
+        "filename": "wood-sword-rack.png",
+        "nativeSha256": "3a046ed9e7a14944da9e0eb182d642a859123cd51173c968a493188e7575257d",
+        "evidence": "review/wood-sword-rack-pivot-grid.png",
+        "method": "manual-visual-measurement-on-native-pixel-grid",
+        "footprintApproved": false
+      }
+    },
+    {
+      "id": "clean-herb-clump",
+      "label": "Khóm dược thảo",
+      "itemId": null,
+      "stage": "VP2",
+      "state": null,
+      "assetType": "prop",
+      "source": {
+        "path": "output/imagegen/game-assets/vn-clean-herb-clump-v1-2026-10-12T13-57-29-311Z-ccde849a12e93523/source.png",
+        "sha256": "df5d82c7adba52f8e6a606210b0c7129f286b473714a59096f8dc1229c2d3ace",
+        "dimensions": {
+          "width": 1324,
+          "height": 1188
+        },
+        "manifest": "output/imagegen/game-assets/vn-clean-herb-clump-v1-2026-10-12T13-57-29-311Z-ccde849a12e93523/manifest.json"
+      },
+      "alpha": {
+        "path": "output/imagegen/game-assets/vn-clean-herb-clump-v1-2026-10-12T13-57-29-311Z-ccde849a12e93523/prepared/image-01-alpha-2026-10-12T14-01-06-147Z-8e79e229.png",
+        "sha256": "66c0d86337a352e134df375af7edf93a350e343f25e5b86563a9089c1088e428",
+        "sourceCanvasPreserved": true
+      },
+      "crop": {
+        "left": 126,
+        "top": 89,
+        "width": 1072,
+        "height": 960,
+        "boundsThreshold": 64
+      },
+      "files": [
+        {
+          "path": "native/clean-herb-clump.png",
+          "filename": "clean-herb-clump.png",
+          "width": 96,
+          "height": 96,
+          "bytes": 8488,
+          "sha256": "a70d67853aea6e835e855db48760ab998abfcbeb482f3491f48b2bdbbd946cad",
+          "url": "/assets/van-ngoc-gameplay-v1/clean-herb-clump.png",
+          "contentBounds": {
+            "left": 13,
+            "top": 17,
+            "width": 69,
+            "height": 62
+          },
+          "placement": {
+            "left": 13,
+            "top": 17,
+            "width": 69,
+            "height": 62
+          },
+          "kernel": "lanczos3",
+          "magentaPixels": 0,
+          "canvasEdgePixels": 0
+        }
+      ],
+      "pivot": {
+        "x": 47,
+        "y": 68
+      },
+      "pivotStatus": "measured-base-reference-awaiting-owner-footprint",
+      "ownerApproved": false,
+      "artApproved": false,
+      "pivotMeasurement": {
+        "id": "clean-herb-clump",
+        "pivot": {
+          "x": 47,
+          "y": 68
+        },
+        "points": [
+          {
+            "x": 47,
+            "y": 68
+          }
+        ],
+        "basis": "root crown where the stems enter the root bundle",
+        "filename": "clean-herb-clump.png",
+        "nativeSha256": "a70d67853aea6e835e855db48760ab998abfcbeb482f3491f48b2bdbbd946cad",
+        "evidence": "review/clean-herb-clump-pivot-grid.png",
+        "method": "manual-visual-measurement-on-native-pixel-grid",
+        "footprintApproved": false
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "id": "hn-refine-training-jade",
+      "stage": "VP1",
+      "requires": [
+        "HN08-accepted",
+        "hn-guard-method"
+      ],
+      "consume": {
+        "hn-refining-material": 4
+      },
+      "keep": {
+        "hn-training-jade": 1
+      },
+      "produce": {},
+      "transform": {
+        "item": "hn-training-jade",
+        "from": "raw",
+        "to": "refined",
+        "sameInstance": true
+      }
+    },
+    {
+      "id": "vh-recipe-ink",
+      "stage": "VP2",
+      "requires": [
+        "EX01-completed"
+      ],
+      "consume": {
+        "vh-conductive-sand": 1,
+        "vh-clear-water": 1
+      },
+      "keep": {},
+      "produce": {
+        "vh-guiding-ink": 1
+      }
+    },
+    {
+      "id": "vh-recipe-recovery",
+      "stage": "VP2",
+      "requires": [
+        "EX01-completed"
+      ],
+      "consume": {
+        "vh-clean-herb": 2,
+        "vh-clear-water": 1
+      },
+      "keep": {},
+      "produce": {
+        "recovery": 1
+      }
+    },
+    {
+      "id": "vh-recipe-case",
+      "stage": "VP2",
+      "requires": [
+        "EX02-completed"
+      ],
+      "consume": {
+        "vh-soft-fiber": 2,
+        "vh-stable-jade": 1
+      },
+      "keep": {},
+      "produce": {
+        "vh-sealed-case": 1
+      }
+    },
+    {
+      "id": "vh-recipe-compass",
+      "stage": "VP3",
+      "requires": [
+        "EX03-completed"
+      ],
+      "consume": {
+        "vh-soft-fiber": 1,
+        "vh-stable-jade": 2,
+        "vh-conductive-sand": 1
+      },
+      "keep": {},
+      "produce": {
+        "vh-flow-compass": 1
+      }
+    },
+    {
+      "id": "vh-recipe-seal",
+      "stage": "VP2",
+      "requires": [
+        "EX03-accepted",
+        "trip-not-started"
+      ],
+      "consume": {
+        "vh-guiding-ink": 1
+      },
+      "keep": {
+        "vh-sealed-case": 1
+      },
+      "produce": {},
+      "effect": {
+        "id": "trip-seal",
+        "scope": "one-character-one-trip",
+        "onTripEnd": "clear-effect-keep-tool",
+        "preStartCancel": "refund-once-and-clear-effect",
+        "postStartRefund": false
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "hn05-first",
+      "condition": "HN05-completed",
+      "repeatable": false,
+      "grant": {
+        "hn-refining-material": 3,
+        "recovery": 2
+      }
+    },
+    {
+      "id": "hn06-first",
+      "condition": "HN06-completed",
+      "repeatable": false,
+      "grant": {
+        "hn-refining-material": 3
+      }
+    },
+    {
+      "id": "hn08-first-blank",
+      "condition": "HN08-accepted",
+      "repeatable": false,
+      "grant": {
+        "hn-training-jade": 1
+      },
+      "initialState": "raw"
+    },
+    {
+      "id": "ex01-first",
+      "condition": "EX01-completed",
+      "repeatable": false,
+      "grant": {
+        "vh-clean-herb": 2,
+        "vh-clear-water": 2,
+        "vh-conductive-sand": 1
+      }
+    },
+    {
+      "id": "ex02-first",
+      "condition": "EX02-completed",
+      "repeatable": false,
+      "grant": {
+        "vh-soft-fiber": 3,
+        "vh-stable-jade": 3,
+        "vh-conductive-sand": 1
+      }
+    }
+  ],
+  "existingItems": [
+    {
+      "id": "wood-sword",
+      "name": "Mộc kiếm nhập môn",
+      "kind": "gear",
+      "stage": "existing",
+      "status": "runtime-reference",
+      "storage": "instance",
+      "slot": "weapon",
+      "url": "/assets/character-ui-v2/wood-sword.webp"
+    },
+    {
+      "id": "plain-robe",
+      "name": "Áo vải môn phái",
+      "kind": "gear",
+      "stage": "existing",
+      "status": "runtime-reference",
+      "storage": "instance",
+      "slot": "robe",
+      "url": "/assets/character-ui-v2/plain-robe.webp"
+    },
+    {
+      "id": "recovery",
+      "name": "Vật tư hồi phục",
+      "kind": "consumable",
+      "stage": "existing",
+      "status": "runtime-reference",
+      "storage": "sect.supplies",
+      "url": "/assets/character-ui-v2/lotus-pill.webp"
+    }
+  ],
+  "review": {
+    "alpha": "assistant-inspected-light-dark-native-and-source",
+    "native": "assistant-inspected-32-48-64-icons-and-native-props",
+    "worldPlacement": "not-produced",
+    "collision": "not-produced",
+    "ownerArtApproval": "pending"
+  },
+  "notes": [
+    "Do not change the two leftover HN materials or invent a recipe sink.",
+    "Raw/refined jade share one item ID and instance.",
+    "Recipe ink, recovery, case, compass and seal retain the current proposed quantities.",
+    "Later VP2/VP3 ART does not unlock those quests or content.",
+    "Retain existing weapon/robe/recovery icons.",
+    "Props are supplied separately, without authored placement or collision."
+  ]
+}

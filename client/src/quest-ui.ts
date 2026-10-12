@@ -1,6 +1,7 @@
 import { CULTIVATION_GATE, progressionLabel, type SectView } from '../../shared/sect';
 import { currentSectQuest, QUEST_STATUS_LABELS, sectQuests, type SectQuest } from '../../shared/sect-quests';
 import type { AvatarId } from '../../shared/profiles';
+import {chapterGate,initialChapter} from '@shared/chapter';
 
 const node = <K extends keyof HTMLElementTagNameMap>(tag: K, text?: string): HTMLElementTagNameMap[K] => {
   const result = document.createElement(tag); if (text) result.textContent = text; return result;
@@ -45,14 +46,15 @@ export class QuestUI {
     document.getElementById('quest-next')!.textContent = syncing ? 'Đang đọc hành trình đã lưu…' : !online ?
       'Vào sân chung để nhận / tiếp tục nhiệm vụ. Tiến độ của mỗi nhân vật lưu riêng.' : current.nextStep;
     const completed = quests.filter(quest => quest.status === 'completed').length;
-    document.getElementById('quest-chapter-progress')!.textContent = `${completed}/4 nhiệm vụ`;
+    document.getElementById('quest-chapter-progress')!.textContent = `${completed}/${quests.filter(q=>q.status!=='unreleased').length} nhiệm vụ`;
     document.getElementById('quest-reward')!.textContent = current.status === 'unreleased' ? 'Ngoại vi chưa mở trong bản này' :
       `${current.status === 'completed' ? 'Đã ghi nhận' : 'Thưởng lần đầu'} · ${current.reward}`;
+    const gate=chapterGate(view?.chapter??initialChapter());
     document.getElementById('cultivation-summary')!.textContent = view ?
-      `${progressionLabel(avatar, view.level).replace(' · mốc gameplay', '')} · ${avatar === 'CHR-SITU-NAN' ? 'Tích lũy hồi phục' : 'Tu vi'} ${view.cultivation} / ${CULTIVATION_GATE}` :
+      `${progressionLabel(avatar, view.level).replace(' · mốc gameplay', '')} · ${avatar === 'CHR-SITU-NAN' ? 'Tích lũy hồi phục' : 'Tu vi'} ${view.cultivation} / ${gate}` :
       'Hành trình riêng · đang chờ bản lưu';
     const meter = document.getElementById('cultivation-meter') as HTMLProgressElement;
-    meter.max = CULTIVATION_GATE; meter.value = Math.min(view?.cultivation ?? 0, CULTIVATION_GATE);
+    meter.max = gate; meter.value = Math.min(view?.cultivation ?? 0, gate);
     meter.setAttribute('aria-label', avatar === 'CHR-SITU-NAN' ? 'Tích lũy hồi phục nền' : 'Tu vi nền');
     meter.title = 'Tích lũy và xác nhận tầng là hai việc riêng. Phần thưởng vượt cổng vẫn được giữ trong bản lưu.';
     const signature = JSON.stringify([view?.profileId, online, avatar, quests]);

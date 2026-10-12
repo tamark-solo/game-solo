@@ -98,7 +98,7 @@ export class ProfileLeases {
     this.leases.set(accountId, { sessionId, expiresAt: now + 12_000 }); return true;
   }
   activate(accountId: string, sessionId: string): void { this.extend(accountId, sessionId, Infinity); }
-  dropped(accountId: string, sessionId: string): void { this.extend(accountId, sessionId, Date.now() + 15_000); }
+  dropped(accountId: string, sessionId: string,reserveMs=15_000): void { this.extend(accountId, sessionId, Date.now() + Math.min(30_000,Math.max(15_000,reserveMs))); }
   release(accountId: string, sessionId: string): void {
     if (this.leases.get(accountId)?.sessionId === sessionId) this.leases.delete(accountId);
   }

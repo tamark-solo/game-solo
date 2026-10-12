@@ -2,6 +2,7 @@ import { HANG_NHAC, HANG_NHAC_AVATARS } from './hang-nhac';
 import type { Direction } from './world/types';
 import { initialSectProgress, type SectProgress } from './sect';
 import { initialCharacterInventory, type CharacterInventory } from './character-inventory';
+import type { ChapterProgress } from './chapter';
 
 export type AvatarId = typeof HANG_NHAC_AVATARS[number];
 export const R01_IDS = ['sword', 'thunder', 'wind'] as const;
@@ -18,11 +19,12 @@ export function cleanPlayerName(value: unknown, fallback: string): string {
 export interface CharacterProfile {
   schema: 2; id: string; accountId: string; avatarId: AvatarId; name: string;
   mapId: string; mapVersion: string; x: number; y: number; direction: Direction;
-  progressionKind: 'cultivation' | 'recovery'; milestone: 'introduction' | 'M01'; cultivation: number; sect: SectProgress;
+  progressionKind: 'cultivation' | 'recovery'; milestone: 'introduction' | 'M01' | 'M02' | 'M03' | 'M04'; cultivation: number; sect: SectProgress;
   skills: SkillId[]; hp: number; mp: number; casts: number; practiceHits: number;
   nextSwordAt: number; nextThunderAt: number; nextWindAt: number; lastSpentAt: number;
   revision: number; createdAt: number; updatedAt: number;
   inventory: CharacterInventory;
+  chapter?:ChapterProgress;
 }
 export function initialProfile(id: string, accountId: string, avatarId: AvatarId, now: number): CharacterProfile {
   return { schema: 2, id, accountId, avatarId, name: CHARACTER_INFO[avatarId].name,

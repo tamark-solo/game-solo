@@ -1,0 +1,552 @@
+{
+  "schema": "game-solo-gameplay-asset-production-1",
+  "id": "van-ngoc-gameplay-assets-v1",
+  "date": "2026-10-12",
+  "status": "briefs-ready",
+  "scope": "11 item-icon states, 3 standalone props, 6 recipe review cards; source preview only",
+  "generationAuthorizedBy": "owner-chat",
+  "styleBaseline": {
+    "approval": "docs/design/world/hang-nhac-van-ngoc-detail-v2/approval.json",
+    "masterSha256": "79b1935aeea27344967d573f52f13935ff832d08342b675e22493f6f1ad6d793",
+    "referenceMode": "visual-inspection-and-text-brief; no image input"
+  },
+  "gddSources": [
+    "docs/GDD.md",
+    "docs/HANG-NHAC-CONTENT-CATALOG.md",
+    "docs/ITEM-CRAFTING-DESIGN.md",
+    "docs/ITEM-PRODUCTION-PLAN.md"
+  ],
+  "itemPlan": {
+    "path": "docs/design/systems/items-v1/plan.json",
+    "sha256": "0d8511147cd28d37a169612e5b1f3cba647e63c44e64c84d7a868eab1d825c84"
+  },
+  "character": {
+    "frame": [
+      64,
+      96
+    ],
+    "anchor": [
+      32,
+      88
+    ],
+    "scale": 1
+  },
+  "ownerApproved": false,
+  "artApproved": false,
+  "runtimeConsumable": false,
+  "navigationModified": false,
+  "characterSystemModified": false,
+  "assets": [
+    {
+      "id": "hn-refining-material",
+      "itemId": "hn-refining-material",
+      "stage": "VP0",
+      "label": "Nguyên liệu luyện hóa nhập môn",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-hn-refining-material-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: Three pale celadon refining crystal chips bound together by one short ivory cord. Broad faceted planes, one warm bronze vein, no bowl. Distinct from the single rough stable-jade chunk.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "hn-training-jade-raw",
+      "itemId": "hn-training-jade",
+      "stage": "VP1",
+      "label": "Phôi ngọc hộ thân",
+      "state": "raw",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-hn-training-jade-raw-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: One vertical oval jade pendant, thickness visible on its lower-right edge, a small circular cord hole centered near the top, two short ivory cord ends. Preserve this exact oval identity for the raw/refined state pair. RAW STATE: dull grey-green unfinished oval, shallow rough facets and a visible hairline crack. No metal ring, no glow.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "hn-training-jade-refined",
+      "itemId": "hn-training-jade",
+      "stage": "VP1",
+      "label": "Ngọc hộ thân luyện tập",
+      "state": "refined",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-hn-training-jade-refined-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: One vertical oval jade pendant, thickness visible on its lower-right edge, a small circular cord hole centered near the top, two short ivory cord ends. Preserve this exact oval identity for the raw/refined state pair. REFINED STATE: same size and silhouette, polished celadon green oval, small antique-bronze crescent embracing its lower edge, one broad ivory curved cloud inlay. No aura or starbursts.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "vh-clean-herb",
+      "itemId": "vh-clean-herb",
+      "stage": "VP2",
+      "label": "Dược thảo sơ chế",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-vh-clean-herb-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: One bundled sprig with three broad teal medicinal leaves, pale mint leaf undersides and two ochre stems tied with ivory string. Botanical silhouette, no potion bottle or pot.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "vh-clear-water",
+      "itemId": "vh-clear-water",
+      "stage": "VP2",
+      "label": "Linh tuyền đã lọc",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-vh-clear-water-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: One squat clear blue-green glass flask with a narrow neck, ivory stopper and a very small bronze collar. Transparent water visible as one broad waterline, large white reflection, no magic glow.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "vh-soft-fiber",
+      "itemId": "vh-soft-fiber",
+      "stage": "VP2",
+      "label": "Sợi vân bố",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-vh-soft-fiber-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: One simple wooden spool wrapped in thick warm-ivory fiber, two loose curved thread ends, small petrol-teal band around the spool core. Readable broad coils, not a scroll or rope knot.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "vh-conductive-sand",
+      "itemId": "vh-conductive-sand",
+      "stage": "VP2",
+      "label": "Cát dẫn khí",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-vh-conductive-sand-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: One shallow warm-ivory ceramic dish filled with ochre-gold sand. Broad mound silhouette with just three small celadon flecks, dark petrol rim underneath. No spilled sand or sparkle cloud.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "vh-stable-jade",
+      "itemId": "vh-stable-jade",
+      "stage": "VP2",
+      "label": "Ngọc thô ổn khí",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-vh-stable-jade-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: One single chunky uncut stable-jade stone, asymmetrical triangular silhouette, deep celadon green, petrol shadow facets, one broad warm-ivory mineral band. Distinct from crystal chips and oval pendant.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "vh-guiding-ink",
+      "itemId": "vh-guiding-ink",
+      "stage": "VP2",
+      "label": "Mực dẫn khí",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-vh-guiding-ink-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: One short opaque petrol-teal ink pot with a broad antique-bronze lip, ivory cork sitting in the neck and one restrained nearly-black ink stain on the rim. Squat round pot, not the clear narrow-neck water flask.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "vh-sealed-case",
+      "itemId": "vh-sealed-case",
+      "stage": "VP2",
+      "label": "Hộp giữ khí",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-vh-sealed-case-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: One compact closed rectangular warm-ivory wood specimen case, rounded corners, dark petrol side plane, two simple bronze corner guards and a small central celadon clasp. No shoulder strap, lettering, scroll or open contents.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "vh-flow-compass",
+      "itemId": "vh-flow-compass",
+      "stage": "VP3",
+      "label": "Định Lưu Bàn",
+      "assetType": "icon",
+      "nativeCanvas": [
+        64,
+        64
+      ],
+      "displaySizes": [
+        32,
+        48,
+        64
+      ],
+      "spec": {
+        "assetType": "icon",
+        "name": "vn-vh-flow-compass-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated inventory icon. Subject: One round antique-bronze surveying instrument, celadon outer ring, dark petrol inner disc and one large ivory directional needle. A single concentric arc and four broad marks, no letters or dense rune engraving. Seen in a restrained three-quarter overhead view.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nComposition: centered, subject occupies approximately 70 percent of the square, generous empty magenta margin on all four sides. Major forms must remain clear at 32, 48 and 64 pixels. One icon only; no contact sheet. Flat #FF00FF chromakey backdrop, no cast shadow on backdrop."
+      }
+    },
+    {
+      "id": "preparation-table",
+      "stage": "hub-and-VP2",
+      "label": "Bàn chuẩn bị",
+      "assetType": "prop",
+      "nativeCanvas": [
+        192,
+        160
+      ],
+      "bodySize": [
+        160,
+        115
+      ],
+      "pivotStatus": "pending-manual-base-measurement",
+      "spec": {
+        "assetType": "prop",
+        "name": "vn-preparation-table-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated map prop. Subject: One low preparation workbench, straight warm-ivory stone top on sturdy petrol-teal stained wooden legs, small bronze corner joints. On the table only: one squat ink pot, one shallow jade mortar, a folded ivory cloth and two trimmed medicinal sprigs; they are a single table-top set with one before/after relation. No stool, floor patch, backdrop, loose objects outside the table or human. Show the full feet and front-right support.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nCamera: orthographic high-angle RPG view, approximately 40 degrees downward. Front and top faces visible, parallel vertical supports, no vanishing point, no dramatic low-angle perspective. Lighting upper left. A human uses 64x96 native frame with feet at (32,88); final prop body target 160x115 pixels inside 192x160 canvas, source is larger for clean native export. Center the complete silhouette with 12 percent empty magenta margin; base must be fully visible. Flat #FF00FF background; no ground shadow, floor or scenery."
+      }
+    },
+    {
+      "id": "wood-sword-rack",
+      "stage": "hub",
+      "label": "Giá mộc kiếm",
+      "assetType": "prop",
+      "nativeCanvas": [
+        160,
+        160
+      ],
+      "bodySize": [
+        126,
+        112
+      ],
+      "pivotStatus": "pending-manual-base-measurement",
+      "spec": {
+        "assetType": "prop",
+        "name": "vn-wood-sword-rack-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated map prop. Subject: One compact wooden training-sword rack with two upright posts and two plain wooden straight training swords resting horizontally across it. Petrol-teal painted posts, warm tan wood blades, ivory rope joints and restrained bronze foot braces. No steel weapons, flags, floor, wall, swords outside the rack or human. Show full supporting feet.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nCamera: orthographic high-angle RPG view, approximately 40 degrees downward. Front and top faces visible, parallel vertical supports, no vanishing point, no dramatic low-angle perspective. Lighting upper left. A human uses 64x96 native frame with feet at (32,88); final prop body target 126x112 pixels inside 160x160 canvas, source is larger for clean native export. Center the complete silhouette with 12 percent empty magenta margin; base must be fully visible. Flat #FF00FF background; no ground shadow, floor or scenery."
+      }
+    },
+    {
+      "id": "clean-herb-clump",
+      "stage": "VP2",
+      "label": "Khóm dược thảo",
+      "assetType": "prop",
+      "nativeCanvas": [
+        96,
+        96
+      ],
+      "bodySize": [
+        70,
+        62
+      ],
+      "pivotStatus": "pending-manual-base-measurement",
+      "spec": {
+        "assetType": "prop",
+        "name": "vn-clean-herb-clump-v1",
+        "quality": "high",
+        "size": "1024x1024",
+        "prompt": "Use case: stylized-concept. Asset: one isolated map prop. Subject: One small medicinal herb clump of five broad teal leaves, mint undersides, two ochre stalks and a narrow visible root base. No flower, planter, ground tile, rocks, crop soil patch, particle glow or human. Same botanical family as the bundled medicinal-leaf inventory icon.\nStyle: VAN NGOC gameplay illustration: decisive dark petrol outline, clean three-tone cel shading, broad readable material planes. Celadon jade, petrol teal shadows, warm ivory highlights and restrained antique bronze. Warm upper-left light. Crisp hand-painted fantasy game asset, consistent with the approved bright jade-and-cloud monastery map. No photographic rendering, soft airbrush, tiny noisy filigree, bloom, labels, runes, typography, watermark or UI frame. These are art references described in text; no reference pixels are transmitted by this tool.\nCamera: orthographic high-angle RPG view, approximately 40 degrees downward. Front and top faces visible, parallel vertical supports, no vanishing point, no dramatic low-angle perspective. Lighting upper left. A human uses 64x96 native frame with feet at (32,88); final prop body target 70x62 pixels inside 96x96 canvas, source is larger for clean native export. Center the complete silhouette with 12 percent empty magenta margin; base must be fully visible. Flat #FF00FF background; no ground shadow, floor or scenery."
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "id": "hn-refine-training-jade",
+      "stage": "VP1",
+      "requires": [
+        "HN08-accepted",
+        "hn-guard-method"
+      ],
+      "consume": {
+        "hn-refining-material": 4
+      },
+      "keep": {
+        "hn-training-jade": 1
+      },
+      "produce": {},
+      "transform": {
+        "item": "hn-training-jade",
+        "from": "raw",
+        "to": "refined",
+        "sameInstance": true
+      }
+    },
+    {
+      "id": "vh-recipe-ink",
+      "stage": "VP2",
+      "requires": [
+        "EX01-completed"
+      ],
+      "consume": {
+        "vh-conductive-sand": 1,
+        "vh-clear-water": 1
+      },
+      "keep": {},
+      "produce": {
+        "vh-guiding-ink": 1
+      }
+    },
+    {
+      "id": "vh-recipe-recovery",
+      "stage": "VP2",
+      "requires": [
+        "EX01-completed"
+      ],
+      "consume": {
+        "vh-clean-herb": 2,
+        "vh-clear-water": 1
+      },
+      "keep": {},
+      "produce": {
+        "recovery": 1
+      }
+    },
+    {
+      "id": "vh-recipe-case",
+      "stage": "VP2",
+      "requires": [
+        "EX02-completed"
+      ],
+      "consume": {
+        "vh-soft-fiber": 2,
+        "vh-stable-jade": 1
+      },
+      "keep": {},
+      "produce": {
+        "vh-sealed-case": 1
+      }
+    },
+    {
+      "id": "vh-recipe-compass",
+      "stage": "VP3",
+      "requires": [
+        "EX03-completed"
+      ],
+      "consume": {
+        "vh-soft-fiber": 1,
+        "vh-stable-jade": 2,
+        "vh-conductive-sand": 1
+      },
+      "keep": {},
+      "produce": {
+        "vh-flow-compass": 1
+      }
+    },
+    {
+      "id": "vh-recipe-seal",
+      "stage": "VP2",
+      "requires": [
+        "EX03-accepted",
+        "trip-not-started"
+      ],
+      "consume": {
+        "vh-guiding-ink": 1
+      },
+      "keep": {
+        "vh-sealed-case": 1
+      },
+      "produce": {},
+      "effect": {
+        "id": "trip-seal",
+        "scope": "one-character-one-trip",
+        "onTripEnd": "clear-effect-keep-tool",
+        "preStartCancel": "refund-once-and-clear-effect",
+        "postStartRefund": false
+      }
+    }
+  ],
+  "existingItemReferences": [
+    {
+      "id": "wood-sword",
+      "name": "Mộc kiếm nhập môn",
+      "kind": "gear",
+      "stage": "existing",
+      "status": "runtime-reference",
+      "storage": "instance",
+      "slot": "weapon"
+    },
+    {
+      "id": "plain-robe",
+      "name": "Áo vải môn phái",
+      "kind": "gear",
+      "stage": "existing",
+      "status": "runtime-reference",
+      "storage": "instance",
+      "slot": "robe"
+    },
+    {
+      "id": "recovery",
+      "name": "Vật tư hồi phục",
+      "kind": "consumable",
+      "stage": "existing",
+      "status": "runtime-reference",
+      "storage": "sect.supplies"
+    }
+  ],
+  "sources": [
+    {
+      "id": "hn05-first",
+      "condition": "HN05-completed",
+      "repeatable": false,
+      "grant": {
+        "hn-refining-material": 3,
+        "recovery": 2
+      }
+    },
+    {
+      "id": "hn06-first",
+      "condition": "HN06-completed",
+      "repeatable": false,
+      "grant": {
+        "hn-refining-material": 3
+      }
+    },
+    {
+      "id": "hn08-first-blank",
+      "condition": "HN08-accepted",
+      "repeatable": false,
+      "grant": {
+        "hn-training-jade": 1
+      },
+      "initialState": "raw"
+    },
+    {
+      "id": "ex01-first",
+      "condition": "EX01-completed",
+      "repeatable": false,
+      "grant": {
+        "vh-clean-herb": 2,
+        "vh-clear-water": 2,
+        "vh-conductive-sand": 1
+      }
+    },
+    {
+      "id": "ex02-first",
+      "condition": "EX02-completed",
+      "repeatable": false,
+      "grant": {
+        "vh-soft-fiber": 3,
+        "vh-stable-jade": 3,
+        "vh-conductive-sand": 1
+      }
+    }
+  ],
+  "notes": [
+    "Do not change the two leftover HN materials or invent a recipe sink.",
+    "Raw/refined jade share one item ID and instance.",
+    "Recipe ink, recovery, case, compass and seal retain the current proposed quantities.",
+    "Later VP2/VP3 ART does not unlock those quests or content.",
+    "Retain existing weapon/robe/recovery icons.",
+    "Props are supplied separately, without authored placement or collision."
+  ]
+}

@@ -14,7 +14,7 @@ export interface SessionOptions {
   roomName?: string;
   joinOptions?: Record<string, unknown> | (() => Record<string, unknown>|Promise<Record<string,unknown>>);
   movementStep?: (state: MovementState, command: { moveX: number; moveY: number }, dt: number) => void;
-  motionFields?: Array<'motionLocked' | 'dashVX' | 'dashVY'>;
+  motionFields?: Array<'motionLocked' | 'dashVX' | 'dashVY' | 'scene'>;
   resumeToken?: () => string | undefined;
   recover?: boolean;
   connected?: (room: Room<CourtyardState>) => void;

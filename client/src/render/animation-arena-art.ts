@@ -36,8 +36,9 @@ export class AnimationArenaArt {
   for(let i=0;i<10;i++){const phase=reduced?i/10:((t*.22+i/10)%1),angle=i*2.399,px=x+Math.cos(angle)*[46,39,35][i%3]*(1-phase*.3),py=y-12-phase*114;this.stamp('aura:mote:'+i,'mote',px,py,[3,3],[1.5,1.5],Math.sin(phase*Math.PI)*.8,0,i%2?9:11,items,y);}
  }
  finish(items:MapDepthItem[]){for(const [id,e] of this.effects)if(!e.sprite.visible){this.renderer.scene.remove(e.sprite);e.sprite.geometry.dispose();e.sprite.material.map!.dispose();e.sprite.material.dispose();this.effects.delete(id);}this.renderer.setPresentationDepthItems(items);
-  let bytes=[...this.entries.values()].reduce((n,e)=>n+e.bytes,0);for(const [url,e] of this.entries){if(bytes<=this.budget)break;if(!e.owned||this.pins.has(url))continue;bytes-=e.bytes;e.texture.dispose();this.entries.delete(url);}
+  this.trim();
  }
+ trim(){let bytes=[...this.entries.values()].reduce((n,e)=>n+e.bytes,0);for(const [url,e] of this.entries){if(bytes<=this.budget)break;if(!e.owned||this.pins.has(url))continue;bytes-=e.bytes;e.texture.dispose();this.entries.delete(url);}}
  diagnostics(){return {atlasRGBABytes:[...this.entries.values()].reduce((n,e)=>n+e.bytes,0),atlasCount:this.entries.size,loading:this.loads.size,effects:this.effects.size,dropped:this.dropped,errors:[...this.errors],budget:this.budget};}
  dispose(){this.alive=false;for(const e of this.effects.values()){this.renderer.scene.remove(e.sprite);e.sprite.geometry.dispose();e.sprite.material.map!.dispose();e.sprite.material.dispose();}this.effects.clear();for(const e of this.entries.values())if(e.owned)e.texture.dispose();this.entries.clear();for(const t of this.procedural.values())t.dispose();this.renderer.setPresentationDepthItems([]);}
 }

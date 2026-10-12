@@ -1,5 +1,7 @@
 # Hằng Nhạc — bản đã lưu để triển khai GDD
 
+**Chuẩn ART tiếp tục 12/10/2026:** owner đã chốt [Vân Ngọc V2 20 vùng](../hang-nhac-van-ngoc-detail-v2/README.md) làm chuẩn hình cho map/asset tiếp theo. Folder này tiếp tục giữ dữ liệu navigation/Editor và đầu vào release đang dùng; không lấy ART cũ ở đây làm chuẩn style mới. [Hồ sơ lưu/dọn mới](../../../HANG-NHAC-VAN-NGOC-BASELINE.md).
+
 **Chốt bản ngày 08/10/2026:** chủ dự án hoàn tất vùng chặn, xác nhận “Đã xong, lưu bản mới nhất”. Nguồn chính là [dự án owner đã lưu](../../../data/authored-maps/294813fd-a175-49ae-ba45-849d726c4984.json), project `294813fd-a175-49ae-ba45-849d726c4984`, level `40db90c5-86f2-4767-a13f-ccb8fdfefe03`.
 
 [Mở Editor](http://127.0.0.1:5173/map-editor.html) · [Dự án có vùng chặn](editor-project.json) · [Ảnh web](map-web-access-v5-clean-v1.webp) · [PNG master](map-master-access-v5-clean-v1.png) · [Navigation](owner-navigation/navigation.json) · [Runtime export](owner-navigation/runtime-project.json) · [Kế hoạch GDD](../../../HANG-NHAC-IMPLEMENTATION-PLAN.md).

@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 2,
+  "createdAt": "2026-10-12T11:47:27.843892+00:00",
+  "manifest": {
+    "path": "production.json",
+    "sha256": "c6d257159a926bcafe4a8303dc57d6c2a23c11f6922a4478ad4b9475e6cd788f"
+  },
+  "source": {
+    "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\world\\hang-nhac-van-ngoc-detail-v1\\map-master.png",
+    "width": 3072,
+    "height": 2048,
+    "bytes": 12368345,
+    "sha256": "e79fa563084602246c475dcb8f4978e6c7eaa1226f0255023df41a838b297f81"
+  },
+  "worldSize": [
+    3072,
+    2048
+  ],
+  "regions": [
+    {
+      "id": "D13",
+      "rect": [
+        1184,
+        896,
+        1888,
+        1600
+      ],
+      "status": "registration-passed-awaiting-visual-review",
+      "blockers": [],
+      "ownerApproved": false,
+      "artApproved": false,
+      "nativeDetailVerified": false,
+      "exactFootprintVerified": false,
+      "caution": "Patch correlation and a small affine fit diagnose layout drift; they do not prove exact collision footprints, stairs, or every silhouette. Owner visual approval and native-detail acceptance remain separate.",
+      "visualReview": {
+        "status": "pending"
+      },
+      "raw": {
+        "path": "generated/D13-v3.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2525690,
+        "sha256": "9a05ada29afe83eb2958237826680715248f6057711a0e4e104797fade99f7e6"
+      },
+      "normalization": {
+        "from": [
+          1254,
+          1254
+        ],
+        "to": [
+          704,
+          704
+        ],
+        "resampling": "bicubic only if size differs",
+        "aspectDeviation": 0.0,
+        "sectorUpsampled": false,
+        "note": "Resolution normalization cannot create or verify native detail."
+      },
+      "measurementReference": {
+        "sourceCropPx": [
+          1184,
+          896,
+          1888,
+          1600
+        ],
+        "normalizedSize": [
+          704,
+          704
+        ],
+        "usage": "layout measurement only; never delivered as ART"
+      },
+      "patches": [
+        {
+          "target": [
+            141.7142857142857,
+            141.7142857142857
+          ],
+          "generated": [
+            141.5332809803144,
+            141.8003113166523
+          ],
+          "ncc": 0.8624723892945159,
+          "peakMargin": 0.4159864942533698,
+          "texture": 0.033467744175473886,
+          "roundTripPx": 0.13928248787015798,
+          "trusted": true,
+          "reasons": [],
+          "kind": "edge-patch",
+          "residualPx": 0.22542534578131998,
+          "inlier": true
+        },
+        {
+          "target": [
+            352.0,
+            141.7142857142857
+          ],
+          "generated": [
+            351.20108328817946,
+            142.3948842126575
+          ],
+          "ncc": 0.7776638742033721,
+          "peakMargin": 0.5864474892613936,
+          "texture": 0.021365605249256254,
+          "roundTripPx": 1.0431294089489418,
+          "trusted": true,
+          "reasons": [],
+          "kind": "edge-patch",
+          "residualPx": 0.5092257023539962,
+          "inlier": true
+        },
+        {
+          "target": [
+            562.2857142857142,
+            141.7142857142857
+          ],
+          "generated": [
+            561.3168366974777,
+            141.74603615882106
+          ],
+          "ncc": 0.7540588512086923,
+          "peakMargin": 0.44470521201493335,
+          "texture": 0.028983070025679524,
+          "roundTripPx": 0.9795189389751573,
+          "trusted": true,
+          "reasons": [],
+          "kind": "edge-patch",
+          "residualPx": 0.21425026925360738,
+          "inlier": true
+        },
+        {
+          "target": [
+            141.7142857142857,
+            352.0
+          ],
+          "generated": [
+            141.31201290511947,
+            351.95827551256525
+          ],
+          "ncc": 0.9217846121304715,
+          "peakMargin": 0.3912702818242587,
+          "texture": 0.061559257639225,
+          "roundTripPx": 0.3932746905297871,
+          "trusted": true,
+          "reasons": [],
+          "kind": "edge-patch",
+          "residualPx": 0.33805084090744125,
+          "inlier": true
+        },
+        {
+          "target": [
+            352.0,
+            352.0
+          ],
+          "generated": [
+            351.5598381530803,
+            352.2743982157718
+          ],
+          "ncc": 0.6319284282249336,
+          "peakMargin": 0.1279846036717721,
+          "texture": 0.007984080982812145,
+          "roundTripPx": 0.5770329854672154,
+          "trusted": true,
+          "reasons": [],
+          "kind": "edge-patch",
+          "residualPx": 0.15333819136657256,
+          "inlier": true
+        },
+        {
+          "target": [
+            562.2857142857142,
+            352.0
+          ],
+          "generated": [
+            560.7243477741118,
+            352.0228975497728
+          ],
+          "ncc": 0.9107295994582644,
+          "peakMargin": 0.33271330961935675,
+          "texture": 0.05943625588576757,
+          "roundTripPx": 0.724292851000923,
+          "trusted": true,
+          "reasons": [],
+          "kind": "edge-patch",
+          "residualPx": 0.6654786841370534,
+          "inlier": true
+        },
+        {
+          "target": [
+            141.7142857142857,
+            562.2857142857142
+          ],
+          "generated": [
+            141.44188919938262,
+            562.7936497868556
+          ],
+          "ncc": 0.9123745825140966,
+          "peakMargin": 0.6250573030611677,
+          "texture": 0.06858891591736926,
+          "roundTripPx": 0.5722020458259884,
+          "trusted": true,
+          "reasons": [],
+          "kind": "edge-patch",
+          "residualPx": 0.2526922273460528,
+          "inlier": true
+        },
+        {
+          "target": [
+            352.0,
+            562.2857142857142
+          ],
+          "generated": [
+            351.75687532236367,
+            562.5522137524753
+          ],
+          "ncc": 0.9180451498563842,
+          "peakMargin": 0.2446309633650222,
+          "texture": 0.04637892359417731,
+          "roundTripPx": 0.36548281287833007,
+          "trusted": true,
+          "reasons": [],
+          "kind": "edge-patch",
+          "residualPx": 0.21559624228011437,
+          "inlier": true
+        },
+        {
+          "target": [
+            562.2857142857142,
+            562.2857142857142
+          ],
+          "generated": [
+            561.8127505724023,
+            562.8930660254006
+          ],
+          "ncc": 0.8702502501171556,
+          "peakMargin": 0.4342560546483338,
+          "texture": 0.059112913136619205,
+          "roundTripPx": 0.7646386020392949,
+          "trusted": true,
+          "reasons": [],
+          "kind": "edge-patch",
+          "residualPx": 0.3876547813689205,
+          "inlier": true
+        }
+      ],
+      "fit": {
+        "targetToGeneratedAffine": [
+          [
+            0.9982979238806873,
+            0.0007611185345611107,
+            -0.2622368310085513
+          ],
+          [
+            8.699522480151951e-05,
+            1.0004623964148782,
+            0.07725109071836778
+          ]
+        ],
+        "singularScales": [
+          1.0005425678712114,
+          0.998217866105374
+        ],
+        "rotationDeg": -0.019324187429523507,
+        "shear": 0.0008479100599055615,
+        "translationPx": [
+          -0.2622368310085513,
+          0.07725109071836778
+        ],
+        "cornerDriftPx": [
+          0.27337865050984683,
+          1.4653476541746737,
+          0.48610072464820275,
+          1.0334818537459944
+        ],
+        "borderExtensionNeededPx": 0.4634734134132259,
+        "coverageFraction": [
+          0.5974025974025974,
+          0.5974025974025974
+        ],
+        "inlierCoverageFraction": [
+          0.5974025974025974,
+          0.5974025974025974
+        ],
+        "inlierCount": 9,
+        "matchCount": 9,
+        "inlierFraction": 1.0,
+        "inlierRmsPx": 0.3647365506330069,
+        "allMatchesP90Px": 0.5404762987106076,
+        "allMatchesMaxPx": 0.6654786841370534
+      },
+      "diagnostic": {
+        "path": "diagnostics/D13-alignment.png",
+        "width": 1232,
+        "height": 646,
+        "bytes": 1443077,
+        "sha256": "18e1de7be91f92644658b9c9a690e6fe8dae6eb6b7188b0b3fb3a3947f88a714"
+      },
+      "registered": {
+        "path": "registered/D13.png",
+        "width": 704,
+        "height": 704,
+        "bytes": 930402,
+        "sha256": "517ac88d4e4eabe5c733266da68518b0ffb6db8baa09d8699586ca2f999e0486"
+      },
+      "guard": {
+        "sizePx": 8,
+        "method": "edge extension only for bounded affine sampling",
+        "extensionUsedPx": 0.4634734134132259
+      },
+      "generationMetadata": {
+        "path": "generated/D13-v3.json",
+        "sha256": "1256e0fa793bcbf868f0f218769e0a83fd8dda7982445f97d3a9a25fae6e5591",
+        "bytes": 7547
+      },
+      "deliverySampling": {
+        "method": "single raw-to-world affine bicubic",
+        "passes": 1,
+        "targetToRawAffine": [
+          [
+            1.7782181769124743,
+            0.0013557423896869785,
+            14.532890644766018
+          ],
+          [
+            0.00015496024417770664,
+            1.782073643614002,
+            15.137603505342092
+          ]
+        ],
+        "guardRawPx": 15,
+        "measurementNormalizationIsNotDelivered": true
+      }
+    }
+  ],
+  "allTwentyPresent": false,
+  "allTwentyRegistrationPassed": false,
+  "ownerApproved": false,
+  "artApproved": false,
+  "navigationModified": false,
+  "authoredMapsModified": false
+}

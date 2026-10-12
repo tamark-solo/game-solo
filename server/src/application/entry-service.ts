@@ -104,7 +104,7 @@ export class EntryService implements PlayGateway {
     try{this.authenticatedKey(grant.sessionKey);this.realm(grant.realmId,true);return this.repos.leases.renew(grant.accountId,clientId,this.options.nodeId,this.now(),this.now()+30_000);}
     catch(error){if(!(error instanceof GameError))this.options.logger.failure('play.renew-failed',{accountId:grant.accountId,characterId:grant.characterId});return false;}
   }
-  drop(grant:PlayGrant,clientId:string){this.repos.leases.renew(grant.accountId,clientId,this.options.nodeId,this.now(),this.now()+20_000);}
+  drop(grant:PlayGrant,clientId:string,reserveMs=20_000){this.repos.leases.renew(grant.accountId,clientId,this.options.nodeId,this.now(),this.now()+Math.min(35_000,Math.max(20_000,reserveMs)));}
   release(grant:PlayGrant,clientId:string){this.repos.leases.release(grant.accountId,clientId,this.options.nodeId);this.options.logger.event('play.release',{accountId:grant.accountId,characterId:grant.characterId,clientId});}
   admin(auth:Authenticated){if(auth.account.role!=='admin')throw new GameError('admin_required',403,'Tài khoản không có quyền quản trị.');}
   snapshot(auth:Authenticated,offset=0):AdminSnapshot {

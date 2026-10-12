@@ -1,24 +1,26 @@
 import type { CharacterProfile } from '../../shared/profiles';
 import type { CombatActor } from '../../shared/r01';
 import { CULTIVATION_GATE, LEVEL_THRESHOLDS, nearStation, type SectCommand, type SectResult, type SectView } from '../../shared/sect';
+import {chapterGate,levelThreshold,initialChapter} from '../../shared/chapter';
 
 export const isPractising = (actor: CombatActor, now: number, projectile = false, nextBasicAt = 0): boolean =>
   !!actor.castId || projectile || now < actor.lastSpentAt+2000 || nextBasicAt > 0 && now < nextBasicAt+1200;
 export function sectView(profile: CharacterProfile, actor: CombatActor, now: number, readyAt: number, projectile = false): SectView {
   const t=profile.sect, busy=isPractising(actor,now,projectile,t.lessons.nextBasicAt);
-  return { ...t, profileId:profile.id, cultivation:profile.cultivation, milestone:profile.milestone, savedAt:profile.updatedAt,hp:actor.hp,practising:busy,
-    activityStatus: !t.hn02?'locked':!t.activity?'stopped':!actor.connected?'offline':profile.cultivation>=CULTIVATION_GATE?'gate':busy||t.lessons.active!=='none'?'paused':'running',
+  return { ...t,chapter:{...(profile.chapter??initialChapter()),activitySave:undefined}, profileId:profile.id, cultivation:profile.cultivation, milestone:profile.milestone, savedAt:profile.updatedAt,hp:actor.hp,practising:busy,
+    activityStatus: !t.hn02?'locked':!t.activity?'stopped':!actor.connected?'offline':profile.cultivation>=(profile.chapter?chapterGate(profile.chapter):CULTIVATION_GATE)?'gate':busy||t.lessons.active!=='none'||profile.chapter&&profile.chapter.scene!=='hub'?'paused':'running',
     cycleStatus: t.hn02?'complete':t.cycleStep===4?'confirm':!readyAt?'idle':!nearStation(actor,'cultivation')?'away':busy?'combat':
       actor.moving||readyAt>now?'settling':'ready', cycleReadyAt:readyAt };
 }
 export function advanceCultivation(profile: CharacterProfile, actor: CombatActor, dt: number, now: number, projectile = false): void {
   const t=profile.sect;
-  if (!t.hn02 || !t.activity || t.lessons.active!=='none' || !actor.connected || actor.hp<=0 || isPractising(actor,now,projectile,t.lessons.nextBasicAt) || profile.cultivation>=CULTIVATION_GATE) return;
+  const gate=profile.chapter?chapterGate(profile.chapter):CULTIVATION_GATE;
+  if (!t.hn02 || !t.activity || t.lessons.active!=='none' || profile.chapter&&profile.chapter.scene!=='hub' || !actor.connected || actor.hp<=0 || isPractising(actor,now,projectile,t.lessons.nextBasicAt) || profile.cultivation>=gate) return;
   // 120/minute: one point per 500 valid server milliseconds. No wall-clock/offline catch-up.
   t.remainderMs+=Math.max(0,Math.min(dt,.1))*1000;
-  const points=Math.min(CULTIVATION_GATE-profile.cultivation,Math.floor((t.remainderMs+1e-7)/500));
+  const points=Math.min(gate-profile.cultivation,Math.floor((t.remainderMs+1e-7)/500));
   profile.cultivation+=points; t.remainderMs=Math.max(0,t.remainderMs-points*500);
-  if (profile.cultivation>=CULTIVATION_GATE) t.remainderMs=0;
+  if (profile.cultivation>=gate) t.remainderMs=0;
 }
 export function performSectCommand(profile: CharacterProfile, actor: CombatActor, command: SectCommand, now: number, readyAt: number, projectile = false):
   { result:SectResult; candidate?:CharacterProfile; startCycle?:boolean; finishCycle?:boolean } {
@@ -64,14 +66,15 @@ export function performSectCommand(profile: CharacterProfile, actor: CombatActor
       t.activity=false;return accepted();
     case 'confirm_level':{
       if(!t.hn02) return reject('hn02');
-      if(t.level>=3) return reject('gate');
+      const max=profile.chapter?chapterGate(profile.chapter)===3600?15:chapterGate(profile.chapter)===1620?9:3:3;
+      if(t.level>=max) return reject('gate');
       if(command.level!==t.level) return reject('phase');
-      if(p.cultivation<LEVEL_THRESHOLDS[t.level+1]!) return reject('cultivation');
+      if(p.cultivation<levelThreshold(t.level+1)) return reject('cultivation');
       t.level++;return accepted();
     }
     case 'use_recovery':
       // Both the NPC and inventory route use this policy, including idle lesson attempts.
-      if(t.lessons.active!=='none') return reject('combat');
+      if(t.lessons.active!=='none'||profile.chapter?.scene!=='hub'&&profile.chapter?.activity&&['HN05','HN07','HN08','HN09','HN10'].includes(profile.chapter.activity)) return reject('combat');
       if(!t.supplies) return reject('supplies');
       if(t.nextRecoveryAt>now) return reject('cooldown');
       if(actor.hp>=100) return reject('full_hp');

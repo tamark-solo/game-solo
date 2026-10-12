@@ -17,6 +17,7 @@ try {
   const config = resolve(folder, 'vite.mjs');
   await writeFile(config, `export default {
     root:${JSON.stringify(resolve('client'))}, publicDir:${JSON.stringify(resolve('client/public'))},
+    cacheDir:${JSON.stringify(resolve(folder, 'vite-cache'))},
     resolve:{alias:{'@shared':${JSON.stringify(resolve('shared'))}}},
     server:{host:'127.0.0.1',strictPort:true,fs:{allow:[${JSON.stringify(resolve('.'))}]}},
     plugins:[{name:'isolated-render-fixture',configureServer(server){server.middlewares.use((req,res,next)=>{
@@ -27,7 +28,7 @@ try {
   vite = await startService(['node_modules/vite/bin/vite.js', '--config', config, '--port', '5199'], origin,
     { VITE_SERVER_URL: endpoint });
   browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe',
-    headless: true, args: ['--enable-unsafe-swiftshader', '--use-angle=swiftshader',
+    headless: true, args: [...(process.env.TEST_NATIVE_GPU === '1' ? [] : ['--enable-unsafe-swiftshader', '--use-angle=swiftshader']),
       '--disable-background-timer-throttling', '--disable-renderer-backgrounding'] });
   const context = await browser.newContext({ viewport: { width: 1440, height: 980 }, deviceScaleFactor: 1 });
   page = await context.newPage();
