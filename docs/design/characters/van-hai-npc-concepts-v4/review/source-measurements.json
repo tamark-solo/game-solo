@@ -1,0 +1,51 @@
+{
+  "schema": "npc-source-measurements-1",
+  "date": "2026-10-13",
+  "measurementMeaning": "Visual source landmarks, not owner ART approval",
+  "artApproved": false,
+  "playerHeadComparison": {
+    "file": "../wang-lin-pixel-production-v2/masters/southeast.png",
+    "headHairBounds": [5,8,49,49],
+    "bodyHeightPx": 80,
+    "headToBodyRatio": 0.5125,
+    "scope": "Approximate hair and bun through chin; long back hair excluded; supporting measurement only."
+  },
+  "actors": [
+    {
+      "id": "NPC-HN-CULTIVATION", "slug": "diep-tinh",
+      "sourceSha256": "c19b3bfa8b6900cd2b7557094e6aad17894b189bb22c8d2bc1ce6615d2b27f42",
+      "visuallyReviewed": true,
+      "sourcePivot": [424,1482],
+      "sourceSupportWitness": [365,1410,485,1482],
+      "bodyTopY": 151,
+      "headBounds": [236,151,800,750],
+      "rootBasis": "Front boot sole ends at row1481; root424,1482 on its planted support, excluding robe and rear boot.",
+      "notes": "Tỷ lệ và nét pixel gần mốc hơn bản v1; đầu vẫn nhỏ hơn Trần Duy v3. Tóc bạc rõ nhưng khuôn mặt vẫn cần thể hiện tuổi già tốt hơn.",
+      "morphologyAssessment": "closer-to-style-basis-identity-and-proportions-review-pending"
+    },
+    {
+      "id": "NPC-HN-TRAINING", "slug": "ta-kiem-son",
+      "sourceSha256": "8e58532ecb15fe9ca023840c66d126ff2451843b8d81485fc01f0de14e4d4215",
+      "visuallyReviewed": true,
+      "sourcePivot": [426,1444],
+      "sourceSupportWitness": [368,1368,482,1444],
+      "bodyTopY": 206,
+      "headBounds": [310,206,765,708],
+      "rootBasis": "Front planted boot ends at row1443; ground1444 with root426 across its sole. Sword tip and robe are excluded.",
+      "notes": "Áo xanh than, cổ tay quấn và mộc kiếm đọc rõ. Tỷ lệ đầu vẫn nhỏ hơn Trần Duy v3; đây là concept trung gian để xem hình, chưa khóa anatomy.",
+      "morphologyAssessment": "closer-to-style-basis-identity-and-proportions-review-pending"
+    },
+    {
+      "id": "NPC-HN-PREPARATION", "slug": "to-nhuoc",
+      "sourceSha256": "6f0a124ce5fb27ad188739fadede39f0f83075217d014379c0fb534165b25fe8",
+      "visuallyReviewed": true,
+      "sourcePivot": [482,1472],
+      "sourceSupportWitness": [424,1390,536,1472],
+      "bodyTopY": 160,
+      "headBounds": [272,160,864,758],
+      "rootBasis": "Front planted boot sole ends at row1471; ground1472, root482 at its supporting sole. Rear boot and apron are excluded.",
+      "notes": "Tóc, áo ngọc và tạp dề/sổ rõ hơn ở native. Bút và hộp niêm còn nhỏ, cần tách prop và cải thiện nhận diện ở bước tiếp; tỷ lệ đầu vẫn nhỏ hơn mốc v3.",
+      "morphologyAssessment": "closer-to-style-basis-identity-and-proportions-review-pending"
+    }
+  ]
+}

@@ -12,7 +12,14 @@ try{
  page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/\/api\/|\/matchmake\//.test(r.url()))api.push(r.url());});
  await page.goto(origin+'/@fs/'+root.replaceAll('\\','/')+'/cluster.html');await page.waitForSelector('body[data-ready=true]');await page.locator('#play').click();await page.locator('#loop').uncheck();
  const storage=await page.evaluate(()=>[JSON.stringify({...localStorage}),JSON.stringify({...sessionStorage})]);
- async function seek(age){await page.locator('#age').evaluate((e,v)=>{e.value=String(v);e.dispatchEvent(new Event('input'));},age);await page.waitForFunction(v=>Number(document.querySelector('#cluster-stage').dataset.sceneTime)===v,age);}
+ async function seek(age){
+  // A previous render can already have this age after a fact or toggle changes.
+  // Publish a different age first so the target wait observes a fresh render.
+  for(const nextAge of [age===0?1:0,age]){
+   await page.locator('#age').evaluate((e,v)=>{e.value=String(v);e.dispatchEvent(new Event('input'));},nextAge);
+   await page.waitForFunction(v=>Number(document.querySelector('#cluster-stage').dataset.sceneTime)===v,nextAge);
+  }
+ }
  async function stats(){return JSON.parse(await page.locator('#cluster-stage').getAttribute('data-stats'));}
  for(const preset of ['same','mixed','escort'])for(const count of [3,6,9,12,18]){
   await page.locator('#preset').selectOption(preset);await page.locator('#count').selectOption(String(count));await page.locator('#timing').selectOption('salvo');await page.locator('#spacing').selectOption('110');await seek(800);

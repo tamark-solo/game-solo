@@ -1,0 +1,266 @@
+{
+  "schema": "npc-wave-a-six-future-motion-brief-1",
+  "id": "VH-NPC-WAVE-A-FUTURE-MOTION-01",
+  "date": "2026-10-13",
+  "ownerContinuation": "tôi đồng ý làm tiếp nhóm tiếp theo",
+  "status": "motion-brief-after-neutral-review",
+  "currentStage": "Six static neutral southeast identity candidates produced, manually registered and technically verified; owner appearance review pending",
+  "currentScope": {
+    "targetNeutralSources": 6,
+    "direction": "southeast",
+    "pose": "neutral",
+    "motionClipsProduced": 0,
+    "motionSourcesProduced": 0,
+    "runtimeImported": false,
+    "neutralSourcesProduced": 6
+  },
+  "sourcePlan": "docs/design/world/van-hai-living-world-v1/plan.json",
+  "sourcePlanSha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576",
+  "neutralProductionPlan": "production-plan.json",
+  "primaryStandard": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+  "directionalStandard": "docs/design/characters/van-hai-npc-visual-standard-v1/directions.json",
+  "skill": "docs/skills/game-actor-animation-production/SKILL.md",
+  "minimumLaterMatrix": {
+    "directions": [
+      "south",
+      "southwest",
+      "west",
+      "northwest",
+      "north",
+      "northeast",
+      "east",
+      "southeast"
+    ],
+    "actions": [
+      "idle",
+      "talk"
+    ],
+    "actors": 6,
+    "futureMinimumClips": 96,
+    "requirementOrigin": "Each of the six authored NPC records declares minimum idle/talk and eight directions",
+    "realViewsRequired": true,
+    "mirrorToClaimCoverage": false,
+    "framesPerClip": null,
+    "timingStatus": "Choose after neutral identity review and actual pose production; not a gameplay balance decision"
+  },
+  "optionalLaterMatrix": {
+    "actions": [
+      "profession"
+    ],
+    "oneProfessionGesturePerActor": true,
+    "directions": 8,
+    "futureOptionalClips": 48,
+    "requirementOrigin": "Authored animation.secondary specifies one profession/prop gesture in a later pack; qi/VFX separate from body",
+    "scheduledNow": false
+  },
+  "artContract": {
+    "neutralCanvas": [
+      64,
+      96
+    ],
+    "neutralWorldFoot": [
+      32,
+      88
+    ],
+    "nominalStandingHeightPx": 80,
+    "oneScalePerSourceFromNeutral": true,
+    "perPoseBboxFitAllowed": false,
+    "largerMotionCanvas": "May add padding only; preserve human world scale and explicitly measured world foot",
+    "nativeReview": "Direct comparison to same-direction live Wang at native1x and integer2x; standing height80 alone does not establish matching anatomy",
+    "neutralOrNewViewInputPolicy": "Image1 actual live Wang of the same direction is PRIMARY anatomy/camera/pixel/style. Own approved or selected NPC identity can support identity/costume; no NPC-to-NPC style chain.",
+    "actionIdentityPolicy": "Lock the NPC's own skull, face, hair, body, clothing and prop identity across poses. Compare directly with same-direction live Wang at native1x.",
+    "sameViewActionCorrectionPolicy": "An explicitly documented action-only correction may put the existing same-NPC/same-direction source at Image1 as edit target and Wang same-direction at Image2 as PRIMARY anatomy/style. Pin the target hash and prove its original Wang-first provenance; preserve neutral intent.",
+    "bodyFxShadow": "Keep body, profession prop production decisions, qi/FX and shadow explicitly separated; never bake qi, forge flame or sword trail into body",
+    "rootMeasurement": "Measure boot/support foot as world root, not the lowest spear/sword/prop pixel or bounding-box center"
+  },
+  "actors": [
+    {
+      "id": "NPC-HN-HERBALIST",
+      "slug": "bach-chi",
+      "name": "Bạch Chỉ",
+      "role": "Dược sư ngoại viện",
+      "authoredLook": "Nữ khoảng ba mươi; áo lá trà/ngà, tay áo buộc gọn, giỏ dược và chày ngọc.",
+      "authoredPersonality": "Mềm lời nhưng không dễ tin; kể chuyện qua mùi và vết cắt lá.",
+      "authoredBrief": "Silhouette giỏ dược, bàn tay chày; palette lá ấm khác áo ngọc của giảng sư.",
+      "authoredSideStory": "Cùng một luống dược, hai vết hái: quan sát trước khi kết tội người hái.",
+      "authoredAmbientLoop": null,
+      "idleBrief": {
+        "origin": "Editorial pose derived from authored personality and held props",
+        "pose": "Small calm breathing, hands resting low with basket/pestle retained; feet stay planted"
+      },
+      "talkBrief": {
+        "origin": "Editorial pose derived from authored measured speech",
+        "pose": "A small head acknowledgement and one restrained explaining hand movement, preserving basket/pestle continuity"
+      },
+      "professionBrief": {
+        "origin": "Editorial gesture derived from authored herbs, pestle and leaf-observation story; GDD does not prescribe this exact sequence",
+        "gesture": "Inspect one small leaf over the basket, lower it, check the small jade pestle once and return to the same resting pose",
+        "noInventedGear": true
+      },
+      "presentationLimit": "No recipe command, recovery consumption, herb grant or EX receipt from playback"
+    },
+    {
+      "id": "NPC-HN-FORGE",
+      "slug": "tong-thiet",
+      "name": "Tống Thiết",
+      "role": "Luyện khí sư",
+      "authoredLook": "Nam lớn tuổi; tóc bạc ngắn, tạp dề nâu tro, vai áo đồng, kìm và phôi mộc kiếm.",
+      "authoredPersonality": "Thẳng tính; quý người sửa được vật hơn người nói giỏi.",
+      "authoredBrief": "Cơ thể chắc nhưng giữ tỷ lệ R01; kìm/phôi ở dưới ngực, không che mặt. Lửa lò là layer đạo cụ.",
+      "authoredSideStory": "Phôi rạn vẫn có ích: khảo sát hạt mực trong rãnh kim loại.",
+      "authoredAmbientLoop": null,
+      "idleBrief": {
+        "origin": "Editorial pose derived from authored practical worker identity",
+        "pose": "Sturdy compact stance, quiet breathing, tongs and wooden blank held below the chest"
+      },
+      "talkBrief": {
+        "origin": "Editorial pose derived from authored direct manner",
+        "pose": "A brief firm head nod with small shoulder movement; keep both tools visible and below the face"
+      },
+      "professionBrief": {
+        "origin": "Editorial gesture derived from authored tongs/wooden blank and repair values; GDD does not prescribe this exact sequence",
+        "gesture": "Turn the compact wooden-sword blank slightly, test it once with the small tongs below the chest, inspect and return to rest",
+        "noInventedGear": true
+      },
+      "presentationLimit": "Forge flame remains a separate prop layer; no craft, upgrade, inventory or reward command"
+    },
+    {
+      "id": "NPC-HN-ROUTE-KEEPER",
+      "slug": "hua-hanh",
+      "name": "Hứa Hành",
+      "role": "Người giữ tuyến",
+      "authoredLook": "Nam trưởng thành; áo choàng ngắn xám bụi, ống bản đồ, dây niêm cũ, giày bám bùn.",
+      "authoredPersonality": "Thực tế; giấu sự mệt mỏi hơn là giấu động cơ.",
+      "authoredBrief": "Không cầm vũ khí lớn; giấy tuyến và dấu bùn phân biệt với lính gác. Áo choàng bị vá lệch một bên.",
+      "authoredSideStory": "Dấu niêm không khớp do bảo quản vội; từ chuyện nhỏ mở manh mối ấn cổ.",
+      "authoredAmbientLoop": null,
+      "idleBrief": {
+        "origin": "Editorial pose derived from authored tired practical manner",
+        "pose": "Quiet standing breath and a slight settled shoulder, compact map tube and sealing cord retained"
+      },
+      "talkBrief": {
+        "origin": "Editorial pose derived from authored witness role",
+        "pose": "A small directional palm near the waist and restrained head acknowledgement; no movement along the route"
+      },
+      "professionBrief": {
+        "origin": "Editorial gesture derived from authored map tube, route paper, old seal and side story; GDD does not prescribe this exact sequence",
+        "gesture": "Unroll a compact route map low at the waist, check the old sealing cord once, then roll and return to rest",
+        "noInventedGear": true
+      },
+      "presentationLimit": "Gesture is visual only; report-first/repair-first remains server fact and grants no duplicate HN/EX reward"
+    },
+    {
+      "id": "NPC-HN-GATE-WARDEN",
+      "slug": "dinh-soc",
+      "name": "Đinh Sóc",
+      "role": "Hộ sơn đệ tử",
+      "authoredLook": "Nam trẻ; áo xanh sẫm, giáp vai đồng nhẹ, trường thương nhỏ, thẻ tuyến treo hông.",
+      "authoredPersonality": "Cứng ở luật, mềm ở lời; nhớ người vừa thất bại ngoài tuyến.",
+      "authoredBrief": "Thương nằm chéo thấp, dấu chức trách trên vai rõ. Vùng cổng để trống tâm lối đi.",
+      "authoredAmbientLoop": null,
+      "idleBrief": {
+        "origin": "Editorial pose derived from authored gate-guard role",
+        "pose": "A composed standing guard breath with slim spear low; do not block the route with the silhouette"
+      },
+      "talkBrief": {
+        "origin": "Editorial pose derived from authored firm but kind manner",
+        "pose": "A concise head nod and free-hand acknowledgement; the holding hand keeps the small spear low"
+      },
+      "professionBrief": {
+        "origin": "Editorial gesture derived from authored hip route tag and duty mark; GDD does not prescribe this exact sequence",
+        "gesture": "Check the hip route tag with the free hand, lower the hand and settle back into guard while retaining the low diagonal spear",
+        "noInventedGear": true
+      },
+      "presentationLimit": "Does not open a gate, change HN12 permission, add a collider or create a route command"
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-WATER",
+      "slug": "ky-an",
+      "name": "Kỷ An",
+      "role": "Đệ tử vận khí",
+      "authoredLook": "Nữ đệ tử trưởng thành; áo lam nhạt, tóc buộc ngắn, bầu nước và trúc giản học dở.",
+      "authoredPersonality": "Chịu khó, hay tự sửa trước khi hỏi.",
+      "authoredBrief": "Chân đứng/ngồi có pivot chung; hơi khí nhỏ ở lòng bàn tay tách FX.",
+      "authoredAmbientLoop": [
+        "đọc giản",
+        "đặt bầu nước",
+        "vận khí"
+      ],
+      "authoredLoopScope": "gesture tại chỗ; chưa tuyến đi/nav",
+      "idleBrief": {
+        "origin": "Editorial resting pose derived from authored diligence and own props",
+        "pose": "Standing attentive breath with gourd/slips close to body; any seated variation must preserve the measured world foot"
+      },
+      "talkBrief": {
+        "origin": "Editorial pose derived from authored self-correcting peer manner",
+        "pose": "A small thinking head tilt then acknowledgement, with bamboo slips retained low"
+      },
+      "professionBrief": {
+        "origin": "Editorial six-step pose sequence adapted from the explicitly authored ambient loop",
+        "authoredLoopAnchors": [
+          "đọc giản",
+          "đặt bầu nước",
+          "vận khí"
+        ],
+        "gesture": "Set the small water gourd beside the planted foot, read the partly studied slips, lower them and correct the breathing posture, then return to rest",
+        "noInventedGear": true
+      },
+      "presentationLimit": "Stationary gesture; no navigation, accumulation, M01 reward or breathing qi baked into body"
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-SWORD",
+      "slug": "phung-da",
+      "name": "Phùng Dã",
+      "role": "Đệ tử luyện kiếm",
+      "authoredLook": "Nam đệ tử trưởng thành; tóc dựng gọn, áo xanh tro, mộc kiếm xước và vải buộc tay đỏ nâu.",
+      "authoredPersonality": "Hiếu thắng nhưng biết phục người làm được thật.",
+      "authoredBrief": "Đầu/thân cùng player approved; pose sửa thế kiếm, không loop tấn công che người chơi.",
+      "authoredAmbientLoop": [
+        "chỉnh thế",
+        "nhìn mũi kiếm",
+        "nghỉ tay"
+      ],
+      "authoredLoopScope": "gesture tại chỗ; không damage/target PvP",
+      "idleBrief": {
+        "origin": "Editorial resting pose derived from authored learning rival role",
+        "pose": "Alert compact standing breath with scratched wooden sword lowered and wrists relaxed"
+      },
+      "talkBrief": {
+        "origin": "Editorial pose derived from authored competitive but respectful manner",
+        "pose": "A short alert head nod and small free-hand gesture; no attack swing"
+      },
+      "professionBrief": {
+        "origin": "Editorial pose sequence adapted from the explicitly authored ambient loop",
+        "authoredLoopAnchors": [
+          "chỉnh thế",
+          "nhìn mũi kiếm",
+          "nghỉ tay"
+        ],
+        "gesture": "Reset the wooden-sword grip and stance in place, glance at the small sword tip, then rest the wrist and return to the same neutral",
+        "noInventedGear": true
+      },
+      "presentationLimit": "No damage, target, voluntary duel, PvP or sword trail from playback"
+    }
+  ],
+  "futureStageOrder": [
+    "Review each new southeast neutral identity directly against live Wang native1x",
+    "Create and verify the remaining seven true same-NPC views in a separate versioned motion production pack",
+    "Produce minimum idle/talk with source-wide neutral calibration and measured foot/root",
+    "Optionally add one authored or explicitly derived profession gesture per actor",
+    "Produce needed qi/forge/sword FX separately",
+    "Core/runtime integration only when that scope is requested"
+  ],
+  "serverSchedule": {
+    "npcSharedScheduleCreated": false,
+    "navigationCreated": false,
+    "meaning": "This document is an ART motion brief, not NPC server simulation, shared schedule, gameplay commands or world map authoring"
+  },
+  "approval": {
+    "neutralArtApproved": false,
+    "motionArtApproved": false,
+    "ownerApproved": false,
+    "runtimeApproved": false,
+    "inheritedV1OrV2Approval": false,
+    "testsDoNotApproveArt": true
+  }
+}

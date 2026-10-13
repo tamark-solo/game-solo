@@ -5,6 +5,10 @@ description: Produce and review player, monster and boss sprite animation packs 
 
 # Sản xuất animation nhân vật Vân Hải
 
+**Chuẩn NPC owner chốt 13/10:** lấy Vương Lâm Pixel02 đang dùng trong game làm chuẩn gốc tỷ lệ, anatomy người, nét pixel và đổ màu. Đọc docs/design/characters/van-hai-npc-visual-standard-v1/basis.json và directions.json (frame thật từ atlas live, pin hash). Khi tạo human NPC neutral, image1 là Vương Lâm cùng hướng; concept NPC chỉ cung cấp nhận diện/phục trang ở input hỗ trợ. Trần Duy v3 là NPC đối chiếu, không thay Vương Lâm làm chuẩn hoặc tạo chuỗi NPC→NPC. Khi làm action, khóa nhận diện riêng của NPC và so trực tiếp với Vương Lâm ở native1×.
+
+
+
 Owner đã chốt Vương Lâm Pixel02 + Ngự Phong01 ngày12/10/2026 và yêu cầu lưu quy trình để làm các nhân vật tiếp theo. Đọc `AGENTS.md` và `docs/ACTOR-ANIMATION-PRODUCTION.md` trong workspace để lấy trạng thái mới nhất. [Quy trình sản xuất và QA](references/production.md) có nguồn, cách chuẩn bị sheet, registration và các lỗi đã gặp.
 
 ## Chọn đúng mốc và phạm vi

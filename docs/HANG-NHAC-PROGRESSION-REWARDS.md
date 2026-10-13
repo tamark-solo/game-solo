@@ -1,5 +1,7 @@
 # Tiến trình tu luyện và phần thưởng Hằng Nhạc
 
+> **Thiết kế tiếp nối 13/10/2026:** [GDD 0.33](GDD.md), [hệ tu tiên mới](CULTIVATION-REDESIGN-2026-10-13.md) và [Hằng Nhạc v2](HANG-NHAC-ONBOARDING-V2.md) thay đề xuất về nhịp nhập môn, HN04, xác nhận tầng/nhiệm vụ và thời điểm EX trong tài liệu này. Nội dung bên dưới giữ làm cơ sở/lịch sử; trạng thái đang chạy xem [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md). Bản thiết kế mới chưa thay code/save hoặc duyệt balance/ART.
+
 **Phiên bản:** 0.2 · **Ngày:** 08/10/2026 · **Trạng thái:** đề xuất thiết kế/số liệu để đánh giá; chưa khóa cân bằng. [Bản thử HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) đã dùng các giá trị nền 1–3, vật tư HN01, thưởng HN02 và tích lũy online. Các chặng sau, stat mốc cao, pháp khí và offline 30 phút chưa triển khai.
 
 **Tham chiếu:** [GDD 0.28](GDD.md), [trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md), [hệ thống tu tiên](CULTIVATION-SYSTEM.md), [nhân vật](CHARACTERS.md), [backlog](MVP-BACKLOG.md).

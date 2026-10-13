@@ -1,0 +1,3590 @@
+{
+  "schema": "npc-motion-registration-1",
+  "date": "2026-10-13",
+  "registrationInput": "registration-input.json",
+  "registrationInputSha256": "d68c927dca9f53046cdebbc6e1777fe1d3d9b6d270bd3aae8ce45fb6102f88eb",
+  "contract": {
+    "canvas": [
+      96,
+      96
+    ],
+    "pivot": [
+      48,
+      88
+    ],
+    "standingHeight": 80,
+    "baseHumanCanvas": [
+      64,
+      96
+    ],
+    "paddingOnly": true,
+    "sampling": "nearest",
+    "atlasPadding": 2
+  },
+  "morphologyBasis": {
+    "primaryActor": "CHR-WANG-LIN-CHIBI",
+    "primaryReference": "Wang Lin Pixel02 currently used in the game",
+    "basisFile": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+    "basisSha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec",
+    "directionsFile": "docs/design/characters/van-hai-npc-visual-standard-v1/directions.json",
+    "directionsSha256": "0fef83b1121c0be2cf9b47909a00f5c3c01a665229cb1d16358fe65650b8abd9",
+    "liveNativeFile": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-native.png",
+    "liveNativeSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+    "liveNativeCanvas": [
+      64,
+      96
+    ],
+    "liveNativePivot": [
+      32,
+      88
+    ],
+    "targets": [
+      {
+        "file": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+        "sha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec"
+      },
+      {
+        "file": "docs/design/characters/van-hai-npc-visual-standard-v1/directions.json",
+        "sha256": "0fef83b1121c0be2cf9b47909a00f5c3c01a665229cb1d16358fe65650b8abd9"
+      }
+    ],
+    "rule": "NPC identity is locked separately; directly compare every action to live Wang Lin at native1x. Padding does not enlarge anatomy."
+  },
+  "gdd": {
+    "file": "docs/design/world/van-hai-living-world-v1/plan.json",
+    "sha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576"
+  },
+  "actors": [
+    {
+      "slug": "tran-duy",
+      "direction": "southeast",
+      "source": "raw/tran-duy-southeast.png",
+      "sourceSha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+      "neutralIndex": 0,
+      "neutralHeight": 309,
+      "neutralTopY": 24,
+      "scale": 0.2588996763754045,
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "alphaThreshold": 128,
+      "worldRootPolicy": "Pinned manual roots; no bbox center or per-pose fitting",
+      "frames": [
+        {
+          "index": 0,
+          "action": "idle",
+          "frame": 0,
+          "left": 99,
+          "top": 24,
+          "width": 162,
+          "height": 309,
+          "rootX": 177,
+          "rootY": 333,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 99,
+            "top": 24,
+            "width": 162,
+            "height": 309
+          },
+          "sourcePivot": [
+            177,
+            333
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            42,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            42,
+            80
+          ],
+          "nativeOpaque": 2337,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34687,
+          "extractedSourcePixels": 34687,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 1,
+          "action": "idle",
+          "frame": 1,
+          "left": 336,
+          "top": 24,
+          "width": 161,
+          "height": 309,
+          "rootX": 415,
+          "rootY": 333,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 336,
+            "top": 24,
+            "width": 161,
+            "height": 309
+          },
+          "sourcePivot": [
+            415,
+            333
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            42,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            42,
+            80
+          ],
+          "nativeOpaque": 2375,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34957,
+          "extractedSourcePixels": 34957,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 2,
+          "action": "idle",
+          "frame": 2,
+          "left": 568,
+          "top": 24,
+          "width": 171,
+          "height": 309,
+          "rootX": 652,
+          "rootY": 333,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 568,
+            "top": 24,
+            "width": 171,
+            "height": 309
+          },
+          "sourcePivot": [
+            652,
+            333
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            26,
+            8
+          ],
+          "nativeCutoutSize": [
+            44,
+            80
+          ],
+          "nativeBounds": [
+            26,
+            8,
+            44,
+            80
+          ],
+          "nativeOpaque": 2442,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 36307,
+          "extractedSourcePixels": 36307,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 3,
+          "action": "idle",
+          "frame": 3,
+          "left": 808,
+          "top": 24,
+          "width": 162,
+          "height": 309,
+          "rootX": 887,
+          "rootY": 333,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 808,
+            "top": 24,
+            "width": 162,
+            "height": 309
+          },
+          "sourcePivot": [
+            887,
+            333
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            42,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            42,
+            80
+          ],
+          "nativeOpaque": 2327,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34536,
+          "extractedSourcePixels": 34536,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 4,
+          "action": "idle",
+          "frame": 4,
+          "left": 1048,
+          "top": 24,
+          "width": 159,
+          "height": 309,
+          "rootX": 1126,
+          "rootY": 333,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1048,
+            "top": 24,
+            "width": 159,
+            "height": 309
+          },
+          "sourcePivot": [
+            1126,
+            333
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            41,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            41,
+            80
+          ],
+          "nativeOpaque": 2316,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34670,
+          "extractedSourcePixels": 34670,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 5,
+          "action": "idle",
+          "frame": 5,
+          "left": 1279,
+          "top": 24,
+          "width": 162,
+          "height": 309,
+          "rootX": 1357,
+          "rootY": 333,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1279,
+            "top": 24,
+            "width": 162,
+            "height": 309
+          },
+          "sourcePivot": [
+            1357,
+            333
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            42,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            42,
+            80
+          ],
+          "nativeOpaque": 2322,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34604,
+          "extractedSourcePixels": 34604,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 6,
+          "action": "talk",
+          "frame": 0,
+          "left": 99,
+          "top": 355,
+          "width": 163,
+          "height": 311,
+          "rootX": 178,
+          "rootY": 666,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 99,
+            "top": 355,
+            "width": 163,
+            "height": 311
+          },
+          "sourcePivot": [
+            178,
+            666
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            28,
+            7
+          ],
+          "nativeCutoutSize": [
+            42,
+            81
+          ],
+          "nativeBounds": [
+            28,
+            7,
+            42,
+            81
+          ],
+          "nativeOpaque": 2409,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 35138,
+          "extractedSourcePixels": 35138,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 7,
+          "action": "talk",
+          "frame": 1,
+          "left": 340,
+          "top": 356,
+          "width": 156,
+          "height": 310,
+          "rootX": 415,
+          "rootY": 666,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 340,
+            "top": 356,
+            "width": 156,
+            "height": 310
+          },
+          "sourcePivot": [
+            415,
+            666
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            40,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            40,
+            80
+          ],
+          "nativeOpaque": 2316,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34773,
+          "extractedSourcePixels": 34773,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 8,
+          "action": "talk",
+          "frame": 2,
+          "left": 567,
+          "top": 356,
+          "width": 197,
+          "height": 310,
+          "rootX": 651,
+          "rootY": 666,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 567,
+            "top": 356,
+            "width": 197,
+            "height": 310
+          },
+          "sourcePivot": [
+            651,
+            666
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            26,
+            8
+          ],
+          "nativeCutoutSize": [
+            51,
+            80
+          ],
+          "nativeBounds": [
+            26,
+            8,
+            51,
+            80
+          ],
+          "nativeOpaque": 2519,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 37905,
+          "extractedSourcePixels": 37905,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 9,
+          "action": "talk",
+          "frame": 3,
+          "left": 808,
+          "top": 356,
+          "width": 185,
+          "height": 310,
+          "rootX": 887,
+          "rootY": 666,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 808,
+            "top": 356,
+            "width": 185,
+            "height": 310
+          },
+          "sourcePivot": [
+            887,
+            666
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            48,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            48,
+            80
+          ],
+          "nativeOpaque": 2504,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 37116,
+          "extractedSourcePixels": 37116,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 10,
+          "action": "talk",
+          "frame": 4,
+          "left": 1055,
+          "top": 356,
+          "width": 154,
+          "height": 310,
+          "rootX": 1126,
+          "rootY": 666,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1055,
+            "top": 356,
+            "width": 154,
+            "height": 310
+          },
+          "sourcePivot": [
+            1126,
+            666
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            30,
+            8
+          ],
+          "nativeCutoutSize": [
+            40,
+            80
+          ],
+          "nativeBounds": [
+            30,
+            8,
+            40,
+            80
+          ],
+          "nativeOpaque": 2338,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34660,
+          "extractedSourcePixels": 34660,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 11,
+          "action": "talk",
+          "frame": 5,
+          "left": 1279,
+          "top": 355,
+          "width": 162,
+          "height": 311,
+          "rootX": 1357,
+          "rootY": 666,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1279,
+            "top": 355,
+            "width": 162,
+            "height": 311
+          },
+          "sourcePivot": [
+            1357,
+            666
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            28,
+            7
+          ],
+          "nativeCutoutSize": [
+            42,
+            81
+          ],
+          "nativeBounds": [
+            28,
+            7,
+            42,
+            81
+          ],
+          "nativeOpaque": 2392,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34967,
+          "extractedSourcePixels": 34967,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 12,
+          "action": "profession",
+          "frame": 0,
+          "left": 99,
+          "top": 690,
+          "width": 163,
+          "height": 309,
+          "rootX": 178,
+          "rootY": 999,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 99,
+            "top": 690,
+            "width": 163,
+            "height": 309
+          },
+          "sourcePivot": [
+            178,
+            999
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            42,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            42,
+            80
+          ],
+          "nativeOpaque": 2356,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34949,
+          "extractedSourcePixels": 34949,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 13,
+          "action": "profession",
+          "frame": 1,
+          "left": 341,
+          "top": 690,
+          "width": 175,
+          "height": 309,
+          "rootX": 416,
+          "rootY": 999,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 341,
+            "top": 690,
+            "width": 175,
+            "height": 309
+          },
+          "sourcePivot": [
+            416,
+            999
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            45,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            45,
+            80
+          ],
+          "nativeOpaque": 2417,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 35910,
+          "extractedSourcePixels": 35910,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 14,
+          "action": "profession",
+          "frame": 2,
+          "left": 568,
+          "top": 690,
+          "width": 198,
+          "height": 309,
+          "rootX": 652,
+          "rootY": 999,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 568,
+            "top": 690,
+            "width": 198,
+            "height": 309
+          },
+          "sourcePivot": [
+            652,
+            999
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            26,
+            8
+          ],
+          "nativeCutoutSize": [
+            51,
+            80
+          ],
+          "nativeBounds": [
+            26,
+            8,
+            51,
+            80
+          ],
+          "nativeOpaque": 2544,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 37858,
+          "extractedSourcePixels": 37858,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 15,
+          "action": "profession",
+          "frame": 3,
+          "left": 807,
+          "top": 690,
+          "width": 195,
+          "height": 309,
+          "rootX": 887,
+          "rootY": 999,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 807,
+            "top": 690,
+            "width": 195,
+            "height": 309
+          },
+          "sourcePivot": [
+            887,
+            999
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            27,
+            8
+          ],
+          "nativeCutoutSize": [
+            50,
+            80
+          ],
+          "nativeBounds": [
+            27,
+            8,
+            50,
+            80
+          ],
+          "nativeOpaque": 2507,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 37351,
+          "extractedSourcePixels": 37351,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 16,
+          "action": "profession",
+          "frame": 4,
+          "left": 1054,
+          "top": 690,
+          "width": 154,
+          "height": 309,
+          "rootX": 1126,
+          "rootY": 999,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1054,
+            "top": 690,
+            "width": 154,
+            "height": 309
+          },
+          "sourcePivot": [
+            1126,
+            999
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            40,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            40,
+            80
+          ],
+          "nativeOpaque": 2324,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34328,
+          "extractedSourcePixels": 34328,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 17,
+          "action": "profession",
+          "frame": 5,
+          "left": 1279,
+          "top": 690,
+          "width": 162,
+          "height": 309,
+          "rootX": 1357,
+          "rootY": 999,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1279,
+            "top": 690,
+            "width": 162,
+            "height": 309
+          },
+          "sourcePivot": [
+            1357,
+            999
+          ],
+          "scale": 0.2588996763754045,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            42,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            42,
+            80
+          ],
+          "nativeOpaque": 2341,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34693,
+          "extractedSourcePixels": 34693,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        }
+      ]
+    },
+    {
+      "slug": "diep-tinh",
+      "direction": "southeast",
+      "source": "raw/diep-tinh-southeast-r3.png",
+      "sourceSha256": "b04d81f55c0b930aa3b58ab03b48701b6247a63cf102ca006c853b0b4ecf06ad",
+      "neutralIndex": 0,
+      "neutralHeight": 368,
+      "neutralTopY": 110,
+      "scale": 0.21739130434782608,
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "alphaThreshold": 128,
+      "worldRootPolicy": "Pinned manual roots; no bbox center or per-pose fitting",
+      "frames": [
+        {
+          "index": 0,
+          "action": "idle",
+          "frame": 0,
+          "left": 15,
+          "top": 110,
+          "width": 177,
+          "height": 368,
+          "rootX": 107,
+          "rootY": 478,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 15,
+            "top": 110,
+            "width": 177,
+            "height": 368
+          },
+          "sourcePivot": [
+            107,
+            478
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            38,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            38,
+            80
+          ],
+          "nativeOpaque": 2285,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 48111,
+          "extractedSourcePixels": 48111,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 1,
+          "action": "idle",
+          "frame": 1,
+          "left": 223,
+          "top": 110,
+          "width": 179,
+          "height": 368,
+          "rootX": 317,
+          "rootY": 478,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 223,
+            "top": 110,
+            "width": 179,
+            "height": 368
+          },
+          "sourcePivot": [
+            317,
+            478
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            39,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            39,
+            80
+          ],
+          "nativeOpaque": 2332,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 49212,
+          "extractedSourcePixels": 49212,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 2,
+          "action": "idle",
+          "frame": 2,
+          "left": 436,
+          "top": 110,
+          "width": 183,
+          "height": 368,
+          "rootX": 529,
+          "rootY": 478,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 436,
+            "top": 110,
+            "width": 183,
+            "height": 368
+          },
+          "sourcePivot": [
+            529,
+            478
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            40,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            40,
+            80
+          ],
+          "nativeOpaque": 2395,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 50158,
+          "extractedSourcePixels": 50158,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 3,
+          "action": "idle",
+          "frame": 3,
+          "left": 642,
+          "top": 110,
+          "width": 177,
+          "height": 368,
+          "rootX": 733,
+          "rootY": 478,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 642,
+            "top": 110,
+            "width": 177,
+            "height": 368
+          },
+          "sourcePivot": [
+            733,
+            478
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            38,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            38,
+            80
+          ],
+          "nativeOpaque": 2297,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 48343,
+          "extractedSourcePixels": 48343,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 4,
+          "action": "idle",
+          "frame": 4,
+          "left": 851,
+          "top": 110,
+          "width": 179,
+          "height": 368,
+          "rootX": 943,
+          "rootY": 478,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 851,
+            "top": 110,
+            "width": 179,
+            "height": 368
+          },
+          "sourcePivot": [
+            943,
+            478
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            39,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            39,
+            80
+          ],
+          "nativeOpaque": 2309,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 48847,
+          "extractedSourcePixels": 48847,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 5,
+          "action": "idle",
+          "frame": 5,
+          "left": 1063,
+          "top": 110,
+          "width": 177,
+          "height": 368,
+          "rootX": 1152,
+          "rootY": 478,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1063,
+            "top": 110,
+            "width": 177,
+            "height": 368
+          },
+          "sourcePivot": [
+            1152,
+            478
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            38,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            38,
+            80
+          ],
+          "nativeOpaque": 2286,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 48227,
+          "extractedSourcePixels": 48227,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 6,
+          "action": "talk",
+          "frame": 0,
+          "left": 13,
+          "top": 499,
+          "width": 178,
+          "height": 369,
+          "rootX": 107,
+          "rootY": 868,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 13,
+            "top": 499,
+            "width": 178,
+            "height": 369
+          },
+          "sourcePivot": [
+            107,
+            868
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            39,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            39,
+            80
+          ],
+          "nativeOpaque": 2312,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 48515,
+          "extractedSourcePixels": 48515,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 7,
+          "action": "talk",
+          "frame": 1,
+          "left": 223,
+          "top": 500,
+          "width": 190,
+          "height": 368,
+          "rootX": 315,
+          "rootY": 868,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 223,
+            "top": 500,
+            "width": 190,
+            "height": 368
+          },
+          "sourcePivot": [
+            315,
+            868
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            41,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            41,
+            80
+          ],
+          "nativeOpaque": 2403,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 50718,
+          "extractedSourcePixels": 50718,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 8,
+          "action": "talk",
+          "frame": 2,
+          "left": 431,
+          "top": 500,
+          "width": 219,
+          "height": 368,
+          "rootX": 521,
+          "rootY": 868,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 431,
+            "top": 500,
+            "width": 219,
+            "height": 368
+          },
+          "sourcePivot": [
+            521,
+            868
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            48,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            48,
+            80
+          ],
+          "nativeOpaque": 2463,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 51283,
+          "extractedSourcePixels": 51283,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 9,
+          "action": "talk",
+          "frame": 3,
+          "left": 641,
+          "top": 500,
+          "width": 215,
+          "height": 368,
+          "rootX": 731,
+          "rootY": 868,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 641,
+            "top": 500,
+            "width": 215,
+            "height": 368
+          },
+          "sourcePivot": [
+            731,
+            868
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            47,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            47,
+            80
+          ],
+          "nativeOpaque": 2440,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 51203,
+          "extractedSourcePixels": 51203,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 10,
+          "action": "talk",
+          "frame": 4,
+          "left": 851,
+          "top": 500,
+          "width": 179,
+          "height": 368,
+          "rootX": 944,
+          "rootY": 868,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 851,
+            "top": 500,
+            "width": 179,
+            "height": 368
+          },
+          "sourcePivot": [
+            944,
+            868
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            39,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            39,
+            80
+          ],
+          "nativeOpaque": 2308,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 48726,
+          "extractedSourcePixels": 48726,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 11,
+          "action": "talk",
+          "frame": 5,
+          "left": 1063,
+          "top": 500,
+          "width": 177,
+          "height": 368,
+          "rootX": 1152,
+          "rootY": 868,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1063,
+            "top": 500,
+            "width": 177,
+            "height": 368
+          },
+          "sourcePivot": [
+            1152,
+            868
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            38,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            38,
+            80
+          ],
+          "nativeOpaque": 2296,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 48483,
+          "extractedSourcePixels": 48483,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 12,
+          "action": "profession",
+          "frame": 0,
+          "left": 14,
+          "top": 888,
+          "width": 177,
+          "height": 357,
+          "rootX": 107,
+          "rootY": 1245,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 14,
+            "top": 888,
+            "width": 177,
+            "height": 357
+          },
+          "sourcePivot": [
+            107,
+            1245
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            10
+          ],
+          "nativeCutoutSize": [
+            38,
+            78
+          ],
+          "nativeBounds": [
+            28,
+            10,
+            38,
+            78
+          ],
+          "nativeOpaque": 2234,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 46884,
+          "extractedSourcePixels": 46884,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 13,
+          "action": "profession",
+          "frame": 1,
+          "left": 222,
+          "top": 891,
+          "width": 178,
+          "height": 354,
+          "rootX": 316,
+          "rootY": 1245,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 222,
+            "top": 891,
+            "width": 178,
+            "height": 354
+          },
+          "sourcePivot": [
+            316,
+            1245
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            11
+          ],
+          "nativeCutoutSize": [
+            39,
+            77
+          ],
+          "nativeBounds": [
+            28,
+            11,
+            39,
+            77
+          ],
+          "nativeOpaque": 2207,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 46293,
+          "extractedSourcePixels": 46293,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 14,
+          "action": "profession",
+          "frame": 2,
+          "left": 431,
+          "top": 890,
+          "width": 186,
+          "height": 353,
+          "rootX": 522,
+          "rootY": 1243,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 431,
+            "top": 890,
+            "width": 186,
+            "height": 353
+          },
+          "sourcePivot": [
+            522,
+            1243
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            11
+          ],
+          "nativeCutoutSize": [
+            40,
+            77
+          ],
+          "nativeBounds": [
+            28,
+            11,
+            40,
+            77
+          ],
+          "nativeOpaque": 2255,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 47553,
+          "extractedSourcePixels": 47553,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 15,
+          "action": "profession",
+          "frame": 3,
+          "left": 642,
+          "top": 891,
+          "width": 181,
+          "height": 354,
+          "rootX": 733,
+          "rootY": 1245,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 642,
+            "top": 891,
+            "width": 181,
+            "height": 354
+          },
+          "sourcePivot": [
+            733,
+            1245
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            11
+          ],
+          "nativeCutoutSize": [
+            39,
+            77
+          ],
+          "nativeBounds": [
+            28,
+            11,
+            39,
+            77
+          ],
+          "nativeOpaque": 2220,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 46727,
+          "extractedSourcePixels": 46727,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 16,
+          "action": "profession",
+          "frame": 4,
+          "left": 850,
+          "top": 890,
+          "width": 179,
+          "height": 355,
+          "rootX": 943,
+          "rootY": 1245,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 850,
+            "top": 890,
+            "width": 179,
+            "height": 355
+          },
+          "sourcePivot": [
+            943,
+            1245
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            11
+          ],
+          "nativeCutoutSize": [
+            39,
+            77
+          ],
+          "nativeBounds": [
+            28,
+            11,
+            39,
+            77
+          ],
+          "nativeOpaque": 2211,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 46794,
+          "extractedSourcePixels": 46794,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 17,
+          "action": "profession",
+          "frame": 5,
+          "left": 1060,
+          "top": 890,
+          "width": 178,
+          "height": 355,
+          "rootX": 1153,
+          "rootY": 1245,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1060,
+            "top": 890,
+            "width": 178,
+            "height": 355
+          },
+          "sourcePivot": [
+            1153,
+            1245
+          ],
+          "scale": 0.21739130434782608,
+          "offset": [
+            28,
+            11
+          ],
+          "nativeCutoutSize": [
+            39,
+            77
+          ],
+          "nativeBounds": [
+            28,
+            11,
+            39,
+            77
+          ],
+          "nativeOpaque": 2229,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 46616,
+          "extractedSourcePixels": 46616,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        }
+      ]
+    },
+    {
+      "slug": "ta-kiem-son",
+      "direction": "southeast",
+      "source": "raw/ta-kiem-son-southeast.png",
+      "sourceSha256": "8d307910ae0c896dfad79c0269cd315aad19a9615c68ed14fa9e67ce7bfe1e84",
+      "neutralIndex": 0,
+      "neutralHeight": 313,
+      "neutralTopY": 26,
+      "scale": 0.25559105431309903,
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "alphaThreshold": 128,
+      "worldRootPolicy": "Pinned manual roots; no bbox center or per-pose fitting",
+      "frames": [
+        {
+          "index": 0,
+          "action": "idle",
+          "frame": 0,
+          "left": 80,
+          "top": 26,
+          "width": 147,
+          "height": 313,
+          "rootX": 157,
+          "rootY": 339,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 80,
+            "top": 26,
+            "width": 147,
+            "height": 313
+          },
+          "sourcePivot": [
+            157,
+            339
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            38,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            38,
+            80
+          ],
+          "nativeOpaque": 2166,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 32577,
+          "extractedSourcePixels": 32577,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 1,
+          "action": "idle",
+          "frame": 1,
+          "left": 336,
+          "top": 26,
+          "width": 147,
+          "height": 313,
+          "rootX": 410,
+          "rootY": 339,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 336,
+            "top": 26,
+            "width": 147,
+            "height": 313
+          },
+          "sourcePivot": [
+            410,
+            339
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            38,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            38,
+            80
+          ],
+          "nativeOpaque": 2169,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 32631,
+          "extractedSourcePixels": 32631,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 2,
+          "action": "idle",
+          "frame": 2,
+          "left": 589,
+          "top": 29,
+          "width": 146,
+          "height": 310,
+          "rootX": 662,
+          "rootY": 339,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 589,
+            "top": 29,
+            "width": 146,
+            "height": 310
+          },
+          "sourcePivot": [
+            662,
+            339
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            9
+          ],
+          "nativeCutoutSize": [
+            37,
+            79
+          ],
+          "nativeBounds": [
+            29,
+            9,
+            37,
+            79
+          ],
+          "nativeOpaque": 2123,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 32647,
+          "extractedSourcePixels": 32647,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 3,
+          "action": "idle",
+          "frame": 3,
+          "left": 838,
+          "top": 27,
+          "width": 147,
+          "height": 312,
+          "rootX": 912,
+          "rootY": 339,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 838,
+            "top": 27,
+            "width": 147,
+            "height": 312
+          },
+          "sourcePivot": [
+            912,
+            339
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            38,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            38,
+            80
+          ],
+          "nativeOpaque": 2172,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 32449,
+          "extractedSourcePixels": 32449,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 4,
+          "action": "idle",
+          "frame": 4,
+          "left": 1087,
+          "top": 25,
+          "width": 145,
+          "height": 314,
+          "rootX": 1160,
+          "rootY": 339,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1087,
+            "top": 25,
+            "width": 145,
+            "height": 314
+          },
+          "sourcePivot": [
+            1160,
+            339
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            37,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            37,
+            80
+          ],
+          "nativeOpaque": 2137,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 32762,
+          "extractedSourcePixels": 32762,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 5,
+          "action": "idle",
+          "frame": 5,
+          "left": 1329,
+          "top": 26,
+          "width": 146,
+          "height": 313,
+          "rootX": 1404,
+          "rootY": 339,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1329,
+            "top": 26,
+            "width": 146,
+            "height": 313
+          },
+          "sourcePivot": [
+            1404,
+            339
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            37,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            37,
+            80
+          ],
+          "nativeOpaque": 2110,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 32296,
+          "extractedSourcePixels": 32296,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 6,
+          "action": "talk",
+          "frame": 0,
+          "left": 80,
+          "top": 357,
+          "width": 147,
+          "height": 315,
+          "rootX": 156,
+          "rootY": 672,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 80,
+            "top": 357,
+            "width": 147,
+            "height": 315
+          },
+          "sourcePivot": [
+            156,
+            672
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            7
+          ],
+          "nativeCutoutSize": [
+            38,
+            81
+          ],
+          "nativeBounds": [
+            29,
+            7,
+            38,
+            81
+          ],
+          "nativeOpaque": 2202,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 33068,
+          "extractedSourcePixels": 33068,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 7,
+          "action": "talk",
+          "frame": 1,
+          "left": 330,
+          "top": 357,
+          "width": 155,
+          "height": 315,
+          "rootX": 404,
+          "rootY": 672,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 330,
+            "top": 357,
+            "width": 155,
+            "height": 315
+          },
+          "sourcePivot": [
+            404,
+            672
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            7
+          ],
+          "nativeCutoutSize": [
+            40,
+            81
+          ],
+          "nativeBounds": [
+            29,
+            7,
+            40,
+            81
+          ],
+          "nativeOpaque": 2255,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 33807,
+          "extractedSourcePixels": 33807,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 8,
+          "action": "talk",
+          "frame": 2,
+          "left": 575,
+          "top": 359,
+          "width": 198,
+          "height": 313,
+          "rootX": 649,
+          "rootY": 672,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 575,
+            "top": 359,
+            "width": 198,
+            "height": 313
+          },
+          "sourcePivot": [
+            649,
+            672
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            51,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            51,
+            80
+          ],
+          "nativeOpaque": 2315,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 35079,
+          "extractedSourcePixels": 35079,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 9,
+          "action": "talk",
+          "frame": 3,
+          "left": 828,
+          "top": 360,
+          "width": 194,
+          "height": 312,
+          "rootX": 904,
+          "rootY": 672,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 828,
+            "top": 360,
+            "width": 194,
+            "height": 312
+          },
+          "sourcePivot": [
+            904,
+            672
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            8
+          ],
+          "nativeCutoutSize": [
+            50,
+            80
+          ],
+          "nativeBounds": [
+            29,
+            8,
+            50,
+            80
+          ],
+          "nativeOpaque": 2291,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34672,
+          "extractedSourcePixels": 34672,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 10,
+          "action": "talk",
+          "frame": 4,
+          "left": 1082,
+          "top": 360,
+          "width": 146,
+          "height": 312,
+          "rootX": 1161,
+          "rootY": 672,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1082,
+            "top": 360,
+            "width": 146,
+            "height": 312
+          },
+          "sourcePivot": [
+            1161,
+            672
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            28,
+            8
+          ],
+          "nativeCutoutSize": [
+            37,
+            80
+          ],
+          "nativeBounds": [
+            28,
+            8,
+            37,
+            80
+          ],
+          "nativeOpaque": 2153,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 32780,
+          "extractedSourcePixels": 32780,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 11,
+          "action": "talk",
+          "frame": 5,
+          "left": 1329,
+          "top": 357,
+          "width": 146,
+          "height": 315,
+          "rootX": 1404,
+          "rootY": 672,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1329,
+            "top": 357,
+            "width": 146,
+            "height": 315
+          },
+          "sourcePivot": [
+            1404,
+            672
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            7
+          ],
+          "nativeCutoutSize": [
+            37,
+            81
+          ],
+          "nativeBounds": [
+            29,
+            7,
+            37,
+            81
+          ],
+          "nativeOpaque": 2165,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 32794,
+          "extractedSourcePixels": 32794,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 12,
+          "action": "profession",
+          "frame": 0,
+          "left": 80,
+          "top": 690,
+          "width": 147,
+          "height": 308,
+          "rootX": 157,
+          "rootY": 998,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 80,
+            "top": 690,
+            "width": 147,
+            "height": 308
+          },
+          "sourcePivot": [
+            157,
+            998
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            28,
+            9
+          ],
+          "nativeCutoutSize": [
+            38,
+            79
+          ],
+          "nativeBounds": [
+            28,
+            9,
+            38,
+            79
+          ],
+          "nativeOpaque": 2159,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 32177,
+          "extractedSourcePixels": 32177,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 13,
+          "action": "profession",
+          "frame": 1,
+          "left": 330,
+          "top": 690,
+          "width": 187,
+          "height": 308,
+          "rootX": 407,
+          "rootY": 998,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 330,
+            "top": 690,
+            "width": 187,
+            "height": 308
+          },
+          "sourcePivot": [
+            407,
+            998
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            28,
+            9
+          ],
+          "nativeCutoutSize": [
+            48,
+            79
+          ],
+          "nativeBounds": [
+            28,
+            9,
+            48,
+            79
+          ],
+          "nativeOpaque": 2073,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 31354,
+          "extractedSourcePixels": 31354,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 14,
+          "action": "profession",
+          "frame": 2,
+          "left": 580,
+          "top": 690,
+          "width": 219,
+          "height": 308,
+          "rootX": 660,
+          "rootY": 998,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 580,
+            "top": 690,
+            "width": 219,
+            "height": 308
+          },
+          "sourcePivot": [
+            660,
+            998
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            28,
+            9
+          ],
+          "nativeCutoutSize": [
+            56,
+            79
+          ],
+          "nativeBounds": [
+            28,
+            9,
+            56,
+            79
+          ],
+          "nativeOpaque": 2192,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 33183,
+          "extractedSourcePixels": 33183,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 15,
+          "action": "profession",
+          "frame": 3,
+          "left": 828,
+          "top": 690,
+          "width": 191,
+          "height": 308,
+          "rootX": 907,
+          "rootY": 998,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 828,
+            "top": 690,
+            "width": 191,
+            "height": 308
+          },
+          "sourcePivot": [
+            907,
+            998
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            28,
+            9
+          ],
+          "nativeCutoutSize": [
+            49,
+            79
+          ],
+          "nativeBounds": [
+            28,
+            9,
+            49,
+            79
+          ],
+          "nativeOpaque": 2253,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 34271,
+          "extractedSourcePixels": 34271,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 16,
+          "action": "profession",
+          "frame": 4,
+          "left": 1092,
+          "top": 694,
+          "width": 140,
+          "height": 304,
+          "rootX": 1167,
+          "rootY": 998,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1092,
+            "top": 694,
+            "width": 140,
+            "height": 304
+          },
+          "sourcePivot": [
+            1167,
+            998
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            10
+          ],
+          "nativeCutoutSize": [
+            36,
+            78
+          ],
+          "nativeBounds": [
+            29,
+            10,
+            36,
+            78
+          ],
+          "nativeOpaque": 2036,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 30754,
+          "extractedSourcePixels": 30754,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 17,
+          "action": "profession",
+          "frame": 5,
+          "left": 1329,
+          "top": 690,
+          "width": 146,
+          "height": 308,
+          "rootX": 1405,
+          "rootY": 998,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1329,
+            "top": 690,
+            "width": 146,
+            "height": 308
+          },
+          "sourcePivot": [
+            1405,
+            998
+          ],
+          "scale": 0.25559105431309903,
+          "offset": [
+            29,
+            9
+          ],
+          "nativeCutoutSize": [
+            37,
+            79
+          ],
+          "nativeBounds": [
+            29,
+            9,
+            37,
+            79
+          ],
+          "nativeOpaque": 2098,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 32007,
+          "extractedSourcePixels": 32007,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        }
+      ]
+    },
+    {
+      "slug": "to-nhuoc",
+      "direction": "southeast",
+      "source": "raw/to-nhuoc-southeast.png",
+      "sourceSha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35",
+      "neutralIndex": 0,
+      "neutralHeight": 325,
+      "neutralTopY": 17,
+      "scale": 0.24615384615384617,
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "alphaThreshold": 128,
+      "worldRootPolicy": "Pinned manual roots; no bbox center or per-pose fitting",
+      "frames": [
+        {
+          "index": 0,
+          "action": "idle",
+          "frame": 0,
+          "left": 78,
+          "top": 17,
+          "width": 175,
+          "height": 325,
+          "rootX": 168,
+          "rootY": 342,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 78,
+            "top": 17,
+            "width": 175,
+            "height": 325
+          },
+          "sourcePivot": [
+            168,
+            342
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            26,
+            8
+          ],
+          "nativeCutoutSize": [
+            43,
+            80
+          ],
+          "nativeBounds": [
+            26,
+            8,
+            43,
+            80
+          ],
+          "nativeOpaque": 2433,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 40181,
+          "extractedSourcePixels": 40181,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 1,
+          "action": "idle",
+          "frame": 1,
+          "left": 325,
+          "top": 18,
+          "width": 177,
+          "height": 324,
+          "rootX": 417,
+          "rootY": 342,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 325,
+            "top": 18,
+            "width": 177,
+            "height": 324
+          },
+          "sourcePivot": [
+            417,
+            342
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            8
+          ],
+          "nativeCutoutSize": [
+            44,
+            80
+          ],
+          "nativeBounds": [
+            25,
+            8,
+            44,
+            80
+          ],
+          "nativeOpaque": 2430,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 39683,
+          "extractedSourcePixels": 39683,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 2,
+          "action": "idle",
+          "frame": 2,
+          "left": 565,
+          "top": 19,
+          "width": 176,
+          "height": 323,
+          "rootX": 658,
+          "rootY": 342,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 565,
+            "top": 19,
+            "width": 176,
+            "height": 323
+          },
+          "sourcePivot": [
+            658,
+            342
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            8
+          ],
+          "nativeCutoutSize": [
+            43,
+            80
+          ],
+          "nativeBounds": [
+            25,
+            8,
+            43,
+            80
+          ],
+          "nativeOpaque": 2449,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 39973,
+          "extractedSourcePixels": 39973,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 3,
+          "action": "idle",
+          "frame": 3,
+          "left": 812,
+          "top": 16,
+          "width": 177,
+          "height": 326,
+          "rootX": 906,
+          "rootY": 342,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 812,
+            "top": 16,
+            "width": 177,
+            "height": 326
+          },
+          "sourcePivot": [
+            906,
+            342
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            8
+          ],
+          "nativeCutoutSize": [
+            44,
+            80
+          ],
+          "nativeBounds": [
+            25,
+            8,
+            44,
+            80
+          ],
+          "nativeOpaque": 2467,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 40200,
+          "extractedSourcePixels": 40200,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 4,
+          "action": "idle",
+          "frame": 4,
+          "left": 1060,
+          "top": 16,
+          "width": 176,
+          "height": 326,
+          "rootX": 1153,
+          "rootY": 342,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1060,
+            "top": 16,
+            "width": 176,
+            "height": 326
+          },
+          "sourcePivot": [
+            1153,
+            342
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            8
+          ],
+          "nativeCutoutSize": [
+            43,
+            80
+          ],
+          "nativeBounds": [
+            25,
+            8,
+            43,
+            80
+          ],
+          "nativeOpaque": 2377,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 39429,
+          "extractedSourcePixels": 39429,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 5,
+          "action": "idle",
+          "frame": 5,
+          "left": 1305,
+          "top": 16,
+          "width": 174,
+          "height": 326,
+          "rootX": 1398,
+          "rootY": 342,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1305,
+            "top": 16,
+            "width": 174,
+            "height": 326
+          },
+          "sourcePivot": [
+            1398,
+            342
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            8
+          ],
+          "nativeCutoutSize": [
+            43,
+            80
+          ],
+          "nativeBounds": [
+            25,
+            8,
+            43,
+            80
+          ],
+          "nativeOpaque": 2405,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 39256,
+          "extractedSourcePixels": 39256,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 6,
+          "action": "talk",
+          "frame": 0,
+          "left": 77,
+          "top": 358,
+          "width": 176,
+          "height": 325,
+          "rootX": 170,
+          "rootY": 683,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 77,
+            "top": 358,
+            "width": 176,
+            "height": 325
+          },
+          "sourcePivot": [
+            170,
+            683
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            8
+          ],
+          "nativeCutoutSize": [
+            43,
+            80
+          ],
+          "nativeBounds": [
+            25,
+            8,
+            43,
+            80
+          ],
+          "nativeOpaque": 2430,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 40075,
+          "extractedSourcePixels": 40075,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 7,
+          "action": "talk",
+          "frame": 1,
+          "left": 323,
+          "top": 358,
+          "width": 176,
+          "height": 325,
+          "rootX": 423,
+          "rootY": 683,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 323,
+            "top": 358,
+            "width": 176,
+            "height": 325
+          },
+          "sourcePivot": [
+            423,
+            683
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            23,
+            8
+          ],
+          "nativeCutoutSize": [
+            43,
+            80
+          ],
+          "nativeBounds": [
+            23,
+            8,
+            43,
+            80
+          ],
+          "nativeOpaque": 2355,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 39232,
+          "extractedSourcePixels": 39232,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 8,
+          "action": "talk",
+          "frame": 2,
+          "left": 565,
+          "top": 358,
+          "width": 204,
+          "height": 325,
+          "rootX": 662,
+          "rootY": 683,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 565,
+            "top": 358,
+            "width": 204,
+            "height": 325
+          },
+          "sourcePivot": [
+            662,
+            683
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            24,
+            8
+          ],
+          "nativeCutoutSize": [
+            50,
+            80
+          ],
+          "nativeBounds": [
+            24,
+            8,
+            50,
+            80
+          ],
+          "nativeOpaque": 2429,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 39970,
+          "extractedSourcePixels": 39970,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 9,
+          "action": "talk",
+          "frame": 3,
+          "left": 811,
+          "top": 358,
+          "width": 202,
+          "height": 325,
+          "rootX": 908,
+          "rootY": 683,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 811,
+            "top": 358,
+            "width": 202,
+            "height": 325
+          },
+          "sourcePivot": [
+            908,
+            683
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            24,
+            8
+          ],
+          "nativeCutoutSize": [
+            50,
+            80
+          ],
+          "nativeBounds": [
+            24,
+            8,
+            50,
+            80
+          ],
+          "nativeOpaque": 2465,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 39784,
+          "extractedSourcePixels": 39784,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 10,
+          "action": "talk",
+          "frame": 4,
+          "left": 1060,
+          "top": 358,
+          "width": 175,
+          "height": 325,
+          "rootX": 1158,
+          "rootY": 683,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1060,
+            "top": 358,
+            "width": 175,
+            "height": 325
+          },
+          "sourcePivot": [
+            1158,
+            683
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            24,
+            8
+          ],
+          "nativeCutoutSize": [
+            43,
+            80
+          ],
+          "nativeBounds": [
+            24,
+            8,
+            43,
+            80
+          ],
+          "nativeOpaque": 2381,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 39376,
+          "extractedSourcePixels": 39376,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 11,
+          "action": "talk",
+          "frame": 5,
+          "left": 1305,
+          "top": 359,
+          "width": 174,
+          "height": 324,
+          "rootX": 1398,
+          "rootY": 683,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1305,
+            "top": 359,
+            "width": 174,
+            "height": 324
+          },
+          "sourcePivot": [
+            1398,
+            683
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            8
+          ],
+          "nativeCutoutSize": [
+            43,
+            80
+          ],
+          "nativeBounds": [
+            25,
+            8,
+            43,
+            80
+          ],
+          "nativeOpaque": 2425,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 39141,
+          "extractedSourcePixels": 39141,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 12,
+          "action": "profession",
+          "frame": 0,
+          "left": 77,
+          "top": 696,
+          "width": 176,
+          "height": 320,
+          "rootX": 169,
+          "rootY": 1016,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 77,
+            "top": 696,
+            "width": 176,
+            "height": 320
+          },
+          "sourcePivot": [
+            169,
+            1016
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            9
+          ],
+          "nativeCutoutSize": [
+            43,
+            79
+          ],
+          "nativeBounds": [
+            25,
+            9,
+            43,
+            79
+          ],
+          "nativeOpaque": 2416,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 39462,
+          "extractedSourcePixels": 39462,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 13,
+          "action": "profession",
+          "frame": 1,
+          "left": 329,
+          "top": 696,
+          "width": 174,
+          "height": 319,
+          "rootX": 416,
+          "rootY": 1015,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 329,
+            "top": 696,
+            "width": 174,
+            "height": 319
+          },
+          "sourcePivot": [
+            416,
+            1015
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            27,
+            9
+          ],
+          "nativeCutoutSize": [
+            43,
+            79
+          ],
+          "nativeBounds": [
+            27,
+            9,
+            43,
+            79
+          ],
+          "nativeOpaque": 2308,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 37419,
+          "extractedSourcePixels": 37419,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 14,
+          "action": "profession",
+          "frame": 2,
+          "left": 564,
+          "top": 697,
+          "width": 171,
+          "height": 319,
+          "rootX": 659,
+          "rootY": 1016,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 564,
+            "top": 697,
+            "width": 171,
+            "height": 319
+          },
+          "sourcePivot": [
+            659,
+            1016
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            9
+          ],
+          "nativeCutoutSize": [
+            42,
+            79
+          ],
+          "nativeBounds": [
+            25,
+            9,
+            42,
+            79
+          ],
+          "nativeOpaque": 2283,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 37202,
+          "extractedSourcePixels": 37202,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 15,
+          "action": "profession",
+          "frame": 3,
+          "left": 812,
+          "top": 697,
+          "width": 170,
+          "height": 317,
+          "rootX": 906,
+          "rootY": 1014,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 812,
+            "top": 697,
+            "width": 170,
+            "height": 317
+          },
+          "sourcePivot": [
+            906,
+            1014
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            10
+          ],
+          "nativeCutoutSize": [
+            42,
+            78
+          ],
+          "nativeBounds": [
+            25,
+            10,
+            42,
+            78
+          ],
+          "nativeOpaque": 2298,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 37165,
+          "extractedSourcePixels": 37165,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 16,
+          "action": "profession",
+          "frame": 4,
+          "left": 1060,
+          "top": 696,
+          "width": 174,
+          "height": 318,
+          "rootX": 1152,
+          "rootY": 1014,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1060,
+            "top": 696,
+            "width": 174,
+            "height": 318
+          },
+          "sourcePivot": [
+            1152,
+            1014
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            10
+          ],
+          "nativeCutoutSize": [
+            43,
+            78
+          ],
+          "nativeBounds": [
+            25,
+            10,
+            43,
+            78
+          ],
+          "nativeOpaque": 2273,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 37025,
+          "extractedSourcePixels": 37025,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        },
+        {
+          "index": 17,
+          "action": "profession",
+          "frame": 5,
+          "left": 1305,
+          "top": 697,
+          "width": 173,
+          "height": 318,
+          "rootX": 1398,
+          "rootY": 1015,
+          "rootBasis": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "sourceRect": {
+            "left": 1305,
+            "top": 697,
+            "width": 173,
+            "height": 318
+          },
+          "sourcePivot": [
+            1398,
+            1015
+          ],
+          "scale": 0.24615384615384617,
+          "offset": [
+            25,
+            10
+          ],
+          "nativeCutoutSize": [
+            43,
+            78
+          ],
+          "nativeBounds": [
+            25,
+            10,
+            43,
+            78
+          ],
+          "nativeOpaque": 2357,
+          "opaquePixelsDropped": 0,
+          "extraction": "measured-connected-alpha-body-and-contained-small-islands",
+          "bodySourcePixels": 38196,
+          "extractedSourcePixels": 38196,
+          "bodyPixelsDropped": 0,
+          "rootMethod": "Ground directly below the visually checked pair of planted boot soles; explicit source coordinates. x ignores hands/props and torso bounds.",
+          "pixelsResampled": true,
+          "resampling": "nearest-once",
+          "rgbPainted": false,
+          "alphaThreshold": 128
+        }
+      ]
+    }
+  ],
+  "artApproved": false,
+  "ownerApproved": false,
+  "runtimeImported": false
+}

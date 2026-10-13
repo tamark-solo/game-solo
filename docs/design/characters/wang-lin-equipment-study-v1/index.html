@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vương Lâm · Vũ khí và pháp bảo 01</title>
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <header>
+    <a class="back" href="../index.html">← Thư viện nhân vật</a>
+    <p class="eyebrow">VÂN HẢI ĐẠO ĐỒ · NGHIÊN CỨU TRANG BỊ 01</p>
+    <h1>Một Vương Lâm.<br>Nhiều cách hành đạo.</h1>
+    <p class="intro">Kiếm, trường thương, linh phiến và hồ lô: bốn hướng trang bị đặt trên đúng frame Vương Lâm đang dùng trong game. Giữ nhận diện, tỷ lệ đầu–thân và điểm chân để đánh giá phần trang bị ở cỡ chơi thật.</p>
+    <div class="badges"><span>Neutral Đông Nam</span><span>Thân live giữ nguyên byte</span><span>Hình v1 không được owner chọn</span></div>
+    <p class="hint">Owner nhận xét các mẫu còn nhạt. Gói này được giữ như thử nghiệm kỹ thuật và reference; hướng art tiếp theo bám pháp bảo nổi bật trong truyện Tiên Nghịch.</p>
+    <nav aria-label="Nội dung"><a href="#native-review">Đối chiếu native</a><a href="#sources">Nguồn tạo</a><a href="#ideas">Hướng mở rộng</a><a href="#production">Bước sản xuất</a></nav>
+  </header>
+  <main>
+    <section id="native-review">
+      <div class="section-head"><div><p class="eyebrow">THÂN LIVE + LAYER TRANG BỊ</p><h2>Đọc trang bị ở 1× trước</h2></div><span class="status" id="pack-status">Đang đọc hồ sơ…</span></div>
+      <div class="toolbar">
+        <fieldset><legend>Cỡ pixel</legend><button type="button" data-zoom="1" aria-pressed="true">1×</button><button type="button" data-zoom="2" aria-pressed="false">2×</button><button type="button" data-zoom="4" aria-pressed="false">4×</button></fieldset>
+        <div class="control"><label for="background">Nền alpha</label><select id="background"><option value="dark">Tối</option><option value="light">Sáng</option><option value="gray">Xám trung tính</option></select></div>
+        <label class="check"><input id="show-body" type="checkbox" checked> Thân Vương Lâm</label>
+        <label class="check"><input id="show-gear" type="checkbox" checked> Trang bị</label>
+        <label class="check"><input id="show-roots" type="checkbox" checked> Điểm chân</label>
+        <label class="check"><input id="show-boxes" type="checkbox"> Canvas / neo</label>
+      </div>
+      <div class="stage-scroll"><canvas id="lineup" width="960" height="250" role="img" aria-label="Vương Lâm live cùng bốn phiên bản trang bị, đặt cùng điểm chân"></canvas></div>
+      <p class="hint" id="scale-note">1 pixel ảnh = 1 pixel CSS ở 1×. Trên màn nhỏ, cuộn ngang để giữ cỡ native.</p>
+      <p class="load-error" id="load-error" hidden role="alert"></p>
+      <div class="pair-head"><div><h3>Xem riêng một phiên bản</h3><p class="hint">Ẩn thân để đọc alpha trang bị; ẩn trang bị để xác nhận đúng thân gốc.</p></div><div class="control"><label for="equipment">Trang bị</label><select id="equipment"></select></div></div>
+      <div class="pair-layout"><div class="stage-scroll"><canvas id="pair" width="480" height="280" role="img" aria-label="Cặp đối chiếu Vương Lâm live và phiên bản được chọn"></canvas></div><article id="detail" class="detail"></article></div>
+      <p class="hint">Thứ tự ghép: trang bị sau → thân live → trang bị trước. Layer tĩnh chỉ đúng pose neutral này; pose hành động cần socket và quan hệ trước/sau theo từng frame.</p>
+    </section>
+    <section id="sources">
+      <p class="eyebrow">NGUỒN & PROVENANCE</p><h2>Xem cả nguồn lớn lẫn bản native</h2>
+      <p class="hint">Nguồn ImageGen dùng để học dáng và thiết kế. Bản native đăng ký trên thân live là deliverable để đánh giá trang bị; thumbnail nguồn không chứng minh anatomy hay animation đã giữ đúng.</p>
+      <div class="source-cards" id="source-cards"></div>
+      <div class="links"><a href="manifest.json">Manifest / hash</a><a href="registration.json">Đo & đăng ký layer</a><a href="reference-study.md">Nghiên cứu reference</a><a href="README.md">Hồ sơ bàn giao</a></div>
+    </section>
+    <section id="ideas">
+      <p class="eyebrow">THỜI TRANG · VŨ KHÍ · PHÁP BẢO</p><h2>Thêm trải nghiệm, vẫn nhận ra Vương Lâm</h2>
+      <p>Đề xuất bên dưới mở rộng góc nhìn thiết kế. Hình bốn neutral v1 chưa được chọn; các ý tưởng khác chưa có ART hoặc luật gameplay được duyệt.</p>
+      <div class="idea-grid">
+        <article><span class="idea-number">06</span><h3>Họ dáng trang phục</h3><p>Nhập môn gọn · lữ hành nhiều lớp · chiến đấu tay gọn · luyện đan dụng cụ bên hông · nghi lễ cổ áo rõ · ma tu tiết chế màu.</p><p class="hint">Thay nhịp tà áo, tay áo và phụ kiện. Giữ hộp sọ, mặt, vai, chiều cao và chân Vương Lâm.</p></article>
+        <article><span class="idea-number">08</span><h3>Vũ khí có lối chơi riêng</h3><p>Kiếm · trường thương · linh phiến · trọng đao · song đoản kiếm · pháp trượng · linh cung · dây kiếm.</p><p class="hint">Mỗi họ cần thế cầm, vùng chuyển động và dấu hiệu nhận biết khác nhau; không chỉ thay màu cùng một đòn.</p></article>
+        <article><span class="idea-number">08</span><h3>Pháp bảo làm đổi nhịp hành động</h3><p>Hồ lô · phù ấn · linh kính · chuông · linh châu · trận bàn · tiểu đỉnh · thẻ ngọc.</p><p class="hint">Đề xuất hút–xả, đặt vùng, phản chiếu, nhịp âm, vệ tinh, bố trận, tích trữ và điều khiển từ xa.</p></article>
+      </div>
+      <a class="primary-link" href="ideas.md">Đọc 22 brief, nhu cầu motion / FX và thứ tự ưu tiên →</a>
+    </section>
+    <section id="production">
+      <p class="eyebrow">NEUTRAL → TÁM HƯỚNG → MOTION → CORE</p><h2>Chốt phần nhìn trước khi làm bộ chuyển động</h2>
+      <ol class="steps">
+        <li><b>01 · Chốt neutral</b><p>So silhouette, tay cầm, alpha và kích thước trang bị trên đúng thân live ở 1×; duyệt theo hash của từng mẫu.</p></li>
+        <li><b>02 · Bảy view thật</b><p>Đối chiếu Vương Lâm đúng hướng. Đăng ký layer sau/trước, grip và neo riêng theo view; không mirror để tuyên bố đủ tám hướng.</p></li>
+        <li><b>03 · Motion & FX</b><p>Idle/run, lấy thế/phát/hồi, hit/death cần cho họ trang bị. Giữ một scale nguồn; weapon–body–trail dùng chung clock và socket theo frame.</p></li>
+        <li><b>04 · Fixture tích hợp</b><p>Chỉ sau production review mới nối appearance/equipment theo quyền server và Core; kiểm mái/tán, đổi trang bị, reload và cancel trong fixture riêng.</p></li>
+      </ol>
+      <p class="hint">Hồ sơ này chưa có animation, chưa chốt thông số chiến đấu, quyền sở hữu hoặc luật trang bị. Không ghi map owner, blocker, save, DB hoặc catalog runtime.</p>
+    </section>
+  </main>
+  <footer>Chuẩn thân: Vương Lâm Pixel02 live · 64 × 96 · chân (32,88) · camera 1×. Kiểm kỹ thuật và duyệt ART được ghi riêng.</footer>
+  <script type="module" src="review.mjs"></script>
+</body>
+</html>

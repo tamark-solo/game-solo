@@ -1,4 +1,5 @@
 /* Quest presentation only. Preserve the approved native skill HUD and map release. */
+#quest-navigation{display:flex;align-items:center;gap:8px;margin-top:8px;color:#d3eac5;font-size:11px;line-height:1.4}#quest-navigation[hidden]{display:none}#quest-navigation span{flex:1;min-width:0}#quest-navigation button{flex:none;min-width:44px}
 #sect-objective.quest-tracker{position:absolute;left:auto;right:var(--game-right);top:86px;z-index:7;width:310px;max-height:calc(100% - 220px);margin:0;padding:12px;display:flex;flex-direction:column;overflow:hidden;touch-action:pan-y;border:1px solid #a99558;border-radius:10px;background:linear-gradient(145deg,#173a32f5,#112921ed);color:#f6efda;box-shadow:0 5px 24px #081f2655;font-size:12px}
 .quest-tracker .quest-tracker-heading{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
 .quest-tracker-heading{flex:none}.quest-tracker-heading strong{font:600 16px Cambria,serif;color:#f2d79e}.quest-tracker-heading small{font-size:10px;color:#c5cbbb}
@@ -25,6 +26,6 @@
   .quest-tracker .quest-tracker-heading{margin-bottom:5px}.quest-tracker-heading strong{font-size:13px;line-height:1.2}.quest-tracker-heading small{display:none}
   #quest-tracker-body{max-height:78px;overflow:auto;touch-action:pan-y;padding-right:3px}#quest-title{font-size:14px;margin:5px 0}
   .quest-tracker .quest-actions{margin-top:5px;gap:5px;flex-wrap:nowrap}.quest-actions #quest-guide{flex-basis:0}.quest-tracker button{font-size:10px;height:44px;min-height:44px;min-width:44px;padding:0 7px}.quest-tracker #quest-hint{font-size:10px}
-  .quest-tracker .quest-actions button{font-size:0}.quest-actions button::after{font-size:10px}#quest-guide::after{content:'NPC'}#sect-objective[data-online=false] #quest-guide::after{content:'Vào sân'}#interact::after{content:'E'}#journal::after{content:'Sổ'}
+  .quest-tracker .quest-actions button{font-size:0}.quest-actions button::after{font-size:10px}#quest-guide::after{content:'Tới nơi'}#sect-objective[data-online=false] #quest-guide::after{content:'Vào sân'}#interact::after{content:'E'}#journal::after{content:'Sổ'}
   .quest-journal{grid-template-columns:1fr}.quest-card h3{font-size:16px}
 }

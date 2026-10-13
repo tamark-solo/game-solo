@@ -109,6 +109,23 @@ test('CLI parsing preserves prompts and explicit request options', () => {
   assert.equal(parseArgs(['generate', '--prompt-file', 'example.txt']).promptFile, 'example.txt');
 });
 
+test('CLI background is explicit, validated and supported only by image request commands', () => {
+  for (const background of ['transparent', 'opaque', 'auto']) {
+    assert.equal(parseArgs(['generate', '--prompt', PROMPT, '--background', background]).background, background);
+    assert.equal(parseArgs(['edit', '--prompt', PROMPT, '--image', 'target.png', `--background=${background}`]).background, background);
+    assert.equal(parseArgs(['edit-responses', '--response-model', 'gpt-6-astra', '--prompt', PROMPT, '--image', 'target.png', '--background', background]).background, background);
+  }
+  assert.equal(Object.hasOwn(parseArgs(['generate', '--prompt', PROMPT]), 'background'), false);
+  for (const args of [
+    ['generate', '--prompt', PROMPT, '--background', 'checkerboard'],
+    ['generate', '--prompt', PROMPT, '--background='],
+    ['generate', '--prompt', PROMPT, '--background'],
+    ['check', '--background', 'transparent'],
+    ['configure', '--base-url', BASE_URL, '--background', 'opaque'],
+    ['edit-responses', '--response-model', 'gpt-6-astra', '--responses-tool-mode', 'minimal', '--prompt', PROMPT, '--image', 'target.png', '--background', 'transparent'],
+  ]) assert.throws(() => parseArgs(args));
+});
+
 test('CLI parsing rejects ambiguous prompts, invalid counts and command-line credentials', () => {
   for (const args of [
     ['generate'],
@@ -204,7 +221,25 @@ test('generate sends one authorized request to the image generation endpoint', a
   assert.equal(body.size, '1024x1024');
   assert.equal(body.quality, 'low');
   assert.equal(body.n, 1);
+  assert.equal(calls[0].init.body, JSON.stringify({ model: 'gpt-image-2', prompt: PROMPT, n: 1, size: '1024x1024', quality: 'low', output_format: 'png' }));
+  const metadata = JSON.parse(await readFile(result.files[0].metadataPath, 'utf8'));
+  assert.equal(Object.hasOwn(metadata.requestParameters, 'background'), false);
   assert.equal(result.files.length, 1);
+});
+
+test('generate propagates each explicit background into its single JSON POST and saved metadata', async (t) => {
+  for (const background of ['transparent', 'opaque', 'auto']) {
+    const { calls, result } = await generate(t, () => jsonResponse({ data: [{ b64_json: PNG_BASE64 }] }), { background });
+    assert.equal(calls.length, 1);
+    const request = JSON.parse(calls[0].init.body);
+    assert.equal(request.background, background);
+    assert.equal(request.model, 'gpt-image-2');
+    assert.equal(request.output_format, 'png');
+    const metadata = JSON.parse(await readFile(result.files[0].metadataPath, 'utf8'));
+    assert.deepEqual(metadata.requestParameters, request);
+    assert.equal(metadata.ownerApproved, false);
+    assert.deepEqual(await readFile(result.files[0].path), PNG);
+  }
 });
 
 test('base64 output is saved byte-for-byte with its hash and unapproved metadata', async (t) => {
@@ -373,7 +408,7 @@ test('dry-run needs no key, sends no network request and writes no image', async
 });
 
 test('invalid generation options fail before network or output writes', async (t) => {
-  for (const overrides of [{ n: 0 }, { n: 11 }, { n: 1.5 }, { quality: 'expensive' }, { size: '0x1024' }, { prompt: '  ' }, { timeoutMs: 0 }]) {
+  for (const overrides of [{ n: 0 }, { n: 11 }, { n: 1.5 }, { quality: 'expensive' }, { background: 'checkerboard' }, { background: null }, { background: '' }, { size: '0x1024' }, { prompt: '  ' }, { timeoutMs: 0 }]) {
     const { directory, out } = await temporaryFixture(t);
     const { calls, fetchImpl } = mockFetch(() => { throw new Error('must validate before POST'); });
     await assert.rejects(runGenerate({ config: fixtureConfig(), prompt: PROMPT, out, fetchImpl, ...overrides }));
@@ -482,6 +517,7 @@ test('edit sends one multipart POST with ordered image inputs and no unsupported
   assert.equal(call.init.body.get('quality'), 'high');
   assert.equal(call.init.body.get('n'), '1');
   assert.equal(call.init.body.get('output_format'), 'png');
+  assert.equal(call.init.body.has('background'), false);
   assert.equal(call.init.body.has('input_fidelity'), false);
   const images = call.init.body.getAll('image[]');
   assert.deepEqual(images.map((image) => image.name), ['target.png', 'style.png']);
@@ -501,7 +537,23 @@ test('edit sends one multipart POST with ordered image inputs and no unsupported
   assert.equal(metadata.inputImages[0].sha256, createHash('sha256').update(PNG).digest('hex'));
   assert.equal(metadata.inputImages[0].bytes, PNG.length);
   assert.equal(metadata.requestParameters.prompt, PROMPT);
+  assert.equal(Object.hasOwn(metadata.requestParameters, 'background'), false);
   assert.ok(!JSON.stringify(metadata).includes(FIXTURE_KEY));
+});
+
+test('edit propagates explicit transparent background in multipart and metadata without changing input order', async (t) => {
+  const { out, targetPath, stylePath } = await editFixture(t);
+  const { calls, fetchImpl } = mockFetch(() => jsonResponse({ data: [{ b64_json: PNG_BASE64 }] }));
+  const result = await runEdit({ config: fixtureConfig(), prompt: PROMPT, images: [targetPath, stylePath], out, background: 'transparent', fetchImpl });
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].url, `${BASE_URL}/images/edits`);
+  assert.equal(calls[0].init.body.get('background'), 'transparent');
+  assert.equal(calls[0].init.body.get('output_format'), 'png');
+  assert.deepEqual(calls[0].init.body.getAll('image[]').map((image) => image.name), ['target.png', 'style.png']);
+  const metadata = JSON.parse(await readFile(result.files[0].metadataPath, 'utf8'));
+  assert.equal(metadata.requestParameters.background, 'transparent');
+  assert.equal(metadata.model, 'gpt-image-2');
+  assert.equal(metadata.registrationVerified, false);
 });
 
 test('edit dry-run reports hashes and dimensions without image data, key, output or network', async (t) => {
@@ -716,6 +768,36 @@ test('edit-responses dry-run omits pixels, performs no key access or request and
   assert.equal(result.inputImages[0].sha256, createHash('sha256').update(PNG).digest('hex'));
   assert.deepEqual(result.inputImages.map((input) => input.dimensions), [{ width: 1, height: 1 }, { width: 2, height: 3 }]);
   assert.deepEqual((await readdir(directory)).sort(), ['style.png', 'target.png']);
+});
+
+test('full Responses sends explicit background in the image tool and records transmission', async (t) => {
+  const { out, targetPath } = await editFixture(t);
+  const { calls, fetchImpl } = mockFetch(() => jsonResponse(responseEditBody()));
+  const result = await runEditResponses({ config: fixtureConfig(), responseModel: 'gpt-6-astra', prompt: PROMPT, images: [targetPath], out, background: 'transparent', fetchImpl });
+  assert.equal(calls.length, 1);
+  const request = JSON.parse(calls[0].init.body);
+  assert.equal(request.tools[0].background, 'transparent');
+  assert.equal(request.model, 'gpt-6-astra');
+  assert.equal(request.tools[0].model, 'gpt-image-2');
+  const metadata = JSON.parse(await readFile(result.files[0].metadataPath, 'utf8'));
+  assert.equal(metadata.requestParameters.tools[0].background, 'transparent');
+  assert.equal(metadata.imageOptions.intended.background, 'transparent');
+  assert.equal(metadata.imageOptions.transmitted.background, 'transparent');
+  assert.deepEqual(metadata.imageOptions.omitted, []);
+});
+
+test('invalid edit backgrounds and explicit minimal Responses background fail before POST or output writes', async (t) => {
+  for (const [run, overrides] of [
+    [runEdit, { background: 'checkerboard' }],
+    [runEditResponses, { responseModel: 'gpt-6-astra', background: null }],
+    [runEditResponses, { responseModel: 'gpt-6-astra', responsesToolMode: 'minimal', background: 'transparent' }],
+  ]) {
+    const { directory, out, targetPath } = await editFixture(t);
+    const { calls, fetchImpl } = mockFetch(() => { throw new Error('must validate before POST'); });
+    await assert.rejects(run({ config: fixtureConfig(), prompt: PROMPT, images: [targetPath], out, fetchImpl, ...overrides }), /background/);
+    assert.equal(calls.length, 0);
+    assert.deepEqual((await readdir(directory)).sort(), ['style.png', 'target.png']);
+  }
 });
 
 test('edit-responses validates text/image model separation, count and input before network', async (t) => {

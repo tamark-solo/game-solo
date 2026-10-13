@@ -84,13 +84,17 @@ export function sectQuests(view?: SectView): SectQuest[] {
   const c=view.chapter,done=(id:ChapterQuestId)=>c.completed.includes(id);
   const unlocked=(id:ChapterQuestId)=>id==='HN05'?hn04:id==='HN06'?done('HN05')&&['M02','M03','M04'].includes(view.milestone):id==='HN07'?done('HN06')&&view.level>=3:id==='HN10'?done('HN09')&&view.level===15&&c.jade==='refined':id==='HN11'?done('HN10'):id==='EX01'?done('HN12'):done(CHAPTER_QUESTS[CHAPTER_QUESTS.indexOf(id)-1]);
   return [...quests.slice(0,4),...CHAPTER_QUESTS.map((id):SectQuest=>{
-    const stationId:StationId=id==='HN07'?'cultivation':['HN05','HN09','HN10'].includes(id)?'training':['HN11','HN12'].includes(id)?'guide':'preparation';
+    let stationId:StationId=id==='HN07'?'cultivation':['HN05','HN09','HN10'].includes(id)?'training':['HN11','HN12'].includes(id)?'guide':'preparation';
     const proof=done(id)||c.facts.includes(`${id}-proof`),ready=proof&&(id!=='HN09'||view.level>=9)||['HN11','HN12'].includes(id)&&c.accepted.includes(id);
+    const cultivationGate=!done(id)&&(id==='HN06'&&done('HN05')&&!['M02','M03','M04'].includes(view.milestone)||id==='HN09'&&proof&&view.level<9||id==='HN10'&&done('HN09')&&view.level<15);
+    if(cultivationGate)stationId='cultivation';
+    else if(id==='HN10'&&done('HN09')&&!done(id)&&c.jade!=='refined')stationId='preparation';
     return {id,title:CHAPTER_TITLES[id],stationId,description:id.startsWith('EX')?'Nhận biết nguồn, chuẩn bị và kiểm chứng công cụ; có cách thủ công thay thế.':'Vận dụng trong bài riêng rồi trở về ghi nhận kết quả.',reward:CHAPTER_REWARDS[id]?`${CHAPTER_REWARDS[id]} tích lũy · phần thưởng một lần`:'Tiến trình / quyền hoạt động · không thưởng sức mạnh',status:status(unlocked(id),done(id),c.accepted.includes(id),ready),
-      objectives:[{id:'accepted',text:'Nhận nhiệm vụ tại NPC',done:c.accepted.includes(id)},{id:'proof',text:id==='HN10'?`Khảo nghiệm: checkpoint ${c.checkpoint}/3`:'Hoàn tất bài được hướng dẫn trong Nhập môn / Luyện chế',done:proof},{id:'confirmed',text:'Ghi nhận kết quả một lần',done:done(id)}],
-      nextStep:done(id)?'Kết quả đã lưu.':!unlocked(id)?id==='HN06'?'Xác nhận M02 tại người hướng dẫn vận khí sau HN05 / tầng 3.':id==='HN10'?'Xác nhận tầng 15 sau HN09/M03.':'Hoàn tất bước trước.':id==='HN09'&&proof&&view.level<9?'Bài đã lưu. Tích lũy và xác nhận tầng 9 trước khi nhận thưởng.':'Tới NPC được chỉ đường; mở H / Nhập môn / Luyện chế để nhận, vào bài hoặc xác nhận.'};
+      objectives:[...(cultivationGate?[{id:'cultivation-gate',text:id==='HN06'?'Xác nhận tầng 3 và M02 tại vườn thổ nạp':`Thổ nạp và xác nhận tầng ${id==='HN09'?9:15} tại vườn thổ nạp`,done:false}]:[]),{id:'accepted',text:'Nhận nhiệm vụ tại NPC',done:c.accepted.includes(id)},{id:'proof',text:id==='HN10'?`Khảo nghiệm: checkpoint ${c.checkpoint}/3`:'Hoàn tất bài được hướng dẫn trong Nhập môn / Luyện chế',done:proof},{id:'confirmed',text:'Ghi nhận kết quả một lần',done:done(id)}],
+      nextStep:done(id)?'Kết quả đã lưu.':cultivationGate?id==='HN06'?'Tới vườn thổ nạp: xác nhận tầng 3 rồi mốc M02 để tiếp tục HN06.':id==='HN09'?'Bài đã lưu. Tới vườn thổ nạp, tích lũy và xác nhận tầng 9 trước khi nhận thưởng.':'Tới vườn thổ nạp, tích lũy và xác nhận tầng 15 để mở khảo nghiệm HN10.':!unlocked(id)?id==='HN10'&&done('HN09')?'Luyện hóa ngọc tại người coi chuẩn bị để mở khảo nghiệm.':'Hoàn tất bước trước.':!c.accepted.includes(id)?'Tới NPC để nhận nhiệm vụ và đọc lời dẫn.':ready?'Bài đã đạt. Tới NPC xác nhận kết quả; mục tiêu tiếp theo sẽ tự hiện.':id==='HN08'&&c.jade!=='refined'?'Học phương pháp hộ thân, luyện hóa và trang bị ngọc tại người coi chuẩn bị.':'Tới NPC để vào bài; làm theo hướng dẫn trong ngoại vi.'};
   })];
 }
 export function currentSectQuest(quests: SectQuest[]): SectQuest {
-  return quests.find(quest => quest.status !== 'completed' && quest.status !== 'locked') ?? quests[quests.length - 1]!;
+  return quests.find(quest => quest.status !== 'completed' && quest.status !== 'locked') ??
+    quests.find(quest => quest.status !== 'completed') ?? quests[quests.length - 1]!;
 }

@@ -1,0 +1,7535 @@
+{
+  "schema": "npc-wave-a-motion-root-review-proposal-2",
+  "date": "2026-10-13",
+  "slug": "dinh-soc",
+  "direction": "northwest",
+  "source": "raw/dinh-soc-northwest-repair-r2.png",
+  "sourceSha256": "5a265045d16f7eee042925648c5902acc114f7c6568e0517064607fdf9eeb64c",
+  "sourceDimensions": [
+    1536,
+    1024
+  ],
+  "prompt": "prompts/dinh-soc-northwest-motion-repair-r2.txt",
+  "alphaThreshold": 128,
+  "neutralIndex": 0,
+  "neutralTopY": 39,
+  "neutralBodyTopConfirmed": true,
+  "neutralBodyTopBasis": "Actual rear-left dark hair/bun crown at source neutral y39, visually identified above gold shoulder and low spear; one crown-to-boot calibration for own compact accepted body.",
+  "manualRootReviewBasis": "All18 wide-layout repaired raw/native poses inspected. Full-alpha lower bands included spear tip and biased rootX; explicit visually chosen bootROIs and sole bands isolate both actual boots and exclude weapon/robe hem. Between-pair world root with one actual neutral crown-to-boot source scale, no body fitting/painting.",
+  "frames": [
+    {
+      "index": 0,
+      "action": "idle",
+      "frame": 0,
+      "left": 51,
+      "top": 39,
+      "width": 211,
+      "height": 292,
+      "componentLabels": [
+        1,
+        7
+      ],
+      "rootX": 125,
+      "rootY": 331,
+      "bootPairBandCandidate": {
+        "rootX": 165.5,
+        "rootY": 331,
+        "occupiedBandSpan": [
+          70,
+          261
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                136,
+                179
+              ],
+              [
+                254,
+                261
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                136,
+                179
+              ],
+              [
+                257,
+                261
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                136,
+                179
+              ],
+              [
+                259,
+                261
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                136,
+                179
+              ],
+              [
+                260,
+                261
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                71,
+                121
+              ],
+              [
+                136,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                71,
+                121
+              ],
+              [
+                136,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                71,
+                121
+              ],
+              [
+                136,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                71,
+                121
+              ],
+              [
+                136,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                72,
+                119
+              ],
+              [
+                137,
+                177
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                73,
+                119
+              ],
+              [
+                138,
+                177
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                74,
+                117
+              ],
+              [
+                139,
+                175
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                75,
+                117
+              ],
+              [
+                140,
+                175
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        70,
+        319,
+        180,
+        331
+      ],
+      "manualRootBasis": "Frame0: both boots visually located in sourceROI[61,301,196,331], support x70–180, ground331, root125 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        61,
+        301,
+        196,
+        331
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          61,
+          301,
+          196,
+          331
+        ],
+        "ground": 331,
+        "occupiedBandSpan": [
+          70,
+          180
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                70,
+                122
+              ],
+              [
+                136,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                70,
+                122
+              ],
+              [
+                136,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                70,
+                122
+              ],
+              [
+                136,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                70,
+                122
+              ],
+              [
+                136,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                71,
+                122
+              ],
+              [
+                136,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                71,
+                122
+              ],
+              [
+                136,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                71,
+                122
+              ],
+              [
+                136,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                71,
+                122
+              ],
+              [
+                136,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                72,
+                120
+              ],
+              [
+                137,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                73,
+                120
+              ],
+              [
+                138,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                74,
+                118
+              ],
+              [
+                139,
+                176
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                75,
+                118
+              ],
+              [
+                140,
+                176
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 1,
+      "action": "idle",
+      "frame": 1,
+      "left": 301,
+      "top": 39,
+      "width": 209,
+      "height": 292,
+      "componentLabels": [
+        2
+      ],
+      "rootX": 376.5,
+      "rootY": 331,
+      "bootPairBandCandidate": {
+        "rootX": 415,
+        "rootY": 331,
+        "occupiedBandSpan": [
+          321,
+          509
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                321,
+                372
+              ],
+              [
+                387,
+                430
+              ],
+              [
+                497,
+                508
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                321,
+                372
+              ],
+              [
+                387,
+                431
+              ],
+              [
+                499,
+                509
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                321,
+                372
+              ],
+              [
+                387,
+                431
+              ],
+              [
+                501,
+                509
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                321,
+                372
+              ],
+              [
+                387,
+                431
+              ],
+              [
+                503,
+                509
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                321,
+                372
+              ],
+              [
+                387,
+                431
+              ],
+              [
+                504,
+                509
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                321,
+                372
+              ],
+              [
+                387,
+                431
+              ],
+              [
+                506,
+                509
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                321,
+                372
+              ],
+              [
+                387,
+                431
+              ],
+              [
+                507,
+                509
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                321,
+                372
+              ],
+              [
+                388,
+                430
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                322,
+                371
+              ],
+              [
+                388,
+                430
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                323,
+                370
+              ],
+              [
+                389,
+                429
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                325,
+                368
+              ],
+              [
+                391,
+                427
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                325,
+                367
+              ],
+              [
+                392,
+                426
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        321,
+        319,
+        432,
+        331
+      ],
+      "manualRootBasis": "Frame1: both boots visually located in sourceROI[311,301,446,331], support x321–432, ground331, root376.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        311,
+        301,
+        446,
+        331
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          311,
+          301,
+          446,
+          331
+        ],
+        "ground": 331,
+        "occupiedBandSpan": [
+          321,
+          432
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                321,
+                373
+              ],
+              [
+                387,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                321,
+                373
+              ],
+              [
+                387,
+                432
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                321,
+                373
+              ],
+              [
+                387,
+                432
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                321,
+                373
+              ],
+              [
+                387,
+                432
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                321,
+                373
+              ],
+              [
+                387,
+                432
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                321,
+                373
+              ],
+              [
+                387,
+                432
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                321,
+                373
+              ],
+              [
+                387,
+                432
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                321,
+                373
+              ],
+              [
+                388,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                322,
+                372
+              ],
+              [
+                388,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                323,
+                371
+              ],
+              [
+                389,
+                430
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                325,
+                369
+              ],
+              [
+                391,
+                428
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                325,
+                368
+              ],
+              [
+                392,
+                427
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 2,
+      "action": "idle",
+      "frame": 2,
+      "left": 547,
+      "top": 39,
+      "width": 217,
+      "height": 292,
+      "componentLabels": [
+        3
+      ],
+      "rootX": 623.5,
+      "rootY": 331,
+      "bootPairBandCandidate": {
+        "rootX": 665.5,
+        "rootY": 331,
+        "occupiedBandSpan": [
+          568,
+          763
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                568,
+                618
+              ],
+              [
+                634,
+                678
+              ],
+              [
+                750,
+                761
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                568,
+                618
+              ],
+              [
+                634,
+                678
+              ],
+              [
+                752,
+                762
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                568,
+                618
+              ],
+              [
+                634,
+                678
+              ],
+              [
+                754,
+                762
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                568,
+                618
+              ],
+              [
+                634,
+                678
+              ],
+              [
+                756,
+                762
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                568,
+                618
+              ],
+              [
+                634,
+                678
+              ],
+              [
+                758,
+                763
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                568,
+                618
+              ],
+              [
+                634,
+                678
+              ],
+              [
+                760,
+                763
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                568,
+                618
+              ],
+              [
+                634,
+                678
+              ],
+              [
+                760,
+                762
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                569,
+                618
+              ],
+              [
+                635,
+                677
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                570,
+                616
+              ],
+              [
+                636,
+                676
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                570,
+                616
+              ],
+              [
+                636,
+                676
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                572,
+                614
+              ],
+              [
+                638,
+                674
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                573,
+                613
+              ],
+              [
+                638,
+                674
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        568,
+        319,
+        679,
+        331
+      ],
+      "manualRootBasis": "Frame2: both boots visually located in sourceROI[557,301,692,331], support x568–679, ground331, root623.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        557,
+        301,
+        692,
+        331
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          557,
+          301,
+          692,
+          331
+        ],
+        "ground": 331,
+        "occupiedBandSpan": [
+          568,
+          679
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                568,
+                619
+              ],
+              [
+                634,
+                679
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                568,
+                619
+              ],
+              [
+                634,
+                679
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                568,
+                619
+              ],
+              [
+                634,
+                679
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                568,
+                619
+              ],
+              [
+                634,
+                679
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                568,
+                619
+              ],
+              [
+                634,
+                679
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                568,
+                619
+              ],
+              [
+                634,
+                679
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                568,
+                619
+              ],
+              [
+                634,
+                679
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                569,
+                619
+              ],
+              [
+                635,
+                678
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                570,
+                617
+              ],
+              [
+                636,
+                677
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                570,
+                617
+              ],
+              [
+                636,
+                677
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                572,
+                615
+              ],
+              [
+                638,
+                675
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                573,
+                614
+              ],
+              [
+                638,
+                675
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 3,
+      "action": "idle",
+      "frame": 3,
+      "left": 806,
+      "top": 40,
+      "width": 216,
+      "height": 291,
+      "componentLabels": [
+        6
+      ],
+      "rootX": 877,
+      "rootY": 331,
+      "bootPairBandCandidate": {
+        "rootX": 920.5,
+        "rootY": 331,
+        "occupiedBandSpan": [
+          820,
+          1021
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                820,
+                871
+              ],
+              [
+                888,
+                933
+              ],
+              [
+                1010,
+                1021
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                820,
+                871
+              ],
+              [
+                888,
+                933
+              ],
+              [
+                1013,
+                1021
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                820,
+                871
+              ],
+              [
+                888,
+                933
+              ],
+              [
+                1015,
+                1021
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                821,
+                871
+              ],
+              [
+                888,
+                933
+              ],
+              [
+                1018,
+                1021
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                821,
+                871
+              ],
+              [
+                889,
+                933
+              ],
+              [
+                1018,
+                1021
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                821,
+                871
+              ],
+              [
+                889,
+                933
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                821,
+                871
+              ],
+              [
+                889,
+                933
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                821,
+                871
+              ],
+              [
+                889,
+                932
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                822,
+                870
+              ],
+              [
+                890,
+                931
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                823,
+                869
+              ],
+              [
+                891,
+                931
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                824,
+                868
+              ],
+              [
+                892,
+                929
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                825,
+                867
+              ],
+              [
+                893,
+                929
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        820,
+        319,
+        934,
+        331
+      ],
+      "manualRootBasis": "Frame3: both boots visually located in sourceROI[816,301,951,331], support x820–934, ground331, root877 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        816,
+        301,
+        951,
+        331
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          816,
+          301,
+          951,
+          331
+        ],
+        "ground": 331,
+        "occupiedBandSpan": [
+          820,
+          934
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                820,
+                872
+              ],
+              [
+                888,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                820,
+                872
+              ],
+              [
+                888,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                820,
+                872
+              ],
+              [
+                888,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                821,
+                872
+              ],
+              [
+                888,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                821,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                821,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                821,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                821,
+                872
+              ],
+              [
+                889,
+                933
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                822,
+                871
+              ],
+              [
+                890,
+                932
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                823,
+                870
+              ],
+              [
+                891,
+                932
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                824,
+                869
+              ],
+              [
+                892,
+                930
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                825,
+                868
+              ],
+              [
+                893,
+                930
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 4,
+      "action": "idle",
+      "frame": 4,
+      "left": 1064,
+      "top": 39,
+      "width": 214,
+      "height": 292,
+      "componentLabels": [
+        4
+      ],
+      "rootX": 1139.5,
+      "rootY": 331,
+      "bootPairBandCandidate": {
+        "rootX": 1180,
+        "rootY": 331,
+        "occupiedBandSpan": [
+          1083,
+          1277
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                1083,
+                1134
+              ],
+              [
+                1151,
+                1195
+              ],
+              [
+                1264,
+                1275
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                1083,
+                1134
+              ],
+              [
+                1151,
+                1195
+              ],
+              [
+                1266,
+                1276
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                1083,
+                1134
+              ],
+              [
+                1151,
+                1195
+              ],
+              [
+                1268,
+                1277
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                1083,
+                1134
+              ],
+              [
+                1151,
+                1195
+              ],
+              [
+                1270,
+                1277
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                1083,
+                1134
+              ],
+              [
+                1151,
+                1195
+              ],
+              [
+                1272,
+                1277
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                1083,
+                1134
+              ],
+              [
+                1151,
+                1195
+              ],
+              [
+                1274,
+                1277
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                1083,
+                1134
+              ],
+              [
+                1151,
+                1195
+              ],
+              [
+                1275,
+                1277
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                1084,
+                1134
+              ],
+              [
+                1151,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                1085,
+                1133
+              ],
+              [
+                1153,
+                1193
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                1085,
+                1132
+              ],
+              [
+                1153,
+                1193
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                1087,
+                1130
+              ],
+              [
+                1155,
+                1191
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                1088,
+                1130
+              ],
+              [
+                1156,
+                1191
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        1083,
+        319,
+        1196,
+        331
+      ],
+      "manualRootBasis": "Frame4: both boots visually located in sourceROI[1074,301,1209,331], support x1083–1196, ground331, root1139.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        1074,
+        301,
+        1209,
+        331
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          1074,
+          301,
+          1209,
+          331
+        ],
+        "ground": 331,
+        "occupiedBandSpan": [
+          1083,
+          1196
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                1083,
+                1135
+              ],
+              [
+                1151,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                1083,
+                1135
+              ],
+              [
+                1151,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                1083,
+                1135
+              ],
+              [
+                1151,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                1083,
+                1135
+              ],
+              [
+                1151,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                1083,
+                1135
+              ],
+              [
+                1151,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                1083,
+                1135
+              ],
+              [
+                1151,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                1083,
+                1135
+              ],
+              [
+                1151,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                1084,
+                1135
+              ],
+              [
+                1151,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                1085,
+                1134
+              ],
+              [
+                1153,
+                1194
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                1085,
+                1133
+              ],
+              [
+                1153,
+                1194
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                1087,
+                1131
+              ],
+              [
+                1155,
+                1192
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                1088,
+                1131
+              ],
+              [
+                1156,
+                1192
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 5,
+      "action": "idle",
+      "frame": 5,
+      "left": 1315,
+      "top": 39,
+      "width": 212,
+      "height": 292,
+      "componentLabels": [
+        5
+      ],
+      "rootX": 1389.5,
+      "rootY": 331,
+      "bootPairBandCandidate": {
+        "rootX": 1431,
+        "rootY": 331,
+        "occupiedBandSpan": [
+          1336,
+          1526
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                1336,
+                1386
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1515,
+                1525
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                1336,
+                1386
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1518,
+                1525
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                1336,
+                1386
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1520,
+                1526
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                1336,
+                1386
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1522,
+                1526
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                1336,
+                1386
+              ],
+              [
+                1400,
+                1442
+              ],
+              [
+                1524,
+                1526
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                1336,
+                1386
+              ],
+              [
+                1400,
+                1442
+              ],
+              [
+                1525,
+                1526
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                1336,
+                1386
+              ],
+              [
+                1400,
+                1442
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                1336,
+                1386
+              ],
+              [
+                1400,
+                1442
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                1337,
+                1385
+              ],
+              [
+                1401,
+                1441
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                1338,
+                1384
+              ],
+              [
+                1401,
+                1440
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                1339,
+                1383
+              ],
+              [
+                1403,
+                1439
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                1340,
+                1382
+              ],
+              [
+                1403,
+                1438
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        1336,
+        319,
+        1443,
+        331
+      ],
+      "manualRootBasis": "Frame5: both boots visually located in sourceROI[1325,301,1460,331], support x1336–1443, ground331, root1389.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        1325,
+        301,
+        1460,
+        331
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          1325,
+          301,
+          1460,
+          331
+        ],
+        "ground": 331,
+        "occupiedBandSpan": [
+          1336,
+          1443
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 319,
+            "runs": [
+              [
+                1336,
+                1387
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 320,
+            "runs": [
+              [
+                1336,
+                1387
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 321,
+            "runs": [
+              [
+                1336,
+                1387
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 322,
+            "runs": [
+              [
+                1336,
+                1387
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 323,
+            "runs": [
+              [
+                1336,
+                1387
+              ],
+              [
+                1400,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 324,
+            "runs": [
+              [
+                1336,
+                1387
+              ],
+              [
+                1400,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 325,
+            "runs": [
+              [
+                1336,
+                1387
+              ],
+              [
+                1400,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 326,
+            "runs": [
+              [
+                1336,
+                1387
+              ],
+              [
+                1400,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 327,
+            "runs": [
+              [
+                1337,
+                1386
+              ],
+              [
+                1401,
+                1442
+              ]
+            ]
+          },
+          {
+            "y": 328,
+            "runs": [
+              [
+                1338,
+                1385
+              ],
+              [
+                1401,
+                1441
+              ]
+            ]
+          },
+          {
+            "y": 329,
+            "runs": [
+              [
+                1339,
+                1384
+              ],
+              [
+                1403,
+                1440
+              ]
+            ]
+          },
+          {
+            "y": 330,
+            "runs": [
+              [
+                1340,
+                1383
+              ],
+              [
+                1403,
+                1439
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 6,
+      "action": "talk",
+      "frame": 0,
+      "left": 49,
+      "top": 363,
+      "width": 219,
+      "height": 287,
+      "componentLabels": [
+        9
+      ],
+      "rootX": 124,
+      "rootY": 650,
+      "bootPairBandCandidate": {
+        "rootX": 168,
+        "rootY": 650,
+        "occupiedBandSpan": [
+          69,
+          267
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                69,
+                118
+              ],
+              [
+                134,
+                178
+              ],
+              [
+                257,
+                266
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                69,
+                118
+              ],
+              [
+                134,
+                178
+              ],
+              [
+                260,
+                267
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                69,
+                118
+              ],
+              [
+                134,
+                178
+              ],
+              [
+                262,
+                267
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                69,
+                118
+              ],
+              [
+                134,
+                178
+              ],
+              [
+                264,
+                267
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                69,
+                118
+              ],
+              [
+                134,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                69,
+                118
+              ],
+              [
+                134,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                69,
+                118
+              ],
+              [
+                134,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                69,
+                118
+              ],
+              [
+                135,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                71,
+                117
+              ],
+              [
+                136,
+                176
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                71,
+                116
+              ],
+              [
+                136,
+                176
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                73,
+                116
+              ],
+              [
+                138,
+                175
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                73,
+                114
+              ],
+              [
+                138,
+                174
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        69,
+        638,
+        179,
+        650
+      ],
+      "manualRootBasis": "Frame6: both boots visually located in sourceROI[59,620,194,650], support x69–179, ground650, root124 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        59,
+        620,
+        194,
+        650
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          59,
+          620,
+          194,
+          650
+        ],
+        "ground": 650,
+        "occupiedBandSpan": [
+          69,
+          179
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                69,
+                119
+              ],
+              [
+                134,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                69,
+                119
+              ],
+              [
+                134,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                69,
+                119
+              ],
+              [
+                134,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                69,
+                119
+              ],
+              [
+                134,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                69,
+                119
+              ],
+              [
+                134,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                69,
+                119
+              ],
+              [
+                134,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                69,
+                119
+              ],
+              [
+                134,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                69,
+                119
+              ],
+              [
+                135,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                71,
+                118
+              ],
+              [
+                136,
+                177
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                71,
+                117
+              ],
+              [
+                136,
+                177
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                73,
+                117
+              ],
+              [
+                138,
+                176
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                73,
+                115
+              ],
+              [
+                138,
+                175
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 7,
+      "action": "talk",
+      "frame": 1,
+      "left": 301,
+      "top": 363,
+      "width": 213,
+      "height": 287,
+      "componentLabels": [
+        10
+      ],
+      "rootX": 376.5,
+      "rootY": 650,
+      "bootPairBandCandidate": {
+        "rootX": 417,
+        "rootY": 650,
+        "occupiedBandSpan": [
+          321,
+          513
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                321,
+                370
+              ],
+              [
+                387,
+                430
+              ],
+              [
+                500,
+                512
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                321,
+                370
+              ],
+              [
+                387,
+                430
+              ],
+              [
+                502,
+                512
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                321,
+                370
+              ],
+              [
+                387,
+                430
+              ],
+              [
+                504,
+                512
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                321,
+                370
+              ],
+              [
+                387,
+                430
+              ],
+              [
+                506,
+                513
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                321,
+                370
+              ],
+              [
+                387,
+                431
+              ],
+              [
+                508,
+                513
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                321,
+                370
+              ],
+              [
+                387,
+                431
+              ],
+              [
+                511,
+                513
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                321,
+                370
+              ],
+              [
+                387,
+                430
+              ],
+              [
+                512,
+                513
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                321,
+                370
+              ],
+              [
+                387,
+                430
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                322,
+                369
+              ],
+              [
+                388,
+                430
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                323,
+                368
+              ],
+              [
+                389,
+                429
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                324,
+                367
+              ],
+              [
+                390,
+                427
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                325,
+                366
+              ],
+              [
+                391,
+                426
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        321,
+        638,
+        432,
+        650
+      ],
+      "manualRootBasis": "Frame7: both boots visually located in sourceROI[311,620,446,650], support x321–432, ground650, root376.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        311,
+        620,
+        446,
+        650
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          311,
+          620,
+          446,
+          650
+        ],
+        "ground": 650,
+        "occupiedBandSpan": [
+          321,
+          432
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                321,
+                371
+              ],
+              [
+                387,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                321,
+                371
+              ],
+              [
+                387,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                321,
+                371
+              ],
+              [
+                387,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                321,
+                371
+              ],
+              [
+                387,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                321,
+                371
+              ],
+              [
+                387,
+                432
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                321,
+                371
+              ],
+              [
+                387,
+                432
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                321,
+                371
+              ],
+              [
+                387,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                321,
+                371
+              ],
+              [
+                387,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                322,
+                370
+              ],
+              [
+                388,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                323,
+                369
+              ],
+              [
+                389,
+                430
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                324,
+                368
+              ],
+              [
+                390,
+                428
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                325,
+                367
+              ],
+              [
+                391,
+                427
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 8,
+      "action": "talk",
+      "frame": 2,
+      "left": 547,
+      "top": 363,
+      "width": 217,
+      "height": 287,
+      "componentLabels": [
+        11
+      ],
+      "rootX": 616.5,
+      "rootY": 650,
+      "bootPairBandCandidate": {
+        "rootX": 661.5,
+        "rootY": 650,
+        "occupiedBandSpan": [
+          560,
+          763
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                560,
+                609
+              ],
+              [
+                628,
+                672
+              ],
+              [
+                749,
+                761
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                560,
+                609
+              ],
+              [
+                628,
+                672
+              ],
+              [
+                751,
+                762
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                560,
+                609
+              ],
+              [
+                628,
+                672
+              ],
+              [
+                753,
+                762
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                560,
+                609
+              ],
+              [
+                628,
+                672
+              ],
+              [
+                756,
+                763
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                560,
+                609
+              ],
+              [
+                628,
+                672
+              ],
+              [
+                757,
+                763
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                560,
+                609
+              ],
+              [
+                628,
+                672
+              ],
+              [
+                759,
+                763
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                560,
+                609
+              ],
+              [
+                629,
+                672
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                560,
+                608
+              ],
+              [
+                629,
+                672
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                561,
+                607
+              ],
+              [
+                630,
+                671
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                562,
+                607
+              ],
+              [
+                631,
+                671
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                563,
+                605
+              ],
+              [
+                632,
+                669
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                564,
+                604
+              ],
+              [
+                633,
+                668
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        560,
+        638,
+        673,
+        650
+      ],
+      "manualRootBasis": "Frame8: both boots visually located in sourceROI[557,620,692,650], support x560–673, ground650, root616.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        557,
+        620,
+        692,
+        650
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          557,
+          620,
+          692,
+          650
+        ],
+        "ground": 650,
+        "occupiedBandSpan": [
+          560,
+          673
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                560,
+                610
+              ],
+              [
+                628,
+                673
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                560,
+                610
+              ],
+              [
+                628,
+                673
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                560,
+                610
+              ],
+              [
+                628,
+                673
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                560,
+                610
+              ],
+              [
+                628,
+                673
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                560,
+                610
+              ],
+              [
+                628,
+                673
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                560,
+                610
+              ],
+              [
+                628,
+                673
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                560,
+                610
+              ],
+              [
+                629,
+                673
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                560,
+                609
+              ],
+              [
+                629,
+                673
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                561,
+                608
+              ],
+              [
+                630,
+                672
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                562,
+                608
+              ],
+              [
+                631,
+                672
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                563,
+                606
+              ],
+              [
+                632,
+                670
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                564,
+                605
+              ],
+              [
+                633,
+                669
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 9,
+      "action": "talk",
+      "frame": 3,
+      "left": 805,
+      "top": 363,
+      "width": 215,
+      "height": 287,
+      "componentLabels": [
+        12,
+        14
+      ],
+      "rootX": 878,
+      "rootY": 650,
+      "bootPairBandCandidate": {
+        "rootX": 920.5,
+        "rootY": 650,
+        "occupiedBandSpan": [
+          822,
+          1019
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                822,
+                871
+              ],
+              [
+                889,
+                933
+              ],
+              [
+                1010,
+                1019
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                822,
+                871
+              ],
+              [
+                889,
+                933
+              ],
+              [
+                1012,
+                1019
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                822,
+                871
+              ],
+              [
+                889,
+                933
+              ],
+              [
+                1014,
+                1019
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                822,
+                871
+              ],
+              [
+                889,
+                933
+              ],
+              [
+                1016,
+                1019
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                822,
+                871
+              ],
+              [
+                889,
+                933
+              ],
+              [
+                1018,
+                1019
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                822,
+                871
+              ],
+              [
+                889,
+                933
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                822,
+                871
+              ],
+              [
+                889,
+                933
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                823,
+                871
+              ],
+              [
+                889,
+                933
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                824,
+                870
+              ],
+              [
+                890,
+                931
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                824,
+                869
+              ],
+              [
+                890,
+                931
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                826,
+                868
+              ],
+              [
+                892,
+                930
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                827,
+                867
+              ],
+              [
+                893,
+                929
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        822,
+        638,
+        934,
+        650
+      ],
+      "manualRootBasis": "Frame9: both boots visually located in sourceROI[815,620,950,650], support x822–934, ground650, root878 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        815,
+        620,
+        950,
+        650
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          815,
+          620,
+          950,
+          650
+        ],
+        "ground": 650,
+        "occupiedBandSpan": [
+          822,
+          934
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                822,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                822,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                822,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                822,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                822,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                822,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                822,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                823,
+                872
+              ],
+              [
+                889,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                824,
+                871
+              ],
+              [
+                890,
+                932
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                824,
+                870
+              ],
+              [
+                890,
+                932
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                826,
+                869
+              ],
+              [
+                892,
+                931
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                827,
+                868
+              ],
+              [
+                893,
+                930
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 10,
+      "action": "talk",
+      "frame": 4,
+      "left": 1062,
+      "top": 362,
+      "width": 217,
+      "height": 288,
+      "componentLabels": [
+        8
+      ],
+      "rootX": 1140.5,
+      "rootY": 650,
+      "bootPairBandCandidate": {
+        "rootX": 1181.5,
+        "rootY": 650,
+        "occupiedBandSpan": [
+          1085,
+          1278
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                1085,
+                1135
+              ],
+              [
+                1152,
+                1195
+              ],
+              [
+                1266,
+                1277
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                1085,
+                1135
+              ],
+              [
+                1152,
+                1195
+              ],
+              [
+                1268,
+                1277
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                1085,
+                1135
+              ],
+              [
+                1152,
+                1195
+              ],
+              [
+                1270,
+                1278
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                1085,
+                1135
+              ],
+              [
+                1152,
+                1195
+              ],
+              [
+                1272,
+                1278
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                1085,
+                1135
+              ],
+              [
+                1152,
+                1195
+              ],
+              [
+                1273,
+                1278
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                1085,
+                1135
+              ],
+              [
+                1152,
+                1195
+              ],
+              [
+                1276,
+                1278
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                1085,
+                1135
+              ],
+              [
+                1152,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                1086,
+                1135
+              ],
+              [
+                1152,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                1087,
+                1134
+              ],
+              [
+                1153,
+                1194
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                1087,
+                1133
+              ],
+              [
+                1154,
+                1193
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                1089,
+                1131
+              ],
+              [
+                1155,
+                1192
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                1090,
+                1130
+              ],
+              [
+                1156,
+                1191
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        1085,
+        638,
+        1196,
+        650
+      ],
+      "manualRootBasis": "Frame10: both boots visually located in sourceROI[1072,620,1207,650], support x1085–1196, ground650, root1140.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        1072,
+        620,
+        1207,
+        650
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          1072,
+          620,
+          1207,
+          650
+        ],
+        "ground": 650,
+        "occupiedBandSpan": [
+          1085,
+          1196
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                1085,
+                1136
+              ],
+              [
+                1152,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                1085,
+                1136
+              ],
+              [
+                1152,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                1085,
+                1136
+              ],
+              [
+                1152,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                1085,
+                1136
+              ],
+              [
+                1152,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                1085,
+                1136
+              ],
+              [
+                1152,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                1085,
+                1136
+              ],
+              [
+                1152,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                1085,
+                1136
+              ],
+              [
+                1152,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                1086,
+                1136
+              ],
+              [
+                1152,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                1087,
+                1135
+              ],
+              [
+                1153,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                1087,
+                1134
+              ],
+              [
+                1154,
+                1194
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                1089,
+                1132
+              ],
+              [
+                1155,
+                1193
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                1090,
+                1131
+              ],
+              [
+                1156,
+                1192
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 11,
+      "action": "talk",
+      "frame": 5,
+      "left": 1314,
+      "top": 363,
+      "width": 213,
+      "height": 287,
+      "componentLabels": [
+        13
+      ],
+      "rootX": 1387.5,
+      "rootY": 650,
+      "bootPairBandCandidate": {
+        "rootX": 1429,
+        "rootY": 650,
+        "occupiedBandSpan": [
+          1332,
+          1526
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                1332,
+                1382
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1512,
+                1524
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                1332,
+                1382
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1515,
+                1525
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                1332,
+                1382
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1517,
+                1525
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                1332,
+                1382
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1520,
+                1526
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                1332,
+                1382
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1521,
+                1526
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                1332,
+                1382
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1524,
+                1526
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                1332,
+                1382
+              ],
+              [
+                1399,
+                1442
+              ],
+              [
+                1525,
+                1525
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                1332,
+                1382
+              ],
+              [
+                1399,
+                1441
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                1334,
+                1381
+              ],
+              [
+                1400,
+                1440
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                1334,
+                1380
+              ],
+              [
+                1401,
+                1440
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                1336,
+                1379
+              ],
+              [
+                1402,
+                1438
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                1336,
+                1378
+              ],
+              [
+                1403,
+                1437
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        1332,
+        638,
+        1443,
+        650
+      ],
+      "manualRootBasis": "Frame11: both boots visually located in sourceROI[1324,620,1459,650], support x1332–1443, ground650, root1387.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        1324,
+        620,
+        1459,
+        650
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          1324,
+          620,
+          1459,
+          650
+        ],
+        "ground": 650,
+        "occupiedBandSpan": [
+          1332,
+          1443
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 638,
+            "runs": [
+              [
+                1332,
+                1383
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 639,
+            "runs": [
+              [
+                1332,
+                1383
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 640,
+            "runs": [
+              [
+                1332,
+                1383
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 641,
+            "runs": [
+              [
+                1332,
+                1383
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 642,
+            "runs": [
+              [
+                1332,
+                1383
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 643,
+            "runs": [
+              [
+                1332,
+                1383
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 644,
+            "runs": [
+              [
+                1332,
+                1383
+              ],
+              [
+                1399,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 645,
+            "runs": [
+              [
+                1332,
+                1383
+              ],
+              [
+                1399,
+                1442
+              ]
+            ]
+          },
+          {
+            "y": 646,
+            "runs": [
+              [
+                1334,
+                1382
+              ],
+              [
+                1400,
+                1441
+              ]
+            ]
+          },
+          {
+            "y": 647,
+            "runs": [
+              [
+                1334,
+                1381
+              ],
+              [
+                1401,
+                1441
+              ]
+            ]
+          },
+          {
+            "y": 648,
+            "runs": [
+              [
+                1336,
+                1380
+              ],
+              [
+                1402,
+                1439
+              ]
+            ]
+          },
+          {
+            "y": 649,
+            "runs": [
+              [
+                1336,
+                1379
+              ],
+              [
+                1403,
+                1438
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 12,
+      "action": "profession",
+      "frame": 0,
+      "left": 49,
+      "top": 681,
+      "width": 219,
+      "height": 290,
+      "componentLabels": [
+        15
+      ],
+      "rootX": 125.5,
+      "rootY": 971,
+      "bootPairBandCandidate": {
+        "rootX": 168.5,
+        "rootY": 971,
+        "occupiedBandSpan": [
+          70,
+          267
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                70,
+                120
+              ],
+              [
+                136,
+                180
+              ],
+              [
+                255,
+                266
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                70,
+                120
+              ],
+              [
+                136,
+                180
+              ],
+              [
+                257,
+                267
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                70,
+                120
+              ],
+              [
+                136,
+                180
+              ],
+              [
+                259,
+                267
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                70,
+                120
+              ],
+              [
+                136,
+                180
+              ],
+              [
+                261,
+                267
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                70,
+                120
+              ],
+              [
+                136,
+                180
+              ],
+              [
+                263,
+                267
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                70,
+                120
+              ],
+              [
+                137,
+                180
+              ],
+              [
+                264,
+                267
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                70,
+                120
+              ],
+              [
+                137,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                70,
+                120
+              ],
+              [
+                137,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                72,
+                118
+              ],
+              [
+                138,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                72,
+                118
+              ],
+              [
+                139,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                73,
+                116
+              ],
+              [
+                140,
+                176
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                74,
+                115
+              ],
+              [
+                142,
+                176
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        70,
+        959,
+        181,
+        971
+      ],
+      "manualRootBasis": "Frame12: both boots visually located in sourceROI[59,941,194,971], support x70–181, ground971, root125.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        59,
+        941,
+        194,
+        971
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          59,
+          941,
+          194,
+          971
+        ],
+        "ground": 971,
+        "occupiedBandSpan": [
+          70,
+          181
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                136,
+                181
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                136,
+                181
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                136,
+                181
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                136,
+                181
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                136,
+                181
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                137,
+                181
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                137,
+                181
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                70,
+                121
+              ],
+              [
+                137,
+                181
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                72,
+                119
+              ],
+              [
+                138,
+                180
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                72,
+                119
+              ],
+              [
+                139,
+                179
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                73,
+                117
+              ],
+              [
+                140,
+                177
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                74,
+                116
+              ],
+              [
+                142,
+                177
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 13,
+      "action": "profession",
+      "frame": 1,
+      "left": 301,
+      "top": 681,
+      "width": 218,
+      "height": 290,
+      "componentLabels": [
+        16
+      ],
+      "rootX": 378.5,
+      "rootY": 971,
+      "bootPairBandCandidate": {
+        "rootX": 420.5,
+        "rootY": 971,
+        "occupiedBandSpan": [
+          323,
+          518
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                323,
+                374
+              ],
+              [
+                388,
+                433
+              ],
+              [
+                506,
+                516
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                323,
+                374
+              ],
+              [
+                388,
+                433
+              ],
+              [
+                509,
+                517
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                323,
+                374
+              ],
+              [
+                388,
+                433
+              ],
+              [
+                510,
+                518
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                323,
+                374
+              ],
+              [
+                388,
+                433
+              ],
+              [
+                513,
+                518
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                323,
+                374
+              ],
+              [
+                388,
+                433
+              ],
+              [
+                515,
+                518
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                323,
+                374
+              ],
+              [
+                388,
+                433
+              ],
+              [
+                516,
+                518
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                323,
+                374
+              ],
+              [
+                388,
+                433
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                324,
+                373
+              ],
+              [
+                389,
+                432
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                325,
+                372
+              ],
+              [
+                390,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                326,
+                372
+              ],
+              [
+                391,
+                430
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                327,
+                370
+              ],
+              [
+                392,
+                429
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                331,
+                370
+              ],
+              [
+                395,
+                428
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        323,
+        959,
+        434,
+        971
+      ],
+      "manualRootBasis": "Frame13: both boots visually located in sourceROI[311,941,446,971], support x323–434, ground971, root378.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        311,
+        941,
+        446,
+        971
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          311,
+          941,
+          446,
+          971
+        ],
+        "ground": 971,
+        "occupiedBandSpan": [
+          323,
+          434
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                323,
+                375
+              ],
+              [
+                388,
+                434
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                323,
+                375
+              ],
+              [
+                388,
+                434
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                323,
+                375
+              ],
+              [
+                388,
+                434
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                323,
+                375
+              ],
+              [
+                388,
+                434
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                323,
+                375
+              ],
+              [
+                388,
+                434
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                323,
+                375
+              ],
+              [
+                388,
+                434
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                323,
+                375
+              ],
+              [
+                388,
+                434
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                324,
+                374
+              ],
+              [
+                389,
+                433
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                325,
+                373
+              ],
+              [
+                390,
+                432
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                326,
+                373
+              ],
+              [
+                391,
+                431
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                327,
+                371
+              ],
+              [
+                392,
+                430
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                331,
+                371
+              ],
+              [
+                395,
+                429
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 14,
+      "action": "profession",
+      "frame": 2,
+      "left": 547,
+      "top": 682,
+      "width": 223,
+      "height": 289,
+      "componentLabels": [
+        19,
+        21
+      ],
+      "rootX": 628.5,
+      "rootY": 971,
+      "bootPairBandCandidate": {
+        "rootX": 670.5,
+        "rootY": 971,
+        "occupiedBandSpan": [
+          572,
+          769
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                572,
+                623
+              ],
+              [
+                640,
+                684
+              ],
+              [
+                756,
+                768
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                572,
+                623
+              ],
+              [
+                640,
+                684
+              ],
+              [
+                759,
+                768
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                572,
+                623
+              ],
+              [
+                640,
+                684
+              ],
+              [
+                760,
+                769
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                572,
+                623
+              ],
+              [
+                640,
+                684
+              ],
+              [
+                762,
+                769
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                572,
+                623
+              ],
+              [
+                640,
+                684
+              ],
+              [
+                765,
+                769
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                572,
+                623
+              ],
+              [
+                640,
+                684
+              ],
+              [
+                766,
+                769
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                572,
+                623
+              ],
+              [
+                640,
+                684
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                573,
+                623
+              ],
+              [
+                641,
+                684
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                574,
+                621
+              ],
+              [
+                642,
+                682
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                575,
+                621
+              ],
+              [
+                643,
+                682
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                576,
+                619
+              ],
+              [
+                644,
+                680
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                578,
+                618
+              ],
+              [
+                652,
+                680
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        572,
+        959,
+        685,
+        971
+      ],
+      "manualRootBasis": "Frame14: both boots visually located in sourceROI[557,941,692,971], support x572–685, ground971, root628.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        557,
+        941,
+        692,
+        971
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          557,
+          941,
+          692,
+          971
+        ],
+        "ground": 971,
+        "occupiedBandSpan": [
+          572,
+          685
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                572,
+                624
+              ],
+              [
+                640,
+                685
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                572,
+                624
+              ],
+              [
+                640,
+                685
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                572,
+                624
+              ],
+              [
+                640,
+                685
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                572,
+                624
+              ],
+              [
+                640,
+                685
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                572,
+                624
+              ],
+              [
+                640,
+                685
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                572,
+                624
+              ],
+              [
+                640,
+                685
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                572,
+                624
+              ],
+              [
+                640,
+                685
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                573,
+                624
+              ],
+              [
+                641,
+                685
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                574,
+                622
+              ],
+              [
+                642,
+                683
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                575,
+                622
+              ],
+              [
+                643,
+                683
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                576,
+                620
+              ],
+              [
+                644,
+                681
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                578,
+                619
+              ],
+              [
+                652,
+                681
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 15,
+      "action": "profession",
+      "frame": 3,
+      "left": 802,
+      "top": 681,
+      "width": 222,
+      "height": 290,
+      "componentLabels": [
+        17
+      ],
+      "rootX": 878.5,
+      "rootY": 971,
+      "bootPairBandCandidate": {
+        "rootX": 922.5,
+        "rootY": 971,
+        "occupiedBandSpan": [
+          822,
+          1023
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                822,
+                873
+              ],
+              [
+                890,
+                934
+              ],
+              [
+                1010,
+                1021
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                822,
+                873
+              ],
+              [
+                890,
+                934
+              ],
+              [
+                1013,
+                1021
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                822,
+                873
+              ],
+              [
+                890,
+                934
+              ],
+              [
+                1016,
+                1022
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                822,
+                873
+              ],
+              [
+                890,
+                934
+              ],
+              [
+                1017,
+                1023
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                822,
+                873
+              ],
+              [
+                890,
+                934
+              ],
+              [
+                1019,
+                1022
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                822,
+                873
+              ],
+              [
+                890,
+                934
+              ],
+              [
+                1020,
+                1022
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                823,
+                873
+              ],
+              [
+                890,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                823,
+                873
+              ],
+              [
+                891,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                824,
+                872
+              ],
+              [
+                892,
+                933
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                825,
+                871
+              ],
+              [
+                892,
+                932
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                826,
+                870
+              ],
+              [
+                894,
+                931
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                827,
+                869
+              ],
+              [
+                894,
+                930
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        822,
+        959,
+        935,
+        971
+      ],
+      "manualRootBasis": "Frame15: both boots visually located in sourceROI[812,941,947,971], support x822–935, ground971, root878.5 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        812,
+        941,
+        947,
+        971
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          812,
+          941,
+          947,
+          971
+        ],
+        "ground": 971,
+        "occupiedBandSpan": [
+          822,
+          935
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                822,
+                874
+              ],
+              [
+                890,
+                935
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                822,
+                874
+              ],
+              [
+                890,
+                935
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                822,
+                874
+              ],
+              [
+                890,
+                935
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                822,
+                874
+              ],
+              [
+                890,
+                935
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                822,
+                874
+              ],
+              [
+                890,
+                935
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                822,
+                874
+              ],
+              [
+                890,
+                935
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                823,
+                874
+              ],
+              [
+                890,
+                935
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                823,
+                874
+              ],
+              [
+                891,
+                935
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                824,
+                873
+              ],
+              [
+                892,
+                934
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                825,
+                872
+              ],
+              [
+                892,
+                933
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                826,
+                871
+              ],
+              [
+                894,
+                932
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                827,
+                870
+              ],
+              [
+                894,
+                931
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 16,
+      "action": "profession",
+      "frame": 4,
+      "left": 1062,
+      "top": 681,
+      "width": 214,
+      "height": 290,
+      "componentLabels": [
+        18
+      ],
+      "rootX": 1138,
+      "rootY": 971,
+      "bootPairBandCandidate": {
+        "rootX": 1178,
+        "rootY": 971,
+        "occupiedBandSpan": [
+          1081,
+          1275
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                1081,
+                1133
+              ],
+              [
+                1150,
+                1194
+              ],
+              [
+                1262,
+                1274
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                1081,
+                1133
+              ],
+              [
+                1150,
+                1194
+              ],
+              [
+                1265,
+                1275
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                1081,
+                1133
+              ],
+              [
+                1150,
+                1194
+              ],
+              [
+                1266,
+                1275
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                1081,
+                1133
+              ],
+              [
+                1150,
+                1194
+              ],
+              [
+                1269,
+                1275
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                1081,
+                1133
+              ],
+              [
+                1150,
+                1194
+              ],
+              [
+                1270,
+                1275
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                1081,
+                1133
+              ],
+              [
+                1150,
+                1194
+              ],
+              [
+                1272,
+                1275
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                1081,
+                1133
+              ],
+              [
+                1150,
+                1194
+              ],
+              [
+                1274,
+                1275
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                1082,
+                1132
+              ],
+              [
+                1151,
+                1194
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                1083,
+                1131
+              ],
+              [
+                1152,
+                1192
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                1084,
+                1130
+              ],
+              [
+                1152,
+                1192
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                1085,
+                1128
+              ],
+              [
+                1154,
+                1190
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                1086,
+                1127
+              ],
+              [
+                1156,
+                1160
+              ],
+              [
+                1164,
+                1190
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        1081,
+        959,
+        1195,
+        971
+      ],
+      "manualRootBasis": "Frame16: both boots visually located in sourceROI[1072,941,1207,971], support x1081–1195, ground971, root1138 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        1072,
+        941,
+        1207,
+        971
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          1072,
+          941,
+          1207,
+          971
+        ],
+        "ground": 971,
+        "occupiedBandSpan": [
+          1081,
+          1195
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                1081,
+                1134
+              ],
+              [
+                1150,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                1081,
+                1134
+              ],
+              [
+                1150,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                1081,
+                1134
+              ],
+              [
+                1150,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                1081,
+                1134
+              ],
+              [
+                1150,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                1081,
+                1134
+              ],
+              [
+                1150,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                1081,
+                1134
+              ],
+              [
+                1150,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                1081,
+                1134
+              ],
+              [
+                1150,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                1082,
+                1133
+              ],
+              [
+                1151,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                1083,
+                1132
+              ],
+              [
+                1152,
+                1193
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                1084,
+                1131
+              ],
+              [
+                1152,
+                1193
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                1085,
+                1129
+              ],
+              [
+                1154,
+                1191
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                1086,
+                1128
+              ],
+              [
+                1156,
+                1161
+              ],
+              [
+                1164,
+                1191
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    },
+    {
+      "index": 17,
+      "action": "profession",
+      "frame": 5,
+      "left": 1313,
+      "top": 682,
+      "width": 214,
+      "height": 289,
+      "componentLabels": [
+        20
+      ],
+      "rootX": 1389,
+      "rootY": 971,
+      "bootPairBandCandidate": {
+        "rootX": 1429.5,
+        "rootY": 971,
+        "occupiedBandSpan": [
+          1333,
+          1526
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                1333,
+                1384
+              ],
+              [
+                1400,
+                1444
+              ],
+              [
+                1513,
+                1524
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                1333,
+                1384
+              ],
+              [
+                1400,
+                1444
+              ],
+              [
+                1515,
+                1525
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                1333,
+                1384
+              ],
+              [
+                1400,
+                1444
+              ],
+              [
+                1518,
+                1525
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                1333,
+                1384
+              ],
+              [
+                1400,
+                1444
+              ],
+              [
+                1520,
+                1526
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                1333,
+                1384
+              ],
+              [
+                1400,
+                1444
+              ],
+              [
+                1522,
+                1526
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                1333,
+                1384
+              ],
+              [
+                1400,
+                1444
+              ],
+              [
+                1524,
+                1526
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                1333,
+                1384
+              ],
+              [
+                1400,
+                1444
+              ],
+              [
+                1525,
+                1525
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                1334,
+                1384
+              ],
+              [
+                1401,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                1335,
+                1383
+              ],
+              [
+                1402,
+                1442
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                1335,
+                1382
+              ],
+              [
+                1403,
+                1441
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                1337,
+                1380
+              ],
+              [
+                1404,
+                1439
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                1337,
+                1376
+              ],
+              [
+                1405,
+                1438
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        1333,
+        959,
+        1445,
+        971
+      ],
+      "manualRootBasis": "Frame17: both boots visually located in sourceROI[1323,941,1458,971], support x1333–1445, ground971, root1389 between soles. Spear tip excluded despite original full-alpha band extending to blade.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually.",
+      "manualBootMeasurementRegion": [
+        1323,
+        941,
+        1458,
+        971
+      ],
+      "manualBootSupportMeasurement": {
+        "region": [
+          1323,
+          941,
+          1458,
+          971
+        ],
+        "ground": 971,
+        "occupiedBandSpan": [
+          1333,
+          1445
+        ],
+        "bandHeight": 12,
+        "rows": [
+          {
+            "y": 959,
+            "runs": [
+              [
+                1333,
+                1385
+              ],
+              [
+                1400,
+                1445
+              ]
+            ]
+          },
+          {
+            "y": 960,
+            "runs": [
+              [
+                1333,
+                1385
+              ],
+              [
+                1400,
+                1445
+              ]
+            ]
+          },
+          {
+            "y": 961,
+            "runs": [
+              [
+                1333,
+                1385
+              ],
+              [
+                1400,
+                1445
+              ]
+            ]
+          },
+          {
+            "y": 962,
+            "runs": [
+              [
+                1333,
+                1385
+              ],
+              [
+                1400,
+                1445
+              ]
+            ]
+          },
+          {
+            "y": 963,
+            "runs": [
+              [
+                1333,
+                1385
+              ],
+              [
+                1400,
+                1445
+              ]
+            ]
+          },
+          {
+            "y": 964,
+            "runs": [
+              [
+                1333,
+                1385
+              ],
+              [
+                1400,
+                1445
+              ]
+            ]
+          },
+          {
+            "y": 965,
+            "runs": [
+              [
+                1333,
+                1385
+              ],
+              [
+                1400,
+                1445
+              ]
+            ]
+          },
+          {
+            "y": 966,
+            "runs": [
+              [
+                1334,
+                1385
+              ],
+              [
+                1401,
+                1444
+              ]
+            ]
+          },
+          {
+            "y": 967,
+            "runs": [
+              [
+                1335,
+                1384
+              ],
+              [
+                1402,
+                1443
+              ]
+            ]
+          },
+          {
+            "y": 968,
+            "runs": [
+              [
+                1335,
+                1383
+              ],
+              [
+                1403,
+                1442
+              ]
+            ]
+          },
+          {
+            "y": 969,
+            "runs": [
+              [
+                1337,
+                1381
+              ],
+              [
+                1404,
+                1440
+              ]
+            ]
+          },
+          {
+            "y": 970,
+            "runs": [
+              [
+                1337,
+                1377
+              ],
+              [
+                1405,
+                1439
+              ]
+            ]
+          }
+        ],
+        "reviewed": true,
+        "excludes": "Far-right spear blade/shaft outside explicit boot region; robe hem ends above sole band"
+      }
+    }
+  ],
+  "canvas": [
+    96,
+    96
+  ],
+  "pivot": [
+    48,
+    88
+  ],
+  "proposalOnly": true,
+  "visuallyReviewed": true,
+  "rootReviewPolicy": "Review source and native strip. Set neutralTopY to the actual crown/body top (exclude props), neutralBodyTopConfirmed=true and neutralBodyTopBasis. For every frame set rootX/rootY from both boots, bootPairSupportWitness=[left,top,right,bottom] covering both boot support bands, and manualRootBasis (or a shared manualRootReviewBasis). Run --render after edits, then explicit confirm with exact-hash visual assessment.",
+  "artApproved": false,
+  "ownerApproved": false,
+  "motionApproved": false,
+  "runtimeImported": false,
+  "neutralHeight": 292,
+  "scale": 0.273972602739726,
+  "diagnostics": [
+    {
+      "index": 0,
+      "sourceOpaque": 37241,
+      "nativeOpaquePixels": 2816,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        58,
+        80
+      ],
+      "offset": [
+        28,
+        8
+      ],
+      "sourceLabels": [
+        1,
+        7
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 1,
+      "sourceOpaque": 37191,
+      "nativeOpaquePixels": 2786,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        57,
+        80
+      ],
+      "offset": [
+        27,
+        8
+      ],
+      "sourceLabels": [
+        2
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 2,
+      "sourceOpaque": 37938,
+      "nativeOpaquePixels": 2840,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        59,
+        80
+      ],
+      "offset": [
+        27,
+        8
+      ],
+      "sourceLabels": [
+        3
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 3,
+      "sourceOpaque": 37590,
+      "nativeOpaquePixels": 2835,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        59,
+        80
+      ],
+      "offset": [
+        29,
+        8
+      ],
+      "sourceLabels": [
+        6
+      ],
+      "crownToRootNative": 79.73,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 4,
+      "sourceOpaque": 37698,
+      "nativeOpaquePixels": 2864,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        59,
+        80
+      ],
+      "offset": [
+        27,
+        8
+      ],
+      "sourceLabels": [
+        4
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 5,
+      "sourceOpaque": 37414,
+      "nativeOpaquePixels": 2808,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        58,
+        80
+      ],
+      "offset": [
+        28,
+        8
+      ],
+      "sourceLabels": [
+        5
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 6,
+      "sourceOpaque": 37157,
+      "nativeOpaquePixels": 2814,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        60,
+        79
+      ],
+      "offset": [
+        27,
+        9
+      ],
+      "sourceLabels": [
+        9
+      ],
+      "crownToRootNative": 78.63,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 7,
+      "sourceOpaque": 37276,
+      "nativeOpaquePixels": 2820,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        58,
+        79
+      ],
+      "offset": [
+        27,
+        9
+      ],
+      "sourceLabels": [
+        10
+      ],
+      "crownToRootNative": 78.63,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 8,
+      "sourceOpaque": 37756,
+      "nativeOpaquePixels": 2849,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        59,
+        79
+      ],
+      "offset": [
+        29,
+        9
+      ],
+      "sourceLabels": [
+        11
+      ],
+      "crownToRootNative": 78.63,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 9,
+      "sourceOpaque": 37713,
+      "nativeOpaquePixels": 2856,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        59,
+        79
+      ],
+      "offset": [
+        28,
+        9
+      ],
+      "sourceLabels": [
+        12,
+        14
+      ],
+      "crownToRootNative": 78.63,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 10,
+      "sourceOpaque": 37594,
+      "nativeOpaquePixels": 2824,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        59,
+        79
+      ],
+      "offset": [
+        26,
+        9
+      ],
+      "sourceLabels": [
+        8
+      ],
+      "crownToRootNative": 78.9,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 11,
+      "sourceOpaque": 37065,
+      "nativeOpaquePixels": 2808,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        58,
+        79
+      ],
+      "offset": [
+        28,
+        9
+      ],
+      "sourceLabels": [
+        13
+      ],
+      "crownToRootNative": 78.63,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 12,
+      "sourceOpaque": 38245,
+      "nativeOpaquePixels": 2872,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        60,
+        79
+      ],
+      "offset": [
+        27,
+        9
+      ],
+      "sourceLabels": [
+        15
+      ],
+      "crownToRootNative": 79.45,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 13,
+      "sourceOpaque": 37826,
+      "nativeOpaquePixels": 2867,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        60,
+        79
+      ],
+      "offset": [
+        27,
+        9
+      ],
+      "sourceLabels": [
+        16
+      ],
+      "crownToRootNative": 79.45,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 14,
+      "sourceOpaque": 37796,
+      "nativeOpaquePixels": 2823,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        61,
+        79
+      ],
+      "offset": [
+        26,
+        9
+      ],
+      "sourceLabels": [
+        19,
+        21
+      ],
+      "crownToRootNative": 79.18,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 15,
+      "sourceOpaque": 38565,
+      "nativeOpaquePixels": 2930,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        61,
+        79
+      ],
+      "offset": [
+        27,
+        9
+      ],
+      "sourceLabels": [
+        17
+      ],
+      "crownToRootNative": 79.45,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 16,
+      "sourceOpaque": 37600,
+      "nativeOpaquePixels": 2852,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        59,
+        79
+      ],
+      "offset": [
+        27,
+        9
+      ],
+      "sourceLabels": [
+        18
+      ],
+      "crownToRootNative": 79.45,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 17,
+      "sourceOpaque": 37982,
+      "nativeOpaquePixels": 2881,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        59,
+        79
+      ],
+      "offset": [
+        27,
+        9
+      ],
+      "sourceLabels": [
+        20
+      ],
+      "crownToRootNative": 79.18,
+      "manualBootPairWitnessPresent": true
+    }
+  ],
+  "reviewStrip": "review/dinh-soc-northwest-root-review-2x.png",
+  "largeReviewStrip": "review/dinh-soc-northwest-root-review-6x.png",
+  "reviewStripSha256": "16339e8e7de5db4e9ae62d77465a8e9a3180a7bd28e747cbc9b8645ec0ec0505",
+  "largeReviewStripSha256": "856d04c0b8ff25dc60a1a1e0dbf7c472f709eb562975b3baa4f7cace4ba7752d",
+  "renderedMeasurementSha256": "ead8735b77c6b54c4d5deadfad6ee75f367360e86f52ac93ad4b4c81bb841806",
+  "needsManualAdjustment": false,
+  "componentReviewBasis": "18 full body poses plus contained tiny hair/edge islands retained in corresponding frame componentLabels: label7@(58,134),area2; label14@(957,529),area1; label21@(555,777),area1. No unassigned/discarded threshold-opaque part."
+}

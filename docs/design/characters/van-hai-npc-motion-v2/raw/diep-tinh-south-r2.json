@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: targeted sprite sheet correction. IMAGE1 remains PRIMARY liveWangLin camera/anatomy/pixel reference in SOUTH. IMAGE2 is the existing18pose Diệp Tĩnh sheet to CORRECT. IMAGE3 is accepted SAME NPC identity/costume only. Edit this SAME NPC sheet; preserve18realposes, sixcolumns3rows, fullbody, transparent background, pixel clusters, compactlargehead, SAME scale/skull/clothes/boots in everyrow. Do not reinstate a southeast view from identityimage3.\n\nSpecific correction: Row2talk frame4 wrongly makes the CLOSED BAMBOO SCROLL disappear. Preserve the same small bamboo scroll in her left/anatomical holding hand for ALL6talk poses, including frame4. Explanatory palm is the other hand. Keep scroll shape, size, hand and occlusion continuous. In row3profession only, scroll may rest/tuck naturally so hands near abdomen can demonstrate breath as approved; never spawn/disappear a prop arbitrarily.\n\nPreserve all other pose timing/progression and exact clothing/age/hair/props identity. Keep fixedcamera in EVERY row/frame. Human native80px calibration, no perrow/pose resizing,96x96paddingfoot48,88. Generous transparent gaps, no floor/shadow/glow/text/FX. The original image dimensions may differ fromrequest; keep same six-by-three sheet organization and body scale, complete anatomy. New revision remains candidate.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: targeted sprite sheet correction. IMAGE1 remains PRIMARY liveWangLin camera/anatomy/pixel reference in SOUTH. IMAGE2 is the existing18pose Diệp Tĩnh sheet to CORRECT. IMAGE3 is accepted SAME NPC identity/costume only. Edit this SAME NPC sheet; preserve18realposes, sixcolumns3rows, fullbody, transparent background, pixel clusters, compactlargehead, SAME scale/skull/clothes/boots in everyrow. Do not reinstate a southeast view from identityimage3.\n\nSpecific correction: Row2talk frame4 wrongly makes the CLOSED BAMBOO SCROLL disappear. Preserve the same small bamboo scroll in her left/anatomical holding hand for ALL6talk poses, including frame4. Explanatory palm is the other hand. Keep scroll shape, size, hand and occlusion continuous. In row3profession only, scroll may rest/tuck naturally so hands near abdomen can demonstrate breath as approved; never spawn/disappear a prop arbitrarily.\n\nPreserve all other pose timing/progression and exact clothing/age/hair/props identity. Keep fixedcamera in EVERY row/frame. Human native80px calibration, no perrow/pose resizing,96x96paddingfoot48,88. Generous transparent gaps, no floor/shadow/glow/text/FX. The original image dimensions may differ fromrequest; keep same six-by-three sheet organization and body scale, complete anatomy. New revision remains candidate.\n",
+    "n": 1,
+    "size": "1536x1536",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-13T07:34:00.525Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v2\\inputs\\wang-lin-live-south-nearest8x.png",
+      "filename": "wang-lin-live-south-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9300,
+      "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v2\\raw\\diep-tinh-south.png",
+      "filename": "diep-tinh-south.png",
+      "mimeType": "image/png",
+      "bytes": 2117440,
+      "sha256": "8a8dd926d82159ba1a99ee17d9373ad100e4c6b7a3ee9d7f6628f9284101849d",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v2\\inputs\\diep-tinh-approved-southeast-nearest8x.png",
+      "filename": "diep-tinh-approved-southeast-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 16952,
+      "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414",
+      "dimensions": {
+        "width": 768,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "diep-tinh-south-r2.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 2110666,
+    "sha256": "f1c52e0cbec5a16a1e725311227c7ea7265847b399d40a702a87a15e27f28a12",
+    "dimensions": {
+      "width": 1254,
+      "height": 1254
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": false
+  }
+}

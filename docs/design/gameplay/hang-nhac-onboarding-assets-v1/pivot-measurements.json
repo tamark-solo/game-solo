@@ -1,0 +1,32 @@
+{
+  "schema": "game-solo-native-pivot-measurements-1",
+  "date": "2026-10-13",
+  "method": "Visual inspection of exported PNG at 6x nearest with an 8px coordinate grid. Mark physical front contact, or midpoint of two front support contacts. Coordinates are native pixels, origin top-left.",
+  "scope": "Art depth reference for review only. Not collision geometry, socket, gameplay placement, or owner approval.",
+  "assets": [
+    {
+      "id": "hn-quest-sample",
+      "nativeSha256": "7a2b674551427b22f33fa154bfa7f0c47efb9edc10a9a9079bd07ef79406c13d",
+      "pivot": {"x": 16, "y": 32},
+      "supportPoints": [{"x": 16, "y": 32}],
+      "basis": "Midpoint of the visible bottom brass contact band. Not the canvas midpoint.",
+      "evidence": "review/hn-quest-sample-pivot.png"
+    },
+    {
+      "id": "hn-qi-guide-stone",
+      "nativeSha256": "dae413b1d70c9c348e12150e621b01ac2f88cec3766d3c5089c7f41c00ac7c52",
+      "pivot": {"x": 38, "y": 66},
+      "supportPoints": [{"x": 38, "y": 66}],
+      "basis": "Lowest front vertex of the ivory octagonal plinth. Does not infer a collider from alpha.",
+      "evidence": "review/hn-qi-guide-stone-pivot.png"
+    },
+    {
+      "id": "hn-sample-comparator",
+      "nativeSha256": "81a650e359bf53522eddfe125cbc3ac2d3096da6b9e67013cb8e2aee435dd043",
+      "pivot": {"x": 62, "y": 77},
+      "supportPoints": [{"x": 28, "y": 64}, {"x": 96, "y": 90}],
+      "basis": "Midpoint of two visible front base contacts, arithmetic ((28+96)/2,(64+90)/2). Image center is not used.",
+      "evidence": "review/hn-sample-comparator-pivot.png"
+    }
+  ]
+}

@@ -62,6 +62,10 @@ npm.cmd run imagegen -- --prompt "Một chiếc chén gốm xanh" --dry-run
 
 Mặc định tạo một ảnh 1024 × 1024, chất lượng `low`, định dạng PNG. Có thể chọn `--quality low|medium|high|auto`, `--size auto|WIDTHxHEIGHT`, `--n`, `--timeout` (giây). Dùng `--help` để xem toàn bộ tham số. Tệp đích đã có sẽ bị chặn trước khi gọi API; chỉ `--force` mới cho phép ghi đè.
 
+`--background transparent|opaque|auto` là tùy chọn rõ cho `generate`, `edit` và `edit-responses` ở chế độ `full`. Nếu bỏ cờ này, tool không thêm trường `background`, giữ payload mặc định trước đây. Khi có cờ, Image API nhận trường đó trong JSON hoặc multipart; Responses full nhận trong tool ảnh. Metadata `requestParameters` lưu phần đã gửi, và Responses full cũng ghi trong `imageOptions.intended`/`transmitted`. Responses minimal từ chối cờ này trước POST vì hợp đồng minimal chỉ gửi type/model.
+
+Tool vẫn gửi `output_format: "png"`, phù hợp yêu cầu nền trong suốt của [Image API](https://developers.openai.com/api/reference/resources/images/methods/edit). Router thực tế có thể không áp dụng tùy chọn; phải kiểm alpha của ảnh trả về, không coi ô caro được vẽ trong bitmap là nền trong suốt. Cờ này không đổi model/endpoint/transport hoặc tạo retry/fallback.
+
 ## Lịch sử nhà cung cấp trước: chỉnh ảnh qua Responses
 
 Rà trang công khai [dashboard router](https://api.clituasmail.com/) ngày 12/10/2026: nhà cung cấp nói **chưa có multipart edits**, nhưng ImageGen trong Codex dùng `/v1/responses` với tool `image_generation`, model trong tool `gpt-image-2` và model chính là model văn bản. Mẫu kết nối của họ dùng `gpt-6-astra` với `wire_api = "responses"`. Router không công bố OpenAPI tại `/openapi.json` hoặc trang `/docs` (cả hai trả 404); trang dashboard chỉ mô tả giao thức, chưa cung cấp toàn bộ schema.

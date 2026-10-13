@@ -1,0 +1,295 @@
+{
+  "schema": "npc-source-focused-face-audit-1",
+  "date": "2026-10-13",
+  "actor": "NPC-HN-CULTIVATION",
+  "slug": "diep-tinh",
+  "direction": "east",
+  "source": "raw/diep-tinh-east.png",
+  "sourceSha256": "d5078a86e9c6b015198222384007f74672f93a0509ab7975d220a1d20c263706",
+  "auditImage": "review/diep-tinh-east-face-audit.png",
+  "primaryReference": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-east-native.png",
+  "scope": "Read-only source visual audit. This does not approve ART, edit source, or alter registration.",
+  "orientationPass": false,
+  "reviewedFrames": 18,
+  "finding": "All18faces retain a three-quarter front-right angle rather than live Wang east one-eye side view. Two open eyes are clear in16poses; idle5 and profession5 close the near eye while the far eye remains visibly open. The dark mark at the far face edge is an eye: it has a separate eyebrow, enclosed black eye shape and white catchlight surrounded by skin, not a hair strand.",
+  "concreteFrames": [
+    "idle1: both near and far open eye with separate eyebrows",
+    "idle5: near eye closes; far eye stays open",
+    "talk2/talk3: both open eyes remain during extended hand gesture",
+    "profession3/profession4: both open eyes remain during cultivation gesture",
+    "profession5: near eye closes; far eye stays open"
+  ],
+  "requiredCorrection": "Regenerate a true east side view for all18poses with one visible eye, retaining NPC grey bun, robe, bamboo-scroll continuity and the approved own identity.",
+  "records": [
+    {
+      "action": "idle",
+      "frame": 1,
+      "sourceFaceRect": {
+        "left": 81,
+        "top": 212,
+        "width": 107,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "idle",
+      "frame": 2,
+      "sourceFaceRect": {
+        "left": 290,
+        "top": 212,
+        "width": 107,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "idle",
+      "frame": 3,
+      "sourceFaceRect": {
+        "left": 499,
+        "top": 212,
+        "width": 107,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "idle",
+      "frame": 4,
+      "sourceFaceRect": {
+        "left": 708,
+        "top": 212,
+        "width": 107,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "idle",
+      "frame": 5,
+      "sourceFaceRect": {
+        "left": 917,
+        "top": 212,
+        "width": 107,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 1,
+      "visibleClosedEyes": 1,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "idle",
+      "frame": 6,
+      "sourceFaceRect": {
+        "left": 1126,
+        "top": 212,
+        "width": 106,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "talk",
+      "frame": 1,
+      "sourceFaceRect": {
+        "left": 81,
+        "top": 601,
+        "width": 107,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "talk",
+      "frame": 2,
+      "sourceFaceRect": {
+        "left": 302,
+        "top": 601,
+        "width": 130,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "talk",
+      "frame": 3,
+      "sourceFaceRect": {
+        "left": 512,
+        "top": 601,
+        "width": 133,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "talk",
+      "frame": 4,
+      "sourceFaceRect": {
+        "left": 708,
+        "top": 601,
+        "width": 107,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "talk",
+      "frame": 5,
+      "sourceFaceRect": {
+        "left": 917,
+        "top": 601,
+        "width": 107,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "talk",
+      "frame": 6,
+      "sourceFaceRect": {
+        "left": 1126,
+        "top": 601,
+        "width": 106,
+        "height": 88
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "profession",
+      "frame": 1,
+      "sourceFaceRect": {
+        "left": 81,
+        "top": 984,
+        "width": 107,
+        "height": 87
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "profession",
+      "frame": 2,
+      "sourceFaceRect": {
+        "left": 290,
+        "top": 984,
+        "width": 106,
+        "height": 87
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "profession",
+      "frame": 3,
+      "sourceFaceRect": {
+        "left": 501,
+        "top": 984,
+        "width": 110,
+        "height": 87
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "profession",
+      "frame": 4,
+      "sourceFaceRect": {
+        "left": 708,
+        "top": 984,
+        "width": 107,
+        "height": 87
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "profession",
+      "frame": 5,
+      "sourceFaceRect": {
+        "left": 917,
+        "top": 984,
+        "width": 107,
+        "height": 87
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 1,
+      "visibleClosedEyes": 1,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    },
+    {
+      "action": "profession",
+      "frame": 6,
+      "sourceFaceRect": {
+        "left": 1126,
+        "top": 984,
+        "width": 106,
+        "height": 87
+      },
+      "faceAngle": "three-quarter-front-right",
+      "visibleOpenEyes": 2,
+      "visibleClosedEyes": 0,
+      "farEyeVisible": true,
+      "verdict": "east-orientation-fails"
+    }
+  ]
+}

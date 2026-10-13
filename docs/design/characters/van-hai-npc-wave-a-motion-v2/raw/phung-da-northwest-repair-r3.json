@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang NORTHWEST remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nUse WIDE1536x1024 sheet6columns3rows with18 complete existing individual poses at one common original head/body scale, translated into roomy layout. Talk row2frame6 / source index11 currently clips the far RIGHT-hand wooden sword tip at the right PNGboundary. Restore the FULL pointed wood blade/cap from other correct frames, give ALL18 complete silhouettes at least24 real alpha0 gutter pixels between neighbors and32 at ALL outer margins. Other final-column blades also need this full margin. Never shrink individual body, shorten/crop a sword or hair, or fit/deform anatomy. Preserve the corrected ONE wooden sword held by anatomical RIGHT FAR hand on screen-RIGHT/up in every pose, near LEFT hand empty/resting and NO extra left blade. Keep true BACK-LEFT camera, own compact spiky hair/grey-green robe/red-brown wrists/boots and idle/talk/low grip reset profession sequence, all18 genuine poses and settle. No hand swap/frontturn/extraweapon/static copied neutral.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang NORTHWEST remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nUse WIDE1536x1024 sheet6columns3rows with18 complete existing individual poses at one common original head/body scale, translated into roomy layout. Talk row2frame6 / source index11 currently clips the far RIGHT-hand wooden sword tip at the right PNGboundary. Restore the FULL pointed wood blade/cap from other correct frames, give ALL18 complete silhouettes at least24 real alpha0 gutter pixels between neighbors and32 at ALL outer margins. Other final-column blades also need this full margin. Never shrink individual body, shorten/crop a sword or hair, or fit/deform anatomy. Preserve the corrected ONE wooden sword held by anatomical RIGHT FAR hand on screen-RIGHT/up in every pose, near LEFT hand empty/resting and NO extra left blade. Keep true BACK-LEFT camera, own compact spiky hair/grey-green robe/red-brown wrists/boots and idle/talk/low grip reset profession sequence, all18 genuine poses and settle. No hand swap/frontturn/extraweapon/static copied neutral.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-13T12:47:49.289Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\inputs\\wang-lin-live-northwest-nearest8x.png",
+      "filename": "wang-lin-live-northwest-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9340,
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\raw\\phung-da-northwest-repair-r2.png",
+      "filename": "phung-da-northwest-repair-r2.png",
+      "mimeType": "image/png",
+      "bytes": 1818544,
+      "sha256": "b63ed099bf62b5d30f1b1471c24cf22628783d8791eed33b5bfcb610f6235f38",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\direction-neutral\\nearest8x\\phung-da-northwest.png",
+      "filename": "phung-da-northwest.png",
+      "mimeType": "image/png",
+      "bytes": 14762,
+      "sha256": "c842aa2c127e6f9e2d319e76b6cd386f2367338cba1aa1666018fe8a31a28e1b",
+      "dimensions": {
+        "width": 768,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "phung-da-northwest-repair-r3.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 2155564,
+    "sha256": "a22bf812f223203058ee4af93cb1d5c54afced78cc42b598902249ecde1b74ce",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

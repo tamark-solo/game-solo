@@ -1,0 +1,431 @@
+{
+  "schema": "npc-concept-registration-1",
+  "date": "2026-10-13",
+  "runtimeConsumable": false,
+  "artApproved": false,
+  "ownerApproved": false,
+  "coverage": {
+    "actors": 4,
+    "viewsPerActor": 1,
+    "posesPerActor": 1,
+    "animationClips": 0
+  },
+  "productionSha256AtPack": "0c1dd91850590bfeddc664c1780268ced8d7d3f29f27ec31004fa2b37aa19dc2",
+  "measurementsSha256": "8277b9d0422865ac64825f020fe5f866d77fe246b09279ff7807ccb8a4e030ff",
+  "approvedPlayerReference": {
+    "file": "docs/design/characters/wang-lin-pixel-production-v2/masters/southeast.png",
+    "sha256": "f89dcf4171aa70e1411553498e8b1f12b3a2b46287272f196604e537e032af54",
+    "canvas": [
+      64,
+      96
+    ],
+    "pivot": [
+      32,
+      88
+    ],
+    "bodyHeightPx": 80,
+    "modified": false
+  },
+  "headComparison": {
+    "file": "../wang-lin-pixel-production-v2/masters/southeast.png",
+    "headHairBounds": [
+      5,
+      8,
+      49,
+      49
+    ],
+    "bodyHeightPx": 80,
+    "headToBodyRatio": 0.5125,
+    "scope": "Approximate hair/bun through chin; long back hair excluded, not anatomy approval."
+  },
+  "actors": [
+    {
+      "id": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "status": "concept-candidate",
+      "direction": "southeast",
+      "pose": "neutral",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceBounds": [
+        266,
+        125,
+        742,
+        1411
+      ],
+      "sourcePivot": [
+        421,
+        1411
+      ],
+      "sourceSupportWitness": [
+        368,
+        1320,
+        474,
+        1411
+      ],
+      "bodyTopY": 125,
+      "sourceHeadBounds": [
+        338,
+        125,
+        668,
+        557
+      ],
+      "rootBasis": "Đế giày trước bên trái: tâm đoạn đế tiếp đất x392–449, ground ngay sau hàng1410. Giày sau ở cao hơn do phối cảnh; bảng ngọc và túi không xác định chân.",
+      "measurementNotes": "Tóc/búi và râu giữ trong head box; đầu tương đối nhỏ và thân thanh hơn Pixel02, cần owner xem anatomy.",
+      "pivotStatus": "concept-measured-pending-motion-review",
+      "sharedNeutralScale": 0.06220839813374806,
+      "pixelsResampled": true,
+      "resampling": "nearest-once",
+      "nativeCutoutSize": [
+        30,
+        80
+      ],
+      "nativeCutoutRoot": [
+        10,
+        80
+      ],
+      "canvasTranslation": [
+        22,
+        8
+      ],
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "nativeBounds": [
+        22,
+        8,
+        52,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "measuredBodyHeightPx": 80,
+      "nativeHeadBounds": [
+        26,
+        8,
+        47,
+        35
+      ],
+      "headToBodyRatio": 0.3359253499222395,
+      "alphaPolicy": {
+        "sourcePreserved": true,
+        "nativeBodyThreshold": 210,
+        "binaryNativeAlpha": true,
+        "magentaKeyEnabled": false,
+        "magentaKey": {
+          "redMin": 180,
+          "blueMin": 180,
+          "greenMax": 140,
+          "channelMinusGreenMin": 70
+        },
+        "magentaPixelsExcluded": 0,
+        "lowAlphaSourcePixelsExcluded": 26449,
+        "rgbPainted": false,
+        "componentsRemoved": 0
+      },
+      "sourceSha256": "b443d504f68456dc55da78de8bba036f99f8bd2bffda065fc49868a33d17cb0c",
+      "spriteSha256": "fdb3823cd1e7f5287c3289b8d12463c6c2ace4477ad36cdc364322bc9d248ff6",
+      "promptSha256": "6cbe9a489ca3e527a291f93aca1a0d993c939e7e2c0e586b90f4764f767c5714",
+      "runtimeConsumable": false,
+      "artApproved": false,
+      "ownerApproved": false
+    },
+    {
+      "id": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "status": "concept-candidate",
+      "direction": "southeast",
+      "pose": "neutral",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceBounds": [
+        279,
+        153,
+        751,
+        1421
+      ],
+      "sourcePivot": [
+        438,
+        1421
+      ],
+      "sourceSupportWitness": [
+        380,
+        1344,
+        484,
+        1421
+      ],
+      "bodyTopY": 153,
+      "sourceHeadBounds": [
+        304,
+        153,
+        699,
+        592
+      ],
+      "rootBasis": "Đế giày trước bên trái: tâm vùng đế x414–462, ground ngay sau hàng1420. Gấu áo và giày sau không dùng làm tâm root.",
+      "measurementNotes": "Tóc bạc/búi và chuỗi ngọc đúng brief; mặt hiện trẻ hơn nữ lớn tuổi, cần owner xem. Head box loại tua ngọc rủ.",
+      "pivotStatus": "concept-measured-pending-motion-review",
+      "sharedNeutralScale": 0.06309148264984227,
+      "pixelsResampled": true,
+      "resampling": "nearest-once",
+      "nativeCutoutSize": [
+        30,
+        80
+      ],
+      "nativeCutoutRoot": [
+        10,
+        80
+      ],
+      "canvasTranslation": [
+        22,
+        8
+      ],
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "nativeBounds": [
+        22,
+        8,
+        52,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "measuredBodyHeightPx": 80,
+      "nativeHeadBounds": [
+        24,
+        8,
+        48,
+        36
+      ],
+      "headToBodyRatio": 0.3462145110410095,
+      "alphaPolicy": {
+        "sourcePreserved": true,
+        "nativeBodyThreshold": 210,
+        "binaryNativeAlpha": true,
+        "magentaKeyEnabled": false,
+        "magentaKey": {
+          "redMin": 180,
+          "blueMin": 180,
+          "greenMax": 140,
+          "channelMinusGreenMin": 70
+        },
+        "magentaPixelsExcluded": 0,
+        "lowAlphaSourcePixelsExcluded": 29069,
+        "rgbPainted": false,
+        "componentsRemoved": 0
+      },
+      "sourceSha256": "52b4a8db1c083bd6e78b2cf85a05a9e1497e9ae28c612e87de534af39087ba43",
+      "spriteSha256": "150897855aa5a4957f5b9ce06e93de981d785e80eb6e7c58b74830b12fbb1c72",
+      "promptSha256": "575867b18cefc8504871d73c7ff4b570996594160c1b0475c4358a509757eb2b",
+      "runtimeConsumable": false,
+      "artApproved": false,
+      "ownerApproved": false
+    },
+    {
+      "id": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "status": "concept-candidate",
+      "direction": "southeast",
+      "pose": "neutral",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceBounds": [
+        216,
+        81,
+        783,
+        1412
+      ],
+      "sourcePivot": [
+        372,
+        1412
+      ],
+      "sourceSupportWitness": [
+        318,
+        1308,
+        428,
+        1412
+      ],
+      "bodyTopY": 81,
+      "sourceHeadBounds": [
+        347,
+        81,
+        663,
+        448
+      ],
+      "rootBasis": "Giày trụ trước bên trái: tâm đoạn đế x339–405, ground ngay sau hàng1411. Mũi mộc kiếm chéo thấp bên phải không phải điểm chân.",
+      "measurementNotes": "Tỷ lệ đầu nhỏ và vai/thân dài hơn Pixel02; cần review anatomy trước sản xuất hướng/action.",
+      "pivotStatus": "concept-measured-pending-motion-review",
+      "sharedNeutralScale": 0.06010518407212622,
+      "pixelsResampled": true,
+      "resampling": "nearest-once",
+      "nativeCutoutSize": [
+        34,
+        80
+      ],
+      "nativeCutoutRoot": [
+        9,
+        80
+      ],
+      "canvasTranslation": [
+        47,
+        8
+      ],
+      "canvas": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "nativeBounds": [
+        47,
+        8,
+        81,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "measuredBodyHeightPx": 80,
+      "nativeHeadBounds": [
+        55,
+        8,
+        74,
+        30
+      ],
+      "headToBodyRatio": 0.27573253193087904,
+      "alphaPolicy": {
+        "sourcePreserved": true,
+        "nativeBodyThreshold": 210,
+        "binaryNativeAlpha": true,
+        "magentaKeyEnabled": false,
+        "magentaKey": {
+          "redMin": 180,
+          "blueMin": 180,
+          "greenMax": 140,
+          "channelMinusGreenMin": 70
+        },
+        "magentaPixelsExcluded": 0,
+        "lowAlphaSourcePixelsExcluded": 47577,
+        "rgbPainted": false,
+        "componentsRemoved": 0
+      },
+      "sourceSha256": "0f9aa072183a5191af2ebbba7b0e1bf865f3b1c2e6019b3b0c17770c6119baa4",
+      "spriteSha256": "37092d3e11eb8f7f653c717186b1c23cae932552374b522ceabccecc2abdb4dc",
+      "promptSha256": "ad86365347062870d9f7613796a6196616b7b3ca62fc9e396053d9022fd0dfd4",
+      "runtimeConsumable": false,
+      "artApproved": false,
+      "ownerApproved": false
+    },
+    {
+      "id": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "status": "concept-candidate",
+      "direction": "southeast",
+      "pose": "neutral",
+      "sourceSize": [
+        1143,
+        1376
+      ],
+      "sourceBounds": [
+        350,
+        85,
+        849,
+        1294
+      ],
+      "sourcePivot": [
+        458,
+        1294
+      ],
+      "sourceSupportWitness": [
+        402,
+        1200,
+        502,
+        1294
+      ],
+      "bodyTopY": 85,
+      "sourceHeadBounds": [
+        378,
+        85,
+        734,
+        474
+      ],
+      "rootBasis": "Đế giày trước bên trái: tâm đoạn đế x435–481, ground ngay sau hàng1293. Hộp niêm cầm cao và gấu tạp dề không xác định root.",
+      "measurementNotes": "Hộp niêm ở tay là pose kiểm vật; nguồn thực1143×1376 khác request. Đầu/thân thanh hơn Pixel02; kiểm riêng trước approval.",
+      "pivotStatus": "concept-measured-pending-motion-review",
+      "sharedNeutralScale": 0.06617038875103391,
+      "pixelsResampled": true,
+      "resampling": "nearest-once",
+      "nativeCutoutSize": [
+        33,
+        80
+      ],
+      "nativeCutoutRoot": [
+        7,
+        80
+      ],
+      "canvasTranslation": [
+        25,
+        8
+      ],
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "nativeBounds": [
+        25,
+        8,
+        58,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "measuredBodyHeightPx": 80,
+      "nativeHeadBounds": [
+        27,
+        8,
+        50,
+        34
+      ],
+      "headToBodyRatio": 0.3217535153019024,
+      "alphaPolicy": {
+        "sourcePreserved": true,
+        "nativeBodyThreshold": 210,
+        "binaryNativeAlpha": true,
+        "magentaKeyEnabled": false,
+        "magentaKey": {
+          "redMin": 180,
+          "blueMin": 180,
+          "greenMax": 140,
+          "channelMinusGreenMin": 70
+        },
+        "magentaPixelsExcluded": 0,
+        "lowAlphaSourcePixelsExcluded": 34429,
+        "rgbPainted": false,
+        "componentsRemoved": 0
+      },
+      "sourceSha256": "76adc009ae946a2a67ee7073fa5d2ac94d3e901c7ac9df3ea487578d66aa46bd",
+      "spriteSha256": "32c60687f1d3425ffb41a19464411fa209da37afabe769b5cd18c2d4e7b2add7",
+      "promptSha256": "ffc69fca1670a934be38aabebdc91a862415612a8bbc7de0d8d4b560c785b29a",
+      "runtimeConsumable": false,
+      "artApproved": false,
+      "ownerApproved": false
+    }
+  ]
+}

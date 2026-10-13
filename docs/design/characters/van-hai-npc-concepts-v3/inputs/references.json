@@ -1,0 +1,20 @@
+{
+  "operation": "multipart-edit",
+  "inputOrder": [
+    "pixel02-southeast-nearest8x.png as edit target",
+    "v1 Trần Duy as costume reference only"
+  ],
+  "images": [
+    {
+      "path": "pixel02-southeast-native.png",
+      "sha256": "f89dcf4171aa70e1411553498e8b1f12b3a2b46287272f196604e537e032af54"
+    },
+    {
+      "path": "pixel02-southeast-nearest8x.png",
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+    }
+  ],
+  "liveFrameVerification": "Pixel02 native reference RGBA matches frame1 of current public idle-southeast atlas",
+  "ownerApproved": false,
+  "artApproved": false
+}

@@ -22,6 +22,8 @@ export class QuestUI {
   private signature = '';
   private journalList?: HTMLElement;
   private selectedQuest = '';
+  private previousCurrent = '';
+  private profileId?: string;
   private tracker = document.getElementById('sect-objective')!;
   constructor(actions: { journal: () => void; guide: () => void }) {
     document.getElementById('journal')!.addEventListener('click', actions.journal);
@@ -53,6 +55,8 @@ export class QuestUI {
   }
   update(view: SectView | undefined, online: boolean, avatar: AvatarId): SectQuest {
     const quests = sectQuests(view), current = currentSectQuest(quests);
+    if (this.profileId !== view?.profileId || this.selectedQuest === this.previousCurrent && current.id !== this.previousCurrent) this.selectedQuest = current.id;
+    this.profileId = view?.profileId; this.previousCurrent = current.id;
     const syncing = online && !view;
     const label = document.getElementById('quest-state')!;
     label.textContent = syncing ? 'Đang đồng bộ' : !online ? 'Chưa kết nối' : QUEST_STATUS_LABELS[current.status];
@@ -63,7 +67,7 @@ export class QuestUI {
     const guide = document.getElementById('quest-guide') as HTMLButtonElement;
     guide.disabled = syncing || current.status === 'unreleased';
     guide.textContent = !online ? 'Vào sân để tiếp tục' : current.status === 'ready' ? 'Về NPC xác nhận' : 'Gặp người hướng dẫn';
-    guide.title = current.status === 'unreleased' ? 'Ngoại vi và HN05 chưa được triển khai' : 'Chỉ đường hoặc mở đối thoại khi đã ở gần NPC; không tự di chuyển';
+    guide.title = current.status === 'unreleased' ? 'Đang chờ dữ liệu đạo trình' : 'Tự tìm đường tới bước tiếp theo. WASD, phím mũi tên hoặc Esc để dừng.';
     document.getElementById('quest-next')!.textContent = syncing ? 'Đang đọc hành trình đã lưu…' : !online ?
       'Vào sân chung để nhận / tiếp tục nhiệm vụ. Tiến độ của mỗi nhân vật lưu riêng.' : current.nextStep;
     const completed = quests.filter(quest => quest.status === 'completed').length;

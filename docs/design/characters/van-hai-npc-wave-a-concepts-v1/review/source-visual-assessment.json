@@ -1,0 +1,292 @@
+{
+  "schema": "npc-wave-a-neutral-source-visual-assessment-1",
+  "date": "2026-10-13",
+  "scope": "Visual source and native review only. Technical candidacy is not owner ART, motion, or runtime approval.",
+  "primaryReference": {
+    "file": "inputs/wang-lin-live-southeast-native.png",
+    "sha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+    "description": "Exact live Wang Lin Pixel02 southeast idle frame; direct human anatomy and pixel style standard."
+  },
+  "gdd": {
+    "file": "docs/design/world/van-hai-living-world-v1/plan.json",
+    "sha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576"
+  },
+  "sources": [
+    {
+      "id": "NPC-HN-HERBALIST",
+      "slug": "bach-chi",
+      "name": "Bạch Chỉ",
+      "direction": "southeast",
+      "source": "raw/bach-chi.png",
+      "sourceSha256": "acd3046530fd9232441a0feda03daae9f22abb2c18cb7b3caae85597831e371c",
+      "rawReviewed": true,
+      "nativeReviewed": true,
+      "reviewedArtifacts": [
+        "raw/bach-chi.png",
+        "review/bach-chi-root-proposal-6x.png"
+      ],
+      "orientation": {
+        "pass": true,
+        "finding": "Front-right three-quarter face, front robe and both planted boots retain the live southeast view."
+      },
+      "identity": {
+        "pass": true,
+        "finding": "Warm tea-leaf/ivory palette, compact herb basket and small jade pestle read as the female herbalist. Profession props and costume distinguish her from Wang and the other NPCs."
+      },
+      "anatomy": {
+        "pass": true,
+        "finding": "Native proposal retains a large chibi skull, short torso and short legs comparable to the direct live Wang reference; no realistic adult-body elongation or detached hands."
+      },
+      "visualLimitations": [
+        "Facial age near thirty and the authored discerning personality are weakly conveyed by the large simple pixel eyes; she can read younger.",
+        "Hair has a high compact bun and loose strands, visually related to the live standard. Identity relies more on costume and profession props.",
+        "Small leaves, pestle detail and sleeve ties remain less legible at native 1x than at the enlarged source."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false,
+      "selected": true
+    },
+    {
+      "id": "NPC-HN-FORGE",
+      "slug": "tong-thiet",
+      "name": "Tống Thiết",
+      "direction": "southeast",
+      "source": "raw/tong-thiet.png",
+      "sourceSha256": "2c70401b135350ea3789e63610d3343ab0bd98179fa095bb560292319bfdefb8",
+      "rawReviewed": true,
+      "nativeReviewed": true,
+      "reviewedArtifacts": [
+        "raw/tong-thiet.png",
+        "review/tong-thiet-root-proposal-6x.png"
+      ],
+      "orientation": {
+        "pass": true,
+        "finding": "Visible front-right face and robe form a southeast three-quarter standing neutral; short white hair is a new identity view, not a mirrored existing NPC."
+      },
+      "identity": {
+        "pass": true,
+        "finding": "Short silver-white hair, moustache/goatee, copper shoulders, ash-brown apron, dark tongs and compact wood blank visibly identify an elderly male artificer. He is distinct from the Wang costume and the other five roles."
+      },
+      "anatomy": {
+        "pass": true,
+        "finding": "Native proposal preserves the Wang-sized large head and compact torso/legs while allowing a slightly sturdier worker silhouette. Hands remain attached and tools stay below the face."
+      },
+      "visualLimitations": [
+        "The apron and tongs share dark values around the waist and are partly merged at native 1x.",
+        "The wooden blank reads clearly as a wooden profession object, but its unfinished-sword geometry is subtle at native.",
+        "Age is conveyed mainly through silver hair and beard, with few face lines retained at native."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false,
+      "selected": true
+    },
+    {
+      "id": "NPC-HN-ROUTE-KEEPER",
+      "slug": "hua-hanh",
+      "name": "Hứa Hành",
+      "direction": "southeast",
+      "source": "raw/hua-hanh.png",
+      "sourceSha256": "cf2e359ec96aedcd696032ab16f6d4edf7f3021150068ad77cc1b16359abb6a8",
+      "rawReviewed": true,
+      "nativeReviewed": true,
+      "reviewedArtifacts": [
+        "raw/hua-hanh.png",
+        "review/hua-hanh-root-proposal-6x.png"
+      ],
+      "orientation": {
+        "pass": true,
+        "finding": "Front-right face, cloak and staggered planted boots are the southeast standing view."
+      },
+      "identity": {
+        "pass": true,
+        "finding": "Dusty grey short cloak, one asymmetric patch, folded route paper, red-brown old cord and muddy boots read as a field route keeper rather than an armored guard. Head silhouette lacks Wang's high bun."
+      },
+      "anatomy": {
+        "pass": true,
+        "finding": "Native proposal has a large compact skull, short torso and short legs comparable to Wang. The cloak alters silhouette without stretching the body."
+      },
+      "visualLimitations": [
+        "The map tube at the hip reads as a small brown cylindrical/container shape; exact map-tube meaning and the cord's seal function need the authored context.",
+        "Tired personality and adult age are weakly conveyed by the simple facial plane."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false,
+      "selected": true,
+      "finalNativeReview": "Reviewed root proposal after manual root moved to both boot support; fixed floor now falls under the near sole rather than being horizontally biased to that boot."
+    },
+    {
+      "id": "NPC-HN-GATE-WARDEN",
+      "slug": "dinh-soc",
+      "name": "Đinh Sóc",
+      "direction": "southeast",
+      "source": "raw/dinh-soc.png",
+      "sourceSha256": "4c22f1ea051216aa0f017c5104fbb5daca2bd8827a832a9578c5e0d9c154de7a",
+      "rawReviewed": true,
+      "nativeReviewed": true,
+      "reviewedArtifacts": [
+        "raw/dinh-soc.png",
+        "review/dinh-soc-root-proposal-6x.png"
+      ],
+      "orientation": {
+        "pass": true,
+        "finding": "Front-right face and visible front robe retain a southeast standing neutral."
+      },
+      "identity": {
+        "pass": true,
+        "finding": "Dark blue-green robe, light copper shoulder duty marks, hip route tag and slim low diagonal spear distinguish the young male gate disciple."
+      },
+      "anatomy": {
+        "pass": true,
+        "finding": "Corrected native proposal retains Wang-comparable large head, compact torso and short legs with attached hands. Both boots remain visually separate from the lowered spear. The manually reviewed foot floor is defined from boots, not spear tip."
+      },
+      "visualLimitations": [
+        "The spear point extends below the boot soles by about three to four native pixels. It must not become the world foot or the body scale measurement; the original prompt requested the point stay inside crown-to-sole bounds.",
+        "The copper shoulder marking and route tag convey duty, while precise tag detail will be small at native."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false,
+      "selected": true,
+      "finalNativeReview": "Reviewed the corrected native proposal using boot floor and both-boot horizontal support; spear point below the floor remains a prop extension."
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-WATER",
+      "slug": "ky-an",
+      "name": "Kỷ An",
+      "direction": "southeast",
+      "source": "raw/ky-an.png",
+      "sourceSha256": "1b2ee485cf35f3cc7b53dfe2e2afb957e019a9990044be5ba5733db054529e45",
+      "rawReviewed": true,
+      "nativeReviewed": true,
+      "reviewedArtifacts": [
+        "raw/ky-an.png"
+      ],
+      "orientation": {
+        "pass": true,
+        "finding": "Front-right three-quarter head and robe remain a southeast standing view."
+      },
+      "identity": {
+        "pass": false,
+        "finding": "Pale-blue/ivory robe, blue water gourd and opened bamboo slips match the cultivation-disciple role, but the high bun and long tied silhouette do not clearly match the authored short tied hair. Correct only this hair identity detail while preserving her face, costume and study props."
+      },
+      "anatomy": {
+        "pass": true,
+        "finding": "Native proposal preserves the large Wang-comparable head, compact short torso/legs and attached hands. The requested hair correction is an identity issue, not a body scale failure."
+      },
+      "visualLimitations": [
+        "The authored short tied hair is not clearly expressed: a high bun and long blue tying ribbon dominate the visible hair silhouette.",
+        "Adult age and diligent personality remain subtle in the chibi face; pale-blue robe and study props carry the identification."
+      ],
+      "status": "superseded-hair-correction-needed",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false,
+      "selected": false,
+      "historicalNativeReview": "The original high-bun native proposal was visually reviewed before the shared proposal path was rebuilt for r2; this record's raw source hash is authoritative."
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-SWORD",
+      "slug": "phung-da",
+      "name": "Phùng Dã",
+      "direction": "southeast",
+      "source": "raw/phung-da.png",
+      "sourceSha256": "0ad9e1d70abd164e07df8b8ad09684f680fee6048e1d6dbc6368297cfb342595",
+      "rawReviewed": true,
+      "nativeReviewed": true,
+      "reviewedArtifacts": [
+        "raw/phung-da.png",
+        "review/phung-da-root-proposal-6x.png"
+      ],
+      "orientation": {
+        "pass": true,
+        "finding": "Front-right three-quarter face, frontal chest and two planted boots remain the live southeast neutral view."
+      },
+      "identity": {
+        "pass": true,
+        "finding": "Compact upright spiked hair, grey-green robe, red-brown tied wrists and compact lowered wooden sword match the adult sword disciple. Hair silhouette and wrist cloth distinguish him from Wang, the route keeper and the gate disciple."
+      },
+      "anatomy": {
+        "pass": true,
+        "finding": "Native proposal preserves the large chibi skull and short torso/legs of the direct Wang standard. The lowered wooden sword stays attached to a clearly visible wrist; no lunge or combat pose."
+      },
+      "visualLimitations": [
+        "The scratched surface and training-sword guard are subtle at native 1x; the prop can read as a short wooden practice stick until enlarged.",
+        "Alert competitive personality and adult age are only lightly conveyed by the simple chibi face.",
+        "Spiked hair broadens the crown relative to Wang's compact front plane while preserving the same short body contract."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false,
+      "selected": true
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-WATER",
+      "slug": "ky-an",
+      "name": "Kỷ An",
+      "direction": "southeast",
+      "source": "raw/ky-an-r2.png",
+      "sourceSha256": "96628ad6c56ee1b502112bd6c7dc89c133040b049ad16c95afa89cc1965e051e",
+      "selected": true,
+      "rawReviewed": true,
+      "nativeReviewed": true,
+      "reviewedArtifacts": [
+        "raw/ky-an-r2.png",
+        "review/ky-an-root-proposal-6x.png"
+      ],
+      "orientation": {
+        "pass": true,
+        "finding": "Front-right face, robe and two planted boots preserve a true southeast neutral."
+      },
+      "identity": {
+        "pass": true,
+        "finding": "Short compact low tie and short blue tying ends above the collar now express the authored short tied hair. The pale-blue/ivory female disciple, water gourd and partially opened bamboo slips retain the prior costume and profession identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "finding": "Native proposal remains a compact human with a large chibi skull, short torso/legs and attached hands compared directly to live Wang. Removing the high bun changes the top hair silhouette without introducing realistic anatomy or body deformation."
+      },
+      "visualLimitations": [
+        "The short tied-hair crown contributes less total standing height than Wang's high bun; their hair-top-to-chin ratios should not be treated as identical skull anatomy.",
+        "Adult age and diligent personality remain lightly conveyed by the chibi face.",
+        "Bamboo slip segments and blue gourd tie details are subtle at native 1x; broad palette and prop silhouettes identify the profession."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    }
+  ],
+  "overall": {
+    "requiredActors": 6,
+    "selectedSourceCount": 6,
+    "reviewedRaw": 7,
+    "reviewedNative": 7,
+    "selectedCandidates": 6,
+    "correctionNeeded": [],
+    "missing": [],
+    "historicalSupersededSources": [
+      "raw/ky-an.png"
+    ],
+    "distinctIdentityFinding": "All six selected neutral views distinguish through hair silhouette, palette, work clothing and different profession props. Faces alone do not establish identity at native 1x. Kỷ An r2 resolves the authored short tied-hair detail; all source pass fields establish technical review candidacy only.",
+    "artApproved": false,
+    "ownerApproved": false,
+    "motionApproved": false,
+    "runtimeImported": false
+  }
+}
+

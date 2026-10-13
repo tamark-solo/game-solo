@@ -1,0 +1,1116 @@
+{
+  "schema": "npc-wave-a-motion-source-visual-assessment-2",
+  "date": "2026-10-13",
+  "scope": "Fourteen selected real-direction Ky An/Phung Da motion sources,252raw/native poses,allcandidate with manual both-boot/crown rendering; prior identity/duplicate/source-edge failures retained in rejectedHistory. No owner ART/motion/runtime approval",
+  "basis": "Wang live same-direction primary plus own manually confirmed actual-direction neutral identity",
+  "sources": [
+    {
+      "slug": "ky-an",
+      "direction": "south",
+      "source": "raw/ky-an-south-direction-neutral.png",
+      "sourceSha256": "958b709259ca7a666e149f6c6765520914b62df5a73ac727b5ab6af6fc8f15ca",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain requested actual front/profile view, reviewed raw alongside same-direction identity. Speech/reading/grip incline head without changing torso camera."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Short low-tied dark hair and blue ribbon, pale-blue/ivory robe, gourd and bamboo slips preserve own confirmed same-view neutral identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses reviewed. Compact head, torso and short legs remain coherent; natural head inclination reduces bounds during profession without source/pose resizing. Boots complete, no detached extra hands, stable shared world floor."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Bamboo slips remain supported by both hands before abdomen; gourd stays at anatomical right/screen-left front hip in all18poses."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Idle blink/breath, restrained talk mouth/head nod, and real bamboo-slip raising/inspection/recover phases are visible."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/ky-an-south-root-review-2x.png",
+        "sha256": "14c550cc7eb02bdfbc976d49b0e07201c47752cc167477cadd7e2b072695027c",
+        "finding": "Final2x native strip visually reviewed after manual both-boot midpoint roots and crown/source scale rendering. All18poses retain props, no neighbour fragments, zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/ky-an-south-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 64,
+        "scale": 0.22792022792022792,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "All frames contain the single actor and original attached props; selected own labels retained."
+      },
+      "limitations": [
+        "Small slips/gourd cord/sword texture is subdued at native1x. Profession brings a head incline and natural pose-height change; retain the common neutral scale.",
+        "Hair outline/robe folds and low prop angles vary slightly between frames; last pose is visually near neutral, without an assertion of pixel-exact first/last equality."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/ky-an-south-direction-neutral.png",
+        "nativeStrip": "review/ky-an-south-root-review-2x.png",
+        "nativeStripSha256": "14c550cc7eb02bdfbc976d49b0e07201c47752cc167477cadd7e2b072695027c",
+        "rootReview": "review/ky-an-south-root-review.json"
+      }
+    },
+    {
+      "slug": "ky-an",
+      "direction": "northwest",
+      "source": "raw/ky-an-northwest-direction-neutral.png",
+      "sourceSha256": "c05e4bec1b6264f278ad48b7c636eb001474fe09543e677eeb3fac21091218f6",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses maintain true back-quarter torso/hair dominance matching Wang same direction; partial side cheek/profile is natural, never both eyes/frontal chest or swapped body camera."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Short low-tied dark hair and blue ribbon, pale-blue/ivory robe, gourd and bamboo slips preserve own confirmed same-view neutral identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses reviewed. Compact head, torso and short legs remain coherent; natural head inclination reduces bounds during profession without source/pose resizing. Boots complete, no detached extra hands, stable shared world floor."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Slips remain on the front-waist side edge and lift naturally into the exposed left-facing space when reading; gourd remains on anatomical right rear/screen-right hip. No hands through back robe or relocated gourd."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Idle blink/breath, restrained talk mouth/head nod, and real bamboo-slip raising/inspection/recover phases are visible."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/ky-an-northwest-root-review-2x.png",
+        "sha256": "28a99398f854dfdd13b69649c0158e931532d02db1fabbe095a79eee5329b4db",
+        "finding": "Final2x native strip visually reviewed after manual both-boot midpoint roots and crown/source scale rendering. All18poses retain props, no neighbour fragments, zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/ky-an-northwest-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 60,
+        "scale": 0.23255813953488372,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "All frames contain the single actor and original attached props; selected own labels retained."
+      },
+      "limitations": [
+        "Small slips/gourd cord/sword texture is subdued at native1x. Profession brings a head incline and natural pose-height change; retain the common neutral scale.",
+        "Rear speech is communicated mainly by shoulder/head motion; front mouth/palms stay hidden.",
+        "Reading raises more of the front-side bamboo slips into profile view in profession2–3; torso stays back-left and gourd remains on original rear hip.",
+        "Hair outline/robe folds and low prop angles vary slightly between frames; last pose is visually near neutral, without an assertion of pixel-exact first/last equality."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/ky-an-northwest-direction-neutral.png",
+        "nativeStrip": "review/ky-an-northwest-root-review-2x.png",
+        "nativeStripSha256": "28a99398f854dfdd13b69649c0158e931532d02db1fabbe095a79eee5329b4db",
+        "rootReview": "review/ky-an-northwest-root-review.json"
+      }
+    },
+    {
+      "slug": "ky-an",
+      "direction": "east",
+      "source": "raw/ky-an-east-direction-neutral.png",
+      "sourceSha256": "5e3091a328193a134ea89aa6f580e9f9ae7129935c8cf5ce091ec3fff91ec6fd",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain requested actual front/profile view, reviewed raw alongside same-direction identity. Speech/reading/grip incline head without changing torso camera."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Short low-tied dark hair and blue ribbon, pale-blue/ivory robe, gourd and bamboo slips preserve own confirmed same-view neutral identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses reviewed. Compact head, torso and short legs remain coherent; natural head inclination reduces bounds during profession without source/pose resizing. Boots complete, no detached extra hands, stable shared world floor."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Both hands keep the same bamboo slips in front, merely lift/tilt for reading. Blue gourd remains attached at the original near anatomical right belt flank in all18poses."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Idle blink/breath, restrained talk mouth/head nod, and real bamboo-slip raising/inspection/recover phases are visible."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/ky-an-east-root-review-2x.png",
+        "sha256": "1558588c046b7b4ed5f8d6208c7593b0488830ba3447ca0b8e88c97a54c2b7e8",
+        "finding": "Final2x native strip visually reviewed after manual both-boot midpoint roots and crown/source scale rendering. All18poses retain props, no neighbour fragments, zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/ky-an-east-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 98,
+        "scale": 0.23460410557184752,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "All frames contain the single actor and original attached props; selected own labels retained."
+      },
+      "limitations": [
+        "Small slips/gourd cord/sword texture is subdued at native1x. Profession brings a head incline and natural pose-height change; retain the common neutral scale.",
+        "Hair outline/robe folds and low prop angles vary slightly between frames; last pose is visually near neutral, without an assertion of pixel-exact first/last equality."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/ky-an-east-direction-neutral.png",
+        "nativeStrip": "review/ky-an-east-root-review-2x.png",
+        "nativeStripSha256": "1558588c046b7b4ed5f8d6208c7593b0488830ba3447ca0b8e88c97a54c2b7e8",
+        "rootReview": "review/ky-an-east-root-review.json"
+      }
+    },
+    {
+      "slug": "phung-da",
+      "direction": "southwest",
+      "source": "raw/phung-da-southwest-direction-neutral.png",
+      "sourceSha256": "003f8049d30200397a0c1b0f9383d80e7935a75c08d99faeda6ede8a484f7abb",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain requested actual front/profile view, reviewed raw alongside same-direction identity. Speech/reading/grip incline head without changing torso camera."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Upright short spiked dark hair, grey-green robe, earthy red-brown wrist/belt wraps and small scratched wooden sword preserve own confirmed same-view neutral identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses reviewed. Compact head, torso and short legs remain coherent; natural head inclination reduces bounds during profession without source/pose resizing. Boots complete, no detached extra hands, stable shared world floor."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Wooden sword remains attached to original anatomical right wrist/hand through all rows. Profession adjusts the low grip/guard across lower front waist, not an attack/lunge. Opposite arm rests; no hand swap, dropped/duplicate blade or metal weapon."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Idle blink/breath, restrained talk nod (rear shoulder/head changes in back views), and low wrist/wooden-sword grip reset/inspection/recover phases are visible."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/phung-da-southwest-root-review-2x.png",
+        "sha256": "7fb35e9983ff54d0f884075af9477866fac969edac2394833f0100d844b7cf51",
+        "finding": "Final2x native strip visually reviewed after manual both-boot midpoint roots and crown/source scale rendering. All18poses retain props, no neighbour fragments, zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/phung-da-southwest-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 90,
+        "scale": 0.2247191011235955,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "All frames contain the single actor and original attached props; selected own labels retained."
+      },
+      "limitations": [
+        "Small slips/gourd cord/sword texture is subdued at native1x. Profession brings a head incline and natural pose-height change; retain the common neutral scale.",
+        "Hair outline/robe folds and low prop angles vary slightly between frames; last pose is visually near neutral, without an assertion of pixel-exact first/last equality."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/phung-da-southwest-direction-neutral.png",
+        "nativeStrip": "review/phung-da-southwest-root-review-2x.png",
+        "nativeStripSha256": "7fb35e9983ff54d0f884075af9477866fac969edac2394833f0100d844b7cf51",
+        "rootReview": "review/phung-da-southwest-root-review.json"
+      }
+    },
+    {
+      "slug": "phung-da",
+      "direction": "west",
+      "source": "raw/phung-da-west-direction-neutral.png",
+      "sourceSha256": "2f1cad2715123b92197ef1fcdf9026265d0475a25cf6080ee44fd75d18d26348",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain requested actual front/profile view, reviewed raw alongside same-direction identity. Speech/reading/grip incline head without changing torso camera."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Upright short spiked dark hair, grey-green robe, earthy red-brown wrist/belt wraps and small scratched wooden sword preserve own confirmed same-view neutral identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses reviewed. Compact head, torso and short legs remain coherent; natural head inclination reduces bounds during profession without source/pose resizing. Boots complete, no detached extra hands, stable shared world floor."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Wooden sword remains attached to original anatomical right wrist/hand through all rows. Profession adjusts the low grip/guard across lower front waist, not an attack/lunge. Opposite arm rests; no hand swap, dropped/duplicate blade or metal weapon."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Idle blink/breath, restrained talk nod (rear shoulder/head changes in back views), and low wrist/wooden-sword grip reset/inspection/recover phases are visible."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/phung-da-west-root-review-2x.png",
+        "sha256": "649ca9ee7323454fac1605119e23f9f30ac07727bb879a828cd5b3c191b0b2d1",
+        "finding": "Final2x native strip visually reviewed after manual both-boot midpoint roots and crown/source scale rendering. All18poses retain props, no neighbour fragments, zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/phung-da-west-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 61,
+        "scale": 0.22988505747126436,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "Four tiny4x4/4x3 hair-cluster islands in idle4/5, talk3 and profession5 are retained under their own frame component masks. They are part of the same spiked hair silhouette, not neighbouring poses."
+      },
+      "limitations": [
+        "Small slips/gourd cord/sword texture is subdued at native1x. Profession brings a head incline and natural pose-height change; retain the common neutral scale.",
+        "Hair outline/robe folds and low prop angles vary slightly between frames; last pose is visually near neutral, without an assertion of pixel-exact first/last equality."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/phung-da-west-direction-neutral.png",
+        "nativeStrip": "review/phung-da-west-root-review-2x.png",
+        "nativeStripSha256": "649ca9ee7323454fac1605119e23f9f30ac07727bb879a828cd5b3c191b0b2d1",
+        "rootReview": "review/phung-da-west-root-review.json"
+      }
+    },
+    {
+      "slug": "phung-da",
+      "direction": "north",
+      "source": "raw/phung-da-north-direction-neutral.png",
+      "sourceSha256": "76cf3c834f89508a52f432fe411e3144674eb9ae2d162a16a5366b9b0510637f",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses maintain direct rear torso, rear hair and robe; ears/head inclination vary but no frontal face, eyes, chest or front palms revealed."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Upright short spiked dark hair, grey-green robe, earthy red-brown wrist/belt wraps and small scratched wooden sword preserve own confirmed same-view neutral identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses reviewed. Compact head, torso and short legs remain coherent; natural head inclination reduces bounds during profession without source/pose resizing. Boots complete, no detached extra hands, stable shared world floor."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Wooden sword remains in anatomical right hand on original right rear flank throughout all18poses; resting opposite arm never takes blade. Rear wrist/shoulder changes retain correct occlusion; no sword across back or face."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Idle blink/breath, restrained talk nod (rear shoulder/head changes in back views), and low wrist/wooden-sword grip reset/inspection/recover phases are visible."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/phung-da-north-root-review-2x.png",
+        "sha256": "aca00bf30aace0f1b5791e0fbe910a70ea6596d0d5baa637730e08141a49979d",
+        "finding": "Final2x native strip visually reviewed after manual both-boot midpoint roots and crown/source scale rendering. All18poses retain props, no neighbour fragments, zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/phung-da-north-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 120,
+        "scale": 0.24922118380062305,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "All frames contain the single actor and original attached props; selected own labels retained."
+      },
+      "limitations": [
+        "Small slips/gourd cord/sword texture is subdued at native1x. Profession brings a head incline and natural pose-height change; retain the common neutral scale.",
+        "Rear speech is communicated mainly by shoulder/head motion; front mouth/palms stay hidden.",
+        "Hair outline/robe folds and low prop angles vary slightly between frames; last pose is visually near neutral, without an assertion of pixel-exact first/last equality."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/phung-da-north-direction-neutral.png",
+        "nativeStrip": "review/phung-da-north-root-review-2x.png",
+        "nativeStripSha256": "aca00bf30aace0f1b5791e0fbe910a70ea6596d0d5baa637730e08141a49979d",
+        "rootReview": "review/phung-da-north-root-review.json"
+      }
+    },
+    {
+      "slug": "phung-da",
+      "direction": "northeast",
+      "source": "raw/phung-da-northeast-direction-neutral.png",
+      "sourceSha256": "a8a569ae810cde9bac35b981b1a9231b1d76b5a171830812874d6aeaa3da41dd",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses maintain true back-quarter torso/hair dominance matching Wang same direction; partial side cheek/profile is natural, never both eyes/frontal chest or swapped body camera."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Upright short spiked dark hair, grey-green robe, earthy red-brown wrist/belt wraps and small scratched wooden sword preserve own confirmed same-view neutral identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses reviewed. Compact head, torso and short legs remain coherent; natural head inclination reduces bounds during profession without source/pose resizing. Boots complete, no detached extra hands, stable shared world floor."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Wooden sword remains in anatomical right hand on original right rear flank throughout all18poses; resting opposite arm never takes blade. Rear wrist/shoulder changes retain correct occlusion; no sword across back or face."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Idle blink/breath, restrained talk nod (rear shoulder/head changes in back views), and low wrist/wooden-sword grip reset/inspection/recover phases are visible."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/phung-da-northeast-root-review-2x.png",
+        "sha256": "794a6a9043cd25e0af62a9f5edad51b074c3950968e74e0464e51bff6769948d",
+        "finding": "Final2x native strip visually reviewed after manual both-boot midpoint roots and crown/source scale rendering. All18poses retain props, no neighbour fragments, zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/phung-da-northeast-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 81,
+        "scale": 0.24024024024024024,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "All frames contain the single actor and original attached props; selected own labels retained."
+      },
+      "limitations": [
+        "Small slips/gourd cord/sword texture is subdued at native1x. Profession brings a head incline and natural pose-height change; retain the common neutral scale.",
+        "Rear speech is communicated mainly by shoulder/head motion; front mouth/palms stay hidden.",
+        "Hair outline/robe folds and low prop angles vary slightly between frames; last pose is visually near neutral, without an assertion of pixel-exact first/last equality."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/phung-da-northeast-direction-neutral.png",
+        "nativeStrip": "review/phung-da-northeast-root-review-2x.png",
+        "nativeStripSha256": "794a6a9043cd25e0af62a9f5edad51b074c3950968e74e0464e51bff6769948d",
+        "rootReview": "review/phung-da-northeast-root-review.json"
+      }
+    },
+    {
+      "slug": "phung-da",
+      "direction": "east",
+      "source": "raw/phung-da-east-direction-neutral.png",
+      "sourceSha256": "5b78e6b5f52c59682d97ef03bcf3f69a035a9352f51f7a39cb5766ff14f2d750",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain requested actual front/profile view, reviewed raw alongside same-direction identity. Speech/reading/grip incline head without changing torso camera."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Upright short spiked dark hair, grey-green robe, earthy red-brown wrist/belt wraps and small scratched wooden sword preserve own confirmed same-view neutral identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses reviewed. Compact head, torso and short legs remain coherent; natural head inclination reduces bounds during profession without source/pose resizing. Boots complete, no detached extra hands, stable shared world floor."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Wooden sword remains attached to original anatomical right wrist/hand through all rows. Profession adjusts the low grip/guard across lower front waist, not an attack/lunge. Opposite arm rests; no hand swap, dropped/duplicate blade or metal weapon."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Idle blink/breath, restrained talk nod (rear shoulder/head changes in back views), and low wrist/wooden-sword grip reset/inspection/recover phases are visible."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/phung-da-east-root-review-2x.png",
+        "sha256": "618e37588c7041bad9f8c2e06daf9285e2106c891e67861cd85395ede1e2a706",
+        "finding": "Final2x native strip visually reviewed after manual both-boot midpoint roots and crown/source scale rendering. All18poses retain props, no neighbour fragments, zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/phung-da-east-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 92,
+        "scale": 0.2318840579710145,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "All frames contain the single actor and original attached props; selected own labels retained."
+      },
+      "limitations": [
+        "Small slips/gourd cord/sword texture is subdued at native1x. Profession brings a head incline and natural pose-height change; retain the common neutral scale.",
+        "Hair outline/robe folds and low prop angles vary slightly between frames; last pose is visually near neutral, without an assertion of pixel-exact first/last equality."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/phung-da-east-direction-neutral.png",
+        "nativeStrip": "review/phung-da-east-root-review-2x.png",
+        "nativeStripSha256": "618e37588c7041bad9f8c2e06daf9285e2106c891e67861cd85395ede1e2a706",
+        "rootReview": "review/phung-da-east-root-review.json"
+      }
+    },
+    {
+      "slug": "ky-an",
+      "direction": "west",
+      "source": "raw/ky-an-west-direction-neutral.png",
+      "sourceSha256": "8d3bdec59cd71399ab52a7991514fc5bc725a91772486ed545d44115a7de5ee3",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain actual requested camera matching same-direction Wang and own confirmed directional neutral; head nods never become a different front/back torso."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own short low-tied dark hair/blue ribbon, pale-blue/ivory robe, slips/gourd retained across rows."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw/native poses inspected; compact head/torso/short legs coherent, natural reading/grip inclination retained, complete boots, no detached hands or neighbouring pose fragments."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Both hands retain original bamboo slips and only lift/tilt during reading; gourd remains attached to original anatomical right hip with actual front/profile/back occlusion, no new props or hand swaps."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/ky-an-west-root-review-2x.png",
+        "sha256": "27fdf55f7550a7f5191c0499a212d90febc55e629794274270ad7cf579149bba",
+        "finding": "Final2x native strip visually reviewed after manual boot witness/crown rendering; body scale common across18frames, floor stable and zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/ky-an-west-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 74,
+        "scale": 0.22857142857142856,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "Single complete own actor and original props per pose; selected body labels fully retained."
+      },
+      "limitations": [
+        "Small gourd/slips/weapon textures and belt cords are subdued at native1x; forearms and far hips intentionally occlude material.",
+        "Natural head/robe/prop angle changes and source pixel outlines remain for owner motion review; no pixel-exact first/last assertion."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/ky-an-west-direction-neutral.png",
+        "nativeStrip": "review/ky-an-west-root-review-2x.png",
+        "nativeStripSha256": "27fdf55f7550a7f5191c0499a212d90febc55e629794274270ad7cf579149bba",
+        "rootReview": "review/ky-an-west-root-review.json"
+      },
+      "motionReadability": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Actual18raw/native poses show idle blink/breath, restrained talk mouth/nod (rear shoulder/head changes where mouth occluded), and real lift/tilt of bamboo slips plus downward gaze/read/recover. Prop stays in original hands; these are actual distinct poses, not static bobbing."
+      }
+    },
+    {
+      "slug": "ky-an",
+      "direction": "northeast",
+      "source": "raw/ky-an-northeast-direction-neutral.png",
+      "sourceSha256": "1bcd31a93aad0896a6bcfaca0a6f60707cff88aba646877c28556df07b507971",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain actual requested camera matching same-direction Wang and own confirmed directional neutral; head nods never become a different front/back torso."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own short low-tied dark hair/blue ribbon, pale-blue/ivory robe, slips/gourd retained across rows."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw/native poses inspected; compact head/torso/short legs coherent, natural reading/grip inclination retained, complete boots, no detached hands or neighbouring pose fragments."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Both hands retain original bamboo slips and only lift/tilt during reading; gourd remains attached to original anatomical right hip with actual front/profile/back occlusion, no new props or hand swaps."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/ky-an-northeast-root-review-2x.png",
+        "sha256": "1940b5505ecce993c2c4c24ab53f02ec9bf0c11de65fc65e86e536a8e5855529",
+        "finding": "Final2x native strip visually reviewed after manual boot witness/crown rendering; body scale common across18frames, floor stable and zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/ky-an-northeast-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 50,
+        "scale": 0.23880597014925373,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "Four tiny1/8/1/4-pixel silhouette/outline islands are inside their own frame rectangles and retained by explicit component masks; not neighbouring actor parts."
+      },
+      "limitations": [
+        "Small gourd/slips/weapon textures and belt cords are subdued at native1x; forearms and far hips intentionally occlude material.",
+        "Natural head/robe/prop angle changes and source pixel outlines remain for owner motion review; no pixel-exact first/last assertion."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/ky-an-northeast-direction-neutral.png",
+        "nativeStrip": "review/ky-an-northeast-root-review-2x.png",
+        "nativeStripSha256": "1940b5505ecce993c2c4c24ab53f02ec9bf0c11de65fc65e86e536a8e5855529",
+        "rootReview": "review/ky-an-northeast-root-review.json"
+      },
+      "motionReadability": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Actual18raw/native poses show idle blink/breath, restrained talk mouth/nod (rear shoulder/head changes where mouth occluded), and real lift/tilt of bamboo slips plus downward gaze/read/recover. Prop stays in original hands; these are actual distinct poses, not static bobbing."
+      }
+    },
+    {
+      "slug": "phung-da",
+      "direction": "south",
+      "source": "raw/phung-da-south-repair-r2.png",
+      "sourceSha256": "e04cebb39836e6a52c7fc21ff20d82b15de8899f18742b1081aee3eed128806d",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain actual requested camera matching same-direction Wang and own confirmed directional neutral; head nods never become a different front/back torso."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own upright short spiked hair, grey-green robe, red-brown wrists/belt and wooden training sword retained across rows."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw/native poses inspected; compact head/torso/short legs coherent, natural reading/grip inclination retained, complete boots, no detached hands or neighbouring pose fragments."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "One wooden sword stays in original anatomical right hand through all18poses; profession brings it into low front-waist guard with opposite hand briefly near grip, no duplicate blade/metal/attack or changed sword-bearing hand."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/phung-da-south-root-review-2x.png",
+        "sha256": "198c9366b65c74c402d10c47998be4e11adb051f53719aa8c082f9afacb44a47",
+        "finding": "Final2x native strip visually reviewed after manual boot witness/crown rendering; body scale common across18frames, floor stable and zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/phung-da-south-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 61,
+        "scale": 0.2247191011235955,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "Single complete own actor and original props per pose; selected body labels fully retained."
+      },
+      "limitations": [
+        "Small gourd/slips/weapon textures and belt cords are subdued at native1x; forearms and far hips intentionally occlude material.",
+        "Natural head/robe/prop angle changes and source pixel outlines remain for owner motion review; no pixel-exact first/last assertion."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/phung-da-south-repair-r2.png",
+        "nativeStrip": "review/phung-da-south-root-review-2x.png",
+        "nativeStripSha256": "198c9366b65c74c402d10c47998be4e11adb051f53719aa8c082f9afacb44a47",
+        "rootReview": "review/phung-da-south-root-review.json"
+      },
+      "motionReadability": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Actual18raw/native poses show idle blink/breath, talk mouth/nod, and real wooden-sword low-grip/guard adjustment/wrist inspection/recover with original right hand and opposite hand near grip only. No duplicate body, static-only sequence or attack/lunge."
+      }
+    },
+    {
+      "slug": "ky-an",
+      "direction": "southwest",
+      "source": "raw/ky-an-southwest-direction-neutral.png",
+      "sourceSha256": "184ad27263678a04e8035fb6d84ee3a3e57326faad2a4a010f2f3a94d94fce33",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain actual requested camera matching same-direction Wang and own confirmed directional neutral; head nods never become a different front/back torso."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own short low-tied dark hair/blue ribbon, pale-blue/ivory robe, slips/gourd retained across rows."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw/native poses inspected; compact head/torso/short legs coherent, natural reading/grip inclination retained, complete boots, no detached hands or neighbouring pose fragments."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Both hands retain original bamboo slips and only lift/tilt during reading; gourd remains attached to original anatomical right hip with actual front/profile/back occlusion, no new props or hand swaps."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/ky-an-southwest-root-review-2x.png",
+        "sha256": "8e693ad752789799b6e845eedfcdaaa3be9ad4656b786049fe783f83b7604032",
+        "finding": "Final2x native strip visually reviewed after manual boot witness/crown rendering; body scale common across18frames, floor stable and zero clipped opaque pixels."
+      },
+      "measurementProposal": {
+        "file": "review/ky-an-southwest-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 58,
+        "scale": 0.22922636103151864,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "Single complete own actor and original props per pose; selected body labels fully retained."
+      },
+      "limitations": [
+        "Small gourd/slips/weapon textures and belt cords are subdued at native1x; forearms and far hips intentionally occlude material.",
+        "Natural head/robe/prop angle changes and source pixel outlines remain for owner motion review; no pixel-exact first/last assertion."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18,
+      "evidence": {
+        "source": "raw/ky-an-southwest-direction-neutral.png",
+        "nativeStrip": "review/ky-an-southwest-root-review-2x.png",
+        "nativeStripSha256": "8e693ad752789799b6e845eedfcdaaa3be9ad4656b786049fe783f83b7604032",
+        "rootReview": "review/ky-an-southwest-root-review.json"
+      },
+      "motionReadability": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Actual18raw/native poses show idle blink/breath, restrained talk mouth/nod (rear shoulder/head changes where mouth occluded), and real lift/tilt of bamboo slips plus downward gaze/read/recover. Prop stays in original hands; these are actual distinct poses, not static bobbing."
+      }
+    },
+    {
+      "slug": "ky-an",
+      "direction": "north",
+      "source": "raw/ky-an-north-repair-r2.png",
+      "sourceSha256": "ff03aa8af65c55eddaa9cd0202550126906e9112d66ebc9a9215ff5756243775",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18repaired poses preserve the actual rear camera matching same-direction Wang; front face/chest/palms remain occluded."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Raised oval high bun has been removed in all18poses. Hair now forms one compact short natural crown with only small cowlick, original low-neck tied tail and blue ribbon; own accepted short hair identity restored."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses visually reviewed. Single complete compact human, short legs/torso, natural shoulder/head variations, no deformation or adjacent-frame parts."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Blue gourd remains anatomical right/screen-right back hip across all18poses; front bamboo slips/hands remain occluded, no second gourd or new props."
+      },
+      "motionReadability": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Actual rear idle breathing, talk head/shoulder inclination and restrained reading shoulder/gaze change/recover are present while mouth/hand gestures stay hidden."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/ky-an-north-root-review-2x.png",
+        "sha256": "1cdc3f6073be5fe80523636578925cc467ac829835ede2f55cb7ed36c3192e55",
+        "finding": "Final2x native strip reviewed after manual two-boot roots/crown and one source scale rendering. Repair effective in all relevant poses, complete boots, fixed world floor and zero clipping."
+      },
+      "nativePosesViewed": 18,
+      "measurementProposal": {
+        "file": "review/ky-an-north-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 58,
+        "scale": 0.2247191011235955,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "Ten tiny1–5pixel own hair/outline/gourd silhouette islands remain retained under correct frame labels; no unassigned body pixels or neighbouring poses."
+      },
+      "evidence": {
+        "source": "raw/ky-an-north-repair-r2.png",
+        "nativeStrip": "review/ky-an-north-root-review-2x.png",
+        "nativeStripSha256": "1cdc3f6073be5fe80523636578925cc467ac829835ede2f55cb7ed36c3192e55",
+        "rootReview": "review/ky-an-north-root-review.json"
+      },
+      "limitations": [
+        "Rear talk/reading/wrist gestures are intentionally restrained and front mouth/palms stay occluded. Small hair/cord/weapon details remain subdued at native1x.",
+        "Neutral/source scale remains common for18poses; frame end is visually near neutral without pixel-exact equality assertion."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "phung-da",
+      "direction": "northwest",
+      "source": "raw/phung-da-northwest-repair-r3.png",
+      "sourceSha256": "a22bf812f223203058ee4af93cb1d5c54afced78cc42b598902249ecde1b74ce",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18repaired poses preserve the actual rear camera matching same-direction Wang; front face/chest/palms remain occluded."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Original upright short spiked hair, grey-green robe and red-brown wrists/belt retained across all18poses."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses visually reviewed. Single complete compact human, short legs/torso, natural shoulder/head variations, no deformation or adjacent-frame parts."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18wide-source poses retain only one wooden sword in same anatomical right far hand, original near left hand empty. Full rounded cap visible for talk6 and all last-column blades; no duplicate near-hand blade or back-crossing weapon."
+      },
+      "motionReadability": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Actual idle breath/hair/stance variation, rear-talk restrained head/shoulder/empty-arm changes, and low sword-bearing wrist/grip inspect/recover present, with complete one-blade silhouette throughout. No attack or lunge."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/phung-da-northwest-root-review-2x.png",
+        "sha256": "9debb400dddd0c3b43b4d8cfed52ff13ff8ce5bb4949bee0cd98a58c54c3903f",
+        "finding": "All18wide-source final2x native poses inspected after crown and manual both-boot roots rendered. Compact identity and right far blade retained; floor stable, full cap intact, no clipped body pixels."
+      },
+      "nativePosesViewed": 18,
+      "measurementProposal": {
+        "file": "review/phung-da-northwest-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 44,
+        "scale": 0.25806451612903225,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "18complete connected actor/prop components, no unassigned neighbouring pose body pixels."
+      },
+      "evidence": {
+        "source": "raw/phung-da-northwest-repair-r3.png",
+        "nativeStrip": "review/phung-da-northwest-root-review-2x.png",
+        "nativeStripSha256": "9debb400dddd0c3b43b4d8cfed52ff13ff8ce5bb4949bee0cd98a58c54c3903f",
+        "rootReview": "review/phung-da-northwest-root-review.json"
+      },
+      "limitations": [
+        "Rear speech/inspection gestures are restrained; near empty hand never receives the blade. Small sword texture/cuff details remain subtle at native1x.",
+        "Source layout is wider to preserve full outer blade tips; one neutral-derived scale preserves the same compact human anatomy. Pixel-exact first/last equality is not claimed."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "sourceCompleteness": {
+        "pass": true,
+        "finding": "New1536x1024 source keeps all18complete actors and rounded wooden blade caps inside clear outer gutters. Talk6 source right-edge sword tip restored; root all-source alpha128 edge report0 and direct source visual review agree."
+      }
+    }
+  ],
+  "artApproved": false,
+  "motionApproved": false,
+  "ownerApproved": false,
+  "runtimeImported": false,
+  "rejectedHistory": [
+    {
+      "slug": "ky-an",
+      "direction": "north",
+      "source": "raw/ky-an-north-direction-neutral.png",
+      "sourceSha256": "4df3f5053aec5485832461d004d72045be7adfc718277e959801841b56f55ff6",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Requested rear camera remains; failure is identity/prop continuity, not camera."
+      },
+      "identity": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "Upper crown oval mass is prominently raised above rear skull (~10nativepx) and reads as an extra high bun in all18poses while low-neck ribbon/tail also remain. This exceeds earlier provisional cowlick limitation and contradicts own accepted short low-tied hair/no high bun identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Single complete connected body per pose; no neighbour overlap seen."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Gourd stays screen-right anatomical right back hip; front slips occluded."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/ky-an-north-root-review-2x.png",
+        "finding": "Initial native strip/source viewed; no manual root confirmation because art identity/props block downstream candidate."
+      },
+      "limitations": [
+        "Upper crown oval mass is prominently raised above rear skull (~10nativepx) and reads as an extra high bun in all18poses while low-neck ribbon/tail also remain. This exceeds earlier provisional cowlick limitation and contradicts own accepted short low-tied hair/no high bun identity."
+      ],
+      "evidence": {
+        "source": "raw/ky-an-north-direction-neutral.png",
+        "nativeStrip": "review/ky-an-north-root-review-2x.png",
+        "nativeStripSha256": null,
+        "rootReview": null,
+        "additional": [
+          "review/ky-an-north-root-review-2x.png"
+        ]
+      },
+      "status": "needs-source-correction",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18
+    },
+    {
+      "slug": "phung-da",
+      "direction": "northwest",
+      "source": "raw/phung-da-northwest-direction-neutral.png",
+      "sourceSha256": "d0dbd6d9c10327fa5a243c7f6e5f47972e9b40613ea9884311ef3ab193c5b4a6",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Requested rear camera remains; failure is identity/prop continuity, not camera."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Original hair/clothes retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Single complete connected body per pose; no neighbour overlap seen."
+      },
+      "props": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "Profession frame4/sourceindex15 contains two wooden blades: one newly in near screen-left/left hand, while original blade remains in far screen-right/right hand. Other17poses do not justify packing this duplicate-weapon pose."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/phung-da-northwest-root-review-2x.png",
+        "finding": "Initial native strip/source viewed; no manual root confirmation because art identity/props block downstream candidate."
+      },
+      "limitations": [
+        "Profession frame4/sourceindex15 contains two wooden blades: one newly in near screen-left/left hand, while original blade remains in far screen-right/right hand. Other17poses do not justify packing this duplicate-weapon pose."
+      ],
+      "evidence": {
+        "source": "raw/phung-da-northwest-direction-neutral.png",
+        "nativeStrip": "review/phung-da-northwest-root-review-2x.png",
+        "nativeStripSha256": null,
+        "rootReview": null,
+        "additional": [
+          "review/phung-da-northwest-source-pose-14-3x.png",
+          "review/phung-da-northwest-source-pose-15-3x.png"
+        ]
+      },
+      "status": "needs-source-correction",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "nativePosesViewed": 18
+    },
+    {
+      "slug": "phung-da",
+      "direction": "northwest",
+      "source": "raw/phung-da-northwest-repair-r2.png",
+      "sourceSha256": "b63ed099bf62b5d30f1b1471c24cf22628783d8791eed33b5bfcb610f6235f38",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18repaired poses preserve the actual rear camera matching same-direction Wang; front face/chest/palms remain occluded."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Original upright short spiked hair, grey-green robe and red-brown wrists/belt retained across all18poses."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18raw and final native poses visually reviewed. Single complete compact human, short legs/torso, natural shoulder/head variations, no deformation or adjacent-frame parts."
+      },
+      "props": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Profession frame4/source15 now has only the original right/far-hand blade; duplicate near/left blade removed. All18poses retain one wooden sword attached to same anatomical right hand; left hand at rest, no blade across back."
+      },
+      "motionReadability": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Actual idle breath, rear-talk head/shoulder changes and low sword-bearing wrist/grip adjustment/recover are present; no attack arc, lunge or extra weapon gesture."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/phung-da-northwest-root-review-2x.png",
+        "sha256": "22399a30ac4b273cc0a296aed35150c3b0d5b8af4785556f4dc3093017408898",
+        "finding": "Final2x native strip reviewed after manual two-boot roots/crown and one source scale rendering. Repair effective in all relevant poses, complete boots, fixed world floor and zero clipping."
+      },
+      "nativePosesViewed": 18,
+      "measurementProposal": {
+        "file": "review/phung-da-northwest-root-review.json",
+        "oneScalePerSource": true,
+        "neutralCrownY": 107,
+        "scale": 0.22792022792022792,
+        "manualBothBootWitnesses": 18,
+        "clippedOpaquePixels": 0
+      },
+      "retainedParts": {
+        "pass": true,
+        "finding": "18complete body components, no detached extra props or neighbouring pose pixels."
+      },
+      "evidence": {
+        "source": "raw/phung-da-northwest-repair-r2.png",
+        "nativeStrip": "review/phung-da-northwest-root-review-2x.png",
+        "nativeStripSha256": "22399a30ac4b273cc0a296aed35150c3b0d5b8af4785556f4dc3093017408898",
+        "rootReview": "review/phung-da-northwest-root-review.json"
+      },
+      "limitations": [
+        "Rear talk/reading/wrist gestures are intentionally restrained and front mouth/palms stay occluded. Small hair/cord/weapon details remain subdued at native1x.",
+        "Neutral/source scale remains common for18poses; frame end is visually near neutral without pixel-exact equality assertion.",
+        "Talk frame6/sourceindex11 sword outline/tip reaches actual source right canvas edge x1253 at y783-795 (13alpha>=128pixels). These are the same connected blade dark cap pixels, not foreign islands; apparent outer outline clipped/no clear source margin. Native zero clipping does not restore/prove missing source edge."
+      ],
+      "status": "needs-source-correction",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "sourceCompleteness": {
+        "pass": false,
+        "finding": "Talk frame6/sourceindex11 sword outline/tip reaches actual source right canvas edge x1253 at y783-795 (13alpha>=128pixels). These are the same connected blade dark cap pixels, not foreign islands; apparent outer outline clipped/no clear source margin. Native zero clipping does not restore/prove missing source edge.",
+        "frames": [
+          11
+        ],
+        "edge": "right",
+        "alphaAtThresholdPixels": 13,
+        "evidence": "review/phung-da-northwest-repair-source-pose-11-3x.png"
+      }
+    }
+  ]
+}

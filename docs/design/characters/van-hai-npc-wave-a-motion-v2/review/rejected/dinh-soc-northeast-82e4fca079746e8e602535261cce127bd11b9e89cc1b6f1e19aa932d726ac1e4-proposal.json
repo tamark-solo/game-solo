@@ -1,0 +1,3384 @@
+{
+  "schema": "npc-wave-a-motion-root-review-proposal-2",
+  "date": "2026-10-13",
+  "slug": "dinh-soc",
+  "direction": "northeast",
+  "source": "raw/dinh-soc-northeast-direction-neutral.png",
+  "sourceSha256": "82e4fca079746e8e602535261cce127bd11b9e89cc1b6f1e19aa932d726ac1e4",
+  "sourceDimensions": [
+    1254,
+    1254
+  ],
+  "prompt": "prompts/dinh-soc-northeast-direction-neutral-motion.txt",
+  "alphaThreshold": 128,
+  "neutralIndex": 0,
+  "neutralTopY": 78,
+  "neutralBodyTopConfirmed": true,
+  "neutralBodyTopBasis": "Neutral frame0 actual crown hair top is y78, separate from the held spear or hand prop. One uniform source scale uses this crown and actual paired bootground 416.",
+  "manualRootReviewBasis": "All18 raw poses visually reviewed and individual paired boot supports manually checked. Prop tips excluded, roots remain on actual boot support; source components preserve original body/prop pixels, one neutral crown-to-boot scale only.",
+  "frames": [
+    {
+      "index": 0,
+      "action": "idle",
+      "frame": 0,
+      "left": 19,
+      "top": 78,
+      "width": 220,
+      "height": 338,
+      "componentLabels": [
+        1
+      ],
+      "rootX": 122,
+      "rootY": 416,
+      "bootPairBandCandidate": {
+        "rootX": 124.5,
+        "rootY": 416,
+        "occupiedBandSpan": [
+          71,
+          178
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 402,
+            "runs": [
+              [
+                71,
+                95
+              ],
+              [
+                122,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 403,
+            "runs": [
+              [
+                72,
+                94
+              ],
+              [
+                122,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 404,
+            "runs": [
+              [
+                122,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 405,
+            "runs": [
+              [
+                122,
+                177
+              ]
+            ]
+          },
+          {
+            "y": 406,
+            "runs": [
+              [
+                122,
+                175
+              ]
+            ]
+          },
+          {
+            "y": 407,
+            "runs": [
+              [
+                122,
+                175
+              ]
+            ]
+          },
+          {
+            "y": 408,
+            "runs": [
+              [
+                122,
+                174
+              ]
+            ]
+          },
+          {
+            "y": 409,
+            "runs": [
+              [
+                122,
+                173
+              ]
+            ]
+          },
+          {
+            "y": 410,
+            "runs": [
+              [
+                122,
+                173
+              ]
+            ]
+          },
+          {
+            "y": 411,
+            "runs": [
+              [
+                123,
+                170
+              ]
+            ]
+          },
+          {
+            "y": 412,
+            "runs": [
+              [
+                124,
+                169
+              ]
+            ]
+          },
+          {
+            "y": 413,
+            "runs": [
+              [
+                125,
+                169
+              ]
+            ]
+          },
+          {
+            "y": 414,
+            "runs": [
+              [
+                126,
+                164
+              ]
+            ]
+          },
+          {
+            "y": 415,
+            "runs": [
+              [
+                126,
+                164
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        66,
+        391,
+        179,
+        416
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 66,391,179,416. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 1,
+      "action": "idle",
+      "frame": 1,
+      "left": 226,
+      "top": 78,
+      "width": 220,
+      "height": 338,
+      "componentLabels": [
+        2
+      ],
+      "rootX": 330.5,
+      "rootY": 416,
+      "bootPairBandCandidate": {
+        "rootX": 332.5,
+        "rootY": 416,
+        "occupiedBandSpan": [
+          280,
+          385
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 402,
+            "runs": [
+              [
+                280,
+                305
+              ],
+              [
+                329,
+                385
+              ]
+            ]
+          },
+          {
+            "y": 403,
+            "runs": [
+              [
+                281,
+                304
+              ],
+              [
+                329,
+                385
+              ]
+            ]
+          },
+          {
+            "y": 404,
+            "runs": [
+              [
+                329,
+                385
+              ]
+            ]
+          },
+          {
+            "y": 405,
+            "runs": [
+              [
+                329,
+                384
+              ]
+            ]
+          },
+          {
+            "y": 406,
+            "runs": [
+              [
+                329,
+                382
+              ]
+            ]
+          },
+          {
+            "y": 407,
+            "runs": [
+              [
+                329,
+                382
+              ]
+            ]
+          },
+          {
+            "y": 408,
+            "runs": [
+              [
+                329,
+                382
+              ]
+            ]
+          },
+          {
+            "y": 409,
+            "runs": [
+              [
+                329,
+                380
+              ]
+            ]
+          },
+          {
+            "y": 410,
+            "runs": [
+              [
+                329,
+                380
+              ]
+            ]
+          },
+          {
+            "y": 411,
+            "runs": [
+              [
+                330,
+                377
+              ]
+            ]
+          },
+          {
+            "y": 412,
+            "runs": [
+              [
+                330,
+                376
+              ]
+            ]
+          },
+          {
+            "y": 413,
+            "runs": [
+              [
+                332,
+                373
+              ],
+              [
+                375,
+                375
+              ]
+            ]
+          },
+          {
+            "y": 414,
+            "runs": [
+              [
+                333,
+                371
+              ]
+            ]
+          },
+          {
+            "y": 415,
+            "runs": [
+              [
+                333,
+                370
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        276,
+        391,
+        386,
+        416
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 276,391,386,416. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 2,
+      "action": "idle",
+      "frame": 2,
+      "left": 433,
+      "top": 78,
+      "width": 218,
+      "height": 338,
+      "componentLabels": [
+        3
+      ],
+      "rootX": 532.5,
+      "rootY": 416,
+      "bootPairBandCandidate": {
+        "rootX": 535,
+        "rootY": 416,
+        "occupiedBandSpan": [
+          482,
+          588
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 402,
+            "runs": [
+              [
+                482,
+                505
+              ],
+              [
+                531,
+                588
+              ]
+            ]
+          },
+          {
+            "y": 403,
+            "runs": [
+              [
+                483,
+                503
+              ],
+              [
+                531,
+                588
+              ]
+            ]
+          },
+          {
+            "y": 404,
+            "runs": [
+              [
+                531,
+                588
+              ]
+            ]
+          },
+          {
+            "y": 405,
+            "runs": [
+              [
+                531,
+                587
+              ]
+            ]
+          },
+          {
+            "y": 406,
+            "runs": [
+              [
+                532,
+                585
+              ]
+            ]
+          },
+          {
+            "y": 407,
+            "runs": [
+              [
+                532,
+                585
+              ]
+            ]
+          },
+          {
+            "y": 408,
+            "runs": [
+              [
+                532,
+                584
+              ]
+            ]
+          },
+          {
+            "y": 409,
+            "runs": [
+              [
+                532,
+                583
+              ]
+            ]
+          },
+          {
+            "y": 410,
+            "runs": [
+              [
+                532,
+                582
+              ]
+            ]
+          },
+          {
+            "y": 411,
+            "runs": [
+              [
+                532,
+                580
+              ]
+            ]
+          },
+          {
+            "y": 412,
+            "runs": [
+              [
+                534,
+                579
+              ]
+            ]
+          },
+          {
+            "y": 413,
+            "runs": [
+              [
+                535,
+                578
+              ]
+            ]
+          },
+          {
+            "y": 414,
+            "runs": [
+              [
+                535,
+                574
+              ]
+            ]
+          },
+          {
+            "y": 415,
+            "runs": [
+              [
+                536,
+                574
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        477,
+        391,
+        589,
+        416
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 477,391,589,416. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 3,
+      "action": "idle",
+      "frame": 3,
+      "left": 637,
+      "top": 78,
+      "width": 222,
+      "height": 338,
+      "componentLabels": [
+        4
+      ],
+      "rootX": 742,
+      "rootY": 416,
+      "bootPairBandCandidate": {
+        "rootX": 744.5,
+        "rootY": 416,
+        "occupiedBandSpan": [
+          690,
+          799
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 402,
+            "runs": [
+              [
+                690,
+                713
+              ],
+              [
+                742,
+                799
+              ]
+            ]
+          },
+          {
+            "y": 403,
+            "runs": [
+              [
+                690,
+                713
+              ],
+              [
+                742,
+                799
+              ]
+            ]
+          },
+          {
+            "y": 404,
+            "runs": [
+              [
+                742,
+                799
+              ]
+            ]
+          },
+          {
+            "y": 405,
+            "runs": [
+              [
+                742,
+                799
+              ]
+            ]
+          },
+          {
+            "y": 406,
+            "runs": [
+              [
+                742,
+                796
+              ]
+            ]
+          },
+          {
+            "y": 407,
+            "runs": [
+              [
+                742,
+                796
+              ]
+            ]
+          },
+          {
+            "y": 408,
+            "runs": [
+              [
+                742,
+                796
+              ]
+            ]
+          },
+          {
+            "y": 409,
+            "runs": [
+              [
+                742,
+                794
+              ]
+            ]
+          },
+          {
+            "y": 410,
+            "runs": [
+              [
+                742,
+                794
+              ]
+            ]
+          },
+          {
+            "y": 411,
+            "runs": [
+              [
+                743,
+                791
+              ]
+            ]
+          },
+          {
+            "y": 412,
+            "runs": [
+              [
+                744,
+                791
+              ]
+            ]
+          },
+          {
+            "y": 413,
+            "runs": [
+              [
+                745,
+                789
+              ]
+            ]
+          },
+          {
+            "y": 414,
+            "runs": [
+              [
+                746,
+                785
+              ]
+            ]
+          },
+          {
+            "y": 415,
+            "runs": [
+              [
+                746,
+                785
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        685,
+        391,
+        800,
+        416
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 685,391,800,416. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 4,
+      "action": "idle",
+      "frame": 4,
+      "left": 844,
+      "top": 78,
+      "width": 215,
+      "height": 338,
+      "componentLabels": [
+        5
+      ],
+      "rootX": 941.5,
+      "rootY": 416,
+      "bootPairBandCandidate": {
+        "rootX": 944,
+        "rootY": 416,
+        "occupiedBandSpan": [
+          889,
+          999
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 402,
+            "runs": [
+              [
+                889,
+                913
+              ],
+              [
+                943,
+                999
+              ]
+            ]
+          },
+          {
+            "y": 403,
+            "runs": [
+              [
+                890,
+                912
+              ],
+              [
+                943,
+                999
+              ]
+            ]
+          },
+          {
+            "y": 404,
+            "runs": [
+              [
+                943,
+                999
+              ]
+            ]
+          },
+          {
+            "y": 405,
+            "runs": [
+              [
+                943,
+                998
+              ]
+            ]
+          },
+          {
+            "y": 406,
+            "runs": [
+              [
+                943,
+                997
+              ]
+            ]
+          },
+          {
+            "y": 407,
+            "runs": [
+              [
+                943,
+                997
+              ]
+            ]
+          },
+          {
+            "y": 408,
+            "runs": [
+              [
+                943,
+                996
+              ]
+            ]
+          },
+          {
+            "y": 409,
+            "runs": [
+              [
+                943,
+                995
+              ]
+            ]
+          },
+          {
+            "y": 410,
+            "runs": [
+              [
+                944,
+                995
+              ]
+            ]
+          },
+          {
+            "y": 411,
+            "runs": [
+              [
+                945,
+                991
+              ]
+            ]
+          },
+          {
+            "y": 412,
+            "runs": [
+              [
+                945,
+                991
+              ]
+            ]
+          },
+          {
+            "y": 413,
+            "runs": [
+              [
+                946,
+                988
+              ]
+            ]
+          },
+          {
+            "y": 414,
+            "runs": [
+              [
+                947,
+                985
+              ]
+            ]
+          },
+          {
+            "y": 415,
+            "runs": [
+              [
+                948,
+                985
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        884,
+        391,
+        1000,
+        416
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 884,391,1000,416. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 5,
+      "action": "idle",
+      "frame": 5,
+      "left": 1039,
+      "top": 78,
+      "width": 215,
+      "height": 338,
+      "componentLabels": [
+        6
+      ],
+      "rootX": 1142.5,
+      "rootY": 416,
+      "bootPairBandCandidate": {
+        "rootX": 1145,
+        "rootY": 416,
+        "occupiedBandSpan": [
+          1092,
+          1198
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 402,
+            "runs": [
+              [
+                1092,
+                1115
+              ],
+              [
+                1142,
+                1198
+              ]
+            ]
+          },
+          {
+            "y": 403,
+            "runs": [
+              [
+                1094,
+                1112
+              ],
+              [
+                1142,
+                1198
+              ]
+            ]
+          },
+          {
+            "y": 404,
+            "runs": [
+              [
+                1142,
+                1198
+              ]
+            ]
+          },
+          {
+            "y": 405,
+            "runs": [
+              [
+                1142,
+                1198
+              ]
+            ]
+          },
+          {
+            "y": 406,
+            "runs": [
+              [
+                1142,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 407,
+            "runs": [
+              [
+                1142,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 408,
+            "runs": [
+              [
+                1142,
+                1194
+              ]
+            ]
+          },
+          {
+            "y": 409,
+            "runs": [
+              [
+                1142,
+                1193
+              ]
+            ]
+          },
+          {
+            "y": 410,
+            "runs": [
+              [
+                1142,
+                1193
+              ]
+            ]
+          },
+          {
+            "y": 411,
+            "runs": [
+              [
+                1143,
+                1191
+              ]
+            ]
+          },
+          {
+            "y": 412,
+            "runs": [
+              [
+                1144,
+                1190
+              ]
+            ]
+          },
+          {
+            "y": 413,
+            "runs": [
+              [
+                1145,
+                1189
+              ]
+            ]
+          },
+          {
+            "y": 414,
+            "runs": [
+              [
+                1146,
+                1184
+              ]
+            ]
+          },
+          {
+            "y": 415,
+            "runs": [
+              [
+                1147,
+                1184
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        1087,
+        391,
+        1199,
+        416
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 1087,391,1199,416. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 6,
+      "action": "talk",
+      "frame": 0,
+      "left": 19,
+      "top": 461,
+      "width": 220,
+      "height": 343,
+      "componentLabels": [
+        7
+      ],
+      "rootX": 122,
+      "rootY": 804,
+      "bootPairBandCandidate": {
+        "rootX": 150,
+        "rootY": 804,
+        "occupiedBandSpan": [
+          122,
+          178
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 790,
+            "runs": [
+              [
+                122,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 791,
+            "runs": [
+              [
+                122,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 792,
+            "runs": [
+              [
+                122,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 793,
+            "runs": [
+              [
+                122,
+                176
+              ]
+            ]
+          },
+          {
+            "y": 794,
+            "runs": [
+              [
+                122,
+                175
+              ]
+            ]
+          },
+          {
+            "y": 795,
+            "runs": [
+              [
+                122,
+                175
+              ]
+            ]
+          },
+          {
+            "y": 796,
+            "runs": [
+              [
+                122,
+                174
+              ]
+            ]
+          },
+          {
+            "y": 797,
+            "runs": [
+              [
+                123,
+                173
+              ]
+            ]
+          },
+          {
+            "y": 798,
+            "runs": [
+              [
+                123,
+                172
+              ]
+            ]
+          },
+          {
+            "y": 799,
+            "runs": [
+              [
+                124,
+                169
+              ]
+            ]
+          },
+          {
+            "y": 800,
+            "runs": [
+              [
+                124,
+                169
+              ]
+            ]
+          },
+          {
+            "y": 801,
+            "runs": [
+              [
+                125,
+                168
+              ]
+            ]
+          },
+          {
+            "y": 802,
+            "runs": [
+              [
+                126,
+                164
+              ]
+            ]
+          },
+          {
+            "y": 803,
+            "runs": [
+              [
+                127,
+                164
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        66,
+        779,
+        179,
+        804
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 66,779,179,804. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 7,
+      "action": "talk",
+      "frame": 1,
+      "left": 221,
+      "top": 462,
+      "width": 225,
+      "height": 342,
+      "componentLabels": [
+        10
+      ],
+      "rootX": 330.5,
+      "rootY": 804,
+      "bootPairBandCandidate": {
+        "rootX": 357,
+        "rootY": 804,
+        "occupiedBandSpan": [
+          329,
+          385
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 790,
+            "runs": [
+              [
+                329,
+                385
+              ]
+            ]
+          },
+          {
+            "y": 791,
+            "runs": [
+              [
+                329,
+                385
+              ]
+            ]
+          },
+          {
+            "y": 792,
+            "runs": [
+              [
+                329,
+                385
+              ]
+            ]
+          },
+          {
+            "y": 793,
+            "runs": [
+              [
+                329,
+                384
+              ]
+            ]
+          },
+          {
+            "y": 794,
+            "runs": [
+              [
+                329,
+                383
+              ]
+            ]
+          },
+          {
+            "y": 795,
+            "runs": [
+              [
+                329,
+                382
+              ]
+            ]
+          },
+          {
+            "y": 796,
+            "runs": [
+              [
+                329,
+                381
+              ]
+            ]
+          },
+          {
+            "y": 797,
+            "runs": [
+              [
+                329,
+                380
+              ]
+            ]
+          },
+          {
+            "y": 798,
+            "runs": [
+              [
+                329,
+                378
+              ]
+            ]
+          },
+          {
+            "y": 799,
+            "runs": [
+              [
+                331,
+                377
+              ]
+            ]
+          },
+          {
+            "y": 800,
+            "runs": [
+              [
+                331,
+                376
+              ]
+            ]
+          },
+          {
+            "y": 801,
+            "runs": [
+              [
+                332,
+                374
+              ]
+            ]
+          },
+          {
+            "y": 802,
+            "runs": [
+              [
+                333,
+                371
+              ]
+            ]
+          },
+          {
+            "y": 803,
+            "runs": [
+              [
+                333,
+                371
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        276,
+        779,
+        386,
+        804
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 276,779,386,804. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 8,
+      "action": "talk",
+      "frame": 2,
+      "left": 433,
+      "top": 461,
+      "width": 222,
+      "height": 343,
+      "componentLabels": [
+        8
+      ],
+      "rootX": 532.5,
+      "rootY": 804,
+      "bootPairBandCandidate": {
+        "rootX": 560,
+        "rootY": 804,
+        "occupiedBandSpan": [
+          532,
+          588
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 790,
+            "runs": [
+              [
+                532,
+                588
+              ]
+            ]
+          },
+          {
+            "y": 791,
+            "runs": [
+              [
+                532,
+                588
+              ]
+            ]
+          },
+          {
+            "y": 792,
+            "runs": [
+              [
+                532,
+                588
+              ]
+            ]
+          },
+          {
+            "y": 793,
+            "runs": [
+              [
+                532,
+                587
+              ]
+            ]
+          },
+          {
+            "y": 794,
+            "runs": [
+              [
+                532,
+                586
+              ]
+            ]
+          },
+          {
+            "y": 795,
+            "runs": [
+              [
+                532,
+                585
+              ]
+            ]
+          },
+          {
+            "y": 796,
+            "runs": [
+              [
+                532,
+                584
+              ]
+            ]
+          },
+          {
+            "y": 797,
+            "runs": [
+              [
+                532,
+                584
+              ]
+            ]
+          },
+          {
+            "y": 798,
+            "runs": [
+              [
+                532,
+                582
+              ]
+            ]
+          },
+          {
+            "y": 799,
+            "runs": [
+              [
+                533,
+                580
+              ]
+            ]
+          },
+          {
+            "y": 800,
+            "runs": [
+              [
+                534,
+                580
+              ]
+            ]
+          },
+          {
+            "y": 801,
+            "runs": [
+              [
+                535,
+                577
+              ]
+            ]
+          },
+          {
+            "y": 802,
+            "runs": [
+              [
+                536,
+                574
+              ]
+            ]
+          },
+          {
+            "y": 803,
+            "runs": [
+              [
+                537,
+                573
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        477,
+        779,
+        589,
+        804
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 477,779,589,804. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 9,
+      "action": "talk",
+      "frame": 3,
+      "left": 635,
+      "top": 464,
+      "width": 228,
+      "height": 340,
+      "componentLabels": [
+        11
+      ],
+      "rootX": 745.5,
+      "rootY": 804,
+      "bootPairBandCandidate": {
+        "rootX": 773.5,
+        "rootY": 804,
+        "occupiedBandSpan": [
+          745,
+          802
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 790,
+            "runs": [
+              [
+                745,
+                802
+              ]
+            ]
+          },
+          {
+            "y": 791,
+            "runs": [
+              [
+                745,
+                802
+              ]
+            ]
+          },
+          {
+            "y": 792,
+            "runs": [
+              [
+                745,
+                802
+              ]
+            ]
+          },
+          {
+            "y": 793,
+            "runs": [
+              [
+                745,
+                800
+              ]
+            ]
+          },
+          {
+            "y": 794,
+            "runs": [
+              [
+                745,
+                799
+              ]
+            ]
+          },
+          {
+            "y": 795,
+            "runs": [
+              [
+                745,
+                799
+              ]
+            ]
+          },
+          {
+            "y": 796,
+            "runs": [
+              [
+                745,
+                797
+              ]
+            ]
+          },
+          {
+            "y": 797,
+            "runs": [
+              [
+                745,
+                797
+              ]
+            ]
+          },
+          {
+            "y": 798,
+            "runs": [
+              [
+                745,
+                795
+              ]
+            ]
+          },
+          {
+            "y": 799,
+            "runs": [
+              [
+                746,
+                793
+              ]
+            ]
+          },
+          {
+            "y": 800,
+            "runs": [
+              [
+                747,
+                793
+              ]
+            ]
+          },
+          {
+            "y": 801,
+            "runs": [
+              [
+                748,
+                787
+              ]
+            ]
+          },
+          {
+            "y": 802,
+            "runs": [
+              [
+                748,
+                787
+              ]
+            ]
+          },
+          {
+            "y": 803,
+            "runs": [
+              [
+                749,
+                786
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        689,
+        779,
+        803,
+        804
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 689,779,803,804. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 10,
+      "action": "talk",
+      "frame": 4,
+      "left": 839,
+      "top": 464,
+      "width": 222,
+      "height": 340,
+      "componentLabels": [
+        12
+      ],
+      "rootX": 943.5,
+      "rootY": 804,
+      "bootPairBandCandidate": {
+        "rootX": 946.5,
+        "rootY": 804,
+        "occupiedBandSpan": [
+          894,
+          999
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 790,
+            "runs": [
+              [
+                894,
+                912
+              ],
+              [
+                943,
+                999
+              ]
+            ]
+          },
+          {
+            "y": 791,
+            "runs": [
+              [
+                943,
+                999
+              ]
+            ]
+          },
+          {
+            "y": 792,
+            "runs": [
+              [
+                943,
+                999
+              ]
+            ]
+          },
+          {
+            "y": 793,
+            "runs": [
+              [
+                943,
+                998
+              ]
+            ]
+          },
+          {
+            "y": 794,
+            "runs": [
+              [
+                943,
+                997
+              ]
+            ]
+          },
+          {
+            "y": 795,
+            "runs": [
+              [
+                943,
+                997
+              ]
+            ]
+          },
+          {
+            "y": 796,
+            "runs": [
+              [
+                943,
+                995
+              ]
+            ]
+          },
+          {
+            "y": 797,
+            "runs": [
+              [
+                943,
+                995
+              ]
+            ]
+          },
+          {
+            "y": 798,
+            "runs": [
+              [
+                944,
+                993
+              ]
+            ]
+          },
+          {
+            "y": 799,
+            "runs": [
+              [
+                945,
+                991
+              ]
+            ]
+          },
+          {
+            "y": 800,
+            "runs": [
+              [
+                945,
+                991
+              ]
+            ]
+          },
+          {
+            "y": 801,
+            "runs": [
+              [
+                946,
+                986
+              ]
+            ]
+          },
+          {
+            "y": 802,
+            "runs": [
+              [
+                947,
+                985
+              ]
+            ]
+          },
+          {
+            "y": 803,
+            "runs": [
+              [
+                948,
+                985
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        887,
+        779,
+        1001,
+        804
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 887,779,1001,804. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 11,
+      "action": "talk",
+      "frame": 5,
+      "left": 1039,
+      "top": 461,
+      "width": 215,
+      "height": 343,
+      "componentLabels": [
+        9
+      ],
+      "rootX": 1142.5,
+      "rootY": 804,
+      "bootPairBandCandidate": {
+        "rootX": 1170,
+        "rootY": 804,
+        "occupiedBandSpan": [
+          1142,
+          1198
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 790,
+            "runs": [
+              [
+                1142,
+                1198
+              ]
+            ]
+          },
+          {
+            "y": 791,
+            "runs": [
+              [
+                1142,
+                1198
+              ]
+            ]
+          },
+          {
+            "y": 792,
+            "runs": [
+              [
+                1142,
+                1198
+              ]
+            ]
+          },
+          {
+            "y": 793,
+            "runs": [
+              [
+                1142,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 794,
+            "runs": [
+              [
+                1142,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 795,
+            "runs": [
+              [
+                1142,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 796,
+            "runs": [
+              [
+                1142,
+                1194
+              ]
+            ]
+          },
+          {
+            "y": 797,
+            "runs": [
+              [
+                1142,
+                1194
+              ]
+            ]
+          },
+          {
+            "y": 798,
+            "runs": [
+              [
+                1142,
+                1191
+              ]
+            ]
+          },
+          {
+            "y": 799,
+            "runs": [
+              [
+                1142,
+                1189
+              ]
+            ]
+          },
+          {
+            "y": 800,
+            "runs": [
+              [
+                1144,
+                1189
+              ]
+            ]
+          },
+          {
+            "y": 801,
+            "runs": [
+              [
+                1145,
+                1188
+              ]
+            ]
+          },
+          {
+            "y": 802,
+            "runs": [
+              [
+                1146,
+                1184
+              ]
+            ]
+          },
+          {
+            "y": 803,
+            "runs": [
+              [
+                1146,
+                1183
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        1087,
+        779,
+        1199,
+        804
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 1087,779,1199,804. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 12,
+      "action": "profession",
+      "frame": 0,
+      "left": 19,
+      "top": 854,
+      "width": 219,
+      "height": 341,
+      "componentLabels": [
+        14
+      ],
+      "rootX": 122,
+      "rootY": 1195,
+      "bootPairBandCandidate": {
+        "rootX": 125,
+        "rootY": 1195,
+        "occupiedBandSpan": [
+          72,
+          178
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 1181,
+            "runs": [
+              [
+                72,
+                95
+              ],
+              [
+                122,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 1182,
+            "runs": [
+              [
+                122,
+                178
+              ]
+            ]
+          },
+          {
+            "y": 1183,
+            "runs": [
+              [
+                122,
+                177
+              ]
+            ]
+          },
+          {
+            "y": 1184,
+            "runs": [
+              [
+                122,
+                176
+              ]
+            ]
+          },
+          {
+            "y": 1185,
+            "runs": [
+              [
+                122,
+                176
+              ]
+            ]
+          },
+          {
+            "y": 1186,
+            "runs": [
+              [
+                122,
+                175
+              ]
+            ]
+          },
+          {
+            "y": 1187,
+            "runs": [
+              [
+                122,
+                174
+              ]
+            ]
+          },
+          {
+            "y": 1188,
+            "runs": [
+              [
+                122,
+                173
+              ]
+            ]
+          },
+          {
+            "y": 1189,
+            "runs": [
+              [
+                122,
+                172
+              ]
+            ]
+          },
+          {
+            "y": 1190,
+            "runs": [
+              [
+                123,
+                169
+              ]
+            ]
+          },
+          {
+            "y": 1191,
+            "runs": [
+              [
+                124,
+                168
+              ]
+            ]
+          },
+          {
+            "y": 1192,
+            "runs": [
+              [
+                126,
+                163
+              ]
+            ]
+          },
+          {
+            "y": 1193,
+            "runs": [
+              [
+                126,
+                163
+              ]
+            ]
+          },
+          {
+            "y": 1194,
+            "runs": [
+              [
+                126,
+                163
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        66,
+        1170,
+        179,
+        1195
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 66,1170,179,1195. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 13,
+      "action": "profession",
+      "frame": 1,
+      "left": 226,
+      "top": 857,
+      "width": 217,
+      "height": 338,
+      "componentLabels": [
+        17
+      ],
+      "rootX": 330.5,
+      "rootY": 1195,
+      "bootPairBandCandidate": {
+        "rootX": 333.5,
+        "rootY": 1195,
+        "occupiedBandSpan": [
+          282,
+          385
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 1181,
+            "runs": [
+              [
+                282,
+                304
+              ],
+              [
+                329,
+                385
+              ]
+            ]
+          },
+          {
+            "y": 1182,
+            "runs": [
+              [
+                329,
+                385
+              ]
+            ]
+          },
+          {
+            "y": 1183,
+            "runs": [
+              [
+                329,
+                385
+              ]
+            ]
+          },
+          {
+            "y": 1184,
+            "runs": [
+              [
+                329,
+                384
+              ]
+            ]
+          },
+          {
+            "y": 1185,
+            "runs": [
+              [
+                329,
+                383
+              ]
+            ]
+          },
+          {
+            "y": 1186,
+            "runs": [
+              [
+                329,
+                383
+              ]
+            ]
+          },
+          {
+            "y": 1187,
+            "runs": [
+              [
+                329,
+                382
+              ]
+            ]
+          },
+          {
+            "y": 1188,
+            "runs": [
+              [
+                329,
+                380
+              ]
+            ]
+          },
+          {
+            "y": 1189,
+            "runs": [
+              [
+                329,
+                380
+              ]
+            ]
+          },
+          {
+            "y": 1190,
+            "runs": [
+              [
+                330,
+                377
+              ]
+            ]
+          },
+          {
+            "y": 1191,
+            "runs": [
+              [
+                331,
+                377
+              ]
+            ]
+          },
+          {
+            "y": 1192,
+            "runs": [
+              [
+                332,
+                371
+              ]
+            ]
+          },
+          {
+            "y": 1193,
+            "runs": [
+              [
+                333,
+                371
+              ]
+            ]
+          },
+          {
+            "y": 1194,
+            "runs": [
+              [
+                334,
+                370
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        276,
+        1170,
+        386,
+        1195
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 276,1170,386,1195. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 14,
+      "action": "profession",
+      "frame": 2,
+      "left": 427,
+      "top": 851,
+      "width": 228,
+      "height": 344,
+      "componentLabels": [
+        13
+      ],
+      "rootX": 533,
+      "rootY": 1195,
+      "bootPairBandCandidate": {
+        "rootX": 535.5,
+        "rootY": 1195,
+        "occupiedBandSpan": [
+          482,
+          589
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 1181,
+            "runs": [
+              [
+                482,
+                505
+              ],
+              [
+                532,
+                589
+              ]
+            ]
+          },
+          {
+            "y": 1182,
+            "runs": [
+              [
+                532,
+                589
+              ]
+            ]
+          },
+          {
+            "y": 1183,
+            "runs": [
+              [
+                532,
+                589
+              ]
+            ]
+          },
+          {
+            "y": 1184,
+            "runs": [
+              [
+                532,
+                587
+              ]
+            ]
+          },
+          {
+            "y": 1185,
+            "runs": [
+              [
+                532,
+                586
+              ]
+            ]
+          },
+          {
+            "y": 1186,
+            "runs": [
+              [
+                532,
+                585
+              ]
+            ]
+          },
+          {
+            "y": 1187,
+            "runs": [
+              [
+                532,
+                584
+              ]
+            ]
+          },
+          {
+            "y": 1188,
+            "runs": [
+              [
+                532,
+                584
+              ]
+            ]
+          },
+          {
+            "y": 1189,
+            "runs": [
+              [
+                532,
+                581
+              ]
+            ]
+          },
+          {
+            "y": 1190,
+            "runs": [
+              [
+                534,
+                580
+              ]
+            ]
+          },
+          {
+            "y": 1191,
+            "runs": [
+              [
+                535,
+                580
+              ]
+            ]
+          },
+          {
+            "y": 1192,
+            "runs": [
+              [
+                536,
+                575
+              ]
+            ]
+          },
+          {
+            "y": 1193,
+            "runs": [
+              [
+                537,
+                574
+              ]
+            ]
+          },
+          {
+            "y": 1194,
+            "runs": [
+              [
+                537,
+                573
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        477,
+        1170,
+        590,
+        1195
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 477,1170,590,1195. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 15,
+      "action": "profession",
+      "frame": 3,
+      "left": 637,
+      "top": 857,
+      "width": 231,
+      "height": 338,
+      "componentLabels": [
+        18
+      ],
+      "rootX": 749.5,
+      "rootY": 1195,
+      "bootPairBandCandidate": {
+        "rootX": 753.5,
+        "rootY": 1195,
+        "occupiedBandSpan": [
+          699,
+          808
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 1181,
+            "runs": [
+              [
+                699,
+                723
+              ],
+              [
+                751,
+                808
+              ]
+            ]
+          },
+          {
+            "y": 1182,
+            "runs": [
+              [
+                751,
+                808
+              ]
+            ]
+          },
+          {
+            "y": 1183,
+            "runs": [
+              [
+                751,
+                807
+              ]
+            ]
+          },
+          {
+            "y": 1184,
+            "runs": [
+              [
+                751,
+                806
+              ]
+            ]
+          },
+          {
+            "y": 1185,
+            "runs": [
+              [
+                751,
+                805
+              ]
+            ]
+          },
+          {
+            "y": 1186,
+            "runs": [
+              [
+                751,
+                805
+              ]
+            ]
+          },
+          {
+            "y": 1187,
+            "runs": [
+              [
+                751,
+                803
+              ]
+            ]
+          },
+          {
+            "y": 1188,
+            "runs": [
+              [
+                751,
+                803
+              ]
+            ]
+          },
+          {
+            "y": 1189,
+            "runs": [
+              [
+                751,
+                802
+              ]
+            ]
+          },
+          {
+            "y": 1190,
+            "runs": [
+              [
+                753,
+                799
+              ]
+            ]
+          },
+          {
+            "y": 1191,
+            "runs": [
+              [
+                753,
+                799
+              ]
+            ]
+          },
+          {
+            "y": 1192,
+            "runs": [
+              [
+                755,
+                794
+              ]
+            ]
+          },
+          {
+            "y": 1193,
+            "runs": [
+              [
+                756,
+                793
+              ]
+            ]
+          },
+          {
+            "y": 1194,
+            "runs": [
+              [
+                756,
+                793
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        693,
+        1170,
+        807,
+        1195
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 693,1170,807,1195. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 16,
+      "action": "profession",
+      "frame": 4,
+      "left": 839,
+      "top": 854,
+      "width": 222,
+      "height": 341,
+      "componentLabels": [
+        15
+      ],
+      "rootX": 944.5,
+      "rootY": 1195,
+      "bootPairBandCandidate": {
+        "rootX": 947.5,
+        "rootY": 1195,
+        "occupiedBandSpan": [
+          895,
+          1000
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 1181,
+            "runs": [
+              [
+                895,
+                917
+              ],
+              [
+                944,
+                1000
+              ]
+            ]
+          },
+          {
+            "y": 1182,
+            "runs": [
+              [
+                943,
+                1000
+              ]
+            ]
+          },
+          {
+            "y": 1183,
+            "runs": [
+              [
+                943,
+                1000
+              ]
+            ]
+          },
+          {
+            "y": 1184,
+            "runs": [
+              [
+                943,
+                998
+              ]
+            ]
+          },
+          {
+            "y": 1185,
+            "runs": [
+              [
+                943,
+                997
+              ]
+            ]
+          },
+          {
+            "y": 1186,
+            "runs": [
+              [
+                943,
+                997
+              ]
+            ]
+          },
+          {
+            "y": 1187,
+            "runs": [
+              [
+                943,
+                995
+              ]
+            ]
+          },
+          {
+            "y": 1188,
+            "runs": [
+              [
+                943,
+                995
+              ]
+            ]
+          },
+          {
+            "y": 1189,
+            "runs": [
+              [
+                944,
+                994
+              ]
+            ]
+          },
+          {
+            "y": 1190,
+            "runs": [
+              [
+                945,
+                991
+              ]
+            ]
+          },
+          {
+            "y": 1191,
+            "runs": [
+              [
+                946,
+                991
+              ]
+            ]
+          },
+          {
+            "y": 1192,
+            "runs": [
+              [
+                947,
+                986
+              ]
+            ]
+          },
+          {
+            "y": 1193,
+            "runs": [
+              [
+                948,
+                985
+              ]
+            ]
+          },
+          {
+            "y": 1194,
+            "runs": [
+              [
+                949,
+                985
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        889,
+        1170,
+        1001,
+        1195
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 889,1170,1001,1195. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    },
+    {
+      "index": 17,
+      "action": "profession",
+      "frame": 5,
+      "left": 1039,
+      "top": 854,
+      "width": 215,
+      "height": 341,
+      "componentLabels": [
+        16
+      ],
+      "rootX": 1142.5,
+      "rootY": 1195,
+      "bootPairBandCandidate": {
+        "rootX": 1145.5,
+        "rootY": 1195,
+        "occupiedBandSpan": [
+          1093,
+          1198
+        ],
+        "bandHeight": 14,
+        "rows": [
+          {
+            "y": 1181,
+            "runs": [
+              [
+                1093,
+                1115
+              ],
+              [
+                1141,
+                1198
+              ]
+            ]
+          },
+          {
+            "y": 1182,
+            "runs": [
+              [
+                1141,
+                1198
+              ]
+            ]
+          },
+          {
+            "y": 1183,
+            "runs": [
+              [
+                1141,
+                1198
+              ]
+            ]
+          },
+          {
+            "y": 1184,
+            "runs": [
+              [
+                1141,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 1185,
+            "runs": [
+              [
+                1141,
+                1196
+              ]
+            ]
+          },
+          {
+            "y": 1186,
+            "runs": [
+              [
+                1141,
+                1195
+              ]
+            ]
+          },
+          {
+            "y": 1187,
+            "runs": [
+              [
+                1141,
+                1193
+              ]
+            ]
+          },
+          {
+            "y": 1188,
+            "runs": [
+              [
+                1142,
+                1193
+              ]
+            ]
+          },
+          {
+            "y": 1189,
+            "runs": [
+              [
+                1142,
+                1191
+              ]
+            ]
+          },
+          {
+            "y": 1190,
+            "runs": [
+              [
+                1143,
+                1189
+              ]
+            ]
+          },
+          {
+            "y": 1191,
+            "runs": [
+              [
+                1144,
+                1189
+              ]
+            ]
+          },
+          {
+            "y": 1192,
+            "runs": [
+              [
+                1145,
+                1184
+              ]
+            ]
+          },
+          {
+            "y": 1193,
+            "runs": [
+              [
+                1146,
+                1183
+              ]
+            ]
+          },
+          {
+            "y": 1194,
+            "runs": [
+              [
+                1146,
+                1183
+              ]
+            ]
+          }
+        ],
+        "method": "occupied-lower-four-percent-boot-pair-span-candidate",
+        "confirmed": false,
+        "warning": "Manual sole/hem/prop discrimination required: sword tips, long robes and foreshortened feet can bias this candidate."
+      },
+      "bootPairSupportWitness": [
+        1087,
+        1170,
+        1199,
+        1195
+      ],
+      "manualRootBasis": "Both actual boot sole supports visually checked in this raw pose and enlarged strip; selected own-source component mask measures support band 1087,1170,1199,1195. World root between boots excludes spear tip, hip props, robe hem and neighbouring source poses.",
+      "rootBasis": "UNCONFIRMED lower-band candidate. Locate both boot soles and exclude prop tips/robe hems manually."
+    }
+  ],
+  "canvas": [
+    96,
+    96
+  ],
+  "pivot": [
+    48,
+    88
+  ],
+  "proposalOnly": true,
+  "visuallyReviewed": false,
+  "rootReviewPolicy": "Review source and native strip. Set neutralTopY to the actual crown/body top (exclude props), neutralBodyTopConfirmed=true and neutralBodyTopBasis. For every frame set rootX/rootY from both boots, bootPairSupportWitness=[left,top,right,bottom] covering both boot support bands, and manualRootBasis (or a shared manualRootReviewBasis). Run --render after edits, then explicit confirm with exact-hash visual assessment.",
+  "artApproved": false,
+  "ownerApproved": false,
+  "motionApproved": false,
+  "runtimeImported": false,
+  "neutralHeight": 338,
+  "scale": 0.23668639053254437,
+  "diagnostics": [
+    {
+      "index": 0,
+      "sourceOpaque": 42485,
+      "nativeOpaquePixels": 2382,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        52,
+        80
+      ],
+      "offset": [
+        24,
+        8
+      ],
+      "sourceLabels": [
+        1
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 1,
+      "sourceOpaque": 41805,
+      "nativeOpaquePixels": 2341,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        52,
+        80
+      ],
+      "offset": [
+        23,
+        8
+      ],
+      "sourceLabels": [
+        2
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 2,
+      "sourceOpaque": 42096,
+      "nativeOpaquePixels": 2396,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        52,
+        80
+      ],
+      "offset": [
+        24,
+        8
+      ],
+      "sourceLabels": [
+        3
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 3,
+      "sourceOpaque": 42387,
+      "nativeOpaquePixels": 2416,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        53,
+        80
+      ],
+      "offset": [
+        23,
+        8
+      ],
+      "sourceLabels": [
+        4
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 4,
+      "sourceOpaque": 42161,
+      "nativeOpaquePixels": 2365,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        51,
+        80
+      ],
+      "offset": [
+        25,
+        8
+      ],
+      "sourceLabels": [
+        5
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 5,
+      "sourceOpaque": 42262,
+      "nativeOpaquePixels": 2363,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        51,
+        80
+      ],
+      "offset": [
+        24,
+        8
+      ],
+      "sourceLabels": [
+        6
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 6,
+      "sourceOpaque": 42806,
+      "nativeOpaquePixels": 2397,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        52,
+        81
+      ],
+      "offset": [
+        24,
+        7
+      ],
+      "sourceLabels": [
+        7
+      ],
+      "crownToRootNative": 81.18,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 7,
+      "sourceOpaque": 43033,
+      "nativeOpaquePixels": 2424,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        53,
+        81
+      ],
+      "offset": [
+        22,
+        7
+      ],
+      "sourceLabels": [
+        10
+      ],
+      "crownToRootNative": 80.95,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 8,
+      "sourceOpaque": 43088,
+      "nativeOpaquePixels": 2442,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        53,
+        81
+      ],
+      "offset": [
+        24,
+        7
+      ],
+      "sourceLabels": [
+        8
+      ],
+      "crownToRootNative": 81.18,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 9,
+      "sourceOpaque": 42628,
+      "nativeOpaquePixels": 2380,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        54,
+        80
+      ],
+      "offset": [
+        22,
+        8
+      ],
+      "sourceLabels": [
+        11
+      ],
+      "crownToRootNative": 80.47,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 10,
+      "sourceOpaque": 42981,
+      "nativeOpaquePixels": 2446,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        53,
+        80
+      ],
+      "offset": [
+        23,
+        8
+      ],
+      "sourceLabels": [
+        12
+      ],
+      "crownToRootNative": 80.47,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 11,
+      "sourceOpaque": 42670,
+      "nativeOpaquePixels": 2404,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        51,
+        81
+      ],
+      "offset": [
+        24,
+        7
+      ],
+      "sourceLabels": [
+        9
+      ],
+      "crownToRootNative": 81.18,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 12,
+      "sourceOpaque": 42677,
+      "nativeOpaquePixels": 2399,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        52,
+        81
+      ],
+      "offset": [
+        24,
+        7
+      ],
+      "sourceLabels": [
+        14
+      ],
+      "crownToRootNative": 80.71,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 13,
+      "sourceOpaque": 42458,
+      "nativeOpaquePixels": 2376,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        51,
+        80
+      ],
+      "offset": [
+        23,
+        8
+      ],
+      "sourceLabels": [
+        17
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 14,
+      "sourceOpaque": 43108,
+      "nativeOpaquePixels": 2410,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        54,
+        81
+      ],
+      "offset": [
+        23,
+        7
+      ],
+      "sourceLabels": [
+        13
+      ],
+      "crownToRootNative": 81.42,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 15,
+      "sourceOpaque": 40942,
+      "nativeOpaquePixels": 2315,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        55,
+        80
+      ],
+      "offset": [
+        21,
+        8
+      ],
+      "sourceLabels": [
+        18
+      ],
+      "crownToRootNative": 80,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 16,
+      "sourceOpaque": 42830,
+      "nativeOpaquePixels": 2428,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        53,
+        81
+      ],
+      "offset": [
+        23,
+        7
+      ],
+      "sourceLabels": [
+        15
+      ],
+      "crownToRootNative": 80.71,
+      "manualBootPairWitnessPresent": true
+    },
+    {
+      "index": 17,
+      "sourceOpaque": 42461,
+      "nativeOpaquePixels": 2389,
+      "clippedOpaquePixels": 0,
+      "nativeSize": [
+        51,
+        81
+      ],
+      "offset": [
+        24,
+        7
+      ],
+      "sourceLabels": [
+        16
+      ],
+      "crownToRootNative": 80.71,
+      "manualBootPairWitnessPresent": true
+    }
+  ],
+  "reviewStrip": "review/dinh-soc-northeast-root-review-2x.png",
+  "largeReviewStrip": "review/dinh-soc-northeast-root-review-6x.png",
+  "reviewStripSha256": "4cec809a6d86bbae404ca9100d751f950fabf98fd63bdf9766242e60dcb51813",
+  "largeReviewStripSha256": "316ebef638f6aa15617f81213056ccb2dc39d79332757cadac5dd2940779b831",
+  "renderedMeasurementSha256": "b6a16bcb2615c5c9c66a857722299c18a0c81832167a3fcd502868e75adf8fe3",
+  "needsManualAdjustment": false
+}

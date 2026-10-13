@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang NORTHWEST remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nCOMPLETE SPEAR TIP and LAYOUT repair: last-column source indices5/11/17 currently clip the outward screen-RIGHT far spear blade/tip at the PNG boundary. Restore a complete pointed blade using the same intact spear design in the other15poses, and give ALL18 entire actors/complete hair/spear silhouettes real transparent gutters: at least24 empty sourcepixels between poses and32 at outer margins. Use roomy wide1536x1024 composition, exactly6columns3rows, body poses at one common scale and spaced by translations only. Never crop/shorten a spear, shrink individual actors, truncate hair, delete a pose, add new weapon or static-repeat neutral. Preserve true BACK-LEFT Northwest camera, own high bun/navy-gold/ivory guard, anatomical RIGHT FAR spear on screen-RIGHT/up and LEFT NEAR hip tag on screen-LEFT/down. Keep all18 genuine idle/talk/tag-check progression and original boots/head/body anatomy. Empty margins must be real alpha0. The wanted corrected atlas will measure boots, never spear tips, as world roots.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang NORTHWEST remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nCOMPLETE SPEAR TIP and LAYOUT repair: last-column source indices5/11/17 currently clip the outward screen-RIGHT far spear blade/tip at the PNG boundary. Restore a complete pointed blade using the same intact spear design in the other15poses, and give ALL18 entire actors/complete hair/spear silhouettes real transparent gutters: at least24 empty sourcepixels between poses and32 at outer margins. Use roomy wide1536x1024 composition, exactly6columns3rows, body poses at one common scale and spaced by translations only. Never crop/shorten a spear, shrink individual actors, truncate hair, delete a pose, add new weapon or static-repeat neutral. Preserve true BACK-LEFT Northwest camera, own high bun/navy-gold/ivory guard, anatomical RIGHT FAR spear on screen-RIGHT/up and LEFT NEAR hip tag on screen-LEFT/down. Keep all18 genuine idle/talk/tag-check progression and original boots/head/body anatomy. Empty margins must be real alpha0. The wanted corrected atlas will measure boots, never spear tips, as world roots.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-13T12:41:08.292Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\inputs\\wang-lin-live-northwest-nearest8x.png",
+      "filename": "wang-lin-live-northwest-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9340,
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\raw\\dinh-soc-northwest-direction-neutral.png",
+      "filename": "dinh-soc-northwest-direction-neutral.png",
+      "mimeType": "image/png",
+      "bytes": 1910365,
+      "sha256": "92c6ee00d700d13f98ac75816fab3711f9a7c20d309cf50b17eb0cea7ed926bd",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\direction-neutral\\nearest8x\\dinh-soc-northwest.png",
+      "filename": "dinh-soc-northwest.png",
+      "mimeType": "image/png",
+      "bytes": 17431,
+      "sha256": "d8a8d1ec78e4267e53e52306d82a13a866a5f672980f340f91499dd90cc9e87d",
+      "dimensions": {
+        "width": 768,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "dinh-soc-northwest-repair-r2.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 2322393,
+    "sha256": "5a265045d16f7eee042925648c5902acc114f7c6568e0517064607fdf9eeb64c",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

@@ -1,5 +1,7 @@
 # Hệ thống tu tiên — ba nhân vật chơi được
 
+> **Thiết kế tiếp nối 13/10/2026:** [GDD 0.33](GDD.md), [hệ tu tiên mới](CULTIVATION-REDESIGN-2026-10-13.md) và [Hằng Nhạc v2](HANG-NHAC-ONBOARDING-V2.md) thay đề xuất về nhịp nhập môn, HN04, xác nhận tầng/nhiệm vụ và thời điểm EX trong tài liệu này. Nội dung bên dưới giữ làm cơ sở/lịch sử; trạng thái đang chạy xem [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md). Bản thiết kế mới chưa thay code/save hoặc duyệt balance/ART.
+
 **Phiên bản:** 0.3 · **Ngày:** 08/10/2026 · **Tham chiếu:** [GDD 0.28](GDD.md), [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md).
 
 **Đã chốt:** sáu phần phát triển; chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu; Hằng Nhạc qua Ngưng Khí, phân hóa sâu từ hành trình Trúc Cơ. **Thiết kế cơ sở:** trạng thái, điều kiện và ví dụ dưới đây; chưa chốt số liệu, tên thuật mới hoặc schema runtime. Không có triển khai code trong tài liệu này.

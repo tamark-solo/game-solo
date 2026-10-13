@@ -1,0 +1,145 @@
+{
+  "schema": "npc-wave-a-direction-neutral-assessment-1",
+  "date": "2026-10-13",
+  "scope": "Explicit standalone view-lock neutrals for BạchChỉ West and TốngThiết Southwest; technical/manual view/root confirmation only",
+  "sources": [
+    {
+      "slug": "bach-chi",
+      "direction": "west",
+      "source": "direction-neutral/raw/bach-chi-west.png",
+      "sourceSha256": "7fb4b3b89f1f193734b8908dfe3adde6f6f5b2bb720c7f2a989dd967011cb74e",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "neutralRegistration": {
+        "file": "direction-neutral/review/bach-chi-west.json",
+        "sha256": "5e032e59e76686f1ca13c9345ed049f2839b9a9db19ca586a31f629f59b841d1"
+      },
+      "orientation": {
+        "pass": true,
+        "finding": "Viewed full raw, native1x/nearest8x and actual Wang liveWest pair. Left-facing one-eye/nose silhouette, hidden far cheek, visible near ear and shoulder match the stylized side camera of liveWangWest; not a Southwest bilateral face. Own brown bun/green tie, compact body, tea-leaf/ivory robe, basket in physicalright/far hand and pestle in physicalleft/near hand retained. No new gear or front/back hand switch."
+      },
+      "identity": {
+        "pass": true,
+        "finding": "Own accepted Southeast actor skull/hair/wardrobe and compact human body retained; Wang targetview used as primary anatomy/pixel/camera standard."
+      },
+      "anatomy": {
+        "pass": true,
+        "finding": "Native1x/2x/nearest8x viewed directly against real Wang same direction, large compact skull and short limbs retained; a single scale is measured from actual crown-to-boot floor."
+      },
+      "propContinuity": {
+        "pass": true,
+        "finding": "Basket remains physicalright/far hand, jade pestle physicalleft/near hand, with legitimate front side extension and no extra tool."
+      },
+      "root": {
+        "pass": true,
+        "root": [
+          509.5,
+          1426
+        ],
+        "neutralTopY": 200,
+        "scale": 0.06525285481239804,
+        "bootPairSupportWitness": [
+          334,
+          1388,
+          685,
+          1426
+        ],
+        "finding": "Both boot supports visually located: far forward screen-left sole ends near y1415 within x334–514; nearer screen-right sole reaches y1426 within x537–685. Use ground1426 and between-pair root509.5, preserving natural foreshortened far-foot height. Basket/pestle/robe hem end higher and do not define root."
+      },
+      "native": {
+        "file": "direction-neutral/native/bach-chi-west.png",
+        "sha256": "73e9c83210b4ed21ad6f32fab2ffc76ca8babf8b879064554124423df5b69bbe",
+        "nearest8x": "direction-neutral/nearest8x/bach-chi-west.png",
+        "nearest8xSha256": "0521dbbbd37fcf495a3e1c43b2c981b778771f2038726c30efde3b7a8e5b4b47",
+        "comparison": "review/bach-chi-west-neutral-wang-pair-2x.png",
+        "comparisonSha256": "58ba083fd52c66c2d4ecfc6cb48ba4bbcf41e30008d509200d34a2a15137ce11",
+        "clippedOpaquePixels": 0,
+        "rgbPainted": false
+      },
+      "limitations": [
+        "Stylized side camera retains some front lapel and both natural prop grips, like liveWangWest; face has one visible eye rather than bilateral Southwest face.",
+        "Far boot ends slightly higher than near boot due foreshortening, approximately1nativepixel; world root uses the boot pair, not bbox center.",
+        "Raw contains soft edge fringe; binaryalpha128 native extraction excludes the fringe without painting or losing threshold-opaque pixels."
+      ],
+      "status": "review-candidate-neutral-confirmed",
+      "ownerApproved": false,
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "tong-thiet",
+      "direction": "southwest",
+      "source": "direction-neutral/raw/tong-thiet-southwest.png",
+      "sourceSha256": "34d5cd00fed23d404400bac912a1aa49ac24da6f760ff6c1689a876883d03d81",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "neutralRegistration": {
+        "file": "direction-neutral/review/tong-thiet-southwest.json",
+        "sha256": "75cbc541b79b2393fb8c8315a200f74a0032a43414d26c438a80b6d36e01fb91"
+      },
+      "orientation": {
+        "pass": true,
+        "finding": "Viewed full raw/native/Wang liveSouthwest pair. True front-left/down-left face and chest, unlike prior front-right failed sheet. Both eyes with correct near/far perspective match WangSW. Own elderly silver hair/moustache, compact body, copper shoulder cloth/ash apron retained; tongs physicalright/far hand at screenleft, wooden blank physicalleft/near hand at screenright. No tool swap or extra gear."
+      },
+      "identity": {
+        "pass": true,
+        "finding": "Own accepted Southeast actor skull/hair/wardrobe and compact human body retained; Wang targetview used as primary anatomy/pixel/camera standard."
+      },
+      "anatomy": {
+        "pass": true,
+        "finding": "Native1x/2x/nearest8x viewed directly against real Wang same direction, large compact skull and short limbs retained; a single scale is measured from actual crown-to-boot floor."
+      },
+      "propContinuity": {
+        "pass": true,
+        "finding": "Tongs remain physicalright/far hand, wooden blank physicalleft/near hand, no swap or new tool."
+      },
+      "root": {
+        "pass": true,
+        "root": [
+          532,
+          1419
+        ],
+        "neutralTopY": 264,
+        "scale": 0.06926406926406926,
+        "bootPairSupportWitness": [
+          348,
+          1350,
+          716,
+          1419
+        ],
+        "finding": "Both boot supports visually located: farther screen-left boot ends near y1376 within x348–426; nearer screen-right boot reaches y1419 within x566–716. Between-boot world root532 at actual near sole floor1419, preserving natural three-quarter foreshortening. Tongs/blank/apron hem are above support witness and excluded."
+      },
+      "native": {
+        "file": "direction-neutral/native/tong-thiet-southwest.png",
+        "sha256": "8733c9b4d2ac6a7d595211ba2680cfbd54bff2e6d393238fc0aafa24f6d7a1fa",
+        "nearest8x": "direction-neutral/nearest8x/tong-thiet-southwest.png",
+        "nearest8xSha256": "eebcba2effd5db331ae1b91b31e33cdfb18571150242a2af7af35adbd8774fa3",
+        "comparison": "review/tong-thiet-southwest-neutral-wang-pair-2x.png",
+        "comparisonSha256": "8113493c7e082d8d58d2b0484833a1c7d80367b46756d295ef52c16e960ff407",
+        "clippedOpaquePixels": 0,
+        "rgbPainted": false
+      },
+      "limitations": [
+        "Far boot is naturally higher than near boot under Southwest camera, approximately3nativepixels; measured both supports with shared root rather than recentering body bbox.",
+        "Small tongs/blank detail and hair spikes are simplified at native; props retain their materials/physical hands.",
+        "Raw contains soft edge fringe; binaryalpha128 native extraction excludes the fringe without painting or losing threshold-opaque pixels."
+      ],
+      "status": "review-candidate-neutral-confirmed",
+      "ownerApproved": false,
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    }
+  ],
+  "reviewedSourceCount": 2,
+  "artApproved": false,
+  "ownerApproved": false,
+  "motionApproved": false,
+  "runtimeImported": false,
+  "apiCalled": false
+}

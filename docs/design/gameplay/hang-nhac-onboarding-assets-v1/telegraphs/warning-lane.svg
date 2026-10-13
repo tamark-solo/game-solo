@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="64" viewBox="0 0 192 64" role="img" aria-labelledby="title desc">
+  <title id="title">Luồng cảnh báo hướng sang phải</title>
+  <desc id="desc">Dải chữ nhật có viền kép, vạch chéo và ba mũi tên chỉ hướng. Dùng phép quay quanh tâm để đổi hướng.</desc>
+  <defs>
+    <pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0V12" stroke="#eeb865" stroke-width="3" opacity=".45"/>
+    </pattern>
+  </defs>
+  <path d="M10 10h172v44H10Z" fill="#594023" fill-opacity=".25"/>
+  <path d="M10 10h172v44H10Z" fill="url(#hatch)"/>
+  <path d="M10 10h172v44H10Z" fill="none" stroke="#153b3e" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M10 10h172v44H10Z" fill="none" stroke="#f0b85f" stroke-width="3"/>
+  <path d="M19 17h154v30H19Z" fill="none" stroke="#ffe7b0" stroke-width="1"/>
+  <g fill="none" stroke="#153b3e" stroke-width="11" stroke-linejoin="round" stroke-linecap="round">
+    <path d="m57 23 10 9-10 9M91 23l10 9-10 9m34-18 10 9-10 9"/>
+  </g>
+  <g fill="none" stroke="#ffe7b0" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="m57 23 10 9-10 9M91 23l10 9-10 9m34-18 10 9-10 9"/>
+  </g>
+  <path d="M10 23v18m172-18v18" stroke="#153b3e" stroke-width="7"/>
+  <path d="M10 25v14m172-14v14" stroke="#ffda93" stroke-width="3"/>
+</svg>

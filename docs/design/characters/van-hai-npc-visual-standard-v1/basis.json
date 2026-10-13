@@ -1,0 +1,56 @@
+{
+  "schema": "npc-visual-standard-1",
+  "date": "2026-10-13",
+  "ownerInstruction": "phải lấy vương lâm trong game làm chuẩn",
+  "primaryActor": "CHR-WANG-LIN-CHIBI",
+  "primaryReference": "Wang Lin Pixel02 currently used in the game",
+  "sourceCatalog": "client/public/assets/hang-nhac-pixel-player/catalog.json",
+  "sourceCatalogSha256": "a2c6956b1965caffd258559c7547fe6c1fdb1fe5efc2008ef379cb98779c1805",
+  "clip": "idle-southeast",
+  "frameIndex": 0,
+  "atlas": "client/public/assets/hang-nhac-pixel-player/atlases/idle-southeast.png",
+  "atlasSha256": "cc00ed2cacfae34195d2e112d2a78168393a7f9beb1e0d1f2cbfc3d12ad84dfb",
+  "rect": {
+    "x": 2,
+    "y": 2,
+    "w": 64,
+    "h": 96
+  },
+  "native": {
+    "file": "inputs/wang-lin-live-southeast-native.png",
+    "sha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+    "canvas": [
+      64,
+      96
+    ],
+    "pivot": [
+      32,
+      88
+    ],
+    "bodyHeightPx": 80,
+    "alphaBounds": [
+      1,
+      8,
+      50,
+      88
+    ]
+  },
+  "nearest8x": {
+    "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+    "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+    "sourcePixelsUnchanged": true
+  },
+  "approvedMaster": {
+    "file": "docs/design/characters/wang-lin-pixel-production-v2/masters/southeast.png",
+    "sha256": "f89dcf4171aa70e1411553498e8b1f12b3a2b46287272f196604e537e032af54",
+    "rgbaMatchesLiveFrame": true
+  },
+  "inputPolicy": {
+    "firstImage": "Wang Lin live frame enlarged by nearest only",
+    "supportingImages": "NPC identity and costume only; never primary pixel style or anatomy basis",
+    "tranDuyRole": "NPC comparison only; must not replace Wang Lin primary reference"
+  },
+  "reviewPolicy": "Compare NPC directly to live Wang Lin at native1x and integer2x; height80 alone does not prove matching anatomy.",
+  "runtimeModified": false,
+  "newNpcApprovalAutomatic": false
+}

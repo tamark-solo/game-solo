@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 import { chromium } from 'playwright';
 import { ProfileStore } from '../../server/src/profile-store.ts';
 import { HANG_NHAC_AVATARS } from '../../shared/hang-nhac.ts';
-import { SECT_STATIONS } from '../../shared/sect.ts';
+import { SECT_STATIONS, nearStation } from '../../shared/sect.ts';
 import { startService, waitFor } from '../support/services.mjs';
 
 const origin='http://127.0.0.1:5202',endpoint='http://127.0.0.1:2598';
@@ -78,13 +78,23 @@ try{
   await waitFor(async()=>(await game(page)).own.x>center.x+62,'walk outside warning');await page.keyboard.up('ArrowRight');
   await page.waitForFunction(()=>window.__hangNhacSect().view.lessons.walk);
   assert.equal((await sect(page)).view.lessons.wind,false);
+  // Server snapshots arrive after predicted movement. Releasing at center+62 can
+  // leave the player beyond the NPC's 84 px range, so return before the next lesson.
+  const returnToTraining=async()=>{
+    await page.locator('#stage').focus();await page.keyboard.down('ArrowLeft');
+    try{await waitFor(async()=>Math.hypot((await game(page)).own.x-SECT_STATIONS[2].x,(await game(page)).own.y-SECT_STATIONS[2].y)<30,'return to NPC');}
+    finally{await page.keyboard.up('ArrowLeft');}
+    await page.waitForFunction(()=>!window.__hangNhacR01().own.moving&&!window.__hangNhacSect().view.practising);
+    assert.ok(nearStation((await game(page)).own,'training'),'each lesson starts within the real NPC interaction range');
+  };
+  await returnToTraining();
+  await page.keyboard.press('ArrowRight');
+  await page.waitForFunction(()=>window.__hangNhacR01().input.aim.x===1&&window.__hangNhacR01().input.aim.y===0&&!window.__hangNhacR01().own.moving);
   await page.locator('#lesson-retry').click();
   await page.waitForFunction(()=>window.__hangNhacSect().view.lessonView?.status==='warning'&&window.__hangNhacSect().view.lessonView.method==='wind');
   await page.locator('#stage').focus();await page.keyboard.press('3');
   await page.waitForFunction(()=>window.__hangNhacSect().view.lessons.wind);
-  await page.keyboard.down('ArrowLeft');
-  await waitFor(async()=>Math.hypot((await game(page)).own.x-SECT_STATIONS[2].x,(await game(page)).own.y-SECT_STATIONS[2].y)<45,'return to NPC after Phong');
-  await page.keyboard.up('ArrowLeft');await page.waitForFunction(()=>!window.__hangNhacSect().view.practising);
+  await returnToTraining();
   await page.locator('#interact').click();await page.locator('[data-action=lesson_confirm]:enabled').click();
   await page.waitForFunction(()=>window.__hangNhacSect().view.lessons.hn04);await page.locator('#sect-close').click();
   assert.equal((await sect(page)).view.cultivation,260);assert.equal((await sect(page)).view.milestone,'M01');

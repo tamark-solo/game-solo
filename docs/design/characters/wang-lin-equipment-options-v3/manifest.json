@@ -1,0 +1,3417 @@
+{
+  "schema": "wang-lin-equipment-options-3",
+  "date": "2026-10-13",
+  "stage": "static outfit and equipment colour candidates",
+  "canvas": [
+    256,
+    224
+  ],
+  "pivot": [
+    96,
+    200
+  ],
+  "bodyOffset": [
+    64,
+    112
+  ],
+  "body": {
+    "id": "original",
+    "name": "Vương Lâm live · nguyên bản",
+    "description": "Frame thật Pixel02 đang dùng trong game, giữ nguyên byte.",
+    "file": "body/original.png",
+    "canvas": [
+      64,
+      96
+    ],
+    "pivot": [
+      32,
+      88
+    ],
+    "sha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+    "liveAtlas": "client/public/assets/hang-nhac-pixel-player/atlases/idle-southeast.png",
+    "liveAtlasSha256": "cc00ed2cacfae34195d2e112d2a78168393a7f9beb1e0d1f2cbfc3d12ad84dfb",
+    "rect": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 96
+    },
+    "pixelsModified": false,
+    "rgbaMatchesLiveFrame": true,
+    "identityAssessment": "Nguyên byte/RGBA của frame live; áo mới chỉ là candidate riêng.",
+    "status": "pinned-live-reference"
+  },
+  "bodies": [
+    {
+      "id": "original",
+      "name": "Vương Lâm live · nguyên bản",
+      "description": "Frame thật Pixel02 đang dùng trong game, giữ nguyên byte.",
+      "file": "body/original.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "sha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+      "liveAtlas": "client/public/assets/hang-nhac-pixel-player/atlases/idle-southeast.png",
+      "liveAtlasSha256": "cc00ed2cacfae34195d2e112d2a78168393a7f9beb1e0d1f2cbfc3d12ad84dfb",
+      "rect": {
+        "x": 2,
+        "y": 2,
+        "w": 64,
+        "h": 96
+      },
+      "pixelsModified": false,
+      "rgbaMatchesLiveFrame": true,
+      "identityAssessment": "Nguyên byte/RGBA của frame live; áo mới chỉ là candidate riêng.",
+      "status": "pinned-live-reference"
+    },
+    {
+      "id": "sword-jade",
+      "equipmentId": "sword",
+      "name": "Kiếm tu · Vân Ngọc",
+      "palette": [
+        "#EAE1C9",
+        "#426C66",
+        "#273D43"
+      ],
+      "description": "Áo kiếm tu ngà ngọc, đai gọn, viền thanh ngọc.",
+      "file": "body/sword-jade.png",
+      "diagnosticFile": "review/composites/body-sword-jade--alignment-4x.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "sha256": "76ee77a7bbe7897f57c51231ab9a54333d17ba85b0444608349ed128ee57e9bf",
+      "raw": "sources/body-sword-jade-source.png",
+      "prompt": "sources/body-sword-jade.prompt.txt",
+      "input": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputs": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "sourceSha256": "3bf9209e5f74396a36a9e44d57745d6845eeccb5d15abd3bd1d111c4344fd006",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "promptSha256": "73b4359299d5faa313ccb28529712d55b210b02963ef072a70d2b795dbc8db18",
+      "generationRequestId": "body-sword-jade",
+      "status": "candidate-outfit-neutral-southeast",
+      "identity": {
+        "method": "documented current live SE clear-and-copy regions plus spatial dark-palette right-hair and exact original warm RGBA pixels",
+        "reference": "body/original.png",
+        "referenceSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+        "regions": [
+          {
+            "left": 0,
+            "top": 0,
+            "width": 64,
+            "height": 49,
+            "role": "head, face, front hair, hair tie and exact transparent boundary; collar starts49"
+          },
+          {
+            "left": 0,
+            "top": 49,
+            "width": 22,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 50,
+            "width": 21,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 51,
+            "width": 20,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 52,
+            "width": 19,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 53,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 54,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 55,
+            "width": 17,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 56,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 57,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 58,
+            "width": 15,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 59,
+            "width": 14,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 60,
+            "width": 13,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 61,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 62,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 63,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 64,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 14,
+            "top": 65,
+            "width": 8,
+            "height": 6,
+            "role": "left closed hand, tiny outline and cuff boundary"
+          },
+          {
+            "left": 40,
+            "top": 61,
+            "width": 7,
+            "height": 8,
+            "role": "right closed fist/cuff and transparent boundary; exactly the pinned gear-occlusion domain, clears small generated-hand shifts"
+          },
+          {
+            "left": 0,
+            "top": 80,
+            "width": 64,
+            "height": 16,
+            "role": "pant lower edge, boots/soles and exact transparent boundary"
+          }
+        ],
+        "rightHairRows": {
+          "49": [
+            37,
+            45
+          ],
+          "50": [
+            41,
+            47
+          ],
+          "51": [
+            41,
+            47
+          ],
+          "52": [
+            41,
+            47
+          ],
+          "53": [
+            43,
+            47
+          ],
+          "54": [
+            43,
+            47
+          ],
+          "55": [
+            43,
+            47
+          ],
+          "56": [
+            44,
+            47
+          ]
+        },
+        "rightHairPalette": [
+          "31,29,36",
+          "41,39,45",
+          "52,50,58",
+          "59,56,63",
+          "75,72,80",
+          "58,54,60",
+          "81,76,83",
+          "83,83,92",
+          "105,100,106",
+          "114,113,121"
+        ],
+        "exactSkinPalette": [
+          "242,206,166",
+          "204,152,115",
+          "169,104,80",
+          "229,184,143"
+        ],
+        "exactSkinPixels": 171,
+        "paletteMaskLimitation": "These exact warm colours include canonical hair-tie/cloth pixels; this is a pixel-preservation mask, not semantic skin segmentation.",
+        "restoredPixels": 4565,
+        "visibleRestoredPixels": 1806,
+        "maskSha256": "659dd94ccbb427e6741e177120feb39fc699cd7ea06f68b748ebbd5c83d50b7e",
+        "maskedRGBAEqualsLive": true,
+        "protectedHeadHairSkinBootPixelsRestoredFromLive": true,
+        "fullBodyRGBAEqualsLive": false,
+        "assessment": "Áo ngà/ngọc mới giữ neutral và cỡ người từ grid16×; raw làm hai bàn tay lệch nhẹ nên hai vùng bàn tay/cổ tay được thay bằng pixel live. Đầu/mặt/tóc/da/giày trong mask khớp RGBA live; cổ áo, vai, vạt áo mới vẫn cần owner chọn ở1×, không gọi toàn anatomy đã duyệt.",
+        "anatomyApprovalAutomatic": false
+      },
+      "identityAssessment": "Áo ngà/ngọc mới giữ neutral và cỡ người từ grid16×; raw làm hai bàn tay lệch nhẹ nên hai vùng bàn tay/cổ tay được thay bằng pixel live. Đầu/mặt/tóc/da/giày trong mask khớp RGBA live; cổ áo, vai, vạt áo mới vẫn cần owner chọn ở1×, không gọi toàn anatomy đã duyệt.",
+      "bodyBounds": {
+        "left": 1,
+        "top": 8,
+        "width": 49,
+        "height": 80,
+        "pixels": 2595
+      },
+      "changedPixelsFromLive": 807,
+      "pixelsResampled": true,
+      "pixelsModified": true,
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "sword-ink",
+      "equipmentId": "sword",
+      "name": "Kiếm tu · Huyền Mặc",
+      "palette": [
+        "#262731",
+        "#A9A4B5",
+        "#8E7953"
+      ],
+      "description": "Áo kiếm tu mực trầm, viền bạc/xám và đai cổ kim.",
+      "file": "body/sword-ink.png",
+      "diagnosticFile": "review/composites/body-sword-ink--alignment-4x.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "sha256": "ba8d73052aea97f3122e9f4bbd5a55f367280071e36564e9696472abda4900f4",
+      "raw": "sources/body-sword-ink-source.png",
+      "prompt": "sources/body-sword-ink.prompt.txt",
+      "input": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputs": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "sourceSha256": "59d7ce794173e373e675c6967c5fa068c0e28146a6d762649009ce2ec71fe1ec",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "promptSha256": "3a505b045d8ee161184da8dad932a07755fa5eedbd6727f22389dfa5a21fcb6b",
+      "generationRequestId": "body-sword-ink",
+      "status": "candidate-outfit-neutral-southeast",
+      "identity": {
+        "method": "documented current live SE clear-and-copy regions plus spatial dark-palette right-hair and exact original warm RGBA pixels",
+        "reference": "body/original.png",
+        "referenceSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+        "regions": [
+          {
+            "left": 0,
+            "top": 0,
+            "width": 64,
+            "height": 49,
+            "role": "head, face, front hair, hair tie and exact transparent boundary; collar starts49"
+          },
+          {
+            "left": 0,
+            "top": 49,
+            "width": 22,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 50,
+            "width": 21,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 51,
+            "width": 20,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 52,
+            "width": 19,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 53,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 54,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 55,
+            "width": 17,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 56,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 57,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 58,
+            "width": 15,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 59,
+            "width": 14,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 60,
+            "width": 13,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 61,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 62,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 63,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 64,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 14,
+            "top": 65,
+            "width": 8,
+            "height": 6,
+            "role": "left closed hand, tiny outline and cuff boundary"
+          },
+          {
+            "left": 40,
+            "top": 61,
+            "width": 7,
+            "height": 8,
+            "role": "right closed fist/cuff and transparent boundary; exactly the pinned gear-occlusion domain, clears small generated-hand shifts"
+          },
+          {
+            "left": 0,
+            "top": 80,
+            "width": 64,
+            "height": 16,
+            "role": "pant lower edge, boots/soles and exact transparent boundary"
+          }
+        ],
+        "rightHairRows": {
+          "49": [
+            37,
+            45
+          ],
+          "50": [
+            41,
+            47
+          ],
+          "51": [
+            41,
+            47
+          ],
+          "52": [
+            41,
+            47
+          ],
+          "53": [
+            43,
+            47
+          ],
+          "54": [
+            43,
+            47
+          ],
+          "55": [
+            43,
+            47
+          ],
+          "56": [
+            44,
+            47
+          ]
+        },
+        "rightHairPalette": [
+          "31,29,36",
+          "41,39,45",
+          "52,50,58",
+          "59,56,63",
+          "75,72,80",
+          "58,54,60",
+          "81,76,83",
+          "83,83,92",
+          "105,100,106",
+          "114,113,121"
+        ],
+        "exactSkinPalette": [
+          "242,206,166",
+          "204,152,115",
+          "169,104,80",
+          "229,184,143"
+        ],
+        "exactSkinPixels": 171,
+        "paletteMaskLimitation": "These exact warm colours include canonical hair-tie/cloth pixels; this is a pixel-preservation mask, not semantic skin segmentation.",
+        "restoredPixels": 4565,
+        "visibleRestoredPixels": 1806,
+        "maskSha256": "659dd94ccbb427e6741e177120feb39fc699cd7ea06f68b748ebbd5c83d50b7e",
+        "maskedRGBAEqualsLive": true,
+        "protectedHeadHairSkinBootPixelsRestoredFromLive": true,
+        "fullBodyRGBAEqualsLive": false,
+        "assessment": "Áo kiếm tu huyền mực với viền bạc/xám và đai cổ kim; neutral/grid16× khớp nguồn người. Vùng hai tay/cổ tay dùng lại live để giữ nắm tay; vai/vạt áo mới được giữ nguyên từ ART AI và chưa chứng minh chuyển động hoặc anatomy toàn bộ.",
+        "anatomyApprovalAutomatic": false
+      },
+      "identityAssessment": "Áo kiếm tu huyền mực với viền bạc/xám và đai cổ kim; neutral/grid16× khớp nguồn người. Vùng hai tay/cổ tay dùng lại live để giữ nắm tay; vai/vạt áo mới được giữ nguyên từ ART AI và chưa chứng minh chuyển động hoặc anatomy toàn bộ.",
+      "bodyBounds": {
+        "left": 1,
+        "top": 8,
+        "width": 49,
+        "height": 80,
+        "pixels": 2585
+      },
+      "changedPixelsFromLive": 799,
+      "pixelsResampled": true,
+      "pixelsModified": true,
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "banner-ashen",
+      "equipmentId": "banner",
+      "name": "Hồn phiên · Tàn Vân",
+      "palette": [
+        "#CCC6B8",
+        "#34313C",
+        "#777487"
+      ],
+      "description": "Áo tro cổ, lớp áo tối, mang vẻ phong trần.",
+      "file": "body/banner-ashen.png",
+      "diagnosticFile": "review/composites/body-banner-ashen--alignment-4x.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "sha256": "60f50ecdc401c1b3a110ea499c2338f516fa42eb744dd78e752730c8a4c583d5",
+      "raw": "sources/body-banner-ashen-source.png",
+      "prompt": "sources/body-banner-ashen.prompt.txt",
+      "input": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputs": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "sourceSha256": "67f88d437eca89fc8a2f402cac899f089539452a24918143d1a1a896a6ad0b04",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "promptSha256": "45228ac74dfeda5314a531f82b611d71a8038f788b603d4b5df6b60f170d28b8",
+      "generationRequestId": "body-banner-ashen",
+      "status": "candidate-outfit-neutral-southeast",
+      "identity": {
+        "method": "documented current live SE clear-and-copy regions plus spatial dark-palette right-hair and exact original warm RGBA pixels",
+        "reference": "body/original.png",
+        "referenceSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+        "regions": [
+          {
+            "left": 0,
+            "top": 0,
+            "width": 64,
+            "height": 49,
+            "role": "head, face, front hair, hair tie and exact transparent boundary; collar starts49"
+          },
+          {
+            "left": 0,
+            "top": 49,
+            "width": 22,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 50,
+            "width": 21,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 51,
+            "width": 20,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 52,
+            "width": 19,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 53,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 54,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 55,
+            "width": 17,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 56,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 57,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 58,
+            "width": 15,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 59,
+            "width": 14,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 60,
+            "width": 13,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 61,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 62,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 63,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 64,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 14,
+            "top": 65,
+            "width": 8,
+            "height": 6,
+            "role": "left closed hand, tiny outline and cuff boundary"
+          },
+          {
+            "left": 40,
+            "top": 61,
+            "width": 7,
+            "height": 8,
+            "role": "right closed fist/cuff and transparent boundary; exactly the pinned gear-occlusion domain, clears small generated-hand shifts"
+          },
+          {
+            "left": 0,
+            "top": 80,
+            "width": 64,
+            "height": 16,
+            "role": "pant lower edge, boots/soles and exact transparent boundary"
+          }
+        ],
+        "rightHairRows": {
+          "49": [
+            37,
+            45
+          ],
+          "50": [
+            41,
+            47
+          ],
+          "51": [
+            41,
+            47
+          ],
+          "52": [
+            41,
+            47
+          ],
+          "53": [
+            43,
+            47
+          ],
+          "54": [
+            43,
+            47
+          ],
+          "55": [
+            43,
+            47
+          ],
+          "56": [
+            44,
+            47
+          ]
+        },
+        "rightHairPalette": [
+          "31,29,36",
+          "41,39,45",
+          "52,50,58",
+          "59,56,63",
+          "75,72,80",
+          "58,54,60",
+          "81,76,83",
+          "83,83,92",
+          "105,100,106",
+          "114,113,121"
+        ],
+        "exactSkinPalette": [
+          "242,206,166",
+          "204,152,115",
+          "169,104,80",
+          "229,184,143"
+        ],
+        "exactSkinPixels": 171,
+        "paletteMaskLimitation": "These exact warm colours include canonical hair-tie/cloth pixels; this is a pixel-preservation mask, not semantic skin segmentation.",
+        "restoredPixels": 4565,
+        "visibleRestoredPixels": 1806,
+        "maskSha256": "659dd94ccbb427e6741e177120feb39fc699cd7ea06f68b748ebbd5c83d50b7e",
+        "maskedRGBAEqualsLive": true,
+        "protectedHeadHairSkinBootPixelsRestoredFromLive": true,
+        "fullBodyRGBAEqualsLive": false,
+        "assessment": "Áo tro xám và lớp trong tím trầm cho hồn phiên; nguồn giữ grid neutral16× và vai cùng tư thế. Mask live giữ nhận diện/giày/tay; vài pixel cổ tay ngà gốc là giới hạn của bản áo review. Chưa có chuyển động vạt áo hoặc cầm/phất cờ.",
+        "anatomyApprovalAutomatic": false
+      },
+      "identityAssessment": "Áo tro xám và lớp trong tím trầm cho hồn phiên; nguồn giữ grid neutral16× và vai cùng tư thế. Mask live giữ nhận diện/giày/tay; vài pixel cổ tay ngà gốc là giới hạn của bản áo review. Chưa có chuyển động vạt áo hoặc cầm/phất cờ.",
+      "bodyBounds": {
+        "left": 1,
+        "top": 8,
+        "width": 49,
+        "height": 80,
+        "pixels": 2592
+      },
+      "changedPixelsFromLive": 803,
+      "pixelsResampled": true,
+      "pixelsModified": true,
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "banner-ritual",
+      "equipmentId": "banner",
+      "name": "Hồn phiên · U Tế",
+      "palette": [
+        "#252331",
+        "#813F46",
+        "#C0B291"
+      ],
+      "description": "Áo nghi lễ huyền mực, đai/vạt đỏ trầm và dấu hình học chuyển thể.",
+      "file": "body/banner-ritual.png",
+      "diagnosticFile": "review/composites/body-banner-ritual--alignment-4x.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "sha256": "7d74912ae4d86e3eac7d7d305976afb350fd4dc03ea5d2ae1818e9bb158683b1",
+      "raw": "sources/body-banner-ritual-source.png",
+      "prompt": "sources/body-banner-ritual.prompt.txt",
+      "input": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputs": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "sourceSha256": "99a4749ad1e46c3c28f35c0a65f59b99e4edcb55ee5ab70c8578cabb14b1eb88",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "promptSha256": "bd5236a1ed49df9e75ff34e90ace4de2c011e2379191adb24580f7bb90bd795d",
+      "generationRequestId": "body-banner-ritual",
+      "status": "candidate-outfit-neutral-southeast",
+      "identity": {
+        "method": "documented current live SE clear-and-copy regions plus spatial dark-palette right-hair and exact original warm RGBA pixels",
+        "reference": "body/original.png",
+        "referenceSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+        "regions": [
+          {
+            "left": 0,
+            "top": 0,
+            "width": 64,
+            "height": 49,
+            "role": "head, face, front hair, hair tie and exact transparent boundary; collar starts49"
+          },
+          {
+            "left": 0,
+            "top": 49,
+            "width": 22,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 50,
+            "width": 21,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 51,
+            "width": 20,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 52,
+            "width": 19,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 53,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 54,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 55,
+            "width": 17,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 56,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 57,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 58,
+            "width": 15,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 59,
+            "width": 14,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 60,
+            "width": 13,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 61,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 62,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 63,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 64,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 14,
+            "top": 65,
+            "width": 8,
+            "height": 6,
+            "role": "left closed hand, tiny outline and cuff boundary"
+          },
+          {
+            "left": 40,
+            "top": 61,
+            "width": 7,
+            "height": 8,
+            "role": "right closed fist/cuff and transparent boundary; exactly the pinned gear-occlusion domain, clears small generated-hand shifts"
+          },
+          {
+            "left": 0,
+            "top": 80,
+            "width": 64,
+            "height": 16,
+            "role": "pant lower edge, boots/soles and exact transparent boundary"
+          }
+        ],
+        "rightHairRows": {
+          "49": [
+            37,
+            45
+          ],
+          "50": [
+            41,
+            47
+          ],
+          "51": [
+            41,
+            47
+          ],
+          "52": [
+            41,
+            47
+          ],
+          "53": [
+            43,
+            47
+          ],
+          "54": [
+            43,
+            47
+          ],
+          "55": [
+            43,
+            47
+          ],
+          "56": [
+            44,
+            47
+          ]
+        },
+        "rightHairPalette": [
+          "31,29,36",
+          "41,39,45",
+          "52,50,58",
+          "59,56,63",
+          "75,72,80",
+          "58,54,60",
+          "81,76,83",
+          "83,83,92",
+          "105,100,106",
+          "114,113,121"
+        ],
+        "exactSkinPalette": [
+          "242,206,166",
+          "204,152,115",
+          "169,104,80",
+          "229,184,143"
+        ],
+        "exactSkinPixels": 171,
+        "paletteMaskLimitation": "These exact warm colours include canonical hair-tie/cloth pixels; this is a pixel-preservation mask, not semantic skin segmentation.",
+        "restoredPixels": 4565,
+        "visibleRestoredPixels": 1806,
+        "maskSha256": "659dd94ccbb427e6741e177120feb39fc699cd7ea06f68b748ebbd5c83d50b7e",
+        "maskedRGBAEqualsLive": true,
+        "protectedHeadHairSkinBootPixelsRestoredFromLive": true,
+        "fullBodyRGBAEqualsLive": false,
+        "assessment": "Áo nghi lễ đen và đỏ trầm, có dấu hình học trên vạt là thiết kế mới. Neutral/grid và vai cùng người chuẩn; tay/cổ tay, đầu/mặt/tóc/da và giày lấy pixel live theo mask. Dấu nhỏ/cuff ngà giữ gốc cần lựa ở1×; chưa claim chữ/phù văn canon hoặc animation.",
+        "anatomyApprovalAutomatic": false
+      },
+      "identityAssessment": "Áo nghi lễ đen và đỏ trầm, có dấu hình học trên vạt là thiết kế mới. Neutral/grid và vai cùng người chuẩn; tay/cổ tay, đầu/mặt/tóc/da và giày lấy pixel live theo mask. Dấu nhỏ/cuff ngà giữ gốc cần lựa ở1×; chưa claim chữ/phù văn canon hoặc animation.",
+      "bodyBounds": {
+        "left": 1,
+        "top": 8,
+        "width": 49,
+        "height": 80,
+        "pixels": 2603
+      },
+      "changedPixelsFromLive": 804,
+      "pixelsResampled": true,
+      "pixelsModified": true,
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "bead-cloud",
+      "equipmentId": "bead",
+      "name": "Thiên nghịch · Vân Bạch",
+      "palette": [
+        "#E8E1D2",
+        "#829891",
+        "#465A5C"
+      ],
+      "description": "Áo tu hành sáng, vân ngọc mờ, thanh sạch để đá châu vẫn nổi.",
+      "file": "body/bead-cloud.png",
+      "diagnosticFile": "review/composites/body-bead-cloud--alignment-4x.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "sha256": "0f7e20ada1ee478f4d96fca03098ed584c9e47c567fa718e76dd8eba3a7a4c87",
+      "raw": "sources/body-bead-cloud-source.png",
+      "prompt": "sources/body-bead-cloud.prompt.txt",
+      "input": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputs": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "sourceSha256": "1069611b105e61ad1431e4c0369adfed85af3d96a27a4f35ad2fd6af7ed9c643",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "promptSha256": "5a56a2405d44ee146f407d617623556fc28c18163d20a32d1dc7b3426a07c402",
+      "generationRequestId": "body-bead-cloud",
+      "status": "candidate-outfit-neutral-southeast",
+      "identity": {
+        "method": "documented current live SE clear-and-copy regions plus spatial dark-palette right-hair and exact original warm RGBA pixels",
+        "reference": "body/original.png",
+        "referenceSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+        "regions": [
+          {
+            "left": 0,
+            "top": 0,
+            "width": 64,
+            "height": 49,
+            "role": "head, face, front hair, hair tie and exact transparent boundary; collar starts49"
+          },
+          {
+            "left": 0,
+            "top": 49,
+            "width": 22,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 50,
+            "width": 21,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 51,
+            "width": 20,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 52,
+            "width": 19,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 53,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 54,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 55,
+            "width": 17,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 56,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 57,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 58,
+            "width": 15,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 59,
+            "width": 14,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 60,
+            "width": 13,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 61,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 62,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 63,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 64,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 14,
+            "top": 65,
+            "width": 8,
+            "height": 6,
+            "role": "left closed hand, tiny outline and cuff boundary"
+          },
+          {
+            "left": 40,
+            "top": 61,
+            "width": 7,
+            "height": 8,
+            "role": "right closed fist/cuff and transparent boundary; exactly the pinned gear-occlusion domain, clears small generated-hand shifts"
+          },
+          {
+            "left": 0,
+            "top": 80,
+            "width": 64,
+            "height": 16,
+            "role": "pant lower edge, boots/soles and exact transparent boundary"
+          }
+        ],
+        "rightHairRows": {
+          "49": [
+            37,
+            45
+          ],
+          "50": [
+            41,
+            47
+          ],
+          "51": [
+            41,
+            47
+          ],
+          "52": [
+            41,
+            47
+          ],
+          "53": [
+            43,
+            47
+          ],
+          "54": [
+            43,
+            47
+          ],
+          "55": [
+            43,
+            47
+          ],
+          "56": [
+            44,
+            47
+          ]
+        },
+        "rightHairPalette": [
+          "31,29,36",
+          "41,39,45",
+          "52,50,58",
+          "59,56,63",
+          "75,72,80",
+          "58,54,60",
+          "81,76,83",
+          "83,83,92",
+          "105,100,106",
+          "114,113,121"
+        ],
+        "exactSkinPalette": [
+          "242,206,166",
+          "204,152,115",
+          "169,104,80",
+          "229,184,143"
+        ],
+        "exactSkinPixels": 171,
+        "paletteMaskLimitation": "These exact warm colours include canonical hair-tie/cloth pixels; this is a pixel-preservation mask, not semantic skin segmentation.",
+        "restoredPixels": 4565,
+        "visibleRestoredPixels": 1806,
+        "maskSha256": "659dd94ccbb427e6741e177120feb39fc699cd7ea06f68b748ebbd5c83d50b7e",
+        "maskedRGBAEqualsLive": true,
+        "protectedHeadHairSkinBootPixelsRestoredFromLive": true,
+        "fullBodyRGBAEqualsLive": false,
+        "assessment": "Áo ngà vân ngọc sáng, vai/cổ cùng neutral16×. Raw giày trái cao/dày thêm khoảng1px native nên phần chân/giày được thay nguyên RGBA live; scale áo vẫn1/16, không fit theo bbox1425. Head/hair/skin và hai nắm tay giữ gốc. Độ rộng vạt/hoạ tiết mới còn candidate ở1×.",
+        "anatomyApprovalAutomatic": false
+      },
+      "identityAssessment": "Áo ngà vân ngọc sáng, vai/cổ cùng neutral16×. Raw giày trái cao/dày thêm khoảng1px native nên phần chân/giày được thay nguyên RGBA live; scale áo vẫn1/16, không fit theo bbox1425. Head/hair/skin và hai nắm tay giữ gốc. Độ rộng vạt/hoạ tiết mới còn candidate ở1×.",
+      "bodyBounds": {
+        "left": 1,
+        "top": 8,
+        "width": 49,
+        "height": 80,
+        "pixels": 2603
+      },
+      "changedPixelsFromLive": 804,
+      "pixelsResampled": true,
+      "pixelsModified": true,
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "bead-hermit",
+      "equipmentId": "bead",
+      "name": "Thiên nghịch · Ẩn Tu",
+      "palette": [
+        "#747D96",
+        "#C4C7D1",
+        "#D4C8AD"
+      ],
+      "description": "Áo ẩn tu lam tro, cổ áo sáng và đai tối, giảm trang sức.",
+      "file": "body/bead-hermit.png",
+      "diagnosticFile": "review/composites/body-bead-hermit--alignment-4x.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "sha256": "3569a025c1fd9f5412d9a3e10ad9539fe25386d3b4545821e737dc831b966878",
+      "raw": "sources/body-bead-hermit-source.png",
+      "prompt": "sources/body-bead-hermit.prompt.txt",
+      "input": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputs": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "sourceSha256": "abb0fab8821dbd752449a577d47043e385b7a8f8e9ae9bf46fb123905e401430",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "promptSha256": "5c9571cbeee0e83e5272f7a57686f85e083164e81631b533f5003229e5afe3a1",
+      "generationRequestId": "body-bead-hermit",
+      "status": "candidate-outfit-neutral-southeast",
+      "identity": {
+        "method": "documented current live SE clear-and-copy regions plus spatial dark-palette right-hair and exact original warm RGBA pixels",
+        "reference": "body/original.png",
+        "referenceSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+        "regions": [
+          {
+            "left": 0,
+            "top": 0,
+            "width": 64,
+            "height": 49,
+            "role": "head, face, front hair, hair tie and exact transparent boundary; collar starts49"
+          },
+          {
+            "left": 0,
+            "top": 49,
+            "width": 22,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 50,
+            "width": 21,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 51,
+            "width": 20,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 52,
+            "width": 19,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 53,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 54,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 55,
+            "width": 17,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 56,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 57,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 58,
+            "width": 15,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 59,
+            "width": 14,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 60,
+            "width": 13,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 61,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 62,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 63,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 64,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 14,
+            "top": 65,
+            "width": 8,
+            "height": 6,
+            "role": "left closed hand, tiny outline and cuff boundary"
+          },
+          {
+            "left": 40,
+            "top": 61,
+            "width": 7,
+            "height": 8,
+            "role": "right closed fist/cuff and transparent boundary; exactly the pinned gear-occlusion domain, clears small generated-hand shifts"
+          },
+          {
+            "left": 0,
+            "top": 80,
+            "width": 64,
+            "height": 16,
+            "role": "pant lower edge, boots/soles and exact transparent boundary"
+          }
+        ],
+        "rightHairRows": {
+          "49": [
+            37,
+            45
+          ],
+          "50": [
+            41,
+            47
+          ],
+          "51": [
+            41,
+            47
+          ],
+          "52": [
+            41,
+            47
+          ],
+          "53": [
+            43,
+            47
+          ],
+          "54": [
+            43,
+            47
+          ],
+          "55": [
+            43,
+            47
+          ],
+          "56": [
+            44,
+            47
+          ]
+        },
+        "rightHairPalette": [
+          "31,29,36",
+          "41,39,45",
+          "52,50,58",
+          "59,56,63",
+          "75,72,80",
+          "58,54,60",
+          "81,76,83",
+          "83,83,92",
+          "105,100,106",
+          "114,113,121"
+        ],
+        "exactSkinPalette": [
+          "242,206,166",
+          "204,152,115",
+          "169,104,80",
+          "229,184,143"
+        ],
+        "exactSkinPixels": 171,
+        "paletteMaskLimitation": "These exact warm colours include canonical hair-tie/cloth pixels; this is a pixel-preservation mask, not semantic skin segmentation.",
+        "restoredPixels": 4565,
+        "visibleRestoredPixels": 1806,
+        "maskSha256": "659dd94ccbb427e6741e177120feb39fc699cd7ea06f68b748ebbd5c83d50b7e",
+        "maskedRGBAEqualsLive": true,
+        "protectedHeadHairSkinBootPixelsRestoredFromLive": true,
+        "fullBodyRGBAEqualsLive": false,
+        "assessment": "ART thực ra áo lam tro, viền/cổ sáng và đai tối; palette ghi theo hình được tạo thay vì mô tả rêu/mộc trong brief. Vai/cổ và neutral cùng grid; phần nhận diện, tay/cuff, giày khớp pixel live theo mask. Chưa motion/ART approval.",
+        "anatomyApprovalAutomatic": false
+      },
+      "identityAssessment": "ART thực ra áo lam tro, viền/cổ sáng và đai tối; palette ghi theo hình được tạo thay vì mô tả rêu/mộc trong brief. Vai/cổ và neutral cùng grid; phần nhận diện, tay/cuff, giày khớp pixel live theo mask. Chưa motion/ART approval.",
+      "bodyBounds": {
+        "left": 1,
+        "top": 8,
+        "width": 49,
+        "height": 80,
+        "pixels": 2585
+      },
+      "changedPixelsFromLive": 799,
+      "pixelsResampled": true,
+      "pixelsModified": true,
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "chariot-bronze",
+      "equipmentId": "chariot",
+      "name": "Xạ thần · Cổ Kim",
+      "palette": [
+        "#313135",
+        "#967E4D",
+        "#C5B78F"
+      ],
+      "description": "Áo cổ kim đen đồng, cấu trúc gọn cho pháp khí cạnh người.",
+      "file": "body/chariot-bronze.png",
+      "diagnosticFile": "review/composites/body-chariot-bronze--alignment-4x.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "sha256": "08c75ca3e173523ff33b2e7a6cec13f96e47ace3a4123d1b7a8ed2f32b8532bb",
+      "raw": "sources/body-chariot-bronze-source.png",
+      "prompt": "sources/body-chariot-bronze.prompt.txt",
+      "input": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputs": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "sourceSha256": "1217c85ec24b5757c9b1e82c81cef81cf7aa2f805382487627cc5119b9ffcbe8",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "promptSha256": "4ca37d95bae6434aed0e52115bc8057f1c9a2160e0b15240131744eefe098ff1",
+      "generationRequestId": "body-chariot-bronze",
+      "status": "candidate-outfit-neutral-southeast",
+      "identity": {
+        "method": "documented current live SE clear-and-copy regions plus spatial dark-palette right-hair and exact original warm RGBA pixels",
+        "reference": "body/original.png",
+        "referenceSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+        "regions": [
+          {
+            "left": 0,
+            "top": 0,
+            "width": 64,
+            "height": 49,
+            "role": "head, face, front hair, hair tie and exact transparent boundary; collar starts49"
+          },
+          {
+            "left": 0,
+            "top": 49,
+            "width": 22,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 50,
+            "width": 21,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 51,
+            "width": 20,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 52,
+            "width": 19,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 53,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 54,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 55,
+            "width": 17,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 56,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 57,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 58,
+            "width": 15,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 59,
+            "width": 14,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 60,
+            "width": 13,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 61,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 62,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 63,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 64,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 14,
+            "top": 65,
+            "width": 8,
+            "height": 6,
+            "role": "left closed hand, tiny outline and cuff boundary"
+          },
+          {
+            "left": 40,
+            "top": 61,
+            "width": 7,
+            "height": 8,
+            "role": "right closed fist/cuff and transparent boundary; exactly the pinned gear-occlusion domain, clears small generated-hand shifts"
+          },
+          {
+            "left": 0,
+            "top": 80,
+            "width": 64,
+            "height": 16,
+            "role": "pant lower edge, boots/soles and exact transparent boundary"
+          }
+        ],
+        "rightHairRows": {
+          "49": [
+            37,
+            45
+          ],
+          "50": [
+            41,
+            47
+          ],
+          "51": [
+            41,
+            47
+          ],
+          "52": [
+            41,
+            47
+          ],
+          "53": [
+            43,
+            47
+          ],
+          "54": [
+            43,
+            47
+          ],
+          "55": [
+            43,
+            47
+          ],
+          "56": [
+            44,
+            47
+          ]
+        },
+        "rightHairPalette": [
+          "31,29,36",
+          "41,39,45",
+          "52,50,58",
+          "59,56,63",
+          "75,72,80",
+          "58,54,60",
+          "81,76,83",
+          "83,83,92",
+          "105,100,106",
+          "114,113,121"
+        ],
+        "exactSkinPalette": [
+          "242,206,166",
+          "204,152,115",
+          "169,104,80",
+          "229,184,143"
+        ],
+        "exactSkinPixels": 171,
+        "paletteMaskLimitation": "These exact warm colours include canonical hair-tie/cloth pixels; this is a pixel-preservation mask, not semantic skin segmentation.",
+        "restoredPixels": 4565,
+        "visibleRestoredPixels": 1806,
+        "maskSha256": "659dd94ccbb427e6741e177120feb39fc699cd7ea06f68b748ebbd5c83d50b7e",
+        "maskedRGBAEqualsLive": true,
+        "protectedHeadHairSkinBootPixelsRestoredFromLive": true,
+        "fullBodyRGBAEqualsLive": false,
+        "assessment": "Áo đen/cổ đồng có vai và đai khỏe hơn qua trang trí kim loại, không phóng người. Hình vai/cổ vẫn cùng neutral; face/hair/skin, closed hands/cuffs and boots restored from live mask. Mảng đồng nhỏ ở1× chỉ đọc như trang trí candidate, chưa chứng minh giáp/artifact command/motion.",
+        "anatomyApprovalAutomatic": false
+      },
+      "identityAssessment": "Áo đen/cổ đồng có vai và đai khỏe hơn qua trang trí kim loại, không phóng người. Hình vai/cổ vẫn cùng neutral; face/hair/skin, closed hands/cuffs and boots restored from live mask. Mảng đồng nhỏ ở1× chỉ đọc như trang trí candidate, chưa chứng minh giáp/artifact command/motion.",
+      "bodyBounds": {
+        "left": 1,
+        "top": 8,
+        "width": 49,
+        "height": 80,
+        "pixels": 2571
+      },
+      "changedPixelsFromLive": 797,
+      "pixelsResampled": true,
+      "pixelsModified": true,
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "chariot-thunder",
+      "equipmentId": "chariot",
+      "name": "Xạ thần · Lôi Huyền",
+      "palette": [
+        "#343A51",
+        "#8D91B5",
+        "#CBC0A2"
+      ],
+      "description": "Áo huyền lam tím trầm, tương phản với thú lôi tách lớp.",
+      "file": "body/chariot-thunder.png",
+      "diagnosticFile": "review/composites/body-chariot-thunder--alignment-4x.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "sha256": "3eb84434f79934b42354006efb3bf693e422fc8e8cda9d8e04c419ea1a82cfe0",
+      "raw": "sources/body-chariot-thunder-source.png",
+      "prompt": "sources/body-chariot-thunder.prompt.txt",
+      "input": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputs": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "sourceSha256": "bbf8c25ac49d5aad7fa39e060549133bf757465e8a0d234126b746fc69c7a185",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "promptSha256": "468dcd679957b0595b440dd77ee6610141fbe8da2824cfee38d2f56c4ca476a7",
+      "generationRequestId": "body-chariot-thunder",
+      "status": "candidate-outfit-neutral-southeast",
+      "identity": {
+        "method": "documented current live SE clear-and-copy regions plus spatial dark-palette right-hair and exact original warm RGBA pixels",
+        "reference": "body/original.png",
+        "referenceSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+        "regions": [
+          {
+            "left": 0,
+            "top": 0,
+            "width": 64,
+            "height": 49,
+            "role": "head, face, front hair, hair tie and exact transparent boundary; collar starts49"
+          },
+          {
+            "left": 0,
+            "top": 49,
+            "width": 22,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 50,
+            "width": 21,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 51,
+            "width": 20,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 52,
+            "width": 19,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 53,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 54,
+            "width": 18,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 55,
+            "width": 17,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 56,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 57,
+            "width": 16,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 58,
+            "width": 15,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 59,
+            "width": 14,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 60,
+            "width": 13,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 61,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 62,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 63,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 0,
+            "top": 64,
+            "width": 10,
+            "height": 1,
+            "role": "manually traced left back-hair boundary; sleeve excluded"
+          },
+          {
+            "left": 14,
+            "top": 65,
+            "width": 8,
+            "height": 6,
+            "role": "left closed hand, tiny outline and cuff boundary"
+          },
+          {
+            "left": 40,
+            "top": 61,
+            "width": 7,
+            "height": 8,
+            "role": "right closed fist/cuff and transparent boundary; exactly the pinned gear-occlusion domain, clears small generated-hand shifts"
+          },
+          {
+            "left": 0,
+            "top": 80,
+            "width": 64,
+            "height": 16,
+            "role": "pant lower edge, boots/soles and exact transparent boundary"
+          }
+        ],
+        "rightHairRows": {
+          "49": [
+            37,
+            45
+          ],
+          "50": [
+            41,
+            47
+          ],
+          "51": [
+            41,
+            47
+          ],
+          "52": [
+            41,
+            47
+          ],
+          "53": [
+            43,
+            47
+          ],
+          "54": [
+            43,
+            47
+          ],
+          "55": [
+            43,
+            47
+          ],
+          "56": [
+            44,
+            47
+          ]
+        },
+        "rightHairPalette": [
+          "31,29,36",
+          "41,39,45",
+          "52,50,58",
+          "59,56,63",
+          "75,72,80",
+          "58,54,60",
+          "81,76,83",
+          "83,83,92",
+          "105,100,106",
+          "114,113,121"
+        ],
+        "exactSkinPalette": [
+          "242,206,166",
+          "204,152,115",
+          "169,104,80",
+          "229,184,143"
+        ],
+        "exactSkinPixels": 171,
+        "paletteMaskLimitation": "These exact warm colours include canonical hair-tie/cloth pixels; this is a pixel-preservation mask, not semantic skin segmentation.",
+        "restoredPixels": 4565,
+        "visibleRestoredPixels": 1806,
+        "maskSha256": "659dd94ccbb427e6741e177120feb39fc699cd7ea06f68b748ebbd5c83d50b7e",
+        "maskedRGBAEqualsLive": true,
+        "protectedHeadHairSkinBootPixelsRestoredFromLive": true,
+        "fullBodyRGBAEqualsLive": false,
+        "assessment": "Áo huyền lam, viền bạc và giáp tay nhỏ; cỡ người/vai/cổ giữ neutral theo grid16×. Đầu/mặt/tóc, warm RGBA, nắm tay/cuff và boots được khôi phục đúng live. Sườn áo/vạt mới là candidate, không dùng alpha halo để phóng/thu người hoặc suy motion.",
+        "anatomyApprovalAutomatic": false
+      },
+      "identityAssessment": "Áo huyền lam, viền bạc và giáp tay nhỏ; cỡ người/vai/cổ giữ neutral theo grid16×. Đầu/mặt/tóc, warm RGBA, nắm tay/cuff và boots được khôi phục đúng live. Sườn áo/vạt mới là candidate, không dùng alpha halo để phóng/thu người hoặc suy motion.",
+      "bodyBounds": {
+        "left": 1,
+        "top": 8,
+        "width": 49,
+        "height": 80,
+        "pixels": 2607
+      },
+      "changedPixelsFromLive": 813,
+      "pixelsResampled": true,
+      "pixelsModified": true,
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    }
+  ],
+  "equipmentGroups": [
+    {
+      "id": "sword",
+      "name": "Tiên kiếm · Hứa Lập Quốc",
+      "description": "Tiên kiếm cổ và kiếm linh tách riêng; màu/vật liệu là lựa chọn chuyển thể.",
+      "variants": [
+        {
+          "id": "original",
+          "name": "Huyền kim",
+          "palette": [
+            "#23232E",
+            "#A08852",
+            "#D9CFAC"
+          ],
+          "copyPrevious": true,
+          "fullFile": "equipment/sword-original.png",
+          "frontFile": "equipment/sword-original-front.png",
+          "rearFile": "equipment/sword-original-rear.png",
+          "fxRearFile": "equipment/sword-original-fx-rear.png",
+          "file": "equipment/sword-original-front.png",
+          "fxFile": "equipment/sword-original-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "../wang-lin-equipment-story-v2/sources/sword-source.png",
+          "prompt": "../wang-lin-equipment-story-v2/sources/sword.prompt.txt",
+          "input": [
+            "../wang-lin-equipment-story-v2/inputs/wang-lin-live-southeast-nearest8x.png"
+          ],
+          "inputs": [
+            {
+              "file": "../wang-lin-equipment-story-v2/inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            }
+          ],
+          "sourceSha256": "f2face38b355e96dbce2877f3e54ba21e1ec245f4211e5ba39ce2341f5bde437",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "promptSha256": "3044206f9f95030f4cf7458fc44dd996e14325c6d97d559d49bde19af1e74f96",
+          "sha256": "f8e1ed701fa6e15c88ef56f9dba502e5e661ac6fc97f46d0a3fe120d1b6b3cf9",
+          "layerSha256": {
+            "front": "98d7a1be09fcbdf084a465fef46cfdfee63519d1868ec46e7abd7b9d1a249a78",
+            "rear": "530eaa99481ba1526d0afc93f3d308e547f6b4ed61e99c30d5398596a6b918f6",
+            "fxRear": "22481d1fd38c53b37e3a24f5e607003cf38639b59f0e52263b956f874738e766"
+          },
+          "itemLocal": {
+            "placement": "grip",
+            "handBodyLocal": [
+              43,
+              64
+            ],
+            "grip": [
+              43,
+              64
+            ],
+            "sourceGrip": [
+              280,
+              824
+            ],
+            "itemGrip": [
+              7,
+              55
+            ],
+            "itemTopLeft": [
+              100,
+              121
+            ],
+            "dimensions": [
+              44,
+              65
+            ],
+            "centreBodyLocal": null,
+            "floor": null,
+            "fxTopLeft": [
+              142,
+              136
+            ],
+            "fxDimensions": [
+              17,
+              30
+            ]
+          },
+          "previousPackageBytesUnchanged": true,
+          "sourceGeometryPreserved": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/sword-original--original.png",
+            "sword-jade": "review/composites/sword-original--sword-jade.png",
+            "sword-ink": "review/composites/sword-original--sword-ink.png"
+          }
+        },
+        {
+          "id": "jade",
+          "name": "Bạch ngọc · thanh kiếm",
+          "palette": [
+            "#D8DDCE",
+            "#4F877F",
+            "#8FAD9E"
+          ],
+          "fullFile": "equipment/sword-jade.png",
+          "frontFile": "equipment/sword-jade-front.png",
+          "rearFile": "equipment/sword-jade-rear.png",
+          "fxRearFile": "equipment/sword-jade-fx-rear.png",
+          "file": "equipment/sword-jade-front.png",
+          "fxFile": "equipment/sword-jade-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "sources/equipment-sword-jade-source.png",
+          "prompt": "sources/equipment-sword-jade.prompt.txt",
+          "input": [
+            "inputs/wang-lin-live-southeast-nearest8x.png",
+            "../wang-lin-equipment-story-v2/sources/sword-source.png"
+          ],
+          "inputs": [
+            {
+              "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "../wang-lin-equipment-story-v2/sources/sword-source.png",
+              "sha256": "f2face38b355e96dbce2877f3e54ba21e1ec245f4211e5ba39ce2341f5bde437"
+            }
+          ],
+          "sourceSha256": "bd59ff343f95a5fad683ea0601524220dfb38b042d0da0e432dea6f85de40972",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "promptSha256": "01000886595b0e510b166ed71d8f756ec64fd4b46d319b5c5dafe73de9e7ee84",
+          "generationRequestId": "equipment-sword-jade",
+          "sha256": "a48880e3106630538f6ad8a10e39350c08b0f5562102113610cbe51033ba86c3",
+          "layerSha256": {
+            "front": "343cde7c8ca90de6dfbae61511577a527f22f9cd512a3d2b5671f743288fd861",
+            "rear": "dcdc942eadbf7db39e4cd76603344b3fd869cfae971954b6d8326028d27839c6",
+            "fxRear": "bd01d97888ff9256a08603d7b7b94ade01f772566b0c3d2f6aa18d4f4783ee34"
+          },
+          "itemLocal": {
+            "placement": "grip",
+            "sourceGrip": [
+              280,
+              824
+            ],
+            "grip": [
+              43,
+              64
+            ],
+            "itemGrip": [
+              7,
+              55
+            ],
+            "itemTopLeft": [
+              100,
+              121
+            ],
+            "dimensions": [
+              44,
+              65
+            ],
+            "floor": null,
+            "fxTopLeft": [
+              142,
+              136
+            ],
+            "fxDimensions": [
+              17,
+              30
+            ],
+            "fxSelected": true
+          },
+          "fxSelected": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "sourceGeometryAssessment": "AI colour/material edit from v2 source preserves sword angle, handle and sword-spirit panel placement nominally. New source alpha bounds differ by a few source pixels, so exact geometry is not asserted; existing handle280,824 verified visually, resampled native whole blade65px and original closed fist retained. Palette is ivory/silver/jade.",
+          "sourceGeometryPreserved": false,
+          "pixelsResampled": true,
+          "hueFilter": false,
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/sword-jade--original.png",
+            "sword-jade": "review/composites/sword-jade--sword-jade.png",
+            "sword-ink": "review/composites/sword-jade--sword-ink.png"
+          }
+        },
+        {
+          "id": "ink",
+          "name": "Huyền mặc · u kiếm",
+          "palette": [
+            "#252534",
+            "#75698F",
+            "#B3ABC9"
+          ],
+          "fullFile": "equipment/sword-ink.png",
+          "frontFile": "equipment/sword-ink-front.png",
+          "rearFile": "equipment/sword-ink-rear.png",
+          "fxRearFile": "equipment/sword-ink-fx-rear.png",
+          "file": "equipment/sword-ink-front.png",
+          "fxFile": "equipment/sword-ink-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "sources/equipment-sword-ink-source.png",
+          "prompt": "sources/equipment-sword-ink.prompt.txt",
+          "input": [
+            "inputs/wang-lin-live-southeast-nearest8x.png",
+            "../wang-lin-equipment-story-v2/sources/sword-source.png"
+          ],
+          "inputs": [
+            {
+              "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "../wang-lin-equipment-story-v2/sources/sword-source.png",
+              "sha256": "f2face38b355e96dbce2877f3e54ba21e1ec245f4211e5ba39ce2341f5bde437"
+            }
+          ],
+          "sourceSha256": "22fa6b955e7419bc8acb5c91e394e7f623c9d0ed5438e07ecb39268a1bec1f99",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "promptSha256": "27641697018df0e91e84920e35c2fa5c08090fba80ba9a45e33f263b70e8d535",
+          "generationRequestId": "equipment-sword-ink",
+          "sha256": "9e4bdb1e40d682f42a8b34e8484547aea094a0dbca394be978b24565f07c2e92",
+          "layerSha256": {
+            "front": "db1d71012b43d68769fee352d34820e85bd22aae3defd1841ff2ea5e5c199283",
+            "rear": "7ac95b1f12b19f58ea76176af8b8f48ad83323b97d7ae77955f80ce8bc4d92d5",
+            "fxRear": "fe61888fe67558bedeb34b7b91c648ececb6f400aa45fa5cbf445c2e78331dc4"
+          },
+          "itemLocal": {
+            "placement": "grip",
+            "sourceGrip": [
+              280,
+              824
+            ],
+            "grip": [
+              43,
+              64
+            ],
+            "itemGrip": [
+              7,
+              55
+            ],
+            "itemTopLeft": [
+              100,
+              121
+            ],
+            "dimensions": [
+              44,
+              65
+            ],
+            "floor": null,
+            "fxTopLeft": [
+              142,
+              136
+            ],
+            "fxDimensions": [
+              17,
+              30
+            ],
+            "fxSelected": true
+          },
+          "fxSelected": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "sourceGeometryAssessment": "AI colour/material edit from v2 source preserves nominal blade angle, handle280,824 and separate sword-spirit panel. Actual artwork is dark violet/silver rather than red; palette/name reflect artwork. Alpha edge differs a few source pixels, exact source geometry not claimed. Native blade65px and original hand occlusion retained.",
+          "sourceGeometryPreserved": false,
+          "pixelsResampled": true,
+          "hueFilter": false,
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/sword-ink--original.png",
+            "sword-jade": "review/composites/sword-ink--sword-jade.png",
+            "sword-ink": "review/composites/sword-ink--sword-ink.png"
+          }
+        }
+      ],
+      "bodyIds": [
+        "original",
+        "sword-jade",
+        "sword-ink"
+      ]
+    },
+    {
+      "id": "banner",
+      "name": "Thập Ức Tôn Hồn Phiên",
+      "description": "Phiên sau người, chủ hồn/khí tách lớp; ba tông trầm dành cho native 1×.",
+      "variants": [
+        {
+          "id": "original",
+          "name": "Huyền kim",
+          "palette": [
+            "#24212C",
+            "#AC905E",
+            "#DED0B3"
+          ],
+          "copyPrevious": true,
+          "fullFile": "equipment/banner-original.png",
+          "frontFile": "equipment/banner-original-front.png",
+          "rearFile": "equipment/banner-original-rear.png",
+          "fxRearFile": "equipment/banner-original-fx-rear.png",
+          "file": "equipment/banner-original-front.png",
+          "fxFile": "equipment/banner-original-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "../wang-lin-equipment-story-v2/sources/banner-source.png",
+          "prompt": "../wang-lin-equipment-story-v2/sources/banner.prompt.txt",
+          "input": [
+            "../wang-lin-equipment-story-v2/inputs/wang-lin-live-southeast-nearest8x.png"
+          ],
+          "inputs": [
+            {
+              "file": "../wang-lin-equipment-story-v2/inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            }
+          ],
+          "sourceSha256": "ae46d411d98f94982ec85af211763332b83e9166d0be9fc27a75995f2f34868e",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "promptSha256": "ae845704565f8b578ccedd97b29d820f53d8e6cf1043de5beae23653a5d968c3",
+          "sha256": "a2aa70a0ea32a62e6867abcd9adf661e0f34c19adb29a119ca0048aa9012ef0f",
+          "layerSha256": {
+            "front": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+            "rear": "a2aa70a0ea32a62e6867abcd9adf661e0f34c19adb29a119ca0048aa9012ef0f",
+            "fxRear": "79a89f3de277b5aeebd392de5f003ddc58a38a1f48108812c6e0e2b7805c260a"
+          },
+          "itemLocal": {
+            "placement": "grip",
+            "handBodyLocal": [
+              43,
+              64
+            ],
+            "grip": [
+              43,
+              64
+            ],
+            "sourceGrip": [
+              726,
+              847
+            ],
+            "itemGrip": [
+              101,
+              121
+            ],
+            "itemTopLeft": [
+              6,
+              55
+            ],
+            "dimensions": [
+              116,
+              145
+            ],
+            "centreBodyLocal": null,
+            "floor": 200,
+            "fxTopLeft": [
+              129,
+              78
+            ],
+            "fxDimensions": [
+              50,
+              75
+            ]
+          },
+          "previousPackageBytesUnchanged": true,
+          "sourceGeometryPreserved": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/banner-original--original.png",
+            "banner-ashen": "review/composites/banner-original--banner-ashen.png",
+            "banner-ritual": "review/composites/banner-original--banner-ritual.png"
+          }
+        },
+        {
+          "id": "violet",
+          "name": "U tím · hồn cổ",
+          "palette": [
+            "#2D263D",
+            "#7A628B",
+            "#B5A9C1"
+          ],
+          "fullFile": "equipment/banner-violet.png",
+          "frontFile": "equipment/banner-violet-front.png",
+          "rearFile": "equipment/banner-violet-rear.png",
+          "fxRearFile": "equipment/banner-violet-fx-rear.png",
+          "file": "equipment/banner-violet-front.png",
+          "fxFile": "equipment/banner-violet-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "sources/equipment-banner-violet-source.png",
+          "prompt": "sources/equipment-banner-violet.prompt.txt",
+          "input": [
+            "inputs/wang-lin-live-southeast-nearest8x.png",
+            "../wang-lin-equipment-story-v2/sources/banner-source.png"
+          ],
+          "inputs": [
+            {
+              "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "../wang-lin-equipment-story-v2/sources/banner-source.png",
+              "sha256": "ae46d411d98f94982ec85af211763332b83e9166d0be9fc27a75995f2f34868e"
+            }
+          ],
+          "sourceSha256": "0d244bf2cd0b9dd385ce4d5b2e4fec106900cb474dc1d228a5743c91b6b494eb",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "promptSha256": "07b6b3006d6c40342534878c2ebae6ab2e81c08d28f4a262d2accb418146fe61",
+          "generationRequestId": "equipment-banner-violet",
+          "sha256": "fd980f92ad4a15351320a126156cb8c979df3f2a4e69ce6aef2be01ab471c3af",
+          "layerSha256": {
+            "front": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+            "rear": "fd980f92ad4a15351320a126156cb8c979df3f2a4e69ce6aef2be01ab471c3af",
+            "fxRear": "797f47e3fbd5031dc9fdfc9b750618dc8cb619f07997b0b72fa85225c4f2331a"
+          },
+          "itemLocal": {
+            "placement": "grip",
+            "sourceGrip": [
+              726,
+              847
+            ],
+            "grip": [
+              43,
+              64
+            ],
+            "itemGrip": [
+              101,
+              121
+            ],
+            "itemTopLeft": [
+              6,
+              55
+            ],
+            "dimensions": [
+              116,
+              145
+            ],
+            "floor": 200,
+            "fxTopLeft": [
+              129,
+              78
+            ],
+            "fxDimensions": [
+              51,
+              75
+            ],
+            "fxSelected": true
+          },
+          "fxSelected": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "sourceGeometryAssessment": "AI violet/silver material edit preserves nominal same pole/flag/soul-panel layout. Lower existing pole grip726,847 visually verified; whole flag145px, pole bottom worldfoot200, all gear behind live identity body. Integer source alpha edges slightly differ; no exact source-geometry or flag motion claim.",
+          "sourceGeometryPreserved": false,
+          "pixelsResampled": true,
+          "hueFilter": false,
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/banner-violet--original.png",
+            "banner-ashen": "review/composites/banner-violet--banner-ashen.png",
+            "banner-ritual": "review/composites/banner-violet--banner-ritual.png"
+          }
+        },
+        {
+          "id": "jade",
+          "name": "Mặc ngọc · thanh hồn",
+          "palette": [
+            "#233635",
+            "#5C8F85",
+            "#B1C4B0"
+          ],
+          "fullFile": "equipment/banner-jade.png",
+          "frontFile": "equipment/banner-jade-front.png",
+          "rearFile": "equipment/banner-jade-rear.png",
+          "fxRearFile": "equipment/banner-jade-fx-rear.png",
+          "file": "equipment/banner-jade-front.png",
+          "fxFile": "equipment/banner-jade-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "sources/equipment-banner-jade-source.png",
+          "prompt": "sources/equipment-banner-jade.prompt.txt",
+          "input": [
+            "inputs/wang-lin-live-southeast-nearest8x.png",
+            "../wang-lin-equipment-story-v2/sources/banner-source.png"
+          ],
+          "inputs": [
+            {
+              "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "../wang-lin-equipment-story-v2/sources/banner-source.png",
+              "sha256": "ae46d411d98f94982ec85af211763332b83e9166d0be9fc27a75995f2f34868e"
+            }
+          ],
+          "sourceSha256": "b2d9762a3d512c083449702f1fff4b9c69c05ebad3db26d380730f686aa497b9",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "promptSha256": "12b2fccd69ac7d812349ab34a178858ebc2849ff2ff06e62694aa4668934910c",
+          "generationRequestId": "equipment-banner-jade",
+          "sha256": "e9df303617abe1b40576cc3b01c7f59903e59b645d77866ab3ab8249428808fe",
+          "layerSha256": {
+            "front": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+            "rear": "e9df303617abe1b40576cc3b01c7f59903e59b645d77866ab3ab8249428808fe",
+            "fxRear": "f700fafa11517762081d9da2b405f736515755c48af5e6e032e8826a599ef37c"
+          },
+          "itemLocal": {
+            "placement": "grip",
+            "sourceGrip": [
+              726,
+              847
+            ],
+            "grip": [
+              43,
+              64
+            ],
+            "itemGrip": [
+              101,
+              121
+            ],
+            "itemTopLeft": [
+              6,
+              55
+            ],
+            "dimensions": [
+              115,
+              145
+            ],
+            "floor": 200,
+            "fxTopLeft": [
+              129,
+              78
+            ],
+            "fxDimensions": [
+              50,
+              75
+            ],
+            "fxSelected": true
+          },
+          "fxSelected": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "sourceGeometryAssessment": "AI dark-jade/ivory/bronze edit keeps nominal same flag silhouette and pole. Existing lower pole grip726,847 manually verified,145px complete flag with bottom200; three muted jade soul wisps separated. Source alpha fringe differs, geometry exactness/cloth action unresolved.",
+          "sourceGeometryPreserved": false,
+          "pixelsResampled": true,
+          "hueFilter": false,
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/banner-jade--original.png",
+            "banner-ashen": "review/composites/banner-jade--banner-ashen.png",
+            "banner-ritual": "review/composites/banner-jade--banner-ritual.png"
+          }
+        }
+      ],
+      "bodyIds": [
+        "original",
+        "banner-ashen",
+        "banner-ritual"
+      ]
+    },
+    {
+      "id": "bead",
+      "name": "Thiên Nghịch Châu · làm lại",
+      "description": "Ba thiết kế đá châu mới: châu xám cũ nhỏ, dấu mây và nội quang tách riêng. Không dùng hình châu v2 bị owner chê.",
+      "variants": [
+        {
+          "id": "stone",
+          "name": "Cổ thạch · ngũ vân",
+          "palette": [
+            "#8D8C83",
+            "#585D58",
+            "#C8C8B9"
+          ],
+          "fullFile": "equipment/bead-stone.png",
+          "frontFile": "equipment/bead-stone-front.png",
+          "rearFile": "equipment/bead-stone-rear.png",
+          "fxRearFile": "equipment/bead-stone-fx-rear.png",
+          "file": "equipment/bead-stone-front.png",
+          "fxFile": "equipment/bead-stone-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "sources/equipment-bead-stone-source.png",
+          "prompt": "sources/equipment-bead-stone.prompt.txt",
+          "input": [
+            "inputs/wang-lin-live-southeast-nearest8x.png"
+          ],
+          "inputs": [
+            {
+              "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            }
+          ],
+          "sourceSha256": "bb6b8e1994d3dd0ea47e87f2db5b264762465a67161e371756769785fc545cac",
+          "sourceSize": [
+            1774,
+            887
+          ],
+          "promptSha256": "0bbbfdf54585ceb924403446399f6b66faa94e4b16641c86f6e61bd927666864",
+          "generationRequestId": "equipment-bead-stone",
+          "sha256": "bfe7858bcdf96463d91c54dff8e630ae0bd59628730973f6e52bf83750902811",
+          "layerSha256": {
+            "front": "bfe7858bcdf96463d91c54dff8e630ae0bd59628730973f6e52bf83750902811",
+            "rear": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+            "fxRear": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+          },
+          "itemLocal": {
+            "placement": "centre",
+            "sourceGrip": null,
+            "grip": null,
+            "itemGrip": null,
+            "itemTopLeft": [
+              124,
+              142
+            ],
+            "dimensions": [
+              18,
+              18
+            ],
+            "floor": null,
+            "fxTopLeft": [
+              106,
+              124
+            ],
+            "fxDimensions": [
+              0,
+              0
+            ],
+            "fxSelected": false
+          },
+          "fxSelected": false,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "sourceGeometryAssessment": "Gray old stone with carved clouds kept as bare core comparison option. Raw right-panel FX is a thick ivory ring and was not selected; its review layer is transparent. New stone source/core, no old v2 bead.",
+          "sourceGeometryPreserved": false,
+          "pixelsResampled": true,
+          "hueFilter": false,
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/bead-stone--original.png",
+            "bead-cloud": "review/composites/bead-stone--bead-cloud.png",
+            "bead-hermit": "review/composites/bead-stone--bead-hermit.png"
+          }
+        },
+        {
+          "id": "cloud",
+          "name": "Vân ngọc · thanh quang",
+          "palette": [
+            "#ADB5A8",
+            "#4C8076",
+            "#D4E3CB"
+          ],
+          "fullFile": "equipment/bead-cloud.png",
+          "frontFile": "equipment/bead-cloud-front.png",
+          "rearFile": "equipment/bead-cloud-rear.png",
+          "fxRearFile": "equipment/bead-cloud-fx-rear.png",
+          "file": "equipment/bead-cloud-front.png",
+          "fxFile": "equipment/bead-cloud-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "sources/equipment-bead-cloud-source.png",
+          "prompt": "sources/equipment-bead-cloud.prompt.txt",
+          "input": [
+            "inputs/wang-lin-live-southeast-nearest8x.png"
+          ],
+          "inputs": [
+            {
+              "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            }
+          ],
+          "sourceSha256": "92b2ef306a6619069c0fa9868fb0445bc0b5c61abb65766d4e34832848dc45af",
+          "sourceSize": [
+            1774,
+            887
+          ],
+          "promptSha256": "956cadb4bf827572fdb3c8fbf428dbb26d272d591d73411253c06220eeaca1d3",
+          "generationRequestId": "equipment-bead-cloud",
+          "sha256": "7ba389e4d057fb9404681eadecdedea01a23386286985d45b2ca2b10647146b3",
+          "layerSha256": {
+            "front": "7ba389e4d057fb9404681eadecdedea01a23386286985d45b2ca2b10647146b3",
+            "rear": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+            "fxRear": "858773b22b7e0fbb8d1f72be727350de7a3b1e345def1dee95ad292f39e89ed0"
+          },
+          "itemLocal": {
+            "placement": "centre",
+            "sourceGrip": null,
+            "grip": null,
+            "itemGrip": null,
+            "itemTopLeft": [
+              124,
+              142
+            ],
+            "dimensions": [
+              18,
+              18
+            ],
+            "floor": null,
+            "fxTopLeft": [
+              122,
+              131
+            ],
+            "fxDimensions": [
+              22,
+              40
+            ],
+            "fxSelected": true
+          },
+          "fxSelected": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "sourceGeometryAssessment": "New smooth pale gray bead with light carved cloud marks; separate two green-white wisps/motes placed above/below core. Source gear and FX are independent panels; visual design is a new celestial option, not a canonical colour claim.",
+          "sourceGeometryPreserved": false,
+          "pixelsResampled": true,
+          "hueFilter": false,
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/bead-cloud--original.png",
+            "bead-cloud": "review/composites/bead-cloud--bead-cloud.png",
+            "bead-hermit": "review/composites/bead-cloud--bead-hermit.png"
+          }
+        },
+        {
+          "id": "abyss",
+          "name": "Huyền thạch · nội giới",
+          "palette": [
+            "#5D6170",
+            "#8B789E",
+            "#C5C2D5"
+          ],
+          "fullFile": "equipment/bead-abyss.png",
+          "frontFile": "equipment/bead-abyss-front.png",
+          "rearFile": "equipment/bead-abyss-rear.png",
+          "fxRearFile": "equipment/bead-abyss-fx-rear.png",
+          "file": "equipment/bead-abyss-front.png",
+          "fxFile": "equipment/bead-abyss-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "sources/equipment-bead-abyss-source.png",
+          "prompt": "sources/equipment-bead-abyss.prompt.txt",
+          "input": [
+            "inputs/wang-lin-live-southeast-nearest8x.png"
+          ],
+          "inputs": [
+            {
+              "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            }
+          ],
+          "sourceSha256": "94e71a93137105b6c8630d3736f2b2ee1f90f14f40cd88009fa7fa43c20aa85b",
+          "sourceSize": [
+            1774,
+            887
+          ],
+          "promptSha256": "ec8d91dbb97af2f8287a005942a83a360c38619a6ddd2112629225ff9f22c77f",
+          "generationRequestId": "equipment-bead-abyss",
+          "sha256": "42f647ad5a6e8b1bf52654e4722f388ec40ae66d0783a5539e1b9655884f626c",
+          "layerSha256": {
+            "front": "42f647ad5a6e8b1bf52654e4722f388ec40ae66d0783a5539e1b9655884f626c",
+            "rear": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+            "fxRear": "4d85ae621eb292031900b80d39bc7d5851143c0f942415a22cedfe9f3af813be"
+          },
+          "itemLocal": {
+            "placement": "centre",
+            "sourceGrip": null,
+            "grip": null,
+            "itemGrip": null,
+            "itemTopLeft": [
+              124,
+              142
+            ],
+            "dimensions": [
+              18,
+              18
+            ],
+            "floor": null,
+            "fxTopLeft": [
+              114,
+              134
+            ],
+            "fxDimensions": [
+              39,
+              35
+            ],
+            "fxSelected": true
+          },
+          "fxSelected": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "sourceGeometryAssessment": "New gray-violet dark bead with fine cloud marks; violet arcs/motes are a separate layer. Source colour is AI artwork, not a local hue shift or a verified permanent canonical appearance.",
+          "sourceGeometryPreserved": false,
+          "pixelsResampled": true,
+          "hueFilter": false,
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/bead-abyss--original.png",
+            "bead-cloud": "review/composites/bead-abyss--bead-cloud.png",
+            "bead-hermit": "review/composites/bead-abyss--bead-hermit.png"
+          }
+        }
+      ],
+      "bodyIds": [
+        "original",
+        "bead-cloud",
+        "bead-hermit"
+      ]
+    },
+    {
+      "id": "chariot",
+      "name": "Xạ Thần Xa",
+      "description": "Form triển khai cô đọng, pháp khí cạnh người và thú lôi riêng; chất liệu/màu là chuyển thể.",
+      "variants": [
+        {
+          "id": "original",
+          "name": "Cổ đồng",
+          "palette": [
+            "#323034",
+            "#9F8351",
+            "#D1BC8E"
+          ],
+          "copyPrevious": true,
+          "fullFile": "equipment/chariot-original.png",
+          "frontFile": "equipment/chariot-original-front.png",
+          "rearFile": "equipment/chariot-original-rear.png",
+          "fxRearFile": "equipment/chariot-original-fx-rear.png",
+          "file": "equipment/chariot-original-front.png",
+          "fxFile": "equipment/chariot-original-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "../wang-lin-equipment-story-v2/sources/chariot-source.png",
+          "prompt": "../wang-lin-equipment-story-v2/sources/chariot.prompt.txt",
+          "input": [
+            "../wang-lin-equipment-story-v2/inputs/wang-lin-live-southeast-nearest8x.png"
+          ],
+          "inputs": [
+            {
+              "file": "../wang-lin-equipment-story-v2/inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            }
+          ],
+          "sourceSha256": "d372d2adb6a8b5c52a575c51ffe0dbfe320ae49d698fac55c1405567e925994d",
+          "sourceSize": [
+            1637,
+            961
+          ],
+          "promptSha256": "2dded18dc2e86567e59f19d3d53f262a21a31a6089c42a11781b64088172a458",
+          "sha256": "3d8a0f86716145060464919d8c270c3e03b4f526a8296d50570d7566c0af6ccc",
+          "layerSha256": {
+            "front": "3d8a0f86716145060464919d8c270c3e03b4f526a8296d50570d7566c0af6ccc",
+            "rear": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+            "fxRear": "2068a159a8454fe2b847e36d877af2c23c0fc01bb1304dc2faa9fd8896089c40"
+          },
+          "itemLocal": {
+            "placement": "floor",
+            "handBodyLocal": null,
+            "grip": null,
+            "sourceGrip": null,
+            "itemGrip": null,
+            "itemTopLeft": [
+              122,
+              107
+            ],
+            "dimensions": [
+              110,
+              93
+            ],
+            "centreBodyLocal": null,
+            "floor": 200,
+            "fxTopLeft": [
+              155,
+              55
+            ],
+            "fxDimensions": [
+              65,
+              80
+            ]
+          },
+          "previousPackageBytesUnchanged": true,
+          "sourceGeometryPreserved": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/chariot-original--original.png",
+            "chariot-bronze": "review/composites/chariot-original--chariot-bronze.png",
+            "chariot-thunder": "review/composites/chariot-original--chariot-thunder.png"
+          }
+        },
+        {
+          "id": "jade",
+          "name": "Huyền kim · thanh ngọc",
+          "palette": [
+            "#354547",
+            "#90B4A3",
+            "#C8D0BC"
+          ],
+          "fullFile": "equipment/chariot-jade.png",
+          "frontFile": "equipment/chariot-jade-front.png",
+          "rearFile": "equipment/chariot-jade-rear.png",
+          "fxRearFile": "equipment/chariot-jade-fx-rear.png",
+          "file": "equipment/chariot-jade-front.png",
+          "fxFile": "equipment/chariot-jade-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "sources/equipment-chariot-jade-source.png",
+          "prompt": "sources/equipment-chariot-jade.prompt.txt",
+          "input": [
+            "inputs/wang-lin-live-southeast-nearest8x.png",
+            "../wang-lin-equipment-story-v2/sources/chariot-source.png"
+          ],
+          "inputs": [
+            {
+              "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "../wang-lin-equipment-story-v2/sources/chariot-source.png",
+              "sha256": "d372d2adb6a8b5c52a575c51ffe0dbfe320ae49d698fac55c1405567e925994d"
+            }
+          ],
+          "sourceSha256": "db72d83d88a24e54d4cbbd149bcb39cf283cc007616a1b6f6d12df7bd60fbdf6",
+          "sourceSize": [
+            1637,
+            961
+          ],
+          "promptSha256": "08216e1d1c6e9e3da540a3db517acce84b96a1fbf538c3ea7005f9a3f208ffc3",
+          "generationRequestId": "equipment-chariot-jade",
+          "sha256": "ea4ccdf76d11aaf95a55a185250412269cdbd3b82b3ae3af7c0baa8589c8da01",
+          "layerSha256": {
+            "front": "ea4ccdf76d11aaf95a55a185250412269cdbd3b82b3ae3af7c0baa8589c8da01",
+            "rear": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+            "fxRear": "d26479dbeba2e295d54ae0e789375ce3a2e4e177fb10d2df108293c1ef03b372"
+          },
+          "itemLocal": {
+            "placement": "floor",
+            "sourceGrip": null,
+            "grip": null,
+            "itemGrip": null,
+            "itemTopLeft": [
+              122,
+              107
+            ],
+            "dimensions": [
+              110,
+              93
+            ],
+            "floor": 200,
+            "fxTopLeft": [
+              155,
+              55
+            ],
+            "fxDimensions": [
+              65,
+              80
+            ],
+            "fxSelected": true
+          },
+          "fxSelected": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "sourceGeometryAssessment": "AI dark metal/jade/silver edit preserves nominal cart wheel/spike/chain geometry and separate thunder-beast panel from v2. Natural complete-cart resample110x92 receives one transparent top row in the baseline110x93 component canvas; source pixels are not stretched and floor remains200. Beast natural64x80 receives one transparent right column in65x80 frame. New edges/fringe vary, not exact geometry or canonical deployment/world scale.",
+          "sourceGeometryPreserved": false,
+          "pixelsResampled": true,
+          "hueFilter": false,
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/chariot-jade--original.png",
+            "chariot-bronze": "review/composites/chariot-jade--chariot-bronze.png",
+            "chariot-thunder": "review/composites/chariot-jade--chariot-thunder.png"
+          }
+        },
+        {
+          "id": "thunder",
+          "name": "Huyền thiết · lôi lam",
+          "palette": [
+            "#2F354C",
+            "#7184AD",
+            "#BFCBE1"
+          ],
+          "fullFile": "equipment/chariot-thunder.png",
+          "frontFile": "equipment/chariot-thunder-front.png",
+          "rearFile": "equipment/chariot-thunder-rear.png",
+          "fxRearFile": "equipment/chariot-thunder-fx-rear.png",
+          "file": "equipment/chariot-thunder-front.png",
+          "fxFile": "equipment/chariot-thunder-fx-rear.png",
+          "canvas": [
+            256,
+            224
+          ],
+          "pivot": [
+            96,
+            200
+          ],
+          "bodyOffset": [
+            64,
+            112
+          ],
+          "raw": "sources/equipment-chariot-thunder-source.png",
+          "prompt": "sources/equipment-chariot-thunder.prompt.txt",
+          "input": [
+            "inputs/wang-lin-live-southeast-nearest8x.png",
+            "../wang-lin-equipment-story-v2/sources/chariot-source.png"
+          ],
+          "inputs": [
+            {
+              "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "../wang-lin-equipment-story-v2/sources/chariot-source.png",
+              "sha256": "d372d2adb6a8b5c52a575c51ffe0dbfe320ae49d698fac55c1405567e925994d"
+            }
+          ],
+          "sourceSha256": "e323e91c7a93863a82420f2dd4ef7325e22a060847398420942f6df4165fec10",
+          "sourceSize": [
+            1637,
+            961
+          ],
+          "promptSha256": "0269787ebadb18daf49c219826a16b52a997d905e82aaab3e45682c80b2e1b3f",
+          "generationRequestId": "equipment-chariot-thunder",
+          "sha256": "3f76ae91d22e898875ae0531ba005d546bf9c6bdf152ffc1c0bb8ef3ee052297",
+          "layerSha256": {
+            "front": "3f76ae91d22e898875ae0531ba005d546bf9c6bdf152ffc1c0bb8ef3ee052297",
+            "rear": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+            "fxRear": "b92b3e12ceaa59ab45d3fbc669fcf610600a44bc6093a120237de3b2aa252ec5"
+          },
+          "itemLocal": {
+            "placement": "floor",
+            "sourceGrip": null,
+            "grip": null,
+            "itemGrip": null,
+            "itemTopLeft": [
+              122,
+              107
+            ],
+            "dimensions": [
+              110,
+              93
+            ],
+            "floor": 200,
+            "fxTopLeft": [
+              155,
+              55
+            ],
+            "fxDimensions": [
+              65,
+              80
+            ],
+            "fxSelected": true
+          },
+          "fxSelected": true,
+          "status": "candidate-static-neutral-with-separate-fx",
+          "sourceGeometryAssessment": "AI dark iron/silver and thunder-blue edit retains nominal v2 cart/chain/spike and beast silhouette. Whole-device width110 and beast height80 are uniform resamples; transparent component padding only retains baseline frame/origin110x93/(122,107) and65x80/(155,55), not stretching pixels. Actual art is blue-gray rather than purple; palette/name reflect source. Static deployment candidate, no exact geometry/footprint/collision/action claim.",
+          "sourceGeometryPreserved": false,
+          "pixelsResampled": true,
+          "hueFilter": false,
+          "ownerApproved": false,
+          "artApproved": false,
+          "runtimeReady": false,
+          "compositeFiles": {
+            "original": "review/composites/chariot-thunder--original.png",
+            "chariot-bronze": "review/composites/chariot-thunder--chariot-bronze.png",
+            "chariot-thunder": "review/composites/chariot-thunder--chariot-thunder.png"
+          }
+        }
+      ],
+      "bodyIds": [
+        "original",
+        "chariot-bronze",
+        "chariot-thunder"
+      ]
+    }
+  ],
+  "mapBackground": {
+    "file": "inputs/map-native.png",
+    "sha256": "7184512733288989b5abb52153e4382aae4daa556b310261843406bf5238ca07"
+  },
+  "generation": {
+    "method": "built-in image_gen edits; original three gear palettes copied byte-exact from v2",
+    "routerGenerationUsed": false,
+    "creativeRecolorInCode": false,
+    "bodyIdentityMethod": "same neutral anatomy mapping, documented canonical live identity replacement",
+    "technicalPostProcess": "measured source registration, nearest isotropic body mapping, source component extraction, alpha threshold, rear/front separation, live identity RGBA restoration",
+    "sourceImagesModified": false
+  },
+  "coverage": {
+    "direction": "southeast",
+    "directions": 1,
+    "bodyOptions": 9,
+    "outfitOptions": 8,
+    "equipmentGroups": 4,
+    "equipmentVariants": 12,
+    "animationClips": 0,
+    "otherDirections": 0,
+    "fx": "separate static rear layers, no motion timeline"
+  },
+  "readiness": {
+    "ownerApproved": false,
+    "artApproved": false,
+    "runtimeIntegrated": false,
+    "gameplayEquipmentImplemented": false
+  },
+  "pending": []
+}

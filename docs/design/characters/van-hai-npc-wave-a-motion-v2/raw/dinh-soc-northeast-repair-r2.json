@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang NORTHEAST remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nUse WIDE1536x1024 sheet6columns3rows with ALL18 complete poses at one common original body scale, spaced by translations. Last-column indices5/11/17 clip anatomical RIGHT NEAR hand spear-blade at the right PNGboundary. Restore the COMPLETE pointed blade from the original intact other15poses, and ensure at least24 real alpha0 gutter pixels between every hair/weapon silhouette and neighboring pose,32 at ALL outer margins. Keep SAME18 idle/talk/tag-check progression, true BACK-RIGHT Northeast camera, own navy-gold/ivory guard/head/boots and physical RIGHT NEAR hand spear/screen-RIGHT, LEFT FAR hip route-tag/screen-LEFT. Do not truncate weapon/hair, shrink individual pose/body or swap spear/tag to opposite limbs. No extra weapon/hand, no frontal turn, no static reused neutral or shadows.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang NORTHEAST remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nUse WIDE1536x1024 sheet6columns3rows with ALL18 complete poses at one common original body scale, spaced by translations. Last-column indices5/11/17 clip anatomical RIGHT NEAR hand spear-blade at the right PNGboundary. Restore the COMPLETE pointed blade from the original intact other15poses, and ensure at least24 real alpha0 gutter pixels between every hair/weapon silhouette and neighboring pose,32 at ALL outer margins. Keep SAME18 idle/talk/tag-check progression, true BACK-RIGHT Northeast camera, own navy-gold/ivory guard/head/boots and physical RIGHT NEAR hand spear/screen-RIGHT, LEFT FAR hip route-tag/screen-LEFT. Do not truncate weapon/hair, shrink individual pose/body or swap spear/tag to opposite limbs. No extra weapon/hand, no frontal turn, no static reused neutral or shadows.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-13T12:46:40.181Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\inputs\\wang-lin-live-northeast-nearest8x.png",
+      "filename": "wang-lin-live-northeast-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 8833,
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\raw\\dinh-soc-northeast-direction-neutral.png",
+      "filename": "dinh-soc-northeast-direction-neutral.png",
+      "mimeType": "image/png",
+      "bytes": 1826540,
+      "sha256": "82e4fca079746e8e602535261cce127bd11b9e89cc1b6f1e19aa932d726ac1e4",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\direction-neutral\\nearest8x\\dinh-soc-northeast.png",
+      "filename": "dinh-soc-northeast.png",
+      "mimeType": "image/png",
+      "bytes": 16143,
+      "sha256": "8048634ec19c3fd1154e9e025a0678ac73ad9b7e8d1a3a8afa100963b189a566",
+      "dimensions": {
+        "width": 768,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "dinh-soc-northeast-repair-r2.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 2238795,
+    "sha256": "be14dbbe3f7b2b259e0992d1b50d773a1fa03e1bde5b2f1feada0f9b7b697ebe",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

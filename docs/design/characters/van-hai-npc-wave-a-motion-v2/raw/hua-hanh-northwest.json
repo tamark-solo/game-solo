@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: real sprite animation production. Produce one transparent RGBA source sheet for this same accepted NPC: exactly6columns x3rows,18separated complete full-body poses. Request1536x1536. No labels, grid, text, scene, floor, shadow, FX, aura or particles. Each pose and every prop pixel must have generous clear alpha gutter, consistent column centers and row boot ground lines. Do not clip or touch neighboring poses. Row1 idle6, row2 talk6, row3 profession6. Row1frame1 is directional neutral calibration; one source-wide scale is measured from this neutral later. All other poses preserve physical scale; no per-pose bbox fitting. Native human standing body80px, base64x96/foot32,88; motion96x96/foot48,88 adds transparent padding only. Skull/main hair around half standing height, short torso/legs and broad crisp few-tone pixel clusters. Frame6 of each row should settle to its own directional frame1 neutral; this is a generation intent, not a claim of pixel-equal end frames.\n\nIMAGE1 is the actual live Wang Lin Pixel02 neutral in the TARGET direction enlarged nearest8x: PRIMARY human anatomy, broad pixel treatment, material shading, camera and native scale. IMAGE2 is the SAME NPC OWNER-APPROVED Southeast motion calibration frame enlarged nearest8x (96x96 native including transparent padding, body unchanged); IMAGE3 is this SAME NPC accepted Southeast raw/motion identity source. Images2/3 support this NPC own face, skull, hair, wardrobe, physical prop hands/attachments and colors only. Reconstruct the same NPC as a true new target-direction view, never mirror/flip the Southeast image or copy Wang face/hair/wardrobe. Preserve own accepted anatomy and identity in every action; do not use another NPC as style basis.\n\nNPC Hứa Hành / NPC-HN-ROUTE-KEEPER. Preserve compact dark hair, dusty-grey short cloak patched asymmetrically on the same physical side, small route map/tube, old waist sealing cords and muddy boots. Adult tired/practical face. Never become an armored guard, add a weapon, duplicate the cloak patch or invent large back insignia.\n\nALL18poses remain NORTHWEST back-left three-quarter facing screen up-left, identical rear camera and body axes to IMAGE1. Show the back-left view throughout all18poses. Back hair, shoulders and robe dominate; do not reveal a front face, both eyes, front chest or palms through the torso. Held objects at front waist are naturally partly or fully hidden. Visible motion uses slight head inclination, shoulder/forearm changes and naturally exposed prop edges, never relocation of front-held props to the back.\n\nProp continuity in every row: Retain the same small map/tube or folded route paper and old sealing cord on their original physical attachments. A partly opened paper remains in the same hands; never spawn a loose floating sheet, duplicate tube or switch physical side of the asymmetric patch/cord.\n\nRear profession occlusion: Map/paper check remains at the front waist, hidden behind cloak/torso where required. Small shoulder/forearm or exposed paper edge changes suffice for rear views. Keep the actual asymmetric cloak patch on its own physical side as rotation reveals/hides it; do not duplicate it on the other side.\n\nROW IDLE6: frame1: Directional neutral calibration with both boots planted; frame2: Small inhalation in shoulders/cloth only; frame3: Slight sleeve/shoulder breathing change; frame4: Gentle exhalation without full-body bob or scaling; frame5: Subtle blink where eyes are actually visible, otherwise a settled shoulder/hair detail; frame6: Return to same source frame1 directional neutral.\n\nROW TALK6: frame1: Same directional standing neutral; frame2: Subtle speaking breath at shoulder/neck, mouth remains occluded where camera hides it; frame3: Restrained head inclination/nod, keeping the same back or back-quarter view; frame4: Small shoulder/neck speaking change while head nod begins to settle; frame5: Return head and shoulders; all low resting hands and props retained; frame6: Return to same source frame1 directional neutral.\n\nROW PROFESSION6: frame1: Directional standing neutral with original map/tube and cord retained; frame2: Incline head slightly toward the old seal/route paper; frame3: Partly open the same compact route paper at waist level without adding a detached sheet; frame4: Check the same old sealing cord once with the available fingers while the holding hand keeps the route prop; frame5: Lower the checking fingers and restore the map angle; frame6: Return to the same directional frame1 neutral.\n\nHair/robe/back construction is the minimal continuation of accepted identity: no extra emblems, pouches, decorations, hidden weapons, embroidery or face redesign. Motion is stationary with stable boots and genuine small pose changes; no six static duplicate images, full-body bobbing/scaling or camera rotation. Any naturally lower bounds while looking down remain natural, not normalized. New view/action is a candidate for review; owner acceptance of Southeast does not approve seven new views or runtime.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: real sprite animation production. Produce one transparent RGBA source sheet for this same accepted NPC: exactly6columns x3rows,18separated complete full-body poses. Request1536x1536. No labels, grid, text, scene, floor, shadow, FX, aura or particles. Each pose and every prop pixel must have generous clear alpha gutter, consistent column centers and row boot ground lines. Do not clip or touch neighboring poses. Row1 idle6, row2 talk6, row3 profession6. Row1frame1 is directional neutral calibration; one source-wide scale is measured from this neutral later. All other poses preserve physical scale; no per-pose bbox fitting. Native human standing body80px, base64x96/foot32,88; motion96x96/foot48,88 adds transparent padding only. Skull/main hair around half standing height, short torso/legs and broad crisp few-tone pixel clusters. Frame6 of each row should settle to its own directional frame1 neutral; this is a generation intent, not a claim of pixel-equal end frames.\n\nIMAGE1 is the actual live Wang Lin Pixel02 neutral in the TARGET direction enlarged nearest8x: PRIMARY human anatomy, broad pixel treatment, material shading, camera and native scale. IMAGE2 is the SAME NPC OWNER-APPROVED Southeast motion calibration frame enlarged nearest8x (96x96 native including transparent padding, body unchanged); IMAGE3 is this SAME NPC accepted Southeast raw/motion identity source. Images2/3 support this NPC own face, skull, hair, wardrobe, physical prop hands/attachments and colors only. Reconstruct the same NPC as a true new target-direction view, never mirror/flip the Southeast image or copy Wang face/hair/wardrobe. Preserve own accepted anatomy and identity in every action; do not use another NPC as style basis.\n\nNPC Hứa Hành / NPC-HN-ROUTE-KEEPER. Preserve compact dark hair, dusty-grey short cloak patched asymmetrically on the same physical side, small route map/tube, old waist sealing cords and muddy boots. Adult tired/practical face. Never become an armored guard, add a weapon, duplicate the cloak patch or invent large back insignia.\n\nALL18poses remain NORTHWEST back-left three-quarter facing screen up-left, identical rear camera and body axes to IMAGE1. Show the back-left view throughout all18poses. Back hair, shoulders and robe dominate; do not reveal a front face, both eyes, front chest or palms through the torso. Held objects at front waist are naturally partly or fully hidden. Visible motion uses slight head inclination, shoulder/forearm changes and naturally exposed prop edges, never relocation of front-held props to the back.\n\nProp continuity in every row: Retain the same small map/tube or folded route paper and old sealing cord on their original physical attachments. A partly opened paper remains in the same hands; never spawn a loose floating sheet, duplicate tube or switch physical side of the asymmetric patch/cord.\n\nRear profession occlusion: Map/paper check remains at the front waist, hidden behind cloak/torso where required. Small shoulder/forearm or exposed paper edge changes suffice for rear views. Keep the actual asymmetric cloak patch on its own physical side as rotation reveals/hides it; do not duplicate it on the other side.\n\nROW IDLE6: frame1: Directional neutral calibration with both boots planted; frame2: Small inhalation in shoulders/cloth only; frame3: Slight sleeve/shoulder breathing change; frame4: Gentle exhalation without full-body bob or scaling; frame5: Subtle blink where eyes are actually visible, otherwise a settled shoulder/hair detail; frame6: Return to same source frame1 directional neutral.\n\nROW TALK6: frame1: Same directional standing neutral; frame2: Subtle speaking breath at shoulder/neck, mouth remains occluded where camera hides it; frame3: Restrained head inclination/nod, keeping the same back or back-quarter view; frame4: Small shoulder/neck speaking change while head nod begins to settle; frame5: Return head and shoulders; all low resting hands and props retained; frame6: Return to same source frame1 directional neutral.\n\nROW PROFESSION6: frame1: Directional standing neutral with original map/tube and cord retained; frame2: Incline head slightly toward the old seal/route paper; frame3: Partly open the same compact route paper at waist level without adding a detached sheet; frame4: Check the same old sealing cord once with the available fingers while the holding hand keeps the route prop; frame5: Lower the checking fingers and restore the map angle; frame6: Return to the same directional frame1 neutral.\n\nHair/robe/back construction is the minimal continuation of accepted identity: no extra emblems, pouches, decorations, hidden weapons, embroidery or face redesign. Motion is stationary with stable boots and genuine small pose changes; no six static duplicate images, full-body bobbing/scaling or camera rotation. Any naturally lower bounds while looking down remain natural, not normalized. New view/action is a candidate for review; owner acceptance of Southeast does not approve seven new views or runtime.\n",
+    "n": 1,
+    "size": "1536x1536",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-13T10:53:07.690Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\inputs\\wang-lin-live-northwest-nearest8x.png",
+      "filename": "wang-lin-live-northwest-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9340,
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\inputs\\hua-hanh-approved-southeast-nearest8x.png",
+      "filename": "hua-hanh-approved-southeast-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 17454,
+      "sha256": "38dc59c6426ca00e4b9155463e04fddc086acda04e9563df58b2ac87a99215da",
+      "dimensions": {
+        "width": 768,
+        "height": 768
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\inputs\\hua-hanh-approved-southeast-actions.png",
+      "filename": "hua-hanh-approved-southeast-actions.png",
+      "mimeType": "image/png",
+      "bytes": 1795073,
+      "sha256": "40ac7c7b8f418ee1cc715806e1309b8e668475083798c394c34dcb4fa1d35f92",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "hua-hanh-northwest.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1781424,
+    "sha256": "08211d16c77792604fdf23710275d25d841ba01348e12c3a55b7d7715e873f72",
+    "dimensions": {
+      "width": 1254,
+      "height": 1254
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": false
+  }
+}

@@ -166,3 +166,15 @@ docs/design/characters/dark-seal-officer-animation-v1/** -text
 docs/design/vfx/dark-seal-officer-vfx-v2/** -text
 # ImageGen prompt records retain exact original whitespace for source hashes.
 docs/design/characters/van-hai-monster-animation-v1/prompts/** -text -whitespace
+# Preserve NPC and supporting ART hashes across Windows/macOS checkouts.
+docs/design/characters/van-hai-npc-*/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/design/characters/van-hai-npc-*/prompts/** -text -whitespace
+docs/design/characters/wang-lin-equipment-*/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/design/characters/wang-lin-equipment-*/prompts/** -text -whitespace
+docs/design/gameplay/hang-nhac-onboarding-assets-v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/design/gameplay/hang-nhac-onboarding-assets-v1/prompts/** -text -whitespace
+# Frozen source records and intentional Markdown hard breaks retain original whitespace.
+docs/design/characters/van-hai-npc-wave-a-concepts-v1/review/source-visual-assessment.json -whitespace
+docs/design/characters/wang-lin-equipment-options-v3/review.css -whitespace
+docs/design/world/van-hai-living-world-v1/placement.html -whitespace
+docs/CULTIVATION-REDESIGN-2026-10-13.md -whitespace

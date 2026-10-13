@@ -1,0 +1,178 @@
+{
+  "schema": "npc-wave-a-eight-direction-input-provenance-1",
+  "date": "2026-10-13",
+  "pilotApproval": {
+    "file": "docs/design/characters/van-hai-npc-wave-a-motion-v1/approval.json",
+    "sha256": "0a3e8e5600961652f43189e4e48f5297890288d606f8857bac904bc4b4ccf300",
+    "pinnedCount": 219
+  },
+  "neutralApproval": {
+    "file": "../van-hai-npc-wave-a-concepts-v1/approval.json",
+    "sha256": "48f0cbbeb1e412c576b3e066e65ff6c1fa19000bb2957ca7f6a3fd6a0ef56663",
+    "pinnedCount": 45
+  },
+  "inputOrder": [
+    "Image1 actual live Wang same direction PRIMARY anatomy/style/camera",
+    "Image2 own approved Southeast motion calibration nearest8x identity",
+    "Image3 own approved Southeast motion source identity/gesture support"
+  ],
+  "noNpcToNpcStyleChain": true,
+  "actors": [
+    {
+      "id": "NPC-HN-HERBALIST",
+      "slug": "bach-chi",
+      "identityReference": {
+        "file": "inputs/bach-chi-approved-neutral-native.png",
+        "sha256": "d787074d1a391970becd0eba67baf6b301b0d9a6c253648230f7060597aa3832",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      "motionCalibration": {
+        "file": "inputs/bach-chi-approved-southeast-nearest8x.png",
+        "sha256": "605b730440ca44731b447693c96858578e3f4d6c1a646fbd450b8428342eb4af",
+        "source": "../van-hai-npc-wave-a-motion-v1/calibration/bach-chi-southeast.png",
+        "sourceSha256": "69622dfb3fc538d5bdf02cdf66ecbbb31161ea0067e302de9623a99cd7d565be"
+      },
+      "motionSupport": {
+        "file": "inputs/bach-chi-approved-southeast-actions.png",
+        "sha256": "dcb36a9e1b09a40dd0f91d91dfff052cd5f8c3bbb7231b4f697a6af08d50e289"
+      }
+    },
+    {
+      "id": "NPC-HN-FORGE",
+      "slug": "tong-thiet",
+      "identityReference": {
+        "file": "inputs/tong-thiet-approved-neutral-native.png",
+        "sha256": "11be3d5f68371500e4f45b948e5cdb185bd5e81961564637837078d26748b945",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      "motionCalibration": {
+        "file": "inputs/tong-thiet-approved-southeast-nearest8x.png",
+        "sha256": "1a7d5b187c61701ed532c010daf5fb6c72b3d5a563ff9106e10fe9ba07e0a515",
+        "source": "../van-hai-npc-wave-a-motion-v1/calibration/tong-thiet-southeast.png",
+        "sourceSha256": "389644ce28fb5eefa95ed0a84c55cd20584f01d177c746354febf37699453b57"
+      },
+      "motionSupport": {
+        "file": "inputs/tong-thiet-approved-southeast-actions.png",
+        "sha256": "09602ebac13eb1fcb5749dee270a944cd2a6e35a76d1a8cc5c93b468ab1a54d8"
+      }
+    },
+    {
+      "id": "NPC-HN-ROUTE-KEEPER",
+      "slug": "hua-hanh",
+      "identityReference": {
+        "file": "inputs/hua-hanh-approved-neutral-native.png",
+        "sha256": "9ea84271f5244330d4ba2d0be3e9d7005fbd74bc4cbeed173c83fd3e0a70991f",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      "motionCalibration": {
+        "file": "inputs/hua-hanh-approved-southeast-nearest8x.png",
+        "sha256": "38dc59c6426ca00e4b9155463e04fddc086acda04e9563df58b2ac87a99215da",
+        "source": "../van-hai-npc-wave-a-motion-v1/calibration/hua-hanh-southeast.png",
+        "sourceSha256": "a54806890bd179dedc84496c7b59026f604b0082a461dddcbb9a933183f64c15"
+      },
+      "motionSupport": {
+        "file": "inputs/hua-hanh-approved-southeast-actions.png",
+        "sha256": "40ac7c7b8f418ee1cc715806e1309b8e668475083798c394c34dcb4fa1d35f92"
+      }
+    },
+    {
+      "id": "NPC-HN-GATE-WARDEN",
+      "slug": "dinh-soc",
+      "identityReference": {
+        "file": "inputs/dinh-soc-approved-neutral-native.png",
+        "sha256": "3792ae58747c4f91f3ef5b26358bc0c3da2dec14cd6060ae263280a006d2c22e",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      "motionCalibration": {
+        "file": "inputs/dinh-soc-approved-southeast-nearest8x.png",
+        "sha256": "cbffb8bce60dc23f96ea2266f7509bf3218e1c50149b4ad85a8430ca73a72752",
+        "source": "../van-hai-npc-wave-a-motion-v1/calibration/dinh-soc-southeast.png",
+        "sourceSha256": "502a06ba934da3927ceb21494e40626cd9758255f88bfd43265393ed3cab5f6b"
+      },
+      "motionSupport": {
+        "file": "inputs/dinh-soc-approved-southeast-actions.png",
+        "sha256": "e9a9d79a580d941f0a89e8d78a91c39bf07c659d2d318c1985e209753505e707"
+      }
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-WATER",
+      "slug": "ky-an",
+      "identityReference": {
+        "file": "inputs/ky-an-approved-neutral-native.png",
+        "sha256": "88eae7d01acc4a2876b0f2bc3dd479ca20553a1cb57bdbc11efed53326a656de",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      "motionCalibration": {
+        "file": "inputs/ky-an-approved-southeast-nearest8x.png",
+        "sha256": "148ef3213cd1eb88b4571cd62703292aaf215b532113d1e9adab1266c54922dc",
+        "source": "../van-hai-npc-wave-a-motion-v1/calibration/ky-an-southeast.png",
+        "sourceSha256": "70a32a887f47fc19fc4ddbaab6a242725a293d86965d360b57000863cc13a376"
+      },
+      "motionSupport": {
+        "file": "inputs/ky-an-approved-southeast-actions.png",
+        "sha256": "3fa51274ac9fa05c6622d8e53212baca11973521f78e2b7d69857225536951b1"
+      }
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-SWORD",
+      "slug": "phung-da",
+      "identityReference": {
+        "file": "inputs/phung-da-approved-neutral-native.png",
+        "sha256": "97882c8dde384a5f5f9cdaba52dd4dd439f85653885437402f72e6435f7384b7",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      "motionCalibration": {
+        "file": "inputs/phung-da-approved-southeast-nearest8x.png",
+        "sha256": "f724c53ecd2fb5ce9aab0c39079f09062a428cd0a769382e471a8e7eb396be8e",
+        "source": "../van-hai-npc-wave-a-motion-v1/calibration/phung-da-southeast.png",
+        "sourceSha256": "c4b52d8f0b0c496f14cdd911cc939c8c670769b685296f016d24b66cba4c17b8"
+      },
+      "motionSupport": {
+        "file": "inputs/phung-da-approved-southeast-actions.png",
+        "sha256": "45f49c0e441b8643826552632d36faaf49bbe345ee5da95b16cae018f5805b40"
+      }
+    }
+  ]
+}

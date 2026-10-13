@@ -1,0 +1,84 @@
+{
+  "schema": "game-solo-onboarding-assets-plan-1",
+  "date": "2026-10-13",
+  "status": "preview-pending-owner",
+  "ownerApproved": false,
+  "artApproved": false,
+  "runtimeConsumable": false,
+  "gdd": "docs/GDD.md",
+  "questSpec": "docs/HANG-NHAC-ONBOARDING-V2.md",
+  "styleReference": "docs/design/world/hang-nhac-van-ngoc-detail-v2/regions/map-web.webp",
+  "referenceMode": "visually inspected and described in text, no image input",
+  "actorReference": "docs/design/characters/wang-lin-pixel-production-v2/frames/idle-south/001.png",
+  "assets": [
+    {
+      "id": "hn-quest-sample",
+      "label": "Ống mẫu niêm khí",
+      "role": "Activity-only sample for HN04/HN06/HN09; not an inventory currency or granted item",
+      "nativeCanvas": [
+        48,
+        64
+      ],
+      "bodySize": [
+        28,
+        46
+      ],
+      "assetType": "prop",
+      "name": "vn-hn-quest-sample-v1",
+      "size": "1024x1024",
+      "quality": "high",
+      "n": 1,
+      "prompt": "Use case: stylized-concept. One small sealed specimen capsule for carrying a cultivation material sample. A short upright HEXAGONAL opaque pale-celadon ceramic cylinder, broad antique-brass cap and base rim, a single wide ivory paper seal fastened down its front under a small dark teal diamond clasp. The front seal has one plain geometric diamond, no calligraphy. One short ivory carrying loop at the cap. Intact state, no leakage or effects. Must be clearly different from a round glass water flask or a rectangular storage chest. Camera: orthographic high-angle three-quarter game view about 40 degrees downward, see top/front/right facets. Physical scale is hand-sized relative to a 64x96 native actor; later body 28x46 pixels in a 48x64 canvas. All forms readable also as a 32px inventory-style display, although this is an activity state prop. VAN NGOC approved visual direction described in text: decisive dark petrol outlines, clean three-tone cel shading, broad celadon jade and ivory stone planes, restrained aged brass details, warm light from upper left. Crisp illustrated 2D cultivation RPG prop, no photographic 3D rendering, airbrush, bloom, noisy microfiligree, labels, text, letters, watermark, characters, scenery or interface. Reference pixels are NOT transmitted by this tool. Plain solid #FF00FF chromakey background with no ground shadow or magenta reflected light. Isolated complete subject with at least 12 percent clear margin."
+    },
+    {
+      "id": "hn-qi-guide-stone",
+      "label": "Phiến dẫn khí",
+      "role": "Low movable activity prop; telegraph drawn separately; no authored map placement",
+      "nativeCanvas": [
+        96,
+        96
+      ],
+      "bodySize": [
+        64,
+        72
+      ],
+      "assetType": "prop",
+      "name": "vn-hn-qi-guide-stone-v1",
+      "size": "1024x1024",
+      "quality": "high",
+      "n": 1,
+      "prompt": "Use case: stylized-concept. One low cultivation qi conductor marker for the side of a training route. A sturdy squat upright beveled celadon stone slab seated on one compact octagonal ivory stone plinth. The broad front of the slab has one dark petrol recessed channel ending in a simple brass diamond inset. Restrained bronze corner clamps. Solid inactive state, no magic beam, no glow, no particles, no ground ring. Height about a person's knee-to-waist, not a huge monolith; later visible body 64x72 in a 96x96 canvas beside a 64x96 person. Orthographic high-angle three-quarter RPG view about 40 degrees downward; top and front/right faces visible, complete flat contact base, no vanishing point. Compact footprint, no sprawling roots or extra stones. VAN NGOC approved visual direction described in text: decisive dark petrol outlines, clean three-tone cel shading, broad celadon jade and ivory stone planes, restrained aged brass details, warm light from upper left. Crisp illustrated 2D cultivation RPG prop, no photographic 3D rendering, airbrush, bloom, noisy microfiligree, labels, text, letters, watermark, characters, scenery or interface. Reference pixels are NOT transmitted by this tool. Plain solid #FF00FF chromakey background with no ground shadow or magenta reflected light. Isolated complete subject with at least 12 percent clear margin."
+    },
+    {
+      "id": "hn-sample-comparator",
+      "label": "Đế đối chứng hai mẫu",
+      "role": "Small comparison/receiving station in private activity HN06/HN09, reused at HN04 destination",
+      "nativeCanvas": [
+        144,
+        112
+      ],
+      "bodySize": [
+        120,
+        76
+      ],
+      "assetType": "prop",
+      "name": "vn-hn-sample-comparator-v1",
+      "size": "1024x1024",
+      "quality": "high",
+      "n": 1,
+      "prompt": "Use case: stylized-concept. One compact low alchemical sample-comparison stand, not a workbench. A shallow rounded rectangular ivory stone top on a single broad squat celadon plinth. The top contains exactly TWO large EMPTY circular recessed sample sockets side by side, each edged in antique brass. A broad plain dark petrol groove links them. Left socket has a small square notch; right socket has a small triangular notch, recognizable non-text shape coding. No samples, bottles, mortars, herbs or other loose objects on the stand. This must accept separately composited sample props later. Orthographic high-angle three-quarter RPG view about 40 degrees down; clear top/front/right faces, no perspective vanishing point. Small waist-below station, later body120x76 in144x112 canvas relative to64x96 actor; show full contact base. No emission, beam, VFX, floor, extra props or scenery. VAN NGOC approved visual direction described in text: decisive dark petrol outlines, clean three-tone cel shading, broad celadon jade and ivory stone planes, restrained aged brass details, warm light from upper left. Crisp illustrated 2D cultivation RPG prop, no photographic 3D rendering, airbrush, bloom, noisy microfiligree, labels, text, letters, watermark, characters, scenery or interface. Reference pixels are NOT transmitted by this tool. Plain solid #FF00FF chromakey background with no ground shadow or magenta reflected light. Isolated complete subject with at least 12 percent clear margin."
+    }
+  ],
+  "deliveredNativeTargets": {
+    "hn-quest-sample": {"canvas": [32, 40], "bodyFit": [18, 28]},
+    "hn-qi-guide-stone": {"canvas": [80, 80], "bodyFit": [56, 56]},
+    "hn-sample-comparator": {"canvas": [144, 112], "bodyFit": [120, 76]}
+  },
+  "deliveryAdjustment": "Original request briefs above are preserved. During native review, reduced the sample to hand size and conductor to knee or waist height beside Pixel02. bodyFit is a bounding limit, not a distortion target; aspect ratio is preserved. Actual dimensions and measured pivots are in assets.json.",
+  "notes": [
+    "Three single-image requests, sequential, no automatic retries.",
+    "Reuses existing 11 material/tool icons; no new currency, character, map or HUD.",
+    "Hazards and state marks are separate code-native assets; no timing/geometry inferred from raster.",
+    "Native export and measured pivot review required; no runtime/import or authored-map placement."
+  ]
+}

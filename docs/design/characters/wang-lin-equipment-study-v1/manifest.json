@@ -1,0 +1,237 @@
+{
+  "schema": "wang-lin-equipment-study-1",
+  "date": "2026-10-13",
+  "stage": "four neutral equipment overlays in southeast view",
+  "generation": {
+    "method": "built-in image_gen",
+    "modelChosenByTool": true,
+    "inputRole": "live Wang nearest8x pixel palette and physical scale reference only",
+    "transparentBackground": true,
+    "routerGenerationUsed": false
+  },
+  "body": {
+    "file": "inputs/wang-lin-live-southeast-native.png",
+    "canvas": [
+      64,
+      96
+    ],
+    "pivot": [
+      32,
+      88
+    ],
+    "sha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+    "liveAtlas": "client/public/assets/hang-nhac-pixel-player/atlases/idle-southeast.png",
+    "liveAtlasSha256": "cc00ed2cacfae34195d2e112d2a78168393a7f9beb1e0d1f2cbfc3d12ad84dfb",
+    "rect": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 96
+    },
+    "rgbaMatchesLiveFrame": true,
+    "pixelsModified": false
+  },
+  "equipment": [
+    {
+      "id": "sword",
+      "name": "Thanh Ngọc Kiếm",
+      "description": "Kiếm thẳng nhẹ; hướng trải nghiệm chém–đâm và điều khiển phi kiếm.",
+      "file": "equipment/sword-front.png",
+      "frontFile": "equipment/sword-front.png",
+      "rearFile": "equipment/sword-rear.png",
+      "fullFile": "equipment/sword.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        48,
+        112
+      ],
+      "bodyOffset": [
+        16,
+        24
+      ],
+      "raw": "sources/sword-source.png",
+      "prompt": "sources/sword.prompt.txt",
+      "status": "candidate-neutral-southeast",
+      "itemLocal": {
+        "grip": [
+          43,
+          64
+        ],
+        "itemGrip": [
+          8,
+          4
+        ],
+        "itemTopLeft": [
+          51,
+          84
+        ],
+        "dimensions": [
+          49,
+          14
+        ]
+      },
+      "sourceSha256": "690decb32a20277040e17435cf1bee3a8919db67ae29464c0a1d44f922449c39",
+      "sha256": "6f9b4e84f49a46f42318d6ebc204057f255443153701d563073d80f5738946e1",
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "spear",
+      "name": "Trường Thương Huyền Mộc",
+      "description": "Thương dài; hướng trải nghiệm giữ cự ly và đâm theo đường thẳng.",
+      "file": "equipment/spear-front.png",
+      "frontFile": "equipment/spear-front.png",
+      "rearFile": "equipment/spear-rear.png",
+      "fullFile": "equipment/spear.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        48,
+        112
+      ],
+      "bodyOffset": [
+        16,
+        24
+      ],
+      "raw": "sources/spear-source.png",
+      "prompt": "sources/spear.prompt.txt",
+      "status": "candidate-neutral-southeast",
+      "itemLocal": {
+        "grip": [
+          43,
+          64
+        ],
+        "itemGrip": [
+          7,
+          65
+        ],
+        "itemTopLeft": [
+          52,
+          23
+        ],
+        "dimensions": [
+          27,
+          94
+        ]
+      },
+      "sourceSha256": "5bebb0009bdfa3050256bbfd36e286caab345de165340a00273b3d066391f264",
+      "sha256": "4d5cf51376b781d934edc7c3233b2aac13a74584ba61ee004e24d16d2601f2bb",
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "fan",
+      "name": "Vân Ngọc Linh Phiến",
+      "description": "Quạt ngọc ngà; hướng trải nghiệm quét hình quạt và vận pháp từ xa.",
+      "file": "equipment/fan-front.png",
+      "frontFile": "equipment/fan-front.png",
+      "rearFile": "equipment/fan-rear.png",
+      "fullFile": "equipment/fan.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        48,
+        112
+      ],
+      "bodyOffset": [
+        16,
+        24
+      ],
+      "raw": "sources/fan-source.png",
+      "prompt": "sources/fan.prompt.txt",
+      "status": "candidate-neutral-southeast",
+      "itemLocal": {
+        "grip": [
+          43,
+          64
+        ],
+        "itemGrip": [
+          8,
+          19
+        ],
+        "itemTopLeft": [
+          51,
+          69
+        ],
+        "dimensions": [
+          28,
+          21
+        ]
+      },
+      "sourceSha256": "890fd66e93a52107f7eb6672a0ea9ef05d3c38d597fcdb88bc8adf5c7d2bec61",
+      "sha256": "737afb134ad68a38e3ad13569e8d74c9e7f1924326ad0853812c928e914bbb11",
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    },
+    {
+      "id": "gourd",
+      "name": "Tụ Linh Hồ Lô",
+      "description": "Hồ lô pháp bảo; hướng trải nghiệm tích khí, phóng khí và chuẩn bị trước giao tranh.",
+      "file": "equipment/gourd-front.png",
+      "frontFile": "equipment/gourd-front.png",
+      "rearFile": "equipment/gourd-rear.png",
+      "fullFile": "equipment/gourd.png",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        48,
+        112
+      ],
+      "bodyOffset": [
+        16,
+        24
+      ],
+      "raw": "sources/gourd-source.png",
+      "prompt": "sources/gourd.prompt.txt",
+      "status": "candidate-neutral-southeast",
+      "itemLocal": {
+        "grip": [
+          43,
+          64
+        ],
+        "itemGrip": [
+          6,
+          1
+        ],
+        "itemTopLeft": [
+          53,
+          87
+        ],
+        "dimensions": [
+          11,
+          24
+        ]
+      },
+      "sourceSha256": "25fade9b6417710ae6da7b3624db5b1d6a9cb96ea5c9a0f5e8ee98b9f403c738",
+      "sha256": "8718d0237f23684e0694a3183bdc89d19d8d6068ab14ee8d8c3b2227e330e9b8",
+      "ownerApproved": false,
+      "artApproved": false,
+      "runtimeReady": false
+    }
+  ],
+  "coverage": {
+    "direction": "southeast",
+    "neutralVariants": 4,
+    "animationClips": 0,
+    "otherDirections": 0
+  },
+  "readiness": {
+    "ownerApproved": false,
+    "artApproved": false,
+    "runtimeIntegrated": false,
+    "ownerSelection": "not-selected",
+    "ownerFeedback": "nhìn hơi chán"
+  }
+}

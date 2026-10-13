@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';import {mkdir,mkdtemp,writeFile} from 'node:fs/promises';import {resolve} from 'node:path';import {chromium} from 'playwright';
 import {ProfileStore} from '../../server/src/profile-store.ts';import {initialChapter} from '../../shared/chapter.ts';import {SECT_STATIONS} from '../../shared/sect.ts';import {startService} from '../support/services.mjs';
-const endpoint='http://127.0.0.1:2613',origin='http://127.0.0.1:5213',captures=resolve('artifacts/hang-nhac-chapter');await mkdir(captures,{recursive:true});const folder=await mkdtemp(resolve(captures,'fixture-')),db=resolve(folder,'profiles.sqlite');let backend,vite,browser;const errors=[],checks=[];
+const endpoint='http://127.0.0.1:2613',origin='http://127.0.0.1:5213',captures=resolve('artifacts/hang-nhac-chapter');await mkdir(captures,{recursive:true});const folder=await mkdtemp(resolve(captures,'fixture-')),db=resolve(folder,'profiles.sqlite');let backend,vite,browser,page;const errors=[],checks=[];
 try{
  backend=await startService(['--import','tsx','server/src/index.ts'],endpoint+'/health',{PORT:'2613',GAME_DB_PATH:db});
  const config=resolve(folder,'vite.mjs');await writeFile(config,`export default {root:${JSON.stringify(resolve('client'))},publicDir:${JSON.stringify(resolve('client/public'))},cacheDir:${JSON.stringify(resolve(folder,'cache'))},resolve:{alias:{'@shared':${JSON.stringify(resolve('shared'))}}},server:{host:'127.0.0.1',strictPort:true,fs:{allow:[${JSON.stringify(resolve('.'))}]}}};`);
@@ -8,7 +8,7 @@ try{
  const guest=await fetch(endpoint+'/api/profile-session',{method:'POST'}).then(r=>r.json()),store=new ProfileStore(db);
  try{const p=store.get(store.authenticate(guest.token),'CHR-WANG-LIN-CHIBI');Object.assign(p,{x:SECT_STATIONS[3].x,y:SECT_STATIONS[3].y,milestone:'M02',cultivation:720,chapter:initialChapter()});Object.assign(p.sect,{hn01:true,hn02:true,foundation:'breathing',cycleStep:4,level:3,supplies:4});Object.assign(p.sect.lessons,{hn03:true,hn04:true,basic:true,sword:true,thunder:true,walk:true,wind:true});Object.assign(p.chapter,{accepted:['HN05','HN06','HN07','HN08'],completed:['HN05','HN06','HN07'],stock:{'hn-refining-material':6},jade:'raw'});store.save(p);}finally{store.close();}
  browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-unsafe-swiftshader']});
- const context=await browser.newContext({viewport:{width:1366,height:900}});await context.addInitScript(token=>localStorage.setItem('hang-nhac.guest.v1',token),guest.token);const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&r.url().startsWith(origin))errors.push(`${r.status()} ${r.url()}`);});
+ const context=await browser.newContext({viewport:{width:1366,height:900}});await context.addInitScript(token=>localStorage.setItem('hang-nhac.guest.v1',token),guest.token);page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&r.url().startsWith(origin))errors.push(`${r.status()} ${r.url()}`);});
  const ready=()=>page.waitForFunction(()=>window.__hangNhacDiagnostics?.().shell.phase==='playing',undefined,{timeout:35000});
  const settled=()=>page.waitForFunction(()=>window.__hangNhacChapter?.().view&&!window.__hangNhacChapter().pending);
  const click=async selector=>{await page.locator(selector).click();await settled();};
@@ -41,6 +41,22 @@ try{
  await page.locator('[data-ui-focus="dock-toggle"]').click();assert.equal(await page.locator('.chapter-dock [data-chapter-action="leave"]').isVisible(),true);await page.setViewportSize({width:1366,height:900});
  const native=await page.evaluate(()=>window.__hangNhacPixelPlayer().samples);assert.equal(native[0].id,await page.evaluate(()=>window.__hangNhacDiagnostics().sessionId));
  await click('.chapter-dock [data-chapter-action="leave"]');await page.waitForFunction(()=>!window.__hangNhacChapter().inActivity);await page.waitForFunction(()=>!!window.__hangNhacDiagnostics().mapBackground);
+ await page.locator('#quest-guide').click();await page.waitForSelector('.chapter-dialog[open]');
+ assert.equal(await page.locator('#sect-dialog').evaluate(n=>n.open),false,'tracker opens chapter detail directly without an NPC dialog');
+ assert.equal(await page.evaluate(()=>window.__hangNhacChapter().selectedQuest),'HN08');
+ // Guard spending keeps hub commands locked for two server seconds after the trial.
+ await page.waitForFunction(()=>window.__hangNhacSect().view?.practising===false);
+ await click('.chapter-dialog [data-quest="HN08"][data-chapter-action="confirm"]');
+ await page.waitForFunction(()=>window.__hangNhacChapter().selectedQuest==='HN09');
+ assert.equal(await page.locator('[data-select-quest="HN09"]').getAttribute('aria-pressed'),'true');
+ assert.equal(await page.locator('#sect-objective').getAttribute('data-quest'),'HN09');
+ assert.equal(await page.evaluate(()=>window.__hangNhacChapter().view.progress.accepted.includes('HN09')),false,'selecting the next step does not accept it');
+ await page.locator('[data-select-quest="HN08"]').click();await page.waitForTimeout(1100);
+ assert.equal(await page.evaluate(()=>window.__hangNhacChapter().selectedQuest),'HN08','manual reading survives confirmed state refreshes');
+ await page.locator('[data-select-quest="HN09"]').click();await page.locator('[data-chapter-navigate="training"]').click();
+ await page.waitForFunction(()=>!window.__hangNhacChapter().modal&&window.__hangNhacNavigation().status==='moving');
+ await page.keyboard.press('Escape');await page.waitForFunction(()=>window.__hangNhacNavigation().status!=='moving');
+ checks.push('tracker opens chapter directly; confirmed HN08 advances detail/tracker to HN09 without accepting; manual rereading remains selected; chapter route survives modal close and Esc cancels');
  checks.push('pixel96 / native1x; keyboard tabs; focus survives cultivation updates; locked recipe reason; inventory opens crafting; real recipe/guard and hub return');
  await page.setViewportSize({width:390,height:844});await page.locator('#stage').focus();await page.keyboard.press('h');await page.waitForSelector('.chapter-dialog[open]');await page.locator('[data-chapter-tab="crafting"]').click();
  assert.ok(await page.locator('.chapter-dialog').evaluate(n=>n.getBoundingClientRect().width<=innerWidth));assert.ok(await page.locator('.chapter-body').evaluate(n=>n.scrollWidth<=n.clientWidth));
@@ -48,4 +64,4 @@ try{
  for(const [width,height] of [[320,740],[844,390]]){await page.setViewportSize({width,height});assert.ok(await page.locator('.chapter-dialog').evaluate(n=>{const r=n.getBoundingClientRect();return r.width<=innerWidth&&r.height<=innerHeight;}));assert.ok(await page.locator('.chapter-body').evaluate(n=>n.scrollWidth<=n.clientWidth));await page.screenshot({path:resolve(captures,`workspace-${width}x${height}.png`)});}
  checks.push('NPC preparation opens crafting; 320px and short landscape workspace stays within viewport');
  assert.deepEqual(errors,[]);const report={passed:true,checks,errors,ownerDatabaseUsed:false,ownerMapEdited:false,fixtureDatabase:db};await writeFile(resolve(captures,'verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
-}catch(e){console.error({errors,backend:backend?.output(),vite:vite?.output()});throw e;}finally{await browser?.close();vite?.stop();backend?.stop();}
+}catch(e){console.error({errors,screen:await page?.evaluate(()=>({shell:window.__hangNhacDiagnostics?.().shell,text:document.body.innerText.slice(0,1800)})),backend:backend?.output(),vite:vite?.output()});throw e;}finally{await browser?.close();vite?.stop();backend?.stop();}

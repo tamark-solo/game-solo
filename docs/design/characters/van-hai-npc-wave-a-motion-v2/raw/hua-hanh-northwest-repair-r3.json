@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang NORTHWEST remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nUse WIDE1536x1024 sheet6columns3rows, all18 complete poses translated into roomy positions at one common body scale. Restore complete far RIGHT-hand routepaper edges in last-column indices11/17 clipped at source rightboundary. Every hair/paper/tube silhouette needs at least24 real alpha0 gutter pixels between poses and32 on ALL outer margins. Never shrink individual bodies, shorten/crop tools or resize anatomy to fit. Keep true BACK-LEFT camera and own identity/phase progression. Exactly ONE routepaper in anatomical RIGHT FAR hand/screen-RIGHT/up, naturally partly hidden. The anatomical LEFT NEAR hand/screen-LEFT/down stays EMPTY or checks original LEFT near-hip tube, never holds another paper. REMOVE any detached/duplicate cream paper shape before the nearLEFT cuff, particularly profession index15; preserve ivory cuff fabric, real hand and original far paper. RIGHT far shoulder patch and LEFT near tube/cord stay attached. No new item/frontface/body turn/static repeated neutral.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang NORTHWEST remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nUse WIDE1536x1024 sheet6columns3rows, all18 complete poses translated into roomy positions at one common body scale. Restore complete far RIGHT-hand routepaper edges in last-column indices11/17 clipped at source rightboundary. Every hair/paper/tube silhouette needs at least24 real alpha0 gutter pixels between poses and32 on ALL outer margins. Never shrink individual bodies, shorten/crop tools or resize anatomy to fit. Keep true BACK-LEFT camera and own identity/phase progression. Exactly ONE routepaper in anatomical RIGHT FAR hand/screen-RIGHT/up, naturally partly hidden. The anatomical LEFT NEAR hand/screen-LEFT/down stays EMPTY or checks original LEFT near-hip tube, never holds another paper. REMOVE any detached/duplicate cream paper shape before the nearLEFT cuff, particularly profession index15; preserve ivory cuff fabric, real hand and original far paper. RIGHT far shoulder patch and LEFT near tube/cord stay attached. No new item/frontface/body turn/static repeated neutral.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-13T12:46:30.375Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\inputs\\wang-lin-live-northwest-nearest8x.png",
+      "filename": "wang-lin-live-northwest-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9340,
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\raw\\hua-hanh-northwest-repair-r2.png",
+      "filename": "hua-hanh-northwest-repair-r2.png",
+      "mimeType": "image/png",
+      "bytes": 1896846,
+      "sha256": "1b8f4eecb28528d318fc4144223aab9c00b0075f4dc62e3fe6b202bf1aa8f912",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\direction-neutral\\nearest8x\\hua-hanh-northwest.png",
+      "filename": "hua-hanh-northwest.png",
+      "mimeType": "image/png",
+      "bytes": 15552,
+      "sha256": "6092b6e0f283cb0e2fb8f3c75f5ed53939b3ce37be0549585cc84e50d5121805",
+      "dimensions": {
+        "width": 768,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "hua-hanh-northwest-repair-r3.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 2188372,
+    "sha256": "964b1f2472f32e8337eb1b151631ec7249b64abe0307132959e6383e0f200f25",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

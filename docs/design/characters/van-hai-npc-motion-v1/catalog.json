@@ -1,0 +1,3761 @@
+{
+  "schema": "npc-motion-catalog-1",
+  "id": "van-hai-npc-motion-v1",
+  "version": 1,
+  "date": "2026-10-13",
+  "status": "four-npc-southeast-motion-pilot",
+  "generator": "project-router-gpt-image-2-edit",
+  "pixelsResampled": true,
+  "contract": {
+    "canvas": [
+      96,
+      96
+    ],
+    "pivot": [
+      48,
+      88
+    ],
+    "standingHeight": 80,
+    "baseHumanCanvas": [
+      64,
+      96
+    ],
+    "paddingOnly": true,
+    "sampling": "nearest",
+    "atlasPadding": 2
+  },
+  "morphologyBasis": {
+    "primaryActor": "CHR-WANG-LIN-CHIBI",
+    "primaryReference": "Wang Lin Pixel02 currently used in the game",
+    "basisFile": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+    "basisSha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec",
+    "directionsFile": "docs/design/characters/van-hai-npc-visual-standard-v1/directions.json",
+    "directionsSha256": "0fef83b1121c0be2cf9b47909a00f5c3c01a665229cb1d16358fe65650b8abd9",
+    "liveNativeFile": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-native.png",
+    "liveNativeSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+    "liveNativeCanvas": [
+      64,
+      96
+    ],
+    "liveNativePivot": [
+      32,
+      88
+    ],
+    "targets": [
+      {
+        "file": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+        "sha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec"
+      },
+      {
+        "file": "docs/design/characters/van-hai-npc-visual-standard-v1/directions.json",
+        "sha256": "0fef83b1121c0be2cf9b47909a00f5c3c01a665229cb1d16358fe65650b8abd9"
+      }
+    ],
+    "rule": "NPC identity is locked separately; directly compare every action to live Wang Lin at native1x. Padding does not enlarge anatomy."
+  },
+  "gdd": {
+    "file": "docs/design/world/van-hai-living-world-v1/plan.json",
+    "sha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576"
+  },
+  "actors": [
+    {
+      "id": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "name": "Trần Duy",
+      "identity": "van-hai-npc-concepts-v3",
+      "description": "Middle-aged male sect guide. Compact dark bun with grey streak, short moustache and goatee, ivory-grey robe, thin bronze trim, celadon waist token and sect-tag pouch.",
+      "gesture": "A calm direction-giving open palm: neutral, lifts right forearm, opens hand towards down-right, holds, retracts, exact neutral. No pointing a weapon.",
+      "direction": "southeast",
+      "source": "raw/tran-duy-southeast.png",
+      "prompt": "prompts/tran-duy-southeast.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/tran-duy-identity-nearest8x.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "85d65818ddf8a9da8304d432176cece83aeb7389229cf51dffc24b6bfd2e9fee",
+        "identityNative": "74b1a3c56cb33d668287b9dc1a9e4969d5619e0d452a026e17dc1feb406ec103"
+      },
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "neutralSprite": "calibration/tran-duy-southeast.png",
+      "clips": {
+        "idle": {
+          "id": "tran-duy-idle-southeast",
+          "actor": "NPC-HN-GUIDE",
+          "action": "idle",
+          "direction": "southeast",
+          "atlas": "atlases/tran-duy-idle-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "7615e4f25629f364c2f3e471e99a65beefd73bd028666ba3122e300313d42d92",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-idle-southeast/001.png",
+              "sha256": "30e5847bcfc5090950803a386d7db777c94c49c3876481263f115b167be0bc39",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-idle-southeast/002.png",
+              "sha256": "557978b7eb1282939f1bb89a0cce97a44f0d912b124620222e19b59f394dbacf",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-idle-southeast/003.png",
+              "sha256": "e57eba7ec663d70e48a91be998c7bd2ac5d7701a3460d110e6bef7e6336c8d47",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-idle-southeast/004.png",
+              "sha256": "c5f8e27e36faa7d23a939c8acb91d9ae3c4b0370379c2ac389eb505432d1ace1",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-idle-southeast/005.png",
+              "sha256": "7409c841e7c0513858dc930e2c1ffe9fba722f56f1f1b2b3bcfe990af3f7aba9",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-idle-southeast/006.png",
+              "sha256": "3d36277a7a66c9137413f42ddac29c07ea3d45097b7d5fb3e12adaa4e0feb421",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            }
+          ],
+          "fps": 5,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1200,
+          "loop": true,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "idle"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        },
+        "talk": {
+          "id": "tran-duy-talk-southeast",
+          "actor": "NPC-HN-GUIDE",
+          "action": "talk",
+          "direction": "southeast",
+          "atlas": "atlases/tran-duy-talk-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "09bdff452e58aaec0955953d3f6a1efde875c897fc4cfb5b35bcc19a060815a4",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-talk-southeast/001.png",
+              "sha256": "9e744c4d79c242916f06211f493c93e7c1c588c15b5776278e28dba5e54ab0f9",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-talk-southeast/002.png",
+              "sha256": "64a732e8929002e991588d69cd30359730bfa408ad60ca8c6664ab08e47db500",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-talk-southeast/003.png",
+              "sha256": "d5a69f307b673c0408ed4e38b87d339e62103c13faf064edc23a949fa560b2f4",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-talk-southeast/004.png",
+              "sha256": "22b4399cd1e98aeabb2286b94b016558937dc5591ef6c4ac31027672fedddb14",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-talk-southeast/005.png",
+              "sha256": "6c6244a5581ca9318d91766a8d925588177f9b37729a7ad6a1acce6189af03d1",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-talk-southeast/006.png",
+              "sha256": "7ea714c45ccdebf1f0bd8b11853c692da9b6adddd7595a80e41f0c758b17d2a0",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            }
+          ],
+          "fps": 5,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1200,
+          "loop": true,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "talk"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        },
+        "profession": {
+          "id": "tran-duy-profession-southeast",
+          "actor": "NPC-HN-GUIDE",
+          "action": "profession",
+          "direction": "southeast",
+          "atlas": "atlases/tran-duy-profession-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "1c5f904497c129cd2d0416e5766df91aba4f8794aad4f482bfb7dd0fb2338fc6",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-profession-southeast/001.png",
+              "sha256": "33c9c366ad438fe78bfda3220f7087f8af208a24976052a71d436ba95d696fef",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-profession-southeast/002.png",
+              "sha256": "311dcd88430ce7c01a3bfd6e613d56d0635418ff2ff1eb803353d22b842d22ce",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-profession-southeast/003.png",
+              "sha256": "ce5892c7496695c3a80dbf93461be5436142acb630bfe91b0d2247529cc220d1",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-profession-southeast/004.png",
+              "sha256": "cad6d482205830e9996f4aeeaf44f6026141680cdc5ca10eff0c453d5858339c",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-profession-southeast/005.png",
+              "sha256": "833cc97e51c8bf21521eca502238ccf3bfb70e2cd5397ad11ee40d62ba6cfca8",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/tran-duy-profession-southeast/006.png",
+              "sha256": "feefb5b8bd4a4ac62be9c78d5f7bc3ecb2a757fbdef3f5c68daccb67a9b0a377",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            }
+          ],
+          "fps": 4,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1500,
+          "loop": false,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "profession"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        }
+      },
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "neutralSha256": "30e5847bcfc5090950803a386d7db777c94c49c3876481263f115b167be0bc39",
+      "sourceSha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "sourceScale": 0.2588996763754045,
+      "neutralHeight": 309
+    },
+    {
+      "id": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "name": "Diệp Tĩnh",
+      "identity": "van-hai-npc-concepts-v4",
+      "description": "Elderly woman cultivation teacher with softly aged face and grey-salt compact bun. Ivory and smoky jade robe, small jade string and closed bamboo scroll. No beard, no young heroine face.",
+      "gesture": "A calm breath-teaching gesture: neutral, draws palms near abdomen, gently separates palms, holds inward palms, closes hands, exact neutral. Jade string remains attached. No visible qi or FX in body sheet.",
+      "direction": "southeast",
+      "source": "raw/diep-tinh-southeast-r3.png",
+      "prompt": "prompts/diep-tinh-southeast-r3.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/diep-tinh-identity-nearest8x.png",
+        "raw/diep-tinh-southeast-r2.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "236aecb4835e20c705d7add566de5d170a33f3c744d285ffe70a66f3f055c794",
+        "identityNative": "649f173937f159d16826ec7dee8f8c58e9392b7573e369b25826dfc9d965ab30"
+      },
+      "sourceRevisions": [
+        {
+          "source": "raw/diep-tinh-southeast.png",
+          "status": "superseded-pilot",
+          "reason": "Profession row about6 native pixels shorter than idle; preserved for provenance."
+        },
+        {
+          "source": "raw/diep-tinh-southeast-r2.png",
+          "status": "superseded-pilot",
+          "reason": "Profession row about4 native pixels shorter than idle; preserved for provenance."
+        },
+        {
+          "source": "raw/diep-tinh-southeast-r3.png",
+          "status": "selected-motion-pilot",
+          "reason": "Idle/talk dimensions closer; profession row still about3 native pixels shorter, requires owner visual review."
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "neutralSprite": "calibration/diep-tinh-southeast.png",
+      "clips": {
+        "idle": {
+          "id": "diep-tinh-idle-southeast",
+          "actor": "NPC-HN-CULTIVATION",
+          "action": "idle",
+          "direction": "southeast",
+          "atlas": "atlases/diep-tinh-idle-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "e20a409cb7c0d33eda1b7d79affb5ec25d13b3d61c70b86bc1816bafacf3a1c3",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-idle-southeast/001.png",
+              "sha256": "eef1a9fa481c07e08d58d7ae6252832229b58456ceb28e80c4c2cdc87042266f",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-idle-southeast/002.png",
+              "sha256": "86033526004d75ade0c5a4633c70cc52b9f4d23e0cf4d3434245b6686b0d10c8",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-idle-southeast/003.png",
+              "sha256": "1bd221809698aed0eef4a7e66137e153b9a9e5e28991f709760898daeb6038cc",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-idle-southeast/004.png",
+              "sha256": "b0e96bd7c1a0be16a7945c97c2e37285a9bae568d4a997219680efdfd3ed2f9a",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-idle-southeast/005.png",
+              "sha256": "e67449abc3ac3981374b97a7524bcd927971c41b1fe1919c3b9393681182b2ed",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-idle-southeast/006.png",
+              "sha256": "9031518a3f898444ef5d0d5d16873344d636144ed96ab839e50b59c754193f1b",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            }
+          ],
+          "fps": 5,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1200,
+          "loop": true,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "idle"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        },
+        "talk": {
+          "id": "diep-tinh-talk-southeast",
+          "actor": "NPC-HN-CULTIVATION",
+          "action": "talk",
+          "direction": "southeast",
+          "atlas": "atlases/diep-tinh-talk-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "6b529f774c510a11e51f69fdb9e7c41352553eb8795bbf3c17ef3737688f341f",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-talk-southeast/001.png",
+              "sha256": "99b699f5a11a12db46ebcf02d54fbe2e23b5b8df94ba6899058a2ed830f016e6",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-talk-southeast/002.png",
+              "sha256": "95344d29e80628f427741e237792e5c272c91b09aaa7498eac153777651ea0f9",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-talk-southeast/003.png",
+              "sha256": "bce47dd1194ba5cb1802b9414ca9480890cd4eaea8ecd4b471a78499cc5c598e",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-talk-southeast/004.png",
+              "sha256": "836de31cefbf329539e31a56014c7ffd88d7c5dba04b4b16c36d6d5bf25bc8fb",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-talk-southeast/005.png",
+              "sha256": "8a863c177141b1a9cec3a6464e29a6212c7dbe085c76ff38a5ba8e6e56afab19",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-talk-southeast/006.png",
+              "sha256": "b9eca3d90e0490ff762c00beaebb0b8a158d8c0329acc0021e6bea8b7952116e",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            }
+          ],
+          "fps": 5,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1200,
+          "loop": true,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "talk"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        },
+        "profession": {
+          "id": "diep-tinh-profession-southeast",
+          "actor": "NPC-HN-CULTIVATION",
+          "action": "profession",
+          "direction": "southeast",
+          "atlas": "atlases/diep-tinh-profession-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "50d66a440134873985d8b98541e7972be3ab253f5bf33cf413ff4ac55131218a",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-profession-southeast/001.png",
+              "sha256": "dd2a95827d7f7ad4c11707bb47b70bbb3c91320fbb94ad827f876be8027edf68",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-profession-southeast/002.png",
+              "sha256": "f0cba23499b1d875ab71f62c17d949258aeae2794499b5483450ed7ca27717dd",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-profession-southeast/003.png",
+              "sha256": "39a43f4cc8fedd215c9d5057381ac8e3db07de91401319c6415cd530bb95cb49",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-profession-southeast/004.png",
+              "sha256": "a21236100cdefb741c5d07cda7b60bd5d3d190e626b8ab5ad48e644be7c417af",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-profession-southeast/005.png",
+              "sha256": "857eb7069d3aafd02d93c29280fb96fc99ee71f0c9b479c140e9a8dc0c5c89bf",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/diep-tinh-profession-southeast/006.png",
+              "sha256": "52e90e480474c29dabadb9148b389f0747cf964296eb127801303b658591e87a",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            }
+          ],
+          "fps": 4,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1500,
+          "loop": false,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "profession"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        }
+      },
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "neutralSha256": "eef1a9fa481c07e08d58d7ae6252832229b58456ceb28e80c4c2cdc87042266f",
+      "sourceSha256": "b04d81f55c0b930aa3b58ab03b48701b6247a63cf102ca006c853b0b4ecf06ad",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "sourceScale": 0.21739130434782608,
+      "neutralHeight": 368
+    },
+    {
+      "id": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "name": "Tạ Kiếm Sơn",
+      "identity": "van-hai-npc-concepts-v4",
+      "description": "Mature male training instructor about forty, compact dark bun, small eyebrow scar, navy robe and wrapped wrists. Holds a short worn wooden sword pointing down; never heavy armor or huge sword.",
+      "gesture": "A measured wooden-sword wrist demonstration: neutral sword tip down, raises forearm slowly, angles the wooden sword across waist, holds controlled guard, lowers wrist, exact neutral. Feet remain planted; no attack, slash, FX or lunge.",
+      "direction": "southeast",
+      "source": "raw/ta-kiem-son-southeast.png",
+      "prompt": "prompts/ta-kiem-son-southeast.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/ta-kiem-son-identity-nearest8x.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "25250e3e114269fb2f3ee69bd43553a5a58bd0e5e3d96ede39fdc6a0ec9f92ed",
+        "identityNative": "0f14111ec3a401ba437bbb125a0537e46e226acf7a2786e49aa3694a09c89249"
+      },
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "neutralSprite": "calibration/ta-kiem-son-southeast.png",
+      "clips": {
+        "idle": {
+          "id": "ta-kiem-son-idle-southeast",
+          "actor": "NPC-HN-TRAINING",
+          "action": "idle",
+          "direction": "southeast",
+          "atlas": "atlases/ta-kiem-son-idle-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "9f32726fca2956c41ee204f06110a4b2d08b604db53d19d35a925f85cb96e4fa",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-idle-southeast/001.png",
+              "sha256": "a78e25fd5134ae5a67aa21dee022f7b7fc8922ae517792ddba492b6e0a0c414b",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-idle-southeast/002.png",
+              "sha256": "239526ca8f0db829d597149e8953fd51f0250de7b4d967019636415a010952ec",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-idle-southeast/003.png",
+              "sha256": "69edf14195de4e69bf6f66c3d312fd7ec094a94baa511967d9f22387633f65c0",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-idle-southeast/004.png",
+              "sha256": "792cf1b98e37925e7212f5733690e119a13bad9ce039e2c10c424e71d315a98e",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-idle-southeast/005.png",
+              "sha256": "8c52df9fc340a77b1586c490a319bebb1e1d79dd4b72e831f40cb2c32f565e5c",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-idle-southeast/006.png",
+              "sha256": "2d5c232ef56e49819a02da235cf62fbe76c757c5a64c3556375cbcb4d08fa730",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            }
+          ],
+          "fps": 5,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1200,
+          "loop": true,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "idle"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        },
+        "talk": {
+          "id": "ta-kiem-son-talk-southeast",
+          "actor": "NPC-HN-TRAINING",
+          "action": "talk",
+          "direction": "southeast",
+          "atlas": "atlases/ta-kiem-son-talk-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "f77bb580e1680be816717973470d33ed90f9f5142007409f1ab78c84f5b027f7",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-talk-southeast/001.png",
+              "sha256": "f9bab47cfcc4d711a3faded844baf22b2719f9fe44f7963ca43cf34c8b790e82",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-talk-southeast/002.png",
+              "sha256": "ca394030692dde6079bca9bb34de12f7d71bd41464e52599305762b3f511b2a8",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-talk-southeast/003.png",
+              "sha256": "8a622d51f7dd3e822a399fcac6aed9d8ec5240d8228f89aca2d3399bf5a666bd",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-talk-southeast/004.png",
+              "sha256": "7e39ad44b52847a0dd1734ad392503b2b7f5133989affbac09db1c3099a17318",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-talk-southeast/005.png",
+              "sha256": "d67c288ef7a84c608f7df3242619b1d6950951991ec34e04f25b506259c567be",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-talk-southeast/006.png",
+              "sha256": "fba1e587e3e1eca38e694ebc9665a0c8832b9d69fe05b315a0fccc5860078d7b",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            }
+          ],
+          "fps": 5,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1200,
+          "loop": true,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "talk"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        },
+        "profession": {
+          "id": "ta-kiem-son-profession-southeast",
+          "actor": "NPC-HN-TRAINING",
+          "action": "profession",
+          "direction": "southeast",
+          "atlas": "atlases/ta-kiem-son-profession-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "3a35a373e37253aa9bdbac7a2098af2a654ec5211a6ede013ddcf9350e0d3e40",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-profession-southeast/001.png",
+              "sha256": "a319963789111cc67d8a71d9dec051b459bc3439fd932028ad9c95d8e7054e0a",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-profession-southeast/002.png",
+              "sha256": "7c624c7223dc24228c7eaf0fdec78327282adb6e9b1cdcb09f88c5ce9686a047",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-profession-southeast/003.png",
+              "sha256": "58a343fa2a1589768ffd87d4b787dcf4704425d11481668ad75733e4c359fd80",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-profession-southeast/004.png",
+              "sha256": "044963ec2707af978f1b282c3f9b0a9aab76d8d408c4ef98aa034886be417db7",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-profession-southeast/005.png",
+              "sha256": "461c0b87ecdfc2b61c0524083c490c134aff13f0c58640847eeedd15deb099a4",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/ta-kiem-son-profession-southeast/006.png",
+              "sha256": "2ff73926d0bbb1ff29a6c94b3a51a919e23f19729e0729d837165423f8987554",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            }
+          ],
+          "fps": 4,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1500,
+          "loop": false,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "profession"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        }
+      },
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "neutralSha256": "a78e25fd5134ae5a67aa21dee022f7b7fc8922ae517792ddba492b6e0a0c414b",
+      "sourceSha256": "8d307910ae0c896dfad79c0269cd315aad19a9615c68ed14fa9e67ce7bfe1e84",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "sourceScale": 0.25559105431309903,
+      "neutralHeight": 313
+    },
+    {
+      "id": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "name": "Tô Nhược",
+      "identity": "van-hai-npc-concepts-v4",
+      "description": "Adult woman supplies clerk. Dark compact bun, muted jade robe, ivory cloth apron, earthy-red tied ledger, small sealed wooden case and a small brush. No beard, no child face.",
+      "gesture": "Inspecting a sealed case: neutral, brings small case to waist, tilts case to inspect seal, taps or traces seal once with small brush, lowers case, exact neutral. Keep case small and same shape in every frame.",
+      "direction": "southeast",
+      "source": "raw/to-nhuoc-southeast.png",
+      "prompt": "prompts/to-nhuoc-southeast.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/to-nhuoc-identity-nearest8x.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "fb4f19ebeb6736c8abf81d6c3da6db44384f03a95b41ce3e361f62dbe704f422",
+        "identityNative": "73cd99ad68a11b6919be27b58ec38b5fed408ab52d57e3db377cf59471176e1c"
+      },
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "neutralSprite": "calibration/to-nhuoc-southeast.png",
+      "clips": {
+        "idle": {
+          "id": "to-nhuoc-idle-southeast",
+          "actor": "NPC-HN-PREPARATION",
+          "action": "idle",
+          "direction": "southeast",
+          "atlas": "atlases/to-nhuoc-idle-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "0f87a473b6896f598eac4775918d8ceae570b0e1e2448edf74a0cdbecca00ff3",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-idle-southeast/001.png",
+              "sha256": "f96b66da76a869be241a8a54d2d3027393363c5d24cacdaa896db523769f8383",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-idle-southeast/002.png",
+              "sha256": "4809c17c5abd0bed5557660be1ce6f54ad94d8b5d4be40662840bf11489889da",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-idle-southeast/003.png",
+              "sha256": "15b7759ffad106c6136d8e8ce6755144b115895043e31c076a83921fdefc6885",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-idle-southeast/004.png",
+              "sha256": "83062acf5e7a7aed30012a6e88ca855e12e5c1f7779aad90c2044221bdc1b220",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-idle-southeast/005.png",
+              "sha256": "f8199cb122e5b554d84db1c3a7fe206a7f9385fdd4debaae5723d5b071b043d0",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-idle-southeast/006.png",
+              "sha256": "9af3b477e0363bcc1588c6d2ccde981f3f92fd7dd3a4ca00d9a70fe64f6d7ddf",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            }
+          ],
+          "fps": 5,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1200,
+          "loop": true,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "idle"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        },
+        "talk": {
+          "id": "to-nhuoc-talk-southeast",
+          "actor": "NPC-HN-PREPARATION",
+          "action": "talk",
+          "direction": "southeast",
+          "atlas": "atlases/to-nhuoc-talk-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "2dec30f1bc0573148946379a2043cdf438379d50d80ee3d5310a667839c22c34",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-talk-southeast/001.png",
+              "sha256": "5bab4ff130bb974e1a6a9e7a256a933f159119f8c30355bdc2fee17c2ccd3536",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-talk-southeast/002.png",
+              "sha256": "efdad0edcfb2188ae2e7fbbc6b78d834ef4382636542a089d9f94d658fa3ec29",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-talk-southeast/003.png",
+              "sha256": "42a78e323da5532fb7b788cf2a206e1e62f66b0c3c0a09ebf9691c5b8aeeaad4",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-talk-southeast/004.png",
+              "sha256": "6d41a000f6bb5c8573ec81841a67a88f50b483c170ea4cc4f985118ca8e211d6",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-talk-southeast/005.png",
+              "sha256": "3537ca5a92f20419cbea33a440aa92e8ee76e04b1cbf9c9fe2673e44a81ca59f",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-talk-southeast/006.png",
+              "sha256": "85e28c3a2b3a93aa7885091dc6755aaa083a38691993537000d33396b4aa8fea",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 200
+            }
+          ],
+          "fps": 5,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1200,
+          "loop": true,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "talk"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        },
+        "profession": {
+          "id": "to-nhuoc-profession-southeast",
+          "actor": "NPC-HN-PREPARATION",
+          "action": "profession",
+          "direction": "southeast",
+          "atlas": "atlases/to-nhuoc-profession-southeast.png",
+          "atlasSize": [
+            600,
+            100
+          ],
+          "atlasSha256": "3a8abce518b944c767779ad1b215bce4d38c7099e7400167b3507b86296c12b9",
+          "atlasPadding": 2,
+          "canvas": [
+            96,
+            96
+          ],
+          "frameSize": [
+            96,
+            96
+          ],
+          "pivot": [
+            48,
+            88
+          ],
+          "frames": [
+            {
+              "x": 2,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-profession-southeast/001.png",
+              "sha256": "2cce378126e37e14de10e116d64a90ea51861203cb0a9c772e9803dc7d93c288",
+              "rect": {
+                "x": 2,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 102,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-profession-southeast/002.png",
+              "sha256": "4daba0b002b5c5706e55ddb4d20949d8e3526884fe7f86b6f04e052c7bba211b",
+              "rect": {
+                "x": 102,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 202,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-profession-southeast/003.png",
+              "sha256": "f2d1aaf3827e2a38a97afa7f8c3984112febbd260fd56dc73c296e9e0a3530c3",
+              "rect": {
+                "x": 202,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 302,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-profession-southeast/004.png",
+              "sha256": "6bb2c5f569ba942e27e53bbf71d75d7516a21970a2c77e4d6337e0c17c7aa096",
+              "rect": {
+                "x": 302,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 402,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-profession-southeast/005.png",
+              "sha256": "0a478c5ccbce8e0d52355bfb821b8fc25f0fc5e24ebd686cad30f535797259c3",
+              "rect": {
+                "x": 402,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            },
+            {
+              "x": 502,
+              "y": 2,
+              "w": 96,
+              "h": 96,
+              "file": "frames/to-nhuoc-profession-southeast/006.png",
+              "sha256": "1103a77043649ca26a7f42ffd52c8dff21ddebb48469f7e871e537675966016a",
+              "rect": {
+                "x": 502,
+                "y": 2,
+                "w": 96,
+                "h": 96
+              },
+              "durationMs": 250
+            }
+          ],
+          "fps": 4,
+          "durations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "durationMs": 1500,
+          "loop": false,
+          "holdLast": false,
+          "phases": [
+            {
+              "at": 0,
+              "label": "profession"
+            }
+          ],
+          "uniqueFrames": 6,
+          "artApproved": false
+        }
+      },
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "neutralSha256": "f96b66da76a869be241a8a54d2d3027393363c5d24cacdaa896db523769f8383",
+      "sourceSha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "sourceScale": 0.24615384615384617,
+      "neutralHeight": 325
+    }
+  ],
+  "clips": {
+    "tran-duy-idle-southeast": {
+      "id": "tran-duy-idle-southeast",
+      "actor": "NPC-HN-GUIDE",
+      "action": "idle",
+      "direction": "southeast",
+      "atlas": "atlases/tran-duy-idle-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "7615e4f25629f364c2f3e471e99a65beefd73bd028666ba3122e300313d42d92",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-idle-southeast/001.png",
+          "sha256": "30e5847bcfc5090950803a386d7db777c94c49c3876481263f115b167be0bc39",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-idle-southeast/002.png",
+          "sha256": "557978b7eb1282939f1bb89a0cce97a44f0d912b124620222e19b59f394dbacf",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-idle-southeast/003.png",
+          "sha256": "e57eba7ec663d70e48a91be998c7bd2ac5d7701a3460d110e6bef7e6336c8d47",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-idle-southeast/004.png",
+          "sha256": "c5f8e27e36faa7d23a939c8acb91d9ae3c4b0370379c2ac389eb505432d1ace1",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-idle-southeast/005.png",
+          "sha256": "7409c841e7c0513858dc930e2c1ffe9fba722f56f1f1b2b3bcfe990af3f7aba9",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-idle-southeast/006.png",
+          "sha256": "3d36277a7a66c9137413f42ddac29c07ea3d45097b7d5fb3e12adaa4e0feb421",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        }
+      ],
+      "fps": 5,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1200,
+      "loop": true,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "idle"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "tran-duy-talk-southeast": {
+      "id": "tran-duy-talk-southeast",
+      "actor": "NPC-HN-GUIDE",
+      "action": "talk",
+      "direction": "southeast",
+      "atlas": "atlases/tran-duy-talk-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "09bdff452e58aaec0955953d3f6a1efde875c897fc4cfb5b35bcc19a060815a4",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-talk-southeast/001.png",
+          "sha256": "9e744c4d79c242916f06211f493c93e7c1c588c15b5776278e28dba5e54ab0f9",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-talk-southeast/002.png",
+          "sha256": "64a732e8929002e991588d69cd30359730bfa408ad60ca8c6664ab08e47db500",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-talk-southeast/003.png",
+          "sha256": "d5a69f307b673c0408ed4e38b87d339e62103c13faf064edc23a949fa560b2f4",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-talk-southeast/004.png",
+          "sha256": "22b4399cd1e98aeabb2286b94b016558937dc5591ef6c4ac31027672fedddb14",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-talk-southeast/005.png",
+          "sha256": "6c6244a5581ca9318d91766a8d925588177f9b37729a7ad6a1acce6189af03d1",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-talk-southeast/006.png",
+          "sha256": "7ea714c45ccdebf1f0bd8b11853c692da9b6adddd7595a80e41f0c758b17d2a0",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        }
+      ],
+      "fps": 5,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1200,
+      "loop": true,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "talk"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "tran-duy-profession-southeast": {
+      "id": "tran-duy-profession-southeast",
+      "actor": "NPC-HN-GUIDE",
+      "action": "profession",
+      "direction": "southeast",
+      "atlas": "atlases/tran-duy-profession-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "1c5f904497c129cd2d0416e5766df91aba4f8794aad4f482bfb7dd0fb2338fc6",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-profession-southeast/001.png",
+          "sha256": "33c9c366ad438fe78bfda3220f7087f8af208a24976052a71d436ba95d696fef",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-profession-southeast/002.png",
+          "sha256": "311dcd88430ce7c01a3bfd6e613d56d0635418ff2ff1eb803353d22b842d22ce",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-profession-southeast/003.png",
+          "sha256": "ce5892c7496695c3a80dbf93461be5436142acb630bfe91b0d2247529cc220d1",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-profession-southeast/004.png",
+          "sha256": "cad6d482205830e9996f4aeeaf44f6026141680cdc5ca10eff0c453d5858339c",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-profession-southeast/005.png",
+          "sha256": "833cc97e51c8bf21521eca502238ccf3bfb70e2cd5397ad11ee40d62ba6cfca8",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/tran-duy-profession-southeast/006.png",
+          "sha256": "feefb5b8bd4a4ac62be9c78d5f7bc3ecb2a757fbdef3f5c68daccb67a9b0a377",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        }
+      ],
+      "fps": 4,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1500,
+      "loop": false,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "profession"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "diep-tinh-idle-southeast": {
+      "id": "diep-tinh-idle-southeast",
+      "actor": "NPC-HN-CULTIVATION",
+      "action": "idle",
+      "direction": "southeast",
+      "atlas": "atlases/diep-tinh-idle-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "e20a409cb7c0d33eda1b7d79affb5ec25d13b3d61c70b86bc1816bafacf3a1c3",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-idle-southeast/001.png",
+          "sha256": "eef1a9fa481c07e08d58d7ae6252832229b58456ceb28e80c4c2cdc87042266f",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-idle-southeast/002.png",
+          "sha256": "86033526004d75ade0c5a4633c70cc52b9f4d23e0cf4d3434245b6686b0d10c8",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-idle-southeast/003.png",
+          "sha256": "1bd221809698aed0eef4a7e66137e153b9a9e5e28991f709760898daeb6038cc",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-idle-southeast/004.png",
+          "sha256": "b0e96bd7c1a0be16a7945c97c2e37285a9bae568d4a997219680efdfd3ed2f9a",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-idle-southeast/005.png",
+          "sha256": "e67449abc3ac3981374b97a7524bcd927971c41b1fe1919c3b9393681182b2ed",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-idle-southeast/006.png",
+          "sha256": "9031518a3f898444ef5d0d5d16873344d636144ed96ab839e50b59c754193f1b",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        }
+      ],
+      "fps": 5,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1200,
+      "loop": true,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "idle"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "diep-tinh-talk-southeast": {
+      "id": "diep-tinh-talk-southeast",
+      "actor": "NPC-HN-CULTIVATION",
+      "action": "talk",
+      "direction": "southeast",
+      "atlas": "atlases/diep-tinh-talk-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "6b529f774c510a11e51f69fdb9e7c41352553eb8795bbf3c17ef3737688f341f",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-talk-southeast/001.png",
+          "sha256": "99b699f5a11a12db46ebcf02d54fbe2e23b5b8df94ba6899058a2ed830f016e6",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-talk-southeast/002.png",
+          "sha256": "95344d29e80628f427741e237792e5c272c91b09aaa7498eac153777651ea0f9",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-talk-southeast/003.png",
+          "sha256": "bce47dd1194ba5cb1802b9414ca9480890cd4eaea8ecd4b471a78499cc5c598e",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-talk-southeast/004.png",
+          "sha256": "836de31cefbf329539e31a56014c7ffd88d7c5dba04b4b16c36d6d5bf25bc8fb",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-talk-southeast/005.png",
+          "sha256": "8a863c177141b1a9cec3a6464e29a6212c7dbe085c76ff38a5ba8e6e56afab19",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-talk-southeast/006.png",
+          "sha256": "b9eca3d90e0490ff762c00beaebb0b8a158d8c0329acc0021e6bea8b7952116e",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        }
+      ],
+      "fps": 5,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1200,
+      "loop": true,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "talk"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "diep-tinh-profession-southeast": {
+      "id": "diep-tinh-profession-southeast",
+      "actor": "NPC-HN-CULTIVATION",
+      "action": "profession",
+      "direction": "southeast",
+      "atlas": "atlases/diep-tinh-profession-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "50d66a440134873985d8b98541e7972be3ab253f5bf33cf413ff4ac55131218a",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-profession-southeast/001.png",
+          "sha256": "dd2a95827d7f7ad4c11707bb47b70bbb3c91320fbb94ad827f876be8027edf68",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-profession-southeast/002.png",
+          "sha256": "f0cba23499b1d875ab71f62c17d949258aeae2794499b5483450ed7ca27717dd",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-profession-southeast/003.png",
+          "sha256": "39a43f4cc8fedd215c9d5057381ac8e3db07de91401319c6415cd530bb95cb49",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-profession-southeast/004.png",
+          "sha256": "a21236100cdefb741c5d07cda7b60bd5d3d190e626b8ab5ad48e644be7c417af",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-profession-southeast/005.png",
+          "sha256": "857eb7069d3aafd02d93c29280fb96fc99ee71f0c9b479c140e9a8dc0c5c89bf",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/diep-tinh-profession-southeast/006.png",
+          "sha256": "52e90e480474c29dabadb9148b389f0747cf964296eb127801303b658591e87a",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        }
+      ],
+      "fps": 4,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1500,
+      "loop": false,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "profession"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "ta-kiem-son-idle-southeast": {
+      "id": "ta-kiem-son-idle-southeast",
+      "actor": "NPC-HN-TRAINING",
+      "action": "idle",
+      "direction": "southeast",
+      "atlas": "atlases/ta-kiem-son-idle-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "9f32726fca2956c41ee204f06110a4b2d08b604db53d19d35a925f85cb96e4fa",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-idle-southeast/001.png",
+          "sha256": "a78e25fd5134ae5a67aa21dee022f7b7fc8922ae517792ddba492b6e0a0c414b",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-idle-southeast/002.png",
+          "sha256": "239526ca8f0db829d597149e8953fd51f0250de7b4d967019636415a010952ec",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-idle-southeast/003.png",
+          "sha256": "69edf14195de4e69bf6f66c3d312fd7ec094a94baa511967d9f22387633f65c0",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-idle-southeast/004.png",
+          "sha256": "792cf1b98e37925e7212f5733690e119a13bad9ce039e2c10c424e71d315a98e",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-idle-southeast/005.png",
+          "sha256": "8c52df9fc340a77b1586c490a319bebb1e1d79dd4b72e831f40cb2c32f565e5c",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-idle-southeast/006.png",
+          "sha256": "2d5c232ef56e49819a02da235cf62fbe76c757c5a64c3556375cbcb4d08fa730",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        }
+      ],
+      "fps": 5,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1200,
+      "loop": true,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "idle"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "ta-kiem-son-talk-southeast": {
+      "id": "ta-kiem-son-talk-southeast",
+      "actor": "NPC-HN-TRAINING",
+      "action": "talk",
+      "direction": "southeast",
+      "atlas": "atlases/ta-kiem-son-talk-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "f77bb580e1680be816717973470d33ed90f9f5142007409f1ab78c84f5b027f7",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-talk-southeast/001.png",
+          "sha256": "f9bab47cfcc4d711a3faded844baf22b2719f9fe44f7963ca43cf34c8b790e82",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-talk-southeast/002.png",
+          "sha256": "ca394030692dde6079bca9bb34de12f7d71bd41464e52599305762b3f511b2a8",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-talk-southeast/003.png",
+          "sha256": "8a622d51f7dd3e822a399fcac6aed9d8ec5240d8228f89aca2d3399bf5a666bd",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-talk-southeast/004.png",
+          "sha256": "7e39ad44b52847a0dd1734ad392503b2b7f5133989affbac09db1c3099a17318",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-talk-southeast/005.png",
+          "sha256": "d67c288ef7a84c608f7df3242619b1d6950951991ec34e04f25b506259c567be",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-talk-southeast/006.png",
+          "sha256": "fba1e587e3e1eca38e694ebc9665a0c8832b9d69fe05b315a0fccc5860078d7b",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        }
+      ],
+      "fps": 5,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1200,
+      "loop": true,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "talk"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "ta-kiem-son-profession-southeast": {
+      "id": "ta-kiem-son-profession-southeast",
+      "actor": "NPC-HN-TRAINING",
+      "action": "profession",
+      "direction": "southeast",
+      "atlas": "atlases/ta-kiem-son-profession-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "3a35a373e37253aa9bdbac7a2098af2a654ec5211a6ede013ddcf9350e0d3e40",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-profession-southeast/001.png",
+          "sha256": "a319963789111cc67d8a71d9dec051b459bc3439fd932028ad9c95d8e7054e0a",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-profession-southeast/002.png",
+          "sha256": "7c624c7223dc24228c7eaf0fdec78327282adb6e9b1cdcb09f88c5ce9686a047",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-profession-southeast/003.png",
+          "sha256": "58a343fa2a1589768ffd87d4b787dcf4704425d11481668ad75733e4c359fd80",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-profession-southeast/004.png",
+          "sha256": "044963ec2707af978f1b282c3f9b0a9aab76d8d408c4ef98aa034886be417db7",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-profession-southeast/005.png",
+          "sha256": "461c0b87ecdfc2b61c0524083c490c134aff13f0c58640847eeedd15deb099a4",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/ta-kiem-son-profession-southeast/006.png",
+          "sha256": "2ff73926d0bbb1ff29a6c94b3a51a919e23f19729e0729d837165423f8987554",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        }
+      ],
+      "fps": 4,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1500,
+      "loop": false,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "profession"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "to-nhuoc-idle-southeast": {
+      "id": "to-nhuoc-idle-southeast",
+      "actor": "NPC-HN-PREPARATION",
+      "action": "idle",
+      "direction": "southeast",
+      "atlas": "atlases/to-nhuoc-idle-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "0f87a473b6896f598eac4775918d8ceae570b0e1e2448edf74a0cdbecca00ff3",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-idle-southeast/001.png",
+          "sha256": "f96b66da76a869be241a8a54d2d3027393363c5d24cacdaa896db523769f8383",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-idle-southeast/002.png",
+          "sha256": "4809c17c5abd0bed5557660be1ce6f54ad94d8b5d4be40662840bf11489889da",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-idle-southeast/003.png",
+          "sha256": "15b7759ffad106c6136d8e8ce6755144b115895043e31c076a83921fdefc6885",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-idle-southeast/004.png",
+          "sha256": "83062acf5e7a7aed30012a6e88ca855e12e5c1f7779aad90c2044221bdc1b220",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-idle-southeast/005.png",
+          "sha256": "f8199cb122e5b554d84db1c3a7fe206a7f9385fdd4debaae5723d5b071b043d0",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-idle-southeast/006.png",
+          "sha256": "9af3b477e0363bcc1588c6d2ccde981f3f92fd7dd3a4ca00d9a70fe64f6d7ddf",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        }
+      ],
+      "fps": 5,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1200,
+      "loop": true,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "idle"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "to-nhuoc-talk-southeast": {
+      "id": "to-nhuoc-talk-southeast",
+      "actor": "NPC-HN-PREPARATION",
+      "action": "talk",
+      "direction": "southeast",
+      "atlas": "atlases/to-nhuoc-talk-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "2dec30f1bc0573148946379a2043cdf438379d50d80ee3d5310a667839c22c34",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-talk-southeast/001.png",
+          "sha256": "5bab4ff130bb974e1a6a9e7a256a933f159119f8c30355bdc2fee17c2ccd3536",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-talk-southeast/002.png",
+          "sha256": "efdad0edcfb2188ae2e7fbbc6b78d834ef4382636542a089d9f94d658fa3ec29",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-talk-southeast/003.png",
+          "sha256": "42a78e323da5532fb7b788cf2a206e1e62f66b0c3c0a09ebf9691c5b8aeeaad4",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-talk-southeast/004.png",
+          "sha256": "6d41a000f6bb5c8573ec81841a67a88f50b483c170ea4cc4f985118ca8e211d6",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-talk-southeast/005.png",
+          "sha256": "3537ca5a92f20419cbea33a440aa92e8ee76e04b1cbf9c9fe2673e44a81ca59f",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-talk-southeast/006.png",
+          "sha256": "85e28c3a2b3a93aa7885091dc6755aaa083a38691993537000d33396b4aa8fea",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 200
+        }
+      ],
+      "fps": 5,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1200,
+      "loop": true,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "talk"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    },
+    "to-nhuoc-profession-southeast": {
+      "id": "to-nhuoc-profession-southeast",
+      "actor": "NPC-HN-PREPARATION",
+      "action": "profession",
+      "direction": "southeast",
+      "atlas": "atlases/to-nhuoc-profession-southeast.png",
+      "atlasSize": [
+        600,
+        100
+      ],
+      "atlasSha256": "3a8abce518b944c767779ad1b215bce4d38c7099e7400167b3507b86296c12b9",
+      "atlasPadding": 2,
+      "canvas": [
+        96,
+        96
+      ],
+      "frameSize": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "frames": [
+        {
+          "x": 2,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-profession-southeast/001.png",
+          "sha256": "2cce378126e37e14de10e116d64a90ea51861203cb0a9c772e9803dc7d93c288",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 102,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-profession-southeast/002.png",
+          "sha256": "4daba0b002b5c5706e55ddb4d20949d8e3526884fe7f86b6f04e052c7bba211b",
+          "rect": {
+            "x": 102,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 202,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-profession-southeast/003.png",
+          "sha256": "f2d1aaf3827e2a38a97afa7f8c3984112febbd260fd56dc73c296e9e0a3530c3",
+          "rect": {
+            "x": 202,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 302,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-profession-southeast/004.png",
+          "sha256": "6bb2c5f569ba942e27e53bbf71d75d7516a21970a2c77e4d6337e0c17c7aa096",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 402,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-profession-southeast/005.png",
+          "sha256": "0a478c5ccbce8e0d52355bfb821b8fc25f0fc5e24ebd686cad30f535797259c3",
+          "rect": {
+            "x": 402,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        },
+        {
+          "x": 502,
+          "y": 2,
+          "w": 96,
+          "h": 96,
+          "file": "frames/to-nhuoc-profession-southeast/006.png",
+          "sha256": "1103a77043649ca26a7f42ffd52c8dff21ddebb48469f7e871e537675966016a",
+          "rect": {
+            "x": 502,
+            "y": 2,
+            "w": 96,
+            "h": 96
+          },
+          "durationMs": 250
+        }
+      ],
+      "fps": 4,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durationMs": 1500,
+      "loop": false,
+      "holdLast": false,
+      "phases": [
+        {
+          "at": 0,
+          "label": "profession"
+        }
+      ],
+      "uniqueFrames": 6,
+      "artApproved": false
+    }
+  },
+  "sources": [
+    {
+      "actor": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "file": "raw/tran-duy-southeast.png",
+      "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/tran-duy-southeast.txt",
+      "promptSha256": "90b04eeb69a6be8bd6d617a1f65d01fec85cd3a09a826e36d59d6958291a15ce",
+      "routerMetadata": "raw/tran-duy-southeast.json",
+      "routerMetadataSha256": "ed07180976d3c1cf4d0901e7181e08eaa57fb7d0914e1afba72cde56da6ca3f9",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "filename": "wang-lin-live-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9320,
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/tran-duy-identity-nearest8x.png",
+          "filename": "tran-duy-identity-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 14155,
+          "sha256": "85d65818ddf8a9da8304d432176cece83aeb7389229cf51dffc24b6bfd2e9fee",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "scale": 0.2588996763754045,
+      "neutralHeight": 309,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "file": "raw/diep-tinh-southeast-r3.png",
+      "sha256": "b04d81f55c0b930aa3b58ab03b48701b6247a63cf102ca006c853b0b4ecf06ad",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/diep-tinh-southeast-r3.txt",
+      "promptSha256": "4a646a3ea6e1e361e41cb8a4b1036458dd2677c0a60eea577f3c854a06612a18",
+      "routerMetadata": "raw/diep-tinh-southeast-r3.json",
+      "routerMetadataSha256": "3d382b282512e72cbf0cbdc7b984cd359954e207156cf8ca8cb74ddb2ee42b77",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "filename": "wang-lin-live-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9320,
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/diep-tinh-identity-nearest8x.png",
+          "filename": "diep-tinh-identity-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 13814,
+          "sha256": "236aecb4835e20c705d7add566de5d170a33f3c744d285ffe70a66f3f055c794",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/raw/diep-tinh-southeast-r2.png",
+          "filename": "diep-tinh-southeast-r2.png",
+          "mimeType": "image/png",
+          "bytes": 2311093,
+          "sha256": "d1e92e9f36c119be5760ab248cb205627791409e67d09b035d209e9a5e7b2081",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "scale": 0.21739130434782608,
+      "neutralHeight": 368,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "file": "raw/ta-kiem-son-southeast.png",
+      "sha256": "8d307910ae0c896dfad79c0269cd315aad19a9615c68ed14fa9e67ce7bfe1e84",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/ta-kiem-son-southeast.txt",
+      "promptSha256": "a588b4cc5184006b948fafefe0ef9cf64248d2dad2d579f877c1e855e31734bb",
+      "routerMetadata": "raw/ta-kiem-son-southeast.json",
+      "routerMetadataSha256": "a0097918226876a2128668ce8e15c22a2aab25899fd7fa8048c48b4e3501a825",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "filename": "wang-lin-live-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9320,
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/ta-kiem-son-identity-nearest8x.png",
+          "filename": "ta-kiem-son-identity-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 12845,
+          "sha256": "25250e3e114269fb2f3ee69bd43553a5a58bd0e5e3d96ede39fdc6a0ec9f92ed",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "scale": 0.25559105431309903,
+      "neutralHeight": 313,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "file": "raw/to-nhuoc-southeast.png",
+      "sha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/to-nhuoc-southeast.txt",
+      "promptSha256": "2eb61538f601cbd52b8fbcbd15188d8703e7d2bf6121436d28d04a7a9db3bf8b",
+      "routerMetadata": "raw/to-nhuoc-southeast.json",
+      "routerMetadataSha256": "4c2d060a5a358d253f66f13e832d940348e2ee223ea174ab39228fd05bffe017",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "filename": "wang-lin-live-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9320,
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/to-nhuoc-identity-nearest8x.png",
+          "filename": "to-nhuoc-identity-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 14153,
+          "sha256": "fb4f19ebeb6736c8abf81d6c3da6db44384f03a95b41ce3e361f62dbe704f422",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "scale": 0.24615384615384617,
+      "neutralHeight": 325,
+      "alphaThreshold": 128
+    }
+  ],
+  "registration": "registration.json",
+  "coverage": {
+    "actors": 4,
+    "producedDirections": [
+      "southeast"
+    ],
+    "pendingDirections": [
+      "south",
+      "southwest",
+      "west",
+      "northwest",
+      "north",
+      "northeast",
+      "east"
+    ],
+    "actions": [
+      "idle",
+      "talk",
+      "profession"
+    ],
+    "clips": 12,
+    "poses": 72,
+    "calibrationPoses": 4,
+    "fullDirectionalSet": false
+  },
+  "artApproved": false,
+  "ownerApproved": false,
+  "runtimeImported": false
+}

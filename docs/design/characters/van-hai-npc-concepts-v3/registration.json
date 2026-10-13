@@ -1,0 +1,149 @@
+{
+  "schema": "npc-concept-registration-2",
+  "date": "2026-10-13",
+  "runtimeConsumable": false,
+  "artApproved": false,
+  "ownerApproved": false,
+  "coverage": {
+    "actors": 1,
+    "viewsPerActor": 1,
+    "posesPerActor": 1,
+    "animationClips": 0
+  },
+  "productionSha256AtPack": "a9185373c10edcb3a90a6193deb99a1a0e83858519a4f942c0c98d47e9f6af51",
+  "measurementsSha256": "73c7bef06c1d48ad2431362e4e705fe69150ee25e9242c5accb7828bd3f29aa6",
+  "approvedPlayerReference": {
+    "file": "docs/design/characters/wang-lin-pixel-production-v2/masters/southeast.png",
+    "sha256": "f89dcf4171aa70e1411553498e8b1f12b3a2b46287272f196604e537e032af54",
+    "canvas": [
+      64,
+      96
+    ],
+    "pivot": [
+      32,
+      88
+    ],
+    "bodyHeightPx": 80,
+    "modified": false
+  },
+  "headComparison": {
+    "file": "../wang-lin-pixel-production-v2/masters/southeast.png",
+    "headHairBounds": [
+      5,
+      8,
+      49,
+      49
+    ],
+    "bodyHeightPx": 80,
+    "headToBodyRatio": 0.5125,
+    "scope": "Approximate hair/bun through chin; long back hair excluded, not anatomy approval.",
+    "alphaBounds": [
+      1,
+      8,
+      50,
+      88
+    ],
+    "alphaWidthPx": 49,
+    "liveFrame": "idle-southeast frame1; identical RGBA verified"
+  },
+  "actors": [
+    {
+      "id": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "status": "concept-candidate",
+      "direction": "southeast",
+      "pose": "neutral",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceBounds": [
+        215,
+        159,
+        812,
+        1436
+      ],
+      "sourcePivot": [
+        412,
+        1436
+      ],
+      "sourceSupportWitness": [
+        350,
+        1350,
+        475,
+        1436
+      ],
+      "bodyTopY": 159,
+      "sourceHeadBounds": [
+        240,
+        159,
+        812,
+        802
+      ],
+      "rootBasis": "Front planted boot sole x359-464 ends at source row1435; world floor1436, x412 near sole center. Rear boot and robe excluded.",
+      "measurementNotes": "Tỷ lệ đầu/thân gọn hơn v1/v2. Tóc ngắn nên silhouette hẹp hơn Vương Lâm; áo sáng và góc mặt chính diện hơn. Mẫu này vẫn cần đánh giá hình trước khi làm tiếp các NPC khác.",
+      "pivotStatus": "concept-measured-pending-motion-review",
+      "sharedNeutralScale": 0.06264682850430697,
+      "pixelsResampled": true,
+      "resampling": "nearest-once",
+      "nativeCutoutSize": [
+        37,
+        80
+      ],
+      "nativeCutoutRoot": [
+        12,
+        80
+      ],
+      "canvasTranslation": [
+        20,
+        8
+      ],
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "nativeBounds": [
+        20,
+        8,
+        57,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "measuredBodyHeightPx": 80,
+      "nativeHeadBounds": [
+        22,
+        8,
+        57,
+        48
+      ],
+      "headToBodyRatio": 0.5035238841033672,
+      "morphologyAssessment": "compact-proportions-pilot-owner-review-pending",
+      "alphaPolicy": {
+        "sourcePreserved": true,
+        "nativeBodyThreshold": 210,
+        "binaryNativeAlpha": true,
+        "magentaKeyEnabled": false,
+        "magentaKey": {
+          "redMin": 180,
+          "blueMin": 180,
+          "greenMax": 140,
+          "channelMinusGreenMin": 70
+        },
+        "magentaPixelsExcluded": 0,
+        "lowAlphaSourcePixelsExcluded": 16326,
+        "rgbPainted": false,
+        "componentsRemoved": 0
+      },
+      "sourceSha256": "e726bccdea5a6cea0bd88ba22ffcd97bff6f14d0799653326f22e9ea1efdba02",
+      "spriteSha256": "74b1a3c56cb33d668287b9dc1a9e4969d5619e0d452a026e17dc1feb406ec103",
+      "promptSha256": "8229811af4c63b87afbffcfa72b63f4e491013b78316b8ccf6169d01e639e79a",
+      "runtimeConsumable": false,
+      "artApproved": false,
+      "ownerApproved": false
+    }
+  ]
+}

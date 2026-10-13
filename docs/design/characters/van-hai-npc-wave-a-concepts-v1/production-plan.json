@@ -1,0 +1,687 @@
+{
+  "schema": "npc-wave-a-six-neutral-plan-1",
+  "id": "VH-NPC-WAVE-A-CONCEPTS-01",
+  "date": "2026-10-13",
+  "ownerContinuation": "tôi đồng ý làm tiếp nhóm tiếp theo",
+  "sourcePlan": "docs/design/world/van-hai-living-world-v1/plan.json",
+  "sourcePlanSha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576",
+  "primaryStandard": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+  "primaryStandardSha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec",
+  "directionalStandard": "docs/design/characters/van-hai-npc-visual-standard-v1/directions.json",
+  "directionalStandardSha256": "0fef83b1121c0be2cf9b47909a00f5c3c01a665229cb1d16358fe65650b8abd9",
+  "skill": "docs/skills/game-actor-animation-production/SKILL.md",
+  "scope": "Six remaining authored Wave A NPC identities, one neutral southeast each before any motion expansion",
+  "generator": "project-router-gpt-image-2-edit",
+  "requestedSize": "1024x1536",
+  "quality": "high",
+  "actors": [
+    {
+      "id": "NPC-HN-HERBALIST",
+      "slug": "bach-chi",
+      "name": "Bạch Chỉ",
+      "role": "Dược sư ngoại viện",
+      "description": "An adult woman herbalist about thirty. Warm tea-leaf green and ivory clothes; practical sleeves tied snugly. A compact herb basket and a small jade pestle visibly identify her profession. Soft-spoken but observant and discerning expression. Adult face, no child face. Hair is simply bound for work with no added ornament; the authored brief does not specify a hair arrangement.",
+      "poseBrief": "Relaxed standing neutral, the small herb basket held beside the lower waist and the small jade pestle resting in the other hand below the chest. Both hands and profession props remain readable without obscuring the face or boots.",
+      "zone": "Dược đình phía tây",
+      "source": "raw/bach-chi.png",
+      "raw": "raw/bach-chi.png",
+      "prompt": "prompts/bach-chi.txt",
+      "spec": "specs/bach-chi.json",
+      "assetPlan": "plans/bach-chi.json",
+      "sprite": "sprites/bach-chi.png",
+      "direction": "southeast",
+      "pose": "neutral",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "authoredBrief": {
+        "id": "NPC-HN-HERBALIST",
+        "name": "Bạch Chỉ",
+        "role": "Dược sư ngoại viện",
+        "group": "service",
+        "wave": "A",
+        "zone": "Dược đình phía tây",
+        "marker": {
+          "u": 0.18,
+          "v": 0.38,
+          "kind": "proposed-zone"
+        },
+        "look": "Nữ khoảng ba mươi; áo lá trà/ngà, tay áo buộc gọn, giỏ dược và chày ngọc.",
+        "personality": "Mềm lời nhưng không dễ tin; kể chuyện qua mùi và vết cắt lá.",
+        "task": "Gợi ý nguồn dược, đọc vật tư hồi phục và lối vào luyện chế; dịch vụ cùng inventory/receipt khi triển khai.",
+        "quote": "Lá còn tươi chưa chắc khí còn nguyên. Hái dược cũng phải biết chờ.",
+        "react": "Sau EX01 nhắc đúng loại mẫu đã kiểm; đầy HP không tiêu vật tư chỉ để tạo hiệu ứng.",
+        "brief": "Silhouette giỏ dược, bàn tay chày; palette lá ấm khác áo ngọc của giảng sư.",
+        "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+        "status": "concept-brief-pending",
+        "runtimeImplemented": false,
+        "animation": {
+          "minimum": [
+            "idle",
+            "talk"
+          ],
+          "directions": 8,
+          "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+        },
+        "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+        "questHooks": [
+          "EX01",
+          "EX02"
+        ],
+        "sideStory": "Cùng một luống dược, hai vết hái: quan sát trước khi kết tội người hái."
+      },
+      "briefInterpretation": "English costume/pose translation from authored GDD. Hair left plain where unspecified. No invented weapon or profession gear.",
+      "references": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "status": "neutral-planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "id": "NPC-HN-FORGE",
+      "slug": "tong-thiet",
+      "name": "Tống Thiết",
+      "role": "Luyện khí sư",
+      "description": "An elderly male artificer with short silver-white hair and a direct practical expression. Ash-brown work apron and copper-toned shoulder cloth. A compact pair of tongs and an unfinished wooden-sword blank. A sturdy worker body while preserving the large chibi head, short torso and legs of the live Wang human contract. No large muscles or tall realistic anatomy.",
+      "poseBrief": "Relaxed planted standing neutral, small tongs and unfinished wooden-sword blank held below the chest. The blank stays compact, close to the body and leg silhouette; neither tool crosses the face.",
+      "zone": "Xưởng đông nam",
+      "source": "raw/tong-thiet.png",
+      "raw": "raw/tong-thiet.png",
+      "prompt": "prompts/tong-thiet.txt",
+      "spec": "specs/tong-thiet.json",
+      "assetPlan": "plans/tong-thiet.json",
+      "sprite": "sprites/tong-thiet.png",
+      "direction": "southeast",
+      "pose": "neutral",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "authoredBrief": {
+        "id": "NPC-HN-FORGE",
+        "name": "Tống Thiết",
+        "role": "Luyện khí sư",
+        "group": "service",
+        "wave": "A",
+        "zone": "Xưởng đông nam",
+        "marker": {
+          "u": 0.855,
+          "v": 0.66,
+          "kind": "proposed-zone"
+        },
+        "look": "Nam lớn tuổi; tóc bạc ngắn, tạp dề nâu tro, vai áo đồng, kìm và phôi mộc kiếm.",
+        "personality": "Thẳng tính; quý người sửa được vật hơn người nói giỏi.",
+        "task": "Đọc/chuẩn bị trang bị và sáu công thức; mở rộng farm→nâng cấp ở K1 riêng sau.",
+        "quote": "Kiếm có thể đổi. Tay cầm kiếm phải biết thứ gì đang giữ nó.",
+        "react": "Thấy ngọc đã luyện hóa thì nói về kiểm độ ổn định; không bán một chỉ số chưa triển khai.",
+        "brief": "Cơ thể chắc nhưng giữ tỷ lệ R01; kìm/phôi ở dưới ngực, không che mặt. Lửa lò là layer đạo cụ.",
+        "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+        "status": "concept-brief-pending",
+        "runtimeImplemented": false,
+        "animation": {
+          "minimum": [
+            "idle",
+            "talk"
+          ],
+          "directions": 8,
+          "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+        },
+        "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+        "questHooks": [
+          "HN08",
+          "EX02"
+        ],
+        "sideStory": "Phôi rạn vẫn có ích: khảo sát hạt mực trong rãnh kim loại."
+      },
+      "briefInterpretation": "English costume/pose translation from authored GDD. Hair left plain where unspecified. No invented weapon or profession gear.",
+      "references": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "status": "neutral-planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "id": "NPC-HN-ROUTE-KEEPER",
+      "slug": "hua-hanh",
+      "name": "Hứa Hành",
+      "role": "Người giữ tuyến",
+      "description": "An adult male route keeper, practical and quietly tired. Short dusty-grey cloak patched asymmetrically on one side. Compact map tube, old sealing cord and muddy boots, with a small route-paper detail. Plain compact hair with no added decorative gear; the authored brief does not specify hair. His silhouette reads as a weary field route keeper, not an armored guard.",
+      "poseBrief": "Relaxed planted standing neutral with the short cloak hanging clearly and map tube close to the hip. A compact folded route paper rests low near one hand, held below the chest, keeping face and boots clear.",
+      "zone": "Đường tuần sơn/lối ngoại vi",
+      "source": "raw/hua-hanh.png",
+      "raw": "raw/hua-hanh.png",
+      "prompt": "prompts/hua-hanh.txt",
+      "spec": "specs/hua-hanh.json",
+      "assetPlan": "plans/hua-hanh.json",
+      "sprite": "sprites/hua-hanh.png",
+      "direction": "southeast",
+      "pose": "neutral",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "authoredBrief": {
+        "id": "NPC-HN-ROUTE-KEEPER",
+        "name": "Hứa Hành",
+        "role": "Người giữ tuyến",
+        "group": "story",
+        "wave": "A",
+        "zone": "Đường tuần sơn/lối ngoại vi",
+        "marker": {
+          "u": 0.54,
+          "v": 0.84,
+          "kind": "proposed-zone"
+        },
+        "look": "Nam trưởng thành; áo choàng ngắn xám bụi, ống bản đồ, dây niêm cũ, giày bám bùn.",
+        "personality": "Thực tế; giấu sự mệt mỏi hơn là giấu động cơ.",
+        "task": "Hiện thân vai Người giữ tuyến đã có trong văn bản HN/EX; làm nhân chứng và đầu mối ngoại vi.",
+        "quote": "Đường vẫn ở đó. Thứ thay đổi là người đi qua và vật họ mang về.",
+        "react": "Cùng fact report-first/repair-first đã lưu; gặp ông không cấp thêm thưởng HN/EX.",
+        "brief": "Không cầm vũ khí lớn; giấy tuyến và dấu bùn phân biệt với lính gác. Áo choàng bị vá lệch một bên.",
+        "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+        "status": "concept-brief-pending",
+        "runtimeImplemented": false,
+        "animation": {
+          "minimum": [
+            "idle",
+            "talk"
+          ],
+          "directions": 8,
+          "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+        },
+        "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+        "questHooks": [
+          "HN05",
+          "HN06",
+          "EX03",
+          "EX04"
+        ],
+        "sideStory": "Dấu niêm không khớp do bảo quản vội; từ chuyện nhỏ mở manh mối ấn cổ."
+      },
+      "briefInterpretation": "English costume/pose translation from authored GDD. Hair left plain where unspecified. No invented weapon or profession gear.",
+      "references": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "status": "neutral-planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "id": "NPC-HN-GATE-WARDEN",
+      "slug": "dinh-soc",
+      "name": "Đinh Sóc",
+      "role": "Hộ sơn đệ tử",
+      "description": "A young adult male gate disciple. Dark blue-green robe, light copper shoulder armor that marks his duty, a small slim long spear and a route tag hanging at the hip. Firm disciplined but approachable expression. Plain compact hair without added decoration; the authored brief does not specify hair. Keep the young-adult identity distinct from an elderly instructor.",
+      "poseBrief": "The slim small spear lies diagonally low beside the lower body with the tip pointing DOWN, held below the chest. Keep the entire compact shaft and tip between crown and boot height; no weapon pixel above the crown or below the soles. The standing world foot is measured from the boot soles, never from the spear tip. The copper shoulder duty mark and hip route tag remain readable.",
+      "zone": "Cổng ngoại viện",
+      "source": "raw/dinh-soc.png",
+      "raw": "raw/dinh-soc.png",
+      "prompt": "prompts/dinh-soc.txt",
+      "spec": "specs/dinh-soc.json",
+      "assetPlan": "plans/dinh-soc.json",
+      "sprite": "sprites/dinh-soc.png",
+      "direction": "southeast",
+      "pose": "neutral",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "authoredBrief": {
+        "id": "NPC-HN-GATE-WARDEN",
+        "name": "Đinh Sóc",
+        "role": "Hộ sơn đệ tử",
+        "group": "service",
+        "wave": "A",
+        "zone": "Cổng ngoại viện",
+        "marker": {
+          "u": 0.455,
+          "v": 0.77,
+          "kind": "proposed-zone"
+        },
+        "look": "Nam trẻ; áo xanh sẫm, giáp vai đồng nhẹ, trường thương nhỏ, thẻ tuyến treo hông.",
+        "personality": "Cứng ở luật, mềm ở lời; nhớ người vừa thất bại ngoài tuyến.",
+        "task": "Giải thích lối ngoại vi và lối xuất hành HN12; quyền/cửa chỉ mở theo nội dung thật.",
+        "quote": "Ra ngoài luyện thân, không phải ra ngoài đánh cược mạng. Hãy nhớ đường trở lại.",
+        "react": "Thua trận thì chỉ cách chuẩn bị lại; HN12 chưa chốt thì không đưa vào map chưa có.",
+        "brief": "Thương nằm chéo thấp, dấu chức trách trên vai rõ. Vùng cổng để trống tâm lối đi.",
+        "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+        "status": "concept-brief-pending",
+        "runtimeImplemented": false,
+        "animation": {
+          "minimum": [
+            "idle",
+            "talk"
+          ],
+          "directions": 8,
+          "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+        },
+        "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+        "questHooks": [
+          "HN05",
+          "HN12"
+        ]
+      },
+      "briefInterpretation": "English costume/pose translation from authored GDD. Hair left plain where unspecified. No invented weapon or profession gear.",
+      "references": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "status": "neutral-planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-WATER",
+      "slug": "ky-an",
+      "name": "Kỷ An",
+      "role": "Đệ tử vận khí",
+      "description": "An adult female cultivation disciple. Light pale-blue robe, short tied hair, a compact water gourd and a partially studied bamboo slip booklet. Earnest diligent expression, attentive and inclined to correct herself before asking. Adult face, no child face; the same compact human anatomy and broad pixel treatment as live Wang.",
+      "poseBrief": "Relaxed standing neutral with a compact water gourd near the hip and a small half-studied bamboo slip booklet resting low in the hands. Both boots are planted and fully visible, the head and facial plane clear.",
+      "zone": "Rìa vườn thổ nạp",
+      "source": "raw/ky-an-r2.png",
+      "raw": "raw/ky-an-r2.png",
+      "prompt": "prompts/ky-an-r2.txt",
+      "spec": "specs/ky-an-r2.json",
+      "assetPlan": "plans/ky-an-r2.json",
+      "sprite": "sprites/ky-an.png",
+      "direction": "southeast",
+      "pose": "neutral",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "authoredBrief": {
+        "id": "NPC-HN-DISCIPLE-WATER",
+        "name": "Kỷ An",
+        "role": "Đệ tử vận khí",
+        "group": "ambient",
+        "wave": "A",
+        "zone": "Rìa vườn thổ nạp",
+        "marker": {
+          "u": 0.32,
+          "v": 0.535,
+          "kind": "proposed-zone"
+        },
+        "look": "Nữ đệ tử trưởng thành; áo lam nhạt, tóc buộc ngắn, bầu nước và trúc giản học dở.",
+        "personality": "Chịu khó, hay tự sửa trước khi hỏi.",
+        "task": "Tạo đối chiếu người mới cùng tu luyện; lời gợi ý ngắn khi đi ngang.",
+        "quote": "Ta cứ tưởng giữ hơi lâu là tốt. Hóa ra bước khó nhất là biết mình đang sai ở đâu.",
+        "react": "Sau M01 hỏi điều người chơi đã hiểu; lời chào không cộng tích lũy.",
+        "brief": "Chân đứng/ngồi có pivot chung; hơi khí nhỏ ở lòng bàn tay tách FX.",
+        "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+        "status": "concept-brief-pending",
+        "runtimeImplemented": false,
+        "animation": {
+          "minimum": [
+            "idle",
+            "talk"
+          ],
+          "directions": 8,
+          "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+        },
+        "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+        "ambientLoop": [
+          "đọc giản",
+          "đặt bầu nước",
+          "vận khí"
+        ],
+        "loopScope": "gesture tại chỗ; chưa tuyến đi/nav"
+      },
+      "briefInterpretation": "English costume/pose translation from authored GDD. Hair left plain where unspecified. No invented weapon or profession gear.",
+      "references": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "status": "neutral-planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-SWORD",
+      "slug": "phung-da",
+      "name": "Phùng Dã",
+      "role": "Đệ tử luyện kiếm",
+      "description": "An adult male sword-practice disciple. Compact upright spiked hair, grey-green robe, a scratched small wooden training sword and earthy red-brown wrist cloth. Competitive alert expression with an honest willingness to learn. Preserve the live Wang large chibi head and compact short torso and legs, retaining an adult face.",
+      "poseBrief": "Relaxed standing rest neutral with the scratched compact wooden sword lowered beside the body, wrists and red-brown hand cloth visible. Feet stay planted, face clear, no swing or lunge.",
+      "zone": "Rìa sân luyện đông",
+      "source": "raw/phung-da.png",
+      "raw": "raw/phung-da.png",
+      "prompt": "prompts/phung-da.txt",
+      "spec": "specs/phung-da.json",
+      "assetPlan": "plans/phung-da.json",
+      "sprite": "sprites/phung-da.png",
+      "direction": "southeast",
+      "pose": "neutral",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "authoredBrief": {
+        "id": "NPC-HN-DISCIPLE-SWORD",
+        "name": "Phùng Dã",
+        "role": "Đệ tử luyện kiếm",
+        "group": "ambient",
+        "wave": "A",
+        "zone": "Rìa sân luyện đông",
+        "marker": {
+          "u": 0.727,
+          "v": 0.355,
+          "kind": "proposed-zone"
+        },
+        "look": "Nam đệ tử trưởng thành; tóc dựng gọn, áo xanh tro, mộc kiếm xước và vải buộc tay đỏ nâu.",
+        "personality": "Hiếu thắng nhưng biết phục người làm được thật.",
+        "task": "Bạn tập và đối thoại thao tác; tỷ thí tự nguyện ở K2 sau.",
+        "quote": "Nhanh chưa chắc trúng. Nhưng cứ đứng yên thì chắc chắn không thắng.",
+        "react": "HN05 đã xác nhận thì đổi lời thách thức sang hỏi cách đọc đòn.",
+        "brief": "Đầu/thân cùng player approved; pose sửa thế kiếm, không loop tấn công che người chơi.",
+        "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+        "status": "concept-brief-pending",
+        "runtimeImplemented": false,
+        "animation": {
+          "minimum": [
+            "idle",
+            "talk"
+          ],
+          "directions": 8,
+          "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+        },
+        "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+        "ambientLoop": [
+          "chỉnh thế",
+          "nhìn mũi kiếm",
+          "nghỉ tay"
+        ],
+        "loopScope": "gesture tại chỗ; không damage/target PvP"
+      },
+      "briefInterpretation": "English costume/pose translation from authored GDD. Hair left plain where unspecified. No invented weapon or profession gear.",
+      "references": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "status": "neutral-planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    }
+  ],
+  "requests": [
+    {
+      "id": "bach-chi-southeast",
+      "slug": "bach-chi",
+      "actorId": "NPC-HN-HERBALIST",
+      "direction": "southeast",
+      "pose": "neutral",
+      "name": "vn-npc-bach-chi-wave-a-neutral-v1",
+      "source": "raw/bach-chi.png",
+      "prompt": "prompts/bach-chi.txt",
+      "promptSha256": "36b74a6c0e11f38a598a1c04b7aefe7d0f893138db0ea528ebaff414d2420e4e",
+      "spec": "specs/bach-chi.json",
+      "assetPlan": "plans/bach-chi.json",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1,
+        "onlyImageReference": "Wang Lin live southeast"
+      },
+      "status": "planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "id": "tong-thiet-southeast",
+      "slug": "tong-thiet",
+      "actorId": "NPC-HN-FORGE",
+      "direction": "southeast",
+      "pose": "neutral",
+      "name": "vn-npc-tong-thiet-wave-a-neutral-v1",
+      "source": "raw/tong-thiet.png",
+      "prompt": "prompts/tong-thiet.txt",
+      "promptSha256": "18de591627f9913cb2ea419ab1f53d89a1a53d503a8e910fd6f5cf35c74f18a9",
+      "spec": "specs/tong-thiet.json",
+      "assetPlan": "plans/tong-thiet.json",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1,
+        "onlyImageReference": "Wang Lin live southeast"
+      },
+      "status": "planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "id": "hua-hanh-southeast",
+      "slug": "hua-hanh",
+      "actorId": "NPC-HN-ROUTE-KEEPER",
+      "direction": "southeast",
+      "pose": "neutral",
+      "name": "vn-npc-hua-hanh-wave-a-neutral-v1",
+      "source": "raw/hua-hanh.png",
+      "prompt": "prompts/hua-hanh.txt",
+      "promptSha256": "a8cec59e9916f3ad8d97a81050c347710d861468f2777cf6da615d19338f09d3",
+      "spec": "specs/hua-hanh.json",
+      "assetPlan": "plans/hua-hanh.json",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1,
+        "onlyImageReference": "Wang Lin live southeast"
+      },
+      "status": "planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "id": "dinh-soc-southeast",
+      "slug": "dinh-soc",
+      "actorId": "NPC-HN-GATE-WARDEN",
+      "direction": "southeast",
+      "pose": "neutral",
+      "name": "vn-npc-dinh-soc-wave-a-neutral-v1",
+      "source": "raw/dinh-soc.png",
+      "prompt": "prompts/dinh-soc.txt",
+      "promptSha256": "69efcd2224e0c680aa49950b0216d2925d6a95c70c62e9bcc9b4061ed2b61dd0",
+      "spec": "specs/dinh-soc.json",
+      "assetPlan": "plans/dinh-soc.json",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1,
+        "onlyImageReference": "Wang Lin live southeast"
+      },
+      "status": "planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "id": "ky-an-southeast",
+      "slug": "ky-an",
+      "actorId": "NPC-HN-DISCIPLE-WATER",
+      "direction": "southeast",
+      "pose": "neutral",
+      "name": "vn-npc-ky-an-wave-a-neutral-v1",
+      "source": "raw/ky-an-r2.png",
+      "prompt": "prompts/ky-an-r2.txt",
+      "promptSha256": "b541ee3cb9590fad74479f0dc517d4d93249d6a60e7a870930b17e46a892005a",
+      "spec": "specs/ky-an-r2.json",
+      "assetPlan": "plans/ky-an-r2.json",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "raw/ky-an.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        },
+        {
+          "file": "raw/ky-an.png",
+          "sha256": "1b2ee485cf35f3cc7b53dfe2e2afb957e019a9990044be5ba5733db054529e45"
+        }
+      ],
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1,
+        "onlyImageReference": "Wang Lin live southeast"
+      },
+      "status": "short-tied-hair-neutral-correction-planned",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "sourceRevisions": [
+        {
+          "source": "raw/ky-an.png",
+          "sha256": "1b2ee485cf35f3cc7b53dfe2e2afb957e019a9990044be5ba5733db054529e45",
+          "status": "superseded-identity-hair-correction",
+          "reason": "High bun and long tied silhouette fail the authored short tied hairstyle."
+        }
+      ],
+      "revision": 2
+    },
+    {
+      "id": "phung-da-southeast",
+      "slug": "phung-da",
+      "actorId": "NPC-HN-DISCIPLE-SWORD",
+      "direction": "southeast",
+      "pose": "neutral",
+      "name": "vn-npc-phung-da-wave-a-neutral-v1",
+      "source": "raw/phung-da.png",
+      "prompt": "prompts/phung-da.txt",
+      "promptSha256": "cc1e1899760ac20d944ed524e2f8cb653a2f384a8be9e0f337a398afdd523921",
+      "spec": "specs/phung-da.json",
+      "assetPlan": "plans/phung-da.json",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1,
+        "onlyImageReference": "Wang Lin live southeast"
+      },
+      "status": "planned-not-generated",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    }
+  ],
+  "canvas": [
+    64,
+    96
+  ],
+  "pivot": [
+    32,
+    88
+  ],
+  "neutralHeight": 80,
+  "requiredNeutralSources": 6,
+  "directionsProduced": [],
+  "directionsPlanned": [
+    "southeast"
+  ],
+  "directionsPending": [
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east"
+  ],
+  "animationProduced": false,
+  "sourceStatus": "planned-not-generated",
+  "retryPolicy": "No automatic paid POST retry; V2 JSON retry authorization does not apply to this new pack.",
+  "artApproved": false,
+  "ownerApproved": false,
+  "motionApproved": false,
+  "runtimeImported": false,
+  "runtimeConsumable": false
+}

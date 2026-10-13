@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "EDIT IMAGE 1 as the pixel sprite template. Image 1 is approved Wang Lin Pixel02 enlarged exactly 8x. Keep its exact squat chibi anatomy, large skull and face size, torso width, shoulder width, short legs, head-to-body ratio, orthographic southeast camera, pixel cluster size, palette density and standing foot level. Change ONLY the character identity and costume to Tran Duy: middle-aged male sect guide, grey-streaked compact dark bun, short moustache and goatee, ivory grey robe with simple thin bronze edging, small celadon jade token and brown sect-tag pouch at waist. Image 2 supplies only these costume colors and identity details. IGNORE image 2 body proportions, pose and fine shading completely. Tran Duy must look like another actor made by the same pixel artist for exactly the same game as image 1. Same wide compact silhouette, head about half the body height, compact robe ending just above short boots, no thin long scholar body. Keep the face mature but DO NOT reduce head size to show adulthood. Hands calmly near waist. Simplify clothing into the SAME broad low-resolution pixel shapes as image1. One single neutral character, facing down-right, with transparent RGBA background. No floor or shadow, light haze, glow, FX, text or sheet. Target logical canvas64x96, body80 pixels high with about44px overall width and foot(32,88), displayed as exact integer pixel enlargement; do not smooth or add smaller detailed pixels. Preserve pixel scale from input1 rather than painting a big illustration to shrink later. This is a new NPC neutral master for review, not an animation.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "EDIT IMAGE 1 as the pixel sprite template. Image 1 is approved Wang Lin Pixel02 enlarged exactly 8x. Keep its exact squat chibi anatomy, large skull and face size, torso width, shoulder width, short legs, head-to-body ratio, orthographic southeast camera, pixel cluster size, palette density and standing foot level. Change ONLY the character identity and costume to Tran Duy: middle-aged male sect guide, grey-streaked compact dark bun, short moustache and goatee, ivory grey robe with simple thin bronze edging, small celadon jade token and brown sect-tag pouch at waist. Image 2 supplies only these costume colors and identity details. IGNORE image 2 body proportions, pose and fine shading completely. Tran Duy must look like another actor made by the same pixel artist for exactly the same game as image 1. Same wide compact silhouette, head about half the body height, compact robe ending just above short boots, no thin long scholar body. Keep the face mature but DO NOT reduce head size to show adulthood. Hands calmly near waist. Simplify clothing into the SAME broad low-resolution pixel shapes as image1. One single neutral character, facing down-right, with transparent RGBA background. No floor or shadow, light haze, glow, FX, text or sheet. Target logical canvas64x96, body80 pixels high with about44px overall width and foot(32,88), displayed as exact integer pixel enlargement; do not smooth or add smaller detailed pixels. Preserve pixel scale from input1 rather than painting a big illustration to shrink later. This is a new NPC neutral master for review, not an animation.\n",
+    "n": 1,
+    "size": "1024x1536",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-13T04:41:31.567Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-concepts-v2\\inputs\\pixel02-southeast-nearest8x.png",
+      "filename": "pixel02-southeast-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9320,
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-concepts-v1\\raw\\tran-duy.png",
+      "filename": "tran-duy.png",
+      "mimeType": "image/png",
+      "bytes": 1309878,
+      "sha256": "b443d504f68456dc55da78de8bba036f99f8bd2bffda065fc49868a33d17cb0c",
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "tran-duy.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1090602,
+    "sha256": "e726bccdea5a6cea0bd88ba22ffcd97bff6f14d0799653326f22e9ea1efdba02",
+    "dimensions": {
+      "width": 1024,
+      "height": 1536
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

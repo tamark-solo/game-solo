@@ -40,6 +40,8 @@ Generate/edit options:\n  --prompt TEXT       Exact prompt text; choose this OR 
                      The file extension follows the returned image signature.
   --size SIZE        Default 1024x1024; dimensions such as 1536x1024, or auto.
   --quality QUALITY  low (default), medium, high, or auto.
+  --background MODE  Optional: transparent, opaque, or auto. Omitted by default.
+                     Not supported in edit-responses minimal mode.
   --n COUNT          Number of images, 1 (default) through 10.
   --timeout SECONDS  Whole request/download deadline; default 300.
   --force            Permit replacement of existing output/metadata files.
@@ -69,7 +71,7 @@ export function parseArgs(argv = []) {
   if (tokens[0] && !tokens[0].startsWith('-')) args.command = tokens.shift();
   else if (tokens.length && !tokens.includes('--help') && !tokens.includes('-h')) args.command = 'generate';
   if (!['help', 'check', 'generate', 'edit', 'edit-responses', 'configure'].includes(args.command)) throw new Error('Unknown command. Use --help.');
-  const values = new Map([['--prompt', 'prompt'], ['--prompt-file', 'promptFile'], ['--out', 'out'], ['--size', 'size'], ['--quality', 'quality'], ['--n', 'n'], ['--timeout', 'timeout'], ['--base-url', 'baseUrl'], ['--response-model', 'responseModel'], ['--responses-tool-mode', 'responsesToolMode']]);
+  const values = new Map([['--prompt', 'prompt'], ['--prompt-file', 'promptFile'], ['--out', 'out'], ['--size', 'size'], ['--quality', 'quality'], ['--background', 'background'], ['--n', 'n'], ['--timeout', 'timeout'], ['--base-url', 'baseUrl'], ['--response-model', 'responseModel'], ['--responses-tool-mode', 'responsesToolMode']]);
   const flags = new Map([['--dry-run', 'dryRun'], ['--force', 'force'], ['--api-key-stdin', 'apiKeyStdin'], ['--help', 'help'], ['-h', 'help']]);
   const seen = new Set();
   for (let index = 0; index < tokens.length; index++) {
@@ -94,9 +96,9 @@ export function parseArgs(argv = []) {
   if (args.help || args.command === 'help') return { command: 'help' };
   const allowed = {
     check: new Set(['command', 'timeout']),
-    generate: new Set(['command', 'prompt', 'promptFile', 'out', 'size', 'quality', 'n', 'timeout', 'dryRun', 'force']),
-    edit: new Set(['command', 'prompt', 'promptFile', 'images', 'out', 'size', 'quality', 'n', 'timeout', 'dryRun', 'force']),
-    'edit-responses': new Set(['command', 'prompt', 'promptFile', 'images', 'responseModel', 'responsesToolMode', 'out', 'size', 'quality', 'n', 'timeout', 'dryRun', 'force']),
+    generate: new Set(['command', 'prompt', 'promptFile', 'out', 'size', 'quality', 'background', 'n', 'timeout', 'dryRun', 'force']),
+    edit: new Set(['command', 'prompt', 'promptFile', 'images', 'out', 'size', 'quality', 'background', 'n', 'timeout', 'dryRun', 'force']),
+    'edit-responses': new Set(['command', 'prompt', 'promptFile', 'images', 'responseModel', 'responsesToolMode', 'out', 'size', 'quality', 'background', 'n', 'timeout', 'dryRun', 'force']),
     configure: new Set(['command', 'baseUrl', 'apiKeyStdin']),
   }[args.command];
   if (Object.keys(args).some((key) => !allowed.has(key))) throw new Error('An option is not supported by this command. Use --help.');
@@ -104,6 +106,8 @@ export function parseArgs(argv = []) {
   if (['edit', 'edit-responses'].includes(args.command) && (!args.images?.length || args.images.length > MAX_INPUT_IMAGES)) throw new Error(`edit requires 1 through ${MAX_INPUT_IMAGES} --image inputs.`);
   if (args.command === 'edit-responses') args.responseModel = validateResponseModel(args.responseModel);
   if (args.responsesToolMode !== undefined) args.responsesToolMode = validateResponsesToolMode(args.responsesToolMode);
+  if (args.background !== undefined) args.background = validateBackground(args.background);
+  if (args.responsesToolMode === 'minimal' && args.background !== undefined) throw new Error('--background is not supported in edit-responses minimal mode.');
   if (args.timeout !== undefined) {
     const seconds = Number(args.timeout);
     if (!Number.isFinite(seconds) || seconds <= 0 || seconds > 86_400) throw new Error('--timeout must be a positive number of seconds, at most 86400.');
@@ -232,6 +236,11 @@ function validateResponseModel(value) {
 
 function validateResponsesToolMode(value) {
   if (!['full', 'minimal'].includes(value)) throw new Error('--responses-tool-mode must be full or minimal.');
+  return value;
+}
+
+function validateBackground(value) {
+  if (!['transparent', 'opaque', 'auto'].includes(value)) throw new Error('background must be transparent, opaque, or auto.');
   return value;
 }
 
@@ -521,14 +530,17 @@ function responseImageItems(body, secrets) {
   return imageCalls.map((item) => ({ b64_json: item.result, source: 'image_generation_call.result', callCompletion: { responseStatus: 'completed', imageCallStatus: item.status ?? null, verifiedBy: item.status === 'completed' ? 'response-and-image-call' : 'completed-response-and-valid-result' }, callId: typeof item.id === 'string' ? sanitizeError(item.id, secrets).slice(0, 256) : undefined }));
 }
 
-async function runImageRequest({ config, prompt, out, size = '1024x1024', quality = 'low', n = 1, timeoutMs = DEFAULT_TIMEOUT_MS, force = false, dryRun = false, fetchImpl = globalThis.fetch, now = Date.now, operation, inputs = [], responseModel, responsesToolMode } = {}) {
+async function runImageRequest({ config, prompt, out, size = '1024x1024', quality = 'low', background, n = 1, timeoutMs = DEFAULT_TIMEOUT_MS, force = false, dryRun = false, fetchImpl = globalThis.fetch, now = Date.now, operation, inputs = [], responseModel, responsesToolMode } = {}) {
   n = validateParameters({ prompt, size, quality, n, timeoutMs });
+  if (background !== undefined) background = validateBackground(background);
   if (!config) throw new Error('Router configuration is required.');
   const baseUrl = validateBaseUrl(config.baseUrl);
   const model = config.model || DEFAULT_MODEL;
   if (typeof model !== 'string' || !model.trim()) throw new Error('The configured model is invalid.');
   const responses = operation === 'edit-responses';
   const minimalResponses = responses && responsesToolMode === 'minimal';
+  if (minimalResponses && background !== undefined) throw new Error('--background is not supported in edit-responses minimal mode.');
+  const backgroundOption = background === undefined ? {} : { background };
   const isEdit = operation === 'edit' || responses;
   if (responses && model !== DEFAULT_MODEL) throw new Error('edit-responses requires the configured image model to remain gpt-image-2; no model change was performed.');
   if (responses && n !== 1) throw new Error('edit-responses supports exactly one requested image; n must be 1.');
@@ -539,11 +551,11 @@ async function runImageRequest({ config, prompt, out, size = '1024x1024', qualit
       { type: 'input_text', text: prompt },
       ...inputs.map((input) => ({ type: 'input_image', image_url: `data:${input.metadata.mimeType};base64,[IMAGE DATA OMITTED]` })),
     ] }],
-    tools: [{ type: 'image_generation', model, ...(minimalResponses ? {} : { action: 'edit', size, quality, output_format: 'png' }) }],
+    tools: [{ type: 'image_generation', model, ...(minimalResponses ? {} : { action: 'edit', size, quality, output_format: 'png', ...backgroundOption }) }],
     tool_choice: { type: 'image_generation' },
     stream: false,
-  } : { model, prompt, n, size, quality, output_format: 'png' };
-  const editDescription = isEdit ? { operation, encoding: responses ? 'application/json' : 'multipart/form-data', ...(responses ? { responseModel, imageModel: model, responsesToolMode, imageOptions: { intended: { size, quality, output_format: 'png', action: 'edit' }, transmitted: minimalResponses ? {} : { size, quality, output_format: 'png', action: 'edit' }, omitted: minimalResponses ? ['size', 'quality', 'output_format', 'action'] : [] }, inputDataOmitted: true } : { imageField: 'image[]' }), inputImages: inputs.map((input) => input.metadata), registrationVerified: false } : {};
+  } : { model, prompt, n, size, quality, output_format: 'png', ...backgroundOption };
+  const editDescription = isEdit ? { operation, encoding: responses ? 'application/json' : 'multipart/form-data', ...(responses ? { responseModel, imageModel: model, responsesToolMode, imageOptions: { intended: { size, quality, output_format: 'png', action: 'edit', ...backgroundOption }, transmitted: minimalResponses ? {} : { size, quality, output_format: 'png', action: 'edit', ...backgroundOption }, omitted: minimalResponses ? ['size', 'quality', 'output_format', 'action'] : [] }, inputDataOmitted: true } : { imageField: 'image[]' }), inputImages: inputs.map((input) => input.metadata), registrationVerified: false } : {};
   const plan = outputPlan(out, n, now);
   if (isEdit) await assertInputDestinations(inputs, plan);
   await assertDestinations(plan, force);

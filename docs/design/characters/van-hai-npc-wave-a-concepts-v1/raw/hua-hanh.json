@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: style-transfer. Produce ONE static neutral southeast human NPC sprite for Van Hai Dao Do.\nIMAGE 1 is the actual live Wang Lin Pixel02 southeast idle frame enlarged exactly 8x with nearest sampling. It is the ONLY image reference and PRIMARY source for human anatomy, large chibi head proportions, camera, coarse pixel clusters, material shading and game scale. Create the distinct NPC below by changing identity, age, gender, hair, clothing and authored compact profession props. Do not copy Wang's clothes or hairstyle as NPC identity. Do not use any other NPC as a style basis.\nAuthored actor: Hứa Hành / Người giữ tuyến.\nSubject identity and costume: An adult male route keeper, practical and quietly tired. Short dusty-grey cloak patched asymmetrically on one side. Compact map tube, old sealing cord and muddy boots, with a small route-paper detail. Plain compact hair with no added decorative gear; the authored brief does not specify hair. His silhouette reads as a weary field route keeper, not an armored guard.\nNeutral pose: Relaxed planted standing neutral with the short cloak hanging clearly and map tube close to the hip. A compact folded route paper rests low near one hand, held below the chest, keeping face and boots clear.\nAuthored look in Vietnamese: Nam trưởng thành; áo choàng ngắn xám bụi, ống bản đồ, dây niêm cũ, giày bám bùn.\nAuthored art brief in Vietnamese: Không cầm vũ khí lớn; giấy tuyến và dấu bùn phân biệt với lính gác. Áo choàng bị vá lệch một bên.\nAuthored personality: Thực tế; giấu sự mệt mỏi hơn là giấu động cơ.\nArt contract: orthographic top-down game camera, real front-right three-quarter SOUTHEAST facing screen down-right, matching IMAGE 1 exactly. The entire head, body, all props and both boots are visible with generous transparent padding. Head and main hair occupy approximately half the full standing height, with short compact torso and legs. A standing height of80 alone does not prove anatomy: preserve IMAGE 1 skull, face-to-body, shoulders and torso proportions while retaining this NPC identity.\nTarget logical human sprite canvas64x96, world foot(32,88), nominal standing body80 world pixels. Render a large integer enlargement of those broad readable low-resolution pixel shapes, NOT detailed illustration. Clothing and props use few broad three-tone material clusters, no fine painterly texture, no subpixel anti-aliased smoothing or intricate embroidery. This is one human static neutral master, not a sheet, portrait or multiple views.\nTransparent RGBA output. No floor, cast shadow, scene, ground plate, grid, text, logo, frame, halo, haze, glow, bloom, particles or FX. Keep body and hand props readable at native1x. No large weapon, armor, staff, backpack, extra hanging gear or invented badge. The asymmetrical patch and small mud marks carry the work history.\nThis source is a concept candidate awaiting owner visual review; it does not authorize animation, gameplay or runtime integration.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: style-transfer. Produce ONE static neutral southeast human NPC sprite for Van Hai Dao Do.\nIMAGE 1 is the actual live Wang Lin Pixel02 southeast idle frame enlarged exactly 8x with nearest sampling. It is the ONLY image reference and PRIMARY source for human anatomy, large chibi head proportions, camera, coarse pixel clusters, material shading and game scale. Create the distinct NPC below by changing identity, age, gender, hair, clothing and authored compact profession props. Do not copy Wang's clothes or hairstyle as NPC identity. Do not use any other NPC as a style basis.\nAuthored actor: Hứa Hành / Người giữ tuyến.\nSubject identity and costume: An adult male route keeper, practical and quietly tired. Short dusty-grey cloak patched asymmetrically on one side. Compact map tube, old sealing cord and muddy boots, with a small route-paper detail. Plain compact hair with no added decorative gear; the authored brief does not specify hair. His silhouette reads as a weary field route keeper, not an armored guard.\nNeutral pose: Relaxed planted standing neutral with the short cloak hanging clearly and map tube close to the hip. A compact folded route paper rests low near one hand, held below the chest, keeping face and boots clear.\nAuthored look in Vietnamese: Nam trưởng thành; áo choàng ngắn xám bụi, ống bản đồ, dây niêm cũ, giày bám bùn.\nAuthored art brief in Vietnamese: Không cầm vũ khí lớn; giấy tuyến và dấu bùn phân biệt với lính gác. Áo choàng bị vá lệch một bên.\nAuthored personality: Thực tế; giấu sự mệt mỏi hơn là giấu động cơ.\nArt contract: orthographic top-down game camera, real front-right three-quarter SOUTHEAST facing screen down-right, matching IMAGE 1 exactly. The entire head, body, all props and both boots are visible with generous transparent padding. Head and main hair occupy approximately half the full standing height, with short compact torso and legs. A standing height of80 alone does not prove anatomy: preserve IMAGE 1 skull, face-to-body, shoulders and torso proportions while retaining this NPC identity.\nTarget logical human sprite canvas64x96, world foot(32,88), nominal standing body80 world pixels. Render a large integer enlargement of those broad readable low-resolution pixel shapes, NOT detailed illustration. Clothing and props use few broad three-tone material clusters, no fine painterly texture, no subpixel anti-aliased smoothing or intricate embroidery. This is one human static neutral master, not a sheet, portrait or multiple views.\nTransparent RGBA output. No floor, cast shadow, scene, ground plate, grid, text, logo, frame, halo, haze, glow, bloom, particles or FX. Keep body and hand props readable at native1x. No large weapon, armor, staff, backpack, extra hanging gear or invented badge. The asymmetrical patch and small mud marks carry the work history.\nThis source is a concept candidate awaiting owner visual review; it does not authorize animation, gameplay or runtime integration.\n",
+    "n": 1,
+    "size": "1024x1536",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-13T09:14:06.638Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-concepts-v1\\inputs\\wang-lin-live-southeast-nearest8x.png",
+      "filename": "wang-lin-live-southeast-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9320,
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "hua-hanh.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1062013,
+    "sha256": "cf2e359ec96aedcd696032ab16f6d4edf7f3021150068ad77cc1b16359abb6a8",
+    "dimensions": {
+      "width": 1024,
+      "height": 1536
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

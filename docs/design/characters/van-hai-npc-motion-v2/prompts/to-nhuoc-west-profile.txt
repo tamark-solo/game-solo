@@ -1,0 +1,15 @@
+Create18real pixel-sprite poses6columns3rows, transparent RGBA. PRIMARY IMAGE1 is liveWangLin WEST camera/anatomy/pixel reference. Fixed actual LEFT SIDE PROFILE in EVERY pose. IMAGE2 supplies ONLY this SAME NPC identity/costume and its compact body; do not copy an opposite direction or southeastcamera. Draw true requestedside, no bitmapmirroring.
+
+Identity: Adult woman supplies clerk. Dark compact bun, muted jade robe, ivory cloth apron, earthy-red tied ledger, small sealed wooden case and a small brush. No beard, no child face.
+
+CRITICAL PROFILE: rotate head sideward90degrees toward screenLEFT. ExactlyONE near eye/eyebrow when open, onlyONE closedeye whenblink. AbsolutelyNO far-eye/far eyebrow/tiny farside blackdot/whitecatchlight. Nose forms outermost side silhouette pointedLEFT, cheek/nose side-plane, head side-facing, no broad frontal mask. Never draw two eyes or return a front3/4face. Keep torso/robes consistent with same-side cameraImage1. Hair/bun skull retains approvedNPCphysical size. This fixes previouslyobserved far-eye/front3/4leak.
+
+All18figures same physical size/skull/torso/legdimensions. Hairtop-to-bootbottom about240sourcepixels acrossallrows. Generous clear gutters above/below everyrow; do notstretch/shrinkrow3 tofillspace. Fullhands/boots/heldprops visible, plantedfeet, no world translation. Coarse pixelclusters and3tone materialpalette matchingimage1; no painterlysmoothedillustration.
+
+Row1IDLE6: neutral calibration -> gentleinhale -> subtle shoulder/sleevebreath -> exhale -> one-eyeblink -> EXACTneutral. No head/bodyresizing.
+
+Row2TALK6: neutral -> forearm lifts with slightmouthchange ifvisible -> calmopenpalm -> hold+mouthchange -> retract -> EXACTneutral. Face remains strictLEFTPROFILE. Prop remains in its own fixedanatomicalhand or waist; no disappearance/hand-switch.
+
+Row3PROFESSION6: Inspecting a sealed case: neutral, brings small case to waist, tilts case to inspect seal, taps or traces seal once with small brush, lowers case, exact neutral. Keep case small and same shape in every frame. All6poses maintain strictLEFTprofile. Forearms may move, skull/legs/boots retain identicalsize, neutral1and6 matchrow1neutral. Occlude hands/props withtorso wherecamera demands; never paintbody-back hand as front gesture.
+
+Humanbase64x96 standing80worldpixels foot32,88. Clip96x96 foot48,88 ispaddingonly. No text/grid/floor/shadow/glow/FX. Outputsquare1536x1536 requested; actualdimensionsmaydiffer but keep18poses6x3. These newdirections remaincandidates, do not claimapprovedART.

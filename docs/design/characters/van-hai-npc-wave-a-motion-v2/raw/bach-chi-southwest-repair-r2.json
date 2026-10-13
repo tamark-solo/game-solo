@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang SOUTHWEST remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nUse WIDE1536x1024 sheet6columns3rows withALL18 existing genuine motionposes at one common original body/head scale, translated into roomy layout. The original last-column poses have body/prop silhouette hitting right PNGboundary. Restore COMPLETE unclipped original hair/robe/jadepestle/basket shapes using corresponding intact neighboring poses as detail support. All18 fullfigures/tools need at least24 real alpha0 gutter pixels between poses and32 at ALL outer margins. Do not shrink individual actor/pose, shorten/crop tools or deform anatomy. Preserve true FRONT-LEFT Southwest camera, own accepted working bun/green tie/tea-leaf ivory herbalist, physical RIGHT FAR hand basket/screen-LEFT and physical LEFT NEAR hand jadepestle/screen-RIGHT through ALL18frames. Keep controlled breathing/talk/basket-pestle inspection progression, correct two hands/onebasket/onepestle; no third item, side swap, frontal rotation, repeated static neutral or shadow.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang SOUTHWEST remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nUse WIDE1536x1024 sheet6columns3rows withALL18 existing genuine motionposes at one common original body/head scale, translated into roomy layout. The original last-column poses have body/prop silhouette hitting right PNGboundary. Restore COMPLETE unclipped original hair/robe/jadepestle/basket shapes using corresponding intact neighboring poses as detail support. All18 fullfigures/tools need at least24 real alpha0 gutter pixels between poses and32 at ALL outer margins. Do not shrink individual actor/pose, shorten/crop tools or deform anatomy. Preserve true FRONT-LEFT Southwest camera, own accepted working bun/green tie/tea-leaf ivory herbalist, physical RIGHT FAR hand basket/screen-LEFT and physical LEFT NEAR hand jadepestle/screen-RIGHT through ALL18frames. Keep controlled breathing/talk/basket-pestle inspection progression, correct two hands/onebasket/onepestle; no third item, side swap, frontal rotation, repeated static neutral or shadow.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-13T12:47:50.258Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\inputs\\wang-lin-live-southwest-nearest8x.png",
+      "filename": "wang-lin-live-southwest-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9702,
+      "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\raw\\bach-chi-southwest-direction-neutral.png",
+      "filename": "bach-chi-southwest-direction-neutral.png",
+      "mimeType": "image/png",
+      "bytes": 2172310,
+      "sha256": "f091046a54c5790371c29ff104bfbc7f24e7407d9fc708ac544ae54ea49eb7c4",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\direction-neutral\\nearest8x\\bach-chi-southwest.png",
+      "filename": "bach-chi-southwest.png",
+      "mimeType": "image/png",
+      "bytes": 16465,
+      "sha256": "23e6c3a7b2def30ca5465ef92aa99d07282c5b74afe92462bb6b76e38103e955",
+      "dimensions": {
+        "width": 768,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "bach-chi-southwest-repair-r2.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 2646292,
+    "sha256": "b15360c3c783902cf6e23c7adf5aac50256c05cd7f20454f53c4a207e591cdb5",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

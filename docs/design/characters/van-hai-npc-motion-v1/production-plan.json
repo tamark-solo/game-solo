@@ -1,0 +1,166 @@
+{
+  "schema": "van-hai-npc-motion-plan-1",
+  "date": "2026-10-13",
+  "sourcePlan": "docs/design/world/van-hai-living-world-v1/plan.json",
+  "sourcePlanSha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576",
+  "primaryStandard": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+  "primaryStandardSha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec",
+  "generator": "project-router-gpt-image-2-edit",
+  "skill": "docs/skills/game-actor-animation-production/SKILL.md",
+  "status": "southeast-motion-pilot",
+  "actions": [
+    "idle",
+    "talk",
+    "profession"
+  ],
+  "framesPerClip": 6,
+  "authoredMinimum": [
+    "idle",
+    "talk"
+  ],
+  "authoredDirections": 8,
+  "producedDirections": [
+    "southeast"
+  ],
+  "pendingDirections": [
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east"
+  ],
+  "timings": {
+    "idle": {
+      "durationMs": 1200,
+      "loop": true
+    },
+    "talk": {
+      "durationMs": 1200,
+      "loop": true
+    },
+    "profession": {
+      "durationMs": 1500,
+      "loop": false
+    }
+  },
+  "canvas": [
+    96,
+    96
+  ],
+  "pivot": [
+    48,
+    88
+  ],
+  "neutralBodyHeightPx": 80,
+  "artApproved": false,
+  "ownerApproved": false,
+  "runtimeImplemented": false,
+  "actors": [
+    {
+      "id": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "name": "Trần Duy",
+      "identity": "van-hai-npc-concepts-v3",
+      "description": "Middle-aged male sect guide. Compact dark bun with grey streak, short moustache and goatee, ivory-grey robe, thin bronze trim, celadon waist token and sect-tag pouch.",
+      "gesture": "A calm direction-giving open palm: neutral, lifts right forearm, opens hand towards down-right, holds, retracts, exact neutral. No pointing a weapon.",
+      "direction": "southeast",
+      "source": "raw/tran-duy-southeast.png",
+      "prompt": "prompts/tran-duy-southeast.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/tran-duy-identity-nearest8x.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "85d65818ddf8a9da8304d432176cece83aeb7389229cf51dffc24b6bfd2e9fee",
+        "identityNative": "74b1a3c56cb33d668287b9dc1a9e4969d5619e0d452a026e17dc1feb406ec103"
+      }
+    },
+    {
+      "id": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "name": "Diệp Tĩnh",
+      "identity": "van-hai-npc-concepts-v4",
+      "description": "Elderly woman cultivation teacher with softly aged face and grey-salt compact bun. Ivory and smoky jade robe, small jade string and closed bamboo scroll. No beard, no young heroine face.",
+      "gesture": "A calm breath-teaching gesture: neutral, draws palms near abdomen, gently separates palms, holds inward palms, closes hands, exact neutral. Jade string remains attached. No visible qi or FX in body sheet.",
+      "direction": "southeast",
+      "source": "raw/diep-tinh-southeast-r3.png",
+      "prompt": "prompts/diep-tinh-southeast-r3.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/diep-tinh-identity-nearest8x.png",
+        "raw/diep-tinh-southeast-r2.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "236aecb4835e20c705d7add566de5d170a33f3c744d285ffe70a66f3f055c794",
+        "identityNative": "649f173937f159d16826ec7dee8f8c58e9392b7573e369b25826dfc9d965ab30"
+      },
+      "sourceRevisions": [
+        {
+          "source": "raw/diep-tinh-southeast.png",
+          "status": "superseded-pilot",
+          "reason": "Profession row about6 native pixels shorter than idle; preserved for provenance."
+        },
+        {
+          "source": "raw/diep-tinh-southeast-r2.png",
+          "status": "superseded-pilot",
+          "reason": "Profession row about4 native pixels shorter than idle; preserved for provenance."
+        },
+        {
+          "source": "raw/diep-tinh-southeast-r3.png",
+          "status": "selected-motion-pilot",
+          "reason": "Idle/talk dimensions closer; profession row still about3 native pixels shorter, requires owner visual review."
+        }
+      ]
+    },
+    {
+      "id": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "name": "Tạ Kiếm Sơn",
+      "identity": "van-hai-npc-concepts-v4",
+      "description": "Mature male training instructor about forty, compact dark bun, small eyebrow scar, navy robe and wrapped wrists. Holds a short worn wooden sword pointing down; never heavy armor or huge sword.",
+      "gesture": "A measured wooden-sword wrist demonstration: neutral sword tip down, raises forearm slowly, angles the wooden sword across waist, holds controlled guard, lowers wrist, exact neutral. Feet remain planted; no attack, slash, FX or lunge.",
+      "direction": "southeast",
+      "source": "raw/ta-kiem-son-southeast.png",
+      "prompt": "prompts/ta-kiem-son-southeast.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/ta-kiem-son-identity-nearest8x.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "25250e3e114269fb2f3ee69bd43553a5a58bd0e5e3d96ede39fdc6a0ec9f92ed",
+        "identityNative": "0f14111ec3a401ba437bbb125a0537e46e226acf7a2786e49aa3694a09c89249"
+      }
+    },
+    {
+      "id": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "name": "Tô Nhược",
+      "identity": "van-hai-npc-concepts-v4",
+      "description": "Adult woman supplies clerk. Dark compact bun, muted jade robe, ivory cloth apron, earthy-red tied ledger, small sealed wooden case and a small brush. No beard, no child face.",
+      "gesture": "Inspecting a sealed case: neutral, brings small case to waist, tilts case to inspect seal, taps or traces seal once with small brush, lowers case, exact neutral. Keep case small and same shape in every frame.",
+      "direction": "southeast",
+      "source": "raw/to-nhuoc-southeast.png",
+      "prompt": "prompts/to-nhuoc-southeast.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/to-nhuoc-identity-nearest8x.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "fb4f19ebeb6736c8abf81d6c3da6db44384f03a95b41ce3e361f62dbe704f422",
+        "identityNative": "73cd99ad68a11b6919be27b58ec38b5fed408ab52d57e3db377cf59471176e1c"
+      }
+    }
+  ],
+  "visualLimitations": {
+    "tran-duy": "Pixel anatomy and face can vary slightly across generated frames; review loop and transitions at native1x.",
+    "diep-tinh": "Profession body about3 native pixels shorter than idle. Older identity remains softened; no per-pose resize has been used to hide variation.",
+    "ta-kiem-son": "Profession row about1-2 native pixels shorter; wooden sword briefly changes hand/occlusion in talk. Prop continuity needs visual review.",
+    "to-nhuoc": "Profession row about1-2 native pixels shorter; brush is small at native scale and the sealed case changes silhouette slightly."
+  }
+}

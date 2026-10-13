@@ -1,0 +1,186 @@
+{
+  "schema": "van-hai-npc-concepts-4",
+  "id": "VH-NPC-CONCEPTS-04",
+  "date": "2026-10-13",
+  "sourcePlan": "docs/design/world/van-hai-living-world-v1/plan.json",
+  "sourcePlanSha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576",
+  "directionsProduced": [
+    "southeast"
+  ],
+  "directionsPending": [
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east"
+  ],
+  "generator": "project-router-gpt-image-2-edit",
+  "skill": "docs/skills/game-actor-animation-production/SKILL.md",
+  "status": "neutral-concepts-candidate",
+  "runtimeConsumable": false,
+  "artApproved": false,
+  "ownerApproved": false,
+  "morphologyStyleBasis": {
+    "file": "../van-hai-npc-concepts-v3/style-approval.json",
+    "sha256": "4091fa2a3ae499a0db12bc3690e4f45dd0e5a970557a897ac731316730d5df78",
+    "scope": "neutral southeast ratio and concept style"
+  },
+  "actors": [
+    {
+      "id": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "name": "Diệp Tĩnh",
+      "role": "Giảng sư vận khí",
+      "zone": "Vườn thổ nạp",
+      "raw": "raw/diep-tinh.png",
+      "prompt": "prompts/diep-tinh.txt",
+      "sprite": "sprites/diep-tinh.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "referenceMode": "Tran Duy v3 edit template first, live Pixel02 second, old costume identity third",
+      "references": [
+        "inputs/tran-duy-v3-nearest8x.png",
+        "inputs/pixel02-southeast-nearest8x.png",
+        "inputs/diep-tinh-identity-v1.png"
+      ],
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "c19b3bfa8b6900cd2b7557094e6aad17894b189bb22c8d2bc1ce6615d2b27f42",
+      "spriteSha256": "649f173937f159d16826ec7dee8f8c58e9392b7573e369b25826dfc9d965ab30",
+      "promptSha256": "6c8650e97d73faa88438c31ea0e49c89e86e43187be819d44002524f2fc7d443",
+      "nativeRegistration": "registration.json",
+      "sourcePivot": [
+        424,
+        1482
+      ],
+      "sharedNeutralScale": 0.06010518407212622,
+      "pixelsResampled": true,
+      "anatomyStatus": "closer-to-style-basis-identity-and-proportions-review-pending",
+      "visualLimitations": "Tỷ lệ và nét pixel gần mốc hơn bản v1; đầu vẫn nhỏ hơn Trần Duy v3. Tóc bạc rõ nhưng khuôn mặt vẫn cần thể hiện tuổi già tốt hơn."
+    },
+    {
+      "id": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "name": "Tạ Kiếm Sơn",
+      "role": "Giáo tập luyện thuật",
+      "zone": "Sân luyện thuật",
+      "raw": "raw/ta-kiem-son.png",
+      "prompt": "prompts/ta-kiem-son.txt",
+      "sprite": "sprites/ta-kiem-son.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "referenceMode": "Tran Duy v3 edit template first, live Pixel02 second, old costume identity third",
+      "references": [
+        "inputs/tran-duy-v3-nearest8x.png",
+        "inputs/pixel02-southeast-nearest8x.png",
+        "inputs/ta-kiem-son-identity-v1.png"
+      ],
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "8e58532ecb15fe9ca023840c66d126ff2451843b8d81485fc01f0de14e4d4215",
+      "spriteSha256": "0f14111ec3a401ba437bbb125a0537e46e226acf7a2786e49aa3694a09c89249",
+      "promptSha256": "5a394a5ab75dec501800e0710e19d323c88114568118e6d641bbd04f7dba29e5",
+      "nativeRegistration": "registration.json",
+      "sourcePivot": [
+        426,
+        1444
+      ],
+      "sharedNeutralScale": 0.06462035541195477,
+      "pixelsResampled": true,
+      "anatomyStatus": "closer-to-style-basis-identity-and-proportions-review-pending",
+      "visualLimitations": "Áo xanh than, cổ tay quấn và mộc kiếm đọc rõ. Tỷ lệ đầu vẫn nhỏ hơn Trần Duy v3; đây là concept trung gian để xem hình, chưa khóa anatomy."
+    },
+    {
+      "id": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "name": "Tô Nhược",
+      "role": "Chấp sự Tư Vật Các",
+      "zone": "Khu chuẩn bị",
+      "raw": "raw/to-nhuoc.png",
+      "prompt": "prompts/to-nhuoc.txt",
+      "sprite": "sprites/to-nhuoc.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "referenceMode": "Tran Duy v3 edit template first, live Pixel02 second, old costume identity third",
+      "references": [
+        "inputs/tran-duy-v3-nearest8x.png",
+        "inputs/pixel02-southeast-nearest8x.png",
+        "inputs/to-nhuoc-identity-v1.png"
+      ],
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "6f0a124ce5fb27ad188739fadede39f0f83075217d014379c0fb534165b25fe8",
+      "spriteSha256": "73cd99ad68a11b6919be27b58ec38b5fed408ab52d57e3db377cf59471176e1c",
+      "promptSha256": "eb1c590705b1d29f8393b856a8f806d417a179dc884481676b7f92f20e4643f7",
+      "nativeRegistration": "registration.json",
+      "sourcePivot": [
+        482,
+        1472
+      ],
+      "sharedNeutralScale": 0.06097560975609756,
+      "pixelsResampled": true,
+      "anatomyStatus": "closer-to-style-basis-identity-and-proportions-review-pending",
+      "visualLimitations": "Tóc, áo ngọc và tạp dề/sổ rõ hơn ở native. Bút và hộp niêm còn nhỏ, cần tách prop và cải thiện nhận diện ở bước tiếp; tỷ lệ đầu vẫn nhỏ hơn mốc v3."
+    }
+  ],
+  "nativePacking": {
+    "status": "static-concept-only",
+    "registration": "registration.json",
+    "sourceMeasurements": "review/source-measurements.json",
+    "alphaThreshold": 210,
+    "resampling": "nearest-once",
+    "animationClips": 0,
+    "runtimeConsumable": false,
+    "anatomyStatus": "see-individual-measured-visual-assessment"
+  }
+}

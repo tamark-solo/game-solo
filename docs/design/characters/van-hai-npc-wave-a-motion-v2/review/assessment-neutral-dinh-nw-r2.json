@@ -1,0 +1,53 @@
+{
+  "schema": "npc-direction-neutral-visual-assessment-1",
+  "date": "2026-10-13",
+  "sources": [
+    {
+      "slug": "dinh-soc",
+      "direction": "northwest",
+      "source": "direction-neutral/raw/dinh-soc-northwest-repair-r2.png",
+      "sourceSha256": "10244a131dd95599607fecd9c14753e6e795205826d48f30c38323d967d23000",
+      "orientation": {
+        "pass": true,
+        "finding": "True rear-left dominant hair/back with natural side cheek, directly compared sameviewWang."
+      },
+      "identity": {
+        "pass": true,
+        "finding": "Original compact bun/navy-gold/ivory guard and spear/tag retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "finding": "Compact human proportions reviewed raw/native; source-wide neutral scale80/1245, no resizing to fit props."
+      },
+      "props": {
+        "pass": true,
+        "finding": "Spear RIGHT far/screenright, left empty hand and LEFT near hip tag screenleft, correct behind-front occlusion."
+      },
+      "nativeReview": {
+        "pass": true,
+        "file": "review/dinh-soc-northwest-neutral-wang-pair-2x.png",
+        "sha256": "d73fd4b4b132fde12bf165f4715525def250fe1aa88200f56409b399feef883d",
+        "clippedOpaquePixels": 0
+      },
+      "root": {
+        "rootX": 477,
+        "rootY": 1395,
+        "bootPairSupportWitness": [
+          282,
+          1345,
+          672,
+          1395
+        ],
+        "basis": "Actual two boots span sourceX282..672 at solesY1345..1395; midpoint477 at bottom sole ground1395. Spear tip nearX950 is excluded from boot witness and never defines root."
+      },
+      "limitations": [
+        "Small route-tag inscription is subdued at native1x. Rear-left stylized camera retains sidecheek/front-edge cloth like liveWang; no frontal two-eye turn."
+      ],
+      "status": "review-candidate",
+      "ownerApproved": false,
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    }
+  ]
+}

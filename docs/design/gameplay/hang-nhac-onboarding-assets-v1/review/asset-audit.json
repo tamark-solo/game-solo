@@ -1,0 +1,39 @@
+{
+  "schema": "game-solo-asset-audit-1",
+  "date": "2026-10-13",
+  "scope": "Read-only technical audit of generated source provenance, exported native metadata and local review links; only this report was written.",
+  "technicalStatus": "pass",
+  "ownerApproved": false,
+  "artApproved": false,
+  "runtimeConsumable": false,
+  "initialChecks": {
+    "sourceAlphaSha256Chains": 3,
+    "nativePngDimensionsAndSha256": 6,
+    "pivotMeasurementsBoundToNativeSha256": 3,
+    "planAndGenerationPromptParameterParity": 3,
+    "generationModel": "gpt-image-2",
+    "generationCountPerRequest": 1,
+    "approvalFlagsRemainFalse": true
+  },
+  "followupChecks": {
+    "actorSourceAndReviewSha256": {
+      "source": "5f092c1290c61400355d73517c493b2453bb5f75a175f387d7c57b6e937ee039",
+      "review": "5f092c1290c61400355d73517c493b2453bb5f75a175f387d7c57b6e937ee039"
+    },
+    "actorManifestSha256Matches": true,
+    "originalBriefPreservedWithDeliveredTargets": true,
+    "nativeHashesUnchanged": true,
+    "localLinksChecked": 28,
+    "externalLinksNotFetched": [
+      "data:,",
+      "http://127.0.0.1:5184/hang-nhac-onboarding-assets-v1/"
+    ],
+    "authoredMapDiffUnchanged": true
+  },
+  "limitations": [
+    "No ART approval inferred.",
+    "No runtime, map builder, database, paid generation or gameplay test executed.",
+    "Browser visual QA is recorded separately; this audit checks static files and metadata."
+  ],
+  "issues": []
+}

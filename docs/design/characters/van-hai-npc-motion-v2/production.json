@@ -1,0 +1,3092 @@
+{
+  "schema": "npc-motion-production-2",
+  "date": "2026-10-13",
+  "ownerContinuation": "tôi đồng ý",
+  "status": "eight-direction-motion-owner-review-pending",
+  "basis": "../van-hai-npc-motion-v1/approval.json",
+  "basisSha256": "6d6d873c9051352b6f568d89ee999ac3b92cc19f8279fd2e29913a64e796fdeb",
+  "primaryStandard": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+  "primaryStandardSha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec",
+  "directions": [
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east",
+    "southeast"
+  ],
+  "actions": [
+    "idle",
+    "talk",
+    "profession"
+  ],
+  "actors": [
+    {
+      "id": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "name": "Trần Duy",
+      "description": "Middle-aged male sect guide. Compact dark bun with grey streak, short moustache and goatee, ivory-grey robe, thin bronze trim, celadon waist token and sect-tag pouch.",
+      "gesture": "A calm direction-giving open palm: neutral, lifts right forearm, opens hand towards actor facing/local direction, holds, retracts, exact neutral. No pointing a weapon."
+    },
+    {
+      "id": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "name": "Diệp Tĩnh",
+      "description": "Elderly woman cultivation teacher with softly aged face and grey-salt compact bun. Ivory and smoky jade robe, small jade string and closed bamboo scroll. No beard, no young heroine face.",
+      "gesture": "A calm breath-teaching gesture: neutral, draws palms near abdomen, gently separates palms, holds inward palms, closes hands, exact neutral. Jade string remains attached. No visible qi or FX in body sheet."
+    },
+    {
+      "id": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "name": "Tạ Kiếm Sơn",
+      "description": "Mature male training instructor about forty, compact dark bun, small eyebrow scar, navy robe and wrapped wrists. Holds a short worn wooden sword pointing down; never heavy armor or huge sword.",
+      "gesture": "A measured wooden-sword wrist demonstration: neutral sword tip down, raises forearm slowly, angles the wooden sword across waist, holds controlled guard, lowers wrist, exact neutral. Feet remain planted; no attack, slash, FX or lunge."
+    },
+    {
+      "id": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "name": "Tô Nhược",
+      "description": "Adult woman supplies clerk. Dark compact bun, muted jade robe, ivory cloth apron, earthy-red tied ledger, small sealed wooden case and a small brush. No beard, no child face.",
+      "gesture": "Inspecting a sealed case: neutral, brings small case to waist, tilts case to inspect seal, taps or traces seal once with small brush, lowers case, exact neutral. Keep case small and same shape in every frame."
+    }
+  ],
+  "requests": [
+    {
+      "id": "tran-duy-south",
+      "slug": "tran-duy",
+      "actorId": "NPC-HN-GUIDE",
+      "direction": "south",
+      "source": "raw/tran-duy-south.png",
+      "prompt": "prompts/tran-duy-south.txt",
+      "images": [
+        "inputs/wang-lin-live-south-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-south-nearest8x.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-nearest8x.png",
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-actions.png",
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "tran-duy-southwest",
+      "slug": "tran-duy",
+      "actorId": "NPC-HN-GUIDE",
+      "direction": "southwest",
+      "source": "raw/tran-duy-southwest.png",
+      "prompt": "prompts/tran-duy-southwest.txt",
+      "images": [
+        "inputs/wang-lin-live-southwest-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-southwest-nearest8x.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-nearest8x.png",
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-actions.png",
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "tran-duy-west",
+      "slug": "tran-duy",
+      "actorId": "NPC-HN-GUIDE",
+      "direction": "west",
+      "source": "raw/tran-duy-west.png",
+      "prompt": "prompts/tran-duy-west.txt",
+      "images": [
+        "inputs/wang-lin-live-west-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-west-nearest8x.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-nearest8x.png",
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-actions.png",
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "tran-duy-northwest",
+      "slug": "tran-duy",
+      "actorId": "NPC-HN-GUIDE",
+      "direction": "northwest",
+      "source": "raw/tran-duy-northwest.png",
+      "prompt": "prompts/tran-duy-northwest.txt",
+      "images": [
+        "inputs/wang-lin-live-northwest-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-northwest-nearest8x.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-nearest8x.png",
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-actions.png",
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "tran-duy-north",
+      "slug": "tran-duy",
+      "actorId": "NPC-HN-GUIDE",
+      "direction": "north",
+      "source": "raw/tran-duy-north.png",
+      "prompt": "prompts/tran-duy-north.txt",
+      "images": [
+        "inputs/wang-lin-live-north-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-north-nearest8x.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-nearest8x.png",
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-actions.png",
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "tran-duy-northeast",
+      "slug": "tran-duy",
+      "actorId": "NPC-HN-GUIDE",
+      "direction": "northeast",
+      "source": "raw/tran-duy-northeast.png",
+      "prompt": "prompts/tran-duy-northeast.txt",
+      "images": [
+        "inputs/wang-lin-live-northeast-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-nearest8x.png",
+        "inputs/tran-duy-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-northeast-nearest8x.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-nearest8x.png",
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-actions.png",
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "tran-duy-east",
+      "slug": "tran-duy",
+      "actorId": "NPC-HN-GUIDE",
+      "direction": "east",
+      "source": "raw/tran-duy-east-r3.png",
+      "prompt": "prompts/tran-duy-east-r3.txt",
+      "images": [
+        "inputs/wang-lin-live-east-nearest8x.png",
+        "raw/tran-duy-east-r2.png",
+        "inputs/tran-duy-approved-southeast-nearest8x.png",
+        "raw/tran-duy-west.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-east-nearest8x.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+        },
+        {
+          "file": "raw/tran-duy-east-r2.png",
+          "sha256": "56926e068048fa5230fb5fa2466dbb0f934b059d3673a502f19c9fc769967978"
+        },
+        {
+          "file": "inputs/tran-duy-approved-southeast-nearest8x.png",
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1"
+        },
+        {
+          "file": "raw/tran-duy-west.png",
+          "sha256": "cb3b2b2eae7b806cb130d93617c862d0031eeb0c795c29afb3d9490eea621be9"
+        }
+      ],
+      "status": "guide-east-identity-correction-planned",
+      "sourceRevisions": [
+        {
+          "source": "raw/tran-duy-east.png",
+          "sha256": "17c7904a9a276b935c3b346821f80c29a208c87c0a5c4ddf77d72501927053e3",
+          "status": "superseded-needs-source-correction",
+          "reason": "Far eye/eyebrow in actual EAST sheet; true side-profile requires only one visible eye."
+        },
+        {
+          "source": "raw/tran-duy-east-r2.png",
+          "sha256": "56926e068048fa5230fb5fa2466dbb0f934b059d3673a502f19c9fc769967978",
+          "status": "superseded-needs-source-correction",
+          "reason": "EAST view correct one-eye but copied Wang Lin long hair and charcoal clothing; restore approved Tran Duy identity."
+        }
+      ],
+      "revision": 3,
+      "assetPlan": "plans/tran-duy-east-r3.json",
+      "spec": "specs/tran-duy-east-r3.json"
+    },
+    {
+      "id": "diep-tinh-south",
+      "slug": "diep-tinh",
+      "actorId": "NPC-HN-CULTIVATION",
+      "direction": "south",
+      "source": "raw/diep-tinh-south-r2.png",
+      "prompt": "prompts/diep-tinh-south-r2.txt",
+      "images": [
+        "inputs/wang-lin-live-south-nearest8x.png",
+        "raw/diep-tinh-south.png",
+        "inputs/diep-tinh-approved-southeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-south-nearest8x.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+        },
+        {
+          "file": "raw/diep-tinh-south.png",
+          "sha256": "8a8dd926d82159ba1a99ee17d9373ad100e4c6b7a3ee9d7f6628f9284101849d"
+        },
+        {
+          "file": "inputs/diep-tinh-approved-southeast-nearest8x.png",
+          "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414"
+        }
+      ],
+      "status": "targeted-correction-planned",
+      "sourceRevisions": [
+        {
+          "source": "raw/diep-tinh-south.png",
+          "sha256": "8a8dd926d82159ba1a99ee17d9373ad100e4c6b7a3ee9d7f6628f9284101849d",
+          "status": "superseded-needs-source-correction",
+          "reason": "Row2talk frame4 wrongly makes the CLOSED BAMBOO SCROLL disappear. Preserve the same small bamboo scroll in her left/anatomical holding hand for ALL6talk poses, including frame4. Explanatory palm is the other hand. Keep scroll shape, size, hand and occlusion continuous. In row3profession only, scroll may rest/tuck naturally so hands near abdomen can demonstrate breath as approved; never spawn/disappear a prop arbitrarily."
+        }
+      ],
+      "revision": 2,
+      "assetPlan": "plans/diep-tinh-south-r2.json"
+    },
+    {
+      "id": "diep-tinh-southwest",
+      "slug": "diep-tinh",
+      "actorId": "NPC-HN-CULTIVATION",
+      "direction": "southwest",
+      "source": "raw/diep-tinh-southwest.png",
+      "prompt": "prompts/diep-tinh-southwest.txt",
+      "images": [
+        "inputs/wang-lin-live-southwest-nearest8x.png",
+        "inputs/diep-tinh-approved-southeast-nearest8x.png",
+        "inputs/diep-tinh-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-southwest-nearest8x.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+        },
+        {
+          "file": "inputs/diep-tinh-approved-southeast-nearest8x.png",
+          "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414"
+        },
+        {
+          "file": "inputs/diep-tinh-approved-southeast-actions.png",
+          "sha256": "b04d81f55c0b930aa3b58ab03b48701b6247a63cf102ca006c853b0b4ecf06ad"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "diep-tinh-west",
+      "slug": "diep-tinh",
+      "actorId": "NPC-HN-CULTIVATION",
+      "direction": "west",
+      "source": "raw/diep-tinh-west-r2.png",
+      "prompt": "prompts/diep-tinh-west-r2.txt",
+      "images": [
+        "inputs/wang-lin-live-west-nearest8x.png",
+        "raw/diep-tinh-west.png",
+        "inputs/diep-tinh-approved-southeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-west-nearest8x.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+        },
+        {
+          "file": "raw/diep-tinh-west.png",
+          "sha256": "72d14a7c97cff876faf78e755dd4114c10ceeb78cfb2988ce5bd2ea4065006c7"
+        },
+        {
+          "file": "inputs/diep-tinh-approved-southeast-nearest8x.png",
+          "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414"
+        }
+      ],
+      "status": "targeted-correction-planned",
+      "sourceRevisions": [
+        {
+          "source": "raw/diep-tinh-west.png",
+          "sha256": "72d14a7c97cff876faf78e755dd4114c10ceeb78cfb2988ce5bd2ea4065006c7",
+          "status": "superseded-needs-source-correction",
+          "reason": "The previous sheet incorrectly shows TWO EYES, a southwest FRONT3/4face. Correct ALL18poses to TRUE LEFT PROFILE matching liveWangImage1. Nose points screenLEFT. Exactly ONE visible NEAR eye and ONE eyebrow (blink closes only that eye), NO far eye/far eyebrow. Narrow side-plane cheek/nose silhouette, head clearly sideways not a broad frontal mask. Remove far-eye painted at left edge, it must not merely become a tiny eye. Chest/robe/bun rotate to correct camera. Palms gesture toward screenLEFT without rotating face."
+        }
+      ],
+      "revision": 2,
+      "assetPlan": "plans/diep-tinh-west-r2.json"
+    },
+    {
+      "id": "diep-tinh-northwest",
+      "slug": "diep-tinh",
+      "actorId": "NPC-HN-CULTIVATION",
+      "direction": "northwest",
+      "source": "raw/diep-tinh-northwest-r3.png",
+      "prompt": "prompts/diep-tinh-northwest-r3.txt",
+      "images": [
+        "inputs/wang-lin-live-northwest-nearest8x.png",
+        "raw/diep-tinh-north-r2.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-northwest-nearest8x.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+        },
+        {
+          "file": "raw/diep-tinh-north-r2.png",
+          "sha256": "912ba7e7784cd5a81b7060b4735033711ba901597e78ad5f298cafe3738f32fb"
+        }
+      ],
+      "status": "targeted-view-correction-planned",
+      "sourceRevisions": [
+        {
+          "source": "raw/diep-tinh-northwest.png",
+          "sha256": "c8054d8860e53e8329711e8735fe5a30efb7138fc6b9a0ac7c490e64a8b16d19",
+          "status": "superseded-needs-source-correction",
+          "reason": "Visible eye/front cheek in NW sheet unlike live Wang NW back-left; correct all heads to back-left."
+        },
+        {
+          "source": "raw/diep-tinh-northwest-r2.png",
+          "sha256": "0978d29bb6d4a1717bae8085c4b4db6390306790e28ce2855e9c4306f4a63e36",
+          "prompt": "prompts/diep-tinh-northwest-r2.txt",
+          "assetPlan": "plans/diep-tinh-northwest-r2.json",
+          "status": "superseded-needs-source-correction",
+          "reason": "Northwest revision still leaks front-facing eye/cheek; new true back-left camera from live Wang NW and correct own north identity."
+        }
+      ],
+      "revision": 3,
+      "assetPlan": "plans/diep-tinh-northwest-r3.json",
+      "spec": "specs/diep-tinh-northwest-r3.json",
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      }
+    },
+    {
+      "id": "diep-tinh-north",
+      "slug": "diep-tinh",
+      "actorId": "NPC-HN-CULTIVATION",
+      "direction": "north",
+      "source": "raw/diep-tinh-north-r2.png",
+      "prompt": "prompts/diep-tinh-north-r2.txt",
+      "images": [
+        "inputs/wang-lin-live-north-nearest8x.png",
+        "raw/diep-tinh-north.png",
+        "inputs/diep-tinh-approved-southeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-north-nearest8x.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+        },
+        {
+          "file": "raw/diep-tinh-north.png",
+          "sha256": "ff5b9e7ee0752cc0601a93fb7ef152a5427cc3572ae604a3c2f45ae60054151e"
+        },
+        {
+          "file": "inputs/diep-tinh-approved-southeast-nearest8x.png",
+          "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414"
+        }
+      ],
+      "status": "targeted-correction-planned",
+      "sourceRevisions": [
+        {
+          "source": "raw/diep-tinh-north.png",
+          "sha256": "ff5b9e7ee0752cc0601a93fb7ef152a5427cc3572ae604a3c2f45ae60054151e",
+          "status": "superseded-needs-source-correction",
+          "reason": "In row3profession frame2and5 the previous sheet wrongly draws visible skin hands clasped on the MIDDLE OF HER BACK. Her palms are at her FRONT ABDOMEN, therefore the torso OCCLUDES them from this fullback camera. Remove skin hands over the back robe. Show only sleeves/elbows at the silhouette sides as appropriate, arms wrapping toward front, continuous robe/back surface at center. No exposed palm, scroll or chest detail in the middle of back. Preserve all18back views, no face."
+        }
+      ],
+      "revision": 2,
+      "assetPlan": "plans/diep-tinh-north-r2.json",
+      "retryAuthorization": "review/diep-tinh-north-retry-authorization.json"
+    },
+    {
+      "id": "diep-tinh-northeast",
+      "slug": "diep-tinh",
+      "actorId": "NPC-HN-CULTIVATION",
+      "direction": "northeast",
+      "source": "raw/diep-tinh-northeast.png",
+      "prompt": "prompts/diep-tinh-northeast.txt",
+      "images": [
+        "inputs/wang-lin-live-northeast-nearest8x.png",
+        "inputs/diep-tinh-approved-southeast-nearest8x.png",
+        "inputs/diep-tinh-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-northeast-nearest8x.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+        },
+        {
+          "file": "inputs/diep-tinh-approved-southeast-nearest8x.png",
+          "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414"
+        },
+        {
+          "file": "inputs/diep-tinh-approved-southeast-actions.png",
+          "sha256": "b04d81f55c0b930aa3b58ab03b48701b6247a63cf102ca006c853b0b4ecf06ad"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "diep-tinh-east",
+      "slug": "diep-tinh",
+      "actorId": "NPC-HN-CULTIVATION",
+      "direction": "east",
+      "source": "raw/diep-tinh-east-r3.png",
+      "prompt": "prompts/diep-tinh-east-r3.txt",
+      "images": [
+        "inputs/wang-lin-live-east-nearest8x.png",
+        "raw/diep-tinh-west-r2.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-east-nearest8x.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+        },
+        {
+          "file": "raw/diep-tinh-west-r2.png",
+          "sha256": "046480c97d117e3e7122d584ad811c992b2fb6f39aeefa3d003877d14d2cff3f"
+        }
+      ],
+      "status": "profile-camera-source-planned",
+      "sourceRevisions": [
+        {
+          "source": "raw/diep-tinh-east.png",
+          "sha256": "d5078a86e9c6b015198222384007f74672f93a0509ab7975d220a1d20c263706",
+          "status": "superseded-needs-source-correction",
+          "reason": "The previous sheet incorrectly shows TWO EYES, a southeast FRONT3/4face. Correct ALL18poses to TRUE RIGHT PROFILE matching liveWangImage1. Nose points screenRIGHT. Exactly ONE visible NEAR eye and ONE eyebrow (blink closes only that eye), NO far eye/far eyebrow. Narrow side-plane cheek/nose silhouette, head clearly sideways not a broad frontal mask. Remove far-eye painted at right edge, it must not merely become a tiny eye. Chest/robe/bun rotate to correct camera. Palms gesture toward screenRIGHT without rotating face."
+        },
+        {
+          "source": "raw/diep-tinh-east-r2.png",
+          "sha256": "7156d1a755615e8649af1462b09df205fe31dafa55126a705258292d10ef29ff",
+          "status": "superseded-needs-source-correction",
+          "reason": "Far eye/eyebrow in actual EAST sheet; true side-profile requires only one visible eye."
+        }
+      ],
+      "revision": 3,
+      "assetPlan": "plans/diep-tinh-east-r3.json",
+      "spec": "specs/diep-tinh-east-r3.json"
+    },
+    {
+      "id": "ta-kiem-son-south",
+      "slug": "ta-kiem-son",
+      "actorId": "NPC-HN-TRAINING",
+      "direction": "south",
+      "source": "raw/ta-kiem-son-south.png",
+      "prompt": "prompts/ta-kiem-son-south.txt",
+      "images": [
+        "inputs/wang-lin-live-south-nearest8x.png",
+        "inputs/ta-kiem-son-approved-southeast-nearest8x.png",
+        "inputs/ta-kiem-son-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-south-nearest8x.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+        },
+        {
+          "file": "inputs/ta-kiem-son-approved-southeast-nearest8x.png",
+          "sha256": "8c2d3c2e2cc77bbb0cef790778798cfebf3964e6fba0d738f211af9d5fe7fc9f"
+        },
+        {
+          "file": "inputs/ta-kiem-son-approved-southeast-actions.png",
+          "sha256": "8d307910ae0c896dfad79c0269cd315aad19a9615c68ed14fa9e67ce7bfe1e84"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "ta-kiem-son-southwest",
+      "slug": "ta-kiem-son",
+      "actorId": "NPC-HN-TRAINING",
+      "direction": "southwest",
+      "source": "raw/ta-kiem-son-southwest-r3.png",
+      "prompt": "prompts/ta-kiem-son-southwest-r3-safe.txt",
+      "images": [
+        "raw/ta-kiem-son-southwest-r2.png",
+        "inputs/wang-lin-live-southwest-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "raw/ta-kiem-son-southwest-r2.png",
+          "sha256": "475bcf49e6974510e36b4008d576d36ca3508301d25f779f4335f83864f4d719"
+        },
+        {
+          "file": "inputs/wang-lin-live-southwest-nearest8x.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+        }
+      ],
+      "status": "source-correction-planned",
+      "sourceRevisions": [
+        {
+          "source": "raw/ta-kiem-son-southwest.png",
+          "sha256": "862baec425c530fdba58f1868920594fac369f737693c225d063622e8ced1413",
+          "status": "superseded-needs-source-correction",
+          "reason": "All18poses copy southeast/front-right instead of southwest/front-left."
+        },
+        {
+          "source": "raw/ta-kiem-son-southwest-r2.png",
+          "sha256": "475bcf49e6974510e36b4008d576d36ca3508301d25f779f4335f83864f4d719",
+          "status": "superseded-needs-source-correction",
+          "reason": "Sword vanishes during raised-hand talk; rear waist sweep causes occlusion or hand-side error. Replace talk with real head nod and profession with small flank wrist tilt."
+        }
+      ],
+      "revision": 3,
+      "spec": "specs/ta-kiem-son-southwest-r3-safe.json",
+      "assetPlan": "plans/ta-kiem-son-southwest-r3-safe.json",
+      "safeGestureRevision": true,
+      "referencePolicy": {
+        "stage": "action-correction",
+        "editTargetFirst": true,
+        "primaryStyleImageIndex": 2,
+        "editTargetFile": "raw/ta-kiem-son-southwest-r2.png",
+        "editTargetSha256": "475bcf49e6974510e36b4008d576d36ca3508301d25f779f4335f83864f4d719",
+        "neutralIntentPreserved": true
+      },
+      "gestureAdaptation": {
+        "talk": "Head nod and shoulder breath, hands down; GDD talk has no mandatory open palm.",
+        "profession": "Small outward wrist-angle demonstration at visible flank; no waist sweep through rear robe."
+      }
+    },
+    {
+      "id": "ta-kiem-son-west",
+      "slug": "ta-kiem-son",
+      "actorId": "NPC-HN-TRAINING",
+      "direction": "west",
+      "source": "raw/ta-kiem-son-west.png",
+      "prompt": "prompts/ta-kiem-son-west-profile.txt",
+      "images": [
+        "inputs/wang-lin-live-west-nearest8x.png",
+        "inputs/ta-kiem-son-approved-southeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-west-nearest8x.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+        },
+        {
+          "file": "inputs/ta-kiem-son-approved-southeast-nearest8x.png",
+          "sha256": "8c2d3c2e2cc77bbb0cef790778798cfebf3964e6fba0d738f211af9d5fe7fc9f"
+        }
+      ],
+      "status": "profile-camera-source-planned",
+      "assetPlan": "plans/ta-kiem-son-west-profile.json",
+      "spec": "specs/ta-kiem-son-west-profile.json"
+    },
+    {
+      "id": "ta-kiem-son-northwest",
+      "slug": "ta-kiem-son",
+      "actorId": "NPC-HN-TRAINING",
+      "direction": "northwest",
+      "source": "raw/ta-kiem-son-northwest-r3.png",
+      "prompt": "prompts/ta-kiem-son-northwest-r3-safe.txt",
+      "images": [
+        "raw/ta-kiem-son-northwest.png",
+        "inputs/wang-lin-live-northwest-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "raw/ta-kiem-son-northwest.png",
+          "sha256": "3e0cd226adead327d7e3b8df8ec65739079ab092ba2f1aa551e6c0d48fc3fcf9"
+        },
+        {
+          "file": "inputs/wang-lin-live-northwest-nearest8x.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+        }
+      ],
+      "status": "source-correction-planned",
+      "sourceRevisions": [
+        {
+          "source": "raw/ta-kiem-son-northwest.png",
+          "sha256": "3e0cd226adead327d7e3b8df8ec65739079ab092ba2f1aa551e6c0d48fc3fcf9",
+          "status": "superseded-needs-source-correction",
+          "reason": "Wooden sword disappears in talk2-5; free hand should explain while holding hand retains exposed sword."
+        },
+        {
+          "source": "raw/ta-kiem-son-northwest-r2.png",
+          "sha256": "802134fac659da62b34613b380f4e727b325ac60b06b22e8f8b1b2f9995e8541",
+          "status": "superseded-needs-source-correction",
+          "reason": "Sword vanishes during raised-hand talk; rear waist sweep causes occlusion or hand-side error. Replace talk with real head nod and profession with small flank wrist tilt."
+        }
+      ],
+      "revision": 3,
+      "spec": "specs/ta-kiem-son-northwest-r3-safe.json",
+      "assetPlan": "plans/ta-kiem-son-northwest-r3-safe.json",
+      "referencePolicy": {
+        "stage": "action-correction",
+        "editTargetFirst": true,
+        "primaryStyleImageIndex": 2,
+        "editTargetFile": "raw/ta-kiem-son-northwest.png",
+        "editTargetSha256": "3e0cd226adead327d7e3b8df8ec65739079ab092ba2f1aa551e6c0d48fc3fcf9",
+        "neutralIntentPreserved": true
+      },
+      "safeGestureRevision": true,
+      "gestureAdaptation": {
+        "talk": "Head nod and shoulder breath, hands down; GDD talk has no mandatory open palm.",
+        "profession": "Small outward wrist-angle demonstration at visible flank; no waist sweep through rear robe."
+      }
+    },
+    {
+      "id": "ta-kiem-son-north",
+      "slug": "ta-kiem-son",
+      "actorId": "NPC-HN-TRAINING",
+      "direction": "north",
+      "source": "raw/ta-kiem-son-north-r4.png",
+      "prompt": "prompts/ta-kiem-son-north-r4-safe.txt",
+      "images": [
+        "raw/ta-kiem-son-north-r2.png",
+        "inputs/wang-lin-live-north-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "raw/ta-kiem-son-north-r2.png",
+          "sha256": "a05308a97359c0874e0c3ff03d24764df226f0fdae8d9aa452ffb2692e84c6e7"
+        },
+        {
+          "file": "inputs/wang-lin-live-north-nearest8x.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+        }
+      ],
+      "status": "source-correction-planned",
+      "sourceRevisions": [
+        {
+          "source": "raw/ta-kiem-son-north.png",
+          "sha256": "de1a8e939e8f2b96425f90d93d16d08f16c9f0b5525a7fde85452299b5a44a6f",
+          "status": "superseded-needs-source-correction",
+          "reason": "Sword switches side in talk and front hands/hilt wrongly appear over the center of the back; preserve holding hand and rear occlusion."
+        },
+        {
+          "source": "raw/ta-kiem-son-north-r2.png",
+          "sha256": "a05308a97359c0874e0c3ff03d24764df226f0fdae8d9aa452ffb2692e84c6e7",
+          "status": "superseded-needs-source-correction",
+          "reason": "Rear occlusion fixed, but talk still raises the sword hand and hides sword; change only free-hand talk."
+        },
+        {
+          "source": "raw/ta-kiem-son-north-r3.png",
+          "sha256": "c6a5406990b66f0ce49974c3b971660b47aa1e543d97d2d2fad636871ea9b9fe",
+          "status": "superseded-needs-source-correction",
+          "reason": "Sword vanishes during raised-hand talk; rear waist sweep causes occlusion or hand-side error. Replace talk with real head nod and profession with small flank wrist tilt."
+        }
+      ],
+      "revision": 4,
+      "spec": "specs/ta-kiem-son-north-r4-safe.json",
+      "assetPlan": "plans/ta-kiem-son-north-r4-safe.json",
+      "referencePolicy": {
+        "stage": "action-correction",
+        "editTargetFirst": true,
+        "primaryStyleImageIndex": 2,
+        "editTargetFile": "raw/ta-kiem-son-north-r2.png",
+        "editTargetSha256": "a05308a97359c0874e0c3ff03d24764df226f0fdae8d9aa452ffb2692e84c6e7",
+        "neutralIntentPreserved": true
+      },
+      "safeGestureRevision": true,
+      "gestureAdaptation": {
+        "talk": "Head nod and shoulder breath, hands down; GDD talk has no mandatory open palm.",
+        "profession": "Small outward wrist-angle demonstration at visible flank; no waist sweep through rear robe."
+      }
+    },
+    {
+      "id": "ta-kiem-son-northeast",
+      "slug": "ta-kiem-son",
+      "actorId": "NPC-HN-TRAINING",
+      "direction": "northeast",
+      "source": "raw/ta-kiem-son-northeast-r3.png",
+      "prompt": "prompts/ta-kiem-son-northeast-r3-safe.txt",
+      "images": [
+        "raw/ta-kiem-son-northeast.png",
+        "inputs/wang-lin-live-northeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "raw/ta-kiem-son-northeast.png",
+          "sha256": "c0b4aee468bc4c5d3a31a85363c3073427211086e97c954125c01cec00af058c"
+        },
+        {
+          "file": "inputs/wang-lin-live-northeast-nearest8x.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+        }
+      ],
+      "status": "source-correction-planned",
+      "sourceRevisions": [
+        {
+          "source": "raw/ta-kiem-son-northeast.png",
+          "sha256": "c0b4aee468bc4c5d3a31a85363c3073427211086e97c954125c01cec00af058c",
+          "status": "superseded-needs-source-correction",
+          "reason": "Wooden sword disappears in talk2-5; free hand should explain while holding hand retains exposed sword."
+        },
+        {
+          "source": "raw/ta-kiem-son-northeast-r2.png",
+          "sha256": "75a5b6ee2a043680eccbd2cdbdbcc830f4f7304c69ddb48519c97762f9a35efb",
+          "status": "superseded-needs-source-correction",
+          "reason": "Sword vanishes during raised-hand talk; rear waist sweep causes occlusion or hand-side error. Replace talk with real head nod and profession with small flank wrist tilt."
+        }
+      ],
+      "revision": 3,
+      "spec": "specs/ta-kiem-son-northeast-r3-safe.json",
+      "assetPlan": "plans/ta-kiem-son-northeast-r3-safe.json",
+      "referencePolicy": {
+        "stage": "action-correction",
+        "editTargetFirst": true,
+        "primaryStyleImageIndex": 2,
+        "editTargetFile": "raw/ta-kiem-son-northeast.png",
+        "editTargetSha256": "c0b4aee468bc4c5d3a31a85363c3073427211086e97c954125c01cec00af058c",
+        "neutralIntentPreserved": true
+      },
+      "safeGestureRevision": true,
+      "gestureAdaptation": {
+        "talk": "Head nod and shoulder breath, hands down; GDD talk has no mandatory open palm.",
+        "profession": "Small outward wrist-angle demonstration at visible flank; no waist sweep through rear robe."
+      }
+    },
+    {
+      "id": "ta-kiem-son-east",
+      "slug": "ta-kiem-son",
+      "actorId": "NPC-HN-TRAINING",
+      "direction": "east",
+      "source": "raw/ta-kiem-son-east.png",
+      "prompt": "prompts/ta-kiem-son-east-profile.txt",
+      "images": [
+        "inputs/wang-lin-live-east-nearest8x.png",
+        "raw/ta-kiem-son-west.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-east-nearest8x.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+        },
+        {
+          "file": "raw/ta-kiem-son-west.png",
+          "sha256": "a4bdce59b417ed145b369de7c87533a1ae794641c16e94537173184a74701607"
+        }
+      ],
+      "status": "final-east-profile-planned",
+      "spec": "specs/ta-kiem-son-east-profile.json",
+      "assetPlan": "plans/ta-kiem-son-east-profile.json"
+    },
+    {
+      "id": "to-nhuoc-south",
+      "slug": "to-nhuoc",
+      "actorId": "NPC-HN-PREPARATION",
+      "direction": "south",
+      "source": "raw/to-nhuoc-south.png",
+      "prompt": "prompts/to-nhuoc-south.txt",
+      "images": [
+        "inputs/wang-lin-live-south-nearest8x.png",
+        "inputs/to-nhuoc-approved-southeast-nearest8x.png",
+        "inputs/to-nhuoc-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-south-nearest8x.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+        },
+        {
+          "file": "inputs/to-nhuoc-approved-southeast-nearest8x.png",
+          "sha256": "6dff2f382ffbbe769b007c9a18de5bdf18014b17a7cebdacec9cc069f0ed0c13"
+        },
+        {
+          "file": "inputs/to-nhuoc-approved-southeast-actions.png",
+          "sha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "to-nhuoc-southwest",
+      "slug": "to-nhuoc",
+      "actorId": "NPC-HN-PREPARATION",
+      "direction": "southwest",
+      "source": "raw/to-nhuoc-southwest-r3.png",
+      "prompt": "prompts/to-nhuoc-southwest-r3.txt",
+      "images": [
+        "inputs/wang-lin-live-southwest-nearest8x.png",
+        "inputs/to-nhuoc-south-neutral-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-southwest-nearest8x.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+        },
+        {
+          "file": "inputs/to-nhuoc-south-neutral-nearest8x.png",
+          "sha256": "24a68447b17372980ef3e69c10cedfdf7f399850cc13e1d0652b37eb744bccb6"
+        }
+      ],
+      "status": "front-left-camera-correction-planned",
+      "spec": "specs/to-nhuoc-southwest-r3.json",
+      "assetPlan": "plans/to-nhuoc-southwest-r3.json",
+      "sourceRevisions": [
+        {
+          "source": "raw/to-nhuoc-southwest.png",
+          "sha256": "ed0394a5fd92eb7e473153e4f8d37b3059440957806b820f277ca465185f0cb8",
+          "prompt": "prompts/to-nhuoc-southwest.txt",
+          "assetPlan": null,
+          "status": "superseded-needs-source-correction",
+          "reason": "Southwest source reads southeast/right-facing; regenerate all 18 poses in true front-left/down-left orientation."
+        },
+        {
+          "source": "raw/to-nhuoc-southwest-r2.png",
+          "sha256": "9ff211bc50ae08bdbfc3a2ccd01e7bc3e500dc520cb843483be6e27819d518c1",
+          "prompt": "prompts/to-nhuoc-southwest-r2.txt",
+          "assetPlan": "plans/to-nhuoc-southwest-r2.json",
+          "status": "superseded-needs-source-correction",
+          "reason": "R2 faces left but is a full one-eye WEST profile with narrow apron; regenerate true 45-degree FRONT-LEFT SOUTHWEST with both eyes and broad front apron plane."
+        }
+      ],
+      "revision": 3,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "derivedIdentityReference": {
+        "schema": "npc-own-neutral-support-reference-1",
+        "date": "2026-10-13",
+        "actorId": "NPC-HN-PREPARATION",
+        "slug": "to-nhuoc",
+        "sourceDirection": "south",
+        "source": "calibration/to-nhuoc-south.png",
+        "sourceSha256": "f5928aa99301a6f4669b5c13fd2b349f74753bcfd1f4f1c95bd0aed621ef9ae9",
+        "sourceCanvas": [
+          96,
+          96
+        ],
+        "sourcePivot": [
+          48,
+          88
+        ],
+        "file": "inputs/to-nhuoc-south-neutral-nearest8x.png",
+        "sha256": "24a68447b17372980ef3e69c10cedfdf7f399850cc13e1d0652b37eb744bccb6",
+        "canvas": [
+          768,
+          768
+        ],
+        "pivot": [
+          384,
+          704
+        ],
+        "derivation": "One nearest-neighbour 8x enlargement only; no recolour, paint, mirror, pose fitting or new identity",
+        "role": "Same-NPC neutral identity/costume support only; live Wang SOUTHWEST remains PRIMARY anatomy/style/camera",
+        "sourceArtApprovalClaimed": false,
+        "artApproved": false,
+        "ownerApproved": false,
+        "runtimeImported": false,
+        "provenanceFile": "inputs/to-nhuoc-south-neutral-nearest8x.json",
+        "provenanceSha256": "e9f937c6d01c19b7ed7a4de3ebdc3bd5b4e265f76e33d6594fc241ea2bfe2565"
+      }
+    },
+    {
+      "id": "to-nhuoc-west",
+      "slug": "to-nhuoc",
+      "actorId": "NPC-HN-PREPARATION",
+      "direction": "west",
+      "source": "raw/to-nhuoc-west.png",
+      "prompt": "prompts/to-nhuoc-west-profile.txt",
+      "images": [
+        "inputs/wang-lin-live-west-nearest8x.png",
+        "inputs/to-nhuoc-approved-southeast-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-west-nearest8x.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+        },
+        {
+          "file": "inputs/to-nhuoc-approved-southeast-nearest8x.png",
+          "sha256": "6dff2f382ffbbe769b007c9a18de5bdf18014b17a7cebdacec9cc069f0ed0c13"
+        }
+      ],
+      "status": "profile-camera-source-planned",
+      "assetPlan": "plans/to-nhuoc-west-profile.json",
+      "spec": "specs/to-nhuoc-west-profile.json"
+    },
+    {
+      "id": "to-nhuoc-northwest",
+      "slug": "to-nhuoc",
+      "actorId": "NPC-HN-PREPARATION",
+      "direction": "northwest",
+      "source": "raw/to-nhuoc-northwest.png",
+      "prompt": "prompts/to-nhuoc-northwest.txt",
+      "images": [
+        "inputs/wang-lin-live-northwest-nearest8x.png",
+        "inputs/to-nhuoc-approved-southeast-nearest8x.png",
+        "inputs/to-nhuoc-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-northwest-nearest8x.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+        },
+        {
+          "file": "inputs/to-nhuoc-approved-southeast-nearest8x.png",
+          "sha256": "6dff2f382ffbbe769b007c9a18de5bdf18014b17a7cebdacec9cc069f0ed0c13"
+        },
+        {
+          "file": "inputs/to-nhuoc-approved-southeast-actions.png",
+          "sha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "to-nhuoc-north",
+      "slug": "to-nhuoc",
+      "actorId": "NPC-HN-PREPARATION",
+      "direction": "north",
+      "source": "raw/to-nhuoc-north-r2.png",
+      "prompt": "prompts/to-nhuoc-north-r2.txt",
+      "images": [
+        "raw/to-nhuoc-north.png",
+        "inputs/wang-lin-live-north-nearest8x.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "raw/to-nhuoc-north.png",
+          "sha256": "9b2d6a725f1da3b66c43964a93710df3d09fcc81950e183aa670fc427adda748"
+        },
+        {
+          "file": "inputs/wang-lin-live-north-nearest8x.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+        }
+      ],
+      "status": "action-correction-planned",
+      "spec": "specs/to-nhuoc-north-r2.json",
+      "assetPlan": "plans/to-nhuoc-north-r2.json",
+      "sourceRevisions": [
+        {
+          "source": "raw/to-nhuoc-north.png",
+          "sha256": "9b2d6a725f1da3b66c43964a93710df3d09fcc81950e183aa670fc427adda748",
+          "prompt": "prompts/to-nhuoc-north.txt",
+          "assetPlan": null,
+          "status": "superseded-needs-source-correction",
+          "reason": "Back-view profession poses 2–5 show case/hands/brush painted through the robe; preserve valid back neutral intent and correct anatomical front-prop occlusion."
+        }
+      ],
+      "revision": 2,
+      "referencePolicy": {
+        "stage": "action-correction",
+        "editTargetFirst": true,
+        "primaryStyleImageIndex": 2,
+        "editTargetFile": "raw/to-nhuoc-north.png",
+        "neutralIntentPreserved": true,
+        "editTargetSha256": "9b2d6a725f1da3b66c43964a93710df3d09fcc81950e183aa670fc427adda748"
+      }
+    },
+    {
+      "id": "to-nhuoc-northeast",
+      "slug": "to-nhuoc",
+      "actorId": "NPC-HN-PREPARATION",
+      "direction": "northeast",
+      "source": "raw/to-nhuoc-northeast.png",
+      "prompt": "prompts/to-nhuoc-northeast.txt",
+      "images": [
+        "inputs/wang-lin-live-northeast-nearest8x.png",
+        "inputs/to-nhuoc-approved-southeast-nearest8x.png",
+        "inputs/to-nhuoc-approved-southeast-actions.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-northeast-nearest8x.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+        },
+        {
+          "file": "inputs/to-nhuoc-approved-southeast-nearest8x.png",
+          "sha256": "6dff2f382ffbbe769b007c9a18de5bdf18014b17a7cebdacec9cc069f0ed0c13"
+        },
+        {
+          "file": "inputs/to-nhuoc-approved-southeast-actions.png",
+          "sha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35"
+        }
+      ],
+      "status": "planned-not-generated"
+    },
+    {
+      "id": "to-nhuoc-east",
+      "slug": "to-nhuoc",
+      "actorId": "NPC-HN-PREPARATION",
+      "direction": "east",
+      "source": "raw/to-nhuoc-east.png",
+      "prompt": "prompts/to-nhuoc-east-profile.txt",
+      "images": [
+        "inputs/wang-lin-live-east-nearest8x.png",
+        "raw/to-nhuoc-west.png"
+      ],
+      "inputHashes": [
+        {
+          "file": "inputs/wang-lin-live-east-nearest8x.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+        },
+        {
+          "file": "raw/to-nhuoc-west.png",
+          "sha256": "9f799ce881a85548ee0966094f46679f6d6d627e896f48228dfeee8faa7b7329"
+        }
+      ],
+      "status": "final-east-profile-planned",
+      "spec": "specs/to-nhuoc-east-profile.json",
+      "assetPlan": "plans/to-nhuoc-east-profile.json"
+    }
+  ],
+  "canvas": [
+    96,
+    96
+  ],
+  "pivot": [
+    48,
+    88
+  ],
+  "neutralHeight": 80,
+  "timings": {
+    "idle": {
+      "durationMs": 1200,
+      "loop": true
+    },
+    "talk": {
+      "durationMs": 1200,
+      "loop": true
+    },
+    "profession": {
+      "durationMs": 1500,
+      "loop": false
+    }
+  },
+  "requiredClips": 96,
+  "requiredPoses": 576,
+  "newRequests": 28,
+  "newClips": 84,
+  "newPoses": 504,
+  "artApproved": false,
+  "ownerApproved": false,
+  "runtimeImported": false,
+  "gestureDocumentationNote": "Trần Duy opens palm toward his own facing. Historical generation prompts are preserved unchanged as provenance; selected source facing is reviewed directly against same-direction live Wang Lin.",
+  "id": "van-hai-npc-motion-v2",
+  "contract": {
+    "canvas": [
+      96,
+      96
+    ],
+    "pivot": [
+      48,
+      88
+    ],
+    "standingHeight": 80,
+    "baseHumanCanvas": [
+      64,
+      96
+    ],
+    "paddingOnly": true,
+    "sampling": "nearest",
+    "atlasPadding": 2
+  },
+  "morphologyBasis": {
+    "primaryActor": "CHR-WANG-LIN-CHIBI",
+    "primaryReference": "Wang Lin Pixel02 currently used in the game",
+    "basisFile": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+    "basisSha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec",
+    "directionsFile": "docs/design/characters/van-hai-npc-visual-standard-v1/directions.json",
+    "directionsSha256": "0fef83b1121c0be2cf9b47909a00f5c3c01a665229cb1d16358fe65650b8abd9",
+    "directionReferences": [
+      {
+        "direction": "south",
+        "native": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-south-native.png",
+        "nativeSha256": "9a8705752fc9acc24162b4fc2def076513c0140d94a5c41c38f675e96e576769",
+        "nearest8xSha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      {
+        "direction": "southwest",
+        "native": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southwest-native.png",
+        "nativeSha256": "1506aecc1aaa72c4f641e9ed6d3061fbbb12a4602b4349cde34517ee05ed6ac9",
+        "nearest8xSha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      {
+        "direction": "west",
+        "native": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-west-native.png",
+        "nativeSha256": "85bdadc3af4cd6850bfe82450bb1233f1e363297ec980a84714b95a2053d8291",
+        "nearest8xSha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      {
+        "direction": "northwest",
+        "native": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-northwest-native.png",
+        "nativeSha256": "5325a428a7b29c5429ff34268112c553558a97a03901428b5f22b4ae1369a539",
+        "nearest8xSha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      {
+        "direction": "north",
+        "native": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-north-native.png",
+        "nativeSha256": "a6628bdb28beda1ba4d023911ba648e98ccc98d9b6e95bf1374bafa91c4fef9a",
+        "nearest8xSha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      {
+        "direction": "northeast",
+        "native": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-northeast-native.png",
+        "nativeSha256": "20c383722512b5462f73ebb7ba3255866091f47376f3eea48ef15ca86215a4d3",
+        "nearest8xSha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      {
+        "direction": "east",
+        "native": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-east-native.png",
+        "nativeSha256": "58885a2a9c2c591971d8f81c2f4aa5cb666d272b791d3f0aa21baef3cd8e3ab8",
+        "nearest8xSha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      },
+      {
+        "direction": "southeast",
+        "native": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-native.png",
+        "nativeSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+        "nearest8xSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "canvas": [
+          64,
+          96
+        ],
+        "pivot": [
+          32,
+          88
+        ]
+      }
+    ],
+    "rule": "New neutral/views use live Wang Lin as Image1. Explicit action corrections may edit the same NPC and direction first, with same-direction live Wang Lin remaining the primary style/anatomy reference at the recorded input index. Own NPC pilot locks identity; every action is compared directly at native1x. One neutral scale per source; padding never enlarges anatomy."
+  },
+  "pilotBasis": {
+    "file": "../van-hai-npc-motion-v1/approval.json",
+    "sha256": "6d6d873c9051352b6f568d89ee999ac3b92cc19f8279fd2e29913a64e796fdeb",
+    "pinnedFilesVerified": 107,
+    "approvedDirections": [
+      "southeast"
+    ],
+    "scope": {
+      "actors": [
+        {
+          "id": "NPC-HN-GUIDE",
+          "name": "Trần Duy",
+          "slug": "tran-duy"
+        },
+        {
+          "id": "NPC-HN-CULTIVATION",
+          "name": "Diệp Tĩnh",
+          "slug": "diep-tinh"
+        },
+        {
+          "id": "NPC-HN-TRAINING",
+          "name": "Tạ Kiếm Sơn",
+          "slug": "ta-kiem-son"
+        },
+        {
+          "id": "NPC-HN-PREPARATION",
+          "name": "Tô Nhược",
+          "slug": "to-nhuoc"
+        }
+      ],
+      "directions": [
+        "southeast"
+      ],
+      "actions": [
+        "idle",
+        "talk",
+        "profession"
+      ],
+      "clips": 12,
+      "poses": 72,
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ]
+    }
+  },
+  "gdd": {
+    "file": "docs/design/world/van-hai-living-world-v1/plan.json",
+    "sha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576"
+  },
+  "sources": [
+    {
+      "actor": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "direction": "north",
+      "file": "raw/tran-duy-north.png",
+      "sha256": "1f068db05bd5d61e38542a0f864993cc088aea53ca51578d6c68546e55a4c417",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/tran-duy-north.txt",
+      "promptSha256": "8c77e0b03f630bd47d5f8883966f4a77c5aeec31475d064d894e37b4af1b9a5f",
+      "routerMetadata": "raw/tran-duy-north.json",
+      "routerMetadataSha256": "adad48f68a4a009e73a8d710cc97df2bb8191c996294c5ebe6356fb41f12cb54",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-north-nearest8x.png",
+          "filename": "wang-lin-live-north-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 8737,
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-nearest8x.png",
+          "filename": "tran-duy-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16906,
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-actions.png",
+          "filename": "tran-duy-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2103841,
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.24390243902439024,
+      "neutralHeight": 328,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "direction": "south",
+      "file": "raw/tran-duy-south.png",
+      "sha256": "36c66e7eaf457719c1bcca6224237c4b85383026c913a00c5fa80cac6588007b",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/tran-duy-south.txt",
+      "promptSha256": "d658c3bc3c73622f5fb836bedd58af3b223b3cae46fc8a9e545b9fa120832305",
+      "routerMetadata": "raw/tran-duy-south.json",
+      "routerMetadataSha256": "cb3580957c5984f87ede0d371c0029d3fbf85c60d35c1960203d9c7debcf3533",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-south-nearest8x.png",
+          "filename": "wang-lin-live-south-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9300,
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-nearest8x.png",
+          "filename": "tran-duy-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16906,
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-actions.png",
+          "filename": "tran-duy-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2103841,
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.23738872403560832,
+      "neutralHeight": 337,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "direction": "west",
+      "file": "raw/tran-duy-west.png",
+      "sha256": "cb3b2b2eae7b806cb130d93617c862d0031eeb0c795c29afb3d9490eea621be9",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/tran-duy-west.txt",
+      "promptSha256": "73660dfb9f5f415f74b288a2fb97e1285b76cd97edb2cf00490e1d5dd44762bb",
+      "routerMetadata": "raw/tran-duy-west.json",
+      "routerMetadataSha256": "bd3c631f295548c5c358ab846e8ca97fe3ee87931af9a74a99a23e94cd8ede9e",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-west-nearest8x.png",
+          "filename": "wang-lin-live-west-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9314,
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-nearest8x.png",
+          "filename": "tran-duy-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16906,
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-actions.png",
+          "filename": "tran-duy-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2103841,
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.22727272727272727,
+      "neutralHeight": 352,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "direction": "northwest",
+      "file": "raw/tran-duy-northwest.png",
+      "sha256": "a89e09f1a45761013be839fe876934e8058fd31d2d2f3a60e376ea6f5853bc3e",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/tran-duy-northwest.txt",
+      "promptSha256": "2543ecec1301ca771b67a382de2dd890099e23b428cf2e8d0bc06ea3a17c4689",
+      "routerMetadata": "raw/tran-duy-northwest.json",
+      "routerMetadataSha256": "911a0fa6e16ac485d694ec3d48a93adbe5f6e94cd9dd0e0033a231d130ff3654",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-northwest-nearest8x.png",
+          "filename": "wang-lin-live-northwest-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9340,
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-nearest8x.png",
+          "filename": "tran-duy-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16906,
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-actions.png",
+          "filename": "tran-duy-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2103841,
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.25559105431309903,
+      "neutralHeight": 313,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "direction": "southwest",
+      "file": "raw/tran-duy-southwest.png",
+      "sha256": "c0967776bb315db7758272eb23d385140819d4eeb9da3987454342e893e5baf5",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/tran-duy-southwest.txt",
+      "promptSha256": "91744f993be0546e5347e0b341a4179afd0b34609c4838c3bf91f31f49ba64f5",
+      "routerMetadata": "raw/tran-duy-southwest.json",
+      "routerMetadataSha256": "18afafb8306d5f3eea44fc4ce7c45cc5b14c01a33bc088e8c8d216c7a217915a",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-southwest-nearest8x.png",
+          "filename": "wang-lin-live-southwest-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9702,
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-nearest8x.png",
+          "filename": "tran-duy-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16906,
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-actions.png",
+          "filename": "tran-duy-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2103841,
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.24615384615384617,
+      "neutralHeight": 325,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "direction": "northeast",
+      "file": "raw/tran-duy-northeast.png",
+      "sha256": "027c4ea953bd04ad86b0f451c5cdeb41fae211247129cfd03163128b27434bee",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/tran-duy-northeast.txt",
+      "promptSha256": "368982d6d00bb23926af01b1f99611af337fa12852db423efe40515c213ddb76",
+      "routerMetadata": "raw/tran-duy-northeast.json",
+      "routerMetadataSha256": "a135474ffa7511e579e443b09308971ef7482baf99377499c34a13ac2dd7742e",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-northeast-nearest8x.png",
+          "filename": "wang-lin-live-northeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 8833,
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-nearest8x.png",
+          "filename": "tran-duy-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16906,
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-actions.png",
+          "filename": "tran-duy-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2103841,
+          "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.24464831804281345,
+      "neutralHeight": 327,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "direction": "north",
+      "file": "raw/diep-tinh-north-r2.png",
+      "sha256": "912ba7e7784cd5a81b7060b4735033711ba901597e78ad5f298cafe3738f32fb",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/diep-tinh-north-r2.txt",
+      "promptSha256": "f296d8712a4ec54845c11fb4f9a6b9914609285b26bded29351b61b050ef9f4c",
+      "routerMetadata": "raw/diep-tinh-north-r2.json",
+      "routerMetadataSha256": "d8ca2e0493b885bd3c536b32d13d11bcc61af08a3109a194db6739eb91026c81",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-north-nearest8x.png",
+          "filename": "wang-lin-live-north-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 8737,
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/diep-tinh-north.png",
+          "filename": "diep-tinh-north.png",
+          "mimeType": "image/png",
+          "bytes": 1761711,
+          "sha256": "ff5b9e7ee0752cc0601a93fb7ef152a5427cc3572ae604a3c2f45ae60054151e",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/diep-tinh-approved-southeast-nearest8x.png",
+          "filename": "diep-tinh-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16952,
+          "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.24615384615384617,
+      "neutralHeight": 325,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "direction": "south",
+      "file": "raw/diep-tinh-south-r2.png",
+      "sha256": "f1c52e0cbec5a16a1e725311227c7ea7265847b399d40a702a87a15e27f28a12",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/diep-tinh-south-r2.txt",
+      "promptSha256": "2c2ea79bb1b83d83e42d0a6efca03fb7814418b26cfba720da0edc6450c81a84",
+      "routerMetadata": "raw/diep-tinh-south-r2.json",
+      "routerMetadataSha256": "d7318d8599cd242b040cd49ada43c5f67a0e95ea8889d0dd72c891f6ff70660b",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-south-nearest8x.png",
+          "filename": "wang-lin-live-south-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9300,
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/diep-tinh-south.png",
+          "filename": "diep-tinh-south.png",
+          "mimeType": "image/png",
+          "bytes": 2117440,
+          "sha256": "8a8dd926d82159ba1a99ee17d9373ad100e4c6b7a3ee9d7f6628f9284101849d",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/diep-tinh-approved-southeast-nearest8x.png",
+          "filename": "diep-tinh-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16952,
+          "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.22160664819944598,
+      "neutralHeight": 361,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "direction": "west",
+      "file": "raw/diep-tinh-west-r2.png",
+      "sha256": "046480c97d117e3e7122d584ad811c992b2fb6f39aeefa3d003877d14d2cff3f",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/diep-tinh-west-r2.txt",
+      "promptSha256": "c8933596f96357e46b86c52e0a78f79c09c1a385a98ed10fbfa3fe0eb956f245",
+      "routerMetadata": "raw/diep-tinh-west-r2.json",
+      "routerMetadataSha256": "2c1827b417b56e37b80fd791d8c95d74387ea875953819b1e8c81ecd004d5030",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-west-nearest8x.png",
+          "filename": "wang-lin-live-west-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9314,
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/diep-tinh-west.png",
+          "filename": "diep-tinh-west.png",
+          "mimeType": "image/png",
+          "bytes": 1982914,
+          "sha256": "72d14a7c97cff876faf78e755dd4114c10ceeb78cfb2988ce5bd2ea4065006c7",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/diep-tinh-approved-southeast-nearest8x.png",
+          "filename": "diep-tinh-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16952,
+          "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.22160664819944598,
+      "neutralHeight": 361,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "direction": "southwest",
+      "file": "raw/diep-tinh-southwest.png",
+      "sha256": "73128f56fca9b79decf5d8c91966487becd4711580dadb8e70e5b47ba2e025f1",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/diep-tinh-southwest.txt",
+      "promptSha256": "793fcadf860ce69d5aa77b7b45cec9c74b5595ef9c316f52e42cbee40a236ab8",
+      "routerMetadata": "raw/diep-tinh-southwest.json",
+      "routerMetadataSha256": "c5e994938429af8dede800c7339469508246a804fac0cce7629f236526608924",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-southwest-nearest8x.png",
+          "filename": "wang-lin-live-southwest-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9702,
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/diep-tinh-approved-southeast-nearest8x.png",
+          "filename": "diep-tinh-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16952,
+          "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/diep-tinh-approved-southeast-actions.png",
+          "filename": "diep-tinh-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2084810,
+          "sha256": "b04d81f55c0b930aa3b58ab03b48701b6247a63cf102ca006c853b0b4ecf06ad",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.22535211267605634,
+      "neutralHeight": 355,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "direction": "northeast",
+      "file": "raw/diep-tinh-northeast.png",
+      "sha256": "c9b584e4c5c1d3104a0ef526f206456394dcb27d81006efd5ea7dcb81ce99a1a",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/diep-tinh-northeast.txt",
+      "promptSha256": "2ada1c542533d3a53240207e60342f8845029ecb14253265439c071c84e44d9f",
+      "routerMetadata": "raw/diep-tinh-northeast.json",
+      "routerMetadataSha256": "79ff940042153117b868e56518b6938c22c02414177a2f12d6bb329b9a7b0801",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-northeast-nearest8x.png",
+          "filename": "wang-lin-live-northeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 8833,
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/diep-tinh-approved-southeast-nearest8x.png",
+          "filename": "diep-tinh-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16952,
+          "sha256": "6ae64778e1b121638ebb4d635bf89415eb82021242b09bd56bf88db7b275c414",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/diep-tinh-approved-southeast-actions.png",
+          "filename": "diep-tinh-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2084810,
+          "sha256": "b04d81f55c0b930aa3b58ab03b48701b6247a63cf102ca006c853b0b4ecf06ad",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.22727272727272727,
+      "neutralHeight": 352,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "direction": "east",
+      "file": "raw/tran-duy-east-r3.png",
+      "sha256": "dd4ca8fc511a399119eeb3d84d41b244731cb6eeddb7184a75acd8b58eda4fcd",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/tran-duy-east-r3.txt",
+      "promptSha256": "e436f74acecb42f0637de55448f0adbbbe29dad2ca302a542913728d54d9a709",
+      "routerMetadata": "raw/tran-duy-east-r3.json",
+      "routerMetadataSha256": "1e67e9c3ee80c846800be3793cf299336da25f6366a4f4c72ac8d6a9e2f41a8a",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-east-nearest8x.png",
+          "filename": "wang-lin-live-east-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9489,
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/tran-duy-east-r2.png",
+          "filename": "tran-duy-east-r2.png",
+          "mimeType": "image/png",
+          "bytes": 1795401,
+          "sha256": "56926e068048fa5230fb5fa2466dbb0f934b059d3673a502f19c9fc769967978",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/tran-duy-approved-southeast-nearest8x.png",
+          "filename": "tran-duy-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 16906,
+          "sha256": "02ea714df2837f702c74b29d2e907e6a47d955a2ebc5c549a171a74fd890ceb1",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 4,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/tran-duy-west.png",
+          "filename": "tran-duy-west.png",
+          "mimeType": "image/png",
+          "bytes": 1760660,
+          "sha256": "cb3b2b2eae7b806cb130d93617c862d0031eeb0c795c29afb3d9490eea621be9",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.2185792349726776,
+      "neutralHeight": 366,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "direction": "east",
+      "file": "raw/diep-tinh-east-r3.png",
+      "sha256": "a614fe33c272e1ffbb1acf8dee0258e058c74245cd3b96d60d9a5c05bcbc53b6",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/diep-tinh-east-r3.txt",
+      "promptSha256": "5de59aa47d0b829990bc9880bbc81ffb3148a5da485567bd6aa768ffde51d96d",
+      "routerMetadata": "raw/diep-tinh-east-r3.json",
+      "routerMetadataSha256": "22217d8d0b43e9368d0556e1d0f4b907701e81dbcadf5c54aef34e0d027c1cf1",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-east-nearest8x.png",
+          "filename": "wang-lin-live-east-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9489,
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/diep-tinh-west-r2.png",
+          "filename": "diep-tinh-west-r2.png",
+          "mimeType": "image/png",
+          "bytes": 1955603,
+          "sha256": "046480c97d117e3e7122d584ad811c992b2fb6f39aeefa3d003877d14d2cff3f",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.2247191011235955,
+      "neutralHeight": 356,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "direction": "west",
+      "file": "raw/ta-kiem-son-west.png",
+      "sha256": "a4bdce59b417ed145b369de7c87533a1ae794641c16e94537173184a74701607",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/ta-kiem-son-west-profile.txt",
+      "promptSha256": "077bd2cc36633c0f40056d23dd3cf43b4161b5a025daeadedab4604fc5e97f65",
+      "routerMetadata": "raw/ta-kiem-son-west.json",
+      "routerMetadataSha256": "944113c07153e0229988e16c34434548953f15e1fb3cb1956e5979c78db12c4b",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-west-nearest8x.png",
+          "filename": "wang-lin-live-west-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9314,
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/ta-kiem-son-approved-southeast-nearest8x.png",
+          "filename": "ta-kiem-son-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 15693,
+          "sha256": "8c2d3c2e2cc77bbb0cef790778798cfebf3964e6fba0d738f211af9d5fe7fc9f",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.2318840579710145,
+      "neutralHeight": 345,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "direction": "east",
+      "file": "raw/ta-kiem-son-east.png",
+      "sha256": "e2d59b7ff1c943dc2ee972170a9b3ee6b4a2e93c2977bcea40e05db696eebb92",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/ta-kiem-son-east-profile.txt",
+      "promptSha256": "1c2927fe4128bb5257c3eb7fed2d352237589059f592f1fff35836dfab5949f4",
+      "routerMetadata": "raw/ta-kiem-son-east.json",
+      "routerMetadataSha256": "e40427521bfd9cdb7af69e266aaff4a4323c0410f34956f8c7dc397f8deb72da",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-east-nearest8x.png",
+          "filename": "wang-lin-live-east-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9489,
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/ta-kiem-son-west.png",
+          "filename": "ta-kiem-son-west.png",
+          "mimeType": "image/png",
+          "bytes": 1411144,
+          "sha256": "a4bdce59b417ed145b369de7c87533a1ae794641c16e94537173184a74701607",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.23952095808383234,
+      "neutralHeight": 334,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "direction": "south",
+      "file": "raw/ta-kiem-son-south.png",
+      "sha256": "2b32421d21f7dc891364d95ea6595af6ab60caaef0731317c6fd54fdd8e7c524",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/ta-kiem-son-south.txt",
+      "promptSha256": "cc19f25f8bb100a9f03524e8abd853d2481c4fb578e0fdd8325db3a2378c1cae",
+      "routerMetadata": "raw/ta-kiem-son-south.json",
+      "routerMetadataSha256": "197a0528044172bdd97d747f6067ac6d592e36ecde8f56ca640fb0eec50d3952",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-south-nearest8x.png",
+          "filename": "wang-lin-live-south-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9300,
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/ta-kiem-son-approved-southeast-nearest8x.png",
+          "filename": "ta-kiem-son-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 15693,
+          "sha256": "8c2d3c2e2cc77bbb0cef790778798cfebf3964e6fba0d738f211af9d5fe7fc9f",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/ta-kiem-son-approved-southeast-actions.png",
+          "filename": "ta-kiem-son-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 1981122,
+          "sha256": "8d307910ae0c896dfad79c0269cd315aad19a9615c68ed14fa9e67ce7bfe1e84",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.2318840579710145,
+      "neutralHeight": 345,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "direction": "west",
+      "file": "raw/to-nhuoc-west.png",
+      "sha256": "9f799ce881a85548ee0966094f46679f6d6d627e896f48228dfeee8faa7b7329",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/to-nhuoc-west-profile.txt",
+      "promptSha256": "65be529a4a87bd316bd509cafa3f5d489be2d5e1503d70522e73a6f3176f0c2d",
+      "routerMetadata": "raw/to-nhuoc-west.json",
+      "routerMetadataSha256": "afd0572c8bcb87e212c763c4b6b7d3e23f678e30134e5b1b0f6bd121c5b1bdeb",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-west-nearest8x.png",
+          "filename": "wang-lin-live-west-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9314,
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/to-nhuoc-approved-southeast-nearest8x.png",
+          "filename": "to-nhuoc-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 17667,
+          "sha256": "6dff2f382ffbbe769b007c9a18de5bdf18014b17a7cebdacec9cc069f0ed0c13",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.23668639053254437,
+      "neutralHeight": 338,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "direction": "east",
+      "file": "raw/to-nhuoc-east.png",
+      "sha256": "52b74b4ce94e9ab5a1ba0ada8cefb402e67599c9e19a6cd8114f8b5bd54b8c6c",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/to-nhuoc-east-profile.txt",
+      "promptSha256": "c9505bd57e8cefd231f95faf8cefe891095c489c6987e5d29b7ccd16449522e2",
+      "routerMetadata": "raw/to-nhuoc-east.json",
+      "routerMetadataSha256": "5570e6b4237c2b5e1496856045abfbd729b0999c6e49b0799164c4f609425666",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-east-nearest8x.png",
+          "filename": "wang-lin-live-east-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9489,
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/to-nhuoc-west.png",
+          "filename": "to-nhuoc-west.png",
+          "mimeType": "image/png",
+          "bytes": 1553074,
+          "sha256": "9f799ce881a85548ee0966094f46679f6d6d627e896f48228dfeee8faa7b7329",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.23323615160349853,
+      "neutralHeight": 343,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "direction": "south",
+      "file": "raw/to-nhuoc-south.png",
+      "sha256": "32cb5bb83062d4143384dd8349b95e6b343200c730d71b6944404c3803978d06",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/to-nhuoc-south.txt",
+      "promptSha256": "aa7752dd780a339a04dc99ef1e7279e5a927fdf754e66ac527cf7a628341de7c",
+      "routerMetadata": "raw/to-nhuoc-south.json",
+      "routerMetadataSha256": "53bc62e0fff67c16728c7dc091733f7db3e5175ba20780681757903493e3e049",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-south-nearest8x.png",
+          "filename": "wang-lin-live-south-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9300,
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/to-nhuoc-approved-southeast-nearest8x.png",
+          "filename": "to-nhuoc-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 17667,
+          "sha256": "6dff2f382ffbbe769b007c9a18de5bdf18014b17a7cebdacec9cc069f0ed0c13",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/to-nhuoc-approved-southeast-actions.png",
+          "filename": "to-nhuoc-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2196645,
+          "sha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.23121387283236994,
+      "neutralHeight": 346,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "direction": "northwest",
+      "file": "raw/to-nhuoc-northwest.png",
+      "sha256": "3edd78aba8b09b30b3ede41a6688af178ce08af708e27d86f16588f255c0ca1f",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/to-nhuoc-northwest.txt",
+      "promptSha256": "9f09b9d5a833695a07477fedb536bc5feeec5620a3dd21a6019171e8980c3442",
+      "routerMetadata": "raw/to-nhuoc-northwest.json",
+      "routerMetadataSha256": "5295527ae3d2f081151d6f5c0cfb9866eba9af31106a737ca2c9e0c7eaf9fbaa",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-northwest-nearest8x.png",
+          "filename": "wang-lin-live-northwest-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9340,
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/to-nhuoc-approved-southeast-nearest8x.png",
+          "filename": "to-nhuoc-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 17667,
+          "sha256": "6dff2f382ffbbe769b007c9a18de5bdf18014b17a7cebdacec9cc069f0ed0c13",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/to-nhuoc-approved-southeast-actions.png",
+          "filename": "to-nhuoc-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2196645,
+          "sha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.2484472049689441,
+      "neutralHeight": 322,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "direction": "northeast",
+      "file": "raw/to-nhuoc-northeast.png",
+      "sha256": "32ac40637270d2d16a30f6c2d0b0328da65be87f64eefe2e29df94919833fdf2",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/to-nhuoc-northeast.txt",
+      "promptSha256": "05b75fcf99b3d9d766c526feb1229ce936a3824971cc945535a0886c4fd11404",
+      "routerMetadata": "raw/to-nhuoc-northeast.json",
+      "routerMetadataSha256": "035a7b1a267089f0c493be43816a2fcdcf0e32eea4f21038a1b2ab93f8dcc1bc",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-northeast-nearest8x.png",
+          "filename": "wang-lin-live-northeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 8833,
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/to-nhuoc-approved-southeast-nearest8x.png",
+          "filename": "to-nhuoc-approved-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 17667,
+          "sha256": "6dff2f382ffbbe769b007c9a18de5bdf18014b17a7cebdacec9cc069f0ed0c13",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/to-nhuoc-approved-southeast-actions.png",
+          "filename": "to-nhuoc-approved-southeast-actions.png",
+          "mimeType": "image/png",
+          "bytes": 2196645,
+          "sha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.24922118380062305,
+      "neutralHeight": 321,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "direction": "northwest",
+      "file": "raw/diep-tinh-northwest-r3.png",
+      "sha256": "6e6bb7b89621e0f213a9fc91e092dbb41c2a85aecf1ac135aa1987f564ac908b",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/diep-tinh-northwest-r3.txt",
+      "promptSha256": "e352978ca0546b382f77300b83a5edd890469c89bcb9a8b3d4f0ed5fc84a8105",
+      "routerMetadata": "raw/diep-tinh-northwest-r3.json",
+      "routerMetadataSha256": "9f516f061b3d96cb451b555fa6b4bb1acdf94ce104e90b52bd20ce6a552539ea",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-northwest-nearest8x.png",
+          "filename": "wang-lin-live-northwest-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9340,
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/diep-tinh-north-r2.png",
+          "filename": "diep-tinh-north-r2.png",
+          "mimeType": "image/png",
+          "bytes": 1778767,
+          "sha256": "912ba7e7784cd5a81b7060b4735033711ba901597e78ad5f298cafe3738f32fb",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.24169184290030213,
+      "neutralHeight": 331,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "direction": "north",
+      "file": "raw/to-nhuoc-north-r2.png",
+      "sha256": "c55adde722011e4f44d29fcab4a6493c0f4ffe698d8dfe2febd2f05249726d8d",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/to-nhuoc-north-r2.txt",
+      "promptSha256": "15e9b81949ccc7140790649aa19b60f70d9e0b09c6e85b13035de055c982bd06",
+      "routerMetadata": "raw/to-nhuoc-north-r2.json",
+      "routerMetadataSha256": "82b81aac2cbb0e75b8c19885e4f37bdb6c5c86ad2e8945a7076cda72406cbf8b",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/to-nhuoc-north.png",
+          "filename": "to-nhuoc-north.png",
+          "mimeType": "image/png",
+          "bytes": 1417519,
+          "sha256": "9b2d6a725f1da3b66c43964a93710df3d09fcc81950e183aa670fc427adda748",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-north-nearest8x.png",
+          "filename": "wang-lin-live-north-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 8737,
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 2,
+      "referencePolicy": {
+        "stage": "action-correction",
+        "editTargetFirst": true,
+        "primaryStyleImageIndex": 2,
+        "editTargetFile": "raw/to-nhuoc-north.png",
+        "neutralIntentPreserved": true,
+        "editTargetSha256": "9b2d6a725f1da3b66c43964a93710df3d09fcc81950e183aa670fc427adda748",
+        "validationScope": "Same NPC/direction existing neutral intent and input provenance; no immutable-pixel or ART approval claim"
+      },
+      "scale": 0.26143790849673204,
+      "neutralHeight": 306,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "direction": "north",
+      "file": "raw/ta-kiem-son-north-r4.png",
+      "sha256": "c054dc6d4f4703b7097238e261209e73912696ed1e0b0436c8051b17e5886824",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/ta-kiem-son-north-r4-safe.txt",
+      "promptSha256": "95fa1841f20cb4a0af1390d78cbb15533db90330350273835378f2471edaa802",
+      "routerMetadata": "raw/ta-kiem-son-north-r4.json",
+      "routerMetadataSha256": "2f26444370bd2225e462484dd2e49d92a08e360b87d3b696becf58231509219e",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/ta-kiem-son-north-r2.png",
+          "filename": "ta-kiem-son-north-r2.png",
+          "mimeType": "image/png",
+          "bytes": 1499413,
+          "sha256": "a05308a97359c0874e0c3ff03d24764df226f0fdae8d9aa452ffb2692e84c6e7",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-north-nearest8x.png",
+          "filename": "wang-lin-live-north-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 8737,
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 2,
+      "referencePolicy": {
+        "stage": "action-correction",
+        "editTargetFirst": true,
+        "primaryStyleImageIndex": 2,
+        "editTargetFile": "raw/ta-kiem-son-north-r2.png",
+        "editTargetSha256": "a05308a97359c0874e0c3ff03d24764df226f0fdae8d9aa452ffb2692e84c6e7",
+        "neutralIntentPreserved": true,
+        "validationScope": "Same NPC/direction existing neutral intent and input provenance; no immutable-pixel or ART approval claim"
+      },
+      "scale": 0.23460410557184752,
+      "neutralHeight": 341,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "direction": "northwest",
+      "file": "raw/ta-kiem-son-northwest-r3.png",
+      "sha256": "1c8950b88194c5c6763bc7f14f004e895f1d92c390a053393f0c7092ea314c9f",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/ta-kiem-son-northwest-r3-safe.txt",
+      "promptSha256": "d17f3bec21743ae5dba0947860a451cc723b63c24d13f8fcf6e85cdec3eb6328",
+      "routerMetadata": "raw/ta-kiem-son-northwest-r3.json",
+      "routerMetadataSha256": "434348ee661613fb7f319a9a87e8f9c60f6e54c0e4a90d3dd6295c9502145eff",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/ta-kiem-son-northwest.png",
+          "filename": "ta-kiem-son-northwest.png",
+          "mimeType": "image/png",
+          "bytes": 1446347,
+          "sha256": "3e0cd226adead327d7e3b8df8ec65739079ab092ba2f1aa551e6c0d48fc3fcf9",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-northwest-nearest8x.png",
+          "filename": "wang-lin-live-northwest-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9340,
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 2,
+      "referencePolicy": {
+        "stage": "action-correction",
+        "editTargetFirst": true,
+        "primaryStyleImageIndex": 2,
+        "editTargetFile": "raw/ta-kiem-son-northwest.png",
+        "editTargetSha256": "3e0cd226adead327d7e3b8df8ec65739079ab092ba2f1aa551e6c0d48fc3fcf9",
+        "neutralIntentPreserved": true,
+        "validationScope": "Same NPC/direction existing neutral intent and input provenance; no immutable-pixel or ART approval claim"
+      },
+      "scale": 0.24390243902439024,
+      "neutralHeight": 328,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "direction": "northeast",
+      "file": "raw/ta-kiem-son-northeast-r3.png",
+      "sha256": "aae755c4676147f855d5337abf47d404e08bcc64022ad0b557fcad0732181518",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/ta-kiem-son-northeast-r3-safe.txt",
+      "promptSha256": "dffdbf5e54c26ca85edbfb82ee666ceabc0f99c92da6110d9b29d86c1feb81bb",
+      "routerMetadata": "raw/ta-kiem-son-northeast-r3.json",
+      "routerMetadataSha256": "8dc6fb6c43f0058fa68f5184b0c8ad7b2c07b6bf82664430ed95bc4c54931347",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/ta-kiem-son-northeast.png",
+          "filename": "ta-kiem-son-northeast.png",
+          "mimeType": "image/png",
+          "bytes": 1416185,
+          "sha256": "c0b4aee468bc4c5d3a31a85363c3073427211086e97c954125c01cec00af058c",
+          "dimensions": {
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-northeast-nearest8x.png",
+          "filename": "wang-lin-live-northeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 8833,
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 2,
+      "referencePolicy": {
+        "stage": "action-correction",
+        "editTargetFirst": true,
+        "primaryStyleImageIndex": 2,
+        "editTargetFile": "raw/ta-kiem-son-northeast.png",
+        "editTargetSha256": "c0b4aee468bc4c5d3a31a85363c3073427211086e97c954125c01cec00af058c",
+        "neutralIntentPreserved": true,
+        "validationScope": "Same NPC/direction existing neutral intent and input provenance; no immutable-pixel or ART approval claim"
+      },
+      "scale": 0.2507836990595611,
+      "neutralHeight": 319,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "direction": "southwest",
+      "file": "raw/ta-kiem-son-southwest-r3.png",
+      "sha256": "762799bede170e94be5171865eb2e029bbb75998888b73f9b14e6c7167a4c1f5",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/ta-kiem-son-southwest-r3-safe.txt",
+      "promptSha256": "a2df1ab4e869f1a8e5f4fb2c5a13708f51077e8064e2d826fe488388529157c6",
+      "routerMetadata": "raw/ta-kiem-son-southwest-r3.json",
+      "routerMetadataSha256": "eacdf06194eae7d9100ecf208dec5e8e50f4d224f75c826ba0374fe0f7033cc1",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/raw/ta-kiem-son-southwest-r2.png",
+          "filename": "ta-kiem-son-southwest-r2.png",
+          "mimeType": "image/png",
+          "bytes": 1956368,
+          "sha256": "475bcf49e6974510e36b4008d576d36ca3508301d25f779f4335f83864f4d719",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-southwest-nearest8x.png",
+          "filename": "wang-lin-live-southwest-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9702,
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 2,
+      "referencePolicy": {
+        "stage": "action-correction",
+        "editTargetFirst": true,
+        "primaryStyleImageIndex": 2,
+        "editTargetFile": "raw/ta-kiem-son-southwest-r2.png",
+        "editTargetSha256": "475bcf49e6974510e36b4008d576d36ca3508301d25f779f4335f83864f4d719",
+        "neutralIntentPreserved": true,
+        "validationScope": "Same NPC/direction existing neutral intent and input provenance; no immutable-pixel or ART approval claim"
+      },
+      "scale": 0.24024024024024024,
+      "neutralHeight": 333,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "direction": "southwest",
+      "file": "raw/to-nhuoc-southwest-r3.png",
+      "sha256": "00af163a883c89504382f4fb5662e95ab5595723c544a0a50cbf3459f8513bd4",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/to-nhuoc-southwest-r3.txt",
+      "promptSha256": "5952865f5305503cfebee988a09bf61580e7c1b07516dd3517e75af91a48a505",
+      "routerMetadata": "raw/to-nhuoc-southwest-r3.json",
+      "routerMetadataSha256": "43a5f5a584172b57aa9c65dc6b0dbd30f97a1055630cf41c6abb964a1efdb48a",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/wang-lin-live-southwest-nearest8x.png",
+          "filename": "wang-lin-live-southwest-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9702,
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v2/inputs/to-nhuoc-south-neutral-nearest8x.png",
+          "filename": "to-nhuoc-south-neutral-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 17249,
+          "sha256": "24a68447b17372980ef3e69c10cedfdf7f399850cc13e1d0652b37eb744bccb6",
+          "dimensions": {
+            "width": 768,
+            "height": 768
+          }
+        }
+      ],
+      "primaryStyleImageIndex": 1,
+      "referencePolicy": {
+        "stage": "new-neutral-or-view",
+        "editTargetFirst": false,
+        "primaryStyleImageIndex": 1
+      },
+      "scale": 0.20618556701030927,
+      "neutralHeight": 388,
+      "alphaThreshold": 128
+    }
+  ],
+  "registration": "registration.json",
+  "registrationSha256": "bfca995ef981ee8197f2628bb05bb37e42b46e8cbf10a58fcbb1c78d829a278f",
+  "coverage": {
+    "actors": 4,
+    "requiredClips": 96,
+    "requiredPoses": 576,
+    "producedClips": 96,
+    "clips": 96,
+    "poses": 576,
+    "newSources": 28,
+    "newClips": 84,
+    "newPoses": 504,
+    "importedPilotClips": 12,
+    "importedPilotPoses": 72,
+    "actions": [
+      "idle",
+      "talk",
+      "profession"
+    ],
+    "requiredDirections": [
+      "south",
+      "southwest",
+      "west",
+      "northwest",
+      "north",
+      "northeast",
+      "east",
+      "southeast"
+    ],
+    "producedDirectionsByActor": {
+      "NPC-HN-GUIDE": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "NPC-HN-CULTIVATION": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "NPC-HN-TRAINING": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ],
+      "NPC-HN-PREPARATION": [
+        "south",
+        "southwest",
+        "west",
+        "northwest",
+        "north",
+        "northeast",
+        "east",
+        "southeast"
+      ]
+    },
+    "missing": [],
+    "fullDirectionalSet": true
+  }
+}

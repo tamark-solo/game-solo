@@ -1,0 +1,156 @@
+{
+  "schema": "npc-wave-a-six-neutral-delivery-1",
+  "date": "2026-10-13",
+  "actors": [
+    {
+      "id": "NPC-HN-HERBALIST",
+      "name": "Bạch Chỉ",
+      "source": "raw/bach-chi.png",
+      "sourceSha256": "acd3046530fd9232441a0feda03daae9f22abb2c18cb7b3caae85597831e371c",
+      "sprite": "sprites/bach-chi.png",
+      "spriteSha256": "d787074d1a391970becd0eba67baf6b301b0d9a6c253648230f7060597aa3832"
+    },
+    {
+      "id": "NPC-HN-FORGE",
+      "name": "Tống Thiết",
+      "source": "raw/tong-thiet.png",
+      "sourceSha256": "2c70401b135350ea3789e63610d3343ab0bd98179fa095bb560292319bfdefb8",
+      "sprite": "sprites/tong-thiet.png",
+      "spriteSha256": "11be3d5f68371500e4f45b948e5cdb185bd5e81961564637837078d26748b945"
+    },
+    {
+      "id": "NPC-HN-ROUTE-KEEPER",
+      "name": "Hứa Hành",
+      "source": "raw/hua-hanh.png",
+      "sourceSha256": "cf2e359ec96aedcd696032ab16f6d4edf7f3021150068ad77cc1b16359abb6a8",
+      "sprite": "sprites/hua-hanh.png",
+      "spriteSha256": "9ea84271f5244330d4ba2d0be3e9d7005fbd74bc4cbeed173c83fd3e0a70991f"
+    },
+    {
+      "id": "NPC-HN-GATE-WARDEN",
+      "name": "Đinh Sóc",
+      "source": "raw/dinh-soc.png",
+      "sourceSha256": "4c22f1ea051216aa0f017c5104fbb5daca2bd8827a832a9578c5e0d9c154de7a",
+      "sprite": "sprites/dinh-soc.png",
+      "spriteSha256": "3792ae58747c4f91f3ef5b26358bc0c3da2dec14cd6060ae263280a006d2c22e"
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-WATER",
+      "name": "Kỷ An",
+      "source": "raw/ky-an-r2.png",
+      "sourceSha256": "96628ad6c56ee1b502112bd6c7dc89c133040b049ad16c95afa89cc1965e051e",
+      "sprite": "sprites/ky-an.png",
+      "spriteSha256": "88eae7d01acc4a2876b0f2bc3dd479ca20553a1cb57bdbc11efed53326a656de"
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-SWORD",
+      "name": "Phùng Dã",
+      "source": "raw/phung-da.png",
+      "sourceSha256": "0ad9e1d70abd164e07df8b8ad09684f680fee6048e1d6dbc6368297cfb342595",
+      "sprite": "sprites/phung-da.png",
+      "spriteSha256": "97882c8dde384a5f5f9cdaba52dd4dd439f85653885437402f72e6435f7384b7"
+    }
+  ],
+  "coverage": {
+    "actors": 6,
+    "neutralViews": 6,
+    "directionsProduced": [
+      "southeast"
+    ],
+    "directionsPending": [
+      "south",
+      "southwest",
+      "west",
+      "northwest",
+      "north",
+      "northeast",
+      "east"
+    ],
+    "animationClips": 0,
+    "poses": 6
+  },
+  "technicalVerification": {
+    "passed": true,
+    "browserScenarios": 36,
+    "threeSprites": 6,
+    "maxColorDelta": 0,
+    "catalogSha256": "729117c6be100977c0f74b5e664d109c9cab9c8a0f45350c41510fb1c38e1a91",
+    "registrationSha256": "c7fab3073ddb276f262e51e00db1e47f36bac52ead653268b7e17a59dda22848"
+  },
+  "priorPacks": {
+    "approvedPilotPinsUnchanged": 107,
+    "eightDirectionDeliveryPinsUnchanged": 9
+  },
+  "status": "six-neutral-identities-owner-review-pending",
+  "ownerApproved": false,
+  "artApproved": false,
+  "motionApproved": false,
+  "runtimeImported": false,
+  "ownerMapEdited": false,
+  "pinnedFiles": [
+    {
+      "file": "production-plan.json",
+      "sha256": "7f7f5b77ac767a0edc9564aff1f90a39a09c7331b3476c0b4954646c3a3e4fcc"
+    },
+    {
+      "file": "production.json",
+      "sha256": "7a39a5295d373273a9b4381a202a3f630613543f993290fd967e578d1083c7f4"
+    },
+    {
+      "file": "catalog.json",
+      "sha256": "729117c6be100977c0f74b5e664d109c9cab9c8a0f45350c41510fb1c38e1a91"
+    },
+    {
+      "file": "registration.json",
+      "sha256": "c7fab3073ddb276f262e51e00db1e47f36bac52ead653268b7e17a59dda22848"
+    },
+    {
+      "file": "motion-plan.json",
+      "sha256": "cc89532dacb76f09a64da7db3ba18098dc8e0955c1cd363f1dea05a16d819a50"
+    },
+    {
+      "file": "review/source-measurements.json",
+      "sha256": "52835d792101f5d5f026a7eb98ac19179ff717827f9206c23bb6c0a060eee934"
+    },
+    {
+      "file": "review/source-visual-assessment.json",
+      "sha256": "5d01d8d572a50398ebdf6057d4ce676d80e42bdda3cc9f3c6d9c5ed068260d36"
+    },
+    {
+      "file": "review/verification.json",
+      "sha256": "de1747764a596adb5cc41e4301109f3609c3d44694d02d753fcd3f43d9a9a754"
+    },
+    {
+      "file": "review/gpu-verification.json",
+      "sha256": "812cc38b3ef8e3c0f2e5c542e9e81525e64d2492728bc040ddfb998b0dd99ae9"
+    },
+    {
+      "file": "review/lineup-2x.png",
+      "sha256": "ab0c25973da1f95c5ad8da20ce4d5a36f63cb5a99bcd413f95ca6df72eb53046"
+    },
+    {
+      "file": "sprites/bach-chi.png",
+      "sha256": "d787074d1a391970becd0eba67baf6b301b0d9a6c253648230f7060597aa3832"
+    },
+    {
+      "file": "sprites/tong-thiet.png",
+      "sha256": "11be3d5f68371500e4f45b948e5cdb185bd5e81961564637837078d26748b945"
+    },
+    {
+      "file": "sprites/hua-hanh.png",
+      "sha256": "9ea84271f5244330d4ba2d0be3e9d7005fbd74bc4cbeed173c83fd3e0a70991f"
+    },
+    {
+      "file": "sprites/dinh-soc.png",
+      "sha256": "3792ae58747c4f91f3ef5b26358bc0c3da2dec14cd6060ae263280a006d2c22e"
+    },
+    {
+      "file": "sprites/ky-an.png",
+      "sha256": "88eae7d01acc4a2876b0f2bc3dd479ca20553a1cb57bdbc11efed53326a656de"
+    },
+    {
+      "file": "sprites/phung-da.png",
+      "sha256": "97882c8dde384a5f5f9cdaba52dd4dd439f85653885437402f72e6435f7384b7"
+    }
+  ]
+}

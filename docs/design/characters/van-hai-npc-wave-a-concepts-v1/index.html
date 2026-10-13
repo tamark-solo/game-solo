@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vân Hải · Sáu NPC Wave A · Tạo hình</title>
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+<header>
+  <a class="back" href="../../world/van-hai-living-world-v1/index.html">← Dàn NPC và sinh cảnh Vân Hải</a>
+  <p class="eyebrow">WAVE A · NHÓM TIẾP THEO · CHUẨN VƯƠNG LÂM TRONG GAME</p>
+  <h1>Sáu người trong ngoại viện</h1>
+  <p>Bạch Chỉ, Tống Thiết, Hứa Hành, Đinh Sóc, Kỷ An và Phùng Dã. Đọc nhận diện theo GDD và xem trực tiếp cạnh Vương Lâm Pixel02 ở cỡ chơi.</p>
+  <div class="badges"><span>Tạo hình đang xem xét</span><span>1 neutral Đông Nam / người</span><span>Chuẩn tỷ lệ và nét pixel · Vương Lâm live</span></div>
+  <nav><a href="#gallery">Sáu tạo hình</a><a href="#scale-review">Đối chiếu native</a><a href="#lineup-review">Cả nhóm</a><a href="#coverage">Tiến độ</a></nav>
+</header>
+<main>
+  <p class="art-note">Đây là sáu tạo hình neutral để kiểm tra nhận diện, tỷ lệ, phục trang và đạo cụ trước khi sản xuất các hướng và động tác theo GDD.</p>
+  <p id="status" role="status">Đang tải hồ sơ tạo hình…</p>
+  <section id="gallery">
+    <p class="eyebrow">NHẬN DIỆN · NGHỀ NGHIỆP · SINH HOẠT</p><h2>Sáu vai trò, sáu silhouette</h2>
+    <p class="hint">Mỗi thẻ đặt Vương Lâm bên trái và NPC bên phải ở 2×. Chọn một người để xem ở 1× và đọc brief gốc.</p>
+    <div id="cards" class="cards"></div>
+  </section>
+  <section id="scale-review">
+    <p class="eyebrow">CÙNG HƯỚNG · CÙNG MẶT ĐẤT</p><h2>Đối chiếu với Vương Lâm</h2>
+    <div class="toolbar">
+      <label class="control">Người đang xem<select id="actor" disabled></select></label>
+      <label class="control">Nền<select id="scene"><option value="map">Vân Ngọc V2</option><option value="light">Sáng</option><option value="dark">Tối</option></select></label>
+      <fieldset><legend>Cỡ chơi</legend><button data-zoom="1" aria-pressed="true">1×</button><button data-zoom="2" aria-pressed="false">2×</button></fieldset>
+      <label class="check"><input id="roots" type="checkbox" checked> Điểm chân</label>
+      <label class="check"><input id="silhouette" type="checkbox"> Silhouette</label>
+    </div>
+    <div class="stage-scroll"><canvas id="stage" width="960" height="420" aria-label="NPC và Vương Lâm ở native, cùng điểm chân"></canvas></div>
+    <p class="hint">1× giữ một pixel ảnh bằng một pixel trên màn hình; 2× phóng số nguyên bằng nearest. Màn hẹp cuộn ngang để giữ cỡ người.</p>
+    <article id="detail"></article>
+  </section>
+  <section id="lineup-review">
+    <p class="eyebrow">NHÌN CẢ NHÓM · GIỮ NHẬN DIỆN RIÊNG</p><h2>Vương Lâm và sáu NPC</h2>
+    <p class="hint">Cùng nền và mức phóng ở trên. Đối chiếu đầu, vai, màu áo và đạo cụ khi sáu người đứng cạnh nhau.</p>
+    <div class="stage-scroll"><canvas id="lineup" width="1008" height="280" aria-label="Vương Lâm và sáu NPC cùng mặt đất"></canvas></div>
+  </section>
+  <section id="coverage">
+    <p class="eyebrow">NEUTRAL → CÁC HƯỚNG → ĐỘNG TÁC</p><h2>Tiến độ của nhóm này</h2>
+    <div id="coverage-counts" class="counts"></div>
+    <div class="steps"><article><b>Hiện có</b><p>Mỗi NPC một neutral Đông Nam với nguồn, prompt, điểm chân và frame native.</p></article><article><b>Các hướng tiếp theo</b><p>Bảy view thật còn lại giữ nhận diện riêng, đối chiếu Vương Lâm live cùng hướng.</p></article><article><b>Động tác theo GDD</b><p>Idle, nói chuyện và cử chỉ theo nghề. Một neutral tĩnh chưa tính là clip idle.</p></article></div>
+    <p class="hint">Hồ sơ kỹ thuật ghi phép đo và hash nguồn. Duyệt hình và đưa vào game được ghi theo phạm vi riêng.</p>
+    <div class="links"><a href="catalog.json">Catalog neutral</a><a href="registration.json">Đo chân / scale / alpha</a><a href="production.json">Hồ sơ nguồn</a><a href="review/verification.json">Kiểm tra trình duyệt</a><a href="README.md">Bàn giao</a><a href="../../world/van-hai-living-world-v1/placement.html">Bố trí theo GDD</a></div>
+  </section>
+</main>
+<footer>Sáu neutral Đông Nam · chuẩn người Vương Lâm Pixel02 đang dùng trong game.</footer>
+<script type="module" src="review.mjs"></script>
+</body>
+</html>

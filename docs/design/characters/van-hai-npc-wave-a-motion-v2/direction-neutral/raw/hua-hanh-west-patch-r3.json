@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Repair ONE isolated Hứa Hành true LEFT PROFILE neutral. IMAGE1 live Wang West is PRIMARY compact human anatomy, pixel style and camera. IMAGE2 is this SAME NPC prior West neutral; preserve his face, hair, cloak, paper, left hip tube, boots and dimensions.\n\nREQUIRED VISIBLE EDIT: remove the large tan/brown rectangular patch currently on the exposed screen-RIGHT upper sleeve below the hood. Replace that rectangle with continuous plain GREY cloak fabric. The entire visible near upper sleeve must be plain grey, with NO tan/brown patch or stitching rectangle. The actual patch belongs to his far anatomical RIGHT shoulder and is hidden behind his torso from this LEFT-facing view; DO NOT draw any visible replacement patch in this image. Do not rotate or mirror his head/body, swap hands or move any other item.\n\nOne full-body neutral, genuine transparent RGBA background, full crown/boots/props with generous margins. No shadow, glow, checkerboard, background or text. Large compact head/short torso and legs stay unchanged. No new figure or action sheet.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Repair ONE isolated Hứa Hành true LEFT PROFILE neutral. IMAGE1 live Wang West is PRIMARY compact human anatomy, pixel style and camera. IMAGE2 is this SAME NPC prior West neutral; preserve his face, hair, cloak, paper, left hip tube, boots and dimensions.\n\nREQUIRED VISIBLE EDIT: remove the large tan/brown rectangular patch currently on the exposed screen-RIGHT upper sleeve below the hood. Replace that rectangle with continuous plain GREY cloak fabric. The entire visible near upper sleeve must be plain grey, with NO tan/brown patch or stitching rectangle. The actual patch belongs to his far anatomical RIGHT shoulder and is hidden behind his torso from this LEFT-facing view; DO NOT draw any visible replacement patch in this image. Do not rotate or mirror his head/body, swap hands or move any other item.\n\nOne full-body neutral, genuine transparent RGBA background, full crown/boots/props with generous margins. No shadow, glow, checkerboard, background or text. Large compact head/short torso and legs stay unchanged. No new figure or action sheet.\n",
+    "n": 1,
+    "size": "1024x1536",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-13T12:23:46.676Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\inputs\\wang-lin-live-west-nearest8x.png",
+      "filename": "wang-lin-live-west-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9314,
+      "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\direction-neutral\\raw\\hua-hanh-west-repair-r2.png",
+      "filename": "hua-hanh-west-repair-r2.png",
+      "mimeType": "image/png",
+      "bytes": 1159560,
+      "sha256": "a9595f59f5f27fc2a03e8b6c083124142fe6ad7581754460a06c725a94e4f217",
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "hua-hanh-west-patch-r3.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1153493,
+    "sha256": "f781a8e070a1c6a71306666defe30a65828ff945464aab34d001919a7dd5bdc6",
+    "dimensions": {
+      "width": 1024,
+      "height": 1536
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

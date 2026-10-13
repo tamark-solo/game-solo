@@ -1,5 +1,7 @@
 # Kế hoạch tiến triển MMORPG — tu tiên, sức mạnh và hiện diện nhân vật
 
+> **Thiết kế tiếp nối 13/10/2026:** [GDD 0.33](GDD.md), [hệ tu tiên mới](CULTIVATION-REDESIGN-2026-10-13.md) và [Hằng Nhạc v2](HANG-NHAC-ONBOARDING-V2.md) thay đề xuất về nhịp nhập môn, HN04, xác nhận tầng/nhiệm vụ và thời điểm EX trong tài liệu này. Nội dung bên dưới giữ làm cơ sở/lịch sử; trạng thái đang chạy xem [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md). Bản thiết kế mới chưa thay code/save hoặc duyệt balance/ART.
+
 **Bản thiết kế 0.1 · 11/10/2026 · tích hợp định hướng GDD 0.32.** Chủ dự án xác nhận vòng chơi cần dẫn tới **farm đồ để mạnh hơn, PvE/PvP cùng người chơi và thể hiện nhân vật qua tọa kỵ, thời trang, pháp bảo cùng những thành tựu khác**. Đây là hướng sản phẩm xuyên suốt, không chỉ phần bổ sung sau tuyến truyện. Luật cụ thể bên dưới là đề xuất để đặc tả và kiểm chứng; chưa khóa số liệu, cân bằng, monetization, hình ART hoặc xác nhận có runtime mới.
 
 Tài liệu nối [GDD](GDD.md), [hướng sáng tạo](VAN-HAI-CREATIVE-DIRECTION.md), [kế hoạch nội dung](RPG-CONTENT-PLAN.md), [lộ trình RM0–RM6](DEVELOPMENT-ROADMAP.md) và [gói vật phẩm VP0–VP4](ITEM-PRODUCTION-PLAN.md). GDD sở hữu lời hứa sản phẩm; tài liệu này sở hữu quan hệ dài hạn giữa các vòng chơi; đặc tả từng lát sẽ sở hữu luật thực thi và số liệu đã chọn.

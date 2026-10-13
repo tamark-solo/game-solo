@@ -1,0 +1,273 @@
+{
+  "schema": "equipment-static-registration-1",
+  "registration": [
+    {
+      "id": "sword",
+      "source": "sources/sword-source.png",
+      "sourceSha256": "690decb32a20277040e17435cf1bee3a8919db67ae29464c0a1d44f922449c39",
+      "sourceSize": [
+        1071,
+        1469
+      ],
+      "sourceGrip": [
+        293,
+        363
+      ],
+      "sourceGripBasis": "manual visual landmark: grip centre / hanging cord top",
+      "rotateDegrees": -45,
+      "scale": 0.035,
+      "actualScale": [
+        0.035025017869907075,
+        0.03626943005181347
+      ],
+      "cropAfterRotation": {
+        "left": 248,
+        "top": 705,
+        "width": 1399,
+        "height": 386,
+        "opaquePixels": 143881
+      },
+      "itemGrip": [
+        8,
+        4
+      ],
+      "itemTopLeft": [
+        51,
+        84
+      ],
+      "handBodyLocal": [
+        43,
+        64
+      ],
+      "occlusionMask": {
+        "left": 40,
+        "top": 61,
+        "width": 7,
+        "height": 8
+      },
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        48,
+        112
+      ],
+      "bodyOffset": [
+        16,
+        24
+      ],
+      "pixelsResampled": true,
+      "sampling": "nearest after source rotation; source rotation uses Sharp",
+      "alpha": {
+        "method": "binary-alpha-128",
+        "removedLowAlphaPixels": 17105
+      },
+      "notes": "Đăng ký xoay nguồn -45° trước nearest; kiếm nằm chếch ngang để đầu mũi không xuyên đất.",
+      "quality": "static equipment registration candidate; grip/body motion unresolved",
+      "promptFile": "sources/sword.prompt.txt",
+      "promptSha256": "b2d4a681e7ac9fcbf9bf96272fec66dfbf0f7781d44c64c818b9a959e9e4a5f8"
+    },
+    {
+      "id": "spear",
+      "source": "sources/spear-source.png",
+      "sourceSha256": "5bebb0009bdfa3050256bbfd36e286caab345de165340a00273b3d066391f264",
+      "sourceSize": [
+        1061,
+        1482
+      ],
+      "sourceGrip": [
+        492,
+        994
+      ],
+      "sourceGripBasis": "manual visual landmark: grip centre / hanging cord top",
+      "rotateDegrees": 0,
+      "scale": 0.07186544342507645,
+      "actualScale": [
+        0.07317073170731707,
+        0.07186544342507645
+      ],
+      "cropAfterRotation": {
+        "left": 390,
+        "top": 84,
+        "width": 369,
+        "height": 1308,
+        "opaquePixels": 65758
+      },
+      "itemGrip": [
+        7,
+        65
+      ],
+      "itemTopLeft": [
+        52,
+        23
+      ],
+      "handBodyLocal": [
+        43,
+        64
+      ],
+      "occlusionMask": {
+        "left": 40,
+        "top": 61,
+        "width": 7,
+        "height": 8
+      },
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        48,
+        112
+      ],
+      "bodyOffset": [
+        16,
+        24
+      ],
+      "pixelsResampled": true,
+      "sampling": "nearest after source rotation; source rotation uses Sharp",
+      "alpha": {
+        "method": "binary-alpha-128",
+        "removedLowAlphaPixels": 9391
+      },
+      "notes": "Nguồn thương được giữ góc nghiêng; chỉ một scale cho toàn vật.",
+      "quality": "static equipment registration candidate; grip/body motion unresolved",
+      "promptFile": "sources/spear.prompt.txt",
+      "promptSha256": "203b016942590e74703099c015d6f31f4fec1bc65bd7b84381eda1d1ea675fad"
+    },
+    {
+      "id": "fan",
+      "source": "sources/fan-source.png",
+      "sourceSha256": "890fd66e93a52107f7eb6672a0ea9ef05d3c38d597fcdb88bc8adf5c7d2bec61",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceGrip": [
+        579,
+        860
+      ],
+      "sourceGripBasis": "manual visual landmark: grip centre / hanging cord top",
+      "rotateDegrees": 0,
+      "scale": 0.02464788732394366,
+      "actualScale": [
+        0.02464788732394366,
+        0.024277456647398842
+      ],
+      "cropAfterRotation": {
+        "left": 256,
+        "top": 96,
+        "width": 1136,
+        "height": 865,
+        "opaquePixels": 562823
+      },
+      "itemGrip": [
+        8,
+        19
+      ],
+      "itemTopLeft": [
+        51,
+        69
+      ],
+      "handBodyLocal": [
+        43,
+        64
+      ],
+      "occlusionMask": {
+        "left": 40,
+        "top": 61,
+        "width": 7,
+        "height": 8
+      },
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        48,
+        112
+      ],
+      "bodyOffset": [
+        16,
+        24
+      ],
+      "pixelsResampled": true,
+      "sampling": "nearest after source rotation; source rotation uses Sharp",
+      "alpha": {
+        "method": "binary-alpha-128",
+        "removedLowAlphaPixels": 20242
+      },
+      "notes": "Nguồn có haze alpha; binary-alpha 128 để bỏ haze trong bản pixel thử.",
+      "quality": "static equipment registration candidate; grip/body motion unresolved",
+      "promptFile": "sources/fan.prompt.txt",
+      "promptSha256": "208dd608e81559a3588d09c2cbae44a893990ce13e1fdc74861ab2b81af9eaae"
+    },
+    {
+      "id": "gourd",
+      "source": "sources/gourd-source.png",
+      "sourceSha256": "25fade9b6417710ae6da7b3624db5b1d6a9cb96ea5c9a0f5e8ee98b9f403c738",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceGrip": [
+        530,
+        337
+      ],
+      "sourceGripBasis": "manual visual landmark: grip centre / hanging cord top",
+      "rotateDegrees": 0,
+      "scale": 0.02591792656587473,
+      "actualScale": [
+        0.02696078431372549,
+        0.02591792656587473
+      ],
+      "cropAfterRotation": {
+        "left": 304,
+        "top": 313,
+        "width": 408,
+        "height": 926,
+        "opaquePixels": 204995
+      },
+      "itemGrip": [
+        6,
+        1
+      ],
+      "itemTopLeft": [
+        53,
+        87
+      ],
+      "handBodyLocal": [
+        43,
+        64
+      ],
+      "occlusionMask": {
+        "left": 40,
+        "top": 61,
+        "width": 7,
+        "height": 8
+      },
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        48,
+        112
+      ],
+      "bodyOffset": [
+        16,
+        24
+      ],
+      "pixelsResampled": true,
+      "sampling": "nearest after source rotation; source rotation uses Sharp",
+      "alpha": {
+        "method": "binary-alpha-128",
+        "removedLowAlphaPixels": 8549
+      },
+      "notes": "Gắn vòng dây vào tay; thân hồ lô và hiệu ứng vận khí tách riêng.",
+      "quality": "static equipment registration candidate; grip/body motion unresolved",
+      "promptFile": "sources/gourd.prompt.txt",
+      "promptSha256": "d2aae2d3a7962e05437288c9b91dbebb8d30feab8f375be07ce9bcd993d24919"
+    }
+  ]
+}

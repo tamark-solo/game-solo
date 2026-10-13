@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Vùng cảnh báo tròn</title>
+  <desc id="desc">Vùng tròn có vạch chéo, viền kép và dấu cảnh báo ở giữa. Hình không chứa thời gian hoặc luật sát thương.</desc>
+  <defs>
+    <pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0V12" stroke="#eeb865" stroke-width="3" opacity=".48"/>
+    </pattern>
+  </defs>
+  <circle cx="64" cy="64" r="52" fill="#594023" fill-opacity=".25"/>
+  <circle cx="64" cy="64" r="52" fill="url(#hatch)"/>
+  <circle cx="64" cy="64" r="52" fill="none" stroke="#153b3e" stroke-width="8"/>
+  <circle cx="64" cy="64" r="52" fill="none" stroke="#f0b85f" stroke-width="3"/>
+  <circle cx="64" cy="64" r="45" fill="none" stroke="#173b3f" stroke-width="3"/>
+  <circle cx="64" cy="64" r="45" fill="none" stroke="#ffe7b0" stroke-width="1"/>
+  <g fill="#ffda93" stroke="#173b3f" stroke-width="2" stroke-linejoin="round">
+    <path d="m64 6 5 6-5 6-5-6Z"/><path d="m122 64-6 5-6-5 6-5Z"/>
+    <path d="m64 122-5-6 5-6 5 6Z"/><path d="m6 64 6-5 6 5-6 5Z"/>
+  </g>
+  <path d="m64 43 20 34H44Z" fill="#eeb865" stroke="#153b3e" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M64 54v10" stroke="#153b3e" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="64" cy="70" r="2.3" fill="#153b3e"/>
+</svg>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vương Lâm · Chọn áo và pháp bảo 03</title>
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <header>
+    <div class="header-top"><a href="../wang-lin-equipment-story-v2/index.html">← Bốn pháp bảo v2</a><a href="README.md">Hồ sơ bộ thử 03</a></div>
+    <p class="eyebrow">VƯƠNG LÂM · PHỐI ÁO & PHÁP BẢO 03</p>
+    <h1>Một Vương Lâm.<br>Nhiều cách phối trang bị.</h1>
+    <p class="intro">Thiên Nghịch Châu được thiết kế lại. Mỗi pháp bảo có ba hướng màu và hai kiểu áo riêng để anh xem, phối và chọn. Vương Lâm live luôn đứng cạnh làm mốc nhận diện.</p>
+    <div class="hero-facts" id="hero-facts"><span><b>04</b> pháp bảo</span><span><b>08</b> kiểu áo mới</span><span><b>03</b> hướng màu mỗi món</span><span><b>SE</b> một pose Đông Nam</span></div>
+    <nav aria-label="Nội dung"><a href="#choose">Phối trang bị</a><a href="#combinations">Xem mọi tổ hợp</a><a href="#wardrobe">Tất cả kiểu áo</a><a href="#favorites">Mẫu đã ghim</a><a href="#sources">Nguồn & ghi chú</a></nav>
+  </header>
+  <main>
+    <section id="choose">
+      <div class="section-head"><div><p class="eyebrow">CHỌN MÓN → CHỌN ÁO → CHỌN MÀU</p><h2>Phối thử bên cạnh bản live</h2></div><span class="status" id="pack-status" role="status">Đang nạp mẫu…</span></div>
+      <p class="load-error" id="load-error" hidden role="alert"></p>
+      <div class="artifact-tabs" id="artifact-tabs" role="group" aria-label="Chọn pháp bảo"></div>
+      <div class="selection-layout">
+        <div class="choice-panel">
+          <div class="choice-heading"><h3>Áo của Vương Lâm</h3><span class="muted">Live + hai kiểu cho món này</span></div>
+          <div class="outfit-options" id="outfit-options" role="group" aria-label="Chọn kiểu áo"></div>
+          <div class="choice-heading color-heading"><h3>Màu pháp bảo</h3><span class="muted">Vật liệu & linh quang</span></div>
+          <div class="color-options" id="color-options" role="group" aria-label="Chọn màu pháp bảo"></div>
+          <p class="choice-note" id="artifact-note"></p>
+        </div>
+        <div class="preview-panel">
+          <div class="chosen-heading"><div><span class="eyebrow">TỔ HỢP ĐANG XEM</span><h3 id="chosen-title">Đang đọc nguồn…</h3></div><button type="button" id="pin-current" disabled aria-pressed="false">☆ Ghim mẫu này</button></div>
+          <div class="toolbar">
+            <fieldset><legend>Cỡ xem</legend><button type="button" data-zoom="1" aria-pressed="false">1×</button><button type="button" data-zoom="2" aria-pressed="true">2×</button><button type="button" data-zoom="4" aria-pressed="false">4×</button></fieldset>
+            <div class="control"><label for="background">Nền đối chiếu</label><select id="background"><option value="gray">Xám</option><option value="light">Sáng</option><option value="dark">Tối</option><option value="map">Nền Vân Ngọc</option></select></div>
+            <label class="check"><input id="show-fx" type="checkbox" checked> FX riêng</label>
+            <label class="check"><input id="show-gear" type="checkbox" checked> Pháp bảo</label>
+            <label class="check"><input id="show-roots" type="checkbox"> Điểm chân</label>
+          </div>
+          <div class="stage-scroll"><canvas id="pair" width="612" height="290" role="img" aria-label="Vương Lâm live và tổ hợp áo pháp bảo được chọn"></canvas></div>
+          <p class="hint" id="scale-note">Ảnh ở 2×. Cuộn ngang để giữ nguyên cỡ pixel trên màn nhỏ.</p>
+          <p class="selection-description" id="selection-description"></p>
+          <p class="identity-note" id="identity-note"></p>
+        </div>
+      </div>
+    </section>
+    <section id="combinations">
+      <div class="section-head"><div><p class="eyebrow">BA ÁO × BA MÀU</p><h2 id="matrix-title">Các tổ hợp của món đang chọn</h2></div><span class="muted">Click hình để so riêng · ☆ để ghim</span></div>
+      <p class="section-intro" id="matrix-note">Mỗi hình bên dưới ở 2×. Đổi cỡ xem, bật/tắt FX và đổi nền ở trên cũng áp dụng vào các tổ hợp, giúp đọc rõ áo và vật liệu.</p>
+      <div class="combination-grid" id="combination-grid"></div>
+    </section>
+    <section id="wardrobe">
+      <div class="section-head"><div><p class="eyebrow">ÁO RIÊNG · KHÔNG PHÁP BẢO / FX</p><h2>Tất cả kiểu áo bên cạnh mốc live</h2></div><span class="muted">Thân 2× · cùng mốc chân</span></div>
+      <p class="section-intro">Tách trang bị để xem vai, vạt áo và màu vải. Mỗi món có hai kiểu hình thể y phục; mặt, tóc và giày luôn đối chiếu với bản live.</p>
+      <div class="wardrobe-grid" id="wardrobe-grid"></div>
+    </section>
+    <section id="favorites">
+      <div class="section-head"><div><p class="eyebrow">GIỮ LẠI ĐỂ ĐỐI CHIẾU</p><h2>Mẫu đã ghim <span id="favorite-count" class="count">0</span></h2></div><button type="button" id="clear-favorites" disabled>Bỏ mọi ghim</button></div>
+      <p class="section-intro">Ghim chỉ giữ trong phiên xem này; tải lại trang sẽ xóa danh sách. Ghim giúp lựa chọn mỹ thuật, chưa xác nhận duyệt ART.</p>
+      <p class="empty-state" id="empty-favorites">Bấm ☆ ở tổ hợp anh muốn giữ lại.</p>
+      <div class="favorite-grid" id="favorite-grid"></div>
+    </section>
+    <section id="sources">
+      <p class="eyebrow">HÌNH THỬ · NGUỒN ĐƯỢC GIỮ</p><h2>Nguồn của tổ hợp đang xem</h2>
+      <p class="section-intro">Áo mới và các phương án màu là concept tĩnh để lựa chọn. Pháp bảo, FX và thân được đặt thành lớp riêng. Mẫu này chưa có animation hoặc ghép vào game.</p>
+      <div class="source-grid" id="source-grid"></div>
+      <details class="technical"><summary>Đối chiếu kỹ thuật & hash</summary><div id="technical-detail"></div><div class="links"><a href="manifest.json">Manifest</a><a href="registration.json">Đo chân / đăng ký</a><a href="README.md">Bàn giao</a><a href="../wang-lin-equipment-story-v2/canon-study.md">Nguồn truyện & game đã đọc</a></div></details>
+    </section>
+  </main>
+  <footer>Concept Đông Nam · cùng mốc người live · thay áo và màu để xem lựa chọn · chưa animation / runtime / ART approval.</footer>
+  <script type="module" src="review.mjs"></script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 # Đặc tả trải nghiệm Hằng Nhạc — Ngưng Khí
 
+> **Thiết kế tiếp nối 13/10/2026:** [GDD 0.33](GDD.md), [hệ tu tiên mới](CULTIVATION-REDESIGN-2026-10-13.md) và [Hằng Nhạc v2](HANG-NHAC-ONBOARDING-V2.md) thay đề xuất về nhịp nhập môn, HN04, xác nhận tầng/nhiệm vụ và thời điểm EX trong tài liệu này. Nội dung bên dưới giữ làm cơ sở/lịch sử; trạng thái đang chạy xem [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md). Bản thiết kế mới chưa thay code/save hoặc duyệt balance/ART.
+
 **Phiên bản:** 0.4 · **Ngày bản cơ sở:** 08/10/2026 · **Trạng thái đối chiếu 10/10:** bộ skill khởi đầu chung đã chốt; R01, HN01–HN04 đã có bản thử. HN05–HN12, ngoại vi và khảo nghiệm vẫn là thiết kế. [GDD 0.30](GDD.md), [roadmap](DEVELOPMENT-ROADMAP.md) và [kế hoạch nội dung](RPG-CONTENT-PLAN.md) bổ sung nghiên cứu/trục truyện ứng viên trước mở rộng, không khóa lại toàn bộ chi tiết bên dưới.
 
 **Tham chiếu:** [GDD 0.28](GDD.md), [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md), [hệ thống tu tiên](CULTIVATION-SYSTEM.md), [nhân vật](CHARACTERS.md), [định hướng online](ONLINE-DIRECTION.md), [backlog](MVP-BACKLOG.md).

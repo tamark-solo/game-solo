@@ -7,7 +7,8 @@ import { currentSectQuest, sectQuests, type SectQuest } from '../../shared/sect-
 import { QuestUI } from './quest-ui';
 import { attachFrameSurface } from './frame-surface';
 import type { Position } from '@shared/world/types';
-import {chapterGate,initialChapter,levelThreshold} from '@shared/chapter';
+import {chapterGate,initialChapter,levelThreshold,CHAPTER_QUESTS,type ChapterQuestId} from '@shared/chapter';
+import { nearbyLifeNpc, nearLifeNpc, npcLifeAvailable, npcLore, npcStationName, type HangNhacNpc, type NpcLifeContext } from './npc-life';
 
 const element=<K extends keyof HTMLElementTagNameMap>(tag:K,text?:string):HTMLElementTagNameMap[K]=>{const node=document.createElement(tag);if(text)node.textContent=text;return node;};
 const reasons:Record<string,string>={ distance:'Tiến lại gần người hướng dẫn, trên cùng lối đi, rồi nhấn E.',profile:'Vào sân chung để lưu hành trình.',inactive:'Nhân vật chưa sẵn sàng.',
@@ -21,7 +22,7 @@ const reasons:Record<string,string>={ distance:'Tiến lại gần người hư�
   lesson_running:'Đang có vùng báo trước; đợi kết quả bài luyện rồi thử lại.',lesson_reward:'Bài đã xác nhận · nhận 80 tích lũy một lần.',
   resource:'Chưa đủ linh lực cho Phong; đợi hồi tự nhiên rồi thử lại.',skill_cooldown:'Phong đang hồi; đợi hết cooldown rồi thử lại.',blocked:'Chưa có khoảng trống hợp lệ cho bài luyện.',
   save:'Chưa lưu được kết quả. Hãy thử lại; phần thưởng chưa cấp.',request_reused:'Mã thao tác đã được dùng cho nội dung khác.',invalid:'Thao tác không hợp lệ.' };
-interface UIOptions { send:(command:SectCommand)=>void; avatar:()=>AvatarId; position:()=>Position; online:()=>boolean; connectionMessage?:()=>string|undefined; mapBackground?:()=>string; clock:()=>number; focus:()=>void; training:()=>void; enter:()=>void;chapter?:(station:StationId)=>void; }
+interface UIOptions { send:(command:SectCommand)=>void; avatar:()=>AvatarId; position:()=>Position; online:()=>boolean; connectionMessage?:()=>string|undefined; mapBackground?:()=>string; clock:()=>number; focus:()=>void; training:()=>void; enter:()=>void;chapter?:(station:StationId)=>void; chapterQuest?:(quest:ChapterQuestId)=>void; navigate?:(station:StationId)=>void; npcContext?:()=>NpcLifeContext; }
 export class SectUI {
   view?:SectView;
   private dialog=document.getElementById('sect-dialog') as HTMLDialogElement;
@@ -32,6 +33,8 @@ export class SectUI {
   private panel=document.getElementById('sect-objective')!;
   private interaction=document.getElementById('interact') as HTMLButtonElement;
   private station?:StationId;
+  private loreNpc?:HangNhacNpc;
+  private loreProfile?:string;
   private destination?:StationId;
   private signature='';
   private pending='';
@@ -46,7 +49,7 @@ export class SectUI {
     document.getElementById('sect-close')!.addEventListener('click',()=>this.dialog.close());
     document.getElementById('lesson-retry')!.addEventListener('click',()=>this.command('lesson_start',{lesson:this.view?.lessons.active==='arts'?'arts':'avoid'}));
     document.getElementById('lesson-stop')!.addEventListener('click',()=>this.command('lesson_stop'));
-    this.dialog.addEventListener('close',()=>{this.station=undefined;this.signature='';this.feedback('');this.options.focus();});
+    this.dialog.addEventListener('close',()=>{this.station=undefined;this.loreNpc=undefined;this.loreProfile=undefined;this.signature='';this.feedback('');this.options.focus();});
   }
   get modal():boolean{return this.dialog.open;}
   private offlineMessage():string{return this.options.connectionMessage?.()??'Chọn “Vào sân chung” để nói chuyện với NPC và lưu hành trình.';}
@@ -66,7 +69,9 @@ export class SectUI {
   reset():void {this.view=undefined;this.pending='';this.destination=undefined;this.signature='';if(this.dialog.open)this.dialog.close();this.feedback('');this.update();}
   state(view:SectView):void {
     if(this.view?.profileId!==view.profileId)this.destination=undefined;
-    if(this.view&&this.objective().id!==currentSectQuest(sectQuests(view)).id)this.destination=undefined;
+    const previous=this.view&&this.objective();
+    const next=currentSectQuest(sectQuests(view));
+    if(previous&&(previous.id!==next.id||previous.stationId!==next.stationId)){this.destination=undefined;if(view.profileId===this.view?.profileId)this.feedback(`Tiếp theo: ${next.id} · ${next.title}`);}
     this.view=view;this.update();
   }
   result(result:SectResult):void {
@@ -84,24 +89,36 @@ export class SectUI {
     const goal=this.objective();
     if(goal.status==='unreleased'){this.feedback(goal.nextStep);return;}
     this.destination=goal.stationId;
-    if(nearStation(this.options.position(),goal.stationId))this.command('talk',{stationId:goal.stationId});
+    if(nearStation(this.options.position(),goal.stationId)){
+      if(CHAPTER_QUESTS.includes(goal.id as ChapterQuestId)&&(goal.stationId!=='cultivation'||goal.id==='HN07')&&this.options.chapterQuest)this.options.chapterQuest(goal.id as ChapterQuestId);
+      else this.command('talk',{stationId:goal.stationId});
+    }else if(this.options.navigate)this.options.navigate(goal.stationId);
     else this.journal();
   }
   basicAttack(targetId:string):void {this.command('basic_attack',{targetId});}
+  updateNpcLife():void {
+    if(!this.loreNpc)return;
+    const context=this.options.npcContext?.();
+    if(!context||!npcLifeAvailable(context)||context.profileId!==this.loreProfile||!nearLifeNpc(context.position,this.loreNpc)){
+      this.loreNpc=undefined;this.loreProfile=undefined;if(this.dialog.open)this.dialog.close();
+    }
+  }
   update():void {
+    this.updateNpcLife();
     const online=this.options.online(),position=this.options.position(),now=this.options.clock(),goal=this.quests.update(this.view,online,this.options.avatar());
     this.dialog.dataset.pending=String(!!this.pending);
     this.body.setAttribute('aria-busy',String(!!this.pending));
     if(this.pending&&(!online||Date.now()-this.pendingAt>5000)){this.pending='';this.feedback('Chưa nhận xác nhận. Kiểm tra kết nối và trạng thái đã lưu trước khi tiếp tục.');}
     const destination=SECT_STATIONS.find(s=>s.id===(this.destination??goal.stationId))!;
     const nearby=SECT_STATIONS.filter(s=>nearStation(position,s.id)).sort((a,b)=>Math.hypot(a.x-position.x,a.y-position.y)-Math.hypot(b.x-position.x,b.y-position.y))[0];
+    const context=this.options.npcContext?.(),lore=context?nearbyLifeNpc(context):undefined;
     const horizontal=destination.x-position.x,vertical=destination.y-position.y;
     const compass=`${Math.abs(vertical)>50?vertical>0?'nam':'bắc':''}${Math.abs(horizontal)>50?horizontal>0?' đông':' tây':''}`.trim();
     document.getElementById('quest-title')!.textContent=`${goal.id} · ${goal.title}`;
-    document.getElementById('quest-hint')!.textContent=online?nearby?`E · nói chuyện với ${nearby.name}`:`${destination.area}${compass?' · hướng '+compass:''} · xem đường trong Nhật ký`: this.options.connectionMessage?.()??'Vào sân chung để bắt đầu hoặc tiếp tục bản lưu.';
-    if(online&&goal.status!=='unreleased')document.getElementById('quest-guide')!.textContent=nearStation(position,goal.stationId)?goal.status==='ready'?'Xác nhận với NPC':'Nói chuyện với NPC':goal.status==='ready'?'Chỉ đường về NPC':'Xem đường tới NPC';
-    this.interaction.disabled=!online||!nearby||!!this.pending;
-    this.interaction.textContent=nearby?'E · Nói chuyện':'E · Tới gần NPC';
+    document.getElementById('quest-hint')!.textContent=online?nearby?`E · nói chuyện với ${npcStationName(nearby.id)}`:lore?`E · nói chuyện với ${lore.name} · ${lore.role}`:`${destination.area}${compass?' · hướng '+compass:''} · bấm Tìm đường để tới nơi`: this.options.connectionMessage?.()??'Vào sân chung để bắt đầu hoặc tiếp tục bản lưu.';
+    if(online&&goal.status!=='unreleased')document.getElementById('quest-guide')!.textContent=nearStation(position,goal.stationId)?goal.status==='ready'?'Xác nhận với NPC':CHAPTER_QUESTS.includes(goal.id as ChapterQuestId)&&(goal.stationId!=='cultivation'||goal.id==='HN07')?'Tiếp tục nhiệm vụ':'Nói chuyện với NPC':'Tìm đường tới mục tiêu';
+    this.interaction.disabled=!online||(!nearby&&!lore)||!!this.pending;
+    this.interaction.textContent=nearby||lore?'E · Nói chuyện':'E · Tới gần NPC';
     this.panel.dataset.quest=goal.id;
     const progress=this.view?.lessons,exercise=this.view?.lessonView,panel=document.getElementById('lesson-panel')!;
     panel.hidden=!progress||progress.active==='none';
@@ -140,10 +157,20 @@ export class SectUI {
     if(this.playerDot){this.playerDot.style.left=`${position.x/HANG_NHAC.world.width*100}%`;this.playerDot.style.top=`${position.y/HANG_NHAC.world.height*100}%`;}
   }
   interact():void {
-    if(this.modal)return;
+    if(this.modal||this.pending)return;
     if(!this.options.online()){this.feedback(this.offlineMessage());return;}
     const station=SECT_STATIONS.filter(s=>nearStation(this.options.position(),s.id)).sort((a,b)=>Math.hypot(a.x-this.options.position().x,a.y-this.options.position().y)-Math.hypot(b.x-this.options.position().x,b.y-this.options.position().y))[0];
-    if(station)this.command('talk',{stationId:station.id});else this.journal();
+    if(station){this.command('talk',{stationId:station.id});return;}
+    const context=this.options.npcContext?.(),npc=context?nearbyLifeNpc(context):undefined;
+    if(npc&&context?.view){this.showLore(npc,context);return;}
+    this.journal();
+  }
+  private showLore(npc:HangNhacNpc,context:NpcLifeContext):void {
+    this.station=undefined;this.loreNpc=npc;this.loreProfile=context.profileId;this.signature='';this.playerDot=undefined;this.actions=undefined;
+    this.title.textContent=`${npc.name} · ${npc.role}`;this.body.replaceChildren();this.feedback('');
+    this.dialog.dataset.mode='lore';document.getElementById('sect-category')!.textContent=`HẰNG NHẠC · ${npc.zone.toLocaleUpperCase('vi-VN')}`;
+    for(const line of npcLore(npc,context.view!))this.paragraph(line);
+    this.dialog.showModal();
   }
   private button(text:string,action:SectAction,extra:Partial<SectCommand>={}):HTMLButtonElement {
     const button=element('button',text);button.type='button';button.dataset.action=action;button.addEventListener('click',()=>this.command(action,extra));(this.actions??this.body).append(button);return button;
@@ -151,7 +178,7 @@ export class SectUI {
   private paragraph(text:string):void{this.body.append(element('p',text));}
   private renderStation():void {
     const s=SECT_STATIONS.find(s=>s.id===this.station)!,v=this.view;
-    this.title.textContent=s.name;this.body.replaceChildren();this.playerDot=undefined;
+    this.title.textContent=npcStationName(s.id);this.body.replaceChildren();this.playerDot=undefined;
     this.dialog.dataset.mode='npc';document.getElementById('sect-category')!.textContent=`HẰNG NHẠC · ${s.area.toLocaleUpperCase('vi-VN')}`;
     this.actions=element('div');this.actions.className='dialog-actions';
     if(v?.lessons.hn04&&this.options.chapter){const button=element('button',s.id==='preparation'?'Mở bàn luyện chế':s.id==='cultivation'?'Mốc tu luyện & chuẩn bị':'Tiếp tục đạo trình');button.type='button';button.className='sect-chapter-route';button.dataset.chapterRoute=s.id;button.addEventListener('click',()=>{this.dialog.close();this.options.chapter?.(s.id);});this.body.append(button);}
@@ -212,7 +239,7 @@ export class SectUI {
   toggleJournal():void {if(this.dialog.open)this.dialog.close();else this.journal();}
   journal(questId?:SectQuest['id']):void {
     const focusedPin=(document.activeElement as HTMLElement)?.dataset.station;
-    this.station=undefined;this.signature='';this.title.textContent='Nhật ký Hằng Nhạc';this.body.replaceChildren();this.feedback('');
+    this.station=undefined;this.loreNpc=undefined;this.loreProfile=undefined;this.signature='';this.title.textContent='Nhật ký Hằng Nhạc';this.body.replaceChildren();this.feedback('');
     this.dialog.dataset.mode='journal';document.getElementById('sect-category')!.textContent='HÀNH TRÌNH NHẬP MÔN';this.actions=undefined;
     const goal=sectQuests(this.view).find(quest=>quest.id===questId)??this.objective();
     if(questId)this.destination=goal.stationId;
@@ -221,25 +248,26 @@ export class SectUI {
     const right=element('section');right.className='journal-map-panel';right.setAttribute('aria-label','Bản đồ chỉ đường');
     attachFrameSurface(right);
     const station=SECT_STATIONS.find(s=>s.id===(this.destination??goal.stationId))!;
-    right.append(element('h3','Đường tu hành'),element('p',`Đi tới ${station.name} · ${station.area}`));
+    right.append(element('h3','Đường tu hành'),element('p',`Đi tới ${npcStationName(station.id)} · ${station.area}`));
     layout.append(left,right);this.body.append(layout);
     const map=element('div');map.className='sect-minimap';map.style.backgroundImage=`url(${this.options.mapBackground?.()??HANG_NHAC.background.url})`;
     const route=sectRoute(this.options.position(),SECT_STATIONS.find(s=>s.id===(this.destination??goal.stationId))!);
     if(route){const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox',`0 0 ${HANG_NHAC.world.width} ${HANG_NHAC.world.height}`);
       const line=document.createElementNS(svg.namespaceURI,'polyline');line.setAttribute('points',route.map(p=>`${p.x},${p.y}`).join(' '));line.setAttribute('fill','none');line.setAttribute('stroke','#ffda6a');line.setAttribute('stroke-width','12');svg.append(line);map.append(svg);}
-    for(const s of SECT_STATIONS){const pin=element('button',s.id==='guide'?'1':s.id==='cultivation'?'2':s.id==='training'?'3':'4');pin.title=s.name;pin.className='sect-pin';pin.style.left=`${s.x/HANG_NHAC.world.width*100}%`;pin.style.top=`${s.y/HANG_NHAC.world.height*100}%`;
-      pin.type='button';pin.dataset.station=s.id;pin.setAttribute('aria-label',s.name);pin.setAttribute('aria-pressed',String(s.id===station.id));
+    for(const s of SECT_STATIONS){const pin=element('button',s.id==='guide'?'1':s.id==='cultivation'?'2':s.id==='training'?'3':'4');pin.title=npcStationName(s.id);pin.className='sect-pin';pin.style.left=`${s.x/HANG_NHAC.world.width*100}%`;pin.style.top=`${s.y/HANG_NHAC.world.height*100}%`;
+      pin.type='button';pin.dataset.station=s.id;pin.setAttribute('aria-label',npcStationName(s.id));pin.setAttribute('aria-pressed',String(s.id===station.id));
       pin.addEventListener('click',()=>{this.destination=s.id;this.journal();});map.append(pin);}
     this.playerDot=element('span');this.playerDot.className='sect-player-dot';this.playerDot.title='Vị trí của bạn';map.append(this.playerDot);right.append(map);
     const legend=element('div');legend.className='map-legend';
-    for(const [index,s] of SECT_STATIONS.entries()){const label=element('span');label.append(element('b',String(index+1)),s.name);legend.append(label);}right.append(legend);
-    right.append(element('p','Chấm trắng là bạn. Chọn điểm để xem đường, đóng sổ rồi di chuyển tới gần NPC và nhấn E.'));
+    for(const [index,s] of SECT_STATIONS.entries()){const label=element('span');label.append(element('b',String(index+1)),npcStationName(s.id));legend.append(label);}right.append(legend);
+    right.append(element('p','Chấm trắng là bạn. Chọn NPC rồi bấm Tìm đường. WASD, phím mũi tên hoặc Esc để dừng; tới nơi nhấn E để nói chuyện.'));
+    if(this.options.navigate){const navigate=element('button',`Tìm đường tới ${station.name}`);navigate.type='button';navigate.dataset.navigateStation=station.id;navigate.disabled=!route||!this.options.online();navigate.addEventListener('click',()=>{this.dialog.addEventListener('close',()=>this.options.navigate?.(station.id),{once:true});this.dialog.close();});right.append(navigate);}
     if(!route)right.append(element('p','Chưa tìm được đường gợi ý từ vị trí này. Di chuyển ra khoảng trống rồi xem lại.'));
     if(this.view?.activity)this.button('Dừng hoạt động nền','activity_stop');
     if(!this.dialog.open)this.dialog.showModal();this.update();
     if(focusedPin)this.body.querySelector<HTMLButtonElement>(`[data-station="${focusedPin}"]`)?.focus({preventScroll:true});
   }
-  diagnostics():unknown{return {view:this.view,quests:sectQuests(this.view),stations:SECT_STATIONS,destination:this.destination,modal:this.modal,station:this.station,
+  diagnostics():unknown{return {view:this.view,quests:sectQuests(this.view),stations:SECT_STATIONS,destination:this.destination,modal:this.modal,station:this.station,loreNpc:this.loreNpc?.id,
     online:this.options.online(),pending:this.pending?{requestId:this.pending,ageMs:Date.now()-this.pendingAt}:undefined,
     interactionDisabled:this.interaction.disabled,feedback:this.notice.textContent};}
 }

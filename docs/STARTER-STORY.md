@@ -1,5 +1,7 @@
 # Kịch bản nhập môn — ba nhân vật tại Hằng Nhạc
 
+> **Thiết kế tiếp nối 13/10/2026:** [GDD 0.33](GDD.md), [hệ tu tiên mới](CULTIVATION-REDESIGN-2026-10-13.md) và [Hằng Nhạc v2](HANG-NHAC-ONBOARDING-V2.md) thay đề xuất về nhịp nhập môn, HN04, xác nhận tầng/nhiệm vụ và thời điểm EX trong tài liệu này. Nội dung bên dưới giữ làm cơ sở/lịch sử; trạng thái đang chạy xem [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md). Bản thiết kế mới chưa thay code/save hoặc duyệt balance/ART.
+
 **Bản:** 2.0 · **Ngày:** 08/10/2026 · **Trạng thái:** brief biên tập theo [GDD 0.28](GDD.md) và [trải nghiệm Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md); lời dẫn/thoại chi tiết chưa được duyệt hoặc triển khai.
 
 **Bổ sung nghiên cứu 10/10:** [nguồn game/truyện](XIANXIA-GAME-RESEARCH.md) đối chiếu một số chương và năm game tu tiên; [hướng sáng tạo](VAN-HAI-CREATIVE-DIRECTION.md) đề xuất trục “Dấu sai trên vân lộ”, Đạo đồ và một hệ quả nhân duyên nhỏ. Đây là ứng viên bổ sung động lực cho HN05–HN12, **chưa thay tuyến/canon hoặc duyệt thoại**. Chọn D09–D10 và hoàn thiện ND1–ND2 trong [kế hoạch nội dung](RPG-CONTENT-PLAN.md) trước sản xuất.

@@ -16,8 +16,10 @@ import { applyR01Movement } from '../../shared/skills/movement';
 import { prepareWindPrediction } from '@shared/skills/dash-motion';
 import { SkillPresentation } from './skills/three-presentation';
 import { SkillSession } from './skills/session';
-import { SECT_STATIONS, progressionLabel, type SectResult, type SectView } from '../../shared/sect';
+import { SECT_STATIONS, progressionLabel, type SectResult, type SectView, type StationId } from '../../shared/sect';
+import { QuestNavigation } from './core/quest-navigation';
 import { SectUI } from './sect-ui';
+import { LIVE_HANG_NHAC_NPCS, npcStationName } from './npc-life';
 import { LessonPresentation } from './lesson-presentation';
 import { QuestMotionPresentation } from './quest-motion-presentation';
 import { GameShell } from './game-shell';
@@ -47,6 +49,13 @@ initializeDaoRuntimeTheme(el('game-shell'));
 const join = el<HTMLButtonElement>('join'), leave = el<HTMLButtonElement>('leave'), loading = el<HTMLElement>('loading');
 const names: Record<string, string> = { 'CHR-WANG-LIN-CHIBI': 'Vương Lâm', 'CHR-SITU-NAN': 'Tư Đồ Nam', 'CHR-LI-MUWAN': 'Lý Mộ Uyển' };
 const keys = new Set<string>(), touch = new Set<string>();
+const navigation = new QuestNavigation();
+let navigationProfile: string | undefined;
+const navigationNotice = document.createElement('div'), navigationText = document.createElement('span'), navigationStop = document.createElement('button');
+navigationNotice.id = 'quest-navigation'; navigationNotice.hidden = true;
+navigationText.setAttribute('role','status'); navigationStop.type = 'button'; navigationStop.textContent = 'Dừng';
+navigationStop.setAttribute('aria-label','Dừng tìm đường'); navigationStop.addEventListener('click',()=>{clearInput();stage.focus();});
+navigationNotice.append(navigationText,navigationStop); el('sect-objective').append(navigationNotice);
 const actors = new Map<string, RenderActor>();
 const npcs: RenderActor[] = [];
 let renderer: PreviewRenderer, local: RenderActor, ready = false, previous = performance.now(), accumulator = 0;
@@ -88,6 +97,12 @@ const sect = new SectUI({send:command=>{
   connectionMessage:()=>network.status==='connecting'||network.status==='reconnecting'?'Đang kết nối lại sân chung… NPC và thuật sẽ sẵn sàng khi khôi phục xong.':undefined,
   clock:()=>Date.now()+serverOffset,focus:()=>{clearInput();shell.focus();},
   chapter:station=>chapter.openAtStation(station),
+  chapterQuest:id=>chapter.openQuest(id),navigate:startNavigation,
+  npcContext:()=>{const own=network.room?.state.players?.get(network.room.sessionId);return {
+    position:own??HANG_NHAC.world.spawn,profileId:own?.profileId,view:sect.view,online:network.status==='connected'&&!!own?.connected,
+    scene:own?.scene,visible:!document.hidden,focused:document.hasFocus(),alive:!!own&&own.hp>0,
+    blocked:chapter.inActivity||chapter.modal||character.panel.modal||!!daoHud?.modal||shell.blocking||!!own?.motionLocked||!!sect.view?.practising,
+  };},
   training:()=>skills.practice(),enter:()=>{void enter().catch(error=>entry?.failed(error));}});
 const attached = new WeakSet<object>();
 const network = new NetworkSession(readInput, updateStatus, { roomName: HANG_NHAC_ROOM,
@@ -117,7 +132,7 @@ const character=new CharacterSession({room:()=>network.room,online:()=>network.s
     clearInput();characterJournalProfile=network.room?.state.players?.get(network.room.sessionId)?.profileId;sect.journal(questId);
   }});
 const chapter=new ChapterUI({room:()=>network.room,position:()=>network.room?.state.players?.get(network.room.sessionId)??local??HANG_NHAC.world.spawn,
-  sect:()=>sect.view,online:()=>network.status==='connected',focus:()=>stage.focus(),clear:clearInput,feedback,select:id=>{skills.selectedTarget=id;},changed:()=>syncChapterScene(),inputSequence:()=>network.nextInputSequence()});
+  sect:()=>sect.view,online:()=>network.status==='connected',focus:()=>stage.focus(),clear:clearInput,feedback,navigate:startNavigation,select:id=>{skills.selectedTarget=id;},changed:()=>syncChapterScene(),inputSequence:()=>network.nextInputSequence()});
 function syncChapterScene(){
   if(!chapterPresentation)return;
   const active=chapter.inActivity&&!!network.room;if(active===activityVisible)return;
@@ -184,14 +199,37 @@ async function enter(): Promise<void> {
   finally { opening=false; updateStatus(); shell.focus(); }
 }
 function clearInput(): void {
+  navigation.cancel(); navigationNotice.hidden = true;
   keys.clear(); touch.clear();
   skills.moveAim({x:0,y:0});
   document.querySelectorAll('.touch-pad button').forEach(b => b.classList.remove('active'));
 }
 function readInput(): Input {
   if (document.hidden || !document.hasFocus() || sect.modal || chapter.modal || character.panel.modal || daoHud?.modal || shell.blocking || document.activeElement?.matches('input,select,textarea')) return { x: 0, y: 0 };
+  if(navigation.status==='moving')return navigation.input;
   return { x: Number(keys.has('d') || keys.has('arrowright') || touch.has('east')) - Number(keys.has('a') || keys.has('arrowleft') || touch.has('west')),
     y: Number(keys.has('s') || keys.has('arrowdown') || touch.has('south')) - Number(keys.has('w') || keys.has('arrowup') || touch.has('north')),fast:keys.has('shift') };
+}
+function startNavigation(stationId: StationId): void {
+  const own=network.room?.state.players?.get(network.room.sessionId),station=SECT_STATIONS.find(s=>s.id===stationId);
+  if(!station||network.status!=='connected'||!own?.connected||own.scene!=='hub'||sect.modal||chapter.modal||character.panel.modal||daoHud?.modal||shell.blocking||document.hidden||!document.hasFocus())return;
+  if(own.motionLocked||sect.view?.practising||sect.view?.lessonView?.status==='warning'){feedback('Đợi thao tác luyện thuật kết thúc rồi tìm đường.');return;}
+  clearInput();stage.focus();navigationProfile=own.profileId;
+  const position=network.renderMotion(network.room!.sessionId)??own;
+  if(!navigation.start(position,station,npcStationName(station.id),performance.now()))feedback('Chưa tìm được đường từ vị trí này. Di chuyển ra chỗ trống rồi thử lại.');
+  else if(navigation.status==='arrived')feedback(`Đã tới ${npcStationName(station.id)}. Nhấn E hoặc Tiếp tục nhiệm vụ.`);
+}
+function updateNavigation(now:number):void {
+  if(navigation.status!=='moving'){navigationNotice.hidden=true;return;}
+  const own=network.room?.state.players?.get(network.room.sessionId);
+  if(network.status!=='connected'||!own?.connected||own.profileId!==navigationProfile||own.scene!=='hub'||own.hp<=0||own.motionLocked||document.hidden||!document.hasFocus()||sect.modal||chapter.modal||character.panel.modal||daoHud?.modal||shell.blocking){clearInput();return;}
+  navigation.update(network.renderMotion(network.room!.sessionId)??own,now);
+  const status=navigation.diagnostics.status;
+  navigationNotice.hidden=status!=='moving';
+  const route=navigation.remainingRoute,distance=route.slice(1).reduce((total,p,i)=>total+Math.hypot(p.x-route[i].x,p.y-route[i].y),0);
+  navigationText.textContent=`Đang tới ${navigation.label} · ${Math.max(1,Math.ceil(distance/120))} giây`;
+  if(status==='arrived')feedback(`Đã tới ${navigation.label}. Nhấn E hoặc Tiếp tục nhiệm vụ.`);
+  if(status==='blocked')feedback('Đường đi đang bị chặn. Tự di chuyển ra chỗ trống rồi bấm Tìm đường lại.');
 }
 function createActor(id: string, assetId: string, title: string, motion: Motion, own: boolean): RenderActor {
   const asset = renderer.assets.get(assetId);
@@ -239,6 +277,7 @@ function updateStatus(): void {
   el<HTMLButtonElement>('game-logout').disabled=!entry?.state.session;
 }
 avatar.addEventListener('change', () => {
+  clearInput();
   characterJournalProfile=undefined;
   character.reset();
   if (ready && !network.room) local = createActor('local', avatar.value, names[avatar.value], local, true);
@@ -284,6 +323,7 @@ window.addEventListener('keydown', event => {
     event.preventDefault();clearInput();sect.toggleJournal();return;
   }
   if(sect.modal)return;
+  if(key==='escape'&&navigation.status==='moving'){event.preventDefault();clearInput();stage.focus();return;}
   if(!event.repeat&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&!shell.blocking){
     if(event.code==='KeyM'){event.preventDefault();clearInput();daoHud?.openMap();return;}
     if(event.code==='KeyV'||event.code==='KeyK'||event.code==='KeyB'){event.preventDefault();clearInput();character.open(event.code==='KeyV'?'cultivation':event.code==='KeyK'?'spells':'inventory');return;}
@@ -292,16 +332,18 @@ window.addEventListener('keydown', event => {
   // IME can report "Process" instead of "e"; the physical key still identifies E.
   if(!event.repeat&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&(event.code==='KeyE'||key==='e')){event.preventDefault();clearInput();if(chapter.inActivity)chapter.interact();else sect.interact();return;}
   if(shell.blocking)return;
-  if(!event.repeat&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&(event.code==='KeyF'||key==='f')){event.preventDefault();skills.basic();return;}
-  const skill=skills.shortcut(event);if(skill){event.preventDefault();skills.cast(skill);return;}
-  if (['shift','w', 'a', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'].includes(key)) { event.preventDefault(); keys.add(key); skills.moveAim(readInput()); }
+  if(!event.repeat&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&(event.code==='KeyF'||key==='f')){event.preventDefault();navigation.cancel();skills.basic();return;}
+  const skill=skills.shortcut(event);if(skill){event.preventDefault();navigation.cancel();skills.cast(skill);return;}
+  if (['shift','w', 'a', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'].includes(key)) { event.preventDefault(); navigation.cancel();keys.add(key); skills.moveAim(readInput()); }
 });
 window.addEventListener('keyup', event => {keys.delete(event.key.toLowerCase());skills.moveAim(readInput());});
-window.addEventListener('blur', clearInput);
-document.addEventListener('visibilitychange', clearInput);
+window.addEventListener('blur',()=>{clearInput();sect.updateNpcLife();});
+document.addEventListener('visibilitychange',()=>{clearInput();sect.updateNpcLife();});
+document.addEventListener('click',event=>{if((event.target as HTMLElement).closest('[data-hotbar-skill],#basic-attack,#training'))navigation.cancel();},true);
 stage.addEventListener('pointerdown', event => {
   if (!ready||sect.modal||chapter.modal||character.panel.modal||daoHud?.modal||shell.blocking) return;
   if ((event.target as HTMLElement).closest('button,[data-game-ui],#hotbar-mount')) return;
+  navigation.cancel();
   stage.focus(); const rect=stage.getBoundingClientRect(), point=new THREE.Vector3((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1,0).unproject(renderer.camera);
   const own=actors.get(network.room?.sessionId??'')??local, dx=point.x-own.x, dy=-point.y-own.y, magnitude=Math.hypot(dx,dy);
   if (magnitude>1) skills.setAim(dx,dy);
@@ -309,13 +351,15 @@ stage.addEventListener('pointerdown', event => {
 });
 document.querySelectorAll<HTMLButtonElement>('[data-input]').forEach(button => {
   const direction = button.dataset.input!;
-  button.addEventListener('pointerdown', event => { if(sect.modal||character.panel.modal||daoHud?.modal||shell.blocking)return;event.preventDefault();stage.focus();button.setPointerCapture(event.pointerId); touch.add(direction); button.classList.add('active');skills.moveAim(readInput()); });
+  button.addEventListener('pointerdown', event => { if(sect.modal||chapter.modal||character.panel.modal||daoHud?.modal||shell.blocking)return;event.preventDefault();navigation.cancel();stage.focus();button.setPointerCapture(event.pointerId); touch.add(direction); button.classList.add('active');skills.moveAim(readInput()); });
   for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) button.addEventListener(type, () => { touch.delete(direction); button.classList.remove('active');skills.moveAim(readInput()); });
 });
 
 function frame(now: number): void {
   const dt = Math.min(Math.max((now - previous) / 1000, 0), .1); previous = now;
+  sect.updateNpcLife();
   let visible: RenderActor[];
+  updateNavigation(now);
   skills.moveAim(readInput());
   if (network.room) {
     accumulator = 0; network.update(now);
@@ -336,6 +380,7 @@ function frame(now: number): void {
     visible = [local];
   }
   const own = visible.find(a => a.own) ?? local;
+  if(!activityVisible)for(const npc of npcs)npc.animation.update(dt);
   const clamp = (value: number, size: number, viewport: number) => viewport >= size ? size / 2 : Math.max(viewport / 2, Math.min(size - viewport / 2, value));
   const world=activityVisible?CHAPTER_WORLD:HANG_NHAC.world;
   const target = { x: clamp(own.x, world.width, stage.clientWidth), y: clamp(own.y - 50, world.height, stage.clientHeight) };
@@ -373,7 +418,7 @@ async function init(): Promise<void> {
         JSON.stringify(asset.atlas.anchor) !== JSON.stringify(HANG_NHAC.character.anchor)) throw new Error('Tỷ lệ nhân vật khác bản đã chốt.');
   }
   local = createActor('local', avatar.value, names[avatar.value], { ...HANG_NHAC.world.spawn, direction: 'south', moving: false }, true);
-  for(const station of SECT_STATIONS)npcs.push(createActor(`npc:${station.id}`,station.avatarId,station.name,{x:station.x,y:station.y,direction:'south',moving:false},false));
+  for(const npc of LIVE_HANG_NHAC_NPCS)npcs.push(createActor(`npc:${npc.stationId??npc.id}`,npc.assetId,`${npc.name} · ${npc.role}`,{x:npc.x,y:npc.y,direction:'south',moving:false},false));
   renderer.cameraCenter = { x: local.x, y: local.y - 50 };
   renderer.mode = 'map'; renderer.render([local]);
   ready = true; loading.hidden = true; mapArtSelect.disabled = false; updateStatus(); shell.focus();
@@ -391,6 +436,8 @@ async function init(): Promise<void> {
       profiles:profiles.profiles,own:network.room?.state.players?.get(network.room.sessionId)?.toJSON(),
       targets:network.room?.state.targets?.toJSON(),vfx:presentation.diagnostics(),selectedTarget:skills.selectedTarget,input:skills.diagnostics() }),
     __hangNhacSect:()=>sect.diagnostics(),
+    __hangNhacNpcs:()=>({visible:!activityVisible&&(!entry||!!network.room),npcs:LIVE_HANG_NHAC_NPCS}),
+    __hangNhacNavigation:()=>({status:navigation.status,reason:navigation.reason,label:navigation.label,remainingRoute:navigation.remainingRoute}),
     __hangNhacSkills:()=>presentation.diagnostics(),
     __hangNhacQuestMotion:()=>questMotion.diagnostics(),
     __hangNhacPixelPlayer:()=>pixelPlayer.diagnostics(),

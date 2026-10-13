@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: style-transfer. Asset: one static neutral NPC sprite concept for Van Hai Dao Do. EDIT IMAGE 1, the owner-confirmed Tran Duy v3 human proportions template, enlarged exactly 8x with nearest sampling. Preserve its compact chibi head-to-body ratio, short torso and legs, shoulder width, large readable pixel clusters, standing foot level, and orthographic southeast/down-right camera. Change ONLY identity, hair, gender, age, clothes and small profession props as specified below. IMAGE 2 is Wang Lin Pixel02 currently in game, supporting pixel treatment and large head proportions. IMAGE 3 is the previous identity/costume concept ONLY; IGNORE its tall thin anatomy, pose, fine shading and detailed illustration style.\r\nSubject: a male martial teacher around forty, disciplined fair expression, short dark tied hair, a small eyebrow scar, dark navy robe, cloth-wrapped wrists and a worn wooden training sword pointing down beside the body. Keep the wooden sword small and readable, no giant sword or heavy armor. Mature face without making the head smaller; weight rests on one planted foot.\r\nThe NPC must appear made by the same pixel artist as images 1 and 2. Head and main hair about half the standing height; preserve mature identity with the large chibi head. Whole character and boots visible, relaxed neutral stance facing screen down-right. Simplify clothes and props into coarse clean low-resolution pixel shapes and broad three-tone material clusters. Target logical 64x96 body canvas, nominal standing height80 world pixels and foot(32,88); do not fill this frame with tall anatomy. Render as an integer enlargement, no subpixel painterly detail or smoothing. One character only, genuinely transparent RGBA background with generous padding. No floor, cast shadow, halo, haze, glow, light bloom, text, grid, scene, FX or sheet. Body and hand-held props form a static identity concept for review; this is not animation or runtime approval.\r\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: style-transfer. Asset: one static neutral NPC sprite concept for Van Hai Dao Do. EDIT IMAGE 1, the owner-confirmed Tran Duy v3 human proportions template, enlarged exactly 8x with nearest sampling. Preserve its compact chibi head-to-body ratio, short torso and legs, shoulder width, large readable pixel clusters, standing foot level, and orthographic southeast/down-right camera. Change ONLY identity, hair, gender, age, clothes and small profession props as specified below. IMAGE 2 is Wang Lin Pixel02 currently in game, supporting pixel treatment and large head proportions. IMAGE 3 is the previous identity/costume concept ONLY; IGNORE its tall thin anatomy, pose, fine shading and detailed illustration style.\r\nSubject: a male martial teacher around forty, disciplined fair expression, short dark tied hair, a small eyebrow scar, dark navy robe, cloth-wrapped wrists and a worn wooden training sword pointing down beside the body. Keep the wooden sword small and readable, no giant sword or heavy armor. Mature face without making the head smaller; weight rests on one planted foot.\r\nThe NPC must appear made by the same pixel artist as images 1 and 2. Head and main hair about half the standing height; preserve mature identity with the large chibi head. Whole character and boots visible, relaxed neutral stance facing screen down-right. Simplify clothes and props into coarse clean low-resolution pixel shapes and broad three-tone material clusters. Target logical 64x96 body canvas, nominal standing height80 world pixels and foot(32,88); do not fill this frame with tall anatomy. Render as an integer enlargement, no subpixel painterly detail or smoothing. One character only, genuinely transparent RGBA background with generous padding. No floor, cast shadow, halo, haze, glow, light bloom, text, grid, scene, FX or sheet. Body and hand-held props form a static identity concept for review; this is not animation or runtime approval.\r\n",
+    "n": 1,
+    "size": "1024x1536",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-13T05:03:47.980Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-concepts-v4\\inputs\\tran-duy-v3-nearest8x.png",
+      "filename": "tran-duy-v3-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 12961,
+      "sha256": "3bd6164fe21d1c33c07bfe4f6934d8e91b9222343ce02610182301e0370346e2",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-concepts-v4\\inputs\\pixel02-southeast-nearest8x.png",
+      "filename": "pixel02-southeast-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9320,
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-concepts-v4\\inputs\\ta-kiem-son-identity-v1.png",
+      "filename": "ta-kiem-son-identity-v1.png",
+      "mimeType": "image/png",
+      "bytes": 1326066,
+      "sha256": "0f9aa072183a5191af2ebbba7b0e1bf865f3b1c2e6019b3b0c17770c6119baa4",
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "ta-kiem-son.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1049329,
+    "sha256": "8e58532ecb15fe9ca023840c66d126ff2451843b8d81485fc01f0de14e4d4215",
+    "dimensions": {
+      "width": 1024,
+      "height": 1536
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

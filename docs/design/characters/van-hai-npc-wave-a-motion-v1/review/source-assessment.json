@@ -1,0 +1,290 @@
+{
+  "schema": "npc-wave-a-motion-source-assessment-audit-1",
+  "date": "2026-10-13",
+  "scope": "Visual source audit of all18realposes per selected Southeast source; technical root confirmation and owner motion approval separate",
+  "basis": {
+    "primaryStyle": "Wang Lin Pixel02 live Southeast",
+    "ownIdentity": "../van-hai-npc-wave-a-concepts-v1/approval.json",
+    "ownNeutralPinnedCount": 45
+  },
+  "frameNotation": "Rows idle/talk/profession, each frame1–6; frame1 neutral calibration and frame6 intended neutral return",
+  "artApproved": false,
+  "ownerApproved": false,
+  "motionApproved": false,
+  "runtimeImported": false,
+  "sources": [
+    {
+      "slug": "bach-chi",
+      "direction": "southeast",
+      "source": "raw/bach-chi-southeast.png",
+      "sourceSha256": "dcb36a9e1b09a40dd0f91d91dfff052cd5f8c3bbb7231b4f697a6af08d50e289",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain the approved front-right/down-right Southeast view; head inclines for speech/inspection without turning the actor into a front or profile view."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Brown high working bun with leaf-green tie, tea-leaf/ivory robe, waist straps, low screen-left herb basket and screen-right small jade pestle preserve the owner-approved neutral identity; no Wang wardrobe/hair substitution."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact chibi skull, short torso/legs and readable broad clusters remain coherent across rows in raw and native2x strip. Talk3 and profession2–3 lower the head naturally to look down; skull width remains comparable rather than a visibly resized head. Both boots stay represented."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Basket remains attached to its original holding hand and pestle to the other hand through all rows. Profession lifts/tilts basket and pestle while retaining their identity; no third leaf, new hand, staff, duplicated basket or disappearing prop."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Idle includes a blink/breath variation; talk has restrained head/mouth changes with hands low; profession has actual downward inspection and wrist/basket angle changes rather than18static copies."
+      },
+      "limitations": [
+        "Bạch Chỉ still reads fairly young, as in the owner-approved static identity; this source preserves that identity.",
+        "Profession2–3 look down and present lower total head-to-floor bounds; source-wide neutral scale must preserve the natural pose change, never normalize each frame.",
+        "Basket shape/contents and pestle angle vary slightly during profession; native1x detail is small.",
+        "Frame6 visually returns close to neutral but pixel-exact neutral end equality is not established by this visual audit.",
+        "Source fringe/alpha, exact root stability, clipping and atlas extraction remain technical checks separate from this art audit."
+      ],
+      "status": "review-candidate",
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/bach-chi-southeast-root-review-2x.png",
+        "finding": "Native2x source strip was visually reviewed alongside raw and own approved neutral; complete boots, compact identity and visible profession props retained."
+      }
+    },
+    {
+      "slug": "tong-thiet",
+      "direction": "southeast",
+      "source": "raw/tong-thiet-southeast.png",
+      "sourceSha256": "09602ebac13eb1fcb5749dee270a944cd2a6e35a76d1a8cc5c93b468ab1a54d8",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses maintain the approved Southeast front-right view; speech and tool inspection use a head nod, without body/camera view change."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Short silver hair, aged brows/moustache, copper shoulder cloth, ash-brown apron, compact tongs and unfinished wooden blank match the approved artificer neutral. Elderly identity stays distinct from young disciples."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Sturdy compact adult chibi body remains short and proportional, with a similar skull/shoulder silhouette throughout all rows. Natural inspection head inclination does not produce a different body build; native2x strips show complete boots and hands."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Tongs remain in the original screen-left hand and wooden blank in the original screen-right hand. Both are visible throughout idle/talk/profession; profession brings the tips together compactly below the chest. No hand switch, metal-sword substitution, hammer, flame or disappearing blank."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Idle blink/breath and actual speaking mouth/nod are present. Profession alters gaze, tongs/blank angle and contact proximity in a controlled small checking gesture."
+      },
+      "limitations": [
+        "Tongs/wooden blank overlap around the waist, including the already accepted neutral, so their contact is subtler at native1x.",
+        "Tool silhouette/angle changes slightly through profession, but the same hands and identities remain readable.",
+        "Frame6 visually returns close to neutral; exact end-frame pixel equality is not established by this visual audit.",
+        "Source edge fringe, alpha threshold, ground/root confirmation and canonical/atlas extraction remain technical checks."
+      ],
+      "status": "review-candidate",
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/tong-thiet-southeast-root-review-2x.png",
+        "finding": "Native2x source strip was visually reviewed alongside raw and own approved neutral; complete boots, compact identity and visible profession props retained."
+      }
+    },
+    {
+      "slug": "hua-hanh",
+      "direction": "southeast",
+      "source": "raw/hua-hanh-southeast.png",
+      "sourceSha256": "40ac7c7b8f418ee1cc715806e1309b8e668475083798c394c34dcb4fa1d35f92",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses keep the approved down-right/front-right Southeast view, including map/cord inspection. Head nods do not turn the body/camera into another direction."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Short dusty grey patched cloak, compact dark hair, waist sealing cords, small route paper/map tube and mud-marked boots match the accepted route-keeper neutral. Asymmetric cloak patch remains on the original visible side."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact human skull, short torso/legs and shoulder cloak keep the approved proportions in raw and native2x. Inspection naturally inclines the head without a new build, oversized arm or disconnected hand."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Map/tube and old cords remain attached to the original hand/waist placements across idle/talk. Profession3 raises/partly opens the same compact route paper at the waist and profession4 checks the existing seal/cord; no floating sheet, new tube, extra weapon or disappearing props."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real blink/breath, speech mouth/head nod and low paper/cord inspection changes are visible. The profession remains restrained enough to preserve the small original gear."
+      },
+      "limitations": [
+        "Map/tube detail remains small and visually ambiguous at native1x, as in the approved neutral.",
+        "Profession3 paper opening reads mainly as a small pale fold; it does not communicate a large map unroll.",
+        "Profession2–4 head inclination lowers total pose bounds naturally; retain source-wide neutral scale.",
+        "End-frame visual return is close to neutral; this audit does not certify exact pixel equality or technical root/alpha/atlas correctness."
+      ],
+      "status": "review-candidate",
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/hua-hanh-southeast-root-review-2x.png",
+        "finding": "Native2x source strip was visually reviewed alongside raw and own approved neutral; complete boots, compact identity and visible profession props retained."
+      }
+    },
+    {
+      "slug": "dinh-soc",
+      "direction": "southeast",
+      "source": "raw/dinh-soc-southeast.png",
+      "sourceSha256": "e9a9d79a580d941f0a89e8d78a91c39bf07c659d2d318c1985e209753505e707",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses remain front-right/down-right Southeast; tag-check head inclination retains the same facing and no spear gesture turns the actor."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact dark hair, young-adult face, dark blue-green robe, light copper shoulder duty marks, hip route tag and short low diagonal spear match the owner-approved guard identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Raw18poses maintain consistent compact skull/torso/leg anatomy and complete boots. Final native2x after explicit boot-sole registration preserves the approved80px standing body and planted boots; small head inclination changes pose naturally, not source scale."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Spear is present in the same original screen-left holding hand for every idle/talk/profession pose, crossing low toward its original screen-right tip. Only the free screen-right hand raises toward the hip/waist tag during profession3–4. No hand swap, missing spear, face crossing, enlarged spear or duplicated tag."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Blink/breath and speaking mouth/head nod are distinct. Profession lowers the gaze and raises the free hand in a small duty/tag gesture while the spear hand stays down."
+      },
+      "nativeRegistrationState": "Final native2x visually reviewed after root-owned boot-witness correction; no source change",
+      "limitations": [
+        "Spear tip extends approximately2–4nativepx below boot ground into transparent padding, consistent with the accepted neutral identity. World root must remain boot soles.",
+        "Tag-check gesture is subtle at native1x: the hand moves near waist/chest rather than strongly displaying the hip tag.",
+        "Small blade angle/length variation persists between frames, while weapon identity and holding hand stay stable.",
+        "This visual audit does not certify exact frame6 pixel equality, alpha or atlas packing; numerical registration and technical checks remain separate."
+      ],
+      "status": "review-candidate",
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/dinh-soc-southeast-root-review-2x.png",
+        "finding": "All18poses show boot soles resting at the common floor with stable between-boot root placement. Spear remains in the same hand and its low tip occupies lower transparent padding."
+      },
+      "registrationCorrectionHistory": {
+        "initialProposalIssue": "Automatic lowest-alpha floor used spear tip, placing boots above floor and reducing apparent body height",
+        "resolvedBy": "Root-owned boot witnesses with explicit near-sole ROI excluding spear tip; one source-wide neutral scale and per-frame foot witnesses",
+        "witnessImage": "review/dinh-soc-boot-witnesses.png",
+        "witnessData": "review/dinh-soc-boot-witnesses.json",
+        "sourceChanged": false
+      }
+    },
+    {
+      "slug": "ky-an",
+      "direction": "southeast",
+      "source": "raw/ky-an-southeast.png",
+      "sourceSha256": "3fa51274ac9fa05c6622d8e53212baca11973521f78e2b7d69857225536951b1",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18rawposes retain the approved front-right/down-right Southeast view. Reading head inclination stays within the same camera and facing."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Pale blue/ivory robe, short low-tied dark hair with blue ribbon, belt water gourd and compact bamboo slips match the specifically corrected and approved Kỷ An neutral. No high bun, long ponytail, beard or Wang costume substitution."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Raw sheet maintains compact adult chibi skull and short torso/legs with the same hair mass and robe silhouette across rows. Profession reading tilt changes head angle naturally while both boots remain complete; native2x root strip was also reviewed; boots appear grounded with own proportions retained."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Water gourd remains in the original waist/belt position and bamboo slips remain in the same hands for all18poses. Profession slightly raises the same slips to read and settles breathing; no gourd ground placement, spawn, duplicate, floating paper or added qi."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Actual blink, speaking mouth/nod and bamboo-slip reading/shoulder changes are present. Profession is a standing reading/breath adaptation of the authored loop, not seated cultivation or full gourd-placement loop."
+      },
+      "nativeRegistrationState": "Final native2x root strip visually reviewed after boot-root proposal render; manual registration remains root-owned",
+      "limitations": [
+        "Gourd lobe/ribbon details and bamboo slip edges vary slightly between poses and remain small at native1x.",
+        "Profession3 head incline reduces the total height bounds naturally; one scale from standing calibration is required.",
+        "Standing pilot omits the authored gourd-placement/seated details as planned; it should be labelled read-slips/breath gesture.",
+        "Numerical root/scale, alpha and atlas checks and exact end-frame pixel equality are outside this raw visual audit."
+      ],
+      "status": "review-candidate",
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/ky-an-southeast-root-review-2x.png",
+        "finding": "All18nativeposes preserve short tied hair and own accepted compact silhouette; boots visually rest on the shared ground, gourd remains at waist and slips readable through the reading gesture."
+      }
+    },
+    {
+      "slug": "phung-da",
+      "direction": "southeast",
+      "source": "raw/phung-da-southeast.png",
+      "sourceSha256": "45f49c0e441b8643826552632d36faaf49bbe345ee5da95b16cae018f5805b40",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18rawposes maintain the approved Southeast view, including wrist/guard adjustment. Small head inclination towards the sword does not change body/camera direction."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact upright spiked hair, grey-green robe, earthy red-brown wrist/belt cloth and scratched short wooden sword preserve the accepted adult disciple identity."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Raw rows retain compact short torso/legs, consistent large skull/hair proportions and complete boots. Guard changes are in arms/wrist and small head angle rather than resized body; native2x root strip was also reviewed with grounded boots and retained proportions."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "The small wooden sword remains visible in its original screen-left holding hand throughout all18poses. Profession3–4 rotates the sword into a low guard and returns it; no sword drop, hand swap, metal substitution, giant weapon or FX trail."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Blink/breath, distinct speaking mouth/nod and genuine grip/guard/rest changes appear. Motion stays stationary, with no attack, lunge or implied target/damage."
+      },
+      "nativeRegistrationState": "Final native2x root strip visually reviewed after boot-root proposal render; manual registration remains root-owned",
+      "limitations": [
+        "Profession4 puts the small sword across the lower waist rather than entirely at the flank; it remains visible and clear of the face, but this differs from the narrow wrist-only prompt.",
+        "Sword length/angle and small wrist cloth shapes vary slightly during profession.",
+        "The face still reads young in the accepted chibi identity; this source retains that face rather than aging the actor during animation.",
+        "Numerical root/scale, alpha and atlas checks and exact frame6 pixel equality are outside this raw visual audit."
+      ],
+      "status": "review-candidate",
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/phung-da-southeast-root-review-2x.png",
+        "finding": "All18nativeposes preserve own spiked hair/compact silhouette; boots rest on shared ground and sword remains visible in its original hand, including the low guard."
+      }
+    }
+  ],
+  "reviewedSourceCount": 6,
+  "reviewedRawPoses": 108,
+  "reviewedNativePoses": 108,
+  "status": "six-selected-sources-review-candidates"
+}

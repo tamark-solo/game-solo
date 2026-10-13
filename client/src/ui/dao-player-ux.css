@@ -187,7 +187,7 @@
   #game-shell[data-dao-ux="05"] #stage .dao-live-quest :is(.quest-checklist,#quest-next) {font-size:11px;margin:6px 0}
   #game-shell[data-dao-ux="05"] #stage .dao-live-quest .quest-actions {grid-template-columns:minmax(44px,1fr) 44px 44px;gap:4px}
   #game-shell[data-dao-ux="05"] #stage .dao-live-quest #quest-guide {font-size:0;padding:4px}
-  #game-shell[data-dao-ux="05"] #stage .dao-live-quest #quest-guide::after {display:inline;content:'Gặp NPC';font:11px 'Segoe UI',sans-serif}
+  #game-shell[data-dao-ux="05"] #stage .dao-live-quest #quest-guide::after {display:inline;content:'Tới nơi';font:11px 'Segoe UI',sans-serif}
   #game-shell[data-dao-ux="05"] #stage .dao-live-quest[data-online=false] #quest-guide::after {content:'Vào sân'}
   #game-shell[data-dao-ux="05"] .dao-hud-journal {bottom:294px;width:132px;padding:2px 7px}
   #game-shell[data-dao-ux="05"] .dao-hud-journal header b {font-size:13px}
@@ -195,6 +195,9 @@
   #game-shell[data-dao-ux="05"] .chapter-dock {top:147px;width:calc(100% - 155px);max-height:calc(100dvh - 354px);padding:9px}
 }
 @media(max-height:520px) {
+  #game-shell[data-dao-ux="05"] #stage #sect-objective:has(#quest-navigation:not([hidden])) :is(.quest-tracker-heading,#quest-title,#quest-tracker-body,.quest-actions) {display:none}
+  #game-shell[data-dao-ux="05"] #stage #quest-navigation {margin:0}
+  #game-shell[data-dao-ux="05"] #stage #quest-navigation button {min-width:44px;min-height:44px;height:44px}
   #game-shell[data-dao-ux="05"] #stage .dao-live-identity {min-height:92px;padding-block:7px}
   #game-shell[data-dao-ux="05"] #stage .dao-live-identity .dao-identity-open {top:0;height:58px}
   #game-shell[data-dao-ux="05"] #stage .dao-identity-open .player-emblem {height:58px}

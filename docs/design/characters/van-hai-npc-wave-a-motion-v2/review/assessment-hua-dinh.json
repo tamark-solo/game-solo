@@ -1,0 +1,585 @@
+{
+  "schema": "npc-wave-a-hua-dinh-initial-source-assessment-1",
+  "date": "2026-10-13",
+  "sources": [
+    {
+      "slug": "hua-hanh",
+      "direction": "south",
+      "source": "raw/hua-hanh-south.png",
+      "sourceSha256": "748a807591b9d47a1d3393d7d5d8c0d9d3b81173235df523ece21a5a896b9e7f",
+      "status": "review-candidate",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": true,
+        "notes": "All18 poses retain a front-facing South body/face; two visible front eyes and front cloak neckline, with restrained downwards profession nods."
+      },
+      "identity": {
+        "pass": true,
+        "notes": "Own approved hair/costume/colour and original prop identities retained in the actual observed camera; requested direction is separately gated."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": true,
+        "notes": "Folded paper remains in physicalRIGHT holding hand; tube/cord stay physicalLEFT in the observed front camera; controlled paper opening uses available free fingers.",
+        "requestedViewHandednessValidated": true
+      },
+      "motion": {
+        "pass": true,
+        "notes": "Breathing/blink, mouth/nods and profession adjustment are distinct source poses; no attack, walk or patrol was added."
+      },
+      "visualLimitations": [
+        "Small paper/tag/cord details remain limited at native1x.",
+        "Look-down profession bounds become shorter naturally; no per-pose scale correction.",
+        "End poses return visually near neutral; exact first/last pixel equality is not claimed."
+      ],
+      "registrationReady": true,
+      "rootProposal": "review/hua-hanh-south-root-review.json",
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "hua-hanh",
+      "direction": "southwest",
+      "source": "raw/hua-hanh-southwest.png",
+      "sourceSha256": "db9fd2fe35c30c9ac70e6a152f13990600d2f521cd42504b5ac599f10825585f",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": false,
+        "notes": "All18 remain right/front Southeast; they never become left/front Southwest."
+      },
+      "identity": {
+        "pass": true,
+        "notes": "Own approved hair/costume/colour and original prop identities retained in the actual observed camera; requested direction is separately gated."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": true,
+        "notes": "Folded paper remains in physicalRIGHT holding hand; tube/cord stay physicalLEFT in the observed front camera; controlled paper opening uses available free fingers.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "hua-hanh",
+      "direction": "west",
+      "source": "raw/hua-hanh-west.png",
+      "sourceSha256": "f348435492a6da65be1c0820a3544d4efee58042435ff69b795cf8a5d2a50f21",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": false,
+        "notes": "All18 remain right/front Southeast, opposite the requested left-facing West profile."
+      },
+      "identity": {
+        "pass": true,
+        "notes": "Own approved hair/costume/colour and original prop identities retained in the actual observed camera; requested direction is separately gated."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": true,
+        "notes": "Folded paper remains in physicalRIGHT holding hand; tube/cord stay physicalLEFT in the observed front camera; controlled paper opening uses available free fingers.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "hua-hanh",
+      "direction": "northwest",
+      "source": "raw/hua-hanh-northwest.png",
+      "sourceSha256": "08211d16c77792604fdf23710275d25d841ba01348e12c3a55b7d7715e873f72",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": false,
+        "notes": "All18 remain right/front Southeast with front neckline and paper visible; there is no rear-left Northwest view."
+      },
+      "identity": {
+        "pass": true,
+        "notes": "Own approved hair/costume/colour and original prop identities retained in the actual observed camera; requested direction is separately gated."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": true,
+        "notes": "Folded paper remains in physicalRIGHT holding hand; tube/cord stay physicalLEFT in the observed front camera; controlled paper opening uses available free fingers.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "hua-hanh",
+      "direction": "north",
+      "source": "raw/hua-hanh-north.png",
+      "sourceSha256": "4154b8fd312a7c8b77b91859b958610f00147fb9545f7b6b2b1a7a5bf8a0fa00",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": false,
+        "notes": "Idle/talk are rear-facing, but profession13–16 rotates/exposes the face toward the right edge and presents forward paper beyond intended rear occlusion."
+      },
+      "identity": {
+        "pass": false,
+        "notes": "ApprovedSE paper belongs to physicalRIGHT hand, tube/cord to physicalLEFT hip, patch to physicalRIGHT shoulder. This rear source puts paper at screenleft (physicalLEFT) and tube at screenright (physicalRIGHT), switching asymmetric prop sides; profession also exposes forward paper/hand improperly."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": false,
+        "notes": "ApprovedSE paper belongs to physicalRIGHT hand, tube/cord to physicalLEFT hip, patch to physicalRIGHT shoulder. This rear source puts paper at screenleft (physicalLEFT) and tube at screenright (physicalRIGHT), switching asymmetric prop sides; profession also exposes forward paper/hand improperly.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "hua-hanh",
+      "direction": "northeast",
+      "source": "raw/hua-hanh-northeast.png",
+      "sourceSha256": "400dc74a3ac43311c9a22f05513ce6afd4fdb644274042537b285eac59ead330",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": false,
+        "notes": "All18 retain front-right Southeast neckline/face; no rear-right Northeast body view."
+      },
+      "identity": {
+        "pass": true,
+        "notes": "Own approved hair/costume/colour and original prop identities retained in the actual observed camera; requested direction is separately gated."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": true,
+        "notes": "Folded paper remains in physicalRIGHT holding hand; tube/cord stay physicalLEFT in the observed front camera; controlled paper opening uses available free fingers.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "hua-hanh",
+      "direction": "east",
+      "source": "raw/hua-hanh-east.png",
+      "sourceSha256": "0f75706cc86b61310826fa464b3893f1b251ef592951f713f94b827a98540703",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": false,
+        "notes": "Source remains three-quarter front-right Southeast, with broad front neckline/body and downlooking profession turning further frontward rather than holding the actual East reference profile."
+      },
+      "identity": {
+        "pass": true,
+        "notes": "Own approved hair/costume/colour and original prop identities retained in the actual observed camera; requested direction is separately gated."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": true,
+        "notes": "Folded paper remains in physicalRIGHT holding hand; tube/cord stay physicalLEFT in the observed front camera; controlled paper opening uses available free fingers.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "dinh-soc",
+      "direction": "south",
+      "source": "raw/dinh-soc-south.png",
+      "sourceSha256": "2d72c34b8de82d48178dd1d938104d1f1171046b1dc6f1305317cd61073678c6",
+      "status": "review-candidate",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": true,
+        "notes": "All18 retain front South body/face; restrained downwards nods preserve front-facing intent."
+      },
+      "identity": {
+        "pass": true,
+        "notes": "Own approved hair/costume/colour and original prop identities retained in the actual observed camera; requested direction is separately gated."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": true,
+        "notes": "Spear stays physicalRIGHT hand and low; physicalLEFT free hand performs the small tag check in the observed front camera.",
+        "requestedViewHandednessValidated": true
+      },
+      "motion": {
+        "pass": true,
+        "notes": "Breathing/blink, mouth/nods and profession adjustment are distinct source poses; no attack, walk or patrol was added."
+      },
+      "visualLimitations": [
+        "Small paper/tag/cord details remain limited at native1x.",
+        "Look-down profession bounds become shorter naturally; no per-pose scale correction.",
+        "End poses return visually near neutral; exact first/last pixel equality is not claimed."
+      ],
+      "registrationReady": true,
+      "rootProposal": "review/dinh-soc-south-root-review.json",
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "dinh-soc",
+      "direction": "southwest",
+      "source": "raw/dinh-soc-southwest.png",
+      "sourceSha256": "51dc4d885bb246857b710ae64cce8805c7d11fa1c2d05058759961ebf5128cb5",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": false,
+        "notes": "All18 remain front-right Southeast rather than left/front Southwest."
+      },
+      "identity": {
+        "pass": true,
+        "notes": "Own approved hair/costume/colour and original prop identities retained in the actual observed camera; requested direction is separately gated."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": true,
+        "notes": "Spear stays physicalRIGHT hand and low; physicalLEFT free hand performs the small tag check in the observed front camera.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "dinh-soc",
+      "direction": "west",
+      "source": "raw/dinh-soc-west.png",
+      "sourceSha256": "93047698260a5b17d40529145a1139ad051f4fe03a6cbea890e008a8c4f57b4b",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": false,
+        "notes": "Idle/talk generally face left but show front-quarter torso; profession13–15 turns to clear front-facing downward face/chest, losing West profile."
+      },
+      "identity": {
+        "pass": true,
+        "notes": "Own approved hair/costume/colour and original prop identities retained in the actual observed camera; requested direction is separately gated."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": true,
+        "notes": "Spear stays physicalRIGHT hand and low; physicalLEFT free hand performs the small tag check in the observed front camera.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "dinh-soc",
+      "direction": "northwest",
+      "source": "raw/dinh-soc-northwest.png",
+      "sourceSha256": "a112c324c5b0ac20ad98f78f37efdd283fdb89027657c828a204e1b5e9719ef2",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": true,
+        "notes": "All18 preserve rear-left body view and appropriate rear hair; camera alone passes."
+      },
+      "identity": {
+        "pass": false,
+        "notes": "Rear-left view places spear in near screenleft arm (physicalLEFT) and tag on far screenright hip (physicalRIGHT). Accepted pilot fixes spear RIGHT hand and tag LEFT hip; attachments are swapped."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": false,
+        "notes": "Rear-left view places spear in near screenleft arm (physicalLEFT) and tag on far screenright hip (physicalRIGHT). Accepted pilot fixes spear RIGHT hand and tag LEFT hip; attachments are swapped.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "dinh-soc",
+      "direction": "north",
+      "source": "raw/dinh-soc-north.png",
+      "sourceSha256": "98c75a910a8cf6de28b3713270cea019c2b02d058b3d5c015086eb20803602a1",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": true,
+        "notes": "All18 preserve direct rear body/hair and facial occlusion; camera alone passes."
+      },
+      "identity": {
+        "pass": false,
+        "notes": "Idle/talk spear screenright corresponds to physicalRIGHT as required. Profession14–15 raises that same screenright weapon arm to a migrated right-side tag while spear persists below without clear original grip; LEFT free hand should perform front-occluded tag check."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": false,
+        "notes": "Idle/talk spear screenright corresponds to physicalRIGHT as required. Profession14–15 raises that same screenright weapon arm to a migrated right-side tag while spear persists below without clear original grip; LEFT free hand should perform front-occluded tag check.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "dinh-soc",
+      "direction": "northeast",
+      "source": "raw/dinh-soc-northeast.png",
+      "sourceSha256": "b77e2d91477224e585b0d0f88df8c6f60d6751ec29c3ad2436f6ea3df24d616f",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": true,
+        "notes": "All18 preserve rear-right body/hair; camera alone passes."
+      },
+      "identity": {
+        "pass": false,
+        "notes": "Tag is visible on near physicalRIGHT hip beside the spear hand, instead of physicalLEFT far hip. Profession14–15 raises the near RIGHT weapon arm to check it rather than keeping the spear gripped while LEFT free hand checks."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": false,
+        "notes": "Tag is visible on near physicalRIGHT hip beside the spear hand, instead of physicalLEFT far hip. Profession14–15 raises the near RIGHT weapon arm to check it rather than keeping the spear gripped while LEFT free hand checks.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "dinh-soc",
+      "direction": "east",
+      "source": "raw/dinh-soc-east.png",
+      "sourceSha256": "63adeda0dac9fc2144414418a6dd95e8982a52a01b3716f9452f24b78e854103",
+      "status": "rejected-source",
+      "reviewedPoseCount": 18,
+      "reviewedNativePoseCount": 18,
+      "sourceReview": "All18 original source poses viewed at original dimensions; all18 corresponding native candidates viewed in the2x strip.",
+      "orientation": {
+        "pass": false,
+        "notes": "Idle/talk nominally face right; profession13–15 rotates face/chest toward the viewer instead of retaining same-direction profile."
+      },
+      "identity": {
+        "pass": true,
+        "notes": "Own approved hair/costume/colour and original prop identities retained in the actual observed camera; requested direction is separately gated."
+      },
+      "anatomy": {
+        "pass": true,
+        "notes": "No gross body/head or limb identity drift visible across18 actual poses; neutral/body scale is not evidence of direction or prop handedness."
+      },
+      "props": {
+        "pass": true,
+        "notes": "Spear stays physicalRIGHT hand and low; physicalLEFT free hand performs the small tag check in the observed front camera.",
+        "requestedViewHandednessValidated": false
+      },
+      "motion": {
+        "pass": false,
+        "notes": "Camera/handedness failures block this source despite visible action variations."
+      },
+      "visualLimitations": [],
+      "registrationReady": false,
+      "rootProposal": null,
+      "selectedForFinalTwoStagePipeline": false,
+      "lineageNote": "Original Southeast-supported sheet retained as initial attempt. New same-view standalone neutral lineage is required for final production; this visual audit does not bypass that provenance gate.",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    }
+  ],
+  "summary": {
+    "sourceCount": 14,
+    "rawPosesViewed": 252,
+    "nativePosesViewed": 252,
+    "visualCandidates": 2,
+    "rejectedSources": 12
+  },
+  "artApproved": false,
+  "ownerApproved": false,
+  "motionApproved": false,
+  "runtimeImported": false
+}

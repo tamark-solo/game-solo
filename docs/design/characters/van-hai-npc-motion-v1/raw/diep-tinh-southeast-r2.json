@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: sprite animation production. Create a genuinely transparent RGBA sprite sheet, exactly 6 columns x 3 rows, 18 separated FULL BODY real poses. Output landscape1536x1024. No labels, text, grid, floor, shadow, background, aura, particles or scene.\n\nIMAGE1 is Wang Lin Pixel02 extracted from the CURRENT GAME, enlarged exactly8x by nearest sampling. It is the PRIMARY style and anatomy standard. Use the same squat large-head pixel anatomy, short torso/legs, broad readable pixel clusters, palette density and orthographic camera. Head/hair about half of standing height. Do NOT copy Wang Lin identity, long hair or clothes. IMAGE2 supplies ONLY this NPC identity/costume/props; never use its smaller head or fine shading as the anatomy/style template.\n\nNPC identity: Elderly woman cultivation teacher with softly aged face and grey-salt compact bun. Ivory and smoky jade robe, small jade string and closed bamboo scroll. No beard, no young heroine face.\n\nAll18 poses face SOUTHEAST, front-right/down-right three-quarter, with exactly the same head/skull/face/hair, physical scale, costume and props. No turning into another direction and no mirrored frames. Chunky crisp pixel clusters, no smooth painterly rendering or tiny texture. Each body about240 source pixels tall, generous transparent gutters. Column centers and ground baselines consistent. Hands, boots and props fully visible and separated from neighboring poses.\n\nRow1, IDLE6: frame1 is standing neutral calibration; frame2 small inhalation, frame3 gently lifts shoulders and sleeves, frame4 calm exhalation, frame5 relaxed blink, frame6 returns to exact neutral. Feet planted and skull dimensions unchanged. Breathing is drawn in cloth and shoulders, not whole-body translation or scaling.\n\nRow2, TALK6: neutral, slight mouth movement with right forearm raising, small open-palm explanatory gesture, holds palm and another mouth shape, returns forearm, exact neutral. Subtle natural head inclination without resizing skull; props stay in same hand or waist place. Clear six-step sequence suitable for a calm dialogue loop.\n\nRow3, PROFESSION6: A calm breath-teaching gesture: neutral, draws palms near abdomen, gently separates palms, holds inward palms, closes hands, exact neutral. Jade string remains attached. No visible qi or FX in body sheet.\n\nThese are real animation poses; do not repeat one static character18times. Preserve identity and anatomy across rows. Do not enlarge head/torso in gestures. Humans have nominal80world-pixel standing height at native game size, base64x96 foot32,88; motion canvas96x96 adds padding only. This sheet is a production candidate for owner review, not automatic ART or runtime approval.\n\nCORRECTION BASED ON IMAGE3: Previous sheet row3 shrank by8percent. Keep ALL rows exactly same physical character size. Top of hair to bottom of boots must remain identical about320sourcepixels in every neutral/standing pose across all3rows. Skull is the same width and height in ALL18poses, same torso/leg length. For the breath gesture do not bend knees, bow or crouch. Image3 is only the prior action layout; correct its shrinking third row while keeping1PRIMARY Wang style and2NPC identity. Keep all boots in cell margins, at least20sourcepixel clear bottom space. No new background.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: sprite animation production. Create a genuinely transparent RGBA sprite sheet, exactly 6 columns x 3 rows, 18 separated FULL BODY real poses. Output landscape1536x1024. No labels, text, grid, floor, shadow, background, aura, particles or scene.\n\nIMAGE1 is Wang Lin Pixel02 extracted from the CURRENT GAME, enlarged exactly8x by nearest sampling. It is the PRIMARY style and anatomy standard. Use the same squat large-head pixel anatomy, short torso/legs, broad readable pixel clusters, palette density and orthographic camera. Head/hair about half of standing height. Do NOT copy Wang Lin identity, long hair or clothes. IMAGE2 supplies ONLY this NPC identity/costume/props; never use its smaller head or fine shading as the anatomy/style template.\n\nNPC identity: Elderly woman cultivation teacher with softly aged face and grey-salt compact bun. Ivory and smoky jade robe, small jade string and closed bamboo scroll. No beard, no young heroine face.\n\nAll18 poses face SOUTHEAST, front-right/down-right three-quarter, with exactly the same head/skull/face/hair, physical scale, costume and props. No turning into another direction and no mirrored frames. Chunky crisp pixel clusters, no smooth painterly rendering or tiny texture. Each body about240 source pixels tall, generous transparent gutters. Column centers and ground baselines consistent. Hands, boots and props fully visible and separated from neighboring poses.\n\nRow1, IDLE6: frame1 is standing neutral calibration; frame2 small inhalation, frame3 gently lifts shoulders and sleeves, frame4 calm exhalation, frame5 relaxed blink, frame6 returns to exact neutral. Feet planted and skull dimensions unchanged. Breathing is drawn in cloth and shoulders, not whole-body translation or scaling.\n\nRow2, TALK6: neutral, slight mouth movement with right forearm raising, small open-palm explanatory gesture, holds palm and another mouth shape, returns forearm, exact neutral. Subtle natural head inclination without resizing skull; props stay in same hand or waist place. Clear six-step sequence suitable for a calm dialogue loop.\n\nRow3, PROFESSION6: A calm breath-teaching gesture: neutral, draws palms near abdomen, gently separates palms, holds inward palms, closes hands, exact neutral. Jade string remains attached. No visible qi or FX in body sheet.\n\nThese are real animation poses; do not repeat one static character18times. Preserve identity and anatomy across rows. Do not enlarge head/torso in gestures. Humans have nominal80world-pixel standing height at native game size, base64x96 foot32,88; motion canvas96x96 adds padding only. This sheet is a production candidate for owner review, not automatic ART or runtime approval.\n\nCORRECTION BASED ON IMAGE3: Previous sheet row3 shrank by8percent. Keep ALL rows exactly same physical character size. Top of hair to bottom of boots must remain identical about320sourcepixels in every neutral/standing pose across all3rows. Skull is the same width and height in ALL18poses, same torso/leg length. For the breath gesture do not bend knees, bow or crouch. Image3 is only the prior action layout; correct its shrinking third row while keeping1PRIMARY Wang style and2NPC identity. Keep all boots in cell margins, at least20sourcepixel clear bottom space. No new background.\n",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-13T05:48:05.491Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v1\\inputs\\wang-lin-live-southeast-nearest8x.png",
+      "filename": "wang-lin-live-southeast-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9320,
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v1\\inputs\\diep-tinh-identity-nearest8x.png",
+      "filename": "diep-tinh-identity-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 13814,
+      "sha256": "236aecb4835e20c705d7add566de5d170a33f3c744d285ffe70a66f3f055c794",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v1\\raw\\diep-tinh-southeast.png",
+      "filename": "diep-tinh-southeast.png",
+      "mimeType": "image/png",
+      "bytes": 2285922,
+      "sha256": "893b997e00b2e2420a678fd83a4376f8a21e0fad96d01c3b6adb97d236881674",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "diep-tinh-southeast-r2.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 2311093,
+    "sha256": "d1e92e9f36c119be5760ab248cb205627791409e67d09b035d209e9a5e7b2081",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

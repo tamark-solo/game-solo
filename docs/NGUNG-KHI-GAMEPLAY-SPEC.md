@@ -1,5 +1,7 @@
 # Hồ sơ gameplay Ngưng Khí — bộ kỹ năng khởi đầu
 
+> **Thiết kế tiếp nối 13/10/2026:** [GDD 0.33](GDD.md), [hệ tu tiên mới](CULTIVATION-REDESIGN-2026-10-13.md) và [Hằng Nhạc v2](HANG-NHAC-ONBOARDING-V2.md) thay đề xuất về nhịp nhập môn, HN04, xác nhận tầng/nhiệm vụ và thời điểm EX trong tài liệu này. Nội dung bên dưới giữ làm cơ sở/lịch sử; trạng thái đang chạy xem [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md). Bản thiết kế mới chưa thay code/save hoặc duyệt balance/ART.
+
 **Mốc runtime 08/10/2026:** [Hằng Nhạc hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) đã dùng baseline Kiếm/Lôi/Phong trên mục tiêu luyện cá nhân và lưu SQLite. Đi bộ vẫn 80 px/s theo map hiện hành. Đây chưa là duyệt cân bằng, farm/HN01–HN12 hoặc combat production; các phần dưới giữ trạng thái đặc tả đề xuất.
 
 **Phiên bản:** 0.3 · **Ngày:** 08/10/2026 · **Trạng thái:** thiết kế tài liệu; chưa triển khai client/server.

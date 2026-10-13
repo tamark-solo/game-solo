@@ -1,0 +1,60 @@
+{
+  "schema": "npc-source-measurements-1",
+  "date": "2026-10-13",
+  "measurementMeaning": "Technical visual landmark inspection, not owner ART approval",
+  "artApproved": false,
+  "playerHeadComparison": {
+    "file": "../wang-lin-pixel-production-v2/masters/southeast.png",
+    "headHairBounds": [
+      5,
+      8,
+      49,
+      49
+    ],
+    "bodyHeightPx": 80,
+    "headToBodyRatio": 0.5125,
+    "scope": "Approximate hair/bun through chin; long back hair excluded, not anatomy approval.",
+    "alphaBounds": [
+      1,
+      8,
+      50,
+      88
+    ],
+    "alphaWidthPx": 49,
+    "liveFrame": "idle-southeast frame1; identical RGBA verified"
+  },
+  "actors": [
+    {
+      "id": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "sourceSha256": "e726bccdea5a6cea0bd88ba22ffcd97bff6f14d0799653326f22e9ea1efdba02",
+      "visuallyReviewed": true,
+      "sourcePivot": [
+        412,
+        1436
+      ],
+      "sourceSupportWitness": [
+        350,
+        1350,
+        475,
+        1436
+      ],
+      "bodyTopY": 159,
+      "headBounds": [
+        240,
+        159,
+        812,
+        802
+      ],
+      "rootBasis": "Front planted boot sole x359-464 ends at source row1435; world floor1436, x412 near sole center. Rear boot and robe excluded.",
+      "notes": "Tỷ lệ đầu/thân gọn hơn v1/v2. Tóc ngắn nên silhouette hẹp hơn Vương Lâm; áo sáng và góc mặt chính diện hơn. Mẫu này vẫn cần đánh giá hình trước khi làm tiếp các NPC khác.",
+      "morphologyAssessment": "compact-proportions-pilot-owner-review-pending",
+      "headIncludingBeardBounds": [
+        240,
+        159,
+        812,
+        850
+      ]
+    }
+  ]
+}

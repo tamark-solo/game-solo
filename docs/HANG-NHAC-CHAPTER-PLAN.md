@@ -1,5 +1,7 @@
 # Chương Hằng Nhạc — đồ thị nhiệm vụ và luồng phát triển
 
+> **Thiết kế tiếp nối 13/10/2026:** [GDD 0.33](GDD.md), [hệ tu tiên mới](CULTIVATION-REDESIGN-2026-10-13.md) và [Hằng Nhạc v2](HANG-NHAC-ONBOARDING-V2.md) thay đề xuất về nhịp nhập môn, HN04, xác nhận tầng/nhiệm vụ và thời điểm EX trong tài liệu này. Nội dung bên dưới giữ làm cơ sở/lịch sử; trạng thái đang chạy xem [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md). Bản thiết kế mới chưa thay code/save hoặc duyệt balance/ART.
+
 **Cập nhật 12/10:** owner đã chọn phạm vi Hằng Nhạc và EX01–EX04 để trải nghiệm; [bản runtime](HANG-NHAC-CHAPTER-RUNTIME.md) thực hiện tuyến dưới đây trên cảnh hoạt động thử và save thật. Tài liệu này giữ đề xuất/nguồn và lịch sử các gate thiết kế; trạng thái runtime, lựa chọn timing, giới hạn ART/stat xem tại bàn giao mới.
 
 **Bản thiết kế làm việc 0.1 · 10/10/2026 · ND1–ND2.** Owner yêu cầu bắt đầu bước tiếp theo sau nghiên cứu. Bản này cụ thể hóa phương án **Đạo đồ + “Dấu sai trên vân lộ”** để đánh giá; không coi lời cho phép bắt đầu thiết kế là duyệt toàn bộ thoại, luật mới, cân bằng hoặc sản xuất ART. Chưa sửa runtime, schema, map, UI hay save.

@@ -1,0 +1,846 @@
+{
+  "schema": "npc-wave-a-motion-direction-assessment-partial-2",
+  "date": "2026-10-13",
+  "scope": "Bach Chi and Tong Thiet seven-view raw/native root audit; progressive explicitly announced source IDs only",
+  "sourceHashPolicy": "Assessments apply only to each exact source hash; rejected direction must be corrected/re-audited",
+  "sources": [
+    {
+      "slug": "bach-chi",
+      "direction": "south",
+      "source": "raw/bach-chi-south.png",
+      "sourceSha256": "84240bbb02956bd6088d8def9c47214644f00eec65262898537af78c522b3bb4",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18 poses use direct frontal South: own full face/front robe visible, no side/profile action rotation. Profession head bends forward naturally without turning body/camera."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own accepted brown high working bun with green tie, tea-leaf/ivory clothes, herb basket and jade pestle remain recognizable throughout18poses; no Wang wardrobe or identity substitution."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Same large compact skull/hair and short torso/legs retained in raw and native strip. Looking down lowers bounds naturally without per-pose scaling. Complete boots and hands remain."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Original physical basket hand projects screen-left, original pestle hand screen-right in true front. Both props stay retained throughout idle/talk/profession; basket slight lift/tilt and pestle inspection do not add a third hand/item."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Distinct blink/breath, speaking mouth/nod and low basket/pestle inspection. No whole-body bob or six static copies."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/bach-chi-south-root-review-2x.png",
+        "finding": "Native2x all18poses visually reviewed: both boots lie on common floor with world root between their support; props are above sole band and no neighboring pose/clipping appears.",
+        "sha256": "57a1c3dc0529c331931c87069f8c84ff2f406e99ff89756db79e432fc9f20266"
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": true,
+        "neutralBodyTopConfirmed": true,
+        "neutralTopY": 110,
+        "scale": 0.23323615160349853,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "Bạch Chỉ retains the fairly young appearance of the accepted neutral identity.",
+        "Profession2–4 look down, lowering crown-to-floor bounds naturally; retain one standing calibration scale.",
+        "Basket/pestle shapes and positions vary slightly; small native details are subtle.",
+        "Final frame visually settles near neutral; exact first-last pixel equality is not asserted."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "tong-thiet",
+      "direction": "south",
+      "source": "raw/tong-thiet-south.png",
+      "sourceSha256": "27735906e6ee8ccdf4ff31239b46a89f930c357b3e2f0f97c0247051eede03a6",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18 poses maintain direct frontal South body/front apron; inspection nod changes head angle slightly, without turning into a new body view."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own accepted short silver hair, elderly brows/moustache, copper shoulder cloth, ash-brown apron, compact tongs and wooden blank retained. No new tool or different young actor."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Sturdy compact human body/skull/hair scale remains consistent across rows in raw/native; head nod does not produce taller torso or smaller head. Both boots complete."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Tongs retained in original physical hand projecting screen-left, unfinished blank in original opposite hand projecting screen-right. Profession rotates tools below chest and brings tips near blank; no hand swap or tool disappearance."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Genuine blink/breath, speaking mouth shapes with nod, and restrained tongs/blank checking. Stationary boots; no attack or forge effect."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/tong-thiet-south-root-review-2x.png",
+        "finding": "Native2x all18poses visually reviewed: both soles grounded with between-boot root; tool/apron edges lie above support band; no clipping or neighboring pixels.",
+        "sha256": "5b4d55c5ddc1bbbf81da85e3ef34d4c8d14d82f653c7f4328ca8ea3782c81f53"
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": true,
+        "neutralBodyTopConfirmed": true,
+        "neutralTopY": 96,
+        "scale": 0.24615384615384617,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "Profession3–4 have a modest head inclination/side glance as he inspects the blank while body stays frontal.",
+        "Tongs/blank overlap at waist so contact remains subtle at native1x.",
+        "Tool angle/length and small apron details vary slightly between poses.",
+        "Final frame looks near neutral; exact end pixel equality is not asserted."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "tong-thiet",
+      "direction": "southwest",
+      "source": "raw/tong-thiet-southwest.png",
+      "sourceSha256": "fbef433b58147c5a229b58f962e31165906ae99cd7017ed20fe9c0f4d083098d",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "FAIL all18poses remain front-right/Southeast with visible nose/face projecting screen-right, similar to accepted SE pilot. They do not match live Wang Southwest front-left camera or facing screen-left."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own silver hair, old face, copper shoulder cloth, ash-brown apron and original compact tongs/blank are preserved despite wrong camera."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Large compact skull and short body/boots remain internally consistent; this does not compensate for direction failure."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Tools retained consistently in original hands; no dropped blank or extra tool. Correct directional physical projection still needs a genuinely rotated source."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Blink/speech/nod and checking changes exist, but all occur in the incorrect view."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/tong-thiet-southwest-root-review-2x.png",
+        "finding": "Native2x strip visually confirms front-right face/body rather than required front-left; do not confirm or pack this source as Southwest."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": false,
+        "neutralBodyTopConfirmed": false,
+        "neutralTopY": 128,
+        "scale": 0.23738872403560832,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "Blocked by wrong direction across all18poses.",
+        "No root confirmation or ART approval; require a new corrected source and fresh exact-hash audit.",
+        "Do not mirror the accepted SE sprite to substitute a true Southwest view."
+      ],
+      "status": "failed-direction",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "bach-chi",
+      "direction": "southwest",
+      "source": "raw/bach-chi-southwest.png",
+      "sourceSha256": "1e2c3969c48b372f73d8f68e34bb46b599848ec08b19c648706ade44d3f6c36c",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "FAIL: All18poses still use front-right/Southeast and nose/face project screen-right, not required front-left/Southwest screen-left."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own brown working bun/green tie, tea-leaf/ivory clothes and original herbalist basket/pestle identity retained; no Wang face/hair/wardrobe substitution."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Props remain present through18poses, but correct target-direction projection cannot be accepted because the actor has not rotated to its required camera."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/bach-chi-southwest-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed and confirm blocker: All18poses still use front-right/Southeast and nose/face project screen-right, not required front-left/Southwest screen-left."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": false,
+        "neutralBodyTopConfirmed": false,
+        "neutralTopY": 81,
+        "scale": 0.24242424242424243,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "BLOCKED: All18poses still use front-right/Southeast and nose/face project screen-right, not required front-left/Southwest screen-left.",
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim."
+      ],
+      "status": "failed-direction",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "bach-chi",
+      "direction": "west",
+      "source": "raw/bach-chi-west.png",
+      "sourceSha256": "c30a35ddd62b40058a05f77dc2dc9997ab9399a1a61a520173ecae8faf2cd409",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "FAIL: All18poses still use front-right/Southeast with front robe/lapel and two-eye face; not a true left-facing profile."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own brown working bun/green tie, tea-leaf/ivory clothes and original herbalist basket/pestle identity retained; no Wang face/hair/wardrobe substitution."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Props remain present through18poses, but correct target-direction projection cannot be accepted because the actor has not rotated to its required camera."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/bach-chi-west-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed and confirm blocker: All18poses still use front-right/Southeast with front robe/lapel and two-eye face; not a true left-facing profile."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": false,
+        "neutralBodyTopConfirmed": false,
+        "neutralTopY": 77,
+        "scale": 0.23529411764705882,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "BLOCKED: All18poses still use front-right/Southeast with front robe/lapel and two-eye face; not a true left-facing profile.",
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim."
+      ],
+      "status": "failed-direction",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "bach-chi",
+      "direction": "northwest",
+      "source": "raw/bach-chi-northwest.png",
+      "sourceSha256": "a350fe12053cd28bca45a270b91c1655778acd9e18f971736f22eed0cd6380dc",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Rear orientation itself passes all18poses; source is blocked instead by physical prop-hand change."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own brown working bun/green tie, tea-leaf/ivory clothes and original herbalist basket/pestle identity retained; no Wang face/hair/wardrobe substitution."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "FAIL: Back-left orientation is valid, but near visible white sleeve/hand holds the herb basket at front-left silhouette. That near arm is actor physical left; accepted front/SE basket was in physical right hand. Pestle/basket projection therefore changes the holding hand rather than preserving original physical hands."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/bach-chi-northwest-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed and confirm blocker: Back-left orientation is valid, but near visible white sleeve/hand holds the herb basket at front-left silhouette. That near arm is actor physical left; accepted front/SE basket was in physical right hand. Pestle/basket projection therefore changes the holding hand rather than preserving original physical hands."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": false,
+        "neutralBodyTopConfirmed": false,
+        "neutralTopY": 108,
+        "scale": 0.24024024024024024,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "BLOCKED: Back-left orientation is valid, but near visible white sleeve/hand holds the herb basket at front-left silhouette. That near arm is actor physical left; accepted front/SE basket was in physical right hand. Pestle/basket projection therefore changes the holding hand rather than preserving original physical hands.",
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim.",
+        "Source19th component is tiny6px island at(1081,1015),within profession17 selected bbox and retained in proposal; source is rejected for hand continuity, not component count."
+      ],
+      "status": "failed-prop-continuity",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "bach-chi",
+      "direction": "north",
+      "source": "raw/bach-chi-north.png",
+      "sourceSha256": "2d5f1de68f8a13cf5479c28b5966004cb12474f608363e9df512ba22d741b959",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain direct North back view with no eyes/front face/chest. Inspection bends head forward away from camera without exposing front."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own brown working bun/green tie, tea-leaf/ivory clothes and original herbalist basket/pestle identity retained; no Wang face/hair/wardrobe substitution."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Original physical basket hand remains actor right, projecting screen-right at North/NE; original pestle physical-left hand is naturally on opposite/far side and may cross toward basket at front waist during inspection. No extra hand, dropped basket, new pestle or front palms through back."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/bach-chi-north-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed: both boot soles rest on common floor with between-boot root, no crop neighbor or opaque clipping.",
+        "sha256": "6947ef802e5c8993c31798cae4fbb767733beae7b1efa4cbb9c692c3dfcb5224"
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": true,
+        "neutralBodyTopConfirmed": true,
+        "neutralTopY": 90,
+        "scale": 0.24316109422492402,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim.",
+        "Bun/ribbon silhouette moves slightly across the rear head in idle frame4. At profession2–3 the original far/front pestle hand crosses toward the basket in front of torso; only legitimate side-edge pixels are visible."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "bach-chi",
+      "direction": "northeast",
+      "source": "raw/bach-chi-northeast.png",
+      "sourceSha256": "083717321ba6c331bdbe9ecdc467146f907654c56f187ed02feb3b0403275197",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses remain back-right/Northeast: back hair/robe dominate, with only the natural edge of cheek and no front face."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own brown working bun/green tie, tea-leaf/ivory clothes and original herbalist basket/pestle identity retained; no Wang face/hair/wardrobe substitution."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Original physical basket hand remains actor right, projecting screen-right at North/NE; original pestle physical-left hand is naturally on opposite/far side and may cross toward basket at front waist during inspection. No extra hand, dropped basket, new pestle or front palms through back."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/bach-chi-northeast-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed: both boot soles rest on common floor with between-boot root, no crop neighbor or opaque clipping.",
+        "sha256": "0474553c570511d084460300fe4b7acad77210e00e4f1ae7b864a9b954e81f77"
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": true,
+        "neutralBodyTopConfirmed": true,
+        "neutralTopY": 63,
+        "scale": 0.22662889518413598,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim.",
+        "One tiny1x1 alpha128 island within profession frame15 is retained in componentLabels[15,19]."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "bach-chi",
+      "direction": "east",
+      "source": "raw/bach-chi-east.png",
+      "sourceSha256": "ff852f1cb90df753af61ea0b10723dc961ec276622a5902857d6cecb935633d0",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "FAIL: All18poses still use front-right/Southeast with front lapels and bilateral face; required true right-facing profile has not been reconstructed."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own brown working bun/green tie, tea-leaf/ivory clothes and original herbalist basket/pestle identity retained; no Wang face/hair/wardrobe substitution."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Props remain present through18poses, but correct target-direction projection cannot be accepted because the actor has not rotated to its required camera."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/bach-chi-east-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed and confirm blocker: All18poses still use front-right/Southeast with front lapels and bilateral face; required true right-facing profile has not been reconstructed."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": false,
+        "neutralBodyTopConfirmed": false,
+        "neutralTopY": 85,
+        "scale": 0.24096385542168675,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "BLOCKED: All18poses still use front-right/Southeast with front lapels and bilateral face; required true right-facing profile has not been reconstructed.",
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim."
+      ],
+      "status": "failed-direction",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "tong-thiet",
+      "direction": "west",
+      "source": "raw/tong-thiet-west.png",
+      "sourceSha256": "9d2032ff5ff6568fc115b3433538445003e45194432fdb6c0fc9bde495ab9166",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "FAIL: All18poses still use front-right/Southeast with both eyes/front apron; required left-facing side profile is absent."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own short silver hair/aged face, copper shoulder cloth/ash-brown apron and compact tongs/wooden blank identity retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Props remain present through18poses, but correct target-direction projection cannot be accepted because the actor has not rotated to its required camera."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/tong-thiet-west-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed and confirm blocker: All18poses still use front-right/Southeast with both eyes/front apron; required left-facing side profile is absent."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": false,
+        "neutralBodyTopConfirmed": false,
+        "neutralTopY": 93,
+        "scale": 0.24539877300613497,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "BLOCKED: All18poses still use front-right/Southeast with both eyes/front apron; required left-facing side profile is absent.",
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim."
+      ],
+      "status": "failed-direction",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "tong-thiet",
+      "direction": "northwest",
+      "source": "raw/tong-thiet-northwest.png",
+      "sourceSha256": "d158f73374ab60fd113e3162e1c8623c36fb3ee6ffaa8ec425c8edfbc3e5385b",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain back-left/Northwest: back hair/copper shoulder cloth dominate; no front face or front apron is exposed."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own short silver hair/aged face, copper shoulder cloth/ash-brown apron and compact tongs/wooden blank identity retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Original wooden blank physical-left hand is near left silhouette in NW; tongs original physical-right/far hand stays retained with natural overlap/occlusion below chest. Tools inspect at front waist, not across visible back; no new tool or hand swap."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/tong-thiet-northwest-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed: both boot soles rest on common floor with between-boot root, no crop neighbor or opaque clipping.",
+        "sha256": "8c117601e9bdacc04451e4896f344b15dee20cbb31a926809b06e263fa906489"
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": true,
+        "neutralBodyTopConfirmed": true,
+        "neutralTopY": 119,
+        "scale": 0.2507836990595611,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "tong-thiet",
+      "direction": "north",
+      "source": "raw/tong-thiet-north.png",
+      "sourceSha256": "e6800f8ba02e5ab8def9e1434e62d8ae3c8bb29756c52dc1b1ed7aa2f10c0039",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Rear orientation itself passes all18poses; source is blocked instead by physical prop-hand change."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own short silver hair/aged face, copper shoulder cloth/ash-brown apron and compact tongs/wooden blank identity retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "FAIL: Direct back orientation is valid, but wooden blank is visibly held by screen-right/physical-right hand in neutral and all rows, while accepted front/SE blank was held by physical-left hand. Required north blank grip projects screen-left; tools have swapped physical holding sides."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/tong-thiet-north-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed and confirm blocker: Direct back orientation is valid, but wooden blank is visibly held by screen-right/physical-right hand in neutral and all rows, while accepted front/SE blank was held by physical-left hand. Required north blank grip projects screen-left; tools have swapped physical holding sides."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": false,
+        "neutralBodyTopConfirmed": false,
+        "neutralTopY": 89,
+        "scale": 0.23529411764705882,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "BLOCKED: Direct back orientation is valid, but wooden blank is visibly held by screen-right/physical-right hand in neutral and all rows, while accepted front/SE blank was held by physical-left hand. Required north blank grip projects screen-left; tools have swapped physical holding sides.",
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim."
+      ],
+      "status": "failed-prop-continuity",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "tong-thiet",
+      "direction": "northeast",
+      "source": "raw/tong-thiet-northeast.png",
+      "sourceSha256": "d1cde61fde03595eb98eb6c5df88b4b0c8d31868aa7dd335043cff9727d7819e",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Rear orientation itself passes all18poses; source is blocked instead by physical prop-hand change."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own short silver hair/aged face, copper shoulder cloth/ash-brown apron and compact tongs/wooden blank identity retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "FAIL: Rear-right orientation is valid, but the near screen-right/physical-right arm visibly holds the wooden blank. Accepted front/SE blank was in physical-left/far hand; near arm should retain tongs. This is a physical hand swap, not merely screen projection."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/tong-thiet-northeast-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed and confirm blocker: Rear-right orientation is valid, but the near screen-right/physical-right arm visibly holds the wooden blank. Accepted front/SE blank was in physical-left/far hand; near arm should retain tongs. This is a physical hand swap, not merely screen projection."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": false,
+        "neutralBodyTopConfirmed": false,
+        "neutralTopY": 103,
+        "scale": 0.2484472049689441,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "BLOCKED: Rear-right orientation is valid, but the near screen-right/physical-right arm visibly holds the wooden blank. Accepted front/SE blank was in physical-left/far hand; near arm should retain tongs. This is a physical hand swap, not merely screen projection.",
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim."
+      ],
+      "status": "failed-prop-continuity",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "tong-thiet",
+      "direction": "east",
+      "source": "raw/tong-thiet-east.png",
+      "sourceSha256": "d591f7f721eaeef514c206c00faa5aa57e288be5ada8fae4b34b91a967c62879",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "finding": "FAIL: All18poses keep front-right/Southeast with both eyes/front apron, rather than actual right-facing profile."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own short silver hair/aged face, copper shoulder cloth/ash-brown apron and compact tongs/wooden blank identity retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Compact own skull/hair, shoulders and short torso/legs stay consistent across raw18poses and native strip. Natural inspection tilt changes pose, not body scale. Both boots remain complete."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Props remain present through18poses, but correct target-direction projection cannot be accepted because the actor has not rotated to its required camera."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Real breath/blink where eyes visible, speaking nod/shoulder change and profession inspection changes occur; no attack, patrol, full-body bob or six-copy static row."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/tong-thiet-east-root-review-2x.png",
+        "finding": "All18nativeposes visually reviewed and confirm blocker: All18poses keep front-right/Southeast with both eyes/front apron, rather than actual right-facing profile."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": false,
+        "neutralBodyTopConfirmed": false,
+        "neutralTopY": 79,
+        "scale": 0.23121387283236994,
+        "oneScalePerSource": true
+      },
+      "limitations": [
+        "BLOCKED: All18poses keep front-right/Southeast with both eyes/front apron, rather than actual right-facing profile.",
+        "Front-held inspection is subtle or mostly occluded in rear views; do not expose hidden palms/face through the body.",
+        "Natural forward head tilt lowers pose bounds; preserve one source-wide standing scale.",
+        "Small prop angles/pixel details vary; final pose visually settles near neutral, no pixel-exact loop equality claim."
+      ],
+      "status": "failed-direction",
+      "artApproved": false,
+      "ownerApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    }
+  ],
+  "reviewedSourceCount": 14,
+  "reviewedRawPoses": 252,
+  "reviewedNativePoses": 252,
+  "artApproved": false,
+  "ownerApproved": false,
+  "motionApproved": false,
+  "runtimeImported": false,
+  "status": "All14 initial sources audited;5review-candidates,6camera failures,3physicalhand failures"
+}

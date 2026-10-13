@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Create eighteen real pixel NPC poses, six columns × three rows, genuinely transparent RGBA. Image1 is Wang Lin LIVE SOUTHWEST: PRIMARY camera, anatomy and pixel treatment. Change identity ONLY to Tạ Kiếm Sơn; never copy Wang long hair, ivory clothes or charcoal sash. Image2 is SAME NPC true WEST side sheet, supplying compact bun/navy robe/wooden sword identity only. Image3 is SAME NPC SOUTH front sheet, identity/gesture continuity only. Do not use a southeast view.\n\nALL eighteen poses must face DOWN-LEFT / SOUTHWEST FRONT-LEFT THREE-QUARTER, precisely as Image1. Nose/chin point screenLEFT, nearer eye on screenRIGHT side of the facial plane, far eye toward LEFT if visible. Head and torso face LEFT, not RIGHT. Absolutely no southeast/down-right pose. Not full WEST profile: turn head/torso toward the viewer by45degrees from Image2 to match Image1. This is a real independently drawn view, never a bitmap mirror.\n\nIdentity locked: mature male instructor, compact dark bun without long hair or ponytail, small brow scar, navy blue robe, cloth-wrapped wrists, short worn wooden sword. Same head, body, clothes and props at the same physical scale in every row; head about half standing height. Large clear transparent gaps, figures about240sourcepixels tall, complete hands/boots/props. No shrinking profession row.\n\nRow1 idle6: neutral, inhale, small shoulder/sleeve breath, exhale, blink, exact neutral. Row2 talk6: neutral, FREE LEFT forearm raises, free palm opens, holds, retracts, neutral. Sword stays down in the SAME RIGHT holding hand and on the same projected side as neutral for all6talkposes; no switching, disappearing or respawning it. Camera stays FRONT-LEFT/down-left. Row3 profession6: neutral, raises sword wrist slowly, angles wooden sword at waist, holds controlled guard, lowers, neutral. Feet planted, no attack/lunge or turning to front-right.\n\nPRIMARY pixel style remains Image1, NPC identity Image2/3. Broad crisp pixel clusters, human native80px calibration, base64x96 foot32,88, clip96x96 foot48,88paddingonly. No text/grid/floor/shadow/FX/glow. New Southwest revision candidate.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Create eighteen real pixel NPC poses, six columns × three rows, genuinely transparent RGBA. Image1 is Wang Lin LIVE SOUTHWEST: PRIMARY camera, anatomy and pixel treatment. Change identity ONLY to Tạ Kiếm Sơn; never copy Wang long hair, ivory clothes or charcoal sash. Image2 is SAME NPC true WEST side sheet, supplying compact bun/navy robe/wooden sword identity only. Image3 is SAME NPC SOUTH front sheet, identity/gesture continuity only. Do not use a southeast view.\n\nALL eighteen poses must face DOWN-LEFT / SOUTHWEST FRONT-LEFT THREE-QUARTER, precisely as Image1. Nose/chin point screenLEFT, nearer eye on screenRIGHT side of the facial plane, far eye toward LEFT if visible. Head and torso face LEFT, not RIGHT. Absolutely no southeast/down-right pose. Not full WEST profile: turn head/torso toward the viewer by45degrees from Image2 to match Image1. This is a real independently drawn view, never a bitmap mirror.\n\nIdentity locked: mature male instructor, compact dark bun without long hair or ponytail, small brow scar, navy blue robe, cloth-wrapped wrists, short worn wooden sword. Same head, body, clothes and props at the same physical scale in every row; head about half standing height. Large clear transparent gaps, figures about240sourcepixels tall, complete hands/boots/props. No shrinking profession row.\n\nRow1 idle6: neutral, inhale, small shoulder/sleeve breath, exhale, blink, exact neutral. Row2 talk6: neutral, FREE LEFT forearm raises, free palm opens, holds, retracts, neutral. Sword stays down in the SAME RIGHT holding hand and on the same projected side as neutral for all6talkposes; no switching, disappearing or respawning it. Camera stays FRONT-LEFT/down-left. Row3 profession6: neutral, raises sword wrist slowly, angles wooden sword at waist, holds controlled guard, lowers, neutral. Feet planted, no attack/lunge or turning to front-right.\n\nPRIMARY pixel style remains Image1, NPC identity Image2/3. Broad crisp pixel clusters, human native80px calibration, base64x96 foot32,88, clip96x96 foot48,88paddingonly. No text/grid/floor/shadow/FX/glow. New Southwest revision candidate.\n",
+    "n": 1,
+    "size": "1536x1536",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-13T08:21:30.786Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v2\\inputs\\wang-lin-live-southwest-nearest8x.png",
+      "filename": "wang-lin-live-southwest-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9702,
+      "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v2\\raw\\ta-kiem-son-west.png",
+      "filename": "ta-kiem-son-west.png",
+      "mimeType": "image/png",
+      "bytes": 1411144,
+      "sha256": "a4bdce59b417ed145b369de7c87533a1ae794641c16e94537173184a74701607",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v2\\raw\\ta-kiem-son-south.png",
+      "filename": "ta-kiem-son-south.png",
+      "mimeType": "image/png",
+      "bytes": 1629446,
+      "sha256": "2b32421d21f7dc891364d95ea6595af6ab60caaef0731317c6fd54fdd8e7c524",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "ta-kiem-son-southwest-r2.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1956368,
+    "sha256": "475bcf49e6974510e36b4008d576d36ca3508301d25f779f4335f83864f4d719",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": false
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "EDIT IMAGE1, the existing SAME NPC / SAME DIRECTION eighteen-pose animation sheet. Keep Tạ Kiếm Sơn identity, navy robe, compact dark bun, wrapped wrists, wooden sword, head/skull/body size, neutral pose and camera exactly as this target. IMAGE2 is live Wang Lin NORTHWEST, the PRIMARY pixel anatomy/style and camera comparison ONLY. DO NOT copy Wang Lin long hair, face identity or ivory/charcoal clothes. No image of another NPC is a style template.\n\nThis is ACTION correction, not a new identity or new neutral concept. The target was already produced from Wang Lin in this exact direction. Preserve its neutral/idle and existing NORTHWEST view throughout. Back views have NO eyes/nose/mouth. Keep all six columns × three rows, source scale, transparent gutters and full boots/props. No per-row resizing.\n\nREPAIR ROW2 TALK ONLY: the hand holding the wooden sword in neutral remains DOWN and holding that sword for ALL SIX talk poses. Never lift, open, swap or retract the sword hand. Keep exposed sword blade at the SAME torso flank as frame1, in the same anatomical hand. ONLY THE OTHER, FREE HAND raises and opens to explain. In full NORTH rear view, sword stays SCREEN RIGHT, free hand gestures SCREEN LEFT. For diagonal northwest, retain sword on the same projected side as its neutral frame, free palm appears on the other arm. Talk1 and6 exact neutral; talk2 free forearm raises; talk3 free palm opens; talk4 holds; talk5 free arm retracts. Sword is never removed or respawned.\n\nROW3 profession keeps a slow waist-level wooden-sword wrist demonstration in FRONT of torso. Back robe must occlude front palms/hilt inside its silhouette; exposed blade/elbow portions appear only at the sides. No x-ray hands or hilt over center back. No attack, slash, lunge or stepping. Preserve side/sword continuity and return to neutral.\n\nBroad crisp low-resolution pixel clusters matching PRIMARY style Image2, with same NPC identity and physical proportions Image1. Nominal native80px from neutral; base64x96 foot32,88; clip96x96 foot48,88 padding only. Transparent RGBA, no scenery/floor/shadow/text/grid/glow/FX. All eighteen real poses, no duplicate static motion substitute. Keep skull, hair and clothes stable; corrected actions are candidates.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "EDIT IMAGE1, the existing SAME NPC / SAME DIRECTION eighteen-pose animation sheet. Keep Tạ Kiếm Sơn identity, navy robe, compact dark bun, wrapped wrists, wooden sword, head/skull/body size, neutral pose and camera exactly as this target. IMAGE2 is live Wang Lin NORTHWEST, the PRIMARY pixel anatomy/style and camera comparison ONLY. DO NOT copy Wang Lin long hair, face identity or ivory/charcoal clothes. No image of another NPC is a style template.\n\nThis is ACTION correction, not a new identity or new neutral concept. The target was already produced from Wang Lin in this exact direction. Preserve its neutral/idle and existing NORTHWEST view throughout. Back views have NO eyes/nose/mouth. Keep all six columns × three rows, source scale, transparent gutters and full boots/props. No per-row resizing.\n\nREPAIR ROW2 TALK ONLY: the hand holding the wooden sword in neutral remains DOWN and holding that sword for ALL SIX talk poses. Never lift, open, swap or retract the sword hand. Keep exposed sword blade at the SAME torso flank as frame1, in the same anatomical hand. ONLY THE OTHER, FREE HAND raises and opens to explain. In full NORTH rear view, sword stays SCREEN RIGHT, free hand gestures SCREEN LEFT. For diagonal northwest, retain sword on the same projected side as its neutral frame, free palm appears on the other arm. Talk1 and6 exact neutral; talk2 free forearm raises; talk3 free palm opens; talk4 holds; talk5 free arm retracts. Sword is never removed or respawned.\n\nROW3 profession keeps a slow waist-level wooden-sword wrist demonstration in FRONT of torso. Back robe must occlude front palms/hilt inside its silhouette; exposed blade/elbow portions appear only at the sides. No x-ray hands or hilt over center back. No attack, slash, lunge or stepping. Preserve side/sword continuity and return to neutral.\n\nBroad crisp low-resolution pixel clusters matching PRIMARY style Image2, with same NPC identity and physical proportions Image1. Nominal native80px from neutral; base64x96 foot32,88; clip96x96 foot48,88 padding only. Transparent RGBA, no scenery/floor/shadow/text/grid/glow/FX. All eighteen real poses, no duplicate static motion substitute. Keep skull, hair and clothes stable; corrected actions are candidates.\n",
+    "n": 1,
+    "size": "1536x1536",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-13T08:19:32.546Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v2\\raw\\ta-kiem-son-northwest.png",
+      "filename": "ta-kiem-son-northwest.png",
+      "mimeType": "image/png",
+      "bytes": 1446347,
+      "sha256": "3e0cd226adead327d7e3b8df8ec65739079ab092ba2f1aa551e6c0d48fc3fcf9",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v2\\inputs\\wang-lin-live-northwest-nearest8x.png",
+      "filename": "wang-lin-live-northwest-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9340,
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "ta-kiem-son-northwest-r2.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1447558,
+    "sha256": "802134fac659da62b34613b380f4e727b325ac60b06b22e8f8b1b2f9995e8541",
+    "dimensions": {
+      "width": 1254,
+      "height": 1254
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": false
+  }
+}

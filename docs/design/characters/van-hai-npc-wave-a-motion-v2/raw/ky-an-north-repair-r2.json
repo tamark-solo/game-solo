@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang NORTH remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nHAIR IDENTITY REPAIR across ALL18poses: remove the additional LARGE raised oval high-bun mass above the head/skull. This NPC Kỷ An has SHORT compact dark hair tied LOW at the nape with a small blue ribbon and low short tail. NO high bun, topknot, long ponytail or extra head mass. Replace the upper protruding oval/high-bun with the low natural rounded/spiky short-hair crown continuous with the normal scalp; preserve same own skull/ears/shoulders dimensions, not an adult elongated head. The top hair may have tiny short cowlick strands, never a raised second oval. IMAGE3 is camera/costume/prop support only: do not amplify its minor cowlick into a high bun. Keep low-neck blue ribbon and short tail in ALL18poses. Preserve direct BACK North camera, own pale-blue/ivory robe, RIGHT hip blue gourd/screen-right, front hands/slips naturally hidden, boots and idle/talk/reading profession motion. Change only this wrong hair silhouette. No frontal face or body turn, no per-pose scaling or duplicate neutral.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "EXPLICIT SAME-NPC SAME-VIEW MOTION REPAIR. Correct the existing18-pose sheet,6columns3rows. IMAGE1 live Wang NORTH remains PRIMARY human anatomy/pixel/camera. IMAGE2 is this SAME NPC SAME-view prior motion sheet and correction target. IMAGE3 is its verified same-direction own neutral nearest8x. Preserve own identity/head/body/robe/boots and real view in all18 poses.\n\nHAIR IDENTITY REPAIR across ALL18poses: remove the additional LARGE raised oval high-bun mass above the head/skull. This NPC Kỷ An has SHORT compact dark hair tied LOW at the nape with a small blue ribbon and low short tail. NO high bun, topknot, long ponytail or extra head mass. Replace the upper protruding oval/high-bun with the low natural rounded/spiky short-hair crown continuous with the normal scalp; preserve same own skull/ears/shoulders dimensions, not an adult elongated head. The top hair may have tiny short cowlick strands, never a raised second oval. IMAGE3 is camera/costume/prop support only: do not amplify its minor cowlick into a high bun. Keep low-neck blue ribbon and short tail in ALL18poses. Preserve direct BACK North camera, own pale-blue/ivory robe, RIGHT hip blue gourd/screen-right, front hands/slips naturally hidden, boots and idle/talk/reading profession motion. Change only this wrong hair silhouette. No frontal face or body turn, no per-pose scaling or duplicate neutral.\n\n\nKeep row1idle6,row2talk6,row3profession6, real pose progression and return-to-neutral. Do not reuse one static neutral or mirror camera. One source scale from neutral crown to boots later. True transparent RGBA PNG, no painted checkerboard/grid/matte/shadow/FX. Full props and boots in generous gutters.\n",
+    "n": 1,
+    "size": "1536x1536",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-13T12:32:18.917Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\inputs\\wang-lin-live-north-nearest8x.png",
+      "filename": "wang-lin-live-north-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 8737,
+      "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\raw\\ky-an-north-direction-neutral.png",
+      "filename": "ky-an-north-direction-neutral.png",
+      "mimeType": "image/png",
+      "bytes": 1900596,
+      "sha256": "4df3f5053aec5485832461d004d72045be7adfc718277e959801841b56f55ff6",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-wave-a-motion-v2\\direction-neutral\\nearest8x\\ky-an-north.png",
+      "filename": "ky-an-north.png",
+      "mimeType": "image/png",
+      "bytes": 14869,
+      "sha256": "2dedde4a2f5a2f5f06fbda612248b392624615c163316f570605de5b83651dca",
+      "dimensions": {
+        "width": 768,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "ky-an-north-repair-r2.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1924192,
+    "sha256": "ff03aa8af65c55eddaa9cd0202550126906e9112d66ebc9a9215ff5756243775",
+    "dimensions": {
+      "width": 1254,
+      "height": 1254
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "npc-wave-a-live-wang-inputs-1",
+  "date": "2026-10-13",
+  "inputOrder": [
+    "Image1 live Wang Lin southeast nearest8x PRIMARY anatomy/camera/pixel/style"
+  ],
+  "npcToNpcStyleChain": false,
+  "images": [
+    {
+      "file": "inputs/wang-lin-live-southeast-native.png",
+      "sha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+      "role": "Direct native1x comparison, not a second input"
+    },
+    {
+      "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "role": "Only multipart input, nearest8x unchanged pixels"
+    }
+  ],
+  "liveCatalog": {
+    "file": "client/public/assets/hang-nhac-pixel-player/catalog.json",
+    "sha256": "a2c6956b1965caffd258559c7547fe6c1fdb1fe5efc2008ef379cb98779c1805"
+  },
+  "liveAtlas": {
+    "file": "client/public/assets/hang-nhac-pixel-player/atlases/idle-southeast.png",
+    "sha256": "cc00ed2cacfae34195d2e112d2a78168393a7f9beb1e0d1f2cbfc3d12ad84dfb"
+  },
+  "primaryStandard": {
+    "file": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+    "sha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec"
+  },
+  "directionalStandard": {
+    "file": "docs/design/characters/van-hai-npc-visual-standard-v1/directions.json",
+    "sha256": "0fef83b1121c0be2cf9b47909a00f5c3c01a665229cb1d16358fe65650b8abd9"
+  }
+}

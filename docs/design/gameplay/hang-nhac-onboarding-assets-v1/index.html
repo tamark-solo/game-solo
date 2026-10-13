@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Hằng Nhạc · Bộ đạo cụ nhập môn</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./review.css">
+  <script src="./review.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="eyebrow"><span class="seal" aria-hidden="true">HN</span> VÂN HẢI ĐẠO ĐỒ <span class="eyebrow-separator">/</span> XƯỞNG MỸ THUẬT</div>
+      <div class="hero-line"><div><p class="kicker">HẰNG NHẠC · NHẬP MÔN V2</p><h1>Vật nhỏ, một chuyến đi.</h1><p class="lead">Mẫu được niêm, phiến dẫn khí và bệ đối chứng. Xem nét, tỷ lệ và điểm chân cạnh nhân vật ở đúng cỡ chơi.</p></div><span class="status">Đạo cụ đã chấp nhận · chưa đặt map</span></div>
+      <nav class="section-links" aria-label="Các phần đối chiếu"><a href="#native">01 <span>Đạo cụ & icon</span></a><a href="#compose">02 <span>Ghép cùng nhân vật</span></a><a href="#reuse">03 <span>Thư viện dùng lại</span></a><a href="./telegraphs/preview.html">04 <span>Dấu báo nguy hiểm ↗</span></a></nav>
+    </header>
+
+    <main>
+      <div id="load-status" class="load-status" role="status">Đang đọc bộ đạo cụ…</div>
+      <section id="native" class="section" aria-labelledby="native-title">
+        <div class="section-heading"><div><p class="kicker">01 / NGUỒN RỜI</p><h2 id="native-title">Đọc rõ ở 1×</h2><p>Mỗi cặp giữ nguyên pixel gốc. 2× chỉ phóng nguyên lần để kiểm mép alpha.</p></div><fieldset class="segmented background-controls"><legend>Nền kiểm alpha</legend><button type="button" data-background="light" aria-pressed="true">Sáng</button><button type="button" data-background="dark" aria-pressed="false">Tối</button><button type="button" data-background="checker" aria-pressed="false">Ô caro</button></fieldset></div>
+        <div id="asset-grid" class="asset-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="compose" class="section" aria-labelledby="compose-title">
+        <div class="section-heading"><div><p class="kicker">02 / TỶ LỆ & ĐIỂM CHÂN</p><h2 id="compose-title">Đặt cạnh người chơi</h2><p>Nhân vật 64 × 96 · chân (32, 88). Thứ tự trước/sau dùng điểm chân trên cùng một mặt đất.</p></div></div>
+        <div class="composition">
+          <div class="composition-view"><div class="canvas-toolbar"><span id="canvas-caption">Đối chiếu native</span><span class="quiet">Kéo thanh cuộn nếu khung lớn hơn màn hình</span></div><div id="scene-scroll" class="scene-scroll" tabindex="0" aria-label="Khung đối chiếu đạo cụ và nhân vật"><canvas id="scene" width="560" height="320" role="img" aria-label="Đạo cụ và nhân vật tại tỷ lệ native"></canvas></div><p id="scene-description" class="scene-description"></p></div>
+          <aside class="controls" aria-label="Điều khiển đối chiếu">
+            <label class="control-label" for="asset-select">Đạo cụ đang xem</label><select id="asset-select" disabled></select>
+            <fieldset class="position-control"><legend>Vị trí nhân vật</legend><div class="button-grid"><button type="button" data-position="front" aria-pressed="true">Trước vật</button><button type="button" data-position="back" aria-pressed="false">Sau vật</button><button type="button" data-position="left" aria-pressed="false">Bên trái</button><button type="button" data-position="right" aria-pressed="false">Bên phải</button></div></fieldset>
+            <fieldset class="segmented scale-control"><legend>Tỷ lệ khung ghép</legend><button type="button" data-scale="1" aria-pressed="true">1× native</button><button type="button" data-scale="2" aria-pressed="false">2× kiểm nét</button></fieldset>
+            <label class="check-control"><input id="map-background" type="checkbox" checked> Dùng crop nền Vân Ngọc</label>
+            <label class="check-control"><input id="show-pivots" type="checkbox" checked> Hiện điểm chân & khung ảnh</label>
+            <dl id="asset-facts" class="asset-facts"></dl>
+            <p class="control-note">Đây là khung ghép thử trên crop, chưa phải vị trí đặt trong map.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="reuse" class="section" aria-labelledby="reuse-title">
+        <div class="section-heading"><div><p class="kicker">03 / DÙNG CÙNG BỘ VÂN NGỌC</p><h2 id="reuse-title">Giữ đồ đã có, thêm đúng phần thiếu</h2><p>Mẫu nhập môn là đạo cụ của bài thử. Hộp giữ khí, linh tuyền và mực dưới đây vẫn là các món riêng.</p></div><a class="text-link" href="../van-ngoc-gameplay-assets-v1/README.md#sáu-công-thức">Xem sáu công thức ↗</a></div>
+        <div id="reuse-icons" class="reuse-icons"></div>
+        <div class="next-links"><a href="../van-ngoc-gameplay-assets-v1/review/icons-native-board.png"><span>BẢNG NGUỒN</span><strong>11 icon · sáng / tối ↗</strong><small>Giữ nguồn và trạng thái duyệt của bộ trước.</small></a><a href="./telegraphs/preview.html"><span>TÍN HIỆU CHƠI</span><strong>Vòng báo, hướng và nhịp ↗</strong><small>Xem riêng các dấu dựng bằng code.</small></a><a href="./assets.json"><span>HỒ SƠ BỘ MỚI</span><strong>Kích thước & điểm chân ↗</strong><small>Đọc manifest nguồn của bản đối chiếu này.</small></a></div>
+      </section>
+    </main>
+    <footer><span>HẰNG NHẠC · ART REVIEW 01</span><p>Chỉ đọc ảnh và manifest. Trang không gửi lệnh gameplay, ghi hồ sơ hoặc thay map. Kiểm kỹ thuật và duyệt hình là hai bước riêng.</p><a href="./review/overview.png">Bảng tổng quan ↗</a><a href="./README.md">Hồ sơ bàn giao ↗</a></footer>
+  </div>
+</body>
+</html>

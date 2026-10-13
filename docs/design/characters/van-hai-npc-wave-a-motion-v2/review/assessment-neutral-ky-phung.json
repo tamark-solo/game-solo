@@ -1,0 +1,1154 @@
+{
+  "schema": "npc-direction-neutral-source-assessment-1",
+  "date": "2026-10-13",
+  "scope": "Fourteen selected standalone real-direction neutral source candidates reviewed and measurement-confirmed for Ky An and Phung Da; rejected source history retained, no owner ART/motion/runtime approval",
+  "basis": "Wang live same-direction Image1 primary; own accepted Southeast identity support",
+  "candidates": [
+    "ky-an-south",
+    "ky-an-northwest",
+    "ky-an-east",
+    "phung-da-south",
+    "phung-da-southwest",
+    "phung-da-west",
+    "phung-da-north",
+    "phung-da-northeast",
+    "phung-da-east",
+    "ky-an-west",
+    "ky-an-north",
+    "ky-an-northeast",
+    "phung-da-northwest",
+    "ky-an-southwest"
+  ],
+  "failedOrHeld": [],
+  "sources": [
+    {
+      "slug": "ky-an",
+      "direction": "south",
+      "source": "direction-neutral/raw/ky-an-south.png",
+      "sourceSha256": "2d847b5c8cbe35482a7bb744317c5a6f67e27ec253191fab5cd9bbd87c7f47db",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Actual target front/profile view follows same-direction live Wang; face/torso axes reviewed in raw and native pair."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted short low-tied dark hair with blue ribbon, blue/ivory robe, bamboo slips and belt gourd retained; no tall bun or new staff."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Direct front South; both eyes/front robe, short low-tied dark hair and blue ribbon, bamboo slips held with both hands at abdomen; gourd attaches at screen-left anatomical right hip."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-south-neutral-wang-pair-2x.png",
+        "sha256": "fb2d8ae0fcccf1d234772aca6a04a9495e1963a3e33fddc6db24136fc23c1fe5",
+        "finding": "After manual roots were rendered, native calibration and same-direction live Wang pair were visually reviewed. Both boots retained and root on shared y88; zero clipped pixels."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/ky-an-south.json",
+        "registrationSha256": "0281037fdb501cb2e837525177c46262a7a9e07e345d0e1e19b05b71e8056b47",
+        "root": [
+          518.25,
+          1438
+        ],
+        "crownY": 336,
+        "bootPairSupportWitness": [
+          362,
+          1393,
+          681,
+          1438
+        ],
+        "scale": 0.07259528130671507,
+        "retainedComponentLabels": [
+          1,
+          2
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Small slips/sword and belt details are subdued at native1x. Short/spiked hair silhouette and foreshortened feet naturally differ across the camera views; exact pixel-level morphology remains part of motion review."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "ky-an",
+      "direction": "northwest",
+      "source": "direction-neutral/raw/ky-an-northwest.png",
+      "sourceSha256": "d1c042b27c876b434c3ed6cefa635423380a07aad902bacf3227414afc04fce0",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Back-quarter view follows live Wang rear axes with rear hair/shoulders/robe dominant; front chest and hands naturally occluded."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted short low-tied dark hair with blue ribbon, blue/ivory robe, bamboo slips and belt gourd retained; no tall bun or new staff."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Back-left three-quarter Northwest follows same-direction Wang. Back robe dominates, face/eyes occluded by hair and rear turn, slips only emerge as a natural front-waist side edge. Gourd stays on screen-right anatomical right rear hip."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-northwest-neutral-wang-pair-2x.png",
+        "sha256": "5affbcc166c8423b036c158653f1514dd5ad000d22789737d3655bd2e3139b6d",
+        "finding": "After manual roots were rendered, native calibration and same-direction live Wang pair were visually reviewed. Both boots retained and root on shared y88; zero clipped pixels."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/ky-an-northwest.json",
+        "registrationSha256": "25e36ee3cefcb7ed835e79fd5887eefaeb8a750e5846a2fca36c0737f8e6bb60",
+        "root": [
+          518.75,
+          1404
+        ],
+        "crownY": 298,
+        "bootPairSupportWitness": [
+          335,
+          1359,
+          683,
+          1404
+        ],
+        "scale": 0.07233273056057866,
+        "retainedComponentLabels": [
+          1
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Small slips/sword and belt details are subdued at native1x. Short/spiked hair silhouette and foreshortened feet naturally differ across the camera views; exact pixel-level morphology remains part of motion review."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "ky-an",
+      "direction": "east",
+      "source": "direction-neutral/raw/ky-an-east.png",
+      "sourceSha256": "aac89a70c8078ac52d6d18fb3b8dbab5b9c22ec68fa8437b508518f80f599f13",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Actual target front/profile view follows same-direction live Wang; face/torso axes reviewed in raw and native pair."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted short low-tied dark hair with blue ribbon, blue/ivory robe, bamboo slips and belt gourd retained; no tall bun or new staff."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Right-facing East profile follows live Wang; one eye and nose point right, original short low-tied hair/ribbon, blue/ivory robe and bamboo slips retained. Gourd is attached to the original near anatomical right belt flank, not placed on ground."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-east-neutral-wang-pair-2x.png",
+        "sha256": "e128ae2150b79e9774d193c2d5212ca8304013308b02e5f61aa43bbb22f01e97",
+        "finding": "After manual roots were rendered, native calibration and same-direction live Wang pair were visually reviewed. Both boots retained and root on shared y88; zero clipped pixels."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/ky-an-east.json",
+        "registrationSha256": "9658405b658fb7a7b561b7ff9dfa522d461aa0661f6cdfad2a769332ab6f294d",
+        "root": [
+          535.25,
+          1394
+        ],
+        "crownY": 299,
+        "bootPairSupportWitness": [
+          397,
+          1350,
+          684,
+          1394
+        ],
+        "scale": 0.0730593607305936,
+        "retainedComponentLabels": [
+          1
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Small slips/sword and belt details are subdued at native1x. Short/spiked hair silhouette and foreshortened feet naturally differ across the camera views; exact pixel-level morphology remains part of motion review."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "phung-da",
+      "direction": "south",
+      "source": "direction-neutral/raw/phung-da-south.png",
+      "sourceSha256": "9345b92c6197ea7e2422dae2e253b3c2156633a0d46253f7591d5f7d010ad554",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Actual target front/profile view follows same-direction live Wang; face/torso axes reviewed in raw and native pair."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted upright short spiked dark hair, grey-green robe, red-brown wrists/belt and short wooden training sword retained; no armor or metal blade."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "South front matches live Wang and accepted identity: upright short spiked hair, grey-green robe, red-brown wrist/belt wraps; same short wooden sword held low in screen-left anatomical right hand. No raised attack, second weapon or duplicate hand."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/phung-da-south-neutral-wang-pair-2x.png",
+        "sha256": "eb03778577a1622b0367e40ae3878fbbb4f64aa107eb6df6a2fb75093230039b",
+        "finding": "After manual roots were rendered, native calibration and same-direction live Wang pair were visually reviewed. Both boots retained and root on shared y88; zero clipped pixels."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/phung-da-south.json",
+        "registrationSha256": "e62e7d1214fead3ba724f45fa0cc7156c694679ae158b4f86dbf23a026c76ef5",
+        "root": [
+          524,
+          1418
+        ],
+        "crownY": 230,
+        "bootPairSupportWitness": [
+          360,
+          1371,
+          692,
+          1419
+        ],
+        "scale": 0.06734006734006734,
+        "retainedComponentLabels": [
+          1,
+          2
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Small slips/sword and belt details are subdued at native1x. Short/spiked hair silhouette and foreshortened feet naturally differ across the camera views; exact pixel-level morphology remains part of motion review."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "phung-da",
+      "direction": "southwest",
+      "source": "direction-neutral/raw/phung-da-southwest.png",
+      "sourceSha256": "a99ad3e7f95f2d07a3b51d8f52957df193ca2df521bf59b4d62e46cc172b05db",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Actual target front/profile view follows same-direction live Wang; face/torso axes reviewed in raw and native pair."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted upright short spiked dark hair, grey-green robe, red-brown wrists/belt and short wooden training sword retained; no armor or metal blade."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Southwest front-left matches live Wang. Face/chest naturally front-left, spiked hair and grey-green/red-brown costume retained. Wooden sword still attaches to screen-left anatomical right hand, with opposite hand resting and clear separate boots."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/phung-da-southwest-neutral-wang-pair-2x.png",
+        "sha256": "0fabadb4d7527bfb93e4366d37ea3884fb3111baad11e2ad6734f191861f07b6",
+        "finding": "After manual roots were rendered, native calibration and same-direction live Wang pair were visually reviewed. Both boots retained and root on shared y88; zero clipped pixels."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/phung-da-southwest.json",
+        "registrationSha256": "fe19396d6a2ce8eda0d538d70095a6db83184f4f7fd13fc99a8c21fbf5572216",
+        "root": [
+          519.5,
+          1405
+        ],
+        "crownY": 246,
+        "bootPairSupportWitness": [
+          336,
+          1358,
+          715,
+          1405
+        ],
+        "scale": 0.06902502157031924,
+        "retainedComponentLabels": [
+          1
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Small slips/sword and belt details are subdued at native1x. Short/spiked hair silhouette and foreshortened feet naturally differ across the camera views; exact pixel-level morphology remains part of motion review."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "phung-da",
+      "direction": "west",
+      "source": "direction-neutral/raw/phung-da-west.png",
+      "sourceSha256": "ff19627fa7ef00e5a59021d3531a55992aab9bdcdf68e2168e54193012ab23fd",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Actual target front/profile view follows same-direction live Wang; face/torso axes reviewed in raw and native pair."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted upright short spiked dark hair, grey-green robe, red-brown wrists/belt and short wooden training sword retained; no armor or metal blade."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "West left profile matches live Wang; single visible eye and left-pointing nose, compact spiked hair, original clothing. Sword attaches to the original right forearm/hand projecting toward front-left of the profile rather than changing to the resting arm; far-side forearm overlap limits exact separation at native1x."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/phung-da-west-neutral-wang-pair-2x.png",
+        "sha256": "6ce9cec64456f398d12d8dba068e66c2636041fe4c6cb0719a844e2dcfb1d797",
+        "finding": "After manual roots were rendered, native calibration and same-direction live Wang pair were visually reviewed. Both boots retained and root on shared y88; zero clipped pixels."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/phung-da-west.json",
+        "registrationSha256": "a4735ba59cc0fb6d1a5750c6ff38701a8de97ddfb97dece3859694797d68b2c5",
+        "root": [
+          497.75,
+          1416
+        ],
+        "crownY": 276,
+        "bootPairSupportWitness": [
+          348,
+          1370,
+          671,
+          1416
+        ],
+        "scale": 0.07017543859649122,
+        "retainedComponentLabels": [
+          1,
+          2
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Small slips/sword and belt details are subdued at native1x. Short/spiked hair silhouette and foreshortened feet naturally differ across the camera views; exact pixel-level morphology remains part of motion review.",
+        "West far-side hand/forearm overlap is less separable at native1x; raw grip remains attached to its original sword-bearing arm."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "phung-da",
+      "direction": "north",
+      "source": "direction-neutral/raw/phung-da-north.png",
+      "sourceSha256": "925d8ab265bc89d41ec1b48c1e7a744c1f7274657b55e5e67e86199052d1f4d3",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Direct back, no eyes/front face/chest visible; live same-direction Wang comparison reviewed."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted upright short spiked dark hair, grey-green robe, red-brown wrists/belt and short wooden training sword retained; no armor or metal blade."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "North direct back has no eyes/front face/chest; original spiked hair and back robe/belt wraps. Sword held by screen-right anatomical right hand, opposite hand resting. Low blade lies on original right flank, not across back torso."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/phung-da-north-neutral-wang-pair-2x.png",
+        "sha256": "41e45d9b371dc9008744217122520bc9c06cc6a6219458660c2ce684184154cc",
+        "finding": "After manual roots were rendered, native calibration and same-direction live Wang pair were visually reviewed. Both boots retained and root on shared y88; zero clipped pixels."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/phung-da-north.json",
+        "registrationSha256": "deb66402cbf2615aa3cc874ba924238f140a4541c5660b06b962a1ba5a7fe735",
+        "root": [
+          510.5,
+          1382
+        ],
+        "crownY": 200,
+        "bootPairSupportWitness": [
+          348,
+          1334,
+          673,
+          1382
+        ],
+        "scale": 0.0676818950930626,
+        "retainedComponentLabels": [
+          1
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Small slips/sword and belt details are subdued at native1x. Short/spiked hair silhouette and foreshortened feet naturally differ across the camera views; exact pixel-level morphology remains part of motion review."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "phung-da",
+      "direction": "northeast",
+      "source": "direction-neutral/raw/phung-da-northeast.png",
+      "sourceSha256": "cecda3a6ca0cee386cd869f8499f637a853f0fec201c8e68ea4b78f0b700f61d",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Back-quarter view follows live Wang rear axes with rear hair/shoulders/robe dominant; front chest and hands naturally occluded."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted upright short spiked dark hair, grey-green robe, red-brown wrists/belt and short wooden training sword retained; no armor or metal blade."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Northeast back-right matches live Wang, rear shoulders/hair/robe dominant and no front face or chest revealed. Same wooden sword remains low in near screen-right anatomical right hand; other wrist rests."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/phung-da-northeast-neutral-wang-pair-2x.png",
+        "sha256": "2e2388887dc7e6b88bf95d794c6c6a5a10d969f98f7c511e724e85217449e1db",
+        "finding": "After manual roots were rendered, native calibration and same-direction live Wang pair were visually reviewed. Both boots retained and root on shared y88; zero clipped pixels."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/phung-da-northeast.json",
+        "registrationSha256": "5d3b282bc117969bab15c3821ac2adbcc4b6d560fd1bbf55f543fa0c0d31c12f",
+        "root": [
+          520,
+          1404
+        ],
+        "crownY": 171,
+        "bootPairSupportWitness": [
+          361,
+          1354,
+          720,
+          1404
+        ],
+        "scale": 0.064882400648824,
+        "retainedComponentLabels": [
+          1,
+          2
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Small slips/sword and belt details are subdued at native1x. Short/spiked hair silhouette and foreshortened feet naturally differ across the camera views; exact pixel-level morphology remains part of motion review."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "phung-da",
+      "direction": "east",
+      "source": "direction-neutral/raw/phung-da-east.png",
+      "sourceSha256": "5e31b336338b397697dceb58ed23acc7b896983d73e1ea8b4b6056c95c0257d4",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Actual target front/profile view follows same-direction live Wang; face/torso axes reviewed in raw and native pair."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted upright short spiked dark hair, grey-green robe, red-brown wrists/belt and short wooden training sword retained; no armor or metal blade."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "East right profile matches live Wang, one visible eye and right nose, own upright short hair/costume. The near anatomical right arm projects screen-left of the torso with sword held low across lower front waist, as the accepted Southeast resting grip; far left hand remains resting."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/phung-da-east-neutral-wang-pair-2x.png",
+        "sha256": "a3a373f32f955403cb83efed74a873a34f9690366c6be0ddd36f3ff573e49bc9",
+        "finding": "After manual roots were rendered, native calibration and same-direction live Wang pair were visually reviewed. Both boots retained and root on shared y88; zero clipped pixels."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/phung-da-east.json",
+        "registrationSha256": "95f0ef1da5e8e8cdb604ced4cf26499eb507fe64d84793a1fe07765da7242a38",
+        "root": [
+          548,
+          1429
+        ],
+        "crownY": 166,
+        "bootPairSupportWitness": [
+          375,
+          1378,
+          713,
+          1429
+        ],
+        "scale": 0.06334125098970704,
+        "retainedComponentLabels": [
+          1
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Small slips/sword and belt details are subdued at native1x. Short/spiked hair silhouette and foreshortened feet naturally differ across the camera views; exact pixel-level morphology remains part of motion review."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "ky-an",
+      "direction": "west",
+      "source": "direction-neutral/raw/ky-an-west-prop-r2.png",
+      "sourceSha256": "24e244c644a205c611684f615386f2bfc5b0610944e7a1a86ff9d2f87c26b50c",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Corrected neutral keeps same camera as original and live same-direction Wang; raw and final native pair reviewed."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Original pale-blue/ivory robe, bamboo slips, low neck ribbon/tail and belt water gourd retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Compact single human morphology retained across this prop-side correction. Crown and both boot supports located in source; one neutral-derived scale, no anatomy deformation, paint or bbox fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Corrected West single neutral retains original profile/hair/robe, slips and planted stance. Only a small gourd edge now peeks from the original anatomical right far belt hip behind sleeve/robe; large opposite near-hip gourd removed. Same-direction Wang profile and own accepted identity reviewed."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-west-neutral-wang-pair-2x.png",
+        "sha256": "ea3690e83a81df20da49a467e2e0d87af838eeb028a27cb039178fde07ab9a8c",
+        "finding": "Final native/Wang same-direction pair reviewed after manual roots were rendered. Original props retained with corrected physical side/occlusion, boots complete, zero clipping."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/ky-an-west.json",
+        "registrationSha256": "aa5614660b0313b453546d8fc63b2c87c8be02fdd98016a0b5929fcb4a4a8121",
+        "root": [
+          497,
+          1441
+        ],
+        "crownY": 301,
+        "bootPairSupportWitness": [
+          335,
+          1395,
+          683,
+          1441
+        ],
+        "scale": 0.07017543859649122,
+        "retainedComponentLabels": [
+          1
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Belt cord/slips and the far hand/prop are subtle at native1x; correct occlusion intentionally reduces visible prop area."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "ky-an",
+      "direction": "north",
+      "source": "direction-neutral/raw/ky-an-north-prop-r2.png",
+      "sourceSha256": "390ca0afdcc0ba1a62c0dfeda5d2e9fddbbc1f8df4d91f60396b3a75f4eaff14",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Corrected neutral keeps same camera as original and live same-direction Wang; raw and final native pair reviewed."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Original pale-blue/ivory robe, bamboo slips, low neck ribbon/tail and belt water gourd retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Compact single human morphology retained across this prop-side correction. Crown and both boot supports located in source; one neutral-derived scale, no anatomy deformation, paint or bbox fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Corrected direct back retains no face/eyes/front chest or palms, short low-tied hair/ribbon and robe. Gourd now attaches to screen-right anatomical RIGHT hip. Front-held bamboo slips stay occluded, no new backpack or prop added."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-north-neutral-wang-pair-2x.png",
+        "sha256": "8f97c66aa0cdfed6014cf7375edcd2d7464f9249e7e43bf7fbab86b45ac64ea5",
+        "finding": "Final native/Wang same-direction pair reviewed after manual roots were rendered. Original props retained with corrected physical side/occlusion, boots complete, zero clipping."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/ky-an-north.json",
+        "registrationSha256": "aec847554cebccabee6a08f8ef1fc0ab3c30e4e6124445d63d9f49dc0b5ba06c",
+        "root": [
+          513.25,
+          1380
+        ],
+        "crownY": 193,
+        "bootPairSupportWitness": [
+          348,
+          1332,
+          679,
+          1380
+        ],
+        "scale": 0.06739679865206402,
+        "retainedComponentLabels": [
+          1
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Belt cord/slips and the far hand/prop are subtle at native1x; correct occlusion intentionally reduces visible prop area.",
+        "North rear crown has a raised hair-volume/cowlick mass, while ribbon and short tail remain low at the neck. At native this can read bun-like; retain as a visual review limitation rather than owner-approved hair detail."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "ky-an",
+      "direction": "northeast",
+      "source": "direction-neutral/raw/ky-an-northeast-prop-r2.png",
+      "sourceSha256": "5a533ba72d89e87319a98aa8178d56f5f1cc8821fbd3ea4b4ec0c66c7a7046d3",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Corrected neutral keeps same camera as original and live same-direction Wang; raw and final native pair reviewed."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Original pale-blue/ivory robe, bamboo slips, low neck ribbon/tail and belt water gourd retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Compact single human morphology retained across this prop-side correction. Crown and both boot supports located in source; one neutral-derived scale, no anatomy deformation, paint or bbox fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Corrected back-right neutral retains camera, hair, robe and natural front-waist side of bamboo slips. Gourd now sits on anatomical right near belt flank at screen-right/down rather than the screen-left far hip; original pair of gourd lobes and belt cord retained."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-northeast-neutral-wang-pair-2x.png",
+        "sha256": "79b8e2a883818f12b1be0d5b66b2fa0dfbd2a353cb73ba294d72c7d9e1738483",
+        "finding": "Final native/Wang same-direction pair reviewed after manual roots were rendered. Original props retained with corrected physical side/occlusion, boots complete, zero clipping."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/ky-an-northeast.json",
+        "registrationSha256": "1d88a35b2b27b25ce964c78e367da156d1c2443c55bc7f5160983a7c9fe2a254",
+        "root": [
+          509.75,
+          1422
+        ],
+        "crownY": 192,
+        "bootPairSupportWitness": [
+          359,
+          1372,
+          697,
+          1422
+        ],
+        "scale": 0.06504065040650407,
+        "retainedComponentLabels": [
+          1
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Belt cord/slips and the far hand/prop are subtle at native1x; correct occlusion intentionally reduces visible prop area."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "phung-da",
+      "direction": "northwest",
+      "source": "direction-neutral/raw/phung-da-northwest-prop-r2.png",
+      "sourceSha256": "966a3887a5d275afd9f05101894f940bc6f1e61adb290da6b26c2992fa41b75d",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Corrected neutral keeps same camera as original and live same-direction Wang; raw and final native pair reviewed."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Original upright short spiked hair, grey-green robe, red-brown waist/wrist wraps and wooden sword retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Compact single human morphology retained across this prop-side correction. Crown and both boot supports located in source; one neutral-derived scale, no anatomy deformation, paint or bbox fit."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Corrected back-left neutral retains rear camera with no front face/chest or palms through torso, original spiked hair/grey-green robe/red-brown wrists. Sword now attaches low to far screen-right anatomical RIGHT hand, left screen-left hand rests; no weapon across back or new metal blade."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/phung-da-northwest-neutral-wang-pair-2x.png",
+        "sha256": "e8685c12cf76b6669e00ef956866356bb8c221a074e07ad5952123ee205e7bf1",
+        "finding": "Final native/Wang same-direction pair reviewed after manual roots were rendered. Original props retained with corrected physical side/occlusion, boots complete, zero clipping."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/phung-da-northwest.json",
+        "registrationSha256": "af0fe76b2301d128d566c743bd242839e379c4b6e7ff41209077ef3d5a6d7cd1",
+        "root": [
+          522,
+          1430
+        ],
+        "crownY": 168,
+        "bootPairSupportWitness": [
+          305,
+          1379,
+          718,
+          1430
+        ],
+        "scale": 0.06339144215530904,
+        "retainedComponentLabels": [
+          1
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Belt cord/slips and the far hand/prop are subtle at native1x; correct occlusion intentionally reduces visible prop area."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "ky-an",
+      "direction": "southwest",
+      "source": "direction-neutral/raw/ky-an-southwest-alpha-r3.png",
+      "sourceSha256": "4e5b10c7fb500e401ef6b725b04067114a1c6de86ae878056b8337d95e4487a5",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Actual Southwest front-left view retains own accepted target camera and follows live Wang."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Short low-tied dark hair and blue ribbon, own blue/ivory robe, bamboo slips and blue gourd retained."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Relative to checkerboard r2, the compact larger head, shorter torso/hem and short legs have been restored. Raw and native pair compared with own approved Southeast and same-direction Wang; source scale only, no deformation."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Southwest front-left camera and own short low-tied dark hair/blue ribbon retained; large compact head and shorter torso/hem match accepted own anatomy again. Both hands hold compact bamboo slips before abdomen. Gourd remains attached to anatomical RIGHT far screen-left/up hip, only a natural small exposed edge behind sleeve/body. Actual exterior is transparent, no checkerboard painted into source."
+      },
+      "alpha": {
+        "pass": true,
+        "finding": "Actual transparent exterior; no painted checkerboard or background keying used."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-southwest-neutral-wang-pair-2x.png",
+        "sha256": "3517938210b8a535da59949b7652ef4a667e594a8383b8cd1f120456b4bda8ab",
+        "finding": "Final native/Wang pair reviewed after manual both-boot roots were rendered. Both boots complete, far-right anatomical hip correctly occluded and zero clipped opaque pixels."
+      },
+      "measurement": {
+        "registration": "direction-neutral/review/ky-an-southwest.json",
+        "registrationSha256": "1f3832758bd2a37199e8db4cc2c15e4ff9b8f1bd0b186d1ec20ca0941229f17c",
+        "root": [
+          502.5,
+          1428
+        ],
+        "crownY": 281,
+        "bootPairSupportWitness": [
+          340,
+          1382,
+          698,
+          1428
+        ],
+        "scale": 0.06974716652136007,
+        "retainedComponentLabels": [
+          1
+        ],
+        "clippedOpaquePixels": 0
+      },
+      "limitations": [
+        "Far anatomical right hip/gourd is intentionally mostly occluded by sleeve/torso in this front-left view; native1x visible blue edge is small.",
+        "R3 neutral uses retained same-view correction ancestry plus exact ownapprovedSE calibration8x for proportions only; Wang same-view remains Image1 primary."
+      ],
+      "status": "review-candidate",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    }
+  ],
+  "artApproved": false,
+  "motionApproved": false,
+  "ownerApproved": false,
+  "runtimeImported": false,
+  "rejectedHistory": [
+    {
+      "slug": "ky-an",
+      "direction": "southwest",
+      "source": "direction-neutral/raw/ky-an-southwest.png",
+      "sourceSha256": "547164b3ac9d835a06a3149ef652aebe26a64a0a9d7c89cd885c5319c0e8a3e7",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Actual target front/profile view follows same-direction live Wang; face/torso axes reviewed in raw and native pair."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted short low-tied dark hair with blue ribbon, blue/ivory robe, bamboo slips and belt gourd retained; no tall bun or new staff."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "finding": "Gourd visibly sits on screen-right near hip of the front-left view. Anatomical right hip should project to screen-left/up on the far side, naturally partly occluded. This source moves attachment to the other hip."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-southwest-neutral-wang-pair-2x.png",
+        "sha256": "ecd0a8a7eecf24ff4b1fa3d71a6646646285b517c8bb5093fb74cb07b8d9ca0e",
+        "finding": "Initial native pair reviewed; physical prop side/occlusion failure blocks downstream motion generation from this neutral."
+      },
+      "measurement": null,
+      "limitations": [
+        "Gourd visibly sits on screen-right near hip of the front-left view. Anatomical right hip should project to screen-left/up on the far side, naturally partly occluded. This source moves attachment to the other hip.",
+        "Retain this raw/proposal as rejected or held history. New selected correction needs its own exact-hash review and measurement; no automatic pass."
+      ],
+      "status": "needs-source-correction",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "ky-an",
+      "direction": "west",
+      "source": "direction-neutral/raw/ky-an-west.png",
+      "sourceSha256": "9ca919fc54e26222533db724bc60b9ee4e1267ea29d2f853db961874a52c9322",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Actual target front/profile view follows same-direction live Wang; face/torso axes reviewed in raw and native pair."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted short low-tied dark hair with blue ribbon, blue/ivory robe, bamboo slips and belt gourd retained; no tall bun or new staff."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "finding": "Large gourd is displayed completely on the screen-right back silhouette of a left profile; same anatomical right far-hip attachment/occlusion cannot be established. Hold for explicit far-hip occlusion correction, not confirmation by silhouette alone."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-west-neutral-wang-pair-2x.png",
+        "sha256": "5d5e45bb51d8225b162213d93fb777190c753a03befe0407dce547de68a9ec87",
+        "finding": "Initial native pair reviewed; physical prop side/occlusion failure blocks downstream motion generation from this neutral."
+      },
+      "measurement": null,
+      "limitations": [
+        "Large gourd is displayed completely on the screen-right back silhouette of a left profile; same anatomical right far-hip attachment/occlusion cannot be established. Hold for explicit far-hip occlusion correction, not confirmation by silhouette alone.",
+        "Retain this raw/proposal as rejected or held history. New selected correction needs its own exact-hash review and measurement; no automatic pass."
+      ],
+      "status": "needs-source-correction",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "ky-an",
+      "direction": "northeast",
+      "source": "direction-neutral/raw/ky-an-northeast.png",
+      "sourceSha256": "2b701b6d18e459848dbbd98c361ba410488d0e9822f836efe85d413c3ba99c83",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Back-quarter view follows live Wang rear axes with rear hair/shoulders/robe dominant; front chest and hands naturally occluded."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted short low-tied dark hair with blue ribbon, blue/ivory robe, bamboo slips and belt gourd retained; no tall bun or new staff."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "finding": "Back-right view places blue gourd on screen-left far hip. Anatomical right hip is the near screen-right/down flank and should show there; attachment side swapped."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-northeast-neutral-wang-pair-2x.png",
+        "sha256": "b3319b01ee984cae3e4c494f89eb012855ca4a3594803be6a6cb8b02b6c3d568",
+        "finding": "Initial native pair reviewed; physical prop side/occlusion failure blocks downstream motion generation from this neutral."
+      },
+      "measurement": null,
+      "limitations": [
+        "Back-right view places blue gourd on screen-left far hip. Anatomical right hip is the near screen-right/down flank and should show there; attachment side swapped.",
+        "Retain this raw/proposal as rejected or held history. New selected correction needs its own exact-hash review and measurement; no automatic pass."
+      ],
+      "status": "needs-source-correction",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "ky-an",
+      "direction": "north",
+      "source": "direction-neutral/raw/ky-an-north.png",
+      "sourceSha256": "d6bdf8472446717779c20a4dce72cad21ba32e264dd95febc8b6936106ccfe1c",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Direct back, no eyes/front face/chest visible; live same-direction Wang comparison reviewed."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted short low-tied dark hair with blue ribbon, blue/ivory robe, bamboo slips and belt gourd retained; no tall bun or new staff."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "finding": "Direct back view places the gourd on screen-left. Anatomical right hip must appear screen-right in direct back; explicit attachment side swapped."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "file": "review/ky-an-north-neutral-wang-pair-2x.png",
+        "sha256": "312a43c0dffa2077b32e1166dc50dcd8c025045b624181a446f40a6e48d45e26",
+        "finding": "Initial native pair reviewed; physical prop side/occlusion failure blocks downstream motion generation from this neutral."
+      },
+      "measurement": null,
+      "limitations": [
+        "Direct back view places the gourd on screen-left. Anatomical right hip must appear screen-right in direct back; explicit attachment side swapped.",
+        "Retain this raw/proposal as rejected or held history. New selected correction needs its own exact-hash review and measurement; no automatic pass."
+      ],
+      "status": "needs-source-correction",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "phung-da",
+      "direction": "northwest",
+      "source": "direction-neutral/raw/phung-da-northwest.png",
+      "sourceSha256": "55d0760830b281add35e8251f00ae99c6ea620e94d7b603aed280d3bec396712",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Back-quarter view follows live Wang rear axes with rear hair/shoulders/robe dominant; front chest and hands naturally occluded."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Own accepted upright short spiked dark hair, grey-green robe, red-brown wrists/belt and short wooden training sword retained; no armor or metal blade."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Single complete compact human, large chibi head and short torso/legs comparable with live Wang at native1x/2x. Crown-to-boot scale only; no anatomy deformation or per-pose fit."
+      },
+      "physicalPropSide": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "finding": "Back-left view attaches sword grip to near screen-left hand. Anatomical right hand is the far screen-right/back hand and should be partly occluded; this neutral changes sword hand."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "file": "review/phung-da-northwest-neutral-wang-pair-2x.png",
+        "sha256": "4be8f5456c4625cd270a33a851e2332182a427ee72a29bcb9e73f58ba9f9c8dd",
+        "finding": "Initial native pair reviewed; physical prop side/occlusion failure blocks downstream motion generation from this neutral."
+      },
+      "measurement": null,
+      "limitations": [
+        "Back-left view attaches sword grip to near screen-left hand. Anatomical right hand is the far screen-right/back hand and should be partly occluded; this neutral changes sword hand.",
+        "Retain this raw/proposal as rejected or held history. New selected correction needs its own exact-hash review and measurement; no automatic pass."
+      ],
+      "status": "needs-source-correction",
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "ky-an",
+      "direction": "southwest",
+      "source": "direction-neutral/raw/ky-an-southwest-prop-r2.png",
+      "sourceSha256": "d7a410c1c399826262afbe87a84dd5ea86d33d3db51d9fd66a24ce15affa83a0",
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Front-left camera retained."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Hair/ribbon, blue/ivory clothes and bamboo slips/gourd remain identifiable."
+      },
+      "anatomy": {
+        "pass": false,
+        "reviewedFrames": 1,
+        "finding": "Coat below belt reads longer and head somewhat smaller relative to torso/legs than accepted Southeast and original Southwest candidate; next source should restore compact own anatomy."
+      },
+      "physicalPropSide": {
+        "pass": true,
+        "reviewedFrames": 1,
+        "finding": "Gourd now on far screen-left/up right hip, mostly occluded as required."
+      },
+      "alpha": {
+        "pass": false,
+        "finding": "Checkerboard is painted opaque alpha255; cannot confirm source or extract by pretending the checkerboard is transparency."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 0,
+        "finding": "No native confirmation or background keying performed."
+      },
+      "status": "needs-source-correction",
+      "limitations": [
+        "Generate an actual transparent source while retaining correct camera/physical right hip and accepted compact human proportions."
+      ],
+      "artApproved": false,
+      "motionApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false
+    }
+  ]
+}

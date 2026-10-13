@@ -1,0 +1,540 @@
+{
+  "schema": "npc-motion-production-1",
+  "date": "2026-10-13",
+  "sourcePlan": "docs/design/world/van-hai-living-world-v1/plan.json",
+  "sourcePlanSha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576",
+  "primaryStandard": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+  "primaryStandardSha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec",
+  "generator": "project-router-gpt-image-2-edit",
+  "skill": "docs/skills/game-actor-animation-production/SKILL.md",
+  "status": "motion-pilot-owner-review-pending",
+  "actions": [
+    "idle",
+    "talk",
+    "profession"
+  ],
+  "framesPerClip": 6,
+  "authoredMinimum": [
+    "idle",
+    "talk"
+  ],
+  "authoredDirections": 8,
+  "producedDirections": [
+    "southeast"
+  ],
+  "pendingDirections": [
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east"
+  ],
+  "timings": {
+    "idle": {
+      "durationMs": 1200,
+      "loop": true
+    },
+    "talk": {
+      "durationMs": 1200,
+      "loop": true
+    },
+    "profession": {
+      "durationMs": 1500,
+      "loop": false
+    }
+  },
+  "canvas": [
+    96,
+    96
+  ],
+  "pivot": [
+    48,
+    88
+  ],
+  "neutralBodyHeightPx": 80,
+  "artApproved": false,
+  "ownerApproved": false,
+  "runtimeImplemented": false,
+  "actors": [
+    {
+      "id": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "name": "Trần Duy",
+      "identity": "van-hai-npc-concepts-v3",
+      "description": "Middle-aged male sect guide. Compact dark bun with grey streak, short moustache and goatee, ivory-grey robe, thin bronze trim, celadon waist token and sect-tag pouch.",
+      "gesture": "A calm direction-giving open palm: neutral, lifts right forearm, opens hand towards down-right, holds, retracts, exact neutral. No pointing a weapon.",
+      "direction": "southeast",
+      "source": "raw/tran-duy-southeast.png",
+      "prompt": "prompts/tran-duy-southeast.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/tran-duy-identity-nearest8x.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "85d65818ddf8a9da8304d432176cece83aeb7389229cf51dffc24b6bfd2e9fee",
+        "identityNative": "74b1a3c56cb33d668287b9dc1a9e4969d5619e0d452a026e17dc1feb406ec103"
+      },
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "neutralSprite": "calibration/tran-duy-southeast.png",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "neutralSha256": "30e5847bcfc5090950803a386d7db777c94c49c3876481263f115b167be0bc39",
+      "sourceSha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "sourceScale": 0.2588996763754045,
+      "neutralHeight": 309,
+      "clips": {
+        "idle": "tran-duy-idle-southeast",
+        "talk": "tran-duy-talk-southeast",
+        "profession": "tran-duy-profession-southeast"
+      }
+    },
+    {
+      "id": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "name": "Diệp Tĩnh",
+      "identity": "van-hai-npc-concepts-v4",
+      "description": "Elderly woman cultivation teacher with softly aged face and grey-salt compact bun. Ivory and smoky jade robe, small jade string and closed bamboo scroll. No beard, no young heroine face.",
+      "gesture": "A calm breath-teaching gesture: neutral, draws palms near abdomen, gently separates palms, holds inward palms, closes hands, exact neutral. Jade string remains attached. No visible qi or FX in body sheet.",
+      "direction": "southeast",
+      "source": "raw/diep-tinh-southeast-r3.png",
+      "prompt": "prompts/diep-tinh-southeast-r3.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/diep-tinh-identity-nearest8x.png",
+        "raw/diep-tinh-southeast-r2.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "236aecb4835e20c705d7add566de5d170a33f3c744d285ffe70a66f3f055c794",
+        "identityNative": "649f173937f159d16826ec7dee8f8c58e9392b7573e369b25826dfc9d965ab30"
+      },
+      "sourceRevisions": [
+        {
+          "source": "raw/diep-tinh-southeast.png",
+          "status": "superseded-pilot",
+          "reason": "Profession row about6 native pixels shorter than idle; preserved for provenance."
+        },
+        {
+          "source": "raw/diep-tinh-southeast-r2.png",
+          "status": "superseded-pilot",
+          "reason": "Profession row about4 native pixels shorter than idle; preserved for provenance."
+        },
+        {
+          "source": "raw/diep-tinh-southeast-r3.png",
+          "status": "selected-motion-pilot",
+          "reason": "Idle/talk dimensions closer; profession row still about3 native pixels shorter, requires owner visual review."
+        }
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "neutralSprite": "calibration/diep-tinh-southeast.png",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "neutralSha256": "eef1a9fa481c07e08d58d7ae6252832229b58456ceb28e80c4c2cdc87042266f",
+      "sourceSha256": "b04d81f55c0b930aa3b58ab03b48701b6247a63cf102ca006c853b0b4ecf06ad",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "sourceScale": 0.21739130434782608,
+      "neutralHeight": 368,
+      "clips": {
+        "idle": "diep-tinh-idle-southeast",
+        "talk": "diep-tinh-talk-southeast",
+        "profession": "diep-tinh-profession-southeast"
+      }
+    },
+    {
+      "id": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "name": "Tạ Kiếm Sơn",
+      "identity": "van-hai-npc-concepts-v4",
+      "description": "Mature male training instructor about forty, compact dark bun, small eyebrow scar, navy robe and wrapped wrists. Holds a short worn wooden sword pointing down; never heavy armor or huge sword.",
+      "gesture": "A measured wooden-sword wrist demonstration: neutral sword tip down, raises forearm slowly, angles the wooden sword across waist, holds controlled guard, lowers wrist, exact neutral. Feet remain planted; no attack, slash, FX or lunge.",
+      "direction": "southeast",
+      "source": "raw/ta-kiem-son-southeast.png",
+      "prompt": "prompts/ta-kiem-son-southeast.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/ta-kiem-son-identity-nearest8x.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "25250e3e114269fb2f3ee69bd43553a5a58bd0e5e3d96ede39fdc6a0ec9f92ed",
+        "identityNative": "0f14111ec3a401ba437bbb125a0537e46e226acf7a2786e49aa3694a09c89249"
+      },
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "neutralSprite": "calibration/ta-kiem-son-southeast.png",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "neutralSha256": "a78e25fd5134ae5a67aa21dee022f7b7fc8922ae517792ddba492b6e0a0c414b",
+      "sourceSha256": "8d307910ae0c896dfad79c0269cd315aad19a9615c68ed14fa9e67ce7bfe1e84",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "sourceScale": 0.25559105431309903,
+      "neutralHeight": 313,
+      "clips": {
+        "idle": "ta-kiem-son-idle-southeast",
+        "talk": "ta-kiem-son-talk-southeast",
+        "profession": "ta-kiem-son-profession-southeast"
+      }
+    },
+    {
+      "id": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "name": "Tô Nhược",
+      "identity": "van-hai-npc-concepts-v4",
+      "description": "Adult woman supplies clerk. Dark compact bun, muted jade robe, ivory cloth apron, earthy-red tied ledger, small sealed wooden case and a small brush. No beard, no child face.",
+      "gesture": "Inspecting a sealed case: neutral, brings small case to waist, tilts case to inspect seal, taps or traces seal once with small brush, lowers case, exact neutral. Keep case small and same shape in every frame.",
+      "direction": "southeast",
+      "source": "raw/to-nhuoc-southeast.png",
+      "prompt": "prompts/to-nhuoc-southeast.txt",
+      "images": [
+        "inputs/wang-lin-live-southeast-nearest8x.png",
+        "inputs/to-nhuoc-identity-nearest8x.png"
+      ],
+      "referenceHashes": {
+        "primary": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+        "identity": "fb4f19ebeb6736c8abf81d6c3da6db44384f03a95b41ce3e361f62dbe704f422",
+        "identityNative": "73cd99ad68a11b6919be27b58ec38b5fed408ab52d57e3db377cf59471176e1c"
+      },
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "neutralSprite": "calibration/to-nhuoc-southeast.png",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImported": false,
+      "neutralSha256": "f96b66da76a869be241a8a54d2d3027393363c5d24cacdaa896db523769f8383",
+      "sourceSha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "sourceScale": 0.24615384615384617,
+      "neutralHeight": 325,
+      "clips": {
+        "idle": "to-nhuoc-idle-southeast",
+        "talk": "to-nhuoc-talk-southeast",
+        "profession": "to-nhuoc-profession-southeast"
+      }
+    }
+  ],
+  "visualLimitations": {
+    "tran-duy": "Pixel anatomy and face can vary slightly across generated frames; review loop and transitions at native1x.",
+    "diep-tinh": "Profession body about3 native pixels shorter than idle. Older identity remains softened; no per-pose resize has been used to hide variation.",
+    "ta-kiem-son": "Profession row about1-2 native pixels shorter; wooden sword briefly changes hand/occlusion in talk. Prop continuity needs visual review.",
+    "to-nhuoc": "Profession row about1-2 native pixels shorter; brush is small at native scale and the sealed case changes silhouette slightly."
+  },
+  "id": "van-hai-npc-motion-v1",
+  "contract": {
+    "canvas": [
+      96,
+      96
+    ],
+    "pivot": [
+      48,
+      88
+    ],
+    "standingHeight": 80,
+    "baseHumanCanvas": [
+      64,
+      96
+    ],
+    "paddingOnly": true,
+    "sampling": "nearest",
+    "atlasPadding": 2
+  },
+  "morphologyBasis": {
+    "primaryActor": "CHR-WANG-LIN-CHIBI",
+    "primaryReference": "Wang Lin Pixel02 currently used in the game",
+    "basisFile": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+    "basisSha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec",
+    "directionsFile": "docs/design/characters/van-hai-npc-visual-standard-v1/directions.json",
+    "directionsSha256": "0fef83b1121c0be2cf9b47909a00f5c3c01a665229cb1d16358fe65650b8abd9",
+    "liveNativeFile": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-native.png",
+    "liveNativeSha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431",
+    "liveNativeCanvas": [
+      64,
+      96
+    ],
+    "liveNativePivot": [
+      32,
+      88
+    ],
+    "targets": [
+      {
+        "file": "docs/design/characters/van-hai-npc-visual-standard-v1/basis.json",
+        "sha256": "cdb284337e2e6e22c6ae77f65743a634e782ee7bb37ac025bc5729ffebcc22ec"
+      },
+      {
+        "file": "docs/design/characters/van-hai-npc-visual-standard-v1/directions.json",
+        "sha256": "0fef83b1121c0be2cf9b47909a00f5c3c01a665229cb1d16358fe65650b8abd9"
+      }
+    ],
+    "rule": "NPC identity is locked separately; directly compare every action to live Wang Lin at native1x. Padding does not enlarge anatomy."
+  },
+  "gdd": {
+    "file": "docs/design/world/van-hai-living-world-v1/plan.json",
+    "sha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576"
+  },
+  "sources": [
+    {
+      "actor": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "file": "raw/tran-duy-southeast.png",
+      "sha256": "fd0edc1b68fe098844263c0dba4cb5e379701593adf2b1876a154b0e9a1c84a7",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/tran-duy-southeast.txt",
+      "promptSha256": "90b04eeb69a6be8bd6d617a1f65d01fec85cd3a09a826e36d59d6958291a15ce",
+      "routerMetadata": "raw/tran-duy-southeast.json",
+      "routerMetadataSha256": "ed07180976d3c1cf4d0901e7181e08eaa57fb7d0914e1afba72cde56da6ca3f9",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "filename": "wang-lin-live-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9320,
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/tran-duy-identity-nearest8x.png",
+          "filename": "tran-duy-identity-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 14155,
+          "sha256": "85d65818ddf8a9da8304d432176cece83aeb7389229cf51dffc24b6bfd2e9fee",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "scale": 0.2588996763754045,
+      "neutralHeight": 309,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-CULTIVATION",
+      "slug": "diep-tinh",
+      "file": "raw/diep-tinh-southeast-r3.png",
+      "sha256": "b04d81f55c0b930aa3b58ab03b48701b6247a63cf102ca006c853b0b4ecf06ad",
+      "size": [
+        1254,
+        1254
+      ],
+      "prompt": "prompts/diep-tinh-southeast-r3.txt",
+      "promptSha256": "4a646a3ea6e1e361e41cb8a4b1036458dd2677c0a60eea577f3c854a06612a18",
+      "routerMetadata": "raw/diep-tinh-southeast-r3.json",
+      "routerMetadataSha256": "3d382b282512e72cbf0cbdc7b984cd359954e207156cf8ca8cb74ddb2ee42b77",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "filename": "wang-lin-live-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9320,
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/diep-tinh-identity-nearest8x.png",
+          "filename": "diep-tinh-identity-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 13814,
+          "sha256": "236aecb4835e20c705d7add566de5d170a33f3c744d285ffe70a66f3f055c794",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 3,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/raw/diep-tinh-southeast-r2.png",
+          "filename": "diep-tinh-southeast-r2.png",
+          "mimeType": "image/png",
+          "bytes": 2311093,
+          "sha256": "d1e92e9f36c119be5760ab248cb205627791409e67d09b035d209e9a5e7b2081",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "scale": 0.21739130434782608,
+      "neutralHeight": 368,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-TRAINING",
+      "slug": "ta-kiem-son",
+      "file": "raw/ta-kiem-son-southeast.png",
+      "sha256": "8d307910ae0c896dfad79c0269cd315aad19a9615c68ed14fa9e67ce7bfe1e84",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/ta-kiem-son-southeast.txt",
+      "promptSha256": "a588b4cc5184006b948fafefe0ef9cf64248d2dad2d579f877c1e855e31734bb",
+      "routerMetadata": "raw/ta-kiem-son-southeast.json",
+      "routerMetadataSha256": "a0097918226876a2128668ce8e15c22a2aab25899fd7fa8048c48b4e3501a825",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "filename": "wang-lin-live-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9320,
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/ta-kiem-son-identity-nearest8x.png",
+          "filename": "ta-kiem-son-identity-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 12845,
+          "sha256": "25250e3e114269fb2f3ee69bd43553a5a58bd0e5e3d96ede39fdc6a0ec9f92ed",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "scale": 0.25559105431309903,
+      "neutralHeight": 313,
+      "alphaThreshold": 128
+    },
+    {
+      "actor": "NPC-HN-PREPARATION",
+      "slug": "to-nhuoc",
+      "file": "raw/to-nhuoc-southeast.png",
+      "sha256": "40862edd2db299bef2bee16fb57bf703dbbf1002d0cf4311781881afe2ce9c35",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "prompts/to-nhuoc-southeast.txt",
+      "promptSha256": "2eb61538f601cbd52b8fbcbd15188d8703e7d2bf6121436d28d04a7a9db3bf8b",
+      "routerMetadata": "raw/to-nhuoc-southeast.json",
+      "routerMetadataSha256": "4c2d060a5a358d253f66f13e832d940348e2ee223ea174ab39228fd05bffe017",
+      "inputs": [
+        {
+          "index": 1,
+          "role": "edit-target",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "filename": "wang-lin-live-southeast-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 9320,
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        },
+        {
+          "index": 2,
+          "role": "supporting-input",
+          "path": "docs/design/characters/van-hai-npc-motion-v1/inputs/to-nhuoc-identity-nearest8x.png",
+          "filename": "to-nhuoc-identity-nearest8x.png",
+          "mimeType": "image/png",
+          "bytes": 14153,
+          "sha256": "fb4f19ebeb6736c8abf81d6c3da6db44384f03a95b41ce3e361f62dbe704f422",
+          "dimensions": {
+            "width": 512,
+            "height": 768
+          }
+        }
+      ],
+      "scale": 0.24615384615384617,
+      "neutralHeight": 325,
+      "alphaThreshold": 128
+    }
+  ],
+  "registration": "registration.json",
+  "registrationSha256": "9759c5e8ea431cc068aebeb8965e8a2a257795ad715f39e054b6dc0c7985e523",
+  "coverage": {
+    "actors": 4,
+    "producedDirections": [
+      "southeast"
+    ],
+    "pendingDirections": [
+      "south",
+      "southwest",
+      "west",
+      "northwest",
+      "north",
+      "northeast",
+      "east"
+    ],
+    "actions": [
+      "idle",
+      "talk",
+      "profession"
+    ],
+    "clips": 12,
+    "poses": 72,
+    "calibrationPoses": 4,
+    "fullDirectionalSet": false
+  },
+  "runtimeImported": false
+}

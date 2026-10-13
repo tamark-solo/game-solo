@@ -1,5 +1,7 @@
 # Hệ thống nhân vật — nền RPG tu tiên
 
+> **Thiết kế tiếp nối 13/10/2026:** [GDD 0.33](GDD.md), [hệ tu tiên mới](CULTIVATION-REDESIGN-2026-10-13.md) và [Hằng Nhạc v2](HANG-NHAC-ONBOARDING-V2.md) thay đề xuất về nhịp nhập môn, HN04, xác nhận tầng/nhiệm vụ và thời điểm EX trong tài liệu này. Nội dung bên dưới giữ làm cơ sở/lịch sử; trạng thái đang chạy xem [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md). Bản thiết kế mới chưa thay code/save hoặc duyệt balance/ART.
+
 **Phiên bản 0.1 · 10/10/2026 · GDD 0.29.** Owner đã đồng ý hướng thiết kế hệ thống nhân vật/nhiệm vụ trước khi mở rộng HN05. Tài liệu này là **thiết kế cơ sở để đánh giá**, không xác nhận mọi luật mới đã được duyệt hoặc triển khai. Phạm vi chi tiết là Hằng Nhạc; arc sau giữ đường mở rộng, không sản xuất toàn bộ MMO ngay.
 
 Đọc cùng [GDD](GDD.md), [sáu phần tu tiên](CULTIVATION-SYSTEM.md), [nhiệm vụ](QUEST-SYSTEM.md) và [lộ trình](DEVELOPMENT-ROADMAP.md). Truyện/nhận diện thuộc [CHARACTERS](CHARACTERS.md); đây không phải tài liệu vẽ UI hay thay ngoại hình.

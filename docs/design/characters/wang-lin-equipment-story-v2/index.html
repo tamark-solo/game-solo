@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vương Lâm · Pháp bảo Tiên Nghịch 02</title>
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <header>
+    <div class="header-top"><a href="../index.html">← Thư viện nhân vật</a><a href="../wang-lin-equipment-study-v1/index.html">Thử nghiệm v1 không được chọn</a></div>
+    <p class="eyebrow">VƯƠNG LÂM · NGHIÊN CỨU PHÁP BẢO 02</p>
+    <h1>Pháp bảo có câu chuyện.<br>Vương Lâm giữ đúng hình.</h1>
+    <p class="intro">Kiếm linh Hứa Lập Quốc, Thập Ức Tôn Hồn Phiên, Thiên Nghịch châu và Xạ Thần Xa mở bốn hướng biểu hiện khác nhau. Lấy chi tiết đã đọc trong truyện làm điểm tựa, thiết kế hình mới cho game và đặt cạnh đúng thân Vương Lâm live.</p>
+    <div class="hero-facts"><span><b>01</b> thân live nguyên byte</span><span><b>04</b> đề xuất hình thể riêng</span><span><b>1×</b> cỡ đọc quyết định</span><span><b>SE</b> neutral Đông Nam</span></div>
+    <nav aria-label="Nội dung"><a href="#artifact-cards">Bốn hướng pháp bảo</a><a href="#native-review">So với thân live</a><a href="#map-review">Trên nền 1×</a><a href="#wardrobe">Ma trận thời trang</a><a href="#references">Học từ game tu tiên</a><a href="#production">Production tiếp theo</a></nav>
+  </header>
+  <main>
+    <section id="artifact-cards">
+      <div class="section-head"><div><p class="eyebrow">CHI TIẾT TRUYỆN → THIẾT KẾ CHO GAME</p><h2>Bốn món, bốn cách hiện diện</h2></div><span class="status" id="pack-status">Đang đọc hồ sơ…</span></div>
+      <p class="section-intro">Phần “Đã đọc trong truyện” ghi căn cứ nguồn. Phần “Thiết kế mới” nói rõ màu, vật liệu, silhouette và cách đăng ký do ta đề xuất. Nguồn lớn và composite native luôn đặt cạnh nhau; hình mới còn chờ owner review.</p>
+      <p class="hint">Sheet nguồn có hai panel: bên trái là pháp bảo, bên phải là concept FX. Native trích chúng thành file riêng; FX hiện là ảnh tĩnh, bật/tắt độc lập ở phần đối chiếu.</p>
+      <div class="artifact-grid" id="artifact-grid"></div>
+      <p class="load-error" id="load-error" hidden role="alert"></p>
+      <div class="links"><a href="canon-study.md">Nguồn truyện & reference đã xem</a><a href="manifest.json">Manifest / hash</a><a href="registration.json">Alpha / scale / đăng ký layer</a><a href="design-directions.md">Brief thiết kế đầy đủ</a></div>
+    </section>
+    <section id="native-review">
+      <p class="eyebrow">NATIVE BODY · ARTIFACT LAYERS</p><h2>Thân không đổi khi pháp bảo đổi</h2>
+      <div class="toolbar">
+        <div class="control"><label for="equipment">Mẫu đối chiếu</label><select id="equipment"></select></div>
+        <fieldset><legend>Cỡ pixel</legend><button type="button" data-zoom="1" aria-pressed="false">1× native</button><button type="button" data-zoom="2" aria-pressed="true">2×</button><button type="button" data-zoom="4" aria-pressed="false">4×</button></fieldset>
+        <div class="control"><label for="background">Nền alpha</label><select id="background"><option value="dark">Tối</option><option value="light">Sáng</option><option value="gray">Xám trung tính</option></select></div>
+        <label class="check"><input id="show-body" type="checkbox" checked> Thân live</label>
+        <label class="check"><input id="show-gear" type="checkbox" checked> Pháp bảo</label>
+        <label class="check"><input id="show-fx" type="checkbox" checked> FX tĩnh riêng</label>
+        <label class="check"><input id="show-roots" type="checkbox" checked> Điểm chân / neo</label>
+        <label class="check"><input id="show-boxes" type="checkbox"> Canvas</label>
+      </div>
+      <div class="stage-scroll"><canvas id="pair" width="932" height="592" role="img" aria-label="Vương Lâm live và mẫu pháp bảo được chọn, đăng ký cùng điểm chân"></canvas></div>
+      <p class="hint" id="scale-note">2× nearest. Chọn 1× để đọc món ở cỡ chơi; cuộn ngang trên màn nhỏ.</p>
+      <article class="detail" id="detail"></article>
+      <p class="hint">FX tĩnh riêng → rear artifact → body live → front artifact. Tắt Pháp bảo và FX để xem đúng body-only. Layer chỉ đăng ký cho neutral Đông Nam. Chiến xa là món triển khai cạnh người, có footprint/neo riêng cần thiết kế về sau; vị trí preview chưa phải collider hoặc spawn.</p>
+    </section>
+    <section id="map-review">
+      <p class="eyebrow">NỀN VÂN NGỌC ĐÃ DUYỆT · SO CỠ NATIVE</p><h2>Bốn cách hiện diện trên nền 1×</h2>
+      <p class="section-intro">Ảnh bake tĩnh từ crop nền hiện hành: 600 × 400 pixel, hiển thị đúng 600 × 400 CSS pixel. Dùng để đọc silhouette/màu/scale; chưa kiểm mái/tán che, occlusion động, footprint hoặc collision. Cuộn ngang mỗi ảnh trên màn nhỏ.</p>
+      <div class="map-gallery">
+        <article><h3>Tiên kiếm · Hứa Lập Quốc</h3><div class="map-scroll"><img src="review/sword-map-1x.png" width="600" height="400" alt="Bake tĩnh kiếm linh trên crop nền Vân Ngọc, native 1×" loading="lazy"></div><p class="hint">Body live + pháp bảo/FX tĩnh · camera 1×.</p></article>
+        <article><h3>Thập Ức Tôn Hồn Phiên</h3><div class="map-scroll"><img src="review/banner-map-1x.png" width="600" height="400" alt="Bake tĩnh Tôn Hồn Phiên trên crop nền Vân Ngọc, native 1×" loading="lazy"></div><p class="hint">Form hiển thị cô đọng; không áp kích thước cờ canon.</p></article>
+        <article><h3>Thiên Nghịch Châu</h3><div class="map-scroll"><img src="review/bead-map-1x.png" width="600" height="400" alt="Bake tĩnh Thiên Nghịch Châu trên crop nền Vân Ngọc, native 1×" loading="lazy"></div><p class="hint">Châu/FX concept tách body; chưa có orbit hoặc nội giới.</p></article>
+        <article><h3>Xạ Thần Xa</h3><div class="map-scroll"><img src="review/chariot-map-1x.png" width="600" height="400" alt="Bake tĩnh Xạ Thần Xa triển khai cạnh người trên crop nền Vân Ngọc, native 1×" loading="lazy"></div><p class="hint">Form chuyển thể scene; root/footprint triển khai chưa chốt.</p></article>
+      </div>
+      <div class="links"><a href="review/map-basis.json">Nguồn crop / hash</a><a href="review/map-courtyard-background.png">Crop nền nguyên pixel</a></div>
+    </section>
+    <section id="wardrobe">
+      <p class="eyebrow">MỘT NGƯỜI · NHIỀU TRỤC DIỆN MẠO</p><h2>Thời trang theo vai trò và giai đoạn</h2>
+      <p class="section-intro">Sáu họ áo dưới đây là đề xuất mới cho game, chưa tạo ART. Tên vai trò/giai đoạn giúp chọn brief; không khẳng định đây là y phục canon của Vương Lâm hoặc quyền trang bị đã mở. Đầu, mặt, tóc, anatomy và chân vẫn giữ chuẩn live.</p>
+      <div class="wardrobe-grid">
+        <article class="wardrobe-card disciple"><span class="chip">01 · Giai đoạn nhập môn</span><h3>Vải thô, ngọc ít</h3><div class="swatches" aria-label="Xám, ngà, ngọc nhạt"><i></i><i></i><i></i></div><p>Áo xám/ngà gọn, một viền ngọc và đai tối. Là họ đầu tiên để thử giữ một người khi đổi chi tiết.</p><b>Hợp hướng:</b><p>Thiết kiếm đơn giản · châu cầm tay.</p></article>
+        <article class="wardrobe-card traveler"><span class="chip">02 · Người du hành</span><h3>Vạt chia, đồ bên hông</h3><div class="swatches" aria-label="Nâu tro, xanh lam, da tối"><i></i><i></i><i></i></div><p>Áo khoác lệch vai, tà ngắn và túi phẳng. Chi tiết được đọc qua khối dây/túi thay cho phủ sáng.</p><b>Hợp hướng:</b><p>Kiếm linh · Thiên Nghịch châu kín đáo.</p></article>
+        <article class="wardrobe-card swordsman"><span class="chip">03 · Điều khiển kiếm linh</span><h3>Tay gọn, đường chém rõ</h3><div class="swatches" aria-label="Ngà, ngọc xanh, thép"><i></i><i></i><i></i></div><p>Hộ thủ nhỏ, vạt lệch theo nhịp chân và vai không nở. Giữ khoảng âm để kiếm và tay cùng đọc được.</p><b>Hợp hướng:</b><p>Tiên kiếm có kiếm linh Hứa Lập Quốc.</p></article>
+        <article class="wardrobe-card soul"><span class="chip">04 · Dẫn hồn / nghi lễ</span><h3>Màu trầm, một dấu niêm</h3><div class="swatches" aria-label="Than đen, tím tro, đỏ niêm"><i></i><i></i><i></i></div><p>Tay áo vừa, tà có nhịp, một dấu niêm đỏ. Khí/hồn nằm ngoài body để tắt vẫn đọc đúng người.</p><b>Hợp hướng:</b><p>Thập Ức Tôn Hồn Phiên.</p></article>
+        <article class="wardrobe-card inner"><span class="chip">05 · Nội giới / kết ấn</span><h3>Áo sáng, nét mây ít</h3><div class="swatches" aria-label="Đá xám, trắng ngà, lam trầm"><i></i><i></i><i></i></div><p>Cổ áo rõ, vạt đối xứng và một vài nét mây lớn. Hào quang là layer tĩnh/motion riêng theo production.</p><b>Hợp hướng:</b><p>Thiên Nghịch châu · pháp bảo điều khiển.</p></article>
+        <article class="wardrobe-card war"><span class="chip">06 · Triển khai chiến trận</span><h3>Giáp nhẹ, không đổi người</h3><div class="swatches" aria-label="Sắt đen, đồng cũ, xanh lôi"><i></i><i></i><i></i></div><p>Vai nhỏ, cổ tay chắc, tà tránh dây xích. Thế điều khiển và bố cục chiến xa tạo sức nặng riêng.</p><b>Hợp hướng:</b><p>Xạ Thần Xa triển khai trong scene.</p></article>
+      </div>
+      <div class="table-scroll"><table><caption>Ma trận phối hợp đề xuất · toàn bộ áo chưa sản xuất</caption><thead><tr><th>Họ áo</th><th>Kiếm linh</th><th>Hồn phiên</th><th>Châu nội giới</th><th>Chiến xa</th><th>Motion / layer phải kiểm</th></tr></thead><tbody>
+        <tr><th>Nhập môn</th><td>Ưu tiên</td><td>Thử sau</td><td>Ưu tiên</td><td>Thử sau</td><td>Giữ pose live; đai/túi đúng hướng</td></tr>
+        <tr><th>Du hành</th><td>Ưu tiên</td><td>Phối trầm</td><td>Ưu tiên</td><td>Thử sau</td><td>Run, túi bên hông, dây trước/sau</td></tr>
+        <tr><th>Kiếm linh</th><td>Ưu tiên</td><td>Thử sau</td><td>Phối nhẹ</td><td>Thử sau</td><td>Grip, cổ tay, tà trong combo</td></tr>
+        <tr><th>Dẫn hồn</th><td>Phối trầm</td><td>Ưu tiên</td><td>Phối nhẹ</td><td>Thử sau</td><td>Tay kết ấn, cán cờ, vải/hồn riêng</td></tr>
+        <tr><th>Nội giới</th><td>Phối nhẹ</td><td>Thử sau</td><td>Ưu tiên</td><td>Thử sau</td><td>Tay áo, kết ấn, châu orbit riêng</td></tr>
+        <tr><th>Chiến trận</th><td>Phối gọn</td><td>Phối trầm</td><td>Phối nhẹ</td><td>Ưu tiên</td><td>Động tác điều khiển, root/footprint chiến xa</td></tr>
+      </tbody></table></div>
+      <p class="hint">“Ưu tiên” là hướng mỹ thuật để làm prototype, chưa là compatibility/entitlement trên server. Áo không tự đổi stat, skill, cảnh giới hoặc nhận diện mặt.</p>
+    </section>
+    <section id="references">
+      <p class="eyebrow">REFERENCE THỊ TRƯỜNG & SOURCE CỤC BỘ</p><h2>Học cách món đồ tạo trải nghiệm</h2>
+      <div class="reference-grid">
+        <article><span class="chip">Mô tả chính thức</span><h3>Tale of Immortal</h3><p>Bagua Jade, Eye of Providence và Mythical Gourd có khả năng khác nhau; artifact spirits có thể đồng hành chiến đấu. Đây là căn cứ để học pháp bảo như một trải nghiệm riêng.</p><p class="hint">Suy luận cho game: phân biệt cách dùng và nhịp hiện diện của bốn món; không suy cấu trúc sprite/layer từ mô tả.</p><a href="https://store.steampowered.com/app/1468810/_Tale_of_Immortal/" target="_blank" rel="noopener">Trang chính thức trên Steam →</a></article>
+        <article><span class="chip">Mô tả chính thức</span><h3>觅长生</h3><p>Mô tả ngũ hành, thần thông/công pháp, pháp bảo/đan dược và phối vật liệu luyện pháp bảo. Món đồ có thể gắn với nhiều lựa chọn build.</p><p class="hint">Suy luận cho game: tách nhận diện món, cách dùng và FX để tạo nhiều tổ hợp; chưa kiểm gameplay hoặc wardrobe nguồn.</p><a href="https://store.steampowered.com/app/1189490/?l=tchinese" target="_blank" rel="noopener">Trang chính thức trên Steam →</a></article>
+        <article><span class="chip">docs/art_reference</span><h3>Họ motion, nhiều biến thể</h3><p>Kiếm Tu Luyện Khí có 47 biến thể kiếm; Thương Tu có 22 biến thể thương. Grip/tip thay theo hướng và frame, weapon–body–FX có layer cùng timeline.</p><p class="hint">Học cách tổ chức. Nguồn ngoài không thay Pixel02 làm anatomy; quạt/hồ lô v1 và bốn thiết kế v2 là hình mới.</p><a href="canon-study.md">Ảnh đã xem & bằng chứng →</a></article>
+        <article class="official-reference"><span class="chip">Nhất Niệm Tiêu Dao · bài chính thức 小师妹</span><h3>Một bộ chủ đề, nhiều món phối</h3><a href="https://www.taptap.cn/moment/531819768764695021" target="_blank" rel="noopener"><img class="remote-reference" src="https://img2-tc.tapimg.com/moment/etag/1ae0202c488f40747ef1be25d06c2bbe.gif/_tap_ugc.gif" alt="Reference chính thức bộ cơ quan 墨隐千机 của Nhất Niệm Tiêu Dao" loading="lazy"></a><p>Bài 墨隐千机 mô tả mực đen/xanh, áo kim loại–lụa, hộp cơ quan ở chân, ô cơ quan sau lưng, nỏ nam/cung nữ và diều cơ khí. Đây là bộ phối áo–vũ khí–vật đi cùng có chung chủ đề.</p><p class="hint">Đề xuất mới cho Vân Hải: thử họ du hành cơ quan với một part lưng và một dụng cụ hông; giữ mặt/tóc/anatomy live. Chưa tạo áo hoặc companion.</p><a href="https://www.taptap.cn/moment/531819768764695021" target="_blank" rel="noopener">Nguồn chủ sở hữu · bài 小师妹 →</a></article>
+        <article class="official-reference"><span class="chip">Phàm Nhân · bài chính thức 大衍神君</span><h3>Đọc công năng qua silhouette</h3><div class="official-thumbnails"><figure><img class="remote-reference" src="https://img2-tc.tapimg.com/bbcode/images/2f4ee804971d5ef1a1518fa47d129d13.png/_tap_ugc.jpg" alt="Reference Chu Tước Hoàn trong bài chính thức Phàm Nhân" loading="lazy"><figcaption>Chu Tước Hoàn</figcaption></figure><figure><img class="remote-reference" src="https://img2-tc.tapimg.com/bbcode/images/bca0d033148d329844fd21e2ed607130.png/_tap_ugc.jpg" alt="Reference mười ba kim trong bài chính thức Phàm Nhân" loading="lazy"><figcaption>13 kim đỏ</figcaption></figure><figure><img class="remote-reference" src="https://img2-tc.tapimg.com/moment/etag/FjPAkCY4CK9odzX7NP1CxHTZ38ig.png/_tap_ugc.jpg" alt="Reference Bát Linh Xích trong bài chính thức Phàm Nhân" loading="lazy"><figcaption>Xích ngọc xanh</figcaption></figure></div><p>Bài nguồn nêu mười ba kim đỏ, vòng lửa, xích ngọc xanh và thú sen. Các hình kim–vòng–xích gợi ba kiểu hiển thị khác nhau, thay vì chỉ đổi màu một món.</p><p class="hint">Ảnh remote thuộc chủ sở hữu gốc, dùng để tham khảo; không copy thành asset game. Phần mô tả dựa trên text bài nguồn, chưa audit pixel/animation các hình.</p><a href="https://www.taptap.cn/moment/400732370212225287?group_id=499919" target="_blank" rel="noopener">Nguồn chủ sở hữu · bài 大衍神君 →</a></article>
+        <article><span class="chip">Phàm Nhân · hai bài chính thức khác</span><h3>Vật liệu và cách dùng làm thành họ</h3><p>Các bài khác nêu ngọc như ý đầu sói, bát hồn đen, ngọc bội xanh; chuông hồn đồng, vệt máu, quạt lửa bảy lông và châu đỏ–đen.</p><p class="hint">Đề xuất mới cho Vân Hải: họ vật liệu đồng cổ/đá xám/giấy niêm có hình chính riêng, đổi activeFX theo cách dùng. Những món này là reference thị trường, không là pháp bảo canon Vương Lâm.</p><div class="links"><a href="https://www.taptap.cn/moment/404961107912952544?group_id=499919" target="_blank" rel="noopener">Bài ngọc/bát →</a><a href="https://www.taptap.cn/moment/414748850817859849?group_id=499919" target="_blank" rel="noopener">Bài chuông/quạt/châu →</a></div></article>
+      </div>
+    </section>
+    <section id="production">
+      <p class="eyebrow">CHỐT NHÌN → KHÓA VIEW → SẢN XUẤT MOTION</p><h2>Đi tiếp theo từng họ pháp bảo</h2>
+      <ol class="steps"><li><b>01 · Neutral theo hash</b><p>Chốt silhouette/scale, body-only và alpha tại 1×. Với hồn phiên/chiến xa, xác định rõ phần nằm trong actor và phần triển khai scene.</p></li><li><b>02 · Tám hướng thật</b><p>Đối chiếu Vương Lâm cùng hướng. Grip/tip, trước/sau, orbit hoặc footprint có metadata riêng, không dùng mirror để tuyên bố đủ bộ.</p></li><li><b>03 · Motion & FX</b><p>Kiếm chém, cờ triển khai, châu kết ấn, chiến xa triệu hồi: bốn brief khác nhau. Clock/timeline đồng bộ; giữ body, weapon, vải, hồn, xích và FX riêng.</p></li><li><b>04 · Fixture Core</b><p>Sau review production mới nối quyền trang bị/server facts. Kiểm đổi món, lifecycle, mái/tán, cancel và reload trên fixture riêng.</p></li></ol>
+      <p class="hint">Pháp bảo và FX đang là concept tĩnh riêng, chờ duyệt; chưa animation, runtime hoặc wardrobe mới. Không sửa map owner, navigation, blocker, station/receipt, DB/save hoặc thông số chiến đấu.</p>
+      <div class="links"><a href="README.md">Bàn giao & giới hạn</a><a href="design-directions.md">Wardrobe / motion / FX brief</a><a href="canon-study.md">Canon & nguồn thị trường</a></div>
+    </section>
+  </main>
+  <footer>Vương Lâm live64×96/(32,88) · artifact canvas256×224/(96,200) · body offset(64,112). Padding và trang bị không đổi anatomy người.</footer>
+  <script type="module" src="review.mjs"></script>
+</body>
+</html>

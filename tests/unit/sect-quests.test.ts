@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { initialSectProgress, type SectView } from '../../shared/sect';
 import { currentSectQuest, sectQuests } from '../../shared/sect-quests';
+import { CHAPTER_QUESTS, initialChapter } from '../../shared/chapter';
 
 const view = (): SectView => ({ ...initialSectProgress(), profileId: 'quest-fixture', cultivation: 0,
   milestone: 'introduction', savedAt: 0, hp: 100, practising: false, activityStatus: 'locked',
@@ -74,4 +75,31 @@ test('projecting a different profile does not carry progress or mutate either sa
   assert.equal(currentSectQuest(sectQuests(advanced)).id, 'HN03');
   assert.equal(currentSectQuest(sectQuests(fresh)).id, 'HN01');
   assert.deepEqual([JSON.stringify(advanced), JSON.stringify(fresh)], originals);
+});
+
+test('a locked cultivation gate tracks the first unfinished quest and its actual next NPC', () => {
+  const snapshot = foundation();
+  Object.assign(snapshot.lessons, { hn03: true, hn04: true });
+  snapshot.chapter = initialChapter();
+  snapshot.chapter.accepted = ['HN05']; snapshot.chapter.completed = ['HN05'];
+  let quest = currentSectQuest(sectQuests(snapshot));
+  assert.equal(quest.id, 'HN06'); assert.equal(quest.status, 'locked');
+  assert.equal(quest.stationId, 'cultivation'); assert.match(quest.nextStep, /M02/);
+  assert.match(quest.objectives.find(o=>!o.done)!.text, /M02/);
+  snapshot.milestone = 'M02'; snapshot.level = 3;
+  quest = currentSectQuest(sectQuests(snapshot));
+  assert.equal(quest.status, 'available'); assert.equal(quest.stationId, 'preparation');
+  assert.equal(quest.objectives.some(o=>o.id==='cultivation-gate'), false);
+  snapshot.chapter.accepted = CHAPTER_QUESTS.slice(0, 5);
+  snapshot.chapter.completed = CHAPTER_QUESTS.slice(0, 4);
+  snapshot.chapter.facts = ['HN09-proof'];
+  quest = currentSectQuest(sectQuests(snapshot));
+  assert.equal(quest.id, 'HN09'); assert.equal(quest.stationId, 'cultivation');
+  snapshot.level = 9; snapshot.milestone = 'M03'; snapshot.chapter.completed.push('HN09');
+  quest = currentSectQuest(sectQuests(snapshot));
+  assert.equal(quest.id, 'HN10'); assert.equal(quest.stationId, 'cultivation');
+  snapshot.level = 15;
+  assert.equal(currentSectQuest(sectQuests(snapshot)).stationId, 'preparation');
+  snapshot.chapter.jade = 'refined';
+  assert.equal(currentSectQuest(sectQuests(snapshot)).stationId, 'training');
 });

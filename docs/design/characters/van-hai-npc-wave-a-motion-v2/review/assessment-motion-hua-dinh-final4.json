@@ -1,0 +1,1064 @@
+{
+  "schema": "npc-wave-a-final-hua-dinh-motion-source-assessment-1",
+  "date": "2026-10-13",
+  "scope": "Assigned final HuaSW/DinhNW targetview motion audit; progressive actualready sources only",
+  "sources": [
+    {
+      "slug": "hua-hanh",
+      "direction": "southwest",
+      "source": "raw/hua-hanh-southwest-direction-neutral.png",
+      "sourceSha256": "8bebc959bc6c7a7a18fb147d90c3b96a472bec2ce7ba2fb7ded4091ba32b3836",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses retain true front-left/down-left Southwest body/face, matching verified own directional neutral/liveWangSW. Speaking/inspection head nod inclines without rotating body/camera into prior Southeast."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own compact dark spiked hair/adult face, dusty-grey short asymmetrically patched cloak, muddy boots, red-brown old belt cords, route paper and small map tube retained. No Wang face/hair/robe or new weapon/gear."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Consistent own large compact skull/hair and short torso/legs across18raw/native poses. Natural lookdown changes pose bounds; one standing source scale80/366, both boots complete."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Original physicalright/far cloak patch and route paper remain screenleft; physicalleft/near map tube remains screenright on the old beltcord/flank through18poses. Profession partly unfolds the same paper low, with both original hands assisting while tube stays on its original attachment; no detached duplicate paper/tube or side swap."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Distinct breath/blink, speaking mouth/nod and low paper/cord inspection/unfolding. Standing boots stable; no full-body bob/attack/patrol/static six-copy row."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/hua-hanh-southwest-root-review-2x.png",
+        "sha256": "510a0d91e8c2a505d17dd5bce14375c9daf1e4f029b9cd57b048a0489668906f",
+        "finding": "All18native2xposes viewed after crown/both-sole witness rendering. Muddy boots rest at common floor with between-boot root; no opaque clipping or neighboring pose."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": true,
+        "proposal": "review/hua-hanh-southwest-root-review.json",
+        "proposalSha256": "7dba94b2ebc8fed3cc5ff337d4b3bab0abbb306ca49304d791cbe80845dc5c6f",
+        "neutralTopY": 85,
+        "neutralHeight": 366,
+        "scale": 0.2185792349726776,
+        "oneScalePerSource": true,
+        "clippedOpaquePixels": 0,
+        "componentReview": "All18complete body poses plus contained tiny hair/pixel edge islands are retained in explicit per-pose labels: label7@(268,220),area4; label8@(679,220),area5; label9@(61,221),area1; label10@(887,222),area1. No unassigned component or discarded opaque detail."
+      },
+      "directionNeutralBasis": {
+        "registration": "direction-neutral/review/hua-hanh-southwest.json",
+        "sha256": "a713ede2849daa4a7de1be817c1113dfa2c4958a265c0e9c4eeb3e52727a2107",
+        "viewReviewed": true,
+        "ownerArtApproved": false
+      },
+      "limitations": [
+        "Talk index9 near hand rises slightly toward waist/cord while the same tube stays on its original left belt attachment; it is not a free-hand wave or disappearing prop.",
+        "During profession the folded paper is briefly supported by both hands; tube remains belt-hung on physicalleft side rather than relocating or spawning.",
+        "Small paper/cape-patch/cord shapes simplify at native1x; modest variations remain.",
+        "Final pose visually settles near directional neutral; no first-last pixel equality claim."
+      ],
+      "status": "review-candidate",
+      "ownerApproved": false,
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "hua-hanh",
+      "direction": "west",
+      "source": "raw/hua-hanh-west-direction-neutral.png",
+      "sourceSha256": "15e163d73f7bac40335db3c6428f26a9a1c17ab248fa1a98dd14f95f44024047",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses keep verified true left-facing West side camera: only side eye/nose, near ear/shoulder and hidden far cheek. Profession bends forward without returning to frontal/Southeast body."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own dark compact spiked hair/adult face, dusty short grey cloak, red-brown corded tube, paper/seal and muddy boots retained. Near visible shoulder/cape remains plain grey; original physicalright/far asymmetrical patch stays hidden."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own consistent compact skull/hair/torso/legs and complete boots across raw/native18poses. Small head/nod/arm inspection changes preserve one source-wide neutral scale, no per-pose fitting."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Original physicalright/far paper stays screenleft; left/near map tube remains screenright on old beltcord. Profession partly opens samepaper low with both original hands supporting it; tube retains its left attachment. No duplicate paper/tube/newweapon or visible near-shoulder patch."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Genuine breath/visible-eye blink or backhead detail, small speech nod/shoulder, and profession hand/inspection changes; no walking/attack/whole-body bob/static copy row."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/hua-hanh-west-root-review-2x.png",
+        "sha256": "5eda35035ac2684d96579ca4e091aa50deaff57c9b36489529a7f8882b7c9880",
+        "finding": "All18native2xposes viewed after explicit crown/sole render: stable floor/between-pair root, no opaque clipping or neighbor."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": true,
+        "proposal": "review/hua-hanh-west-root-review.json",
+        "proposalSha256": "2ee0f9b9f070c06de9f30d2c557342934130a5a4c8c518ec297a8ae0ed004ae6",
+        "neutralTopY": 55,
+        "neutralHeight": 365,
+        "scale": 0.2191780821917808,
+        "oneScalePerSource": true,
+        "clippedOpaquePixels": 0,
+        "componentReview": "Exactly18 connected full pose bodies at alpha128; no detached tiny/unassigned component or discarded opaque gear/limb pixels."
+      },
+      "directionNeutralBasis": {
+        "registration": "direction-neutral/review/hua-hanh-west.json",
+        "sha256": "37357836c8ebbbfe6607eed56435fe8008e5ca311fa83ab25c50366e6b5e4ee9",
+        "viewReviewed": true,
+        "ownerArtApproved": false
+      },
+      "limitations": [
+        "Near shoulder/cape stays plain grey under West camera, with original right/far patch hidden rather than copied to near side.",
+        "Profession paper is briefly supported by both hands while tube remains left-belt corded; small paper fold/seal detail is subtle at native.",
+        "Final pose visually settles near neutral; exact pixel-equality loop claim is not made."
+      ],
+      "status": "review-candidate",
+      "ownerApproved": false,
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "dinh-soc",
+      "direction": "northwest",
+      "source": "raw/dinh-soc-northwest-direction-neutral.png",
+      "sourceSha256": "92c6ee00d700d13f98ac75816fab3711f9a7c20d309cf50b17eb0cea7ed926bd",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All18poses maintain verified rear-left Northwest camera: back hair/navy robe/gold shoulder dominant, natural side cheek edge only, no front bilateral face or palms through torso."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own accepted dark bun/hair, navy/ivory robe, small gold shoulder duty marks, physicalleft hip route tag and physicalright low spear retained; no new gear or face/hair/wardrobe."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own consistent compact skull/hair/torso/legs and complete boots across raw/native18poses. Small head/nod/arm inspection changes preserve one source-wide neutral scale, no per-pose fitting."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Original physicalright/far hand retains low spear on screenright throughout18poses; physicalleft/near hand checks original left hip tag. No spear hand swap/drop, extra tag or face crossing. Last-column spear points are cropped by source boundary separately recorded below."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Genuine breath/visible-eye blink or backhead detail, small speech nod/shoulder, and profession hand/inspection changes; no walking/attack/whole-body bob/static copy row."
+      },
+      "nativeReview": {
+        "pass": false,
+        "reviewedFrames": 18,
+        "file": "review/dinh-soc-northwest-root-review-2x.png",
+        "sha256": "93138e6543bfb5f8366eebdbaee3e5aa6e26295f6a7271b7512bf4bec242a7b0",
+        "finding": "All18native2xposes viewed after corrected bootROIs: pivot now centred between boots. Lastcolumn spear tips still visibly shortened by raw source edge; cannot repair missing prop pixels by packing.",
+        "fileMayBeSuperseded": true,
+        "exactRawSourceIsAuthoritativeHistory": true
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": true,
+        "proposal": "review/dinh-soc-northwest-root-review.json",
+        "proposalSha256": "ad7c7c6d6ed74a29f8428d16beaff365aa72efb77252c41f81685a570171716a",
+        "neutralTopY": 95,
+        "neutralHeight": 320,
+        "scale": 0.25,
+        "oneScalePerSource": true,
+        "clippedOpaquePixels": 0,
+        "componentReview": "All18full bodies plus contained tiny hair/pixel islands retained by explicit frame labels: label7@(197,261),area4; label8@(615,261),area4; label9@(1032,261),area6; label10@(1240,261),area3; label17@(1240,641),area4; label18@(1033,643),area4; label25@(196,1017),area5; label26@(1240,1017),area6. No unassigned/dropped component.",
+        "correctedFromSpearBiasedRoot": true,
+        "neutralBootRoot": [
+          98,
+          415
+        ],
+        "initialNeutralRoot": [
+          130.5,
+          415
+        ],
+        "explicitBootROIs": [
+          {
+            "index": 0,
+            "region": [
+              35,
+              385,
+              170,
+              415
+            ],
+            "support": [
+              43,
+              402,
+              153,
+              415
+            ],
+            "root": [
+              98,
+              415
+            ]
+          },
+          {
+            "index": 1,
+            "region": [
+              241,
+              385,
+              376,
+              415
+            ],
+            "support": [
+              253,
+              402,
+              363,
+              415
+            ],
+            "root": [
+              308,
+              415
+            ]
+          },
+          {
+            "index": 2,
+            "region": [
+              449,
+              385,
+              584,
+              415
+            ],
+            "support": [
+              462,
+              402,
+              572,
+              415
+            ],
+            "root": [
+              517,
+              415
+            ]
+          },
+          {
+            "index": 3,
+            "region": [
+              659,
+              385,
+              794,
+              415
+            ],
+            "support": [
+              671,
+              402,
+              781,
+              415
+            ],
+            "root": [
+              726,
+              415
+            ]
+          },
+          {
+            "index": 4,
+            "region": [
+              867,
+              385,
+              1002,
+              415
+            ],
+            "support": [
+              880,
+              402,
+              990,
+              415
+            ],
+            "root": [
+              935,
+              415
+            ]
+          },
+          {
+            "index": 5,
+            "region": [
+              1077,
+              385,
+              1212,
+              415
+            ],
+            "support": [
+              1088,
+              402,
+              1198,
+              415
+            ],
+            "root": [
+              1143,
+              415
+            ]
+          },
+          {
+            "index": 6,
+            "region": [
+              32,
+              764,
+              167,
+              794
+            ],
+            "support": [
+              43,
+              781,
+              154,
+              794
+            ],
+            "root": [
+              98.5,
+              794
+            ]
+          },
+          {
+            "index": 7,
+            "region": [
+              241,
+              764,
+              376,
+              794
+            ],
+            "support": [
+              253,
+              781,
+              363,
+              794
+            ],
+            "root": [
+              308,
+              794
+            ]
+          },
+          {
+            "index": 8,
+            "region": [
+              449,
+              764,
+              584,
+              794
+            ],
+            "support": [
+              462,
+              781,
+              572,
+              794
+            ],
+            "root": [
+              517,
+              794
+            ]
+          },
+          {
+            "index": 9,
+            "region": [
+              656,
+              764,
+              791,
+              794
+            ],
+            "support": [
+              671,
+              781,
+              781,
+              794
+            ],
+            "root": [
+              726,
+              794
+            ]
+          },
+          {
+            "index": 10,
+            "region": [
+              868,
+              764,
+              1003,
+              794
+            ],
+            "support": [
+              880,
+              781,
+              990,
+              794
+            ],
+            "root": [
+              935,
+              794
+            ]
+          },
+          {
+            "index": 11,
+            "region": [
+              1077,
+              764,
+              1212,
+              794
+            ],
+            "support": [
+              1088,
+              781,
+              1198,
+              794
+            ],
+            "root": [
+              1143,
+              794
+            ]
+          },
+          {
+            "index": 12,
+            "region": [
+              32,
+              1142,
+              167,
+              1172
+            ],
+            "support": [
+              43,
+              1159,
+              153,
+              1172
+            ],
+            "root": [
+              98,
+              1172
+            ]
+          },
+          {
+            "index": 13,
+            "region": [
+              246,
+              1142,
+              381,
+              1172
+            ],
+            "support": [
+              253,
+              1159,
+              363,
+              1172
+            ],
+            "root": [
+              308,
+              1172
+            ]
+          },
+          {
+            "index": 14,
+            "region": [
+              452,
+              1142,
+              587,
+              1172
+            ],
+            "support": [
+              462,
+              1159,
+              572,
+              1172
+            ],
+            "root": [
+              517,
+              1172
+            ]
+          },
+          {
+            "index": 15,
+            "region": [
+              663,
+              1142,
+              798,
+              1172
+            ],
+            "support": [
+              671,
+              1159,
+              781,
+              1172
+            ],
+            "root": [
+              726,
+              1172
+            ]
+          },
+          {
+            "index": 16,
+            "region": [
+              870,
+              1142,
+              1005,
+              1172
+            ],
+            "support": [
+              880,
+              1159,
+              990,
+              1172
+            ],
+            "root": [
+              935,
+              1172
+            ]
+          },
+          {
+            "index": 17,
+            "region": [
+              1079,
+              1142,
+              1214,
+              1172
+            ],
+            "support": [
+              1089,
+              1159,
+              1198,
+              1172
+            ],
+            "root": [
+              1143.5,
+              1172
+            ]
+          }
+        ]
+      },
+      "directionNeutralBasis": {
+        "registration": "direction-neutral/review/dinh-soc-northwest.json",
+        "sha256": "70d44c9919391a9c1389c74e99ec15a7ed85c3b5419dd050aad798841f2670f2",
+        "viewReviewed": true,
+        "ownerArtApproved": false
+      },
+      "limitations": [
+        "BLOCKED raw source clipping: spear blades in indices5/11/17 terminate on right PNG edge,24/29/29threshold-opaque pixels on x1253, not a single complete apex.",
+        "Padding a clipped source in atlas cannot recover missing blade pixels; repair layout/outer gutter without rescaling body/hand swapping, then fresh18pose audit.",
+        "Initial lower support span included spear tip, shifting Xroot to weapon side. Explicit bootROIs fix horizontal pivot; groundY/scale remained80/320.",
+        "26components include18bodies+8contained tiny hair/edge islands, all retained with no unassigned deletion."
+      ],
+      "sourceEdgeReview": {
+        "pass": false,
+        "sourceWidth": 1254,
+        "boundaryX": 1253,
+        "affectedIndices": [
+          5,
+          11,
+          17
+        ],
+        "threshold": 128,
+        "opaqueContacts": [
+          {
+            "index": 5,
+            "pixels": 24,
+            "y": [
+              390,
+              413
+            ]
+          },
+          {
+            "index": 11,
+            "pixels": 29,
+            "y": [
+              762,
+              790
+            ]
+          },
+          {
+            "index": 17,
+            "pixels": 29,
+            "y": [
+              1138,
+              1166
+            ]
+          }
+        ],
+        "finding": "Three last-column spear blades cut vertically at raw PNG boundary; visible shortened points, source repair required"
+      },
+      "status": "failed-source-clipping",
+      "ownerApproved": false,
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    },
+    {
+      "slug": "dinh-soc",
+      "direction": "northwest",
+      "source": "raw/dinh-soc-northwest-repair-r2.png",
+      "sourceSha256": "5a265045d16f7eee042925648c5902acc114f7c6568e0517064607fdf9eeb64c",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "reviewedRawPoses": 18,
+      "orientation": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "All 18 wide repaired poses preserve the rear-left Northwest camera. Back hair/navy robe/shoulder dominate, with only the natural side cheek edge. Speech and tag inspection retain the same view, with no front face or palms drawn through the body."
+      },
+      "identity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own darkbun/hair, compact adult guard identity, navy/ivory robe, small gold shoulder marks and original hiptag/spear retained; no newgear or Wang hair/wardrobe."
+      },
+      "anatomy": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "Own large compact skull/hair with short torso/legs and complete boots across18poses. Small head/forearm inclination retains one sourcewide standing calibration80/292, no per-pose fitting."
+      },
+      "propContinuity": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "finding": "The anatomical right/far hand retains the same low diagonal spear at screen-right through all 18 poses. The anatomical left/near hand checks the original screen-left hip tag, retaining its original side. Full blade points are now inside the wider source with a gutter in indices 5/11/17; no blade crop, hand swap, dropped spear or duplicate tag remains."
+      },
+      "motionReadability": {
+        "pass": true,
+        "finding": "Genuine small breath/backhead speech/shoulder and near-hand tagcheck changes, stationary boots; no attack/patrol/whole-body bob."
+      },
+      "nativeReview": {
+        "pass": true,
+        "reviewedFrames": 18,
+        "file": "review/dinh-soc-northwest-root-review-2x.png",
+        "sha256": "16339e8e7de5db4e9ae62d77465a8e9a3180a7bd28e747cbc9b8645ec0ec0505",
+        "finding": "All 18 native 2× poses were reviewed after explicit boot-region root correction. The pivot is now between the actual boots. Full spear blades are retained, with a stable floor and no opaque clipping or neighboring pose."
+      },
+      "rootMeasurement": {
+        "manualRootReviewed": true,
+        "proposal": "review/dinh-soc-northwest-root-review.json",
+        "proposalSha256": "269d540bbe7357258d55ac2c373ac5134b1338ac6cda7dfab9349f38502ef477",
+        "neutralTopY": 39,
+        "neutralHeight": 292,
+        "scale": 0.273972602739726,
+        "oneScalePerSource": true,
+        "clippedOpaquePixels": 0,
+        "componentReview": "18 full body poses plus contained tiny hair/edge islands retained in corresponding frame componentLabels: label7@(58,134),area2; label14@(957,529),area1; label21@(555,777),area1. No unassigned/discarded threshold-opaque part.",
+        "correctedFromSpearBiasedRoot": true,
+        "neutralBootRoot": [
+          125,
+          331
+        ],
+        "initialNeutralRoot": [
+          165.5,
+          331
+        ],
+        "explicitBootROIs": [
+          {
+            "index": 0,
+            "region": [
+              61,
+              301,
+              196,
+              331
+            ],
+            "support": [
+              70,
+              319,
+              180,
+              331
+            ],
+            "root": [
+              125,
+              331
+            ]
+          },
+          {
+            "index": 1,
+            "region": [
+              311,
+              301,
+              446,
+              331
+            ],
+            "support": [
+              321,
+              319,
+              432,
+              331
+            ],
+            "root": [
+              376.5,
+              331
+            ]
+          },
+          {
+            "index": 2,
+            "region": [
+              557,
+              301,
+              692,
+              331
+            ],
+            "support": [
+              568,
+              319,
+              679,
+              331
+            ],
+            "root": [
+              623.5,
+              331
+            ]
+          },
+          {
+            "index": 3,
+            "region": [
+              816,
+              301,
+              951,
+              331
+            ],
+            "support": [
+              820,
+              319,
+              934,
+              331
+            ],
+            "root": [
+              877,
+              331
+            ]
+          },
+          {
+            "index": 4,
+            "region": [
+              1074,
+              301,
+              1209,
+              331
+            ],
+            "support": [
+              1083,
+              319,
+              1196,
+              331
+            ],
+            "root": [
+              1139.5,
+              331
+            ]
+          },
+          {
+            "index": 5,
+            "region": [
+              1325,
+              301,
+              1460,
+              331
+            ],
+            "support": [
+              1336,
+              319,
+              1443,
+              331
+            ],
+            "root": [
+              1389.5,
+              331
+            ]
+          },
+          {
+            "index": 6,
+            "region": [
+              59,
+              620,
+              194,
+              650
+            ],
+            "support": [
+              69,
+              638,
+              179,
+              650
+            ],
+            "root": [
+              124,
+              650
+            ]
+          },
+          {
+            "index": 7,
+            "region": [
+              311,
+              620,
+              446,
+              650
+            ],
+            "support": [
+              321,
+              638,
+              432,
+              650
+            ],
+            "root": [
+              376.5,
+              650
+            ]
+          },
+          {
+            "index": 8,
+            "region": [
+              557,
+              620,
+              692,
+              650
+            ],
+            "support": [
+              560,
+              638,
+              673,
+              650
+            ],
+            "root": [
+              616.5,
+              650
+            ]
+          },
+          {
+            "index": 9,
+            "region": [
+              815,
+              620,
+              950,
+              650
+            ],
+            "support": [
+              822,
+              638,
+              934,
+              650
+            ],
+            "root": [
+              878,
+              650
+            ]
+          },
+          {
+            "index": 10,
+            "region": [
+              1072,
+              620,
+              1207,
+              650
+            ],
+            "support": [
+              1085,
+              638,
+              1196,
+              650
+            ],
+            "root": [
+              1140.5,
+              650
+            ]
+          },
+          {
+            "index": 11,
+            "region": [
+              1324,
+              620,
+              1459,
+              650
+            ],
+            "support": [
+              1332,
+              638,
+              1443,
+              650
+            ],
+            "root": [
+              1387.5,
+              650
+            ]
+          },
+          {
+            "index": 12,
+            "region": [
+              59,
+              941,
+              194,
+              971
+            ],
+            "support": [
+              70,
+              959,
+              181,
+              971
+            ],
+            "root": [
+              125.5,
+              971
+            ]
+          },
+          {
+            "index": 13,
+            "region": [
+              311,
+              941,
+              446,
+              971
+            ],
+            "support": [
+              323,
+              959,
+              434,
+              971
+            ],
+            "root": [
+              378.5,
+              971
+            ]
+          },
+          {
+            "index": 14,
+            "region": [
+              557,
+              941,
+              692,
+              971
+            ],
+            "support": [
+              572,
+              959,
+              685,
+              971
+            ],
+            "root": [
+              628.5,
+              971
+            ]
+          },
+          {
+            "index": 15,
+            "region": [
+              812,
+              941,
+              947,
+              971
+            ],
+            "support": [
+              822,
+              959,
+              935,
+              971
+            ],
+            "root": [
+              878.5,
+              971
+            ]
+          },
+          {
+            "index": 16,
+            "region": [
+              1072,
+              941,
+              1207,
+              971
+            ],
+            "support": [
+              1081,
+              959,
+              1195,
+              971
+            ],
+            "root": [
+              1138,
+              971
+            ]
+          },
+          {
+            "index": 17,
+            "region": [
+              1323,
+              941,
+              1458,
+              971
+            ],
+            "support": [
+              1333,
+              959,
+              1445,
+              971
+            ],
+            "root": [
+              1389,
+              971
+            ]
+          }
+        ]
+      },
+      "sourceEdgeReview": {
+        "pass": true,
+        "alphaThreshold": 128,
+        "sourceDimensions": [
+          1536,
+          1024
+        ],
+        "sourceOpaqueBoundaryPixels": 0,
+        "finding": "All18full poses/hair/prop/boots have transparent external source margin at established body threshold; former clippedlastcolumn corrected bywide layout, not postpadding."
+      },
+      "directionNeutralBasis": {
+        "registration": "direction-neutral/review/dinh-soc-northwest.json",
+        "sha256": "70d44c9919391a9c1389c74e99ec15a7ed85c3b5419dd050aad798841f2670f2",
+        "viewReviewed": true,
+        "ownerArtApproved": false
+      },
+      "correctionHistory": {
+        "failedSource": "raw/dinh-soc-northwest-direction-neutral.png",
+        "failedSourceSha256": "92c6ee00d700d13f98ac75816fab3711f9a7c20d309cf50b17eb0cea7ed926bd",
+        "failedStatus": "failed-source-clipping",
+        "affectedIndices": [
+          5,
+          11,
+          17
+        ],
+        "failedRecordPreservedInSameFile": true,
+        "sourceOverwritten": false,
+        "method": "Explicit wide1536x1024 layout repair preserves actor/physicalprops andprovides full blade/outergutters; bootROIs exclude spear inregistration."
+      },
+      "limitations": [
+        "The low spear extends horizontally beyond the body. The 96×96 motion canvas adds padding only and retains the full tip.",
+        "Head, near-hand and tag changes remain small at native 1×; the natural side cheek edge remains visible in the rear quarter view.",
+        "The initial root proposal included the blade in its lower band and biased the horizontal root. Explicit boot-pair regions correct this while retaining one source scale.",
+        "The final pose returns visually near neutral; no exact pixel-equality loop claim is made."
+      ],
+      "status": "review-candidate",
+      "ownerApproved": false,
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeImported": false
+    }
+  ],
+  "ownerApproved": false,
+  "artApproved": false,
+  "motionApproved": false,
+  "runtimeImported": false,
+  "reviewedSourceCount": 4,
+  "reviewedRawPoses": 72,
+  "reviewedNativePoses": 72,
+  "status": "HuaSW/West and repairedDinhNW selectedcandidates; clippedDinh predecessor preserved",
+  "selectedCandidateCount": 3
+}

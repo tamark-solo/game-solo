@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Create a production pixel game sprite sheet containing 18 genuinely drawn, isolated FULL BODY animation poses: exactly six columns and three rows. Request 1536 x 1536 pixels, transparent RGBA background, high quality. No text, labels, grid, ground, shadow, scene, aura, glow or particles.\n\nREFERENCE ROLES ARE STRICT.\nIMAGE 1 is Wang Lin Pixel02 facing EAST, extracted from the player actually used in the game. Use it as the PRIMARY reference for the camera, human anatomy, large chibi skull, compact torso, short legs, crisp pixel clusters and palette treatment. Its head is about half of standing height. NEVER copy Wang Lin's identity, face design, long loose hair, charcoal robe, costume or equipment. Wang Lin supplies the shared game style and EAST camera only.\nIMAGE 2 is this NPC's own correctly facing WEST animation sheet, raw/ta-kiem-son-west.png. It supplies Tạ Kiếm Sơn's identity, costume, anatomy continuity, attached equipment and action progression ONLY. Draw a new, real EAST view by rotating this same character to face RIGHT. Do not keep the WEST camera. Do not horizontally flip or mirror the bitmap. Do not copy another NPC or use a southeast reference.\n\nLOCK THIS EXACT NPC IDENTITY.\nTạ Kiếm Sơn is a mature male training instructor, about forty. Preserve his compact dark bun, small eyebrow scar, navy robe, wrapped wrists and short worn wooden sword. Keep the sword in the SAME ANATOMICAL HAND as IMAGE 2 throughout all three rows. Preserve the same bun and skull size, face age, robe layers, belt and wraps. He has no Wang Lin long loose hair or charcoal robe, no heavy armour and no giant sword.\n\nEAST CAMERA IN EVERY ONE OF THE 18 POSES.\nThe character faces screen RIGHT in a clear RIGHT-FACING PROFILE. The nose silhouette points RIGHT. Exactly ONE near eye is visible when open; the far eye and far eyebrow are fully hidden by the skull. A blink closes this same single eye. Never draw two eyes, a frontal face, a southeast face, a left-facing face or a three-quarter turn toward the viewer. The head, torso, arms and boots keep the same EAST view during talk and the sword demonstration. Use the orthographic game elevation of IMAGE 1. Do not rotate the head to make an expression or gesture easier to see. Anatomical left and right are preserved when changing the camera; the sword must not switch hands.\n\nSHEET LAYOUT AND SCALE.\nSix columns and three rows with generous transparent gaps. Every pose includes the complete hair, hands, boots and wooden sword, with clear separation from neighbouring poses. Neutral crown-to-boot height is approximately 240 source pixels; body width should remain compact, about 150 source pixels or less before an arm gesture. All 18 figures have ONE physical scale and the exact same skull, torso and leg proportions. Do not resize a profession row to fit its cell. Keep the boots planted at each pose's world ground; no walking, stepping, root translation or whole-body bounce. Only genuine breathing, facial movement, forearm, wrist and small cloth changes are animated.\n\nROW 1 — IDLE, six poses.\n1: Neutral calibration stance, wooden sword pointing down.\n2: Slight inhalation, small sleeve movement.\n3: Gentle breathing continuation.\n4: Calm exhalation.\n5: Subtle blink of the one visible eye.\n6: Return to the exact neutral stance of pose 1.\n\nROW 2 — TALK, six poses.\n1: The same neutral stance as row 1 pose 1.\n2: Small mouth movement and the free forearm beginning to rise.\n3: A restrained explanatory palm toward screen RIGHT.\n4: Hold the calm palm gesture with a second small mouth shape.\n5: Retract the free forearm.\n6: Return to exact neutral.\nKeep the wooden sword attached to its original hand, tip down, for the entire talk sequence. It does not disappear, turn into a metal weapon or migrate between hands.\n\nROW 3 — PROFESSION, six poses.\nA measured wooden-sword wrist demonstration: neutral sword tip down; slowly raise the original sword forearm; angle the wooden sword across the waist; hold a controlled guard; lower the wrist; return to exact neutral. The beginning and ending stance match row 1 pose 1. Feet remain planted. This is a controlled teaching gesture: no attack, slash, lunge, combat effect or stepping. The face remains a RIGHT-FACING ONE-EYE PROFILE even when the sword crosses the waist. Keep the same wooden sword length, material and holding hand in every pose.\n\nDraw actual pose differences with stable identity and anatomy. Use crisp integer-style pixel clusters, limited game palette and clean alpha edges. Nominal human height is 80 world pixels; base human canvas 64 x 96, foot (32,88). Animation canvas 96 x 96, foot (48,88), adds padding only and does not enlarge the body. Body and small held sword are included; FX and shadow are absent. This new EAST source is a review candidate, and approval of the earlier southeast pilot is not approval of this direction.\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Create a production pixel game sprite sheet containing 18 genuinely drawn, isolated FULL BODY animation poses: exactly six columns and three rows. Request 1536 x 1536 pixels, transparent RGBA background, high quality. No text, labels, grid, ground, shadow, scene, aura, glow or particles.\n\nREFERENCE ROLES ARE STRICT.\nIMAGE 1 is Wang Lin Pixel02 facing EAST, extracted from the player actually used in the game. Use it as the PRIMARY reference for the camera, human anatomy, large chibi skull, compact torso, short legs, crisp pixel clusters and palette treatment. Its head is about half of standing height. NEVER copy Wang Lin's identity, face design, long loose hair, charcoal robe, costume or equipment. Wang Lin supplies the shared game style and EAST camera only.\nIMAGE 2 is this NPC's own correctly facing WEST animation sheet, raw/ta-kiem-son-west.png. It supplies Tạ Kiếm Sơn's identity, costume, anatomy continuity, attached equipment and action progression ONLY. Draw a new, real EAST view by rotating this same character to face RIGHT. Do not keep the WEST camera. Do not horizontally flip or mirror the bitmap. Do not copy another NPC or use a southeast reference.\n\nLOCK THIS EXACT NPC IDENTITY.\nTạ Kiếm Sơn is a mature male training instructor, about forty. Preserve his compact dark bun, small eyebrow scar, navy robe, wrapped wrists and short worn wooden sword. Keep the sword in the SAME ANATOMICAL HAND as IMAGE 2 throughout all three rows. Preserve the same bun and skull size, face age, robe layers, belt and wraps. He has no Wang Lin long loose hair or charcoal robe, no heavy armour and no giant sword.\n\nEAST CAMERA IN EVERY ONE OF THE 18 POSES.\nThe character faces screen RIGHT in a clear RIGHT-FACING PROFILE. The nose silhouette points RIGHT. Exactly ONE near eye is visible when open; the far eye and far eyebrow are fully hidden by the skull. A blink closes this same single eye. Never draw two eyes, a frontal face, a southeast face, a left-facing face or a three-quarter turn toward the viewer. The head, torso, arms and boots keep the same EAST view during talk and the sword demonstration. Use the orthographic game elevation of IMAGE 1. Do not rotate the head to make an expression or gesture easier to see. Anatomical left and right are preserved when changing the camera; the sword must not switch hands.\n\nSHEET LAYOUT AND SCALE.\nSix columns and three rows with generous transparent gaps. Every pose includes the complete hair, hands, boots and wooden sword, with clear separation from neighbouring poses. Neutral crown-to-boot height is approximately 240 source pixels; body width should remain compact, about 150 source pixels or less before an arm gesture. All 18 figures have ONE physical scale and the exact same skull, torso and leg proportions. Do not resize a profession row to fit its cell. Keep the boots planted at each pose's world ground; no walking, stepping, root translation or whole-body bounce. Only genuine breathing, facial movement, forearm, wrist and small cloth changes are animated.\n\nROW 1 — IDLE, six poses.\n1: Neutral calibration stance, wooden sword pointing down.\n2: Slight inhalation, small sleeve movement.\n3: Gentle breathing continuation.\n4: Calm exhalation.\n5: Subtle blink of the one visible eye.\n6: Return to the exact neutral stance of pose 1.\n\nROW 2 — TALK, six poses.\n1: The same neutral stance as row 1 pose 1.\n2: Small mouth movement and the free forearm beginning to rise.\n3: A restrained explanatory palm toward screen RIGHT.\n4: Hold the calm palm gesture with a second small mouth shape.\n5: Retract the free forearm.\n6: Return to exact neutral.\nKeep the wooden sword attached to its original hand, tip down, for the entire talk sequence. It does not disappear, turn into a metal weapon or migrate between hands.\n\nROW 3 — PROFESSION, six poses.\nA measured wooden-sword wrist demonstration: neutral sword tip down; slowly raise the original sword forearm; angle the wooden sword across the waist; hold a controlled guard; lower the wrist; return to exact neutral. The beginning and ending stance match row 1 pose 1. Feet remain planted. This is a controlled teaching gesture: no attack, slash, lunge, combat effect or stepping. The face remains a RIGHT-FACING ONE-EYE PROFILE even when the sword crosses the waist. Keep the same wooden sword length, material and holding hand in every pose.\n\nDraw actual pose differences with stable identity and anatomy. Use crisp integer-style pixel clusters, limited game palette and clean alpha edges. Nominal human height is 80 world pixels; base human canvas 64 x 96, foot (32,88). Animation canvas 96 x 96, foot (48,88), adds padding only and does not enlarge the body. Body and small held sword are included; FX and shadow are absent. This new EAST source is a review candidate, and approval of the earlier southeast pilot is not approval of this direction.\n",
+    "n": 1,
+    "size": "1536x1536",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-13T08:01:27.162Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v2\\inputs\\wang-lin-live-east-nearest8x.png",
+      "filename": "wang-lin-live-east-nearest8x.png",
+      "mimeType": "image/png",
+      "bytes": 9489,
+      "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-motion-v2\\raw\\ta-kiem-son-west.png",
+      "filename": "ta-kiem-son-west.png",
+      "mimeType": "image/png",
+      "bytes": 1411144,
+      "sha256": "a4bdce59b417ed145b369de7c87533a1ae794641c16e94537173184a74701607",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "ta-kiem-son-east.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1465980,
+    "sha256": "e2d59b7ff1c943dc2ee972170a9b3ee6b4a2e93c2977bcea40e05db696eebb92",
+    "dimensions": {
+      "width": 1254,
+      "height": 1254
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": false
+  }
+}

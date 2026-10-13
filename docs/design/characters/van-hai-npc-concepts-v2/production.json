@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-13",
+  "sourcePlan": "docs/design/world/van-hai-living-world-v1/plan.json",
+  "sourcePlanSha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576",
+  "directionsProduced": [
+    "southeast"
+  ],
+  "directionsPending": [
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east"
+  ],
+  "schema": "van-hai-npc-concepts-2",
+  "id": "VH-NPC-CONCEPTS-02",
+  "generator": "project-router-gpt-image-2-edit",
+  "skill": "docs/skills/game-actor-animation-production/SKILL.md",
+  "status": "neutral-pilot-candidate",
+  "runtimeConsumable": false,
+  "artApproved": false,
+  "ownerApproved": false,
+  "actors": [
+    {
+      "id": "NPC-HN-GUIDE",
+      "slug": "tran-duy",
+      "name": "Trần Duy",
+      "role": "Chấp sự tiếp dẫn",
+      "zone": "Sân môn phái",
+      "raw": "raw/tran-duy.png",
+      "prompt": "prompts/tran-duy.txt",
+      "sprite": "sprites/tran-duy.png",
+      "canvas": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        88
+      ],
+      "bodyHeightPx": 80,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "referenceMode": "actual image inputs via multipart edit",
+      "references": [
+        "inputs/pixel02-southeast-nearest8x.png",
+        "../van-hai-npc-concepts-v1/raw/tran-duy.png"
+      ],
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "8266e8c8e3c32db5ae0569873568c32ea5e27901d67762aaf878df2fbd9f58dc",
+      "spriteSha256": "1c4e353695f77a3329e38015c1ed02e648fc3a2faa0db51a922f43ff4aad0d05",
+      "promptSha256": "907391cf721710a78bab32c10bfdbfc6fe19a7e5369686bab30ad24e905596e2",
+      "nativeRegistration": "registration.json",
+      "sourcePivot": [
+        420,
+        1512
+      ],
+      "sharedNeutralScale": 0.06116207951070336,
+      "pixelsResampled": true,
+      "anatomyStatus": "improved-versus-v1-owner-review-pending",
+      "visualLimitations": "Head enlarged versus v1; still slimmer and longer robe than Pixel02. Visual owner review pending."
+    }
+  ],
+  "nativePacking": {
+    "status": "static-concept-only",
+    "registration": "registration.json",
+    "sourceMeasurements": "review/source-measurements.json",
+    "alphaThreshold": 210,
+    "resampling": "nearest-once",
+    "animationClips": 0,
+    "runtimeConsumable": false,
+    "anatomyStatus": "see-individual-measured-visual-assessment"
+  }
+}
