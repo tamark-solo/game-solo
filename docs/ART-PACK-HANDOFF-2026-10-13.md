@@ -1,6 +1,8 @@
 # Bàn giao ART quái và boss · 13/10/2026
 
-Nhánh `codex/monster-boss-art-review` bắt đầu từ `_MMO` tại `82bc389a`. Commit lưu các gói ART, nguồn/prompt/registration, sân review Core, kiểm kỹ thuật và hồ sơ duyệt đã làm trong đợt này. Worktree tạo commit riêng, không chuyển nhánh hoặc ghi lên checkout `_MMO` đang mở ở thư mục chính.
+Nhánh đích bàn giao là **`_MMO`**. Commit ART **`36eb453a`** bắt đầu từ `82bc389a`, được tạo trong worktree riêng rồi fast-forward vào checkout `_MMO` theo yêu cầu owner. Commit lưu các gói ART, nguồn/prompt/registration, sân review Core, kiểm kỹ thuật và hồ sơ duyệt đã làm trong đợt này.
+
+Trước khi ghép, bản ART chưa commit trong thư mục chính đã được đối chiếu với gói bàn giao và lưu stash dự phòng với nhãn `Backup ART working copy before integrating 36eb453a into _MMO (2026-10-13)`. Giữ snapshot này để khôi phục bản cũ nếu cần; không apply toàn bộ lên bản mới vì sẽ đưa lại tài liệu/metadata cũ. DB, output và draft bị ignore không đưa vào commit hoặc stash này.
 
 ## Phạm vi và trạng thái
 
