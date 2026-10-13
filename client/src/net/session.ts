@@ -13,8 +13,8 @@ export type ConnectionStatus = 'idle' | 'connecting' | 'connected' | 'reconnecti
 export interface SessionOptions {
   roomName?: string;
   joinOptions?: Record<string, unknown> | (() => Record<string, unknown>|Promise<Record<string,unknown>>);
-  movementStep?: (state: MovementState, command: { moveX: number; moveY: number }, dt: number) => void;
-  motionFields?: Array<'motionLocked' | 'dashVX' | 'dashVY' | 'scene' | 'hp'>;
+  movementStep?: (state: MovementState, command: { moveX: number; moveY: number; fast?:boolean }, dt: number, interval:{previous:number;now:number}) => void;
+  motionFields?: Array<keyof Disciple & string>;
   resumeToken?: () => string | undefined;
   recover?: boolean;
   connected?: (room: Room<CourtyardState>) => void;
@@ -152,7 +152,12 @@ export class NetworkSession {
       this.prediction.attachAll('players', { mode: 'lerp', fields: ['x', 'y'], delay: 100 });
       this.self = this.prediction.reconciler(own, {
         input: this.inputHandle, fields: ['x', 'y', 'direction', 'moving', ...(this.options.motionFields ?? [])], smoothMs: 35,
-        step: (ctx, state, command) => (this.options.movementStep ?? applyMovement)(state, command, ctx.dt),
+        step: (ctx, state, command) => {
+          // Restore time is the authoritative snapshot, not wall time. A replay
+          // step belongs to its input sequence, including the end of timed motion.
+          const previous=room.state.serverTime+Math.max(0,ctx.tick-this.inputHandle!.lastProcessed-1)*ctx.dtMs;
+          (this.options.movementStep ?? applyMovement)(state, command, ctx.dt,{previous,now:previous+ctx.dtMs});
+        },
       });
     }
     const steps = this.prediction.tick(now);
@@ -168,7 +173,7 @@ export class NetworkSession {
 
   // Skills wait for the next ordinary movement tick; never send extra physics steps from a key event.
   nextInputSequence():number {return (this.inputHandle?.sentCount??0)+1;}
-  movementDiagnostics(){return {input:this.input(),fast:this.inputHandle?.data.fast,sent:this.inputHandle?.sentCount};}
+  movementDiagnostics(){return {input:this.input(),fast:this.inputHandle?.data.fast,sent:this.inputHandle?.sentCount,ack:this.inputHandle?.lastProcessed,snapshotTime:this.room?.state.serverTime,predicted:this.self?{x:this.self.state.x,y:this.self.state.y,dashVX:this.self.state.dashVX,dashVY:this.self.state.dashVY}:undefined};}
 
   renderMotion(id: string): Motion | undefined {
     const entity = this.room?.state.players?.get(id);

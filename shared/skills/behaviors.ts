@@ -4,6 +4,7 @@ import type { Position } from '../world/types';
 import { moveUsingCollision } from '../world/movement';
 import { type Direction } from '../world/types';
 import { hangNhacWalkable } from '../hang-nhac';
+import { dashVelocity } from './dash-motion';
 
 interface Validation {actor:CombatActor;dx:number;dy:number;target?:TrainingTarget;definition:SkillDefinition;walkable:typeof hangNhacWalkable;clearPath:(a:Position,b:Position)=>boolean}
 export interface BehaviorContext {
@@ -50,10 +51,9 @@ export const SKILL_BEHAVIORS:Record<string,SkillBehavior>={
     },
     advance:({actor,cast,now,previous,dt,arrive,definition})=>{
       if(cast.arrived)return;
-      const begin=cast.startedAt+definition.release,end=begin+definition.duration!;
-      const overlap=Math.max(0,Math.min(now,end)-Math.max(previous,begin));
-      const speed=definition.range/(definition.duration!/1000)*overlap/(dt*1000);
-      actor.dashVX=cast.dx*speed;actor.dashVY=cast.dy*speed;
+      const end=cast.startedAt+definition.release+definition.duration!;
+      const velocity=dashVelocity(cast.startedAt,cast.dx,cast.dy,{previous,now},definition,dt);
+      actor.dashVX=velocity.vx;actor.dashVY=velocity.vy;
       if(now+.001>=end)arrive();
     }
   }

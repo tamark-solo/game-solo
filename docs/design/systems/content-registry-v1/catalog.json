@@ -1,11 +1,11 @@
 {
   "documentSchema": 1,
   "id": "vh-content-design-index-v1",
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "status": "design-reference",
   "runtimeConsumable": false,
   "pathBase": "workspace-root",
-  "scope": "Partial index of current pilot, HN/EX item plans and retained character appearance designs; not a runtime catalog or source of balance.",
+  "scope": "Partial design index: current pilot and retained plans, plus living-world NPC/monster/boss/material/map briefs. New records are unreleased candidates, not gameplay definitions.",
   "authorityNote": "Source code/docs own values and policies. Relations support browsing, not prerequisite/effect execution. Pending/see-source fields must be resolved in the slice schema before release; missing fields do not imply no restriction or unlimited capacity.",
   "approvalNote": "Statuses do not infer ownerApproved, balanceApproved or artApproved.",
   "taxonomyDoc": "docs/GAME-CONTENT-TAXONOMY.md",
@@ -14,8 +14,6 @@
     "mount",
     "companion",
     "method",
-    "npc",
-    "encounter",
     "loot",
     "unlock",
     "achievement",
@@ -1661,6 +1659,1204 @@
       "storage": "appearance-definition-reference",
       "stage": "hoa-than",
       "runtimeNotes": "Owner approved the static concept on 2026-10-12. Retain source/prompt/PNG; production layers/animation and server unlocks are not implemented."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-GUIDE",
+      "displayName": "Trần Duy · Chấp sự tiếp dẫn",
+      "classification": {
+        "subtype": "guide",
+        "functionTags": [
+          "living-world-design",
+          "anchor"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-GUIDE"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Existing station guide is preserved; identity/art are proposed. Giữ đầu mối HN01, tổng kết HN11 và xuất hành HN12."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-CULTIVATION",
+      "displayName": "Diệp Tĩnh · Giảng sư vận khí",
+      "classification": {
+        "subtype": "guide",
+        "functionTags": [
+          "living-world-design",
+          "anchor"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-CULTIVATION"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Existing station cultivation is preserved; identity/art are proposed. HN02, xác nhận tầng/M01–M03 và đối chiếu HN07."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-TRAINING",
+      "displayName": "Tạ Kiếm Sơn · Giáo tập luyện thuật",
+      "classification": {
+        "subtype": "guide",
+        "functionTags": [
+          "living-world-design",
+          "anchor"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-TRAINING"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Existing station training is preserved; identity/art are proposed. Giữ HN03–HN05, HN09 và HN10; phân biệt thử luyện với chiến đấu thật."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-PREPARATION",
+      "displayName": "Tô Nhược · Chấp sự Tư Vật Các",
+      "classification": {
+        "subtype": "guide",
+        "functionTags": [
+          "living-world-design",
+          "anchor"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-PREPARATION"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Existing station preparation is preserved; identity/art are proposed. Giữ HN06/HN08, sáu công thức và báo cáo EX; vẫn là writer/dịch vụ hiện có."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-HERBALIST",
+      "displayName": "Bạch Chỉ · Dược sư ngoại viện",
+      "classification": {
+        "subtype": "service",
+        "functionTags": [
+          "living-world-design",
+          "service"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-HERBALIST"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Gợi ý nguồn dược, đọc vật tư hồi phục và lối vào luyện chế; dịch vụ cùng inventory/receipt khi triển khai."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-FORGE",
+      "displayName": "Tống Thiết · Luyện khí sư",
+      "classification": {
+        "subtype": "service",
+        "functionTags": [
+          "living-world-design",
+          "service"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-FORGE"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Đọc/chuẩn bị trang bị và sáu công thức; mở rộng farm→nâng cấp ở K1 riêng sau."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-ROUTE-KEEPER",
+      "displayName": "Hứa Hành · Người giữ tuyến",
+      "classification": {
+        "subtype": "story",
+        "functionTags": [
+          "living-world-design",
+          "story"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-ROUTE-KEEPER"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Hiện thân vai Người giữ tuyến đã có trong văn bản HN/EX; làm nhân chứng và đầu mối ngoại vi."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-GATE-WARDEN",
+      "displayName": "Đinh Sóc · Hộ sơn đệ tử",
+      "classification": {
+        "subtype": "service",
+        "functionTags": [
+          "living-world-design",
+          "service"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-GATE-WARDEN"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Giải thích lối ngoại vi và lối xuất hành HN12; quyền/cửa chỉ mở theo nội dung thật."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-ARCHIVIST",
+      "displayName": "Lục Văn · Thủ thư Tàng Kinh",
+      "classification": {
+        "subtype": "service",
+        "functionTags": [
+          "living-world-design",
+          "service"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-ARCHIVIST"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Đọc Đạo đồ, nguồn thuật và tư liệu ấn cổ; thư tịch được đọc không tự cấp skill."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-BEAST-KEEPER",
+      "displayName": "A Ly · Người coi linh thú",
+      "classification": {
+        "subtype": "service",
+        "functionTags": [
+          "living-world-design",
+          "service"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-BEAST-KEEPER"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Trúc Cơ; có thể xuất hiện như NPC sinh hoạt sớm",
+      "runtimeNotes": "Concept brief only. Giới thiệu sinh cảnh/linh thú; tọa kỵ và thuần dưỡng mở cùng hệ tương ứng ở chặng sau."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-TEA",
+      "displayName": "Mạc Bà · Người coi trà đình",
+      "classification": {
+        "subtype": "story",
+        "functionTags": [
+          "living-world-design",
+          "ambient"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-TEA"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Tin đồn có hạn, dấu vết tuyến/quái và câu chuyện đệ tử; không phát daily lặp chỉ bằng mở thoại."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-DISCIPLE-WATER",
+      "displayName": "Kỷ An · Đệ tử vận khí",
+      "classification": {
+        "subtype": "story",
+        "functionTags": [
+          "living-world-design",
+          "ambient"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-DISCIPLE-WATER"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Tạo đối chiếu người mới cùng tu luyện; lời gợi ý ngắn khi đi ngang."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-DISCIPLE-SWORD",
+      "displayName": "Phùng Dã · Đệ tử luyện kiếm",
+      "classification": {
+        "subtype": "story",
+        "functionTags": [
+          "living-world-design",
+          "ambient"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-DISCIPLE-SWORD"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Bạn tập và đối thoại thao tác; tỷ thí tự nguyện ở K2 sau."
+    },
+    {
+      "domain": "npc",
+      "id": "NPC-HN-MESSENGER",
+      "displayName": "Tiểu Nghiên · Người đưa tin",
+      "classification": {
+        "subtype": "story",
+        "functionTags": [
+          "living-world-design",
+          "ambient"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "not_applicable",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "npcs",
+        "recordId": "NPC-HN-MESSENGER"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Hằng Nhạc · Ngưng Khí",
+      "runtimeNotes": "Concept brief only. Lời nhắn và nhịp hoạt động môn phái; hộp thư thưởng chỉ nối khi backend có."
+    },
+    {
+      "domain": "map",
+      "id": "MAP-HN-OUTER-DESIGN",
+      "displayName": "Ngoại vi Vân Khê",
+      "classification": {
+        "subtype": "planned-world",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "maps",
+        "recordId": "MAP-HN-OUTER-DESIGN"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí",
+      "runtimeNotes": "Tuyến farm đầu có đường quay về, nguồn vật liệu phân theo sinh cảnh."
+    },
+    {
+      "domain": "map",
+      "id": "MAP-HN-TRIAL-DESIGN",
+      "displayName": "Đàn khảo nghiệm Tam Ấn",
+      "classification": {
+        "subtype": "planned-world",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "maps",
+        "recordId": "MAP-HN-TRIAL-DESIGN"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí cuối",
+      "runtimeNotes": "Phiên khảo nghiệm cá nhân; giữ proof/checkpoint và thưởng hữu hạn hiện hành."
+    },
+    {
+      "domain": "map",
+      "id": "MAP-VH-ANCIENT-GROVE-DESIGN",
+      "displayName": "Cổ Lâm Phong Ấn",
+      "classification": {
+        "subtype": "planned-world",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "maps",
+        "recordId": "MAP-VH-ANCIENT-GROVE-DESIGN"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Trúc Cơ",
+      "runtimeNotes": "Nhánh bí cảnh và cốt truyện hậu nhập môn nối nguồn ma khí."
+    },
+    {
+      "domain": "item",
+      "id": "MAT-VH-LANG-FANG",
+      "displayName": "Vân nha",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "materials",
+        "recordId": "MAT-VH-LANG-FANG"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí → Trúc Cơ",
+      "runtimeNotes": "Chi tiết chuôi/mũi kiếm; ứng viên nguồn–chi K1 đầu. Recipe, drop rate and ownership pending; no live grant."
+    },
+    {
+      "domain": "item",
+      "id": "MAT-VH-WOOD-RESIN",
+      "displayName": "Mộc linh dịch",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "materials",
+        "recordId": "MAT-VH-WOOD-RESIN"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí → Trúc Cơ",
+      "runtimeNotes": "Mực dẫn/nhựa giữ phù của công thức hậu nhập môn. Recipe, drop rate and ownership pending; no live grant."
+    },
+    {
+      "domain": "item",
+      "id": "MAT-VH-JADE-SHELL",
+      "displayName": "Mảnh ngọc giáp",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "materials",
+        "recordId": "MAT-VH-JADE-SHELL"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí → Trúc Cơ",
+      "runtimeNotes": "Lót hộ thân/trang bị phòng vệ mới, tách ngọc nhiệm vụ HN08. Recipe, drop rate and ownership pending; no live grant."
+    },
+    {
+      "domain": "item",
+      "id": "MAT-VH-INK-WING",
+      "displayName": "Mặc dực",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "materials",
+        "recordId": "MAT-VH-INK-WING"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí → Trúc Cơ",
+      "runtimeNotes": "Bùa dò khí/lọc nhiễu; cần recipe mới trước mở drop. Recipe, drop rate and ownership pending; no live grant."
+    },
+    {
+      "domain": "item",
+      "id": "MAT-VH-PUPPET-SHARD",
+      "displayName": "Lõi khôi lỗi rạn",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "materials",
+        "recordId": "MAT-VH-PUPPET-SHARD"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí → Trúc Cơ",
+      "runtimeNotes": "Sửa/cấu tạo pháp khí hoặc bộ sưu tập; không loot từ HN10 thử lại. Recipe, drop rate and ownership pending; no live grant."
+    },
+    {
+      "domain": "item",
+      "id": "MAT-VH-SPORE",
+      "displayName": "Bào tử giữ khí",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "materials",
+        "recordId": "MAT-VH-SPORE"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí → Trúc Cơ",
+      "runtimeNotes": "Vật tư đề kháng khu vực sau nhập môn; balance pending. Recipe, drop rate and ownership pending; no live grant."
+    },
+    {
+      "domain": "item",
+      "id": "MAT-VH-SEAL-FRAGMENT",
+      "displayName": "Mảnh hắc phù",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "materials",
+        "recordId": "MAT-VH-SEAL-FRAGMENT"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí → Trúc Cơ",
+      "runtimeNotes": "Giải mã dấu niêm và linh phù mới; đòi nguồn–chi riêng. Recipe, drop rate and ownership pending; no live grant."
+    },
+    {
+      "domain": "item",
+      "id": "MAT-VH-QUIET-ASH",
+      "displayName": "Tĩnh niệm tro",
+      "classification": {
+        "subtype": "material",
+        "functionTags": [
+          "living-world-design"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "materials",
+        "recordId": "MAT-VH-QUIET-ASH"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí → Trúc Cơ",
+      "runtimeNotes": "Vật liệu tịnh hóa/diện mạo về sau; không tăng đạo lộ bằng nhặt đồ. Recipe, drop rate and ownership pending; no live grant."
+    },
+    {
+      "domain": "encounter",
+      "id": "MOB-VH-CLOUD-WOLF",
+      "displayName": "Vân Nha Lang",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "mob"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "MOB-VH-CLOUD-WOLF"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-LANG-FANG",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí đầu",
+      "runtimeNotes": "mob; Áp sát, thử đọc đòn. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "MOB-VH-TALISMAN-SPROUT",
+      "displayName": "Phù Mộc Tinh",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "mob"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "MOB-VH-TALISMAN-SPROUT"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-WOOD-RESIN",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí giữa",
+      "runtimeNotes": "mob; Thi triển từ xa. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "MOB-VH-JADE-SCUTE",
+      "displayName": "Ngọc Giáp Trùng",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "mob"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "MOB-VH-JADE-SCUTE"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-JADE-SHELL",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí giữa",
+      "runtimeNotes": "mob; Bruiser/chặn hướng. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "MOB-VH-INK-BAT",
+      "displayName": "Mặc Dực Bức",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "mob"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "MOB-VH-INK-BAT"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-INK-WING",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí giữa",
+      "runtimeNotes": "mob; Quấy rối/tầm xa. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "MOB-VH-CRACKED-PUPPET",
+      "displayName": "Khôi Lỗi Rạn Ngọc",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "mob"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "MOB-VH-CRACKED-PUPPET"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-PUPPET-SHARD",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí cuối",
+      "runtimeNotes": "mob; Construct đánh chậm. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "MOB-VH-SPIRIT-FUNGUS",
+      "displayName": "Thực Linh Khuẩn",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "mob"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "MOB-VH-SPIRIT-FUNGUS"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-SPORE",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí giữa",
+      "runtimeNotes": "mob; Kiểm soát vị trí. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "MOB-VH-DARK-TALISMAN-ROGUE",
+      "displayName": "Tán Tu Hắc Phù",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "mob"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "MOB-VH-DARK-TALISMAN-ROGUE"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-SEAL-FRAGMENT",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí cuối / Trúc Cơ đầu",
+      "runtimeNotes": "mob; Đối thủ người có chuẩn bị. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "MOB-VH-QUIET-WISP",
+      "displayName": "U Niệm",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "mob"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "MOB-VH-QUIET-WISP"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-QUIET-ASH",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Trúc Cơ",
+      "runtimeNotes": "mob; Linh thể/gợi mở mạch tối. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "ELITE-VH-WOLF-CALLER",
+      "displayName": "Lang Tuần Sơn",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "elite"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "ELITE-VH-WOLF-CALLER"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-LANG-FANG",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí giữa",
+      "runtimeNotes": "elite; Pack leader. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "ELITE-VH-JADE-GUARD",
+      "displayName": "Thiết Giáp Linh Trùng",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "elite"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "ELITE-VH-JADE-GUARD"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-JADE-SHELL",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí cuối",
+      "runtimeNotes": "elite; Armored elite. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "ELITE-VH-BLACK-SILK-ADEPT",
+      "displayName": "Phù Sư Hắc Lụa",
+      "classification": {
+        "subtype": "mob",
+        "functionTags": [
+          "living-world-design",
+          "elite"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "ELITE-VH-BLACK-SILK-ADEPT"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-SEAL-FRAGMENT",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Trúc Cơ đầu",
+      "runtimeNotes": "elite; Trap/control. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "BOSS-VH-CLOUD-WOLF-KING",
+      "displayName": "Vân Nha Lang Vương",
+      "classification": {
+        "subtype": "boss",
+        "functionTags": [
+          "living-world-design",
+          "boss"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "BOSS-VH-CLOUD-WOLF-KING"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-LANG-FANG",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí cuối",
+      "runtimeNotes": "boss; Thủ lĩnh ngoại vi / pilot solo. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "BOSS-HN-THREE-SEAL-PUPPET",
+      "displayName": "Tam Ấn Khôi Lỗi",
+      "classification": {
+        "subtype": "boss",
+        "functionTags": [
+          "living-world-design",
+          "boss"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "BOSS-HN-THREE-SEAL-PUPPET"
+      },
+      "relations": [],
+      "ownershipScope": "content-release",
+      "stage": "Ngưng Khí cuối",
+      "runtimeNotes": "boss; Chủ khảo cá nhân. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "BOSS-VH-ANCIENT-ROOT",
+      "displayName": "Cổ Mộc Trấn Khí",
+      "classification": {
+        "subtype": "boss",
+        "functionTags": [
+          "living-world-design",
+          "boss"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "BOSS-VH-ANCIENT-ROOT"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-WOOD-RESIN",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Trúc Cơ",
+      "runtimeNotes": "boss; Boss địa hình / bí cảnh nhóm đề xuất. Concept only; does not replace HN runtime or authorize repeat loot."
+    },
+    {
+      "domain": "encounter",
+      "id": "BOSS-VH-DARK-SEAL-OFFICER",
+      "displayName": "Hắc Ấn Chấp Sự",
+      "classification": {
+        "subtype": "boss",
+        "functionTags": [
+          "living-world-design",
+          "boss"
+        ],
+        "requirementsStatus": "pending"
+      },
+      "status": {
+        "implementation": "unreleased",
+        "decision": "pending",
+        "balance": "pending",
+        "art": "pending"
+      },
+      "source": {
+        "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+        "collection": "enemies",
+        "recordId": "BOSS-VH-DARK-SEAL-OFFICER"
+      },
+      "relations": [
+        {
+          "domain": "item",
+          "id": "MAT-VH-SEAL-FRAGMENT",
+          "relation": "grants"
+        },
+        {
+          "domain": "item",
+          "id": "MAT-VH-QUIET-ASH",
+          "relation": "grants"
+        }
+      ],
+      "ownershipScope": "content-release",
+      "stage": "Trúc Cơ cuối",
+      "runtimeNotes": "boss; Boss tu sĩ / truyện âm mưu. Concept only; does not replace HN runtime or authorize repeat loot."
     }
   ]
 }

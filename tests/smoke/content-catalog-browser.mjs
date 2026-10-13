@@ -17,7 +17,7 @@ try{
   await player.request('/register','POST',{login:'catalogplayer',password:'fixture-player-password'});const denied=await player.request('/admin/catalog');assert.equal(denied.status,403);assert.ok(denied.trace);
   await player.request('/characters','POST',{requestId:'catalog-profile',realmId:'hang-nhac-1',avatarId:'CHR-WANG-LIN-CHIBI',name:'Catalog Fixture'});
   const before=(await player.request('/characters?realmId=hang-nhac-1')).data;
-  await admin.request('/login','POST',{login:'catalogoperator',password:'fixture123'});const loaded=await admin.request('/admin/catalog');assert.equal(loaded.status,200);assert.equal(loaded.data.catalog.records.length,56);assert.equal(loaded.data.catalog.runtimeConsumable,false);
+  await admin.request('/login','POST',{login:'catalogoperator',password:'fixture123'});const loaded=await admin.request('/admin/catalog');assert.equal(loaded.status,200);assert.equal(loaded.data.catalog.records.length,96);assert.equal(loaded.data.catalog.runtimeConsumable,false);
   assert.equal((await admin.request('/admin/catalog','POST',{path:'server/data/profiles.sqlite'})).status,404);
   assert.deepEqual((await player.request('/characters?realmId=hang-nhac-1')).data,before);
   checks.push('Local short-password admin login; player registration remains strict; anonymous/player denied; catalog read does not mutate profiles');
@@ -25,15 +25,15 @@ try{
   vite=await startService(['node_modules/vite/bin/vite.js','--config',config,'--port','5248'],origin,{VITE_SERVER_URL:endpoint});
   browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});page=await browser.newPage({viewport:{width:1366,height:900}});page.on('pageerror',e=>errors.push(e.message));
   await page.goto(origin+'/admin.html?view=catalog');await page.locator('#admin-login').waitFor();await page.locator('#admin-login').fill('catalogoperator');await page.locator('#admin-password').fill('fixture123');await page.locator('[data-admin-form="login"] button').click();
-  const ready=()=>page.waitForFunction(()=>window.__gameAdmin?.().catalogRecords===56&&!window.__gameAdmin().busy);
-  await ready();assert.equal(await page.locator('.catalog-list tbody tr').count(),56);
+  const ready=()=>page.waitForFunction(()=>window.__gameAdmin?.().catalogRecords===96&&!window.__gameAdmin().busy);
+  await ready();assert.equal(await page.locator('.catalog-list tbody tr').count(),96);
   await page.locator('#catalog-domain').selectOption('cosmetic');await page.locator('[data-admin-form="catalog-filter"] button').click();assert.equal(await page.locator('.catalog-list tbody tr').count(),8);
   await page.locator('#catalog-subtype').selectOption('aura');await page.locator('[data-admin-form="catalog-filter"] button').click();assert.equal(await page.locator('.catalog-list tbody tr').count(),3);
   await page.locator('[data-catalog-record="cosmetic:aura-sinh-tu-wheel-v4"]').first().click();assert.match(await page.locator('#catalog-detail').innerText(),/static concept/);assert.match(await page.locator('#catalog-detail').innerText(),/Chưa triển khai/);
   await page.locator('#catalog-subtype').selectOption('outfit');await page.locator('[data-admin-form="catalog-filter"] button').click();assert.equal(await page.locator('.catalog-list tbody tr').count(),5);
   await page.locator('#catalog-subtype').selectOption('');
   checks.push('Retained appearance library: five outfits and three approved static aura concepts remain unreleased in admin catalog');
-  await page.locator('#catalog-query').fill('ngoc');await page.locator('#catalog-domain').selectOption('item');await page.locator('[data-admin-form="catalog-filter"] button').click();assert.equal(await page.locator('.catalog-list tbody tr').count(),2);
+  await page.locator('#catalog-query').fill('ngoc');await page.locator('#catalog-domain').selectOption('item');await page.locator('[data-admin-form="catalog-filter"] button').click();assert.equal(await page.locator('.catalog-list tbody tr').count(),3);
   await page.locator('[data-catalog-record="item:hn-training-jade"]').first().click();await page.locator('#catalog-detail').getByRole('button',{name:'recipe:hn-refine-training-jade',exact:true}).first().click();assert.match(await page.locator('#catalog-detail').innerText(),/Tiêu nguyên liệu/);assert.match(await page.locator('#catalog-detail').innerText(),/Biến đổi cùng một món/);
   await page.locator('#catalog-query').fill('');await page.locator('#catalog-subtype').selectOption('artifact');await page.locator('[data-admin-form="catalog-filter"] button').click();assert.equal(await page.locator('.catalog-list tbody tr').count(),1);await page.locator('#catalog-subtype').selectOption('');await page.locator('#catalog-query').fill('');await page.locator('#catalog-domain').selectOption('item');await page.locator('#catalog-implementation').selectOption('implemented-local');await page.locator('[data-admin-form="catalog-filter"] button').click();assert.equal(await page.locator('.catalog-list tbody tr').count(),3);
   await page.locator('#catalog-domain').selectOption('mount');await page.locator('[data-admin-form="catalog-filter"] button').click();assert.match(await page.locator('.catalog-list').innerText(),/Chưa có bản ghi/);

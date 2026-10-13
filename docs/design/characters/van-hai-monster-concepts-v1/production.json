@@ -1,0 +1,666 @@
+{
+  "schema": "van-hai-monster-concepts-1",
+  "id": "VH-MONSTER-CONCEPTS-01",
+  "date": "2026-10-13",
+  "generator": "built-in-imagegen",
+  "sourcePlan": "docs/design/world/van-hai-living-world-v1/plan.json",
+  "status": "concept-candidate",
+  "runtimeConsumable": false,
+  "artApproved": false,
+  "ownerApproved": false,
+  "directionsProduced": [
+    "southeast"
+  ],
+  "directionsPending": [
+    "south",
+    "southwest",
+    "west",
+    "northwest",
+    "north",
+    "northeast",
+    "east"
+  ],
+  "inputs": [
+    {
+      "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+      "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+    },
+    {
+      "file": "docs/design/characters/sect-encounter-actors-v2/native-identity-matrix.png",
+      "sha256": "d5df2b6ca30c0c2cf999f8a2350d7be596602330c17a45fdf99b2fecabfbd035"
+    }
+  ],
+  "actors": [
+    {
+      "id": "MOB-VH-CLOUD-WOLF",
+      "name": "Vân Nha Lang",
+      "slug": "cloud-wolf",
+      "rank": "mob",
+      "stage": "Ngưng Khí đầu",
+      "zone": "Ngoại vi · rìa đường",
+      "bodyHeightPx": 50,
+      "canvas": [
+        128,
+        96
+      ],
+      "pivot": [
+        64,
+        88
+      ],
+      "liftPx": 0,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/cloud-wolf.txt",
+      "raw": "raw/cloud-wolf.png",
+      "sprite": "sprites/cloud-wolf.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+        "docs/design/characters/sect-encounter-actors-v2/native-identity-matrix.png"
+      ],
+      "role": "Áp sát, thử đọc đòn",
+      "rawSha256": "eb7955ad246be23a405bd90e0e79bc0780c214db30fb2db67886651b7c4f2a5c",
+      "spriteSha256": "edb6ac5a36eb41290746b4948f5aa6a57af14a91f6e9fe867e6500c1687e2285",
+      "promptSha256": "f9915d66b4fe29d5edb055c53d23f23d7cbd5284af15244304a17a292ffded2e",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 50,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 0
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        },
+        {
+          "file": "docs/design/characters/sect-encounter-actors-v2/native-identity-matrix.png",
+          "sha256": "d5df2b6ca30c0c2cf999f8a2350d7be596602330c17a45fdf99b2fecabfbd035"
+        }
+      ],
+      "nativeBounds": [
+        25,
+        38,
+        81,
+        88
+      ]
+    },
+    {
+      "id": "MOB-VH-TALISMAN-SPROUT",
+      "name": "Phù Mộc Tinh",
+      "slug": "talisman-sprout",
+      "rank": "mob",
+      "stage": "Ngưng Khí giữa",
+      "zone": "Ngoại vi · dược cốc",
+      "bodyHeightPx": 58,
+      "canvas": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "liftPx": 0,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/talisman-sprout.txt",
+      "raw": "raw/talisman-sprout.png",
+      "sprite": "sprites/talisman-sprout.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png"
+      ],
+      "role": "Thi triển từ xa",
+      "rawSha256": "11228a7f6d9eb75e035b920b6020b41c2eeaafc1fdf52c905387cc387996ec0c",
+      "spriteSha256": "2167c8f680a3eda3a22339a843de969a77fc73c1aef08405b583ed0b02e06f12",
+      "promptSha256": "27ade8aef75d448a24d3a6edb8263b7f142d6da5ad7a2a829da9f2969a96f8ff",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 58,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 0
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "nativeBounds": [
+        39,
+        30,
+        85,
+        88
+      ]
+    },
+    {
+      "id": "MOB-VH-JADE-SCUTE",
+      "name": "Ngọc Giáp Trùng",
+      "slug": "jade-scute",
+      "rank": "mob",
+      "stage": "Ngưng Khí giữa",
+      "zone": "Ngoại vi · bãi ngọc vụn",
+      "bodyHeightPx": 46,
+      "canvas": [
+        144,
+        96
+      ],
+      "pivot": [
+        72,
+        88
+      ],
+      "liftPx": 0,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/jade-scute.txt",
+      "raw": "raw/jade-scute.png",
+      "sprite": "sprites/jade-scute.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png"
+      ],
+      "role": "Bruiser/chặn hướng",
+      "rawSha256": "50d5b717f5cb2abf9ffeb08e3da7557a0efe47517fa086f1ec9e06aa6cfc54e6",
+      "spriteSha256": "64b6e6d8bcf592a20ca177a955ca04ea648f5f9261f9e746cc427c330f1b650f",
+      "promptSha256": "549f5f598f7566e0d8eb00c5f8988c0493164a7cac9e112834dd78982816b889",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 46,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 0
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "nativeBounds": [
+        37,
+        42,
+        104,
+        88
+      ]
+    },
+    {
+      "id": "MOB-VH-INK-BAT",
+      "name": "Mặc Dực Bức",
+      "slug": "ink-bat",
+      "rank": "mob",
+      "stage": "Ngưng Khí giữa",
+      "zone": "Ngoại vi · lạch mực",
+      "bodyHeightPx": 42,
+      "canvas": [
+        160,
+        96
+      ],
+      "pivot": [
+        80,
+        88
+      ],
+      "liftPx": 16,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/ink-bat.txt",
+      "raw": "raw/ink-bat.png",
+      "sprite": "sprites/ink-bat.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png"
+      ],
+      "role": "Quấy rối/tầm xa",
+      "rawSha256": "0b66f39dd9493905a0adbbe1db299b1823741e2d03bf4760ebbb7a78bec283ad",
+      "spriteSha256": "dd8325da17973a3766ee30473e44f527cf680a759ec497ac3f7ac041b59fa4c2",
+      "promptSha256": "f9d6cfce3bbd2a2af03285fa3df89826205fe30e59b409ec818a76e14b0c89e3",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 42,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 16
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "nativeBounds": [
+        44,
+        46,
+        110,
+        88
+      ]
+    },
+    {
+      "id": "MOB-VH-CRACKED-PUPPET",
+      "name": "Khôi Lỗi Rạn Ngọc",
+      "slug": "cracked-puppet",
+      "rank": "mob",
+      "stage": "Ngưng Khí cuối",
+      "zone": "Ngoại vi · di tích cạnh đường",
+      "bodyHeightPx": 72,
+      "canvas": [
+        128,
+        104
+      ],
+      "pivot": [
+        64,
+        96
+      ],
+      "liftPx": 0,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/cracked-puppet.txt",
+      "raw": "raw/cracked-puppet.png",
+      "sprite": "sprites/cracked-puppet.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png"
+      ],
+      "role": "Construct đánh chậm",
+      "rawSha256": "03c899787908f0718b7d19162c4f9c76f328bf50ca67546b195e522e7894eb17",
+      "spriteSha256": "aa1d8c38fb255cd66e674b4ac7726ee4715b9858cf09fd53b3d2ff002ce410af",
+      "promptSha256": "7cb90e63d2e838bc634a10dc855eb463db8fdeaa0da68bbdd6fe717a3c2880f4",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 72,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 0
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "nativeBounds": [
+        33,
+        24,
+        103,
+        96
+      ]
+    },
+    {
+      "id": "MOB-VH-SPIRIT-FUNGUS",
+      "name": "Thực Linh Khuẩn",
+      "slug": "spirit-fungus",
+      "rank": "mob",
+      "stage": "Ngưng Khí giữa",
+      "zone": "Ngoại vi · dược cốc ẩm",
+      "bodyHeightPx": 48,
+      "canvas": [
+        128,
+        96
+      ],
+      "pivot": [
+        64,
+        88
+      ],
+      "liftPx": 0,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/spirit-fungus.txt",
+      "raw": "raw/spirit-fungus.png",
+      "sprite": "sprites/spirit-fungus.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png"
+      ],
+      "role": "Kiểm soát vị trí",
+      "rawSha256": "a416dc618847c1340d52a51f459a40b08faac862c3e0f339fc72b6c08195a2e7",
+      "spriteSha256": "bb597d16ad247f846e5b7c8f017d7e6e1d20e743ed034c9ec147fabc53267a52",
+      "promptSha256": "3b3da506df41760294f0e657c40f7f33a53d5c69445a3cad49b5e148cb200993",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 48,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 0
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "nativeBounds": [
+        38,
+        40,
+        85,
+        88
+      ]
+    },
+    {
+      "id": "MOB-VH-DARK-TALISMAN-ROGUE",
+      "name": "Tán Tu Hắc Phù",
+      "slug": "dark-talisman-rogue",
+      "rank": "mob",
+      "stage": "Ngưng Khí cuối / Trúc Cơ đầu",
+      "zone": "Đường tuần sơn xa",
+      "bodyHeightPx": 80,
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "liftPx": 0,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/dark-talisman-rogue.txt",
+      "raw": "raw/dark-talisman-rogue.png",
+      "sprite": "sprites/dark-talisman-rogue.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png"
+      ],
+      "role": "Đối thủ người có chuẩn bị",
+      "rawSha256": "66990deac2690e25807a180bf99830537d81c5d921655792c6b683e3f70b4197",
+      "spriteSha256": "e4aea4c73db979236765850baa03fd8af3357f57321cdbb6e5eb7cd2b24c2563",
+      "promptSha256": "9c9fa2aa3a416be9407be48b6a7a218fbe3efa0363aa0f39b67aae09556af644",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 80,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 0
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "nativeBounds": [
+        23,
+        8,
+        77,
+        88
+      ]
+    },
+    {
+      "id": "MOB-VH-QUIET-WISP",
+      "name": "U Niệm",
+      "slug": "quiet-wisp",
+      "rank": "mob",
+      "stage": "Trúc Cơ",
+      "zone": "Cổ Lâm · ngoài phong ấn",
+      "bodyHeightPx": 58,
+      "canvas": [
+        128,
+        112
+      ],
+      "pivot": [
+        64,
+        100
+      ],
+      "liftPx": 8,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/quiet-wisp.txt",
+      "raw": "raw/quiet-wisp.png",
+      "sprite": "sprites/quiet-wisp.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png"
+      ],
+      "role": "Linh thể/gợi mở mạch tối",
+      "rawSha256": "28f2b9388376e7370bfe0a45117c107e526467f1f0ed13daa12f30d249bcf4b4",
+      "spriteSha256": "43ae13d44b254be52db01e6273f48ff5645a101b1dd666f82d3c3660c76a479a",
+      "promptSha256": "dc6ef5f4050ad8d5185294303e78582146ff5d08523e407b1485d9ea9cb3cf3b",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 57,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 8
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "nativeBounds": [
+        42,
+        43,
+        88,
+        100
+      ]
+    },
+    {
+      "id": "ELITE-VH-WOLF-CALLER",
+      "name": "Lang Tuần Sơn",
+      "slug": "wolf-caller",
+      "rank": "elite",
+      "stage": "Ngưng Khí giữa",
+      "zone": "Ngoại vi · bãi tuần sơn",
+      "bodyHeightPx": 65,
+      "canvas": [
+        160,
+        112
+      ],
+      "pivot": [
+        80,
+        104
+      ],
+      "liftPx": 0,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/wolf-caller.txt",
+      "raw": "raw/wolf-caller.png",
+      "sprite": "sprites/wolf-caller.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/cloud-wolf.png"
+      ],
+      "role": "Pack leader",
+      "rawSha256": "844d715877eb43b1b5e33b6dbf837e542b9e28a6df0def92cb0357a61a40a4c2",
+      "spriteSha256": "37ad80888c500477355ceb7a6b5b0fd58a8305cbfe5f94b6f895c1ab7c8d349d",
+      "promptSha256": "e92d41c76479279a8322e63eac1c9388fa2f332b026b8bb8cd04e8c36f205970",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 65,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 0
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        },
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/cloud-wolf.png",
+          "sha256": "eb7955ad246be23a405bd90e0e79bc0780c214db30fb2db67886651b7c4f2a5c"
+        }
+      ],
+      "nativeBounds": [
+        24,
+        39,
+        98,
+        104
+      ]
+    },
+    {
+      "id": "ELITE-VH-JADE-GUARD",
+      "name": "Thiết Giáp Linh Trùng",
+      "slug": "jade-guard",
+      "rank": "elite",
+      "stage": "Ngưng Khí cuối",
+      "zone": "Ngoại vi · bãi ngọc",
+      "bodyHeightPx": 62,
+      "canvas": [
+        176,
+        112
+      ],
+      "pivot": [
+        88,
+        104
+      ],
+      "liftPx": 0,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/jade-guard.txt",
+      "raw": "raw/jade-guard.png",
+      "sprite": "sprites/jade-guard.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/jade-scute.png"
+      ],
+      "role": "Armored elite",
+      "rawSha256": "552ae704ff8529aff0f1642928d2ebb519550737a4821b1c298a13d1010c46a3",
+      "spriteSha256": "c7631ab47215a6e625de61cb4a44eaf5bb461b22734b0f54d29a5d2f28678c11",
+      "promptSha256": "4d7d1b821ee6e6d8b8cbaeec84de7448f9d9dc5c782abd7e4c23a81839444818",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 62,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 0
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        },
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/jade-scute.png",
+          "sha256": "50d5b717f5cb2abf9ffeb08e3da7557a0efe47517fa086f1ec9e06aa6cfc54e6"
+        }
+      ],
+      "refinement": {
+        "prompt": "prompts/jade-guard-refine.txt",
+        "promptSha256": "906ef9074a971a64c1b5f52ef3ad7dc5384c4fd95d8e1561a18b29299ccd3a1d",
+        "editTarget": "raw/jade-guard-v1-rejected.png",
+        "editTargetSha256": "2fb6dad7afc58f42868c09fa9d87a5a1260bcdd040b8e64e379435cf2b349b7f",
+        "reason": "Initial elite too close to ordinary shell; darker material, stepped armor, forward bronze shield and V seam."
+      },
+      "nativeBounds": [
+        38,
+        42,
+        131,
+        104
+      ]
+    },
+    {
+      "id": "ELITE-VH-BLACK-SILK-ADEPT",
+      "name": "Phù Sư Hắc Lụa",
+      "slug": "black-silk-adept",
+      "rank": "elite",
+      "stage": "Trúc Cơ đầu",
+      "zone": "Cổ Lâm · phù thất ngoài",
+      "bodyHeightPx": 80,
+      "canvas": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "liftPx": 0,
+      "direction": "southeast",
+      "pose": "neutral",
+      "status": "concept-candidate",
+      "artApproved": false,
+      "ownerApproved": false,
+      "runtimeImplemented": false,
+      "animationProduced": false,
+      "prompt": "prompts/black-silk-adept.txt",
+      "raw": "raw/black-silk-adept.png",
+      "sprite": "sprites/black-silk-adept.png",
+      "references": [
+        "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png"
+      ],
+      "role": "Trap/control",
+      "rawSha256": "29d9fa1a1522fa23f339ecf42951f60e893a5e298bba37235fb71502d0ecf0f4",
+      "spriteSha256": "4d31b88958d864174d9cc690e4f0a91422e303cb56298b9c785cc5cd3538ce81",
+      "promptSha256": "4393fcceebe2e6d623d300c6056e412ecf060bc168439d14c3acfedb95e5960b",
+      "pixelsResampled": true,
+      "measuredBodyHeightPx": 80,
+      "presentation": {
+        "shadowBaked": false,
+        "vfxBaked": false,
+        "liftPx": 0
+      },
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/wang-lin-pixel-production-v2/native-eight-directions-2x.png",
+          "sha256": "264b8979e13dde6c3c8c2de88f6c3f3c48241b664f00bbeb15a2dbf915d3c7d5"
+        }
+      ],
+      "nativeBounds": [
+        33,
+        8,
+        74,
+        88
+      ]
+    }
+  ],
+  "sourcePlanSha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576",
+  "approvedPlayerReference": {
+    "file": "docs/design/characters/wang-lin-pixel-production-v2/masters/southeast.png",
+    "sha256": "f89dcf4171aa70e1411553498e8b1f12b3a2b46287272f196604e537e032af54",
+    "canvas": [
+      64,
+      96
+    ],
+    "pivot": [
+      32,
+      88
+    ],
+    "bodyHeightPx": 80,
+    "modified": false
+  }
+}

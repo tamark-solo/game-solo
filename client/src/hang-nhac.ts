@@ -13,6 +13,7 @@ import * as THREE from 'three';
 import { ProfileSession } from './profiles';
 import { CHARACTER_INFO, isAvatarId, type AvatarId } from '../../shared/profiles';
 import { applyR01Movement } from '../../shared/skills/movement';
+import { prepareWindPrediction } from '@shared/skills/dash-motion';
 import { SkillPresentation } from './skills/three-presentation';
 import { SkillSession } from './skills/session';
 import { SECT_STATIONS, progressionLabel, type SectResult, type SectView } from '../../shared/sect';
@@ -91,8 +92,8 @@ const sect = new SectUI({send:command=>{
 const attached = new WeakSet<object>();
 const network = new NetworkSession(readInput, updateStatus, { roomName: HANG_NHAC_ROOM,
   recover: true,
-  joinOptions: () => entry?entry.profiles.joinOptions():({ mapVersion: HANG_NHAC.version, accountToken: profiles.token }), movementStep:(state,input,dt)=>((state as {scene?:string}).scene&&(state as {scene?:string}).scene!=='hub'?applyChapterMovement:applyR01Movement)(state,input,dt),
-  motionFields: ['motionLocked','dashVX','dashVY','scene','hp'], resumeToken: () => profiles.active()?.avatarId === avatar.value ? profiles.active()?.reconnectionToken : undefined,
+  joinOptions: () => entry?entry.profiles.joinOptions():({ mapVersion: HANG_NHAC.version, accountToken: profiles.token }), movementStep:(state,input,dt,interval)=>{prepareWindPrediction(state,interval,dt);((state as {scene?:string}).scene&&(state as {scene?:string}).scene!=='hub'?applyChapterMovement:applyR01Movement)(state,input,dt);},
+  motionFields: ['motionLocked','dashVX','dashVY','scene','hp','castId','castSkill','castStartedAt','castAimX','castAimY'], resumeToken: () => profiles.active()?.avatarId === avatar.value ? profiles.active()?.reconnectionToken : undefined,
   connected: room => {
     questMotion.reset();
     pixelPlayer.reset();

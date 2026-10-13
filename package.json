@@ -30,6 +30,7 @@
     "test:hang-nhac-r01": "tsx tests/smoke/hang-nhac-r01-online-smoke.ts && node tests/smoke/hang-nhac-r01-browser-smoke.mjs",
     "test:skill-animation": "tsx tests/smoke/hang-nhac-skill-animation-smoke.ts",
     "test:skill-aim": "tsx tests/smoke/hang-nhac-skill-input-online-smoke.ts && tsx tests/smoke/hang-nhac-skill-aim-smoke.mjs",
+    "test:wind-motion": "node --import tsx --test tests/unit/wind-motion.test.ts && node --import tsx tests/smoke/hang-nhac-wind-motion-smoke.mjs",
     "test:skill-vfx": "node tests/smoke/skill-vfx-render-smoke.mjs",
     "test:skill-body": "node tests/smoke/skill-body-render-smoke.mjs",
     "test:hang-nhac-sect": "tsx tests/smoke/hang-nhac-sect-online-smoke.ts && tsx tests/smoke/hang-nhac-sect-browser-smoke.ts",

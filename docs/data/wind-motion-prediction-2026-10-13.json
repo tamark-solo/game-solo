@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-13",
+  "baseCommit": "b51f8cf",
+  "bug": "Snapshot dash velocity replayed beyond the confirmed wind interval",
+  "baseline": {
+    "direction": "west",
+    "maxBacktrackPx": 65.74280672723194,
+    "overshootPx": 74.62367871258857,
+    "log": "artifacts/wind-motion-baseline.log"
+  },
+  "fix": "Mirror confirmed cast metadata; derive each replay interval from snapshot serverTime and acknowledged input sequence; use shared bounded dash motion",
+  "verified": [
+    {
+      "oneWayLatencyMs": 0,
+      "nativeGpu": false,
+      "shaderWarmupCast": true,
+      "cases": [
+        {
+          "direction": "east",
+          "renderFrames": 15,
+          "castFrames": 8,
+          "maxBacktrackPx": 0.000016554398598600528,
+          "overshootPx": 0.00001944639620887756,
+          "serverDistancePx": 160
+        },
+        {
+          "direction": "west",
+          "renderFrames": 17,
+          "castFrames": 8,
+          "maxBacktrackPx": 0.000013994339269629563,
+          "overshootPx": 0.00001643910309212515,
+          "serverDistancePx": 160
+        }
+      ]
+    },
+    {
+      "oneWayLatencyMs": 120,
+      "nativeGpu": true,
+      "shaderWarmupCast": true,
+      "cases": [
+        {
+          "direction": "east",
+          "renderFrames": 76,
+          "castFrames": 32,
+          "maxBacktrackPx": 0,
+          "overshootPx": 0,
+          "serverDistancePx": 160
+        },
+        {
+          "direction": "west",
+          "renderFrames": 80,
+          "castFrames": 37,
+          "maxBacktrackPx": 0,
+          "overshootPx": 0,
+          "serverDistancePx": 160
+        }
+      ]
+    }
+  ],
+  "unitTests": {
+    "passed": 22,
+    "newWindTests": 5,
+    "eightDirections": true,
+    "shift": true,
+    "ownerCollision": true,
+    "exteriorCollision": true,
+    "longAckGap": true
+  },
+  "regressions": {
+    "r01": true,
+    "skillAim": true,
+    "lessons": true,
+    "reloadReconnectAndRestart": true,
+    "typecheck": true,
+    "viteBuild": true
+  },
+  "renderSampling": "Warm up shader and texture uploads once; assert at least 10 RAF samples per measured dash. Software WebGL and native GPU were checked.",
+  "rangePx": 160,
+  "durationMs": 250,
+  "gameplayCostsAndReceiptsChanged": false,
+  "ownerMapEdited": false,
+  "ownerDatabaseUsedForTests": false,
+  "artOrCameraChanged": false,
+  "logs": [
+    "artifacts/wind-motion-final.log",
+    "artifacts/wind-motion-latency-final.log",
+    "artifacts/wind-motion-unit.log",
+    "artifacts/wind-r01-regression.log",
+    "artifacts/wind-aim-regression.log",
+    "artifacts/wind-lessons-regression.log",
+    "artifacts/wind-reload-regression.log"
+  ],
+  "screenshot": "artifacts/wind-motion/confirmed-wind.png"
+}

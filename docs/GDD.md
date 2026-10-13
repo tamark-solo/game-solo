@@ -1,5 +1,9 @@
 # GDD — Vân Hải Đạo Đồ: MMORPG Tu Tiên
 
+**Tạo hình đối thủ 13/10/2026:** theo ưu tiên mới, [8 quái thường và 3 tinh anh Pixel01](design/characters/van-hai-monster-concepts-v1/README.md) có identity master và sân đối chiếu với Vương Lâm/map1×. Mỗi mẫu một neutral Đông Nam; raw/body/shadow/VFX tách, giữ morphology theo loài. Đợi duyệt hình trước bảy hướng còn lại và năm nhóm animation; chưa thay NPC/quái live, behavior, reward hoặc mở farm. Đây là sản xuất concept của roster đã đề xuất, không nâng phiên bản GDD hoặc suy duyệt bằng test.
+
+**NPC/sinh cảnh 13/10/2026:** owner chọn [chốt dàn NPC và brief concept trước](VAN-HAI-LIVING-WORLD-PLAN.md). Gói đề xuất có14 NPC (bốn station giữ nguyên +mười vai mới), tám quái thường, ba tinh anh và bốn boss nối dấu niêm→ngoại vi→khảo nghiệm→cổ lâm. [Review](design/world/van-hai-living-world-v1/index.html) và catalog96record tách role runtime với danh tính/ART mới. Chưa đổi map, nhiệm vụ/thưởng, HP/MP, NPC global state hoặc mở Đọa Ma; số liệu/cơ chế mới theo prototype/gate riêng. Đây là phụ lục thiết kế, chưa nâng số phiên bản hoặc duyệt toàn bộ nội dung.
+
 **Bản trải nghiệm 12/10/2026 theo phạm vi owner chọn:** đã tích hợp [Hằng Nhạc HN01–HN12 và nhánh EX01–EX04](HANG-NHAC-CHAPTER-RUNTIME.md), sáu công thức, save/proof/checkpoint server và bộ pixel Vương Lâm mới. Các đoạn “chưa mở runtime” ở ghi chú nghiên cứu 10–11/10 bên dưới ghi trạng thái lúc thiết kế; xem tài liệu bản trải nghiệm để biết phần đã triển khai và phần còn thử. Map ngoại vi/ART hai nhân vật còn lại/tăng chỉ số M03–M04 vẫn cần hoàn thiện, không suy duyệt toàn bộ GDD từ tích hợp.
 
 **Nhận diện 10/10/2026:** owner chốt tên **Vân Hải Đạo Đồ**, câu dẫn **“Đạo chưa có đường. Ta tự mở.”** Các ý tưởng mới về ân oán, mưu trí vượt cảnh giới và tự lập đạo đang ở bước thiết kế, chưa là gameplay đã triển khai. Đổi tên game chưa thay bộ ba nhân vật hoặc tuyến Hằng Nhạc hiện hành; các nhắc tới Tiên Nghịch bên dưới là nguồn truyện tham khảo.

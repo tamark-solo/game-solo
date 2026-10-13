@@ -1,0 +1,1693 @@
+{
+  "schema": "van-hai-living-world-plan-1",
+  "id": "VH-LIVING-WORLD-01",
+  "date": "2026-10-13",
+  "status": "design-reference",
+  "runtimeConsumable": false,
+  "ownerApproved": false,
+  "artApproved": false,
+  "scope": "NPC identities, dialogue and staging; monster/boss scenarios and concept briefs. User chose design/concept brief first; no map/DB/gameplay/ART changes.",
+  "basis": {
+    "gdd": "docs/GDD.md",
+    "gddVersion": "0.32",
+    "runtime": "docs/GAME-ACTOR-RUNTIME.md",
+    "worldArt": "docs/HANG-NHAC-VAN-NGOC-BASELINE.md",
+    "core": "docs/ARCHITECTURE.md",
+    "contracts": "docs/MMORPG-SYSTEM-CONTRACTS.md"
+  },
+  "runtimeBaselines": [
+    {
+      "id": "HN-E01",
+      "body": "Lang02",
+      "purpose": "HN05 áp sát",
+      "note": "Ai/ID/finite receipt hiện hành giữ riêng"
+    },
+    {
+      "id": "HN-E02",
+      "body": "Lang02 trong bản thử",
+      "purpose": "Đối luyện thi triển",
+      "note": "Caster body mới là đề xuất, không suy đã có"
+    },
+    {
+      "id": "HN-E03",
+      "body": "Khôi Lỗi02",
+      "purpose": "HN10 chủ khảo",
+      "note": "104 world px; body176×176/pivot88,160"
+    }
+  ],
+  "artContract": {
+    "style": "Pixel-chibi theo Vương Lâm Pixel02 đã duyệt; đồng/ngọc/mây của map Vân Ngọc V2",
+    "playerBasis": "docs/design/characters/actor-animation-standard-v2/approval.json",
+    "npc": {
+      "logicalFrame": [
+        64,
+        96
+      ],
+      "logicalFoot": [
+        32,
+        88
+      ],
+      "bodyHeightMaxPx": 80,
+      "wideArtCanvas": [
+        112,
+        96
+      ],
+      "wideArtFoot": [
+        56,
+        88
+      ],
+      "headRatio": "Giữ tỷ lệ R01; khác nhận diện qua tóc, tuổi, trang phục, dáng và đạo cụ"
+    },
+    "camera": "1× unchanged",
+    "directions": 8,
+    "fx": "Separate warning, weapon/contact, aura and ground shadow; body/frame pixels not effects size",
+    "quality": "Neutral calibration, measured world foot, native 1× and integer 2×, approval separate from test"
+  },
+  "references": [
+    {
+      "id": "ZX-forge",
+      "game": "Tru Tiên PC",
+      "title": "Luyện khí và NPC luyện khí sư",
+      "date": "2009-09-18",
+      "url": "https://zhuxian.wanmei.com/infostation/xtjs/zbxt/20090918/25301.shtml",
+      "learning": "NPC chuyên nghề nối nguyên liệu với trang bị; kết quả sức mạnh có dấu hiệu nhìn thấy. Dùng mô hình vai trò, biên tập luật kinh tế riêng."
+    },
+    {
+      "id": "WD-sect",
+      "game": "Vấn Đạo Mobile",
+      "title": "Nhiệm vụ sư môn",
+      "date": "historical-guide",
+      "url": "https://wd.leiting.com/home/game/game_data.php?level=2&level_id=50&show_type=1",
+      "learning": "Người thầy tạo nhịp nhận việc–ra ngoài–trở về trong đời sống môn phái. Mỗi vòng cần mục đích và trạng thái hoàn thành rõ."
+    },
+    {
+      "id": "ZX-temple",
+      "game": "Tru Tiên PC",
+      "title": "Thiên Đế Bảo Khố — tuyến NPC và boss",
+      "date": "2024-10-25",
+      "url": "https://zhuxian.wanmei.com/net/241018show/index.html",
+      "learning": "NPC dẫn đoàn và manh mối nối các cuộc chạm trán thành truyện; từng boss thay đổi tình thế và không gian giao chiến."
+    },
+    {
+      "id": "WD-demon",
+      "game": "Vấn Đạo Mobile",
+      "title": "Thượng cổ yêu vương",
+      "date": "historical-guide",
+      "url": "https://wd.leiting.com/home/game/game_data.php?level=2&level_id=84&show_type=1",
+      "learning": "Boss phát sinh từ hoạt động khám phá có quyền tham gia và nhận thưởng riêng. Cần chốt ownership/lifecycle trước khi mở farm chia sẻ."
+    },
+    {
+      "id": "ZX-small-story",
+      "game": "Tru Tiên Mobile",
+      "title": "Hướng dẫn khám phá nhiệm vụ",
+      "date": "2017-08-01",
+      "url": "https://zx.wanmei.com/data/mobile/xd/ycrw/20170801/205207.shtml",
+      "learning": "Các việc nhỏ như luyện dược và quan sát vật thể tạo chuyện bên cạnh chính tuyến. NPC đời thường cần việc đang làm và một điểm để người chơi tò mò."
+    }
+  ],
+  "maps": [
+    {
+      "id": "MAP-HN-OUTER-DESIGN",
+      "name": "Ngoại vi Vân Khê",
+      "stage": "Ngưng Khí",
+      "kind": "planned-world",
+      "runtimeBasis": "Cảnh ngoại vi riêng HN05/EX hiện dùng nền code 1280×896",
+      "zones": [
+        "Rìa đường môn phái",
+        "Dược cốc",
+        "Bãi ngọc vụn",
+        "Lạch mực",
+        "Đường tuần sơn"
+      ],
+      "purpose": "Tuyến farm đầu có đường quay về, nguồn vật liệu phân theo sinh cảnh.",
+      "placementStatus": "concept-only; chưa là navigation/portal production"
+    },
+    {
+      "id": "MAP-HN-TRIAL-DESIGN",
+      "name": "Đàn khảo nghiệm Tam Ấn",
+      "stage": "Ngưng Khí cuối",
+      "kind": "planned-world",
+      "runtimeBasis": "Cảnh trial/checkpoint HN10 hiện có",
+      "zones": [
+        "Sân đối luyện",
+        "Vòng thử thuật",
+        "Đài Tam Ấn"
+      ],
+      "purpose": "Phiên khảo nghiệm cá nhân; giữ proof/checkpoint và thưởng hữu hạn hiện hành.",
+      "placementStatus": "brief ART cho scene riêng hiện có; không đổi stage gameplay"
+    },
+    {
+      "id": "MAP-VH-ANCIENT-GROVE-DESIGN",
+      "name": "Cổ Lâm Phong Ấn",
+      "stage": "Trúc Cơ",
+      "kind": "planned-world",
+      "runtimeBasis": "Chưa runtime",
+      "zones": [
+        "Lâm môn",
+        "Cội trấn khí",
+        "Phù thất bỏ hoang"
+      ],
+      "purpose": "Nhánh bí cảnh và cốt truyện hậu nhập môn nối nguồn ma khí.",
+      "placementStatus": "concept-only; party/map/loot còn phải đặc tả"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "NPC-HN-GUIDE",
+      "name": "Trần Duy",
+      "role": "Chấp sự tiếp dẫn",
+      "group": "anchor",
+      "wave": "A",
+      "zone": "Sân môn phái",
+      "marker": {
+        "x": 1536,
+        "y": 1168,
+        "kind": "existing-station"
+      },
+      "look": "Nam trung niên; đạo bào xám ngà, viền đồng mảnh, bảng ngọc và túi thẻ môn phái.",
+      "personality": "Điềm đạm, nhớ việc người chơi đã làm; lời ngắn, chắc.",
+      "task": "Giữ đầu mối HN01, tổng kết HN11 và xuất hành HN12.",
+      "quote": "Nhập môn chỉ cần một bước. Đi hết đường này, ngươi phải tự biết bước tiếp.",
+      "react": "Sau HN11: nhắc đúng điều người chơi đã kiểm chứng; chưa vượt khảo nghiệm thì không chúc như đã đột phá.",
+      "brief": "Dáng đứng ngay; silhouette bảng ngọc bên hông, áo ít bay. Ba góc nhìn có cùng tóc, dấu áo, vật cầm.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "existingStationId": "guide",
+      "runtimeRoleExists": true,
+      "questHooks": [
+        "HN01",
+        "HN11",
+        "HN12"
+      ],
+      "avatarNotes": {
+        "wang": "Dạy tự kiểm chứng.",
+        "situ": "Gọi là đạo hữu; không coi ông mất hết hiểu biết.",
+        "li": "Thừa nhận năng lực tự chuẩn bị."
+      }
+    },
+    {
+      "id": "NPC-HN-CULTIVATION",
+      "name": "Diệp Tĩnh",
+      "role": "Giảng sư vận khí",
+      "group": "anchor",
+      "wave": "A",
+      "zone": "Vườn thổ nạp",
+      "marker": {
+        "x": 736,
+        "y": 944,
+        "kind": "existing-station"
+      },
+      "look": "Nữ lớn tuổi; tóc muối tiêu búi gọn, áo trắng ngà/xanh khói, ngọc chuỗi nhỏ, trúc giản.",
+      "personality": "Kiệm lời; hỏi cách vận hành thay vì giảng mọi đạo lý.",
+      "task": "HN02, xác nhận tầng/M01–M03 và đối chiếu HN07.",
+      "quote": "Khí tụ đủ, chưa chắc đường khí đã thông. Hãy nói điều ngươi vừa làm được.",
+      "react": "Thoại theo milestone đã xác nhận, không chỉ theo số tích lũy.",
+      "brief": "Tư thế tay trước bụng, dây ngọc nhỏ; thổ nạp có hơi khí sát tay, không phủ kín toàn thân.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "existingStationId": "cultivation",
+      "runtimeRoleExists": true,
+      "questHooks": [
+        "HN02",
+        "HN07",
+        "HN09"
+      ],
+      "avatarNotes": {
+        "wang": "Ổn định nền.",
+        "situ": "Ổn định hiện diện; giữ tri thức vốn có.",
+        "li": "Nối đan–trận với nhịp vận khí."
+      }
+    },
+    {
+      "id": "NPC-HN-TRAINING",
+      "name": "Tạ Kiếm Sơn",
+      "role": "Giáo tập luyện thuật",
+      "group": "anchor",
+      "wave": "A",
+      "zone": "Sân luyện thuật",
+      "marker": {
+        "x": 2464,
+        "y": 880,
+        "kind": "existing-station"
+      },
+      "look": "Nam khoảng bốn mươi; áo xanh than, tay quấn vải, mộc kiếm cũ, vết sẹo nhỏ ở mày.",
+      "personality": "Nghiêm mà công bằng; luôn chỉ lỗi thao tác cụ thể.",
+      "task": "Giữ HN03–HN05, HN09 và HN10; phân biệt thử luyện với chiến đấu thật.",
+      "quote": "Né được một đòn chưa phải giỏi. Biết khi nào nên tiến, khi nào phải lui mới giữ được mạng.",
+      "react": "HN04 xong thì nhắc bài ngoại vi; proof HN05 chưa xác nhận thì chỉ đường quay về.",
+      "brief": "Trọng lượng dồn một chân, mộc kiếm chĩa xuống. Tránh giáp nặng và kiếm khổng lồ che tay/chân.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "existingStationId": "training",
+      "runtimeRoleExists": true,
+      "questHooks": [
+        "HN03",
+        "HN04",
+        "HN05",
+        "HN09",
+        "HN10"
+      ]
+    },
+    {
+      "id": "NPC-HN-PREPARATION",
+      "name": "Tô Nhược",
+      "role": "Chấp sự Tư Vật Các",
+      "group": "anchor",
+      "wave": "A",
+      "zone": "Khu chuẩn bị",
+      "marker": {
+        "x": 2392,
+        "y": 1488,
+        "kind": "existing-station"
+      },
+      "look": "Nữ trưởng thành; áo ngọc trầm với tạp dề vải ngà, sổ buộc dây đỏ đất, hộp niêm nhỏ.",
+      "personality": "Cẩn thận; tin dấu vết và đối chứng hơn lời đồn.",
+      "task": "Giữ HN06/HN08, sáu công thức và báo cáo EX; vẫn là writer/dịch vụ hiện có.",
+      "quote": "Tên trên sổ giống nhau, khí trong vật chưa chắc giống nhau. Đừng bỏ qua vết niêm.",
+      "react": "report-first: công nhận bảng đối chứng; repair-first: ghi nhận việc hỗ trợ và vẫn nêu sai sót.",
+      "brief": "Sổ, bút và hộp niêm là nhận diện; một gesture kiểm hộp. Hai nhánh thoại không tự đổi NPC toàn server.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "existingStationId": "preparation",
+      "runtimeRoleExists": true,
+      "questHooks": [
+        "HN06",
+        "HN08",
+        "EX01",
+        "EX02",
+        "EX03",
+        "EX04"
+      ]
+    },
+    {
+      "id": "NPC-HN-HERBALIST",
+      "name": "Bạch Chỉ",
+      "role": "Dược sư ngoại viện",
+      "group": "service",
+      "wave": "A",
+      "zone": "Dược đình phía tây",
+      "marker": {
+        "u": 0.18,
+        "v": 0.38,
+        "kind": "proposed-zone"
+      },
+      "look": "Nữ khoảng ba mươi; áo lá trà/ngà, tay áo buộc gọn, giỏ dược và chày ngọc.",
+      "personality": "Mềm lời nhưng không dễ tin; kể chuyện qua mùi và vết cắt lá.",
+      "task": "Gợi ý nguồn dược, đọc vật tư hồi phục và lối vào luyện chế; dịch vụ cùng inventory/receipt khi triển khai.",
+      "quote": "Lá còn tươi chưa chắc khí còn nguyên. Hái dược cũng phải biết chờ.",
+      "react": "Sau EX01 nhắc đúng loại mẫu đã kiểm; đầy HP không tiêu vật tư chỉ để tạo hiệu ứng.",
+      "brief": "Silhouette giỏ dược, bàn tay chày; palette lá ấm khác áo ngọc của giảng sư.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "questHooks": [
+        "EX01",
+        "EX02"
+      ],
+      "sideStory": "Cùng một luống dược, hai vết hái: quan sát trước khi kết tội người hái."
+    },
+    {
+      "id": "NPC-HN-FORGE",
+      "name": "Tống Thiết",
+      "role": "Luyện khí sư",
+      "group": "service",
+      "wave": "A",
+      "zone": "Xưởng đông nam",
+      "marker": {
+        "u": 0.855,
+        "v": 0.66,
+        "kind": "proposed-zone"
+      },
+      "look": "Nam lớn tuổi; tóc bạc ngắn, tạp dề nâu tro, vai áo đồng, kìm và phôi mộc kiếm.",
+      "personality": "Thẳng tính; quý người sửa được vật hơn người nói giỏi.",
+      "task": "Đọc/chuẩn bị trang bị và sáu công thức; mở rộng farm→nâng cấp ở K1 riêng sau.",
+      "quote": "Kiếm có thể đổi. Tay cầm kiếm phải biết thứ gì đang giữ nó.",
+      "react": "Thấy ngọc đã luyện hóa thì nói về kiểm độ ổn định; không bán một chỉ số chưa triển khai.",
+      "brief": "Cơ thể chắc nhưng giữ tỷ lệ R01; kìm/phôi ở dưới ngực, không che mặt. Lửa lò là layer đạo cụ.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "questHooks": [
+        "HN08",
+        "EX02"
+      ],
+      "sideStory": "Phôi rạn vẫn có ích: khảo sát hạt mực trong rãnh kim loại."
+    },
+    {
+      "id": "NPC-HN-ROUTE-KEEPER",
+      "name": "Hứa Hành",
+      "role": "Người giữ tuyến",
+      "group": "story",
+      "wave": "A",
+      "zone": "Đường tuần sơn/lối ngoại vi",
+      "marker": {
+        "u": 0.54,
+        "v": 0.84,
+        "kind": "proposed-zone"
+      },
+      "look": "Nam trưởng thành; áo choàng ngắn xám bụi, ống bản đồ, dây niêm cũ, giày bám bùn.",
+      "personality": "Thực tế; giấu sự mệt mỏi hơn là giấu động cơ.",
+      "task": "Hiện thân vai Người giữ tuyến đã có trong văn bản HN/EX; làm nhân chứng và đầu mối ngoại vi.",
+      "quote": "Đường vẫn ở đó. Thứ thay đổi là người đi qua và vật họ mang về.",
+      "react": "Cùng fact report-first/repair-first đã lưu; gặp ông không cấp thêm thưởng HN/EX.",
+      "brief": "Không cầm vũ khí lớn; giấy tuyến và dấu bùn phân biệt với lính gác. Áo choàng bị vá lệch một bên.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "questHooks": [
+        "HN05",
+        "HN06",
+        "EX03",
+        "EX04"
+      ],
+      "sideStory": "Dấu niêm không khớp do bảo quản vội; từ chuyện nhỏ mở manh mối ấn cổ."
+    },
+    {
+      "id": "NPC-HN-GATE-WARDEN",
+      "name": "Đinh Sóc",
+      "role": "Hộ sơn đệ tử",
+      "group": "service",
+      "wave": "A",
+      "zone": "Cổng ngoại viện",
+      "marker": {
+        "u": 0.455,
+        "v": 0.77,
+        "kind": "proposed-zone"
+      },
+      "look": "Nam trẻ; áo xanh sẫm, giáp vai đồng nhẹ, trường thương nhỏ, thẻ tuyến treo hông.",
+      "personality": "Cứng ở luật, mềm ở lời; nhớ người vừa thất bại ngoài tuyến.",
+      "task": "Giải thích lối ngoại vi và lối xuất hành HN12; quyền/cửa chỉ mở theo nội dung thật.",
+      "quote": "Ra ngoài luyện thân, không phải ra ngoài đánh cược mạng. Hãy nhớ đường trở lại.",
+      "react": "Thua trận thì chỉ cách chuẩn bị lại; HN12 chưa chốt thì không đưa vào map chưa có.",
+      "brief": "Thương nằm chéo thấp, dấu chức trách trên vai rõ. Vùng cổng để trống tâm lối đi.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "questHooks": [
+        "HN05",
+        "HN12"
+      ]
+    },
+    {
+      "id": "NPC-HN-ARCHIVIST",
+      "name": "Lục Văn",
+      "role": "Thủ thư Tàng Kinh",
+      "group": "service",
+      "wave": "B",
+      "zone": "Hiên tây bắc",
+      "marker": {
+        "u": 0.2,
+        "v": 0.17,
+        "kind": "proposed-zone"
+      },
+      "look": "Nam già gầy; tóc trắng, áo mực/ngà, bó trúc giản, kính ngọc nhỏ nếu đọc được ở native.",
+      "personality": "Hay bỏ lửng câu; yêu cầu người nghe tự nối dữ kiện.",
+      "task": "Đọc Đạo đồ, nguồn thuật và tư liệu ấn cổ; thư tịch được đọc không tự cấp skill.",
+      "quote": "Đọc được tên của vật, chưa phải biết nó từ đâu đến.",
+      "react": "Sau khảo nghiệm chỉ bổ sung trang tư liệu của hồ sơ; lore chung vẫn là lore chung.",
+      "brief": "Dáng hơi khom, trúc giản dày bên hông; giữ mặt đủ pixel ở 1×.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "questHooks": [
+        "HN11",
+        "HN12"
+      ],
+      "sideStory": "Một trang thiếu: khớp thớ giấy với báo cáo tuyến."
+    },
+    {
+      "id": "NPC-HN-BEAST-KEEPER",
+      "name": "A Ly",
+      "role": "Người coi linh thú",
+      "group": "service",
+      "wave": "B",
+      "zone": "Rìa vườn phía tây",
+      "marker": {
+        "u": 0.13,
+        "v": 0.68,
+        "kind": "proposed-zone"
+      },
+      "look": "Nữ trẻ; áo nâu nhạt/lam sương, dây thức ăn, chuông đồng rất nhỏ, găng tay chăm thú.",
+      "personality": "Tò mò, quan sát rất nhanh; không biến linh thú thành trò phô trương.",
+      "task": "Giới thiệu sinh cảnh/linh thú; tọa kỵ và thuần dưỡng mở cùng hệ tương ứng ở chặng sau.",
+      "quote": "Nó nhìn tay ngươi trước khi nhìn áo ngươi. Muốn đến gần, đừng vội giơ kiếm.",
+      "react": "Nhắc hành vi sinh vật đã được ghi nhận; không cho cưỡi từ nút preview.",
+      "brief": "Silhouette chuông và túi thức ăn; linh thú là actor/prefab riêng, không dính vào body NPC.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "stage": "Trúc Cơ; có thể xuất hiện như NPC sinh hoạt sớm"
+    },
+    {
+      "id": "NPC-HN-TEA",
+      "name": "Mạc Bà",
+      "role": "Người coi trà đình",
+      "group": "ambient",
+      "wave": "B",
+      "zone": "Trà đình bên hồ",
+      "marker": {
+        "u": 0.265,
+        "v": 0.64,
+        "kind": "proposed-zone"
+      },
+      "look": "Nữ lớn tuổi; áo lanh be/đỏ đất, tóc bạc búi thấp, ấm và khăn sạch.",
+      "personality": "Nhớ người qua thói quen; lời đồn luôn có nguồn và mức tin cậy.",
+      "task": "Tin đồn có hạn, dấu vết tuyến/quái và câu chuyện đệ tử; không phát daily lặp chỉ bằng mở thoại.",
+      "quote": "Người qua cổng kể về yêu thú. Người trở về thường chỉ hỏi một chén nước ấm.",
+      "react": "Theo HN05/EX đổi một dòng phản ứng; tin đồn chưa chứng minh có nhãn suy đoán.",
+      "brief": "Ấm nhỏ không rực sáng, động tác rót trà và lau bàn; dải màu ấm làm map bớt toàn xanh.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "sideStory": "Ấm trà nguội: nối lời người giữ tuyến với người đưa thư."
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-WATER",
+      "name": "Kỷ An",
+      "role": "Đệ tử vận khí",
+      "group": "ambient",
+      "wave": "A",
+      "zone": "Rìa vườn thổ nạp",
+      "marker": {
+        "u": 0.32,
+        "v": 0.535,
+        "kind": "proposed-zone"
+      },
+      "look": "Nữ đệ tử trưởng thành; áo lam nhạt, tóc buộc ngắn, bầu nước và trúc giản học dở.",
+      "personality": "Chịu khó, hay tự sửa trước khi hỏi.",
+      "task": "Tạo đối chiếu người mới cùng tu luyện; lời gợi ý ngắn khi đi ngang.",
+      "quote": "Ta cứ tưởng giữ hơi lâu là tốt. Hóa ra bước khó nhất là biết mình đang sai ở đâu.",
+      "react": "Sau M01 hỏi điều người chơi đã hiểu; lời chào không cộng tích lũy.",
+      "brief": "Chân đứng/ngồi có pivot chung; hơi khí nhỏ ở lòng bàn tay tách FX.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "ambientLoop": [
+        "đọc giản",
+        "đặt bầu nước",
+        "vận khí"
+      ],
+      "loopScope": "gesture tại chỗ; chưa tuyến đi/nav"
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-SWORD",
+      "name": "Phùng Dã",
+      "role": "Đệ tử luyện kiếm",
+      "group": "ambient",
+      "wave": "A",
+      "zone": "Rìa sân luyện đông",
+      "marker": {
+        "u": 0.727,
+        "v": 0.355,
+        "kind": "proposed-zone"
+      },
+      "look": "Nam đệ tử trưởng thành; tóc dựng gọn, áo xanh tro, mộc kiếm xước và vải buộc tay đỏ nâu.",
+      "personality": "Hiếu thắng nhưng biết phục người làm được thật.",
+      "task": "Bạn tập và đối thoại thao tác; tỷ thí tự nguyện ở K2 sau.",
+      "quote": "Nhanh chưa chắc trúng. Nhưng cứ đứng yên thì chắc chắn không thắng.",
+      "react": "HN05 đã xác nhận thì đổi lời thách thức sang hỏi cách đọc đòn.",
+      "brief": "Đầu/thân cùng player approved; pose sửa thế kiếm, không loop tấn công che người chơi.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "ambientLoop": [
+        "chỉnh thế",
+        "nhìn mũi kiếm",
+        "nghỉ tay"
+      ],
+      "loopScope": "gesture tại chỗ; không damage/target PvP"
+    },
+    {
+      "id": "NPC-HN-MESSENGER",
+      "name": "Tiểu Nghiên",
+      "role": "Người đưa tin",
+      "group": "ambient",
+      "wave": "B",
+      "zone": "Hiên chính điện",
+      "marker": {
+        "u": 0.465,
+        "v": 0.315,
+        "kind": "proposed-zone"
+      },
+      "look": "Nữ trưởng thành; áo trắng xám/đỏ đất, túi thư và dải vải chắn gió, giày nhẹ.",
+      "personality": "Nhanh lời, biết việc nhiều nơi nhưng biết giới hạn điều được kể.",
+      "task": "Lời nhắn và nhịp hoạt động môn phái; hộp thư thưởng chỉ nối khi backend có.",
+      "quote": "Thư đi nhanh được. Điều viết trong thư thì phải nghĩ chậm một chút.",
+      "react": "Nhắc báo cáo đã gửi; không tự sinh thư có loot khi nhân vật đăng nhập.",
+      "brief": "Túi thư bên hông; giấy và chim đưa thư tách layer, không nhồi vào silhouette đầu.",
+      "origin": "Nhân vật sáng tạo đề xuất cho Vân Hải; không gán danh tính canon",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "animation": {
+        "minimum": [
+          "idle",
+          "talk"
+        ],
+        "directions": 8,
+        "secondary": "Một gesture nghề/đạo cụ ở gói sau; khí/VFX tách body"
+      },
+      "portrait": "Từ cùng tạo hình đã duyệt; không tự thay tỉ lệ đầu/thân ở portrait",
+      "ambientLoop": [
+        "so thẻ tuyến",
+        "gấp thư",
+        "nhìn về cổng"
+      ],
+      "loopScope": "gesture tại chỗ; patrol sau route duyệt"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "MOB-VH-CLOUD-WOLF",
+      "name": "Vân Nha Lang",
+      "rank": "mob",
+      "stage": "Ngưng Khí đầu",
+      "zone": "Ngoại vi · rìa đường",
+      "role": "Áp sát, thử đọc đòn",
+      "story": "Vốn đi theo mùi dược, gần đây lông vương những sợi khí mực từ đường tuần sơn.",
+      "look": "Sói nhỏ xám ngà/ngọc khói, tai nhọn, chùm lông gáy hình mây; mắt hổ phách; ít hào quang.",
+      "lesson": "Khoảng cách và thời điểm phản công",
+      "attacks": [
+        "Hạ vai, khóa hướng rồi chồm cắn",
+        "Hụt cắn: ghìm chân, để hở sườn"
+      ],
+      "counter": [
+        "Đi ngang hướng đã khóa; Phong giúp đổi vị trí",
+        "Đòn thường vẫn có cửa thắng khi cạn MP"
+      ],
+      "materialIds": [
+        "MAT-VH-LANG-FANG"
+      ],
+      "production": "P0: dùng Lang02 làm basis, đổi costume/detail sau duyệt",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "basis": "docs/design/characters/sect-encounter-actors-v2/catalog.json",
+      "baselineRole": "HN-E01 art/AI basis; HN05 vẫn hữu hạn",
+      "bodyHeightPx": 50,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/cloud-wolf.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/cloud-wolf.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/cloud-wolf.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=MOB-VH-CLOUD-WOLF",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 50,
+        "canvas": [
+          128,
+          96
+        ],
+        "pivot": [
+          64,
+          88
+        ],
+        "liftPx": 0
+      }
+    },
+    {
+      "id": "MOB-VH-TALISMAN-SPROUT",
+      "name": "Phù Mộc Tinh",
+      "rank": "mob",
+      "stage": "Ngưng Khí giữa",
+      "zone": "Ngoại vi · dược cốc",
+      "role": "Thi triển từ xa",
+      "story": "Một dải phù thất lạc bám vào rễ cây, khiến nó coi mọi người hái dược là kẻ phá trận.",
+      "look": "Cây/rễ thấp, giấy phù quấn nhánh, mắt là hạt ngọc nhỏ; không mặt người.",
+      "lesson": "Đọc đòn chọn điểm và tiếp cận",
+      "attacks": [
+        "Lá dựng thành vòng rồi phóng tia thẳng",
+        "Rễ thu vào đất, mở cửa sổ hồi thế"
+      ],
+      "counter": [
+        "Rời dấu đất trước resolve",
+        "Tiếp cận theo bên trống; Lôi theo target hợp lệ"
+      ],
+      "materialIds": [
+        "MAT-VH-WOOD-RESIN"
+      ],
+      "production": "P1: caster mới sau wolf; chưa thay HN-E02 tự động",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 58,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/talisman-sprout.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/talisman-sprout.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/talisman-sprout.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=MOB-VH-TALISMAN-SPROUT",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 58,
+        "canvas": [
+          112,
+          96
+        ],
+        "pivot": [
+          56,
+          88
+        ],
+        "liftPx": 0
+      }
+    },
+    {
+      "id": "MOB-VH-JADE-SCUTE",
+      "name": "Ngọc Giáp Trùng",
+      "rank": "mob",
+      "stage": "Ngưng Khí giữa",
+      "zone": "Ngoại vi · bãi ngọc vụn",
+      "role": "Bruiser/chặn hướng",
+      "story": "Nó ăn lớp vụn ngọc bị bỏ quanh nơi thử phôi, mang theo vết ấn chưa tiêu hết.",
+      "look": "Trùng giáp thấp, mảnh vỏ ngọc xám, càng đồng nâu, khe bụng màu đất ấm.",
+      "lesson": "Chọn góc đánh thay vì đứng đổi damage",
+      "attacks": [
+        "Nâng giáp trước, báo đường lao ngắn",
+        "Sau lao xoay thân chậm, hở sườn"
+      ],
+      "counter": [
+        "Né lệch trục rồi phản công",
+        "Giảm damage giáp trước là mechanic P2 cần prototype riêng"
+      ],
+      "materialIds": [
+        "MAT-VH-JADE-SHELL"
+      ],
+      "production": "P1 body / P2 directional defense",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 46,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/jade-scute.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/jade-scute.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/jade-scute.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=MOB-VH-JADE-SCUTE",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 46,
+        "canvas": [
+          144,
+          96
+        ],
+        "pivot": [
+          72,
+          88
+        ],
+        "liftPx": 0
+      }
+    },
+    {
+      "id": "MOB-VH-INK-BAT",
+      "name": "Mặc Dực Bức",
+      "rank": "mob",
+      "stage": "Ngưng Khí giữa",
+      "zone": "Ngoại vi · lạch mực",
+      "role": "Quấy rối/tầm xa",
+      "story": "Dơi ngủ trên mặt phù mục, mang mực khí theo vệt nước xuống dược cốc.",
+      "look": "Dơi chibi mực tím/xám, cánh như giấy rách, một vệt ngọc nhạt ở tai; ground shadow rõ.",
+      "lesson": "Quan sát quỹ đạo và shadow chân",
+      "attacks": [
+        "Bay vòng rồi khép cánh khóa điểm bổ xuống",
+        "Bổ hụt thì lượn thấp, dễ chọn mục tiêu"
+      ],
+      "counter": [
+        "Đi khỏi marker đã khóa",
+        "Body nâng cao là trình bày; hit/target dùng hợp đồng ground rõ"
+      ],
+      "materialIds": [
+        "MAT-VH-INK-WING"
+      ],
+      "production": "P2: kiểm ground/lift trước loại bay",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 42,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/ink-bat.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/ink-bat.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/ink-bat.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=MOB-VH-INK-BAT",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 42,
+        "canvas": [
+          160,
+          96
+        ],
+        "pivot": [
+          80,
+          88
+        ],
+        "liftPx": 16
+      }
+    },
+    {
+      "id": "MOB-VH-CRACKED-PUPPET",
+      "name": "Khôi Lỗi Rạn Ngọc",
+      "rank": "mob",
+      "stage": "Ngưng Khí cuối",
+      "zone": "Ngoại vi · di tích cạnh đường",
+      "role": "Construct đánh chậm",
+      "story": "Một khôi lỗi vận chuyển bỏ tuyến, vẫn lặp mệnh lệnh giữ hộp niêm đã trống.",
+      "look": "Thân đất nung/ngọc rạn, vai đồng nhỏ, ấn khắc mờ ở ngực, tay nặng hơn thân.",
+      "lesson": "Đợi hồi thế, tránh đứng trước mặt",
+      "attacks": [
+        "Giơ tay chậm rồi quét cung hẹp",
+        "Rút tay vào ngực để nạp ấn"
+      ],
+      "counter": [
+        "Đi ra cạnh cung đã khóa",
+        "Lôi trong hồi thế; hit phản ứng không tự cắt warning"
+      ],
+      "materialIds": [
+        "MAT-VH-PUPPET-SHARD"
+      ],
+      "production": "P2: cùng họ construct nhưng body mới, không thu nhỏ PNG boss",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 72,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/cracked-puppet.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/cracked-puppet.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/cracked-puppet.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=MOB-VH-CRACKED-PUPPET",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 72,
+        "canvas": [
+          128,
+          104
+        ],
+        "pivot": [
+          64,
+          96
+        ],
+        "liftPx": 0
+      }
+    },
+    {
+      "id": "MOB-VH-SPIRIT-FUNGUS",
+      "name": "Thực Linh Khuẩn",
+      "rank": "mob",
+      "stage": "Ngưng Khí giữa",
+      "zone": "Ngoại vi · dược cốc ẩm",
+      "role": "Kiểm soát vị trí",
+      "story": "Nấm giữ linh khí để bảo vệ nền đất; phù nhiễu biến lớp bảo vệ thành vùng đẩy người hái đi.",
+      "look": "Mũ nấm ngà/ngọc nhạt, thân nâu, bào tử thành hạt sắc nét; glow hạn chế.",
+      "lesson": "Không tham damage trong vùng lưu lại",
+      "attacks": [
+        "Mũ nấm rung ba nhịp báo vòng bào tử",
+        "Bào tử tan, lộ thân hồi thế"
+      ],
+      "counter": [
+        "Thoát dấu tròn bằng đi thường",
+        "Tổng vùng lưu lại phải chừa hành lang; chưa poison stack gameplay"
+      ],
+      "materialIds": [
+        "MAT-VH-SPORE"
+      ],
+      "production": "P2: area denial sau đánh điểm",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 48,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/spirit-fungus.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/spirit-fungus.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/spirit-fungus.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=MOB-VH-SPIRIT-FUNGUS",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 48,
+        "canvas": [
+          128,
+          96
+        ],
+        "pivot": [
+          64,
+          88
+        ],
+        "liftPx": 0
+      }
+    },
+    {
+      "id": "MOB-VH-DARK-TALISMAN-ROGUE",
+      "name": "Tán Tu Hắc Phù",
+      "rank": "mob",
+      "stage": "Ngưng Khí cuối / Trúc Cơ đầu",
+      "zone": "Đường tuần sơn xa",
+      "role": "Đối thủ người có chuẩn bị",
+      "story": "Tán tu thu gom giấy niêm bỏ đi để làm phù; không phải người chơi/PvP hay trưởng lão canon.",
+      "look": "Người pixel thân gọn, áo than/nâu, nửa vai quấn phù, dao ngắn và túi giấy; mắt đọc được.",
+      "lesson": "Đánh theo intent và nhịp đối thủ",
+      "attacks": [
+        "Giơ tay phù báo tia rồi lùi một đoạn có khóa",
+        "Nếu áp sát: rút dao, quét ngắn và hồi thế"
+      ],
+      "counter": [
+        "Dùng khoảng trống giữa hai đòn để tiến",
+        "Không teleport theo lưng người chơi"
+      ],
+      "materialIds": [
+        "MAT-VH-SEAL-FRAGMENT"
+      ],
+      "production": "P2: humanoid enemy, tách skill/player ownership",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 80,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/dark-talisman-rogue.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/dark-talisman-rogue.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/dark-talisman-rogue.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=MOB-VH-DARK-TALISMAN-ROGUE",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 80,
+        "canvas": [
+          96,
+          96
+        ],
+        "pivot": [
+          48,
+          88
+        ],
+        "liftPx": 0
+      }
+    },
+    {
+      "id": "MOB-VH-QUIET-WISP",
+      "name": "U Niệm",
+      "rank": "mob",
+      "stage": "Trúc Cơ",
+      "zone": "Cổ Lâm · ngoài phong ấn",
+      "role": "Linh thể/gợi mở mạch tối",
+      "story": "Dư niệm quanh phù thất kéo khí đi sai nhịp. Nó gợi nguồn hắc khí, không cấp trạng thái Đọa Ma.",
+      "look": "Một lõi ngọc mờ trong dải mực vỡ; có điểm chân/shadow, dáng không giống người trùm áo.",
+      "lesson": "Đọc nguồn phát đòn giữa nhiễu VFX",
+      "attacks": [
+        "Lõi ngừng trôi, báo hướng tia",
+        "Dải mực khép rồi mở, lộ lõi hồi thế"
+      ],
+      "counter": [
+        "Ký hiệu khóa hướng phải đọc được cả khi tắt glow",
+        "Tịnh hóa là mechanic hậu nhập môn cần source/sink riêng"
+      ],
+      "materialIds": [
+        "MAT-VH-QUIET-ASH"
+      ],
+      "production": "P3: linh thể với VFX riêng",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 58,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/quiet-wisp.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/quiet-wisp.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/quiet-wisp.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=MOB-VH-QUIET-WISP",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 57,
+        "canvas": [
+          128,
+          112
+        ],
+        "pivot": [
+          64,
+          100
+        ],
+        "liftPx": 8
+      }
+    },
+    {
+      "id": "ELITE-VH-WOLF-CALLER",
+      "name": "Lang Tuần Sơn",
+      "rank": "elite",
+      "stage": "Ngưng Khí giữa",
+      "zone": "Ngoại vi · bãi tuần sơn",
+      "role": "Pack leader",
+      "story": "Lông gáy mang mảnh dấu niêm mắc từ một hộp bị rách; tiếng gọi kéo bầy về tuyến vận chuyển.",
+      "look": "Sói vai rộng, scar gáy, thẻ niêm rách treo lông; bụi ngọc ở chân.",
+      "lesson": "Chọn thứ tự mục tiêu và giữ lối lui",
+      "attacks": [
+        "Ngẩng mõm báo gọi một bạn bầy",
+        "Chồm cắn sau một nhịp khóa hướng dài hơn thường"
+      ],
+      "counter": [
+        "Tách góc để bầy không kẹp lối",
+        "Adds chỉ mở sau caps/credit/leash; phiên đầu có thể thử solo trước"
+      ],
+      "materialIds": [
+        "MAT-VH-LANG-FANG"
+      ],
+      "production": "P1 elite silhouette / P2 summon policy",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 65,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/wolf-caller.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/wolf-caller.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/wolf-caller.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=ELITE-VH-WOLF-CALLER",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 65,
+        "canvas": [
+          160,
+          112
+        ],
+        "pivot": [
+          80,
+          104
+        ],
+        "liftPx": 0
+      }
+    },
+    {
+      "id": "ELITE-VH-JADE-GUARD",
+      "name": "Thiết Giáp Linh Trùng",
+      "rank": "elite",
+      "stage": "Ngưng Khí cuối",
+      "zone": "Ngoại vi · bãi ngọc",
+      "role": "Armored elite",
+      "story": "Vỏ tích tụ vụn ấn cổ, khiến việc bảo vệ một bãi ngọc trở thành bản năng quá mức.",
+      "look": "Giáp ngọc tối/đồng già, một vết nứt sáng hình chữ V; càng lớn nhưng thân thấp.",
+      "lesson": "Tìm cửa sổ mở giáp",
+      "attacks": [
+        "Khép giáp báo đường lao",
+        "Mở giáp sau lao, nạp lại qua khe ngực"
+      ],
+      "counter": [
+        "Né trục; đánh khi giáp mở",
+        "Tăng độ khó bằng nhịp và cửa sổ, không chỉ HP"
+      ],
+      "materialIds": [
+        "MAT-VH-JADE-SHELL"
+      ],
+      "production": "P2: có pose mở/khép giáp riêng",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 62,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/jade-guard.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/jade-guard.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/jade-guard.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=ELITE-VH-JADE-GUARD",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 62,
+        "canvas": [
+          176,
+          112
+        ],
+        "pivot": [
+          88,
+          104
+        ],
+        "liftPx": 0
+      }
+    },
+    {
+      "id": "ELITE-VH-BLACK-SILK-ADEPT",
+      "name": "Phù Sư Hắc Lụa",
+      "rank": "elite",
+      "stage": "Trúc Cơ đầu",
+      "zone": "Cổ Lâm · phù thất ngoài",
+      "role": "Trap/control",
+      "story": "Người nhặt được phương pháp từ giấy niêm cũ, dùng địa hình để giữ người khác khỏi phôi ấn.",
+      "look": "Áo than, dải lụa đỏ đất ở cánh tay, ba thẻ phù lớn đọc được, chưa aura Hóa Thần.",
+      "lesson": "Đọc đường thoát và vùng đã khóa",
+      "attacks": [
+        "Đặt hai điểm ấn có thứ tự sáng rõ",
+        "Phóng tia qua đường nối hai điểm rồi hồi thế"
+      ],
+      "counter": [
+        "Không đứng trên đoạn nối; có hành lang thay thế",
+        "Không khóa tất cả hướng hoặc ép dùng Phong"
+      ],
+      "materialIds": [
+        "MAT-VH-SEAL-FRAGMENT"
+      ],
+      "production": "P3: trap spatial prototype trước ART sequence",
+      "status": "concept-art-candidate",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 80,
+      "concept": {
+        "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+        "sprite": "docs/design/characters/van-hai-monster-concepts-v1/sprites/black-silk-adept.png",
+        "raw": "docs/design/characters/van-hai-monster-concepts-v1/raw/black-silk-adept.png",
+        "prompt": "docs/design/characters/van-hai-monster-concepts-v1/prompts/black-silk-adept.txt",
+        "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html#actor=ELITE-VH-BLACK-SILK-ADEPT",
+        "directions": [
+          "southeast"
+        ],
+        "poses": 1,
+        "animationProduced": false,
+        "artApproved": false,
+        "measuredBodyHeightPx": 80,
+        "canvas": [
+          112,
+          96
+        ],
+        "pivot": [
+          56,
+          88
+        ],
+        "liftPx": 0
+      }
+    },
+    {
+      "id": "BOSS-VH-CLOUD-WOLF-KING",
+      "name": "Vân Nha Lang Vương",
+      "rank": "boss",
+      "stage": "Ngưng Khí cuối",
+      "zone": "Ngoại vi · đài đá rìa rừng",
+      "role": "Thủ lĩnh ngoại vi / pilot solo",
+      "story": "Hứa Hành nghi bầy theo hộp dược; Bạch Chỉ phát hiện mùi mực khí trên lông. Người chơi lần dấu tới đài đá và thấy lang vương bảo vệ mảnh phù mắc ở thân.",
+      "look": "Sói bạc/ngọc khói, vai lớn và đuôi có ba chùm mây, vết ấn mực ở sườn; không vương miện/giáp vàng.",
+      "lesson": "Ghép né–giữ khoảng cách–phản công",
+      "attacks": [
+        "Vân Nha: hạ vai, khóa đường chồm thẳng",
+        "Hồi Phong: giậm hai chân báo quét vòng có đường thoát",
+        "Lang Khiếu: báo nhịp gọi bầy ở gói mở rộng"
+      ],
+      "counter": [
+        "Đi ngang trục; tránh vòng rồi dùng cửa sổ thở gấp",
+        "Giữ ba thuật/đòn thường đều có ích; bản solo ban đầu không bắt buộc adds"
+      ],
+      "materialIds": [
+        "MAT-VH-LANG-FANG"
+      ],
+      "production": "P1: boss đầu tiếp theo sau wolf; solo baseline trước đội nhóm",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death",
+        "appear",
+        "skillA",
+        "skillB",
+        "skillC"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 96,
+      "script": [
+        "Nghe người giữ tuyến và dược sư đối chứng mùi",
+        "Theo hai dấu có thể quan sát, không yêu cầu farm random để vào",
+        "Tới đài đá, boss xuất hiện; vùng bắt đầu chủ động",
+        "Pha 1 học đường chồm và hồi thế",
+        "Pha 2 thêm vòng quét; bài adds thử sau",
+        "Kết thúc trận: nhân chứng giải thích mảnh phù, tạo proof",
+        "Phần thưởng/nguồn farm riêng có receipt; không mở lại HN05"
+      ],
+      "rewardPolicy": "Design new farm activity/source; rates/attempt limits/ownership pending. Quest proof remains finite."
+    },
+    {
+      "id": "BOSS-HN-THREE-SEAL-PUPPET",
+      "name": "Tam Ấn Khôi Lỗi",
+      "rank": "boss",
+      "stage": "Ngưng Khí cuối",
+      "zone": "Đàn khảo nghiệm HN10",
+      "role": "Chủ khảo cá nhân",
+      "story": "Giáo tập cho mượn khôi lỗi có ba ấn để đo nhịp thân–khí–thuật. Thắng nó chứng minh khả năng phối hợp, không đánh bại trưởng lão cảnh giới cao.",
+      "look": "Khôi lỗi ngọc rạn/đồng già, ba mảng ấn ở ngực và hai vai; lõi sáng nhỏ, đường nét chắc như kiến trúc Vân Ngọc.",
+      "lesson": "Tổng hợp bài đã học",
+      "attacks": [
+        "Ấn Thân: chém/quét cung trước mặt",
+        "Ấn Khí: dấu vòng tại điểm khóa",
+        "Ấn Thuật: đường ấn thẳng; nửa HP có hai xung đã báo"
+      ],
+      "counter": [
+        "Đi thường luôn có cửa né; Phong đổi vị trí sớm",
+        "Ngọc hộ thân xử lý một hit theo luật hiện có; không puzzle bắt nộp đồ"
+      ],
+      "materialIds": [],
+      "production": "P0: giữ Khôi Lỗi02/64clip làm basis, concept đổi chi tiết nhận diện",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death",
+        "appear",
+        "skillA",
+        "skillB",
+        "skillC"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "basis": "docs/design/characters/sect-encounter-actors-v2/catalog.json",
+      "baselineRole": "HN-E03/HN10 existing trial; design name pending",
+      "bodyHeightPx": 104,
+      "script": [
+        "Tạ Kiếm Sơn nhắc điều kiện và cách chuẩn bị",
+        "Người chơi tự bắt đầu pha đang mở",
+        "Pha áp sát kiểm khoảng cách",
+        "Pha thử thuật kiểm nhịp tiếp cận và phản công",
+        "Pha chủ khảo dùng line/circle/fan; double line theo baseline",
+        "Checkpoint/proof server giữ kết quả",
+        "Quay về xác nhận milestone; thử lại không sinh loot mới"
+      ],
+      "rewardPolicy": "Retain HN10 checkpoint/proof and finite quest reward. No kill loot."
+    },
+    {
+      "id": "BOSS-VH-ANCIENT-ROOT",
+      "name": "Cổ Mộc Trấn Khí",
+      "rank": "boss",
+      "stage": "Trúc Cơ",
+      "zone": "Cổ Lâm · cội trấn khí",
+      "role": "Boss địa hình / bí cảnh nhóm đề xuất",
+      "story": "Lục Văn tìm được sơ đồ một cội cây từng giữ đường khí. Hắc phù làm ba rễ trấn sinh trưởng lệch nhịp; nhân vật phải giữ đường thoát khi tiếp cận lõi.",
+      "look": "Cây thấp rộng, rễ như nét trận pháp, ngọc vùi trong vỏ và đồng gãy; khuôn mặt không trùng tượng người.",
+      "lesson": "Cộng tác, đọc nhịp vùng và quản lý mục tiêu",
+      "attacks": [
+        "Rễ khóa: ba vệt đất lần lượt báo, không đồng thời bít sân",
+        "Khí phản: lõi nạp rồi phóng tia qua một hành lang",
+        "Mở lõi: rễ nghỉ, cơ hội tập trung đánh"
+      ],
+      "counter": [
+        "Luôn còn lối đi thường tới vùng an toàn",
+        "Ba rễ/phase là mục tiêu riêng nếu được duyệt; không sửa collider map để diễn chiêu"
+      ],
+      "materialIds": [
+        "MAT-VH-WOOD-RESIN"
+      ],
+      "production": "P3: prototype solo geometry rồi mới ruleset party",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death",
+        "appear",
+        "skillA",
+        "skillB",
+        "skillC"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 140,
+      "script": [
+        "Đọc trang Tàng Kinh và tới lâm môn",
+        "Cảnh quan hiện ba rễ bất thường",
+        "Pha 1 đọc vùng mọc rễ tuần tự",
+        "Pha 2 tiếp cận lõi khi đường khí mở",
+        "Pha 3 ghép vệt rễ và tia, luôn giữ đường thoát",
+        "Lõi vỡ ấn; cội cây ngừng tấn công trong phiên",
+        "Đọc dấu ấn trùng mẫu báo cáo; loot tổ đội cần quyền riêng"
+      ],
+      "rewardPolicy": "New dungeon/party ruleset required; first-story proof and repeat loot are distinct sources."
+    },
+    {
+      "id": "BOSS-VH-DARK-SEAL-OFFICER",
+      "name": "Hắc Ấn Chấp Sự",
+      "rank": "boss",
+      "stage": "Trúc Cơ cuối",
+      "zone": "Cổ Lâm · phù thất",
+      "role": "Boss tu sĩ / truyện âm mưu",
+      "story": "Đường giấy niêm dẫn tới một chấp sự tự lập ấn để giữ nguồn khí cho mình. Những bản sao của ông là dư ảnh phù, không phải nhiều người chơi cùng bị biến thành Đọa Ma.",
+      "look": "Người pixel cùng tỷ lệ R01, áo than/ngà, thẻ ấn đồng đen, lụa đỏ đất lệch vai; khí mực là layer riêng.",
+      "lesson": "Đọc nguồn đòn thật và phối hợp công cụ",
+      "attacks": [
+        "Đạo Ấn: giơ tay khóa tia có ký hiệu thật",
+        "Phân Phù: hai dư ảnh báo cùng nhịp; dấu bàn tay khác nhau",
+        "Ấn Hồi: vòng thu về có khe đi thường và hồi thế"
+      ],
+      "counter": [
+        "Dùng hình/dấu hiệu chuyển động để nhận thật, không chỉ màu",
+        "Dư ảnh không gây hit/loot nếu chưa có policy entity riêng"
+      ],
+      "materialIds": [
+        "MAT-VH-SEAL-FRAGMENT",
+        "MAT-VH-QUIET-ASH"
+      ],
+      "production": "P3: một thân chuẩn + VFX/dư ảnh tách lớp",
+      "status": "concept-brief-pending",
+      "runtimeImplemented": false,
+      "behaviorApproval": false,
+      "artApproval": false,
+      "animation": [
+        "idle",
+        "move",
+        "attack",
+        "hit",
+        "death",
+        "appear",
+        "skillA",
+        "skillB",
+        "skillC"
+      ],
+      "vfx": "Tách warning/release/contact/aura khỏi body; sát thương/loot theo fact server",
+      "bodyHeightPx": 80,
+      "script": [
+        "Ghép báo cáo tuyến với trang thư viện",
+        "Đối thoại trước trận: quyền giữ khí đối lập với đường tự mở",
+        "Pha 1 một thân/đòn thật rõ",
+        "Pha 2 thêm dư ảnh với ký hiệu phân biệt",
+        "Pha 3 ghép vòng và tia trong hạn mức đã prototype",
+        "Đánh bại làm lộ nguồn ấn trong phiên cá nhân",
+        "Mở chương sau; Đọa Ma vẫn phải chờ Hóa Thần và luật riêng"
+      ],
+      "rewardPolicy": "Finite story result per profile; no automatic alignment change or new player skill."
+    }
+  ],
+  "materials": [
+    {
+      "id": "MAT-VH-LANG-FANG",
+      "name": "Vân nha",
+      "family": "Nanh linh thú",
+      "sink": "Chi tiết chuôi/mũi kiếm; ứng viên nguồn–chi K1 đầu",
+      "source": "Vân Nha Lang / Lang Vương",
+      "status": "design-only",
+      "binding": "pending-per-source",
+      "dropRate": "pending",
+      "recipe": "pending-new-recipe; not a live grant"
+    },
+    {
+      "id": "MAT-VH-WOOD-RESIN",
+      "name": "Mộc linh dịch",
+      "family": "Tinh chất thực vật",
+      "sink": "Mực dẫn/nhựa giữ phù của công thức hậu nhập môn",
+      "source": "Phù Mộc Tinh / Cổ Mộc",
+      "status": "design-only",
+      "binding": "pending-per-source",
+      "dropRate": "pending",
+      "recipe": "pending-new-recipe; not a live grant"
+    },
+    {
+      "id": "MAT-VH-JADE-SHELL",
+      "name": "Mảnh ngọc giáp",
+      "family": "Khoáng sinh thể",
+      "sink": "Lót hộ thân/trang bị phòng vệ mới, tách ngọc nhiệm vụ HN08",
+      "source": "Ngọc Giáp Trùng / Thiết Giáp",
+      "status": "design-only",
+      "binding": "pending-per-source",
+      "dropRate": "pending",
+      "recipe": "pending-new-recipe; not a live grant"
+    },
+    {
+      "id": "MAT-VH-INK-WING",
+      "name": "Mặc dực",
+      "family": "Màng cánh linh thú",
+      "sink": "Bùa dò khí/lọc nhiễu; cần recipe mới trước mở drop",
+      "source": "Mặc Dực Bức",
+      "status": "design-only",
+      "binding": "pending-per-source",
+      "dropRate": "pending",
+      "recipe": "pending-new-recipe; not a live grant"
+    },
+    {
+      "id": "MAT-VH-PUPPET-SHARD",
+      "name": "Lõi khôi lỗi rạn",
+      "family": "Cấu kiện",
+      "sink": "Sửa/cấu tạo pháp khí hoặc bộ sưu tập; không loot từ HN10 thử lại",
+      "source": "Khôi Lỗi Rạn Ngọc bản farm riêng",
+      "status": "design-only",
+      "binding": "pending-per-source",
+      "dropRate": "pending",
+      "recipe": "pending-new-recipe; not a live grant"
+    },
+    {
+      "id": "MAT-VH-SPORE",
+      "name": "Bào tử giữ khí",
+      "family": "Dược chất",
+      "sink": "Vật tư đề kháng khu vực sau nhập môn; balance pending",
+      "source": "Thực Linh Khuẩn",
+      "status": "design-only",
+      "binding": "pending-per-source",
+      "dropRate": "pending",
+      "recipe": "pending-new-recipe; not a live grant"
+    },
+    {
+      "id": "MAT-VH-SEAL-FRAGMENT",
+      "name": "Mảnh hắc phù",
+      "family": "Vật liệu ấn",
+      "sink": "Giải mã dấu niêm và linh phù mới; đòi nguồn–chi riêng",
+      "source": "Tán Tu Hắc Phù / Phù Sư",
+      "status": "design-only",
+      "binding": "pending-per-source",
+      "dropRate": "pending",
+      "recipe": "pending-new-recipe; not a live grant"
+    },
+    {
+      "id": "MAT-VH-QUIET-ASH",
+      "name": "Tĩnh niệm tro",
+      "family": "Dư chất linh thể",
+      "sink": "Vật liệu tịnh hóa/diện mạo về sau; không tăng đạo lộ bằng nhặt đồ",
+      "source": "U Niệm / Hắc Ấn",
+      "status": "design-only",
+      "binding": "pending-per-source",
+      "dropRate": "pending",
+      "recipe": "pending-new-recipe; not a live grant"
+    }
+  ],
+  "productionWaves": [
+    {
+      "id": "P0",
+      "title": "Chốt người đang gặp",
+      "deliver": "4 NPC trục truyện và Tam Ấn Khôi Lỗi theo basis hiện hành; không viết lại HN receipt",
+      "actors": 4,
+      "approval": "silhouette/palette/props at native"
+    },
+    {
+      "id": "P1",
+      "title": "Ngoại viện có đời sống và vòng ngoài",
+      "deliver": "Bạch Chỉ, Tống Thiết, Hứa Hành, Đinh Sóc + Kỷ An/Phùng Dã; Vân Nha Lang, Phù Mộc Tinh, Lang Tuần Sơn, Lang Vương",
+      "approval": "1 NPC service + 1 ambient + wolf/king concept trước full sheets"
+    },
+    {
+      "id": "P2",
+      "title": "Đa dạng cách giao chiến",
+      "deliver": "Giáp trùng, dơi, nấm, khôi lỗi rạn và tán tu; prototype caster/ground/lift/area/guard từng mechanic",
+      "approval": "Không sản xuất mọi clip trước prototype đọc đòn"
+    },
+    {
+      "id": "P3",
+      "title": "Cổ Lâm và nhánh sau nhập môn",
+      "deliver": "NPC wave B, U Niệm, Phù Sư, Cổ Mộc, Hắc Ấn; party/loot/relationship cùng hợp đồng mới",
+      "approval": "Map/gates/source–sink và luật nhóm trước runtime"
+    }
+  ],
+  "narrativeArc": {
+    "title": "Dấu niêm trên đường khí",
+    "beats": [
+      "HN nhập môn: sư phụ dạy điều có thể kiểm chứng",
+      "Ngoại vi: dược đổi mùi, thú đổi đường tuần",
+      "Đối chứng: sổ/niêm/bảo quản khác nhau; giữ nhánh EX hiện có",
+      "Luyện chế: nguồn vật liệu có nơi dùng, không farm lại thưởng HN",
+      "Khảo nghiệm: đủ kỹ năng để tự xuất hành",
+      "Trúc Cơ: dấu ấn dẫn tới cổ lâm và người lợi dụng đường khí",
+      "Hóa Thần: gợi câu hỏi giữ đạo/tự lập đạo; tính năng Đọa Ma theo gate riêng"
+    ],
+    "principle": "Nhân chứng → bằng chứng → chuẩn bị → vận dụng → hệ quả"
+  },
+  "technicalHandoff": {
+    "definitions": "Stable IDs, releaseVersion and source pointers; design registry is not gameplay loader",
+    "npcState": "Per-profile quest/dialogue facts; ambient pose presentation separate from command/receipt; no global fate changes from one player",
+    "farm": "HN05/EX finite proofs stay intact; new activityId/sourceId/spawnLifeId for repeat grants; rates/eligibility/full bag/party/death/reconnect/restart pending before release",
+    "combat": "Server intent/locked warning → resolve → confirmed hit; body flinch does not silently cancel intent",
+    "navigation": "Pins are zones for concept review only; keep owner 9 blockers/Spawn/steps/drafts",
+    "livingMotion": " gestures at fixed feet first; patrol/escort after a route is approved; no random player-follow/roof walking"
+  },
+  "decisionsPending": [
+    "Names/palette/roster art owner review",
+    "First-source–sink K1 and power change budget",
+    "Reward/ownership/party rules for outdoor bosses",
+    "Production exterior navigation/portal footprint",
+    "Patrol routes and readable local chatter cadence"
+  ],
+  "monsterConceptProduction": {
+    "package": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+    "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html",
+    "mobs": 8,
+    "elites": 3,
+    "viewsPerActor": 1,
+    "posesPerActor": 1,
+    "artApproved": false,
+    "runtimeImplemented": false,
+    "order": "Owner13/10: produce mob/elite identities before NPC/boss ART; eight-direction animation follows visual review."
+  }
+}
