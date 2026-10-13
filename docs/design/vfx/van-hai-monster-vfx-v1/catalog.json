@@ -1,0 +1,1471 @@
+{
+  "version": 1,
+  "id": "van-hai-monster-vfx-v1",
+  "date": "2026-10-13",
+  "status": "candidate-art-review",
+  "artApproved": false,
+  "ownerApproved": false,
+  "runtimeConsumable": false,
+  "tool": "built-in ImageGen",
+  "clips": {
+    "cloud-bite": {
+      "id": "cloud-bite",
+      "kind": "directional",
+      "frameSize": [
+        128,
+        96
+      ],
+      "anchor": [
+        26,
+        48
+      ],
+      "frames": [
+        {
+          "file": "frames/cloud-bite/001.png",
+          "sha256": "75856cfb7ee1a8e1b2d978d0596e76f221403d937ba0d322d75db8c22d51c796",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 128,
+            "h": 96
+          },
+          "sourceMapping": 0,
+          "bounds": [
+            23,
+            27,
+            50,
+            71
+          ]
+        },
+        {
+          "file": "frames/cloud-bite/002.png",
+          "sha256": "5c45b4a0782dde29ea234cb9427511fd046abbf60b8c48101cac362125e6bee1",
+          "rect": {
+            "x": 134,
+            "y": 2,
+            "w": 128,
+            "h": 96
+          },
+          "sourceMapping": 1,
+          "bounds": [
+            19,
+            22,
+            52,
+            74
+          ]
+        },
+        {
+          "file": "frames/cloud-bite/003.png",
+          "sha256": "5ac2f08100180af5b6d3ec82989fda0573d37a0c80f4046c756487a64ec423a7",
+          "rect": {
+            "x": 266,
+            "y": 2,
+            "w": 128,
+            "h": 96
+          },
+          "sourceMapping": 2,
+          "bounds": [
+            14,
+            19,
+            55,
+            76
+          ]
+        },
+        {
+          "file": "frames/cloud-bite/004.png",
+          "sha256": "35126acf2fee91eb90e6b1887b2c3941af5a50039b940427e8f401f9e72d7591",
+          "rect": {
+            "x": 398,
+            "y": 2,
+            "w": 128,
+            "h": 96
+          },
+          "sourceMapping": 3,
+          "bounds": [
+            10,
+            20,
+            47,
+            79
+          ]
+        },
+        {
+          "file": "frames/cloud-bite/005.png",
+          "sha256": "ebdfa6125ce57957cd44848d48ca38846d61dcd54a1215eaf6575eb87aac3f9b",
+          "rect": {
+            "x": 530,
+            "y": 2,
+            "w": 128,
+            "h": 96
+          },
+          "sourceMapping": 4,
+          "bounds": [
+            9,
+            18,
+            36,
+            66
+          ]
+        },
+        {
+          "file": "frames/cloud-bite/006.png",
+          "sha256": "dc17cc3a3a8b2e2e081ccfd33689fcd76160f6573b4e63345ac4c694a114af7b",
+          "rect": {
+            "x": 662,
+            "y": 2,
+            "w": 128,
+            "h": 96
+          },
+          "sourceMapping": 5,
+          "bounds": [
+            2,
+            29,
+            30,
+            67
+          ]
+        }
+      ],
+      "atlas": "atlases/cloud-bite.png",
+      "atlasSize": [
+        792,
+        100
+      ],
+      "atlasSha256": "6d2886dd6d8dcb0e036e5981b5f6cc511a885ac3f1bac58d50ab9c7dc9cae314",
+      "fps": 30,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "loop": false,
+      "artApproved": false,
+      "sampling": "nearest core / original soft alpha",
+      "rotationReuse": true
+    },
+    "wood-ray": {
+      "id": "wood-ray",
+      "kind": "directional",
+      "frameSize": [
+        176,
+        96
+      ],
+      "anchor": [
+        24,
+        48
+      ],
+      "frames": [
+        {
+          "file": "frames/wood-ray/001.png",
+          "sha256": "436a55d18096343eb47cabf36aeb811293be50d4f4150d0eba5b3cbe09199cbb",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 176,
+            "h": 96
+          },
+          "sourceMapping": 0,
+          "bounds": [
+            18,
+            23,
+            42,
+            79
+          ]
+        },
+        {
+          "file": "frames/wood-ray/002.png",
+          "sha256": "91cc447a0e742d212ebec26b250bf7c9bbeec5b48998a7e4eba82204526d37d1",
+          "rect": {
+            "x": 182,
+            "y": 2,
+            "w": 176,
+            "h": 96
+          },
+          "sourceMapping": 1,
+          "bounds": [
+            6,
+            17,
+            49,
+            66
+          ]
+        },
+        {
+          "file": "frames/wood-ray/003.png",
+          "sha256": "3441737352cef4b4ccaece7536991ced28d777d9a9206ebfb18ef8fe5a283409",
+          "rect": {
+            "x": 362,
+            "y": 2,
+            "w": 176,
+            "h": 96
+          },
+          "sourceMapping": 2,
+          "bounds": [
+            4,
+            12,
+            58,
+            85
+          ]
+        },
+        {
+          "file": "frames/wood-ray/004.png",
+          "sha256": "bf8039d583f1a5143c91eb8c8fd418000677027d18ab34c93823d12533ed9975",
+          "rect": {
+            "x": 542,
+            "y": 2,
+            "w": 176,
+            "h": 96
+          },
+          "sourceMapping": 3,
+          "bounds": [
+            16,
+            17,
+            59,
+            85
+          ]
+        },
+        {
+          "file": "frames/wood-ray/005.png",
+          "sha256": "3b0cd6a0d9306252b8d83a85fa8d34ddc36b6a8943b3f245124cab68847d8e55",
+          "rect": {
+            "x": 722,
+            "y": 2,
+            "w": 176,
+            "h": 96
+          },
+          "sourceMapping": 4,
+          "bounds": [
+            16,
+            23,
+            55,
+            83
+          ]
+        },
+        {
+          "file": "frames/wood-ray/006.png",
+          "sha256": "8892c501af3e484721114339e8682316db36f9607750d10d32435c6f87be0342",
+          "rect": {
+            "x": 902,
+            "y": 2,
+            "w": 176,
+            "h": 96
+          },
+          "sourceMapping": 5,
+          "bounds": [
+            4,
+            35,
+            32,
+            64
+          ]
+        }
+      ],
+      "atlas": "atlases/wood-ray.png",
+      "atlasSize": [
+        1080,
+        100
+      ],
+      "atlasSha256": "d746917486f86ba2549c8bdc59a9dd3c7b9ef0332f9e3374489cfed43e063027",
+      "fps": 30,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "loop": false,
+      "artApproved": false,
+      "sampling": "nearest core / original soft alpha",
+      "rotationReuse": true
+    },
+    "jade-claw": {
+      "id": "jade-claw",
+      "kind": "directional",
+      "frameSize": [
+        144,
+        112
+      ],
+      "anchor": [
+        30,
+        56
+      ],
+      "frames": [
+        {
+          "file": "frames/jade-claw/001.png",
+          "sha256": "1bfa1e20f23e56216c26d8df677b57c9c853a706ddc49e3108c11dd54bf7e2c2",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 144,
+            "h": 112
+          },
+          "sourceMapping": 0,
+          "bounds": [
+            15,
+            44,
+            42,
+            89
+          ]
+        },
+        {
+          "file": "frames/jade-claw/002.png",
+          "sha256": "c294f24a55292fa2e8d9395ba6009e4bd9fad2ebf1e13325142e510ed1dc28aa",
+          "rect": {
+            "x": 150,
+            "y": 2,
+            "w": 144,
+            "h": 112
+          },
+          "sourceMapping": 1,
+          "bounds": [
+            7,
+            27,
+            46,
+            87
+          ]
+        },
+        {
+          "file": "frames/jade-claw/003.png",
+          "sha256": "8eadec0153de101f3c34ea557c8a492f4fcc4d3c154c005fd07ef8710b456543",
+          "rect": {
+            "x": 298,
+            "y": 2,
+            "w": 144,
+            "h": 112
+          },
+          "sourceMapping": 2,
+          "bounds": [
+            5,
+            27,
+            52,
+            84
+          ]
+        },
+        {
+          "file": "frames/jade-claw/004.png",
+          "sha256": "21516e2ce0b5017d9e3c0e4bb24f81e840fd768bbc37ee346dde24aa650fa4a0",
+          "rect": {
+            "x": 446,
+            "y": 2,
+            "w": 144,
+            "h": 112
+          },
+          "sourceMapping": 3,
+          "bounds": [
+            3,
+            34,
+            44,
+            85
+          ]
+        },
+        {
+          "file": "frames/jade-claw/005.png",
+          "sha256": "7c301be5420727e8b5003c30d710ca7df2fd310c3926f53e757ee6647c7c1d3f",
+          "rect": {
+            "x": 594,
+            "y": 2,
+            "w": 144,
+            "h": 112
+          },
+          "sourceMapping": 4,
+          "bounds": [
+            10,
+            37,
+            46,
+            99
+          ]
+        },
+        {
+          "file": "frames/jade-claw/006.png",
+          "sha256": "94f891d29e0308bf180a4e9140791fcc1ee18fbb4d516dd416871d5cac012f12",
+          "rect": {
+            "x": 742,
+            "y": 2,
+            "w": 144,
+            "h": 112
+          },
+          "sourceMapping": 5,
+          "bounds": [
+            17,
+            51,
+            39,
+            94
+          ]
+        }
+      ],
+      "atlas": "atlases/jade-claw.png",
+      "atlasSize": [
+        888,
+        116
+      ],
+      "atlasSha256": "e4d285623edc7b422b792a41f31010c6901bec8a3156bdf5d02af7c34ca7eeac",
+      "fps": 30,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "loop": false,
+      "artApproved": false,
+      "sampling": "nearest core / original soft alpha",
+      "rotationReuse": true
+    },
+    "ink-dive": {
+      "id": "ink-dive",
+      "kind": "directional",
+      "frameSize": [
+        144,
+        96
+      ],
+      "anchor": [
+        28,
+        48
+      ],
+      "frames": [
+        {
+          "file": "frames/ink-dive/001.png",
+          "sha256": "03fe979421f3156df3d0bd0f0d0e2e5ecf7bf15c6bfcc0ae51a8941c02600179",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 144,
+            "h": 96
+          },
+          "sourceMapping": 0,
+          "bounds": [
+            24,
+            36,
+            56,
+            60
+          ]
+        },
+        {
+          "file": "frames/ink-dive/002.png",
+          "sha256": "a9e33cd355bc44ba4d377c02301f75e38fc7463185fbecd3e6b442112ecb047b",
+          "rect": {
+            "x": 150,
+            "y": 2,
+            "w": 144,
+            "h": 96
+          },
+          "sourceMapping": 1,
+          "bounds": [
+            23,
+            13,
+            67,
+            67
+          ]
+        },
+        {
+          "file": "frames/ink-dive/003.png",
+          "sha256": "1522b340c09c946dc73b7a9d0405fe5562a8b61e812375893def17676c7ea4cb",
+          "rect": {
+            "x": 298,
+            "y": 2,
+            "w": 144,
+            "h": 96
+          },
+          "sourceMapping": 2,
+          "bounds": [
+            23,
+            5,
+            87,
+            85
+          ]
+        },
+        {
+          "file": "frames/ink-dive/004.png",
+          "sha256": "40fbebbd7af6aacd1807d21d8bb25f5d9aa9e4d21f878fc1e644400667b05692",
+          "rect": {
+            "x": 446,
+            "y": 2,
+            "w": 144,
+            "h": 96
+          },
+          "sourceMapping": 3,
+          "bounds": [
+            18,
+            28,
+            63,
+            85
+          ]
+        },
+        {
+          "file": "frames/ink-dive/005.png",
+          "sha256": "94c7170243de4b3f339098d490a593c3ff5e97e0cfba148c642e594b9289edc1",
+          "rect": {
+            "x": 594,
+            "y": 2,
+            "w": 144,
+            "h": 96
+          },
+          "sourceMapping": 4,
+          "bounds": [
+            23,
+            32,
+            65,
+            78
+          ]
+        },
+        {
+          "file": "frames/ink-dive/006.png",
+          "sha256": "451f81592b0561c3f964fbee345abff6db700847dd19aabba65f991d7d427f96",
+          "rect": {
+            "x": 742,
+            "y": 2,
+            "w": 144,
+            "h": 96
+          },
+          "sourceMapping": 5,
+          "bounds": [
+            18,
+            43,
+            52,
+            78
+          ]
+        }
+      ],
+      "atlas": "atlases/ink-dive.png",
+      "atlasSize": [
+        888,
+        100
+      ],
+      "atlasSha256": "64777b86bd8fd45d7f42854166c2fe74898ad212b5779562de40a52c653bfd15",
+      "fps": 30,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "loop": false,
+      "artApproved": false,
+      "sampling": "nearest core / original soft alpha",
+      "rotationReuse": true
+    },
+    "puppet-strike": {
+      "id": "puppet-strike",
+      "kind": "directional",
+      "frameSize": [
+        128,
+        112
+      ],
+      "anchor": [
+        28,
+        56
+      ],
+      "frames": [
+        {
+          "file": "frames/puppet-strike/001.png",
+          "sha256": "04a5380572d45cc12a33fbbc70d6a04ee6d0b92f5218a79ccbad39d333f9d777",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 128,
+            "h": 112
+          },
+          "sourceMapping": 0,
+          "bounds": [
+            22,
+            23,
+            57,
+            84
+          ]
+        },
+        {
+          "file": "frames/puppet-strike/002.png",
+          "sha256": "5c7846ab834d9e7fd1a101fc41ca532a41b4a887cc12d0c806a2ebabb219020c",
+          "rect": {
+            "x": 134,
+            "y": 2,
+            "w": 128,
+            "h": 112
+          },
+          "sourceMapping": 1,
+          "bounds": [
+            19,
+            14,
+            65,
+            92
+          ]
+        },
+        {
+          "file": "frames/puppet-strike/003.png",
+          "sha256": "7d2c89af3991c3989f1e32bb6343a5faf333e36e36ef274c2306e53b5afbd207",
+          "rect": {
+            "x": 266,
+            "y": 2,
+            "w": 128,
+            "h": 112
+          },
+          "sourceMapping": 2,
+          "bounds": [
+            9,
+            8,
+            68,
+            102
+          ]
+        },
+        {
+          "file": "frames/puppet-strike/004.png",
+          "sha256": "8e536d46be8b87206f79a4aac97fb342ac556f0bb1b73d921edb1fb655d41ee6",
+          "rect": {
+            "x": 398,
+            "y": 2,
+            "w": 128,
+            "h": 112
+          },
+          "sourceMapping": 3,
+          "bounds": [
+            15,
+            32,
+            66,
+            84
+          ]
+        },
+        {
+          "file": "frames/puppet-strike/005.png",
+          "sha256": "2f2086e1069132cba68ca8ad09f80f066550df4a84c023b2bd267795825cba4a",
+          "rect": {
+            "x": 530,
+            "y": 2,
+            "w": 128,
+            "h": 112
+          },
+          "sourceMapping": 4,
+          "bounds": [
+            19,
+            20,
+            71,
+            84
+          ]
+        },
+        {
+          "file": "frames/puppet-strike/006.png",
+          "sha256": "c4dcaf02fbba58d0a731c11a69ab3f233361d6441bf5839a1ab51085901d4959",
+          "rect": {
+            "x": 662,
+            "y": 2,
+            "w": 128,
+            "h": 112
+          },
+          "sourceMapping": 5,
+          "bounds": [
+            24,
+            29,
+            58,
+            89
+          ]
+        }
+      ],
+      "atlas": "atlases/puppet-strike.png",
+      "atlasSize": [
+        792,
+        116
+      ],
+      "atlasSha256": "9730f4ba2de4627122acdaef8614763e8e9c7629c7f8a8e983e5b843d5f42bea",
+      "fps": 30,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "loop": false,
+      "artApproved": false,
+      "sampling": "nearest core / original soft alpha",
+      "rotationReuse": true
+    },
+    "spore-ring": {
+      "id": "spore-ring",
+      "kind": "radial",
+      "frameSize": [
+        144,
+        144
+      ],
+      "anchor": [
+        72,
+        72
+      ],
+      "frames": [
+        {
+          "file": "frames/spore-ring/001.png",
+          "sha256": "fefa574e17e0c98a9242ba83fa36acfae398cfde817c27541b6c9d85911cb7a2",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 144,
+            "h": 144
+          },
+          "sourceMapping": 0,
+          "bounds": [
+            51,
+            27,
+            107,
+            98
+          ]
+        },
+        {
+          "file": "frames/spore-ring/002.png",
+          "sha256": "0634315c53c74487c62ba6827f05e7c5dcb85155443f87b2a495e59e10d37c68",
+          "rect": {
+            "x": 150,
+            "y": 2,
+            "w": 144,
+            "h": 144
+          },
+          "sourceMapping": 1,
+          "bounds": [
+            41,
+            40,
+            99,
+            101
+          ]
+        },
+        {
+          "file": "frames/spore-ring/003.png",
+          "sha256": "5ef0314d33446509e87911ebda1baf5127ef1e2faeeae356e8cca688a6cd15f1",
+          "rect": {
+            "x": 298,
+            "y": 2,
+            "w": 144,
+            "h": 144
+          },
+          "sourceMapping": 2,
+          "bounds": [
+            38,
+            37,
+            108,
+            105
+          ]
+        },
+        {
+          "file": "frames/spore-ring/004.png",
+          "sha256": "c1d731175e5a744d8d7d9b2743200b6b33c5b9b555aa8461ab77568858a8c36d",
+          "rect": {
+            "x": 446,
+            "y": 2,
+            "w": 144,
+            "h": 144
+          },
+          "sourceMapping": 3,
+          "bounds": [
+            39,
+            32,
+            104,
+            135
+          ]
+        },
+        {
+          "file": "frames/spore-ring/005.png",
+          "sha256": "fab1dada1b020f5c9f642c63ca18c30d60972cc74c88b52518afe9603fd030aa",
+          "rect": {
+            "x": 594,
+            "y": 2,
+            "w": 144,
+            "h": 144
+          },
+          "sourceMapping": 4,
+          "bounds": [
+            42,
+            39,
+            105,
+            104
+          ]
+        },
+        {
+          "file": "frames/spore-ring/006.png",
+          "sha256": "666823f22af95b1115b57633c070ca6fd6203e635484fbf9ad399c374505cc95",
+          "rect": {
+            "x": 742,
+            "y": 2,
+            "w": 144,
+            "h": 144
+          },
+          "sourceMapping": 5,
+          "bounds": [
+            38,
+            46,
+            99,
+            122
+          ]
+        }
+      ],
+      "atlas": "atlases/spore-ring.png",
+      "atlasSize": [
+        888,
+        148
+      ],
+      "atlasSha256": "e1503dc27aa5eb3cadafcc5775439127cc24b20e8cb64b16802910386d39761e",
+      "fps": 30,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "loop": false,
+      "artApproved": false,
+      "sampling": "nearest core / original soft alpha",
+      "rotationReuse": false
+    },
+    "dark-seal": {
+      "id": "dark-seal",
+      "kind": "directional",
+      "frameSize": [
+        176,
+        112
+      ],
+      "anchor": [
+        24,
+        56
+      ],
+      "frames": [
+        {
+          "file": "frames/dark-seal/001.png",
+          "sha256": "690c9e4b52d2877e9d0270e6aa168c33e8388d7bb75d6551e933397b790a6610",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 0,
+          "bounds": [
+            19,
+            47,
+            34,
+            74
+          ]
+        },
+        {
+          "file": "frames/dark-seal/002.png",
+          "sha256": "6f3b997a17081eefcc6c0bc87df152aad6d14933b337983181a8bd894e102e10",
+          "rect": {
+            "x": 182,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 1,
+          "bounds": [
+            15,
+            29,
+            44,
+            83
+          ]
+        },
+        {
+          "file": "frames/dark-seal/003.png",
+          "sha256": "34ea63505903e2ac12346a37bd6ea16da5b913f5bbb2d18b26e528ff7f103cc3",
+          "rect": {
+            "x": 362,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 2,
+          "bounds": [
+            4,
+            40,
+            46,
+            79
+          ]
+        },
+        {
+          "file": "frames/dark-seal/004.png",
+          "sha256": "a3c488c9901b7d1144e0c2acb0f6229d87c367628d3ea44f261a70cd82ffed9d",
+          "rect": {
+            "x": 542,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 3,
+          "bounds": [
+            10,
+            29,
+            48,
+            78
+          ]
+        },
+        {
+          "file": "frames/dark-seal/005.png",
+          "sha256": "58d387375e82849a45fc0453bc7a20d44eb1e5f538575bc70b66a60fe0d56fd7",
+          "rect": {
+            "x": 722,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 4,
+          "bounds": [
+            11,
+            37,
+            42,
+            77
+          ]
+        },
+        {
+          "file": "frames/dark-seal/006.png",
+          "sha256": "f277920ff4286a07edc438e2cd54ed3a8549b08d3a0b5827d2c4131b4b19a812",
+          "rect": {
+            "x": 902,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 5,
+          "bounds": [
+            13,
+            50,
+            35,
+            77
+          ]
+        }
+      ],
+      "atlas": "atlases/dark-seal.png",
+      "atlasSize": [
+        1080,
+        116
+      ],
+      "atlasSha256": "a47a286730a1a57b0d571e9bffebcb69a3e379f36a7e35f1376b940b5e30c251",
+      "fps": 30,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "loop": false,
+      "artApproved": false,
+      "sampling": "nearest core / original soft alpha",
+      "rotationReuse": true
+    },
+    "wisp-ray": {
+      "id": "wisp-ray",
+      "kind": "directional",
+      "frameSize": [
+        176,
+        112
+      ],
+      "anchor": [
+        26,
+        56
+      ],
+      "frames": [
+        {
+          "file": "frames/wisp-ray/001.png",
+          "sha256": "92f5b8ba627e51853c86e06a537378cdc3dd28364ca4d6cab2208b989eaaf8ac",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 0,
+          "bounds": [
+            18,
+            31,
+            41,
+            76
+          ]
+        },
+        {
+          "file": "frames/wisp-ray/002.png",
+          "sha256": "f84045318846e7cd3ad25928884cd17fb4185a1cb12d2d98f719b4b45cf6e80d",
+          "rect": {
+            "x": 182,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 1,
+          "bounds": [
+            9,
+            38,
+            45,
+            85
+          ]
+        },
+        {
+          "file": "frames/wisp-ray/003.png",
+          "sha256": "95e776a2593d81a68f870a79844b6b176cd6603071611130f3b7ddc97c82b27a",
+          "rect": {
+            "x": 362,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 2,
+          "bounds": [
+            6,
+            35,
+            50,
+            83
+          ]
+        },
+        {
+          "file": "frames/wisp-ray/004.png",
+          "sha256": "97b59cadc88222a530c294b35f2ded4eff219d5d8413f980fe4afe4133461742",
+          "rect": {
+            "x": 542,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 3,
+          "bounds": [
+            2,
+            26,
+            38,
+            87
+          ]
+        },
+        {
+          "file": "frames/wisp-ray/005.png",
+          "sha256": "1290464de4b454cb036b3a215fbf05f37ecde34be86cdc9122c50225ce6caccb",
+          "rect": {
+            "x": 722,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 4,
+          "bounds": [
+            6,
+            33,
+            38,
+            81
+          ]
+        },
+        {
+          "file": "frames/wisp-ray/006.png",
+          "sha256": "7a30b3f9427b2b95765fd1d6ced350813424430be5ab75d920ba14296cf2a592",
+          "rect": {
+            "x": 902,
+            "y": 2,
+            "w": 176,
+            "h": 112
+          },
+          "sourceMapping": 5,
+          "bounds": [
+            7,
+            41,
+            30,
+            82
+          ]
+        }
+      ],
+      "atlas": "atlases/wisp-ray.png",
+      "atlasSize": [
+        1080,
+        116
+      ],
+      "atlasSha256": "fb18f2f99efa3d623ad5a7b0271437ddbec46654e028e6c46972db6b9357ed64",
+      "fps": 30,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "loop": false,
+      "artApproved": false,
+      "sampling": "nearest core / original soft alpha",
+      "rotationReuse": true
+    },
+    "jade-contact": {
+      "id": "jade-contact",
+      "kind": "radial",
+      "frameSize": [
+        80,
+        80
+      ],
+      "anchor": [
+        40,
+        40
+      ],
+      "frames": [
+        {
+          "file": "frames/jade-contact/001.png",
+          "sha256": "1b5c3718b0a3cbad3b9a8475043d15d38b563c14d38e01bf59d968fb8eedc7bc",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 80,
+            "h": 80
+          },
+          "sourceMapping": 0,
+          "bounds": [
+            25,
+            20,
+            58,
+            56
+          ]
+        },
+        {
+          "file": "frames/jade-contact/002.png",
+          "sha256": "f40215d980702b69de313e951cc6aecd4d07b3f014b45816201a8c3f2e91518a",
+          "rect": {
+            "x": 86,
+            "y": 2,
+            "w": 80,
+            "h": 80
+          },
+          "sourceMapping": 1,
+          "bounds": [
+            18,
+            11,
+            62,
+            69
+          ]
+        },
+        {
+          "file": "frames/jade-contact/003.png",
+          "sha256": "9cd7778a4198c5a376c4dcad40f8783d04324145211f9e17a4d20f28a8ee5506",
+          "rect": {
+            "x": 170,
+            "y": 2,
+            "w": 80,
+            "h": 80
+          },
+          "sourceMapping": 2,
+          "bounds": [
+            20,
+            3,
+            59,
+            71
+          ]
+        },
+        {
+          "file": "frames/jade-contact/004.png",
+          "sha256": "d7a7401f61c7991a9cbad0876ee2f3a68ea75fbf627b0f074493ea88f66f8f96",
+          "rect": {
+            "x": 254,
+            "y": 2,
+            "w": 80,
+            "h": 80
+          },
+          "sourceMapping": 3,
+          "bounds": [
+            21,
+            14,
+            60,
+            63
+          ]
+        },
+        {
+          "file": "frames/jade-contact/005.png",
+          "sha256": "48a13f17cf6c5c1c46df4fae922b4410419b878fd60aaa5445bd8341a685fbe4",
+          "rect": {
+            "x": 338,
+            "y": 2,
+            "w": 80,
+            "h": 80
+          },
+          "sourceMapping": 4,
+          "bounds": [
+            24,
+            10,
+            60,
+            65
+          ]
+        },
+        {
+          "file": "frames/jade-contact/006.png",
+          "sha256": "e091ba6062e2df79381539d4af9dde56aea13dabc2ac2b9b99668d0551a3b9e7",
+          "rect": {
+            "x": 422,
+            "y": 2,
+            "w": 80,
+            "h": 80
+          },
+          "sourceMapping": 5,
+          "bounds": [
+            26,
+            22,
+            54,
+            54
+          ]
+        }
+      ],
+      "atlas": "atlases/jade-contact.png",
+      "atlasSize": [
+        504,
+        84
+      ],
+      "atlasSha256": "495b55fb66a7077abd8246d635101644cea48f84164fb8fb4c7b78f455799fe8",
+      "fps": 30,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "loop": false,
+      "artApproved": false,
+      "sampling": "nearest core / original soft alpha",
+      "rotationReuse": false
+    }
+  },
+  "props": {
+    "rogue-dagger": {
+      "id": "rogue-dagger",
+      "file": "props/rogue-dagger.png",
+      "sha256": "c78fe042c9dc160d0e05bf34ad387f20534656e07a67e5926e33b99311234e12",
+      "frameSize": [
+        32,
+        24
+      ],
+      "anchor": [
+        5,
+        12
+      ],
+      "sourceGrip": [
+        479.5,
+        483.32
+      ],
+      "sourceBounds": [
+        377,
+        332,
+        1402,
+        623
+      ],
+      "scale": 0.021463414634146343,
+      "pixelsResampled": true,
+      "artApproved": false,
+      "gripStatus": "source-relative candidate; hand socket review required"
+    },
+    "adept-fan": {
+      "id": "adept-fan",
+      "file": "props/adept-fan.png",
+      "sha256": "db147089528c5666a1be609b8da405d029f2b2e81f6f48bb0c9b5aaff5cff092",
+      "frameSize": [
+        32,
+        32
+      ],
+      "anchor": [
+        8,
+        26
+      ],
+      "sourceGrip": [
+        496.6,
+        795.8199999999999
+      ],
+      "sourceBounds": [
+        421,
+        162,
+        1177,
+        899
+      ],
+      "scale": 0.03042328042328042,
+      "pixelsResampled": true,
+      "artApproved": false,
+      "gripStatus": "source-relative candidate; hand socket review required"
+    }
+  },
+  "sources": [
+    {
+      "id": "cloud-bite",
+      "source": "sources/cloud-bite.png",
+      "sourceSha256": "24cf0a80121ab47637d0ee766f13f1b74f092c33e495ef0131928d91564c453d",
+      "prompt": "prompts/cloud-bite.txt",
+      "promptSha256": "d8421433132f3a877bc49eb827e1ef92921d38c412e69f31cf16f7dd1b2619ed",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/cloud-wolf.png",
+          "sha256": "eb7955ad246be23a405bd90e0e79bc0780c214db30fb2db67886651b7c4f2a5c"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "vfx-sequence"
+    },
+    {
+      "id": "wood-ray",
+      "source": "sources/wood-ray.png",
+      "sourceSha256": "c7e29321b097ce20a74497ea0e971c9ebc13f0e09fbd51b04b104cf850d264e1",
+      "prompt": "prompts/wood-ray.txt",
+      "promptSha256": "8a2f5d21fd7b885c72602ee21446f0382014811c145c99d54e16445984f3c668",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/talisman-sprout.png",
+          "sha256": "11228a7f6d9eb75e035b920b6020b41c2eeaafc1fdf52c905387cc387996ec0c"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "vfx-sequence"
+    },
+    {
+      "id": "jade-claw",
+      "source": "sources/jade-claw.png",
+      "sourceSha256": "805ad55e1be834adb04f6037c7bd78a5ae3691bebe5307a739bb4bd5a6d55bf7",
+      "prompt": "prompts/jade-claw.txt",
+      "promptSha256": "f7cdff3b111ede005411bbfd0ab7e480122b39559502e30351f144dcf056f56f",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/jade-guard.png",
+          "sha256": "552ae704ff8529aff0f1642928d2ebb519550737a4821b1c298a13d1010c46a3"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "vfx-sequence"
+    },
+    {
+      "id": "ink-dive",
+      "source": "sources/ink-dive.png",
+      "sourceSha256": "f58d9cc89ff2a9e82c4e47b76238287da59a64cb7e8f3bae5977898ff8171125",
+      "prompt": "prompts/ink-dive.txt",
+      "promptSha256": "0b820cfa54bfae86511a6ceb4bd9ec70edd096abd4a452dfbe46b44ec0942c7c",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/ink-bat.png",
+          "sha256": "0b66f39dd9493905a0adbbe1db299b1823741e2d03bf4760ebbb7a78bec283ad"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "vfx-sequence"
+    },
+    {
+      "id": "puppet-strike",
+      "source": "sources/puppet-strike.png",
+      "sourceSha256": "24e827f183af251843360be3e67f605697312d5fc5a5d8cd3ef4fd30aceebd5b",
+      "prompt": "prompts/puppet-strike.txt",
+      "promptSha256": "78f1402a457b38d68d6d5edacd8fb5364538b42439d86a11109ec6b13a0b1e22",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/cracked-puppet.png",
+          "sha256": "03c899787908f0718b7d19162c4f9c76f328bf50ca67546b195e522e7894eb17"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "vfx-sequence"
+    },
+    {
+      "id": "spore-ring",
+      "source": "sources/spore-ring.png",
+      "sourceSha256": "60e530e8f43391f9151da4ba65d8597946a93ce90f9b3783116502880e1bd434",
+      "prompt": "prompts/spore-ring.txt",
+      "promptSha256": "5a09fd8343c62c51c836378ee644fd6db2dca3075c590786e9ad4584fc193166",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/spirit-fungus.png",
+          "sha256": "a416dc618847c1340d52a51f459a40b08faac862c3e0f339fc72b6c08195a2e7"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "vfx-sequence"
+    },
+    {
+      "id": "dark-seal",
+      "source": "sources/dark-seal.png",
+      "sourceSha256": "d300b82486424507aadaf769c54bf8980fd4908e9e9e017f03c1bba6bf59a2b5",
+      "prompt": "prompts/dark-seal.txt",
+      "promptSha256": "93fb0e34f60e788cde242487677244a7bfde71daab1d833afdd29a8ef59d8cb3",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/dark-talisman-rogue.png",
+          "sha256": "66990deac2690e25807a180bf99830537d81c5d921655792c6b683e3f70b4197"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "vfx-sequence"
+    },
+    {
+      "id": "wisp-ray",
+      "source": "sources/wisp-ray.png",
+      "sourceSha256": "01c258f06ddca084e0f4d5e0446317f5cb4e838cf5118797a5e4bc902298efea",
+      "prompt": "prompts/wisp-ray.txt",
+      "promptSha256": "e1c5566013c5e17851cd744d3d51b148b25843b36d205f209ec106910af06807",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/quiet-wisp.png",
+          "sha256": "28f2b9388376e7370bfe0a45117c107e526467f1f0ed13daa12f30d249bcf4b4"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "vfx-sequence"
+    },
+    {
+      "id": "jade-contact",
+      "source": "sources/jade-contact.png",
+      "sourceSha256": "e358b8d53e58a6ee3afd23708b1cd0dca097a8e9bc5c5df8fdb00e3244b2553a",
+      "prompt": "prompts/jade-contact.txt",
+      "promptSha256": "d9bf4d809b91e3e176106c4989836a33bb94b9bbf6beddbcd2c768d3d84c45a3",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/jade-scute.png",
+          "sha256": "50d5b717f5cb2abf9ffeb08e3da7557a0efe47517fa086f1ec9e06aa6cfc54e6"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "vfx-sequence"
+    },
+    {
+      "id": "rogue-dagger",
+      "source": "sources/rogue-dagger.png",
+      "sourceSha256": "afbb42d2305e4a1baeb70659d18a9a056c531dcd41411e6a2f5a6a78d968c000",
+      "prompt": "prompts/rogue-dagger.txt",
+      "promptSha256": "b758b5555de538247e78e6b5f05a5a68e85f5abb389c3f0164f703e03dedb865",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/dark-talisman-rogue.png",
+          "sha256": "66990deac2690e25807a180bf99830537d81c5d921655792c6b683e3f70b4197"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "held-prop"
+    },
+    {
+      "id": "adept-fan",
+      "source": "sources/adept-fan.png",
+      "sourceSha256": "60286d90388dd95cecc2b8453f04affc5990bb5af9f77eab6c71fe254e3ee75f",
+      "prompt": "prompts/adept-fan.txt",
+      "promptSha256": "385238e699a31ddfe29061f6fc55ab67b5ac61faf5a1f3c90a547be486023abb",
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-monster-concepts-v1/raw/black-silk-adept.png",
+          "sha256": "29d9fa1a1522fa23f339ecf42951f60e893a5e298bba37235fb71502d0ecf0f4"
+        }
+      ],
+      "pixelsResampled": true,
+      "type": "held-prop"
+    }
+  ],
+  "coverage": {
+    "required": [
+      "cloud-bite",
+      "wood-ray",
+      "jade-claw",
+      "ink-dive",
+      "puppet-strike",
+      "spore-ring",
+      "dark-seal",
+      "wisp-ray",
+      "jade-contact",
+      "rogue-dagger",
+      "adept-fan"
+    ],
+    "missing": [],
+    "sequenceCount": 9,
+    "poses": 54,
+    "heldProps": 2
+  },
+  "alpha": "Soft original RGBA / all shards, no binary body threshold",
+  "registration": "registration.json"
+}

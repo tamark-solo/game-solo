@@ -1,0 +1,1002 @@
+{
+  "id": "cloud-wolf-king-vfx-v1",
+  "date": "2026-10-13",
+  "status": "candidate-art-review",
+  "tool": "built-in ImageGen",
+  "actors": [
+    {
+      "id": "wolf-fx",
+      "actor": "BOSS-VH-CLOUD-WOLF-KING",
+      "rank": "boss",
+      "name": "Vân Nha Lang Vương",
+      "palette": "Ivory / smoky jade / amber",
+      "description": "Spectral fangs and ink cloud wind, separated from body.",
+      "charge": "wolf-fx-charge",
+      "release": "wolf-fx-release",
+      "hoi_phong": "wolf-ground-hoi_phong",
+      "impact": "wolf-fx-impact",
+      "arrival": "wolf-ground-arrival"
+    }
+  ],
+  "clips": {
+    "wolf-fx-impact": {
+      "id": "wolf-fx-impact",
+      "actor": "BOSS-VH-CLOUD-WOLF-KING",
+      "slug": "wolf-fx",
+      "phase": "impact",
+      "phases": [
+        {
+          "at": 0,
+          "label": "impact"
+        }
+      ],
+      "kind": "radial",
+      "frameSize": [
+        104,
+        96
+      ],
+      "anchor": [
+        52,
+        48
+      ],
+      "frames": [
+        {
+          "file": "frames/wolf-fx-impact/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 104,
+            "h": 96
+          },
+          "bounds": [
+            19,
+            11,
+            79,
+            77
+          ],
+          "coreBounds": [
+            31,
+            27,
+            70,
+            62
+          ],
+          "sha256": "d811badcf374aaf538d4a05dd58fee2145220798b1509b0028fb5a68f0e6eaba"
+        },
+        {
+          "file": "frames/wolf-fx-impact/002.png",
+          "rect": {
+            "x": 110,
+            "y": 2,
+            "w": 104,
+            "h": 96
+          },
+          "bounds": [
+            14,
+            11,
+            86,
+            76
+          ],
+          "coreBounds": [
+            24,
+            19,
+            82,
+            72
+          ],
+          "sha256": "afcffd4d7783a38bca4dcc80ae502c61f128819611cda119a9906d4b3b9e88df"
+        },
+        {
+          "file": "frames/wolf-fx-impact/003.png",
+          "rect": {
+            "x": 218,
+            "y": 2,
+            "w": 104,
+            "h": 96
+          },
+          "bounds": [
+            21,
+            11,
+            92,
+            79
+          ],
+          "coreBounds": [
+            24,
+            17,
+            91,
+            75
+          ],
+          "sha256": "88ddc8673d5d353beeb7e392ec4d2c9b9bd1c7e89d6e50e3e0d3a7bdeae35849"
+        },
+        {
+          "file": "frames/wolf-fx-impact/004.png",
+          "rect": {
+            "x": 326,
+            "y": 2,
+            "w": 104,
+            "h": 96
+          },
+          "bounds": [
+            26,
+            11,
+            90,
+            81
+          ],
+          "coreBounds": [
+            27,
+            19,
+            87,
+            72
+          ],
+          "sha256": "90311fd56c56f20fd1404e1a60d9fbb610647719488be08c39d95ba6f3a41736"
+        },
+        {
+          "file": "frames/wolf-fx-impact/005.png",
+          "rect": {
+            "x": 434,
+            "y": 2,
+            "w": 104,
+            "h": 96
+          },
+          "bounds": [
+            23,
+            11,
+            92,
+            78
+          ],
+          "coreBounds": [
+            27,
+            17,
+            84,
+            71
+          ],
+          "sha256": "7260c4f75915f8cc85ff10b4a9e35508de0b530237f77c1c6e5c3a9c0b76cfbd"
+        },
+        {
+          "file": "frames/wolf-fx-impact/006.png",
+          "rect": {
+            "x": 542,
+            "y": 2,
+            "w": 104,
+            "h": 96
+          },
+          "bounds": [
+            27,
+            11,
+            83,
+            78
+          ],
+          "coreBounds": [
+            35,
+            25,
+            72,
+            69
+          ],
+          "sha256": "b717816c33c2a6b8693fdf0ff1fec989a872b092b7bdc62cc0c941eb6d358b69"
+        }
+      ],
+      "atlas": "atlases/wolf-fx-impact.png",
+      "atlasSize": [
+        648,
+        100
+      ],
+      "fps": 24,
+      "durations": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "loop": false,
+      "peakTargetWidth": 66.0,
+      "artApproved": false,
+      "rotationReuse": false,
+      "originStatus": "authored logical grid center, candidate emitter",
+      "atlasSha256": "c3860e78e0cded2c359b50eb7df9731532619399775de027c57010aeb52eece5"
+    },
+    "wolf-ground-hoi_phong": {
+      "id": "wolf-ground-hoi_phong",
+      "actor": "BOSS-VH-CLOUD-WOLF-KING",
+      "slug": "wolf-ground",
+      "phase": "hoi_phong",
+      "phases": [
+        {
+          "at": 0,
+          "label": "hoi_phong"
+        }
+      ],
+      "kind": "ground",
+      "frameSize": [
+        296,
+        288
+      ],
+      "anchor": [
+        148,
+        144
+      ],
+      "frames": [
+        {
+          "file": "frames/wolf-ground-hoi_phong/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 296,
+            "h": 288
+          },
+          "bounds": [
+            30,
+            31,
+            281,
+            276
+          ],
+          "coreBounds": [
+            106,
+            62,
+            259,
+            255
+          ],
+          "sha256": "4781269557939be7634630a48995a8de2a7fbfca490dff9b2211aec1adbfbdc4"
+        },
+        {
+          "file": "frames/wolf-ground-hoi_phong/002.png",
+          "rect": {
+            "x": 302,
+            "y": 2,
+            "w": 296,
+            "h": 288
+          },
+          "bounds": [
+            45,
+            26,
+            272,
+            277
+          ],
+          "coreBounds": [
+            68,
+            58,
+            256,
+            260
+          ],
+          "sha256": "115037c444009447bbbc06f2bc665c9e88d5900a527ec10f62b235538d6080d2"
+        },
+        {
+          "file": "frames/wolf-ground-hoi_phong/003.png",
+          "rect": {
+            "x": 602,
+            "y": 2,
+            "w": 296,
+            "h": 288
+          },
+          "bounds": [
+            35,
+            28,
+            269,
+            277
+          ],
+          "coreBounds": [
+            53,
+            51,
+            253,
+            262
+          ],
+          "sha256": "218ecaae6e23056bf890faae9d813e944f296082e4facfb7bbd8e8c92ba31282"
+        },
+        {
+          "file": "frames/wolf-ground-hoi_phong/004.png",
+          "rect": {
+            "x": 902,
+            "y": 2,
+            "w": 296,
+            "h": 288
+          },
+          "bounds": [
+            32,
+            26,
+            279,
+            277
+          ],
+          "coreBounds": [
+            48,
+            44,
+            256,
+            267
+          ],
+          "sha256": "036c514a38d2d8c11e798b83493a2f4dbb573718cf85b04236cd07ab53e1c358"
+        },
+        {
+          "file": "frames/wolf-ground-hoi_phong/005.png",
+          "rect": {
+            "x": 1202,
+            "y": 2,
+            "w": 296,
+            "h": 288
+          },
+          "bounds": [
+            43,
+            31,
+            285,
+            276
+          ],
+          "coreBounds": [
+            72,
+            57,
+            252,
+            258
+          ],
+          "sha256": "1b1887ebb1b93a5446d44225d42956be509ce84d5177a48f623163b8756695e5"
+        },
+        {
+          "file": "frames/wolf-ground-hoi_phong/006.png",
+          "rect": {
+            "x": 1502,
+            "y": 2,
+            "w": 296,
+            "h": 288
+          },
+          "bounds": [
+            49,
+            31,
+            256,
+            276
+          ],
+          "coreBounds": [
+            84,
+            60,
+            227,
+            248
+          ],
+          "sha256": "8d1f7082db2e6ccf5915f8cd909eaad4a042b05bc775566a1cef54b887661d04"
+        }
+      ],
+      "atlas": "atlases/wolf-ground-hoi_phong.png",
+      "atlasSize": [
+        1800,
+        292
+      ],
+      "fps": 24,
+      "durations": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "loop": false,
+      "peakTargetWidth": 208.0,
+      "artApproved": false,
+      "rotationReuse": false,
+      "originStatus": "authored logical grid center, candidate emitter",
+      "atlasSha256": "df9f800277b538222ac18b91449dc5f825f8d523b10edbc54d1d62840e554d92"
+    },
+    "wolf-ground-arrival": {
+      "id": "wolf-ground-arrival",
+      "actor": "BOSS-VH-CLOUD-WOLF-KING",
+      "slug": "wolf-ground",
+      "phase": "arrival",
+      "phases": [
+        {
+          "at": 0,
+          "label": "arrival"
+        }
+      ],
+      "kind": "radial",
+      "frameSize": [
+        168,
+        160
+      ],
+      "anchor": [
+        84,
+        80
+      ],
+      "frames": [
+        {
+          "file": "frames/wolf-ground-arrival/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 168,
+            "h": 160
+          },
+          "bounds": [
+            31,
+            19,
+            155,
+            141
+          ],
+          "coreBounds": [
+            42,
+            47,
+            143,
+            114
+          ],
+          "sha256": "bc71ce8be9f479da41ed254d336eded680eac266a4ab0d2278b9c81249073d72"
+        },
+        {
+          "file": "frames/wolf-ground-arrival/002.png",
+          "rect": {
+            "x": 174,
+            "y": 2,
+            "w": 168,
+            "h": 160
+          },
+          "bounds": [
+            15,
+            19,
+            152,
+            150
+          ],
+          "coreBounds": [
+            27,
+            42,
+            145,
+            125
+          ],
+          "sha256": "73a99e148d189c83a300ab3a3c38a8c45305d5a379b12b467478f860c7198cac"
+        },
+        {
+          "file": "frames/wolf-ground-arrival/003.png",
+          "rect": {
+            "x": 346,
+            "y": 2,
+            "w": 168,
+            "h": 160
+          },
+          "bounds": [
+            13,
+            19,
+            155,
+            144
+          ],
+          "coreBounds": [
+            21,
+            25,
+            149,
+            130
+          ],
+          "sha256": "43f31b1765e0d927d012bd6c0d04d8dcd77d8aa05d4a67fe81909fc0dce39d19"
+        },
+        {
+          "file": "frames/wolf-ground-arrival/004.png",
+          "rect": {
+            "x": 518,
+            "y": 2,
+            "w": 168,
+            "h": 160
+          },
+          "bounds": [
+            16,
+            19,
+            156,
+            143
+          ],
+          "coreBounds": [
+            22,
+            39,
+            148,
+            128
+          ],
+          "sha256": "33969899c6dabe6918563adf29cbbb8ee3b9639006d37ed140bc23b079ee6c54"
+        },
+        {
+          "file": "frames/wolf-ground-arrival/005.png",
+          "rect": {
+            "x": 690,
+            "y": 2,
+            "w": 168,
+            "h": 160
+          },
+          "bounds": [
+            17,
+            19,
+            157,
+            145
+          ],
+          "coreBounds": [
+            25,
+            46,
+            142,
+            132
+          ],
+          "sha256": "10608faa7879c547f39e91cdaa39dc5d7b1d862af7686576d371c3e0aea62193"
+        },
+        {
+          "file": "frames/wolf-ground-arrival/006.png",
+          "rect": {
+            "x": 862,
+            "y": 2,
+            "w": 168,
+            "h": 160
+          },
+          "bounds": [
+            20,
+            19,
+            136,
+            150
+          ],
+          "coreBounds": [
+            36,
+            56,
+            129,
+            119
+          ],
+          "sha256": "56b28ace9d829e329d990d8ef27ffb7d274d203acad149ad02b927445255fcc8"
+        }
+      ],
+      "atlas": "atlases/wolf-ground-arrival.png",
+      "atlasSize": [
+        1032,
+        164
+      ],
+      "fps": 24,
+      "durations": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "loop": false,
+      "peakTargetWidth": 128.0,
+      "artApproved": false,
+      "rotationReuse": false,
+      "originStatus": "authored logical grid center, candidate emitter",
+      "atlasSha256": "b2f1b0fc9fa802bb97f7f6329c5a63a145e544b88c5cf16dbfea17a5ca27734c"
+    },
+    "wolf-fx-charge": {
+      "id": "wolf-fx-charge",
+      "actor": "BOSS-VH-CLOUD-WOLF-KING",
+      "slug": "wolf-charge",
+      "phase": "charge",
+      "phases": [
+        {
+          "at": 0,
+          "label": "charge"
+        }
+      ],
+      "kind": "radial",
+      "frameSize": [
+        112,
+        112
+      ],
+      "anchor": [
+        56,
+        56
+      ],
+      "frames": [
+        {
+          "file": "frames/wolf-fx-charge/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 112,
+            "h": 112
+          },
+          "bounds": [
+            17,
+            14,
+            96,
+            97
+          ],
+          "coreBounds": [
+            29,
+            37,
+            83,
+            86
+          ],
+          "sha256": "cc03c292a569c310cb2516117c1054d08cda10e2eaa18b5a44fcee72395d200f"
+        },
+        {
+          "file": "frames/wolf-fx-charge/002.png",
+          "rect": {
+            "x": 118,
+            "y": 2,
+            "w": 112,
+            "h": 112
+          },
+          "bounds": [
+            11,
+            14,
+            99,
+            97
+          ],
+          "coreBounds": [
+            25,
+            34,
+            86,
+            89
+          ],
+          "sha256": "2c76992d84d8966489b42bf44621dede02cbbfe592c3d02c96550d50f98e0f72"
+        },
+        {
+          "file": "frames/wolf-fx-charge/003.png",
+          "rect": {
+            "x": 234,
+            "y": 2,
+            "w": 112,
+            "h": 112
+          },
+          "bounds": [
+            14,
+            15,
+            97,
+            97
+          ],
+          "coreBounds": [
+            27,
+            27,
+            88,
+            91
+          ],
+          "sha256": "268c48526728a4152eebb0b407bcd452572c39313c60fb0834864c3a27106385"
+        },
+        {
+          "file": "frames/wolf-fx-charge/004.png",
+          "rect": {
+            "x": 350,
+            "y": 2,
+            "w": 112,
+            "h": 112
+          },
+          "bounds": [
+            14,
+            12,
+            100,
+            98
+          ],
+          "coreBounds": [
+            24,
+            18,
+            94,
+            84
+          ],
+          "sha256": "6b36670738352d40a45ab51d83c865b635afc4978de60b16907eb4c91c072fcf"
+        },
+        {
+          "file": "frames/wolf-fx-charge/005.png",
+          "rect": {
+            "x": 466,
+            "y": 2,
+            "w": 112,
+            "h": 112
+          },
+          "bounds": [
+            15,
+            12,
+            97,
+            98
+          ],
+          "coreBounds": [
+            21,
+            18,
+            91,
+            89
+          ],
+          "sha256": "3191658bb9e1f754f1abb04f129b7b890c7d7b5d475e769f9a8c4b77a042ff80"
+        },
+        {
+          "file": "frames/wolf-fx-charge/006.png",
+          "rect": {
+            "x": 582,
+            "y": 2,
+            "w": 112,
+            "h": 112
+          },
+          "bounds": [
+            12,
+            12,
+            99,
+            99
+          ],
+          "coreBounds": [
+            18,
+            18,
+            94,
+            89
+          ],
+          "sha256": "eca2c96bf4137b796b84ad4001c7270cb290c28bda8516f5f1d3c1ee6003bdb0"
+        }
+      ],
+      "atlas": "atlases/wolf-fx-charge.png",
+      "atlasSize": [
+        696,
+        116
+      ],
+      "fps": 24,
+      "durations": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "loop": false,
+      "peakTargetWidth": 76.0,
+      "artApproved": false,
+      "rotationReuse": false,
+      "originStatus": "authored logical grid center, candidate emitter",
+      "atlasSha256": "0f2808edda529939affea6815f0bee4909a83825e5e945dc36cccbc974966298"
+    },
+    "wolf-fx-release": {
+      "id": "wolf-fx-release",
+      "actor": "BOSS-VH-CLOUD-WOLF-KING",
+      "slug": "wolf-release",
+      "phase": "release",
+      "phases": [
+        {
+          "at": 0,
+          "label": "release"
+        }
+      ],
+      "kind": "directional",
+      "frameSize": [
+        192,
+        184
+      ],
+      "anchor": [
+        96,
+        92
+      ],
+      "frames": [
+        {
+          "file": "frames/wolf-fx-release/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 192,
+            "h": 184
+          },
+          "bounds": [
+            22,
+            18,
+            172,
+            176
+          ],
+          "coreBounds": [
+            30,
+            62,
+            159,
+            137
+          ],
+          "sha256": "0c6197592bc9d305e62bed042fc7e2388ed50e917787004338c5e3c8a2d70bb7"
+        },
+        {
+          "file": "frames/wolf-fx-release/002.png",
+          "rect": {
+            "x": 198,
+            "y": 2,
+            "w": 192,
+            "h": 184
+          },
+          "bounds": [
+            14,
+            18,
+            167,
+            176
+          ],
+          "coreBounds": [
+            27,
+            57,
+            156,
+            144
+          ],
+          "sha256": "f9da41bb19850427e0a0ce7e7e68460dc391dbc09e24d21f6c46ef4667b0781f"
+        },
+        {
+          "file": "frames/wolf-fx-release/003.png",
+          "rect": {
+            "x": 394,
+            "y": 2,
+            "w": 192,
+            "h": 184
+          },
+          "bounds": [
+            9,
+            13,
+            175,
+            176
+          ],
+          "coreBounds": [
+            24,
+            37,
+            161,
+            160
+          ],
+          "sha256": "c657df438d6e9085bbcacf9f30d3c249d55994f475e380447625e6a702d9b5d0"
+        },
+        {
+          "file": "frames/wolf-fx-release/004.png",
+          "rect": {
+            "x": 590,
+            "y": 2,
+            "w": 192,
+            "h": 184
+          },
+          "bounds": [
+            17,
+            18,
+            178,
+            172
+          ],
+          "coreBounds": [
+            29,
+            33,
+            169,
+            149
+          ],
+          "sha256": "3e0a0a3849342defe4808cd3968a08f91610baf17945c1d4a81765e4c054834f"
+        },
+        {
+          "file": "frames/wolf-fx-release/005.png",
+          "rect": {
+            "x": 786,
+            "y": 2,
+            "w": 192,
+            "h": 184
+          },
+          "bounds": [
+            20,
+            18,
+            178,
+            169
+          ],
+          "coreBounds": [
+            29,
+            42,
+            168,
+            135
+          ],
+          "sha256": "3e4c3edaccd4dc238f7d5d8fe3244cf4b1c3cb8c0de357fb908ead83e8b1995c"
+        },
+        {
+          "file": "frames/wolf-fx-release/006.png",
+          "rect": {
+            "x": 982,
+            "y": 2,
+            "w": 192,
+            "h": 184
+          },
+          "bounds": [
+            19,
+            18,
+            175,
+            172
+          ],
+          "coreBounds": [
+            33,
+            42,
+            160,
+            129
+          ],
+          "sha256": "ffba01f4eb4cf6018034acec5a1c7cacdcfc4dfee77c6cd5cb22090e76321ef8"
+        }
+      ],
+      "atlas": "atlases/wolf-fx-release.png",
+      "atlasSize": [
+        1176,
+        188
+      ],
+      "fps": 24,
+      "durations": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "loop": false,
+      "peakTargetWidth": 140.0,
+      "artApproved": false,
+      "rotationReuse": true,
+      "originStatus": "authored logical grid center, candidate emitter",
+      "atlasSha256": "7330c33cd8d31052b80b8f149af7229029c318bdba03c3a58b2e8c4cb76e48db"
+    }
+  },
+  "sources": [
+    {
+      "id": "wolf-fx",
+      "source": "sources/wolf-fx.png",
+      "sha256": "22d680411a95bba3d806db002fbac64e4f9ad2dc49ddda262d073e778effff9e",
+      "prompt": "prompts/wolf-fx.txt",
+      "promptSha256": "20146af9ca4a5628f788dafb52986d36e246d77874005e5798a90558acc31fdc",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "layout": [
+        6,
+        3
+      ],
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-boss-concepts-v1/raw/cloud-wolf-king.png",
+          "sha256": "117794da5cac10ed6135d544cbb5c0d8221e28c5588097da8a686d7b169af19f"
+        }
+      ]
+    },
+    {
+      "id": "wolf-ground",
+      "source": "sources/wolf-ground.png",
+      "sha256": "8d27944490f9779091348d30bbcac0513e5eb2e66327ef5d891ec04b50f02f77",
+      "prompt": "prompts/wolf-ground.txt",
+      "promptSha256": "4131ee095e4311f0055f93bf3d5e4a0ab3c6d8cf5171f4ce318b1647bda8a18b",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "layout": [
+        6,
+        2
+      ],
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-boss-concepts-v1/raw/cloud-wolf-king.png",
+          "sha256": "117794da5cac10ed6135d544cbb5c0d8221e28c5588097da8a686d7b169af19f"
+        }
+      ]
+    },
+    {
+      "id": "wolf-charge",
+      "source": "sources/wolf-charge.png",
+      "sha256": "64b0f1993b6b059b768d291e210e55e4daea57d6d8a59a9cf4de95afc98bd872",
+      "prompt": "prompts/wolf-charge.txt",
+      "promptSha256": "dac0077382e52a0b56de7cdc169fe45c055de5cf435d934d4cdf21eb82e33bd2",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-boss-concepts-v1/raw/cloud-wolf-king.png",
+          "sha256": "117794da5cac10ed6135d544cbb5c0d8221e28c5588097da8a686d7b169af19f"
+        }
+      ]
+    },
+    {
+      "id": "wolf-release",
+      "source": "sources/wolf-release.png",
+      "sha256": "c43d1763847db7b7c8dde1268c22004389c684694173a820a0c1d7adb577df96",
+      "prompt": "prompts/wolf-release.txt",
+      "promptSha256": "e86ae25d18d8bf57cc9e923e64725a0ed4095995373953b9d960b824b45da932",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "inputFiles": [
+        {
+          "file": "docs/design/characters/van-hai-boss-concepts-v1/raw/cloud-wolf-king.png",
+          "sha256": "117794da5cac10ed6135d544cbb5c0d8221e28c5588097da8a686d7b169af19f"
+        }
+      ]
+    }
+  ],
+  "bodyBasis": "../basis.json",
+  "registration": "registration.json",
+  "artApproved": false,
+  "runtimeConsumable": false,
+  "propsBasis": null,
+  "coverage": {
+    "sources": 4,
+    "sequences": 5,
+    "poses": 30,
+    "required": [
+      "wolf-fx-impact",
+      "wolf-ground-hoi_phong",
+      "wolf-ground-arrival",
+      "wolf-fx-charge",
+      "wolf-fx-release"
+    ],
+    "missing": []
+  }
+}

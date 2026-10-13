@@ -1,5 +1,25 @@
 # Mục lục tài liệu _MMO
 
+**Hắc Ấn Triện Thuật02:** [sân A/B01–02](design/vfx/dark-seal-officer-vfx-v2/index.html), [nguồn/thiết kế/kiểm](design/vfx/dark-seal-officer-vfx-v2/README.md).8sequence/48frame mới, ba chiêu có silhouette và tụ/phát riêng, hai cổng phù mờ và vòng co có khe. Body/nhịp/VFX01 giữ nguyên; ART/VFX02 đã duyệt theo [106hash](design/vfx/dark-seal-officer-vfx-v2/approval.json).
+
+**Hắc Ấn solo Motion01:** [sân tám hướng/ba chiêu](design/characters/dark-seal-officer-animation-v1/index.html), [nguồn và kiểm](design/characters/dark-seal-officer-animation-v1/README.md), [gate ghép gameplay](design/characters/dark-seal-officer-animation-v1/INTEGRATION-NOTES.md).72clip/432pose và6FX/36frame; motion/VFX mới chờ duyệt, chưa live.
+
+**Lang Vương solo Motion01:** [sân tám hướng/hai chiêu](design/characters/cloud-wolf-king-animation-v1/index.html), [duyệt ART/motion/VFX theo556hash](design/characters/cloud-wolf-king-animation-v1/approval.json).64clip/384pose và5FX/30frame đã được owner chấp nhận; nhịp gameplay/AI/loot/adds/live còn riêng.
+
+**Tiếp nối bộ boss:** [kit/animation/VFX và thứ tự đề xuất](BOSS-SKILL-ANIMATION-PLAN.md); Lang Motion01 đã duyệt; Hắc Motion01 mới chờ duyệt, Tam/Cổ tiếp nối theo gate neutral và prototype. Chốt dấu báo/khóa/phát/hồi và cửa né trước gameplay.
+
+**Hắc Ấn03:** [so với Vương Lâm và02](design/characters/van-hai-dark-seal-officer-v3/index.html), [nguồn/prompt/phép đo](design/characters/van-hai-dark-seal-officer-v3/README.md). Dựng lại một neutral từ masterPixel02, cùng compact80/native64×96; neutral03 đã duyệt riêng, bộ motion mới có root riêng ở trên.
+
+**Boss02:** [so ba bản làm lại01–02](design/characters/van-hai-boss-concepts-v2/index.html), [nguồn/prompt/đo chân](design/characters/van-hai-boss-concepts-v2/README.md). Lang Vương01 đã duyệt neutral và giữ nguyên; Tam128/Cổ160 là cỡ ART đề xuất, Hắc80, ba bản mới chờ duyệt.
+
+**Boss concept13/10:** [bốn tạo hình Pixel01](design/characters/van-hai-boss-concepts-v1/index.html), [brief/layer/nguồn](design/characters/van-hai-boss-concepts-v1/README.md). Mỗi boss một neutral Đông Nam, native1×/2× so player/cùng họ; chưa animation/VFX boss hoặc gameplay.
+
+**Cụm quái/VFX02:** [sân3–18con](design/characters/van-hai-monster-animation-v1/cluster.html), [cách kiểm và findings](design/characters/van-hai-monster-animation-v1/CLUSTER-REVIEW.md). Full/managed opacity để so chồng lấp, không đổi ART hoặc gameplay.
+
+**VFX quái/tinh anh02:** [33sequence/198frame](design/vfx/van-hai-monster-vfx-v2/README.md), [body basis giữ nguyên](design/vfx/van-hai-monster-vfx-v2/body-basis.json), [review01/02](design/characters/van-hai-monster-animation-v1/index.html). Tụ lực, thuật và va chạm riêng từng loài; artwork tinh anh riêng, chưa live.
+
+**Animation quái/tinh anh13/10:** [Pixel01 ·11actor/440clip](design/characters/van-hai-monster-animation-v1/README.md), [VFX9sequence/2prop](design/vfx/van-hai-monster-vfx-v1/README.md), [playback native](design/characters/van-hai-monster-animation-v1/index.html). Năm action/tám view thật, source registration và socket candidates; motion/VFX mới chờ duyệt, chưa thay live.
+
 **VFX đòn thường12/10:** [Thanh Ngọc01](design/vfx/basic-attack-jade-v1/README.md) có5sequence/30frame riêng, ba vệt và hai mức va chạm,24socket; [review combat](design/characters/wang-lin-pixel-combat-v1/index.html) có FX toggle/hit-hụt/seekms/âm thanh. Body80clip giữ nguyên; presentation thuần, chưa nối room/live.
 
 **Combat pixel12/10:** [Bộ mới](design/characters/wang-lin-pixel-combat-v1/README.md) đã thêm40clip/240pose trúng đòn/ngã/combo1–3 tám hướng, [review tổng80clip/480pose](design/characters/wang-lin-pixel-combat-v1/index.html). ART mới là candidate, bộ40 đã duyệt giữ nguyên. Player dùng một run cho normal/Shift, bỏ walk/sprint riêng; phase theo quãng đường. Action sinh hoạt và tích hợp toàn actor/server vẫn tiếp nối.

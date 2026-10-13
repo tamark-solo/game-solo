@@ -1,5 +1,13 @@
 # Vân Hải · NPC và sinh cảnh đối thủ 01
 
+**Hắc Ấn03/style người13/10:** [một neutral mới](../../characters/van-hai-dark-seal-officer-v3/index.html) so Player/02/03, dùng masterPixel02 làm input chính và giữ64×96/body80/chân32,88. World review đọc override riêng đúng ID Hắc, giữ manifestBoss02 và pinned plan/catalog nguyên. Mẫu03 mới pending, không đổi boss live hoặc quyền/gameplay.
+
+**Boss02/feedback13/10:** [ba bản tăng uy lực](../../characters/van-hai-boss-concepts-v2/index.html) so trực tiếp với01; Lang Vương01 được duyệt neutral và giữ nguyên. World review đọc manifest02, pinned plan/catalog không đổi. Tam128/Cổ160 chỉ là cỡ ART đề xuất; Hắc80, không đổi boss live/motion/AI/thưởng. Trạng thái candidate01 bên dưới là trước feedback mới.
+
+**Boss concept13/10:** theo bước tiếp mới của owner, [bốn boss Pixel01](../../characters/van-hai-boss-concepts-v1/index.html) có một neutral Đông Nam/native/đo chân và brief motion/layer riêng; body96/104/140/80worldpx. Trang sinh cảnh đọc thêm manifest boss để hiển thị; pinned `plan.json` và catalog giữ nguyên, NPC còn brief. Chưa animation/VFX boss/live hoặc duyệt ART. Mốc “NPC/boss giữ brief” dưới đây là trước đợt tạo hình này.
+
+**Tiếp nối animation13/10:** owner chọn11concept quái/tinh anh làm basis. [Playback](../../characters/van-hai-monster-animation-v1/index.html) có440clip/2640pose,5action/tám view thật cùng [VFX9sequence](../../vfx/van-hai-monster-vfx-v1/README.md). Motion/VFX/socket là candidate mới để duyệt; chưa mở NPC/boss/AI/drop và catalog vẫn pending. Mốc ART một pose dưới đây là trước animation.
+
 **Đợt ART13/10:** owner chuyển ưu tiên sang quái/tinh anh trước. [11 tạo hình Pixel01](../../characters/van-hai-monster-concepts-v1/index.html) có một neutral Đông Nam/actor, sprite native và đối chiếu player/map1×/2×. `plan.json` nối nguồn/prompt/hình theo11ID; art candidate chưa duyệt, bảy hướng/năm action chưa sản xuất. NPC/boss tiếp tục giữ brief, runtime/catalog chưa mở mới. Thứ tự P0–P3 dưới đây là kế hoạch tổng trước ưu tiên này.
 
 13/10/2026 · Owner chọn **chốt dàn NPC và kịch bản/brief concept trước**. [Trang duyệt](index.html) / [dữ liệu tác giả](plan.json) / [hồ sơ kịch bản](../../../VAN-HAI-LIVING-WORLD-PLAN.md).

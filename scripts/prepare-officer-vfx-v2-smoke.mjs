@@ -1,0 +1,25 @@
+import fs from'node:fs/promises';
+let s=await fs.readFile('tests/smoke/dark-seal-officer-animation-smoke.mjs','utf8');
+s=s.replace("const root=resolve('docs/design/characters/dark-seal-officer-animation-v1');","const root=resolve('docs/design/vfx/dark-seal-officer-vfx-v2'),bodyRoot=resolve('docs/design/characters/dark-seal-officer-animation-v1');").replace("resolve('artifacts/dark-seal-officer-animation-v1')","resolve('artifacts/dark-seal-officer-vfx-v2')").replace("root+'/catalog.json'","bodyRoot+'/catalog.json'").replace("root+'/kit.json'","bodyRoot+'/kit.json'").replace("process.env.OFFICER_REVIEW_PORT||'5234'","process.env.OFFICER_VFX_REVIEW_PORT||'5235'");
+s=s.replace("await page.waitForSelector('body[data-ready=true]');","await page.waitForSelector('body[data-ready=true]');await page.locator('#loop').uncheck();");
+s=s.replace("const mode=await page.locator('#mode').inputValue();","const mode=await page.locator('#mode').inputValue(),fxset=await page.locator('#fxset').inputValue();").replace('({clip,mode,age})=>','({clip,mode,fxset,age})=>').replace('s.mode===mode&&','s.mode===mode&&s.fxset===fxset&&').replace('{clip,mode,age:Math.ceil(age)}','{clip,mode,fxset,age:Math.ceil(age)}');
+s=s.replace("for(const action of Object.keys(kit.skills))for(const direction of catalog.directions){","for(const fxset of ['v2','v1']){await page.locator('#fxset').selectOption(fxset);for(const action of Object.keys(kit.skills))for(const direction of catalog.directions){");
+s=s.replace("for(const action of ['dao_an','phan_phu','an_hoi','attack']){","}\n for(const fxset of ['v2','v1']){await page.locator('#fxset').selectOption(fxset);for(const action of ['dao_an','phan_phu','an_hoi']){");
+s=s.replace("out+'/'+action+'-map-1x.png'","out+'/'+action+'-'+fxset+'-map-1x.png'").replace("out+'/'+action+'-map-2x.png'","out+'/'+action+'-'+fxset+'-map-2x.png'").replace("out+'/'+action+'-'+scene+'-2x.png'","out+'/'+action+'-'+fxset+'-'+scene+'-2x.png'");
+s=s.replace("await select('phan_phu','southeast','hit');const phantom", "}\n await page.locator('#fxset').selectOption('v2');\n for(const action of ['dao_an','phan_phu','an_hoi']){await select(action,'southeast','hit');const t=trial(kit,action,'southeast','hit');await page.locator('#scene').selectOption('map');await page.locator('#zoom').selectOption('1');await seek(t.release-120);await page.locator('#stage').screenshot({path:out+'/'+action+'-charge-map-1x.png'});await seek(t.release+100);await page.locator('#stage').screenshot({path:out+'/'+action+'-release-map-1x.png'});const before=await page.locator('#stage').evaluate(e=>({...e.dataset}));await page.locator('#fxset').selectOption('v1');const after=await seek(t.release+100);assert.equal(after.age,before.age);assert.equal(after.frame,before.frame);assert.equal(after.playerOffset,before.playerOffset);await page.locator('#fxset').selectOption('v2');}\n await select('phan_phu','southeast','hit');const phantom");
+s=s.replace("const report={passed:true", "const report={passed:true").replace("'four attacks ×eight directions ×hit/miss/pre-release cancel'","'two FX versions ×four attacks ×eight directions ×hit/miss/pre-release cancel'");
+// Transparent offscreen draws use the SAME renderer module as the stage.
+const extra=`
+ const groundReview=await page.evaluate(async()=>{
+  const {drawSprite}=await import('./renderer.mjs'),fx=await fetch('catalog.json').then(r=>r.json());let samples=0,lit=0;
+  for(const c of Object.values(fx.clips).filter(c=>c.kind==='ground'))for(const f of c.frames)for(let direction=0;direction<8;direction++){
+   const im=new Image();im.src=f.file;await im.decode();const canvas=document.createElement('canvas');canvas.width=canvas.height=512;const ctx=canvas.getContext('2d'),rotation=direction*Math.PI/4;
+   drawSprite(ctx,im,c.anchor,[256,256],c.frameSize,{rotation,safeGap:90});const pixels=ctx.getImageData(0,0,512,512).data;
+   for(let y=0;y<512;y++)for(let x=0;x<512;x++){const a=pixels[(y*512+x)*4+3];if(!a)continue;lit++;const dx=x+.5-256,dy=y+.5-256,forward=dx*Math.cos(rotation)+dy*Math.sin(rotation),side=-dx*Math.sin(rotation)+dy*Math.cos(rotation);if(Math.hypot(dx,dy)>8&&Math.abs(Math.atan2(side,-forward))<Math.PI/4-.04)throw Error('FX paints escape wedge '+c.id+'/'+direction);}
+   samples++;
+  }return {samples,lit};
+ });assert.equal(groundReview.samples,96);assert.ok(groundReview.lit>0);
+ await select('dao_an','southeast','hit');await seek(0);await page.locator('#sound').check();await page.locator('#restart').click();await page.waitForFunction(()=>Number(document.body.dataset.audioCount)>=3);await page.locator('#play').click();const audioCount=await page.locator('body').getAttribute('data-audio-count');await seek(1600);await page.waitForTimeout(240);assert.equal(await page.locator('body').getAttribute('data-audio-count'),audioCount,'seek/paused never emit sound');await page.locator('#sound').uncheck();
+ `;
+s=s.replace("const cache=JSON.parse",extra+"\n const cache=JSON.parse").replace("const report={passed:true,date:","const report={passed:true,groundReview,audioSeekPausedSilent:true,date:");
+await fs.writeFile('tests/smoke/dark-seal-officer-vfx-v2-smoke.mjs',s);

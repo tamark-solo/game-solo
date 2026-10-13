@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "date": "2026-10-13",
+  "id": "VH-DARK-SEAL-OFFICER-03",
+  "actorId": "BOSS-VH-DARK-SEAL-OFFICER",
+  "neutralPoses": 1,
+  "views": 1,
+  "bodyHeightPx": 80,
+  "canvas": [
+    64,
+    96
+  ],
+  "pivot": [
+    32,
+    88
+  ],
+  "rawSha256": "cf3ffe85aad093ba64bdebb61de14b7ed49911cb1b84adcc57681c240131bf35",
+  "spriteSha256": "5081a4be9db07e2e8a494d30169585146aa2bcf3337948ade38890375479ce3e",
+  "approvedPlayerHashesVerified": 323,
+  "preservedBoss02Hashes": 11,
+  "checks": [
+    "prompt/raw/native/input hashes",
+    "exact nearest8x style input verified sample-by-sample",
+    "80px body/64x96/32,88/binary alpha",
+    "three actors at native1x/2x/4x x light/dark/map",
+    "silhouette/root/shadow/frame controls",
+    "mobile native canvas scroll",
+    "world brief resolves new candidate only for officer",
+    "no game API or storage writes"
+  ],
+  "errors": [],
+  "api": [],
+  "artApproved": true,
+  "approvalScope": "Only the existing southeast neutral body identity/style/native80 for Dark Seal Officer03, referenced beside approved Wang Pixel02. Does not approve other boss concepts, extra directions, motion, FX, skill mechanics, balance, runtime or performance.",
+  "runtimeImplemented": false,
+  "ownerMapEdited": false,
+  "ownerDatabaseUsed": false
+}

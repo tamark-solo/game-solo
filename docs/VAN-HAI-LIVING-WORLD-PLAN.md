@@ -1,5 +1,9 @@
 # Vân Hải · dàn NPC, quái và boss
 
+**Tiếp nối concept boss13/10:** owner yêu cầu tạo hình cả bốn boss. [Gói Pixel01](design/characters/van-hai-boss-concepts-v1/README.md) có neutral Đông Nam, raw/prompt/input/hash/native và review tỷ lệ cùng player/loài cùng họ; cues/body/VFX riêng, chưa motion/FX/gameplay. `plan.json` đã pin bởi gói trước nên giữ nguyên; world review đọc thêm manifest concept boss. NPC vẫn ở brief, catalog chưa mở release.
+
+**Animation tiếp nối13/10:** owner chọn11neutral và yêu cầu anim/VFX. [Gói Pixel01](design/characters/van-hai-monster-animation-v1/README.md) có440clip/2640pose action (5action/tám view thật) và9FX/54pose/2prop rời; [review](design/characters/van-hai-monster-animation-v1/index.html) dùng clock Core/facts fixture. Motion/VFX mới chờ duyệt, chưa đổi runtime/AI/loot. Mốc concept một pose dưới đây giữ lịch sử.
+
 **Cập nhật ART13/10:** owner yêu cầu tạo quái và tinh anh trước NPC/boss. [Pixel01](design/characters/van-hai-monster-concepts-v1/index.html) đã có11identity (8quái/3tinh anh), mỗi mẫu một neutral Đông Nam, nguồn/prompt/input/hash/native và sân so Vương Lâm/map1×/2×. `concept` trên11record trong plan nối gói art. Candidate chờ duyệt hình; chưa sản xuất bảy view/năm action hoặc đưa vào gameplay. Nội dung/production waves dưới đây giữ kế hoạch tổng; ưu tiên art mới được áp trước các wave ấy.
 
 **13/10/2026 · GDD 0.32 · brief concept trước.** Owner chọn chốt dàn nhân vật và kịch bản trước khi thêm vào map. [Trang duyệt](design/world/van-hai-living-world-v1/index.html) / [plan.json đầy đủ](design/world/van-hai-living-world-v1/plan.json). Tên, tạo hình, vùng xuất hiện và cơ chế mới là ứng viên thiết kế; runtime/ART không được đổi trong đợt này.

@@ -32,6 +32,12 @@ Hook: `__hangNhacPixelPlayer()` đọc pose/facts/FX/cache; `__hangNhacEncounter
 
 Decoded atlas budget: Vương Lâm32MiB, encounter16MiB; cache hữu hạn, source mới theo demand cho quái. Đây không phải tổng GPU/browser RAM. Test GPU bằng SwiftShader chỉ xác nhận correctness.
 
+## Lưu ý cho bước ghép nhóm quái · 13/10/2026
+
+Theo yêu cầu owner sau [review cụm body/VFX02](design/characters/van-hai-monster-animation-v1/CLUSTER-REVIEW.md), khi tích hợp cần phối hợp ba phần: **AI giãn điểm đứng/tiếp cận theo vai trò và giữ đường né; server dàn nhịp báo đòn/phát đòn theo Core; presentation giới hạn FX cộng dồn, ưu tiên nguy hiểm và phản hồi trúng**. Giảm hiệu ứng phụ trước, giữ rõ người và cảnh báo. Không dùng opacity để thay giải pháp thân quái dồn cụm hoặc để thay kết quả hit server.
+
+Đây là yêu cầu cho integration tiếp theo, chưa là luật đang chạy của Lang02/Khôi Lỗi02. Thông số số lượng/khoảng đứng/lệch nhịp/opacity trong sân review chỉ là fixture. Chốt chúng bằng encounter thực ở camera1×, kiểm đường né, lifecycle/facts và tải runtime; giữ navigation/map/DB owner. Checklist và căn cứ đo nằm trong tài liệu review liên kết trên.
+
 ## Nguồn, kiểm và phạm vi
 
 323 hash basis40 giữ nguyên. Life mới tạo bằng built-in ImageGen, source/prompt/input/registration ở gói riêng; quái/boss lấy có chọn lọc từ archive có hash, không khôi phục player/pipeline cũ. Combat40/life16/quái/boss là ART ứng viên trong bản chơi thử; test không thay duyệt hình.

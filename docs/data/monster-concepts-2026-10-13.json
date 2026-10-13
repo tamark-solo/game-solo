@@ -1,0 +1,277 @@
+{
+  "schema": "van-hai-monster-concept-delivery-1",
+  "date": "2026-10-13",
+  "scope": "Eight mobs and three elites: single neutral southeast identity, native review only",
+  "generator": "built-in-imagegen",
+  "generatedIdentityCount": 11,
+  "additionalRefinements": 1,
+  "manifest": {
+    "path": "docs/design/characters/van-hai-monster-concepts-v1/production.json",
+    "sha256": "b6df232ee612a6db1f689ae2f409aad10b25f3616d7aaaa63396a941fdfd0c94"
+  },
+  "registration": {
+    "path": "docs/design/characters/van-hai-monster-concepts-v1/registration.json",
+    "sha256": "285a683d7f77952395779c55b511aba815e0126f6a9b1d63848f9cb9e1f1d64d"
+  },
+  "sourcePlan": {
+    "path": "docs/design/world/van-hai-living-world-v1/plan.json",
+    "sha256": "9890bf1589b6efdc2858fcca2f1e1d56d6a5ec4b2e58238ab5c297d4bbefa576"
+  },
+  "promptSet": "docs/design/characters/van-hai-monster-concepts-v1/prompts",
+  "sources": "docs/design/characters/van-hai-monster-concepts-v1/raw",
+  "sprites": "docs/design/characters/van-hai-monster-concepts-v1/sprites",
+  "review": "docs/design/characters/van-hai-monster-concepts-v1/index.html",
+  "lineup": "docs/design/characters/van-hai-monster-concepts-v1/review/lineup-3x.png",
+  "screenshots": [
+    "artifacts/monster-concepts/review-in-app.jpg",
+    "artifacts/monster-concepts/jade-elite-map-1x.png",
+    "artifacts/monster-concepts/jade-elite-map-2x.png",
+    "artifacts/monster-concepts/gallery-mobile.png"
+  ],
+  "actors": [
+    {
+      "id": "MOB-VH-CLOUD-WOLF",
+      "rank": "mob",
+      "bodyTargetPx": 50,
+      "measuredBodyPx": 50,
+      "canvas": [
+        128,
+        96
+      ],
+      "pivot": [
+        64,
+        88
+      ],
+      "liftPx": 0,
+      "rawSha256": "eb7955ad246be23a405bd90e0e79bc0780c214db30fb2db67886651b7c4f2a5c",
+      "spriteSha256": "edb6ac5a36eb41290746b4948f5aa6a57af14a91f6e9fe867e6500c1687e2285"
+    },
+    {
+      "id": "MOB-VH-TALISMAN-SPROUT",
+      "rank": "mob",
+      "bodyTargetPx": 58,
+      "measuredBodyPx": 58,
+      "canvas": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "liftPx": 0,
+      "rawSha256": "11228a7f6d9eb75e035b920b6020b41c2eeaafc1fdf52c905387cc387996ec0c",
+      "spriteSha256": "2167c8f680a3eda3a22339a843de969a77fc73c1aef08405b583ed0b02e06f12"
+    },
+    {
+      "id": "MOB-VH-JADE-SCUTE",
+      "rank": "mob",
+      "bodyTargetPx": 46,
+      "measuredBodyPx": 46,
+      "canvas": [
+        144,
+        96
+      ],
+      "pivot": [
+        72,
+        88
+      ],
+      "liftPx": 0,
+      "rawSha256": "50d5b717f5cb2abf9ffeb08e3da7557a0efe47517fa086f1ec9e06aa6cfc54e6",
+      "spriteSha256": "64b6e6d8bcf592a20ca177a955ca04ea648f5f9261f9e746cc427c330f1b650f"
+    },
+    {
+      "id": "MOB-VH-INK-BAT",
+      "rank": "mob",
+      "bodyTargetPx": 42,
+      "measuredBodyPx": 42,
+      "canvas": [
+        160,
+        96
+      ],
+      "pivot": [
+        80,
+        88
+      ],
+      "liftPx": 16,
+      "rawSha256": "0b66f39dd9493905a0adbbe1db299b1823741e2d03bf4760ebbb7a78bec283ad",
+      "spriteSha256": "dd8325da17973a3766ee30473e44f527cf680a759ec497ac3f7ac041b59fa4c2"
+    },
+    {
+      "id": "MOB-VH-CRACKED-PUPPET",
+      "rank": "mob",
+      "bodyTargetPx": 72,
+      "measuredBodyPx": 72,
+      "canvas": [
+        128,
+        104
+      ],
+      "pivot": [
+        64,
+        96
+      ],
+      "liftPx": 0,
+      "rawSha256": "03c899787908f0718b7d19162c4f9c76f328bf50ca67546b195e522e7894eb17",
+      "spriteSha256": "aa1d8c38fb255cd66e674b4ac7726ee4715b9858cf09fd53b3d2ff002ce410af"
+    },
+    {
+      "id": "MOB-VH-SPIRIT-FUNGUS",
+      "rank": "mob",
+      "bodyTargetPx": 48,
+      "measuredBodyPx": 48,
+      "canvas": [
+        128,
+        96
+      ],
+      "pivot": [
+        64,
+        88
+      ],
+      "liftPx": 0,
+      "rawSha256": "a416dc618847c1340d52a51f459a40b08faac862c3e0f339fc72b6c08195a2e7",
+      "spriteSha256": "bb597d16ad247f846e5b7c8f017d7e6e1d20e743ed034c9ec147fabc53267a52"
+    },
+    {
+      "id": "MOB-VH-DARK-TALISMAN-ROGUE",
+      "rank": "mob",
+      "bodyTargetPx": 80,
+      "measuredBodyPx": 80,
+      "canvas": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        88
+      ],
+      "liftPx": 0,
+      "rawSha256": "66990deac2690e25807a180bf99830537d81c5d921655792c6b683e3f70b4197",
+      "spriteSha256": "e4aea4c73db979236765850baa03fd8af3357f57321cdbb6e5eb7cd2b24c2563"
+    },
+    {
+      "id": "MOB-VH-QUIET-WISP",
+      "rank": "mob",
+      "bodyTargetPx": 58,
+      "measuredBodyPx": 57,
+      "canvas": [
+        128,
+        112
+      ],
+      "pivot": [
+        64,
+        100
+      ],
+      "liftPx": 8,
+      "rawSha256": "28f2b9388376e7370bfe0a45117c107e526467f1f0ed13daa12f30d249bcf4b4",
+      "spriteSha256": "43ae13d44b254be52db01e6273f48ff5645a101b1dd666f82d3c3660c76a479a"
+    },
+    {
+      "id": "ELITE-VH-WOLF-CALLER",
+      "rank": "elite",
+      "bodyTargetPx": 65,
+      "measuredBodyPx": 65,
+      "canvas": [
+        160,
+        112
+      ],
+      "pivot": [
+        80,
+        104
+      ],
+      "liftPx": 0,
+      "rawSha256": "844d715877eb43b1b5e33b6dbf837e542b9e28a6df0def92cb0357a61a40a4c2",
+      "spriteSha256": "37ad80888c500477355ceb7a6b5b0fd58a8305cbfe5f94b6f895c1ab7c8d349d"
+    },
+    {
+      "id": "ELITE-VH-JADE-GUARD",
+      "rank": "elite",
+      "bodyTargetPx": 62,
+      "measuredBodyPx": 62,
+      "canvas": [
+        176,
+        112
+      ],
+      "pivot": [
+        88,
+        104
+      ],
+      "liftPx": 0,
+      "rawSha256": "552ae704ff8529aff0f1642928d2ebb519550737a4821b1c298a13d1010c46a3",
+      "spriteSha256": "c7631ab47215a6e625de61cb4a44eaf5bb461b22734b0f54d29a5d2f28678c11"
+    },
+    {
+      "id": "ELITE-VH-BLACK-SILK-ADEPT",
+      "rank": "elite",
+      "bodyTargetPx": 80,
+      "measuredBodyPx": 80,
+      "canvas": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ],
+      "liftPx": 0,
+      "rawSha256": "29d9fa1a1522fa23f339ecf42951f60e893a5e298bba37235fb71502d0ecf0f4",
+      "spriteSha256": "4d31b88958d864174d9cc690e4f0a91422e303cb56298b9c785cc5cd3538ce81"
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "date": "2026-10-13",
+    "mobs": 8,
+    "elites": 3,
+    "neutralPoses": 11,
+    "viewsPerActor": 1,
+    "approvedBasisFilesVerified": 323,
+    "checks": [
+      "raw/prompt/input/native SHA256",
+      "native canvas/body/root and binary alpha",
+      "no opaque silhouette clipped by cards",
+      "eleven actor selections",
+      "8/3 rank filters",
+      "1x/2x map and light/dark silhouette review",
+      "body/ground/lift separation",
+      "mobile preserves native canvas without page overflow",
+      "existing world brief links candidate art",
+      "no game API or browser storage writes"
+    ],
+    "errors": [],
+    "api": [],
+    "artApproved": false,
+    "runtimeImplemented": false,
+    "ownerMapEdited": false,
+    "ownerDatabaseUsed": false,
+    "viewportWidths": [
+      1440,
+      1024,
+      850,
+      768,
+      600,
+      390
+    ],
+    "contentCatalog": {
+      "records": 96,
+      "errors": 0,
+      "pendingWarnings": 84,
+      "unitTests": 7,
+      "browserGroups": 5,
+      "layouts": 4
+    },
+    "livingWorldReviewPassed": true,
+    "diffCheckPassed": true
+  },
+  "directionsProduced": [
+    "southeast"
+  ],
+  "posesPerActor": 1,
+  "directionsPending": 7,
+  "animationProduced": false,
+  "artApproved": false,
+  "ownerApproved": false,
+  "runtimeImplemented": false,
+  "ownerMapEdited": false,
+  "ownerDatabaseUsed": false,
+  "next": "Visual review of identities and native proportions, then remaining seven real directions and five actions for prioritized species."
+}

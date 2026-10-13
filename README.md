@@ -1,5 +1,7 @@
 # Vân Hải Đạo Đồ · game-solo
 
+**ART quái/tinh anh13/10:** [11bộ motion Pixel01](docs/design/characters/van-hai-monster-animation-v1/README.md) có440clip/2640pose,5action ×8hướng, [VFX tách layer](docs/design/vfx/van-hai-monster-vfx-v1/README.md)9sequence/54pose +2prop. [Trang playback](docs/design/characters/van-hai-monster-animation-v1/index.html) dùng clock Core và fixture trúng/hụt/hủy; motion/VFX mới chờ duyệt hình, chưa thay actor hoặc AI đang chơi.
+
 **Tên game chốt ngày 10/10/2026:** Vân Hải Đạo Đồ. Logo màn đầu dùng hai dòng **VÂN HẢI / ĐẠO ĐỒ**, câu dẫn **“Đạo chưa có đường. Ta tự mở.”** Xem [màn mở đầu](docs/GAME-TITLE-SCREEN.md). Đây là đổi nhận diện; các ý tưởng ân oán/nghịch thiên đang ở bước thiết kế.
 
 Game web theo hướng **MMORPG tu tiên có combat chủ động và idle hỗ trợ**, dành cho một người phát triển. Thiết kế hiện hành cho chọn **Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu**, cùng trải qua **Hằng Nhạc — Ngưng Khí**, rồi phân hóa từ **Trúc Cơ**. Mở đầu chung là chuyển thể gameplay, không phải lịch sử ba người cùng nhập môn trong nguyên tác.

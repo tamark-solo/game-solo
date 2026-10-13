@@ -1,5 +1,7 @@
 # Quái và tinh anh · concept Pixel01
 
+**Tiếp nối13/10:** owner chọn các neutral này làm basis sản xuất. [Animation Pixel01](../van-hai-monster-animation-v1/index.html) đã có11actor/440clip/2640pose ở8view/năm action, [VFX riêng](../../vfx/van-hai-monster-vfx-v1/README.md). Nguồn concept/native giữ nguyên byte; metadata bên dưới mô tả gói một pose này. Motion/VFX mới vẫn chờ duyệt hình, chưa vào runtime.
+
 13/10/2026 · Owner yêu cầu sản xuất **quái thường và tinh anh trước**. [Trang duyệt](index.html) / [bảng so 3×](review/lineup-3x.png) / [brief thế giới](../../world/van-hai-living-world-v1/plan.json).
 
 Đã tạo **11 identity master**, mỗi mẫu **một neutral pose hướng Đông Nam**. Đây là art concept để chốt nhận diện, không phải 11 bộ animation hoặc actor mới đã vào gameplay. `artApproved=false`, `ownerApproved=false`, `runtimeConsumable=false`; catalog vẫn `unreleased/pending`. Bảy hướng còn lại và idle/move/attack/hit/death chưa sản xuất trong gói này.
@@ -33,6 +35,8 @@ Bóng ellipse ở sân review chỉ là lớp đối chiếu; không nằm trong
 Gallery3×, canvas camera1×/2×, nền map/sáng/tối, silhouette, root và shadow toggle. Elite được đặt cạnh quái thường cùng họ; người chơi dùng master Pixel02 nguyên byte. Màn nhỏ giữ canvas native, cuộn ngang. Không gửi API game, không ghi save/map hoặc draft.
 
 Sau duyệt hình: khóa neutral và palette → bảy view thật còn lại → năm action mỗi loài → separate warning/VFX → scoped runtime integration theo Core. Ưu tiên Vân Nha Lang và Phù Mộc Tinh để kiểm melee/caster trước; AI/timing/drop/respawn mới cần prototype và server authority riêng.
+
+**Kiểm kỹ thuật:** native alpha/canvas/body/support-root/hash qua; gallery không cắt silhouette tại1440/1024/850/768/600/390px, camera1×/2× và các layer toggle qua; 323file basis đã duyệt cùng map background giữ nguyên hash. Review không API/storage write; world review và catalog96/7unit/5nhóm browser/4layout qua,84cảnh báo pending giữ đúng trạng thái. [Biên bản bàn giao](../../../data/monster-concepts-2026-10-13.json). Kết quả này không duyệt tạo hình hoặc chứng minh motion.
 
 Builder chỉ viết root concept mới:
 

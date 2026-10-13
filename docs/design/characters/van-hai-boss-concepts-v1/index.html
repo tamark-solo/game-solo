@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vân Hải · Bốn boss concept01</title><link rel="stylesheet" href="review.css"></head>
+<body>
+<header>
+ <a href="../../world/van-hai-living-world-v1/index.html">← Hồ sơ sinh cảnh</a>
+ <div class="eyebrow">VÂN HẢI ĐẠO ĐỒ · BOSS CONCEPT01</div>
+ <h1>Thủ lĩnh giữ rừng.<br>Chủ khảo giữ ấn.</h1>
+ <p>Bốn tạo hình boss theo kế hoạch sinh cảnh. Giữ chất pixel, ngọc khói và đồng già; mỗi boss có dáng nhận diện và cách báo chiêu riêng.</p>
+ <div class="badges"><span>Bản01 để đối chiếu</span><span>1 neutral / 1 view mỗi boss</span><span>Thân tách khí tức & chiêu</span></div>
+ <p class="revision-note">Lang Vương đã được duyệt riêng. <a href="../van-hai-boss-concepts-v2/index.html#actor=BOSS-HN-THREE-SEAL-PUPPET">Xem ba boss làm lại và so01–02 →</a></p>
+ <nav aria-label="Nội dung"><a href="#gallery">Bốn tạo hình</a><a href="#scale-review">So tỷ lệ trên map</a><a href="#handoff">Hồ sơ & bước tiếp</a><a href="../van-hai-monster-concepts-v1/index.html">Quái & tinh anh →</a></nav>
+</header>
+<main>
+ <section id="gallery"><div class="eyebrow">NEUTRAL ĐÔNG NAM · CÙNG NEAREST2×</div><h2>Bốn dáng, bốn vai trò</h2><p class="hint">Chiều cao dưới mỗi thẻ là chiều cao thân ở cỡ chơi 1×. Thẻ nhỏ có thể cuộn ngang; hình không tự co cho vừa màn.</p><div id="cards" class="cards"></div></section>
+ <section id="scale-review">
+  <div class="eyebrow">NATIVE SCALE · WORLD FOOT</div><h2>Đối chiếu với Vương Lâm và cùng họ</h2>
+  <div class="toolbar">
+   <label>Boss đang xem<select id="actor"></select></label>
+   <label>Nền đối chiếu<select id="scene"><option value="map">Vân Ngọc V2</option><option value="light">Nền sáng</option><option value="dark">Nền tối</option></select></label>
+   <fieldset><legend>Zoom nguyên</legend><button data-zoom="1" aria-pressed="true">1×</button><button data-zoom="2" aria-pressed="false">2×</button></fieldset>
+   <label class="check"><input id="roots" type="checkbox" checked> Điểm chân</label>
+   <label class="check"><input id="shadows" type="checkbox" checked> Bóng đất riêng</label>
+   <label class="check"><input id="silhouette" type="checkbox"> Silhouette</label>
+  </div>
+  <div class="stage-scroll"><canvas id="stage" width="1280" height="480" aria-label="So tỷ lệ boss, người và cùng họ ở camera native"></canvas></div>
+  <p class="hint">1 world px = 1 CSS px ở 1×. Cuộn ngang trên màn nhỏ. Đặt chung mặt đất để so ART; không đặt spawn, xác nhận tầm đánh hoặc thay navigation.</p>
+  <article id="detail" aria-live="polite"></article>
+ </section>
+ <section id="handoff"><div class="eyebrow">IDENTITY → EIGHT VIEWS → MOTION → FX → CORE</div><h2>Chốt nhận diện trước khi làm bộ động tác</h2>
+  <div class="steps"><article><b>01 · Gói concept này</b><p>Bốn neutral Đông Nam, raw RGBA, prompt/input/hash và native đã đo chân. Cổ Mộc có nguồn chỉnh dáng thấp rộng riêng. Tất cả chưa duyệt ART.</p></article><article><b>02 · Sau duyệt hình</b><p>Khóa morphology, palette, scale và chân từng boss; làm bảy view thật và action riêng. Tam Ấn không tự dùng lại motion Khôi Lỗi02 chỉ vì cùng chiều cao.</p></article><article><b>03 · VFX & gameplay</b><p>Warning, release, contact và aura tách body. Ghép theo facts Core/server; phối hợp vị trí, nhịp đòn và giới hạn FX khi có đàn phụ. Solo/party, damage và loot chốt bằng prototype riêng.</p></article></div>
+  <p class="hint">Nguồn lớn được trích alpha và resample nearest một scale/neutral; raw giữ nguyên. Canvas chỉ là padding. Chân đo ở tư thế này chưa chứng minh các view/action tiếp theo hoặc collider.</p>
+  <div class="links"><a href="production.json">Manifest / input / hash</a><a href="registration.json">Phép đo chân / scale / alpha</a><a href="README.md">Bàn giao concept</a><a href="review/lineup-2x.png">Bảng so sánh 2×</a><a href="../van-hai-monster-animation-v1/CLUSTER-REVIEW.md">Lưu ý ghép nhóm / FX</a></div>
+ </section>
+</main>
+<footer>Concept chưa thay boss đang chơi, AI, nhiệm vụ, vật liệu hoặc quyền Đọa Ma. Nền map và Vương Lâm dùng nguyên nguồn hiện hành.</footer>
+<script type="module" src="review.mjs"></script>
+</body></html>

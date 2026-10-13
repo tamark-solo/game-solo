@@ -1,0 +1,431 @@
+{
+  "schema": "van-hai-monster-cluster-review-1",
+  "date": "2026-10-13",
+  "feedback": "nhìn tốt đó. thử cho thành cụm các nhóm quái xem vfx có ổn không vì game sẽ phải có các nhóm quái",
+  "singleActorVfxPositiveFeedback": true,
+  "scope": "Presentation-only cluster review of existing body/VFX02, not live spawn/AI/range/damage/loot",
+  "review": "docs/design/characters/van-hai-monster-animation-v1/cluster.html",
+  "models": [
+    {
+      "path": "docs/design/characters/van-hai-monster-animation-v1/cluster-model.mjs",
+      "sha256": "5cfdeefc521910ccd5e1b7491ecfb1bfbdf82dfb48a9c8ce6032261bd48d4dbe"
+    },
+    {
+      "path": "docs/design/characters/van-hai-monster-animation-v1/cluster-renderer.mjs",
+      "sha256": "f1bcd58281df38f624fbc74c06370f2b706a0e2e6322932e6d9797138534dc11"
+    },
+    {
+      "path": "docs/design/characters/van-hai-monster-animation-v1/cluster.mjs",
+      "sha256": "4c1a3e0b265f939d37c4d5c9cdebce4669fc21f846788a20d2c396bdb3969bc2"
+    }
+  ],
+  "sourceBasis": [
+    {
+      "path": "docs/design/characters/van-hai-monster-animation-v1/catalog.json",
+      "sha256": "1033836af86dcb4bdefc1425fbe12b08bf24f59d1338b693d9078b2998061ce4"
+    },
+    {
+      "path": "docs/design/vfx/van-hai-monster-vfx-v2/catalog.json",
+      "sha256": "d257ce598a813c2f86e265ed5f43fcbe8d72576ba44b07863a8b4c7ad0824c05"
+    },
+    {
+      "path": "docs/design/vfx/van-hai-monster-vfx-v2/body-basis.json",
+      "sha256": "c21f51a2f8bb2e8da85f5abbe629edd867592a31cdd4a4d5e26e62ecb528d12b"
+    }
+  ],
+  "groupPresets": [
+    "same",
+    "mixed",
+    "escort"
+  ],
+  "counts": [
+    3,
+    6,
+    9,
+    12,
+    18
+  ],
+  "spacingWorldPx": [
+    64,
+    110,
+    170
+  ],
+  "timing": [
+    "release-aligned salvo",
+    "staggered starts"
+  ],
+  "aim": [
+    "convergent fixture target",
+    "parallel eight directions"
+  ],
+  "modes": [
+    "full VFX02",
+    "managed priority/overlap alpha budget"
+  ],
+  "findings": {
+    "at800msDense18": {
+      "full": {
+        "time": 800,
+        "actors": 18,
+        "elites": 3,
+        "effects": 36,
+        "warnings": 0,
+        "fxCoverage": 92.5,
+        "bodyCoverage": 34.5,
+        "renderMs": 25.1,
+        "cache": {
+          "decodedBytes": 16695552,
+          "budgetBytes": 16777216,
+          "entries": 171,
+          "loads": 354,
+          "evictions": 183,
+          "scope": "decoded actor/FX bitmaps only; excludes map/browser cache/GPU total"
+        },
+        "drawCommands": 73
+      },
+      "managed": {
+        "time": 800,
+        "actors": 18,
+        "elites": 3,
+        "effects": 36,
+        "warnings": 0,
+        "fxCoverage": 63.8,
+        "bodyCoverage": 34.5,
+        "renderMs": 1.5,
+        "cache": {
+          "decodedBytes": 16695552,
+          "budgetBytes": 16777216,
+          "entries": 171,
+          "loads": 354,
+          "evictions": 183,
+          "scope": "decoded actor/FX bitmaps only; excludes map/browser cache/GPU total"
+        },
+        "drawCommands": 73
+      }
+    },
+    "interpretation": "Alpha reduction improves FX coverage but close enemy bodies still obscure the player. Use spacing, attack cadence and presentation budget together before live integration.",
+    "measurement": "Player alpha>=128; foreground FX combined alpha>=96 / bodies>=128. Pixel coverage at fixed frame, not recognition/damage or benchmark."
+  },
+  "verification": {
+    "passed": true,
+    "date": "2026-10-13",
+    "scenarios": [
+      {
+        "preset": "same",
+        "count": 3,
+        "time": 800,
+        "full": {
+          "fxCoverage": 60.6,
+          "bodyCoverage": 0,
+          "effects": 6
+        },
+        "managed": {
+          "fxCoverage": 57.2,
+          "bodyCoverage": 0,
+          "effects": 6
+        }
+      },
+      {
+        "preset": "same",
+        "count": 6,
+        "time": 800,
+        "full": {
+          "fxCoverage": 62.9,
+          "bodyCoverage": 0,
+          "effects": 12
+        },
+        "managed": {
+          "fxCoverage": 57.2,
+          "bodyCoverage": 0,
+          "effects": 12
+        }
+      },
+      {
+        "preset": "same",
+        "count": 9,
+        "time": 800,
+        "full": {
+          "fxCoverage": 63.9,
+          "bodyCoverage": 0,
+          "effects": 18
+        },
+        "managed": {
+          "fxCoverage": 57.1,
+          "bodyCoverage": 0,
+          "effects": 18
+        }
+      },
+      {
+        "preset": "same",
+        "count": 12,
+        "time": 800,
+        "full": {
+          "fxCoverage": 64.5,
+          "bodyCoverage": 0,
+          "effects": 24
+        },
+        "managed": {
+          "fxCoverage": 57,
+          "bodyCoverage": 0,
+          "effects": 24
+        }
+      },
+      {
+        "preset": "same",
+        "count": 18,
+        "time": 800,
+        "full": {
+          "fxCoverage": 65.8,
+          "bodyCoverage": 0,
+          "effects": 36
+        },
+        "managed": {
+          "fxCoverage": 57,
+          "bodyCoverage": 0,
+          "effects": 36
+        }
+      },
+      {
+        "preset": "mixed",
+        "count": 3,
+        "time": 800,
+        "full": {
+          "fxCoverage": 68.9,
+          "bodyCoverage": 0,
+          "effects": 6
+        },
+        "managed": {
+          "fxCoverage": 62.3,
+          "bodyCoverage": 0,
+          "effects": 6
+        }
+      },
+      {
+        "preset": "mixed",
+        "count": 6,
+        "time": 800,
+        "full": {
+          "fxCoverage": 76.8,
+          "bodyCoverage": 0,
+          "effects": 12
+        },
+        "managed": {
+          "fxCoverage": 62.8,
+          "bodyCoverage": 0,
+          "effects": 12
+        }
+      },
+      {
+        "preset": "mixed",
+        "count": 9,
+        "time": 800,
+        "full": {
+          "fxCoverage": 77.4,
+          "bodyCoverage": 0,
+          "effects": 18
+        },
+        "managed": {
+          "fxCoverage": 63.3,
+          "bodyCoverage": 0,
+          "effects": 18
+        }
+      },
+      {
+        "preset": "mixed",
+        "count": 12,
+        "time": 800,
+        "full": {
+          "fxCoverage": 83,
+          "bodyCoverage": 0,
+          "effects": 24
+        },
+        "managed": {
+          "fxCoverage": 63.5,
+          "bodyCoverage": 0,
+          "effects": 24
+        }
+      },
+      {
+        "preset": "mixed",
+        "count": 18,
+        "time": 800,
+        "full": {
+          "fxCoverage": 92.5,
+          "bodyCoverage": 0,
+          "effects": 36
+        },
+        "managed": {
+          "fxCoverage": 63.8,
+          "bodyCoverage": 0,
+          "effects": 36
+        }
+      },
+      {
+        "preset": "escort",
+        "count": 3,
+        "time": 800,
+        "full": {
+          "fxCoverage": 58.7,
+          "bodyCoverage": 0,
+          "effects": 6
+        },
+        "managed": {
+          "fxCoverage": 55.6,
+          "bodyCoverage": 0,
+          "effects": 6
+        }
+      },
+      {
+        "preset": "escort",
+        "count": 6,
+        "time": 800,
+        "full": {
+          "fxCoverage": 58.9,
+          "bodyCoverage": 0,
+          "effects": 12
+        },
+        "managed": {
+          "fxCoverage": 55.6,
+          "bodyCoverage": 0,
+          "effects": 12
+        }
+      },
+      {
+        "preset": "escort",
+        "count": 9,
+        "time": 800,
+        "full": {
+          "fxCoverage": 58.9,
+          "bodyCoverage": 0,
+          "effects": 18
+        },
+        "managed": {
+          "fxCoverage": 55.6,
+          "bodyCoverage": 0,
+          "effects": 18
+        }
+      },
+      {
+        "preset": "escort",
+        "count": 12,
+        "time": 800,
+        "full": {
+          "fxCoverage": 58.9,
+          "bodyCoverage": 0,
+          "effects": 24
+        },
+        "managed": {
+          "fxCoverage": 55.6,
+          "bodyCoverage": 0,
+          "effects": 24
+        }
+      },
+      {
+        "preset": "escort",
+        "count": 18,
+        "time": 800,
+        "full": {
+          "fxCoverage": 59,
+          "bodyCoverage": 0,
+          "effects": 36
+        },
+        "managed": {
+          "fxCoverage": 55.7,
+          "bodyCoverage": 0,
+          "effects": 36
+        }
+      }
+    ],
+    "worst": {
+      "full": {
+        "time": 800,
+        "actors": 18,
+        "elites": 3,
+        "effects": 36,
+        "warnings": 0,
+        "fxCoverage": 92.5,
+        "bodyCoverage": 34.5,
+        "renderMs": 25.1,
+        "cache": {
+          "decodedBytes": 16695552,
+          "budgetBytes": 16777216,
+          "entries": 171,
+          "loads": 354,
+          "evictions": 183,
+          "scope": "decoded actor/FX bitmaps only; excludes map/browser cache/GPU total"
+        },
+        "drawCommands": 73
+      },
+      "managed": {
+        "time": 800,
+        "actors": 18,
+        "elites": 3,
+        "effects": 36,
+        "warnings": 0,
+        "fxCoverage": 63.8,
+        "bodyCoverage": 34.5,
+        "renderMs": 1.5,
+        "cache": {
+          "decodedBytes": 16695552,
+          "budgetBytes": 16777216,
+          "entries": 171,
+          "loads": 354,
+          "evictions": 183,
+          "scope": "decoded actor/FX bitmaps only; excludes map/browser cache/GPU total"
+        },
+        "drawCommands": 73
+      }
+    },
+    "cache": {
+      "decodedBytes": 16720384,
+      "budgetBytes": 16777216,
+      "entries": 203,
+      "loads": 739,
+      "evictions": 536,
+      "scope": "decoded actor/FX bitmaps only; excludes map/browser cache/GPU total"
+    },
+    "errors": [],
+    "api": [],
+    "checks": [
+      "same/mixed/escort x3/6/9/12/18",
+      "all11species and3elite-family selections",
+      "own clock/body/pivot and world-foot depth",
+      "salvo/stagger and parallel/convergent directions",
+      "same source art in full/managed; measured pixel coverage improves",
+      "miss/cancel/FX/warning toggles",
+      "1x/2x map/light/dark screenshots",
+      "18 actors playing without detached bitmaps",
+      "16MiB canonical-frame cache with eviction",
+      "offline/reduced-motion pause",
+      "390/768 without page overflow",
+      "no API/storage/owner map/DB writes"
+    ],
+    "runtimeImplemented": false,
+    "crowdArtApproved": false,
+    "unitTests": 3,
+    "typecheckPassed": true,
+    "boundariesPassed": true,
+    "bodyBasisFilesUnchanged": 3171,
+    "fxAtlasAndCanonicalUnchanged": 231,
+    "diffCheckPassed": true
+  },
+  "screenshots": [
+    "artifacts/monster-cluster/escort-6-native.png",
+    "artifacts/monster-cluster/wolves-6-native.png",
+    "artifacts/monster-cluster/crowd-full-native.png",
+    "artifacts/monster-cluster/crowd-managed-native.png",
+    "artifacts/monster-cluster/cluster-mobile.png"
+  ],
+  "crowdArtApproved": false,
+  "runtimeImplemented": false,
+  "spawnExported": false,
+  "ownerMapEdited": false,
+  "ownerDatabaseUsed": false,
+  "limitations": [
+    "Presentation positions/targets/timings are fixtures, not authored encounter data",
+    "Managed opacity is a candidate viewer mode, not a live renderer change",
+    "Canvas2D timing includes frame decode/metrics and is not GPU/MMO throughput",
+    "Decoded image ledger16MiB excludes map/player/canvases/browser cache"
+  ],
+  "next": "Owner compare6/12/18 and full/managed; later integrate server encounter spacing, staggered telegraphs and FX budget in a scoped runtime step."
+}

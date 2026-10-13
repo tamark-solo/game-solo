@@ -1,0 +1,106 @@
+{
+  "id": "cloud-wolf-king-vfx-v1",
+  "artApproved": false,
+  "jobs": [
+    {
+      "id": "wolf-fx",
+      "actor": "BOSS-VH-CLOUD-WOLF-KING",
+      "rank": "boss",
+      "name": "Vân Nha Lang Vương",
+      "rows": 3,
+      "palette": "Ivory / smoky jade / amber",
+      "description": "Spectral fangs and ink cloud wind, separated from body.",
+      "source": "sources/wolf-fx.png",
+      "prompt": "prompts/wolf-fx.txt",
+      "references": [
+        "docs/design/characters/van-hai-boss-concepts-v1/raw/cloud-wolf-king.png"
+      ],
+      "phases": [
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 66
+        }
+      ],
+      "cols": 6
+    },
+    {
+      "id": "wolf-ground",
+      "actor": "BOSS-VH-CLOUD-WOLF-KING",
+      "rank": "boss",
+      "name": "Vân Nha Lang Vương",
+      "rows": 2,
+      "palette": "Ivory / smoky jade / amber",
+      "description": "Spectral fangs and ink cloud wind, separated from body.",
+      "source": "sources/wolf-ground.png",
+      "prompt": "prompts/wolf-ground.txt",
+      "references": [
+        "docs/design/characters/van-hai-boss-concepts-v1/raw/cloud-wolf-king.png"
+      ],
+      "phases": [
+        {
+          "id": "hoi_phong",
+          "row": 0,
+          "kind": "ground",
+          "width": 208
+        },
+        {
+          "id": "arrival",
+          "row": 1,
+          "kind": "radial",
+          "width": 128
+        }
+      ],
+      "cols": 6
+    },
+    {
+      "id": "wolf-charge",
+      "actor": "BOSS-VH-CLOUD-WOLF-KING",
+      "rank": "boss",
+      "name": "Vân Nha Lang Vương",
+      "rows": 2,
+      "palette": "Ivory / smoky jade / amber",
+      "description": "Spectral fangs and ink cloud wind, separated from body.",
+      "source": "sources/wolf-charge.png",
+      "prompt": "prompts/wolf-charge.txt",
+      "references": [
+        "docs/design/characters/van-hai-boss-concepts-v1/raw/cloud-wolf-king.png"
+      ],
+      "phases": [
+        {
+          "id": "charge",
+          "wholeSheet": true,
+          "clipId": "wolf-fx-charge",
+          "kind": "radial",
+          "width": 76
+        }
+      ],
+      "cols": 3
+    },
+    {
+      "id": "wolf-release",
+      "actor": "BOSS-VH-CLOUD-WOLF-KING",
+      "rank": "boss",
+      "name": "Vân Nha Lang Vương",
+      "rows": 2,
+      "palette": "Ivory / smoky jade / amber",
+      "description": "Spectral fangs and ink cloud wind, separated from body.",
+      "source": "sources/wolf-release.png",
+      "prompt": "prompts/wolf-release.txt",
+      "references": [
+        "docs/design/characters/van-hai-boss-concepts-v1/raw/cloud-wolf-king.png"
+      ],
+      "phases": [
+        {
+          "id": "release",
+          "wholeSheet": true,
+          "clipId": "wolf-fx-release",
+          "kind": "directional",
+          "width": 140
+        }
+      ],
+      "cols": 3
+    }
+  ]
+}

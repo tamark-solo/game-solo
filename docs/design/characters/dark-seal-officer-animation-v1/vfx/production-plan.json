@@ -1,0 +1,146 @@
+{
+  "id": "dark-seal-officer-vfx-v1",
+  "date": "2026-10-13",
+  "artApproved": false,
+  "runtimeConsumable": false,
+  "jobs": [
+    {
+      "id": "officer-charge",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Hắc Ấn Chấp Sự",
+      "palette": "charcoal/ivory/bronze/vermilion",
+      "description": "Dark seal rituals and separate decoy dissolution",
+      "rows": 2,
+      "cols": 3,
+      "source": "sources/officer-charge.png",
+      "prompt": "prompts/officer-charge.txt",
+      "references": [
+        "docs/design/characters/dark-seal-officer-animation-v1/inputs/officer-approved-8x.png"
+      ],
+      "phases": [
+        {
+          "id": "charge",
+          "wholeSheet": true,
+          "kind": "radial",
+          "width": 56
+        }
+      ]
+    },
+    {
+      "id": "officer-release",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Hắc Ấn Chấp Sự",
+      "palette": "charcoal/ivory/bronze/vermilion",
+      "description": "Dark seal rituals and separate decoy dissolution",
+      "rows": 2,
+      "cols": 3,
+      "source": "sources/officer-release.png",
+      "prompt": "prompts/officer-release.txt",
+      "references": [
+        "docs/design/characters/dark-seal-officer-animation-v1/inputs/officer-approved-8x.png"
+      ],
+      "phases": [
+        {
+          "id": "release",
+          "wholeSheet": true,
+          "kind": "directional",
+          "width": 124
+        }
+      ]
+    },
+    {
+      "id": "officer-impact",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Hắc Ấn Chấp Sự",
+      "palette": "charcoal/ivory/bronze/vermilion",
+      "description": "Dark seal rituals and separate decoy dissolution",
+      "rows": 2,
+      "cols": 3,
+      "source": "sources/officer-impact.png",
+      "prompt": "prompts/officer-impact.txt",
+      "references": [
+        "docs/design/characters/dark-seal-officer-animation-v1/inputs/officer-approved-8x.png"
+      ],
+      "phases": [
+        {
+          "id": "impact",
+          "wholeSheet": true,
+          "kind": "radial",
+          "width": 64
+        }
+      ]
+    },
+    {
+      "id": "officer-phantom",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Hắc Ấn Chấp Sự",
+      "palette": "charcoal/ivory/bronze/vermilion",
+      "description": "Dark seal rituals and separate decoy dissolution",
+      "rows": 2,
+      "cols": 3,
+      "source": "sources/officer-phantom.png",
+      "prompt": "prompts/officer-phantom.txt",
+      "references": [
+        "docs/design/characters/dark-seal-officer-animation-v1/inputs/officer-approved-8x.png"
+      ],
+      "phases": [
+        {
+          "id": "phantom",
+          "wholeSheet": true,
+          "kind": "radial",
+          "width": 96
+        }
+      ]
+    },
+    {
+      "id": "officer-return",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Hắc Ấn Chấp Sự",
+      "palette": "charcoal/ivory/bronze/vermilion",
+      "description": "Dark seal rituals and separate decoy dissolution",
+      "rows": 2,
+      "cols": 3,
+      "source": "sources/officer-return.png",
+      "prompt": "prompts/officer-return.txt",
+      "references": [
+        "docs/design/characters/dark-seal-officer-animation-v1/inputs/officer-approved-8x.png"
+      ],
+      "phases": [
+        {
+          "id": "return",
+          "wholeSheet": true,
+          "kind": "ground",
+          "width": 224
+        }
+      ]
+    },
+    {
+      "id": "officer-arrival",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Hắc Ấn Chấp Sự",
+      "palette": "charcoal/ivory/bronze/vermilion",
+      "description": "Dark seal rituals and separate decoy dissolution",
+      "rows": 2,
+      "cols": 3,
+      "source": "sources/officer-arrival.png",
+      "prompt": "prompts/officer-arrival.txt",
+      "references": [
+        "docs/design/characters/dark-seal-officer-animation-v1/inputs/officer-approved-8x.png"
+      ],
+      "phases": [
+        {
+          "id": "arrival",
+          "wholeSheet": true,
+          "kind": "ground",
+          "width": 116
+        }
+      ]
+    }
+  ]
+}

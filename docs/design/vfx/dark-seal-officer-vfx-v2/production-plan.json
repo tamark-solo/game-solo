@@ -1,0 +1,240 @@
+{
+  "id": "dark-seal-officer-vfx-v2",
+  "date": "2026-10-13",
+  "status": "production-in-progress",
+  "artApproved": false,
+  "runtimeConsumable": false,
+  "bodyBasis": "body-basis.json",
+  "jobs": [
+    {
+      "id": "officer02-dao-charge",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Triện Thiên Môn",
+      "palette": "ivory/gold/vermilion/charcoal-indigo",
+      "description": "FRONT VIEW upright hollow SQUARE bronze ritual seal in a circular ivory rim. Four angular corners click inward like an ancient stamp machine, crimson threads cinch them and a small bright ivory diamond ignites centrally. Six ordered stages: two corner fragments / four corners converge / ring appears / dense square lattice locks / pressure brightens / complete focused square seal. Clearly legible strong silhouette, thin clear center, not a speck of swirling smoke. Origin at geometric center.",
+      "source": "sources/officer02-dao-charge.png",
+      "prompt": "prompts/officer02-dao-charge.txt",
+      "references": [
+        "docs/design/vfx/dark-seal-officer-vfx-v2/inputs/officer-palette.png"
+      ],
+      "rows": 2,
+      "cols": 3,
+      "phases": [
+        {
+          "id": "charge",
+          "wholeSheet": true,
+          "kind": "radial",
+          "width": 92
+        }
+      ]
+    },
+    {
+      "id": "officer02-dao-release",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Đạo Ấn · Phán Quyết",
+      "palette": "ivory/gold/vermilion/charcoal-indigo",
+      "description": "SCREEN RIGHT traveling sharp rectangular SEAL SPEAR. A large luminous ivory-bronze diamond stamp head thrusts right with three aligned dark obsidian square lattice plates stacked behind it, red-hot vermilion energy through their centers and sharp tapering trailing strokes to LEFT. Strong contrast ivory core / near-black ink border / crimson seam. Six stages: spear birth / stamp head advances / fully articulated powerful lance / lattice plates shatter behind / shrinking broken red path / last stamp fragments. Tip direction always RIGHT. No round fireball, generic ribbon or broad filled fog. All six effect origins at center of their cell.",
+      "source": "sources/officer02-dao-release.png",
+      "prompt": "prompts/officer02-dao-release.txt",
+      "references": [
+        "docs/design/vfx/dark-seal-officer-vfx-v2/inputs/officer-palette.png"
+      ],
+      "rows": 2,
+      "cols": 3,
+      "phases": [
+        {
+          "id": "release",
+          "wholeSheet": true,
+          "kind": "directional",
+          "width": 152
+        }
+      ]
+    },
+    {
+      "id": "officer02-phan-charge",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Phân Phù · Ly Ảnh",
+      "palette": "ivory/gold/vermilion/charcoal-indigo",
+      "description": "An upright hollow talisman EYE/DIAMOND made from two mirrored folded ivory paper brackets, red silk-like threads and a charcoal hollow center. It splits and recombines with three floating narrow paper talismans. Six ordered formation stages: single folded plate / opposing brackets / diamond frame / split plates / two interlocking eyes / three crisp folded talismans poised around one bright diamond. An eerie paper ritual with angular readable shapes, no drawn people or faces, no actual eye illustration. Center fixed.",
+      "source": "sources/officer02-phan-charge.png",
+      "prompt": "prompts/officer02-phan-charge.txt",
+      "references": [
+        "docs/design/vfx/dark-seal-officer-vfx-v2/inputs/officer-palette.png"
+      ],
+      "rows": 2,
+      "cols": 3,
+      "phases": [
+        {
+          "id": "charge",
+          "wholeSheet": true,
+          "kind": "radial",
+          "width": 90
+        }
+      ]
+    },
+    {
+      "id": "officer02-phan-release",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Phân Phù · Tam Phù",
+      "palette": "ivory/gold/vermilion/charcoal-indigo",
+      "description": "SCREEN RIGHT traveling fan of THREE folded talisman blades, center blade largest with ivory angular diamond tip, two smaller papery blades alongside it slightly staggered above/below. Split charcoal-paper shadows and thin vermilion strings behind them, bright aged-gold folded edges. Six stages: folded blades gather / fan opens / three razor seals fully visible / paper tips split / torn fragments / sparse red and ivory paper chips. Distinct origami-paper silhouette, not the seal spear or a generic trail. Consistent right-facing and cell-center origins, clear gaps between blades.",
+      "source": "sources/officer02-phan-release.png",
+      "prompt": "prompts/officer02-phan-release.txt",
+      "references": [
+        "docs/design/vfx/dark-seal-officer-vfx-v2/inputs/officer-palette.png"
+      ],
+      "rows": 2,
+      "cols": 3,
+      "phases": [
+        {
+          "id": "release",
+          "wholeSheet": true,
+          "kind": "directional",
+          "width": 140
+        }
+      ]
+    },
+    {
+      "id": "officer02-hoi-charge",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Ấn Hồi · Lập Trận",
+      "palette": "ivory/gold/vermilion/charcoal-indigo",
+      "description": "STRICT TOP DOWN ground ritual annular sector: a240-degree C-shaped array of SIX large broken ivory square seal tablets set around a near-black thin ring with gold hard edge and vermilion winding threads. Completely EMPTY90degree rear opening centered SCREEN LEFT in ALL six frames, including threads/sparks. Transparent center, ring only. Six assembly stages with full-radius guide rim: faint broken corner tablets / three aligned seals / six seals / tablets light in sequence / crimson inner arcs tighten / all six tablets hold bright pressure. Full physical ring diameter same between frames1-6; each formation has some faint ring silhouette to hold origin. Fixed center; not perspective ellipse, upright halo or opaque disk.",
+      "source": "sources/officer02-hoi-charge.png",
+      "prompt": "prompts/officer02-hoi-charge.txt",
+      "references": [
+        "docs/design/vfx/dark-seal-officer-vfx-v2/inputs/officer-palette.png"
+      ],
+      "rows": 2,
+      "cols": 3,
+      "phases": [
+        {
+          "id": "charge",
+          "wholeSheet": true,
+          "kind": "ground",
+          "width": 224,
+          "nativeRadius": 112,
+          "originOffset": [
+            -15.11,
+            4.81
+          ],
+          "originWitnesses": {
+            "method": "Median circle-center residual of high-alpha charcoal ring pixels in first three source cells; one offset for entire sequence, never recenter each frame.",
+            "residuals": [
+              [
+                6.92,
+                4.47
+              ],
+              [
+                -15.11,
+                4.81
+              ],
+              [
+                -23.62,
+                6.32
+              ]
+            ],
+            "status": "presentation-candidate"
+          }
+        }
+      ]
+    },
+    {
+      "id": "officer02-hoi-release",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Ấn Hồi · Lục Triện Quy Tâm",
+      "palette": "ivory/gold/vermilion/charcoal-indigo",
+      "description": "STRICT TOP DOWN 270-degree C-shaped contracting ritual ring with SIX large luminous ivory square seals, sharp bronze lattice and near-black hard outline. Thin crimson energy pulls inward, converging like a restrained whirlpool around a TRANSPARENT EMPTY CENTER. Completely EMPTY90degree escape wedge SCREEN LEFT remains empty in ALL six stages. Six frames: full-radius seals ignite / thin inward hook arcs appear / six seals snap and pull toward center / broken seal tablets gather closer / red lines and ivory chips unravel / faint disappearing C outline and chips. Peak ring diameter unchanged frame1-3 then contracts; no opaque dark smoke cloud, no filled disk, no flame wall. Fixed center of effect; ground plane view.",
+      "source": "sources/officer02-hoi-release.png",
+      "prompt": "prompts/officer02-hoi-release.txt",
+      "references": [
+        "docs/design/vfx/dark-seal-officer-vfx-v2/inputs/officer-palette.png"
+      ],
+      "rows": 2,
+      "cols": 3,
+      "phases": [
+        {
+          "id": "return",
+          "wholeSheet": true,
+          "kind": "ground",
+          "width": 224,
+          "nativeRadius": 112,
+          "originOffset": [
+            4.35,
+            2.02
+          ],
+          "originWitnesses": {
+            "method": "Median circle-center residual of high-alpha charcoal ring pixels in first three source cells; one offset for entire sequence, never recenter each frame.",
+            "residuals": [
+              [
+                15.78,
+                2.02
+              ],
+              [
+                4.35,
+                0.84
+              ],
+              [
+                -3.25,
+                5.64
+              ]
+            ],
+            "status": "presentation-candidate"
+          }
+        }
+      ]
+    },
+    {
+      "id": "officer02-seal-impact",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Triện Vỡ · Xác Nhận",
+      "palette": "ivory/gold/vermilion/charcoal-indigo",
+      "description": "A forceful square STAMP CONTACT fractures on impact. Bright ivory diamond imprint bordered in near-black and bronze appears and cracks into four angular corners with vermilion rays. Six ordered stages: sharp small stamp flash / complete square mark / pressure fracture peak / ivory-bronze corner shards eject / shattered red seams fade / last paper-like chips. Crisp moment of contact, compact hollow center after peak, no blood/people, no giant circular explosion or full opaque white disk. Geometric center same for all frames.",
+      "source": "sources/officer02-seal-impact.png",
+      "prompt": "prompts/officer02-seal-impact.txt",
+      "references": [
+        "docs/design/vfx/dark-seal-officer-vfx-v2/inputs/officer-palette.png"
+      ],
+      "rows": 2,
+      "cols": 3,
+      "phases": [
+        {
+          "id": "impact",
+          "wholeSheet": true,
+          "kind": "radial",
+          "width": 96
+        }
+      ]
+    },
+    {
+      "id": "officer02-phantom-collapse",
+      "actor": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rank": "boss",
+      "name": "Hư Ảnh · Phù Tàn",
+      "palette": "ivory/gold/vermilion/charcoal-indigo",
+      "description": "A tall open arch made from THREE floating ivory paper talismans collapses into torn-paper fragments, a hollow dark crimson diamond seal and long thin charcoal ink strings. Six stages: intact narrow hovering paper gate / paper brackets separate / burst of folded ivory corners / torn ribbons fall apart / few red threads and ivory flakes / last motes. Ritual illusion dissolution, distinctly softer/sparser than a damage impact. Do NOT draw an actor, body, face, ghost or weapon. Clear transparent center throughout, consistent center origins.",
+      "source": "sources/officer02-phantom-collapse.png",
+      "prompt": "prompts/officer02-phantom-collapse.txt",
+      "references": [
+        "docs/design/vfx/dark-seal-officer-vfx-v2/inputs/officer-palette.png"
+      ],
+      "rows": 2,
+      "cols": 3,
+      "phases": [
+        {
+          "id": "phantom",
+          "wholeSheet": true,
+          "kind": "radial",
+          "width": 112
+        }
+      ]
+    }
+  ]
+}

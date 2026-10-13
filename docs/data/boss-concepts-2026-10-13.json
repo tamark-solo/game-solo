@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "date": "2026-10-13",
+  "id": "VH-BOSS-CONCEPTS-01",
+  "bosses": 4,
+  "neutralPoses": 4,
+  "viewsPerActor": 1,
+  "directionsPending": 7,
+  "sources": 5,
+  "approvedPlayerHashesVerified": 323,
+  "monsterConceptRawNativeHashesVerified": 22,
+  "sourcePlanUnchanged": true,
+  "ownerMapEdited": false,
+  "ownerDatabaseUsed": false,
+  "runtimeImplemented": false,
+  "artApproved": false,
+  "checks": [
+    "prompt/input/raw/native hashes",
+    "measured source support and native feet/binary alpha",
+    "actual 2x card body not clipped",
+    "four actor selections x 1x/2x x map/light/dark",
+    "native canvas scroll at mobile/desktop widths",
+    "root/shadow/silhouette controls",
+    "deep link restored",
+    "four candidate concepts linked from world brief",
+    "no game API or browser storage writes"
+  ],
+  "errors": [],
+  "api": [],
+  "files": [
+    {
+      "id": "BOSS-VH-CLOUD-WOLF-KING",
+      "rawSha256": "117794da5cac10ed6135d544cbb5c0d8221e28c5588097da8a686d7b169af19f",
+      "spriteSha256": "3ff0eedb3a3a86b946a4982d5f0cebcfb0407611a1e351cc2b982d3487a51d7f",
+      "bodyHeightPx": 96,
+      "canvas": [
+        224,
+        144
+      ],
+      "pivot": [
+        112,
+        128
+      ]
+    },
+    {
+      "id": "BOSS-HN-THREE-SEAL-PUPPET",
+      "rawSha256": "c3d695f98c2ce700add5a4892f35351361e6c7b28296dc8a426bebe504bdd896",
+      "spriteSha256": "88e220faf665b2f644765f67ba9c297ff7f500033bfc16e62f2a3085c4255cf5",
+      "bodyHeightPx": 104,
+      "canvas": [
+        176,
+        176
+      ],
+      "pivot": [
+        88,
+        160
+      ]
+    },
+    {
+      "id": "BOSS-VH-ANCIENT-ROOT",
+      "rawSha256": "a3a9c7613f87a9c5e9f701f5ad915f6fe2a63289b14e1236c147fc6743e36897",
+      "spriteSha256": "f39677df1ef57363ab84f55677a1c9b3dd295f6739ed637b23fef5bf03b17f0d",
+      "bodyHeightPx": 140,
+      "canvas": [
+        400,
+        176
+      ],
+      "pivot": [
+        200,
+        160
+      ]
+    },
+    {
+      "id": "BOSS-VH-DARK-SEAL-OFFICER",
+      "rawSha256": "ad1d1e597c4beecc682c87911771a5ba031ce1fc42a6110ee2c91dbd0d5e581d",
+      "spriteSha256": "23e6f4e450b22ffc1732f23f79058b894e49326900ecd290561a27324c28d604",
+      "bodyHeightPx": 80,
+      "canvas": [
+        112,
+        96
+      ],
+      "pivot": [
+        56,
+        88
+      ]
+    }
+  ],
+  "regressions": {
+    "livingWorldReview": true,
+    "monsterVfx02And3171BodyHashes": true,
+    "typecheckAndBoundaries": true
+  }
+}

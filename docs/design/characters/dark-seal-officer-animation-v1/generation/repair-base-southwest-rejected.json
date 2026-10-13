@@ -1,0 +1,23 @@
+{
+  "id": "repair-base-southwest-rejected",
+  "date": "2026-10-13",
+  "tool": "built-in-imagegen",
+  "source": "sources/superseded/repair-base-southwest-rejected.png",
+  "sourceSha256": "d872c0f0fa0ac79a950f266a8f02b7b15252e6c41661edb5d244e9698923e801",
+  "generatedPath": "C:\\Users\\Mark-TA\\.codex\\generated_images\\01a1210e-d50e-74f0-86ba-c0f93b0ab70b\\exec-227ae269-e538-4da7-9930-98bce6766092.png",
+  "prompt": "prompts/repair-base-southwest.txt",
+  "promptSha256": "cec5d1c7fbf98ea507fec2fa33c914d27f33feb23e4cebcf73fd7e41cdeb35ea",
+  "inputs": [
+    {
+      "file": "docs/design/characters/dark-seal-officer-animation-v1/inputs/facing-southwest-8x.png",
+      "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+    },
+    {
+      "file": "docs/design/characters/dark-seal-officer-animation-v1/inputs/officer-approved-8x.png",
+      "sha256": "63a253ae1f1767414e820e67e1bcfc93639083dc7381cbb8b3ada8cf899a3324"
+    }
+  ],
+  "reason": "First repair still showed front-right neutral/idle while gait faced southwest. Replaced by same-view gait-led regeneration; retained for history only.",
+  "artApproved": false,
+  "status": "superseded"
+}

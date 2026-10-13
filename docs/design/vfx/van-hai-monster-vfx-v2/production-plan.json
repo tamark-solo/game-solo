@@ -1,0 +1,441 @@
+{
+  "id": "van-hai-monster-vfx-v2",
+  "date": "2026-10-13",
+  "tool": "built-in ImageGen",
+  "status": "candidate-art-review",
+  "artApproved": false,
+  "runtimeConsumable": false,
+  "bodyBasis": "body-basis.json",
+  "jobs": [
+    {
+      "id": "cloud-wolf",
+      "actor": "MOB-VH-CLOUD-WOLF",
+      "name": "Vân Nha · Liệt Nha",
+      "rank": "mob",
+      "type": "vfx-three-phase",
+      "source": "sources/cloud-wolf.png",
+      "prompt": "prompts/cloud-wolf.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/cloud-wolf.png"
+      ],
+      "palette": {
+        "light": "#a6e0d3",
+        "dark": "#184c59"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 34
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "directional",
+          "width": 90
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 44
+        }
+      ],
+      "description": "Two curved ivory fang strokes condense around a narrow celadon breath ribbon. Charge: two small fangs sharpen in an inward spiral. Release: one strong forward crescent with TWO interlocking fang notches and wind filaments, crisp dark teal edges. Impact: two fang-shaped slash marks split into three short ivory spikes and jade dust. NO literal wolf head.",
+      "releaseSource": "sources/cloud-wolf-release.png",
+      "releasePrompt": "prompts/cloud-wolf-release.txt"
+    },
+    {
+      "id": "talisman-sprout",
+      "actor": "MOB-VH-TALISMAN-SPROUT",
+      "name": "Mộc Phù · Xuyên Diệp",
+      "rank": "mob",
+      "type": "vfx-three-phase",
+      "source": "sources/talisman-sprout.png",
+      "prompt": "prompts/talisman-sprout.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/talisman-sprout.png"
+      ],
+      "palette": {
+        "light": "#9ed667",
+        "dark": "#355327"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 34
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "directional",
+          "width": 98
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 50
+        }
+      ],
+      "description": "An ochre rectangular talisman hangs inside a ring of four pointed jade LEAVES, with a twisted root stroke. Charge: leaves rotate inward around paper seal. Release: a green thorn lance wrapped in a corkscrew of four leaves, narrow bright ivory core, separated dark root curls. Impact: a sharp sprouting branch lattice opens with leaf-shaped shards, no generic star explosion.",
+      "releaseSource": "sources/talisman-sprout-release.png",
+      "releasePrompt": "prompts/talisman-sprout-release.txt"
+    },
+    {
+      "id": "jade-scute",
+      "actor": "MOB-VH-JADE-SCUTE",
+      "name": "Ngọc Giáp · Song Kiềm",
+      "rank": "mob",
+      "type": "vfx-three-phase",
+      "source": "sources/jade-scute.png",
+      "prompt": "prompts/jade-scute.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/jade-scute.png"
+      ],
+      "palette": {
+        "light": "#ddbc67",
+        "dark": "#25483f"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 34
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "directional",
+          "width": 82
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 44
+        }
+      ],
+      "description": "TWO opposed crescent PINCER shapes, aged bronze outside and teal crystalline inside. Charge: small pair opens and clamps inward around a diamond jade spark. Release: pincers snap together making a clear crossed X of two thick angular cuts. Impact: a broken diamond jade facet and warm bronze chips fly apart. No beast anatomy, only abstract pincer energy.",
+      "releaseSource": "sources/jade-scute-release.png",
+      "releasePrompt": "prompts/jade-scute-release.txt"
+    },
+    {
+      "id": "ink-bat",
+      "actor": "MOB-VH-INK-BAT",
+      "name": "Mặc Dực · Tước Ảnh",
+      "rank": "mob",
+      "type": "vfx-three-phase",
+      "source": "sources/ink-bat.png",
+      "prompt": "prompts/ink-bat.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/ink-bat.png"
+      ],
+      "palette": {
+        "light": "#b9adea",
+        "dark": "#29263f"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 34
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "directional",
+          "width": 108
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 50
+        }
+      ],
+      "description": "Two ragged violet-black paper WING strokes with cool lavender ivory razor edges. Charge: paired black feathers pull into a small violet bead. Release: a swept V-shaped ink dive wake pointing right, two torn ribbons and thin luminous violet outer blades. Impact: four separated ink petals burst with a tiny violet-white center. Strong opaque dark contour behind luminous edge, no smoke cloud covering the action.",
+      "releaseSource": "sources/ink-bat-release.png",
+      "releasePrompt": "prompts/ink-bat-release.txt"
+    },
+    {
+      "id": "cracked-puppet",
+      "actor": "MOB-VH-CRACKED-PUPPET",
+      "name": "Khôi Ấn · Chấn Thạch",
+      "rank": "mob",
+      "type": "vfx-three-phase",
+      "source": "sources/cracked-puppet.png",
+      "prompt": "prompts/cracked-puppet.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/cracked-puppet.png"
+      ],
+      "palette": {
+        "light": "#e9be73",
+        "dark": "#704c2e"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 34
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "directional",
+          "width": 90
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 56
+        }
+      ],
+      "description": "An angular SQUARE bronze stamp, cracked jade stone corners, warm amber energy. Charge: four heavy square corners gather around a tiny seal. Release: square stamp compresses into a heavy forward trapezoid shock stroke with stone chips and gold-white crack lines. Impact: a square broken seal splits in four with chunky jade slabs, brief radial shock wave. Mechanical heaviness, no fist/body/weapon.",
+      "releaseSource": "sources/cracked-puppet-release.png",
+      "releasePrompt": "prompts/cracked-puppet-release.txt"
+    },
+    {
+      "id": "spirit-fungus",
+      "actor": "MOB-VH-SPIRIT-FUNGUS",
+      "name": "Thực Linh · Tán Bào",
+      "rank": "mob",
+      "type": "vfx-three-phase",
+      "source": "sources/spirit-fungus.png",
+      "prompt": "prompts/spirit-fungus.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/spirit-fungus.png"
+      ],
+      "palette": {
+        "light": "#d9d282",
+        "dark": "#536d2c"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 34
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "radial",
+          "width": 100
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 54
+        }
+      ],
+      "description": "Saffron-ivory SPORE beads and muted moss green mist, distinct rounded organic shape. Charge: six small seed beads spiral inward. Release: circular low expanding ring made of pearl spores, dense bright rim and dark olive underside, fully open hollow center. Impact: three bell-shaped spore clusters pop into smaller amber droplets and pale seed stars. Row2 radial centered, NOT directional.",
+      "releaseSource": "sources/spirit-fungus-release.png",
+      "releasePrompt": "prompts/spirit-fungus-release.txt"
+    },
+    {
+      "id": "dark-talisman-rogue",
+      "actor": "MOB-VH-DARK-TALISMAN-ROGUE",
+      "name": "Hắc Phù · Liệt Ấn",
+      "rank": "mob",
+      "type": "vfx-three-phase",
+      "source": "sources/dark-talisman-rogue.png",
+      "prompt": "prompts/dark-talisman-rogue.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/dark-talisman-rogue.png"
+      ],
+      "palette": {
+        "light": "#f0a270",
+        "dark": "#4b252b"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 34
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "directional",
+          "width": 110
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 54
+        }
+      ],
+      "description": "ONE cream rectangular PAPER talisman with earth-red angular abstract seal, dark plum ink tail. Charge: folded paper rotates within a red angular sigil. Release: one bright talisman spear pointing right with paired red hook strokes and two ink ribbons, keep paper silhouette readable. Impact: paper cracks into triangular cream fragments within a red broken square seal. No readable text or Chinese characters.",
+      "releaseSource": "sources/dark-talisman-rogue-release.png",
+      "releasePrompt": "prompts/dark-talisman-rogue-release.txt"
+    },
+    {
+      "id": "quiet-wisp",
+      "actor": "MOB-VH-QUIET-WISP",
+      "name": "U Niệm · Nhiếp Hồn",
+      "rank": "mob",
+      "type": "vfx-three-phase",
+      "source": "sources/quiet-wisp.png",
+      "prompt": "prompts/quiet-wisp.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/quiet-wisp.png"
+      ],
+      "palette": {
+        "light": "#9fe5eb",
+        "dark": "#193944"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 34
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "directional",
+          "width": 106
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 52
+        }
+      ],
+      "description": "A hollow cyan jade LANTERN flame enclosed by two charcoal ink curves, not the creature body. Charge: small hollow teardrop and wisps orbit inward. Release: long hollow spectral flame spear pointing right, white-blue double rim, two separated dark curls with little cyan pearls. Impact: hollow cyan iris ring collapses then splits into four curved soul shards. No literal eyeball/face/body.",
+      "releaseSource": "sources/quiet-wisp-release.png",
+      "releasePrompt": "prompts/quiet-wisp-release.txt"
+    },
+    {
+      "id": "wolf-caller",
+      "actor": "ELITE-VH-WOLF-CALLER",
+      "name": "Lang Tuần · Phong Nha Trận",
+      "rank": "elite",
+      "type": "vfx-three-phase",
+      "source": "sources/wolf-caller.png",
+      "prompt": "prompts/wolf-caller.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/wolf-caller.png"
+      ],
+      "palette": {
+        "light": "#beeae0",
+        "dark": "#1e4859"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 50
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "directional",
+          "width": 140
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 74
+        }
+      ],
+      "description": "ELITE wolf: three long ivory-celadon FANG blades around a broken circular wind sigil, deeper blue ink contour. Charge: three curved fangs orbit a bright three-pronged wind crest, ring closes in stages. Release: three offset thick forward claw-like fang blades in a fan with a braided wind helix, spatial silhouette clearly different from normal single crescent. Impact: triple slash and a large broken wind-ring ripple with crisp ivory fangs, jade chips. Spiritual predator, no wolf face.",
+      "releaseSource": "sources/wolf-caller-release.png",
+      "releasePrompt": "prompts/wolf-caller-release.txt"
+    },
+    {
+      "id": "jade-guard",
+      "actor": "ELITE-VH-JADE-GUARD",
+      "name": "Thiết Giáp · Trấn Ngọc Kiềm",
+      "rank": "elite",
+      "type": "vfx-three-phase",
+      "source": "sources/jade-guard.png",
+      "prompt": "prompts/jade-guard.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/jade-guard.png"
+      ],
+      "palette": {
+        "light": "#f2d087",
+        "dark": "#204c48"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 50
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "directional",
+          "width": 142
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 78
+        }
+      ],
+      "description": "ELITE insect: two massive angular BRONZE JADE mandible energy blades surrounding a diamond armor sigil. Charge: diamond plates stack inward with a bronze ring and two pincer tips. Release: two serrated armor crescents snap across a sharp diamond core, thick gold-white outer edge, deep teal jade plates; upward rock splinters. Impact: diamond shield sigil SHATTERS with a four-way fault line, gold rim and large angular jade pieces. This is heavy armor energy, not a recolored normal claw.",
+      "releaseSource": "sources/jade-guard-release.png",
+      "releasePrompt": "prompts/jade-guard-release.txt"
+    },
+    {
+      "id": "black-silk-adept",
+      "actor": "ELITE-VH-BLACK-SILK-ADEPT",
+      "name": "Hắc Lụa · Tam Phù Liên Ấn",
+      "rank": "elite",
+      "type": "vfx-three-phase",
+      "source": "sources/black-silk-adept.png",
+      "prompt": "prompts/black-silk-adept.txt",
+      "references": [
+        "docs/design/characters/van-hai-monster-concepts-v1/raw/black-silk-adept.png"
+      ],
+      "palette": {
+        "light": "#eb987c",
+        "dark": "#32233e"
+      },
+      "phases": [
+        {
+          "id": "charge",
+          "row": 0,
+          "kind": "radial",
+          "width": 50
+        },
+        {
+          "id": "release",
+          "row": 1,
+          "kind": "directional",
+          "width": 150
+        },
+        {
+          "id": "impact",
+          "row": 2,
+          "kind": "radial",
+          "width": 82
+        }
+      ],
+      "description": "ELITE spellcaster: exactly THREE luminous cream paper seals linked into a triangular formation by red threads and dark violet silk ribbons. Charge: three paper seals unfold sequentially around a small triangle, ring of red geometric runic strokes. Release: three stepped paper-seal lances pointing right at different vertical levels, connected by a triangular red frame and opaque black-violet ribbons. Impact: three paper sigils ignite in sequence around a broken red-violet triangle and detach as cream fragments. Keep geometric triangle and three-seal hierarchy; no generic spark, no readable text.",
+      "releaseSource": "sources/black-silk-adept-release.png",
+      "releasePrompt": "prompts/black-silk-adept-release.txt"
+    }
+  ],
+  "productionComplete": true
+}

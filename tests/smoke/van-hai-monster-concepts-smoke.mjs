@@ -42,6 +42,13 @@ try{
  const clipping=await page.locator('.actor-card').evaluateAll((nodes,rows)=>nodes.map(n=>{const a=rows.find(a=>a.id===n.dataset.id),b=n.querySelector('.sprite-stage').getBoundingClientRect(),im=n.querySelector('img').getBoundingClientRect(),r=a.nativeBounds;return {id:a.id,clips:im.left+r[0]*3<b.left-1||im.top+r[1]*3<b.top-1||im.left+r[2]*3>b.right+1||im.top+r[3]*3>b.bottom+1};}),registration.actors);
  assert.deepEqual(clipping.filter(v=>v.clips),[],'Card clips body silhouette');
  await page.screenshot({path:resolve(output,'gallery-desktop.png'),fullPage:true});
+ for(const width of [1024,850,768,600,390]){
+  await page.setViewportSize({width,height:900});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`Page overflow at ${width}`);
+  const clipped=await page.locator('.actor-card').evaluateAll((nodes,rows)=>nodes.filter(n=>{const a=rows.find(a=>a.id===n.dataset.id),b=n.querySelector('.sprite-stage').getBoundingClientRect(),im=n.querySelector('img').getBoundingClientRect(),r=a.nativeBounds;return im.left+r[0]*3<b.left-1||im.top+r[1]*3<b.top-1||im.left+r[2]*3>b.right+1||im.top+r[3]*3>b.bottom+1;}).map(n=>n.dataset.id),registration.actors);
+  assert.deepEqual(clipped,[],`Body clipping at ${width}`);
+ }
+ await page.setViewportSize({width:1440,height:1000});
  await page.locator('[data-filter=elite]').click();assert.equal(await page.locator('.actor-card').count(),3);
  await page.locator('[data-filter=mob]').click();assert.equal(await page.locator('.actor-card').count(),8);
  await page.locator('[data-filter=all]').click();

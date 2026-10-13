@@ -117,6 +117,6 @@ for i,a in enumerate(items):
     d.line((x+13,ground,x+315,ground),fill='#908a70',width=1)
     centered(d,x+164,y+254,a['name'],font(20,True),'#263c30')
     label={'basis':'BASIS','mob':'QUÁI THƯỜNG','elite':'TINH ANH'}[a['rank']]
-    centered(d,x+164,y+286,f"{label} · {a['bodyHeightPx']} px",font(13),'#42583f')
+    centered(d,x+164,y+286,f"{label} · {a.get('measuredBodyHeightPx',a['bodyHeightPx'])} px",font(13),'#42583f')
 board.save(ROOT/'review/lineup-3x.png')
 print(f"Packed {len(rows)} identity masters; one view/pose each, no animation or runtime claims.")

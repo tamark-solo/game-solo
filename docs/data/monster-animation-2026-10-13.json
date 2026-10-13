@@ -1,0 +1,407 @@
+{
+  "schema": "van-hai-monster-animation-delivery-1",
+  "date": "2026-10-13",
+  "generator": "built-in-imagegen",
+  "scope": "Eight mobs / three elites: base five actions in eight genuine views plus separate VFX and held props, ART review only",
+  "acceptedConceptBasis": {
+    "path": "docs/design/characters/van-hai-monster-animation-v1/basis.json",
+    "sha256": "fcf61c51de77d423d8574f4d2ceea02795b33eb190b6fc99c400d10855d3fd1b"
+  },
+  "catalog": {
+    "path": "docs/design/characters/van-hai-monster-animation-v1/catalog.json",
+    "sha256": "1033836af86dcb4bdefc1425fbe12b08bf24f59d1338b693d9078b2998061ce4"
+  },
+  "sourceRegistration": {
+    "path": "docs/design/characters/van-hai-monster-animation-v1/source-registration.json",
+    "sha256": "1a17c7f22060ebc97381cc4141e4339ded4d8085de02087acf75b2b03da50cf5"
+  },
+  "socketCandidates": {
+    "path": "docs/design/characters/van-hai-monster-animation-v1/socket-registration.json",
+    "sha256": "202ed1758f49ec886add26de2deb90a007d8383c37c9a9d9fa583660b4faaa59"
+  },
+  "vfxCatalog": {
+    "path": "docs/design/vfx/van-hai-monster-vfx-v1/catalog.json",
+    "sha256": "fce91dfd21bad8d1f8d393269866c000992641acd55806f066d9c1c135e081ed"
+  },
+  "vfxRegistration": {
+    "path": "docs/design/vfx/van-hai-monster-vfx-v1/registration.json",
+    "sha256": "ec4738ea355b414d7b506925f55812a8f7faefa23d974d6924b769b73cbe2c36"
+  },
+  "bodySources": 88,
+  "neutralCalibrationPoses": 528,
+  "actionClips": 440,
+  "actionPoses": 2640,
+  "vfxSequences": 9,
+  "vfxPoses": 54,
+  "heldProps": 2,
+  "retainedBodyRefinements": 5,
+  "actors": [
+    {
+      "id": "MOB-VH-CLOUD-WOLF",
+      "name": "Vân Nha Lang",
+      "rank": "mob",
+      "bodyTargetPx": 50,
+      "frameSize": [
+        224,
+        128
+      ],
+      "worldFoot": [
+        112,
+        104
+      ],
+      "liftPx": 0,
+      "clips": 40
+    },
+    {
+      "id": "MOB-VH-TALISMAN-SPROUT",
+      "name": "Phù Mộc Tinh",
+      "rank": "mob",
+      "bodyTargetPx": 58,
+      "frameSize": [
+        208,
+        128
+      ],
+      "worldFoot": [
+        104,
+        104
+      ],
+      "liftPx": 0,
+      "clips": 40
+    },
+    {
+      "id": "MOB-VH-JADE-SCUTE",
+      "name": "Ngọc Giáp Trùng",
+      "rank": "mob",
+      "bodyTargetPx": 46,
+      "frameSize": [
+        240,
+        128
+      ],
+      "worldFoot": [
+        120,
+        104
+      ],
+      "liftPx": 0,
+      "clips": 40
+    },
+    {
+      "id": "MOB-VH-INK-BAT",
+      "name": "Mặc Dực Bức",
+      "rank": "mob",
+      "bodyTargetPx": 42,
+      "frameSize": [
+        256,
+        128
+      ],
+      "worldFoot": [
+        128,
+        104
+      ],
+      "liftPx": 16,
+      "clips": 40
+    },
+    {
+      "id": "MOB-VH-CRACKED-PUPPET",
+      "name": "Khôi Lỗi Rạn Ngọc",
+      "rank": "mob",
+      "bodyTargetPx": 72,
+      "frameSize": [
+        224,
+        136
+      ],
+      "worldFoot": [
+        112,
+        112
+      ],
+      "liftPx": 0,
+      "clips": 40
+    },
+    {
+      "id": "MOB-VH-SPIRIT-FUNGUS",
+      "name": "Thực Linh Khuẩn",
+      "rank": "mob",
+      "bodyTargetPx": 48,
+      "frameSize": [
+        224,
+        128
+      ],
+      "worldFoot": [
+        112,
+        104
+      ],
+      "liftPx": 0,
+      "clips": 40
+    },
+    {
+      "id": "MOB-VH-DARK-TALISMAN-ROGUE",
+      "name": "Tán Tu Hắc Phù",
+      "rank": "mob",
+      "bodyTargetPx": 80,
+      "frameSize": [
+        192,
+        128
+      ],
+      "worldFoot": [
+        96,
+        104
+      ],
+      "liftPx": 0,
+      "clips": 40
+    },
+    {
+      "id": "MOB-VH-QUIET-WISP",
+      "name": "U Niệm",
+      "rank": "mob",
+      "bodyTargetPx": 58,
+      "frameSize": [
+        224,
+        144
+      ],
+      "worldFoot": [
+        112,
+        116
+      ],
+      "liftPx": 8,
+      "clips": 40
+    },
+    {
+      "id": "ELITE-VH-WOLF-CALLER",
+      "name": "Lang Tuần Sơn",
+      "rank": "elite",
+      "bodyTargetPx": 65,
+      "frameSize": [
+        256,
+        144
+      ],
+      "worldFoot": [
+        128,
+        120
+      ],
+      "liftPx": 0,
+      "clips": 40
+    },
+    {
+      "id": "ELITE-VH-JADE-GUARD",
+      "name": "Thiết Giáp Linh Trùng",
+      "rank": "elite",
+      "bodyTargetPx": 62,
+      "frameSize": [
+        272,
+        144
+      ],
+      "worldFoot": [
+        136,
+        120
+      ],
+      "liftPx": 0,
+      "clips": 40
+    },
+    {
+      "id": "ELITE-VH-BLACK-SILK-ADEPT",
+      "name": "Phù Sư Hắc Lụa",
+      "rank": "elite",
+      "bodyTargetPx": 80,
+      "frameSize": [
+        208,
+        128
+      ],
+      "worldFoot": [
+        104,
+        104
+      ],
+      "liftPx": 0,
+      "clips": 40
+    }
+  ],
+  "quantization": [
+    {
+      "source": "cracked-puppet-northwest",
+      "target": 72,
+      "measuredNeutralHeights": [
+        74,
+        73,
+        72,
+        72,
+        72,
+        72
+      ],
+      "note": "Measured nearest quantization, no per-pose stretch"
+    },
+    {
+      "source": "quiet-wisp-southwest",
+      "target": 58,
+      "measuredNeutralHeights": [
+        56,
+        57,
+        58,
+        57,
+        56,
+        57
+      ],
+      "note": "Measured nearest quantization, no per-pose stretch"
+    },
+    {
+      "source": "quiet-wisp-west",
+      "target": 58,
+      "measuredNeutralHeights": [
+        57,
+        57,
+        56,
+        58,
+        58,
+        57
+      ],
+      "note": "Measured nearest quantization, no per-pose stretch"
+    },
+    {
+      "source": "quiet-wisp-northwest",
+      "target": 58,
+      "measuredNeutralHeights": [
+        56,
+        57,
+        57,
+        58,
+        57,
+        57
+      ],
+      "note": "Measured nearest quantization, no per-pose stretch"
+    },
+    {
+      "source": "quiet-wisp-southeast",
+      "target": 58,
+      "measuredNeutralHeights": [
+        56,
+        57,
+        57,
+        57,
+        56,
+        56
+      ],
+      "note": "Measured nearest quantization, no per-pose stretch"
+    }
+  ],
+  "review": "docs/design/characters/van-hai-monster-animation-v1/index.html",
+  "promptSets": [
+    "docs/design/characters/van-hai-monster-animation-v1/prompts",
+    "docs/design/vfx/van-hai-monster-vfx-v1/prompts"
+  ],
+  "sourceFolders": [
+    "docs/design/characters/van-hai-monster-animation-v1/sources",
+    "docs/design/vfx/van-hai-monster-vfx-v1/sources"
+  ],
+  "screenshots": [
+    "artifacts/monster-animation/review-in-app.jpg",
+    "artifacts/monster-animation/review-desktop.png",
+    "artifacts/monster-animation/review-mobile.png",
+    "artifacts/monster-animation/adept-cast-map-2x.png"
+  ],
+  "verification": {
+    "assets": {
+      "passed": true,
+      "date": "2026-10-13",
+      "bodySources": 88,
+      "actors": 11,
+      "clips": 440,
+      "bodyPoses": 2640,
+      "vfxSequences": 9,
+      "vfxPoses": 54,
+      "heldProps": 2,
+      "softAlpha": [
+        {
+          "id": "cloud-bite",
+          "semiTransparentNativePixels": 3110
+        },
+        {
+          "id": "wood-ray",
+          "semiTransparentNativePixels": 4840
+        },
+        {
+          "id": "jade-claw",
+          "semiTransparentNativePixels": 5399
+        },
+        {
+          "id": "ink-dive",
+          "semiTransparentNativePixels": 5690
+        },
+        {
+          "id": "puppet-strike",
+          "semiTransparentNativePixels": 7604
+        },
+        {
+          "id": "spore-ring",
+          "semiTransparentNativePixels": 13551
+        },
+        {
+          "id": "dark-seal",
+          "semiTransparentNativePixels": 2091
+        },
+        {
+          "id": "wisp-ray",
+          "semiTransparentNativePixels": 3565
+        },
+        {
+          "id": "jade-contact",
+          "semiTransparentNativePixels": 3596
+        }
+      ],
+      "checks": [
+        "source/prompt/input and accepted concept + Wang basis SHA256",
+        "eight genuine source views per actor; no mirroring",
+        "one neutral scale across five actions",
+        "measured source masks and padded body bounds",
+        "canonical/atlas byte parity + transparent gutters",
+        "all frame socket candidates inside canvas",
+        "FX original soft alpha and sequence scale",
+        "no missing poses/sources"
+      ],
+      "artApproved": false,
+      "runtimeImplemented": false,
+      "ownerMapEdited": false,
+      "ownerDatabaseUsed": false
+    },
+    "browser": {
+      "passed": true,
+      "date": "2026-10-13",
+      "clipsTraversed": 440,
+      "checks": [
+        "440 action/direction bindings sampled with Core clock",
+        "confirmed hit / miss / pre-release cancel fixture",
+        "VFX + held prop toggles",
+        "death terminal hold",
+        "hidden/offline/reduced motion pause",
+        "1x/2x scene playback screenshots",
+        "native canvas at768/390 without page overflow",
+        "16MiB actor/FX decoded bitmap cache + eviction",
+        "no API or browser storage writes"
+      ],
+      "cache": {
+        "decodedBytes": 16612992,
+        "budgetBytes": 16777216,
+        "entries": 23,
+        "loads": 633,
+        "evictions": 610,
+        "scope": "decoded actor/FX bitmaps only; excludes map/browser cache/GPU total"
+      },
+      "errors": [],
+      "api": [],
+      "artApproved": false,
+      "runtimeImplemented": false
+    },
+    "typecheckPassed": true,
+    "boundariesPassed": true,
+    "diffCheckPassed": true
+  },
+  "artApproved": false,
+  "ownerApproved": false,
+  "runtimeImplemented": false,
+  "gameplayTimingApproved": false,
+  "ownerMapEdited": false,
+  "ownerDatabaseUsed": false,
+  "limitations": [
+    "Skin/core witnesses, occluded-hand projections and prop grip candidates need visual review before gameplay binding",
+    "Single base attack per actor; additional elite abilities and boss kits are separate scope",
+    "Fixture contact is not live server damage confirmation",
+    "Decoded actor/FX bitmap ledger excludes map/browser cache/GPU total; no MMO crowd benchmark"
+  ],
+  "next": "Owner reviews native motion/VFX/prop placement, then scoped Core integration with server-confirmed hit facts and AI timing."
+}
