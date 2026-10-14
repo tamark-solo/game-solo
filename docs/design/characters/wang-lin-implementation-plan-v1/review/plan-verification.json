@@ -1,0 +1,3426 @@
+{
+  "schema": "wang-lin-implementation-plan-verification-1",
+  "date": "2026-10-14",
+  "status": "passed",
+  "planSha256": "157b5b84437d8a5ada6f668471c240af00a9140668fa47e59486ae9a765f0bea",
+  "approvalSha256": "f9c6a90496fe5908f57f24b0d4404c1cb15041c877582f87fdd0aa7865f686a5",
+  "checkCount": 853,
+  "approvedConceptPinsUnchanged": 86,
+  "historicalAndLiveBasisPinsUnchanged": 307,
+  "productionOrGameplayWrites": false,
+  "checks": [
+    {
+      "name": "both-approved-identities-planned",
+      "passed": true
+    },
+    {
+      "name": "four-approved-families-planned",
+      "passed": true
+    },
+    {
+      "name": "approval-is-static-concept",
+      "passed": true
+    },
+    {
+      "name": "plan-has-no-generated-production",
+      "passed": true
+    },
+    {
+      "name": "source-coverage-matches-approval",
+      "passed": true
+    },
+    {
+      "name": "approval-guard-verification-passed",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:basis.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:basis.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:brief.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:brief.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:concepts/native/banner-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:concepts/native/banner-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:concepts/native/banner-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:concepts/native/banner-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:concepts/native/bead-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:concepts/native/bead-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:concepts/native/bead-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:concepts/native/bead-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:concepts/native/chariot-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:concepts/native/chariot-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:concepts/native/chariot-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:concepts/native/chariot-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:concepts/native/identity-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:concepts/native/identity-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:concepts/native/identity-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:concepts/native/identity-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:concepts/native/sword-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:concepts/native/sword-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:concepts/native/sword-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:concepts/native/sword-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:correct-banner-framing.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:correct-banner-framing.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:finalize-delivery.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:finalize-delivery.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:generation.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:generation.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:inputs/wang-lin-live-southeast-native.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:inputs/wang-lin-live-southeast-native.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:inputs/wang-lin-live-southeast-nearest8x.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:inputs/wang-lin-live-southeast-nearest8x.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:manifest.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:manifest.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:pack.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:pack.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:plan.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:plan.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:prepare.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:prepare.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:record-approval.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:record-approval.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:record-source.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:record-source.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:registration.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:registration.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/asset-verification.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/asset-verification.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/browser-verification.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/browser-verification.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/delivery.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/delivery.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/lineage-verification.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/lineage-verification.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-banner-characters.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-banner-characters.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-banner-combat.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-banner-combat.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-banner-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-banner-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-bead-characters.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-bead-characters.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-bead-combat.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-bead-combat.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-bead-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-bead-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-chariot-characters.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-chariot-characters.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-chariot-combat.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-chariot-combat.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-chariot-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-chariot-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-overview.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-overview.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-sword-characters.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-sword-characters.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-sword-combat.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-sword-combat.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/desktop-sword-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/desktop-sword-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/mobile-characters.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/mobile-characters.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/mobile-combat.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/mobile-combat.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/screenshots/mobile-top.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/screenshots/mobile-top.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:review/source-inspection.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:review/source-inspection.json",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/banner-a-r2.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/banner-a-r2.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/banner-a-r2.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/banner-a-r2.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/banner-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/banner-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/banner-a.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/banner-a.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/banner-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/banner-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/banner-aoe.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/banner-aoe.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/banner-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/banner-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/banner-b.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/banner-b.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/banner-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/banner-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/banner-progression.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/banner-progression.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/bead-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/bead-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/bead-a.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/bead-a.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/bead-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/bead-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/bead-aoe.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/bead-aoe.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/bead-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/bead-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/bead-b.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/bead-b.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/bead-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/bead-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/bead-progression.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/bead-progression.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/chariot-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/chariot-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/chariot-a.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/chariot-a.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/chariot-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/chariot-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/chariot-aoe.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/chariot-aoe.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/chariot-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/chariot-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/chariot-b.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/chariot-b.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/chariot-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/chariot-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/chariot-progression.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/chariot-progression.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/identity-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/identity-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/identity-a.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/identity-a.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/identity-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/identity-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/identity-b.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/identity-b.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/sword-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/sword-a.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/sword-a.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/sword-a.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/sword-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/sword-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/sword-aoe.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/sword-aoe.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/sword-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/sword-b.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/sword-b.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/sword-b.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/sword-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/sword-progression.png",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:sources/sword-progression.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:sources/sword-progression.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:verify-approval.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:verify-approval.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:verify-assets.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:verify-assets.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:workspace-boundary:verify-lineage.mjs",
+      "passed": true
+    },
+    {
+      "name": "approved-concept:hash:verify-lineage.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/bead-sheet.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/bead-sheet.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/body/banner-ashen.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/body/banner-ashen.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/body/banner-ritual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/body/banner-ritual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/body/bead-cloud.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/body/bead-cloud.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/body/bead-hermit.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/body/bead-hermit.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/body/chariot-bronze.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/body/chariot-bronze.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/body/chariot-thunder.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/body/chariot-thunder.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/body/original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/body/original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/body/sword-ink.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/body/sword-ink.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/body/sword-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/body/sword-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/contact-sheet.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/contact-sheet.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-jade-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-jade-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-jade-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-jade-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-jade-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-jade-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-original-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-original-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-original-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-original-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-original-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-original-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-violet-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-violet-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-violet-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-violet-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-violet-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-violet-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/banner-violet.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/banner-violet.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-abyss-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-abyss-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-abyss-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-abyss-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-abyss-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-abyss-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-abyss.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-abyss.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-cloud-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-cloud-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-cloud-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-cloud-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-cloud-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-cloud-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-cloud.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-cloud.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-stone-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-stone-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-stone-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-stone-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-stone-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-stone-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/bead-stone.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/bead-stone.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-jade-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-jade-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-jade-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-jade-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-jade-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-jade-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-original-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-original-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-original-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-original-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-original-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-original-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-thunder-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-thunder-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-thunder-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-thunder-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-thunder-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-thunder-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/chariot-thunder.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/chariot-thunder.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-ink-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-ink-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-ink-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-ink-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-ink-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-ink-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-ink.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-ink.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-jade-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-jade-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-jade-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-jade-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-jade-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-jade-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-original-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-original-front.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-original-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-original-fx-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-original-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-original-rear.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/equipment/sword-original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/equipment/sword-original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/generation.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/generation.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/index.html",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/index.html",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/inputs/map-native.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/inputs/map-native.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/inputs/wang-lin-live-southeast-native.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/inputs/wang-lin-live-southeast-native.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/inputs/wang-lin-live-southeast-nearest8x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/inputs/wang-lin-live-southeast-nearest8x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/inspection.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/inspection.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/manifest.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/manifest.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/pack.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/pack.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/README.md",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/README.md",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/record-source.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/record-source.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/registration.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/registration.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/assessment.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/assessment.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/bead-options-3x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/bead-options-3x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/browser-verification.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/browser-verification.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/browser-verify.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/browser-verify.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/banner-jade--banner-ashen.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/banner-jade--banner-ashen.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/banner-jade--banner-ritual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/banner-jade--banner-ritual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/banner-jade--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/banner-jade--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/banner-original--banner-ashen.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/banner-original--banner-ashen.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/banner-original--banner-ritual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/banner-original--banner-ritual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/banner-original--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/banner-original--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/banner-violet--banner-ashen.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/banner-violet--banner-ashen.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/banner-violet--banner-ritual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/banner-violet--banner-ritual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/banner-violet--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/banner-violet--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/bead-abyss--bead-cloud.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/bead-abyss--bead-cloud.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/bead-abyss--bead-hermit.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/bead-abyss--bead-hermit.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/bead-abyss--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/bead-abyss--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/bead-cloud--bead-cloud.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/bead-cloud--bead-cloud.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/bead-cloud--bead-hermit.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/bead-cloud--bead-hermit.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/bead-cloud--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/bead-cloud--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/bead-stone--bead-cloud.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/bead-stone--bead-cloud.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/bead-stone--bead-hermit.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/bead-stone--bead-hermit.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/bead-stone--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/bead-stone--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/body-banner-ashen--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/body-banner-ashen--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/body-banner-ritual--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/body-banner-ritual--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/body-bead-cloud--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/body-bead-cloud--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/body-bead-hermit--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/body-bead-hermit--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/body-chariot-bronze--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/body-chariot-bronze--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/body-chariot-thunder--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/body-chariot-thunder--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/body-sword-ink--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/body-sword-ink--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/body-sword-jade--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/body-sword-jade--alignment-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/chariot-jade--chariot-bronze.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/chariot-jade--chariot-bronze.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/chariot-jade--chariot-thunder.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/chariot-jade--chariot-thunder.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/chariot-jade--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/chariot-jade--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/chariot-original--chariot-bronze.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/chariot-original--chariot-bronze.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/chariot-original--chariot-thunder.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/chariot-original--chariot-thunder.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/chariot-original--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/chariot-original--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/chariot-thunder--chariot-bronze.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/chariot-thunder--chariot-bronze.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/chariot-thunder--chariot-thunder.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/chariot-thunder--chariot-thunder.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/chariot-thunder--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/chariot-thunder--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/sword-ink--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/sword-ink--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/sword-ink--sword-ink.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/sword-ink--sword-ink.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/sword-ink--sword-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/sword-ink--sword-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/sword-jade--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/sword-jade--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/sword-jade--sword-ink.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/sword-jade--sword-ink.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/sword-jade--sword-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/sword-jade--sword-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/sword-original--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/sword-original--original.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/sword-original--sword-ink.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/sword-original--sword-ink.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/composites/sword-original--sword-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/composites/sword-original--sword-jade.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/outfits-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/outfits-4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/screenshots/desktop.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/screenshots/desktop.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/screenshots/mobile.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/screenshots/mobile.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/screenshots/selection-grid.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/screenshots/selection-grid.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review/source-hash-report.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review/source-hash-report.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review.css",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review.css",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/review.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/review.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-banner-ashen-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-banner-ashen-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-banner-ashen.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-banner-ashen.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-banner-ritual-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-banner-ritual-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-banner-ritual.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-banner-ritual.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-bead-cloud-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-bead-cloud-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-bead-cloud.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-bead-cloud.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-bead-hermit-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-bead-hermit-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-bead-hermit.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-bead-hermit.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-chariot-bronze-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-chariot-bronze-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-chariot-bronze.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-chariot-bronze.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-chariot-thunder-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-chariot-thunder-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-chariot-thunder.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-chariot-thunder.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-sword-ink-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-sword-ink-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-sword-ink.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-sword-ink.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-sword-jade-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-sword-jade-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/body-sword-jade.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/body-sword-jade.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-banner-jade-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-banner-jade-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-banner-jade.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-banner-jade.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-banner-violet-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-banner-violet-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-banner-violet.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-banner-violet.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-bead-abyss-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-bead-abyss-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-bead-abyss.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-bead-abyss.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-bead-cloud-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-bead-cloud-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-bead-cloud.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-bead-cloud.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-bead-stone-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-bead-stone-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-bead-stone.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-bead-stone.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-chariot-jade-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-chariot-jade-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-chariot-jade.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-chariot-jade.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-chariot-thunder-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-chariot-thunder-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-chariot-thunder.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-chariot-thunder.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-sword-ink-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-sword-ink-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-sword-ink.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-sword-ink.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-sword-jade-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-sword-jade-source.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/sources/equipment-sword-jade.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/sources/equipment-sword-jade.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../wang-lin-equipment-options-v3/verify-assets.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../wang-lin-equipment-options-v3/verify-assets.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/basis.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/basis.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/finalize-delivery.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/finalize-delivery.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/banner-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/banner-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/banner-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/banner-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/banner-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/banner-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/banner-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/banner-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/chariot-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/chariot-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/chariot-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/chariot-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/chariot-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/chariot-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/chariot-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/chariot-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/sword-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/sword-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/sword-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/sword-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/sword-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/sword-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/sword-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/atlases/sword-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-charge/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-escort/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-release/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/banner-residual/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-charge/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-escort/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-release/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/chariot-residual/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-charge/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-escort/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-release/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/001.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/002.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/003.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/004.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/005.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/fx/frames/sword-residual/006.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/generation.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/generation.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/index.html",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/index.html",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/inputs/banner-selected-nearest4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/inputs/banner-selected-nearest4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/inputs/chariot-selected-nearest4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/inputs/chariot-selected-nearest4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/inputs/sword-selected-nearest4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/inputs/sword-selected-nearest4x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/inputs/wang-lin-live-southeast-nearest8x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/inputs/wang-lin-live-southeast-nearest8x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/manifest.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/manifest.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/owner-shortlist.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/owner-shortlist.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/pack.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/pack.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/plan.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/plan.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/prepare.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/prepare.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/README.md",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/README.md",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/record-source.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/record-source.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/reference-direction.md",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/reference-direction.md",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/registration.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/registration.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/asset-verification.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/asset-verification.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/basis-verification.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/basis-verification.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/browser-verification.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/browser-verification.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/browser-verify.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/browser-verify.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/delivery.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/delivery.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-banner-dark.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-banner-dark.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-banner.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-banner.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-chariot-dark.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-chariot-dark.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-chariot.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-chariot.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-sword-dark.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-sword-dark.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-sword.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/desktop-sword.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/mobile-reduced-motion.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/mobile-reduced-motion.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/seven-pinned.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/seven-pinned.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/three-kits-2x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/screenshots/three-kits-2x.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/source-inspection.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/source-inspection.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/three-verification.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/three-verification.json",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review/three-verify.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review/three-verify.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review.css",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review.css",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/review.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/review.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/banner-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/banner-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/banner-charge.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/banner-charge.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/banner-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/banner-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/banner-escort.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/banner-escort.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/banner-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/banner-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/banner-release.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/banner-release.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/banner-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/banner-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/banner-residual.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/banner-residual.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-charge.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-charge.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-escort.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-escort.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-release.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-release.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-residual.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/chariot-residual.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/sword-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/sword-charge.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/sword-charge.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/sword-charge.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/sword-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/sword-escort.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/sword-escort.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/sword-escort.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/sword-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/sword-release.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/sword-release.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/sword-release.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/sword-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/sword-residual.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/sources/sword-residual.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/sources/sword-residual.prompt.txt",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/verify-assets.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/verify-assets.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../vfx/wang-lin-equipment-fx-v4/verify-basis.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../vfx/wang-lin-equipment-fx-v4/verify-basis.mjs",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:workspace-boundary:../../../../client/public/assets/hang-nhac-pixel-player/atlases/idle-southeast.png",
+      "passed": true
+    },
+    {
+      "name": "existing-basis:hash:../../../../client/public/assets/hang-nhac-pixel-player/atlases/idle-southeast.png",
+      "passed": true
+    },
+    {
+      "name": "phase-ids-unique",
+      "passed": true
+    },
+    {
+      "name": "concept-phase-complete",
+      "passed": true
+    },
+    {
+      "name": "neutral-and-mechanics-ready-together",
+      "passed": true
+    },
+    {
+      "name": "phase:P0:has-deliverables-and-gate",
+      "passed": true
+    },
+    {
+      "name": "phase:P0:dependencies-exist",
+      "passed": true
+    },
+    {
+      "name": "phase:P1:has-deliverables-and-gate",
+      "passed": true
+    },
+    {
+      "name": "phase:P1:dependencies-exist",
+      "passed": true
+    },
+    {
+      "name": "phase:P2:has-deliverables-and-gate",
+      "passed": true
+    },
+    {
+      "name": "phase:P2:dependencies-exist",
+      "passed": true
+    },
+    {
+      "name": "phase:P3:has-deliverables-and-gate",
+      "passed": true
+    },
+    {
+      "name": "phase:P3:dependencies-exist",
+      "passed": true
+    },
+    {
+      "name": "phase:P4:has-deliverables-and-gate",
+      "passed": true
+    },
+    {
+      "name": "phase:P4:dependencies-exist",
+      "passed": true
+    },
+    {
+      "name": "phase:P5:has-deliverables-and-gate",
+      "passed": true
+    },
+    {
+      "name": "phase:P5:dependencies-exist",
+      "passed": true
+    },
+    {
+      "name": "phase:P6:has-deliverables-and-gate",
+      "passed": true
+    },
+    {
+      "name": "phase:P6:dependencies-exist",
+      "passed": true
+    },
+    {
+      "name": "phase:P7:has-deliverables-and-gate",
+      "passed": true
+    },
+    {
+      "name": "phase:P7:dependencies-exist",
+      "passed": true
+    },
+    {
+      "name": "phase:P8:has-deliverables-and-gate",
+      "passed": true
+    },
+    {
+      "name": "phase:P8:dependencies-exist",
+      "passed": true
+    },
+    {
+      "name": "phase-dependencies-acyclic",
+      "passed": true
+    },
+    {
+      "name": "pilot-needs-neutral-and-prototype",
+      "passed": true
+    },
+    {
+      "name": "integration-needs-complete-sword-and-core",
+      "passed": true
+    },
+    {
+      "name": "neutral-and-gear-views",
+      "passed": true
+    },
+    {
+      "name": "body-core-formula",
+      "passed": true
+    },
+    {
+      "name": "body-skill-and-gear-formula",
+      "passed": true
+    },
+    {
+      "name": "base-body-formula",
+      "passed": true
+    },
+    {
+      "name": "conditional-combo-formula",
+      "passed": true
+    },
+    {
+      "name": "nominal-pose-estimates",
+      "passed": true
+    },
+    {
+      "name": "fx-estimate-formula",
+      "passed": true
+    },
+    {
+      "name": "three-milestone-estimates",
+      "passed": true
+    },
+    {
+      "name": "pilot-body-estimate",
+      "passed": true
+    },
+    {
+      "name": "pilot-gear-and-fx-estimates",
+      "passed": true
+    },
+    {
+      "name": "document-or-image:../../../WANG-LIN-IMPLEMENTATION-PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "document-or-image:../wang-lin-concept-direction-v5/approval.json",
+      "passed": true
+    },
+    {
+      "name": "document-or-image:../wang-lin-concept-direction-v5/index.html",
+      "passed": true
+    },
+    {
+      "name": "document-or-image:../../../skills/game-actor-animation-production/SKILL.md",
+      "passed": true
+    },
+    {
+      "name": "document-or-image:../wang-lin-concept-direction-v5/sources/identity-a.png",
+      "passed": true
+    },
+    {
+      "name": "document-or-image:../wang-lin-concept-direction-v5/sources/identity-b.png",
+      "passed": true
+    },
+    {
+      "name": "document-or-image:../wang-lin-concept-direction-v5/sources/sword-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "document-or-image:../wang-lin-concept-direction-v5/sources/banner-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "document-or-image:../wang-lin-concept-direction-v5/sources/chariot-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "document-or-image:../wang-lin-concept-direction-v5/sources/bead-aoe.png",
+      "passed": true
+    },
+    {
+      "name": "existing-module:shared/hang-nhac.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:shared/profiles.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:server/src/application/entry-service.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:server/src/persistence/profile-codec.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:shared/character-inventory.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:shared/content/catalog.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:client/src/pixel-player-runtime.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:client/src/hang-nhac.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:shared/skills/engine.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:shared/skills/behaviors.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:server/src/chapter-activity.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:shared/skills/presentation.ts",
+      "passed": true
+    },
+    {
+      "name": "existing-module:client/src/render/sprite-frame.ts",
+      "passed": true
+    },
+    {
+      "name": "markdown-link:design/characters/wang-lin-implementation-plan-v1/index.html",
+      "passed": true
+    },
+    {
+      "name": "markdown-link:design/characters/wang-lin-implementation-plan-v1/plan.json",
+      "passed": true
+    },
+    {
+      "name": "markdown-link:design/characters/wang-lin-concept-direction-v5/approval.json",
+      "passed": true
+    },
+    {
+      "name": "markdown-link:CULTIVATION-REDESIGN-2026-10-13.md",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

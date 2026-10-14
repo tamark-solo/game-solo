@@ -1,0 +1,438 @@
+{
+  "schema": "wang-lin-equipment-contracts-1",
+  "date": "2026-10-14",
+  "status": "experimental-fixture-only",
+  "runtimeIntegrated": false,
+  "ownerConceptApproval": "../../characters/wang-lin-concept-direction-v5/approval.json",
+  "contracts": [
+    {
+      "id": "sword-st",
+      "family": "sword",
+      "mode": "st",
+      "name": "Kiếm Ý Nhất Tuyến",
+      "version": 1,
+      "status": "experimental-fixture-only",
+      "units": "world-px-and-ms",
+      "timing": {
+        "warningMs": 160,
+        "releaseMs": 480,
+        "activeEndMs": 680,
+        "endMs": 1100
+      },
+      "pulses": [
+        {
+          "id": "line",
+          "atMs": 480,
+          "cap": 1,
+          "kind": "hit",
+          "magnitude": 10
+        }
+      ],
+      "policy": {
+        "target": "direction-enemy",
+        "range": 220,
+        "los": true,
+        "overlap": "one-target-once-per-pulse"
+      },
+      "geometry": {
+        "kind": "single-corridor",
+        "length": 210,
+        "start": 16,
+        "halfWidth": 10
+      }
+    },
+    {
+      "id": "sword-aoe",
+      "family": "sword",
+      "mode": "aoe",
+      "name": "Kiếm Trận Phá Giới",
+      "version": 1,
+      "status": "experimental-fixture-only",
+      "units": "world-px-and-ms",
+      "timing": {
+        "warningMs": 260,
+        "releaseMs": 800,
+        "activeEndMs": 1640,
+        "endMs": 2180
+      },
+      "pulses": [
+        {
+          "id": "sword-wave-1",
+          "atMs": 800,
+          "cap": 5,
+          "kind": "hit",
+          "magnitude": 6
+        },
+        {
+          "id": "sword-wave-2",
+          "atMs": 1120,
+          "cap": 5,
+          "kind": "hit",
+          "magnitude": 6
+        },
+        {
+          "id": "sword-wave-3",
+          "atMs": 1440,
+          "cap": 5,
+          "kind": "hit",
+          "magnitude": 6
+        }
+      ],
+      "policy": {
+        "target": "point-enemies",
+        "range": 252,
+        "los": true,
+        "overlap": "one-target-once-per-pulse"
+      },
+      "geometry": {
+        "kind": "parallel-corridors",
+        "start": 24,
+        "length": 228,
+        "offsets": [
+          -60,
+          0,
+          60
+        ],
+        "halfWidth": 16
+      },
+      "canonNote": "Ba tuyến song song theo board đã chọn; kiếm linh không tự thêm hit."
+    },
+    {
+      "id": "banner-st",
+      "family": "banner",
+      "mode": "st",
+      "name": "Chủ Hồn Dẫn Lộ",
+      "version": 1,
+      "status": "experimental-fixture-only",
+      "units": "world-px-and-ms",
+      "timing": {
+        "warningMs": 200,
+        "releaseMs": 600,
+        "activeEndMs": 1120,
+        "endMs": 1560
+      },
+      "pulses": [
+        {
+          "id": "soul-link-1",
+          "atMs": 600,
+          "cap": 1,
+          "kind": "hit",
+          "magnitude": 7
+        },
+        {
+          "id": "soul-link-2",
+          "atMs": 900,
+          "cap": 1,
+          "kind": "hit",
+          "magnitude": 7
+        }
+      ],
+      "policy": {
+        "target": "locked-enemy",
+        "range": 224,
+        "los": true,
+        "overlap": "one-target-once-per-pulse"
+      },
+      "geometry": {
+        "kind": "locked-circle",
+        "radius": 26
+      }
+    },
+    {
+      "id": "banner-aoe",
+      "family": "banner",
+      "mode": "aoe",
+      "name": "Tam Môn Tụ Hồn",
+      "version": 1,
+      "status": "experimental-fixture-only",
+      "units": "world-px-and-ms",
+      "timing": {
+        "warningMs": 280,
+        "releaseMs": 900,
+        "activeEndMs": 1940,
+        "endMs": 2500
+      },
+      "pulses": [
+        {
+          "id": "gate-wave-1",
+          "atMs": 900,
+          "cap": 6,
+          "kind": "hit",
+          "magnitude": 5
+        },
+        {
+          "id": "gate-wave-2",
+          "atMs": 1300,
+          "cap": 6,
+          "kind": "hit",
+          "magnitude": 5
+        },
+        {
+          "id": "gate-wave-3",
+          "atMs": 1700,
+          "cap": 6,
+          "kind": "hit",
+          "magnitude": 5
+        }
+      ],
+      "policy": {
+        "target": "point-enemies",
+        "range": 272,
+        "los": true,
+        "overlap": "one-target-once-per-pulse"
+      },
+      "geometry": {
+        "kind": "triangular-gates",
+        "anchors": [
+          {
+            "x": 64,
+            "y": -90
+          },
+          {
+            "x": 64,
+            "y": 90
+          },
+          {
+            "x": 224,
+            "y": 0
+          }
+        ],
+        "gateRadius": 34,
+        "streamHalfWidth": 18,
+        "innerGapRadius": 30
+      },
+      "escapeNote": "Tâm tam giác giữ khe trống; viền warning không gây hit."
+    },
+    {
+      "id": "chariot-st",
+      "family": "chariot",
+      "mode": "st",
+      "name": "Giải Niêm Dẫn Thú",
+      "version": 1,
+      "status": "experimental-fixture-only",
+      "units": "world-px-and-ms",
+      "timing": {
+        "warningMs": 220,
+        "releaseMs": 700,
+        "activeEndMs": 960,
+        "endMs": 1480
+      },
+      "pulses": [
+        {
+          "id": "beast-contact",
+          "atMs": 700,
+          "cap": 1,
+          "kind": "hit",
+          "magnitude": 12
+        }
+      ],
+      "policy": {
+        "target": "direction-enemy",
+        "range": 250,
+        "los": true,
+        "overlap": "one-target-once-per-pulse"
+      },
+      "geometry": {
+        "kind": "single-corridor",
+        "start": 24,
+        "length": 238,
+        "halfWidth": 13
+      }
+    },
+    {
+      "id": "chariot-aoe",
+      "family": "chariot",
+      "mode": "aoe",
+      "name": "Lôi Thú Liệt Địa",
+      "version": 1,
+      "status": "experimental-fixture-only",
+      "units": "world-px-and-ms",
+      "timing": {
+        "warningMs": 300,
+        "releaseMs": 850,
+        "activeEndMs": 1710,
+        "endMs": 2260
+      },
+      "pulses": [
+        {
+          "id": "stomp-1",
+          "atMs": 850,
+          "cap": 4,
+          "kind": "hit",
+          "magnitude": 8,
+          "node": 0
+        },
+        {
+          "id": "stomp-2",
+          "atMs": 1150,
+          "cap": 4,
+          "kind": "hit",
+          "magnitude": 8,
+          "node": 1
+        },
+        {
+          "id": "stomp-3",
+          "atMs": 1450,
+          "cap": 4,
+          "kind": "hit",
+          "magnitude": 8,
+          "node": 2
+        }
+      ],
+      "policy": {
+        "target": "point-enemies",
+        "range": 292,
+        "los": true,
+        "overlap": "one-target-once-per-pulse"
+      },
+      "geometry": {
+        "kind": "rails-and-nodes",
+        "rails": [
+          -54,
+          54
+        ],
+        "railEnd": 270,
+        "railHalfWidth": 12,
+        "nodes": [
+          90,
+          164,
+          238
+        ],
+        "nodeRadius": 48
+      },
+      "escapeNote": "Hai rail là đường báo; chỉ node đúng pulse gây contact. Có đường né ở hai bên."
+    },
+    {
+      "id": "bead-st",
+      "family": "bead",
+      "mode": "st",
+      "name": "Dẫn Giới Hộ Thân",
+      "version": 1,
+      "status": "experimental-fixture-only",
+      "units": "world-px-and-ms",
+      "timing": {
+        "warningMs": 180,
+        "releaseMs": 600,
+        "activeEndMs": 820,
+        "endMs": 1380
+      },
+      "pulses": [
+        {
+          "id": "ward",
+          "atMs": 600,
+          "cap": 1,
+          "kind": "support",
+          "magnitude": 15,
+          "durationMs": 900
+        }
+      ],
+      "policy": {
+        "target": "locked-ally",
+        "range": 210,
+        "los": true,
+        "overlap": "one-target-once-per-pulse"
+      },
+      "geometry": {
+        "kind": "locked-circle",
+        "radius": 42
+      },
+      "creditPolicy": "support-only-no-hit-or-practice-credit"
+    },
+    {
+      "id": "bead-aoe",
+      "family": "bead",
+      "mode": "aoe",
+      "name": "Nội Giới Hộ Đạo",
+      "version": 1,
+      "status": "experimental-fixture-only",
+      "units": "world-px-and-ms",
+      "timing": {
+        "warningMs": 280,
+        "releaseMs": 900,
+        "activeEndMs": 2050,
+        "endMs": 2640
+      },
+      "pulses": [
+        {
+          "id": "inner-world-1",
+          "atMs": 900,
+          "cap": 3,
+          "kind": "support",
+          "magnitude": 12,
+          "durationMs": 700,
+          "controlCap": 4,
+          "controlMagnitude": 0.35,
+          "controlDurationMs": 450
+        },
+        {
+          "id": "inner-world-2",
+          "atMs": 1350,
+          "cap": 3,
+          "kind": "support",
+          "magnitude": 12,
+          "durationMs": 700,
+          "controlCap": 4,
+          "controlMagnitude": 0.35,
+          "controlDurationMs": 450
+        },
+        {
+          "id": "inner-world-3",
+          "atMs": 1800,
+          "cap": 3,
+          "kind": "support",
+          "magnitude": 12,
+          "durationMs": 700,
+          "controlCap": 4,
+          "controlMagnitude": 0.35,
+          "controlDurationMs": 450
+        }
+      ],
+      "policy": {
+        "target": "point-allies-and-enemy-border",
+        "range": 274,
+        "los": true,
+        "overlap": "one-target-once-per-pulse-and-effect-kind"
+      },
+      "geometry": {
+        "kind": "sanctuary-and-fold",
+        "anchors": [
+          {
+            "x": 72,
+            "y": -64
+          },
+          {
+            "x": 72,
+            "y": 64
+          },
+          {
+            "x": 168,
+            "y": 0
+          }
+        ],
+        "sanctuaryRadius": 34,
+        "fold": [
+          {
+            "x": 40,
+            "y": -104
+          },
+          {
+            "x": 224,
+            "y": -104
+          },
+          {
+            "x": 224,
+            "y": 104
+          },
+          {
+            "x": 40,
+            "y": 104
+          }
+        ],
+        "borderHalfWidth": 12,
+        "casterRingRadius": 38
+      },
+      "creditPolicy": "support-and-control-only-no-damage",
+      "canonNote": "AOE bên ngoài là chuyển thể gameplay đề xuất, không canon damage, XP hay tích lũy offline."
+    }
+  ]
+}

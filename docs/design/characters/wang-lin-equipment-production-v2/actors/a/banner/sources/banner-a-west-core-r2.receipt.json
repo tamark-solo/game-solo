@@ -1,0 +1,85 @@
+{
+  "id": "banner-a-west-core-r2",
+  "identityId": "a",
+  "familyId": "banner",
+  "direction": "west",
+  "group": "core",
+  "actions": [
+    "idle",
+    "run",
+    "cast-single-target",
+    "cast-aoe"
+  ],
+  "calibrationCells": 6,
+  "prompt": "actors/a/banner/prompts/banner-a-west-core-r2.txt",
+  "promptSha256": "6dc11944b36234c159247ad226b982f905d0663d71214284360698fa599ecbb0",
+  "raw": "actors/a/banner/sources/banner-a-west-core-r2.png",
+  "inputs": [
+    {
+      "file": "actors/a/banner/inputs/corrective/banner-a-west-core-r2/1.png",
+      "sha256": "662d28463a0bd4c77cf4b119376571afaebb807f3a47ed7b6cdcdf9d18124962",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\sources\\banner-a-west-core-r1.png",
+      "role": "same-own-A-banner-edit-target-primary"
+    },
+    {
+      "file": "actors/a/banner/inputs/corrective/banner-a-west-core-r2/2.png",
+      "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\core\\banner-a-west-core-r1\\2.png",
+      "role": "Wang-requested-view-style-camera-only"
+    },
+    {
+      "file": "actors/a/banner/inputs/corrective/banner-a-west-core-r2/3.png",
+      "sha256": "d4a4155b26152ec9369e5e9cefdd03cd3b1aa90f1d652b1aaac90f1987c1b61a",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\huyen-tam-banner-p1-source.png",
+      "role": "own-A-banner-P1-full-source-outfit-support"
+    },
+    {
+      "file": "actors/a/banner/inputs/corrective/banner-a-west-core-r2/4.png",
+      "sha256": "4f6dfd49f85f9ea99135cee6ef09e4b7bb5f1aaf775ea8807d58a5b1cbff367b",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\corrective\\banner-a-west-core-r2\\own-sword-same-view-nearest8x.png",
+      "role": "own-A-same-identity-approved-Sword-view-camera-only-no-outfit"
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": null,
+  "tool": "built-in-imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    6,
+    5
+  ],
+  "requestedSourcePoses": 30,
+  "status": "generated-awaiting-source-review",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "promptPriorVersions": [
+    {
+      "file": "actors/a/banner/prompts/history/banner-a-west-core-r1-ambiguous-grip.txt",
+      "sha256": "34c85b67e3d1f03564ef41475685389247e67d6a4846ab4366f98cc7cc60c8a1",
+      "status": "planned-before-call"
+    },
+    {
+      "file": "actors/a/banner/prompts/history/banner-a-west-core-r1-closed-through-cast.txt",
+      "sha256": "857b672cd6a7cc7c35f61b2a9fcf18e0fbe14432d5711baddcaf6f36a632bf47",
+      "status": "planned-prior-choreography-before-call"
+    }
+  ],
+  "sourceViewed": true,
+  "rawImmutable": true,
+  "supersedes": "banner-a-west-core-r1",
+  "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1387f-9141-7e10-8b79-ce994001f7cb\\exec-43934e06-72b0-4ff4-9cb5-ce406aad4c09.png",
+  "originalSha256": "d90ab271efe699969ad0e783dfce09fda894aa5ee533821f18977f0c75be722f",
+  "sha256": "d90ab271efe699969ad0e783dfce09fda894aa5ee533821f18977f0c75be722f",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "outputProvenance": {
+    "originalToolOutput": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1387f-9141-7e10-8b79-ce994001f7cb\\exec-43934e06-72b0-4ff4-9cb5-ce406aad4c09.png",
+    "workspaceRaw": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\sources\\banner-a-west-core-r2.png",
+    "copiedOriginalUnchanged": true
+  }
+}

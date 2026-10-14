@@ -1,0 +1,7 @@
+import{readFile,writeFile,copyFile,stat}from'node:fs/promises';import{createHash}from'node:crypto';import{fileURLToPath}from'node:url';import path from'node:path';
+const ROOT=path.dirname(fileURLToPath(import.meta.url)),[family,id,original,version='2']=process.argv.slice(2),base=path.join(ROOT,family),gen=JSON.parse(await readFile(path.join(base,'generation.json'),'utf8')),prior=gen.sources.find(r=>r.id===id&&r.selected);
+if(!prior)throw Error('Prior selected source required');const file='sources/'+id+'-r'+version+'.png',out=path.join(base,file),prompt='sources/'+id+'-r'+version+'.prompt.txt';
+try{await stat(out);throw Error('Correction already recorded');}catch(e){if(e.code!=='ENOENT')throw e}
+await copyFile(original,out);const raw=await readFile(out),pb=await readFile(path.join(base,prompt));prior.selected=false;prior.supersededReason='Raw gridline or physical cell-boundary overlap; retained history.';
+gen.sources.push({...prior,file,originalPath:original,sha256:createHash('sha256').update(raw).digest('hex'),prompt,promptSha256:createHash('sha256').update(pb).digest('hex'),inputs:[{file:prior.file,role:'actual-edit-target-cell-gutter-correction',sha256:prior.sha256}],selected:true,version:Number(version),supersededReason:undefined});
+await writeFile(path.join(base,'generation.json'),JSON.stringify(gen,null,2)+'\n');console.log(JSON.stringify({family,id,file,bytes:raw.length}));

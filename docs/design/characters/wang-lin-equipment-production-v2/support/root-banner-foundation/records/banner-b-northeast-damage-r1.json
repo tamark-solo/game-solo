@@ -1,0 +1,79 @@
+{
+  "id": "banner-b-northeast-damage-r1",
+  "identityId": "b",
+  "familyId": "banner",
+  "direction": "northeast",
+  "group": "damage",
+  "actions": [
+    "hit",
+    "death"
+  ],
+  "calibrationCells": 6,
+  "prompt": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\root-banner-foundation\\prompts\\banner-b-northeast-damage-r1.txt",
+  "promptSha256": "5a5d8a48488e3adda7dd28fd1003326cc44b7a78f04c09883399f7cc08200243",
+  "raw": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\root-banner-foundation\\sources\\banner-b-northeast-damage-r1.png",
+  "inputs": [
+    {
+      "file": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\root-banner-foundation\\inputs\\banner-b-northeast-damage-r1\\1.png",
+      "sha256": "1c1cf126e7003fe5307590bc6634ce7e29a6680a70d71f8dd34c8f9efb3ddcdd",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-northeast-nearest8x.png",
+      "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY",
+      "snapshotFrom": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-northeast-damage-r1\\1.png"
+    },
+    {
+      "file": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\root-banner-foundation\\inputs\\banner-b-northeast-damage-r1\\2.png",
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-northeast-core-r1\\2.png",
+      "role": "Wang-same-view-camera-anatomy-style-only",
+      "snapshotFrom": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-northeast-damage-r1\\2.png"
+    },
+    {
+      "file": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\root-banner-foundation\\inputs\\banner-b-northeast-damage-r1\\3.png",
+      "sha256": "fd129477ffb9465c551f54b909e46a64966663c323e6872c4fd0b5f2f8253843",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-northeast-core-r1.png",
+      "role": "own-B-banner-same-view-core-full-source-support",
+      "snapshotFrom": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-northeast-damage-r1\\3.png"
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": "banner-b-northeast-core-r1 own neutral key1, factor0.37209302325581395",
+  "tool": "built-in-imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    3,
+    6
+  ],
+  "requestedSourcePoses": 18,
+  "status": "generated-awaiting-actor-manual-review",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "basisCoreSha256": "fd129477ffb9465c551f54b909e46a64966663c323e6872c4fd0b5f2f8253843",
+  "neutralReviewed": true,
+  "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-2x.png",
+  "neutralReviewEvidenceSha256": "0686000c81c24855a9491b35998143009e1f7961b566efc731ad8dd50a42522f",
+  "reservedBy": "root",
+  "promptAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\root-banner-foundation\\prompts\\banner-b-northeast-damage-r1.txt",
+  "rawAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-northeast-damage-r1.png",
+  "inputAbsolute": [
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\root-banner-foundation\\inputs\\banner-b-northeast-damage-r1\\1.png",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\root-banner-foundation\\inputs\\banner-b-northeast-damage-r1\\2.png",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\root-banner-foundation\\inputs\\banner-b-northeast-damage-r1\\3.png"
+  ],
+  "dispatchSha256": "1c6f5d7bb38c9effecc69a79542613c4df22df96101ddebfaf2a644f2decafce",
+  "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-54526bf9-5757-402c-9801-7afbcdc244b7.png",
+  "actorWrites": false,
+  "sha256": "d2bb1556bd9977ec61d92fb222869f151664c157f074d632be56c4908996f162",
+  "originalSha256": "d2bb1556bd9977ec61d92fb222869f151664c157f074d632be56c4908996f162",
+  "actualDimensions": [
+    1024,
+    1536
+  ],
+  "actualMode": "RGBA",
+  "toolMetadata": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\root-banner-foundation\\tool\\banner-b-northeast-damage-r1.json",
+  "toolMetadataSha256": "bf172cca5b40e321a5fa8ae660ffd458b096accc09d53d1352db373c473ea4c8",
+  "sourceViewed": false,
+  "rawImmutable": true,
+  "outerPhysical128": 0
+}

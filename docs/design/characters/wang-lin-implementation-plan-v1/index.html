@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Huyễn Tâm & Tịch Bạch · Kế hoạch triển khai</title>
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+  <header><a class="brand" href="#top">GAME SOLO <span>KẾ HOẠCH TRIỂN KHAI</span></a><nav aria-label="Nội dung kế hoạch"><a href="#characters">Nhân vật</a><a href="#pilot">Gói đầu tiên</a><a href="#phases">Lộ trình</a><a href="#scope">Khối lượng</a></nav></header>
+  <main id="top">
+    <section class="hero">
+      <div><p class="eyebrow">CONCEPT ĐÃ DUYỆT · 14 / 10 / 2026</p><h1>Hai nhân vật.<br><em>Bốn đạo đồ.</em></h1><p class="lead">Huyễn Tâm và Tịch Bạch cùng được sản xuất. Kiếm linh, Hồn phiên, Xạ Thần Xa và Thiên Nghịch Châu là bốn hướng đã chốt.</p><div class="hero-actions"><a class="primary" href="#pilot">Xem gói triển khai đầu tiên <span>↓</span></a><a id="concept-link" href="../wang-lin-concept-direction-v5/index.html">Xem concept đã duyệt ↗</a></div></div>
+      <aside class="approval-card"><span class="status">ĐÃ DUYỆT CONCEPT</span><p>Khóa hướng hình ảnh trước khi làm neutral native, motion, FX và ghép gameplay.</p><div id="approval-stats" class="approval-stats"></div><a href="../wang-lin-concept-direction-v5/approval.json">Hồ sơ duyệt theo hash ↗</a><small id="approval-note"></small></aside>
+    </section>
+    <section id="characters" class="section">
+      <div class="section-heading"><div><p class="eyebrow">01 / NHẬN DIỆN SẢN XUẤT</p><h2>Cả hai nhân vật, xuyên suốt.</h2></div><p>Vương Lâm live cung cấp tỷ lệ người và nét pixel. Nhận diện, mặt, tóc và phục trang mới đi theo hai master đã duyệt.</p></div>
+      <div id="character-grid" class="character-grid"></div>
+      <div id="family-grid" class="family-grid"></div>
+    </section>
+    <section id="pilot" class="section pilot-section">
+      <div class="section-heading"><div><p class="eyebrow">02 / GÓI TRIỂN KHAI ĐẦU TIÊN</p><h2 id="pilot-title">Pilot Kiếm linh.</h2></div><span class="planned-tag">KẾ HOẠCH · CHƯA SẢN XUẤT</span></div>
+      <div class="pilot-layout"><div><p id="pilot-summary" class="pilot-summary"></p><div id="pilot-deliverables" class="pilot-deliverables"></div><p id="pilot-gate" class="gate"></p></div><figure><a id="pilot-board-link" href="#" target="_blank" rel="noopener"><img id="pilot-board" alt="Concept Kiếm linh đã duyệt, với đòn đơn và AOE"></a><figcaption>Board concept tĩnh đã duyệt. Pilot sẽ tạo nguồn neutral, motion và FX riêng cho cả Huyễn Tâm lẫn Tịch Bạch.</figcaption></figure></div>
+    </section>
+    <section id="phases" class="section">
+      <div class="section-heading"><div><p class="eyebrow">03 / THỨ TỰ VÀ ĐIỂM KIỂM</p><h2>Từ concept đến chơi được.</h2></div><p>Mỗi bước có đầu ra cụ thể và điều kiện để sang bước kế tiếp. Các con số dưới đây là phạm vi dự kiến.</p></div>
+      <div id="phase-filters" class="filters" role="group" aria-label="Lọc giai đoạn"></div><div id="phase-grid" class="phase-grid"></div>
+    </section>
+    <section id="scope" class="section scope-section">
+      <div class="section-heading"><div><p class="eyebrow">04 / MA TRẬN KHỐI LƯỢNG</p><h2>Làm trọn từng mốc.</h2></div><div class="scope-switch" role="group" aria-label="Phạm vi mốc phát triển"><button data-stages="1" aria-pressed="true">1 mốc</button><button data-stages="3" aria-pressed="false">3 mốc xuyên suốt</button></div></div>
+      <p id="scope-description" class="scope-description"></p><div id="scope-totals" class="scope-totals"></div>
+      <div class="table-wrap"><table><caption id="scope-caption">Khối lượng dự kiến cho một mốc</caption><thead><tr><th scope="col">Hạng mục</th><th scope="col">Cách tính</th><th scope="col">Số lượng</th><th scope="col">Điều kiện / đầu ra</th></tr></thead><tbody id="scope-rows"></tbody></table></div><p id="scope-note" class="quiet"></p>
+    </section>
+    <section class="section delivery-section"><div><p class="eyebrow">HỒ SƠ TRIỂN KHAI</p><h2>Chốt nguồn. Làm theo từng gói.</h2><p id="delivery-note">Kế hoạch này là căn cứ chia gói sản xuất và kiểm nghiệm. Neutral, motion, FX và gameplay được đánh giá tại từng đầu ra.</p></div><div class="document-links"><a href="../../../WANG-LIN-IMPLEMENTATION-PLAN.md">Đọc kế hoạch chi tiết <span>↗</span></a><a href="plan.json">Dữ liệu kế hoạch <span>↗</span></a><a href="../wang-lin-concept-direction-v5/approval.json">Hồ sơ duyệt concept <span>↗</span></a><a href="../wang-lin-concept-direction-v5/manifest.json">Nguồn concept đã ghim <span>↗</span></a></div></section>
+  </main>
+  <footer><span>GAME SOLO / HUYỄN TÂM · TỊCH BẠCH</span><p>Concept đã duyệt · Các gói neutral, motion, FX và runtime là bước triển khai tiếp theo.</p></footer>
+  <script type="module" src="review.mjs"></script>
+</body>
+</html>

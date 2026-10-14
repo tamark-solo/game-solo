@@ -1,0 +1,128 @@
+{
+  "schema": "equipment-A-banner-pack-recipe-v1",
+  "status": "prepared-no-generated-body",
+  "sourceBasis": [
+    {
+      "file": "../wang-lin-equipment-production-v1/body/native/banner-a.png",
+      "sha256": "b7c7416d5c6be1e508a77c55af79ddc75e4c5861e0e1bbbeb0ecbf29204d5352"
+    },
+    {
+      "file": "../wang-lin-equipment-production-v1/sources/body/banner-a.png",
+      "sha256": "d4a4155b26152ec9369e5e9cefdd03cd3b1aa90f1d652b1aaac90f1987c1b61a"
+    }
+  ],
+  "bodyNominalPx": 80,
+  "normalCanvas": [
+    112,
+    112
+  ],
+  "normalPivot": [
+    56,
+    104
+  ],
+  "deathCanvas": [
+    192,
+    128
+  ],
+  "deathPivot": [
+    96,
+    112
+  ],
+  "scalePolicy": "One isotropic factor/source from median six neutral crown to actual dark boot sole; nearest resample only, never pose fit/mirror/head transplant.",
+  "sourceMaskPolicy": "Measured whole source bodies and all their opaque disconnected hand/hair fragments; preserve raw; no uniform-cell cap clipping or neighbor fragments. Alpha128 body threshold only, raw RGBA retained.",
+  "rootPolicy": "Actual dark boot sole for upright. Running anatomical ground / actual supported footprint + explicit lift; prone actual source boot endpoint/ground contact, manual evidence, never ivory hem/hair/pole bottom. Seated support ground recorded separately. Native canvas padding only.",
+  "socketPolicy": "Idle/run one actual dominant empty closed grip, same anatomical arm per view. Cast ready key1 may hold; from chargekey2 fixed planted pole is independent from free/sealed/open hands. Source palm/cuff/root measured every pose, no hand swap or tracking planted pole to palms.",
+  "timingMs": {
+    "idle": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ],
+    "run": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "hit": [
+      60,
+      60,
+      80,
+      100,
+      100,
+      160
+    ],
+    "death": [
+      140,
+      140,
+      180,
+      180,
+      200,
+      500
+    ],
+    "meditate": [
+      260,
+      260,
+      260,
+      260,
+      260,
+      260
+    ],
+    "gather": [
+      180,
+      200,
+      200,
+      260,
+      200,
+      260
+    ],
+    "cast-single-target": [
+      200,
+      200,
+      200,
+      300,
+      220,
+      440
+    ],
+    "cast-aoe": [
+      280,
+      310,
+      310,
+      400,
+      640,
+      560
+    ]
+  },
+  "releaseMs": {
+    "cast-single-target": 600,
+    "cast-aoe": 900
+  },
+  "phaseMapping": "ST600/AOE900 start key4. Charge key2 plants pole at fixed measured ground beside caster; both hands free for ritual through recovery. Root prop tracks preserve planted world origin and confirmed Core release/hit facts.",
+  "rowCompletenessPolicy": "Derive actual counts from source. Seated3 or other valid distinct counts allowed with source mapping; no cloning to fill forecast. Run terminal standing excluded, action recovery same-source neutral7 allowed when anatomy needs, recorded reuseReason.",
+  "atlas": {
+    "gutter": 2,
+    "rgbaExactCanonicalParity": true,
+    "sampling": "nearest"
+  },
+  "pathsRelativeTo": "wang-lin-equipment-production-v2",
+  "clipIdTemplate": "banner-a-{direction}-{action}",
+  "finalRequiredFlags": [
+    "sourceViewed",
+    "sourceSocketReviewed",
+    "socketReviewComplete",
+    "headTorsoFirstRecoveryViewed"
+  ],
+  "approvalPolicy": "Technical gate does not approve new Banner ART/motion/runtime. No changes to Sword/V1/runtime/map/DB.",
+  "plantPolicy": {
+    "fromKey": 2,
+    "throughRecovery": true,
+    "fixedGroundRoot": true,
+    "followPalmAfterPlant": false,
+    "bodyEmbeddedProp": false
+  }
+}

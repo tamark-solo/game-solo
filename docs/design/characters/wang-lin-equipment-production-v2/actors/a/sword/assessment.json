@@ -1,0 +1,1157 @@
+{
+  "schema": "huyen-tam-sword-body-assessment-v2",
+  "date": "2026-10-14",
+  "identityId": "a",
+  "identityName": "Huyễn Tâm",
+  "familyId": "sword",
+  "coverage": {
+    "requiredClips": 64,
+    "registeredClips": 64,
+    "newClips": 56,
+    "reusedV1Clips": 8,
+    "bodyPoses": 385,
+    "neutralCalibrationPoses": 150,
+    "status": "technical-production-candidate-complete"
+  },
+  "actualNewSourceBodies": 483,
+  "actualNewSourceActionBodies": 333,
+  "actualCalibrationBodies": 150,
+  "selectedSources": 25,
+  "rawHistorySources": 34,
+  "failedOrUnusedSources": 9,
+  "sourceQA": [
+    {
+      "sourceId": "sword-a-east-core-r1",
+      "file": "actors/a/sword/sources/sword-a-east-core-r1.png",
+      "sha256": "f270470edbc7219fe825a640e039746050ec6ac86592eb970e2100ecf3e887fc",
+      "size": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        56,
+        4,
+        55,
+        10
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 30,
+      "actualCalibrations": 6,
+      "actualActionBodies": 24,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.41237113402061853,
+      "neutralHeights": [
+        194,
+        194,
+        194,
+        194,
+        194,
+        194
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-east-core-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-east-damage-r1",
+      "file": "actors/a/sword/sources/sword-a-east-damage-r1.png",
+      "sha256": "84a76c76005223714278a7fdb619913d84ab20b0e4310709019c90e6d8962a31",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        13,
+        3,
+        11,
+        22
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.2952029520295203,
+      "neutralHeights": [
+        269,
+        270,
+        270,
+        272,
+        273,
+        272
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-east-damage-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-east-gather-r2",
+      "file": "actors/a/sword/sources/sword-a-east-gather-r2.png",
+      "sha256": "5bdf5a2212e7a38c6f2f1858eb7ed07971ab85eb24b6d4557ef5d05c08870ee8",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        69,
+        41,
+        74,
+        18
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 12,
+      "actualCalibrations": 6,
+      "actualActionBodies": 6,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.21592442645074225,
+      "neutralHeights": [
+        373,
+        372,
+        373,
+        369,
+        368,
+        369
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-east-gather-r2-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-east-meditate-r2",
+      "file": "actors/a/sword/sources/sword-a-east-meditate-r2.png",
+      "sha256": "bafe8643358822c216acfbf92000a3895445e58a61c77c73f88a625299c5ddb5",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        50,
+        44,
+        59,
+        13
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 12,
+      "actualCalibrations": 6,
+      "actualActionBodies": 6,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.19777503090234858,
+      "neutralHeights": [
+        404,
+        404,
+        404,
+        405,
+        405,
+        405
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-east-meditate-r2-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-north-damage-r1",
+      "file": "actors/a/sword/sources/sword-a-north-damage-r1.png",
+      "sha256": "1b9d145fd05deed7c1594d312fb3f16e39ea2e13fecade55af933694fe0445e6",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        33,
+        11,
+        27,
+        31
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.32786885245901637,
+      "neutralHeights": [
+        244,
+        244,
+        244,
+        244,
+        245,
+        244
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-north-damage-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-north-practice-r1",
+      "file": "actors/a/sword/sources/sword-a-north-practice-r1.png",
+      "sha256": "c549e8b402b13871cbac67bd32669a3ea184c96fd395a090678a7293935643ae",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        162,
+        16,
+        144,
+        25
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.3137254901960784,
+      "neutralHeights": [
+        255,
+        255,
+        255,
+        256,
+        255,
+        256
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-north-practice-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-northeast-core-r1",
+      "file": "actors/a/sword/sources/sword-a-northeast-core-r1.png",
+      "sha256": "98141adbe7b8dc88a5b1900edcda258005cab32ceb26a0a513757011d4411331",
+      "size": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        66,
+        14,
+        58,
+        20
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 30,
+      "actualCalibrations": 6,
+      "actualActionBodies": 24,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.43010752688172044,
+      "neutralHeights": [
+        185,
+        187,
+        186,
+        186,
+        186,
+        187
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-northeast-core-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-northeast-damage-r1",
+      "file": "actors/a/sword/sources/sword-a-northeast-damage-r1.png",
+      "sha256": "0343303367d2f7bd6793e0ba4a7d9742c67608781c3b6a0a28bb839b88250f90",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        57,
+        11,
+        23,
+        24
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.2962962962962963,
+      "neutralHeights": [
+        268,
+        269,
+        270,
+        270,
+        270,
+        270
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-northeast-damage-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-northeast-practice-r1",
+      "file": "actors/a/sword/sources/sword-a-northeast-practice-r1.png",
+      "sha256": "46cebe2bf1010f5b325a11c6ff5ae18f1253793f15b27414a1b5080f7146a935",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        146,
+        13,
+        123,
+        12
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.28169014084507044,
+      "neutralHeights": [
+        284,
+        284,
+        284,
+        284,
+        284,
+        284
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-northeast-practice-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-northwest-core-r1",
+      "file": "actors/a/sword/sources/sword-a-northwest-core-r1.png",
+      "sha256": "4a7a35db6500d537c655e95ce39e5fc2258511fb9c834af256a2b24f0fef752e",
+      "size": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        59,
+        16,
+        55,
+        33
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 30,
+      "actualCalibrations": 6,
+      "actualActionBodies": 24,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.4166666666666667,
+      "neutralHeights": [
+        192,
+        192,
+        192,
+        192,
+        192,
+        192
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-northwest-core-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-northwest-damage-r1",
+      "file": "actors/a/sword/sources/sword-a-northwest-damage-r1.png",
+      "sha256": "8297b2eb4a93909a3ab79c679b7dfb1392628209eec02ecd61e30a234856d4f0",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        61,
+        31,
+        46,
+        33
+      ],
+      "requested24PxMarginsMet": true,
+      "framingDelta": null,
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.32064128256513025,
+      "neutralHeights": [
+        248,
+        249,
+        248,
+        251,
+        250,
+        250
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-northwest-damage-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-northwest-practice-r1",
+      "file": "actors/a/sword/sources/sword-a-northwest-practice-r1.png",
+      "sha256": "45777198dc73827b17712e8f78d0091e3fb473da6b24cb38ea2524f5a5d11b7c",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        112,
+        15,
+        100,
+        13
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.299625468164794,
+      "neutralHeights": [
+        267,
+        267,
+        267,
+        267,
+        267,
+        267
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-northwest-practice-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-south-damage-r1",
+      "file": "actors/a/sword/sources/sword-a-south-damage-r1.png",
+      "sha256": "a144fd4f6ece6df36bb5edfff93a9627f45899d32b501853420f628d1a2e729b",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        24,
+        6,
+        26,
+        24
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.2787456445993031,
+      "neutralHeights": [
+        287,
+        287,
+        287,
+        287,
+        287,
+        287
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-south-damage-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-south-locomotion-r3",
+      "file": "actors/a/sword/sources/sword-a-south-locomotion-r3.png",
+      "sha256": "ddbe0ff04e53607d633cc523cbf13eaa3480acb604983144a5ef437a9dfaacb3",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        22,
+        70,
+        21,
+        96
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 30,
+      "actualCalibrations": 6,
+      "actualActionBodies": 24,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.3252032520325203,
+      "neutralHeights": [
+        246,
+        246,
+        246,
+        247,
+        247,
+        246
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-south-locomotion-r3-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-south-practice-r1",
+      "file": "actors/a/sword/sources/sword-a-south-practice-r1.png",
+      "sha256": "828d46e3c23fd5c55674123c6a5dcc7c1447f3dd8aa96df5ff2bb19f8ef94536",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        134,
+        18,
+        125,
+        8
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.27538726333907054,
+      "neutralHeights": [
+        290,
+        290,
+        290,
+        291,
+        291,
+        291
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-south-practice-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-southeast-damage-r1",
+      "file": "actors/a/sword/sources/sword-a-southeast-damage-r1.png",
+      "sha256": "3835d936df4a0e93c679b0250c7b585820fd83a0143e7bfac081d2d043b71b96",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        39,
+        13,
+        29,
+        46
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.3187250996015936,
+      "neutralHeights": [
+        251,
+        251,
+        251,
+        251,
+        251,
+        251
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-southeast-damage-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-southeast-practice-r1",
+      "file": "actors/a/sword/sources/sword-a-southeast-practice-r1.png",
+      "sha256": "f5a70990ca3ae4afa933d37401560f967e3b3e81cad4ae29b1181b523517dbca",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        112,
+        14,
+        107,
+        101
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 15,
+      "actualCalibrations": 6,
+      "actualActionBodies": 9,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.2768166089965398,
+      "neutralHeights": [
+        288,
+        288,
+        289,
+        289,
+        289,
+        289
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-southeast-practice-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-southwest-aoe-r7",
+      "file": "actors/a/sword/sources/sword-a-southwest-aoe-r7.png",
+      "sha256": "11abf221f1e82da48ae0a33bba1b2c0e0bcd0946e5cfd651aa6e37fb190bbe92",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        28,
+        13,
+        25,
+        34
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 12,
+      "actualCalibrations": 6,
+      "actualActionBodies": 6,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.2127659574468085,
+      "neutralHeights": [
+        377,
+        377,
+        377,
+        375,
+        375,
+        375
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-southwest-aoe-r7-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-southwest-damage-r1",
+      "file": "actors/a/sword/sources/sword-a-southwest-damage-r1.png",
+      "sha256": "d73189d7325a621224dae834f4e70534320bc1dd0c61c9edcf8e8a44d3824f23",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        43,
+        9,
+        27,
+        29
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.31683168316831684,
+      "neutralHeights": [
+        253,
+        253,
+        253,
+        252,
+        252,
+        252
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-southwest-damage-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-southwest-locomotion-r5",
+      "file": "actors/a/sword/sources/sword-a-southwest-locomotion-r5.png",
+      "sha256": "d7e07eca93c8a4d15c9d39cfc7b1ee2a1919e6153d603f8b69f6ed62e67a72d6",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        88,
+        11,
+        79,
+        5
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.3125,
+      "neutralHeights": [
+        257,
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-southwest-locomotion-r5-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-southwest-practice-r1",
+      "file": "actors/a/sword/sources/sword-a-southwest-practice-r1.png",
+      "sha256": "a6f653aac1cb2c214c8670488dd0ebae4db2e09bfcca2419b91cda635c4e9108",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        104,
+        5,
+        85,
+        7
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.28776978417266186,
+      "neutralHeights": [
+        277,
+        278,
+        277,
+        278,
+        278,
+        278
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-southwest-practice-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-southwest-st-r6",
+      "file": "actors/a/sword/sources/sword-a-southwest-st-r6.png",
+      "sha256": "1022ee18bd0034a8175ffda1b3166e87d779fc7d9a6c272e6b5bf33721a6f59a",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        54,
+        41,
+        40,
+        28
+      ],
+      "requested24PxMarginsMet": true,
+      "framingDelta": null,
+      "actualBodies": 12,
+      "actualCalibrations": 6,
+      "actualActionBodies": 6,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.2244039270687237,
+      "neutralHeights": [
+        355,
+        355,
+        355,
+        358,
+        358,
+        358
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-southwest-st-r6-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-west-core-r1",
+      "file": "actors/a/sword/sources/sword-a-west-core-r1.png",
+      "sha256": "635bd65d29642a29f578568974eba255eff68971d73aed2d1e908ebb251e8189",
+      "size": [
+        1536,
+        1024
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        48,
+        8,
+        34,
+        12
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 30,
+      "actualCalibrations": 6,
+      "actualActionBodies": 24,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.41025641025641024,
+      "neutralHeights": [
+        195,
+        195,
+        195,
+        195,
+        195,
+        195
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-west-core-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-west-damage-r1",
+      "file": "actors/a/sword/sources/sword-a-west-damage-r1.png",
+      "sha256": "1b65fd949e4c8438dbde31d24ca660733546a5495e52a85c46f4363d7d9bd650",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        31,
+        10,
+        17,
+        37
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.30947775628626695,
+      "neutralHeights": [
+        259,
+        259,
+        259,
+        258,
+        258,
+        258
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-west-damage-r1-inspection-2x.png"
+    },
+    {
+      "sourceId": "sword-a-west-practice-r1",
+      "file": "actors/a/sword/sources/sword-a-west-practice-r1.png",
+      "sha256": "2a3deaa192128e6ced7ed8d2638c8ccb7cff612adf4fe5627a7059073930d7b4",
+      "size": [
+        1024,
+        1536
+      ],
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alpha128OuterMarginsLTRB": [
+        91,
+        13,
+        62,
+        12
+      ],
+      "requested24PxMarginsMet": false,
+      "framingDelta": "Whole heads/hair/boots remain present at alpha128; source margin is smaller than requested24px on one or more edges.",
+      "actualBodies": 18,
+      "actualCalibrations": 6,
+      "actualActionBodies": 12,
+      "sourceEdgeClipping": {
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0
+      },
+      "sameSourceScale": 0.2831858407079646,
+      "neutralHeights": [
+        281,
+        281,
+        281,
+        284,
+        284,
+        284
+      ],
+      "calibrationPolicy": "One scale80/median of six actual crown-to-human-boot heights; no width/pose fitting.",
+      "trueViewReviewed": true,
+      "rawUnchanged": true,
+      "manualSourceProof": "actors/a/sword/contact/sword-a-west-practice-r1-inspection-2x.png"
+    }
+  ],
+  "anatomyProxyFile": "actors/a/sword/anatomy-measurements.json",
+  "comparisonFile": "actors/a/sword/comparison.json",
+  "manualProofFile": "actors/a/sword/manual-proof.json",
+  "groundImports": "actors/a/sword/ground-imports.json",
+  "limitationsAndDeltas": [
+    {
+      "kind": "identity",
+      "detail": "Own approved A has a slimmer torso and smaller head than Wang. Preserve own face/hair/cream-black Sword coat and gold trim; Wang only establishes native anatomy/style/camera reference. An80px crown-to-boot number does not prove anatomy."
+    },
+    {
+      "kind": "source-history",
+      "detail": "Nine failed/unused raw sources, prompts and immutable inputs retained. Source bottom clipping, touching cells, wrong left camera, compressed cast heads or missing AOE heads are not used as active canonical artwork."
+    },
+    {
+      "kind": "row-count",
+      "detail": "South locomotion r3 requested text contained an18/30-body conflict; actual selected output has30 complete bodies in6columns5rows, used as six neutral+fouractions. SE practice contains15 actual bodies, so meditate has three genuine keys. No fabricated keys fill either layout."
+    },
+    {
+      "kind": "run",
+      "detail": "East/South source sixth run keys are neutral standing recoveries, excluded from loop; five actual stride keys retained. South run1 uses open palm and run3 joins a seal during stride, so both detach-hover and retain actual choreography rather than claim a held grip."
+    },
+    {
+      "kind": "gather",
+      "detail": "NE/NW/S/SW/W final source gather is a low stance, so each appends an actual same-source neutral calibration0 as a seventh160ms standing recovery. Raw six action keys are kept. These are five reuse keys, not five new generated poses/calibrations."
+    },
+    {
+      "kind": "head-measurement",
+      "detail": "anatomy-measurements.json reports per-pose fixed head/hair band and warm-face proxies. Hair flare during run and whole prone bodies make band width grow; a tiny rear cheek changes1–4 pixels by angle/occlusion. These are diagnostic values, not skull/bone dimensions or blanket anatomy approval. Standing recoveries retain own head/torso mass visibly; rear cheek deltas up to33.33% and NE idle hair-band10.81% remain reported."
+    },
+    {
+      "kind": "grip",
+      "detail": "All336 new keys have actual raw-coordinate palm or explicitly hidden cuff/forearm endpoint and visual source/native proof. Color islands were only candidate locations; belt/cuff false positives were corrected on original raw. N meditate uses six hidden cuff endpoints; NE meditate fingertips and NW run3 fragment remain honest. Cast/meditate/gather open/seal hands use hover/stow rather than a forced held blade."
+    },
+    {
+      "kind": "wrist",
+      "detail": "100 core idle/run/recovery/source cuffs measured relative actual same-direction own neutral calibration (52 new E/NE/S/SW plus48 W/NW). Each projects a short bracer-to-palm vector with ±1nativepixel and explicit angle uncertainty; no N135/facing rotation. Foundation/other detached keys have unmeasured0 presentation placeholder, not a claimed wrist measurement."
+    },
+    {
+      "kind": "root",
+      "detail": "Run uses per-key cloth-waist/upper-leg projection onto a measured row ground, preserving natural foot lift without lowest-sole horizontal wobble. Death uses160x112/(80,104) padding; support boot/knee for first two keys, clothed pelvis/upper-thigh projection and observed corpse material contact thereafter. Seated meditation uses folded legs/robe support. Actual per-axis uncertainty spans1–6nativepixels across boot support and concealed waist candidates; sourceProof records the specific bound rather than a false exact pelvis claim."
+    },
+    {
+      "kind": "lift",
+      "detail": "The3px death key3 lift is a presentation candidate already encoded in canonical source-root translation; lift metadata explains it. Transparent source has no actual world floor. Renderer must not subtract lift again from body."
+    },
+    {
+      "kind": "motion",
+      "detail": "Raw head/view/gesture coverage and source/canonical/atlas QA are complete; no animation rig guarantees anatomical handedness through every perspective. Browser/GPU and gear/FX overlay checks are root review steps, not claimed by this body worker."
+    },
+    {
+      "kind": "approval",
+      "detail": "Eight approved V1 body clips/49 keys stay byte-for-byte unchanged and are only referenced. New56clips/336keys remain candidate ART/motion; no runtime/map/navigation/DB or gameplay integration was made."
+    }
+  ],
+  "newArtApproved": false,
+  "motionApproved": false,
+  "runtimeIntegrated": false,
+  "reviewStatus": "technical-production-candidate"
+}

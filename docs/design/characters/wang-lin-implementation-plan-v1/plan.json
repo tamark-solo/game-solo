@@ -1,0 +1,441 @@
+{
+  "schema": "wang-lin-implementation-plan-1",
+  "date": "2026-10-14",
+  "timezone": "Asia/Bangkok",
+  "title": "Kế hoạch triển khai Huyễn Tâm và Tịch Bạch",
+  "status": "concept-approved-implementation-planned",
+  "summary": "Triển khai cả hai nhân vật qua bốn họ trang bị, với body, trang bị, FX đơn mục tiêu và AOE tách lớp. Hoàn thiện một lát Kiếm linh cho cả hai trước khi mở rộng đủ bộ và các chặng tiến hóa.",
+  "approval": {
+    "file": "../wang-lin-concept-direction-v5/approval.json",
+    "date": "2026-10-14",
+    "conceptApproved": true,
+    "pinnedFiles": 86,
+    "selectedSources": 18,
+    "nativeConceptPreviews": 10,
+    "scope": "Hai nhận diện, tám concept áo/pháp bảo, bốn board tiến hóa và bốn board ST/AOE tĩnh.",
+    "productionMotionApproved": false,
+    "runtimeIntegrated": false
+  },
+  "characters": [
+    {
+      "id": "huyen-tam",
+      "name": "Huyễn Tâm",
+      "sourceIdentityId": "a",
+      "sourceName": "Huyền Tâm",
+      "description": "Nhận diện tóc đen, mặt lạnh và dáng compact. Tên nguồn cũ giữ trong provenance; tên hiển thị theo owner là Huyễn Tâm.",
+      "image": "../wang-lin-concept-direction-v5/sources/identity-a.png",
+      "productionStatus": "planned"
+    },
+    {
+      "id": "tich-bach",
+      "name": "Tịch Bạch",
+      "sourceIdentityId": "b",
+      "description": "Nhận diện tóc bạc, khí chất trầm và lạnh. Có đủ bốn concept bộ áo/pháp bảo, được sản xuất và kiểm độc lập.",
+      "image": "../wang-lin-concept-direction-v5/sources/identity-b.png",
+      "productionStatus": "planned"
+    }
+  ],
+  "families": [
+    {
+      "id": "sword",
+      "name": "Kiếm linh",
+      "role": "Đánh theo tuyến và tổ chức kiếm trận",
+      "st": "Kiếm Ý Nhất Tuyến",
+      "aoe": "Kiếm Trận Phá Giới",
+      "geometry": "Ba hành lang kiếm giữa hai dãy cọc",
+      "source": "../wang-lin-concept-direction-v5/sources/sword-aoe.png",
+      "order": 1,
+      "contract": "Khóa origin/hướng và các tuyến; giải quyết mục tiêu giao nhiều tuyến theo cap mỗi cast/pulse. Kiếm linh là presentation, không tự thêm một hit.",
+      "readiness": "concept-approved"
+    },
+    {
+      "id": "banner",
+      "name": "Hồn phiên",
+      "role": "Trường hồn nhiều cổng và dòng hội tụ",
+      "st": "Chủ Hồn Dẫn Lộ",
+      "aoe": "Tam Môn Tụ Hồn",
+      "geometry": "Ba cổng theo tam giác, khoảng tâm và lối mở",
+      "source": "../wang-lin-concept-direction-v5/sources/banner-aoe.png",
+      "order": 2,
+      "contract": "Khóa ba anchor và vùng hiệu lực; đặc tả pulse/stack/khống chế trước sản xuất. Dải hồn thể hiện facts của field, không điều khiển enemy từ renderer.",
+      "readiness": "concept-approved"
+    },
+    {
+      "id": "chariot",
+      "name": "Xạ Thần Xa",
+      "role": "Triển pháp khí và chuỗi contact theo hành lang",
+      "st": "Giải Niêm Dẫn Thú",
+      "aoe": "Lôi Thú Liệt Địa",
+      "geometry": "Hai rail xích và ba điểm dậm theo thứ tự",
+      "source": "../wang-lin-concept-direction-v5/sources/chariot-aoe.png",
+      "order": 3,
+      "contract": "Thiết bị/thú/xích tách body; từng điểm dậm có pulse và effect ID riêng. Server xác nhận contact, target cap và đường né hai bên.",
+      "readiness": "concept-approved"
+    },
+    {
+      "id": "bead",
+      "name": "Thiên Nghịch Châu",
+      "role": "Nội cảnh hộ đạo và hỗ trợ/control chuyển thể",
+      "st": "Dẫn Giới Hộ Thân",
+      "aoe": "Nội Giới Hộ Đạo",
+      "geometry": "Nếp giới chia sân và ba điểm trú",
+      "source": "../wang-lin-concept-direction-v5/sources/bead-aoe.png",
+      "order": 4,
+      "contract": "Định nghĩa facts hộ đạo/control và credit riêng; có ally/enemy/point target policy. AOE ngoài thực tại là cơ chế game đề xuất, không mặc định canon damage hoặc tích lũy offline.",
+      "readiness": "concept-approved"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "path",
+      "name": "I Tự mở đường",
+      "realms": "Ngưng Khí đến Trúc Cơ",
+      "implementation": "Neutral/diện mạo nhập đạo và công cụ tiền thân, hồ sơ cơ duyên. Chỉ mở vật phẩm và khả năng theo nguồn/điều kiện được đặc tả.",
+      "fullMotionStatus": "after-pilot-scope-estimate"
+    },
+    {
+      "id": "spirit",
+      "name": "II Luyện hóa thành bản sắc",
+      "realms": "Kết Đan đến Nguyên Anh",
+      "implementation": "Mốc hoàn thiện body tám hướng, bộ trang bị, ST/AOE và linh thể trước trong sân chơi thử.",
+      "fullMotionStatus": "primary-production-scope"
+    },
+    {
+      "id": "domain",
+      "name": "III Đạo của chính mình",
+      "realms": "Hóa Thần",
+      "implementation": "Chốt neutral/gear và cấu trúc trường cảnh, rồi mở motion theo thay đổi áo và cơ chế đã kiểm. Thân vẫn 80px.",
+      "fullMotionStatus": "after-pilot-scope-estimate"
+    }
+  ],
+  "phases": [
+    {
+      "id": "P0",
+      "title": "Khóa concept đã duyệt",
+      "summary": "Lưu lựa chọn cả hai nhân vật và bốn họ theo hash, giữ lịch sử nguồn.",
+      "status": "complete",
+      "dependsOn": [],
+      "deliverables": [
+        "Hồ sơ duyệt khóa 86 file theo hash",
+        "18 nguồn concept và 10 preview native làm căn cứ",
+        "Tên Huyễn Tâm/Tịch Bạch và tên nguồn được đối chiếu rõ"
+      ],
+      "gate": "Hồ sơ duyệt được kiểm hash; nguồn V5 khóa ghi, production dùng gói mới."
+    },
+    {
+      "id": "P1",
+      "title": "Chuẩn nhân vật và trang bị Đông Nam",
+      "summary": "Tạo neutral sản xuất cho cả hai nhân vật và cả bốn bộ áo, tách body và đạo cụ.",
+      "status": "ready",
+      "dependsOn": [
+        "P0"
+      ],
+      "deliverables": [
+        "8 neutral Đông Nam, tách riêng body",
+        "8 bộ trang bị, lớp trước/sau và điểm cầm/đặt",
+        "Đối chiếu tỷ lệ 1× trên nền sáng, tối và map"
+      ],
+      "gate": "Giữ nhận diện riêng, anatomy và thân 80 px; điểm chân, bàn tay và grip đúng. Concept gộp trang bị cần được tách thành tài sản sản xuất."
+    },
+    {
+      "id": "P2",
+      "title": "Prototype cơ chế đơn mục tiêu và AOE",
+      "summary": "Đặc tả và kiểm cả bốn họ trên fixture nhiều mục tiêu, chạy song song P1.",
+      "status": "ready",
+      "dependsOn": [
+        "P0"
+      ],
+      "deliverables": [
+        "8 hợp đồng chiêu đơn mục tiêu/AOE",
+        "Sân kiểm nhiều mục tiêu và life, có báo vùng/khóa/phát/tan",
+        "Hình vùng, nhịp tác động, giới hạn mục tiêu, LOS và hủy chiêu",
+        "Sự kiện hộ đạo riêng của Châu; khóa đa-hit theo cast/pulse/target/life"
+      ],
+      "gate": "Mỗi tác động được giải quyết đúng một lần; vùng chồng tuân theo luật damage. Trúng, hụt, hủy và reconnect có kết quả rõ."
+    },
+    {
+      "id": "P3",
+      "title": "Pilot Kiếm linh cho cả hai nhân vật",
+      "summary": "Kiểm motion, góc sau, grip, linh kiếm và AOE trên một lát hoàn chỉnh trước mở đủ hướng.",
+      "status": "planned",
+      "dependsOn": [
+        "P1",
+        "P2"
+      ],
+      "deliverables": [
+        "Đông Nam và Bắc cho cả 2 nhân vật",
+        "Idle/run/cast ST/cast AOE: 16 body clip",
+        "8 track trang bị cho ST/AOE",
+        "10 sequence FX Kiếm linh, có contact nhiều mục tiêu",
+        "Review cùng thời điểm; kiểm hụt, hủy và sự kiện trễ"
+      ],
+      "gate": "Body, gear và FX tách lớp; idle → cast → run giữ anatomy. Kiểm 1×, Three, browser và lifecycle qua; hình pilot được review."
+    },
+    {
+      "id": "P4",
+      "title": "Hoàn thiện Kiếm linh tám hướng",
+      "summary": "Bổ sung sáu hướng còn lại sau pilot, hoàn thiện action nền và đòn thường phù hợp cho cả hai nhân vật.",
+      "status": "planned",
+      "dependsOn": [
+        "P3"
+      ],
+      "deliverables": [
+        "2 bộ Kiếm linh, mỗi bộ đủ 8 hướng thật",
+        "6 action nền và ST/AOE: 128 body clip cơ sở",
+        "Đủ hình đòn thường theo luật F được chọn",
+        "Atlas, pose, socket, hồ sơ nguồn và đồng bộ riêng gói"
+      ],
+      "gate": "Đủ view thật và mọi binding cần thiết; thiếu clip được báo rõ. Hoàn thiện đòn thường trước khi bật lát chơi thử."
+    },
+    {
+      "id": "P5",
+      "title": "Mở rộng Hồn phiên rồi Xạ Thần Xa rồi Châu",
+      "summary": "Mỗi họ đi neutral→pilot→tám hướng, giữ cả Huyễn Tâm và Tịch Bạch.",
+      "status": "planned",
+      "dependsOn": [
+        "P3"
+      ],
+      "deliverables": [
+        "6 bộ còn lại, có binding riêng",
+        "Vải phiên/cổng/hồn; khung xa/xích/thú; nếp nội giới",
+        "3 kit FX còn lại, mỗi kit có 10 sequence",
+        "Kiểm contact/hộ đạo, nhiều mục tiêu và so nét/màu"
+      ],
+      "gate": "Cơ chế từng họ đã qua P2; động tác, trang bị và FX khớp sự kiện server. Đòn thường của Châu được thiết kế phù hợp vai trò riêng."
+    },
+    {
+      "id": "P6",
+      "title": "Registry nhân vật và trang bị server",
+      "summary": "Nối hai identity và appearance có quyền rõ, save/version/migration và peer render; bắt đầu bằng lát Kiếm đã đủ.",
+      "status": "planned",
+      "dependsOn": [
+        "P2",
+        "P4"
+      ],
+      "deliverables": [
+        "Registry nhân vật/diện mạo; nạp binding khi cần",
+        "Hợp đồng target/skill/cooldown/trang bị có version",
+        "Tạo và đọc hai ID trên fixture; migration giữ hồ sơ cũ",
+        "Equip do server xác nhận, lưu atomic và hiển thị cho peer"
+      ],
+      "gate": "Diện mạo giữ avatarId ổn định; đủ asset trước khi bật. Save cũ và R01 đọc đúng; đổi đồ giữa cast có luật; reconnect không lặp equip/hit."
+    },
+    {
+      "id": "P7",
+      "title": "Tiến hóa và luồng sở hữu pháp bảo",
+      "summary": "Triển khai mốc I/III và điều kiện nhận biết→luyện hóa→vận dụng sau khi mốc II được chứng minh.",
+      "status": "planned",
+      "dependsOn": [
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "deliverables": [
+        "Nguồn, cơ duyên, điều kiện và recipe/quest cho từng họ",
+        "Neutral, trang bị và trường cảnh mỗi chặng cho cả hai nhân vật",
+        "Quyền chiêu/diện mạo theo tiến trình do server xác nhận",
+        "Dự toán motion mốc I/III theo pilot và khác biệt áo thực tế"
+      ],
+      "gate": "Vật và quyền vận dụng mở theo điều kiện đã chứng minh. Hình hoặc clip không tự cấp reward/cảnh giới."
+    },
+    {
+      "id": "P8",
+      "title": "Chơi thử nhiều mục tiêu và phát hành theo phạm vi",
+      "summary": "Đo solo/peer/crowd trong encounter riêng trước mở rộng nội dung.",
+      "status": "planned",
+      "dependsOn": [
+        "P5",
+        "P6"
+      ],
+      "deliverables": [
+        "Sân 3/6/12/18 mục tiêu, nền sáng/tối và mái/tán",
+        "Giãn vị trí, dàn nhịp và ngân sách FX để giữ body/warning rõ",
+        "Lifecycle, reload/restart, credit/receipt và kiểm hồi quy",
+        "Bàn giao theo hash; trạng thái ART và gameplay tách riêng"
+      ],
+      "gate": "Schema, migration, credit và độ đầy đủ asset qua trên fixture; giữ owner map, navigation, DB và draft trong các kiểm."
+    }
+  ],
+  "pilot": {
+    "name": "Bàn giao đầu tiên cho cả Huyễn Tâm và Tịch Bạch",
+    "scope": "Chuẩn neutral tám bộ, prototype tám cơ chế, pilot motion Kiếm linh hai góc.",
+    "characters": 2,
+    "equipmentFamilies": 1,
+    "directions": [
+      "southeast",
+      "north"
+    ],
+    "actions": [
+      "idle",
+      "run",
+      "cast-single-target",
+      "cast-aoe"
+    ],
+    "bodyClips": 16,
+    "nominalKeysPerClip": 6,
+    "nominalBodyPoses": 96,
+    "fxSequences": 10,
+    "nominalFxKeys": 60,
+    "gearSkillTracks": 8,
+    "estimatedNotGenerated": true,
+    "reviewCases": [
+      "Tỷ lệ 1×/2×, đối chiếu Wang về style/scale và master riêng về nhận diện",
+      "ST trúng/hụt/hủy và AOE nhiều điểm contact",
+      "Hướng Bắc đúng lưng; lớp trước/sau và điểm cầm trang bị đúng",
+      "Seek, loop, trễ, hidden/offline và reduced motion",
+      "Sự kiện Core độc lập với callback frame"
+    ]
+  },
+  "quantities": {
+    "characters": 2,
+    "families": 4,
+    "appearancesPerMilestone": 8,
+    "directions": 8,
+    "neutralPosesPerMilestone": 64,
+    "coreActions": [
+      "idle",
+      "run",
+      "hit",
+      "death",
+      "meditate",
+      "gather"
+    ],
+    "coreClips": 384,
+    "skillActions": [
+      "cast-single-target",
+      "cast-aoe"
+    ],
+    "skillClips": 128,
+    "baseBodyClips": 512,
+    "basicComboActionsReserved": 3,
+    "conditionalComboClips": 192,
+    "bodyClipsWithCombo": 704,
+    "nominalKeysPerClip": 6,
+    "baseNominalPoses": 3072,
+    "nominalPosesWithCombo": 4224,
+    "fxSequencesPerFamily": 10,
+    "fxSequencesPerMilestone": 40,
+    "nominalFxKeysPerMilestone": 240,
+    "restGearViews": 64,
+    "gearStAoeTracks": 128,
+    "allThreeMilestonesAppearances": 24,
+    "allThreeMilestonesBaseClips": 1536,
+    "allThreeMilestonesClipsWithCombo": 2112,
+    "estimationStatus": "planning allowance, not generated coverage or fixed frame recipe",
+    "conditions": [
+      "512 clip là mốc II: 8 bộ × 8 hướng × 8 action. Đòn thường phải có hình đầy đủ trước tích hợp.",
+      "Combo 3 bước có điều kiện theo luật F của từng họ; thiết kế phù hợp chức năng pháp bảo.",
+      "Sáu key chỉ phục vụ dự toán; frame holds và timing chốt theo action/prototype.",
+      "Hai nhân vật dùng chung FX khi mechanic/palette trùng; biến thể riêng làm tăng số nguồn.",
+      "Trang bị tĩnh bám socket chỉ tái dùng sau pilot; tổng frame cho idle/run/death, vải phiên và xích còn cần đo.",
+      "Mỗi nhân vật/bộ áo cần artwork riêng; tái dùng quy trình, choreography và timeline sau kiểm.",
+      "Nếu ba chặng đổi toàn bộ áo thì có 24 diện mạo; mở rộng scope sau khi đo khác biệt và chi phí pilot."
+    ]
+  },
+  "artContract": {
+    "liveRole": "Wang live làm chuẩn tỷ lệ người và nét pixel; master riêng Huyễn Tâm/Tịch Bạch khóa nhận diện mới.",
+    "body": "Thân danh nghĩa 80 world px; neutral body 64 × 96, pivot (32,88). Canvas action rộng hơn là padding có đo.",
+    "layers": [
+      "body",
+      "gear-rear",
+      "gear-front",
+      "ground-warning",
+      "fx-rear",
+      "fx-front",
+      "contact",
+      "residual"
+    ],
+    "directionPolicy": "Tám hướng thật; dị thú có phối cảnh cần view riêng, giữ đúng phía tay và quan hệ che khuất.",
+    "sourcePolicy": "Gói mới lưu raw, prompt, input, hash, phép đo và registration; một scale/nguồn theo neutral, nguồn lỗi giữ lịch sử.",
+    "bodyGearSeparation": "Concept đã duyệt gộp body và trang bị. Production tách art và socket/track, kiểm bàn tay và lớp che ở cả hai phía."
+  },
+  "architecture": [
+    {
+      "area": "Actor và danh tính",
+      "modules": [
+        "shared/hang-nhac.ts",
+        "shared/profiles.ts",
+        "server/src/application/entry-service.ts",
+        "server/src/persistence/profile-codec.ts"
+      ],
+      "change": "Registry hai identity độc lập và chính sách tạo/migration; giữ ba hồ sơ cũ."
+    },
+    {
+      "area": "Trang bị và diện mạo",
+      "modules": [
+        "shared/character-inventory.ts",
+        "shared/content/catalog.ts",
+        "client/src/pixel-player-runtime.ts",
+        "client/src/hang-nhac.ts"
+      ],
+      "change": "Trang bị có instance/version và diện mạo do server xác nhận; thay hardcode Wang và giới hạn loader năm actor bằng registry kiểm đủ binding."
+    },
+    {
+      "area": "ST và AOE",
+      "modules": [
+        "shared/skills/engine.ts",
+        "shared/skills/behaviors.ts",
+        "server/src/chapter-activity.ts"
+      ],
+      "change": "Luật target nhiều entity/life, hình vùng khóa, pulse/cap/LOS và sự kiện hỗ trợ. Prototype dùng activity/fixture riêng."
+    },
+    {
+      "area": "Timeline và FX",
+      "modules": [
+        "shared/skills/presentation.ts",
+        "client/src/render/sprite-frame.ts"
+      ],
+      "change": "Khóa đa-hit theo cast/pulse/target/spawnLife; effect ID contact riêng, tuổi FX tuyệt đối, nạp khi cần và dọn cache khi kết thúc."
+    }
+  ],
+  "verification": {
+    "art": [
+      "Hash nguồn/native/atlas, điểm chân, gutter và alpha mềm",
+      "Grip trang bị đúng tám hướng và mọi action",
+      "Canvas/Three: UV, pivot, swap; nền sáng/tối/map 1×",
+      "Body và warning đọc rõ trong vùng FX nhiều mục tiêu"
+    ],
+    "core": [
+      "Biên vùng, góc/tầm/LOS, overlap/pulse/cap",
+      "Target rời, chết hoặc đổi life; hủy trước/sau release",
+      "Sự kiện trễ/lặp và reconnect/restart không lặp tác động/credit",
+      "Hộ đạo của Châu đúng quyền, target và duration"
+    ],
+    "save": [
+      "Entry/save cũ và R01 giữ đúng trên fixture",
+      "Identity mới, quyền sở hữu gear, equip/save/receipt atomic",
+      "Peer có đủ asset và chỉ nhận ID được server xác nhận"
+    ],
+    "scopedCommands": [
+      "test:game-entry",
+      "test:hang-nhac-character",
+      "test:hang-nhac-r01",
+      "test:skill-aim",
+      "test:game-actor-actions",
+      "test:wind-motion khi chạm movement",
+      "chapter/lessons/sect/reload/HUD phù hợp",
+      "check:content-catalog/test:content-catalog khi chạm catalog",
+      "typecheck"
+    ],
+    "buildPolicy": "Dùng builder/sync riêng gói và fixture. Lệnh assets/build tổng hiện gọi map builder, cần tách khỏi kiểm gói này."
+  },
+  "scheduling": {
+    "sequence": "P1 và P2 song song; P3 → P4. P5 bắt đầu sau pilot; P6 bám lát Kiếm đủ binding. P7/P8 theo mức hoàn thiện của ART, Core và save.",
+    "estimateMethod": "Đo số nguồn sửa, thời gian gen/registration/QA và chi phí thực từ pilot 16 clip, rồi cập nhật dự toán tám bộ và ba chặng.",
+    "calendarEta": "not committed before pilot",
+    "generationStarted": false
+  },
+  "documents": {
+    "main": "../../../WANG-LIN-IMPLEMENTATION-PLAN.md",
+    "approval": "../wang-lin-concept-direction-v5/approval.json",
+    "conceptReview": "../wang-lin-concept-direction-v5/index.html",
+    "productionSkill": "../../../skills/game-actor-animation-production/SKILL.md"
+  },
+  "readiness": {
+    "conceptApproved": true,
+    "productionNeutralApproved": false,
+    "motionApproved": false,
+    "runtimeIntegrated": false,
+    "thisRequest": "Approval record and implementation plan only; no ImageGen production or gameplay changes in this turn."
+  }
+}

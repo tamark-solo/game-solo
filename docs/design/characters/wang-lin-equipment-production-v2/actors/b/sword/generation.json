@@ -1,0 +1,759 @@
+{
+  "schema": "equipment-body-generation-v2",
+  "identityId": "b",
+  "familyId": "sword",
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "records": [
+    {
+      "id": "sword-b-north-foundation",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "north",
+      "group": "foundation",
+      "actions": [
+        "hit",
+        "death",
+        "meditate",
+        "gather"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-north-foundation.txt",
+      "promptSha256": "60ba01323f288b4bfd70c685ab50420859e30849b0492e1ec09ae98a6aa54c79",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-north-nearest8x.png",
+          "sha256": "33e66d1538f261c73ad62ff110d9969ee503bc7096365b0db06026692f89bd6d",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-north-nearest8x.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-north-foundation.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-31deeb37-0d81-48b8-9587-ebd8ded31b38.png",
+      "sha256": "954437c4de898dcc1f786bba5f8b941f04c948c1b5ccc1a3a81e7a3e47f3c90a",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-northeast-pilot",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "northeast",
+      "group": "pilot",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-northeast-pilot.txt",
+      "promptSha256": "5bb1a0e3ca1af6f8333d4c9f0a6bee431a0c6ba3090f61cd3421fef4c0d886c3",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-northeast-nearest8x.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-northeast-pilot.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-8e6ed0cb-047b-4c3b-b8af-a7a1776ad77a.png",
+      "sha256": "1f3b6f9578a60bba200451dd72d98c5987a16fb1767406c7d0f4cf1375fe2d18",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-northeast-foundation",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "northeast",
+      "group": "foundation",
+      "actions": [
+        "hit",
+        "death",
+        "meditate",
+        "gather"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-northeast-foundation.txt",
+      "promptSha256": "76a85cd4b060838db44a5a98386e6ac3d4a0e421241bed20cc4cf2573a2c5aaa",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-northeast-nearest8x.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-northeast-foundation.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-05749ee6-a0a8-4339-81e3-889d30863f8a.png",
+      "sha256": "252ca0a933ee37b41eeb1f2afc1c93ba7e6b4337ef572b0b6cc3a2cf862c00c6",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-east-pilot",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "east",
+      "group": "pilot",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-east-pilot.txt",
+      "promptSha256": "d64b07e82aa3d220fffccd6b2e9acf80c7cdfdf4b12d1425f98a483badbc3f3d",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-east-nearest8x.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-east-pilot.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-53b47a65-f600-4351-bd7a-cb8c1a2d8e5c.png",
+      "sha256": "a89980e464f4d3f62081d47def817adfa4e7f968e5f9731eb5aede4df85cd65d",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-east-foundation",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "east",
+      "group": "foundation",
+      "actions": [
+        "hit",
+        "death",
+        "meditate",
+        "gather"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-east-foundation.txt",
+      "promptSha256": "efc2edd3eb7a2cafd79f97ac5f3ba5888df6fbcdb956c4b56ec11aa46024e814",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-east-nearest8x.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-east-foundation.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-72838886-cdf0-411a-9d73-f93f940e96cd.png",
+      "sha256": "e09f127cc4b053b8324f4e1896f2b371e7e89591f64b2bb86fafd42594081809",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-southeast-foundation",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "southeast",
+      "group": "foundation",
+      "actions": [
+        "hit",
+        "death",
+        "meditate",
+        "gather"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-southeast-foundation.txt",
+      "promptSha256": "7d0656f0413684ff6a300f4c6ed76b3bd100e8c3b991b1aea01daeab0013fcfc",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-southeast-nearest8x.png",
+          "sha256": "6442045da20ca34e963a1520947609f953d50770468832d5209fcd60cf1e1834",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-southeast-foundation.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-b64d5b00-ec76-4387-9228-61083f519bc4.png",
+      "sha256": "7282cfe71e68afb873d6f0429a11dfc998583dfd649759ae2d56f24ca5775aea",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-south-pilot",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "south",
+      "group": "pilot",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-south-pilot.txt",
+      "promptSha256": "b9f08b156ae6251b40769c908e007c41f134d464390c19a886a9a40e8f6716a1",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-south-nearest8x.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-south-pilot.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-41e13a11-3560-40f9-97b8-e0adfc4f69bf.png",
+      "sha256": "551e8aed5a9c3c3a4061e37dce0642edba312266db25c975d07ed11c181825f5",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-south-foundation",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "south",
+      "group": "foundation",
+      "actions": [
+        "hit",
+        "death",
+        "meditate",
+        "gather"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-south-foundation.txt",
+      "promptSha256": "f1b4c23e00f846889a023de267364ad9b676cd09e43ad2b9e8fc46b32a3c2400",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-south-nearest8x.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-south-foundation.png",
+      "status": "generated",
+      "selected": false,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-6c14b4d2-2ea9-4095-91b6-ae7c6856f844.png",
+      "sha256": "0d14e9d7dc7e203608339a4de2e40587adddd3f0d8c8c4e3f294ac80bc2ce168",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true,
+      "sourceIssue": "Only four actual rows: meditate omitted/merged with gather",
+      "supersededBy": [
+        "sword-b-south-hit-death-r2",
+        "sword-b-south-meditate-gather-r2"
+      ]
+    },
+    {
+      "id": "sword-b-southwest-pilot",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "southwest",
+      "group": "pilot",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-southwest-pilot.txt",
+      "promptSha256": "d33687b630d3fc0e23ce484206f4b6f761ee00d9110c972a306175897936abb5",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-southwest-nearest8x.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-southwest-pilot.png",
+      "status": "generated",
+      "selected": false,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-3f0e84a9-e290-4508-a8db-025b81b7859f.png",
+      "sha256": "b21e0bdc2a1e9143ff22c9b4975a397697fade0f629d45088ec512e9405bb785",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true,
+      "supersededBy": "sword-b-southwest-pilot-r2",
+      "sourceIssue": "Neutral and cast rows face front-right unlike left-facing run"
+    },
+    {
+      "id": "sword-b-southwest-foundation",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "southwest",
+      "group": "foundation",
+      "actions": [
+        "hit",
+        "death",
+        "meditate",
+        "gather"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-southwest-foundation.txt",
+      "promptSha256": "d7f38c2775b1893b3d95c018610ce37ec5ffebae1126a596a95a8f62b022b9ae",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-southwest-nearest8x.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-southwest-foundation.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-eb71dae3-fb44-4d67-b704-83887b422c82.png",
+      "sha256": "f826f1434516b06556d2d4aff03213ddaebe38567ec489942750f48dcfb5cc6e",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-west-pilot",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "west",
+      "group": "pilot",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-west-pilot.txt",
+      "promptSha256": "d99e12bee978589cb6bd78301bfa6aa3f48ec1bb0792b8abbfc792fc55e4bcce",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-west-nearest8x.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-west-pilot.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-4e3cf253-0297-4654-b803-2e694b7014e7.png",
+      "sha256": "7198cf00a15280ad96deaa02050eec7502561c259613177a6427444a98f8816a",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-west-foundation",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "west",
+      "group": "foundation",
+      "actions": [
+        "hit",
+        "death",
+        "meditate",
+        "gather"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-west-foundation.txt",
+      "promptSha256": "f02ddaff1a82c7051abb27d25b64e4e848eb795460a386c4098108912a84892e",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-west-nearest8x.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-west-foundation.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-39b75441-0dff-462c-a242-887da26160c6.png",
+      "sha256": "9a02d720acd2054946abb1672e2531883c38e5c94b51a46df06e893dfe478300",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-northwest-pilot",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "northwest",
+      "group": "pilot",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-northwest-pilot.txt",
+      "promptSha256": "2948b73519484b967449c8b9167fd03fd76956eee27bbd20f76a58f706f289d6",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-northwest-nearest8x.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-northwest-pilot.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-b0e9a108-d08a-42a5-976d-392cef9c02da.png",
+      "sha256": "3f975b467e010e219a5d1c17a58a8b3ca6a7c5aff4122cd616edcdf583957cf2",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-northwest-foundation",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "northwest",
+      "group": "foundation",
+      "actions": [
+        "hit",
+        "death",
+        "meditate",
+        "gather"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-northwest-foundation.txt",
+      "promptSha256": "b1ef4b2fa435045b3adab8b9e3f49dd062b8a001b2e8925d7f1e088c3b5b4986",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-northwest-nearest8x.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-northwest-foundation.png",
+      "status": "generated",
+      "selected": true,
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-2d97f7c4-ca5c-477d-a6a8-a09f60e3dbd8.png",
+      "sha256": "a873c1c2c8bc3ff124a4d035e225fe142fba0ddd5e0ca92e972673fa566f7e5b",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-southwest-pilot-r2",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "southwest",
+      "group": "pilot",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-southwest-pilot-r2.txt",
+      "promptSha256": "49c7192c6a53cc433179c89a588b5d3eb9495fddd69b5ddc61c5ed9e9718b79c",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-southwest-nearest8x.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6 columns ×5 rows: neutral6 +4actions6",
+      "raw": "actors/b/sword/sources/sword-b-southwest-pilot-r2.png",
+      "status": "generated",
+      "selected": true,
+      "replaces": "sword-b-southwest-pilot",
+      "replacementReason": "Neutral and cast rows face front-right unlike left-facing run",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-51f96c7c-112b-4617-b290-ceb711acbaf1.png",
+      "sha256": "0d5780eb610f9c0dace2ae9a46507bf96d7b5c66b2f791f80e3650bfdcc6f1de",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-south-hit-death-r2",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "south",
+      "group": "foundation",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-south-hit-death-r2.txt",
+      "promptSha256": "6255cae87c29d34f7fa91b544a2299c3360d89f81f453e7c3ffb7fb79144c524",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-south-nearest8x.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "3columns×6rows: neutral6 +2actions6",
+      "raw": "actors/b/sword/sources/sword-b-south-hit-death-r2.png",
+      "status": "generated",
+      "selected": true,
+      "replaces": "sword-b-south-foundation",
+      "replacementReason": "Smaller group to enforce complete rows",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-fa41eca8-3cf9-4aa2-b306-a9f5dc7aa90b.png",
+      "sha256": "cbdfc4219c2b094563d69998c25524406cf34b1dc676b930419ebc9dd9fd7c03",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "sword-b-south-meditate-gather-r2",
+      "identityId": "b",
+      "familyId": "sword",
+      "direction": "south",
+      "group": "foundation",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "prompt": "actors/b/sword/prompts/sword-b-south-meditate-gather-r2.txt",
+      "promptSha256": "a4c5fbf88473f0d97c6e0a6f1dae34595953fae22b17e75e493f23a5ce731759",
+      "inputs": [
+        {
+          "file": "actors/b/sword/inputs/tich-bach-approved-master.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575",
+          "role": "approved own identity PRIMARY"
+        },
+        {
+          "file": "actors/b/sword/inputs/wang-south-nearest8x.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "role": "Wang same-view style/anatomy only"
+        }
+      ],
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "3columns×6rows: neutral6 +2actions6",
+      "raw": "actors/b/sword/sources/sword-b-south-meditate-gather-r2.png",
+      "status": "generated",
+      "selected": true,
+      "replaces": "sword-b-south-foundation",
+      "replacementReason": "Smaller group to enforce complete rows",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13658-4f85-76b0-b6c7-1ac3a4b9b9ac\\exec-fd760a9c-6ce2-482c-89b6-fc4111adeb96.png",
+      "sha256": "6aa63c2f3844c81897c2c11f8194a7f243a357d05e9dd0ec29c45780f409cee0",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true,
+      "actualRows": 5,
+      "actualColumns": 3,
+      "actualSourcePoseMapping": {
+        "neutral": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "meditate": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "gather": [
+          12,
+          10,
+          11,
+          13,
+          14
+        ]
+      },
+      "actualSourcePoseCount": 15,
+      "sourceLayoutDelta": "Requested18; actual15. Four true seated keys form meditation loop. Five gather keys mapped ready,bend,reach,retrieve,recover using actual cells, no duplicate or altered body."
+    }
+  ]
+}

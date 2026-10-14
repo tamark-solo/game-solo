@@ -1,0 +1,19 @@
+{
+  "schema": "banner-core-assist-visual-assessment-1",
+  "source": "sources/banner-b-northwest-core-r1.png",
+  "sha256": "2b6d421ac8806e72d79f60657706036a81b593538ff6fe2247e64cbbd71ae81d",
+  "requestedView": "northwest rear-left quarter",
+  "observedView": "Figures face screen-right with rear-right view through calibration, idle, run, ST and AOE. Requested rear-left camera was not achieved.",
+  "status": "history-wrong-view-awaiting-actor-corrective-source",
+  "actualVisuallyCountedFigures": 30,
+  "selected": false,
+  "mirrorPermitted": false,
+  "canonicalCoverageClaimed": 0,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "limitations": [
+    "Body/source preserved unchanged, no sourceRect masking to hide view errors.",
+    "Layout diagnostics and nonempty figures are not choreography or camera approval.",
+    "Actor B must prepare corrective exact prompt/input snapshots and perform final source/root/socket review."
+  ]
+}

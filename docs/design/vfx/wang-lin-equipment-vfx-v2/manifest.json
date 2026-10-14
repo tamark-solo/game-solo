@@ -1,0 +1,73 @@
+{
+  "schema": "wang-lin-equipment-vfx-2",
+  "date": "2026-10-14",
+  "status": "candidate-expanded-production-art",
+  "kits": [
+    {
+      "familyId": "sword",
+      "file": "../wang-lin-sword-pilot-v1/manifest.json",
+      "sha256": "c7574caa138d54329d8a96cdb70796885b3a6eb2e16e33a72b6469d65748b1c4",
+      "coverage": {
+        "sequences": 10,
+        "frames": 60,
+        "directionalCreatureViews": 0
+      },
+      "reusedApprovedPilot": true,
+      "newArtwork": false,
+      "approvalBasis": "Owner-approved pilot read-only; no redraw in V2."
+    },
+    {
+      "familyId": "banner",
+      "file": "banner/manifest.json",
+      "sha256": "f8b21c44bbd7372e6a499797e01e4dc68610888d42965ae5b2ae0e33a264780a",
+      "coverage": {
+        "sequences": 10,
+        "frames": 60,
+        "decodedCanonicalBytes": 9822816,
+        "decodedCanonicalMiB": 9.367767333984375,
+        "directionalSpiritViews": 0
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "familyId": "chariot",
+      "file": "chariot/manifest.json",
+      "sha256": "23e4a9f18fc2475500fd074873644e7aac1cc2abaad590de3e2264643be44ee7",
+      "coverage": {
+        "sequences": 10,
+        "frames": 60,
+        "decodedCanonicalBytes": 11349312,
+        "decodedCanonicalMiB": 10.82354736328125,
+        "directionalSpiritViews": 0
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "familyId": "bead",
+      "file": "bead/manifest.json",
+      "sha256": "fc2a2c45032fa85465f6fba1b6df8bd18c456acc3f99751556e2ccb52f4ae7e6",
+      "coverage": {
+        "sequences": 10,
+        "frames": 60,
+        "decodedCanonicalBytes": 12069984,
+        "decodedCanonicalMiB": 11.510833740234375,
+        "directionalSpiritViews": 0
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    }
+  ],
+  "coverage": {
+    "families": 4,
+    "newSequences": 30,
+    "newFrames": 180,
+    "approvedSwordSequencesReused": 10,
+    "approvedSwordFramesReused": 60,
+    "totalSequences": 40,
+    "totalFrames": 240
+  },
+  "artApproved": false,
+  "runtimeIntegrated": false
+}

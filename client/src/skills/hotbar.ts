@@ -6,18 +6,18 @@ import { HotbarEffects } from './hotbar-effects';
 // Presentation metadata is separate from gameplay definitions and transport.
 const ART: Record<SkillId, { kind: string; description: string; icon: string }> = {
   sword: {
-    kind: 'Công kích · theo hướng ngắm',
-    description: 'Phóng kiếm khí theo hướng đang ngắm. Đổi hướng di chuyển trước khi phát thuật sẽ ngắt thi triển.',
+    kind: 'Kiếm Linh · Chủ Công (Hướng ngắm)',
+    description: 'Kiếm Ý Nhất Tuyến: Phóng kiếm khí xuyên thấu theo hướng đang ngắm (30 sát thương). Tiến hóa qua Thanh Phong Linh Kiếm → Hung Linh Kiếm Hứa Lập Quốc → Tử Kim Ma Kiếm.',
     icon: '<path class="icon-aura" d="M16 49C8 35 19 13 47 10M14 48C31 52 49 33 51 17"/><path class="icon-blade" d="m42 8-5 21-17 16-5-5 16-17Z"/><path class="icon-detail" d="m17 35 13 13M16 43l-6 7M32 24l6 4"/><path class="icon-spark" d="m48 25 2-5 2 5 5 2-5 2-2 5-2-5-5-2Z"/>',
   },
   thunder: {
-    kind: 'Công kích · mục tiêu đã chọn',
-    description: 'Gọi lôi ấn xuống mục tiêu đã chọn trong tầm. Cần chọn mục tiêu trước khi thi triển.',
+    kind: 'Hồn Phiên · Khống Trường (Mục tiêu chọn)',
+    description: 'Phệ Hồn Lôi: Triệu hồi Chủ Hồn trong Hồn Phiên giáng lôi hồn công kích mục tiêu đã chọn trong tầm (45 sát thương). Tiến hóa qua Tiểu Hồn Phiên → Tam Môn → Thập Ức Tôn Hồn Phiên.',
     icon: '<circle class="icon-aura" cx="32" cy="34" r="22"/><path class="icon-ring" d="M13 42h38M17 47h30M23 51h18"/><path class="icon-bolt" d="M36 7 20 32h13l-7 24 19-31H32Z"/><path class="icon-detail" d="m11 19 4 3-2 5M48 13l-1 7 6 2"/>',
   },
   wind: {
-    kind: 'Thân pháp · theo hướng ngắm',
-    description: 'Lướt theo hướng đang ngắm. Chọn khoảng trống phía trước; không thể lướt xuyên vùng chặn.',
+    kind: 'Xạ Thần Xa · Phá Giáp & Cơ Động (Hướng ngắm)',
+    description: 'Chiến Thú Xung Kích: Giải ấn Xạ Thần Xa lướt nhanh thoát khỏi vùng sát thương đỏ của Boss và phá vỡ trận địa.',
     icon: '<path class="icon-aura" d="M10 42C4 22 28 8 48 15M16 51c18 10 42-8 40-27"/><path class="icon-wind" d="M10 29h27c15 0 13-16 5-16-5 0-7 4-5 7M7 36h39c12 0 12 17 3 17-5 0-7-4-5-7M17 22h10M16 44h16"/><path class="icon-feather" d="M19 51c2-12 10-26 27-31-4 17-15 27-27 31Z"/><path class="icon-detail" d="m19 51 23-27"/>',
   },
 };
@@ -81,10 +81,14 @@ export class SkillHotbar {
             </button>
             <b class="hotbar-skill-name">${SKILL_DEFINITIONS[id].name}</b>
             <span class="hotbar-slot-status">Sẵn sàng</span>
-          </div>`).join('')}${Array.from({ length: 7 }, (_, index) => `
-          <div class="hotbar-slot-group hotbar-reserved" aria-hidden="true"><span class="hotbar-slot hotbar-empty"><svg viewBox="0 0 24 24"><path d="M12 4c-4 4-4 8 0 13 4-5 4-9 0-13ZM4 10c1 6 4 9 8 9-2-6-4-8-8-9Zm16 0c-4 1-6 3-8 9 4 0 7-3 8-9Z"/></svg><kbd>${(index + 4) % 10}</kbd></span></div>`).join('')}
+          </div>`).join('')}${Array.from({ length: 7 }, (_, index) => {
+            if (index === 0) return `<div class="hotbar-slot-group hotbar-reserved" title="Thiên Nghịch Châu · Nội Giới Hộ Đạo (Phím G trong Bí Cảnh)"><span class="hotbar-slot hotbar-empty" style="position:relative;overflow:hidden"><img src="/assets/g2-items/bead.png" width="38" height="38" alt="" style="image-rendering:pixelated;opacity:.92"><kbd>G</kbd></span><b class="hotbar-skill-name" style="font-size:10px;opacity:.85">Nghịch Châu</b></div>`;
+            if (index === 1) return `<div class="hotbar-slot-group hotbar-reserved" title="Mệnh Kiếp Chí & Lò Đan Lý Mộ Uyển (Phím H)"><span class="hotbar-slot hotbar-empty" style="position:relative;overflow:hidden"><img src="/assets/character-ui-v2/lotus-pill.webp" width="34" height="34" alt="" style="opacity:.92"><kbd>H</kbd></span><b class="hotbar-skill-name" style="font-size:10px;opacity:.85">Nội Giới</b></div>`;
+            if (index === 2) return `<div class="hotbar-slot-group hotbar-reserved" title="Hành Trang & Pháp Bảo (Phím I)"><span class="hotbar-slot hotbar-empty" style="position:relative;overflow:hidden"><img src="/assets/character-ui-v2/jade-charm.webp" width="34" height="34" alt="" style="opacity:.92"><kbd>I</kbd></span><b class="hotbar-skill-name" style="font-size:10px;opacity:.85">Túi Đồ</b></div>`;
+            return `<div class="hotbar-slot-group hotbar-reserved" aria-hidden="true"><span class="hotbar-slot hotbar-empty"><svg viewBox="0 0 24 24"><path d="M12 4c-4 4-4 8 0 13 4-5 4-9 0-13ZM4 10c1 6 4 9 8 9-2-6-4-8-8-9Zm16 0c-4 1-6 3-8 9 4 0 7-3 8-9Z"/></svg><kbd>${(index + 4) % 10}</kbd></span></div>`;
+          }).join('')}
         </div>
-        <div class="hotbar-footer"><span>THUẬT NHẬP MÔN</span><span class="hotbar-aim">↓ Hướng thi triển</span></div>
+        <div class="hotbar-footer"><span>4 PHÁP BẢO · F Đánh gần · G Hộ Đạo · H Nội Giới</span><span class="hotbar-aim">↓ Hướng thi triển</span></div>
       </div>
       <div id="${tooltipId}" class="hotbar-tooltip" role="tooltip" hidden></div>`;
     mount.append(this.root);

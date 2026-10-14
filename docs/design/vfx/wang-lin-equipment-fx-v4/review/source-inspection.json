@@ -1,0 +1,2228 @@
+{
+  "date": "2026-10-13",
+  "inspections": [
+    {
+      "id": "sword-escort",
+      "source": "sources/sword-escort.png",
+      "sourceSha256": "0ef45c41ce239028662e0bb9960d58b6237469d5d22d3b3171e0f035571ece9f",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            503,
+            521
+          ],
+          "alphaBounds": [
+            99,
+            83,
+            413,
+            480
+          ],
+          "coreBounds": [
+            102,
+            85,
+            409,
+            478
+          ],
+          "alpha4Pixels": 57013,
+          "alpha64Pixels": 49535
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            503,
+            0,
+            1029,
+            521
+          ],
+          "alphaBounds": [
+            90,
+            81,
+            438,
+            480
+          ],
+          "coreBounds": [
+            92,
+            82,
+            432,
+            478
+          ],
+          "alpha4Pixels": 66388,
+          "alpha64Pixels": 57858
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1029,
+            0,
+            1536,
+            521
+          ],
+          "alphaBounds": [
+            89,
+            73,
+            442,
+            479
+          ],
+          "coreBounds": [
+            91,
+            73,
+            441,
+            478
+          ],
+          "alpha4Pixels": 77703,
+          "alpha64Pixels": 67236
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            521,
+            547,
+            1024
+          ],
+          "alphaBounds": [
+            62,
+            42,
+            501,
+            441
+          ],
+          "coreBounds": [
+            63,
+            44,
+            499,
+            440
+          ],
+          "alpha4Pixels": 97631,
+          "alpha64Pixels": 85214
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            547,
+            521,
+            1048,
+            1024
+          ],
+          "alphaBounds": [
+            47,
+            56,
+            423,
+            441
+          ],
+          "coreBounds": [
+            49,
+            58,
+            420,
+            440
+          ],
+          "alpha4Pixels": 75853,
+          "alpha64Pixels": 64553
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1048,
+            521,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            79,
+            45,
+            398,
+            441
+          ],
+          "coreBounds": [
+            82,
+            48,
+            396,
+            440
+          ],
+          "alpha4Pixels": 60387,
+          "alpha64Pixels": 51686
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "softAlpha": "Alpha4+ smoke, fragments and detached ribbon/chain parts kept; only documented alpha1..3 fringe removed.",
+        "development": [
+          "small coiled hắc khí with pointed ivory eyes",
+          "coil leans and blade tilts",
+          "upright narrow blade and stronger curl",
+          "broad diagonal ivory slash peak",
+          "blade returns upright with recoiling curl",
+          "compact curl returns near first stage"
+        ],
+        "emitter": "One reviewed source tail-base origin y480 replaces requested y416 uniformly; no frame fitting.",
+        "limitations": [
+          "Upper and lower logical rows have a modest tail-height drift retained from source."
+        ]
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 118680,
+        "clearedFullyTransparentRgb": 1130755,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "sword-charge",
+      "source": "sources/sword-charge.png",
+      "sourceSha256": "8f652704c0629899019834ac34a7acac4afaea4bc94ffc6d4c243bb7621d4b9a",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            512,
+            497
+          ],
+          "alphaBounds": [
+            196,
+            195,
+            327,
+            478
+          ],
+          "coreBounds": [
+            199,
+            198,
+            324,
+            473
+          ],
+          "alpha4Pixels": 11000,
+          "alpha64Pixels": 7114
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            512,
+            0,
+            1014,
+            497
+          ],
+          "alphaBounds": [
+            147,
+            97,
+            344,
+            476
+          ],
+          "coreBounds": [
+            149,
+            98,
+            342,
+            473
+          ],
+          "alpha4Pixels": 29435,
+          "alpha64Pixels": 18514
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1014,
+            0,
+            1536,
+            497
+          ],
+          "alphaBounds": [
+            135,
+            40,
+            404,
+            477
+          ],
+          "coreBounds": [
+            137,
+            40,
+            400,
+            473
+          ],
+          "alpha4Pixels": 43322,
+          "alpha64Pixels": 30679
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            497,
+            512,
+            1024
+          ],
+          "alphaBounds": [
+            71,
+            70,
+            454,
+            459
+          ],
+          "coreBounds": [
+            74,
+            71,
+            452,
+            456
+          ],
+          "alpha4Pixels": 51591,
+          "alpha64Pixels": 35478
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            512,
+            497,
+            1004,
+            1024
+          ],
+          "alphaBounds": [
+            58,
+            19,
+            446,
+            459
+          ],
+          "coreBounds": [
+            60,
+            20,
+            444,
+            456
+          ],
+          "alpha4Pixels": 68206,
+          "alpha64Pixels": 49182
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1004,
+            497,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            47,
+            23,
+            496,
+            459
+          ],
+          "coreBounds": [
+            50,
+            25,
+            493,
+            456
+          ],
+          "alpha4Pixels": 81297,
+          "alpha64Pixels": 56634
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "softAlpha": "Alpha4+ cores, smoke, orbital shards and ribbons retained; only alpha1..3 fringe removed.",
+        "development": [
+          "weak dark curl",
+          "faint central blade begins",
+          "central blade ignites and four orbiting points",
+          "thickening central ivory blade with four orbital swords",
+          "bright blade and wider dark orbit",
+          "narrow concentrated ivory blade with tilted satellites"
+        ],
+        "emitter": "Requested source origin y416 retained as shared condensation/hilt emitter; alpha4 tails below it remain intact.",
+        "limitations": [
+          "Artwork develops a vertical blade with orbital sword cues; timing is a review fixture."
+        ]
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 178925,
+        "clearedFullyTransparentRgb": 1165671,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "sword-release",
+      "source": "sources/sword-release.png",
+      "sourceSha256": "b754cd1b618b8603702d9f99c6c56d71d227a4b1f6f6fc9dbf55b19fd5554801",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            462,
+            529
+          ],
+          "alphaBounds": [
+            99,
+            147,
+            357,
+            397
+          ],
+          "coreBounds": [
+            102,
+            152,
+            356,
+            394
+          ],
+          "alpha4Pixels": 19713,
+          "alpha64Pixels": 15000
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            462,
+            0,
+            1006,
+            529
+          ],
+          "alphaBounds": [
+            95,
+            139,
+            512,
+            430
+          ],
+          "coreBounds": [
+            96,
+            143,
+            511,
+            427
+          ],
+          "alpha4Pixels": 45657,
+          "alpha64Pixels": 37380
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1006,
+            0,
+            1536,
+            529
+          ],
+          "alphaBounds": [
+            33,
+            119,
+            500,
+            450
+          ],
+          "coreBounds": [
+            35,
+            120,
+            500,
+            449
+          ],
+          "alpha4Pixels": 82623,
+          "alpha64Pixels": 67083
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            529,
+            528,
+            1024
+          ],
+          "alphaBounds": [
+            46,
+            104,
+            506,
+            393
+          ],
+          "coreBounds": [
+            48,
+            106,
+            503,
+            391
+          ],
+          "alpha4Pixels": 50624,
+          "alpha64Pixels": 39112
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            528,
+            529,
+            1041,
+            1024
+          ],
+          "alphaBounds": [
+            23,
+            123,
+            480,
+            365
+          ],
+          "coreBounds": [
+            24,
+            125,
+            479,
+            363
+          ],
+          "alpha4Pixels": 35283,
+          "alpha64Pixels": 25401
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1041,
+            529,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            34,
+            79,
+            462,
+            349
+          ],
+          "coreBounds": [
+            36,
+            81,
+            460,
+            348
+          ],
+          "alpha4Pixels": 24385,
+          "alpha64Pixels": 16986
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "softAlpha": "Alpha4+ cores, smoke and disconnected pieces retained; only alpha1..3 fringe removed.",
+        "limitations": [
+          "Late fade has no remaining star, so physical emitter coordinates are estimated; original RGBA retained."
+        ],
+        "development": [
+          "small burst star and dark twist",
+          "long ivory edge grows from burst star",
+          "largest blade arc and dark crescent",
+          "blade follows through",
+          "edge breaks into separated fragments",
+          "sparse ivory shard and dark smoke"
+        ],
+        "emitter": "Bright physical stars in frames1–4 registered manually to native[210,248]; frames5–6 use explicitly estimated fade-continuation emitters; one common scale, no bbox fit."
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 141433,
+        "clearedFullyTransparentRgb": 1232229,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "sword-residual",
+      "source": "sources/sword-residual.png",
+      "sourceSha256": "730996393465061d2bf44fc9b54594a98a2925224b144777adcd69acd9ee0524",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            531,
+            550
+          ],
+          "alphaBounds": [
+            41,
+            70,
+            492,
+            496
+          ],
+          "coreBounds": [
+            44,
+            72,
+            490,
+            494
+          ],
+          "alpha4Pixels": 94631,
+          "alpha64Pixels": 73063
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            531,
+            0,
+            1044,
+            550
+          ],
+          "alphaBounds": [
+            39,
+            68,
+            483,
+            478
+          ],
+          "coreBounds": [
+            42,
+            70,
+            481,
+            477
+          ],
+          "alpha4Pixels": 70341,
+          "alpha64Pixels": 52971
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1044,
+            0,
+            1536,
+            550
+          ],
+          "alphaBounds": [
+            30,
+            78,
+            438,
+            461
+          ],
+          "coreBounds": [
+            32,
+            80,
+            436,
+            459
+          ],
+          "alpha4Pixels": 45162,
+          "alpha64Pixels": 29917
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            550,
+            557,
+            1024
+          ],
+          "alphaBounds": [
+            91,
+            76,
+            488,
+            396
+          ],
+          "coreBounds": [
+            93,
+            78,
+            485,
+            394
+          ],
+          "alpha4Pixels": 35228,
+          "alpha64Pixels": 22555
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            557,
+            550,
+            1061,
+            1024
+          ],
+          "alphaBounds": [
+            69,
+            55,
+            402,
+            361
+          ],
+          "coreBounds": [
+            73,
+            57,
+            400,
+            360
+          ],
+          "alpha4Pixels": 18383,
+          "alpha64Pixels": 11079
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1061,
+            550,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            103,
+            98,
+            353,
+            344
+          ],
+          "coreBounds": [
+            104,
+            100,
+            351,
+            343
+          ],
+          "alpha4Pixels": 8252,
+          "alpha64Pixels": 4567
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "softAlpha": "Alpha4+ cores, smoke and disconnected pieces retained; only alpha1..3 fringe removed.",
+        "limitations": [
+          "Review fixture timing and no owner motion approval."
+        ],
+        "development": [
+          "broken ivory crescent and dense dark coils",
+          "crescent separates into fragments",
+          "two light shards and dark curls",
+          "small ivory tip and smoke",
+          "faint sliver and loose dark wisps",
+          "almost vanished smoke curl"
+        ],
+        "emitter": "Fixed cell-center residual origin; detached shards all retained, no largest-component filtering."
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 186614,
+        "clearedFullyTransparentRgb": 1248492,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "banner-escort",
+      "source": "sources/banner-escort.png",
+      "sourceSha256": "d40279a0ab58bc2878fd372fd0b3e258854b4c5e2a7385a216394a6bef28a344",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            480,
+            520
+          ],
+          "alphaBounds": [
+            120,
+            192,
+            399,
+            496
+          ],
+          "coreBounds": [
+            122,
+            192,
+            398,
+            495
+          ],
+          "alpha4Pixels": 43833,
+          "alpha64Pixels": 37160
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            480,
+            0,
+            977,
+            520
+          ],
+          "alphaBounds": [
+            81,
+            67,
+            430,
+            495
+          ],
+          "coreBounds": [
+            82,
+            70,
+            428,
+            494
+          ],
+          "alpha4Pixels": 78472,
+          "alpha64Pixels": 67106
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            977,
+            0,
+            1536,
+            520
+          ],
+          "alphaBounds": [
+            68,
+            95,
+            518,
+            495
+          ],
+          "coreBounds": [
+            70,
+            95,
+            515,
+            495
+          ],
+          "alpha4Pixels": 90742,
+          "alpha64Pixels": 76891
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            520,
+            542,
+            1024
+          ],
+          "alphaBounds": [
+            25,
+            24,
+            515,
+            450
+          ],
+          "coreBounds": [
+            26,
+            25,
+            513,
+            448
+          ],
+          "alpha4Pixels": 122778,
+          "alpha64Pixels": 108220
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            542,
+            520,
+            1061,
+            1024
+          ],
+          "alphaBounds": [
+            28,
+            66,
+            414,
+            454
+          ],
+          "coreBounds": [
+            29,
+            67,
+            412,
+            452
+          ],
+          "alpha4Pixels": 74502,
+          "alpha64Pixels": 63060
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1061,
+            520,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            107,
+            153,
+            385,
+            442
+          ],
+          "coreBounds": [
+            107,
+            154,
+            384,
+            440
+          ],
+          "alpha4Pixels": 40787,
+          "alpha64Pixels": 34511
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "softAlpha": "Alpha4+ smoke, fragments and detached ribbon/chain parts kept; only documented alpha1..3 fringe removed.",
+        "development": [
+          "compact three souls and short red ribbon",
+          "four souls rise and uncurl",
+          "four souls sweep wider",
+          "largest four-soul procession",
+          "three souls curl inward",
+          "compact three-soul return"
+        ],
+        "emitter": "One reviewed source ribbon-tail base y480 replaces requested y416 uniformly; no frame fitting.",
+        "limitations": [
+          "Different soul counts and lower-row tail-height drift remain intentional source development."
+        ]
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 112535,
+        "clearedFullyTransparentRgb": 1071804,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "banner-charge",
+      "source": "sources/banner-charge.png",
+      "sourceSha256": "b06079ac407429a661e925aac15faa4ffa3469f6aed7a0813b30ed0b45ac0e49",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            515,
+            506
+          ],
+          "alphaBounds": [
+            69,
+            138,
+            460,
+            490
+          ],
+          "coreBounds": [
+            73,
+            141,
+            458,
+            475
+          ],
+          "alpha4Pixels": 40034,
+          "alpha64Pixels": 22760
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            515,
+            0,
+            1016,
+            506
+          ],
+          "alphaBounds": [
+            56,
+            113,
+            448,
+            498
+          ],
+          "coreBounds": [
+            59,
+            114,
+            446,
+            496
+          ],
+          "alpha4Pixels": 56119,
+          "alpha64Pixels": 31877
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1016,
+            0,
+            1536,
+            506
+          ],
+          "alphaBounds": [
+            53,
+            67,
+            471,
+            496
+          ],
+          "coreBounds": [
+            55,
+            70,
+            470,
+            496
+          ],
+          "alpha4Pixels": 87101,
+          "alpha64Pixels": 53884
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            506,
+            533,
+            1024
+          ],
+          "alphaBounds": [
+            95,
+            31,
+            443,
+            467
+          ],
+          "coreBounds": [
+            97,
+            38,
+            440,
+            464
+          ],
+          "alpha4Pixels": 68595,
+          "alpha64Pixels": 45653
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            533,
+            506,
+            1016,
+            1024
+          ],
+          "alphaBounds": [
+            91,
+            24,
+            376,
+            468
+          ],
+          "coreBounds": [
+            92,
+            25,
+            373,
+            466
+          ],
+          "alpha4Pixels": 59351,
+          "alpha64Pixels": 43114
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1016,
+            506,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            108,
+            9,
+            366,
+            469
+          ],
+          "coreBounds": [
+            110,
+            10,
+            365,
+            468
+          ],
+          "alpha4Pixels": 58972,
+          "alpha64Pixels": 44647
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "softAlpha": "Alpha4+ cores, smoke, orbital shards and ribbons retained; only alpha1..3 fringe removed.",
+        "development": [
+          "three separated soul heads",
+          "three heads rise around common convergence",
+          "four heads branch from common lower point",
+          "four heads begin gathering inward",
+          "three heads converge into ivory center",
+          "two small heads enclose narrow ivory seal"
+        ],
+        "emitter": "Requested source origin y416 retained for fixed convergence; no per-frame relocation as source contracts.",
+        "limitations": [
+          "Head count and narrowing are source development, not extra gameplay entities."
+        ]
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 196943,
+        "clearedFullyTransparentRgb": 1161694,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "banner-release",
+      "source": "sources/banner-release.png",
+      "sourceSha256": "9bff3899cb1cfb9da78e7ca4078ee37ff50b5d2bc0372af1e08907f0797540e7",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            468,
+            536
+          ],
+          "alphaBounds": [
+            83,
+            193,
+            414,
+            455
+          ],
+          "coreBounds": [
+            83,
+            193,
+            412,
+            453
+          ],
+          "alpha4Pixels": 40093,
+          "alpha64Pixels": 33438
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            468,
+            0,
+            985,
+            536
+          ],
+          "alphaBounds": [
+            55,
+            135,
+            496,
+            464
+          ],
+          "coreBounds": [
+            56,
+            137,
+            494,
+            462
+          ],
+          "alpha4Pixels": 76018,
+          "alpha64Pixels": 64555
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            985,
+            0,
+            1536,
+            536
+          ],
+          "alphaBounds": [
+            21,
+            99,
+            531,
+            480
+          ],
+          "coreBounds": [
+            23,
+            102,
+            528,
+            480
+          ],
+          "alpha4Pixels": 115252,
+          "alpha64Pixels": 103959
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            536,
+            537,
+            1024
+          ],
+          "alphaBounds": [
+            18,
+            56,
+            513,
+            411
+          ],
+          "coreBounds": [
+            19,
+            57,
+            512,
+            409
+          ],
+          "alpha4Pixels": 93788,
+          "alpha64Pixels": 77842
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            537,
+            536,
+            1039,
+            1024
+          ],
+          "alphaBounds": [
+            25,
+            73,
+            483,
+            388
+          ],
+          "coreBounds": [
+            27,
+            73,
+            479,
+            386
+          ],
+          "alpha4Pixels": 62514,
+          "alpha64Pixels": 50648
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1039,
+            536,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            20,
+            129,
+            451,
+            343
+          ],
+          "coreBounds": [
+            22,
+            131,
+            450,
+            342
+          ],
+          "alpha4Pixels": 25515,
+          "alpha64Pixels": 18966
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "softAlpha": "Alpha4+ cores, smoke and disconnected pieces retained; only alpha1..3 fringe removed.",
+        "limitations": [
+          "Review fixture timing and no owner motion approval."
+        ],
+        "development": [
+          "compact three rushing souls",
+          "three souls stretch forward",
+          "largest three-soul roaring torrent",
+          "wide trailing souls and red ribbons",
+          "souls shrink and detach",
+          "one faint soul and sparse ribbons"
+        ],
+        "emitter": "Fixed logical cell-center manifestation origin; source rushing artwork grows locally, no gameplay projectile movement claim."
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 124605,
+        "clearedFullyTransparentRgb": 1110805,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "banner-residual",
+      "source": "sources/banner-residual.png",
+      "sourceSha256": "3696656e19fd67142f344186c5e6d9a7099e32812c3418deb9f4c2d5ebb0e470",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            531,
+            544
+          ],
+          "alphaBounds": [
+            54,
+            57,
+            486,
+            480
+          ],
+          "coreBounds": [
+            55,
+            60,
+            484,
+            480
+          ],
+          "alpha4Pixels": 95699,
+          "alpha64Pixels": 77975
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            531,
+            0,
+            1029,
+            544
+          ],
+          "alphaBounds": [
+            45,
+            80,
+            440,
+            474
+          ],
+          "coreBounds": [
+            47,
+            81,
+            437,
+            471
+          ],
+          "alpha4Pixels": 68393,
+          "alpha64Pixels": 50094
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1029,
+            0,
+            1536,
+            544
+          ],
+          "alphaBounds": [
+            58,
+            98,
+            453,
+            472
+          ],
+          "coreBounds": [
+            60,
+            99,
+            449,
+            471
+          ],
+          "alpha4Pixels": 44753,
+          "alpha64Pixels": 28104
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            544,
+            507,
+            1024
+          ],
+          "alphaBounds": [
+            64,
+            66,
+            431,
+            423
+          ],
+          "coreBounds": [
+            64,
+            67,
+            430,
+            421
+          ],
+          "alpha4Pixels": 36402,
+          "alpha64Pixels": 22548
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            507,
+            544,
+            1029,
+            1024
+          ],
+          "alphaBounds": [
+            76,
+            65,
+            446,
+            416
+          ],
+          "coreBounds": [
+            78,
+            67,
+            442,
+            415
+          ],
+          "alpha4Pixels": 21455,
+          "alpha64Pixels": 10338
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1029,
+            544,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            77,
+            99,
+            398,
+            384
+          ],
+          "coreBounds": [
+            79,
+            101,
+            377,
+            383
+          ],
+          "alpha4Pixels": 5824,
+          "alpha64Pixels": 2395
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "development": [
+          "three heads and thick red curls",
+          "three heads fade and trails loosen",
+          "two heads remain with thinner ribbons",
+          "two faint heads and loose trails",
+          "one tiny head and faint dark curl",
+          "only sparse red ribbon and dark wisps"
+        ],
+        "emitter": "Fixed logical cell-center residual origin; torn paper/ribbons and every disconnected fragment kept.",
+        "softAlpha": "Alpha4+ source soft falloff preserved; alpha1..3 fringe removed only.",
+        "limitations": [
+          "Residual development is presentation artwork, no soul entity or gameplay claim."
+        ]
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 179077,
+        "clearedFullyTransparentRgb": 1203681,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "chariot-escort",
+      "source": "sources/chariot-escort.png",
+      "sourceSha256": "83ff4e9ea58f21f91661ff15ec97daced1e2914590307a0842e634b5b50e239c",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            522,
+            523
+          ],
+          "alphaBounds": [
+            56,
+            128,
+            487,
+            494
+          ],
+          "coreBounds": [
+            58,
+            128,
+            485,
+            492
+          ],
+          "alpha4Pixels": 90746,
+          "alpha64Pixels": 81608
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            522,
+            0,
+            997,
+            523
+          ],
+          "alphaBounds": [
+            36,
+            89,
+            446,
+            496
+          ],
+          "coreBounds": [
+            36,
+            91,
+            444,
+            489
+          ],
+          "alpha4Pixels": 101601,
+          "alpha64Pixels": 88439
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            997,
+            0,
+            1536,
+            523
+          ],
+          "alphaBounds": [
+            30,
+            66,
+            488,
+            491
+          ],
+          "coreBounds": [
+            33,
+            67,
+            486,
+            489
+          ],
+          "alpha4Pixels": 136434,
+          "alpha64Pixels": 116183
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            523,
+            537,
+            1024
+          ],
+          "alphaBounds": [
+            50,
+            28,
+            513,
+            433
+          ],
+          "coreBounds": [
+            53,
+            29,
+            507,
+            430
+          ],
+          "alpha4Pixels": 126626,
+          "alpha64Pixels": 104500
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            537,
+            523,
+            1007,
+            1024
+          ],
+          "alphaBounds": [
+            24,
+            37,
+            432,
+            452
+          ],
+          "coreBounds": [
+            25,
+            38,
+            430,
+            444
+          ],
+          "alpha4Pixels": 109445,
+          "alpha64Pixels": 88562
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1007,
+            523,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            39,
+            73,
+            465,
+            450
+          ],
+          "coreBounds": [
+            41,
+            76,
+            464,
+            448
+          ],
+          "alpha4Pixels": 99408,
+          "alpha64Pixels": 87946
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "softAlpha": "Alpha4+ smoke, fragments and detached ribbon/chain parts kept; only documented alpha1..3 fringe removed.",
+        "development": [
+          "closed-mouth dark horned beast and slack chain",
+          "beast shifts forward as chain brightens",
+          "open-mouth peak roar with amber lightning",
+          "lowest sweeping lightning fork along chain",
+          "chain swings right as lightning contracts",
+          "small closed-mouth beast returns"
+        ],
+        "emitter": "One reviewed lower chain-base origin y480 replaces requested y416 uniformly; no frame fitting.",
+        "limitations": [
+          "Chain deformation and lower-row drift belong to artwork, no world translation is added."
+        ]
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 122907,
+        "clearedFullyTransparentRgb": 904501,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "chariot-charge",
+      "source": "sources/chariot-charge.png",
+      "sourceSha256": "caefab04a87ed17bd810867883eb3f31fd750ed82fa9e441d6f42046b9a29255",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            525,
+            499
+          ],
+          "alphaBounds": [
+            92,
+            120,
+            447,
+            477
+          ],
+          "coreBounds": [
+            94,
+            123,
+            446,
+            474
+          ],
+          "alpha4Pixels": 54906,
+          "alpha64Pixels": 41036
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            525,
+            0,
+            1025,
+            499
+          ],
+          "alphaBounds": [
+            79,
+            107,
+            430,
+            479
+          ],
+          "coreBounds": [
+            81,
+            109,
+            427,
+            477
+          ],
+          "alpha4Pixels": 72731,
+          "alpha64Pixels": 51608
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1025,
+            0,
+            1536,
+            499
+          ],
+          "alphaBounds": [
+            71,
+            73,
+            468,
+            482
+          ],
+          "coreBounds": [
+            74,
+            74,
+            466,
+            479
+          ],
+          "alpha4Pixels": 96913,
+          "alpha64Pixels": 72695
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            499,
+            542,
+            1024
+          ],
+          "alphaBounds": [
+            66,
+            57,
+            493,
+            472
+          ],
+          "coreBounds": [
+            68,
+            59,
+            490,
+            470
+          ],
+          "alpha4Pixels": 105357,
+          "alpha64Pixels": 78256
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            542,
+            499,
+            1028,
+            1024
+          ],
+          "alphaBounds": [
+            49,
+            31,
+            460,
+            473
+          ],
+          "coreBounds": [
+            51,
+            33,
+            448,
+            470
+          ],
+          "alpha4Pixels": 122299,
+          "alpha64Pixels": 87559
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1028,
+            499,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            27,
+            18,
+            462,
+            476
+          ],
+          "coreBounds": [
+            30,
+            21,
+            460,
+            474
+          ],
+          "alpha4Pixels": 146549,
+          "alpha64Pixels": 109082
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "softAlpha": "Alpha4+ cores, smoke and disconnected pieces retained; only alpha1..3 fringe removed.",
+        "limitations": [
+          "Review fixture timing and no owner motion approval."
+        ],
+        "development": [
+          "weak beast and slack chains",
+          "first amber chain flare",
+          "lightning grows on horns and chain ends",
+          "open jaws with stronger connecting arcs",
+          "chain ends blaze and dark mane widens",
+          "peak roar and thick amber-blue bolts"
+        ],
+        "emitter": "Common chain-base source origin corrected416 to480 uniformly; movement in source remains intact."
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 185700,
+        "clearedFullyTransparentRgb": 961270,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "chariot-release",
+      "source": "sources/chariot-release.png",
+      "sourceSha256": "701eaef45d7ece73e9c7944359733ae05911b74769dfa54dd699dd8e367ddc1d",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            485,
+            535
+          ],
+          "alphaBounds": [
+            57,
+            74,
+            434,
+            477
+          ],
+          "coreBounds": [
+            58,
+            76,
+            433,
+            473
+          ],
+          "alpha4Pixels": 83246,
+          "alpha64Pixels": 70374
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            485,
+            0,
+            1002,
+            535
+          ],
+          "alphaBounds": [
+            51,
+            98,
+            488,
+            468
+          ],
+          "coreBounds": [
+            53,
+            100,
+            486,
+            466
+          ],
+          "alpha4Pixels": 89729,
+          "alpha64Pixels": 75632
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1002,
+            0,
+            1536,
+            535
+          ],
+          "alphaBounds": [
+            30,
+            51,
+            491,
+            482
+          ],
+          "coreBounds": [
+            32,
+            53,
+            490,
+            480
+          ],
+          "alpha4Pixels": 119401,
+          "alpha64Pixels": 101454
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            535,
+            530,
+            1024
+          ],
+          "alphaBounds": [
+            48,
+            54,
+            512,
+            383
+          ],
+          "coreBounds": [
+            48,
+            56,
+            511,
+            381
+          ],
+          "alpha4Pixels": 87546,
+          "alpha64Pixels": 73247
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            530,
+            535,
+            1025,
+            1024
+          ],
+          "alphaBounds": [
+            18,
+            64,
+            464,
+            392
+          ],
+          "coreBounds": [
+            20,
+            66,
+            462,
+            390
+          ],
+          "alpha4Pixels": 66879,
+          "alpha64Pixels": 51915
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1025,
+            535,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            32,
+            115,
+            461,
+            325
+          ],
+          "coreBounds": [
+            33,
+            117,
+            459,
+            323
+          ],
+          "alpha4Pixels": 32746,
+          "alpha64Pixels": 22348
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "softAlpha": "Alpha4+ cores, smoke and disconnected pieces retained; only alpha1..3 fringe removed.",
+        "limitations": [
+          "Review fixture timing and no owner motion approval."
+        ],
+        "development": [
+          "small beast emerges from broken chains",
+          "mouth opens and mane streams",
+          "largest beast roar with claw and amber lightning",
+          "beast stretches and begins fading",
+          "partial head and thin lightning",
+          "only lightning and smoke remnants"
+        ],
+        "emitter": "Fixed local manifestation origin[244,200]; whole sequence raised22px to preserve full alpha4. Width225 kept, no crop or per-frame scaling."
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 162247,
+        "clearedFullyTransparentRgb": 1075652,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    },
+    {
+      "id": "chariot-residual",
+      "source": "sources/chariot-residual.png",
+      "sourceSha256": "70c41f15ba93158bb03369140c08798ee1c404b2633bba4bd2f9c8f61cb8dfdf",
+      "size": [
+        1536,
+        1024
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "measuredTransparentGutters": true,
+      "gutterAlphaThreshold": 4,
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            529,
+            556
+          ],
+          "alphaBounds": [
+            57,
+            38,
+            479,
+            494
+          ],
+          "coreBounds": [
+            58,
+            41,
+            477,
+            492
+          ],
+          "alpha4Pixels": 118675,
+          "alpha64Pixels": 90974
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            529,
+            0,
+            1029,
+            556
+          ],
+          "alphaBounds": [
+            50,
+            78,
+            429,
+            485
+          ],
+          "coreBounds": [
+            53,
+            78,
+            426,
+            483
+          ],
+          "alpha4Pixels": 85577,
+          "alpha64Pixels": 64115
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1029,
+            0,
+            1536,
+            556
+          ],
+          "alphaBounds": [
+            72,
+            114,
+            406,
+            476
+          ],
+          "coreBounds": [
+            75,
+            115,
+            403,
+            474
+          ],
+          "alpha4Pixels": 66436,
+          "alpha64Pixels": 42747
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            556,
+            520,
+            1024
+          ],
+          "alphaBounds": [
+            114,
+            63,
+            404,
+            385
+          ],
+          "coreBounds": [
+            120,
+            63,
+            402,
+            383
+          ],
+          "alpha4Pixels": 46649,
+          "alpha64Pixels": 29159
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            520,
+            556,
+            1030,
+            1024
+          ],
+          "alphaBounds": [
+            116,
+            95,
+            373,
+            373
+          ],
+          "coreBounds": [
+            117,
+            96,
+            371,
+            370
+          ],
+          "alpha4Pixels": 26836,
+          "alpha64Pixels": 15658
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1030,
+            556,
+            1536,
+            1024
+          ],
+          "alphaBounds": [
+            179,
+            133,
+            363,
+            352
+          ],
+          "coreBounds": [
+            180,
+            134,
+            361,
+            350
+          ],
+          "alpha4Pixels": 11060,
+          "alpha64Pixels": 5418
+        }
+      ],
+      "sourceLayoutAssessment": "Measured alpha4-empty row and column gutters after explicit alpha1..3 fringe cleanup; all six ordered source cells have visible alpha64 content. Visual progression review required separately.",
+      "manualVisualReview": true,
+      "visualAssessment": {
+        "sourceViewSeen": true,
+        "allSixCellsSeen": true,
+        "nativeAtlasSeen": true,
+        "development": [
+          "large disconnected beast head and broad broken chains",
+          "head and chain shrink while lightning breaks",
+          "smaller head with separated lightning/chain pieces",
+          "partial small head and thin amber bolts",
+          "tiny horn fragment and sparse chain sparks",
+          "faint mane and tiny last lightning/chains"
+        ],
+        "emitter": "Fixed local residual emitter[256,220]; sequence raised8px uniformly to keep full alpha4 padding. Peak165 width kept.",
+        "softAlpha": "Alpha4+ soft mane/lightning and every detached chain retained; alpha1..3 fringe removed only.",
+        "limitations": [
+          "Timing and manifestation positions remain review fixtures; no live projectile or entity claim."
+        ]
+      },
+      "cleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 156402,
+        "clearedFullyTransparentRgb": 1159277,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      }
+    }
+  ],
+  "manualVisualReview": true,
+  "scope": "Source gutters, cell content, fixed emitter and native clipping. Root owner visual assessment remains separate.",
+  "artApproved": false
+}

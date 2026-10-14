@@ -1,0 +1,979 @@
+{
+  "schema": "wang-lin-equipment-family-vfx-source-assessment-2",
+  "familyId": "banner",
+  "sources": [
+    {
+      "id": "st-warning",
+      "source": "sources/st-warning.png",
+      "sourceSha256": "68eb03f028617a969d6810e6ba6b30fd3d091542bf5b81f8bbb06e3d5a1b4e6d",
+      "selected": true,
+      "uniqueRawKeys": 6,
+      "sourceEdgeAlphaMax": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "sourcePhysicalEdge16": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sourcePhysicalMargins16": [
+        [
+          104,
+          268,
+          103,
+          49
+        ],
+        [
+          82,
+          114,
+          78,
+          42
+        ],
+        [
+          53,
+          39,
+          51,
+          29
+        ],
+        [
+          41,
+          1,
+          34,
+          51
+        ],
+        [
+          54,
+          43,
+          53,
+          55
+        ],
+        [
+          85,
+          64,
+          60,
+          60
+        ]
+      ],
+      "sourceCompletenessPolicy": "Raw cells checked separately; zero native edge is padding proof only. Low alpha halos at raw boundaries remain documented and preserved.",
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "notes": [
+        "Faint local halo alpha at raw cell edge; full source-cell sampled RGBA preserved, not manually erased."
+      ]
+    },
+    {
+      "id": "st-charge",
+      "source": "sources/st-charge-r3.png",
+      "sourceSha256": "2b0f902d17e538d30b2c12b7a0ff7c53ccae38443a2f92b6416a8d2d8b142805",
+      "selected": true,
+      "uniqueRawKeys": 6,
+      "sourceEdgeAlphaMax": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "sourcePhysicalEdge16": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sourcePhysicalMargins16": [
+        [
+          171,
+          168,
+          154,
+          122
+        ],
+        [
+          145,
+          159,
+          153,
+          104
+        ],
+        [
+          142,
+          162,
+          158,
+          104
+        ],
+        [
+          169,
+          145,
+          164,
+          149
+        ],
+        [
+          155,
+          146,
+          158,
+          155
+        ],
+        [
+          161,
+          156,
+          162,
+          149
+        ]
+      ],
+      "sourceCompletenessPolicy": "Raw cells checked separately; zero native edge is padding proof only. Low alpha halos at raw boundaries remain documented and preserved.",
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "notes": [
+        "Faint local halo alpha at raw cell edge; full source-cell sampled RGBA preserved, not manually erased."
+      ]
+    },
+    {
+      "id": "st-release",
+      "source": "sources/st-release.png",
+      "sourceSha256": "060223ecfac4b7ccac6ba368b0bf052d16a015686df6b90cd89ff3f225386894",
+      "selected": true,
+      "uniqueRawKeys": 6,
+      "sourceEdgeAlphaMax": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "sourcePhysicalEdge16": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sourcePhysicalMargins16": [
+        [
+          94,
+          44,
+          80,
+          14
+        ],
+        [
+          65,
+          77,
+          60,
+          31
+        ],
+        [
+          45,
+          63,
+          36,
+          31
+        ],
+        [
+          52,
+          40,
+          42,
+          49
+        ],
+        [
+          56,
+          35,
+          52,
+          54
+        ],
+        [
+          77,
+          45,
+          64,
+          54
+        ]
+      ],
+      "sourceCompletenessPolicy": "Raw cells checked separately; zero native edge is padding proof only. Low alpha halos at raw boundaries remain documented and preserved.",
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "notes": [
+        "Faint local halo alpha at raw cell edge; full source-cell sampled RGBA preserved, not manually erased."
+      ]
+    },
+    {
+      "id": "st-resolve",
+      "source": "sources/st-resolve.png",
+      "sourceSha256": "be78a3a8d8ad85576e81fa02a1af78c099d81c9a5bc74b8c8d6567e79faa2495",
+      "selected": true,
+      "uniqueRawKeys": 6,
+      "sourceEdgeAlphaMax": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "sourcePhysicalEdge16": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sourcePhysicalMargins16": [
+        [
+          113,
+          130,
+          56,
+          21
+        ],
+        [
+          63,
+          64,
+          66,
+          20
+        ],
+        [
+          5,
+          48,
+          75,
+          11
+        ],
+        [
+          80,
+          43,
+          41,
+          50
+        ],
+        [
+          80,
+          58,
+          62,
+          47
+        ],
+        [
+          65,
+          81,
+          103,
+          49
+        ]
+      ],
+      "sourceCompletenessPolicy": "Raw cells checked separately; zero native edge is padding proof only. Low alpha halos at raw boundaries remain documented and preserved.",
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "notes": [
+        "Faint local halo alpha at raw cell edge; full source-cell sampled RGBA preserved, not manually erased."
+      ]
+    },
+    {
+      "id": "st-tail",
+      "source": "sources/st-tail.png",
+      "sourceSha256": "74a6b4187c6838024aefe9c5db0d4b1eee63fc2571854f4386190cdf6d21dd54",
+      "selected": true,
+      "uniqueRawKeys": 6,
+      "sourceEdgeAlphaMax": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "sourcePhysicalEdge16": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sourcePhysicalMargins16": [
+        [
+          49,
+          58,
+          39,
+          14
+        ],
+        [
+          31,
+          62,
+          37,
+          24
+        ],
+        [
+          57,
+          106,
+          52,
+          27
+        ],
+        [
+          64,
+          73,
+          59,
+          64
+        ],
+        [
+          59,
+          84,
+          67,
+          62
+        ],
+        [
+          112,
+          130,
+          100,
+          89
+        ]
+      ],
+      "sourceCompletenessPolicy": "Raw cells checked separately; zero native edge is padding proof only. Low alpha halos at raw boundaries remain documented and preserved.",
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "notes": [
+        "Faint local halo alpha at raw cell edge; full source-cell sampled RGBA preserved, not manually erased."
+      ]
+    },
+    {
+      "id": "aoe-warning",
+      "source": "sources/aoe-warning.png",
+      "sourceSha256": "87667eaf71458da63d877e531605025e3793aa84063b96d827a544aa2182ffb1",
+      "selected": true,
+      "uniqueRawKeys": 6,
+      "sourceEdgeAlphaMax": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "sourcePhysicalEdge16": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sourcePhysicalMargins16": [
+        [
+          163,
+          178,
+          146,
+          38
+        ],
+        [
+          109,
+          100,
+          121,
+          37
+        ],
+        [
+          31,
+          75,
+          55,
+          36
+        ],
+        [
+          61,
+          52,
+          40,
+          56
+        ],
+        [
+          44,
+          52,
+          45,
+          56
+        ],
+        [
+          26,
+          52,
+          49,
+          57
+        ]
+      ],
+      "sourceCompletenessPolicy": "Raw cells checked separately; zero native edge is padding proof only. Low alpha halos at raw boundaries remain documented and preserved.",
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "notes": [
+        "Faint local halo alpha at raw cell edge; full source-cell sampled RGBA preserved, not manually erased."
+      ]
+    },
+    {
+      "id": "aoe-deploy",
+      "source": "sources/aoe-deploy.png",
+      "sourceSha256": "c61641c7a8efa2f25cb1a53c17d6afd5a8189cc0735349a2ee5e52fedf4389fb",
+      "selected": true,
+      "uniqueRawKeys": 6,
+      "sourceEdgeAlphaMax": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "sourcePhysicalEdge16": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sourcePhysicalMargins16": [
+        [
+          125,
+          56,
+          115,
+          16
+        ],
+        [
+          72,
+          65,
+          77,
+          15
+        ],
+        [
+          34,
+          99,
+          42,
+          14
+        ],
+        [
+          47,
+          53,
+          22,
+          53
+        ],
+        [
+          40,
+          50,
+          41,
+          52
+        ],
+        [
+          9,
+          27,
+          37,
+          48
+        ]
+      ],
+      "sourceCompletenessPolicy": "Raw cells checked separately; zero native edge is padding proof only. Low alpha halos at raw boundaries remain documented and preserved.",
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "notes": [
+        "Faint local halo alpha at raw cell edge; full source-cell sampled RGBA preserved, not manually erased."
+      ]
+    },
+    {
+      "id": "aoe-active",
+      "source": "sources/aoe-active.png",
+      "sourceSha256": "46092cb83a038041c5ee18fd7c4b95dd339ce7f99d997c3e4582310f82284eb8",
+      "selected": true,
+      "uniqueRawKeys": 6,
+      "sourceEdgeAlphaMax": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "sourcePhysicalEdge16": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sourcePhysicalMargins16": [
+        [
+          32,
+          54,
+          28,
+          35
+        ],
+        [
+          35,
+          61,
+          44,
+          35
+        ],
+        [
+          11,
+          98,
+          26,
+          35
+        ],
+        [
+          32,
+          67,
+          5,
+          63
+        ],
+        [
+          44,
+          70,
+          21,
+          63
+        ],
+        [
+          37,
+          26,
+          51,
+          62
+        ]
+      ],
+      "sourceCompletenessPolicy": "Raw cells checked separately; zero native edge is padding proof only. Low alpha halos at raw boundaries remain documented and preserved.",
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "notes": [
+        "Faint local halo alpha at raw cell edge; full source-cell sampled RGBA preserved, not manually erased."
+      ]
+    },
+    {
+      "id": "aoe-contact",
+      "source": "sources/aoe-contact-r2.png",
+      "sourceSha256": "88b6fd5071fc6b85fef0484ae64693087662d9d3cd0e7175b863e87385b99fa5",
+      "selected": true,
+      "uniqueRawKeys": 6,
+      "sourceEdgeAlphaMax": [
+        [
+          0,
+          3,
+          1,
+          1
+        ],
+        [
+          0,
+          13,
+          1,
+          5
+        ],
+        [
+          0,
+          3,
+          6,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          4
+        ],
+        [
+          12,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ]
+      ],
+      "sourcePhysicalEdge16": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sourcePhysicalMargins16": [
+        [
+          130,
+          207,
+          109,
+          12
+        ],
+        [
+          66,
+          93,
+          90,
+          7
+        ],
+        [
+          9,
+          27,
+          63,
+          10
+        ],
+        [
+          55,
+          44,
+          2,
+          46
+        ],
+        [
+          118,
+          15,
+          81,
+          43
+        ],
+        [
+          103,
+          79,
+          108,
+          39
+        ]
+      ],
+      "sourceCompletenessPolicy": "Raw cells checked separately; zero native edge is padding proof only. Low alpha halos at raw boundaries remain documented and preserved.",
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "notes": [
+        "Faint local halo alpha at raw cell edge; full source-cell sampled RGBA preserved, not manually erased."
+      ]
+    },
+    {
+      "id": "aoe-collapse",
+      "source": "sources/aoe-collapse.png",
+      "sourceSha256": "ffd0919d9ee52193a92bc4a77684688b8b96ed5e30080ff253b2c9cb42ecc24e",
+      "selected": true,
+      "uniqueRawKeys": 6,
+      "sourceEdgeAlphaMax": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "sourcePhysicalEdge16": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "sourcePhysicalMargins16": [
+        [
+          26,
+          27,
+          7,
+          10
+        ],
+        [
+          28,
+          27,
+          12,
+          12
+        ],
+        [
+          38,
+          72,
+          35,
+          19
+        ],
+        [
+          152,
+          47,
+          103,
+          39
+        ],
+        [
+          181,
+          50,
+          159,
+          40
+        ],
+        [
+          189,
+          50,
+          166,
+          50
+        ]
+      ],
+      "sourceCompletenessPolicy": "Raw cells checked separately; zero native edge is padding proof only. Low alpha halos at raw boundaries remain documented and preserved.",
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "notes": [
+        "Faint local halo alpha at raw cell edge; full source-cell sampled RGBA preserved, not manually erased."
+      ]
+    }
+  ],
+  "historyCount": 13,
+  "selectedCount": 10,
+  "artApproved": false
+}

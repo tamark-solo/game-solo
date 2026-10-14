@@ -1,0 +1,48 @@
+{
+  "schema": "wang-lin-progression-loop-fixtures-1",
+  "fixtureOnly": true,
+  "scenarios": {
+    "stage1_to_stage2_heaven_foundation": {
+      "description": "Hành trình trọn vẹn Chặng 1 (VG01–VG06: Ngưng Khí 1 → 15 → Thiên Đạo Trúc Cơ) và Chặng 2 (VG07–VG11: Trúc Cơ → Độ Kiếp Kết Đan).",
+      "identities": ["a", "b"],
+      "expectedFinalRealm": "ket_dan",
+      "expectedFoundationQuality": "heaven",
+      "expectedCompletedActsCount": 11
+    },
+    "annular_seal_90deg_sector_probes": [
+      {
+        "id": "inside-center-ray",
+        "bossOrigin": { "x": 0, "y": 0 },
+        "lockedAim": { "x": 1, "y": 0 },
+        "playerPos": { "x": 84, "y": 0 },
+        "expected": { "inRing": true, "inSafeSector": true, "takesDamage": false }
+      },
+      {
+        "id": "inside-44deg-edge",
+        "bossOrigin": { "x": 0, "y": 0 },
+        "lockedAim": { "x": 1, "y": 0 },
+        "playerPos": { "x": 72, "y": 69.5 },
+        "expected": { "inRing": true, "inSafeSector": true, "takesDamage": false }
+      },
+      {
+        "id": "outside-safe-sector-in-ring",
+        "bossOrigin": { "x": 0, "y": 0 },
+        "lockedAim": { "x": 1, "y": 0 },
+        "playerPos": { "x": 0, "y": 88 },
+        "expected": { "inRing": true, "inSafeSector": false, "takesDamage": true }
+      },
+      {
+        "id": "outside-ring-radius",
+        "bossOrigin": { "x": 0, "y": 0 },
+        "lockedAim": { "x": 1, "y": 0 },
+        "playerPos": { "x": -125, "y": 0 },
+        "expected": { "inRing": false, "inSafeSector": true, "takesDamage": false }
+      }
+    ],
+    "retroactive_foundation_upgrade": {
+      "description": "Đột phá Phàm Đạo Trúc Cơ trước, sau đó thu thập đủ 3 Linh Vật Boss và đánh bại Hắc Ấn Chấp Sự không trúng Ấn Hồi để Bù Đắp Đạo Cơ lên Thiên Đạo.",
+      "initialQuality": "mortal",
+      "upgradedQuality": "heaven"
+    }
+  }
+}

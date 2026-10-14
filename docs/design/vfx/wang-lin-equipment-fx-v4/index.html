@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111a21">
+  <title>Vương Lâm · Pháp bảo thức tỉnh</title>
+  <link rel="stylesheet" href="./review.css">
+  <script type="module" src="./review.mjs"></script>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <div><p class="eyebrow">Vương Lâm · bảy phối trang bị anh đã ghim</p><h1>Pháp bảo thức tỉnh</h1><p class="lead">Kiếm ý mở thiên môn. Hồn phiên dẫn vạn hồn. Chiến xa cuốn lôi đình.</p></div>
+      <p class="status" id="pack-status">Đang nạp hình…</p>
+    </header>
+    <p id="load-error" class="error" role="alert" hidden></p>
+    <section class="selection" aria-labelledby="selection-title">
+      <div class="section-heading"><div><p class="eyebrow">Giữ lại những mẫu anh chọn</p><h2 id="selection-title">Bảy phối áo và pháp bảo</h2></div><p>Chọn một mẫu để xem khí thế mới.</p></div>
+      <div id="shortlist" class="shortlist"></div>
+    </section>
+    <section id="stage-section" class="stage-section" aria-labelledby="chosen-title">
+      <div class="section-heading"><div><p id="kit-kicker" class="eyebrow">Thức tỉnh pháp bảo</p><h2 id="chosen-title">Vương Lâm</h2><p id="kit-description" class="kit-description"></p></div><div id="mode-controls" class="segmented" aria-label="Cách xem"><button data-mode="old" aria-pressed="false">Cũ</button><button data-mode="new" aria-pressed="true">Mới</button><button data-mode="fx" aria-pressed="false">FX riêng</button></div></div>
+      <div class="toolbar">
+        <div class="segmented" aria-label="Cỡ xem"><button data-zoom="1" aria-pressed="true">1× trong game</button><button data-zoom="2" aria-pressed="false">2× đọc nét</button></div>
+        <label class="select-label">Nền <select id="background"><option value="map">Hằng Nhạc</option><option value="dark">Tối</option><option value="light">Sáng</option><option value="gray">Xám</option></select></label>
+        <label><input id="compare" type="checkbox" checked> So cạnh bản cũ</label>
+        <label><input id="show-root" type="checkbox"> Điểm chân</label>
+        <label class="select-label">Cường độ <select id="intensity"><option value="1">Đầy đủ</option><option value="0.65">Dịu hơn</option></select></label>
+      </div>
+      <div id="stage-grid" class="stage-grid">
+        <figure id="old-panel"><figcaption><span class="tag">Trước</span><b>Khí tĩnh v3</b><span>Cùng áo · cùng pháp bảo</span></figcaption><div class="canvas-scroll"><canvas id="old-stage" width="384" height="320" role="img" aria-label="Phối trang bị đã ghim với FX tĩnh v3"></canvas></div></figure>
+        <figure id="new-panel"><figcaption><span class="tag awake">Sau</span><b id="new-panel-title">Pháp bảo thức tỉnh v4</b><span id="phase-label">Đang tụ khí</span></figcaption><div class="canvas-scroll"><canvas id="new-stage" width="384" height="320" role="img" aria-label="Pháp bảo với FX thức tỉnh mới"></canvas></div></figure>
+      </div>
+      <p id="scale-note" class="scale-note">Cỡ 1× giữ nguyên pixel như trong game.</p>
+      <div class="playback">
+        <div class="playback-main"><button id="awaken" class="primary">Khai mở pháp bảo</button><button id="play-pause">Tạm dừng</button><label><input id="loop" type="checkbox" checked> Lặp chu kỳ</label><button id="quiet">Khí tức thường</button><span id="clock" class="clock">0 ms</span></div>
+        <label class="seek-label"><span class="sr-only">Thời điểm trong chu kỳ</span><input id="seek" type="range" min="0" max="3000" step="1" value="0"><span class="timeline-markers"><span>Khởi khí</span><span>Tụ lực</span><span>Khai mở</span><span>Tan dư khí</span></span></label>
+        <p id="motion-note" class="motion-note">Bấm khai mở để đọc trọn nhịp tụ lực → bộc phát → dư khí.</p>
+      </div>
+      <div class="story-note"><b id="kit-cue">Khí thế riêng cho từng pháp bảo</b><p id="kit-note">Hào quang và hình tượng được xem riêng với thân và trang bị.</p></div>
+    </section>
+    <section class="kit-breakdown" aria-labelledby="breakdown-title"><div class="section-heading"><div><p class="eyebrow">Bốn lớp khí thuật</p><h2 id="breakdown-title">Đọc hình và chuyển động riêng</h2></div><p id="sequence-count"></p></div><div id="sequence-grid" class="sequence-grid"></div></section>
+    <details class="evidence"><summary>Nguồn hình, phép đo và kiểm tra</summary><div id="source-details"></div><p class="hint">Bản xem thử VFX. Tạo hình và trang bị đã ghim được giữ nguyên; animation thân và tích hợp game là phần tiếp theo.</p></details>
+    <footer><p>Pháp bảo thức tỉnh · Vương Lâm</p><a href="../../characters/wang-lin-equipment-options-v3/index.html" target="_blank" rel="noopener">Mở bộ áo / trang bị v3</a><a href="./README.md" target="_blank" rel="noopener">Hồ sơ bản này</a></footer>
+  </main>
+</body>
+</html>

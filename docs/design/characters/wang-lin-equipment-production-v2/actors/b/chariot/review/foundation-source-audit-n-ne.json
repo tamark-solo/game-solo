@@ -1,0 +1,287 @@
+{
+  "schema": "chariot-b-foundation-source-audit-v1",
+  "auditDate": "2026-10-14",
+  "identityId": "b",
+  "familyId": "chariot",
+  "scope": {
+    "directions": [
+      "north",
+      "northeast"
+    ],
+    "groups": [
+      "damage",
+      "practice"
+    ],
+    "jobIds": [
+      "chariot-b-north-damage-r1",
+      "chariot-b-north-practice-r1",
+      "chariot-b-northeast-damage-r1",
+      "chariot-b-northeast-practice-r1"
+    ],
+    "inspection": "read-only filesystem, manifest, hash and native PNG metadata inspection",
+    "imageGenerationPerformedByAuditor": false,
+    "manualReviewComplete": false,
+    "ownerApproved": false,
+    "runtimeIntegrated": false
+  },
+  "evidence": {
+    "generation": {
+      "file": "actors/b/chariot/generation.json",
+      "sha256": "629f806ff74f0cab0be2c8db4c48e7262070d0ee4b1b1e9216d69a310c9da8e3",
+      "generationAllowed": true,
+      "actualCoverageGeneratedSources": 9,
+      "targetFoundationSourcesWithRecordedSha256": 0
+    },
+    "rootDispatch": {
+      "file": "actors/b/chariot/root-dispatch.json",
+      "sha256": "30e1b8b83e07f2e03aeb9473c701250c4d84489ec3449a8123c94d61bcbc0c35",
+      "owner": "root",
+      "jobs": 4,
+      "onlyRawAndProvenance": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false
+    },
+    "preparationVerification": {
+      "file": "actors/b/chariot/review/preparation-verification.json",
+      "sha256": "e682f2a644c91d73d7b580068eb0ed8a775afa46d90cd3c7f0c43d33cb819148",
+      "status": "passed",
+      "jobs": 24,
+      "actualGeneration": 0,
+      "generationAllowed": false,
+      "interpretation": "Preparation checks do not prove that any foundation source was generated."
+    },
+    "supportCandidate": {
+      "file": "support/chariot-foundation-assist/raw-b/chariot-b-north-damage-r1.png",
+      "exists": true,
+      "sha256": "a4e4d70a9e84f877f24667d108a5e448145d25ba525a68fae916479caf937621",
+      "bytes": 2279432,
+      "size": [
+        1024,
+        1536
+      ],
+      "gridClaim": [
+        3,
+        6
+      ],
+      "provenanceRecord": null,
+      "use": "unregistered support candidate only; never a canonical actor source"
+    }
+  },
+  "entries": [
+    {
+      "sourceId": "chariot-b-north-core-r1",
+      "direction": "north",
+      "group": "core",
+      "classification": "valid-dependency",
+      "packableForFoundationBasis": true,
+      "raw": {
+        "file": "actors/b/chariot/sources/chariot-b-north-core-r1.png",
+        "sha256": "cbfe176dc8b121fdf73080090bf5c79f79e0b02b080157609912457e431821ac",
+        "bytes": 2305561,
+        "size": [
+          1214,
+          1295
+        ],
+        "mode": "RGBA",
+        "requestedGrid": [
+          6,
+          5
+        ]
+      },
+      "manifestChecks": {
+        "status": "generated",
+        "selected": true,
+        "sourceViewed": true,
+        "rawImmutable": true,
+        "ownerApproved": false,
+        "recordPromptHashMatchesFile": true,
+        "recordRawHashMatchesFile": true
+      },
+      "use": "same-view own Chariot core dependency for North damage/practice"
+    },
+    {
+      "sourceId": "chariot-b-northeast-core-r1",
+      "direction": "northeast",
+      "group": "core",
+      "classification": "valid-dependency",
+      "packableForFoundationBasis": true,
+      "raw": {
+        "file": "actors/b/chariot/sources/chariot-b-northeast-core-r1.png",
+        "sha256": "8eecbbd14ccc470fb419388349c92707cc18c7a375bcdcb70ee816161d0b94d0",
+        "bytes": 2894678,
+        "size": [
+          1214,
+          1295
+        ],
+        "mode": "RGBA",
+        "requestedGrid": [
+          6,
+          5
+        ]
+      },
+      "manifestChecks": {
+        "status": "generated",
+        "selected": true,
+        "sourceViewed": true,
+        "rawImmutable": true,
+        "ownerApproved": false,
+        "recordPromptHashMatchesFile": true,
+        "recordRawHashMatchesFile": true
+      },
+      "use": "same-view own Chariot core dependency for Northeast damage/practice"
+    },
+    {
+      "sourceId": "chariot-b-north-damage-r1",
+      "direction": "north",
+      "group": "damage",
+      "classification": "malformed-unregistered-raw",
+      "packableForFoundation": false,
+      "manifest": {
+        "status": "reserved-ready-built-in-call",
+        "selected": false,
+        "inputSnapshotsReady": true,
+        "inputSnapshotCount": 4,
+        "ownerApproved": false,
+        "sourceViewed": null,
+        "rawImmutable": null,
+        "recordSha256": null,
+        "rawFile": "actors/b/chariot/sources/chariot-b-north-damage-r1.png",
+        "rawExistsAtAudit": true,
+        "rawSha256AtAudit": "a5bcfe287a6e5d5043623c80fd9f96b89cfde885a025b58500a2ffb776139711",
+        "rawBytesAtAudit": 2347510,
+        "rawSizeAtAudit": [
+          1024,
+          1536
+        ],
+        "rawModeAtAudit": "RGBA",
+        "requestedGrid": [
+          3,
+          6
+        ],
+        "promptSha256InGeneration": "c688b082a7c9b0d26df950e8d02af4aad9603e4bd9ac4a33cf4c51d39d4a2ad1",
+        "promptSha256Actual": "a4f839373657545267467dab9f6ae82f28b6c8193be7120fb52336f7e4b14817",
+        "promptSha256InRootDispatch": "a4f839373657545267467dab9f6ae82f28b6c8193be7120fb52336f7e4b14817",
+        "promptHashMatchesGeneration": false,
+        "promptHashMatchesRootDispatch": true,
+        "supportCandidateSha256DiffersFromActorRaw": true
+      },
+      "reasonCodes": [
+        "actorRawAppearsWithout_generation_original_sha256_sourceViewed_or_rawImmutable_record_fields",
+        "generation_prompt_hash_is_stale_against_prompt_file",
+        "actor_raw_differs_from_unregistered_support_raw_b_candidate",
+        "manual_visual_review_not_recorded"
+      ],
+      "disposition": "quarantine; do not import, select or pack until an immutable actual-call record and manual source review are attached"
+    },
+    {
+      "sourceId": "chariot-b-north-practice-r1",
+      "direction": "north",
+      "group": "practice",
+      "classification": "missing-raw-source",
+      "packableForFoundation": false,
+      "manifest": {
+        "status": "reserved-ready-built-in-call",
+        "selected": false,
+        "inputSnapshotsReady": true,
+        "inputSnapshotCount": 4,
+        "ownerApproved": false,
+        "sourceViewed": null,
+        "rawFile": "actors/b/chariot/sources/chariot-b-north-practice-r1.png",
+        "rawExistsAtAudit": false,
+        "rawSha256": null,
+        "promptSha256InGeneration": "3e2ff5ca3c0e27fcf6e3bef16735536325b200b6c06c8007d5fdf10661418931",
+        "promptSha256Actual": "de6d42c02fb2da3b05fae9760b610813fbbf3538e77caa5c14771ceffef3c2e0",
+        "promptSha256InRootDispatch": "de6d42c02fb2da3b05fae9760b610813fbbf3538e77caa5c14771ceffef3c2e0",
+        "promptHashMatchesGeneration": false,
+        "promptHashMatchesRootDispatch": true
+      },
+      "reasonCodes": [
+        "actor_raw_missing",
+        "generation_prompt_hash_is_stale_against_prompt_file",
+        "manual_visual_review_not_recorded"
+      ],
+      "disposition": "keep reserved; no packing"
+    },
+    {
+      "sourceId": "chariot-b-northeast-damage-r1",
+      "direction": "northeast",
+      "group": "damage",
+      "classification": "missing-raw-source",
+      "packableForFoundation": false,
+      "manifest": {
+        "status": "reserved-ready-built-in-call",
+        "selected": false,
+        "inputSnapshotsReady": true,
+        "inputSnapshotCount": 4,
+        "ownerApproved": false,
+        "sourceViewed": null,
+        "rawFile": "actors/b/chariot/sources/chariot-b-northeast-damage-r1.png",
+        "rawExistsAtAudit": false,
+        "rawSha256": null,
+        "promptSha256InGeneration": "c1f24f126f5ba6940e1cf5bf70896c3200b59cc8cb9abc765736091c2be01848",
+        "promptSha256Actual": "4827dde6aef823ba2d38af8f27346bc323a755fa096b8bf7d017aeceb606febf",
+        "promptSha256InRootDispatch": "4827dde6aef823ba2d38af8f27346bc323a755fa096b8bf7d017aeceb606febf",
+        "promptHashMatchesGeneration": false,
+        "promptHashMatchesRootDispatch": true
+      },
+      "reasonCodes": [
+        "actor_raw_missing",
+        "generation_prompt_hash_is_stale_against_prompt_file",
+        "manual_visual_review_not_recorded"
+      ],
+      "disposition": "keep reserved; no packing"
+    },
+    {
+      "sourceId": "chariot-b-northeast-practice-r1",
+      "direction": "northeast",
+      "group": "practice",
+      "classification": "missing-raw-source",
+      "packableForFoundation": false,
+      "manifest": {
+        "status": "reserved-ready-built-in-call",
+        "selected": false,
+        "inputSnapshotsReady": true,
+        "inputSnapshotCount": 4,
+        "ownerApproved": false,
+        "sourceViewed": null,
+        "rawFile": "actors/b/chariot/sources/chariot-b-northeast-practice-r1.png",
+        "rawExistsAtAudit": false,
+        "rawSha256": null,
+        "promptSha256InGeneration": "9a0df2b8f244b593d2935311b90ea27f4d4ef455cafca2e8c4cf188d30688ab2",
+        "promptSha256Actual": "ea34bf936cc26d962f11b51da8e146cf2f821eaa95a94c243ceb669bf55fb384",
+        "promptSha256InRootDispatch": "ea34bf936cc26d962f11b51da8e146cf2f821eaa95a94c243ceb669bf55fb384",
+        "promptHashMatchesGeneration": false,
+        "promptHashMatchesRootDispatch": true
+      },
+      "reasonCodes": [
+        "actor_raw_missing",
+        "generation_prompt_hash_is_stale_against_prompt_file",
+        "manual_visual_review_not_recorded"
+      ],
+      "disposition": "keep reserved; no packing"
+    }
+  ],
+  "aggregateChecks": {
+    "validSameViewCoreDependencies": 2,
+    "foundationJobsAudited": 4,
+    "foundationJobsWithRecordedActorSha256": 0,
+    "foundationJobsWithPackableRaw": 0,
+    "foundationJobsMissingActorRaw": 3,
+    "foundationJobsWithUnregisteredActorRaw": 1,
+    "foundationJobsWithGenerationPromptHashMismatch": 4,
+    "inputSnapshotFilesMissing": 0,
+    "inputSnapshotHashMismatches": 0
+  },
+  "minimalPackingRecommendation": {
+    "step1": "Retain chariot-b-north-core-r1 and chariot-b-northeast-core-r1 as the only valid same-view dependencies; both raw and manifest hashes match.",
+    "step2": "Quarantine chariot-b-north-damage-r1's actor PNG and do not pack it. Attach an immutable actual-call/original record and a manual visual assessment first; the support raw-b PNG is a different unregistered hash and cannot be used as provenance.",
+    "step3": "Keep chariot-b-north-practice-r1, chariot-b-northeast-damage-r1 and chariot-b-northeast-practice-r1 reserved but ungenerated. Before any call or import, reconcile each generation.json promptSha256 with the actual prompt (the root-dispatch snapshot already carries the current prompt hashes).",
+    "step4": "Only after all four jobs have actual RGBA 1024x1536 3x6 sources, immutable original/tool/hash records, sourceViewed evidence and manual owner review should the four sources enter manual registration and canonical packing."
+  },
+  "manualReview": {
+    "status": "pending",
+    "complete": false,
+    "ownerApproved": false,
+    "reason": "This file records filesystem and provenance findings only; it is not an ART, motion or runtime approval."
+  }
+}

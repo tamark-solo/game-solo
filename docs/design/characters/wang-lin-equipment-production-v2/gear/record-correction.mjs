@@ -1,0 +1,8 @@
+import{readFile,writeFile,copyFile,stat}from'node:fs/promises';import{createHash}from'node:crypto';import{fileURLToPath}from'node:url';import path from'node:path';
+const ROOT=path.dirname(fileURLToPath(import.meta.url)),V2=path.dirname(ROOT),[id,original,version='2']=process.argv.slice(2),gen=JSON.parse(await readFile(path.join(ROOT,'generation.json'),'utf8')),prior=gen.records.find(r=>r.id===id&&r.selected);
+if(!prior)throw Error('Original source required');const file='gear/'+prior.familyId+'/sources/'+id+'-r'+version+'.png',out=path.join(V2,file),prompt='gear/'+prior.familyId+'/sources/'+id+'-r'+version+'.prompt.txt';
+try{await stat(out);throw Error('Correction already recorded');}catch(e){if(e.code!=='ENOENT')throw e}
+await copyFile(original,out);const raw=await readFile(out),pb=await readFile(path.join(V2,prompt));prior.selected=false;prior.supersededReason='Grip window occluded by opaque cloth and finial near cell edge; retain original source/prompt.';
+const target={file:prior.file,role:'actual-edit-target-grip-and-cell-gutter-correction',sha256:prior.sourceSha256},primary=gen.records.find(r=>r.id===id).inputs[0],actualInputs=Number(version)>=4||id==='banner-b-views'&&Number(version)===2?[target]:[primary,target];
+gen.records.push({...prior,file,sourceSha256:createHash('sha256').update(raw).digest('hex'),original,originalSha256:createHash('sha256').update(raw).digest('hex'),prompt,promptSha256:createHash('sha256').update(pb).digest('hex'),inputs:actualInputs,selected:true,version:Number(version),supersededReason:undefined});
+await writeFile(path.join(ROOT,'generation.json'),JSON.stringify(gen,null,2)+'\n');console.log(JSON.stringify({id,file,bytes:raw.length}));

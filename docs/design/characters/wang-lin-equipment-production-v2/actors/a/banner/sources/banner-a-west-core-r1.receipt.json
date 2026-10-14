@@ -1,0 +1,90 @@
+{
+  "id": "banner-a-west-core-r1",
+  "identityId": "a",
+  "familyId": "banner",
+  "direction": "west",
+  "group": "core",
+  "actions": [
+    "idle",
+    "run",
+    "cast-single-target",
+    "cast-aoe"
+  ],
+  "calibrationCells": 6,
+  "prompt": "actors/a/banner/prompts/history/banner-a-west-core-r1-actual-helper-prompt.txt",
+  "promptSha256": "857b672cd6a7cc7c35f61b2a9fcf18e0fbe14432d5711baddcaf6f36a632bf47",
+  "raw": "actors/a/banner/sources/banner-a-west-core-r1.png",
+  "inputs": [
+    {
+      "file": "actors/a/banner/inputs/helper/banner-a-west-core-r1/1.png",
+      "sha256": "b85dc7a8c32bd8e173129d38ee123e0501ccd0d8d5c9031d846f51d49146e5df",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\huyen-tam-banner-p1-nearest8x.png",
+      "role": "own-approved-A-banner-P1-primary",
+      "index": 1,
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\core\\banner-a-west-core-r1\\1.png"
+    },
+    {
+      "file": "actors/a/banner/inputs/helper/banner-a-west-core-r1/2.png",
+      "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-west-nearest8x.png",
+      "role": "Wang-same-view-style-anatomy-only",
+      "index": 2,
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\core\\banner-a-west-core-r1\\2.png"
+    },
+    {
+      "file": "actors/a/banner/inputs/helper/banner-a-west-core-r1/3.png",
+      "sha256": "d4a4155b26152ec9369e5e9cefdd03cd3b1aa90f1d652b1aaac90f1987c1b61a",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\banner-a.png",
+      "role": "own-A-banner-P1-full-source-outfit-support",
+      "index": 3,
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\core\\banner-a-west-core-r1\\3.png"
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": null,
+  "tool": "built-in-imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    6,
+    5
+  ],
+  "requestedSourcePoses": 30,
+  "status": "imported-helper-raw-awaiting-source-review",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "promptPriorVersions": [
+    {
+      "file": "actors/a/banner/prompts/history/banner-a-west-core-r1-ambiguous-grip.txt",
+      "sha256": "34c85b67e3d1f03564ef41475685389247e67d6a4846ab4366f98cc7cc60c8a1",
+      "status": "planned-before-call"
+    },
+    {
+      "file": "actors/a/banner/prompts/history/banner-a-west-core-r1-closed-through-cast.txt",
+      "sha256": "857b672cd6a7cc7c35f61b2a9fcf18e0fbe14432d5711baddcaf6f36a632bf47",
+      "status": "planned-prior-choreography-before-call"
+    }
+  ],
+  "preparedPrompt": {
+    "file": "actors/a/banner/prompts/banner-a-west-core-r1.txt",
+    "sha256": "59e639f8d7f745efee2a8e432560d8e489f9db4eea5441a2eb937f74c116962b"
+  },
+  "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-3877d041-3c25-4437-b7c2-8b3452a939f7.png",
+  "originalSha256": "662d28463a0bd4c77cf4b119376571afaebb807f3a47ed7b6cdcdf9d18124962",
+  "sha256": "662d28463a0bd4c77cf4b119376571afaebb807f3a47ed7b6cdcdf9d18124962",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "sourceViewed": false,
+  "rawImmutable": true,
+  "outputProvenance": {
+    "originalToolOutput": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-3877d041-3c25-4437-b7c2-8b3452a939f7.png",
+    "workspaceRaw": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\sources\\banner-a-west-core-r1.png",
+    "copiedOriginalUnchanged": true,
+    "helperRecord": "support/banner-core-assist/records/banner-a-west-core-r1.json",
+    "helperRecordSha256": "117720ac14b4a821c081fdfeec4ae80a9a7dc44a4b2db5b0c9ef85a08fef1b8f"
+  }
+}

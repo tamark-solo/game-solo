@@ -1,0 +1,534 @@
+{
+  "schema": "wang-lin-concept-direction-plan-5",
+  "date": "2026-10-13",
+  "stage": "whole character + artifact + ST/AOE + progression concept decision",
+  "canvas": [
+    160,
+    144
+  ],
+  "pivot": [
+    64,
+    128
+  ],
+  "targetBodyHeight": 80,
+  "liveReference": {
+    "image": "inputs/wang-lin-live-southeast-native.png",
+    "bodyHeight": 80,
+    "role": "scale and pixel style only"
+  },
+  "identityMasters": [
+    {
+      "id": "a",
+      "name": "Huyền Tâm",
+      "description": "Tóc đen dài buộc nửa thấp, mặt góc cạnh lạnh, ánh mắt nhỏ sắc và bình tĩnh; dáng compact, nền vải mực–ngà.",
+      "design": "a new cold angular male cultivator face, small sharp dark eyes, long charcoal-black hair half tied low with a loose asymmetric fringe, stern calm expression; restrained ink-charcoal wrap tunic with ivory inner fold, slim belt and plain boots",
+      "image": "sources/identity-a.png",
+      "nativeImage": "concepts/native/identity-a.png"
+    },
+    {
+      "id": "b",
+      "name": "Tịch Bạch",
+      "description": "Tóc bạc buộc cao với hai lọn rủ, mặt trầm và mày sắc; khí chất cô độc, nền ngà–xám lạnh.",
+      "design": "a new austere male cultivator face, small piercing slate eyes and angled brows, long silver-white hair in a high half-ponytail with two deliberate loose strands, quiet severe expression; simple ivory-gray wrap coat with slate inner layer, narrow belt and plain dark boots",
+      "image": "sources/identity-b.png",
+      "nativeImage": "concepts/native/identity-b.png"
+    }
+  ],
+  "families": [
+    {
+      "id": "sword",
+      "name": "Huyền Mặc Kiếm Chủ",
+      "subtitle": "Tiên kiếm · kiếm linh Hứa Lập Quốc",
+      "signature": "Thân chỉ huy, kiếm linh hiện hình và kiếm trận chia nhiều tuyến.",
+      "characterDesign": "a narrow asymmetric split coat, short controlled wrist cuffs for sword-finger hand gestures, diagonal waist scabbard, deliberate stance and three large readable cloth folds; an ancient straight sword with restrained old-metal guard, hovering black-qi sword spirit only in awakened scenes",
+      "options": [
+        {
+          "id": "sword-a",
+          "identity": "a",
+          "name": "Huyền Mặc",
+          "description": "Áo mực xẻ lệch, lớp trong ngà, cổ tay gọn và đai kim nhạt.",
+          "colors": [
+            "#242332",
+            "#E3D8BC",
+            "#A89260"
+          ],
+          "costume": "ink-charcoal asymmetric long-short split coat, ivory inner fold, narrow muted antique-gold belt, black wrist bracers, simple high boots; a crisp ancient dark straight sword held lowered at one side",
+          "image": "sources/sword-a.png",
+          "nativeImage": "concepts/native/sword-a.png",
+          "status": "new whole-character concept, unapproved"
+        },
+        {
+          "id": "sword-b",
+          "identity": "b",
+          "name": "Vân Ngọc",
+          "description": "Áo ngà và giáp vải thanh ngọc, kiếm sáng lạnh, nét tóc bạc rõ.",
+          "colors": [
+            "#E6DECC",
+            "#4E7874",
+            "#344B58"
+          ],
+          "costume": "ivory asymmetric swordsman coat, muted pale-jade cloth collar and waist wrap, slate wrist bracers, short split hems, dark boots; pale jade-gray ancient straight sword held lowered at one side",
+          "image": "sources/sword-b.png",
+          "nativeImage": "concepts/native/sword-b.png",
+          "status": "new whole-character concept, unapproved"
+        }
+      ],
+      "singleTarget": {
+        "name": "Kiếm Ý Nhất Tuyến",
+        "footprint": "Một trục hẹp tới một mục tiêu",
+        "beats": [
+          "Kiếm quyết dẫn điểm",
+          "Kiếm linh áp theo lưỡi",
+          "Một đường cắt hẹp",
+          "Khí nhập chuôi"
+        ],
+        "description": "Thân chuyển trọng tâm và ra kiếm quyết; một trục sắc, linh thể không tạo thêm mục tiêu giả."
+      },
+      "aoe": {
+        "name": "Kiếm Trận Phá Giới",
+        "footprint": "Sáu cọc kiếm · ba tuyến chém giao nhau",
+        "geometry": "crossed-lanes",
+        "beats": [
+          "Sáu dấu cọc + đường mảnh",
+          "Cọc kiếm dựng; tuyến ngừng đổi",
+          "Ba đường cắt qua nhiều mục tiêu",
+          "Mảnh khí tan dọc tuyến"
+        ],
+        "description": "Sáu kiếm cọc dựng hai bên sân, ba đường chém cắt chéo; khoảng trống giữa tuyến giữ lối né rõ.",
+        "visual": "six huge upright sword stakes at both sides of a battle area, three crossing ivory-edged black sword-qi corridors slice through FIVE distinct enemies, one commanding ink sword spirit towers behind the acting hero, jagged ground contact at enemy feet, two empty safe corridors between blade lines; NOT one bigger slash or circular aura"
+      },
+      "progression": "First: coarse-cloth novice and one ordinary sword with one thin qi trace, no legendary artifact ownership claim. Second: tailored ink swordsman coat, proper relic sword and a distinct black sword spirit, three orbiting support blades. Third: calm severe sword sovereign with refined restrained coat, six battlefield blade stakes and crossing sword lanes, power organized as a sword domain.",
+      "palettes": [
+        {
+          "id": "sword-a",
+          "name": "Huyền Mặc",
+          "colors": [
+            "#242332",
+            "#E3D8BC",
+            "#A89260"
+          ],
+          "optionId": "sword-a",
+          "status": "realized by the matching generated costume option, not arbitrary recolour"
+        },
+        {
+          "id": "sword-b",
+          "name": "Vân Ngọc",
+          "colors": [
+            "#E6DECC",
+            "#4E7874",
+            "#344B58"
+          ],
+          "optionId": "sword-b",
+          "status": "realized by the matching generated costume option, not arbitrary recolour"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "path",
+          "name": "I · Tự mở đường",
+          "realm": "Ngưng Khí → Trúc Cơ",
+          "summary": "Vải thô, hình gọn và một điểm nhận diện; thấy tiền thân phong cách, chưa mặc định sở hữu trọng bảo."
+        },
+        {
+          "id": "spirit",
+          "name": "II · Luyện hóa thành bản sắc",
+          "realm": "Kết Đan → Nguyên Anh",
+          "summary": "Bộ áo–pháp bảo–động tác thống nhất, kết cấu điều khiển và linh ảnh rõ; nguồn và điều kiện luyện hóa cần đặc tả."
+        },
+        {
+          "id": "domain",
+          "name": "III · Đạo của chính mình",
+          "realm": "Hóa Thần",
+          "summary": "Khí chất điềm tĩnh, hình cô đọng; cấu trúc ý cảnh biến đổi chiến trường, không chỉ tăng lượng sáng."
+        }
+      ],
+      "progressionBoard": "sources/sword-progression.png",
+      "combatBoard": "sources/sword-aoe.png",
+      "battleBoard": "sources/sword-aoe.png"
+    },
+    {
+      "id": "banner",
+      "name": "U Tế Hồn Chủ",
+      "subtitle": "Thập Ức Tôn Hồn Phiên",
+      "signature": "Tư thế phất phiên, hồn có vai trò và cổng phân tầng trong sân.",
+      "characterDesign": "an asymmetric ritual robe with one short broad sleeve and one fitted controlling sleeve, three large muted-red seal panels, wrist binding cords, boots visible, body angled as if controlling a heavy soul banner; the banner has a black ragged triangular cloth silhouette and restrained old-gold pole",
+      "options": [
+        {
+          "id": "banner-a",
+          "identity": "a",
+          "name": "U Tế",
+          "description": "Áo than, ba mảng niêm chu sa, vai lệch theo lực cán phiên.",
+          "colors": [
+            "#292333",
+            "#905C63",
+            "#D5C9AA"
+          ],
+          "costume": "charcoal-plum ritual robe, THREE large muted cinnabar seal panels on hem and chest, asymmetric shortened sleeve, black-gold old pole supporting a ragged soul banner behind left shoulder; keep face and boots visible",
+          "image": "sources/banner-a-r2.png",
+          "nativeImage": "concepts/native/banner-a.png",
+          "status": "new whole-character concept, unapproved",
+          "sourceId": "banner-a-r2"
+        },
+        {
+          "id": "banner-b",
+          "identity": "b",
+          "name": "Tàn Nguyệt",
+          "description": "Áo tro ngà, tím trầm và niêm cổ; hình người lạnh giữa hồn vực.",
+          "colors": [
+            "#CEC9BB",
+            "#66536F",
+            "#3A3447"
+          ],
+          "costume": "ashen-ivory and muted violet-gray ritual robe, three deep-plum binding panels, asymmetric sleeves and visible dark boots, weathered silver pole supporting a dark plum ragged soul banner behind left shoulder",
+          "image": "sources/banner-b.png",
+          "nativeImage": "concepts/native/banner-b.png",
+          "status": "new whole-character concept, unapproved"
+        }
+      ],
+      "singleTarget": {
+        "name": "Chủ Hồn Dẫn Lộ",
+        "footprint": "Một dải hồn hẹp giữ một mục tiêu",
+        "beats": [
+          "Phất cán báo điểm",
+          "Chủ hồn theo dải mực",
+          "Quấn đúng một mục tiêu",
+          "Hồn về mép phiên"
+        ],
+        "description": "Một chủ hồn có silhouette nhận diện, dải khí gọn; thân và tay người tham gia động tác."
+      },
+      "aoe": {
+        "name": "Tam Môn Tụ Hồn",
+        "footprint": "Ba cổng theo tam giác · dòng hồn hội tụ",
+        "geometry": "soul-gates",
+        "beats": [
+          "Ba vệt khí báo vị trí cổng",
+          "Cổng mở; dòng hồn kéo căng",
+          "Các dòng hội tụ qua nhiều địch",
+          "Thu ngược; hồn tan trước khí"
+        ],
+        "description": "Ba cổng hồn cao thấp khác nhau và dòng hồn đan từ ngoài vào; có lối mở và khoảng tâm để đọc người.",
+        "visual": "THREE imposing torn-silk soul gates arranged as a triangle, one tall rear gate and two lower front gates, recognizable spectral human soul silhouettes flow as braided ink ribbons from all three directions through SIX visible enemies; the acting hero sweeps a huge soul banner at the left edge, an open center and two visible escape gaps, muted cinnabar binding threads; NOT a flat black cloud wall or skull wallpaper"
+      },
+      "progression": "First: coarse dark initiate wrap and a simple symbolic banner with one quiet soul-ribbon trace, a precursor theme not this legendary relic already granted. Second: asymmetric ritual costume, recognizable soul flag and two named-looking chief soul silhouettes, deliberate cloth movement. Third: restrained solemn soul sovereign, a giant deployed flag behind the caster, three soul gates and layered converging streams with quiet gaps.",
+      "palettes": [
+        {
+          "id": "banner-a",
+          "name": "U Tế",
+          "colors": [
+            "#292333",
+            "#905C63",
+            "#D5C9AA"
+          ],
+          "optionId": "banner-a",
+          "status": "realized by the matching generated costume option, not arbitrary recolour"
+        },
+        {
+          "id": "banner-b",
+          "name": "Tàn Nguyệt",
+          "colors": [
+            "#CEC9BB",
+            "#66536F",
+            "#3A3447"
+          ],
+          "optionId": "banner-b",
+          "status": "realized by the matching generated costume option, not arbitrary recolour"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "path",
+          "name": "I · Tự mở đường",
+          "realm": "Ngưng Khí → Trúc Cơ",
+          "summary": "Vải thô, hình gọn và một điểm nhận diện; thấy tiền thân phong cách, chưa mặc định sở hữu trọng bảo."
+        },
+        {
+          "id": "spirit",
+          "name": "II · Luyện hóa thành bản sắc",
+          "realm": "Kết Đan → Nguyên Anh",
+          "summary": "Bộ áo–pháp bảo–động tác thống nhất, kết cấu điều khiển và linh ảnh rõ; nguồn và điều kiện luyện hóa cần đặc tả."
+        },
+        {
+          "id": "domain",
+          "name": "III · Đạo của chính mình",
+          "realm": "Hóa Thần",
+          "summary": "Khí chất điềm tĩnh, hình cô đọng; cấu trúc ý cảnh biến đổi chiến trường, không chỉ tăng lượng sáng."
+        }
+      ],
+      "progressionBoard": "sources/banner-progression.png",
+      "combatBoard": "sources/banner-aoe.png",
+      "battleBoard": "sources/banner-aoe.png"
+    },
+    {
+      "id": "chariot",
+      "name": "Cổ Kim Ngự Xa Sư",
+      "subtitle": "Xạ Thần Xa · chuyển thể tổng hợp",
+      "signature": "Người điều khiển giằng xích; pháp khí triển khai, dị thú và contact theo tuyến.",
+      "characterDesign": "a compact short war coat, one weathered bronze shoulder plate, clear chain-control glove and large waist binding clasp, planted boots and strong low stance; deployable ancient spiked war engine stays beside the person, never held in one hand",
+      "options": [
+        {
+          "id": "chariot-a",
+          "identity": "a",
+          "name": "Cổ Kim",
+          "description": "Áo ngắn vững, một vai đồng cũ, găng xích và đai niêm lớn.",
+          "colors": [
+            "#302F35",
+            "#A08957",
+            "#D7C5A0"
+          ],
+          "costume": "short charcoal commander coat with old bronze plate at ONE shoulder, muted antique-gold waist binding clasp, chain-control glove, wide stance and dark boots; a compact folded ancient bronze spiked war engine beside the right side, feet of both hero and device on same plane",
+          "image": "sources/chariot-a.png",
+          "nativeImage": "concepts/native/chariot-a.png",
+          "status": "new whole-character concept, unapproved"
+        },
+        {
+          "id": "chariot-b",
+          "identity": "b",
+          "name": "Lôi Huyền",
+          "description": "Huyền thiết và vải lam xám, xích bạc; tư thế kết ấn triển xa.",
+          "colors": [
+            "#333F53",
+            "#8193B0",
+            "#C9D3D7"
+          ],
+          "costume": "short slate-blue and dark-iron commander coat, ONE dark-metal shoulder plate, cold silver waist binding and chain glove, firm boots; compact folded ancient dark-iron spiked war engine beside right side, sparse cold-blue material accent, no huge bright aura",
+          "image": "sources/chariot-b.png",
+          "nativeImage": "concepts/native/chariot-b.png",
+          "status": "new whole-character concept, unapproved"
+        }
+      ],
+      "singleTarget": {
+        "name": "Giải Niêm Dẫn Thú",
+        "footprint": "Xích căng · một cú giằng theo trục",
+        "beats": [
+          "Mở một mắt niêm",
+          "Thú hồn lùi lấy đà",
+          "Giằng trúng một mục tiêu",
+          "Thú rút theo xích"
+        ],
+        "description": "Lực tác động đọc qua tay, thân và xích; thiết bị là pháp khí được triển khai."
+      },
+      "aoe": {
+        "name": "Lôi Thú Liệt Địa",
+        "footprint": "Hai rail xích · ba điểm dậm nối tiếp",
+        "geometry": "chain-rails",
+        "beats": [
+          "Rail mờ + ba dấu dậm",
+          "Xích căng; khung xa mở",
+          "Thú lao; ba contact lệch nhịp",
+          "Rút thú; khung xa đóng"
+        ],
+        "description": "Hành lang chéo có nhiều contact và đường né hai bên; bộ hình kết hợp cảm hứng các dạng truyện.",
+        "visual": "a huge ancient spiked war engine unfolds BEHIND the commanding hero, TWO ghost-chain rails sweep diagonally across the battlefield, an immense horned ink thunder beast rushes then stamps along the rails, THREE distinct ground impact nodes with branching amber-ivory lightning among SIX visible enemies; two clear safe flanks, physical weight and ground cracks, staged contact sequence rather than a floating beast bullet"
+      },
+      "progression": "First: coarse short work coat and a humble folded binding tool, not the full legendary chariot granted to a novice. Second: bronze control coat, compact war engine opens, a fierce beast apparition is visibly restrained by chains. Third: calm battle conductor in concise strong costume, massive battlefield engine deployed behind the hero, chain rails and three staged thunder-beast contact nodes.",
+      "palettes": [
+        {
+          "id": "chariot-a",
+          "name": "Cổ Kim",
+          "colors": [
+            "#302F35",
+            "#A08957",
+            "#D7C5A0"
+          ],
+          "optionId": "chariot-a",
+          "status": "realized by the matching generated costume option, not arbitrary recolour"
+        },
+        {
+          "id": "chariot-b",
+          "name": "Lôi Huyền",
+          "colors": [
+            "#333F53",
+            "#8193B0",
+            "#C9D3D7"
+          ],
+          "optionId": "chariot-b",
+          "status": "realized by the matching generated costume option, not arbitrary recolour"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "path",
+          "name": "I · Tự mở đường",
+          "realm": "Ngưng Khí → Trúc Cơ",
+          "summary": "Vải thô, hình gọn và một điểm nhận diện; thấy tiền thân phong cách, chưa mặc định sở hữu trọng bảo."
+        },
+        {
+          "id": "spirit",
+          "name": "II · Luyện hóa thành bản sắc",
+          "realm": "Kết Đan → Nguyên Anh",
+          "summary": "Bộ áo–pháp bảo–động tác thống nhất, kết cấu điều khiển và linh ảnh rõ; nguồn và điều kiện luyện hóa cần đặc tả."
+        },
+        {
+          "id": "domain",
+          "name": "III · Đạo của chính mình",
+          "realm": "Hóa Thần",
+          "summary": "Khí chất điềm tĩnh, hình cô đọng; cấu trúc ý cảnh biến đổi chiến trường, không chỉ tăng lượng sáng."
+        }
+      ],
+      "progressionBoard": "sources/chariot-progression.png",
+      "combatBoard": "sources/chariot-aoe.png",
+      "battleBoard": "sources/chariot-aoe.png"
+    },
+    {
+      "id": "bead",
+      "name": "Ngũ Vân Nội Giới Sư",
+      "subtitle": "Thiên Nghịch Châu · nội cảnh và hộ đạo",
+      "signature": "Châu đá cổ nhỏ; nhân vật trầm tĩnh mở nếp nội cảnh thay đổi không gian đọc được.",
+      "characterDesign": "a discreet traveler cloak over a compact wrap coat, one asymmetric shoulder drape, one large cloud fold at wrist, bare visible hands and simple boots; a TINY weathered gray stone bead engraved with five cloud curves held at the palm, not a jewel sphere or staff",
+      "options": [
+        {
+          "id": "bead-a",
+          "identity": "a",
+          "name": "Thạch Châu",
+          "description": "Áo du hành xám–ngọc, nếp vai lệch; hạt đá cổ nhỏ ở bàn tay.",
+          "colors": [
+            "#969891",
+            "#60756F",
+            "#D7D0B9"
+          ],
+          "costume": "weathered stone-gray and muted jade traveler wrap, one short asymmetric shoulder drape, compact sleeve with a large cloud-fold accent, plain boots, one hand lifting a very small old gray stone bead with FIVE CLOUD engravings; no luminous orbit around body",
+          "image": "sources/bead-a.png",
+          "nativeImage": "concepts/native/bead-a.png",
+          "status": "new whole-character concept, unapproved"
+        },
+        {
+          "id": "bead-b",
+          "identity": "b",
+          "name": "Vân Tịch",
+          "description": "Ngà–xám lạnh, áo giản dị và bàn tay dẫn nếp giới.",
+          "colors": [
+            "#DED9CC",
+            "#687A87",
+            "#3D4650"
+          ],
+          "costume": "austere ivory-gray inner wrap and cool slate short traveler mantle, one asymmetric shoulder fold, visible hands and boots, palm bearing a TINY weathered gray stone bead with FIVE CLOUD engravings, quiet enigmatic pose",
+          "image": "sources/bead-b.png",
+          "nativeImage": "concepts/native/bead-b.png",
+          "status": "new whole-character concept, unapproved"
+        }
+      ],
+      "singleTarget": {
+        "name": "Dẫn Giới Hộ Thân",
+        "footprint": "Một điểm hộ đạo · hỗ trợ/control đề xuất",
+        "beats": [
+          "Nâng châu đọc điểm",
+          "Ký tự/nếp giới định hình",
+          "Hộ đạo tại một điểm",
+          "Nếp khép về châu"
+        ],
+        "description": "Diễn giải hỗ trợ cho game. Nguồn đã đọc nói về nội không gian/tu luyện, chưa chứng minh đòn gây sát thương ngoài thực tại."
+      },
+      "aoe": {
+        "name": "Nội Giới Hộ Đạo",
+        "footprint": "Nếp giới chia sân · ba điểm trú",
+        "geometry": "folded-field",
+        "beats": [
+          "Đường gấp mảnh; bụi lệch nhịp",
+          "Nếp cảnh ổn định; ba điểm trú",
+          "Nội cảnh chồng lên một phần sân",
+          "Nếp khép; nhịp cảnh đồng bộ"
+        ],
+        "description": "AOE hỗ trợ/control là đề xuất chuyển thể; châu nhỏ còn môi trường thay đổi lớn, không biến thành cầu laser.",
+        "visual": "a tiny old gray five-cloud bead in the acting hero palm unfolds a vast DIAGONAL folded-space seam across the battlefield; on one side ordinary stone courtyard and moving dust, on the other an overlapping monochrome inner-realm ink mountain sky with suspended leaves and faint repeated temporal silhouettes; THREE low luminous sanctuary anchors hold visible allies while FIVE enemies remain clearly positioned across the field, two clear ordinary-world safe margins, artifact tiny but world topology transforms, NO laser projectile or damage explosion"
+      },
+      "progression": "First: quiet coarse-cloth traveler and tiny old gray FIVE-CLOUD stone bead, private discovery and subtle inspection. Second: refined discreet cloud-fold robe, ten clouds transitioning to unusual characters with a small visible aperture into an inner realm. Third: calm minimal inner-realm sage, bead still small, a vast restrained folded-realm field changes the environment with suspended leaves and several sanctuary points, conceptual game adaptation rather than a claimed canon external attack.",
+      "palettes": [
+        {
+          "id": "bead-a",
+          "name": "Thạch Châu",
+          "colors": [
+            "#969891",
+            "#60756F",
+            "#D7D0B9"
+          ],
+          "optionId": "bead-a",
+          "status": "realized by the matching generated costume option, not arbitrary recolour"
+        },
+        {
+          "id": "bead-b",
+          "name": "Vân Tịch",
+          "colors": [
+            "#DED9CC",
+            "#687A87",
+            "#3D4650"
+          ],
+          "optionId": "bead-b",
+          "status": "realized by the matching generated costume option, not arbitrary recolour"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "path",
+          "name": "I · Tự mở đường",
+          "realm": "Ngưng Khí → Trúc Cơ",
+          "summary": "Vải thô, hình gọn và một điểm nhận diện; thấy tiền thân phong cách, chưa mặc định sở hữu trọng bảo."
+        },
+        {
+          "id": "spirit",
+          "name": "II · Luyện hóa thành bản sắc",
+          "realm": "Kết Đan → Nguyên Anh",
+          "summary": "Bộ áo–pháp bảo–động tác thống nhất, kết cấu điều khiển và linh ảnh rõ; nguồn và điều kiện luyện hóa cần đặc tả."
+        },
+        {
+          "id": "domain",
+          "name": "III · Đạo của chính mình",
+          "realm": "Hóa Thần",
+          "summary": "Khí chất điềm tĩnh, hình cô đọng; cấu trúc ý cảnh biến đổi chiến trường, không chỉ tăng lượng sáng."
+        }
+      ],
+      "progressionBoard": "sources/bead-progression.png",
+      "combatBoard": "sources/bead-aoe.png",
+      "battleBoard": "sources/bead-aoe.png"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "path",
+      "name": "I · Tự mở đường",
+      "realm": "Ngưng Khí → Trúc Cơ",
+      "summary": "Vải thô, hình gọn và một điểm nhận diện; thấy tiền thân phong cách, chưa mặc định sở hữu trọng bảo."
+    },
+    {
+      "id": "spirit",
+      "name": "II · Luyện hóa thành bản sắc",
+      "realm": "Kết Đan → Nguyên Anh",
+      "summary": "Bộ áo–pháp bảo–động tác thống nhất, kết cấu điều khiển và linh ảnh rõ; nguồn và điều kiện luyện hóa cần đặc tả."
+    },
+    {
+      "id": "domain",
+      "name": "III · Đạo của chính mình",
+      "realm": "Hóa Thần",
+      "summary": "Khí chất điềm tĩnh, hình cô đọng; cấu trúc ý cảnh biến đổi chiến trường, không chỉ tăng lượng sáng."
+    }
+  ],
+  "workflow": [
+    "Chốt nhận diện mới",
+    "Chốt bộ áo/pháp bảo và palette",
+    "Chốt 3 chặng thị giác",
+    "Chốt ST/AOE và nhịp đọc vùng",
+    "Prototype không cân bằng",
+    "Tạo neutral/view/actions và FX tách lớp",
+    "Duyệt theo hash",
+    "Ghép runtime theo phạm vi"
+  ],
+  "equipmentJourney": [
+    "Nhận/quan sát",
+    "Hiểu nguồn và điều kiện",
+    "Luyện hóa",
+    "Trang bị",
+    "Vận dụng",
+    "Nâng cách triển khai"
+  ],
+  "sources": "generation.json",
+  "readiness": {
+    "conceptApproved": false,
+    "artApproved": false,
+    "runtimeIntegrated": false
+  },
+  "limits": [
+    "All names/skills/clothes here are creative adaptation proposals",
+    "Realm links are design milestones, not unlocked relic ownership",
+    "AOE shapes and beat diagrams are concepts, not damage/collider/timing balance",
+    "New identity replaces old face/hair lock ONLY within this new concept package"
+  ]
+}

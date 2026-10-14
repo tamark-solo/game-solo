@@ -90,7 +90,8 @@ const skills=new SkillSession({room:()=>network.room,online:()=>network.status==
 const sect = new SectUI({send:command=>{
     if(!network.room?.connection.isOpen||network.status!=='connected')throw new Error('NPC transport unavailable');
     network.room.send('sect:command',command);
-  },avatar:()=>avatar.value as AvatarId,
+  },sendChapter:(nodeName,choice)=>chapter.sendNode(nodeName,choice),
+  avatar:()=>avatar.value as AvatarId,
   mapBackground:()=>hangNhacMapArt(mapArtId).backgroundUrl,
   position:()=>network.room?.state.players?.get(network.room.sessionId)??local??HANG_NHAC.world.spawn,
   online:()=>network.status==='connected'&&!!network.room?.state.players?.get(network.room.sessionId)?.connected,
@@ -217,7 +218,7 @@ function startNavigation(stationId: StationId): void {
   clearInput();stage.focus();navigationProfile=own.profileId;
   const position=network.renderMotion(network.room!.sessionId)??own;
   if(!navigation.start(position,station,npcStationName(station.id),performance.now()))feedback('Chưa tìm được đường từ vị trí này. Di chuyển ra chỗ trống rồi thử lại.');
-  else if(navigation.status==='arrived')feedback(`Đã tới ${npcStationName(station.id)}. Nhấn E hoặc Tiếp tục nhiệm vụ.`);
+  else if(navigation.status==='arrived'){feedback(`Đã tới ${npcStationName(station.id)}.`);sect.interact();}
 }
 function updateNavigation(now:number):void {
   if(navigation.status!=='moving'){navigationNotice.hidden=true;return;}
@@ -227,8 +228,8 @@ function updateNavigation(now:number):void {
   const status=navigation.diagnostics.status;
   navigationNotice.hidden=status!=='moving';
   const route=navigation.remainingRoute,distance=route.slice(1).reduce((total,p,i)=>total+Math.hypot(p.x-route[i].x,p.y-route[i].y),0);
-  navigationText.textContent=`Đang tới ${navigation.label} · ${Math.max(1,Math.ceil(distance/120))} giây`;
-  if(status==='arrived')feedback(`Đã tới ${navigation.label}. Nhấn E hoặc Tiếp tục nhiệm vụ.`);
+  navigationText.textContent=`🧭 Đang tự tìm đường tới ${navigation.label} · ${Math.max(1,Math.ceil(distance/120))} giây`;
+  if(status==='arrived'){feedback(`Đã tới ${navigation.label} · Mở đối thoại NPC.`);sect.interact();}
   if(status==='blocked')feedback('Đường đi đang bị chặn. Tự di chuyển ra chỗ trống rồi bấm Tìm đường lại.');
 }
 function createActor(id: string, assetId: string, title: string, motion: Motion, own: boolean): RenderActor {

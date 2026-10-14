@@ -1,0 +1,130 @@
+{
+  "id": "banner-b-northwest-damage-r1",
+  "identityId": "b",
+  "familyId": "banner",
+  "direction": "northwest",
+  "group": "damage",
+  "actions": [
+    "hit",
+    "death"
+  ],
+  "calibrationCells": 6,
+  "prompt": "prompts/banner-b-northwest-damage-r1.txt",
+  "promptSha256": "6bf7c810c91b0027e6c369dff7d4fedf7a390c2d1eb812af073db997b4951b8b",
+  "raw": "sources/banner-b-northwest-damage-r1.png",
+  "inputs": [
+    {
+      "file": "inputs/banner-b-northwest-damage-r1/1.png",
+      "sha256": "486875a45eb08f0dc8fbd7518bc61e9abfdaadd4bd50bfdacc21a61ce750cd8a",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-northwest-nearest8x.png",
+      "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY",
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-northwest-damage-r1\\1.png",
+      "index": 1
+    },
+    {
+      "file": "inputs/banner-b-northwest-damage-r1/2.png",
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\helper\\banner-b-northwest-core-r2\\2.png",
+      "role": "Wang-same-view-camera-anatomy-style-only",
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-northwest-damage-r1\\2.png",
+      "index": 2
+    },
+    {
+      "file": "inputs/banner-b-northwest-damage-r1/3.png",
+      "sha256": "c47b2641595ad0e0f8b6ebc3b38170f37a511a02108c2a176e286655f2ea56d2",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-northwest-core-r2.png",
+      "role": "own-B-banner-same-view-core-full-source-support",
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-northwest-damage-r1\\3.png",
+      "index": 3
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": "banner-b-northwest-core-r2 own neutral key1, factor0.35555555555555557",
+  "tool": "image_gen.imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    3,
+    6
+  ],
+  "requestedSourcePoses": 18,
+  "status": "raw-produced-awaiting-actor-source-assessment",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "basisCoreSha256": "c47b2641595ad0e0f8b6ebc3b38170f37a511a02108c2a176e286655f2ea56d2",
+  "neutralReviewed": true,
+  "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-8views-2x.png",
+  "neutralReviewEvidenceSha256": "d74028de4cd5e90487b2755996509a5c53fb26912b09cdc7c7e8a69504fe82a1",
+  "reservedBy": "banner_support_resume",
+  "upstreamPromptOriginal": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-northwest-damage-r1.txt",
+  "actualOriginalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13880-27b5-7690-becf-8edfeba067c1\\exec-7d418ae0-4f00-4561-be4e-9dfb4f282bf3.png",
+  "rawSha256": "43bfb0704bae2cfb03ff1ea46d8a46080a4d629ee671b39d406452e912079154",
+  "upstreamGeneration": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\generation.json",
+  "upstreamGenerationSha256": "0d2d1ae08197c87e9f6f46d5859d915f137d5b0eaf7b25275052b7c244f93cf6",
+  "upstreamRecord": {
+    "id": "banner-b-northwest-damage-r1",
+    "identityId": "b",
+    "familyId": "banner",
+    "direction": "northwest",
+    "group": "damage",
+    "actions": [
+      "hit",
+      "death"
+    ],
+    "calibrationCells": 6,
+    "prompt": "actors/b/banner/prompts/banner-b-northwest-damage-r1.txt",
+    "promptSha256": "6bf7c810c91b0027e6c369dff7d4fedf7a390c2d1eb812af073db997b4951b8b",
+    "raw": "actors/b/banner/sources/banner-b-northwest-damage-r1.png",
+    "inputs": [
+      {
+        "file": "actors/b/banner/inputs/foundation/banner-b-northwest-damage-r1/1.png",
+        "sha256": "486875a45eb08f0dc8fbd7518bc61e9abfdaadd4bd50bfdacc21a61ce750cd8a",
+        "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-northwest-nearest8x.png",
+        "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY"
+      },
+      {
+        "file": "actors/b/banner/inputs/foundation/banner-b-northwest-damage-r1/2.png",
+        "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+        "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\helper\\banner-b-northwest-core-r2\\2.png",
+        "role": "Wang-same-view-camera-anatomy-style-only"
+      },
+      {
+        "file": "actors/b/banner/inputs/foundation/banner-b-northwest-damage-r1/3.png",
+        "sha256": "c47b2641595ad0e0f8b6ebc3b38170f37a511a02108c2a176e286655f2ea56d2",
+        "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-northwest-core-r2.png",
+        "role": "own-B-banner-same-view-core-full-source-support"
+      }
+    ],
+    "inputSnapshotsReady": true,
+    "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+    "dependency": "banner-b-northwest-core-r2 own neutral key1, factor0.35555555555555557",
+    "tool": "built-in-imagegen",
+    "transparentRequested": true,
+    "requestedGrid": [
+      3,
+      6
+    ],
+    "requestedSourcePoses": 18,
+    "status": "reserved-ready-built-in-call",
+    "selected": false,
+    "ownerApproved": false,
+    "runtimeIntegrated": false,
+    "basisCoreSha256": "c47b2641595ad0e0f8b6ebc3b38170f37a511a02108c2a176e286655f2ea56d2",
+    "neutralReviewed": true,
+    "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-8views-2x.png",
+    "neutralReviewEvidenceSha256": "d74028de4cd5e90487b2755996509a5c53fb26912b09cdc7c7e8a69504fe82a1",
+    "reservedBy": "banner_support_resume"
+  },
+  "reservation": "Root/actor explicitly assigned own-view damage/practice to banner_support_resume; A N/NE/E/SE and B W/NW.",
+  "originalSha256": "43bfb0704bae2cfb03ff1ea46d8a46080a4d629ee671b39d406452e912079154",
+  "actualDimensions": [
+    1024,
+    1536
+  ],
+  "actualMode": "RGBA",
+  "toolMetadata": "tool/banner-b-northwest-damage-r1.json",
+  "toolMetadataSha256": "a26722724403b72d8b142ad05064252c301890a6cddc96ef83cda6bf50822358",
+  "sourceLayoutQA": "qa/banner-b-northwest-damage-r1.json",
+  "sourceLayoutQASha256": "7c89836838a4430a38a34a28bcaac4d41c8d3a63e38d3748cafecace1c8a07d6"
+}

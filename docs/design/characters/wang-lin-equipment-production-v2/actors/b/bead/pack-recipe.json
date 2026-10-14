@@ -1,0 +1,104 @@
+{
+  "schema": "equipment-B-bead-pack-recipe-v1",
+  "status": "prepared-no-generated-body",
+  "bodyNominalPx": 80,
+  "normalCanvas": [
+    112,
+    112
+  ],
+  "normalPivot": [
+    56,
+    104
+  ],
+  "deathCanvas": [
+    192,
+    128
+  ],
+  "deathPivot": [
+    96,
+    112
+  ],
+  "scalePolicy": "One isotropic factor per actual source from six own neutral crown-to-dark-boot measurements; no per-pose fit, mirror, head transplant or orb pixels.",
+  "rootPolicy": "Actual supported dark boot soles for upright/run; source-measured seated/prone support with uncertainty and one baked lift; no cloth hem/hair/root proxy.",
+  "socketPolicy": "Manual dominant palm/cuff/forearm evidence per source. Palm-up is hover anchor, never a held grip; occluded/fragment states remain explicit with uncertainty.",
+  "sourceMaskPolicy": "Raw RGBA is immutable; retain complete hair/hands/cuffs/boots and transparent gutters; no body/FX/temple/orb painted into body.",
+  "timingMs": {
+    "idle": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ],
+    "run": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "hit": [
+      60,
+      60,
+      80,
+      100,
+      100,
+      160
+    ],
+    "death": [
+      140,
+      140,
+      180,
+      180,
+      200,
+      500
+    ],
+    "meditate": [
+      260,
+      260,
+      260,
+      260,
+      260,
+      260
+    ],
+    "gather": [
+      180,
+      200,
+      200,
+      260,
+      200,
+      260
+    ],
+    "cast-single-target": [
+      180,
+      200,
+      220,
+      110,
+      110,
+      560
+    ],
+    "cast-aoe": [
+      280,
+      310,
+      310,
+      450,
+      700,
+      590
+    ]
+  },
+  "releaseMs": {
+    "cast-single-target": 600,
+    "cast-aoe": 900
+  },
+  "phaseMapping": "Key four starts fixture release; Core facts own support/control timing. Prop is rendered separately above the actual palm and is never granted by body pixels.",
+  "atlas": {
+    "gutter": 2,
+    "rgbaExactCanonicalParity": true,
+    "sampling": "nearest"
+  },
+  "pathsRelativeTo": "wang-lin-equipment-production-v2",
+  "clipIdTemplate": "bead-b-{direction}-{action}",
+  "approvalPolicy": "Technical preparation does not approve Bead ART/motion/runtime; do not modify Sword, Banner, Chariot, V1, runtime, map, DB or receipt."
+}

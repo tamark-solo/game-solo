@@ -1,0 +1,227 @@
+{
+  "schema": "chariot-foundation-dispatch-v1",
+  "owner": "root",
+  "root": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2",
+  "actorRoot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot",
+  "jobs": [
+    {
+      "id": "chariot-b-north-damage-r1",
+      "identityId": "b",
+      "familyId": "chariot",
+      "direction": "north",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/chariot/prompts/chariot-b-north-damage-r1.txt",
+      "promptSha256": "a4f839373657545267467dab9f6ae82f28b6c8193be7120fb52336f7e4b14817",
+      "raw": "actors/b/chariot/sources/chariot-b-north-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-north-damage-r1/1.png",
+          "sha256": "2f351dcffaca3b1c9dbba6edc2cc4365ec425001f10dd2a40ecbef521f2ce29f",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\inputs\\core\\chariot-b-north-core-r1\\1.png",
+          "role": "own-same-identity-B-chariot-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-north-damage-r1/2.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\inputs\\core\\chariot-b-north-core-r1\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-north-damage-r1/3.png",
+          "sha256": "cbfe176dc8b121fdf73080090bf5c79f79e0b02b080157609912457e431821ac",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\sources\\chariot-b-north-core-r1.png",
+          "role": "own-B-chariot-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; foundation calls require reviewed own same-view Cart neutral, no mirror/foreign outfit.",
+      "dependency": "chariot-b-north-core-r1 own neutral key1, factor0.3404255319148936",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "cbfe176dc8b121fdf73080090bf5c79f79e0b02b080157609912457e431821ac",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/chariot/review/chariot-b-north-core-r1-marked-2x.png",
+      "neutralReviewEvidenceSha256": "d94dd78d30e6e8dfba72be0be01881afa15191c31e29d02965dfc61ce3067de1",
+      "reservedBy": "root"
+    },
+    {
+      "id": "chariot-b-north-practice-r1",
+      "identityId": "b",
+      "familyId": "chariot",
+      "direction": "north",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/chariot/prompts/chariot-b-north-practice-r1.txt",
+      "promptSha256": "de6d42c02fb2da3b05fae9760b610813fbbf3538e77caa5c14771ceffef3c2e0",
+      "raw": "actors/b/chariot/sources/chariot-b-north-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-north-practice-r1/1.png",
+          "sha256": "2f351dcffaca3b1c9dbba6edc2cc4365ec425001f10dd2a40ecbef521f2ce29f",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\inputs\\core\\chariot-b-north-core-r1\\1.png",
+          "role": "own-same-identity-B-chariot-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-north-practice-r1/2.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\inputs\\core\\chariot-b-north-core-r1\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-north-practice-r1/3.png",
+          "sha256": "cbfe176dc8b121fdf73080090bf5c79f79e0b02b080157609912457e431821ac",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\sources\\chariot-b-north-core-r1.png",
+          "role": "own-B-chariot-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; foundation calls require reviewed own same-view Cart neutral, no mirror/foreign outfit.",
+      "dependency": "chariot-b-north-core-r1 own neutral key1, factor0.3404255319148936",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "cbfe176dc8b121fdf73080090bf5c79f79e0b02b080157609912457e431821ac",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/chariot/review/chariot-b-north-core-r1-marked-2x.png",
+      "neutralReviewEvidenceSha256": "d94dd78d30e6e8dfba72be0be01881afa15191c31e29d02965dfc61ce3067de1",
+      "reservedBy": "root"
+    },
+    {
+      "id": "chariot-b-northeast-damage-r1",
+      "identityId": "b",
+      "familyId": "chariot",
+      "direction": "northeast",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/chariot/prompts/chariot-b-northeast-damage-r1.txt",
+      "promptSha256": "4827dde6aef823ba2d38af8f27346bc323a755fa096b8bf7d017aeceb606febf",
+      "raw": "actors/b/chariot/sources/chariot-b-northeast-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-northeast-damage-r1/1.png",
+          "sha256": "2f351dcffaca3b1c9dbba6edc2cc4365ec425001f10dd2a40ecbef521f2ce29f",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\inputs\\core\\chariot-b-northeast-core-r1\\1.png",
+          "role": "own-same-identity-B-chariot-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-northeast-damage-r1/2.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\inputs\\core\\chariot-b-northeast-core-r1\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-northeast-damage-r1/3.png",
+          "sha256": "8eecbbd14ccc470fb419388349c92707cc18c7a375bcdcb70ee816161d0b94d0",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\sources\\chariot-b-northeast-core-r1.png",
+          "role": "own-B-chariot-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; foundation calls require reviewed own same-view Cart neutral, no mirror/foreign outfit.",
+      "dependency": "chariot-b-northeast-core-r1 own neutral key1, factor0.3193612774451098",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "8eecbbd14ccc470fb419388349c92707cc18c7a375bcdcb70ee816161d0b94d0",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/chariot/review/chariot-b-northeast-core-r1-marked-2x.png",
+      "neutralReviewEvidenceSha256": "581451eff50f5f85bd31f0e8169ad2b6ec0523007ae25fe4b8d4a226ea69865f",
+      "reservedBy": "root"
+    },
+    {
+      "id": "chariot-b-northeast-practice-r1",
+      "identityId": "b",
+      "familyId": "chariot",
+      "direction": "northeast",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/chariot/prompts/chariot-b-northeast-practice-r1.txt",
+      "promptSha256": "ea34bf936cc26d962f11b51da8e146cf2f821eaa95a94c243ceb669bf55fb384",
+      "raw": "actors/b/chariot/sources/chariot-b-northeast-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-northeast-practice-r1/1.png",
+          "sha256": "2f351dcffaca3b1c9dbba6edc2cc4365ec425001f10dd2a40ecbef521f2ce29f",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\inputs\\core\\chariot-b-northeast-core-r1\\1.png",
+          "role": "own-same-identity-B-chariot-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-northeast-practice-r1/2.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\inputs\\core\\chariot-b-northeast-core-r1\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/chariot/inputs/foundation/chariot-b-northeast-practice-r1/3.png",
+          "sha256": "8eecbbd14ccc470fb419388349c92707cc18c7a375bcdcb70ee816161d0b94d0",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\chariot\\sources\\chariot-b-northeast-core-r1.png",
+          "role": "own-B-chariot-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; foundation calls require reviewed own same-view Cart neutral, no mirror/foreign outfit.",
+      "dependency": "chariot-b-northeast-core-r1 own neutral key1, factor0.3193612774451098",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "8eecbbd14ccc470fb419388349c92707cc18c7a375bcdcb70ee816161d0b94d0",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/chariot/review/chariot-b-northeast-core-r1-marked-2x.png",
+      "neutralReviewEvidenceSha256": "581451eff50f5f85bd31f0e8169ad2b6ec0523007ae25fe4b8d4a226ea69865f",
+      "reservedBy": "root"
+    }
+  ],
+  "onlyRawAndProvenance": true,
+  "ownerApproved": false,
+  "runtimeIntegrated": false
+}

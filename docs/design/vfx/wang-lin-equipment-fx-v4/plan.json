@@ -1,0 +1,572 @@
+{
+  "schema": "wang-lin-equipment-fx-plan-4",
+  "canvas": [
+    384,
+    320
+  ],
+  "pivot": [
+    176,
+    288
+  ],
+  "bodyOffset": [
+    144,
+    200
+  ],
+  "equipmentOffset": [
+    80,
+    88
+  ],
+  "kits": [
+    {
+      "id": "sword",
+      "name": "Kiếm linh · Hắc Khí Nghịch Thiên",
+      "description": "Hứa Lập Quốc hiện qua hắc khí, kiếm khí ngà sắc cạnh; màu ngà lạnh hợp cả huyền kim, huyền mặc và ngọc.",
+      "palette": [
+        "#151625",
+        "#E8DEBB",
+        "#B7C6CA"
+      ]
+    },
+    {
+      "id": "banner",
+      "name": "Tôn Hồn Phiên · Vạn Hồn Cuộn",
+      "description": "Dải hồn mực tụ thành xoáy sau phiên, khuôn hồn nhỏ đọc được rồi bung thành dòng; sắc đỏ tím trầm hợp hai phiên đã ghim.",
+      "palette": [
+        "#17151F",
+        "#DBD3B5",
+        "#98556F"
+      ]
+    },
+    {
+      "id": "chariot",
+      "name": "Xạ Thần Xa · Dị Thú Phá Xích",
+      "description": "Dị thú khí tượng giằng xích, lôi quang ngà hổ phách chạy dọc điểm căng; phối hợp thị giác mới lấy cảm hứng nhiều dạng trong truyện.",
+      "palette": [
+        "#1B2028",
+        "#E7DFBD",
+        "#C9AB69"
+      ]
+    }
+  ],
+  "timeline": {
+    "durationMs": 3600,
+    "peakMs": 1060,
+    "chargeEndMs": 900,
+    "releaseEndMs": 1380,
+    "residualEndMs": 2220
+  },
+  "sequences": [
+    {
+      "id": "sword-escort",
+      "kit": "sword",
+      "phase": "escort",
+      "role": "escort",
+      "source": "sources/sword-escort.png",
+      "prompt": "sources/sword-escort.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 120,
+      "origin": [
+        215,
+        256
+      ],
+      "sourceOrigin": [
+        256,
+        416
+      ],
+      "frameHoldsMs": [
+        300,
+        300,
+        300,
+        300,
+        300,
+        300
+      ],
+      "startMs": 0,
+      "idle": true,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.8125
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "sword-charge",
+      "kit": "sword",
+      "phase": "charge",
+      "role": "charge",
+      "source": "sources/sword-charge.png",
+      "prompt": "sources/sword-charge.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 165,
+      "origin": [
+        234,
+        268
+      ],
+      "sourceOrigin": [
+        256,
+        416
+      ],
+      "frameHoldsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "startMs": 0,
+      "idle": false,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.8125
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "sword-release",
+      "kit": "sword",
+      "phase": "release",
+      "role": "release",
+      "source": "sources/sword-release.png",
+      "prompt": "sources/sword-release.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 180,
+      "origin": [
+        244,
+        222
+      ],
+      "sourceOrigin": [
+        256,
+        256
+      ],
+      "frameHoldsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "startMs": 900,
+      "idle": false,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.5
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "sword-residual",
+      "kit": "sword",
+      "phase": "residual",
+      "role": "residual",
+      "source": "sources/sword-residual.png",
+      "prompt": "sources/sword-residual.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 165,
+      "origin": [
+        256,
+        228
+      ],
+      "sourceOrigin": [
+        256,
+        256
+      ],
+      "frameHoldsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "startMs": 1380,
+      "idle": false,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.5
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "banner-escort",
+      "kit": "banner",
+      "phase": "escort",
+      "role": "escort",
+      "source": "sources/banner-escort.png",
+      "prompt": "sources/banner-escort.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 150,
+      "origin": [
+        225,
+        272
+      ],
+      "sourceOrigin": [
+        256,
+        416
+      ],
+      "frameHoldsMs": [
+        300,
+        300,
+        300,
+        300,
+        300,
+        300
+      ],
+      "startMs": 0,
+      "idle": true,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.8125
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "banner-charge",
+      "kit": "banner",
+      "phase": "charge",
+      "role": "charge",
+      "source": "sources/banner-charge.png",
+      "prompt": "sources/banner-charge.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 165,
+      "origin": [
+        234,
+        268
+      ],
+      "sourceOrigin": [
+        256,
+        416
+      ],
+      "frameHoldsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "startMs": 0,
+      "idle": false,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.8125
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "banner-release",
+      "kit": "banner",
+      "phase": "release",
+      "role": "release",
+      "source": "sources/banner-release.png",
+      "prompt": "sources/banner-release.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 210,
+      "origin": [
+        244,
+        222
+      ],
+      "sourceOrigin": [
+        256,
+        256
+      ],
+      "frameHoldsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "startMs": 900,
+      "idle": false,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.5
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "banner-residual",
+      "kit": "banner",
+      "phase": "residual",
+      "role": "residual",
+      "source": "sources/banner-residual.png",
+      "prompt": "sources/banner-residual.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 165,
+      "origin": [
+        256,
+        228
+      ],
+      "sourceOrigin": [
+        256,
+        256
+      ],
+      "frameHoldsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "startMs": 1380,
+      "idle": false,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.5
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "chariot-escort",
+      "kit": "chariot",
+      "phase": "escort",
+      "role": "escort",
+      "source": "sources/chariot-escort.png",
+      "prompt": "sources/chariot-escort.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 165,
+      "origin": [
+        267,
+        267
+      ],
+      "sourceOrigin": [
+        256,
+        416
+      ],
+      "frameHoldsMs": [
+        300,
+        300,
+        300,
+        300,
+        300,
+        300
+      ],
+      "startMs": 0,
+      "idle": true,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.8125
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "chariot-charge",
+      "kit": "chariot",
+      "phase": "charge",
+      "role": "charge",
+      "source": "sources/chariot-charge.png",
+      "prompt": "sources/chariot-charge.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 165,
+      "origin": [
+        234,
+        268
+      ],
+      "sourceOrigin": [
+        256,
+        416
+      ],
+      "frameHoldsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "startMs": 0,
+      "idle": false,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.8125
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "chariot-release",
+      "kit": "chariot",
+      "phase": "release",
+      "role": "release",
+      "source": "sources/chariot-release.png",
+      "prompt": "sources/chariot-release.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 225,
+      "origin": [
+        244,
+        222
+      ],
+      "sourceOrigin": [
+        256,
+        256
+      ],
+      "frameHoldsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "startMs": 900,
+      "idle": false,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.5
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    },
+    {
+      "id": "chariot-residual",
+      "kit": "chariot",
+      "phase": "residual",
+      "role": "residual",
+      "source": "sources/chariot-residual.png",
+      "prompt": "sources/chariot-residual.prompt.txt",
+      "layer": "rear",
+      "targetWidth": 165,
+      "origin": [
+        256,
+        228
+      ],
+      "sourceOrigin": [
+        256,
+        256
+      ],
+      "frameHoldsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "startMs": 1380,
+      "idle": false,
+      "sourceSheet": {
+        "columns": 3,
+        "rows": 2,
+        "nominalCell": [
+          512,
+          512
+        ],
+        "originNormalized": [
+          0.5,
+          0.5
+        ]
+      },
+      "direction": "southeast presentation / forward screen-right",
+      "timingStatus": "review fixture only"
+    }
+  ],
+  "scope": "three pinned artifact families, real six-frame escort/charge/release/residual artwork; exact selected neutral body+gear preserved",
+  "canonStudy": "../../characters/wang-lin-equipment-story-v2/canon-study.md",
+  "chariotAdaptation": "Combined apparition direction inspired by different canon forms; not an exact single canon chassis/form",
+  "readiness": {
+    "ownerApproved": false,
+    "artApproved": false,
+    "runtimeIntegrated": false
+  }
+}

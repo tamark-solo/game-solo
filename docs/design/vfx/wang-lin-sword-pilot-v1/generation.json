@@ -1,0 +1,289 @@
+{
+  "schema": "wang-lin-sword-pilot-vfx-generation-1",
+  "date": "2026-10-14",
+  "tool": "built-in image_gen",
+  "artApproved": false,
+  "runtimeIntegrated": false,
+  "sources": [
+    {
+      "id": "st-warning",
+      "file": "sources/st-warning.png",
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-f5540615-5360-48db-af99-79ec286d6924.png",
+      "selected": true,
+      "sha256": "ef1982d69024e80a8459287d6c8788acf2599408741902281a4ce00f60593190",
+      "prompt": "sources/st-warning.prompt.txt",
+      "promptSha256": "0ed9756298e00032b48eba77925cc5b97f9d828ffc731fbd1861300fa100809a",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        }
+      ],
+      "transparentRequested": true
+    },
+    {
+      "id": "aoe-active",
+      "file": "sources/aoe-active.png",
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-74d0b5c9-9aac-40a2-a76f-9e6646ebd819.png",
+      "selected": true,
+      "sha256": "23cc05c5be4769f374d2b5ed6fce3f3ac99ffa212f6d782df0f0b51b945825ff",
+      "prompt": "sources/aoe-active.prompt.txt",
+      "promptSha256": "f4831bada80cfc19043f9ee7ab50d2ceab9921cf057e75fa058c27c1501828bd",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        }
+      ],
+      "transparentRequested": true
+    },
+    {
+      "id": "st-charge",
+      "file": "sources/st-charge.png",
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-1a7669de-f57c-472f-a78d-bd2f6d55f227.png",
+      "selected": false,
+      "sha256": "b86e25c1b9724d4430fe561e189a87fa431912ff13bf61b43bf1c27d337c2103",
+      "prompt": "sources/st-charge.prompt.txt",
+      "promptSha256": "0c0643f91445b57b8d6bf2035637fc05b79ec0d94f61e4745a0e35f672dc2e10",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        }
+      ],
+      "transparentRequested": true,
+      "assessment": "Superseded: physical source frames crossed grid boundary; source and original prompt preserved."
+    },
+    {
+      "id": "st-release",
+      "file": "sources/st-release.png",
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-2b8f2c6a-a066-4c4a-b209-cad2fc90a9cb.png",
+      "selected": true,
+      "sha256": "7ca27a7d6a0fd45dabca19b14339500aa596df2097baa276effc126caea09b92",
+      "prompt": "sources/st-release.prompt.txt",
+      "promptSha256": "c9f576e5db68d8f950f7a8fd42d366884d2caba118171990005d8aa99db66ff9",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        }
+      ],
+      "transparentRequested": true
+    },
+    {
+      "id": "st-resolve",
+      "file": "sources/st-resolve.png",
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-06403cef-f175-4bf1-b000-26a0cc12c937.png",
+      "selected": false,
+      "sha256": "80805232cbaf133eb5b7db13ba067abeb59169bf4937eed688bb51d7e0292ddd",
+      "prompt": "sources/st-resolve.prompt.txt",
+      "promptSha256": "6b33a490816534ecefa66a1d0c550954977ba5ebedc2463e4d44bf93936aa351",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        }
+      ],
+      "transparentRequested": true,
+      "assessment": "Superseded: physical source frames crossed grid boundary; source and original prompt preserved."
+    },
+    {
+      "id": "st-tail",
+      "file": "sources/st-tail.png",
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-56c70ebb-ba3b-4b3d-a766-e89a6741d62b.png",
+      "selected": true,
+      "sha256": "f56b6d4c8407dfe70de62b03add2fdb155de7fcae86300e7437f35a7c6ed6650",
+      "prompt": "sources/st-tail.prompt.txt",
+      "promptSha256": "c9471e4d6e34b7fe9369d6b538d882dd416761f6c8a6071f84af15cf64992d76",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        }
+      ],
+      "transparentRequested": true
+    },
+    {
+      "id": "aoe-warning",
+      "file": "sources/aoe-warning.png",
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-bd3f5e27-a45e-445c-b981-841a0a7a012a.png",
+      "selected": true,
+      "sha256": "77d13d283e48893b167bbc550d91e63cb7cc194421247458556101276a278322",
+      "prompt": "sources/aoe-warning.prompt.txt",
+      "promptSha256": "76a4fe3a526d1915a3b8dd2af4c7a8b7fdf02aad3e60717b9d4fe0dfcc499e35",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        }
+      ],
+      "transparentRequested": true
+    },
+    {
+      "id": "aoe-deploy",
+      "file": "sources/aoe-deploy.png",
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-f28858a2-5726-4f0b-91b9-39f258c0ff1c.png",
+      "selected": true,
+      "sha256": "e316464f5d2c21c7a8ed8d10073b1a41a46db824b59d8076fe29db1636dae13d",
+      "prompt": "sources/aoe-deploy.prompt.txt",
+      "promptSha256": "59287d6b0966e9883272252a3b0f671e7bf7d0b3c3b513a000474fc693c7329b",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        }
+      ],
+      "transparentRequested": true
+    },
+    {
+      "id": "aoe-contact",
+      "file": "sources/aoe-contact.png",
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-ecd33a08-830c-483b-ad83-e3b79aadea06.png",
+      "selected": true,
+      "sha256": "82ad695f96a71cf0780ef7a4f6a03eba28411b237d1e8a951bc9ca35c9568727",
+      "prompt": "sources/aoe-contact.prompt.txt",
+      "promptSha256": "42091f41165a2ece0807bdb034d3a101ff0576a761dfcf754e79e0437548b733",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        }
+      ],
+      "transparentRequested": true
+    },
+    {
+      "id": "aoe-collapse",
+      "file": "sources/aoe-collapse.png",
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-8d770531-8daa-418c-8b0d-3613ce038451.png",
+      "selected": true,
+      "sha256": "e83e0e1498a554a3af2ad4232f69ed89de0371df2392dc788c33b91fd04fa4e1",
+      "prompt": "sources/aoe-collapse.prompt.txt",
+      "promptSha256": "5b2b77fb6a37bd84b29c94ef571adb5bbae6ef5b2ace2bf945e622d362a00a7e",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        }
+      ],
+      "transparentRequested": true
+    },
+    {
+      "id": "st-charge",
+      "file": "sources/st-charge-r2.png",
+      "version": 2,
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-61edb56d-54e2-41f6-bba7-60572708e29b.png",
+      "selected": true,
+      "sha256": "33863bd933164f47c1d5dbddd38769f9914edf3bce58c19bc14df6f3f39b616a",
+      "prompt": "sources/st-charge-r2.prompt.txt",
+      "promptSha256": "41e03449c4cd593a8bea3ac00d725682f73c69793c4f57179d7b69adc43df78e",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        },
+        {
+          "file": "sources/st-charge.png",
+          "role": "edit-target-gutter-correction",
+          "sha256": "b86e25c1b9724d4430fe561e189a87fa431912ff13bf61b43bf1c27d337c2103"
+        }
+      ],
+      "transparentRequested": true,
+      "reason": "Correct opaque frame boundary contamination; not a service retry"
+    },
+    {
+      "id": "st-resolve",
+      "file": "sources/st-resolve-r2.png",
+      "version": 2,
+      "originalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-9f29-7eb2-853c-7de92d3084ec\\exec-48c9493e-b291-433d-8f9b-768dc9116279.png",
+      "selected": true,
+      "sha256": "4d888c3fedc15cac2feb86ea25c66773de338d9c179c6cf68858ccb31882009d",
+      "prompt": "sources/st-resolve-r2.prompt.txt",
+      "promptSha256": "953117879a9fc6dcd5b7929604d424ae0b306a4436d1287eb458f183e81fb258",
+      "inputs": [
+        {
+          "file": "inputs/sword-aoe.png",
+          "role": "approved-concept-style-only",
+          "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65"
+        },
+        {
+          "file": "inputs/sword-progression.png",
+          "role": "approved-concept-style-only",
+          "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240"
+        },
+        {
+          "file": "sources/st-resolve.png",
+          "role": "edit-target-gutter-correction",
+          "sha256": "80805232cbaf133eb5b7db13ba067abeb59169bf4937eed688bb51d7e0292ddd"
+        }
+      ],
+      "transparentRequested": true,
+      "reason": "Correct opaque frame boundary contamination; not a service retry"
+    }
+  ]
+}

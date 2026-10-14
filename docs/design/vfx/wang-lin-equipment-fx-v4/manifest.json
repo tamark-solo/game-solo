@@ -1,0 +1,2625 @@
+{
+  "schema": "wang-lin-equipment-fx-4",
+  "date": "2026-10-13",
+  "stage": "candidate-equipment-fx-review",
+  "frameSize": [
+    384,
+    320
+  ],
+  "canvas": [
+    384,
+    320
+  ],
+  "pivot": [
+    176,
+    288
+  ],
+  "atlasGutter": 2,
+  "kits": [
+    {
+      "id": "sword",
+      "name": "Kiếm linh · Hắc Khí Nghịch Thiên",
+      "description": "Hứa Lập Quốc hiện qua hắc khí, kiếm khí ngà sắc cạnh; màu ngà lạnh hợp cả huyền kim, huyền mặc và ngọc.",
+      "clips": [
+        "sword-escort",
+        "sword-charge",
+        "sword-release",
+        "sword-residual"
+      ]
+    },
+    {
+      "id": "banner",
+      "name": "Tôn Hồn Phiên · Vạn Hồn Cuộn",
+      "description": "Dải hồn mực tụ thành xoáy sau phiên, khuôn hồn nhỏ đọc được rồi bung thành dòng; sắc đỏ tím trầm hợp hai phiên đã ghim.",
+      "clips": [
+        "banner-escort",
+        "banner-charge",
+        "banner-release",
+        "banner-residual"
+      ]
+    },
+    {
+      "id": "chariot",
+      "name": "Xạ Thần Xa · Dị Thú Phá Xích",
+      "description": "Dị thú khí tượng giằng xích, lôi quang ngà hổ phách chạy dọc điểm căng; phối hợp thị giác mới lấy cảm hứng nhiều dạng trong truyện.",
+      "clips": [
+        "chariot-escort",
+        "chariot-charge",
+        "chariot-release",
+        "chariot-residual"
+      ]
+    }
+  ],
+  "clips": {
+    "sword-escort": {
+      "id": "sword-escort",
+      "kit": "sword",
+      "phase": "escort",
+      "name": "sword-escort",
+      "layer": "rear",
+      "atlas": "fx/atlases/sword-escort.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "22a9bd9754386db4807d1c14d69dd4029475223438c670173ba70841d1b4db54",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        215,
+        256
+      ],
+      "emitterOffset": [
+        39,
+        -32
+      ],
+      "frameHoldsMs": [
+        300,
+        300,
+        300,
+        300,
+        300,
+        300
+      ],
+      "durationMs": 1800,
+      "startMs": 0,
+      "loop": true,
+      "idle": true,
+      "idleOpacity": 1,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/sword-escort/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "851fa8407d5225ca16a57d73820de146c001a588f60539ff39048dce9f1620fb",
+          "bounds": [
+            172,
+            147,
+            258,
+            256
+          ],
+          "coreBounds": [
+            173,
+            148,
+            257,
+            255
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/sword-escort/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "b17733d1dc649cfb7e45ba03d13c8a07c04b961c27bddfbcaff6a279da9df7f8",
+          "bounds": [
+            168,
+            146,
+            263,
+            256
+          ],
+          "coreBounds": [
+            168,
+            146,
+            261,
+            255
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/sword-escort/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "02691a0e924f3e2fe436f51a518afb1fdfc21cd08536812ae7b432b6fbb353d8",
+          "bounds": [
+            170,
+            144,
+            267,
+            256
+          ],
+          "coreBounds": [
+            170,
+            144,
+            267,
+            256
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/sword-escort/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "38eec039ea384a819ce54719b3dc2d7c9d77f214ced16166e009eafb55a9eb6f",
+          "bounds": [
+            162,
+            138,
+            283,
+            248
+          ],
+          "coreBounds": [
+            162,
+            139,
+            282,
+            248
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/sword-escort/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "e034d6b0a8923da8e12630c724aee22d68ff72bfe7d48e1548eb09e9ae77fdb8",
+          "bounds": [
+            167,
+            142,
+            270,
+            248
+          ],
+          "coreBounds": [
+            167,
+            143,
+            269,
+            248
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/sword-escort/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "2e0cf0f8cf7450c56d1924e03ce13ce24ce7c0a36471e3eb1ce1596ea3cf4e3e",
+          "bounds": [
+            174,
+            139,
+            261,
+            248
+          ],
+          "coreBounds": [
+            174,
+            140,
+            260,
+            248
+          ],
+          "holdMs": 300
+        }
+      ],
+      "peakTargetWidth": 120,
+      "actualPeakCoreWidth": 120,
+      "source": "sources/sword-escort.png",
+      "sourceFile": "sources/sword-escort.png",
+      "promptFile": "sources/sword-escort.prompt.txt",
+      "sourceSha256": "0ef45c41ce239028662e0bb9960d58b6237469d5d22d3b3171e0f035571ece9f",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "sword-charge": {
+      "id": "sword-charge",
+      "kit": "sword",
+      "phase": "charge",
+      "name": "sword-charge",
+      "layer": "rear",
+      "atlas": "fx/atlases/sword-charge.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "800c9887edb78b34691d225e1bd609e6b983ceac300bdc7d06624634f435a2aa",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        234,
+        268
+      ],
+      "emitterOffset": [
+        58,
+        -20
+      ],
+      "frameHoldsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "durationMs": 900,
+      "startMs": 0,
+      "loop": false,
+      "idle": false,
+      "idleOpacity": 0,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/sword-charge/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "0c5cdbb31e0733c4c6223f2d66a225382d8ee91b0dbb624febcf687009700efb",
+          "bounds": [
+            212,
+            186,
+            261,
+            291
+          ],
+          "coreBounds": [
+            213,
+            186,
+            260,
+            289
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/sword-charge/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "341fe1592742475ec49cde44ec8764755a5a173922cc0e3888daeaaa2425e156",
+          "bounds": [
+            193,
+            149,
+            265,
+            290
+          ],
+          "coreBounds": [
+            194,
+            149,
+            265,
+            289
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/sword-charge/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "3a56430a00bb388f46d57b09741f7225206f23a383c20e872fe13e640647d605",
+          "bounds": [
+            185,
+            128,
+            285,
+            291
+          ],
+          "coreBounds": [
+            186,
+            129,
+            284,
+            290
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/sword-charge/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "8e331187fd189dc2e34e9779e78a6ce908f50db09939e4f8f77d90a6b2576dcb",
+          "bounds": [
+            165,
+            134,
+            308,
+            279
+          ],
+          "coreBounds": [
+            166,
+            134,
+            307,
+            278
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/sword-charge/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "473a8b04b8f86bb177fb3a5fc212c1c5d67b988291a092aa137153aa7b75d425",
+          "bounds": [
+            160,
+            115,
+            305,
+            279
+          ],
+          "coreBounds": [
+            161,
+            115,
+            304,
+            278
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/sword-charge/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "3312d34923fcabf038e03d73895f5f50c6c450cc17b0c4a82bfe84d77eeea962",
+          "bounds": [
+            149,
+            116,
+            316,
+            278
+          ],
+          "coreBounds": [
+            150,
+            119,
+            315,
+            277
+          ],
+          "holdMs": 150
+        }
+      ],
+      "peakTargetWidth": 165,
+      "actualPeakCoreWidth": 165,
+      "source": "sources/sword-charge.png",
+      "sourceFile": "sources/sword-charge.png",
+      "promptFile": "sources/sword-charge.prompt.txt",
+      "sourceSha256": "8f652704c0629899019834ac34a7acac4afaea4bc94ffc6d4c243bb7621d4b9a",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "sword-release": {
+      "id": "sword-release",
+      "kit": "sword",
+      "phase": "release",
+      "name": "sword-release",
+      "layer": "rear",
+      "atlas": "fx/atlases/sword-release.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "ec93db80aaa67532935a8fc3568fe2bcde27c1348631fd88587b7275cfdbaa94",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        210,
+        248
+      ],
+      "emitterOffset": [
+        34,
+        -40
+      ],
+      "frameHoldsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "durationMs": 480,
+      "startMs": 900,
+      "loop": false,
+      "idle": false,
+      "idleOpacity": 0,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/sword-release/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "628b208935f9e910aca9bf9a9b6660d1810c19e1c02e5cd8427b81dd27165bc1",
+          "bounds": [
+            162,
+            183,
+            262,
+            280
+          ],
+          "coreBounds": [
+            163,
+            185,
+            261,
+            279
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/sword-release/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "23e1e3c1a0c56a9508eaa71697220e2d89b1aa051fb2a3b21ef955df824fd04e",
+          "bounds": [
+            157,
+            178,
+            318,
+            291
+          ],
+          "coreBounds": [
+            157,
+            180,
+            318,
+            290
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/sword-release/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "56929220bbfdccd2cae44b57077bc50156252a4877742eb53a5e78ce32c3579e",
+          "bounds": [
+            160,
+            167,
+            341,
+            295
+          ],
+          "coreBounds": [
+            161,
+            167,
+            341,
+            295
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/sword-release/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "888c238fca3585b4d172b713d3a455a234103815700d5a49114df82ae909a6fe",
+          "bounds": [
+            172,
+            170,
+            349,
+            282
+          ],
+          "coreBounds": [
+            173,
+            171,
+            349,
+            281
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/sword-release/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "7a6d55272a622535c1b12a7850655455c93dce7ced6c2a0502ce49a59b4c2465",
+          "bounds": [
+            179,
+            174,
+            356,
+            267
+          ],
+          "coreBounds": [
+            179,
+            174,
+            355,
+            266
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/sword-release/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "73d151973907864c93131404cf0e2a2b6c97765f4439143e868a69ea42e3cef2",
+          "bounds": [
+            174,
+            154,
+            340,
+            259
+          ],
+          "coreBounds": [
+            175,
+            155,
+            339,
+            259
+          ],
+          "holdMs": 80
+        }
+      ],
+      "peakTargetWidth": 180,
+      "actualPeakCoreWidth": 180,
+      "source": "sources/sword-release.png",
+      "sourceFile": "sources/sword-release.png",
+      "promptFile": "sources/sword-release.prompt.txt",
+      "sourceSha256": "b754cd1b618b8603702d9f99c6c56d71d227a4b1f6f6fc9dbf55b19fd5554801",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "sword-residual": {
+      "id": "sword-residual",
+      "kit": "sword",
+      "phase": "residual",
+      "name": "sword-residual",
+      "layer": "rear",
+      "atlas": "fx/atlases/sword-residual.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "7da10e1cb286273f91d70569af535354de0890abf8dd4ea65fafe675b9df9f40",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        256,
+        228
+      ],
+      "emitterOffset": [
+        80,
+        -60
+      ],
+      "frameHoldsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "durationMs": 840,
+      "startMs": 1380,
+      "loop": false,
+      "idle": false,
+      "idleOpacity": 0,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/sword-residual/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "b69c9678538e04e98140044cebf7ad899dc66c40ceee3920e3fd628f805a9c7a",
+          "bounds": [
+            176,
+            160,
+            343,
+            317
+          ],
+          "coreBounds": [
+            177,
+            160,
+            342,
+            316
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/sword-residual/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "a83cfa3a46aaea018dec3f3e7a5f3bc7b76dc0ab47cedf054c32934f85f649c3",
+          "bounds": [
+            183,
+            158,
+            347,
+            310
+          ],
+          "coreBounds": [
+            183,
+            159,
+            346,
+            310
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/sword-residual/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "42a9497db55bdcd44f2a93d00b209aaf45856f05a540d4d92247fc8ec7945a06",
+          "bounds": [
+            180,
+            163,
+            331,
+            304
+          ],
+          "coreBounds": [
+            181,
+            163,
+            330,
+            303
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/sword-residual/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "dc24680039d9a8e4c5f4401ffd9d522f80dfa4bcd9efd4824065bf8d52a2cc59",
+          "bounds": [
+            195,
+            175,
+            341,
+            293
+          ],
+          "coreBounds": [
+            196,
+            175,
+            341,
+            293
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/sword-residual/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "c66ac53181bf68cb2738dd0a74b827e369c5574432ea5d8b03c82d8e4abd78df",
+          "bounds": [
+            203,
+            169,
+            326,
+            281
+          ],
+          "coreBounds": [
+            204,
+            169,
+            325,
+            281
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/sword-residual/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "28e6f0e2481ad8c8fc63c8a4f268a5e482f4d985ce688eae45c3b82945e71e9f",
+          "bounds": [
+            213,
+            184,
+            305,
+            275
+          ],
+          "coreBounds": [
+            213,
+            185,
+            305,
+            275
+          ],
+          "holdMs": 140
+        }
+      ],
+      "peakTargetWidth": 165,
+      "actualPeakCoreWidth": 165,
+      "source": "sources/sword-residual.png",
+      "sourceFile": "sources/sword-residual.png",
+      "promptFile": "sources/sword-residual.prompt.txt",
+      "sourceSha256": "730996393465061d2bf44fc9b54594a98a2925224b144777adcd69acd9ee0524",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "banner-escort": {
+      "id": "banner-escort",
+      "kit": "banner",
+      "phase": "escort",
+      "name": "banner-escort",
+      "layer": "rear",
+      "atlas": "fx/atlases/banner-escort.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "eb716e46c11a463a92751d06667342c529a0e924f65b4cf18e7248cad8e79484",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        225,
+        272
+      ],
+      "emitterOffset": [
+        49,
+        -16
+      ],
+      "frameHoldsMs": [
+        300,
+        300,
+        300,
+        300,
+        300,
+        300
+      ],
+      "durationMs": 1800,
+      "startMs": 0,
+      "loop": true,
+      "idle": true,
+      "idleOpacity": 1,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/banner-escort/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "1d755e7806f601e55ec808ff0381b7464706766208f06ff69c270f1609727d10",
+          "bounds": [
+            183,
+            183,
+            269,
+            277
+          ],
+          "coreBounds": [
+            183,
+            183,
+            269,
+            277
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/banner-escort/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "4d32baec03ddc757f4955395a6bee7476b8c417bff4f4085e1e92bec1316454d",
+          "bounds": [
+            161,
+            145,
+            268,
+            277
+          ],
+          "coreBounds": [
+            161,
+            146,
+            267,
+            277
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/banner-escort/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "e19fe23865a7d24b6837b61dab8d7766d8bf10f104d8e9c1ce0d9ecca71d1981",
+          "bounds": [
+            153,
+            153,
+            291,
+            276
+          ],
+          "coreBounds": [
+            154,
+            153,
+            291,
+            276
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/banner-escort/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "175a338436e8a90af8b9ada834e45ebc3a4dad32da843f6acdc081c5288dd4f5",
+          "bounds": [
+            154,
+            134,
+            305,
+            265
+          ],
+          "coreBounds": [
+            154,
+            134,
+            304,
+            265
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/banner-escort/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "2c8470e833fd2fec121e2b67f34d5b97def9730367ee6c444ef659f64a157a86",
+          "bounds": [
+            164,
+            147,
+            283,
+            267
+          ],
+          "coreBounds": [
+            164,
+            147,
+            283,
+            266
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/banner-escort/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "f6864e8944614ddeddf2f70a8e1c76e8b661fa6fcd3147a4e740acf0d5fad907",
+          "bounds": [
+            191,
+            174,
+            277,
+            263
+          ],
+          "coreBounds": [
+            191,
+            174,
+            277,
+            263
+          ],
+          "holdMs": 300
+        }
+      ],
+      "peakTargetWidth": 150,
+      "actualPeakCoreWidth": 150,
+      "source": "sources/banner-escort.png",
+      "sourceFile": "sources/banner-escort.png",
+      "promptFile": "sources/banner-escort.prompt.txt",
+      "sourceSha256": "d40279a0ab58bc2878fd372fd0b3e258854b4c5e2a7385a216394a6bef28a344",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "banner-charge": {
+      "id": "banner-charge",
+      "kit": "banner",
+      "phase": "charge",
+      "name": "banner-charge",
+      "layer": "rear",
+      "atlas": "fx/atlases/banner-charge.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "6998d90e1ea303c14b7aa9587e540bbd933382167a8bcfb2d34c88711e11ed95",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        234,
+        268
+      ],
+      "emitterOffset": [
+        58,
+        -20
+      ],
+      "frameHoldsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "durationMs": 900,
+      "startMs": 0,
+      "loop": false,
+      "idle": false,
+      "idleOpacity": 0,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/banner-charge/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "de92ce17ff15e5e776943dd2d5ce0574d37440b371439903c310da065057f008",
+          "bounds": [
+            160,
+            157,
+            315,
+            295
+          ],
+          "coreBounds": [
+            161,
+            158,
+            314,
+            291
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/banner-charge/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "0f6f894d9f97227e583e38415e761498e15137ce0ab34963e93b1631b44e0fa1",
+          "bounds": [
+            156,
+            148,
+            312,
+            301
+          ],
+          "coreBounds": [
+            157,
+            148,
+            311,
+            300
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/banner-charge/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "3087d47135db02856a8af7c524290c6d0539937aa7b35540aa7693384d4a3018",
+          "bounds": [
+            150,
+            129,
+            316,
+            300
+          ],
+          "coreBounds": [
+            150,
+            130,
+            315,
+            300
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/banner-charge/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "0224b25e9f0114cbcc406aa6d095849437edda7978f473ee28fac24b1af8effa",
+          "bounds": [
+            170,
+            115,
+            308,
+            286
+          ],
+          "coreBounds": [
+            171,
+            116,
+            307,
+            285
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/banner-charge/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "96de5d69c688cfeb32dc98503a4315bd729d08324522464ee0fa05313f39b65a",
+          "bounds": [
+            177,
+            110,
+            290,
+            287
+          ],
+          "coreBounds": [
+            177,
+            111,
+            289,
+            285
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/banner-charge/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "3196864620334b21b5c3df080a17f340aa2905e51da043adc47643ebe45a751c",
+          "bounds": [
+            172,
+            104,
+            275,
+            287
+          ],
+          "coreBounds": [
+            173,
+            104,
+            275,
+            285
+          ],
+          "holdMs": 150
+        }
+      ],
+      "peakTargetWidth": 165,
+      "actualPeakCoreWidth": 165,
+      "source": "sources/banner-charge.png",
+      "sourceFile": "sources/banner-charge.png",
+      "promptFile": "sources/banner-charge.prompt.txt",
+      "sourceSha256": "b06079ac407429a661e925aac15faa4ffa3469f6aed7a0813b30ed0b45ac0e49",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "banner-release": {
+      "id": "banner-release",
+      "kit": "banner",
+      "phase": "release",
+      "name": "banner-release",
+      "layer": "rear",
+      "atlas": "fx/atlases/banner-release.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "86183571bd719bdadfc4863820ee1147593978100a4f92a00e48cc468715a4ea",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        244,
+        222
+      ],
+      "emitterOffset": [
+        68,
+        -66
+      ],
+      "frameHoldsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "durationMs": 480,
+      "startMs": 900,
+      "loop": false,
+      "idle": false,
+      "idleOpacity": 0,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/banner-release/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "b9ab5be6f94e474736872570c50080ace047aed114f31fad120f993050e755c4",
+          "bounds": [
+            172,
+            196,
+            310,
+            304
+          ],
+          "coreBounds": [
+            172,
+            196,
+            309,
+            304
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/banner-release/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "4d42e882e70731e9bcf3e7713c1e371ec206e62675be2b827e89625c95caec1e",
+          "bounds": [
+            142,
+            172,
+            324,
+            309
+          ],
+          "coreBounds": [
+            142,
+            173,
+            324,
+            308
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/banner-release/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "89e64612895e0f0ff7c6b052a6cb249251014b7daf0fae6365b6c5d8876616f4",
+          "bounds": [
+            130,
+            157,
+            342,
+            315
+          ],
+          "coreBounds": [
+            131,
+            158,
+            341,
+            315
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/banner-release/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "09d1aa597d44007c23a8a3e18c111b6921fdd4b789fb970d703e2f9a6ceeb7ac",
+          "bounds": [
+            145,
+            149,
+            351,
+            297
+          ],
+          "coreBounds": [
+            145,
+            149,
+            351,
+            296
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/banner-release/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "033ac04cf40357eba968f6c26d847e5dd5487e6ca4dace32ef3bc6b4cc31e5eb",
+          "bounds": [
+            158,
+            156,
+            348,
+            287
+          ],
+          "coreBounds": [
+            159,
+            156,
+            347,
+            286
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/banner-release/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "a09d48dad53086b252f0873aa85488facb40d6d997a5aa11686ef5ac8e62f16f",
+          "bounds": [
+            152,
+            180,
+            331,
+            268
+          ],
+          "coreBounds": [
+            153,
+            180,
+            331,
+            268
+          ],
+          "holdMs": 80
+        }
+      ],
+      "peakTargetWidth": 210,
+      "actualPeakCoreWidth": 210,
+      "source": "sources/banner-release.png",
+      "sourceFile": "sources/banner-release.png",
+      "promptFile": "sources/banner-release.prompt.txt",
+      "sourceSha256": "9bff3899cb1cfb9da78e7ca4078ee37ff50b5d2bc0372af1e08907f0797540e7",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "banner-residual": {
+      "id": "banner-residual",
+      "kit": "banner",
+      "phase": "residual",
+      "name": "banner-residual",
+      "layer": "rear",
+      "atlas": "fx/atlases/banner-residual.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "f2390082d9f217662b316eb7a75db1ba05d8c06042b1c2814fa7eb2c9f8675cb",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        256,
+        228
+      ],
+      "emitterOffset": [
+        80,
+        -60
+      ],
+      "frameHoldsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "durationMs": 840,
+      "startMs": 1380,
+      "loop": false,
+      "idle": false,
+      "idleOpacity": 0,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/banner-residual/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "af6486926083669cfd73b3ff4ed36f5bb4795b16f8a4fa3f682f276c78100847",
+          "bounds": [
+            178,
+            152,
+            344,
+            314
+          ],
+          "coreBounds": [
+            179,
+            152,
+            343,
+            314
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/banner-residual/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "bd4be93f742bc0ec1311846849335e2e0b2ff2dc28fe1a97cea7b229b33564fe",
+          "bounds": [
+            182,
+            160,
+            333,
+            311
+          ],
+          "coreBounds": [
+            183,
+            160,
+            333,
+            311
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/banner-residual/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "d0f3cf112f1dc83f948aed192f6acd8455d62fc9d6e47e65f134526008de8a73",
+          "bounds": [
+            183,
+            167,
+            334,
+            311
+          ],
+          "coreBounds": [
+            183,
+            167,
+            333,
+            311
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/banner-residual/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "a58e660fcae6ea6f545d761aa8de0be9c925bf46bc6733848851c0ec6bcf089a",
+          "bounds": [
+            182,
+            167,
+            323,
+            303
+          ],
+          "coreBounds": [
+            182,
+            167,
+            323,
+            303
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/banner-residual/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "d35b5c1fa22a16ce8f7c8935337c9861f2fc569e8bd83600f2ad513dc55eee0f",
+          "bounds": [
+            185,
+            167,
+            327,
+            302
+          ],
+          "coreBounds": [
+            186,
+            168,
+            326,
+            302
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/banner-residual/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "db74c2b9c397c3e4e1dbd710d48f94eb56bbb7b2385fad7ea9b90eeeb55b1066",
+          "bounds": [
+            189,
+            180,
+            312,
+            290
+          ],
+          "coreBounds": [
+            189,
+            181,
+            304,
+            290
+          ],
+          "holdMs": 140
+        }
+      ],
+      "peakTargetWidth": 165,
+      "actualPeakCoreWidth": 164,
+      "source": "sources/banner-residual.png",
+      "sourceFile": "sources/banner-residual.png",
+      "promptFile": "sources/banner-residual.prompt.txt",
+      "sourceSha256": "3696656e19fd67142f344186c5e6d9a7099e32812c3418deb9f4c2d5ebb0e470",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "chariot-escort": {
+      "id": "chariot-escort",
+      "kit": "chariot",
+      "phase": "escort",
+      "name": "chariot-escort",
+      "layer": "rear",
+      "atlas": "fx/atlases/chariot-escort.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "d3007886fbd02504cb231715b6bb6329999775875a33d760d839bc103c49a688",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        267,
+        267
+      ],
+      "emitterOffset": [
+        91,
+        -21
+      ],
+      "frameHoldsMs": [
+        300,
+        300,
+        300,
+        300,
+        300,
+        300
+      ],
+      "durationMs": 1800,
+      "startMs": 0,
+      "loop": true,
+      "idle": true,
+      "idleOpacity": 1,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/chariot-escort/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "b6e0f6ea9a21e6909ac08fc2028d2344304e498dd5fe8698f6df9208f00ab24e",
+          "bounds": [
+            195,
+            139,
+            351,
+            272
+          ],
+          "coreBounds": [
+            195,
+            139,
+            350,
+            271
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/chariot-escort/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "f5576bb92b3c8900031b0d8d4e28ac97bb325baf1439458b51a598fba1bfc179",
+          "bounds": [
+            191,
+            126,
+            339,
+            273
+          ],
+          "coreBounds": [
+            191,
+            126,
+            339,
+            270
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/chariot-escort/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "2ac29fa6168ee5871afb3c8b8c35346abaab0dc523a47aeac57b60d2154ec7ad",
+          "bounds": [
+            175,
+            117,
+            341,
+            271
+          ],
+          "coreBounds": [
+            176,
+            117,
+            340,
+            270
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/chariot-escort/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "13fb5905dca824c6dc90e02640d6512925474d833574bbd31599bb58c1c46d5e",
+          "bounds": [
+            192,
+            107,
+            360,
+            254
+          ],
+          "coreBounds": [
+            193,
+            107,
+            358,
+            253
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/chariot-escort/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "155f862c601de8f08676966d06e68805e05dfa766666b050a0f5d88db061383b",
+          "bounds": [
+            192,
+            110,
+            339,
+            261
+          ],
+          "coreBounds": [
+            192,
+            110,
+            339,
+            258
+          ],
+          "holdMs": 300
+        },
+        {
+          "file": "fx/frames/chariot-escort/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "d61b8e0396390d32b579e4cf87f837b8665d004d3d9161c7f9a61a532d92d134",
+          "bounds": [
+            182,
+            124,
+            337,
+            260
+          ],
+          "coreBounds": [
+            183,
+            124,
+            337,
+            259
+          ],
+          "holdMs": 300
+        }
+      ],
+      "peakTargetWidth": 165,
+      "actualPeakCoreWidth": 165,
+      "source": "sources/chariot-escort.png",
+      "sourceFile": "sources/chariot-escort.png",
+      "promptFile": "sources/chariot-escort.prompt.txt",
+      "sourceSha256": "83ff4e9ea58f21f91661ff15ec97daced1e2914590307a0842e634b5b50e239c",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "chariot-charge": {
+      "id": "chariot-charge",
+      "kit": "chariot",
+      "phase": "charge",
+      "name": "chariot-charge",
+      "layer": "rear",
+      "atlas": "fx/atlases/chariot-charge.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "f9829b0d6fe5f95c9a21d298c58d03b6fe9ef722499300e4efecd18f304552ae",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        234,
+        268
+      ],
+      "emitterOffset": [
+        58,
+        -20
+      ],
+      "frameHoldsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "durationMs": 900,
+      "startMs": 0,
+      "loop": false,
+      "idle": false,
+      "idleOpacity": 0,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/chariot-charge/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "7a69e3c0a75a2865abe944a830e7e53048a7a93743975125f64b0adc827ea663",
+          "bounds": [
+            171,
+            130,
+            307,
+            267
+          ],
+          "coreBounds": [
+            172,
+            131,
+            307,
+            266
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/chariot-charge/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "62a9df860fcc3c030be1cb00d32c97bab565f33110d747e42d8f938110e3065f",
+          "bounds": [
+            171,
+            125,
+            306,
+            268
+          ],
+          "coreBounds": [
+            172,
+            126,
+            305,
+            267
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/chariot-charge/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "17eb0ff3486fa1538247cf7acce99e8cb00de400fd9f14af6920d2e98d4550c0",
+          "bounds": [
+            164,
+            112,
+            315,
+            269
+          ],
+          "coreBounds": [
+            164,
+            112,
+            314,
+            268
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/chariot-charge/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "3b8e894149919eb64e68002dcc92dc5c391e918169ca1b49d2ac549ab023b67a",
+          "bounds": [
+            161,
+            101,
+            325,
+            260
+          ],
+          "coreBounds": [
+            162,
+            102,
+            324,
+            259
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/chariot-charge/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "d96372147715e1fed85df38daf5a8e601759495279d4f5d18a916f46f360f13d",
+          "bounds": [
+            166,
+            91,
+            323,
+            261
+          ],
+          "coreBounds": [
+            167,
+            92,
+            319,
+            260
+          ],
+          "holdMs": 150
+        },
+        {
+          "file": "fx/frames/chariot-charge/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "410fa4158d0b243904cd796aff13add95c94fcfe0fbc24001e32cc76532c6e77",
+          "bounds": [
+            148,
+            86,
+            315,
+            262
+          ],
+          "coreBounds": [
+            149,
+            87,
+            314,
+            261
+          ],
+          "holdMs": 150
+        }
+      ],
+      "peakTargetWidth": 165,
+      "actualPeakCoreWidth": 165,
+      "source": "sources/chariot-charge.png",
+      "sourceFile": "sources/chariot-charge.png",
+      "promptFile": "sources/chariot-charge.prompt.txt",
+      "sourceSha256": "caefab04a87ed17bd810867883eb3f31fd750ed82fa9e441d6f42046b9a29255",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "chariot-release": {
+      "id": "chariot-release",
+      "kit": "chariot",
+      "phase": "release",
+      "name": "chariot-release",
+      "layer": "rear",
+      "atlas": "fx/atlases/chariot-release.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "318ed3fd946527faa2a7f5131947e7c889ef2d0cefef99584d21d02f4ce7af58",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        244,
+        200
+      ],
+      "emitterOffset": [
+        68,
+        -88
+      ],
+      "frameHoldsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "durationMs": 480,
+      "startMs": 900,
+      "loop": false,
+      "idle": false,
+      "idleOpacity": 0,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/chariot-release/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "a7dd416956614fa5253fb549bc95e5e4fdb45f287b99a683b40a2ba81cb0d86d",
+          "bounds": [
+            147,
+            112,
+            330,
+            308
+          ],
+          "coreBounds": [
+            147,
+            113,
+            330,
+            306
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/chariot-release/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "30e66ead19bcf59cab920240b936ec20ccc3b646435cf24ec357326ea45290f3",
+          "bounds": [
+            131,
+            123,
+            343,
+            303
+          ],
+          "coreBounds": [
+            131,
+            124,
+            342,
+            302
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/chariot-release/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "a24c910478546ac9a84174d32b116c3ec2bef291633b0cde3611749a3802c2e3",
+          "bounds": [
+            123,
+            100,
+            347,
+            309
+          ],
+          "coreBounds": [
+            124,
+            101,
+            347,
+            308
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/chariot-release/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "6ed17b293329478a7fcebcb67c3a6064958e179e999fb62ad543ae92267522fb",
+          "bounds": [
+            143,
+            114,
+            367,
+            273
+          ],
+          "coreBounds": [
+            143,
+            114,
+            367,
+            272
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/chariot-release/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "a872a6284190f27632980d43acb1c7751e038d65fab056c282355eab27b2cfa9",
+          "bounds": [
+            137,
+            118,
+            354,
+            277
+          ],
+          "coreBounds": [
+            138,
+            118,
+            353,
+            276
+          ],
+          "holdMs": 80
+        },
+        {
+          "file": "fx/frames/chariot-release/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "3125196244d225904afc19623353aa7bbd7b87ff16103e7a7884f7c5d1a6370f",
+          "bounds": [
+            136,
+            143,
+            344,
+            245
+          ],
+          "coreBounds": [
+            136,
+            144,
+            343,
+            244
+          ],
+          "holdMs": 80
+        }
+      ],
+      "peakTargetWidth": 225,
+      "actualPeakCoreWidth": 224,
+      "source": "sources/chariot-release.png",
+      "sourceFile": "sources/chariot-release.png",
+      "promptFile": "sources/chariot-release.prompt.txt",
+      "sourceSha256": "701eaef45d7ece73e9c7944359733ae05911b74769dfa54dd699dd8e367ddc1d",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    "chariot-residual": {
+      "id": "chariot-residual",
+      "kit": "chariot",
+      "phase": "residual",
+      "name": "chariot-residual",
+      "layer": "rear",
+      "atlas": "fx/atlases/chariot-residual.png",
+      "atlasSize": [
+        1164,
+        648
+      ],
+      "atlasSha256": "d9092e29e12533df49284028a5656496d26d9437c542663ac14a143aee212a03",
+      "decodedBytes": 3017088,
+      "frameSize": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "origin": [
+        256,
+        220
+      ],
+      "emitterOffset": [
+        80,
+        -68
+      ],
+      "frameHoldsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "durationMs": 840,
+      "startMs": 1380,
+      "loop": false,
+      "idle": false,
+      "idleOpacity": 0,
+      "frameCount": 6,
+      "frames": [
+        {
+          "file": "fx/frames/chariot-residual/001.png",
+          "rect": {
+            "x": 2,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "723e16d413663be6bbb944d1c7fd85c3d7d52d6ba987d077534dfe3dc250b167",
+          "bounds": [
+            178,
+            134,
+            344,
+            314
+          ],
+          "coreBounds": [
+            178,
+            136,
+            343,
+            313
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/chariot-residual/002.png",
+          "rect": {
+            "x": 390,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "04b10a0fb6f82bdad97e473058730189d9d5127f75e17551309e668894e54af8",
+          "bounds": [
+            182,
+            150,
+            331,
+            310
+          ],
+          "coreBounds": [
+            183,
+            150,
+            330,
+            309
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/chariot-residual/003.png",
+          "rect": {
+            "x": 778,
+            "y": 2,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "a40faf7f14a0ba6e85193285bdef9e853601c4c67b09d0dcad4aaeb62bb70310",
+          "bounds": [
+            186,
+            164,
+            318,
+            306
+          ],
+          "coreBounds": [
+            187,
+            164,
+            317,
+            306
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/chariot-residual/004.png",
+          "rect": {
+            "x": 2,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "28dabf1072f655355c58d6ca569c5f4d7f5506fa241c34adabd4f38a62b6c600",
+          "bounds": [
+            200,
+            161,
+            313,
+            288
+          ],
+          "coreBounds": [
+            202,
+            161,
+            313,
+            287
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/chariot-residual/005.png",
+          "rect": {
+            "x": 390,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "b3ff91423c6cc70b66a29fddc5d5cc3190768da6d9a19cb095ab4a1acbfc046a",
+          "bounds": [
+            204,
+            174,
+            305,
+            283
+          ],
+          "coreBounds": [
+            204,
+            174,
+            304,
+            282
+          ],
+          "holdMs": 140
+        },
+        {
+          "file": "fx/frames/chariot-residual/006.png",
+          "rect": {
+            "x": 778,
+            "y": 326,
+            "w": 384,
+            "h": 320
+          },
+          "sha256": "2bbd5c488cf0e33ef7511234a13ddbf6dfbd516fff613701176b7d94b02cf737",
+          "bounds": [
+            228,
+            189,
+            300,
+            275
+          ],
+          "coreBounds": [
+            228,
+            189,
+            299,
+            274
+          ],
+          "holdMs": 140
+        }
+      ],
+      "peakTargetWidth": 165,
+      "actualPeakCoreWidth": 165,
+      "source": "sources/chariot-residual.png",
+      "sourceFile": "sources/chariot-residual.png",
+      "promptFile": "sources/chariot-residual.prompt.txt",
+      "sourceSha256": "70c41f15ba93158bb03369140c08798ee1c404b2633bba4bd2f9c8f61cb8dfdf",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    }
+  },
+  "sources": [
+    {
+      "id": "sword-escort",
+      "file": "sources/sword-escort.png",
+      "sha256": "0ef45c41ce239028662e0bb9960d58b6237469d5d22d3b3171e0f035571ece9f",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/sword-escort.prompt.txt",
+      "promptSha256": "bc331dbf7e6ea332147f1cb608b3bfd9d1986790da0efbec87b5cb502ff4f67e",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-188644db-ff48-4a20-897f-882ff60091aa.png"
+    },
+    {
+      "id": "sword-charge",
+      "file": "sources/sword-charge.png",
+      "sha256": "8f652704c0629899019834ac34a7acac4afaea4bc94ffc6d4c243bb7621d4b9a",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/sword-charge.prompt.txt",
+      "promptSha256": "6d3b0e08c56f56db9d2e95ac4bd0a0afee9f1db1cdcbce1a6c39eaa5a9c1e06f",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-a90540ed-667a-4045-8c32-b9b86eb2bedd.png"
+    },
+    {
+      "id": "sword-release",
+      "file": "sources/sword-release.png",
+      "sha256": "b754cd1b618b8603702d9f99c6c56d71d227a4b1f6f6fc9dbf55b19fd5554801",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/sword-release.prompt.txt",
+      "promptSha256": "2fa834aa57cdc6dcbca672fd7a7dddce55fc9367dd49217e6daf73c1556f2243",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-c8b5facb-06b8-41af-b53f-2332b3364f96.png"
+    },
+    {
+      "id": "sword-residual",
+      "file": "sources/sword-residual.png",
+      "sha256": "730996393465061d2bf44fc9b54594a98a2925224b144777adcd69acd9ee0524",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/sword-residual.prompt.txt",
+      "promptSha256": "484a8094985f79c3a74c5306af63a54d677cf714d6f6558a0d1bc00973928a01",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-c5b5feca-8952-446a-b95f-87683c71f24a.png"
+    },
+    {
+      "id": "banner-escort",
+      "file": "sources/banner-escort.png",
+      "sha256": "d40279a0ab58bc2878fd372fd0b3e258854b4c5e2a7385a216394a6bef28a344",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/banner-escort.prompt.txt",
+      "promptSha256": "42be5cfc3ce86b6c85a47566bd680e8989f10d177b1ffd0e2af0ae6b105e8288",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-54514342-b930-45e3-8791-c1a17909bb76.png"
+    },
+    {
+      "id": "banner-charge",
+      "file": "sources/banner-charge.png",
+      "sha256": "b06079ac407429a661e925aac15faa4ffa3469f6aed7a0813b30ed0b45ac0e49",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/banner-charge.prompt.txt",
+      "promptSha256": "763c7c1f03b6247d685c6f5616f4db62218738e86663efe083bb8915f82d0dd7",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-7ca15e18-2d84-4c6d-aff5-b2cc4115f877.png"
+    },
+    {
+      "id": "banner-release",
+      "file": "sources/banner-release.png",
+      "sha256": "9bff3899cb1cfb9da78e7ca4078ee37ff50b5d2bc0372af1e08907f0797540e7",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/banner-release.prompt.txt",
+      "promptSha256": "3159df70fe0101d4a05560ff87b5b2c0916def1377f690626c4e4f0a88908fca",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-fea6db80-a91f-4c47-ac50-8dda7adb0469.png"
+    },
+    {
+      "id": "banner-residual",
+      "file": "sources/banner-residual.png",
+      "sha256": "3696656e19fd67142f344186c5e6d9a7099e32812c3418deb9f4c2d5ebb0e470",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/banner-residual.prompt.txt",
+      "promptSha256": "efa33877b6c126bf39e8f3bf4fcc46c8154b5ca9505fbe4ad8081fddc13a09a1",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-af701918-d890-4d90-9845-e6674aae2b76.png"
+    },
+    {
+      "id": "chariot-escort",
+      "file": "sources/chariot-escort.png",
+      "sha256": "83ff4e9ea58f21f91661ff15ec97daced1e2914590307a0842e634b5b50e239c",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/chariot-escort.prompt.txt",
+      "promptSha256": "43f6a6e5e8caf0d28dea90f77f6bb7eca43334f34ae62de1ad81d2f8be9edd83",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-54a67b3d-98eb-4e5f-9435-e0eaf0934717.png"
+    },
+    {
+      "id": "chariot-charge",
+      "file": "sources/chariot-charge.png",
+      "sha256": "caefab04a87ed17bd810867883eb3f31fd750ed82fa9e441d6f42046b9a29255",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/chariot-charge.prompt.txt",
+      "promptSha256": "6182b3dc23e3ca2d6cd76e2d4135e46c325c5279afa795de0b4d0d745d61a222",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-6cc28203-13e9-47e0-a23d-b31c56786ac9.png"
+    },
+    {
+      "id": "chariot-release",
+      "file": "sources/chariot-release.png",
+      "sha256": "701eaef45d7ece73e9c7944359733ae05911b74769dfa54dd699dd8e367ddc1d",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/chariot-release.prompt.txt",
+      "promptSha256": "d697d27b366fda233d3cf9e94687ff95d90f662fd6e5c1c82469b445151ef2e1",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-54f7401c-af60-4429-ab13-fb1c53dec63c.png"
+    },
+    {
+      "id": "chariot-residual",
+      "file": "sources/chariot-residual.png",
+      "sha256": "70c41f15ba93158bb03369140c08798ee1c404b2633bba4bd2f9c8f61cb8dfdf",
+      "size": [
+        1536,
+        1024
+      ],
+      "prompt": "sources/chariot-residual.prompt.txt",
+      "promptSha256": "a92dadebb195ee609769d8059a10fdbceffc8bb0cf06be15af70236b4c222000",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-fd1b0f72-74bf-45c1-8daa-c42c6db5068a.png"
+    }
+  ],
+  "bodyBasis": {
+    "package": "docs/design/characters/wang-lin-equipment-options-v3",
+    "targets": [
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/manifest.json",
+        "sha256": "9cab6b1cf7ea9aac22b8257736582218982d650c8a43d0bca16a5ad3c1e9db32"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/body/banner-ritual.png",
+        "sha256": "7d74912ae4d86e3eac7d7d305976afb350fd4dc03ea5d2ae1818e9bb158683b1"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-original-front.png",
+        "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-original-rear.png",
+        "sha256": "a2aa70a0ea32a62e6867abcd9adf661e0f34c19adb29a119ca0048aa9012ef0f"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-original-fx-rear.png",
+        "sha256": "79a89f3de277b5aeebd392de5f003ddc58a38a1f48108812c6e0e2b7805c260a"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/body/chariot-bronze.png",
+        "sha256": "08c75ca3e173523ff33b2e7a6cec13f96e47ace3a4123d1b7a8ed2f32b8532bb"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/chariot-original-front.png",
+        "sha256": "3d8a0f86716145060464919d8c270c3e03b4f526a8296d50570d7566c0af6ccc"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/chariot-original-rear.png",
+        "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/chariot-original-fx-rear.png",
+        "sha256": "2068a159a8454fe2b847e36d877af2c23c0fc01bb1304dc2faa9fd8896089c40"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/body/chariot-thunder.png",
+        "sha256": "3eb84434f79934b42354006efb3bf693e422fc8e8cda9d8e04c419ea1a82cfe0"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/body/sword-ink.png",
+        "sha256": "ba8d73052aea97f3122e9f4bbd5a55f367280071e36564e9696472abda4900f4"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-original-front.png",
+        "sha256": "98d7a1be09fcbdf084a465fef46cfdfee63519d1868ec46e7abd7b9d1a249a78"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-original-rear.png",
+        "sha256": "530eaa99481ba1526d0afc93f3d308e547f6b4ed61e99c30d5398596a6b918f6"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-original-fx-rear.png",
+        "sha256": "22481d1fd38c53b37e3a24f5e607003cf38639b59f0e52263b956f874738e766"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-ink-front.png",
+        "sha256": "db1d71012b43d68769fee352d34820e85bd22aae3defd1841ff2ea5e5c199283"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-ink-rear.png",
+        "sha256": "7ac95b1f12b19f58ea76176af8b8f48ad83323b97d7ae77955f80ce8bc4d92d5"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-ink-fx-rear.png",
+        "sha256": "fe61888fe67558bedeb34b7b91c648ececb6f400aa45fa5cbf445c2e78331dc4"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-jade-front.png",
+        "sha256": "343cde7c8ca90de6dfbae61511577a527f22f9cd512a3d2b5671f743288fd861"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-jade-rear.png",
+        "sha256": "dcdc942eadbf7db39e4cd76603344b3fd869cfae971954b6d8326028d27839c6"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-jade-fx-rear.png",
+        "sha256": "bd01d97888ff9256a08603d7b7b94ade01f772566b0c3d2f6aa18d4f4783ee34"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-violet-front.png",
+        "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-violet-rear.png",
+        "sha256": "fd980f92ad4a15351320a126156cb8c979df3f2a4e69ce6aef2be01ab471c3af"
+      },
+      {
+        "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-violet-fx-rear.png",
+        "sha256": "797f47e3fbd5031dc9fdfc9b750618dc8cb619f07997b0b72fa85225c4f2331a"
+      }
+    ],
+    "bodyPixelsModified": false,
+    "gearPixelsModified": false
+  },
+  "timeline": {
+    "durationMs": 3600,
+    "peakMs": 1060,
+    "chargeEndMs": 900,
+    "releaseEndMs": 1380,
+    "residualEndMs": 2220,
+    "loopPresentation": true,
+    "flipbookLoops": "escort only; other source phases play once"
+  },
+  "decodedCacheBudgetBytes": 16777216,
+  "cacheScope": "all decoded review bitmaps, including FX atlases and pinned body/gear/map; current kit references protected from eviction",
+  "coverage": {
+    "expectedSequences": 12,
+    "sequences": 12,
+    "canonicalFrames": 72,
+    "pending": []
+  },
+  "pending": [],
+  "ownerApproved": false,
+  "artApproved": false,
+  "runtimeIntegrated": false
+}

@@ -22,7 +22,7 @@ import { basicDamage, copyLessonProfile, creditLessonHit, lessonView, performLes
   type LessonRuntime, type LessonOutcome } from './training-lessons';
 import {ChapterActivity} from './chapter-activity';
 import type {ActorActionFact} from '../../shared/actor-actions';
-import {chapterAvailable,performChapterCommand} from './chapter-progress';
+import {applyG2MilestoneFacts,autoChainNextChapterQuest,chapterAvailable,performChapterCommand} from './chapter-progress';
 import {CHAPTER_WORLD,applyChapterMovement,chapterCommandKey,initialChapter,readChapterCommand,type ChapterView,type ChapterResult} from '../../shared/chapter';
 import {ownedItemId} from '../../shared/character-inventory';
 
@@ -143,6 +143,8 @@ export class HangNhacRoom extends CourtyardRoom {
         performSectCommand(this.snapshot(profile,actor),actor,command,this.engine.now,this.cycles.get(actor.id)??0,this.hasProjectile(actor.id));
       try {
         if(outcome.candidate){
+          applyG2MilestoneFacts(outcome.candidate);
+          if(command.action==='lesson_confirm'&&command.lesson==='avoid')autoChainNextChapterQuest(outcome.candidate);
           this.storeFor(client.sessionId).commitSect(outcome.candidate,command.id,{command:key,result:outcome.result});
           this.profiles.set(actor.id,outcome.candidate);actor.hp=outcome.candidate.hp;actor.savedAt=outcome.candidate.updatedAt;
           if(outcome.startCycle)this.cycles.set(actor.id,this.engine.now+CYCLE_PHASE_MS);
@@ -166,7 +168,7 @@ export class HangNhacRoom extends CourtyardRoom {
           }
         }
       }catch{client.send('sect:result',{requestId:command.id,ok:false,reason:'save'});}
-      this.sendSect(client,true);
+      this.sendSect(client,true);this.sendChapter(client,true);this.sendCharacter(client,true);
     });
   }
   onJoin(client: Client, options: unknown): void {
@@ -189,6 +191,7 @@ export class HangNhacRoom extends CourtyardRoom {
       const data = options as Record<string, unknown>;
       actor.name = grant?profile.name:cleanPlayerName(data.name, profile.name);
       for (const key of ['hp','mp','casts','practiceHits','nextSwordAt','nextThunderAt','nextWindAt','lastSpentAt'] as const) actor[key] = profile[key];
+      applyG2MilestoneFacts(profile); autoChainNextChapterQuest(profile);
       this.profiles.set(client.sessionId, profile);if(!grant)HangNhacRoom.leases.activate(profile.accountId, client.sessionId);
     }
     actor.scene='hub';
@@ -264,6 +267,7 @@ export class HangNhacRoom extends CourtyardRoom {
       if(this.cycles.has(id)&&(!actor.connected||actor.moving||!nearStation(actor,'cultivation')||isPractising(actor,this.engine.now,projectile,profile.sect.lessons.nextBasicAt)))
         this.cycles.set(id,this.engine.now+CYCLE_PHASE_MS);
       advanceCultivation(profile,actor,dt,this.engine.now,projectile);
+      autoChainNextChapterQuest(profile);
     }
     if (this.engine.now >= this.nextSaveAt) { this.nextSaveAt = this.engine.now + 1000; for (const id of this.profiles.keys()) this.save(id); }
     if(this.engine.now>=this.nextSectAt){this.nextSectAt=this.engine.now+250;for(const client of this.clients){this.sendSect(client);this.sendCharacter(client);this.sendChapter(client);}}
@@ -426,8 +430,9 @@ export class HangNhacRoom extends CourtyardRoom {
     const candidate=this.snapshot(p,actor),c=candidate.chapter!;
     if(q==='HN10'){
       c.checkpoint=phase;c.facts.push(`HN10-phase-${phase}`);
-      if(phase===3){c.completed.push('HN10');candidate.milestone='M04';}
+      if(phase===3){c.completed.push('HN10');candidate.milestone='M04';autoChainNextChapterQuest(candidate);}
     }else c.facts.push(`${q}-proof`);
+    applyG2MilestoneFacts(candidate);
     try{this.storeFor(id).save(candidate);this.profiles.set(id,candidate);actor.savedAt=candidate.updatedAt;this.clients.find(c=>c.sessionId===id)?.send('chapter:result',{ok:true,reason:'proof_saved'});}
     catch{this.clients.find(c=>c.sessionId===id)?.send('chapter:result',{ok:false,reason:'save'});}
   }

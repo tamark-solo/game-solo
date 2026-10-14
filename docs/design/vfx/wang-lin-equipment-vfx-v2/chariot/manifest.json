@@ -1,0 +1,2734 @@
+{
+  "schema": "wang-lin-equipment-family-vfx-manifest-2",
+  "familyId": "chariot",
+  "date": "2026-10-14",
+  "status": "candidate-production-art",
+  "sharedIdentities": [
+    "a",
+    "b"
+  ],
+  "artApproved": false,
+  "runtimeIntegrated": false,
+  "releaseMs": 850,
+  "activeEndMs": 1710,
+  "endMs": 2260,
+  "coverage": {
+    "sequences": 10,
+    "frames": 60,
+    "decodedCanonicalBytes": 11349312,
+    "decodedCanonicalMiB": 10.82354736328125,
+    "directionalSpiritViews": 0
+  },
+  "sequences": [
+    {
+      "id": "st-warning",
+      "familyId": "chariot",
+      "mode": "st",
+      "phase": "warning",
+      "anchor": "ground-node",
+      "cameraPolicy": "abstract-effect-direction-or-ground",
+      "aimRotationAllowed": true,
+      "source": "sources/st-warning.png",
+      "sourceSha256": "e54a1ce6176dc27c0b80dcbb718deb597f032a4473dd664ddde7536074335587",
+      "canvas": [
+        144,
+        161
+      ],
+      "pivot": [
+        75,
+        114
+      ],
+      "durationMs": 220,
+      "loop": false,
+      "scale": 0.25882352941176473,
+      "frames": [
+        {
+          "id": "st-warning-1",
+          "index": 0,
+          "file": "frames/st-warning/001.png",
+          "canvas": [
+            144,
+            161
+          ],
+          "pivot": [
+            75,
+            114
+          ],
+          "durationMs": 30,
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            265.0,
+            423.0
+          ],
+          "sha256": "fafbcb07b7e9342558399f114ce730735df2c185a8acee2a8ca1f383266dd33c",
+          "rgbaSha256": "c44749f97fa9949f64d24c1211912ebda16120536ebf22c805fbe48e57dd1e28",
+          "bounds": [
+            6,
+            34,
+            139,
+            137
+          ],
+          "softAlphaPixels": 1843,
+          "rect": [
+            2,
+            2,
+            144,
+            161
+          ]
+        },
+        {
+          "id": "st-warning-2",
+          "index": 1,
+          "file": "frames/st-warning/002.png",
+          "canvas": [
+            144,
+            161
+          ],
+          "pivot": [
+            75,
+            114
+          ],
+          "durationMs": 30,
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            263.0,
+            422.0
+          ],
+          "sha256": "b27c632a91151c57c906e2e3f59eba16464fef0f62156dd4ac4c72b06611816a",
+          "rgbaSha256": "bdbd696859e248409c08575d6fd6a612573ad1f42959c65c650105524133227c",
+          "bounds": [
+            9,
+            13,
+            135,
+            136
+          ],
+          "softAlphaPixels": 3104,
+          "rect": [
+            150,
+            2,
+            144,
+            161
+          ]
+        },
+        {
+          "id": "st-warning-3",
+          "index": 2,
+          "file": "frames/st-warning/003.png",
+          "canvas": [
+            144,
+            161
+          ],
+          "pivot": [
+            75,
+            114
+          ],
+          "durationMs": 40,
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            263.0,
+            421.0
+          ],
+          "sha256": "c3cbe253bf2293e939ece6a2601de01c69d9146a4806cd59f06eb2a14b3bdcd3",
+          "rgbaSha256": "b40e77322b03e6c29081a08f934618c166050f37bf7f0d6123dbe43b337d24f3",
+          "bounds": [
+            9,
+            19,
+            134,
+            138
+          ],
+          "softAlphaPixels": 4614,
+          "rect": [
+            298,
+            2,
+            144,
+            161
+          ]
+        },
+        {
+          "id": "st-warning-4",
+          "index": 3,
+          "file": "frames/st-warning/004.png",
+          "canvas": [
+            144,
+            161
+          ],
+          "pivot": [
+            75,
+            114
+          ],
+          "durationMs": 40,
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            269.0,
+            348.0
+          ],
+          "sha256": "9146bbd2756371d70c5da14d4b62a0ca0e35f09cff661dfb03a53b12f111c61a",
+          "rgbaSha256": "293c4809a463715fa7c3619a92cc2910124e6d9acbf8baa429949e740ed46848",
+          "bounds": [
+            5,
+            24,
+            138,
+            152
+          ],
+          "softAlphaPixels": 4849,
+          "rect": [
+            2,
+            167,
+            144,
+            161
+          ]
+        },
+        {
+          "id": "st-warning-5",
+          "index": 4,
+          "file": "frames/st-warning/005.png",
+          "canvas": [
+            144,
+            161
+          ],
+          "pivot": [
+            75,
+            114
+          ],
+          "durationMs": 40,
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            272.0,
+            347.0
+          ],
+          "sha256": "812b9a0fd8570407565e3b613033c433cb345d0c6bcfb74f4acb2590516b4b1c",
+          "rgbaSha256": "4c6642784db639fa36fa68460e82baf25a6abfe59bcd0cf818575b69004ae5d0",
+          "bounds": [
+            5,
+            24,
+            137,
+            157
+          ],
+          "softAlphaPixels": 5217,
+          "rect": [
+            150,
+            167,
+            144,
+            161
+          ]
+        },
+        {
+          "id": "st-warning-6",
+          "index": 5,
+          "file": "frames/st-warning/006.png",
+          "canvas": [
+            144,
+            161
+          ],
+          "pivot": [
+            75,
+            114
+          ],
+          "durationMs": 40,
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            270.0,
+            347.0
+          ],
+          "sha256": "c486b9eb980fac635ab8f32932eaaaedb78f2013ad170f1f6801f2adc23abcaf",
+          "rgbaSha256": "251aef7d0e57ddcbb43968eeaa9d0c90d14a5cd4fc010235232bc7f6c22b721e",
+          "bounds": [
+            5,
+            24,
+            135,
+            144
+          ],
+          "softAlphaPixels": 5271,
+          "rect": [
+            298,
+            167,
+            144,
+            161
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/st-warning.png",
+        "sha256": "3e92828e2f76f40573b159fa52563de28c43a04c04b144d432e21f9361b1129c",
+        "size": [
+          444,
+          330
+        ],
+        "gutter": 2
+      },
+      "timingPolicy": "ART playback spans experimental Core fixture phases; gameplay release/pulse/contact/lifetime exclusively Core facts.",
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "st-charge",
+      "familyId": "chariot",
+      "mode": "st",
+      "phase": "charge",
+      "anchor": "hand",
+      "cameraPolicy": "abstract-effect-direction-or-ground",
+      "aimRotationAllowed": true,
+      "source": "sources/st-charge-r2.png",
+      "sourceSha256": "49e5dc35958c73f7d081be336d8d8eb8203f312ecf5163c9dd4d4f65722ab21b",
+      "canvas": [
+        142,
+        150
+      ],
+      "pivot": [
+        73,
+        77
+      ],
+      "durationMs": 480,
+      "loop": false,
+      "scale": 0.24731182795698925,
+      "frames": [
+        {
+          "id": "st-charge-1",
+          "index": 0,
+          "file": "frames/st-charge/001.png",
+          "canvas": [
+            142,
+            150
+          ],
+          "pivot": [
+            73,
+            77
+          ],
+          "durationMs": 70,
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            264.0,
+            295.0
+          ],
+          "sha256": "0f2374d1555ca0b472ee9f67c2cb260c541a5f4f8d314311f1f9c81fe033c7d0",
+          "rgbaSha256": "f0b635cc4c02987ba1a747a059810af3250052dd650df21f1b181ef177a8f99f",
+          "bounds": [
+            23,
+            32,
+            134,
+            129
+          ],
+          "softAlphaPixels": 3378,
+          "rect": [
+            2,
+            2,
+            142,
+            150
+          ]
+        },
+        {
+          "id": "st-charge-2",
+          "index": 1,
+          "file": "frames/st-charge/002.png",
+          "canvas": [
+            142,
+            150
+          ],
+          "pivot": [
+            73,
+            77
+          ],
+          "durationMs": 70,
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            250.0,
+            278.0
+          ],
+          "sha256": "c00a9d425896c7e3c6a77a0632f6a168ac0c0a9413d575c91d272c4a25438d00",
+          "rgbaSha256": "71912aade007989c1a51ee049bdddf23586ec465d3ec9d005e214069c2b3afac",
+          "bounds": [
+            11,
+            24,
+            138,
+            135
+          ],
+          "softAlphaPixels": 3909,
+          "rect": [
+            148,
+            2,
+            142,
+            150
+          ]
+        },
+        {
+          "id": "st-charge-3",
+          "index": 2,
+          "file": "frames/st-charge/003.png",
+          "canvas": [
+            142,
+            150
+          ],
+          "pivot": [
+            73,
+            77
+          ],
+          "durationMs": 80,
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            255.0,
+            275.0
+          ],
+          "sha256": "e01f3794b3de8f5e99ac2a6a233a8ff085ca1898085fa0c8b108df6abc8dd280",
+          "rgbaSha256": "124722ef9504ff5e685d7f48f9e934d1690f72867d65c8442c2a46ad0b17c0d3",
+          "bounds": [
+            27,
+            15,
+            129,
+            128
+          ],
+          "softAlphaPixels": 5336,
+          "rect": [
+            294,
+            2,
+            142,
+            150
+          ]
+        },
+        {
+          "id": "st-charge-4",
+          "index": 3,
+          "file": "frames/st-charge/004.png",
+          "canvas": [
+            142,
+            150
+          ],
+          "pivot": [
+            73,
+            77
+          ],
+          "durationMs": 80,
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            277.0,
+            253.0
+          ],
+          "sha256": "aec3e646ea52a9633d12cce8365659eec69f31732bda0ff5f12f39a27c9d81b2",
+          "rgbaSha256": "acc7f477b3fef92b558666dc8997fc3c7d0cbe0aef32147765d3121f4cec1e8d",
+          "bounds": [
+            21,
+            30,
+            130,
+            131
+          ],
+          "softAlphaPixels": 5394,
+          "rect": [
+            2,
+            156,
+            142,
+            150
+          ]
+        },
+        {
+          "id": "st-charge-5",
+          "index": 4,
+          "file": "frames/st-charge/005.png",
+          "canvas": [
+            142,
+            150
+          ],
+          "pivot": [
+            73,
+            77
+          ],
+          "durationMs": 90,
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256.0,
+            235.0
+          ],
+          "sha256": "30eceb3a74ff9e55ea1cd38c270332a0191cd0b9b86016fe07f16cb9914ea0b6",
+          "rgbaSha256": "6e5e90f93e11fd3d982712199efbbb4d8105f5f3b1536c406f32ca8bcf15d11f",
+          "bounds": [
+            10,
+            19,
+            136,
+            146
+          ],
+          "softAlphaPixels": 4006,
+          "rect": [
+            148,
+            156,
+            142,
+            150
+          ]
+        },
+        {
+          "id": "st-charge-6",
+          "index": 5,
+          "file": "frames/st-charge/006.png",
+          "canvas": [
+            142,
+            150
+          ],
+          "pivot": [
+            73,
+            77
+          ],
+          "durationMs": 90,
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            262.0,
+            252.0
+          ],
+          "sha256": "c14fe361773bf07bd033f3a0366fbe0ad8fd242f4ff640277ed1947518950606",
+          "rgbaSha256": "5886c8d2ca910c0b61e354fe86982dfef6f0a219db6c1d71e77f87b06c0dec68",
+          "bounds": [
+            8,
+            22,
+            118,
+            141
+          ],
+          "softAlphaPixels": 3284,
+          "rect": [
+            294,
+            156,
+            142,
+            150
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/st-charge.png",
+        "sha256": "8c05d9f9698f46a9028471114c825128cd86c6e425060c0c520fdd8c060c7de3",
+        "size": [
+          438,
+          308
+        ],
+        "gutter": 2
+      },
+      "timingPolicy": "ART playback spans experimental Core fixture phases; gameplay release/pulse/contact/lifetime exclusively Core facts.",
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "st-release",
+      "familyId": "chariot",
+      "mode": "st",
+      "phase": "release",
+      "anchor": "projectile",
+      "cameraPolicy": "abstract-effect-direction-or-ground",
+      "aimRotationAllowed": true,
+      "source": "sources/st-release.png",
+      "sourceSha256": "553c452e360743c08ab9a1b55ff06fbad43c403b45372e1adbe3288cf6f01657",
+      "canvas": [
+        271,
+        235
+      ],
+      "pivot": [
+        102,
+        129
+      ],
+      "durationMs": 300,
+      "loop": false,
+      "scale": 0.39618138424821003,
+      "frames": [
+        {
+          "id": "st-release-1",
+          "index": 0,
+          "file": "frames/st-release/001.png",
+          "canvas": [
+            271,
+            235
+          ],
+          "pivot": [
+            102,
+            129
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            245.0,
+            311.0
+          ],
+          "sha256": "a0b1812a9ccf2c709b0f62fd50e51f21fb1d008126219d52b08e88969d558294",
+          "rgbaSha256": "679406b3d2016fa630a97cd512cf2f49ecc2d94689ba2b0271f9a24230fedd89",
+          "bounds": [
+            12,
+            12,
+            208,
+            209
+          ],
+          "softAlphaPixels": 10705,
+          "rect": [
+            2,
+            2,
+            271,
+            235
+          ]
+        },
+        {
+          "id": "st-release-2",
+          "index": 1,
+          "file": "frames/st-release/002.png",
+          "canvas": [
+            271,
+            235
+          ],
+          "pivot": [
+            102,
+            129
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            150.0,
+            310.0
+          ],
+          "sha256": "8ee28db0b82f15114103229916ce100d319073fb824b31d359bc6a16d456d606",
+          "rgbaSha256": "4bf39521ae8399fe0064801ab8dc8557b1d79eb2024a5284afec378c2bdbbd1d",
+          "bounds": [
+            43,
+            11,
+            245,
+            209
+          ],
+          "softAlphaPixels": 12678,
+          "rect": [
+            277,
+            2,
+            271,
+            235
+          ]
+        },
+        {
+          "id": "st-release-3",
+          "index": 2,
+          "file": "frames/st-release/003.png",
+          "canvas": [
+            271,
+            235
+          ],
+          "pivot": [
+            102,
+            129
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            125.0,
+            313.0
+          ],
+          "sha256": "031bdae11b80f7ee61b666727922cc928ba96fbf579ec921af6d3dfdc95caae3",
+          "rgbaSha256": "892f0c1c4f205a650e3db992f5dd9168534bc7c643e340bb8279c120f1162e32",
+          "bounds": [
+            52,
+            5,
+            247,
+            208
+          ],
+          "softAlphaPixels": 13563,
+          "rect": [
+            552,
+            2,
+            271,
+            235
+          ]
+        },
+        {
+          "id": "st-release-4",
+          "index": 3,
+          "file": "frames/st-release/004.png",
+          "canvas": [
+            271,
+            235
+          ],
+          "pivot": [
+            102,
+            129
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            112.0,
+            280.0
+          ],
+          "sha256": "2c02b5046d00b5181c76c8184a1db5a3a121347396b356f495b6f48a49ba61f7",
+          "rgbaSha256": "9228b6b6f04cdeb6019cc776a7aade465fcf766a881d45c777a7a8db0f300369",
+          "bounds": [
+            58,
+            18,
+            260,
+            221
+          ],
+          "softAlphaPixels": 12842,
+          "rect": [
+            2,
+            241,
+            271,
+            235
+          ]
+        },
+        {
+          "id": "st-release-5",
+          "index": 4,
+          "file": "frames/st-release/005.png",
+          "canvas": [
+            271,
+            235
+          ],
+          "pivot": [
+            102,
+            129
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            98.0,
+            275.0
+          ],
+          "sha256": "4b058cdd3784cf11e9e6d287b2f61a4dac9c00459c11a2d7895737e78e9d6fc7",
+          "rgbaSha256": "1af44af5f0dada359435f084b0747d3bd59d268a36ae39909482e2b1057c88d1",
+          "bounds": [
+            63,
+            20,
+            266,
+            223
+          ],
+          "softAlphaPixels": 13882,
+          "rect": [
+            277,
+            241,
+            271,
+            235
+          ]
+        },
+        {
+          "id": "st-release-6",
+          "index": 5,
+          "file": "frames/st-release/006.png",
+          "canvas": [
+            271,
+            235
+          ],
+          "pivot": [
+            102,
+            129
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            153.0,
+            255.0
+          ],
+          "sha256": "470d6fff8633f8e352e8ab16563dd3ffa74f9fc98839f9186349a234926139e5",
+          "rgbaSha256": "33192ed801fceb035287a23643a6f1c6f49ff33d9b59028b98bb199e93907700",
+          "bounds": [
+            41,
+            28,
+            244,
+            231
+          ],
+          "softAlphaPixels": 12741,
+          "rect": [
+            552,
+            241,
+            271,
+            235
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/st-release.png",
+        "sha256": "b30aacc9ba870154ecd3f2b56cedb9b1d1fe1b6b768651d0aad5fa71a0c20eda",
+        "size": [
+          825,
+          478
+        ],
+        "gutter": 2
+      },
+      "timingPolicy": "ART playback spans experimental Core fixture phases; gameplay release/pulse/contact/lifetime exclusively Core facts.",
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "st-resolve",
+      "familyId": "chariot",
+      "mode": "st",
+      "phase": "resolve",
+      "anchor": "contact",
+      "cameraPolicy": "abstract-effect-direction-or-ground",
+      "aimRotationAllowed": true,
+      "source": "sources/st-resolve.png",
+      "sourceSha256": "0a240dac867b6cba334e198f88b9e2c893aa56cb9fed53bf77bc141fb26d0f78",
+      "canvas": [
+        159,
+        156
+      ],
+      "pivot": [
+        81,
+        120
+      ],
+      "durationMs": 450,
+      "loop": false,
+      "scale": 0.28028503562945367,
+      "frames": [
+        {
+          "id": "st-resolve-1",
+          "index": 0,
+          "file": "frames/st-resolve/001.png",
+          "canvas": [
+            159,
+            156
+          ],
+          "pivot": [
+            81,
+            120
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            273.0,
+            410.0
+          ],
+          "sha256": "4b25116a0ae52d6fc41e0c684f644460e72bfdd7f59d087723654624243688fa",
+          "rgbaSha256": "6ebe4d81cbc2ba94e94916a63dfd4587c352d6e15b83c5aae16766ecc64d9cca",
+          "bounds": [
+            4,
+            7,
+            147,
+            149
+          ],
+          "softAlphaPixels": 6132,
+          "rect": [
+            2,
+            2,
+            159,
+            156
+          ]
+        },
+        {
+          "id": "st-resolve-2",
+          "index": 1,
+          "file": "frames/st-resolve/002.png",
+          "canvas": [
+            159,
+            156
+          ],
+          "pivot": [
+            81,
+            120
+          ],
+          "durationMs": 55,
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            250.0,
+            409.0
+          ],
+          "sha256": "ad373c0c3f258c99548b2ce66cf649ce06a38fe843780f7244eababbb8c52ada",
+          "rgbaSha256": "2f689b0ce59164a72026b332cdbf4d1b31330f5d6c36dcbe171756c16a21a5a4",
+          "bounds": [
+            12,
+            8,
+            154,
+            149
+          ],
+          "softAlphaPixels": 8768,
+          "rect": [
+            165,
+            2,
+            159,
+            156
+          ]
+        },
+        {
+          "id": "st-resolve-3",
+          "index": 2,
+          "file": "frames/st-resolve/003.png",
+          "canvas": [
+            159,
+            156
+          ],
+          "pivot": [
+            81,
+            120
+          ],
+          "durationMs": 65,
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            254.0,
+            411.0
+          ],
+          "sha256": "4abb43aec988a327c4bf850b7c2cd9bdadaf155743656e0e915d29154bd7d364",
+          "rgbaSha256": "94db5f4ac23d7c34026cd7704cb4b16f6138a737d9dc667d3d5f341ce7631fd9",
+          "bounds": [
+            11,
+            9,
+            148,
+            148
+          ],
+          "softAlphaPixels": 10594,
+          "rect": [
+            328,
+            2,
+            159,
+            156
+          ]
+        },
+        {
+          "id": "st-resolve-4",
+          "index": 3,
+          "file": "frames/st-resolve/004.png",
+          "canvas": [
+            159,
+            156
+          ],
+          "pivot": [
+            81,
+            120
+          ],
+          "durationMs": 75,
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            268.0,
+            402.0
+          ],
+          "sha256": "e4a7d24c4401d70cc85bc8243497f167c88d9cd72f5e1442cc259d8e6769e88e",
+          "rgbaSha256": "655d082cdf780af34cf363c2fadeca62fbf0d46fac971f79737e535aef9437cf",
+          "bounds": [
+            6,
+            7,
+            149,
+            151
+          ],
+          "softAlphaPixels": 8222,
+          "rect": [
+            2,
+            162,
+            159,
+            156
+          ]
+        },
+        {
+          "id": "st-resolve-5",
+          "index": 4,
+          "file": "frames/st-resolve/005.png",
+          "canvas": [
+            159,
+            156
+          ],
+          "pivot": [
+            81,
+            120
+          ],
+          "durationMs": 90,
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            260.0,
+            400.0
+          ],
+          "sha256": "c9eacbcdfbd6d4a33bd9e61920272b762883b6f9b12f96e4b2f5ffbdaa39c3d4",
+          "rgbaSha256": "dc879581608f7641d603c45c3b464f93e9f59ec55f4171a9113fdacf26d0ea23",
+          "bounds": [
+            8,
+            8,
+            152,
+            151
+          ],
+          "softAlphaPixels": 7690,
+          "rect": [
+            165,
+            162,
+            159,
+            156
+          ]
+        },
+        {
+          "id": "st-resolve-6",
+          "index": 5,
+          "file": "frames/st-resolve/006.png",
+          "canvas": [
+            159,
+            156
+          ],
+          "pivot": [
+            81,
+            120
+          ],
+          "durationMs": 115,
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            260.0,
+            400.0
+          ],
+          "sha256": "cd06e71b605f2da90c062a0b462d91748dcf8a413d53977ced21670c512a1111",
+          "rgbaSha256": "b2422cd782bfa407ceebf13fc453648d1c5c41a34952f95c3e34cf89c88da2f2",
+          "bounds": [
+            8,
+            8,
+            147,
+            147
+          ],
+          "softAlphaPixels": 6204,
+          "rect": [
+            328,
+            162,
+            159,
+            156
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/st-resolve.png",
+        "sha256": "5e6892ece6d0087c905fcaa9211dacf009d9c629fbb8066ba5cfe5e2f2c9c77e",
+        "size": [
+          489,
+          320
+        ],
+        "gutter": 2
+      },
+      "timingPolicy": "ART playback spans experimental Core fixture phases; gameplay release/pulse/contact/lifetime exclusively Core facts.",
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "st-tail",
+      "familyId": "chariot",
+      "mode": "st",
+      "phase": "tail",
+      "anchor": "projectile",
+      "cameraPolicy": "abstract-effect-direction-or-ground",
+      "aimRotationAllowed": true,
+      "source": "sources/st-tail.png",
+      "sourceSha256": "16c72e839ad76c2cc2830e426baa15ae3d13bbb38661c255485ee10d01685ad7",
+      "canvas": [
+        163,
+        171
+      ],
+      "pivot": [
+        85,
+        93
+      ],
+      "durationMs": 520,
+      "loop": false,
+      "scale": 0.2962962962962963,
+      "frames": [
+        {
+          "id": "st-tail-1",
+          "index": 0,
+          "file": "frames/st-tail/001.png",
+          "canvas": [
+            163,
+            171
+          ],
+          "pivot": [
+            85,
+            93
+          ],
+          "durationMs": 60,
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            264.0,
+            294.0
+          ],
+          "sha256": "1386e04cdedf4f65c96a62b0d2bfc60408484021357cbee35d01949a25afc708",
+          "rgbaSha256": "1aa4f2b7a9a0857b599d9542351d0dbb24f0f1b655de102c4db5e182f9b166c1",
+          "bounds": [
+            17,
+            9,
+            158,
+            158
+          ],
+          "softAlphaPixels": 8445,
+          "rect": [
+            2,
+            2,
+            163,
+            171
+          ]
+        },
+        {
+          "id": "st-tail-2",
+          "index": 1,
+          "file": "frames/st-tail/002.png",
+          "canvas": [
+            163,
+            171
+          ],
+          "pivot": [
+            85,
+            93
+          ],
+          "durationMs": 70,
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            268.0,
+            296.0
+          ],
+          "sha256": "42e574cee3641c1636c416703e056c8bd9abb799f9698b06611df97ec8f84fcb",
+          "rgbaSha256": "e7ae88e36ccbb2b9ee4094082c000a2a9c7be1ce94a709d9b1ead90c5e0036d5",
+          "bounds": [
+            6,
+            5,
+            156,
+            156
+          ],
+          "softAlphaPixels": 9616,
+          "rect": [
+            169,
+            2,
+            163,
+            171
+          ]
+        },
+        {
+          "id": "st-tail-3",
+          "index": 2,
+          "file": "frames/st-tail/003.png",
+          "canvas": [
+            163,
+            171
+          ],
+          "pivot": [
+            85,
+            93
+          ],
+          "durationMs": 80,
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            266.0,
+            300.0
+          ],
+          "sha256": "d21be0eed0baf1d3ab023d69edb5d5ce813bf7b395c6a96cc2d714a7a4fc78e8",
+          "rgbaSha256": "adefb9d045682e0c83bc9a56943efa45827f404e7e3042e8af030b275e53994a",
+          "bounds": [
+            6,
+            17,
+            153,
+            156
+          ],
+          "softAlphaPixels": 7956,
+          "rect": [
+            336,
+            2,
+            163,
+            171
+          ]
+        },
+        {
+          "id": "st-tail-4",
+          "index": 3,
+          "file": "frames/st-tail/004.png",
+          "canvas": [
+            163,
+            171
+          ],
+          "pivot": [
+            85,
+            93
+          ],
+          "durationMs": 90,
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            272.0,
+            273.0
+          ],
+          "sha256": "b0433f5e7dec33a2a19a520b84d1c276bf742debe38242d74160290689585340",
+          "rgbaSha256": "dbffe10c4f804ec4aedc1172e89fb9bb7b96438cbef0b0a00a142fb5ff80fa46",
+          "bounds": [
+            4,
+            12,
+            156,
+            163
+          ],
+          "softAlphaPixels": 7675,
+          "rect": [
+            2,
+            177,
+            163,
+            171
+          ]
+        },
+        {
+          "id": "st-tail-5",
+          "index": 4,
+          "file": "frames/st-tail/005.png",
+          "canvas": [
+            163,
+            171
+          ],
+          "pivot": [
+            85,
+            93
+          ],
+          "durationMs": 100,
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            267.0,
+            265.0
+          ],
+          "sha256": "b4023cd19cd56d156919be388bd2d6816b7b0750ce846aa7d1ddfcbee1f22fc9",
+          "rgbaSha256": "93e76197fe3d2d20c3cbf1188a8755efd112146c2867f4cae800cb5e4035d3a7",
+          "bounds": [
+            7,
+            14,
+            158,
+            161
+          ],
+          "softAlphaPixels": 6424,
+          "rect": [
+            169,
+            177,
+            163,
+            171
+          ]
+        },
+        {
+          "id": "st-tail-6",
+          "index": 5,
+          "file": "frames/st-tail/006.png",
+          "canvas": [
+            163,
+            171
+          ],
+          "pivot": [
+            85,
+            93
+          ],
+          "durationMs": 120,
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            266.0,
+            268.0
+          ],
+          "sha256": "5d07242dc159cd2e0f13a01960173aaef20bb9da5085045d52d778004b7f3726",
+          "rgbaSha256": "a094ed2b2fea13ee9981ad29adb190f7f35d97d3219d2afcc30079283e36c71d",
+          "bounds": [
+            6,
+            14,
+            151,
+            158
+          ],
+          "softAlphaPixels": 3875,
+          "rect": [
+            336,
+            177,
+            163,
+            171
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/st-tail.png",
+        "sha256": "8116d480b01e8ca24b6abb8c20e255da6e6c90493e8e2e2759776e66e436c971",
+        "size": [
+          501,
+          350
+        ],
+        "gutter": 2
+      },
+      "timingPolicy": "ART playback spans experimental Core fixture phases; gameplay release/pulse/contact/lifetime exclusively Core facts.",
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "aoe-warning",
+      "familyId": "chariot",
+      "mode": "aoe",
+      "phase": "warning",
+      "anchor": "ground-node",
+      "cameraPolicy": "camera-facing-fixed-spectral-beast-or-ground-seal-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "source": "sources/aoe-warning.png",
+      "sourceSha256": "1ebdab85e1193127aeec017f8eb3bf6c63df697211c99fc9d50c15272f516138",
+      "canvas": [
+        160,
+        160
+      ],
+      "pivot": [
+        84,
+        111
+      ],
+      "durationMs": 850,
+      "loop": false,
+      "scale": 0.2914572864321608,
+      "frames": [
+        {
+          "id": "aoe-warning-1",
+          "index": 0,
+          "file": "frames/aoe-warning/001.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            84,
+            111
+          ],
+          "durationMs": 100,
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            272.0,
+            360.0
+          ],
+          "sha256": "c8506766ea307019e12cd2e9f887b36786971d11703af02f9638d4c698ebc6e3",
+          "rgbaSha256": "bece1b9abfc967fa79d834357387ecf8333d398a6a2911cf489f0df0dc6e0680",
+          "bounds": [
+            10,
+            17,
+            154,
+            155
+          ],
+          "softAlphaPixels": 3588,
+          "rect": [
+            2,
+            2,
+            160,
+            160
+          ]
+        },
+        {
+          "id": "aoe-warning-2",
+          "index": 1,
+          "file": "frames/aoe-warning/002.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            84,
+            111
+          ],
+          "durationMs": 110,
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            271.0,
+            360.0
+          ],
+          "sha256": "aae33bbe36f3decb0d1b9c634b3d0b006c52da64c73397f9048998e6f55b8d42",
+          "rgbaSha256": "f6ec6501e20374a4be32b57dac68f16251850143ce78ba84e941949bf3de95cd",
+          "bounds": [
+            5,
+            13,
+            154,
+            155
+          ],
+          "softAlphaPixels": 5119,
+          "rect": [
+            166,
+            2,
+            160,
+            160
+          ]
+        },
+        {
+          "id": "aoe-warning-3",
+          "index": 2,
+          "file": "frames/aoe-warning/003.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            84,
+            111
+          ],
+          "durationMs": 130,
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            271.0,
+            363.0
+          ],
+          "sha256": "bfd4d42c4f59e0757058f7eec29fa4d0013a03cff07bce8ef5c726873a3dabf4",
+          "rgbaSha256": "e2d8301de06ad1343c6a8d27e50271a4fe3dbd431ea8d06e2f6dded3dfa60aec",
+          "bounds": [
+            5,
+            14,
+            133,
+            154
+          ],
+          "softAlphaPixels": 7137,
+          "rect": [
+            330,
+            2,
+            160,
+            160
+          ]
+        },
+        {
+          "id": "aoe-warning-4",
+          "index": 3,
+          "file": "frames/aoe-warning/004.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            84,
+            111
+          ],
+          "durationMs": 150,
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            269.0,
+            365.0
+          ],
+          "sha256": "1a337096ddc78e6f223bdaecee2eb53bf603d189b0f8c7dabc12e4e664a3c212",
+          "rgbaSha256": "817706392c487c562ef27a15115af2b391648abf0b31284d533ad54c29f57b2d",
+          "bounds": [
+            13,
+            11,
+            154,
+            138
+          ],
+          "softAlphaPixels": 8761,
+          "rect": [
+            2,
+            166,
+            160,
+            160
+          ]
+        },
+        {
+          "id": "aoe-warning-5",
+          "index": 4,
+          "file": "frames/aoe-warning/005.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            84,
+            111
+          ],
+          "durationMs": 170,
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            267.0,
+            363.0
+          ],
+          "sha256": "a43c20b633e38d6e26429dae015c9886e6789ca6069dded8a182fb7614d13484",
+          "rgbaSha256": "00042bccc6db5560edfe011c662f6ef982b50439ca9881d82a2e2d6810b1780c",
+          "bounds": [
+            6,
+            5,
+            154,
+            143
+          ],
+          "softAlphaPixels": 10459,
+          "rect": [
+            166,
+            166,
+            160,
+            160
+          ]
+        },
+        {
+          "id": "aoe-warning-6",
+          "index": 5,
+          "file": "frames/aoe-warning/006.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            84,
+            111
+          ],
+          "durationMs": 190,
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            267.0,
+            360.0
+          ],
+          "sha256": "402d6ff37147c8d3c59b82fcf0b5c34646d414f640f3401d0a43beedc73faee9",
+          "rgbaSha256": "59dad5fd13da403cff0a211eb46900b9d1fba048abf329e7308617ef914f3e0f",
+          "bounds": [
+            6,
+            13,
+            139,
+            141
+          ],
+          "softAlphaPixels": 8958,
+          "rect": [
+            330,
+            166,
+            160,
+            160
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/aoe-warning.png",
+        "sha256": "41cd530ef97e7a38c276f193886ca28ee9b27e754ad1ba86f5b390387422b44e",
+        "size": [
+          492,
+          328
+        ],
+        "gutter": 2
+      },
+      "timingPolicy": "ART playback spans experimental Core fixture phases; gameplay release/pulse/contact/lifetime exclusively Core facts.",
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "aoe-deploy",
+      "familyId": "chariot",
+      "mode": "aoe",
+      "phase": "deploy",
+      "anchor": "ground-node",
+      "cameraPolicy": "camera-facing-fixed-spectral-beast-or-ground-seal-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "source": "sources/aoe-deploy.png",
+      "sourceSha256": "067c472ca0fbbab377f5c0c147c086f6951e0e9e96bd7e0ba40acf53ebd4cadf",
+      "canvas": [
+        236,
+        236
+      ],
+      "pivot": [
+        120,
+        168
+      ],
+      "durationMs": 360,
+      "loop": false,
+      "scale": 0.4282238442822384,
+      "frames": [
+        {
+          "id": "aoe-deploy-1",
+          "index": 0,
+          "file": "frames/aoe-deploy/001.png",
+          "canvas": [
+            236,
+            236
+          ],
+          "pivot": [
+            120,
+            168
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            254.0,
+            378.0
+          ],
+          "sha256": "3622c4ae9961ce087a69de27463d3a6d7cef372c37a02ca954731b617e62fefb",
+          "rgbaSha256": "50ad69489a46b1c1d51625fe55dfce18b557b3899423cb8c2282e4f619373169",
+          "bounds": [
+            11,
+            15,
+            230,
+            225
+          ],
+          "softAlphaPixels": 14197,
+          "rect": [
+            2,
+            2,
+            236,
+            236
+          ]
+        },
+        {
+          "id": "aoe-deploy-2",
+          "index": 1,
+          "file": "frames/aoe-deploy/002.png",
+          "canvas": [
+            236,
+            236
+          ],
+          "pivot": [
+            120,
+            168
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            254.0,
+            380.0
+          ],
+          "sha256": "db1680724e65d3d716c6d6732c3554c5b51aeda1415a9798f8cafb2b493cf90f",
+          "rgbaSha256": "4f815550e557c66bbf87fbc11f2f4fd071b7fbc0818b2d900bfe6798f6a44a7a",
+          "bounds": [
+            11,
+            5,
+            230,
+            225
+          ],
+          "softAlphaPixels": 18205,
+          "rect": [
+            242,
+            2,
+            236,
+            236
+          ]
+        },
+        {
+          "id": "aoe-deploy-3",
+          "index": 2,
+          "file": "frames/aoe-deploy/003.png",
+          "canvas": [
+            236,
+            236
+          ],
+          "pivot": [
+            120,
+            168
+          ],
+          "durationMs": 60,
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            251.0,
+            382.0
+          ],
+          "sha256": "4c85e996eef5b23ad021743ce0663a036e88c35b4d9f0d479221df70bb64210c",
+          "rgbaSha256": "4d077600529971a2c4b69bff286bbb22a5f0eea27c08897484c77b821c0b317a",
+          "bounds": [
+            13,
+            12,
+            225,
+            224
+          ],
+          "softAlphaPixels": 20487,
+          "rect": [
+            482,
+            2,
+            236,
+            236
+          ]
+        },
+        {
+          "id": "aoe-deploy-4",
+          "index": 3,
+          "file": "frames/aoe-deploy/004.png",
+          "canvas": [
+            236,
+            236
+          ],
+          "pivot": [
+            120,
+            168
+          ],
+          "durationMs": 60,
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            270.0,
+            363.0
+          ],
+          "sha256": "93a47d108b2486db5907a48f0156166a09a5208c0b1dcddf5b51f56f625e4601",
+          "rgbaSha256": "c158e20730fc7fb5b7634483e0fa6e85686b9486f937f74897c248be1255fecd",
+          "bounds": [
+            4,
+            13,
+            224,
+            232
+          ],
+          "softAlphaPixels": 19310,
+          "rect": [
+            2,
+            242,
+            236,
+            236
+          ]
+        },
+        {
+          "id": "aoe-deploy-5",
+          "index": 4,
+          "file": "frames/aoe-deploy/005.png",
+          "canvas": [
+            236,
+            236
+          ],
+          "pivot": [
+            120,
+            168
+          ],
+          "durationMs": 70,
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            265.0,
+            366.0
+          ],
+          "sha256": "4f6f2f269f5b5888f243f9cfe2f389f16afae9572751dd4f2eed0febf05fc59e",
+          "rgbaSha256": "272ec6e7355528eba75f81a430156dd7c385a5027b74a3edaad7734703b96552",
+          "bounds": [
+            7,
+            11,
+            226,
+            231
+          ],
+          "softAlphaPixels": 19605,
+          "rect": [
+            242,
+            242,
+            236,
+            236
+          ]
+        },
+        {
+          "id": "aoe-deploy-6",
+          "index": 5,
+          "file": "frames/aoe-deploy/006.png",
+          "canvas": [
+            236,
+            236
+          ],
+          "pivot": [
+            120,
+            168
+          ],
+          "durationMs": 70,
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            261.0,
+            368.0
+          ],
+          "sha256": "066ac66a2792894cc91cfe59b74e628c2da33783d874fb74ce08d235dd3de3cb",
+          "rgbaSha256": "3924db8f4bfaf71ba4d306f450153a3d00b3f8b7b6e76f4be7ab58dcdc6b7174",
+          "bounds": [
+            10,
+            10,
+            215,
+            230
+          ],
+          "softAlphaPixels": 19788,
+          "rect": [
+            482,
+            242,
+            236,
+            236
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/aoe-deploy.png",
+        "sha256": "e44d1cc54102a2e0b4b9a6c9832b754b4644b7163014da77d140e2733315ebdd",
+        "size": [
+          720,
+          480
+        ],
+        "gutter": 2
+      },
+      "timingPolicy": "ART playback spans experimental Core fixture phases; gameplay release/pulse/contact/lifetime exclusively Core facts.",
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "aoe-active",
+      "familyId": "chariot",
+      "mode": "aoe",
+      "phase": "active",
+      "anchor": "field-center",
+      "cameraPolicy": "camera-facing-fixed-spectral-beast-or-ground-seal-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "source": "sources/aoe-active.png",
+      "sourceSha256": "314dc29e290928c0fba1b24edea34d25bae08d63de285d290f1daf932a5c670d",
+      "canvas": [
+        365,
+        404
+      ],
+      "pivot": [
+        192,
+        300
+      ],
+      "durationMs": 860,
+      "loop": false,
+      "scale": 0.676923076923077,
+      "frames": [
+        {
+          "id": "aoe-active-1",
+          "index": 0,
+          "file": "frames/aoe-active/001.png",
+          "canvas": [
+            365,
+            404
+          ],
+          "pivot": [
+            192,
+            300
+          ],
+          "durationMs": 130,
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            277.0,
+            423.0
+          ],
+          "sha256": "01dbe1d43834c6eb61c606037886f9400a22212b7a07f70de60e1d4995184d16",
+          "rgbaSha256": "707b817625445826ba9ae504d569664f7fb0703e315101be8e160f4b7e1ee2e3",
+          "bounds": [
+            4,
+            20,
+            351,
+            355
+          ],
+          "softAlphaPixels": 34177,
+          "rect": [
+            2,
+            2,
+            365,
+            404
+          ]
+        },
+        {
+          "id": "aoe-active-2",
+          "index": 1,
+          "file": "frames/aoe-active/002.png",
+          "canvas": [
+            365,
+            404
+          ],
+          "pivot": [
+            192,
+            300
+          ],
+          "durationMs": 140,
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            268.0,
+            427.0
+          ],
+          "sha256": "c765f8aa86269d13834f7eab006978e13e288230799ae2aa8b01096ffe3a91f7",
+          "rgbaSha256": "35a4453a2c5d496ea5a972a4bd98c00d8f4149dec8edb6fefcd8b10a2710f55d",
+          "bounds": [
+            11,
+            17,
+            357,
+            358
+          ],
+          "softAlphaPixels": 38178,
+          "rect": [
+            371,
+            2,
+            365,
+            404
+          ]
+        },
+        {
+          "id": "aoe-active-3",
+          "index": 2,
+          "file": "frames/aoe-active/003.png",
+          "canvas": [
+            365,
+            404
+          ],
+          "pivot": [
+            192,
+            300
+          ],
+          "durationMs": 140,
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            263.0,
+            437.0
+          ],
+          "sha256": "efe8b50ccc177875becacdd0f05558bc4269564291d23f7b2869cbda01fa35ef",
+          "rgbaSha256": "154d16f1587ccac14d8d49d7472b8c56c55eea40795aef0db62f57e60ccc8252",
+          "bounds": [
+            16,
+            20,
+            347,
+            342
+          ],
+          "softAlphaPixels": 49251,
+          "rect": [
+            740,
+            2,
+            365,
+            404
+          ]
+        },
+        {
+          "id": "aoe-active-4",
+          "index": 3,
+          "file": "frames/aoe-active/004.png",
+          "canvas": [
+            365,
+            404
+          ],
+          "pivot": [
+            192,
+            300
+          ],
+          "durationMs": 150,
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            276.0,
+            365.0
+          ],
+          "sha256": "53e213f9759ceaefc53d3cbcd2ce0e8fd864113e693f9e250aac2ea653845676",
+          "rgbaSha256": "c6f97f802c7269364f961dd78bbeb9cff13c8c1a259ea1ff78b12c0d97427acc",
+          "bounds": [
+            5,
+            56,
+            348,
+            383
+          ],
+          "softAlphaPixels": 50188,
+          "rect": [
+            2,
+            410,
+            365,
+            404
+          ]
+        },
+        {
+          "id": "aoe-active-5",
+          "index": 4,
+          "file": "frames/aoe-active/005.png",
+          "canvas": [
+            365,
+            404
+          ],
+          "pivot": [
+            192,
+            300
+          ],
+          "durationMs": 150,
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            268.0,
+            383.0
+          ],
+          "sha256": "464837987d2c0ec2d508a5d0528976339fb476adecd894de2f73b568c1aeb7fb",
+          "rgbaSha256": "f9410f012676d55e521d075ac472242c4b62b5d63c1e90ce9ff272111d389d34",
+          "bounds": [
+            11,
+            41,
+            352,
+            375
+          ],
+          "softAlphaPixels": 51861,
+          "rect": [
+            371,
+            410,
+            365,
+            404
+          ]
+        },
+        {
+          "id": "aoe-active-6",
+          "index": 5,
+          "file": "frames/aoe-active/006.png",
+          "canvas": [
+            365,
+            404
+          ],
+          "pivot": [
+            192,
+            300
+          ],
+          "durationMs": 150,
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            264.0,
+            383.0
+          ],
+          "sha256": "feb63a0626eaef6de8beb00e1b2056c49bba19f7dd24346bbf8e75dbe4a71fcf",
+          "rgbaSha256": "835ff5a193c4493d04f379107d8459adebe82d40fc69ffc01b417a5843335594",
+          "bounds": [
+            22,
+            44,
+            352,
+            371
+          ],
+          "softAlphaPixels": 40998,
+          "rect": [
+            740,
+            410,
+            365,
+            404
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/aoe-active.png",
+        "sha256": "fe9a37325aa98b4eefebffa0aee619834d6f3ecfdc12bfcb6125f5e2ca258ecd",
+        "size": [
+          1107,
+          816
+        ],
+        "gutter": 2
+      },
+      "timingPolicy": "ART playback spans experimental Core fixture phases; gameplay release/pulse/contact/lifetime exclusively Core facts.",
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "aoe-contact",
+      "familyId": "chariot",
+      "mode": "aoe",
+      "phase": "contact",
+      "anchor": "contact",
+      "cameraPolicy": "camera-facing-fixed-spectral-beast-or-ground-seal-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "source": "sources/aoe-contact.png",
+      "sourceSha256": "e589adf3c4e8738a9c40d95d702ff04012b0b5527bd255bbfe9b03ddc346ddec",
+      "canvas": [
+        174,
+        175
+      ],
+      "pivot": [
+        89,
+        140
+      ],
+      "durationMs": 350,
+      "loop": false,
+      "scale": 0.3116883116883117,
+      "frames": [
+        {
+          "id": "aoe-contact-1",
+          "index": 0,
+          "file": "frames/aoe-contact/001.png",
+          "canvas": [
+            174,
+            175
+          ],
+          "pivot": [
+            89,
+            140
+          ],
+          "durationMs": 40,
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            254.0,
+            433.0
+          ],
+          "sha256": "6d7a8bc64115184dc6f808917c6a210e71b68e87bbf3df885c358ec191050449",
+          "rgbaSha256": "43f54bdc3c48ac6069f4961ea399189735b58a76bd7250c15e59540145e9f9ae",
+          "bounds": [
+            13,
+            15,
+            169,
+            165
+          ],
+          "softAlphaPixels": 3070,
+          "rect": [
+            2,
+            2,
+            174,
+            175
+          ]
+        },
+        {
+          "id": "aoe-contact-2",
+          "index": 1,
+          "file": "frames/aoe-contact/002.png",
+          "canvas": [
+            174,
+            175
+          ],
+          "pivot": [
+            89,
+            140
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            254.0,
+            433.0
+          ],
+          "sha256": "b53ff5cfb6659a57259daa2bb37d6e5f3627bc6ea0cc45c29be4f24330796c5c",
+          "rgbaSha256": "28430d9672e77b019b21eed0b2871c726c585d21e49e907207cbe76d9d53f11d",
+          "bounds": [
+            10,
+            12,
+            169,
+            165
+          ],
+          "softAlphaPixels": 6743,
+          "rect": [
+            180,
+            2,
+            174,
+            175
+          ]
+        },
+        {
+          "id": "aoe-contact-3",
+          "index": 2,
+          "file": "frames/aoe-contact/003.png",
+          "canvas": [
+            174,
+            175
+          ],
+          "pivot": [
+            89,
+            140
+          ],
+          "durationMs": 50,
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            254.0,
+            435.0
+          ],
+          "sha256": "0325b3c6e4e95d360f4589d392071010460b0bf0c418b6650216b06e23429e12",
+          "rgbaSha256": "cdd361941a5db61584648b19a6a01e398012b23ae081ca325d020ce3dccf8e19",
+          "bounds": [
+            13,
+            15,
+            158,
+            164
+          ],
+          "softAlphaPixels": 12713,
+          "rect": [
+            358,
+            2,
+            174,
+            175
+          ]
+        },
+        {
+          "id": "aoe-contact-4",
+          "index": 3,
+          "file": "frames/aoe-contact/004.png",
+          "canvas": [
+            174,
+            175
+          ],
+          "pivot": [
+            89,
+            140
+          ],
+          "durationMs": 60,
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            270.0,
+            416.0
+          ],
+          "sha256": "bbf35bd8ffcd17c355f5da0238d25223029cfac57eda1ca7b3c887c797751d07",
+          "rgbaSha256": "e09d5ff6166696a92214f39e115935382300d93f83b417215169865fe91d5590",
+          "bounds": [
+            24,
+            11,
+            164,
+            162
+          ],
+          "softAlphaPixels": 12248,
+          "rect": [
+            2,
+            181,
+            174,
+            175
+          ]
+        },
+        {
+          "id": "aoe-contact-5",
+          "index": 4,
+          "file": "frames/aoe-contact/005.png",
+          "canvas": [
+            174,
+            175
+          ],
+          "pivot": [
+            89,
+            140
+          ],
+          "durationMs": 70,
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            269.0,
+            415.0
+          ],
+          "sha256": "77254fa77cfcf0eafe8ad638847ed41a845d9febcf30bad4d91a54642477f3eb",
+          "rgbaSha256": "a8174f2f91f35c16296a6629200b2b1d6b9c4ed0fc35e1bdc5facadea269ed66",
+          "bounds": [
+            5,
+            11,
+            162,
+            163
+          ],
+          "softAlphaPixels": 9565,
+          "rect": [
+            180,
+            181,
+            174,
+            175
+          ]
+        },
+        {
+          "id": "aoe-contact-6",
+          "index": 5,
+          "file": "frames/aoe-contact/006.png",
+          "canvas": [
+            174,
+            175
+          ],
+          "pivot": [
+            89,
+            140
+          ],
+          "durationMs": 80,
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            269.0,
+            414.0
+          ],
+          "sha256": "5897cd73f75d0a077562542afc19cca8fb3d94534169ca89e9159810db8f53ad",
+          "rgbaSha256": "aa5768c8f87cbbc611238683c7c4d53ab0edeff78abe7ab1c524756cebea317b",
+          "bounds": [
+            5,
+            11,
+            157,
+            171
+          ],
+          "softAlphaPixels": 6234,
+          "rect": [
+            358,
+            181,
+            174,
+            175
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/aoe-contact.png",
+        "sha256": "f032f638408febb9e94c5656ba72eeb23d29aaa4de486bf90942ba0c36c90335",
+        "size": [
+          534,
+          358
+        ],
+        "gutter": 2
+      },
+      "timingPolicy": "ART playback spans experimental Core fixture phases; gameplay release/pulse/contact/lifetime exclusively Core facts.",
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "aoe-collapse",
+      "familyId": "chariot",
+      "mode": "aoe",
+      "phase": "collapse",
+      "anchor": "ground-node",
+      "cameraPolicy": "camera-facing-fixed-spectral-beast-or-ground-seal-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "source": "sources/aoe-collapse.png",
+      "sourceSha256": "0bbca380f53433b1704470a54ad7384c6ec9e299754d02def4aa0a04b7a6081b",
+      "canvas": [
+        222,
+        238
+      ],
+      "pivot": [
+        117,
+        183
+      ],
+      "durationMs": 550,
+      "loop": false,
+      "scale": 0.411214953271028,
+      "frames": [
+        {
+          "id": "aoe-collapse-1",
+          "index": 0,
+          "file": "frames/aoe-collapse/001.png",
+          "canvas": [
+            222,
+            238
+          ],
+          "pivot": [
+            117,
+            183
+          ],
+          "durationMs": 70,
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            272.0,
+            390.0
+          ],
+          "sha256": "f7074e9b59f7e9f59f74cdb7477ddd5405c2b572710b703a60bd7ba787450f1f",
+          "rgbaSha256": "05a33904fa9eb19db6a15bdaf3f23af05b3ebbf2bb4576b7804e5f8680479bfb",
+          "bounds": [
+            5,
+            30,
+            216,
+            230
+          ],
+          "softAlphaPixels": 15793,
+          "rect": [
+            2,
+            2,
+            222,
+            238
+          ]
+        },
+        {
+          "id": "aoe-collapse-2",
+          "index": 1,
+          "file": "frames/aoe-collapse/002.png",
+          "canvas": [
+            222,
+            238
+          ],
+          "pivot": [
+            117,
+            183
+          ],
+          "durationMs": 80,
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            270.0,
+            394.0
+          ],
+          "sha256": "74077288751062d0fc959dcd17ae546d32c37963f76ac2fc6a4c957a53849c7c",
+          "rgbaSha256": "ded356b9e079654f52c497f7836eb76c4082e07198aa8cedc59a26226c9e8406",
+          "bounds": [
+            6,
+            21,
+            217,
+            231
+          ],
+          "softAlphaPixels": 17217,
+          "rect": [
+            228,
+            2,
+            222,
+            238
+          ]
+        },
+        {
+          "id": "aoe-collapse-3",
+          "index": 2,
+          "file": "frames/aoe-collapse/003.png",
+          "canvas": [
+            222,
+            238
+          ],
+          "pivot": [
+            117,
+            183
+          ],
+          "durationMs": 90,
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            270.0,
+            402.0
+          ],
+          "sha256": "fedaa161baf8d4d4bc334c520dfc1f08496bfffa1f478ad19e460369e3096fe6",
+          "rgbaSha256": "e7d8868018f5a51e78adfe71bb58987943706de33a35bcf8fdde99e7d76815a9",
+          "bounds": [
+            6,
+            31,
+            203,
+            227
+          ],
+          "softAlphaPixels": 20326,
+          "rect": [
+            454,
+            2,
+            222,
+            238
+          ]
+        },
+        {
+          "id": "aoe-collapse-4",
+          "index": 3,
+          "file": "frames/aoe-collapse/004.png",
+          "canvas": [
+            222,
+            238
+          ],
+          "pivot": [
+            117,
+            183
+          ],
+          "durationMs": 90,
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            273.0,
+            433.0
+          ],
+          "sha256": "4b39a2b387cc64986611dbc7cc1a4d3ca0e0e30424137f39a8d443ad65746d11",
+          "rgbaSha256": "802eb24a3bb022996a7d283901a8a8e5375666a6d2304fd3cc58d2212db138b4",
+          "bounds": [
+            5,
+            5,
+            214,
+            211
+          ],
+          "softAlphaPixels": 14118,
+          "rect": [
+            2,
+            244,
+            222,
+            238
+          ]
+        },
+        {
+          "id": "aoe-collapse-5",
+          "index": 4,
+          "file": "frames/aoe-collapse/005.png",
+          "canvas": [
+            222,
+            238
+          ],
+          "pivot": [
+            117,
+            183
+          ],
+          "durationMs": 100,
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            268.0,
+            433.0
+          ],
+          "sha256": "7f67a0c8aef644c13ad738a231da770fdb7f7046c0aa935cc50cddeaaaf7e5ba",
+          "rgbaSha256": "d88cccc5e677e20d4c9c5695f20c4205465f5e8f1a661a8ee69ab42efe5cb6cd",
+          "bounds": [
+            7,
+            11,
+            217,
+            211
+          ],
+          "softAlphaPixels": 9491,
+          "rect": [
+            228,
+            244,
+            222,
+            238
+          ]
+        },
+        {
+          "id": "aoe-collapse-6",
+          "index": 5,
+          "file": "frames/aoe-collapse/006.png",
+          "canvas": [
+            222,
+            238
+          ],
+          "pivot": [
+            117,
+            183
+          ],
+          "durationMs": 120,
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            270.0,
+            433.0
+          ],
+          "sha256": "c3da4aa76f3a788a518719333404748b3cd30993cd8c466b3f0ee4561946d7fb",
+          "rgbaSha256": "d94a6ddf44a0b38770e51762b8564de255e80009c0e18b06335d60733530b666",
+          "bounds": [
+            6,
+            9,
+            211,
+            209
+          ],
+          "softAlphaPixels": 9813,
+          "rect": [
+            454,
+            244,
+            222,
+            238
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/aoe-collapse.png",
+        "sha256": "803f45e93e9e847e94f22c7083c71f2ecbbe7c6323af5442fc9c37762941cdac",
+        "size": [
+          678,
+          484
+        ],
+        "gutter": 2
+      },
+      "timingPolicy": "ART playback spans experimental Core fixture phases; gameplay release/pulse/contact/lifetime exclusively Core facts.",
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "artApproved": false,
+      "runtimeIntegrated": false
+    }
+  ]
+}

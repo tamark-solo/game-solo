@@ -1,0 +1,855 @@
+{
+  "schema": "wang-lin-equipment-pilot-motion-assessment-1",
+  "items": [
+    {
+      "sourceId": "sword-a-southeast",
+      "sourceViewed": true,
+      "nativeContactViewed": true,
+      "trueDirection": true,
+      "northShowsNoEyesOrChest": null,
+      "bodyOnly": true,
+      "rawRowCount": 5,
+      "rawColumns": 6,
+      "sourcePoses": 30,
+      "selectedActions": [
+        "idle",
+        "run"
+      ],
+      "neutralCalibrations": 6,
+      "singleSourceScale": 0.2962962962962963,
+      "anatomyMeasurements": [
+        {
+          "action": "neutral",
+          "bodySilhouetteHeightsSource": [
+            270,
+            270,
+            270,
+            270,
+            271,
+            270
+          ],
+          "recoverySilhouetteHeightSource": 270,
+          "recoveryDeltaPct": 0.0,
+          "faceSkinWidthsSource": [
+            41,
+            42,
+            41,
+            41,
+            40,
+            40
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "idle",
+          "bodySilhouetteHeightsSource": [
+            268,
+            268,
+            268,
+            267,
+            268,
+            268
+          ],
+          "recoverySilhouetteHeightSource": 268,
+          "recoveryDeltaPct": -0.741,
+          "faceSkinWidthsSource": [
+            41,
+            41,
+            42,
+            41,
+            42,
+            42
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "run",
+          "bodySilhouetteHeightsSource": [
+            228,
+            230,
+            230,
+            229,
+            225,
+            229
+          ],
+          "recoverySilhouetteHeightSource": 229,
+          "recoveryDeltaPct": -15.185,
+          "faceSkinWidthsSource": [
+            42,
+            41,
+            43,
+            42,
+            45,
+            43
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-single-target",
+          "bodySilhouetteHeightsSource": [
+            228,
+            230,
+            230,
+            231,
+            233,
+            232
+          ],
+          "recoverySilhouetteHeightSource": 232,
+          "recoveryDeltaPct": -14.074,
+          "faceSkinWidthsSource": [
+            39,
+            43,
+            39,
+            42,
+            41,
+            39
+          ],
+          "active": false,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-aoe",
+          "bodySilhouetteHeightsSource": [
+            190,
+            211,
+            214,
+            217,
+            220,
+            224
+          ],
+          "recoverySilhouetteHeightSource": 224,
+          "recoveryDeltaPct": -17.037,
+          "faceSkinWidthsSource": [
+            25,
+            40,
+            38,
+            41,
+            39,
+            39
+          ],
+          "active": false,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        }
+      ],
+      "opaqueVividFringePixelsSource": 0,
+      "notes": "Original southeast cast rows superseded by their own r2 sources and kept as source history. North run twists slightly while remaining back, no eyes/chest. AOE r2 starts with a seal instead of settle-low; A-SE adds a seventh same-source standing recovery after six lower-stance action keys. Hands are manually picked; orange hidden/seal candidates require detached or hovering gear. Raw low-alpha colored fringe retained, native binary128 has no vivid opaque fringes.",
+      "ownerApproved": false,
+      "motionApproved": false
+    },
+    {
+      "sourceId": "sword-b-southeast",
+      "sourceViewed": true,
+      "nativeContactViewed": true,
+      "trueDirection": true,
+      "northShowsNoEyesOrChest": null,
+      "bodyOnly": true,
+      "rawRowCount": 5,
+      "rawColumns": 6,
+      "sourcePoses": 30,
+      "selectedActions": [
+        "idle",
+        "run"
+      ],
+      "neutralCalibrations": 6,
+      "singleSourceScale": 0.32388663967611336,
+      "anatomyMeasurements": [
+        {
+          "action": "neutral",
+          "bodySilhouetteHeightsSource": [
+            245,
+            246,
+            247,
+            247,
+            247,
+            247
+          ],
+          "recoverySilhouetteHeightSource": 247,
+          "recoveryDeltaPct": 0.0,
+          "faceSkinWidthsSource": [
+            38,
+            38,
+            39,
+            39,
+            39,
+            39
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "idle",
+          "bodySilhouetteHeightsSource": [
+            248,
+            247,
+            247,
+            247,
+            247,
+            247
+          ],
+          "recoverySilhouetteHeightSource": 247,
+          "recoveryDeltaPct": 0.0,
+          "faceSkinWidthsSource": [
+            40,
+            40,
+            40,
+            40,
+            40,
+            40
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "run",
+          "bodySilhouetteHeightsSource": [
+            227,
+            221,
+            226,
+            223,
+            221,
+            221
+          ],
+          "recoverySilhouetteHeightSource": 221,
+          "recoveryDeltaPct": -10.526,
+          "faceSkinWidthsSource": [
+            40,
+            43,
+            40,
+            43,
+            42,
+            42
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-single-target",
+          "bodySilhouetteHeightsSource": [
+            215,
+            214,
+            215,
+            216,
+            214,
+            214
+          ],
+          "recoverySilhouetteHeightSource": 214,
+          "recoveryDeltaPct": -13.36,
+          "faceSkinWidthsSource": [
+            38,
+            42,
+            40,
+            39,
+            40,
+            39
+          ],
+          "active": false,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-aoe",
+          "bodySilhouetteHeightsSource": [
+            197,
+            221,
+            221,
+            224,
+            224,
+            236
+          ],
+          "recoverySilhouetteHeightSource": 236,
+          "recoveryDeltaPct": -4.453,
+          "faceSkinWidthsSource": [
+            43,
+            41,
+            40,
+            41,
+            41,
+            39
+          ],
+          "active": false,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        }
+      ],
+      "opaqueVividFringePixelsSource": 0,
+      "notes": "Original southeast cast rows superseded by their own r2 sources and kept as source history. North run twists slightly while remaining back, no eyes/chest. AOE r2 starts with a seal instead of settle-low; A-SE adds a seventh same-source standing recovery after six lower-stance action keys. Hands are manually picked; orange hidden/seal candidates require detached or hovering gear. Raw low-alpha colored fringe retained, native binary128 has no vivid opaque fringes.",
+      "ownerApproved": false,
+      "motionApproved": false
+    },
+    {
+      "sourceId": "sword-a-north",
+      "sourceViewed": true,
+      "nativeContactViewed": true,
+      "trueDirection": true,
+      "northShowsNoEyesOrChest": true,
+      "bodyOnly": true,
+      "rawRowCount": 5,
+      "rawColumns": 6,
+      "sourcePoses": 30,
+      "selectedActions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "neutralCalibrations": 6,
+      "singleSourceScale": 0.3883495145631068,
+      "anatomyMeasurements": [
+        {
+          "action": "neutral",
+          "bodySilhouetteHeightsSource": [
+            206,
+            206,
+            206,
+            206,
+            206,
+            206
+          ],
+          "recoverySilhouetteHeightSource": 206,
+          "recoveryDeltaPct": 0.0,
+          "faceSkinWidthsSource": [
+            17,
+            16,
+            17,
+            17,
+            17,
+            17
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "idle",
+          "bodySilhouetteHeightsSource": [
+            212,
+            212,
+            212,
+            212,
+            212,
+            212
+          ],
+          "recoverySilhouetteHeightSource": 212,
+          "recoveryDeltaPct": 2.913,
+          "faceSkinWidthsSource": [
+            19,
+            18,
+            9,
+            19,
+            19,
+            17
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "run",
+          "bodySilhouetteHeightsSource": [
+            215,
+            215,
+            215,
+            215,
+            214,
+            215
+          ],
+          "recoverySilhouetteHeightSource": 215,
+          "recoveryDeltaPct": 4.369,
+          "faceSkinWidthsSource": [
+            16,
+            11,
+            16,
+            16,
+            16,
+            19
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-single-target",
+          "bodySilhouetteHeightsSource": [
+            208,
+            208,
+            208,
+            208,
+            208,
+            208
+          ],
+          "recoverySilhouetteHeightSource": 208,
+          "recoveryDeltaPct": 0.971,
+          "faceSkinWidthsSource": [
+            16,
+            15,
+            18,
+            17,
+            20,
+            17
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-aoe",
+          "bodySilhouetteHeightsSource": [
+            184,
+            212,
+            215,
+            208,
+            210,
+            208
+          ],
+          "recoverySilhouetteHeightSource": 208,
+          "recoveryDeltaPct": 0.971,
+          "faceSkinWidthsSource": [
+            16,
+            15,
+            17,
+            17,
+            22,
+            9
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        }
+      ],
+      "opaqueVividFringePixelsSource": 0,
+      "notes": "Original southeast cast rows superseded by their own r2 sources and kept as source history. North run twists slightly while remaining back, no eyes/chest. AOE r2 starts with a seal instead of settle-low; A-SE adds a seventh same-source standing recovery after six lower-stance action keys. Hands are manually picked; orange hidden/seal candidates require detached or hovering gear. Raw low-alpha colored fringe retained, native binary128 has no vivid opaque fringes.",
+      "ownerApproved": false,
+      "motionApproved": false
+    },
+    {
+      "sourceId": "sword-b-north",
+      "sourceViewed": true,
+      "nativeContactViewed": true,
+      "trueDirection": true,
+      "northShowsNoEyesOrChest": true,
+      "bodyOnly": true,
+      "rawRowCount": 5,
+      "rawColumns": 6,
+      "sourcePoses": 30,
+      "selectedActions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "neutralCalibrations": 6,
+      "singleSourceScale": 0.3508771929824561,
+      "anatomyMeasurements": [
+        {
+          "action": "neutral",
+          "bodySilhouetteHeightsSource": [
+            228,
+            228,
+            228,
+            228,
+            228,
+            228
+          ],
+          "recoverySilhouetteHeightSource": 228,
+          "recoveryDeltaPct": 0.0,
+          "faceSkinWidthsSource": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            6
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "idle",
+          "bodySilhouetteHeightsSource": [
+            231,
+            231,
+            231,
+            231,
+            231,
+            231
+          ],
+          "recoverySilhouetteHeightSource": 231,
+          "recoveryDeltaPct": 1.316,
+          "faceSkinWidthsSource": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "run",
+          "bodySilhouetteHeightsSource": [
+            232,
+            232,
+            232,
+            230,
+            230,
+            232
+          ],
+          "recoverySilhouetteHeightSource": 232,
+          "recoveryDeltaPct": 1.754,
+          "faceSkinWidthsSource": [
+            21,
+            14,
+            28,
+            17,
+            8,
+            14
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-single-target",
+          "bodySilhouetteHeightsSource": [
+            225,
+            225,
+            226,
+            226,
+            223,
+            227
+          ],
+          "recoverySilhouetteHeightSource": 227,
+          "recoveryDeltaPct": -0.439,
+          "faceSkinWidthsSource": [
+            16,
+            16,
+            8,
+            20,
+            14,
+            7
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-aoe",
+          "bodySilhouetteHeightsSource": [
+            188,
+            214,
+            225,
+            225,
+            223,
+            224
+          ],
+          "recoverySilhouetteHeightSource": 224,
+          "recoveryDeltaPct": -1.754,
+          "faceSkinWidthsSource": [
+            4,
+            7,
+            18,
+            16,
+            18,
+            8
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        }
+      ],
+      "opaqueVividFringePixelsSource": 0,
+      "notes": "Original southeast cast rows superseded by their own r2 sources and kept as source history. North run twists slightly while remaining back, no eyes/chest. AOE r2 starts with a seal instead of settle-low; A-SE adds a seventh same-source standing recovery after six lower-stance action keys. Hands are manually picked; orange hidden/seal candidates require detached or hovering gear. Raw low-alpha colored fringe retained, native binary128 has no vivid opaque fringes.",
+      "ownerApproved": false,
+      "motionApproved": false
+    },
+    {
+      "sourceId": "sword-a-southeast-st-r2",
+      "sourceViewed": true,
+      "nativeContactViewed": true,
+      "trueDirection": true,
+      "northShowsNoEyesOrChest": null,
+      "bodyOnly": true,
+      "rawRowCount": 4,
+      "rawColumns": 3,
+      "sourcePoses": 12,
+      "selectedActions": [
+        "cast-single-target"
+      ],
+      "neutralCalibrations": 6,
+      "singleSourceScale": 0.23391812865497075,
+      "anatomyMeasurements": [
+        {
+          "action": "neutral",
+          "bodySilhouetteHeightsSource": [
+            340,
+            340,
+            341,
+            343,
+            343,
+            343
+          ],
+          "recoverySilhouetteHeightSource": 343,
+          "recoveryDeltaPct": 0.292,
+          "faceSkinWidthsSource": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-single-target",
+          "bodySilhouetteHeightsSource": [
+            323,
+            323,
+            323,
+            339,
+            340,
+            340
+          ],
+          "recoverySilhouetteHeightSource": 340,
+          "recoveryDeltaPct": -0.585,
+          "faceSkinWidthsSource": [
+            52,
+            51,
+            51,
+            52,
+            51,
+            51
+          ],
+          "active": "cast-single-target",
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        }
+      ],
+      "opaqueVividFringePixelsSource": 0,
+      "notes": "Original southeast cast rows superseded by their own r2 sources and kept as source history. North run twists slightly while remaining back, no eyes/chest. AOE r2 starts with a seal instead of settle-low; A-SE adds a seventh same-source standing recovery after six lower-stance action keys. Hands are manually picked; orange hidden/seal candidates require detached or hovering gear. Raw low-alpha colored fringe retained, native binary128 has no vivid opaque fringes.",
+      "ownerApproved": false,
+      "motionApproved": false
+    },
+    {
+      "sourceId": "sword-b-southeast-st-r2",
+      "sourceViewed": true,
+      "nativeContactViewed": true,
+      "trueDirection": true,
+      "northShowsNoEyesOrChest": null,
+      "bodyOnly": true,
+      "rawRowCount": 4,
+      "rawColumns": 3,
+      "sourcePoses": 12,
+      "selectedActions": [
+        "cast-single-target"
+      ],
+      "neutralCalibrations": 6,
+      "singleSourceScale": 0.24390243902439024,
+      "anatomyMeasurements": [
+        {
+          "action": "neutral",
+          "bodySilhouetteHeightsSource": [
+            327,
+            327,
+            327,
+            329,
+            331,
+            331
+          ],
+          "recoverySilhouetteHeightSource": 331,
+          "recoveryDeltaPct": 0.915,
+          "faceSkinWidthsSource": [
+            49,
+            50,
+            50,
+            49,
+            50,
+            49
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-single-target",
+          "bodySilhouetteHeightsSource": [
+            328,
+            326,
+            328,
+            328,
+            328,
+            328
+          ],
+          "recoverySilhouetteHeightSource": 328,
+          "recoveryDeltaPct": 0.0,
+          "faceSkinWidthsSource": [
+            49,
+            51,
+            50,
+            52,
+            49,
+            49
+          ],
+          "active": "cast-single-target",
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        }
+      ],
+      "opaqueVividFringePixelsSource": 0,
+      "notes": "Original southeast cast rows superseded by their own r2 sources and kept as source history. North run twists slightly while remaining back, no eyes/chest. AOE r2 starts with a seal instead of settle-low; A-SE adds a seventh same-source standing recovery after six lower-stance action keys. Hands are manually picked; orange hidden/seal candidates require detached or hovering gear. Raw low-alpha colored fringe retained, native binary128 has no vivid opaque fringes.",
+      "ownerApproved": false,
+      "motionApproved": false
+    },
+    {
+      "sourceId": "sword-a-southeast-aoe-r2",
+      "sourceViewed": true,
+      "nativeContactViewed": true,
+      "trueDirection": true,
+      "northShowsNoEyesOrChest": null,
+      "bodyOnly": true,
+      "rawRowCount": 4,
+      "rawColumns": 3,
+      "sourcePoses": 12,
+      "selectedActions": [
+        "cast-aoe"
+      ],
+      "neutralCalibrations": 6,
+      "singleSourceScale": 0.20278833967046894,
+      "anatomyMeasurements": [
+        {
+          "action": "neutral",
+          "bodySilhouetteHeightsSource": [
+            393,
+            394,
+            393,
+            395,
+            395,
+            395
+          ],
+          "recoverySilhouetteHeightSource": 395,
+          "recoveryDeltaPct": 0.127,
+          "faceSkinWidthsSource": [
+            61,
+            61,
+            61,
+            62,
+            61,
+            61
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-aoe",
+          "bodySilhouetteHeightsSource": [
+            324,
+            326,
+            325,
+            353,
+            355,
+            357
+          ],
+          "recoverySilhouetteHeightSource": 357,
+          "recoveryDeltaPct": -9.506,
+          "faceSkinWidthsSource": [
+            61,
+            59,
+            61,
+            60,
+            59,
+            60
+          ],
+          "active": "cast-aoe",
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        }
+      ],
+      "opaqueVividFringePixelsSource": 0,
+      "notes": "Original southeast cast rows superseded by their own r2 sources and kept as source history. North run twists slightly while remaining back, no eyes/chest. AOE r2 starts with a seal instead of settle-low; A-SE adds a seventh same-source standing recovery after six lower-stance action keys. Hands are manually picked; orange hidden/seal candidates require detached or hovering gear. Raw low-alpha colored fringe retained, native binary128 has no vivid opaque fringes.",
+      "ownerApproved": false,
+      "motionApproved": false
+    },
+    {
+      "sourceId": "sword-b-southeast-aoe-r2",
+      "sourceViewed": true,
+      "nativeContactViewed": true,
+      "trueDirection": true,
+      "northShowsNoEyesOrChest": null,
+      "bodyOnly": true,
+      "rawRowCount": 4,
+      "rawColumns": 3,
+      "sourcePoses": 12,
+      "selectedActions": [
+        "cast-aoe"
+      ],
+      "neutralCalibrations": 6,
+      "singleSourceScale": 0.2206896551724138,
+      "anatomyMeasurements": [
+        {
+          "action": "neutral",
+          "bodySilhouetteHeightsSource": [
+            361,
+            361,
+            361,
+            364,
+            364,
+            364
+          ],
+          "recoverySilhouetteHeightSource": 364,
+          "recoveryDeltaPct": 0.414,
+          "faceSkinWidthsSource": [
+            52,
+            52,
+            53,
+            52,
+            52,
+            52
+          ],
+          "active": true,
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        },
+        {
+          "action": "cast-aoe",
+          "bodySilhouetteHeightsSource": [
+            337,
+            343,
+            338,
+            365,
+            351,
+            363
+          ],
+          "recoverySilhouetteHeightSource": 363,
+          "recoveryDeltaPct": 0.138,
+          "faceSkinWidthsSource": [
+            56,
+            56,
+            55,
+            54,
+            54,
+            53
+          ],
+          "active": "cast-aoe",
+          "measurementLimit": "Active raised hands can exceed natural crown; recovery silhouette uses actual hair/boots where hands are lowered. Face-width proxy is not a full skull measurement."
+        }
+      ],
+      "opaqueVividFringePixelsSource": 0,
+      "notes": "Original southeast cast rows superseded by their own r2 sources and kept as source history. North run twists slightly while remaining back, no eyes/chest. AOE r2 starts with a seal instead of settle-low; A-SE adds a seventh same-source standing recovery after six lower-stance action keys. Hands are manually picked; orange hidden/seal candidates require detached or hovering gear. Raw low-alpha colored fringe retained, native binary128 has no vivid opaque fringes.",
+      "ownerApproved": false,
+      "motionApproved": false
+    }
+  ],
+  "technicalVerification": {
+    "activeClips": 16,
+    "canonicalMotionPoses": 97,
+    "calibrations": 48,
+    "sourcePoseCaps": 168,
+    "atlasRgbaRectsVerified": 97,
+    "opaqueVividFringePixelsNative": 0,
+    "sourceCoreEdgePixels": 0,
+    "nativeCoreEdgePixels": 0,
+    "manuallySelectedMotionSockets": 97
+  },
+  "limitations": [
+    "Only two real directions, not eight.",
+    "16 clips97poses exclude48neutral calibration source poses.",
+    "A-SE AOE uses a seventh same-source standing key to finish at80 rather than fit the lower-stance pose.",
+    "Body silhouettes remain slimmer and head smaller than Wang as approved ownidentity concept. No per-pose fit, oldWang patch, color painting or mirror.",
+    "Root/hand candidates need final per-pose gear review; seal/hidden/open palms explicitly detach-hover.",
+    "Run lift0/2px and preview durations are fixtures, not server balance."
+  ],
+  "ownerApproved": false,
+  "motionApproved": false,
+  "runtimeReady": false
+}

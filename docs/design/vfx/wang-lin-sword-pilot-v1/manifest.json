@@ -1,0 +1,2929 @@
+{
+  "schema": "wang-lin-sword-pilot-vfx-manifest-1",
+  "date": "2026-10-14",
+  "status": "candidate-production-art",
+  "sharedIdentities": [
+    "huyen-tam",
+    "tich-bach"
+  ],
+  "directionPolicy": "Shared nonbody kit; projectile follows aim. Frontal fixed-view spirit only, not eight directional creature views.",
+  "artApproved": false,
+  "runtimeIntegrated": false,
+  "coverage": {
+    "sequences": 10,
+    "frames": 60,
+    "directionalCreatureViews": 0
+  },
+  "sequences": [
+    {
+      "id": "st-warning",
+      "mode": "st",
+      "phase": "warning",
+      "anchor": "ground",
+      "source": "sources/st-warning.png",
+      "sourceSha256": "ef1982d69024e80a8459287d6c8788acf2599408741902281a4ce00f60593190",
+      "canvas": [
+        160,
+        118
+      ],
+      "pivot": [
+        80,
+        80
+      ],
+      "durationMs": 540,
+      "loop": false,
+      "timingPolicy": "art playback only; release/contact exclusively fixture/server facts",
+      "scale": 0.18723404255319148,
+      "frames": [
+        {
+          "id": "st-warning-1",
+          "index": 0,
+          "file": "frames/st-warning/001.png",
+          "canvas": [
+            160,
+            118
+          ],
+          "pivot": [
+            80,
+            80
+          ],
+          "durationMs": 90,
+          "bounds": [
+            38,
+            67,
+            130,
+            87
+          ],
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            248,
+            378
+          ],
+          "nativeOffset": [
+            34,
+            9
+          ],
+          "sha256": "26143d2fccbf70663af2f24e46f574ac21c0125783d43b4317b710c76dd3d972",
+          "rgbaSha256": "cd0f04168d8e00f8adb31ebdd0513a3d20e7308db3560af96ff96c5648c50718",
+          "softAlphaPixels": 412,
+          "rect": [
+            2,
+            2,
+            160,
+            118
+          ]
+        },
+        {
+          "id": "st-warning-2",
+          "index": 1,
+          "file": "frames/st-warning/002.png",
+          "canvas": [
+            160,
+            118
+          ],
+          "pivot": [
+            80,
+            80
+          ],
+          "durationMs": 90,
+          "bounds": [
+            36,
+            40,
+            129,
+            105
+          ],
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            246,
+            380
+          ],
+          "nativeOffset": [
+            34,
+            9
+          ],
+          "sha256": "669c9d0dee493ab177196ea33a540e7554e98e8492eb4aae5c3330d0a9b21c83",
+          "rgbaSha256": "51f062633f862e61ec0cd8a447a42ba956cabf98973580a90f18b5bc883faa2e",
+          "softAlphaPixels": 1002,
+          "rect": [
+            166,
+            2,
+            160,
+            118
+          ]
+        },
+        {
+          "id": "st-warning-3",
+          "index": 2,
+          "file": "frames/st-warning/003.png",
+          "canvas": [
+            160,
+            118
+          ],
+          "pivot": [
+            80,
+            80
+          ],
+          "durationMs": 90,
+          "bounds": [
+            32,
+            29,
+            121,
+            89
+          ],
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            255,
+            390
+          ],
+          "nativeOffset": [
+            32,
+            7
+          ],
+          "sha256": "e30204dd92eccc308cf849e6c198d497c6a314405ac5739d911d2ba0dbec5011",
+          "rgbaSha256": "9d6c765da4434951cb654427cfd0695e5cf337cabcf52698a20a4ee7d961eb60",
+          "softAlphaPixels": 1824,
+          "rect": [
+            330,
+            2,
+            160,
+            118
+          ]
+        },
+        {
+          "id": "st-warning-4",
+          "index": 3,
+          "file": "frames/st-warning/004.png",
+          "canvas": [
+            160,
+            118
+          ],
+          "pivot": [
+            80,
+            80
+          ],
+          "durationMs": 90,
+          "bounds": [
+            36,
+            19,
+            126,
+            105
+          ],
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            266,
+            333
+          ],
+          "nativeOffset": [
+            30,
+            18
+          ],
+          "sha256": "960aa333524e7ff4488f7d54e51325fc388b928b392e4cb9266629243f8f2d1c",
+          "rgbaSha256": "0dc77e49968a5c29d97e91021caf5346cccf13803ea1a0a23bb0e448924c62ec",
+          "softAlphaPixels": 2134,
+          "rect": [
+            2,
+            124,
+            160,
+            118
+          ]
+        },
+        {
+          "id": "st-warning-5",
+          "index": 4,
+          "file": "frames/st-warning/005.png",
+          "canvas": [
+            160,
+            118
+          ],
+          "pivot": [
+            80,
+            80
+          ],
+          "durationMs": 90,
+          "bounds": [
+            32,
+            17,
+            122,
+            100
+          ],
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            258,
+            334
+          ],
+          "nativeOffset": [
+            32,
+            17
+          ],
+          "sha256": "a4a9cd5fa07af3cff35558d552b198532906b716b27ee18d3c161158039f862b",
+          "rgbaSha256": "41bba6e455f2e1e8fdf7bca32dae244cbd8bda78378a2624bdf0028db503b66f",
+          "softAlphaPixels": 3052,
+          "rect": [
+            166,
+            124,
+            160,
+            118
+          ]
+        },
+        {
+          "id": "st-warning-6",
+          "index": 5,
+          "file": "frames/st-warning/006.png",
+          "canvas": [
+            160,
+            118
+          ],
+          "pivot": [
+            80,
+            80
+          ],
+          "durationMs": 90,
+          "bounds": [
+            33,
+            18,
+            122,
+            107
+          ],
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            259,
+            335
+          ],
+          "nativeOffset": [
+            31,
+            17
+          ],
+          "sha256": "2eb757dc3c0c119e52694a65d327dcbb70030129ef364a2aa7d4c94185bd7369",
+          "rgbaSha256": "8eef386326af376c3d3996925160aff4975a5d717c123ecb2da4fb8b518c4e98",
+          "softAlphaPixels": 2439,
+          "rect": [
+            330,
+            124,
+            160,
+            118
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/st-warning.png",
+        "size": [
+          492,
+          244
+        ],
+        "gutter": 2,
+        "sha256": "c6a3a1c5eb0f2f986f9f75746f0d9d47585776bef196377d9234a8c2a9f4a85b"
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "st-charge",
+      "mode": "st",
+      "phase": "charge",
+      "anchor": "hand",
+      "source": "sources/st-charge-r2.png",
+      "sourceSha256": "33863bd933164f47c1d5dbddd38769f9914edf3bce58c19bc14df6f3f39b616a",
+      "canvas": [
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "durationMs": 480,
+      "loop": false,
+      "timingPolicy": "art playback only; release/contact exclusively fixture/server facts",
+      "scale": 0.17987152034261242,
+      "frames": [
+        {
+          "id": "st-charge-1",
+          "index": 0,
+          "file": "frames/st-charge/001.png",
+          "canvas": [
+            128,
+            128
+          ],
+          "pivot": [
+            64,
+            64
+          ],
+          "durationMs": 80,
+          "bounds": [
+            24,
+            17,
+            109,
+            109
+          ],
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            264,
+            263
+          ],
+          "nativeOffset": [
+            17,
+            17
+          ],
+          "sha256": "677aa5f550a9503e798b47b23d9e19962256786310fabac58f383b30374d0331",
+          "rgbaSha256": "9a63e4bd99aa248699ecf6819a6901a773677aa740bd3dd7865bdd5a5b6378a7",
+          "softAlphaPixels": 1216,
+          "rect": [
+            2,
+            2,
+            128,
+            128
+          ]
+        },
+        {
+          "id": "st-charge-2",
+          "index": 1,
+          "file": "frames/st-charge/002.png",
+          "canvas": [
+            128,
+            128
+          ],
+          "pivot": [
+            64,
+            64
+          ],
+          "durationMs": 80,
+          "bounds": [
+            21,
+            19,
+            113,
+            107
+          ],
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            240,
+            271
+          ],
+          "nativeOffset": [
+            21,
+            15
+          ],
+          "sha256": "830ee39aa06327d9ddf7431b1decc92befa31c01218282ce3adf74e8e0042e04",
+          "rgbaSha256": "1ab8a5cdb0d992871e1d73e4aaa8a7a6c4ee442439fcb27384fbcf32fc4eb804",
+          "softAlphaPixels": 2655,
+          "rect": [
+            134,
+            2,
+            128,
+            128
+          ]
+        },
+        {
+          "id": "st-charge-3",
+          "index": 2,
+          "file": "frames/st-charge/003.png",
+          "canvas": [
+            128,
+            128
+          ],
+          "pivot": [
+            64,
+            64
+          ],
+          "durationMs": 80,
+          "bounds": [
+            19,
+            19,
+            102,
+            109
+          ],
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            253,
+            264
+          ],
+          "nativeOffset": [
+            19,
+            17
+          ],
+          "sha256": "24d5aea2d8f8871eb97467aea2ff0631038f32cd7211899d297c0ae5be6ea47c",
+          "rgbaSha256": "c382ef1ca4cae9719df173fa96893ba8a1ef131670e56701b871e91ab07d6393",
+          "softAlphaPixels": 2811,
+          "rect": [
+            266,
+            2,
+            128,
+            128
+          ]
+        },
+        {
+          "id": "st-charge-4",
+          "index": 3,
+          "file": "frames/st-charge/004.png",
+          "canvas": [
+            128,
+            128
+          ],
+          "pivot": [
+            64,
+            64
+          ],
+          "durationMs": 80,
+          "bounds": [
+            20,
+            27,
+            109,
+            114
+          ],
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            264,
+            206
+          ],
+          "nativeOffset": [
+            17,
+            27
+          ],
+          "sha256": "b96b09206a584c7cb856b69153549d18cffd58deff1e24773a18918bd111a301",
+          "rgbaSha256": "46b08827a818fd3a552e57fa205085a49db4b75cb08aff62edfe30fe3a35d8d3",
+          "softAlphaPixels": 2871,
+          "rect": [
+            2,
+            134,
+            128,
+            128
+          ]
+        },
+        {
+          "id": "st-charge-5",
+          "index": 4,
+          "file": "frames/st-charge/005.png",
+          "canvas": [
+            128,
+            128
+          ],
+          "pivot": [
+            64,
+            64
+          ],
+          "durationMs": 80,
+          "bounds": [
+            21,
+            31,
+            110,
+            121
+          ],
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            248,
+            186
+          ],
+          "nativeOffset": [
+            19,
+            31
+          ],
+          "sha256": "44914f1104c3a910a6760117ccd864ff075cb490310de3d7418326e2303f7b2f",
+          "rgbaSha256": "d55abc5550d8d5d78723eb72575eb4534f75f1ea6186d586e4b6dc8403c43315",
+          "softAlphaPixels": 3970,
+          "rect": [
+            134,
+            134,
+            128,
+            128
+          ]
+        },
+        {
+          "id": "st-charge-6",
+          "index": 5,
+          "file": "frames/st-charge/006.png",
+          "canvas": [
+            128,
+            128
+          ],
+          "pivot": [
+            64,
+            64
+          ],
+          "durationMs": 80,
+          "bounds": [
+            18,
+            22,
+            105,
+            114
+          ],
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            258,
+            233
+          ],
+          "nativeOffset": [
+            18,
+            22
+          ],
+          "sha256": "6c57901a49de1fffd68646590fe60ce9196ad6fef3255b53cfce4ef2281cd07d",
+          "rgbaSha256": "7ec8f37c1083767a8b1b0f5a029c012a1bc072a880591a1074626b39319b7ee4",
+          "softAlphaPixels": 4269,
+          "rect": [
+            266,
+            134,
+            128,
+            128
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/st-charge.png",
+        "size": [
+          396,
+          264
+        ],
+        "gutter": 2,
+        "sha256": "0450fd780d5bbe682d0edad489c6ee7d2b31353f5153868d81a26122d2fb5ec7"
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "st-release",
+      "mode": "st",
+      "phase": "release",
+      "anchor": "projectile",
+      "source": "sources/st-release.png",
+      "sourceSha256": "7ca27a7d6a0fd45dabca19b14339500aa596df2097baa276effc126caea09b92",
+      "canvas": [
+        192,
+        187
+      ],
+      "pivot": [
+        96,
+        102
+      ],
+      "durationMs": 360,
+      "loop": false,
+      "timingPolicy": "art playback only; release/contact exclusively fixture/server facts",
+      "scale": 0.31020408163265306,
+      "frames": [
+        {
+          "id": "st-release-1",
+          "index": 0,
+          "file": "frames/st-release/001.png",
+          "canvas": [
+            192,
+            187
+          ],
+          "pivot": [
+            96,
+            102
+          ],
+          "durationMs": 60,
+          "bounds": [
+            20,
+            14,
+            171,
+            163
+          ],
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            270,
+            317
+          ],
+          "nativeOffset": [
+            12,
+            4
+          ],
+          "sha256": "5c935499d558e92f08f61a55bac136b3a485e41a8821a90adc861f5d7897c35f",
+          "rgbaSha256": "b5da4b2f7fea608949379345d647dfe7f8bfb37fa5a9b6bc1d7af33b9a9b5df1",
+          "softAlphaPixels": 6274,
+          "rect": [
+            2,
+            2,
+            192,
+            187
+          ]
+        },
+        {
+          "id": "st-release-2",
+          "index": 1,
+          "file": "frames/st-release/002.png",
+          "canvas": [
+            192,
+            187
+          ],
+          "pivot": [
+            96,
+            102
+          ],
+          "durationMs": 60,
+          "bounds": [
+            17,
+            23,
+            176,
+            164
+          ],
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            254,
+            312
+          ],
+          "nativeOffset": [
+            17,
+            5
+          ],
+          "sha256": "b4c2b29e5c6522ab8783f05f2f1144258405b1aa36ba57bab7a78d8edcdeb82a",
+          "rgbaSha256": "1563bcde10155c80bad0a3ff380942046799bb539a2396c9653d28caed121e65",
+          "softAlphaPixels": 7085,
+          "rect": [
+            198,
+            2,
+            192,
+            187
+          ]
+        },
+        {
+          "id": "st-release-3",
+          "index": 2,
+          "file": "frames/st-release/003.png",
+          "canvas": [
+            192,
+            187
+          ],
+          "pivot": [
+            96,
+            102
+          ],
+          "durationMs": 60,
+          "bounds": [
+            28,
+            11,
+            187,
+            163
+          ],
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            219,
+            315
+          ],
+          "nativeOffset": [
+            28,
+            4
+          ],
+          "sha256": "3c3b99e474aa1230a9d59291b9031b9e29e4101d54735c7c2d46611e0f84d973",
+          "rgbaSha256": "908d07ec45fa46e4bd1acae938f27767237099141eb17d70d9c4b0837177ce7d",
+          "softAlphaPixels": 8622,
+          "rect": [
+            394,
+            2,
+            192,
+            187
+          ]
+        },
+        {
+          "id": "st-release-4",
+          "index": 3,
+          "file": "frames/st-release/004.png",
+          "canvas": [
+            192,
+            187
+          ],
+          "pivot": [
+            96,
+            102
+          ],
+          "durationMs": 60,
+          "bounds": [
+            13,
+            23,
+            172,
+            178
+          ],
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            267,
+            253
+          ],
+          "nativeOffset": [
+            13,
+            23
+          ],
+          "sha256": "7ae4c1e693e1f5b6fae57cf400b725500a556c96b6d31b0cf712a24be4191fc5",
+          "rgbaSha256": "bf6882bfb4dc4c0701235f430d3ee11da8f1c0e3325c468e9f6183904f071c8f",
+          "softAlphaPixels": 8007,
+          "rect": [
+            2,
+            193,
+            192,
+            187
+          ]
+        },
+        {
+          "id": "st-release-5",
+          "index": 4,
+          "file": "frames/st-release/005.png",
+          "canvas": [
+            192,
+            187
+          ],
+          "pivot": [
+            96,
+            102
+          ],
+          "durationMs": 60,
+          "bounds": [
+            13,
+            24,
+            171,
+            178
+          ],
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            266,
+            250
+          ],
+          "nativeOffset": [
+            13,
+            24
+          ],
+          "sha256": "2153294d41d76683641f372130438ac8eb0c9a79c24a07e0f7653c9e5821d0a7",
+          "rgbaSha256": "94cbbe5d7b4d6eaf0c64c47a894e57834aa63593ff94cbea6dbd1472b1f1ae28",
+          "softAlphaPixels": 7767,
+          "rect": [
+            198,
+            193,
+            192,
+            187
+          ]
+        },
+        {
+          "id": "st-release-6",
+          "index": 5,
+          "file": "frames/st-release/006.png",
+          "canvas": [
+            192,
+            187
+          ],
+          "pivot": [
+            96,
+            102
+          ],
+          "durationMs": 60,
+          "bounds": [
+            14,
+            23,
+            164,
+            173
+          ],
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            263,
+            253
+          ],
+          "nativeOffset": [
+            14,
+            23
+          ],
+          "sha256": "3fc0a3279a50644258b1be5b9fab3767d145638dc9c036e8198f999ed1619a65",
+          "rgbaSha256": "2ab6526a0fb2d6f401bbcb38da640a14cd857aa22336ce45332ec780633de3a8",
+          "softAlphaPixels": 6665,
+          "rect": [
+            394,
+            193,
+            192,
+            187
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/st-release.png",
+        "size": [
+          588,
+          382
+        ],
+        "gutter": 2,
+        "sha256": "f8f540b9d51f1abcb4787078599da78cf3af918f7165b5ea546b34d323af110f"
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "st-resolve",
+      "mode": "st",
+      "phase": "resolve",
+      "anchor": "target",
+      "source": "sources/st-resolve-r2.png",
+      "sourceSha256": "4d888c3fedc15cac2feb86ea25c66773de338d9c179c6cf68858ccb31882009d",
+      "canvas": [
+        160,
+        160
+      ],
+      "pivot": [
+        80,
+        128
+      ],
+      "durationMs": 450,
+      "loop": false,
+      "timingPolicy": "art playback only; release/contact exclusively fixture/server facts",
+      "scale": 0.23376623376623376,
+      "frames": [
+        {
+          "id": "st-resolve-1",
+          "index": 0,
+          "file": "frames/st-resolve/001.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            80,
+            128
+          ],
+          "durationMs": 55,
+          "bounds": [
+            31,
+            34,
+            137,
+            140
+          ],
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            266,
+            432
+          ],
+          "nativeOffset": [
+            18,
+            27
+          ],
+          "sha256": "5849fa3e33a09662b6878ed6ffced3ae22c24cca8331c229779ccca8b650f5d6",
+          "rgbaSha256": "35841ece1082b7b48f76a9fc55e135e81c4d1c0e829fa9ad406596a214e4c49d",
+          "softAlphaPixels": 1532,
+          "rect": [
+            2,
+            2,
+            160,
+            160
+          ]
+        },
+        {
+          "id": "st-resolve-2",
+          "index": 1,
+          "file": "frames/st-resolve/002.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            80,
+            128
+          ],
+          "durationMs": 55,
+          "bounds": [
+            24,
+            36,
+            127,
+            136
+          ],
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            245,
+            446
+          ],
+          "nativeOffset": [
+            23,
+            23
+          ],
+          "sha256": "6b2c8fb460db5c5432c7c7daf48337af15c88801acf9b515f0298a31e01ca17e",
+          "rgbaSha256": "e5e7d5bcd0c1cbda52ebf0f8105934d8f617dfe92d5c106a6ecea7d1f2fedf79",
+          "softAlphaPixels": 2926,
+          "rect": [
+            166,
+            2,
+            160,
+            160
+          ]
+        },
+        {
+          "id": "st-resolve-3",
+          "index": 2,
+          "file": "frames/st-resolve/003.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            80,
+            128
+          ],
+          "durationMs": 65,
+          "bounds": [
+            32,
+            28,
+            130,
+            139
+          ],
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            237,
+            452
+          ],
+          "nativeOffset": [
+            24,
+            22
+          ],
+          "sha256": "082bf07adb5cfaea63a5afec08e4b2b708b2ff5405b6e2d17dc7a3c19db1a6e8",
+          "rgbaSha256": "3dff03e079afd0ba9c1a68635dfff78de9465f2398a010f9af5dc1f38f23ec2d",
+          "softAlphaPixels": 6869,
+          "rect": [
+            330,
+            2,
+            160,
+            160
+          ]
+        },
+        {
+          "id": "st-resolve-4",
+          "index": 3,
+          "file": "frames/st-resolve/004.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            80,
+            128
+          ],
+          "durationMs": 75,
+          "bounds": [
+            28,
+            36,
+            136,
+            143
+          ],
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            267,
+            411
+          ],
+          "nativeOffset": [
+            17,
+            32
+          ],
+          "sha256": "440f97a16d9520bd7f3d9580a7a54609832588399ffdd1469363d5dca3e6d4f0",
+          "rgbaSha256": "3947ed5ef1532993c4814656077609a83676618c3f72c1510b76419625d27221",
+          "softAlphaPixels": 4462,
+          "rect": [
+            2,
+            166,
+            160,
+            160
+          ]
+        },
+        {
+          "id": "st-resolve-5",
+          "index": 4,
+          "file": "frames/st-resolve/005.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            80,
+            128
+          ],
+          "durationMs": 90,
+          "bounds": [
+            46,
+            48,
+            142,
+            138
+          ],
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            247,
+            411
+          ],
+          "nativeOffset": [
+            22,
+            32
+          ],
+          "sha256": "c2aaaa16a3791ba4c56b251eea8afc3bb9a5f1eb02844934a90eb72eb8903fa1",
+          "rgbaSha256": "717fcd0be3251cc1ce5d3879ee726a06a4ea7327ed70e4d7f16d31296130cee3",
+          "softAlphaPixels": 2884,
+          "rect": [
+            166,
+            166,
+            160,
+            160
+          ]
+        },
+        {
+          "id": "st-resolve-6",
+          "index": 5,
+          "file": "frames/st-resolve/006.png",
+          "canvas": [
+            160,
+            160
+          ],
+          "pivot": [
+            80,
+            128
+          ],
+          "durationMs": 110,
+          "bounds": [
+            24,
+            36,
+            126,
+            135
+          ],
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            243,
+            417
+          ],
+          "nativeOffset": [
+            23,
+            30
+          ],
+          "sha256": "dbe64d3c9ccffb0cda6d35a9e3455718658b2fd24205bedde7f14d879a1c2854",
+          "rgbaSha256": "4df4f4575b648c79c72231e321ff961df80c38b4e4f9fcb5316947d3ea44045c",
+          "softAlphaPixels": 1467,
+          "rect": [
+            330,
+            166,
+            160,
+            160
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/st-resolve.png",
+        "size": [
+          492,
+          328
+        ],
+        "gutter": 2,
+        "sha256": "43beb6f4de655b562223fb0c7bffb1c6ebcba1c432582757d942dbec0f4dd4c8"
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "st-tail",
+      "mode": "st",
+      "phase": "tail",
+      "anchor": "projectile",
+      "source": "sources/st-tail.png",
+      "sourceSha256": "f56b6d4c8407dfe70de62b03add2fdb155de7fcae86300e7437f35a7c6ed6650",
+      "canvas": [
+        160,
+        130
+      ],
+      "pivot": [
+        80,
+        70
+      ],
+      "durationMs": 580,
+      "loop": false,
+      "timingPolicy": "art playback only; release/contact exclusively fixture/server facts",
+      "scale": 0.2363238512035011,
+      "frames": [
+        {
+          "id": "st-tail-1",
+          "index": 0,
+          "file": "frames/st-tail/001.png",
+          "canvas": [
+            160,
+            130
+          ],
+          "pivot": [
+            80,
+            70
+          ],
+          "durationMs": 70,
+          "bounds": [
+            27,
+            8,
+            141,
+            125
+          ],
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            280
+          ],
+          "nativeOffset": [
+            20,
+            4
+          ],
+          "sha256": "7d1af97a4f0c39b0cb5d16f1c4ecf4203def0ca2d2e65d04e0b96d3ebb80b0e3",
+          "rgbaSha256": "113b8a2853098f9754102694e75368f8f0aeef0e0850f9319e80800646edce47",
+          "softAlphaPixels": 8083,
+          "rect": [
+            2,
+            2,
+            160,
+            130
+          ]
+        },
+        {
+          "id": "st-tail-2",
+          "index": 1,
+          "file": "frames/st-tail/002.png",
+          "canvas": [
+            160,
+            130
+          ],
+          "pivot": [
+            80,
+            70
+          ],
+          "durationMs": 80,
+          "bounds": [
+            20,
+            9,
+            141,
+            126
+          ],
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            274
+          ],
+          "nativeOffset": [
+            20,
+            5
+          ],
+          "sha256": "bf2344665fd0e986b4b66f58b76611923b2690ff1e782ae2aacfe4d4e046ad26",
+          "rgbaSha256": "f77baf3ba0cd4f417d5b90ba3271a501f34599260d19cafb3028478ffd0ec754",
+          "softAlphaPixels": 7219,
+          "rect": [
+            166,
+            2,
+            160,
+            130
+          ]
+        },
+        {
+          "id": "st-tail-3",
+          "index": 2,
+          "file": "frames/st-tail/003.png",
+          "canvas": [
+            160,
+            130
+          ],
+          "pivot": [
+            80,
+            70
+          ],
+          "durationMs": 90,
+          "bounds": [
+            22,
+            4,
+            138,
+            125
+          ],
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            280
+          ],
+          "nativeOffset": [
+            20,
+            4
+          ],
+          "sha256": "e0b8a7c3d6dd38feb22361d437961ab5f3d6dc885075a128857df7931c57c694",
+          "rgbaSha256": "3fb86432e6fca2bde3bd7236c7ee1193f42420a54677d667fb7cd45a1e2c7af4",
+          "softAlphaPixels": 5950,
+          "rect": [
+            330,
+            2,
+            160,
+            130
+          ]
+        },
+        {
+          "id": "st-tail-4",
+          "index": 3,
+          "file": "frames/st-tail/004.png",
+          "canvas": [
+            160,
+            130
+          ],
+          "pivot": [
+            80,
+            70
+          ],
+          "durationMs": 100,
+          "bounds": [
+            33,
+            5,
+            141,
+            117
+          ],
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            276
+          ],
+          "nativeOffset": [
+            20,
+            5
+          ],
+          "sha256": "ffda81bff2a639e85c4ca79df84f6459e31d5994d32868e30473431d860a3d4f",
+          "rgbaSha256": "48c069e4c2f6efbe4b92b39defd1875b2c82894cff86ab754bab805fd424d4d0",
+          "softAlphaPixels": 4648,
+          "rect": [
+            2,
+            136,
+            160,
+            130
+          ]
+        },
+        {
+          "id": "st-tail-5",
+          "index": 4,
+          "file": "frames/st-tail/005.png",
+          "canvas": [
+            160,
+            130
+          ],
+          "pivot": [
+            80,
+            70
+          ],
+          "durationMs": 110,
+          "bounds": [
+            20,
+            5,
+            132,
+            122
+          ],
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            276
+          ],
+          "nativeOffset": [
+            20,
+            5
+          ],
+          "sha256": "0dcb69c4a7594307e692f4f573c89885f1b61c08a935869e2cdcb4874a072600",
+          "rgbaSha256": "6e39de9422870385820bcc4a2359dbbc53fc43bd224e7fbfb50a69bcade9143a",
+          "softAlphaPixels": 3497,
+          "rect": [
+            166,
+            136,
+            160,
+            130
+          ]
+        },
+        {
+          "id": "st-tail-6",
+          "index": 5,
+          "file": "frames/st-tail/006.png",
+          "canvas": [
+            160,
+            130
+          ],
+          "pivot": [
+            80,
+            70
+          ],
+          "durationMs": 130,
+          "bounds": [
+            26,
+            10,
+            134,
+            117
+          ],
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            276
+          ],
+          "nativeOffset": [
+            20,
+            5
+          ],
+          "sha256": "6d0a9767cb36195e03b20e08cc15066f53a0c7789a88e7f8f03cb43dc693ba45",
+          "rgbaSha256": "88ef46a85c879faf0a37a52d1e3385f86e32f471a1861f037c9f7e1bff30ed15",
+          "softAlphaPixels": 1497,
+          "rect": [
+            330,
+            136,
+            160,
+            130
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/st-tail.png",
+        "size": [
+          492,
+          268
+        ],
+        "gutter": 2,
+        "sha256": "27b4eb9e3fc99aed34e0d55ab430ed78dea3359b70465c6bf086617a56afaf08"
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "aoe-warning",
+      "mode": "aoe",
+      "phase": "warning",
+      "anchor": "ground",
+      "source": "sources/aoe-warning.png",
+      "sourceSha256": "77d13d283e48893b167bbc550d91e63cb7cc194421247458556101276a278322",
+      "canvas": [
+        132,
+        165
+      ],
+      "pivot": [
+        66,
+        144
+      ],
+      "durationMs": 600,
+      "loop": false,
+      "timingPolicy": "art playback only; release/contact exclusively fixture/server facts",
+      "scale": 0.24086021505376345,
+      "frames": [
+        {
+          "id": "aoe-warning-1",
+          "index": 0,
+          "file": "frames/aoe-warning/001.png",
+          "canvas": [
+            132,
+            165
+          ],
+          "pivot": [
+            66,
+            144
+          ],
+          "durationMs": 100,
+          "bounds": [
+            22,
+            40,
+            127,
+            159
+          ],
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            255,
+            449
+          ],
+          "nativeOffset": [
+            5,
+            36
+          ],
+          "sha256": "165bc8ef021dfa8a4e5a05ef8c2219678082e22c69ff8e57665bb15c9b44db4d",
+          "rgbaSha256": "c1bbf3eac765022c8c4a0756d9203a918d1c2476829db5726c6cbbb568365d1c",
+          "softAlphaPixels": 2009,
+          "rect": [
+            2,
+            2,
+            132,
+            165
+          ]
+        },
+        {
+          "id": "aoe-warning-2",
+          "index": 1,
+          "file": "frames/aoe-warning/002.png",
+          "canvas": [
+            132,
+            165
+          ],
+          "pivot": [
+            66,
+            144
+          ],
+          "durationMs": 100,
+          "bounds": [
+            11,
+            54,
+            124,
+            152
+          ],
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            257,
+            449
+          ],
+          "nativeOffset": [
+            4,
+            36
+          ],
+          "sha256": "46405c27f5ce7f29c4cba8442402b414f9969321dc43255b07720e2590e37a63",
+          "rgbaSha256": "462eed1a421a3aca9637876f0ed4136e31f89bb5c32dab2eee96f606fb5d612b",
+          "softAlphaPixels": 2591,
+          "rect": [
+            138,
+            2,
+            132,
+            165
+          ]
+        },
+        {
+          "id": "aoe-warning-3",
+          "index": 2,
+          "file": "frames/aoe-warning/003.png",
+          "canvas": [
+            132,
+            165
+          ],
+          "pivot": [
+            66,
+            144
+          ],
+          "durationMs": 100,
+          "bounds": [
+            11,
+            43,
+            120,
+            159
+          ],
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            255,
+            447
+          ],
+          "nativeOffset": [
+            5,
+            37
+          ],
+          "sha256": "8573b3f5a20c14f65cc2a29cfeb22571a9447b057452600d612e99ca49b428f9",
+          "rgbaSha256": "491272f0e8f701b7bd2c82c2c610f89bea9927b3d341290f976b7dd224ab8f27",
+          "softAlphaPixels": 3011,
+          "rect": [
+            274,
+            2,
+            132,
+            165
+          ]
+        },
+        {
+          "id": "aoe-warning-4",
+          "index": 3,
+          "file": "frames/aoe-warning/004.png",
+          "canvas": [
+            132,
+            165
+          ],
+          "pivot": [
+            66,
+            144
+          ],
+          "durationMs": 100,
+          "bounds": [
+            11,
+            42,
+            124,
+            152
+          ],
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            255,
+            445
+          ],
+          "nativeOffset": [
+            5,
+            37
+          ],
+          "sha256": "bcdb4f4d3dc2cbee291661901b9b2cfb66065e338afeb97605818e917c6e7f7b",
+          "rgbaSha256": "6e90b08fd43fe017dbc45bb19e7a1b03c67e1e72fe038b838efc3ef4246fa286",
+          "softAlphaPixels": 3384,
+          "rect": [
+            2,
+            171,
+            132,
+            165
+          ]
+        },
+        {
+          "id": "aoe-warning-5",
+          "index": 4,
+          "file": "frames/aoe-warning/005.png",
+          "canvas": [
+            132,
+            165
+          ],
+          "pivot": [
+            66,
+            144
+          ],
+          "durationMs": 100,
+          "bounds": [
+            10,
+            40,
+            127,
+            154
+          ],
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            257,
+            443
+          ],
+          "nativeOffset": [
+            4,
+            38
+          ],
+          "sha256": "36f5af6938ccb73fcbf76ab83ba1da59eee32d024655470a5f35d1a0d2063887",
+          "rgbaSha256": "8a8fe3f553082cd00236529e9c49d7d7c607e73ee09cd6fe461a73cb47e04fdc",
+          "softAlphaPixels": 4219,
+          "rect": [
+            138,
+            171,
+            132,
+            165
+          ]
+        },
+        {
+          "id": "aoe-warning-6",
+          "index": 5,
+          "file": "frames/aoe-warning/006.png",
+          "canvas": [
+            132,
+            165
+          ],
+          "pivot": [
+            66,
+            144
+          ],
+          "durationMs": 100,
+          "bounds": [
+            10,
+            39,
+            124,
+            152
+          ],
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            257,
+            444
+          ],
+          "nativeOffset": [
+            4,
+            37
+          ],
+          "sha256": "fa8b61a21255a1ea29ce1f69a488b903d35d28ca9344c8f04fb82c8fb6ba53cf",
+          "rgbaSha256": "6bad38d6b965c67387829fd4a6b862c639bafe1b53f4acb6a08119c701550577",
+          "softAlphaPixels": 4436,
+          "rect": [
+            274,
+            171,
+            132,
+            165
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/aoe-warning.png",
+        "size": [
+          408,
+          338
+        ],
+        "gutter": 2,
+        "sha256": "13f0c5ca7d6b84b16b30713bf5089509d3902401315ec461a0fa9ad69af72d03"
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "aoe-deploy",
+      "mode": "aoe",
+      "phase": "deploy",
+      "anchor": "ground",
+      "source": "sources/aoe-deploy.png",
+      "sourceSha256": "e316464f5d2c21c7a8ed8d10073b1a41a46db824b59d8076fe29db1636dae13d",
+      "canvas": [
+        204,
+        245
+      ],
+      "pivot": [
+        103,
+        224
+      ],
+      "durationMs": 540,
+      "loop": false,
+      "timingPolicy": "art playback only; release/contact exclusively fixture/server facts",
+      "scale": 0.37938144329896906,
+      "frames": [
+        {
+          "id": "aoe-deploy-1",
+          "index": 0,
+          "file": "frames/aoe-deploy/001.png",
+          "canvas": [
+            204,
+            245
+          ],
+          "pivot": [
+            103,
+            224
+          ],
+          "durationMs": 70,
+          "bounds": [
+            15,
+            57,
+            195,
+            236
+          ],
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            255,
+            478
+          ],
+          "nativeOffset": [
+            6,
+            43
+          ],
+          "sha256": "8aa41738800390a7fd5f464dcd1589ecabe407fbb60002073f38344468ad1d06",
+          "rgbaSha256": "cb305fb8b8161ad5cc89ae9f7491d88fa6f6ec22fcaf31b83cb01784bed38879",
+          "softAlphaPixels": 3825,
+          "rect": [
+            2,
+            2,
+            204,
+            245
+          ]
+        },
+        {
+          "id": "aoe-deploy-2",
+          "index": 1,
+          "file": "frames/aoe-deploy/002.png",
+          "canvas": [
+            204,
+            245
+          ],
+          "pivot": [
+            103,
+            224
+          ],
+          "durationMs": 80,
+          "bounds": [
+            6,
+            57,
+            195,
+            233
+          ],
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            482
+          ],
+          "nativeOffset": [
+            6,
+            41
+          ],
+          "sha256": "453832bbee553ee335aa16f47609f5e1b53bcbaf825bf51f69ffdb988b62f80c",
+          "rgbaSha256": "a9d907ad9275937a1d8a0f565dfbe14c4ccd48bd9621ba7ec097c07be8424926",
+          "softAlphaPixels": 7509,
+          "rect": [
+            210,
+            2,
+            204,
+            245
+          ]
+        },
+        {
+          "id": "aoe-deploy-3",
+          "index": 2,
+          "file": "frames/aoe-deploy/003.png",
+          "canvas": [
+            204,
+            245
+          ],
+          "pivot": [
+            103,
+            224
+          ],
+          "durationMs": 90,
+          "bounds": [
+            4,
+            48,
+            190,
+            234
+          ],
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            262,
+            485
+          ],
+          "nativeOffset": [
+            4,
+            40
+          ],
+          "sha256": "ce01107249e96db04886c1d1319b82c0e20886adc9a70473077ca671b01a9292",
+          "rgbaSha256": "3aa04c95fdc4291a4dddcc51822b956a7acb9aa6676c26de32ef363c7d6a3065",
+          "softAlphaPixels": 11188,
+          "rect": [
+            418,
+            2,
+            204,
+            245
+          ]
+        },
+        {
+          "id": "aoe-deploy-4",
+          "index": 3,
+          "file": "frames/aoe-deploy/004.png",
+          "canvas": [
+            204,
+            245
+          ],
+          "pivot": [
+            103,
+            224
+          ],
+          "durationMs": 90,
+          "bounds": [
+            11,
+            54,
+            199,
+            236
+          ],
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            258,
+            466
+          ],
+          "nativeOffset": [
+            5,
+            47
+          ],
+          "sha256": "3f3df1b611686d80123cd0d10b44483d173edbcb03dae1753fcddcb2ce6643bf",
+          "rgbaSha256": "57c667db5de83a3f1c87a17b1881c83a7b1961441264dce7d74cad63123d9f9d",
+          "softAlphaPixels": 15697,
+          "rect": [
+            2,
+            251,
+            204,
+            245
+          ]
+        },
+        {
+          "id": "aoe-deploy-5",
+          "index": 4,
+          "file": "frames/aoe-deploy/005.png",
+          "canvas": [
+            204,
+            245
+          ],
+          "pivot": [
+            103,
+            224
+          ],
+          "durationMs": 100,
+          "bounds": [
+            4,
+            48,
+            196,
+            236
+          ],
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            260,
+            466
+          ],
+          "nativeOffset": [
+            4,
+            47
+          ],
+          "sha256": "43722df0c3df798d113483d36e2cf4874b13efebb23dca5c0d6b7e7a3e2f7354",
+          "rgbaSha256": "31c91c4e17ee07f7789e910a2130f7d48f9e5a870f80ef2da7aa5f3e68c25ce0",
+          "softAlphaPixels": 16487,
+          "rect": [
+            210,
+            251,
+            204,
+            245
+          ]
+        },
+        {
+          "id": "aoe-deploy-6",
+          "index": 5,
+          "file": "frames/aoe-deploy/006.png",
+          "canvas": [
+            204,
+            245
+          ],
+          "pivot": [
+            103,
+            224
+          ],
+          "durationMs": 110,
+          "bounds": [
+            5,
+            48,
+            175,
+            235
+          ],
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            258,
+            466
+          ],
+          "nativeOffset": [
+            5,
+            47
+          ],
+          "sha256": "f43bc55922f151b3fff10a8a6e0685392bd22fd108c55aa534aa215e5ed31ddb",
+          "rgbaSha256": "7666813a764255c791032ab137862c1ea0d5f2fc4c257702e45d08bdad278002",
+          "softAlphaPixels": 15478,
+          "rect": [
+            418,
+            251,
+            204,
+            245
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/aoe-deploy.png",
+        "size": [
+          624,
+          498
+        ],
+        "gutter": 2,
+        "sha256": "02276f178f0a9b72013f5a39b3b70c206c4a8160f91f792a37e383976183c172"
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "aoe-active",
+      "mode": "aoe",
+      "phase": "active",
+      "anchor": "caster",
+      "source": "sources/aoe-active.png",
+      "sourceSha256": "23cc05c5be4769f374d2b5ed6fce3f3ac99ffa212f6d782df0f0b51b945825ff",
+      "canvas": [
+        352,
+        352
+      ],
+      "pivot": [
+        176,
+        320
+      ],
+      "durationMs": 960,
+      "loop": false,
+      "timingPolicy": "art playback only; release/contact exclusively fixture/server facts",
+      "scale": 0.5679513184584178,
+      "frames": [
+        {
+          "id": "aoe-active-1",
+          "index": 0,
+          "file": "frames/aoe-active/001.png",
+          "canvas": [
+            352,
+            352
+          ],
+          "pivot": [
+            176,
+            320
+          ],
+          "durationMs": 160,
+          "bounds": [
+            30,
+            72,
+            321,
+            346
+          ],
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            466
+          ],
+          "nativeOffset": [
+            30,
+            55
+          ],
+          "sha256": "84a448ebf7276ecbacf869f1cc41d2e3fc61119cd5be2753af5cdd78deb59d5b",
+          "rgbaSha256": "2849d79f006cf2e32588087bcb643d780180451f3b1185676889f5b570de820e",
+          "softAlphaPixels": 50746,
+          "rect": [
+            2,
+            2,
+            352,
+            352
+          ]
+        },
+        {
+          "id": "aoe-active-2",
+          "index": 1,
+          "file": "frames/aoe-active/002.png",
+          "canvas": [
+            352,
+            352
+          ],
+          "pivot": [
+            176,
+            320
+          ],
+          "durationMs": 160,
+          "bounds": [
+            36,
+            60,
+            320,
+            342
+          ],
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            258,
+            473
+          ],
+          "nativeOffset": [
+            29,
+            51
+          ],
+          "sha256": "d771e5325979d89dfa3edc68878bfc9e400c23ddeebdd37fbb2b08b3a7cc409f",
+          "rgbaSha256": "4d658af5e29053153842499519e284cd25101ed47d85f2758531279e8b3d1c4a",
+          "softAlphaPixels": 52545,
+          "rect": [
+            358,
+            2,
+            352,
+            352
+          ]
+        },
+        {
+          "id": "aoe-active-3",
+          "index": 2,
+          "file": "frames/aoe-active/003.png",
+          "canvas": [
+            352,
+            352
+          ],
+          "pivot": [
+            176,
+            320
+          ],
+          "durationMs": 160,
+          "bounds": [
+            29,
+            48,
+            320,
+            339
+          ],
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            259,
+            479
+          ],
+          "nativeOffset": [
+            29,
+            48
+          ],
+          "sha256": "d56c058c05f9e6d77e1945c36637dff44f41e225e894710e5d9d7ca619e79d26",
+          "rgbaSha256": "48f6cd316b8eb3ba6b8e9109388b1fffa74d242a4ebbe78139665f025a994c24",
+          "softAlphaPixels": 61055,
+          "rect": [
+            714,
+            2,
+            352,
+            352
+          ]
+        },
+        {
+          "id": "aoe-active-4",
+          "index": 3,
+          "file": "frames/aoe-active/004.png",
+          "canvas": [
+            352,
+            352
+          ],
+          "pivot": [
+            176,
+            320
+          ],
+          "durationMs": 160,
+          "bounds": [
+            29,
+            51,
+            320,
+            342
+          ],
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            258,
+            474
+          ],
+          "nativeOffset": [
+            29,
+            51
+          ],
+          "sha256": "65f3f1b217b58a4ec761a9e05b6b1c1ba33f05e88eb16a769e8aef1d792ddbbb",
+          "rgbaSha256": "17ae34acc0077446cca1072b7607fe32b8b3cc41576ef9a1ca3c5a9c52dfb616",
+          "softAlphaPixels": 62319,
+          "rect": [
+            2,
+            358,
+            352,
+            352
+          ]
+        },
+        {
+          "id": "aoe-active-5",
+          "index": 4,
+          "file": "frames/aoe-active/005.png",
+          "canvas": [
+            352,
+            352
+          ],
+          "pivot": [
+            176,
+            320
+          ],
+          "durationMs": 160,
+          "bounds": [
+            30,
+            51,
+            321,
+            342
+          ],
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            257,
+            474
+          ],
+          "nativeOffset": [
+            30,
+            51
+          ],
+          "sha256": "489d8a31ae9f697c6802a2a45fd644db9063a5bc8573f9241bdf576b138b8468",
+          "rgbaSha256": "c3e1e22378b69c05fe5c54d9a11c7e4e44b44b250e2e3b5a7ef99561ee9bf8b9",
+          "softAlphaPixels": 63137,
+          "rect": [
+            358,
+            358,
+            352,
+            352
+          ]
+        },
+        {
+          "id": "aoe-active-6",
+          "index": 5,
+          "file": "frames/aoe-active/006.png",
+          "canvas": [
+            352,
+            352
+          ],
+          "pivot": [
+            176,
+            320
+          ],
+          "durationMs": 160,
+          "bounds": [
+            28,
+            48,
+            319,
+            339
+          ],
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            260,
+            478
+          ],
+          "nativeOffset": [
+            28,
+            48
+          ],
+          "sha256": "b62ec113c4e886a192bb8084e699b44921628f07ce92fe035edbe724a934e5dc",
+          "rgbaSha256": "2a9f54774a05d450a1712d87c78d3fc924f41b5525c5fd0b4eb6c73726134bbc",
+          "softAlphaPixels": 58366,
+          "rect": [
+            714,
+            358,
+            352,
+            352
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/aoe-active.png",
+        "size": [
+          1068,
+          712
+        ],
+        "gutter": 2,
+        "sha256": "292c38fa734f24542165bd1ec12ec65b25d0e969858dd3a492c629f489640541"
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "aoe-contact",
+      "mode": "aoe",
+      "phase": "contact",
+      "anchor": "target",
+      "source": "sources/aoe-contact.png",
+      "sourceSha256": "82ad695f96a71cf0780ef7a4f6a03eba28411b237d1e8a951bc9ca35c9568727",
+      "canvas": [
+        192,
+        208
+      ],
+      "pivot": [
+        96,
+        184
+      ],
+      "durationMs": 490,
+      "loop": false,
+      "timingPolicy": "art playback only; release/contact exclusively fixture/server facts",
+      "scale": 0.30062630480167013,
+      "frames": [
+        {
+          "id": "aoe-contact-1",
+          "index": 0,
+          "file": "frames/aoe-contact/001.png",
+          "canvas": [
+            192,
+            208
+          ],
+          "pivot": [
+            96,
+            184
+          ],
+          "durationMs": 55,
+          "bounds": [
+            28,
+            65,
+            173,
+            198
+          ],
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            463
+          ],
+          "nativeOffset": [
+            19,
+            45
+          ],
+          "sha256": "38689729cbe4c2092ef4563a543551cac9f900cf4a3de3fea9a1462f87ac9a3c",
+          "rgbaSha256": "3d7ddcf6a0d240f108846c8c91975355017659c3813ec406248e7cf214336eaa",
+          "softAlphaPixels": 3231,
+          "rect": [
+            2,
+            2,
+            192,
+            208
+          ]
+        },
+        {
+          "id": "aoe-contact-2",
+          "index": 1,
+          "file": "frames/aoe-contact/002.png",
+          "canvas": [
+            192,
+            208
+          ],
+          "pivot": [
+            96,
+            184
+          ],
+          "durationMs": 60,
+          "bounds": [
+            17,
+            49,
+            170,
+            198
+          ],
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            262,
+            466
+          ],
+          "nativeOffset": [
+            17,
+            44
+          ],
+          "sha256": "f7530a2e18d5eed917eb07a9255b7d3258fa9cbdb57f1109d5c55906264454c2",
+          "rgbaSha256": "9209a0850beea4244666a4d64085a20b3dfdbd77a0e44ca64e9f33290c1f0df2",
+          "softAlphaPixels": 7730,
+          "rect": [
+            198,
+            2,
+            192,
+            208
+          ]
+        },
+        {
+          "id": "aoe-contact-3",
+          "index": 2,
+          "file": "frames/aoe-contact/003.png",
+          "canvas": [
+            192,
+            208
+          ],
+          "pivot": [
+            96,
+            184
+          ],
+          "durationMs": 70,
+          "bounds": [
+            18,
+            49,
+            165,
+            196
+          ],
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            258,
+            470
+          ],
+          "nativeOffset": [
+            18,
+            43
+          ],
+          "sha256": "8c4ca92432983398fc67bb8d97e4b7a44a0de69074fa45c9f57af773177447cb",
+          "rgbaSha256": "f97a6fcc6ba280117ee673de7a234f2ba6ea3f05213261d2ae59d92feb975b4f",
+          "softAlphaPixels": 13618,
+          "rect": [
+            394,
+            2,
+            192,
+            208
+          ]
+        },
+        {
+          "id": "aoe-contact-4",
+          "index": 3,
+          "file": "frames/aoe-contact/004.png",
+          "canvas": [
+            192,
+            208
+          ],
+          "pivot": [
+            96,
+            184
+          ],
+          "durationMs": 80,
+          "bounds": [
+            32,
+            51,
+            173,
+            194
+          ],
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            254,
+            452
+          ],
+          "nativeOffset": [
+            20,
+            48
+          ],
+          "sha256": "16aab56271d0a50ef713b9e87c941f3b9da9f9d7c894126ae3feb37663b4d2d8",
+          "rgbaSha256": "a2755242e2a3b6157b133ac2f5dde84121498fe2cbaae33587e45e543462a874",
+          "softAlphaPixels": 11495,
+          "rect": [
+            2,
+            214,
+            192,
+            208
+          ]
+        },
+        {
+          "id": "aoe-contact-5",
+          "index": 4,
+          "file": "frames/aoe-contact/005.png",
+          "canvas": [
+            192,
+            208
+          ],
+          "pivot": [
+            96,
+            184
+          ],
+          "durationMs": 100,
+          "bounds": [
+            22,
+            48,
+            173,
+            197
+          ],
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            451
+          ],
+          "nativeOffset": [
+            19,
+            48
+          ],
+          "sha256": "0e4d515717e3807add53ee10a19dfd00d5499d9ab4f286e93dbc8bfdfb98ed88",
+          "rgbaSha256": "004e20f2a9a7048410c719c123ffbed12e7e65ec01d03537091645c8173de61e",
+          "softAlphaPixels": 10838,
+          "rect": [
+            198,
+            214,
+            192,
+            208
+          ]
+        },
+        {
+          "id": "aoe-contact-6",
+          "index": 5,
+          "file": "frames/aoe-contact/006.png",
+          "canvas": [
+            192,
+            208
+          ],
+          "pivot": [
+            96,
+            184
+          ],
+          "durationMs": 125,
+          "bounds": [
+            18,
+            51,
+            165,
+            195
+          ],
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            259,
+            453
+          ],
+          "nativeOffset": [
+            18,
+            48
+          ],
+          "sha256": "00632a4178a293f5f2b6d3513ee4ca3b33510cff9ec8ae4239d87fa476c058d4",
+          "rgbaSha256": "65462ff9acf12bc2b9fa140949277b861ebef4b3862ae31dabbd7c4777168823",
+          "softAlphaPixels": 7202,
+          "rect": [
+            394,
+            214,
+            192,
+            208
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/aoe-contact.png",
+        "size": [
+          588,
+          424
+        ],
+        "gutter": 2,
+        "sha256": "d6fd8a489b1e23d4f7d2630757ac1b04141c13335623cb718ed097ad0dd12121"
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "aoe-collapse",
+      "mode": "aoe",
+      "phase": "collapse",
+      "anchor": "ground",
+      "source": "sources/aoe-collapse.png",
+      "sourceSha256": "e83e0e1498a554a3af2ad4232f69ed89de0371df2392dc788c33b91fd04fa4e1",
+      "canvas": [
+        187,
+        228
+      ],
+      "pivot": [
+        94,
+        208
+      ],
+      "durationMs": 720,
+      "loop": false,
+      "timingPolicy": "art playback only; release/contact exclusively fixture/server facts",
+      "scale": 0.34782608695652173,
+      "frames": [
+        {
+          "id": "aoe-collapse-1",
+          "index": 0,
+          "file": "frames/aoe-collapse/001.png",
+          "canvas": [
+            187,
+            228
+          ],
+          "pivot": [
+            94,
+            208
+          ],
+          "durationMs": 90,
+          "bounds": [
+            14,
+            51,
+            182,
+            219
+          ],
+          "sourceCell": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            257,
+            480
+          ],
+          "nativeOffset": [
+            5,
+            41
+          ],
+          "sha256": "692b546833b4461a5e7c428147b5813483d1f3d9a3ccb5f1b7d355f026c4741d",
+          "rgbaSha256": "02a132c968c5886a73ea51e157bb1e44046454ff5bebcdc8614b6aac961890d3",
+          "softAlphaPixels": 8482,
+          "rect": [
+            2,
+            2,
+            187,
+            228
+          ]
+        },
+        {
+          "id": "aoe-collapse-2",
+          "index": 1,
+          "file": "frames/aoe-collapse/002.png",
+          "canvas": [
+            187,
+            228
+          ],
+          "pivot": [
+            94,
+            208
+          ],
+          "durationMs": 100,
+          "bounds": [
+            6,
+            50,
+            181,
+            220
+          ],
+          "sourceCell": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            258,
+            478
+          ],
+          "nativeOffset": [
+            4,
+            42
+          ],
+          "sha256": "0f35678f7e45bfc697b4bfaf20f7fa3259fb1a2c00f97066609ff95e49ca5c0c",
+          "rgbaSha256": "fa0ec0cf9ad6520bc599c50b5106ff830b634edadad36c117138978138354713",
+          "softAlphaPixels": 8980,
+          "rect": [
+            193,
+            2,
+            187,
+            228
+          ]
+        },
+        {
+          "id": "aoe-collapse-3",
+          "index": 2,
+          "file": "frames/aoe-collapse/003.png",
+          "canvas": [
+            187,
+            228
+          ],
+          "pivot": [
+            94,
+            208
+          ],
+          "durationMs": 110,
+          "bounds": [
+            4,
+            50,
+            174,
+            219
+          ],
+          "sourceCell": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            260,
+            481
+          ],
+          "nativeOffset": [
+            4,
+            41
+          ],
+          "sha256": "5aeb0b6878222d45a11ceef997cda7b7e4fee2c0f57c142bec01d2933d08053f",
+          "rgbaSha256": "9bb060cc2f42830c6490de2ea4c11a5c10d0a18a7af91f6033724e4f6b609979",
+          "softAlphaPixels": 8337,
+          "rect": [
+            384,
+            2,
+            187,
+            228
+          ]
+        },
+        {
+          "id": "aoe-collapse-4",
+          "index": 3,
+          "file": "frames/aoe-collapse/004.png",
+          "canvas": [
+            187,
+            228
+          ],
+          "pivot": [
+            94,
+            208
+          ],
+          "durationMs": 120,
+          "bounds": [
+            15,
+            60,
+            181,
+            215
+          ],
+          "sourceCell": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            258,
+            466
+          ],
+          "nativeOffset": [
+            4,
+            46
+          ],
+          "sha256": "28ef522575f0bf32ec6166de0ae831bb617aa86311a3dbda380166fe27f87c62",
+          "rgbaSha256": "c8e41cfec851d371db6bef3f6afdb89afccc08561250a91a245b67c83b429509",
+          "softAlphaPixels": 7130,
+          "rect": [
+            2,
+            234,
+            187,
+            228
+          ]
+        },
+        {
+          "id": "aoe-collapse-5",
+          "index": 4,
+          "file": "frames/aoe-collapse/005.png",
+          "canvas": [
+            187,
+            228
+          ],
+          "pivot": [
+            94,
+            208
+          ],
+          "durationMs": 140,
+          "bounds": [
+            5,
+            45,
+            167,
+            213
+          ],
+          "sourceCell": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            468
+          ],
+          "nativeOffset": [
+            5,
+            45
+          ],
+          "sha256": "9b990221346dbffadbeb1245f90d3e7bbda0aeaabcfa3bd5e7798315b1588eda",
+          "rgbaSha256": "cec57bcd09fa6ff39cc521888e797dff9170c63e75dd8789bd490ead9ef42cf1",
+          "softAlphaPixels": 11040,
+          "rect": [
+            193,
+            234,
+            187,
+            228
+          ]
+        },
+        {
+          "id": "aoe-collapse-6",
+          "index": 5,
+          "file": "frames/aoe-collapse/006.png",
+          "canvas": [
+            187,
+            228
+          ],
+          "pivot": [
+            94,
+            208
+          ],
+          "durationMs": 160,
+          "bounds": [
+            5,
+            46,
+            168,
+            212
+          ],
+          "sourceCell": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "sourceEmitter": [
+            256,
+            472
+          ],
+          "nativeOffset": [
+            5,
+            44
+          ],
+          "sha256": "7d69a8ff2ececa37a1d9735950a86144a14559b0b6688ba84987f312944feca8",
+          "rgbaSha256": "090781944c2ce1ebd06b51e073b6d5089d06616a9050b8811d289eee53948c93",
+          "softAlphaPixels": 5948,
+          "rect": [
+            384,
+            234,
+            187,
+            228
+          ]
+        }
+      ],
+      "atlas": {
+        "file": "atlases/aoe-collapse.png",
+        "size": [
+          573,
+          464
+        ],
+        "gutter": 2,
+        "sha256": "5608f21eaa6357274f06b5378c2a8d3b892fe75112b81a3339079844e02b831e"
+      },
+      "artApproved": false,
+      "runtimeIntegrated": false
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "p5-next-family-briefs-2",
+  "date": "2026-10-14",
+  "status": "prepared-no-generation",
+  "generationAllowed": false,
+  "order": [
+    "sword",
+    "banner",
+    "chariot",
+    "bead"
+  ],
+  "preparedFamilies": [
+    {
+      "familyId": "chariot",
+      "plan": "chariot/plan.json",
+      "choreography": "chariot/choreography.json",
+      "jobs": 48
+    },
+    {
+      "familyId": "bead",
+      "plan": "bead/plan.json",
+      "choreography": "bead/choreography.json",
+      "jobs": 48
+    }
+  ],
+  "actualCoverage": {
+    "imagegenCalls": 0,
+    "sources": 0,
+    "clips": 0,
+    "keys": 0
+  },
+  "forecast": {
+    "jobs": 96,
+    "coreInputTripletsReady": 32,
+    "foundationTripletsPending": 64,
+    "bodyClips": 256,
+    "motionKeysAtSix": 1536,
+    "neutralCalibrationAtSix": 576
+  },
+  "supportOnly": true,
+  "actorWriteAllowed": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false
+}

@@ -1,0 +1,755 @@
+{
+  "schema": "wang-lin-concept-source-inspection-5",
+  "sources": [
+    {
+      "id": "identity-a",
+      "role": "identity-master",
+      "raw": "sources/identity-a.png",
+      "sha256": "bbdab0b55d0cbcbf99e000097e0e017c2fe787639b379e6ef972198d2c9d7c08",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 959275,
+        "soft": 613589,
+        "opaque": 0
+      },
+      "sourceBounds": {
+        "left": 47,
+        "top": 171,
+        "width": 947,
+        "height": 1295,
+        "right": 993,
+        "bottom": 1465,
+        "pixels": 613589
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": {
+        "sourceSize": [
+          1024,
+          1536
+        ],
+        "crownY": 174,
+        "groundY": 1461,
+        "rootX": 534,
+        "basis": "Viewed immutable source at original resolution. Natural upper hair knot/crown opaque edge174–175; faint fringe171 is not used to choose scale. Lower left/lead sole ends1460, world-ground1461; rear/right sole ends1442 due southeast perspective. Two boot centres about400/668 give root534; not the full alpha/long-hair bbox centre.",
+        "assessment": "Nhận diện mới tóc đen buộc nửa, lọn mái lệch và mặt/đôi tay mới; không ghép đầu hoặc pixel da từ live. Áo nền than–ngà và boot neutral. Tóc vẫn chiếm mảng lớn ở1× theo hướng compact; thân/face cần owner chốt, chiều cao80 không chứng minh toàn anatomy đã duyệt. Hai đế giày lệch sâu theo góc Đông Nam, root giữa chân và ground lấy đế thấp. Alpha nguồn mềm quanh tóc/áo được giữ, không vẽ lại."
+      },
+      "boardAssessment": null
+    },
+    {
+      "id": "identity-b",
+      "role": "identity-master",
+      "raw": "sources/identity-b.png",
+      "sha256": "d52d981a22a1ddf927499b851cd7d833c6a4ab833009bc267356849250933412",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 1000949,
+        "soft": 571915,
+        "opaque": 0
+      },
+      "sourceBounds": {
+        "left": 75,
+        "top": 48,
+        "width": 787,
+        "height": 1462,
+        "right": 861,
+        "bottom": 1509,
+        "pixels": 571915
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": {
+        "sourceSize": [
+          1024,
+          1536
+        ],
+        "crownY": 170,
+        "groundY": 1427,
+        "rootX": 512,
+        "basis": "Viewed immutable source at original resolution. Natural silver upper knot starts169–172; crown170 chosen at dense hair edge. Lower right boot sole ends1426, ground1427; left boot is aboutone source shoe-grid row shallower from southeast view. Boot centres approximately400/624 support root512. Faint alpha1 spill up to48 and down1509 excluded from anatomy anchors but source alpha remains retained.",
+        "assessment": "Nhận diện mới tóc bạc buộc cao, hai lọn rủ và mày/mắt sắc; mặt, tay, áo và boot đều từ nguồn mới. Hai đế giày lệch sâu theo Đông Nam, đo ground từ đế thấp. Tóc bạc và áo ngà có tương phản mực giữ silhouette; lớp alpha mềm rất nhạt ngoài hair/boot còn trong raw/native, không dùng để fit cỡ người. Chưa kết luận anatomy/style hay ART được duyệt."
+      },
+      "boardAssessment": null
+    },
+    {
+      "id": "sword-a",
+      "role": "equipment-character-concept",
+      "raw": "sources/sword-a.png",
+      "sha256": "aa46091230a5ff7325bad9cc9b4ba047f00c1c1ec5d6268ce5a9337dfe1665e9",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 917567,
+        "soft": 655297,
+        "opaque": 0
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 49,
+        "width": 1018,
+        "height": 1453,
+        "right": 1017,
+        "bottom": 1501,
+        "pixels": 655297
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": {
+        "sourceSize": [
+          1024,
+          1536
+        ],
+        "crownY": 166,
+        "groundY": 1464,
+        "rootX": 566,
+        "basis": "Viewed source original. Natural upper hair knot/crown dense edge166–167, soles: lower/left boot ends1463 at alpha128 (1462 dense), worldground1464. Right/rear boot is a little shallower. Left boot centre about417/right716, root566. Sword tip near1440 is not used to measure boots. Faint alpha spill0..1017/49..1501 retained but excluded from anatomy scale.",
+        "assessment": "Tạo hình kiếm tu Huyền Mặc toàn thân mới bám nhận diện tóc đen A, áo xẻ lệch mực–ngà, viền kim trầm và đai cổ; tay trái thực sự cầm kiếm hạ, tay phải riêng. Kiếm và bao/đai được bake vào concept, chưa là body/weapon riêng hoặc socket grip sản xuất. Vạt/chi tiết cổ kim đọc gọn ở1×; không ghép đầu live. Đế thấp dùng để đăng ký người, không lấy mũi kiếm."
+      },
+      "boardAssessment": null
+    },
+    {
+      "id": "sword-b",
+      "role": "equipment-character-concept",
+      "raw": "sources/sword-b.png",
+      "sha256": "170ae3a2bfc076751495462a171a2aed9018bd1b26daafdc8e86ead890f3ec0d",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 896373,
+        "soft": 676491,
+        "opaque": 0
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 57,
+        "width": 1008,
+        "height": 1431,
+        "right": 1007,
+        "bottom": 1487,
+        "pixels": 676491
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": {
+        "sourceSize": [
+          1024,
+          1536
+        ],
+        "crownY": 122,
+        "groundY": 1479,
+        "rootX": 494,
+        "basis": "Viewed source original. Natural silver upperknot/crown denseedge122–123. Lower/left humanbootsole ends1478(alpha128/220), worldground1479. Humanboot centres~346/642 give root494. Blade tip near1472 is above lower sole and explicitly not used as foot/root. Faint halo57..1487/left0 retained; all source core edges0. One80/1357 factor applies robe, face, hair, boots and sword together.",
+        "assessment": "Vân Ngọc toàn thân B với tóc bạc buộc cao, áo ngà/cổ và đai thanh ngọc, cuff/giày lam xám và kiếm thẳng sáng hạ chéo. Tay trái thực sự giữ chuôi, tay phải riêng; mặt/tay/tóc mới từ source matchingmaster, không ghép live. Mũi kiếm gần ground nhưng không phải chân; figure cùng nominal80. Chi tiết guard ngọc/bao kiếm là thiết kế mới, chưa production layer/socket/motion hoặc owner ART."
+      },
+      "boardAssessment": null
+    },
+    {
+      "id": "sword-progression",
+      "role": "progression-board",
+      "raw": "sources/sword-progression.png",
+      "sha256": "86f7d8ac7e0e121e38df6608bb99ba16cae09ee47981bb60fbf25352c93ea240",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceChannels": 3,
+      "hasAlpha": false,
+      "alpha": {
+        "empty": 0,
+        "soft": 0,
+        "opaque": 1572864
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1536,
+        "height": 1024,
+        "right": 1535,
+        "bottom": 1023,
+        "pixels": 1572864
+      },
+      "sourceCoreEdges": {
+        "top": 1536,
+        "right": 1024,
+        "bottom": 1536,
+        "left": 1024
+      },
+      "manual": null,
+      "boardAssessment": "Đã xem raw: ba nhân vật tóc đen A ở cùng sàn/cỡ tương đối, từ áo vải gọn/kiếm thường tới áo Huyền Mặc + kiếm linh/ba kiếm hỗ trợ rồi áo cô đọng + miền cọc kiếm. Ba study dưới là vải/kiếm-linh/cấu trúc miền. Kiếm linh có silhouette khí dạng long ảnh trong hình; đây là đề xuất động hình kiếm linh, không chân dung người Hứa Lập Quốc canon. Các mốc thị giác và cảnh giới là đề xuất phát triển, không tự cấp trọng bảo sớm hoặc chốt lịch mở khóa."
+    },
+    {
+      "id": "sword-aoe",
+      "role": "battle-aoe-board",
+      "raw": "sources/sword-aoe.png",
+      "sha256": "161dfa02f3c1cdd5965590e0c68103fded6fb25fc44f38a3e769a9055bf51b65",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceChannels": 3,
+      "hasAlpha": false,
+      "alpha": {
+        "empty": 0,
+        "soft": 0,
+        "opaque": 1572864
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1536,
+        "height": 1024,
+        "right": 1535,
+        "bottom": 1023,
+        "pixels": 1572864
+      },
+      "sourceCoreEdges": {
+        "top": 1536,
+        "right": 1024,
+        "bottom": 1536,
+        "left": 1024
+      },
+      "manual": null,
+      "boardAssessment": "Đã xem raw: panel trái minh họa một đòn một mục tiêu; panel lớn có kiếm linh lớn sau người, cọc kiếm hai bên và ba hành lang đen–ngà tác động nhiều địch; bốn panel dưới là báo vùng/cọc dựng/phát/tan. Tuyến trong hình đọc chủ yếu song song chéo, chưa thể hiện rõ ba đường giao nhau như đề xuất. Peak có khoảng bốn địch đọc rõ, panel báo vùng có năm; một số cọc/thân bị che. Đây là concept bố cục/nhịp, không phải bốn frame animation đã đăng ký hoặc bằng chứng collider/timing thực."
+    },
+    {
+      "id": "banner-a-r2",
+      "role": "equipment-character-concept",
+      "raw": "sources/banner-a-r2.png",
+      "sha256": "25ab2b0fa27855bc1dbd1c348b0a0f7610b39b69279d63742cf8983043e4af14",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 1037759,
+        "soft": 533623,
+        "opaque": 1134
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 17,
+        "width": 1245,
+        "height": 1237,
+        "right": 1244,
+        "bottom": 1253,
+        "pixels": 534757
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": {
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "crownY": 327,
+        "groundY": 1221,
+        "rootX": 552,
+        "basis": "Viewed targeted wider-canvas r2 original. Natural hair/crown first dense pixels327 at x471..509; left/lead bootsole ends1220, ground1221. Boot centres about429/675 supportroot552. Pole/flag tip28 and clothbottom are excluded from body measurement. Alpha128 sourcebounds226..1015/28..1220 show completeflag with large rightmargin; all four sourcecoreedges0. A single80/894 scale registers completecharacterandgear; wider rawcanvas is transparent padding, not a smaller human at native.",
+        "assessment": "Bản r2 mở đủ khăn cờ và mũi/chuôi phiên, thay nguồn r1 bị cắt thật ở cạnh phải; r1 giữ nguyên lịch sử. Nhân vật U Tế toàn thân A với áo nghi lễ than–đỏ, ba mảng niêm lớn, tay phải giữ cán và vai nghiêng theo phiên. Cờ/nhân vật bake trong concept, chưa phất phiên/motion/socket. Không ghép đầu live, không cắt/đổ lại alpha; có fringe cực nhạt/màu cạnh nguồn ở zoom lớn, native giữ nguồn thật và toàn bộ silhouette."
+      },
+      "boardAssessment": null
+    },
+    {
+      "id": "banner-b",
+      "role": "equipment-character-concept",
+      "raw": "sources/banner-b.png",
+      "sha256": "e52a5aeabbb61d18c22b7b14daaf22b6f6460127478ae75fe767b62e658bcead",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 748706,
+        "soft": 824158,
+        "opaque": 0
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 5,
+        "width": 1010,
+        "height": 1531,
+        "right": 1009,
+        "bottom": 1535,
+        "pixels": 824158
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": {
+        "sourceSize": [
+          1024,
+          1536
+        ],
+        "crownY": 347,
+        "groundY": 1483,
+        "rootX": 449,
+        "basis": "Viewed raw original. Silver upper hair knot first denseedge347 atx340..347, independently measured below tallflag tip50. Lower/left humanbootsole ends1482, worldground1483; boots span~234..337 and524..700, centres286/612 supportroot449. Polebottom around1410 is explicitly not sole/root. One80/1136 factor retains completeperson andflag; sourcecoreedgesall0, alpha1 fringe0..1009/5..1535 remains retained.",
+        "assessment": "Tàn Nguyệt toàn thân B: tóc bạc, áo tro ngà/tím trầm, ba mảng niêm và tay phải thực sự giữ cán. Cờ/đầu phiên/boots đầy đủ, mặt/tay trước không che. Phiên vươn cao làm người đứng thấp trong source; đo body bằng crown/boots, không thu người theo wholeflagbbox hoặc lấy đáy cán làm chân. Nguồn halo tóc bạc còn mềm ở1×; chưa motion/grip/socket tách lớp hoặc ART approval."
+      },
+      "boardAssessment": null
+    },
+    {
+      "id": "banner-progression",
+      "role": "progression-board",
+      "raw": "sources/banner-progression.png",
+      "sha256": "1493ba3945d2c1f0d77fd7d5a8dfc691f153c9f080035b5e013ed2b8e3d2a988",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceChannels": 3,
+      "hasAlpha": false,
+      "alpha": {
+        "empty": 0,
+        "soft": 0,
+        "opaque": 1572864
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1536,
+        "height": 1024,
+        "right": 1535,
+        "bottom": 1023,
+        "pixels": 1572864
+      },
+      "sourceCoreEdges": {
+        "top": 1536,
+        "right": 1024,
+        "bottom": 1536,
+        "left": 1024
+      },
+      "manual": null,
+      "boardAssessment": "Đã xem raw: tiền thân áo vải/phiên giản dị, sau là U Tế + hai linh ảnh đỏ/ngà, rồi áo nghi lễ cô đọng/khung phiên lớn/ba cổng. Hai linh ảnh stage2 mang dạng long ảnh chứ không là chân dung chủ hồn người; dạng này là đề xuất thị giác, AOE board khác dùng hồn người. Nhân vật stage1 trong board cao ít hơn khoảng20% so stage2/3; các figure là minh họa chặng, chưa registration cùng80px và không đề xuất tăng runtime scale. Native neutral toàn thân giữ80 bằng đo nguồn riêng. Mốc cảnh giới/nhận bảo chưa khóa."
+    },
+    {
+      "id": "banner-aoe",
+      "role": "battle-aoe-board",
+      "raw": "sources/banner-aoe.png",
+      "sha256": "37c8fcad39b7672c6fc1a612ec544648fb1089bb30a69c59d0da4851ddf07503",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceChannels": 3,
+      "hasAlpha": false,
+      "alpha": {
+        "empty": 0,
+        "soft": 0,
+        "opaque": 1572864
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1536,
+        "height": 1024,
+        "right": 1535,
+        "bottom": 1023,
+        "pixels": 1572864
+      },
+      "sourceCoreEdges": {
+        "top": 1536,
+        "right": 1024,
+        "bottom": 1536,
+        "left": 1024
+      },
+      "manual": null,
+      "boardAssessment": "Đã xem raw: một dải hồn đơn mục tiêu ở panel trái; peak là ba cổng khăn-hồn bố trí một cao sau/hai thấp trước, linh thể ngà có silhouette người và dòng mực/chỉ đỏ đi qua nhóm năm địch đọc rõ. Tâm có khoảng trống, người phất phiên ở cạnh sân còn thấy tay/face; không chỉ là đám mây hoặc vòng sáng phóng lớn. Bốn panel dưới thể hiện dấu báo vị trí/cổng mở/dòng hội tụ/thu khí. Cấu trúc khung-cổng và niêm đỏ là chuyển thể, không tuyên bố vật thể/canon hoặc collider đã xác nhận; số địch thực trong peak năm thay vì sáu của brief."
+    },
+    {
+      "id": "chariot-a",
+      "role": "equipment-character-concept",
+      "raw": "sources/chariot-a.png",
+      "sha256": "641b980b2528f5f55b611e2457f345c52486952513dd6e17929e88b30410825e",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 908292,
+        "soft": 664572,
+        "opaque": 0
+      },
+      "sourceBounds": {
+        "left": 20,
+        "top": 51,
+        "width": 1004,
+        "height": 1485,
+        "right": 1023,
+        "bottom": 1535,
+        "pixels": 664572
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": {
+        "sourceSize": [
+          1024,
+          1536
+        ],
+        "crownY": 233,
+        "groundY": 1446,
+        "rootX": 399,
+        "basis": "Viewed source original. Dense natural hair/crown233–235; lower/left human boot sole ends1445(alpha128), ground1446. Right/rear boot endsabout1427; human boot centres~222/576 give root399. Device spikes/cast feet are excluded from human anchors; device spike denseedge1016 stays inside rawcanvas (not core clipped). Extremely faint spilltop51 and bottom1535 retained independently of body measurement.",
+        "assessment": "Nhân vật Cổ Kim toàn thân mới với một vai đồng cũ, đai niêm lớn, găng/xích và thế chân vững; thiết bị thu gọn đứng cạnh người, không bị cầm một tay. Vật liệu đồng/than hợp A, tóc/mặt mới cùng master. Xích ở găng là đoạn slack nhìn rõ nhưng đường liên tục từ găng tới máy chưa được chứng minh; grip/socket/triển khai cần concept/prototype tiếp. Mũi máy sát biên raw nhưng alpha core vẫn có6px nguồn, native giữ tất cả alpha và cỡ người80 bằng một factor."
+      },
+      "boardAssessment": null
+    },
+    {
+      "id": "chariot-b",
+      "role": "equipment-character-concept",
+      "raw": "sources/chariot-b.png",
+      "sha256": "20cd2266f58ca9e30521ec0c7dab417add0106bd6fe46a370fcbaf53077d765d",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 857007,
+        "soft": 715857,
+        "opaque": 0
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 22,
+        "width": 1024,
+        "height": 1514,
+        "right": 1023,
+        "bottom": 1535,
+        "pixels": 715857
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": {
+        "sourceSize": [
+          1024,
+          1536
+        ],
+        "crownY": 165,
+        "groundY": 1444,
+        "rootX": 435,
+        "basis": "Viewed raw original. Natural silver hair/crown denseedge165–166; lower/left humanbootsole ends1443, worldground1444. Boot spansabout216..323 and526..675, centres270/600 supportroot435. Device spikes/fabricbottom/standingfeet excluded from anatomy; densegearright1011 staysinsidecanvas with12px margin, allsourcecoreedges0. One80/1279 factor applies full armor, person,chain andengine.",
+        "assessment": "Lôi Huyền toàn thân B với vải lam xám/huyền thiết, xích bạc nối găng tới pháp khí cạnh người và thế chân vững; xe không cầm/nâng bằng một tay. AI mở giáp từ một vai xuống cả cánh tay và thêm chân giáp, nặng hơn brief một vai; giữ đây là một option tạo hình, cần owner chọn mức giáp. Mặt/tóc/tay mới theo master B, không ghép live. Root lấy đôi boots/người, không dùng bánh/gai/đáy vải của máy; triển khai/thu máy/motion chưa có."
+      },
+      "boardAssessment": null
+    },
+    {
+      "id": "chariot-progression",
+      "role": "progression-board",
+      "raw": "sources/chariot-progression.png",
+      "sha256": "e0bc91b6664289104ea2dc4bd9789700ab4be647c0fb1ea633521fee02dd1407",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceChannels": 3,
+      "hasAlpha": false,
+      "alpha": {
+        "empty": 0,
+        "soft": 0,
+        "opaque": 1572864
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1536,
+        "height": 1024,
+        "right": 1535,
+        "bottom": 1023,
+        "pixels": 1572864
+      },
+      "sourceCoreEdges": {
+        "top": 1536,
+        "right": 1024,
+        "bottom": 1536,
+        "left": 1024
+      },
+      "manual": null,
+      "boardAssessment": "Đã xem raw: tiền thân áo vải/cuốn thẻ gỗ nhỏ, sau là áo một vai đồng/engine thu gọn/xích/thú bị giữ, rồi người điều khiển áo cô đọng trước khung máy lớn có ba linh diện thú. Các figure có cỡ tương đối/cùng nền chân, chưa registered80 trong board. Khung stage3 đọc như trận cơ/đàn máy hơn xe mang theo; đây là đề xuất chuyển thể tổng hợp cần chốt cơ chế triển khai và thu gọn, không xác nhận ba thú entity hoặc một dạng nguyên tác. Ba study dưới gồm vải/thẻ, giáp đồng+xích/thú, cấu trúc máy lớn."
+    },
+    {
+      "id": "chariot-aoe",
+      "role": "battle-aoe-board",
+      "raw": "sources/chariot-aoe.png",
+      "sha256": "8d1b2ae5d798faa38b6f1b6b7ac7775eaee5bf154183c8589f9b946554ab1da0",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceChannels": 3,
+      "hasAlpha": false,
+      "alpha": {
+        "empty": 0,
+        "soft": 0,
+        "opaque": 1572864
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1536,
+        "height": 1024,
+        "right": 1535,
+        "bottom": 1023,
+        "pixels": 1572864
+      },
+      "sourceCoreEdges": {
+        "top": 1536,
+        "right": 1024,
+        "bottom": 1536,
+        "left": 1024
+      },
+      "manual": null,
+      "boardAssessment": "Đã xem raw: ST ở trái nối tay/xích/máy tới một contact; peak là khung xa lớn sau người, thú sừng mực có trọng lượng chạm đất, hai rail xích chéo, ba contact địa lôi giữa nhóm khoảng sáu địch đọc rõ và khe hai bên. Bốn panel dưới phân biệt báo rail/contact, khóa xích/thú, dậm phát, rút thú. Bộ hình tổng hợp cảm hứng dạng Xạ Thần Xa, không khẳng định mọi chi tiết là một dạng nguyên tác; đây là concept vùng/nhiều contact chứ chưa có animation, ground collider, server hit hoặc balancedamage."
+    },
+    {
+      "id": "bead-a",
+      "role": "equipment-character-concept",
+      "raw": "sources/bead-a.png",
+      "sha256": "b327afe0d657d87e88ebb1931f3eae7386e5b0f2aa0e51cc8d8fb66e403854c8",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 891786,
+        "soft": 681078,
+        "opaque": 0
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 19,
+        "width": 1004,
+        "height": 1491,
+        "right": 1003,
+        "bottom": 1509,
+        "pixels": 681078
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": {
+        "sourceSize": [
+          1024,
+          1536
+        ],
+        "crownY": 184,
+        "groundY": 1461,
+        "rootX": 543,
+        "basis": "Viewed immutable original. Natural hair/crown184–187, lower/left bootsole ends1460(alpha128)/1459dense; ground1461. Two boot centres about408/678 give root543. Bead near836,773 is a small stone held at raised right fingers, roughly50sourcepx/3nativepx; it never defines body scale or root. Faint alpha19..1509 and left0 retained but excluded from anatomy measurement.",
+        "assessment": "Thạch Châu toàn thân mới A với áo du hành xám–ngọc, nếp vai/khăn lệch và cuff có một vân lớn; bàn tay phải thực sự nâng đá châu xám nhỏ. Châu đọc khoảng3px ở native1×, nên dấu mây nhỏ là gợi hình, không chứng minh đếm được năm vân; xem raw để chọn thiết kế. Châu không phóng thành cầu phát sáng, thân/áo mới không ghép pixel live; nội cảnh/FX sẽ ở board hoặc lớp sản xuất riêng."
+      },
+      "boardAssessment": null
+    },
+    {
+      "id": "bead-b",
+      "role": "equipment-character-concept",
+      "raw": "sources/bead-b.png",
+      "sha256": "ea1e8fc731bec9de1433f79f06b9f18b53ac9c53eb436fe7e3139f2c66818b8d",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 852996,
+        "soft": 719868,
+        "opaque": 0
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 65,
+        "width": 992,
+        "height": 1425,
+        "right": 991,
+        "bottom": 1489,
+        "pixels": 719868
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": {
+        "sourceSize": [
+          1024,
+          1536
+        ],
+        "crownY": 174,
+        "groundY": 1487,
+        "rootX": 531,
+        "basis": "Viewed raw original. Natural silverhair/crown denseedge174–175, lower/left bootsole ends1486, worldground1487. Bootspans346..457 and579..741 supportroot531. Tinycarvedgraystone atpalm near869,813 about75sourcepx/~5nativepx is excluded from human scale. One80/1313 factor preservesperson, cloak and bead; allsourcecoreedges0, faintalpha65..1489/left0 retained.",
+        "assessment": "Vân Tịch toàn thân B: tóc bạc, áo ngà/khăn du hành lam xám, đai/thẻ gọn và bàn tay nâng đá châu xám cổ nhỏ. Đá khoảng5px ở1×, vân mây đọc như motif nhưng không chứng minh đủ năm dấu ở native; ảnh lớn để chọn khắc đá. Không cầu laser hoặc FX bake vào body theo yêu cầu, không ghép đầu live. Alpha tóc bạc mềm từ nguồn giữ nguyên; hộ đạo/nội cảnh là directionboard riêng, chưa motion/socket/ART."
+      },
+      "boardAssessment": null
+    },
+    {
+      "id": "bead-progression",
+      "role": "progression-board",
+      "raw": "sources/bead-progression.png",
+      "sha256": "06cc48b9f4f4ce2e1a3b9faf4f63637eb2787dbc57261e2c41c34769da1c6160",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceChannels": 3,
+      "hasAlpha": false,
+      "alpha": {
+        "empty": 0,
+        "soft": 0,
+        "opaque": 1572864
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1536,
+        "height": 1024,
+        "right": 1535,
+        "bottom": 1023,
+        "pixels": 1572864
+      },
+      "sourceCoreEdges": {
+        "top": 1536,
+        "right": 1024,
+        "bottom": 1536,
+        "left": 1024
+      },
+      "manual": null,
+      "boardAssessment": "Đã xem raw: người A vẫn nâng đá châu nhỏ qua ba chặng áo vải thô, áo du hành xám–ngọc, áo ngà/cloud mantle cô đọng; stage3 môi trường mở rộng với địa hình treo/lá và nội cảnh chồng. Ba study dưới là vải/đá châu+dấu mây chuyểnglyph/không gian nội cảnh. Cỡ người tương đối giữ gần nhau trên sàn, nhưng đây không là native80 registration ba pose. Cloud/glyph chỉ gợi thiết kế, không xác nhận đúng mười dấu hoặc ký tự canon; nội cảnh ngoài sân là đề xuất hộ đạo/control, không gán thành chiêu laser hoặc damage trong truyện."
+    },
+    {
+      "id": "bead-aoe",
+      "role": "battle-aoe-board",
+      "raw": "sources/bead-aoe.png",
+      "sha256": "5c4869a6204a2acc9133d53b854fa9a5b110f022128217c4b3fa2bbb8d790e8e",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceChannels": 3,
+      "hasAlpha": false,
+      "alpha": {
+        "empty": 0,
+        "soft": 0,
+        "opaque": 1572864
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1536,
+        "height": 1024,
+        "right": 1535,
+        "bottom": 1023,
+        "pixels": 1572864
+      },
+      "sourceCoreEdges": {
+        "top": 1536,
+        "right": 1024,
+        "bottom": 1536,
+        "left": 1024
+      },
+      "manual": null,
+      "boardAssessment": "Đã xem raw: ST ở trái là nếp giới tại một điểm; peak là đường gấp chéo phân sân thường với nội cảnh núi mực, lá treo và nhiều temporal silhouettes của A trong nền. Ba allyanchors có vòng trú, thêm một vòng quanh caster; bốn địch ngoài nếp đọc rõ thay vì năm brief. Bốn panel dưới báo nếp, điểm trú ổn định, nội cảnh mở, khép lại. Đá châu vẫn nhỏ; nhân vật/địch còn đọc được, không cầu laser/explosion. Mọi nếp giới ngoài sân/hộ đạo/timeecho là chuyển thể hỗ trợ/control, chưa là năng lực tấn công ngoài thực tại canon hoặc entity/gameplay đã chốt."
+    },
+    {
+      "id": "banner-a",
+      "role": "superseded-source-history",
+      "raw": "sources/banner-a.png",
+      "sha256": "627989bde0b68107d12cec4250ca7ef07230aa48258b88c437f4a7cf02aa52d6",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceChannels": 4,
+      "hasAlpha": true,
+      "alpha": {
+        "empty": 822110,
+        "soft": 750754,
+        "opaque": 0
+      },
+      "sourceBounds": {
+        "left": 0,
+        "top": 14,
+        "width": 1024,
+        "height": 1492,
+        "right": 1023,
+        "bottom": 1505,
+        "pixels": 750754
+      },
+      "sourceCoreEdges": {
+        "top": 0,
+        "right": 22,
+        "bottom": 0,
+        "left": 0
+      },
+      "manual": null,
+      "boardAssessment": null
+    }
+  ],
+  "pending": [],
+  "liveIdentityCopied": false,
+  "colorEditsPerformed": false,
+  "staticConceptOnly": true
+}

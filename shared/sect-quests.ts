@@ -1,99 +1,101 @@
-import { LESSON_REWARD } from './lesson-contracts';
 import type { SectView, StationId } from './sect';
-import {CHAPTER_QUESTS,CHAPTER_TITLES,CHAPTER_REWARDS,type ChapterQuestId} from './chapter';
+import {G2_ACTS,initialChapter,readG2State,type ChapterQuestId,type G2ActId,type G2RewardItem} from './chapter';
 
-// Read-only presentation of server-confirmed progress. No rewards or commands are applied here.
+// Read-only presentation of server-confirmed G2 Mệnh Kiếp Chí (VG01–VG11).
 export type SectQuestStatus = 'locked' | 'available' | 'active' | 'ready' | 'completed' | 'unreleased';
+export type SectQuestId = G2ActId | ChapterQuestId;
 export interface SectQuest {
-  id: 'HN01' | 'HN02' | 'HN03' | 'HN04' | ChapterQuestId;
+  id: SectQuestId;
+  chapterId?: ChapterQuestId;
   title: string;
   stationId: StationId;
   description: string;
   reward: string;
+  speaker: string;
+  portrait: string;
+  voiceover: string;
+  rewardItems: G2RewardItem[];
   status: SectQuestStatus;
   objectives: { id: string; text: string; done: boolean }[];
   nextStep: string;
 }
 export const QUEST_STATUS_LABELS: Record<SectQuestStatus, string> = {
   locked: 'Chưa mở', available: 'Có thể nhận', active: 'Đang thực hiện',
-  ready: 'Chờ xác nhận', completed: 'Đã hoàn thành', unreleased: 'Chưa triển khai',
+  ready: 'Chờ ghi nhận đạo quả', completed: 'Đã viên mãn', unreleased: 'Chưa triển khai',
 };
-const status = (unlocked: boolean, completed: boolean, started: boolean, ready: boolean): SectQuestStatus =>
-  completed ? 'completed' : !unlocked ? 'locked' : ready ? 'ready' : started ? 'active' : 'available';
+
+const actStation = (id: G2ActId, view?: SectView): StationId => {
+  if (id === 'VG01') {
+    if (!view?.hn01) return 'guide';
+    if (!view?.hn02) return 'cultivation';
+    return 'training';
+  }
+  if (id === 'VG03' || id === 'VG07' || id === 'VG11') return 'cultivation';
+  if (id === 'VG05' || id === 'VG09') return 'preparation';
+  return 'training';
+};
 
 export function sectQuests(view?: SectView): SectQuest[] {
-  const lessons = view?.lessons;
-  const hn01 = !!view?.hn01, hn02 = !!view?.hn02, hn03 = !!lessons?.hn03, hn04 = !!lessons?.hn04;
-  const artsReady = !!(lessons?.basic && lessons.sword && lessons.thunder);
-  const avoidReady = !!(lessons?.walk && lessons.wind);
-  const cycleStep = view?.cycleStep ?? 0;
-  const quests:SectQuest[]=[
-    { id: 'HN01', title: 'Bước vào Hằng Nhạc', stationId: 'guide',
-      description: 'Gặp người tiếp dẫn ở sân môn phái để bắt đầu hành trình của nhân vật này.',
-      reward: '2 vật tư hồi phục · mở hành trình nhập môn',
-      status: status(true, hn01, false, false),
-      objectives: [{ id: 'intro', text: 'Nói chuyện và nhận hướng dẫn từ người tiếp dẫn', done: hn01 }],
-      nextStep: hn01 ? 'Hướng dẫn nhập môn đã được lưu.' : 'Tới người tiếp dẫn, nhấn E và chọn “Nhận hướng dẫn nhập môn”.' },
-    { id: 'HN02', title: 'Một vòng vận hành', stationId: 'cultivation',
-      description: 'Ổn định nền vận khí, hiểu tu vi khác linh lực và tự xác nhận mốc đầu.',
-      reward: '100 tích lũy · M01 · hoạt động thổ nạp / hồi phục nền',
-      status: status(hn01, hn02, view?.foundation !== undefined && view.foundation !== 'none', cycleStep === 4),
-      objectives: [
-        { id: 'foundation', text: 'Chọn nền vận hành tại vườn thổ nạp', done: hn02 || !!view && view.foundation !== 'none' },
-        ...['Hít — ổn định', 'Dẫn — vận hành', 'Thu — giữ nhịp'].map((text, index) =>
-          ({ id: `cycle-${index}`, text: `Xác nhận nhịp ${index + 1}/3: ${text}`, done: hn02 || cycleStep > index })),
-        { id: 'understanding', text: 'Phân biệt tích lũy dài hạn với linh lực thi triển', done: hn02 || cycleStep === 4 },
-      ],
-      nextStep: hn02 ? 'M01 đã lưu. Có thể chọn thổ nạp hoặc hồi phục nền.' : !hn01 ? 'Hoàn thành HN01 trước.' :
-        cycleStep === 4 ? 'Đã đủ điều kiện. Nói chuyện với người hướng dẫn vận khí để xác nhận M01.' :
-        cycleStep === 3 ? 'Trả lời câu hỏi về nguồn lực dài hạn tại người hướng dẫn vận khí.' :
-        view?.cycleStatus === 'ready' ? 'Nhịp đã ổn định. Nhấn E và xác nhận nhịp hiện tại.' :
-        view?.cycleReadyAt ? 'Đứng yên gần người hướng dẫn đủ một nhịp, rồi tự xác nhận.' :
-        'Tới vườn thổ nạp, nhấn E và chọn bắt đầu / tiếp tục vòng vận khí.' },
-    { id: 'HN03', title: 'Vận dụng thuật nền', stationId: 'training',
-      description: 'Vận dụng đòn thường, Kiếm Khí và Lôi Ấn trên mục tiêu riêng của bài đã nhận.',
-      reward: `${LESSON_REWARD} tích lũy · nhận một lần khi xác nhận`,
-      status: status(hn02, hn03, lessons?.active === 'arts' || !!(lessons?.basic || lessons?.sword || lessons?.thunder), artsReady),
-      objectives: [
-        { id: 'basic', text: 'F · Đánh thường trúng mục tiêu của bài (0 MP)', done: !!lessons?.basic },
-        { id: 'sword', text: '1 · Kiếm Khí trúng mục tiêu theo hướng ngắm', done: !!lessons?.sword },
-        { id: 'thunder', text: '2 · Lôi Ấn trúng mục tiêu đã chọn', done: !!lessons?.thunder },
-      ],
-      nextStep: hn03 ? 'Bài vận dụng thuật nền đã được lưu.' : !hn02 ? 'Hoàn thành HN02 và xác nhận M01 trước.' :
-        artsReady ? 'Đủ ba đòn hợp lệ. Quay lại người coi luyện thuật, nhấn E để xác nhận và nhận thưởng.' :
-        lessons?.active === 'arts' ? 'Chọn mục tiêu của bài; dùng F ở cự ly gần, 1 Kiếm và 2 Lôi. Chỉ hit được server xác nhận mới tính.' :
-        'Tới sân luyện phía đông, nhấn E và nhận / tiếp tục bài HN03. Mục tiêu luyện tự do không tính.' },
-    { id: 'HN04', title: 'Nhìn đòn mà tiến', stationId: 'training',
-      description: 'Đọc vòng báo trước, né bằng đi bộ rồi vận dụng Ngự Phong Bộ trong bài an toàn.',
-      reward: `${LESSON_REWARD} tích lũy · nhận một lần khi xác nhận`,
-      status: status(hn03, hn04, lessons?.active === 'avoid' || !!(lessons?.walk || lessons?.wind), avoidReady),
-      objectives: [
-        { id: 'walk', text: 'Đi bộ ra ngoài vòng trước lúc server xét đòn', done: !!lessons?.walk },
-        { id: 'wind', text: '3 · Phong đưa chân ra ngoài vòng đúng lúc', done: !!lessons?.wind },
-      ],
-      nextStep: hn04 ? 'Bài đọc báo đòn và di chuyển đã được lưu.' : !hn03 ? 'Xác nhận hoàn thành HN03 trước.' :
-        avoidReady ? 'Đủ hai cách né. Quay lại người coi luyện thuật, nhấn E để xác nhận và nhận thưởng.' :
-        view?.lessonView?.status === 'warning' ? 'Rời cả vòng báo trước theo phương thức của bài. Bài an toàn không gây mất HP.' :
-        'Tới người coi luyện thuật để bắt đầu / thử lại phần còn thiếu. Credit đã lưu được giữ nguyên.' },
-    { id: 'HN05', title: 'Ra khỏi sân luyện', stationId: 'training',
-      description: 'Chặng ngoại vi và encounter riêng là nội dung tiếp theo; chưa có trong bản đang chạy.',
-      reward: 'Chưa mở phần thưởng hoặc M02', status: 'unreleased', objectives: [],
-      nextStep: 'Bản hiện tại dừng ở HN04. Có thể luyện tự do và thổ nạp; chưa có cổng ngoại vi.' },
-  ];
-  if(!view?.chapter)return quests;
-  const c=view.chapter,done=(id:ChapterQuestId)=>c.completed.includes(id);
-  const unlocked=(id:ChapterQuestId)=>id==='HN05'?hn04:id==='HN06'?done('HN05')&&['M02','M03','M04'].includes(view.milestone):id==='HN07'?done('HN06')&&view.level>=3:id==='HN10'?done('HN09')&&view.level===15&&c.jade==='refined':id==='HN11'?done('HN10'):id==='EX01'?done('HN12'):done(CHAPTER_QUESTS[CHAPTER_QUESTS.indexOf(id)-1]);
-  return [...quests.slice(0,4),...CHAPTER_QUESTS.map((id):SectQuest=>{
-    let stationId:StationId=id==='HN07'?'cultivation':['HN05','HN09','HN10'].includes(id)?'training':['HN11','HN12'].includes(id)?'guide':'preparation';
-    const proof=done(id)||c.facts.includes(`${id}-proof`),ready=proof&&(id!=='HN09'||view.level>=9)||['HN11','HN12'].includes(id)&&c.accepted.includes(id);
-    const cultivationGate=!done(id)&&(id==='HN06'&&done('HN05')&&!['M02','M03','M04'].includes(view.milestone)||id==='HN09'&&proof&&view.level<9||id==='HN10'&&done('HN09')&&view.level<15);
-    if(cultivationGate)stationId='cultivation';
-    else if(id==='HN10'&&done('HN09')&&!done(id)&&c.jade!=='refined')stationId='preparation';
-    return {id,title:CHAPTER_TITLES[id],stationId,description:id.startsWith('EX')?'Nhận biết nguồn, chuẩn bị và kiểm chứng công cụ; có cách thủ công thay thế.':'Vận dụng trong bài riêng rồi trở về ghi nhận kết quả.',reward:CHAPTER_REWARDS[id]?`${CHAPTER_REWARDS[id]} tích lũy · phần thưởng một lần`:'Tiến trình / quyền hoạt động · không thưởng sức mạnh',status:status(unlocked(id),done(id),c.accepted.includes(id),ready),
-      objectives:[...(cultivationGate?[{id:'cultivation-gate',text:id==='HN06'?'Xác nhận tầng 3 và M02 tại vườn thổ nạp':`Thổ nạp và xác nhận tầng ${id==='HN09'?9:15} tại vườn thổ nạp`,done:false}]:[]),{id:'accepted',text:'Nhận nhiệm vụ tại NPC',done:c.accepted.includes(id)},{id:'proof',text:id==='HN10'?`Khảo nghiệm: checkpoint ${c.checkpoint}/3`:'Hoàn tất bài được hướng dẫn trong Nhập môn / Luyện chế',done:proof},{id:'confirmed',text:'Ghi nhận kết quả một lần',done:done(id)}],
-      nextStep:done(id)?'Kết quả đã lưu.':cultivationGate?id==='HN06'?'Tới vườn thổ nạp: xác nhận tầng 3 rồi mốc M02 để tiếp tục HN06.':id==='HN09'?'Bài đã lưu. Tới vườn thổ nạp, tích lũy và xác nhận tầng 9 trước khi nhận thưởng.':'Tới vườn thổ nạp, tích lũy và xác nhận tầng 15 để mở khảo nghiệm HN10.':!unlocked(id)?id==='HN10'&&done('HN09')?'Luyện hóa ngọc tại người coi chuẩn bị để mở khảo nghiệm.':'Hoàn tất bước trước.':!c.accepted.includes(id)?'Tới NPC để nhận nhiệm vụ và đọc lời dẫn.':ready?'Bài đã đạt. Tới NPC xác nhận kết quả; mục tiêu tiếp theo sẽ tự hiện.':id==='HN08'&&c.jade!=='refined'?'Học phương pháp hộ thân, luyện hóa và trang bị ngọc tại người coi chuẩn bị.':'Tới NPC để vào bài; làm theo hướng dẫn trong ngoại vi.'};
-  })];
+  const c = view?.chapter ?? initialChapter();
+  const g2 = readG2State(view ? { ...view, chapter: c } : { chapter: c });
+  const doneSet = new Set<G2ActId>(g2.completedActs);
+  return G2_ACTS.map((act): SectQuest => {
+    const isDone = doneSet.has(act.id);
+    const isCurrent = !isDone && act.id === g2.currentActId;
+    const q = act.chapterQuest;
+    const vg01Ready = act.id === 'VG01' && !!view?.hn01 && !!view?.hn02 && !!(view?.lessons?.basic || view?.lessons?.sword || view?.lessons?.thunder);
+    const hasProof = isDone || vg01Ready || (q ? c.facts.includes(`${q}-proof`) : false);
+    const questStatus: SectQuestStatus =
+      isDone ? 'completed' :
+      hasProof ? 'ready' :
+      isCurrent ? 'active' : 'locked';
+    const objectives = act.objectives.map((obj, idx) => {
+      let objDone = isDone;
+      if (!isDone && act.id === 'VG01') {
+        if (idx === 0) objDone = !!view?.hn01;
+        else if (idx === 1) objDone = !!view?.hn02;
+        else objDone = !!view?.lessons?.hn04 || vg01Ready;
+      } else if (!isDone && hasProof && idx === 0) {
+        objDone = true;
+      }
+      return { id: obj.id, text: obj.text, done: objDone };
+    });
+    const stationId = actStation(act.id, view);
+    const npcLabel =
+      stationId === 'guide' ? 'Trần Duy (Cổng Vân Liệt)' :
+      stationId === 'cultivation' ? 'Diệp Tĩnh (Thềm Tụ Khí)' :
+      stationId === 'preparation' ? 'Lý Mộ Uyển / Bạch Chỉ (Dược Viên)' : 'Tạ Kiếm Sơn (Bãi Tập Kiếm)';
+    const nextStep = isDone
+      ? `${act.id} đã viên mãn · Đạo quả đã lưu và tự động nối mạch hồi tiếp theo.`
+      : hasProof
+      ? `Khảo nghiệm ${act.id} đã hoàn tất! Bấm trực tiếp vào khung Nhiệm vụ (hoặc phím E tại ${npcLabel}) để nhận Đạo Quả!`
+      : isCurrent && act.id === 'VG01'
+      ? (!view?.hn01
+          ? `Bấm vào khung Nhiệm vụ để tự động chạy tới ${npcLabel}, nhấn E nhặt Châu Đá Ngũ Vân (Thiên Nghịch Châu Mốc I).`
+          : !view?.hn02
+          ? `Bấm vào khung Nhiệm vụ để chạy tới ${npcLabel}, nhấn E khai mạch Ngưng Khí & lĩnh Thanh Phong Linh Kiếm.`
+          : `Bấm vào khung Nhiệm vụ để chạy tới ${npcLabel}, nhấn E triệu hồi Khôi Lỗi Rạn Ngọc và dùng phím 1/2/F đánh trúng!`)
+      : isCurrent
+      ? `Bấm vào khung Nhiệm vụ để tự động chạy tới ${npcLabel} (hoặc nhấn E) tiến vào Bí Cảnh ${act.id} (${act.realmRange}).`
+      : `Hoàn tất hồi trước trong Mệnh Kiếp Chí để mở khóa ${act.id} (${act.realmRange}).`;
+    return {
+      id: act.id,
+      ...(q ? { chapterId: q } : {}),
+      title: act.title,
+      stationId,
+      description: `${act.description} (${act.realmRange})`,
+      reward: act.reward,
+      speaker: act.speaker,
+      portrait: act.portrait,
+      voiceover: act.voiceover,
+      rewardItems: act.rewardItems,
+      status: questStatus,
+      objectives,
+      nextStep,
+    };
+  });
 }
+
 export function currentSectQuest(quests: SectQuest[]): SectQuest {
   return quests.find(quest => quest.status !== 'completed' && quest.status !== 'locked') ??
     quests.find(quest => quest.status !== 'completed') ?? quests[quests.length - 1]!;

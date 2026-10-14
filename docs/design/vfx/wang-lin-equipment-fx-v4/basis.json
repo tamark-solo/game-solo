@@ -1,0 +1,656 @@
+{
+  "v3Root": "../../characters/wang-lin-equipment-options-v3",
+  "scope": "entire existing static option package and owner selected body/gear byte preservation",
+  "files": [
+    {
+      "file": "bead-sheet.mjs",
+      "sha256": "4175530b36fa2d196d3ed400a386bfad3b24f16b44b94ca196541f4fe01e9758"
+    },
+    {
+      "file": "body/banner-ashen.png",
+      "sha256": "60f50ecdc401c1b3a110ea499c2338f516fa42eb744dd78e752730c8a4c583d5"
+    },
+    {
+      "file": "body/banner-ritual.png",
+      "sha256": "7d74912ae4d86e3eac7d7d305976afb350fd4dc03ea5d2ae1818e9bb158683b1"
+    },
+    {
+      "file": "body/bead-cloud.png",
+      "sha256": "0f7e20ada1ee478f4d96fca03098ed584c9e47c567fa718e76dd8eba3a7a4c87"
+    },
+    {
+      "file": "body/bead-hermit.png",
+      "sha256": "3569a025c1fd9f5412d9a3e10ad9539fe25386d3b4545821e737dc831b966878"
+    },
+    {
+      "file": "body/chariot-bronze.png",
+      "sha256": "08c75ca3e173523ff33b2e7a6cec13f96e47ace3a4123d1b7a8ed2f32b8532bb"
+    },
+    {
+      "file": "body/chariot-thunder.png",
+      "sha256": "3eb84434f79934b42354006efb3bf693e422fc8e8cda9d8e04c419ea1a82cfe0"
+    },
+    {
+      "file": "body/original.png",
+      "sha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431"
+    },
+    {
+      "file": "body/sword-ink.png",
+      "sha256": "ba8d73052aea97f3122e9f4bbd5a55f367280071e36564e9696472abda4900f4"
+    },
+    {
+      "file": "body/sword-jade.png",
+      "sha256": "76ee77a7bbe7897f57c51231ab9a54333d17ba85b0444608349ed128ee57e9bf"
+    },
+    {
+      "file": "contact-sheet.mjs",
+      "sha256": "4f27c3ff6d8b626fa60024498a853c3f48e10418ce836cbe32e049750fe0530d"
+    },
+    {
+      "file": "equipment/banner-jade-front.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+    },
+    {
+      "file": "equipment/banner-jade-fx-rear.png",
+      "sha256": "f700fafa11517762081d9da2b405f736515755c48af5e6e032e8826a599ef37c"
+    },
+    {
+      "file": "equipment/banner-jade-rear.png",
+      "sha256": "e9df303617abe1b40576cc3b01c7f59903e59b645d77866ab3ab8249428808fe"
+    },
+    {
+      "file": "equipment/banner-jade.png",
+      "sha256": "e9df303617abe1b40576cc3b01c7f59903e59b645d77866ab3ab8249428808fe"
+    },
+    {
+      "file": "equipment/banner-original-front.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+    },
+    {
+      "file": "equipment/banner-original-fx-rear.png",
+      "sha256": "79a89f3de277b5aeebd392de5f003ddc58a38a1f48108812c6e0e2b7805c260a"
+    },
+    {
+      "file": "equipment/banner-original-rear.png",
+      "sha256": "a2aa70a0ea32a62e6867abcd9adf661e0f34c19adb29a119ca0048aa9012ef0f"
+    },
+    {
+      "file": "equipment/banner-original.png",
+      "sha256": "a2aa70a0ea32a62e6867abcd9adf661e0f34c19adb29a119ca0048aa9012ef0f"
+    },
+    {
+      "file": "equipment/banner-violet-front.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+    },
+    {
+      "file": "equipment/banner-violet-fx-rear.png",
+      "sha256": "797f47e3fbd5031dc9fdfc9b750618dc8cb619f07997b0b72fa85225c4f2331a"
+    },
+    {
+      "file": "equipment/banner-violet-rear.png",
+      "sha256": "fd980f92ad4a15351320a126156cb8c979df3f2a4e69ce6aef2be01ab471c3af"
+    },
+    {
+      "file": "equipment/banner-violet.png",
+      "sha256": "fd980f92ad4a15351320a126156cb8c979df3f2a4e69ce6aef2be01ab471c3af"
+    },
+    {
+      "file": "equipment/bead-abyss-front.png",
+      "sha256": "42f647ad5a6e8b1bf52654e4722f388ec40ae66d0783a5539e1b9655884f626c"
+    },
+    {
+      "file": "equipment/bead-abyss-fx-rear.png",
+      "sha256": "4d85ae621eb292031900b80d39bc7d5851143c0f942415a22cedfe9f3af813be"
+    },
+    {
+      "file": "equipment/bead-abyss-rear.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+    },
+    {
+      "file": "equipment/bead-abyss.png",
+      "sha256": "42f647ad5a6e8b1bf52654e4722f388ec40ae66d0783a5539e1b9655884f626c"
+    },
+    {
+      "file": "equipment/bead-cloud-front.png",
+      "sha256": "7ba389e4d057fb9404681eadecdedea01a23386286985d45b2ca2b10647146b3"
+    },
+    {
+      "file": "equipment/bead-cloud-fx-rear.png",
+      "sha256": "858773b22b7e0fbb8d1f72be727350de7a3b1e345def1dee95ad292f39e89ed0"
+    },
+    {
+      "file": "equipment/bead-cloud-rear.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+    },
+    {
+      "file": "equipment/bead-cloud.png",
+      "sha256": "7ba389e4d057fb9404681eadecdedea01a23386286985d45b2ca2b10647146b3"
+    },
+    {
+      "file": "equipment/bead-stone-front.png",
+      "sha256": "bfe7858bcdf96463d91c54dff8e630ae0bd59628730973f6e52bf83750902811"
+    },
+    {
+      "file": "equipment/bead-stone-fx-rear.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+    },
+    {
+      "file": "equipment/bead-stone-rear.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+    },
+    {
+      "file": "equipment/bead-stone.png",
+      "sha256": "bfe7858bcdf96463d91c54dff8e630ae0bd59628730973f6e52bf83750902811"
+    },
+    {
+      "file": "equipment/chariot-jade-front.png",
+      "sha256": "ea4ccdf76d11aaf95a55a185250412269cdbd3b82b3ae3af7c0baa8589c8da01"
+    },
+    {
+      "file": "equipment/chariot-jade-fx-rear.png",
+      "sha256": "d26479dbeba2e295d54ae0e789375ce3a2e4e177fb10d2df108293c1ef03b372"
+    },
+    {
+      "file": "equipment/chariot-jade-rear.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+    },
+    {
+      "file": "equipment/chariot-jade.png",
+      "sha256": "ea4ccdf76d11aaf95a55a185250412269cdbd3b82b3ae3af7c0baa8589c8da01"
+    },
+    {
+      "file": "equipment/chariot-original-front.png",
+      "sha256": "3d8a0f86716145060464919d8c270c3e03b4f526a8296d50570d7566c0af6ccc"
+    },
+    {
+      "file": "equipment/chariot-original-fx-rear.png",
+      "sha256": "2068a159a8454fe2b847e36d877af2c23c0fc01bb1304dc2faa9fd8896089c40"
+    },
+    {
+      "file": "equipment/chariot-original-rear.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+    },
+    {
+      "file": "equipment/chariot-original.png",
+      "sha256": "3d8a0f86716145060464919d8c270c3e03b4f526a8296d50570d7566c0af6ccc"
+    },
+    {
+      "file": "equipment/chariot-thunder-front.png",
+      "sha256": "3f76ae91d22e898875ae0531ba005d546bf9c6bdf152ffc1c0bb8ef3ee052297"
+    },
+    {
+      "file": "equipment/chariot-thunder-fx-rear.png",
+      "sha256": "b92b3e12ceaa59ab45d3fbc669fcf610600a44bc6093a120237de3b2aa252ec5"
+    },
+    {
+      "file": "equipment/chariot-thunder-rear.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5"
+    },
+    {
+      "file": "equipment/chariot-thunder.png",
+      "sha256": "3f76ae91d22e898875ae0531ba005d546bf9c6bdf152ffc1c0bb8ef3ee052297"
+    },
+    {
+      "file": "equipment/sword-ink-front.png",
+      "sha256": "db1d71012b43d68769fee352d34820e85bd22aae3defd1841ff2ea5e5c199283"
+    },
+    {
+      "file": "equipment/sword-ink-fx-rear.png",
+      "sha256": "fe61888fe67558bedeb34b7b91c648ececb6f400aa45fa5cbf445c2e78331dc4"
+    },
+    {
+      "file": "equipment/sword-ink-rear.png",
+      "sha256": "7ac95b1f12b19f58ea76176af8b8f48ad83323b97d7ae77955f80ce8bc4d92d5"
+    },
+    {
+      "file": "equipment/sword-ink.png",
+      "sha256": "9e4bdb1e40d682f42a8b34e8484547aea094a0dbca394be978b24565f07c2e92"
+    },
+    {
+      "file": "equipment/sword-jade-front.png",
+      "sha256": "343cde7c8ca90de6dfbae61511577a527f22f9cd512a3d2b5671f743288fd861"
+    },
+    {
+      "file": "equipment/sword-jade-fx-rear.png",
+      "sha256": "bd01d97888ff9256a08603d7b7b94ade01f772566b0c3d2f6aa18d4f4783ee34"
+    },
+    {
+      "file": "equipment/sword-jade-rear.png",
+      "sha256": "dcdc942eadbf7db39e4cd76603344b3fd869cfae971954b6d8326028d27839c6"
+    },
+    {
+      "file": "equipment/sword-jade.png",
+      "sha256": "a48880e3106630538f6ad8a10e39350c08b0f5562102113610cbe51033ba86c3"
+    },
+    {
+      "file": "equipment/sword-original-front.png",
+      "sha256": "98d7a1be09fcbdf084a465fef46cfdfee63519d1868ec46e7abd7b9d1a249a78"
+    },
+    {
+      "file": "equipment/sword-original-fx-rear.png",
+      "sha256": "22481d1fd38c53b37e3a24f5e607003cf38639b59f0e52263b956f874738e766"
+    },
+    {
+      "file": "equipment/sword-original-rear.png",
+      "sha256": "530eaa99481ba1526d0afc93f3d308e547f6b4ed61e99c30d5398596a6b918f6"
+    },
+    {
+      "file": "equipment/sword-original.png",
+      "sha256": "f8e1ed701fa6e15c88ef56f9dba502e5e661ac6fc97f46d0a3fe120d1b6b3cf9"
+    },
+    {
+      "file": "generation.json",
+      "sha256": "f07d5272c0d61f72517b739fdb27dce1d57c148b788597509390ba66e0cb1d5e"
+    },
+    {
+      "file": "index.html",
+      "sha256": "9f2f2607cbb9ea817cb5808bd3fe2b05693ea0c750d0247867963ae12c47a6c1"
+    },
+    {
+      "file": "inputs/map-native.png",
+      "sha256": "7184512733288989b5abb52153e4382aae4daa556b310261843406bf5238ca07"
+    },
+    {
+      "file": "inputs/wang-lin-live-southeast-native.png",
+      "sha256": "78d0fb7e2e159334e65707423d8da2e4608d75e0845dcd3db677a3d1d2a14431"
+    },
+    {
+      "file": "inputs/wang-lin-live-southeast-nearest8x.png",
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+    },
+    {
+      "file": "inspection.json",
+      "sha256": "9dc90211489e3d8722cca10b000701790e87248a688ec7117ac4c9f420058946"
+    },
+    {
+      "file": "manifest.json",
+      "sha256": "9cab6b1cf7ea9aac22b8257736582218982d650c8a43d0bca16a5ad3c1e9db32"
+    },
+    {
+      "file": "pack.mjs",
+      "sha256": "82519a946fc6d7fe38fe9d79a2690d185ed848d71bafebfc4fdca5ea350cd669"
+    },
+    {
+      "file": "README.md",
+      "sha256": "2c0a0c6610c2f89338d8ff62139bd20b8ec61182683c60b22419fc567f3cd73f"
+    },
+    {
+      "file": "record-source.mjs",
+      "sha256": "5cf96a6ba5c1911c1daafeab26c51d86f71dfec037869ee47611d0cc8fb28273"
+    },
+    {
+      "file": "registration.json",
+      "sha256": "04854a26fd25f61c5d3a63c1c5d488b18268fbd1faf763b1babe75ffe27900e3"
+    },
+    {
+      "file": "review/assessment.json",
+      "sha256": "aafdae2e866b3d8f64b42c8709d1262952bfb428a22edbb97728cc97989e8e09"
+    },
+    {
+      "file": "review/bead-options-3x.png",
+      "sha256": "0e1712fcd7445dd85c6cced878ddb8e3a1a5e539ac2adaade1ef3819cef8b253"
+    },
+    {
+      "file": "review/browser-verification.json",
+      "sha256": "9a662df6a1f0dc8a12434cd02f0512d4b83f771a24da41601c9bd94f76eb112b"
+    },
+    {
+      "file": "review/browser-verify.mjs",
+      "sha256": "3c1950d78f557a6e9295f175ba699c5cd1524cecf2d70d7e871b912cd335c7eb"
+    },
+    {
+      "file": "review/composites/banner-jade--banner-ashen.png",
+      "sha256": "a36da30f163a7583cf0d3995285acc94c4ac510fb0423d05ece10af23e3c9aa2"
+    },
+    {
+      "file": "review/composites/banner-jade--banner-ritual.png",
+      "sha256": "dee8ce2402746cd87977b120b3e3e67a553c4000f76ab8ed9e94cf0240196d36"
+    },
+    {
+      "file": "review/composites/banner-jade--original.png",
+      "sha256": "66599629ec7f8229ea145c66b1fe1870acb5e2e7256f9e0e230103fc0dbd0b19"
+    },
+    {
+      "file": "review/composites/banner-original--banner-ashen.png",
+      "sha256": "e8361ef3ce8f769ba07fdc3d207f1c227ed959bb40691d091ab7b3247f44a4a6"
+    },
+    {
+      "file": "review/composites/banner-original--banner-ritual.png",
+      "sha256": "21daaaedad3765560259d60b13819b12186835eae03b537f25d885b219669333"
+    },
+    {
+      "file": "review/composites/banner-original--original.png",
+      "sha256": "a030cac705ef88958d0880c7a40fe8585854961062f04ccca0e4f71de1d0eb61"
+    },
+    {
+      "file": "review/composites/banner-violet--banner-ashen.png",
+      "sha256": "d532093f0832bb88ad16c11752d8197773aad04d1db982ec5a5ed59c6725c7ad"
+    },
+    {
+      "file": "review/composites/banner-violet--banner-ritual.png",
+      "sha256": "6e7cba646233573da8d449cde721ff224e1a02a2ffed582a0cf4a9c0c101f32d"
+    },
+    {
+      "file": "review/composites/banner-violet--original.png",
+      "sha256": "f7fb05198025633c52d58609825e0d4c1fd731af5beea443859cc6da214d79d9"
+    },
+    {
+      "file": "review/composites/bead-abyss--bead-cloud.png",
+      "sha256": "eb033776a3331eb75a74d1755613939d14ebffce363e2ec8e96ac6ccfaa7d29c"
+    },
+    {
+      "file": "review/composites/bead-abyss--bead-hermit.png",
+      "sha256": "53e8f513c5071e5394cdd5824d54e1601221cf056738b286d827d53eab1cea4b"
+    },
+    {
+      "file": "review/composites/bead-abyss--original.png",
+      "sha256": "e6aeaf82defced428084fdbd839be233e187248c0d8510274fd37b189c6d7957"
+    },
+    {
+      "file": "review/composites/bead-cloud--bead-cloud.png",
+      "sha256": "e2f40b41373c0f8a0be788622c11d8da9537e4b2f94543ddffef11c01809c7f4"
+    },
+    {
+      "file": "review/composites/bead-cloud--bead-hermit.png",
+      "sha256": "0d7896fe8b77df037e05e737544e3767942627ce5e3797b9a0a03c422793a5dc"
+    },
+    {
+      "file": "review/composites/bead-cloud--original.png",
+      "sha256": "512545926e545a33e13de055a6b0a208a8df5c2aff6a81d61c13a439e28d5484"
+    },
+    {
+      "file": "review/composites/bead-stone--bead-cloud.png",
+      "sha256": "8178b725386e1e188b2942c6d9aa240c9993f7d4abb74aa2dce2b549eab4d3cb"
+    },
+    {
+      "file": "review/composites/bead-stone--bead-hermit.png",
+      "sha256": "9a9dc1e597f39d9162bbc4186d524f07e6d2e22277c22023f4e6253793f3e96d"
+    },
+    {
+      "file": "review/composites/bead-stone--original.png",
+      "sha256": "89779c2f7aaebfcd74c3404ee4926216a3faa7297c223fee7cb6a29e69535ef3"
+    },
+    {
+      "file": "review/composites/body-banner-ashen--alignment-4x.png",
+      "sha256": "bfb9c8ab46bb3f5889d84c07dd643d4c615e71b89f2d36a2363c7569880e9566"
+    },
+    {
+      "file": "review/composites/body-banner-ritual--alignment-4x.png",
+      "sha256": "66ef93c51320fcf43bc8ed3fbb54da3980bf84af5486137aeb5b8d6ec20091e3"
+    },
+    {
+      "file": "review/composites/body-bead-cloud--alignment-4x.png",
+      "sha256": "04cb92563f154c8e5d81d15f153d31738afe6d159f87302f75a952f87a3a8659"
+    },
+    {
+      "file": "review/composites/body-bead-hermit--alignment-4x.png",
+      "sha256": "b6f78282919ca2a599e0705e9045fa75c606d1ca812b46ee4bad1f7fbdd73a9b"
+    },
+    {
+      "file": "review/composites/body-chariot-bronze--alignment-4x.png",
+      "sha256": "6abf6eee9c2346464794d85526e98fbfb79ab8c1be632abac37d0c3b508973f4"
+    },
+    {
+      "file": "review/composites/body-chariot-thunder--alignment-4x.png",
+      "sha256": "841a695cc0cc2ceee20657fdcf4fa7405b38983db18e9549f267f18359235fa2"
+    },
+    {
+      "file": "review/composites/body-sword-ink--alignment-4x.png",
+      "sha256": "312600b337990d89b8b151f1be7de8de8059e663b531522176faed6edc5ea86c"
+    },
+    {
+      "file": "review/composites/body-sword-jade--alignment-4x.png",
+      "sha256": "af64354f2b463ceb3cdf31f2ecfa6ed6d41bef1b6cc1dfe1b87688939c7cc9d9"
+    },
+    {
+      "file": "review/composites/chariot-jade--chariot-bronze.png",
+      "sha256": "6fe1c47133e185fbfb80243f8b8d8c54be8a2bc009d7cee39081ff2b32f2e3ae"
+    },
+    {
+      "file": "review/composites/chariot-jade--chariot-thunder.png",
+      "sha256": "63a2f6c374c49b8b35e92fbd875249cf73d7a14ca9218e97abd8aa02ebc5f7c7"
+    },
+    {
+      "file": "review/composites/chariot-jade--original.png",
+      "sha256": "302fb6a66d8a672bf203824c8d6e4ca2ff14664e0dff8c5d204ec6b7921efd1f"
+    },
+    {
+      "file": "review/composites/chariot-original--chariot-bronze.png",
+      "sha256": "076c5442e88637c20f1d7bd9712789b020d8661d32a855fbc89066145cd1be70"
+    },
+    {
+      "file": "review/composites/chariot-original--chariot-thunder.png",
+      "sha256": "ae4309b40ab181a7991a264cbbdbfe0d8291ff47df850c1a247d786fcc3c62b9"
+    },
+    {
+      "file": "review/composites/chariot-original--original.png",
+      "sha256": "8925a65f5a37e2b225c3ea96fcae983100f775c24ce44ea4de8bb5367ec73f19"
+    },
+    {
+      "file": "review/composites/chariot-thunder--chariot-bronze.png",
+      "sha256": "d41fbd7f033f77fe4e37a0152f91333d3005a606db8d409951b3dd3b3309eda8"
+    },
+    {
+      "file": "review/composites/chariot-thunder--chariot-thunder.png",
+      "sha256": "556c3332a74a8dfcbb02d0d304bdb724b71c0db6259aa4c47d0266a098e878ba"
+    },
+    {
+      "file": "review/composites/chariot-thunder--original.png",
+      "sha256": "2278242f274665676314942cd477bd0ce2b622632062baee0ccca70247f02998"
+    },
+    {
+      "file": "review/composites/sword-ink--original.png",
+      "sha256": "29d9631cbd94f58e9ab528ae7431c863c50e1f9529ca4faccec43850cb7a2819"
+    },
+    {
+      "file": "review/composites/sword-ink--sword-ink.png",
+      "sha256": "9b2d39a4e3038e825fd6b17ca2d79caeaf7c86246645dfd8033d689d4a88cf2b"
+    },
+    {
+      "file": "review/composites/sword-ink--sword-jade.png",
+      "sha256": "a8140c53223a777967b9377a005cf75104b20a1a7bbbe41a23bb6a330e0476af"
+    },
+    {
+      "file": "review/composites/sword-jade--original.png",
+      "sha256": "446eb25f0499b6c249e1e4887d85abb5e72b8ec9ad88db171ba3e6d96c9b566e"
+    },
+    {
+      "file": "review/composites/sword-jade--sword-ink.png",
+      "sha256": "5f7cb4d9ecba13c19ba1eb835e2e9bcf0e279647437217e93e1c971bfd73b36b"
+    },
+    {
+      "file": "review/composites/sword-jade--sword-jade.png",
+      "sha256": "9c811268553dd543377f5052a5de54a7938934b48a92cd33b7201bb5e37e374b"
+    },
+    {
+      "file": "review/composites/sword-original--original.png",
+      "sha256": "4536ea7804182089706ba7fcecdd1c33d2e86c67bc21fab0963f9299f8bb2ea0"
+    },
+    {
+      "file": "review/composites/sword-original--sword-ink.png",
+      "sha256": "eade318f40e61d7c24634bd72b11852a9128eebb3faef6b697c265267b4386d1"
+    },
+    {
+      "file": "review/composites/sword-original--sword-jade.png",
+      "sha256": "e9fb6cf399d2d69ba27044994b308d2eb9d04bade8e577cea456056f3e28afd6"
+    },
+    {
+      "file": "review/outfits-4x.png",
+      "sha256": "180f24441de5a1a3d03029f77be8132b674adba652ab5eb71c1bcd4830cc7169"
+    },
+    {
+      "file": "review/screenshots/desktop.png",
+      "sha256": "d0dfd708edd96a1060174f4a61424b966dc5c4bbc1b1d544c14cb6bc4c28a1d1"
+    },
+    {
+      "file": "review/screenshots/mobile.png",
+      "sha256": "637b9212ef1d379358a962fd22f9a72ab4afedb403369f3d887950b071cb3940"
+    },
+    {
+      "file": "review/screenshots/selection-grid.png",
+      "sha256": "99feb58a345f85214a96b384e19d9f275514039ad912df9d2bd9ecf0c221cc6c"
+    },
+    {
+      "file": "review/source-hash-report.json",
+      "sha256": "0aa250094a5ccaa6389c06a6789ceb9f637b61df91c4c0fb2a98542ae9faab84"
+    },
+    {
+      "file": "review.css",
+      "sha256": "1095d6659b2a5961af2b17baf34cac93a67afc5d5ab5c25635d03e113d80cbf1"
+    },
+    {
+      "file": "review.mjs",
+      "sha256": "834708db642d43dcde8e71acb8c9626d284cbf22c656fb5a8a3f8c0b031376e1"
+    },
+    {
+      "file": "sources/body-banner-ashen-source.png",
+      "sha256": "67f88d437eca89fc8a2f402cac899f089539452a24918143d1a1a896a6ad0b04"
+    },
+    {
+      "file": "sources/body-banner-ashen.prompt.txt",
+      "sha256": "45228ac74dfeda5314a531f82b611d71a8038f788b603d4b5df6b60f170d28b8"
+    },
+    {
+      "file": "sources/body-banner-ritual-source.png",
+      "sha256": "99a4749ad1e46c3c28f35c0a65f59b99e4edcb55ee5ab70c8578cabb14b1eb88"
+    },
+    {
+      "file": "sources/body-banner-ritual.prompt.txt",
+      "sha256": "bd5236a1ed49df9e75ff34e90ace4de2c011e2379191adb24580f7bb90bd795d"
+    },
+    {
+      "file": "sources/body-bead-cloud-source.png",
+      "sha256": "1069611b105e61ad1431e4c0369adfed85af3d96a27a4f35ad2fd6af7ed9c643"
+    },
+    {
+      "file": "sources/body-bead-cloud.prompt.txt",
+      "sha256": "5a56a2405d44ee146f407d617623556fc28c18163d20a32d1dc7b3426a07c402"
+    },
+    {
+      "file": "sources/body-bead-hermit-source.png",
+      "sha256": "abb0fab8821dbd752449a577d47043e385b7a8f8e9ae9bf46fb123905e401430"
+    },
+    {
+      "file": "sources/body-bead-hermit.prompt.txt",
+      "sha256": "5c9571cbeee0e83e5272f7a57686f85e083164e81631b533f5003229e5afe3a1"
+    },
+    {
+      "file": "sources/body-chariot-bronze-source.png",
+      "sha256": "1217c85ec24b5757c9b1e82c81cef81cf7aa2f805382487627cc5119b9ffcbe8"
+    },
+    {
+      "file": "sources/body-chariot-bronze.prompt.txt",
+      "sha256": "4ca37d95bae6434aed0e52115bc8057f1c9a2160e0b15240131744eefe098ff1"
+    },
+    {
+      "file": "sources/body-chariot-thunder-source.png",
+      "sha256": "bbf8c25ac49d5aad7fa39e060549133bf757465e8a0d234126b746fc69c7a185"
+    },
+    {
+      "file": "sources/body-chariot-thunder.prompt.txt",
+      "sha256": "468dcd679957b0595b440dd77ee6610141fbe8da2824cfee38d2f56c4ca476a7"
+    },
+    {
+      "file": "sources/body-sword-ink-source.png",
+      "sha256": "59d7ce794173e373e675c6967c5fa068c0e28146a6d762649009ce2ec71fe1ec"
+    },
+    {
+      "file": "sources/body-sword-ink.prompt.txt",
+      "sha256": "3a505b045d8ee161184da8dad932a07755fa5eedbd6727f22389dfa5a21fcb6b"
+    },
+    {
+      "file": "sources/body-sword-jade-source.png",
+      "sha256": "3bf9209e5f74396a36a9e44d57745d6845eeccb5d15abd3bd1d111c4344fd006"
+    },
+    {
+      "file": "sources/body-sword-jade.prompt.txt",
+      "sha256": "73b4359299d5faa313ccb28529712d55b210b02963ef072a70d2b795dbc8db18"
+    },
+    {
+      "file": "sources/equipment-banner-jade-source.png",
+      "sha256": "b2d9762a3d512c083449702f1fff4b9c69c05ebad3db26d380730f686aa497b9"
+    },
+    {
+      "file": "sources/equipment-banner-jade.prompt.txt",
+      "sha256": "12b2fccd69ac7d812349ab34a178858ebc2849ff2ff06e62694aa4668934910c"
+    },
+    {
+      "file": "sources/equipment-banner-violet-source.png",
+      "sha256": "0d244bf2cd0b9dd385ce4d5b2e4fec106900cb474dc1d228a5743c91b6b494eb"
+    },
+    {
+      "file": "sources/equipment-banner-violet.prompt.txt",
+      "sha256": "07b6b3006d6c40342534878c2ebae6ab2e81c08d28f4a262d2accb418146fe61"
+    },
+    {
+      "file": "sources/equipment-bead-abyss-source.png",
+      "sha256": "94e71a93137105b6c8630d3736f2b2ee1f90f14f40cd88009fa7fa43c20aa85b"
+    },
+    {
+      "file": "sources/equipment-bead-abyss.prompt.txt",
+      "sha256": "ec8d91dbb97af2f8287a005942a83a360c38619a6ddd2112629225ff9f22c77f"
+    },
+    {
+      "file": "sources/equipment-bead-cloud-source.png",
+      "sha256": "92b2ef306a6619069c0fa9868fb0445bc0b5c61abb65766d4e34832848dc45af"
+    },
+    {
+      "file": "sources/equipment-bead-cloud.prompt.txt",
+      "sha256": "956cadb4bf827572fdb3c8fbf428dbb26d272d591d73411253c06220eeaca1d3"
+    },
+    {
+      "file": "sources/equipment-bead-stone-source.png",
+      "sha256": "bb6b8e1994d3dd0ea47e87f2db5b264762465a67161e371756769785fc545cac"
+    },
+    {
+      "file": "sources/equipment-bead-stone.prompt.txt",
+      "sha256": "0bbbfdf54585ceb924403446399f6b66faa94e4b16641c86f6e61bd927666864"
+    },
+    {
+      "file": "sources/equipment-chariot-jade-source.png",
+      "sha256": "db72d83d88a24e54d4cbbd149bcb39cf283cc007616a1b6f6d12df7bd60fbdf6"
+    },
+    {
+      "file": "sources/equipment-chariot-jade.prompt.txt",
+      "sha256": "08216e1d1c6e9e3da540a3db517acce84b96a1fbf538c3ea7005f9a3f208ffc3"
+    },
+    {
+      "file": "sources/equipment-chariot-thunder-source.png",
+      "sha256": "e323e91c7a93863a82420f2dd4ef7325e22a060847398420942f6df4165fec10"
+    },
+    {
+      "file": "sources/equipment-chariot-thunder.prompt.txt",
+      "sha256": "0269787ebadb18daf49c219826a16b52a997d905e82aaab3e45682c80b2e1b3f"
+    },
+    {
+      "file": "sources/equipment-sword-ink-source.png",
+      "sha256": "22fa6b955e7419bc8acb5c91e394e7f623c9d0ed5438e07ecb39268a1bec1f99"
+    },
+    {
+      "file": "sources/equipment-sword-ink.prompt.txt",
+      "sha256": "27641697018df0e91e84920e35c2fa5c08090fba80ba9a45e33f263b70e8d535"
+    },
+    {
+      "file": "sources/equipment-sword-jade-source.png",
+      "sha256": "bd59ff343f95a5fad683ea0601524220dfb38b042d0da0e432dea6f85de40972"
+    },
+    {
+      "file": "sources/equipment-sword-jade.prompt.txt",
+      "sha256": "01000886595b0e510b166ed71d8f756ec64fd4b46d319b5c5dafe73de9e7ee84"
+    },
+    {
+      "file": "verify-assets.mjs",
+      "sha256": "b555b9fcd050946f91322848d31e131a595f663b7234f46eab54b644a32ea3b7"
+    }
+  ],
+  "ownerSelections": [
+    "banner/banner-ritual/original",
+    "chariot/chariot-bronze/original",
+    "chariot/chariot-thunder/original",
+    "sword/sword-ink/original",
+    "sword/sword-ink/ink",
+    "sword/sword-ink/jade",
+    "banner/banner-ritual/violet"
+  ],
+  "runtimeIntegrated": false
+}

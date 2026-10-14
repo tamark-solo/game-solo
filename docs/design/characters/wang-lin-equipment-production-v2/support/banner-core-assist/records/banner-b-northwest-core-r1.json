@@ -1,0 +1,139 @@
+{
+  "id": "banner-b-northwest-core-r1",
+  "identityId": "b",
+  "familyId": "banner",
+  "direction": "northwest",
+  "group": "core",
+  "actions": [
+    "idle",
+    "run",
+    "cast-single-target",
+    "cast-aoe"
+  ],
+  "calibrationCells": 6,
+  "prompt": "prompts/banner-b-northwest-core-r1-owner-revision-de189dd1749d.txt",
+  "promptSha256": "de189dd1749da0d1bb6247873a04ad95f9843a00ae3fbba2f998655ee8152d9e",
+  "raw": "sources/banner-b-northwest-core-r1.png",
+  "inputs": [
+    {
+      "file": "inputs/banner-b-northwest-core-r1/1.png",
+      "sha256": "895b7948ccfd4a54aec8dca5cf2a8b07996b8a8049bca66b52cdce9c26551917",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\tich-bach-banner-p1-nearest8x.png",
+      "role": "own-approved-B-banner-P1-primary",
+      "index": 1,
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-northwest-core-r1\\1.png"
+    },
+    {
+      "file": "inputs/banner-b-northwest-core-r1/2.png",
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northwest-nearest8x.png",
+      "role": "Wang-same-view-style-anatomy-only",
+      "index": 2,
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-northwest-core-r1\\2.png"
+    },
+    {
+      "file": "inputs/banner-b-northwest-core-r1/3.png",
+      "sha256": "c112d967d4fd4a712ae4f8fb8ebbba11b55413bfb60be49315df67d2eaf9e9d3",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\banner-b.png",
+      "role": "own-B-banner-P1-full-source-outfit-support",
+      "index": 3,
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-northwest-core-r1\\3.png"
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": null,
+  "tool": "image_gen.imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    6,
+    5
+  ],
+  "requestedSourcePoses": 30,
+  "status": "raw-produced-awaiting-owner-source-assessment",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "preparedLayoutNote": "Core square6x5 allows wide ritual sleeves and raised closed hand; foundation portrait3x6. No generated source exists at this prompt revision.",
+  "upstreamGeneration": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\generation.json",
+  "upstreamGenerationSha256": "f97c32fa3884bd34b6306f0daa4d5d8e726e65dd0e6afe76ac1aa54c75feb89f",
+  "upstreamRecord": {
+    "id": "banner-b-northwest-core-r1",
+    "identityId": "b",
+    "familyId": "banner",
+    "direction": "northwest",
+    "group": "core",
+    "actions": [
+      "idle",
+      "run",
+      "cast-single-target",
+      "cast-aoe"
+    ],
+    "calibrationCells": 6,
+    "prompt": "actors/b/banner/prompts/banner-b-northwest-core-r1.txt",
+    "promptSha256": "de189dd1749da0d1bb6247873a04ad95f9843a00ae3fbba2f998655ee8152d9e",
+    "raw": "actors/b/banner/sources/banner-b-northwest-core-r1.png",
+    "inputs": [
+      {
+        "file": "actors/b/banner/inputs/core/banner-b-northwest-core-r1/1.png",
+        "sha256": "895b7948ccfd4a54aec8dca5cf2a8b07996b8a8049bca66b52cdce9c26551917",
+        "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\tich-bach-banner-p1-nearest8x.png",
+        "role": "own-approved-B-banner-P1-primary"
+      },
+      {
+        "file": "actors/b/banner/inputs/core/banner-b-northwest-core-r1/2.png",
+        "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+        "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northwest-nearest8x.png",
+        "role": "Wang-same-view-style-anatomy-only"
+      },
+      {
+        "file": "actors/b/banner/inputs/core/banner-b-northwest-core-r1/3.png",
+        "sha256": "c112d967d4fd4a712ae4f8fb8ebbba11b55413bfb60be49315df67d2eaf9e9d3",
+        "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\banner-b.png",
+        "role": "own-B-banner-P1-full-source-outfit-support"
+      }
+    ],
+    "inputSnapshotsReady": true,
+    "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+    "dependency": null,
+    "tool": "built-in-imagegen",
+    "transparentRequested": true,
+    "requestedGrid": [
+      6,
+      5
+    ],
+    "requestedSourcePoses": 30,
+    "status": "prepared-gate-released-awaiting-own-view-inputs-and-source",
+    "selected": false,
+    "ownerApproved": false,
+    "runtimeIntegrated": false,
+    "preparedLayoutNote": "Core square6x5 allows wide ritual sleeves and raised closed hand; foundation portrait3x6. No generated source exists at this prompt revision.",
+    "promptClarification": "Physical one-arm pole continuity + opposite one-hand seals; revised BEFORE first tool call.",
+    "choreographyDelta": "Root approved planted ritual: key1 held, from charge key2 pole fixed at ground and body hands free. Idle/run same physical held hand."
+  },
+  "actualOriginalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13880-27b5-7690-becf-8edfeba067c1\\exec-e5a62154-25ff-4a9e-933b-09e17e6a570d.png",
+  "rawSha256": "2b6d421ac8806e72d79f60657706036a81b593538ff6fe2247e64cbbd71ae81d",
+  "promptHistory": [
+    {
+      "file": "history/prepared-prompts/banner-b-northwest-core-r1-b80e605102c6.txt",
+      "sha256": "b80e605102c6fd50f5aa76329928fc4fe3adae9a3e82420e72a82f21114e6121",
+      "notCalled": true
+    },
+    {
+      "file": "history/prepared-prompts/banner-b-northwest-core-r1-ff4b4c8af700.txt",
+      "sha256": "ff4b4c8af7008dfc34044da7573a9526f5b94476f797fc2354754c6401698eee",
+      "notCalled": true
+    }
+  ],
+  "upstreamPromptOriginal": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-northwest-core-r1.txt",
+  "originalSha256": "2b6d421ac8806e72d79f60657706036a81b593538ff6fe2247e64cbbd71ae81d",
+  "actualDimensions": [
+    1254,
+    1254
+  ],
+  "actualMode": "RGBA",
+  "toolMetadata": "tool/banner-b-northwest-core-r1.json",
+  "toolMetadataSha256": "53b50161e73fb78a1462da15cd89fcc9c3f77543b50c5a30fdf11a47438fa6c1",
+  "sourceLayoutQA": "qa/banner-b-northwest-core-r1.json",
+  "sourceLayoutQASha256": "7e19284e9627bb43c322c9e869e56125d6b7a8d78b66879d81cb6b780dab405a"
+}

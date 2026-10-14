@@ -1,0 +1,93 @@
+{
+  "schema": "tich-bach-banner-source-assessment-v2",
+  "identityId": "b",
+  "familyId": "banner",
+  "status": "manual-source-candidate-reviewed",
+  "coverage": {
+    "generatedSourcesIncludingHistory": 29,
+    "selectedSources": 24,
+    "supersededSources": 5,
+    "clips": 64,
+    "motionKeys": 382,
+    "neutralCalibrationKeys": 144,
+    "actualSelectedSourceFigures": 532,
+    "unusedSelectedSourceFigures": 6
+  },
+  "ownerApproved": false,
+  "motionApproved": false,
+  "runtimeIntegrated": false,
+  "bodyContract": {
+    "nominalStandingHeight": 80,
+    "sourceFactor": "one 80/median crown-to-dark-boot source calibration, same isotropic factor for all poses",
+    "standingCanvas": [
+      112,
+      112
+    ],
+    "standingPivot": [
+      56,
+      104
+    ],
+    "deathDefaultCanvas": [
+      192,
+      128
+    ],
+    "deathDefaultPivot": [
+      96,
+      112
+    ],
+    "westDeathCanvas": [
+      224,
+      128
+    ],
+    "westDeathPivot": [
+      112,
+      112
+    ],
+    "paddingException": "Actual W terminal corpse/hair touched192px edge; padding expanded for the whole W death clip, source/root/scale unchanged",
+    "lift": "All0 fixture/support projections, not exact world-floor measurement; renderer must not invent/subtract lift"
+  },
+  "lineage": "Own BannerB P1 PRIMARY. Wang same-view style/anatomy/camera supporting only. No face patch, mirror or per-pose fit. Each actual ImageGen call retains prompt/input snapshots, raw SHA, original path, rejected history.",
+  "sourceCorrections": [
+    {
+      "direction": "east",
+      "selected": "core-r2",
+      "history": "core-r1 wrongSE camera"
+    },
+    {
+      "direction": "southeast",
+      "selected": "core-r2",
+      "history": "core-r1 choreography superseded"
+    },
+    {
+      "direction": "southwest",
+      "selected": "core-r3",
+      "history": "core-r1 wrongSE camera and bottom clipping; core-r2 genuineLEFT but bottom boots clipped145px; core-r3 whole source edge0"
+    },
+    {
+      "direction": "northwest",
+      "selected": "core-r2",
+      "history": "core-r1 wrongNE rearRIGHT; r2 redraw genuinebackLEFT, no mirror"
+    }
+  ],
+  "actualMappingDeltas": [
+    "E andSWrun use five actual stride keys; terminal standing raw key17 excluded, no clone.",
+    "NWdamage raw actual22 figures with rowColumns4,4,4,4,3,3; six actualcal0..5, hit8,9,10,11,14,15,death16..21. Extra neutral6/7 and hit12/13 preserved unused.",
+    "NEgather actual remap12,13,15,14,16,17; SWgather12,15,13,16,14,17 removes stand→kneel chronology. No generated/repainted recovery."
+  ],
+  "choreography": "Idle/run one actual closed empty front fist for separately packed physical pole. Cast ground-planted from charge key2; SWclasp readiness is already plantedkey1. Open SWrun palm remains commanded/grounded, never falseheld. Core facts alone create release/contact/pulses.",
+  "handRoleCorrection": "36 E/SE foundation cal/hit points changed from physical free lower hand to physical raised front fist matching own same-view core; helper records remain pinned history; corrected actualpalm/cuff source crops retained.",
+  "sourceLimitations": [
+    "W single-target command release key4 extends the far arm across the body toward opposite screen side although face remains left; body pose is inspected independently of fixtureaim and has no directed hit authority.",
+    "Wmeditate terminalkey raises hand but remains seated; SWmeditate fifthkey raises closed palm while seated.",
+    "Hidden/sliver hands and occluded cuffs retain source uncertainty and explicit estimated angle basis, never held agreement.",
+    "N/NE/E/SE prone roots use clothed support projection with uncertainty5native where exact hidden pelvis/floor cannot be measured. W/NW/S/SW use visible dark-boot endpoint or supported-source projection; not collider/bone approval.",
+    "Soft raw magenta/cyan edge RGB is retained history; native binaryalpha128 body has0 opaque suspect pixels."
+  ],
+  "reviewEvidence": [
+    "review/core-first-recovery-8views-2x.png",
+    "review/foundation-first-recovery-8views-2x.png",
+    "review/own-versus-Wang-8views-2x.png",
+    "review/front-arm-role-corrections.json"
+  ],
+  "summaryGridScope": "First/recovery form grids crop transparent padding only and use fixed nearest2x; they do not show world pivot. Full marked native contacts retain actual canvas/pivot for support registration."
+}

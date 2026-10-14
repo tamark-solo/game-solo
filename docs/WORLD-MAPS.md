@@ -4,13 +4,13 @@
 
 > **Đặc tả trải nghiệm mới:** [Hằng Nhạc — Ngưng Khí v0.4](HANG-NHAC-NGUNG-KHI-SPEC.md) đề xuất tám khu chức năng/tuyến HN01–HN12; [tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) phân bổ 15 tầng thử; [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất arena và phiên khảo nghiệm. Chưa là địa lý/ngân sách background đã khóa; bảng node ở đây giữ làm nguồn tham chiếu lịch sử.
 
-> **Đối chiếu GDD 0.28 — 08/10/2026:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, có sẵn cả ba thuật R01, Hằng Nhạc qua Ngưng Khí và phân hóa từ hành trình Trúc Cơ. Toàn bộ node, phân kỳ, ngân sách và ID MAP-001… bên dưới là hồ sơ lịch sử của tuyến Vương Lâm; không là địa lý/ngân sách map gameplay đã khóa. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md).
+> **Đối chiếu [GDD 0.34](GDD.md) — 14/10/2026:** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Toàn bộ node, phân kỳ, ngân sách và ID MAP-001… bên dưới là hồ sơ lịch sử; không là địa lý/ngân sách map gameplay đã khóa. Xem [GDD 0.34](GDD.md), [Lộ trình Giai đoạn & Nhiệm vụ](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md).
 
 > **ART và map:** bộ sân legacy, ART Hằng Nhạc v1/v2/v3 và hai bản thử vùng đi đã [xóa](MAP-ASSETS-RESET.md). Đang chờ kế hoạch map mới. Không dùng đồ thị node cũ để tự bố trí level, thay tọa độ bản lưu của người phát triển hoặc khôi phục ART.
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  
 **Trạng thái nguồn:** lộ trình A → B/ngân sách của bản trước; chưa là map đi lại được nghiệm thu.\
-**Tham chiếu lịch sử:** [GDD idle](GDD-IDLE-REFERENCE-v0.26.md), [asset](ASSET-PLAN.md), [gặp gỡ cũ](ENCOUNTERS.md).
+**Tham chiếu lịch sử:** [asset](ASSET-PLAN.md), [gặp gỡ cũ](ENCOUNTERS.md).
 
 ## 0. Phân biệt map thế giới và map chính truyện
 

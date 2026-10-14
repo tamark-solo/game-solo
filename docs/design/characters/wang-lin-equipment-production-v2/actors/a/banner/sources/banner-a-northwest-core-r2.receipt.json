@@ -1,0 +1,85 @@
+{
+  "id": "banner-a-northwest-core-r2",
+  "identityId": "a",
+  "familyId": "banner",
+  "direction": "northwest",
+  "group": "core",
+  "actions": [
+    "idle",
+    "run",
+    "cast-single-target",
+    "cast-aoe"
+  ],
+  "calibrationCells": 6,
+  "prompt": "actors/a/banner/prompts/banner-a-northwest-core-r2.txt",
+  "promptSha256": "ef5b70e4b9830932d2626f6ee98a756eb3c51d37ab2935e1988fdefdfdf0de1d",
+  "raw": "actors/a/banner/sources/banner-a-northwest-core-r2.png",
+  "inputs": [
+    {
+      "file": "actors/a/banner/inputs/corrective/banner-a-northwest-core-r2/1.png",
+      "sha256": "7e7940dac201fdf8238d3cb6c0f7b238dd204661e58c28a2edd85817886f86e2",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\sources\\banner-a-northwest-core-r1.png",
+      "role": "same-own-A-banner-edit-target-primary"
+    },
+    {
+      "file": "actors/a/banner/inputs/corrective/banner-a-northwest-core-r2/2.png",
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\core\\banner-a-northwest-core-r1\\2.png",
+      "role": "Wang-requested-view-style-camera-only"
+    },
+    {
+      "file": "actors/a/banner/inputs/corrective/banner-a-northwest-core-r2/3.png",
+      "sha256": "d4a4155b26152ec9369e5e9cefdd03cd3b1aa90f1d652b1aaac90f1987c1b61a",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\huyen-tam-banner-p1-source.png",
+      "role": "own-A-banner-P1-full-source-outfit-support"
+    },
+    {
+      "file": "actors/a/banner/inputs/corrective/banner-a-northwest-core-r2/4.png",
+      "sha256": "1365631073465674d4ff5a664e1cd1d6765f2da8b1157b4018c9fa028a9f75ae",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\corrective\\banner-a-northwest-core-r2\\own-sword-same-view-nearest8x.png",
+      "role": "own-A-same-identity-approved-Sword-view-camera-only-no-outfit"
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": null,
+  "tool": "built-in-imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    6,
+    5
+  ],
+  "requestedSourcePoses": 30,
+  "status": "generated-awaiting-source-review",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "promptPriorVersions": [
+    {
+      "file": "actors/a/banner/prompts/history/banner-a-northwest-core-r1-ambiguous-grip.txt",
+      "sha256": "fe179681a0ea94c6c3cbc067587b5fe016e4f3a1aac4fa8e772ebea3591f5da2",
+      "status": "planned-before-call"
+    },
+    {
+      "file": "actors/a/banner/prompts/history/banner-a-northwest-core-r1-closed-through-cast.txt",
+      "sha256": "5bd546e3b67ba8decd5791568b7a72ffb68cce84772aa95b9b03555f6d81a2c1",
+      "status": "planned-prior-choreography-before-call"
+    }
+  ],
+  "sourceViewed": true,
+  "rawImmutable": true,
+  "supersedes": "banner-a-northwest-core-r1",
+  "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1387f-9141-7e10-8b79-ce994001f7cb\\exec-c70dd474-28bc-4417-9e4c-14bb5034e550.png",
+  "originalSha256": "f272408b7cfd690a268cf355fda3693100a590d7ee9bc1813cf8aae16ef65f07",
+  "sha256": "f272408b7cfd690a268cf355fda3693100a590d7ee9bc1813cf8aae16ef65f07",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "outputProvenance": {
+    "originalToolOutput": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1387f-9141-7e10-8b79-ce994001f7cb\\exec-c70dd474-28bc-4417-9e4c-14bb5034e550.png",
+    "workspaceRaw": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\sources\\banner-a-northwest-core-r2.png",
+    "copiedOriginalUnchanged": true
+  }
+}

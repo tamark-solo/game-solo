@@ -1,0 +1,345 @@
+{
+  "schema": "wang-lin-equipment-family-vfx-plan-2",
+  "date": "2026-10-14",
+  "familyId": "banner",
+  "source": "built-in ImageGen",
+  "inputs": [
+    {
+      "file": "inputs/banner-aoe.png",
+      "role": "approved-concept-style-and-element-reference",
+      "sha256": "37c8fcad39b7672c6fc1a612ec544648fb1089bb30a69c59d0da4851ddf07503"
+    },
+    {
+      "file": "inputs/banner-progression.png",
+      "role": "approved-concept-style-and-element-reference",
+      "sha256": "1493ba3945d2c1f0d77fd7d5a8dfc691f153c9f080035b5e013ed2b8e3d2a988"
+    }
+  ],
+  "sequences": [
+    {
+      "id": "st-warning",
+      "mode": "st",
+      "phase": "warning",
+      "anchor": "ground-node",
+      "canvas": [
+        160,
+        128
+      ],
+      "pivot": [
+        80,
+        96
+      ],
+      "sourcePivot": [
+        0.5,
+        0.7
+      ],
+      "peakExtent": 88,
+      "extentAxis": "width",
+      "durations": [
+        30,
+        30,
+        30,
+        30,
+        40,
+        40
+      ],
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "subject": "One isolated ground soul-thread sigil: thin crimson-charcoal loop with a pale ghostly eye-slit. Six phases trace from faint scratch to split soul-mark, without a whole circle/arena."
+    },
+    {
+      "id": "st-charge",
+      "mode": "st",
+      "phase": "charge",
+      "anchor": "hand",
+      "canvas": [
+        160,
+        160
+      ],
+      "pivot": [
+        80,
+        80
+      ],
+      "sourcePivot": [
+        0.5,
+        0.5
+      ],
+      "peakExtent": 92,
+      "extentAxis": "max",
+      "durations": [
+        60,
+        60,
+        60,
+        70,
+        70,
+        80
+      ],
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "subject": "An isolated condensed soul seed at the hand socket, pale ancestral face hint emerging inside twisting charcoal and crimson thread. Six phases gather from wisps to compressed bone-white core. No actual hand or banner."
+    },
+    {
+      "id": "st-release",
+      "mode": "st",
+      "phase": "release",
+      "anchor": "projectile",
+      "canvas": [
+        224,
+        176
+      ],
+      "pivot": [
+        112,
+        88
+      ],
+      "sourcePivot": [
+        0.5,
+        0.5
+      ],
+      "peakExtent": 166,
+      "extentAxis": "width",
+      "durations": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "subject": "ONE isolated white-robed human wraith, abstract pale face and hollow eyes, long spectral sleeves dissolving into a flowing bone-white/crimson tail. Camera-facing three-quarter apparition. Six true flight morphs: emerge; reach; long sleeve flow; open ghost palm; split mist; steady stalking wraith. No actual caster/enemy, no weapon, no corpse."
+    },
+    {
+      "id": "st-resolve",
+      "mode": "st",
+      "phase": "resolve",
+      "anchor": "contact",
+      "canvas": [
+        192,
+        208
+      ],
+      "pivot": [
+        96,
+        184
+      ],
+      "sourcePivot": [
+        0.5,
+        0.82
+      ],
+      "peakExtent": 118,
+      "extentAxis": "max",
+      "durations": [
+        50,
+        55,
+        65,
+        75,
+        90,
+        115
+      ],
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "subject": "One confirmed soul contact: a pale ghost hand and crimson binding-thread knot burst at target ground. Six phases seed→white grasp flash→binding knot→breaking black wisps→small soul shreds→fade. No enemy or damage number."
+    },
+    {
+      "id": "st-tail",
+      "mode": "st",
+      "phase": "tail",
+      "anchor": "projectile",
+      "canvas": [
+        192,
+        144
+      ],
+      "pivot": [
+        96,
+        72
+      ],
+      "sourcePivot": [
+        0.5,
+        0.5
+      ],
+      "peakExtent": 112,
+      "extentAxis": "width",
+      "durations": [
+        50,
+        60,
+        70,
+        80,
+        80,
+        100
+      ],
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "subject": "Isolated residual bone-white soul threads and sparse crimson ribbons with faint tiny face shapes. Six phases progressively fray, separate, thin and disappear; final phase still has a few visible pixels."
+    },
+    {
+      "id": "aoe-warning",
+      "mode": "aoe",
+      "phase": "warning",
+      "anchor": "ground-node",
+      "canvas": [
+        176,
+        192
+      ],
+      "pivot": [
+        88,
+        176
+      ],
+      "sourcePivot": [
+        0.5,
+        0.84
+      ],
+      "peakExtent": 116,
+      "extentAxis": "height",
+      "durations": [
+        100,
+        120,
+        140,
+        160,
+        180,
+        200
+      ],
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "subject": "ONE dormant spectral soul-gate outline, curved bronze finial ornament, charcoal/crimson torn streamers and faint pale aperture. A single ground-anchor cue; renderer instances three gates. Six phases faint slit→rising edges→finial hint→pale seams→small soul within→poised closed gate. No full triangle."
+    },
+    {
+      "id": "aoe-deploy",
+      "mode": "aoe",
+      "phase": "deploy",
+      "anchor": "ground-node",
+      "canvas": [
+        208,
+        256
+      ],
+      "pivot": [
+        104,
+        240
+      ],
+      "sourcePivot": [
+        0.5,
+        0.84
+      ],
+      "peakExtent": 176,
+      "extentAxis": "height",
+      "durations": [
+        50,
+        50,
+        60,
+        60,
+        70,
+        70
+      ],
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "subject": "ONE spectral soul gate opens from a narrow ink seam into an arched dark aperture edged in bone ivory/old bronze, crimson ribbons. Six true deployment phases: fissure; gate legs; arch rises; veil opens; pale wraith peeks; fully open gate. No actual prop banner or terrain."
+    },
+    {
+      "id": "aoe-active",
+      "mode": "aoe",
+      "phase": "active",
+      "anchor": "field-center",
+      "canvas": [
+        352,
+        352
+      ],
+      "pivot": [
+        176,
+        320
+      ],
+      "sourcePivot": [
+        0.5,
+        0.84
+      ],
+      "peakExtent": 264,
+      "extentAxis": "height",
+      "durations": [
+        160,
+        160,
+        180,
+        180,
+        180,
+        180
+      ],
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "subject": "ONE cluster of towering ancestral white-robed wraiths pouring from a dark veil: one large abstract elder soul torso and two smaller trailing souls, long spectral sleeves and mist, stern hollow pale faces. Upper apparitions only, no physical feet/players. Six morphing phases reach, bend, sweep sleeves and flow into each other. No gates/topology baked; this is a camera-facing field spirit element placed behind the unseen wearer."
+    },
+    {
+      "id": "aoe-contact",
+      "mode": "aoe",
+      "phase": "contact",
+      "anchor": "contact",
+      "canvas": [
+        208,
+        224
+      ],
+      "pivot": [
+        104,
+        200
+      ],
+      "sourcePivot": [
+        0.5,
+        0.82
+      ],
+      "peakExtent": 144,
+      "extentAxis": "max",
+      "durations": [
+        50,
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "subject": "One ground contact fountain of pale souls and crimson thread fragments with bone-white flash core, abstract ghost face hint. Six phases core seed→small hand/wisp→full soul burst→breaking threads→settling wisps→final pale chips. No target, blood, body, gate or floor."
+    },
+    {
+      "id": "aoe-collapse",
+      "mode": "aoe",
+      "phase": "collapse",
+      "anchor": "ground-node",
+      "canvas": [
+        192,
+        256
+      ],
+      "pivot": [
+        96,
+        240
+      ],
+      "sourcePivot": [
+        0.5,
+        0.84
+      ],
+      "peakExtent": 176,
+      "extentAxis": "height",
+      "durations": [
+        70,
+        80,
+        90,
+        100,
+        100,
+        120
+      ],
+      "cameraPolicy": "camera-facing-fixed-spectral-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Contact comes only from confirmed facts; frame timing never applies damage.",
+      "subject": "ONE soul gate collapsing: spectral arched edges and crimson streamers fragment into bone-white wisps/charcoal soot, close aperture and sink. Six true phases of arch fracturing, top falling, sides dissolving, shuttered slit, last threads, final flecks. No full field or ground."
+    }
+  ],
+  "releaseMs": 900,
+  "activeEndMs": 1940,
+  "endMs": 2500,
+  "ownerApproved": false,
+  "runtimeIntegrated": false
+}

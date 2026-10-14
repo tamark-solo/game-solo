@@ -1,0 +1,30 @@
+{
+  "schema": "wang-lin-sword-pilot-vfx-visual-assessment-1",
+  "date": "2026-10-14",
+  "status": "candidate-ready-for-combined-review",
+  "rawSourcesViewed": 12,
+  "selectedSources": 10,
+  "nativeStripsViewed": [
+    "aoe-active-dark-1x.png",
+    "aoe-deploy-light-1x.png",
+    "st-charge-dark-1x.png",
+    "aoe-contact-dark-1x.png"
+  ],
+  "findings": [
+    "Linh thể có lực, tóc/vạt/khí đổi rõ qua sáu key, thân trên frontal cố định và phần chân tan. Chiều cao physical peak 280px cần nằm rear để giữ body80px đọc được.",
+    "Deploy tăng từ chồi kiếm lên cọc184px; cùng native ground pivot sau registration. Source emitter đo riêng từng frame, một scale sequence giữ nguyên.",
+    "Charge r2 giữ central ivory emitter, chuyển silhouette từ hạt xoắn sang kim kiếm; contact có core ngà rõ và tan sáu phase khác nhau.",
+    "Warning stake có frame đầu rất mờ để vào nhịp. Cảnh báo geometry Core phải luôn đọc rõ độc lập với alpha cue này.",
+    "Ba spectral blades trong avatar là ornament linh thể, không thay sáu Core stake anchors hoặc gây thêm hit.",
+    "Hai nguồn r1 giao cell giữ lịch sử và loại khỏi selected; r2 đã kiểm physical source edges alpha dưới16."
+  ],
+  "technicalReadiness": {
+    "pngSourceNativeAtlasChecks": 882,
+    "canonicalFrames": 60,
+    "softAlphaPreserved": true,
+    "v5PinsUnchanged": 86,
+    "combinedBrowserAndThreeReview": "pending integration in production-v1"
+  },
+  "artApproved": false,
+  "runtimeIntegrated": false
+}

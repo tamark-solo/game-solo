@@ -1,0 +1,4394 @@
+{
+  "schema": "chariot-ground-device-verification-1",
+  "date": "2026-10-14",
+  "familyId": "chariot",
+  "registrationSha256": "7e4c300e5fabb328c1b660245f83c3990e88d647faa37e57b23fececabfaccf2",
+  "coverage": 16,
+  "checks": 888,
+  "passed": true,
+  "failed": [],
+  "details": [
+    {
+      "name": "registration-16-records",
+      "pass": true,
+      "detail": "got 16"
+    },
+    {
+      "name": "registration-identity-direction-matrix",
+      "pass": true,
+      "detail": "missing=[] extra=[]"
+    },
+    {
+      "name": "registration-family-chariot",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-south-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-south.png"
+    },
+    {
+      "name": "chariot-a-south-full-sha256",
+      "pass": true,
+      "detail": "expected e4248d2516c49dce1ccc481393f40ae3e8f9256afe799439b62a809611a3c690 got e4248d2516c49dce1ccc481393f40ae3e8f9256afe799439b62a809611a3c690"
+    },
+    {
+      "name": "chariot-a-south-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-south-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-a-south-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-south-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-south-rear.png"
+    },
+    {
+      "name": "chariot-a-south-rear-sha256",
+      "pass": true,
+      "detail": "expected 88b31f2216345316634a8d02da948a8b341ac5d378734a69b5bd2147d66eedd0 got 88b31f2216345316634a8d02da948a8b341ac5d378734a69b5bd2147d66eedd0"
+    },
+    {
+      "name": "chariot-a-south-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-south-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-south-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-south-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-south-front.png"
+    },
+    {
+      "name": "chariot-a-south-front-sha256",
+      "pass": true,
+      "detail": "expected 84ae78e0b666cb88a21d085ca9fef133f9b7fd580dcd8231230300962ed324b3 got 84ae78e0b666cb88a21d085ca9fef133f9b7fd580dcd8231230300962ed324b3"
+    },
+    {
+      "name": "chariot-a-south-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-south-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-south-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-south-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-south-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-a-views.png"
+    },
+    {
+      "name": "chariot-a-south-source-sha256",
+      "pass": true,
+      "detail": "expected 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01 got 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01"
+    },
+    {
+      "name": "chariot-a-south-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[0, 0, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-a-south-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[98.419452887538, 157.98176291793314]"
+    },
+    {
+      "name": "chariot-a-south-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[98.419452887538, 157.98176291793314] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-a-south-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-south-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-south-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-a-south-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-southwest-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-southwest.png"
+    },
+    {
+      "name": "chariot-a-southwest-full-sha256",
+      "pass": true,
+      "detail": "expected 0bb1b3bdcaa6307d78dfa4d91cae4b378e6d6d650d1852b0c329059a5e5a8d73 got 0bb1b3bdcaa6307d78dfa4d91cae4b378e6d6d650d1852b0c329059a5e5a8d73"
+    },
+    {
+      "name": "chariot-a-southwest-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-southwest-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-a-southwest-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-southwest-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-southwest-rear.png"
+    },
+    {
+      "name": "chariot-a-southwest-rear-sha256",
+      "pass": true,
+      "detail": "expected ec74ebecac2be120807a0664c52ea4e2583b32ab38c821a69047e1b46e3620fb got ec74ebecac2be120807a0664c52ea4e2583b32ab38c821a69047e1b46e3620fb"
+    },
+    {
+      "name": "chariot-a-southwest-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-southwest-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-southwest-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-southwest-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-southwest-front.png"
+    },
+    {
+      "name": "chariot-a-southwest-front-sha256",
+      "pass": true,
+      "detail": "expected f469c1cc1abe1b9bb9ed91d5afa9d5c50df2fee244838ff74b2c05279f12015b got f469c1cc1abe1b9bb9ed91d5afa9d5c50df2fee244838ff74b2c05279f12015b"
+    },
+    {
+      "name": "chariot-a-southwest-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-southwest-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-southwest-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-southwest-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-southwest-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-a-views.png"
+    },
+    {
+      "name": "chariot-a-southwest-source-sha256",
+      "pass": true,
+      "detail": "expected 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01 got 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01"
+    },
+    {
+      "name": "chariot-a-southwest-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[418, 0, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-a-southwest-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[99.51367781155015, 159.07598784194528]"
+    },
+    {
+      "name": "chariot-a-southwest-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[99.51367781155015, 159.07598784194528] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-a-southwest-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-southwest-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-southwest-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-a-southwest-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-west-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-west.png"
+    },
+    {
+      "name": "chariot-a-west-full-sha256",
+      "pass": true,
+      "detail": "expected 5885d2d21e7712175769d67702d27d430479f5b3b734cd01620946b703ad5b03 got 5885d2d21e7712175769d67702d27d430479f5b3b734cd01620946b703ad5b03"
+    },
+    {
+      "name": "chariot-a-west-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-west-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-a-west-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-west-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-west-rear.png"
+    },
+    {
+      "name": "chariot-a-west-rear-sha256",
+      "pass": true,
+      "detail": "expected 04d4879d0ec59aedd8ccafee14e8ea3ee29764424cb479658b3f5c90630627ea got 04d4879d0ec59aedd8ccafee14e8ea3ee29764424cb479658b3f5c90630627ea"
+    },
+    {
+      "name": "chariot-a-west-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-west-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-west-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-west-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-west-front.png"
+    },
+    {
+      "name": "chariot-a-west-front-sha256",
+      "pass": true,
+      "detail": "expected 8876de29f23eb48d22d4da8f68a77cf0355b7de4f03f448050de970c5bd60846 got 8876de29f23eb48d22d4da8f68a77cf0355b7de4f03f448050de970c5bd60846"
+    },
+    {
+      "name": "chariot-a-west-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-west-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-west-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-west-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-west-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-a-views.png"
+    },
+    {
+      "name": "chariot-a-west-source-sha256",
+      "pass": true,
+      "detail": "expected 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01 got 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01"
+    },
+    {
+      "name": "chariot-a-west-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[836, 0, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-a-west-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[97.50759878419453, 158.62006079027356]"
+    },
+    {
+      "name": "chariot-a-west-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[97.50759878419453, 158.62006079027356] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-a-west-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-west-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-west-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-a-west-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-northwest-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-northwest.png"
+    },
+    {
+      "name": "chariot-a-northwest-full-sha256",
+      "pass": true,
+      "detail": "expected ce2951fa5ba8e4b8c2984e1bc69ab6ca56ea63a54fd02f2e2aa5f25de95ad016 got ce2951fa5ba8e4b8c2984e1bc69ab6ca56ea63a54fd02f2e2aa5f25de95ad016"
+    },
+    {
+      "name": "chariot-a-northwest-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-northwest-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-a-northwest-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-northwest-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-northwest-rear.png"
+    },
+    {
+      "name": "chariot-a-northwest-rear-sha256",
+      "pass": true,
+      "detail": "expected 8067e5c101c325794d309bc2a97a4b93d6bd5ed2bca0075f7a63b51e01dd4457 got 8067e5c101c325794d309bc2a97a4b93d6bd5ed2bca0075f7a63b51e01dd4457"
+    },
+    {
+      "name": "chariot-a-northwest-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-northwest-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-northwest-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-northwest-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-northwest-front.png"
+    },
+    {
+      "name": "chariot-a-northwest-front-sha256",
+      "pass": true,
+      "detail": "expected 642ad574f53b6b6f25ea66486ee965b23ece97cd826e6f9c0dc3f6067e1cf08d got 642ad574f53b6b6f25ea66486ee965b23ece97cd826e6f9c0dc3f6067e1cf08d"
+    },
+    {
+      "name": "chariot-a-northwest-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-northwest-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-northwest-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-northwest-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-northwest-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-a-views.png"
+    },
+    {
+      "name": "chariot-a-northwest-source-sha256",
+      "pass": true,
+      "detail": "expected 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01 got 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01"
+    },
+    {
+      "name": "chariot-a-northwest-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[0, 418, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-a-northwest-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[93.13069908814589, 160.17021276595744]"
+    },
+    {
+      "name": "chariot-a-northwest-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[93.13069908814589, 160.17021276595744] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-a-northwest-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-northwest-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-northwest-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-a-northwest-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-north-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-north.png"
+    },
+    {
+      "name": "chariot-a-north-full-sha256",
+      "pass": true,
+      "detail": "expected db4e33ae154cb08b35f5f4577907b77695467db385f9028e3ce41104465f0583 got db4e33ae154cb08b35f5f4577907b77695467db385f9028e3ce41104465f0583"
+    },
+    {
+      "name": "chariot-a-north-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-north-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-a-north-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-north-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-north-rear.png"
+    },
+    {
+      "name": "chariot-a-north-rear-sha256",
+      "pass": true,
+      "detail": "expected e84457b2bd8a14862fbf10687c6207e52622064e8374601267be4433712a2a6a got e84457b2bd8a14862fbf10687c6207e52622064e8374601267be4433712a2a6a"
+    },
+    {
+      "name": "chariot-a-north-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-north-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-north-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-north-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-north-front.png"
+    },
+    {
+      "name": "chariot-a-north-front-sha256",
+      "pass": true,
+      "detail": "expected b019ed90cd9f73803296edf81861b1cbd170aff553ae73093df7f3db6c8a2d9e got b019ed90cd9f73803296edf81861b1cbd170aff553ae73093df7f3db6c8a2d9e"
+    },
+    {
+      "name": "chariot-a-north-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-north-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-north-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-north-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-north-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-a-views.png"
+    },
+    {
+      "name": "chariot-a-north-source-sha256",
+      "pass": true,
+      "detail": "expected 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01 got 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01"
+    },
+    {
+      "name": "chariot-a-north-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[418, 418, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-a-north-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[91.94528875379939, 158.89361702127658]"
+    },
+    {
+      "name": "chariot-a-north-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[91.94528875379939, 158.89361702127658] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-a-north-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-north-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-north-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-a-north-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-northeast-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-northeast.png"
+    },
+    {
+      "name": "chariot-a-northeast-full-sha256",
+      "pass": true,
+      "detail": "expected 16b0cb98f3c9949b19f9f1273d38779597d042d04c1f381896ed4330d11c4a6d got 16b0cb98f3c9949b19f9f1273d38779597d042d04c1f381896ed4330d11c4a6d"
+    },
+    {
+      "name": "chariot-a-northeast-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-northeast-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-a-northeast-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-northeast-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-northeast-rear.png"
+    },
+    {
+      "name": "chariot-a-northeast-rear-sha256",
+      "pass": true,
+      "detail": "expected dbaba38acbf65e09fe1d825df51196fda33a134b83bc18a39ff412610378a6ac got dbaba38acbf65e09fe1d825df51196fda33a134b83bc18a39ff412610378a6ac"
+    },
+    {
+      "name": "chariot-a-northeast-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-northeast-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-northeast-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-northeast-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-northeast-front.png"
+    },
+    {
+      "name": "chariot-a-northeast-front-sha256",
+      "pass": true,
+      "detail": "expected ac593d6d7405bf275c9870a0a776c97e729692f73319d80cf088c10dfc1a50de got ac593d6d7405bf275c9870a0a776c97e729692f73319d80cf088c10dfc1a50de"
+    },
+    {
+      "name": "chariot-a-northeast-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-northeast-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-northeast-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-northeast-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-northeast-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-a-views.png"
+    },
+    {
+      "name": "chariot-a-northeast-source-sha256",
+      "pass": true,
+      "detail": "expected 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01 got 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01"
+    },
+    {
+      "name": "chariot-a-northeast-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[836, 418, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-a-northeast-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[69.7872340425532, 159.16717325227964]"
+    },
+    {
+      "name": "chariot-a-northeast-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[69.7872340425532, 159.16717325227964] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-a-northeast-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-northeast-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-northeast-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-a-northeast-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-east-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-east.png"
+    },
+    {
+      "name": "chariot-a-east-full-sha256",
+      "pass": true,
+      "detail": "expected 46999ce54c3fa33a3eda822de24e21cdcd9ca1e900434d3b3dd69fbaae04cc9d got 46999ce54c3fa33a3eda822de24e21cdcd9ca1e900434d3b3dd69fbaae04cc9d"
+    },
+    {
+      "name": "chariot-a-east-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-east-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-a-east-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-east-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-east-rear.png"
+    },
+    {
+      "name": "chariot-a-east-rear-sha256",
+      "pass": true,
+      "detail": "expected 03e6b987eaa7d9460485b725fcd562ea7393e421a08ac326c5035e98575f2b30 got 03e6b987eaa7d9460485b725fcd562ea7393e421a08ac326c5035e98575f2b30"
+    },
+    {
+      "name": "chariot-a-east-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-east-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-east-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-east-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-a-east-front.png"
+    },
+    {
+      "name": "chariot-a-east-front-sha256",
+      "pass": true,
+      "detail": "expected d537b76506a77dee5cfb61690d3dc41830c3ae98aea3286aec51833fbba43e73 got d537b76506a77dee5cfb61690d3dc41830c3ae98aea3286aec51833fbba43e73"
+    },
+    {
+      "name": "chariot-a-east-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-east-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-east-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-east-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-east-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-a-views.png"
+    },
+    {
+      "name": "chariot-a-east-source-sha256",
+      "pass": true,
+      "detail": "expected 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01 got 5b3333c2fc9f719c9f9494eb0ab25a7aafcc091a85bc1f66aae33d179f6b0d01"
+    },
+    {
+      "name": "chariot-a-east-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[0, 836, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-a-east-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[92.85714285714286, 159.89665653495442]"
+    },
+    {
+      "name": "chariot-a-east-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[92.85714285714286, 159.89665653495442] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-a-east-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-east-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-east-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-a-east-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-southeast-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\gear\\native\\chariot-a.png"
+    },
+    {
+      "name": "chariot-a-southeast-full-sha256",
+      "pass": true,
+      "detail": "expected 4e8e9869f76115a9f44223c11febfcf86f40878b42546aeb0ec24e608d3d8459 got 4e8e9869f76115a9f44223c11febfcf86f40878b42546aeb0ec24e608d3d8459"
+    },
+    {
+      "name": "chariot-a-southeast-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-southeast-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-a-southeast-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-southeast-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\gear\\native\\chariot-a-rear.png"
+    },
+    {
+      "name": "chariot-a-southeast-rear-sha256",
+      "pass": true,
+      "detail": "expected f268df2d470b51c70480570f6725cac907ba6523812da140c66bbd1a9017ddcf got f268df2d470b51c70480570f6725cac907ba6523812da140c66bbd1a9017ddcf"
+    },
+    {
+      "name": "chariot-a-southeast-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-southeast-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-southeast-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-southeast-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\gear\\native\\chariot-a-front.png"
+    },
+    {
+      "name": "chariot-a-southeast-front-sha256",
+      "pass": true,
+      "detail": "expected 4e8e9869f76115a9f44223c11febfcf86f40878b42546aeb0ec24e608d3d8459 got 4e8e9869f76115a9f44223c11febfcf86f40878b42546aeb0ec24e608d3d8459"
+    },
+    {
+      "name": "chariot-a-southeast-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-a-southeast-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-a-southeast-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-a-southeast-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-southeast-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\gear\\chariot-a.png"
+    },
+    {
+      "name": "chariot-a-southeast-source-sha256",
+      "pass": true,
+      "detail": "expected 131d897460df2c77f6c72fd69bff289e15639825608015536d0cefc7a3923a23 got 131d897460df2c77f6c72fd69bff289e15639825608015536d0cefc7a3923a23"
+    },
+    {
+      "name": "chariot-a-southeast-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[0, 0, 1536, 1024] source=[1536, 1024]"
+    },
+    {
+      "name": "chariot-a-southeast-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[95.41033434650456, 160.71732522796353]"
+    },
+    {
+      "name": "chariot-a-southeast-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[95.41033434650456, 160.71732522796353] pivot=[80, 160]"
+    },
+    {
+      "name": "chariot-a-southeast-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-southeast-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-a-southeast-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-a-southeast-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-south-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-south.png"
+    },
+    {
+      "name": "chariot-b-south-full-sha256",
+      "pass": true,
+      "detail": "expected 21903c5bade2e57bc7eeb8c546eee3958fda59ebdaca39972a97938daa51439a got 21903c5bade2e57bc7eeb8c546eee3958fda59ebdaca39972a97938daa51439a"
+    },
+    {
+      "name": "chariot-b-south-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-south-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-b-south-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-south-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-south-rear.png"
+    },
+    {
+      "name": "chariot-b-south-rear-sha256",
+      "pass": true,
+      "detail": "expected 1c0f114a1b3459687f10d8078405681741605a5826d3d09b62005252cea52392 got 1c0f114a1b3459687f10d8078405681741605a5826d3d09b62005252cea52392"
+    },
+    {
+      "name": "chariot-b-south-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-south-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-south-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-south-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-south-front.png"
+    },
+    {
+      "name": "chariot-b-south-front-sha256",
+      "pass": true,
+      "detail": "expected 4c8fab71895cdea75526f017f6d48290c7965a220c581e253048a46cb9f8fe54 got 4c8fab71895cdea75526f017f6d48290c7965a220c581e253048a46cb9f8fe54"
+    },
+    {
+      "name": "chariot-b-south-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-south-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-south-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-south-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-south-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-b-views-r3.png"
+    },
+    {
+      "name": "chariot-b-south-source-sha256",
+      "pass": true,
+      "detail": "expected d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c got d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c"
+    },
+    {
+      "name": "chariot-b-south-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[0, 0, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-b-south-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[93.82530120481928, 160.29518072289156]"
+    },
+    {
+      "name": "chariot-b-south-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[93.82530120481928, 160.29518072289156] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-b-south-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-south-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-south-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-b-south-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-southwest-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-southwest.png"
+    },
+    {
+      "name": "chariot-b-southwest-full-sha256",
+      "pass": true,
+      "detail": "expected f2ad18a686b5923ad970d230659a9031dadeb655e4857f2dca75db0e8933f73e got f2ad18a686b5923ad970d230659a9031dadeb655e4857f2dca75db0e8933f73e"
+    },
+    {
+      "name": "chariot-b-southwest-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-southwest-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-b-southwest-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-southwest-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-southwest-rear.png"
+    },
+    {
+      "name": "chariot-b-southwest-rear-sha256",
+      "pass": true,
+      "detail": "expected 12ee6a10dc8aaeef20fa61839650b9de81949242ab7399f7e59dbf55ada41f05 got 12ee6a10dc8aaeef20fa61839650b9de81949242ab7399f7e59dbf55ada41f05"
+    },
+    {
+      "name": "chariot-b-southwest-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-southwest-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-southwest-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-southwest-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-southwest-front.png"
+    },
+    {
+      "name": "chariot-b-southwest-front-sha256",
+      "pass": true,
+      "detail": "expected 0b75119890932a260bd72149da75973a983169ea3d92555cb7bd8128c43cc27a got 0b75119890932a260bd72149da75973a983169ea3d92555cb7bd8128c43cc27a"
+    },
+    {
+      "name": "chariot-b-southwest-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-southwest-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-southwest-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-southwest-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-southwest-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-b-views-r3.png"
+    },
+    {
+      "name": "chariot-b-southwest-source-sha256",
+      "pass": true,
+      "detail": "expected d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c got d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c"
+    },
+    {
+      "name": "chariot-b-southwest-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[418, 0, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-b-southwest-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[96.35542168674698, 160.3855421686747]"
+    },
+    {
+      "name": "chariot-b-southwest-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[96.35542168674698, 160.3855421686747] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-b-southwest-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-southwest-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-southwest-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-b-southwest-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-west-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-west.png"
+    },
+    {
+      "name": "chariot-b-west-full-sha256",
+      "pass": true,
+      "detail": "expected 4650a3f921657a41dc1789071e11096eaeb863244776c50b32a92ea9f9b40a9f got 4650a3f921657a41dc1789071e11096eaeb863244776c50b32a92ea9f9b40a9f"
+    },
+    {
+      "name": "chariot-b-west-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-west-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-b-west-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-west-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-west-rear.png"
+    },
+    {
+      "name": "chariot-b-west-rear-sha256",
+      "pass": true,
+      "detail": "expected 41d05b944950e17edfd0a0aa1b50d77a7e1ba425c7d9fa600bb3feede64ad8d2 got 41d05b944950e17edfd0a0aa1b50d77a7e1ba425c7d9fa600bb3feede64ad8d2"
+    },
+    {
+      "name": "chariot-b-west-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-west-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-west-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-west-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-west-front.png"
+    },
+    {
+      "name": "chariot-b-west-front-sha256",
+      "pass": true,
+      "detail": "expected 81866e6625dcaeaa440a5785870bba17262f32f701b316531ac5c6235ae9f008 got 81866e6625dcaeaa440a5785870bba17262f32f701b316531ac5c6235ae9f008"
+    },
+    {
+      "name": "chariot-b-west-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-west-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-west-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-west-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-west-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-b-views-r3.png"
+    },
+    {
+      "name": "chariot-b-west-source-sha256",
+      "pass": true,
+      "detail": "expected d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c got d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c"
+    },
+    {
+      "name": "chariot-b-west-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[836, 0, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-b-west-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[95.99397590361446, 159.39156626506025]"
+    },
+    {
+      "name": "chariot-b-west-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[95.99397590361446, 159.39156626506025] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-b-west-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-west-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-west-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-b-west-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-northwest-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-northwest.png"
+    },
+    {
+      "name": "chariot-b-northwest-full-sha256",
+      "pass": true,
+      "detail": "expected 22733e0b19a3ff5b9e43304a39f10c092c153ddb61571ae13d655927feae6c3d got 22733e0b19a3ff5b9e43304a39f10c092c153ddb61571ae13d655927feae6c3d"
+    },
+    {
+      "name": "chariot-b-northwest-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-northwest-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-b-northwest-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-northwest-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-northwest-rear.png"
+    },
+    {
+      "name": "chariot-b-northwest-rear-sha256",
+      "pass": true,
+      "detail": "expected 8057cdf82617993174b0beb2e0ece0a0fb75e6efbe883a2eff162216804b6866 got 8057cdf82617993174b0beb2e0ece0a0fb75e6efbe883a2eff162216804b6866"
+    },
+    {
+      "name": "chariot-b-northwest-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-northwest-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-northwest-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-northwest-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-northwest-front.png"
+    },
+    {
+      "name": "chariot-b-northwest-front-sha256",
+      "pass": true,
+      "detail": "expected c59280618adbc7cc7dcc53e6cd7f1ff8b35650d0a99cd230a79f3f58581af827 got c59280618adbc7cc7dcc53e6cd7f1ff8b35650d0a99cd230a79f3f58581af827"
+    },
+    {
+      "name": "chariot-b-northwest-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-northwest-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-northwest-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-northwest-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-northwest-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-b-views-r3.png"
+    },
+    {
+      "name": "chariot-b-northwest-source-sha256",
+      "pass": true,
+      "detail": "expected d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c got d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c"
+    },
+    {
+      "name": "chariot-b-northwest-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[0, 418, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-b-northwest-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[69.60843373493975, 160.02409638554218]"
+    },
+    {
+      "name": "chariot-b-northwest-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[69.60843373493975, 160.02409638554218] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-b-northwest-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-northwest-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-northwest-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-b-northwest-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-north-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-north.png"
+    },
+    {
+      "name": "chariot-b-north-full-sha256",
+      "pass": true,
+      "detail": "expected bcf90c3e813f604105cb1ab30048f073cdacd4d907d7ca78133a998506560958 got bcf90c3e813f604105cb1ab30048f073cdacd4d907d7ca78133a998506560958"
+    },
+    {
+      "name": "chariot-b-north-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-north-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-b-north-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-north-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-north-rear.png"
+    },
+    {
+      "name": "chariot-b-north-rear-sha256",
+      "pass": true,
+      "detail": "expected 81e980c745425317f2a1ced6d7f583be66353793bb149a6715e538cbadaf4175 got 81e980c745425317f2a1ced6d7f583be66353793bb149a6715e538cbadaf4175"
+    },
+    {
+      "name": "chariot-b-north-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-north-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-north-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-north-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-north-front.png"
+    },
+    {
+      "name": "chariot-b-north-front-sha256",
+      "pass": true,
+      "detail": "expected 7dbdfca8c9003c2eff2080b5cc359560a701ce4957df36d10c73f098dc347a42 got 7dbdfca8c9003c2eff2080b5cc359560a701ce4957df36d10c73f098dc347a42"
+    },
+    {
+      "name": "chariot-b-north-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-north-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-north-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-north-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-north-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-b-views-r3.png"
+    },
+    {
+      "name": "chariot-b-north-source-sha256",
+      "pass": true,
+      "detail": "expected d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c got d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c"
+    },
+    {
+      "name": "chariot-b-north-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[418, 418, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-b-north-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[89.57831325301206, 160.83734939759037]"
+    },
+    {
+      "name": "chariot-b-north-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[89.57831325301206, 160.83734939759037] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-b-north-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-north-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-north-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-b-north-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-northeast-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-northeast.png"
+    },
+    {
+      "name": "chariot-b-northeast-full-sha256",
+      "pass": true,
+      "detail": "expected 9750488279e4f8b3655c83d4cd06c37b09599ddfe30eeef0c1cdd9c8f7b33d26 got 9750488279e4f8b3655c83d4cd06c37b09599ddfe30eeef0c1cdd9c8f7b33d26"
+    },
+    {
+      "name": "chariot-b-northeast-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-northeast-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-b-northeast-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-northeast-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-northeast-rear.png"
+    },
+    {
+      "name": "chariot-b-northeast-rear-sha256",
+      "pass": true,
+      "detail": "expected 98aebfcc6cbe4169d054c526e705b2e0675bf6d6963fc26d19f3faaa047607de got 98aebfcc6cbe4169d054c526e705b2e0675bf6d6963fc26d19f3faaa047607de"
+    },
+    {
+      "name": "chariot-b-northeast-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-northeast-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-northeast-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-northeast-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-northeast-front.png"
+    },
+    {
+      "name": "chariot-b-northeast-front-sha256",
+      "pass": true,
+      "detail": "expected 93ff09aebcb84b349ac4a01c1cd5b16eabef208b3be37ede4ab53b077d7bfdec got 93ff09aebcb84b349ac4a01c1cd5b16eabef208b3be37ede4ab53b077d7bfdec"
+    },
+    {
+      "name": "chariot-b-northeast-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-northeast-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-northeast-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-northeast-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-northeast-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-b-views-r3.png"
+    },
+    {
+      "name": "chariot-b-northeast-source-sha256",
+      "pass": true,
+      "detail": "expected d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c got d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c"
+    },
+    {
+      "name": "chariot-b-northeast-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[836, 418, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-b-northeast-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[71.32530120481928, 159.48192771084337]"
+    },
+    {
+      "name": "chariot-b-northeast-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[71.32530120481928, 159.48192771084337] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-b-northeast-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-northeast-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-northeast-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-b-northeast-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-east-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-east.png"
+    },
+    {
+      "name": "chariot-b-east-full-sha256",
+      "pass": true,
+      "detail": "expected d673a53b72e29d2aa9ce1b0c730a17f63af7fdb369abc5b5decfab7e50edf73a got d673a53b72e29d2aa9ce1b0c730a17f63af7fdb369abc5b5decfab7e50edf73a"
+    },
+    {
+      "name": "chariot-b-east-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-east-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-b-east-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-east-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-east-rear.png"
+    },
+    {
+      "name": "chariot-b-east-rear-sha256",
+      "pass": true,
+      "detail": "expected a006a1b8e6d6da8ccce1d58078bbe3caea02dab47eec25eec5b3cf75bda6c9a6 got a006a1b8e6d6da8ccce1d58078bbe3caea02dab47eec25eec5b3cf75bda6c9a6"
+    },
+    {
+      "name": "chariot-b-east-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-east-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-east-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-east-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\native\\chariot-b-east-front.png"
+    },
+    {
+      "name": "chariot-b-east-front-sha256",
+      "pass": true,
+      "detail": "expected eb66761e56d8e6daed33ac0531ff1fd8751317bc0baafb247ce3a579cb6bf617 got eb66761e56d8e6daed33ac0531ff1fd8751317bc0baafb247ce3a579cb6bf617"
+    },
+    {
+      "name": "chariot-b-east-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-east-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-east-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-east-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-east-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\gear\\chariot\\sources\\chariot-b-views-r3.png"
+    },
+    {
+      "name": "chariot-b-east-source-sha256",
+      "pass": true,
+      "detail": "expected d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c got d48af14e018ae35762c41985b989f652dc319c3d3b0a3ef740f40fcba65cfb2c"
+    },
+    {
+      "name": "chariot-b-east-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[0, 836, 418, 418] source=[1254, 1254]"
+    },
+    {
+      "name": "chariot-b-east-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[66.26506024096386, 159.3012048192771]"
+    },
+    {
+      "name": "chariot-b-east-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[66.26506024096386, 159.3012048192771] pivot=[96, 160]"
+    },
+    {
+      "name": "chariot-b-east-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-east-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-east-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-b-east-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-southeast-full-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\gear\\native\\chariot-b.png"
+    },
+    {
+      "name": "chariot-b-southeast-full-sha256",
+      "pass": true,
+      "detail": "expected f17c7320e0de87421b94e9807cc44ac8e316f9a4763838e68fc56c2d85dfa78d got f17c7320e0de87421b94e9807cc44ac8e316f9a4763838e68fc56c2d85dfa78d"
+    },
+    {
+      "name": "chariot-b-southeast-full-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-southeast-full-opaque",
+      "pass": true,
+      "detail": "device must contain alpha>=128 pixels"
+    },
+    {
+      "name": "chariot-b-southeast-full-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-southeast-rear-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\gear\\native\\chariot-b-rear.png"
+    },
+    {
+      "name": "chariot-b-southeast-rear-sha256",
+      "pass": true,
+      "detail": "expected f268df2d470b51c70480570f6725cac907ba6523812da140c66bbd1a9017ddcf got f268df2d470b51c70480570f6725cac907ba6523812da140c66bbd1a9017ddcf"
+    },
+    {
+      "name": "chariot-b-southeast-rear-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-southeast-rear-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-southeast-rear-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-southeast-front-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\gear\\native\\chariot-b-front.png"
+    },
+    {
+      "name": "chariot-b-southeast-front-sha256",
+      "pass": true,
+      "detail": "expected f17c7320e0de87421b94e9807cc44ac8e316f9a4763838e68fc56c2d85dfa78d got f17c7320e0de87421b94e9807cc44ac8e316f9a4763838e68fc56c2d85dfa78d"
+    },
+    {
+      "name": "chariot-b-southeast-front-canvas",
+      "pass": true,
+      "detail": "expected [192, 192] got [192, 192]"
+    },
+    {
+      "name": "chariot-b-southeast-front-opaque",
+      "pass": true,
+      "detail": "front layer must contain alpha>=128 pixels; rear may be empty in the frozen SE pilot"
+    },
+    {
+      "name": "chariot-b-southeast-front-gutter",
+      "pass": true,
+      "detail": "{'left': False, 'top': False, 'right': False, 'bottom': False}"
+    },
+    {
+      "name": "chariot-b-southeast-front-rear-present",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-southeast-source-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\gear\\chariot-b.png"
+    },
+    {
+      "name": "chariot-b-southeast-source-sha256",
+      "pass": true,
+      "detail": "expected 51da64f9d3c71c0b8bc7b1b6b189dc6bab64801ef7ed41527faacad66a5fe698 got 51da64f9d3c71c0b8bc7b1b6b189dc6bab64801ef7ed41527faacad66a5fe698"
+    },
+    {
+      "name": "chariot-b-southeast-source-cell-in-bounds",
+      "pass": true,
+      "detail": "cell=[0, 0, 1247, 1261] source=[1247, 1261]"
+    },
+    {
+      "name": "chariot-b-southeast-registered-ground-in-canvas",
+      "pass": true,
+      "detail": "[70.78313253012048, 159.75301204819277]"
+    },
+    {
+      "name": "chariot-b-southeast-registered-ground-near-bottom",
+      "pass": true,
+      "detail": "ground=[70.78313253012048, 159.75301204819277] pivot=[80, 160]"
+    },
+    {
+      "name": "chariot-b-southeast-source-ground-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-southeast-registered-grip-recorded",
+      "pass": true
+    },
+    {
+      "name": "chariot-b-southeast-ground-root-policy",
+      "pass": true,
+      "detail": "Ground-rooted apparatus after deployment; root must use world origin and wheel-ground registration, not drag the whole device with an animated hand."
+    },
+    {
+      "name": "chariot-b-southeast-no-wearer-hand-anchor",
+      "pass": true
+    },
+    {
+      "name": "registration-owner-approval-remains-false",
+      "pass": true
+    },
+    {
+      "name": "registration-runtime-remains-false",
+      "pass": true
+    },
+    {
+      "name": "lineage-48-jobs",
+      "pass": true,
+      "detail": "got 48"
+    },
+    {
+      "name": "chariot-a-north-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-north-core-planned.txt"
+    },
+    {
+      "name": "chariot-a-north-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 59b712f7952dfbf3a2172dfa612b1bd010e3a6ea5588d2075eead3235a3921ce got 59b712f7952dfbf3a2172dfa612b1bd010e3a6ea5588d2075eead3235a3921ce"
+    },
+    {
+      "name": "chariot-a-north-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-north-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-a-north-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-north-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-north-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-a-north-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-north-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-north-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-a-north-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-a-north-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-north-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-north-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-north-damage-planned.txt"
+    },
+    {
+      "name": "chariot-a-north-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 7979885af1d8ccc494c2d444bf04aeec58e76cd1503e40ced9c8b90f1d1e6cc6 got 7979885af1d8ccc494c2d444bf04aeec58e76cd1503e40ced9c8b90f1d1e6cc6"
+    },
+    {
+      "name": "chariot-a-north-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-north-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-north-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-north-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-north-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-north-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-north-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-north-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-north-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-north-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-north-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-north-practice-planned.txt"
+    },
+    {
+      "name": "chariot-a-north-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected dab60f6377ea977a28f0ae1c9be2ef1c3a0d13e3d947c8161119b15d316b4c6e got dab60f6377ea977a28f0ae1c9be2ef1c3a0d13e3d947c8161119b15d316b4c6e"
+    },
+    {
+      "name": "chariot-a-north-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-north-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-north-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-north-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-north-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-north-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-north-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-north-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-north-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-north-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northeast-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-northeast-core-planned.txt"
+    },
+    {
+      "name": "chariot-a-northeast-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected dd66df3a640fa5454915a8b137154ca3f43571b50f5e96a32422da3c4486fca7 got dd66df3a640fa5454915a8b137154ca3f43571b50f5e96a32422da3c4486fca7"
+    },
+    {
+      "name": "chariot-a-northeast-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-northeast-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-a-northeast-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-northeast-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-northeast-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-a-northeast-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-northeast-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-northeast-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-a-northeast-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-a-northeast-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northeast-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northeast-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-northeast-damage-planned.txt"
+    },
+    {
+      "name": "chariot-a-northeast-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 787be86afe6a46b01fbcbfa676721ef0b576a4bd60055bc4587f3c59f20063cf got 787be86afe6a46b01fbcbfa676721ef0b576a4bd60055bc4587f3c59f20063cf"
+    },
+    {
+      "name": "chariot-a-northeast-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-northeast-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-northeast-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-northeast-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northeast-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-northeast-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-northeast-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-northeast-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-northeast-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northeast-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northeast-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-northeast-practice-planned.txt"
+    },
+    {
+      "name": "chariot-a-northeast-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 077dfa7e4e053e151e1a80dfeeb89bc82b3361e88984cfa13a28fcabbd088cd5 got 077dfa7e4e053e151e1a80dfeeb89bc82b3361e88984cfa13a28fcabbd088cd5"
+    },
+    {
+      "name": "chariot-a-northeast-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-northeast-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-northeast-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-northeast-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northeast-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-northeast-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-northeast-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-northeast-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-northeast-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northeast-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-east-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-east-core-planned.txt"
+    },
+    {
+      "name": "chariot-a-east-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 8cc07f6e2ffe5dfdc96e74ad255a8aa75355fae336948b28550ac01b8880a227 got 8cc07f6e2ffe5dfdc96e74ad255a8aa75355fae336948b28550ac01b8880a227"
+    },
+    {
+      "name": "chariot-a-east-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-east-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-a-east-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-east-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-east-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-a-east-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-east-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-east-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-a-east-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-a-east-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-east-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-east-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-east-damage-planned.txt"
+    },
+    {
+      "name": "chariot-a-east-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 0ee980b4b80606a399c5b58d032ef46cf7efa9ceedfbe9fb36a3450a6d91a5e7 got 0ee980b4b80606a399c5b58d032ef46cf7efa9ceedfbe9fb36a3450a6d91a5e7"
+    },
+    {
+      "name": "chariot-a-east-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-east-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-east-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-east-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-east-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-east-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-east-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-east-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-east-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-east-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-east-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-east-practice-planned.txt"
+    },
+    {
+      "name": "chariot-a-east-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 100639aab15b3563516e0c033c9de5d5eb75b971f4329ec4ee9a2d5e36dc6069 got 100639aab15b3563516e0c033c9de5d5eb75b971f4329ec4ee9a2d5e36dc6069"
+    },
+    {
+      "name": "chariot-a-east-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-east-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-east-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-east-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-east-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-east-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-east-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-east-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-east-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-east-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southeast-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-southeast-core-planned.txt"
+    },
+    {
+      "name": "chariot-a-southeast-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 33cd1f6ed588532094f701551e6392cd1dfab9e4cf603a1fdf448a861f80ef99 got 33cd1f6ed588532094f701551e6392cd1dfab9e4cf603a1fdf448a861f80ef99"
+    },
+    {
+      "name": "chariot-a-southeast-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-southeast-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-a-southeast-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-southeast-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-southeast-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-a-southeast-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-southeast-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-southeast-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-a-southeast-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-a-southeast-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southeast-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southeast-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-southeast-damage-planned.txt"
+    },
+    {
+      "name": "chariot-a-southeast-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected a0886cccb573309419497dd680d6fa98677b70042f5955c9fb2c6a120c731f85 got a0886cccb573309419497dd680d6fa98677b70042f5955c9fb2c6a120c731f85"
+    },
+    {
+      "name": "chariot-a-southeast-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-southeast-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-southeast-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-southeast-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-southeast-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-southeast-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-southeast-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-southeast-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-southeast-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southeast-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southeast-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-southeast-practice-planned.txt"
+    },
+    {
+      "name": "chariot-a-southeast-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected b7389e6574041af3eac07bc045029bd9cf7f361b3f8cc715018b60780fb8a37b got b7389e6574041af3eac07bc045029bd9cf7f361b3f8cc715018b60780fb8a37b"
+    },
+    {
+      "name": "chariot-a-southeast-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-southeast-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-southeast-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-southeast-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-southeast-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-southeast-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-southeast-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-southeast-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-southeast-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southeast-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-south-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-south-core-planned.txt"
+    },
+    {
+      "name": "chariot-a-south-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 37c13a89ccdc28006ccbfaaaa6a06ce1bc331289b9cf1b2d749c3d7ba95a391f got 37c13a89ccdc28006ccbfaaaa6a06ce1bc331289b9cf1b2d749c3d7ba95a391f"
+    },
+    {
+      "name": "chariot-a-south-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-south-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-a-south-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-south-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-south-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-a-south-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-south-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-south-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-a-south-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-a-south-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-south-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-south-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-south-damage-planned.txt"
+    },
+    {
+      "name": "chariot-a-south-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected bb0a43c5656ca6260b0ab60f4da71ecec7d35a9d44dd2a3bf9579a9913422977 got bb0a43c5656ca6260b0ab60f4da71ecec7d35a9d44dd2a3bf9579a9913422977"
+    },
+    {
+      "name": "chariot-a-south-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-south-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-south-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-south-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-south-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-south-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-south-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-south-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-south-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-south-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-south-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-south-practice-planned.txt"
+    },
+    {
+      "name": "chariot-a-south-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected aba14552f13d2a597ff98194e43ba18bc4f9972ca89e41966976837f68ff2c2e got aba14552f13d2a597ff98194e43ba18bc4f9972ca89e41966976837f68ff2c2e"
+    },
+    {
+      "name": "chariot-a-south-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-south-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-south-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-south-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-south-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-south-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-south-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-south-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-south-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-south-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southwest-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-southwest-core-planned.txt"
+    },
+    {
+      "name": "chariot-a-southwest-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected c6f8f3ea76b5baf5d2d96ad3697d4d88ca333c8a0d58254ce800b3fcafc04b4b got c6f8f3ea76b5baf5d2d96ad3697d4d88ca333c8a0d58254ce800b3fcafc04b4b"
+    },
+    {
+      "name": "chariot-a-southwest-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-southwest-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-a-southwest-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-southwest-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-southwest-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-a-southwest-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-southwest-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-southwest-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-a-southwest-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-a-southwest-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southwest-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southwest-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-southwest-damage-planned.txt"
+    },
+    {
+      "name": "chariot-a-southwest-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 3702a04cbb00e4ca07d2b0a6aec6133a3d3ce69b3d16fd7a3181af8e788627b9 got 3702a04cbb00e4ca07d2b0a6aec6133a3d3ce69b3d16fd7a3181af8e788627b9"
+    },
+    {
+      "name": "chariot-a-southwest-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-southwest-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-southwest-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-southwest-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-southwest-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-southwest-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-southwest-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-southwest-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-southwest-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southwest-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southwest-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-southwest-practice-planned.txt"
+    },
+    {
+      "name": "chariot-a-southwest-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected e948dc7016c1a39154e2fd01a20058ad902949fa7c5b456f18177520f9efd7bc got e948dc7016c1a39154e2fd01a20058ad902949fa7c5b456f18177520f9efd7bc"
+    },
+    {
+      "name": "chariot-a-southwest-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-southwest-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-southwest-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-southwest-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-southwest-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-southwest-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-southwest-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-southwest-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-southwest-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-southwest-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-west-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-west-core-planned.txt"
+    },
+    {
+      "name": "chariot-a-west-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 48be9c3820bd48f24066128b35742375a0cbdf7fcfd1083a38f8f222aebdb0a6 got 48be9c3820bd48f24066128b35742375a0cbdf7fcfd1083a38f8f222aebdb0a6"
+    },
+    {
+      "name": "chariot-a-west-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-west-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-a-west-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-west-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-west-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-a-west-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-west-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-west-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-a-west-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-a-west-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-west-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-west-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-west-damage-planned.txt"
+    },
+    {
+      "name": "chariot-a-west-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 0a3d5ba549c0797b1f93bd9c9230f6e0e0cf1a4577cc6f368d6cc70d32e943b5 got 0a3d5ba549c0797b1f93bd9c9230f6e0e0cf1a4577cc6f368d6cc70d32e943b5"
+    },
+    {
+      "name": "chariot-a-west-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-west-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-west-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-west-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-west-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-west-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-west-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-west-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-west-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-west-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-west-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-west-practice-planned.txt"
+    },
+    {
+      "name": "chariot-a-west-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 6a531917a5f7388961d1e166503dfb785a78543d7e3a96d2b071c5c7030a275f got 6a531917a5f7388961d1e166503dfb785a78543d7e3a96d2b071c5c7030a275f"
+    },
+    {
+      "name": "chariot-a-west-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-west-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-west-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-west-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-west-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-west-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-west-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-west-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-west-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-west-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northwest-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-northwest-core-planned.txt"
+    },
+    {
+      "name": "chariot-a-northwest-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 45fc3126291a98ae11f77756bbab0668893136df2ba5d333cf6ebded35d6c77d got 45fc3126291a98ae11f77756bbab0668893136df2ba5d333cf6ebded35d6c77d"
+    },
+    {
+      "name": "chariot-a-northwest-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-northwest-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-a-northwest-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-northwest-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-northwest-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-a-northwest-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-northwest-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-a-northwest-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-a-northwest-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-a-northwest-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northwest-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northwest-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-northwest-damage-planned.txt"
+    },
+    {
+      "name": "chariot-a-northwest-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected a1acbca4f16cc53874c95ceccf40d6e1be3175fdbac5b7e19747313baa058e9f got a1acbca4f16cc53874c95ceccf40d6e1be3175fdbac5b7e19747313baa058e9f"
+    },
+    {
+      "name": "chariot-a-northwest-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-northwest-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-northwest-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-northwest-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northwest-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-northwest-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-northwest-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-northwest-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-northwest-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northwest-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northwest-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-a-northwest-practice-planned.txt"
+    },
+    {
+      "name": "chariot-a-northwest-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected eb021e852cd1fb1bea69d5e16818e102c463fbe70805557652c551cd0349030d got eb021e852cd1fb1bea69d5e16818e102c463fbe70805557652c551cd0349030d"
+    },
+    {
+      "name": "chariot-a-northwest-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-northwest-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-a-northwest-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-a-northwest-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northwest-nearest8x.png"
+    },
+    {
+      "name": "chariot-a-northwest-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-a-northwest-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-a-northwest-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-a-northwest-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-a-northwest-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-north-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-north-core-planned.txt"
+    },
+    {
+      "name": "chariot-b-north-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected a60fa444a55708112615c8fd4a729b1335862072dc517e0e035f804bbbb36294 got a60fa444a55708112615c8fd4a729b1335862072dc517e0e035f804bbbb36294"
+    },
+    {
+      "name": "chariot-b-north-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-north-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-b-north-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-north-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-north-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-b-north-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-north-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-north-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-b-north-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-b-north-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-north-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-north-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-north-damage-planned.txt"
+    },
+    {
+      "name": "chariot-b-north-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected c688b082a7c9b0d26df950e8d02af4aad9603e4bd9ac4a33cf4c51d39d4a2ad1 got c688b082a7c9b0d26df950e8d02af4aad9603e4bd9ac4a33cf4c51d39d4a2ad1"
+    },
+    {
+      "name": "chariot-b-north-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-north-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-north-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-north-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-north-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-north-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-north-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-north-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-north-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-north-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-north-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-north-practice-planned.txt"
+    },
+    {
+      "name": "chariot-b-north-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 3e2ff5ca3c0e27fcf6e3bef16735536325b200b6c06c8007d5fdf10661418931 got 3e2ff5ca3c0e27fcf6e3bef16735536325b200b6c06c8007d5fdf10661418931"
+    },
+    {
+      "name": "chariot-b-north-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-north-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-north-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-north-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-north-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-north-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-north-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-north-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-north-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-north-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northeast-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-northeast-core-planned.txt"
+    },
+    {
+      "name": "chariot-b-northeast-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 5f0c58a6a58c6093217b3303740b000f085f29497fd42ff66ba85346d329b86d got 5f0c58a6a58c6093217b3303740b000f085f29497fd42ff66ba85346d329b86d"
+    },
+    {
+      "name": "chariot-b-northeast-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-northeast-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-b-northeast-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-northeast-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-northeast-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-b-northeast-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-northeast-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-northeast-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-b-northeast-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-b-northeast-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northeast-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northeast-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-northeast-damage-planned.txt"
+    },
+    {
+      "name": "chariot-b-northeast-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected c1f24f126f5ba6940e1cf5bf70896c3200b59cc8cb9abc765736091c2be01848 got c1f24f126f5ba6940e1cf5bf70896c3200b59cc8cb9abc765736091c2be01848"
+    },
+    {
+      "name": "chariot-b-northeast-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-northeast-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-northeast-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-northeast-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northeast-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-northeast-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-northeast-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-northeast-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-northeast-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northeast-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northeast-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-northeast-practice-planned.txt"
+    },
+    {
+      "name": "chariot-b-northeast-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 9a0df2b8f244b593d2935311b90ea27f4d4ef455cafca2e8c4cf188d30688ab2 got 9a0df2b8f244b593d2935311b90ea27f4d4ef455cafca2e8c4cf188d30688ab2"
+    },
+    {
+      "name": "chariot-b-northeast-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-northeast-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-northeast-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-northeast-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northeast-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-northeast-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-northeast-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-northeast-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-northeast-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northeast-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-east-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-east-core-planned.txt"
+    },
+    {
+      "name": "chariot-b-east-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected b83e8081550ede8db96704f420ff09a085a4860a3b20328a106b39c9c7207ba3 got b83e8081550ede8db96704f420ff09a085a4860a3b20328a106b39c9c7207ba3"
+    },
+    {
+      "name": "chariot-b-east-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-east-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-b-east-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-east-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-east-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-b-east-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-east-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-east-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-b-east-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-b-east-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-east-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-east-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-east-damage-planned.txt"
+    },
+    {
+      "name": "chariot-b-east-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 71293c70a2bf8785feeae5cfe91e412c97a9f1cda30810849a0a0a48626b88ac got 71293c70a2bf8785feeae5cfe91e412c97a9f1cda30810849a0a0a48626b88ac"
+    },
+    {
+      "name": "chariot-b-east-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-east-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-east-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-east-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-east-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-east-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-east-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-east-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-east-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-east-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-east-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-east-practice-planned.txt"
+    },
+    {
+      "name": "chariot-b-east-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected bb5effb99fbc6fb99f4dfa66940d902805bbf092f886c87f2af87a85603fcf9f got bb5effb99fbc6fb99f4dfa66940d902805bbf092f886c87f2af87a85603fcf9f"
+    },
+    {
+      "name": "chariot-b-east-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-east-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-east-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-east-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-east-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-east-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-east-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-east-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-east-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-east-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southeast-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-southeast-core-planned.txt"
+    },
+    {
+      "name": "chariot-b-southeast-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 704ea277a6f67c88a7310721be3dc4585620a76b1233c975c272ae598b814060 got 704ea277a6f67c88a7310721be3dc4585620a76b1233c975c272ae598b814060"
+    },
+    {
+      "name": "chariot-b-southeast-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-southeast-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-b-southeast-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-southeast-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-southeast-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-b-southeast-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-southeast-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-southeast-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-b-southeast-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-b-southeast-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southeast-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southeast-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-southeast-damage-planned.txt"
+    },
+    {
+      "name": "chariot-b-southeast-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected a5771a1d4ca434fb4ed7e91422d02a3d7892efa3300ec011886372d702411aa8 got a5771a1d4ca434fb4ed7e91422d02a3d7892efa3300ec011886372d702411aa8"
+    },
+    {
+      "name": "chariot-b-southeast-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-southeast-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-southeast-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-southeast-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-southeast-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-southeast-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-southeast-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-southeast-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-southeast-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southeast-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southeast-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-southeast-practice-planned.txt"
+    },
+    {
+      "name": "chariot-b-southeast-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected b111e2e22786eca85bfde2c74b3484c69227432a62be655ecf26e25cf3a1db91 got b111e2e22786eca85bfde2c74b3484c69227432a62be655ecf26e25cf3a1db91"
+    },
+    {
+      "name": "chariot-b-southeast-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-southeast-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-southeast-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-southeast-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-southeast-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-southeast-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-southeast-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-southeast-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-southeast-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southeast-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-south-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-south-core-planned.txt"
+    },
+    {
+      "name": "chariot-b-south-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 3a2f2bf650af33a3d9478b6e2034c6703cccf1b5248b18cac26b952b1d2c5b3c got 3a2f2bf650af33a3d9478b6e2034c6703cccf1b5248b18cac26b952b1d2c5b3c"
+    },
+    {
+      "name": "chariot-b-south-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-south-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-b-south-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-south-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-south-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-b-south-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-south-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-south-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-b-south-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-b-south-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-south-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-south-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-south-damage-planned.txt"
+    },
+    {
+      "name": "chariot-b-south-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 96989f54c1f2c1723987876bfdba9591d18a40fcd8a59371c75abe69dbe8b047 got 96989f54c1f2c1723987876bfdba9591d18a40fcd8a59371c75abe69dbe8b047"
+    },
+    {
+      "name": "chariot-b-south-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-south-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-south-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-south-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-south-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-south-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-south-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-south-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-south-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-south-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-south-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-south-practice-planned.txt"
+    },
+    {
+      "name": "chariot-b-south-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 15e62d8de8755cec9b6473bc333bc71928a4f249df10a11398bab2fc0883ee2c got 15e62d8de8755cec9b6473bc333bc71928a4f249df10a11398bab2fc0883ee2c"
+    },
+    {
+      "name": "chariot-b-south-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-south-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-south-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-south-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-south-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-south-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-south-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-south-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-south-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-south-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southwest-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-southwest-core-planned.txt"
+    },
+    {
+      "name": "chariot-b-southwest-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 38352467c6c4cd02645732233d7646fc13a917e0d7d0eeed908e6d7177a121f7 got 38352467c6c4cd02645732233d7646fc13a917e0d7d0eeed908e6d7177a121f7"
+    },
+    {
+      "name": "chariot-b-southwest-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-southwest-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-b-southwest-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-southwest-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-southwest-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-b-southwest-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-southwest-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-southwest-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-b-southwest-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-b-southwest-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southwest-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southwest-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-southwest-damage-planned.txt"
+    },
+    {
+      "name": "chariot-b-southwest-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 61ea9a3decc9cb66033f56e8cb6a75c35be8e21ed3f58d214e526184f3af6d80 got 61ea9a3decc9cb66033f56e8cb6a75c35be8e21ed3f58d214e526184f3af6d80"
+    },
+    {
+      "name": "chariot-b-southwest-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-southwest-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-southwest-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-southwest-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-southwest-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-southwest-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-southwest-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-southwest-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-southwest-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southwest-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southwest-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-southwest-practice-planned.txt"
+    },
+    {
+      "name": "chariot-b-southwest-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected ba06a42d992f4f8713f8b4ca5ccf0929aca234945db1f69eaeff16fdef27c25c got ba06a42d992f4f8713f8b4ca5ccf0929aca234945db1f69eaeff16fdef27c25c"
+    },
+    {
+      "name": "chariot-b-southwest-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-southwest-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-southwest-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-southwest-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-southwest-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-southwest-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-southwest-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-southwest-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-southwest-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-southwest-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-west-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-west-core-planned.txt"
+    },
+    {
+      "name": "chariot-b-west-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 89b3bf7f5aa45ac9f305dcd13d76bfc7d29ad523d7b937c6b1e473ade1545caf got 89b3bf7f5aa45ac9f305dcd13d76bfc7d29ad523d7b937c6b1e473ade1545caf"
+    },
+    {
+      "name": "chariot-b-west-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-west-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-b-west-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-west-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-west-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-b-west-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-west-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-west-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-b-west-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-b-west-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-west-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-west-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-west-damage-planned.txt"
+    },
+    {
+      "name": "chariot-b-west-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected fffad3d49a7055e3798a4ec94deb174f0609a7f0e340f3ba3f4aefb68fbc1f7f got fffad3d49a7055e3798a4ec94deb174f0609a7f0e340f3ba3f4aefb68fbc1f7f"
+    },
+    {
+      "name": "chariot-b-west-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-west-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-west-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-west-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-west-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-west-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-west-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-west-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-west-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-west-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-west-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-west-practice-planned.txt"
+    },
+    {
+      "name": "chariot-b-west-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 546b4383bbf17d4a689a6469ee0d3df7b6a0e870465032e284a0cbf79daf479f got 546b4383bbf17d4a689a6469ee0d3df7b6a0e870465032e284a0cbf79daf479f"
+    },
+    {
+      "name": "chariot-b-west-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-west-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-west-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-west-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-west-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-west-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-west-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-west-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-west-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-west-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northwest-core-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-northwest-core-planned.txt"
+    },
+    {
+      "name": "chariot-b-northwest-core-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected f59785452fb976a175d81661e20ac3a635ec3c010fa28f2cc1a26e58faceeed3 got f59785452fb976a175d81661e20ac3a635ec3c010fa28f2cc1a26e58faceeed3"
+    },
+    {
+      "name": "chariot-b-northwest-core-planned-input-1-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-northwest-core-planned\\1.png"
+    },
+    {
+      "name": "chariot-b-northwest-core-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-P1-native-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-northwest-core-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-northwest-core-planned\\2.png"
+    },
+    {
+      "name": "chariot-b-northwest-core-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-northwest-core-planned-input-3-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\inputs\\core\\chariot-b-northwest-core-planned\\3.png"
+    },
+    {
+      "name": "chariot-b-northwest-core-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-P1-full-source-outfit-support-SE-does-not-override-view"
+    },
+    {
+      "name": "chariot-b-northwest-core-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northwest-core-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northwest-damage-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-northwest-damage-planned.txt"
+    },
+    {
+      "name": "chariot-b-northwest-damage-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected 341f83966b24892cf246f472d9458e3d303532f026fd799d03830ba86e0ca126 got 341f83966b24892cf246f472d9458e3d303532f026fd799d03830ba86e0ca126"
+    },
+    {
+      "name": "chariot-b-northwest-damage-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-northwest-damage-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-northwest-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-northwest-damage-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northwest-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-northwest-damage-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-northwest-damage-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-northwest-damage-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-northwest-damage-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northwest-damage-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northwest-practice-planned-prompt-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\chariot\\prompts\\chariot-b-northwest-practice-planned.txt"
+    },
+    {
+      "name": "chariot-b-northwest-practice-planned-prompt-sha256",
+      "pass": true,
+      "detail": "expected bceb246e5497fc36e115490c318154509f8870227fb653a4c1b403e0c3615d9d got bceb246e5497fc36e115490c318154509f8870227fb653a4c1b403e0c3615d9d"
+    },
+    {
+      "name": "chariot-b-northwest-practice-planned-input-1-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-northwest-practice-planned-input1-own-primary",
+      "pass": true,
+      "detail": "own-reviewed-chariot-b-northwest-core-neutral-nearest8x-PRIMARY"
+    },
+    {
+      "name": "chariot-b-northwest-practice-planned-input-2-exists",
+      "pass": true,
+      "detail": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northwest-nearest8x.png"
+    },
+    {
+      "name": "chariot-b-northwest-practice-planned-input2-wang-support-only",
+      "pass": true,
+      "detail": "Wang-same-view-anatomy-pixel-camera-support-only"
+    },
+    {
+      "name": "chariot-b-northwest-practice-planned-input-3-exists",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "name": "chariot-b-northwest-practice-planned-input3-own-support",
+      "pass": true,
+      "detail": "own-same-family-identity-view-reviewed-core-raw-support"
+    },
+    {
+      "name": "chariot-b-northwest-practice-planned-generation-closed",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "chariot-b-northwest-practice-planned-raw-not-produced-yet",
+      "pass": true,
+      "detail": "False"
+    },
+    {
+      "name": "lineage-groups",
+      "pass": true,
+      "detail": "{'core': 16, 'damage': 16, 'practice': 16}"
+    },
+    {
+      "name": "lineage-input-role-policy",
+      "pass": true,
+      "detail": "[]"
+    }
+  ],
+  "lineage": {
+    "checks": 483,
+    "passed": true,
+    "readyJobs": 16,
+    "jobs": 48
+  },
+  "gearModified": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false
+}

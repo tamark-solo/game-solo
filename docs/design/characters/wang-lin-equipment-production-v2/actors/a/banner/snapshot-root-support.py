@@ -1,0 +1,6 @@
+from pathlib import Path
+import json,hashlib
+ROOT=Path(__file__).resolve().parent;V2=ROOT.parents[2]
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+reg=json.loads((ROOT/'registration.json').read_text(encoding='utf-8'));clips=[c for c in reg['clips'] if c['action'] in ['death','meditate']];ids={c['sourceId'] for c in clips};sources=[s for s in reg['sources'] if s['id'] in ids];out={'schema':'A-banner-semantic-root-support-snapshot-1','rootBodyRegistrationSha256':sha(ROOT/'registration.json'),'clips':clips,'sources':sources,'requiredClips':16,'requiredFrames':96,'fieldsRelativeToV2':True,'frozenObservationOnly':True,'doesNotApproveArtOrRuntime':True,'policy':'Source raw, sourceRect/bodyCell, sourceFactor and canonical at observation retained. Observe actual dark boots or clothed support projection for prone/seated, mark uncertainty. No hem/hair as exact bone, do not edit actors. Source palm coordinates stay in raw space; actor owner recomputes native sockets after imports.'}
+p=ROOT/'support-inputs'/'semantic-roots-registration.json';p.parent.mkdir(exist_ok=True);p.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print(json.dumps({'file':str(p.relative_to(V2)).replace('\\','/'),'sha256':sha(p),'clips':len(clips),'frames':sum(len(c['frames']) for c in clips)}))

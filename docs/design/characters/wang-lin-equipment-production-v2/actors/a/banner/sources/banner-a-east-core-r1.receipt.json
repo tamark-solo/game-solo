@@ -1,0 +1,83 @@
+{
+  "id": "banner-a-east-core-r1",
+  "identityId": "a",
+  "familyId": "banner",
+  "direction": "east",
+  "group": "core",
+  "actions": [
+    "idle",
+    "run",
+    "cast-single-target",
+    "cast-aoe"
+  ],
+  "calibrationCells": 6,
+  "prompt": "actors/a/banner/prompts/history/banner-a-east-core-r1-actual-tool-prompt.txt",
+  "promptSha256": "79baeefc0661c198a4a273e24c8786fbd7057eb609b91cadb3ccdfe574f66aa8",
+  "raw": "actors/a/banner/sources/banner-a-east-core-r1.png",
+  "inputs": [
+    {
+      "file": "actors/a/banner/inputs/core/banner-a-east-core-r1/1.png",
+      "sha256": "b85dc7a8c32bd8e173129d38ee123e0501ccd0d8d5c9031d846f51d49146e5df",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\huyen-tam-banner-p1-nearest8x.png",
+      "role": "own-approved-A-banner-P1-primary"
+    },
+    {
+      "file": "actors/a/banner/inputs/core/banner-a-east-core-r1/2.png",
+      "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-east-nearest8x.png",
+      "role": "Wang-same-view-style-anatomy-only"
+    },
+    {
+      "file": "actors/a/banner/inputs/core/banner-a-east-core-r1/3.png",
+      "sha256": "d4a4155b26152ec9369e5e9cefdd03cd3b1aa90f1d652b1aaac90f1987c1b61a",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\banner-a.png",
+      "role": "own-A-banner-P1-full-source-outfit-support"
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": null,
+  "tool": "built-in-imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    6,
+    5
+  ],
+  "requestedSourcePoses": 30,
+  "status": "generated-awaiting-source-review",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "promptPriorVersions": [
+    {
+      "file": "actors/a/banner/prompts/history/banner-a-east-core-r1-ambiguous-grip.txt",
+      "sha256": "910f2e94a140e6e6533f00b9f6309327eb9dc527c85c1a2eaf4497571cb131b9",
+      "status": "planned-before-call"
+    },
+    {
+      "file": "actors/a/banner/prompts/history/banner-a-east-core-r1-closed-through-cast.txt",
+      "sha256": "bff8fa50cbc0e7119c3d45fd072f093b8fb219c5d1af04550c35a51cb935aa63",
+      "status": "planned-prior-choreography-before-call"
+    }
+  ],
+  "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1387f-9141-7e10-8b79-ce994001f7cb\\exec-8805100c-a564-44f8-b39e-cd97adbe931f.png",
+  "originalSha256": "f8c11b7c32f279217c0a6d7f8241e44f1cfe1a44717be01f4265017791e824b2",
+  "sha256": "f8c11b7c32f279217c0a6d7f8241e44f1cfe1a44717be01f4265017791e824b2",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "outputProvenance": {
+    "originalToolOutput": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1387f-9141-7e10-8b79-ce994001f7cb\\exec-8805100c-a564-44f8-b39e-cd97adbe931f.png",
+    "workspaceRaw": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\sources\\banner-a-east-core-r1.png",
+    "copiedOriginalUnchanged": true
+  },
+  "sourceViewed": true,
+  "rawImmutable": true,
+  "preparedPrompt": {
+    "file": "actors/a/banner/prompts/banner-a-east-core-r1.txt",
+    "sha256": "3b8d25ef9b7309d8dcadf4464e10dcb0aff0a189a8fa217273ea098376132cee"
+  },
+  "literalToolPromptNormalization": "trim"
+}

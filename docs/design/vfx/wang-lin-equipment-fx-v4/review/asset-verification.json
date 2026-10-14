@@ -1,0 +1,919 @@
+{
+  "date": "2026-10-13",
+  "status": "passed",
+  "coverage": {
+    "sequences": 12,
+    "canonicalFrames": 72,
+    "pending": []
+  },
+  "checks": {
+    "sourceBytesUnchanged": true,
+    "v3BodyGearBytesUnchanged": true,
+    "singleScalePerSource": true,
+    "fixedSourceEmitter": true,
+    "canonicalAtlasRgbaExact": true,
+    "allSixStagesDistinct": true,
+    "fullSoftAlphaPadding": true,
+    "atlasGutter2": true,
+    "oneCompleteKitFits16MiB": true
+  },
+  "basis": [
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/manifest.json",
+      "sha256": "9cab6b1cf7ea9aac22b8257736582218982d650c8a43d0bca16a5ad3c1e9db32",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/body/banner-ritual.png",
+      "sha256": "7d74912ae4d86e3eac7d7d305976afb350fd4dc03ea5d2ae1818e9bb158683b1",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-original-front.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-original-rear.png",
+      "sha256": "a2aa70a0ea32a62e6867abcd9adf661e0f34c19adb29a119ca0048aa9012ef0f",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-original-fx-rear.png",
+      "sha256": "79a89f3de277b5aeebd392de5f003ddc58a38a1f48108812c6e0e2b7805c260a",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/body/chariot-bronze.png",
+      "sha256": "08c75ca3e173523ff33b2e7a6cec13f96e47ace3a4123d1b7a8ed2f32b8532bb",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/chariot-original-front.png",
+      "sha256": "3d8a0f86716145060464919d8c270c3e03b4f526a8296d50570d7566c0af6ccc",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/chariot-original-rear.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/chariot-original-fx-rear.png",
+      "sha256": "2068a159a8454fe2b847e36d877af2c23c0fc01bb1304dc2faa9fd8896089c40",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/body/chariot-thunder.png",
+      "sha256": "3eb84434f79934b42354006efb3bf693e422fc8e8cda9d8e04c419ea1a82cfe0",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/body/sword-ink.png",
+      "sha256": "ba8d73052aea97f3122e9f4bbd5a55f367280071e36564e9696472abda4900f4",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-original-front.png",
+      "sha256": "98d7a1be09fcbdf084a465fef46cfdfee63519d1868ec46e7abd7b9d1a249a78",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-original-rear.png",
+      "sha256": "530eaa99481ba1526d0afc93f3d308e547f6b4ed61e99c30d5398596a6b918f6",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-original-fx-rear.png",
+      "sha256": "22481d1fd38c53b37e3a24f5e607003cf38639b59f0e52263b956f874738e766",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-ink-front.png",
+      "sha256": "db1d71012b43d68769fee352d34820e85bd22aae3defd1841ff2ea5e5c199283",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-ink-rear.png",
+      "sha256": "7ac95b1f12b19f58ea76176af8b8f48ad83323b97d7ae77955f80ce8bc4d92d5",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-ink-fx-rear.png",
+      "sha256": "fe61888fe67558bedeb34b7b91c648ececb6f400aa45fa5cbf445c2e78331dc4",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-jade-front.png",
+      "sha256": "343cde7c8ca90de6dfbae61511577a527f22f9cd512a3d2b5671f743288fd861",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-jade-rear.png",
+      "sha256": "dcdc942eadbf7db39e4cd76603344b3fd869cfae971954b6d8326028d27839c6",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/sword-jade-fx-rear.png",
+      "sha256": "bd01d97888ff9256a08603d7b7b94ade01f772566b0c3d2f6aa18d4f4783ee34",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-violet-front.png",
+      "sha256": "c5b09c6a18dc7233042a07b39cf7d1cfe1f2a9acadc774aa3b96c8d9f63b57d5",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-violet-rear.png",
+      "sha256": "fd980f92ad4a15351320a126156cb8c979df3f2a4e69ce6aef2be01ab471c3af",
+      "unchanged": true
+    },
+    {
+      "file": "docs/design/characters/wang-lin-equipment-options-v3/equipment/banner-violet-fx-rear.png",
+      "sha256": "797f47e3fbd5031dc9fdfc9b750618dc8cb619f07997b0b72fa85225c4f2331a",
+      "unchanged": true
+    }
+  ],
+  "sequences": [
+    {
+      "id": "sword-escort",
+      "sourceUnchanged": true,
+      "singleScale": 0.27522935779816515,
+      "nativeOrigin": [
+        215,
+        256
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "851fa8407d5225ca16a57d73820de146c001a588f60539ff39048dce9f1620fb",
+          "alpha64Pixels": 3730,
+          "partialAlphaPixels": 4302,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "b17733d1dc649cfb7e45ba03d13c8a07c04b961c27bddfbcaff6a279da9df7f8",
+          "alpha64Pixels": 4402,
+          "partialAlphaPixels": 5056,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "02691a0e924f3e2fe436f51a518afb1fdfc21cd08536812ae7b432b6fbb353d8",
+          "alpha64Pixels": 5121,
+          "partialAlphaPixels": 5922,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "38eec039ea384a819ce54719b3dc2d7c9d77f214ced16166e009eafb55a9eb6f",
+          "alpha64Pixels": 6478,
+          "partialAlphaPixels": 7427,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "e034d6b0a8923da8e12630c724aee22d68ff72bfe7d48e1548eb09e9ae77fdb8",
+          "alpha64Pixels": 4852,
+          "partialAlphaPixels": 5739,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "2e0cf0f8cf7450c56d1924e03ce13ce24ce7c0a36471e3eb1ce1596ea3cf4e3e",
+          "alpha64Pixels": 3918,
+          "partialAlphaPixels": 4614,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 120,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "sword-charge",
+      "sourceUnchanged": true,
+      "singleScale": 0.3724604966139955,
+      "nativeOrigin": [
+        234,
+        268
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "0c5cdbb31e0733c4c6223f2d66a225382d8ee91b0dbb624febcf687009700efb",
+          "alpha64Pixels": 998,
+          "partialAlphaPixels": 1533,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "341fe1592742475ec49cde44ec8764755a5a173922cc0e3888daeaaa2425e156",
+          "alpha64Pixels": 2569,
+          "partialAlphaPixels": 4082,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "3a56430a00bb388f46d57b09741f7225206f23a383c20e872fe13e640647d605",
+          "alpha64Pixels": 4262,
+          "partialAlphaPixels": 6035,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "8e331187fd189dc2e34e9779e78a6ce908f50db09939e4f8f77d90a6b2576dcb",
+          "alpha64Pixels": 4945,
+          "partialAlphaPixels": 7212,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "473a8b04b8f86bb177fb3a5fc212c1c5d67b988291a092aa137153aa7b75d425",
+          "alpha64Pixels": 6889,
+          "partialAlphaPixels": 9512,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "3312d34923fcabf038e03d73895f5f50c6c450cc17b0c4a82bfe84d77eeea962",
+          "alpha64Pixels": 7852,
+          "partialAlphaPixels": 11254,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 165,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "sword-release",
+      "sourceUnchanged": true,
+      "singleScale": 0.3870967741935484,
+      "nativeOrigin": [
+        210,
+        248
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "628b208935f9e910aca9bf9a9b6660d1810c19e1c02e5cd8427b81dd27165bc1",
+          "alpha64Pixels": 2246,
+          "partialAlphaPixels": 2963,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "23e1e3c1a0c56a9508eaa71697220e2d89b1aa051fb2a3b21ef955df824fd04e",
+          "alpha64Pixels": 5646,
+          "partialAlphaPixels": 6891,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "56929220bbfdccd2cae44b57077bc50156252a4877742eb53a5e78ce32c3579e",
+          "alpha64Pixels": 10111,
+          "partialAlphaPixels": 12429,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "888c238fca3585b4d172b713d3a455a234103815700d5a49114df82ae909a6fe",
+          "alpha64Pixels": 5872,
+          "partialAlphaPixels": 7601,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "7a6d55272a622535c1b12a7850655455c93dce7ced6c2a0502ce49a59b4c2465",
+          "alpha64Pixels": 3836,
+          "partialAlphaPixels": 5313,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "73d151973907864c93131404cf0e2a2b6c97765f4439143e868a69ea42e3cef2",
+          "alpha64Pixels": 2582,
+          "partialAlphaPixels": 3679,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 180,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "sword-residual",
+      "sourceUnchanged": true,
+      "singleScale": 0.36995515695067266,
+      "nativeOrigin": [
+        256,
+        228
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "b69c9678538e04e98140044cebf7ad899dc66c40ceee3920e3fd628f805a9c7a",
+          "alpha64Pixels": 10079,
+          "partialAlphaPixels": 13034,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "a83cfa3a46aaea018dec3f3e7a5f3bc7b76dc0ab47cedf054c32934f85f649c3",
+          "alpha64Pixels": 7278,
+          "partialAlphaPixels": 9684,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "42a9497db55bdcd44f2a93d00b209aaf45856f05a540d4d92247fc8ec7945a06",
+          "alpha64Pixels": 4086,
+          "partialAlphaPixels": 6193,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "dc24680039d9a8e4c5f4401ffd9d522f80dfa4bcd9efd4824065bf8d52a2cc59",
+          "alpha64Pixels": 3091,
+          "partialAlphaPixels": 4806,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "c66ac53181bf68cb2738dd0a74b827e369c5574432ea5d8b03c82d8e4abd78df",
+          "alpha64Pixels": 1499,
+          "partialAlphaPixels": 2519,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "28e6f0e2481ad8c8fc63c8a4f268a5e482f4d985ce688eae45c3b82945e71e9f",
+          "alpha64Pixels": 618,
+          "partialAlphaPixels": 1134,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 165,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "banner-escort",
+      "sourceUnchanged": true,
+      "singleScale": 0.3080082135523614,
+      "nativeOrigin": [
+        225,
+        272
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "1d755e7806f601e55ec808ff0381b7464706766208f06ff69c270f1609727d10",
+          "alpha64Pixels": 3560,
+          "partialAlphaPixels": 4185,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "4d32baec03ddc757f4955395a6bee7476b8c417bff4f4085e1e92bec1316454d",
+          "alpha64Pixels": 6390,
+          "partialAlphaPixels": 7477,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "e19fe23865a7d24b6837b61dab8d7766d8bf10f104d8e9c1ce0d9ecca71d1981",
+          "alpha64Pixels": 7313,
+          "partialAlphaPixels": 8635,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "175a338436e8a90af8b9ada834e45ebc3a4dad32da843f6acdc081c5288dd4f5",
+          "alpha64Pixels": 10277,
+          "partialAlphaPixels": 11668,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "2c8470e833fd2fec121e2b67f34d5b97def9730367ee6c444ef659f64a157a86",
+          "alpha64Pixels": 6024,
+          "partialAlphaPixels": 7154,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "f6864e8944614ddeddf2f70a8e1c76e8b661fa6fcd3147a4e740acf0d5fad907",
+          "alpha64Pixels": 3318,
+          "partialAlphaPixels": 3910,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 150,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "banner-charge",
+      "sourceUnchanged": true,
+      "singleScale": 0.39759036144578314,
+      "nativeOrigin": [
+        234,
+        268
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "de92ce17ff15e5e776943dd2d5ce0574d37440b371439903c310da065057f008",
+          "alpha64Pixels": 3582,
+          "partialAlphaPixels": 6299,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "0f6f894d9f97227e583e38415e761498e15137ce0ab34963e93b1631b44e0fa1",
+          "alpha64Pixels": 5059,
+          "partialAlphaPixels": 8916,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "3087d47135db02856a8af7c524290c6d0539937aa7b35540aa7693384d4a3018",
+          "alpha64Pixels": 8532,
+          "partialAlphaPixels": 13830,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "0224b25e9f0114cbcc406aa6d095849437edda7978f473ee28fac24b1af8effa",
+          "alpha64Pixels": 7179,
+          "partialAlphaPixels": 10807,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "96de5d69c688cfeb32dc98503a4315bd729d08324522464ee0fa05313f39b65a",
+          "alpha64Pixels": 6859,
+          "partialAlphaPixels": 9400,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "3196864620334b21b5c3df080a17f340aa2905e51da043adc47643ebe45a751c",
+          "alpha64Pixels": 7089,
+          "partialAlphaPixels": 9380,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 165,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "banner-release",
+      "sourceUnchanged": true,
+      "singleScale": 0.4158415841584158,
+      "nativeOrigin": [
+        244,
+        222
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "b9ab5be6f94e474736872570c50080ace047aed114f31fad120f993050e755c4",
+          "alpha64Pixels": 5821,
+          "partialAlphaPixels": 6954,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "4d42e882e70731e9bcf3e7713c1e371ec206e62675be2b827e89625c95caec1e",
+          "alpha64Pixels": 11193,
+          "partialAlphaPixels": 13226,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "89e64612895e0f0ff7c6b052a6cb249251014b7daf0fae6365b6c5d8876616f4",
+          "alpha64Pixels": 17947,
+          "partialAlphaPixels": 19888,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "09d1aa597d44007c23a8a3e18c111b6921fdd4b789fb970d703e2f9a6ceeb7ac",
+          "alpha64Pixels": 13521,
+          "partialAlphaPixels": 16302,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "033ac04cf40357eba968f6c26d847e5dd5487e6ca4dace32ef3bc6b4cc31e5eb",
+          "alpha64Pixels": 8748,
+          "partialAlphaPixels": 10758,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "a09d48dad53086b252f0873aa85488facb40d6d997a5aa11686ef5ac8e62f16f",
+          "alpha64Pixels": 3287,
+          "partialAlphaPixels": 4405,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 210,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "banner-residual",
+      "sourceUnchanged": true,
+      "singleScale": 0.38461538461538464,
+      "nativeOrigin": [
+        256,
+        228
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "af6486926083669cfd73b3ff4ed36f5bb4795b16f8a4fa3f682f276c78100847",
+          "alpha64Pixels": 11549,
+          "partialAlphaPixels": 14162,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "bd4be93f742bc0ec1311846849335e2e0b2ff2dc28fe1a97cea7b229b33564fe",
+          "alpha64Pixels": 7449,
+          "partialAlphaPixels": 10208,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "d0f3cf112f1dc83f948aed192f6acd8455d62fc9d6e47e65f134526008de8a73",
+          "alpha64Pixels": 4198,
+          "partialAlphaPixels": 6658,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "a58e660fcae6ea6f545d761aa8de0be9c925bf46bc6733848851c0ec6bcf089a",
+          "alpha64Pixels": 3336,
+          "partialAlphaPixels": 5345,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "d35b5c1fa22a16ce8f7c8935337c9861f2fc569e8bd83600f2ad513dc55eee0f",
+          "alpha64Pixels": 1541,
+          "partialAlphaPixels": 3166,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "db74c2b9c397c3e4e1dbd710d48f94eb56bbb7b2385fad7ea9b90eeeb55b1066",
+          "alpha64Pixels": 350,
+          "partialAlphaPixels": 857,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 164,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "chariot-escort",
+      "sourceUnchanged": true,
+      "singleScale": 0.3634361233480176,
+      "nativeOrigin": [
+        267,
+        267
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "b6e0f6ea9a21e6909ac08fc2028d2344304e498dd5fe8698f6df9208f00ab24e",
+          "alpha64Pixels": 10805,
+          "partialAlphaPixels": 12051,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "f5576bb92b3c8900031b0d8d4e28ac97bb325baf1439458b51a598fba1bfc179",
+          "alpha64Pixels": 11661,
+          "partialAlphaPixels": 13437,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "2ac29fa6168ee5871afb3c8b8c35346abaab0dc523a47aeac57b60d2154ec7ad",
+          "alpha64Pixels": 15263,
+          "partialAlphaPixels": 17903,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "13fb5905dca824c6dc90e02640d6512925474d833574bbd31599bb58c1c46d5e",
+          "alpha64Pixels": 13763,
+          "partialAlphaPixels": 16677,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "155f862c601de8f08676966d06e68805e05dfa766666b050a0f5d88db061383b",
+          "alpha64Pixels": 11709,
+          "partialAlphaPixels": 14473,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "d61b8e0396390d32b579e4cf87f837b8665d004d3d9161c7f9a61a532d92d134",
+          "alpha64Pixels": 11646,
+          "partialAlphaPixels": 13152,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 165,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "chariot-charge",
+      "sourceUnchanged": true,
+      "singleScale": 0.38372093023255816,
+      "nativeOrigin": [
+        234,
+        268
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "7a69e3c0a75a2865abe944a830e7e53048a7a93743975125f64b0adc827ea663",
+          "alpha64Pixels": 6054,
+          "partialAlphaPixels": 8073,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "62a9df860fcc3c030be1cb00d32c97bab565f33110d747e42d8f938110e3065f",
+          "alpha64Pixels": 7621,
+          "partialAlphaPixels": 10773,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "17eb0ff3486fa1538247cf7acce99e8cb00de400fd9f14af6920d2e98d4550c0",
+          "alpha64Pixels": 10726,
+          "partialAlphaPixels": 14274,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "3b8e894149919eb64e68002dcc92dc5c391e918169ca1b49d2ac549ab023b67a",
+          "alpha64Pixels": 11521,
+          "partialAlphaPixels": 15536,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "d96372147715e1fed85df38daf5a8e601759495279d4f5d18a916f46f360f13d",
+          "alpha64Pixels": 12963,
+          "partialAlphaPixels": 18078,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "410fa4158d0b243904cd796aff13add95c94fcfe0fbc24001e32cc76532c6e77",
+          "alpha64Pixels": 16086,
+          "partialAlphaPixels": 21656,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 165,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "chariot-release",
+      "sourceUnchanged": true,
+      "singleScale": 0.48596112311015116,
+      "nativeOrigin": [
+        244,
+        200
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "a7dd416956614fa5253fb549bc95e5e4fdb45f287b99a683b40a2ba81cb0d86d",
+          "alpha64Pixels": 16659,
+          "partialAlphaPixels": 19672,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "30e66ead19bcf59cab920240b936ec20ccc3b646435cf24ec357326ea45290f3",
+          "alpha64Pixels": 17875,
+          "partialAlphaPixels": 21272,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "a24c910478546ac9a84174d32b116c3ec2bef291633b0cde3611749a3802c2e3",
+          "alpha64Pixels": 23951,
+          "partialAlphaPixels": 28231,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "6ed17b293329478a7fcebcb67c3a6064958e179e999fb62ad543ae92267522fb",
+          "alpha64Pixels": 17337,
+          "partialAlphaPixels": 20701,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "a872a6284190f27632980d43acb1c7751e038d65fab056c282355eab27b2cfa9",
+          "alpha64Pixels": 12251,
+          "partialAlphaPixels": 15845,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "3125196244d225904afc19623353aa7bbd7b87ff16103e7a7884f7c5d1a6370f",
+          "alpha64Pixels": 5306,
+          "partialAlphaPixels": 7748,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 224,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    },
+    {
+      "id": "chariot-residual",
+      "sourceUnchanged": true,
+      "singleScale": 0.3937947494033413,
+      "nativeOrigin": [
+        256,
+        220
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sha256": "723e16d413663be6bbb944d1c7fd85c3d7d52d6ba987d077534dfe3dc250b167",
+          "alpha64Pixels": 14191,
+          "partialAlphaPixels": 18458,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 2,
+          "sha256": "04b10a0fb6f82bdad97e473058730189d9d5127f75e17551309e668894e54af8",
+          "alpha64Pixels": 9907,
+          "partialAlphaPixels": 13230,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 3,
+          "sha256": "a40faf7f14a0ba6e85193285bdef9e853601c4c67b09d0dcad4aaeb62bb70310",
+          "alpha64Pixels": 6675,
+          "partialAlphaPixels": 10384,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 4,
+          "sha256": "28dabf1072f655355c58d6ca569c5f4d7f5506fa241c34adabd4f38a62b6c600",
+          "alpha64Pixels": 4552,
+          "partialAlphaPixels": 7258,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 5,
+          "sha256": "b3ff91423c6cc70b66a29fddc5d5cc3190768da6d9a19cb095ab4a1acbfc046a",
+          "alpha64Pixels": 2415,
+          "partialAlphaPixels": 4167,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        },
+        {
+          "frame": 6,
+          "sha256": "2bbd5c488cf0e33ef7511234a13ddbf6dfbd516fff613701176b7d94b02cf737",
+          "alpha64Pixels": 828,
+          "partialAlphaPixels": 1713,
+          "fullAlphaMarginPixels": 2,
+          "atlasRgbaExact": true
+        }
+      ],
+      "decodedBytes": 3017088,
+      "peakNativeCoreWidth": 165,
+      "softAlphaPreserved": true,
+      "componentsRemoved": 0
+    }
+  ],
+  "kitMemory": [
+    {
+      "id": "sword",
+      "sequences": 4,
+      "decodedBytes": 12068352,
+      "fits16MiB": true
+    },
+    {
+      "id": "banner",
+      "sequences": 4,
+      "decodedBytes": 12068352,
+      "fits16MiB": true
+    },
+    {
+      "id": "chariot",
+      "sequences": 4,
+      "decodedBytes": 12068352,
+      "fits16MiB": true
+    }
+  ],
+  "scope": "Technical source, registration, frame and atlas checks. Visual owner ART/motion review and live integration are separate.",
+  "ownerApproved": false,
+  "artApproved": false,
+  "runtimeIntegrated": false
+}

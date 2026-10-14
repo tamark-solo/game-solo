@@ -1,5 +1,9 @@
 # Mục lục tài liệu _MMO
 
+**Chuẩn hóa GDD 0.34, Đồng bộ G0 & Prototype Vòng Lặp G2 · 14/10:** [GDD 0.34](GDD.md) đã chốt 3 định hướng lớn cùng owner (đồng thời dọn bỏ các file GDD phiên bản cũ để tránh nhầm lẫn): **(1) Một tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) + 4 Pháp Bảo biểu tượng** (*Kiếm linh, Hồn phiên, Xạ Thần Xa, Thiên Nghịch Châu*), đưa **Tư Đồ Nam** về vai trò tàn hồn chỉ điểm trong Châu và **Lý Mộ Uyển** về trụ cột Đan–Trận / Nhân Duyên ở Quyết Minh Cốc – Tu Ma Hải; **(2) Vòng lặp 20% Cốt truyện Nghịch thiên (`Mệnh Kiếp Chí`) + 80% Sandbox Tu luyện & Kỳ ngộ mở**; **(3) Khung 5 Đại Cảnh Giới (`Ngưng Khí → Trúc Cơ → Kết Đan → Nguyên Anh → Hóa Thần`) × 3 Mốc Pháp Bảo (`Mốc I → II → III`)**. Xem [Lộ trình Giai đoạn & Nhiệm vụ](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md), [Đặc tả Artwork & Logic Từng Chặng](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md), [Reference Thị trường & Tiên Nghịch 14/10](XIANXIA-MARKET-STORY-REFERENCES-2026-10-14.md) và [Prototype Vòng Lặp Tiến Trình Nhánh G2](design/gameplay/wang-lin-progression-loop-prototype-v1/README.md) ([sân chơi tương tác](design/gameplay/wang-lin-progression-loop-prototype-v1/index.html) · `955 checks / 9 unit tests PASS`).
+
+**Sản xuất Pháp Bảo Huyễn Tâm & Tịch Bạch V1–V2 · 14/10:** [Kế hoạch P0–P8](WANG-LIN-IMPLEMENTATION-PLAN.md), [Approval Concept V5](design/characters/wang-lin-concept-direction-v5/approval.json), [Approval Pilot V1](design/characters/wang-lin-equipment-production-v1/approval.json), [Prototype Cơ chế 8 hợp đồng ST/AOE](design/gameplay/wang-lin-equipment-prototype-v1/README.md), và [Gói mở rộng V2 đủ 8 hướng](design/characters/wang-lin-equipment-production-v2/README.md) (đã qua checkpoint kỹ thuật cho [Kiếm linh](design/characters/wang-lin-equipment-production-v2/checkpoints/sword.json) và [Hồn phiên](design/characters/wang-lin-equipment-production-v2/checkpoints/banner.json), đang tiếp nối Xạ Thần Xa → Thiên Nghịch Châu).
+
 **Hắc Ấn Triện Thuật02:** [sân A/B01–02](design/vfx/dark-seal-officer-vfx-v2/index.html), [nguồn/thiết kế/kiểm](design/vfx/dark-seal-officer-vfx-v2/README.md).8sequence/48frame mới, ba chiêu có silhouette và tụ/phát riêng, hai cổng phù mờ và vòng co có khe. Body/nhịp/VFX01 giữ nguyên; ART/VFX02 đã duyệt theo [106hash](design/vfx/dark-seal-officer-vfx-v2/approval.json).
 
 **Hắc Ấn solo Motion01:** [sân tám hướng/ba chiêu](design/characters/dark-seal-officer-animation-v1/index.html), [nguồn và kiểm](design/characters/dark-seal-officer-animation-v1/README.md), [gate ghép gameplay](design/characters/dark-seal-officer-animation-v1/INTEGRATION-NOTES.md).72clip/432pose và6FX/36frame; motion/VFX mới chờ duyệt, chưa live.
@@ -40,31 +44,34 @@
 
 **Nhân vật/hành trang UI 02:** owner tạm chấp nhận hai theme và yêu cầu thêm ý tưởng/reference. [Thiết kế và nguồn học hỏi](CHARACTER-INVENTORY-UI-DESIGN.md) có Linh Đài, Trữ Vật Nang, Diện Mạo tương tác trên trang đối chiếu; 60 cấu hình/55 kiểm qua. Chưa skin game, diện mạo gameplay hoặc ART nhân vật mới.
 
-## Điểm đọc thiết kế hiện hành — 11/10/2026
+## Điểm đọc thiết kế hiện hành — 14/10/2026 (GDD 0.34 · G0)
 
-Owner đã đồng ý thiết kế rõ nhân vật/nhiệm vụ trước HN05, và yêu cầu đào thêm game tu tiên/cốt truyện để phát triển bản sắc. Đọc **GDD → nghiên cứu/bản sắc → nội dung → hệ thống → lộ trình → backlog**; ý tưởng mới chưa tự là nội dung/luật được duyệt.
-
-**Hướng MMORPG mới được làm rõ:** farm/build để mạnh, PvE/PvP và sưu tập–thể hiện nhân vật xuyên quá trình tu tiên. Đọc thêm **GDD → kế hoạch MMORPG → contract Core** để thấy hoạt động, nguồn sức mạnh và diện mạo từng chặng; các pilot được chọn theo gate, không đợi toàn RM5 hoặc làm hết trước HN05.
+Thứ tự đọc chuẩn hóa từ G0 (14/10/2026): **[GDD 0.34](GDD.md) → [Lộ trình Giai đoạn & Nhiệm vụ](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) → [Đặc tả Artwork & Logic Từng Chặng](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md) → [Reference Thị trường & Tiên Nghịch](XIANXIA-MARKET-STORY-REFERENCES-2026-10-14.md) → [Kế hoạch Huyễn Tâm & Tịch Bạch](WANG-LIN-IMPLEMENTATION-PLAN.md) → [Sinh cảnh 14 NPC, 11 Quái/Tinh Anh & 4 Boss](VAN-HAI-LIVING-WORLD-PLAN.md)**.
 
 | Tài liệu | Trách nhiệm |
 | --- | --- |
-| [GDD 0.32 — Vân Hải Đạo Đồ](GDD.md) | Hướng sản phẩm, quyết định/giới hạn và phân kỳ; sức mạnh/farm/PvE/PvP/hiện diện xuyên chặng |
+| **[GDD 0.34 — Vân Hải Đạo Đồ (14/10)](GDD.md)** | Tài liệu GDD duy nhất của dự án: 1 tuyến chính (`Huyễn Tâm / Tịch Bạch`) + 4 Pháp Bảo, vòng lặp 20% Cốt truyện Nghịch thiên + 80% Sandbox, lộ trình 5 Đại Cảnh Giới × 3 Mốc và phân kỳ `G0 → G4` |
+| **[Thiết kế Lộ trình Giai đoạn, Nhiệm vụ & Nhân vật (14/10)](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md)** | Kiến trúc nhân vật (Tư Đồ Nam trong Châu, Lý Mộ Uyển ở Quyết Minh Cốc), ma trận 5 Đại Cảnh Giới và kịch bản 11 Hồi (`VG01 → VG11`) của Chặng 1 & Chặng 2 |
+| **[Đặc tả Chi tiết Artwork & Logic Theo Từng Chặng (14/10)](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md)** | Quy chuẩn Canvas/Pivot/Layer, State Machine (`PlayerCultivationState`, `ArtifactLoadoutState`, `StageProgressionLedger`) và bảng đối chiếu **Artwork × Logic** từng Hồi |
+| **[Reference Thị trường & Nguyên tác Tiên Nghịch (14/10)](XIANXIA-MARKET-STORY-REFERENCES-2026-10-14.md)** | Đối chiếu 7 hệ game thị trường (*Quỷ Cốc Bát Hoang, Mịch Trường Sinh, Đại Hiệp Lập Chí Truyện, Dật Kiếm Phong Vân Quyết...*) và bằng chứng các chương *Tiên Nghịch* |
+| **[Kế hoạch Triển khai Huyễn Tâm & Tịch Bạch (14/10)](WANG-LIN-IMPLEMENTATION-PLAN.md)** | Thứ tự sản xuất P0–P8 cho 2 danh tính × 4 họ Pháp Bảo, dự toán 512 clip cơ sở Mốc II và hợp đồng cơ chế ST/AOE |
+| **[Dàn 14 NPC, 11 Quái/Tinh Anh & 4 Boss Vân Hải (13/10)](VAN-HAI-LIVING-WORLD-PLAN.md)** | Roster thế giới sống, 14 NPC (Wave A/B), 8 quái thường, 3 tinh anh, 4 Boss và quy tắc công bằng đường né |
+| **[Prototype Vòng Lặp Tiến Trình & Nhiệm Vụ G2 (14/10)](design/gameplay/wang-lin-progression-loop-prototype-v1/README.md)** | Hiện thực hóa Mệnh Kiếp Chí `VG01–VG11` (`Auto-Chain Fact`), 5 Đại Cảnh Giới, 4 Pháp Bảo × 3 Mốc, Nội Giới Tư Đồ Nam, Lò đan Lý Mộ Uyển và 4 Boss Chặng 1 |
+| [Thiết kế tu tiên 13/10](CULTIVATION-REDESIGN-2026-10-13.md) | Nền tảng thuật ngữ 5 Đại Cảnh Giới đợt ngày 13/10 |
 | [Kế hoạch tiến triển MMORPG](MMORPG-PROGRESSION-PLAN.md) | Ngưng Khí tới Hóa Thần: build/nguồn–chi, PvE/PvP, thời trang/tọa kỵ/pháp bảo, pilot sớm và MP01–MP10 |
 | [Hợp đồng Core cho MMORPG](MMORPG-SYSTEM-CONTRACTS.md) | Nền thật/giới hạn schema, loot/damage peer/appearance/mount, migration/một writer, debug/scale và K0–K4 |
 | [Phân loại nội dung game](GAME-CONTENT-TAXONOMY.md) | Domain/đa trục, definition khác owned/simulation, ID/reference và trạng thái độc lập |
 | [Registry catalog quản trị v1](GAME-CONTENT-CATALOG-RUNTIME.md) | Đã có schema/validator, API admin chỉ đọc, tìm/lọc domain/subtype/status, source/use graph và diagnostics |
-| [Catalog/Core/quy trình kiểm soát](GAME-CONTENT-CONTROL-PLAN.md) | Source–use, public/server/private, version/ownership/receipt, validator/release và lát HN05 |
-| [Sổ catalog khởi đầu](design/systems/content-registry-v1/README.md) | 56 record/45 typed refs; index [JSON](design/systems/content-registry-v1/catalog.json) trỏ về nguồn; registry quản trị đọc, không là bảng balance/definition gameplay mới |
+| [Catalog/Core/quy trình kiểm soát](GAME-CONTENT-CONTROL-PLAN.md) | Source–use, public/server/private, version/ownership/receipt và validator/release |
+| [Sổ catalog khởi đầu](design/systems/content-registry-v1/README.md) | 96 record (56 cũ + 40 sinh cảnh mới); index [JSON](design/systems/content-registry-v1/catalog.json) trỏ về nguồn; registry quản trị đọc, không là bảng balance/definition gameplay mới |
 | [Nghiên cứu game tu tiên và nguồn truyện](XIANXIA-GAME-RESEARCH.md) | Năm game, nguồn chính thức/đoạn truyện, điều học/không học và khoảng trống GDD |
 | [Tiên Nghịch/reference luyện chế — đợt 2](TIEN-NGHICH-CRAFTING-REFERENCES.md) | 3 game mới, sổ khảo sát 12 trang chương và giới hạn bằng chứng; không suy recipe canon |
-| [Thiết kế item/luyện chế](ITEM-CRAFTING-DESIGN.md) | 8 định nghĩa/5 recipe/EX01–EX04 hậu HN12, nguồn–chi, tác dụng/cách thủ công, [manifest kế hoạch](design/systems/items-v1/plan.json) |
+| [Thiết kế item/luyện chế](ITEM-CRAFTING-DESIGN.md) | 8 định nghĩa/5 recipe, nguồn–chi, tác dụng/cách thủ công, [manifest kế hoạch](design/systems/items-v1/plan.json) |
 | [Lộ trình sản xuất item](ITEM-PRODUCTION-PLAN.md) | VP0–VP4 trong RM; IT01–IT12, ngân sách asset và gate nghiệm thu |
 | [Bản sắc/cốt truyện đề xuất](VAN-HAI-CREATIVE-DIRECTION.md) | Đạo đồ, chuẩn bị, nhân duyên; tuyến sáng tạo ứng viên và ranh giới nguyên tác |
 | [Kế hoạch nội dung RPG](RPG-CONTENT-PLAN.md) | Luồng nhiệm vụ/nhân vật/đồ/công pháp/thuật/pháp bảo/kinh tế/MMO; ND1–ND6 trước code |
-| [Chương Hằng Nhạc — phương án A](HANG-NHAC-CHAPTER-PLAN.md) | Bản chi tiết ND1–ND2: graph/cổng HN05–HN12, nhánh bộ ba, lựa chọn báo cáo, nguồn thưởng và storyboard |
 | [Catalog nhập môn](HANG-NHAC-CONTENT-CATALOG.md) | Bản chi tiết ND3/phần ND4: 3 item ID hiện có + 2 dự kiến, recipe/pháp khí, nền vận hành, R01 và tương thích |
 | [Hệ thống nhân vật 0.1](CHARACTER-SYSTEM.md) | Ownership/state, sáu phần tu tiên, nguồn stat, mốc, đồ và tương thích |
-| [Hệ thống nhiệm vụ 0.1](QUEST-SYSTEM.md) | Định nghĩa/tiến trình/attempt, credit/thưởng/lifecycle, HN01–HN04 và đề xuất HN05 |
 | [Lộ trình RM0–RM6](DEVELOPMENT-ROADMAP.md) | Phụ thuộc, gate, D01–D12, nội dung trước framework, phối hợp UI/vận hành |
 | [Backlog GD01–GD21](MVP-BACKLOG.md) | Hàng đợi thiết kế và liên kết sang chặng thực hiện |
 | [Trạng thái checkout](PROJECT-STATUS.md) | Cái đã có và giới hạn, tách khỏi roadmap |
@@ -91,11 +98,9 @@ Owner đã đồng ý thiết kế rõ nhân vật/nhiệm vụ trước HN05, v
 | [Bộ UI Vân Ngọc H5](HANG-NHAC-VAN-NGOC-UI.md) | Trạng thái chốt 10/10, vấn đề đã xử lý, phạm vi và bằng chứng |
 | [Quy tắc chữ/vùng đọc](GAME-UI-READING.md) | Token, bố cục và cách tái sử dụng cho màn tiếp theo |
 | [Sửa khung/nền khi resize](HANG-NHAC-UI-FRAME-RESIZE.md) | Hợp đồng clipping/nine-slice và 28 cấu hình pixel |
-| [UI nhiệm vụ](HANG-NHAC-QUEST-UI.md) | Tracker/sổ/chỉ đường và trạng thái nhiệm vụ thật |
 | [Game shell H5](HANG-NHAC-GAME-SHELL.md) | Toàn viewport, chọn/tiếp tục hồ sơ và menu |
-| [Animation nhiệm vụ Hằng Nhạc](HANG-NHAC-QUEST-MOTION.md) | 21 clip / 84 frame body + 4 clip / 16 frame khí quang; chào, vận khí, chưởng bốn hướng và hồi phục; ART mới chờ xem chuyển động |
 
-**Đối chiếu nền 10/10/2026:** đọc [trạng thái dự án](PROJECT-STATUS.md) và [GDD 0.32](GDD.md) trước. ART Hằng Nhạc cũ, các walk study và bộ concept/nền/ba asset thử đã xóa. [Map hiện hành](design/world/hang-nhac-map-v1/README.md), layer/HUD, R01 và [HN01–HN02](HANG-NHAC-SECT-RUNTIME.md)/[HN03–HN04](HANG-NHAC-LESSONS-RUNTIME.md) đã có bản thử. Tiếp theo là chốt hệ thống RM0, nền tối thiểu RM1, rồi HN05/ngoại vi RM2; hồ sơ thiết kế không chứng minh tính năng đã triển khai.
+**Đối chiếu nền:** đọc [trạng thái dự án](PROJECT-STATUS.md) và [GDD 0.34](GDD.md) trước. Tuyến nhiệm vụ cũ đã được dọn bỏ để chuyển sang **Mệnh Kiếp Chí (`VG01–VG11`)** theo [Lộ trình Giai đoạn 14/10](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Prototype G2](design/gameplay/wang-lin-progression-loop-prototype-v1/README.md). [Map hiện hành](design/world/hang-nhac-map-v1/README.md), layer/HUD và R01 đã có bản thử. Hồ sơ thiết kế không chứng minh tính năng đã triển khai.
 
 Tài liệu runtime ghi code 0.12.0; tài liệu thiết kế tách quyết định đã chốt với đề xuất; lịch sử giữ nguyên số liệu theo thời điểm nguồn. Prompt, source/approval manifest và verification là hồ sơ sản xuất/kiểm tra, không sửa để khớp trạng thái mới. Các gói ZIP VFX được sinh/đóng riêng và bị Git ignore; xem hướng dẫn trong bàn giao khi tải hoặc đóng lại.
 
@@ -124,12 +129,8 @@ Tài liệu runtime ghi code 0.12.0; tài liệu thiết kế tách quyết đ�
 | [Quái, nguy hiểm và chiến đấu — hồ sơ lịch sử](ENCOUNTERS.md) | Hồ sơ lịch sử; xem nhãn và liên kết bản hiện hành |
 | [Sửa bộ đi bộ — tay và chân (hồ sơ trước chibi)](GAIT-CORRECTION.md) | Hồ sơ lịch sử; xem nhãn và liên kết bản hiện hành |
 | [Tham chiếu mới — tỷ lệ chibi và bước đi nhỏ](GAIT-REFERENCE-REVIEW.md) | Nguồn phản hồi/tỷ lệ chibi; xem bộ bốn hướng đã sản xuất |
-| [GDD — Tiên Nghịch: Hành Trình Vương Lâm](GDD-IDLE-REFERENCE-v0.26.md) | Hồ sơ lịch sử; xem nhãn và liên kết bản hiện hành |
-| [GDD — Vân Hải Đạo Đồ: MMORPG Tu Tiên](GDD.md) | Nguồn hướng sản phẩm 0.32; mạnh lên/farm/PvE/PvP/hiện diện, hệ thống/nội dung trước sản xuất |
-| [Đối thủ và khảo nghiệm nhập môn Hằng Nhạc](HANG-NHAC-ENCOUNTERS-TRIAL.md) | Đặc tả đề xuất; số liệu/vận hành chưa khóa |
+| [GDD — Vân Hải Đạo Đồ: MMORPG Tu Tiên](GDD.md) | Nguồn GDD 0.34 duy nhất hiện hành (14/10/2026) |
 | [Hằng Nhạc — map và bố cục v0.1](HANG-NHAC-MAP-LAYOUT.md) | Đặc tả đề xuất; số liệu/vận hành chưa khóa |
-| [Đặc tả trải nghiệm Hằng Nhạc — Ngưng Khí](HANG-NHAC-NGUNG-KHI-SPEC.md) | Đặc tả đề xuất; số liệu/vận hành chưa khóa |
-| [Tiến trình tu luyện và phần thưởng Hằng Nhạc](HANG-NHAC-PROGRESSION-REWARDS.md) | Đặc tả đề xuất; số liệu/vận hành chưa khóa |
 | [ART map legacy — ghi chú lịch sử](MAP-ART-DESIGN.md) | Hồ sơ lịch sử; xem nhãn và liên kết bản hiện hành |
 | [Phân công xây map — 08/10/2026](MAP-ASSET-PRODUCTION-NOTES.md) | Phân công hiện hành: chủ dự án bố trí level/navigation |
 | [Bắt đầu lại thư viện map](MAP-ASSETS-RESET.md) | Các đợt xóa ART; quy trình map tổng trước, navigation rồi asset |
@@ -146,12 +147,10 @@ Tài liệu runtime ghi code 0.12.0; tài liệu thiết kế tách quyết đ�
 | [Backlog MVP — Tiên Nghịch: Hành Trình Vương Lâm](MVP-BACKLOG-IDLE-REFERENCE.md) | Hồ sơ lịch sử; xem nhãn và liên kết bản hiện hành |
 | [Backlog thiết kế — Hằng Nhạc và hệ thống tu tiên](MVP-BACKLOG.md) | Backlog hiện hành; chưa là tính năng hoàn thành |
 | [MVP RPG — nhập môn Hằng Nhạc theo GDD 0.28](MVP-RPG-A.md) | Phạm vi nhập môn theo GDD mới; chưa triển khai |
-| [Hồ sơ gameplay Ngưng Khí — bộ kỹ năng khởi đầu](NGUNG-KHI-GAMEPLAY-SPEC.md) | Đặc tả đề xuất; số liệu/vận hành chưa khóa |
 | [Định hướng online nhiều người — điều chỉnh GDD](ONLINE-DIRECTION-REFERENCE.md) | Hồ sơ lịch sử; xem nhãn và liên kết bản hiện hành |
 | [Định hướng online — ba nhân vật chơi được](ONLINE-DIRECTION.md) | Tài liệu hiện hành; đọc trạng thái đã chốt/đề xuất trong file |
 | [Avatar đệ tử thử nghiệm — tạo hình và bộ pixel đầu tiên](PLAYER-AVATAR-VISUAL-SPEC.md) | Hồ sơ lịch sử; xem nhãn và liên kết bản hiện hành |
 | [Chạy preview, backend thử và Map Editor](PREVIEW-RUNBOOK.md) | Lệnh/URL hiện có; prototype và giới hạn vận hành |
-| [NPC, HN01–HN02 và thổ nạp Hằng Nhạc](HANG-NHAC-SECT-RUNTIME.md) | Bản mở đầu bước 3: nhật ký/chỉ đường, M01, tích lũy online, vật tư và ledger riêng |
 | [Trạng thái hiện hành của _MMO](PROJECT-STATUS.md) | Hiện trạng code, ART, thiết kế và ưu tiên map |
 | [Map nhập môn 3840 × 2560 — tham chiếu prototype trước](STARTER-REGION-MAP.md) | Prototype di chuyển cũ; không là Hằng Nhạc mới |
 | [Kịch bản nhập môn — ba nhân vật tại Hằng Nhạc](STARTER-STORY.md) | Mở đầu bộ ba; tách chuyển thể và canon |
@@ -220,7 +219,6 @@ Tài liệu runtime ghi code 0.12.0; tài liệu thiết kế tách quyết đ�
 | Tài liệu | Vai trò/trạng thái |
 | --- | --- |
 | [Dàn nhân vật và tạo hình — bản online](archive/design-before-three-playable-characters/CHARACTERS.md) | Snapshot lịch sử; không dùng làm luật hiện hành |
-| [GDD — Tiên Nghịch: Hành Trình Vương Lâm](archive/design-before-three-playable-characters/GDD.md) | Snapshot lịch sử; không dùng làm luật hiện hành |
 | [Định hướng MMORPG tu luyện có cơ chế idle](archive/design-before-three-playable-characters/MMORPG-DIRECTION.md) | Snapshot lịch sử; không dùng làm luật hiện hành |
 | [Backlog MVP — Tiên Nghịch: Hành Trình Vương Lâm](archive/design-before-three-playable-characters/MVP-BACKLOG.md) | Snapshot lịch sử; không dùng làm luật hiện hành |
 | [MVP A mới — nhập môn Hằng Nhạc, nhiệm vụ và chiến đấu](archive/design-before-three-playable-characters/MVP-RPG-A.md) | Snapshot lịch sử; không dùng làm luật hiện hành |

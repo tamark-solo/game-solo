@@ -2,11 +2,11 @@
 
 > **Hồ sơ lịch sử, đối chiếu ngày 08/10/2026:** năm khu Tu luyện/Hạt châu/Hành trình/Hành trang/Cài đặt, E01–E08, import save cục bộ, 480 tu vi/8 giờ và màn kết thúc tầng 1 ở các mục 1–11 bên dưới là UX idle v0.6. Các wireframe/bản vẽ được giữ để tham khảo bố cục, chưa là UX online hiện hành. Hướng tạo đệ tử riêng từng được xét cũng đã bị thay.
 
-> **Chuẩn hiện hành [GDD 0.28](GDD.md):** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu, cả ba có Kiếm Khí/Lôi Ấn/Ngự Phong Bộ R01 khi bắt đầu điều khiển, học tại Hằng Nhạc qua Ngưng Khí và phân hóa từ Trúc Cơ. UI cần được đặc tả theo [trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [tu tiên](CULTIVATION-SYSTEM.md), [online](ONLINE-DIRECTION.md) và [backlog](MVP-BACKLOG.md); không ghép bộ idle vào sản phẩm mới như luồng đã duyệt.
+> **Chuẩn hiện hành [GDD 0.34](GDD.md) (14/10/2026):** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Xem thêm [Lộ trình Giai đoạn & Nhiệm vụ](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic Từng Chặng](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md).
 
 **Phiên bản:** 0.3, ngày 06/10/2026.  
 **Trạng thái nguồn:** UX/sơ đồ/bản vẽ tĩnh của bản idle; tương tác chưa được nghiệm thu bởi các bản phác.\
-**Tham chiếu lịch sử:** [GDD idle](GDD-IDLE-REFERENCE-v0.26.md), [đặc tả hệ thống idle](MVP-A-SPEC.md), [chi tiết màn hình cũ](UX-SCREENS-AND-STATES.md), [ART](ART-DIRECTION.md), [bộ UI](UI-COMPONENTS.md), [node truyện](WORLD-MAPS.md), [asset](ASSET-PLAN.md).
+**Tham chiếu lịch sử:** [đặc tả hệ thống idle](MVP-A-SPEC.md), [chi tiết màn hình cũ](UX-SCREENS-AND-STATES.md), [ART](ART-DIRECTION.md), [bộ UI](UI-COMPONENTS.md), [node truyện](WORLD-MAPS.md), [asset](ASSET-PLAN.md).
 
 ## 0. Điểm cần biên tập cho UX hiện hành
 

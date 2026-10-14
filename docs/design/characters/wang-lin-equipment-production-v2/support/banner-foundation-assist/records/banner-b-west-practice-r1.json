@@ -1,0 +1,130 @@
+{
+  "id": "banner-b-west-practice-r1",
+  "identityId": "b",
+  "familyId": "banner",
+  "direction": "west",
+  "group": "practice",
+  "actions": [
+    "meditate",
+    "gather"
+  ],
+  "calibrationCells": 6,
+  "prompt": "prompts/banner-b-west-practice-r1.txt",
+  "promptSha256": "b784108758071a152972246e2d037fd2a9e9a4d2dc8a81ec45eb2404476b9ae1",
+  "raw": "sources/banner-b-west-practice-r1.png",
+  "inputs": [
+    {
+      "file": "inputs/banner-b-west-practice-r1/1.png",
+      "sha256": "1102b2bc7a61cd286a64fbb04dac186c610a96a64e378d98194914181a2d4a53",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-west-nearest8x.png",
+      "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY",
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-west-practice-r1\\1.png",
+      "index": 1
+    },
+    {
+      "file": "inputs/banner-b-west-practice-r1/2.png",
+      "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\helper\\banner-b-west-core-r1\\2.png",
+      "role": "Wang-same-view-camera-anatomy-style-only",
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-west-practice-r1\\2.png",
+      "index": 2
+    },
+    {
+      "file": "inputs/banner-b-west-practice-r1/3.png",
+      "sha256": "4f390431ad67a4db64ba8fdab07a8fd072726094fa4736b6de671596a408811c",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-west-core-r1.png",
+      "role": "own-B-banner-same-view-core-full-source-support",
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-west-practice-r1\\3.png",
+      "index": 3
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": "banner-b-west-core-r1 own neutral key1, factor0.37037037037037035",
+  "tool": "image_gen.imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    3,
+    6
+  ],
+  "requestedSourcePoses": 18,
+  "status": "raw-produced-awaiting-actor-source-assessment",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "basisCoreSha256": "4f390431ad67a4db64ba8fdab07a8fd072726094fa4736b6de671596a408811c",
+  "neutralReviewed": true,
+  "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-8views-2x.png",
+  "neutralReviewEvidenceSha256": "d74028de4cd5e90487b2755996509a5c53fb26912b09cdc7c7e8a69504fe82a1",
+  "reservedBy": "banner_support_resume",
+  "upstreamPromptOriginal": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-west-practice-r1.txt",
+  "actualOriginalPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13880-27b5-7690-becf-8edfeba067c1\\exec-10f8da8f-59c6-479b-b885-d73fee92301a.png",
+  "rawSha256": "926522b941b59205d4f967573213fc610fbc6f96a3be829514b73a099cb17a67",
+  "upstreamGeneration": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\generation.json",
+  "upstreamGenerationSha256": "0d2d1ae08197c87e9f6f46d5859d915f137d5b0eaf7b25275052b7c244f93cf6",
+  "upstreamRecord": {
+    "id": "banner-b-west-practice-r1",
+    "identityId": "b",
+    "familyId": "banner",
+    "direction": "west",
+    "group": "practice",
+    "actions": [
+      "meditate",
+      "gather"
+    ],
+    "calibrationCells": 6,
+    "prompt": "actors/b/banner/prompts/banner-b-west-practice-r1.txt",
+    "promptSha256": "b784108758071a152972246e2d037fd2a9e9a4d2dc8a81ec45eb2404476b9ae1",
+    "raw": "actors/b/banner/sources/banner-b-west-practice-r1.png",
+    "inputs": [
+      {
+        "file": "actors/b/banner/inputs/foundation/banner-b-west-practice-r1/1.png",
+        "sha256": "1102b2bc7a61cd286a64fbb04dac186c610a96a64e378d98194914181a2d4a53",
+        "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-west-nearest8x.png",
+        "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY"
+      },
+      {
+        "file": "actors/b/banner/inputs/foundation/banner-b-west-practice-r1/2.png",
+        "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+        "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\helper\\banner-b-west-core-r1\\2.png",
+        "role": "Wang-same-view-camera-anatomy-style-only"
+      },
+      {
+        "file": "actors/b/banner/inputs/foundation/banner-b-west-practice-r1/3.png",
+        "sha256": "4f390431ad67a4db64ba8fdab07a8fd072726094fa4736b6de671596a408811c",
+        "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-west-core-r1.png",
+        "role": "own-B-banner-same-view-core-full-source-support"
+      }
+    ],
+    "inputSnapshotsReady": true,
+    "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+    "dependency": "banner-b-west-core-r1 own neutral key1, factor0.37037037037037035",
+    "tool": "built-in-imagegen",
+    "transparentRequested": true,
+    "requestedGrid": [
+      3,
+      6
+    ],
+    "requestedSourcePoses": 18,
+    "status": "reserved-ready-built-in-call",
+    "selected": false,
+    "ownerApproved": false,
+    "runtimeIntegrated": false,
+    "basisCoreSha256": "4f390431ad67a4db64ba8fdab07a8fd072726094fa4736b6de671596a408811c",
+    "neutralReviewed": true,
+    "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-8views-2x.png",
+    "neutralReviewEvidenceSha256": "d74028de4cd5e90487b2755996509a5c53fb26912b09cdc7c7e8a69504fe82a1",
+    "reservedBy": "banner_support_resume"
+  },
+  "reservation": "Root/actor explicitly assigned own-view damage/practice to banner_support_resume; A N/NE/E/SE and B W/NW.",
+  "originalSha256": "926522b941b59205d4f967573213fc610fbc6f96a3be829514b73a099cb17a67",
+  "actualDimensions": [
+    1024,
+    1536
+  ],
+  "actualMode": "RGBA",
+  "toolMetadata": "tool/banner-b-west-practice-r1.json",
+  "toolMetadataSha256": "2a7539f60fd1103a557122bae02c8fdda22dbdda4265249e392a54a3d79a14c4",
+  "sourceLayoutQA": "qa/banner-b-west-practice-r1.json",
+  "sourceLayoutQASha256": "3df5e51d8c6437c2c1c88bdcf7577c0e3d725c2674571a728a5132d78148f53c"
+}

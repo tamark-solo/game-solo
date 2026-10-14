@@ -1,0 +1,67 @@
+{
+  "schema": "chariot-foundation-helper-source-v1",
+  "jobId": "chariot-a-northeast-damage-r1",
+  "familyId": "chariot",
+  "identityId": "a",
+  "direction": "northeast",
+  "group": "damage",
+  "actions": [
+    "hit",
+    "death"
+  ],
+  "tool": "built-in-imagegen",
+  "transparentRequested": true,
+  "prompt": {
+    "file": "actors/a/chariot/prompts/chariot-a-northeast-damage-r1.txt",
+    "sha256": "4311e5a64262763dcf97a20a47984bdbdbca641b4624eebcfb01901bf1aa439b"
+  },
+  "inputs": [
+    {
+      "file": "actors/a/chariot/inputs/foundation/chariot-a-northeast-damage-r1/1.png",
+      "sha256": "806c561366ba165fdbe43211d3865ddfa4c8ca1435dbe969a053ecd3f5ea503c",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\chariot\\inputs\\core\\chariot-a-northeast-core-r1\\1.png",
+      "role": "own-same-identity-A-chariot-reviewed-neutral-PRIMARY"
+    },
+    {
+      "file": "actors/a/chariot/inputs/foundation/chariot-a-northeast-damage-r1/2.png",
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\chariot\\inputs\\core\\chariot-a-northeast-core-r1\\2.png",
+      "role": "Wang-same-view-camera-anatomy-style-only"
+    },
+    {
+      "file": "actors/a/chariot/inputs/foundation/chariot-a-northeast-damage-r1/3.png",
+      "sha256": "274775d7dcce3192a92267f34826adc476848b53293e2264c88572d7394f507a",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\chariot\\sources\\chariot-a-northeast-core-r1.png",
+      "role": "own-A-chariot-same-view-core-full-source-support"
+    }
+  ],
+  "neutralReviewed": true,
+  "neutralReviewEvidence": {
+    "file": "actors/a/chariot/review/chariot-a-northeast-core-r1-marked-2x.png",
+    "sha256": "6e415048543723fbab23d63e469061cde693e735438e93d85c72320fb6a91d91"
+  },
+  "originalOutputPath": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13901-1dbd-74f3-a60a-54e89b928f65\\exec-564889b1-c327-4f7a-a21b-69bbc0ca7c1a.png",
+  "originalOutputSha256": "b1a4d0635875a7c4030108a6864bee779587ac33ab0eebed2abd38a36b9bd005",
+  "rawPath": "support/chariot-foundation-assist/raw/chariot-a-northeast-damage-r1.png",
+  "rawSha256": "b1a4d0635875a7c4030108a6864bee779587ac33ab0eebed2abd38a36b9bd005",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "alpha": {
+    "min": 0,
+    "max": 254,
+    "zeroPixels": 751477,
+    "nonzeroPixels": 821387
+  },
+  "requestedGrid": [
+    3,
+    6
+  ],
+  "requestedSourcePoses": 18,
+  "status": "candidate-support-only",
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "bodyDeviceSeparateGroundRooted": true,
+  "note": "Raw copied verbatim from built-in ImageGen output; no mask, repaint, crop, resize, or actor import."
+}

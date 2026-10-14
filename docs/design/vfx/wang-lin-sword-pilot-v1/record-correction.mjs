@@ -1,0 +1,20 @@
+import {readFile,writeFile,copyFile,stat} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import path from 'node:path';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const [id,source]=process.argv.slice(2), file='sources/'+id+'-r2.png';
+const out=path.join(root,file);
+try{await stat(out);throw Error('Correction already recorded');}catch(e){if(e.code!=='ENOENT')throw e;}
+const plan=JSON.parse(await readFile(path.join(root,'plan.json'),'utf8'));
+if(!plan.sequences.some(s=>s.id===id))throw Error('Unknown sequence');
+const generation=JSON.parse(await readFile(path.join(root,'generation.json'),'utf8'));
+const previous=generation.sources.find(s=>s.id===id&&s.selected);
+if(!previous)throw Error('Original source required');
+await copyFile(source,out);
+const prompt='sources/'+id+'-r2.prompt.txt';
+const bytes=await readFile(out), promptBytes=await readFile(path.join(root,prompt));
+previous.selected=false; previous.assessment='Superseded: physical source frames crossed grid boundary; source and original prompt preserved.';
+generation.sources.push({id,file,version:2,originalPath:source,selected:true,sha256:createHash('sha256').update(bytes).digest('hex'),prompt,promptSha256:createHash('sha256').update(promptBytes).digest('hex'),inputs:[...plan.inputs,{file:previous.file,role:'edit-target-gutter-correction',sha256:previous.sha256}],transparentRequested:true,reason:'Correct opaque frame boundary contamination; not a service retry'});
+await writeFile(path.join(root,'generation.json'),JSON.stringify(generation,null,2)+'\n');
+console.log(JSON.stringify({id,file,bytes:bytes.length}));

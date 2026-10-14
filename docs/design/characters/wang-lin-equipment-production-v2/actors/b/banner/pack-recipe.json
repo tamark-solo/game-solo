@@ -1,0 +1,127 @@
+{
+  "schema": "equipment-B-banner-pack-recipe-v1",
+  "status": "candidate-source-native-reviewed",
+  "sourceBasis": [
+    {
+      "file": "../wang-lin-equipment-production-v1/body/native/banner-b.png",
+      "sha256": "c107468deafea29dce3cebf4033efeceb543eed489868521a0671fb3c8ab036c"
+    },
+    {
+      "file": "../wang-lin-equipment-production-v1/sources/body/banner-b.png",
+      "sha256": "c112d967d4fd4a712ae4f8fb8ebbba11b55413bfb60be49315df67d2eaf9e9d3"
+    }
+  ],
+  "bodyNominalPx": 80,
+  "normalCanvas": [
+    112,
+    112
+  ],
+  "normalPivot": [
+    56,
+    104
+  ],
+  "deathCanvas": [
+    192,
+    128
+  ],
+  "deathPivot": [
+    96,
+    112
+  ],
+  "scalePolicy": "One isotropic factor/source from median six neutral crown to actual dark boot sole; nearest resample only, never pose fit/mirror/head transplant.",
+  "sourceMaskPolicy": "Measured whole source bodies and all their opaque disconnected hand/hair fragments; preserve raw; no uniform-cell cap clipping or neighbor fragments. Alpha128 body threshold only, raw RGBA retained.",
+  "rootPolicy": "Actual dark boot sole for upright. Running anatomical ground / actual supported footprint + explicit lift; prone actual source boot endpoint/ground contact, manual evidence, never ivory hem/hair/pole bottom. Seated support ground recorded separately. Native canvas padding only.",
+  "socketPolicy": "Each source pose actual palm/cuff reviewed. Idle/run and hit bind the same actual raised front pole arm; cast from charge uses separate ground-planted pole while hands seal/command. Open/hidden palms have no held claim; source wrist delta relative own same-view neutral, with explicit estimates when hidden.",
+  "timingMs": {
+    "idle": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ],
+    "run": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "hit": [
+      60,
+      60,
+      80,
+      100,
+      100,
+      160
+    ],
+    "death": [
+      140,
+      140,
+      180,
+      180,
+      200,
+      500
+    ],
+    "meditate": [
+      260,
+      260,
+      260,
+      260,
+      260,
+      260
+    ],
+    "gather": [
+      180,
+      200,
+      200,
+      260,
+      200,
+      260
+    ],
+    "cast-single-target": [
+      200,
+      200,
+      200,
+      300,
+      220,
+      440
+    ],
+    "cast-aoe": [
+      280,
+      310,
+      310,
+      400,
+      640,
+      560
+    ]
+  },
+  "releaseMs": {
+    "cast-single-target": 600,
+    "cast-aoe": 900
+  },
+  "phaseMapping": "Key4 starts Core ART release600/900. Pole planted on ground from chargekey2; SW clasp readiness plantedkey1. Core fact alone creates contact/pulse, no body-driven early hit. Source gesture may open while charging without contact authority.",
+  "rowCompletenessPolicy": "Derive actual counts from source. Seated3 or other valid distinct counts allowed with source mapping; no cloning to fill forecast. Run terminal standing excluded, action recovery same-source neutral7 allowed when anatomy needs, recorded reuseReason.",
+  "atlas": {
+    "gutter": 2,
+    "rgbaExactCanonicalParity": true,
+    "sampling": "nearest"
+  },
+  "pathsRelativeTo": "wang-lin-equipment-production-v2",
+  "clipIdTemplate": "banner-b-{direction}-{action}",
+  "finalRequiredFlags": [
+    "sourceViewed",
+    "sourceSocketReviewed",
+    "socketReviewComplete",
+    "headTorsoFirstRecoveryViewed"
+  ],
+  "approvalPolicy": "Technical gate does not approve new Banner ART/motion/runtime. No changes to Sword/V1/runtime/map/DB.",
+  "actualCoverage": {
+    "clips": 64,
+    "motionKeys": 382,
+    "neutralCalibration": 144,
+    "selectedSources": 24
+  }
+}

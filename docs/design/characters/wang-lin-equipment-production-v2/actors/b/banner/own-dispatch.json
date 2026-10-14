@@ -1,0 +1,499 @@
+{
+  "schema": "banner-foundation-dispatch-v1",
+  "owner": "banner_b_resume",
+  "root": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2",
+  "actorRoot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner",
+  "jobs": [
+    {
+      "id": "banner-b-east-damage-r1",
+      "identityId": "b",
+      "familyId": "banner",
+      "direction": "east",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/banner/prompts/banner-b-east-damage-r1.txt",
+      "promptSha256": "f509972be6e20be8762a2707950a9a3bb0f7fd605b6ea7c8d480111b5bc1ca31",
+      "raw": "actors/b/banner/sources/banner-b-east-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-east-damage-r1/1.png",
+          "sha256": "33a7951e39caeea51e0ee2e83aa25973b45fef0d090b64e892bb5831b3ff3276",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-east-nearest8x.png",
+          "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-east-damage-r1/2.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-east-core-r2\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-east-damage-r1/3.png",
+          "sha256": "ec50e5053c262edcf59bec3f2e8c5c12de6315e3cbfd013cac63cee6bd0a302a",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-east-core-r2.png",
+          "role": "own-B-banner-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+      "dependency": "banner-b-east-core-r2 own neutral key1, factor0.33613445378151263",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "ec50e5053c262edcf59bec3f2e8c5c12de6315e3cbfd013cac63cee6bd0a302a",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-2x.png",
+      "neutralReviewEvidenceSha256": "0686000c81c24855a9491b35998143009e1f7961b566efc731ad8dd50a42522f",
+      "reservedBy": "banner_b_resume",
+      "promptAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-east-damage-r1.txt",
+      "rawAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-east-damage-r1.png",
+      "inputAbsolute": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-east-damage-r1\\1.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-east-damage-r1\\2.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-east-damage-r1\\3.png"
+      ]
+    },
+    {
+      "id": "banner-b-east-practice-r1",
+      "identityId": "b",
+      "familyId": "banner",
+      "direction": "east",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/banner/prompts/banner-b-east-practice-r1.txt",
+      "promptSha256": "e9387fe6c6b8c9e3c695f8fcf35759b6e1d6e2991f689a08fe0a3fe6d5bcc8ec",
+      "raw": "actors/b/banner/sources/banner-b-east-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-east-practice-r1/1.png",
+          "sha256": "33a7951e39caeea51e0ee2e83aa25973b45fef0d090b64e892bb5831b3ff3276",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-east-nearest8x.png",
+          "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-east-practice-r1/2.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-east-core-r2\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-east-practice-r1/3.png",
+          "sha256": "ec50e5053c262edcf59bec3f2e8c5c12de6315e3cbfd013cac63cee6bd0a302a",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-east-core-r2.png",
+          "role": "own-B-banner-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+      "dependency": "banner-b-east-core-r2 own neutral key1, factor0.33613445378151263",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "ec50e5053c262edcf59bec3f2e8c5c12de6315e3cbfd013cac63cee6bd0a302a",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-2x.png",
+      "neutralReviewEvidenceSha256": "0686000c81c24855a9491b35998143009e1f7961b566efc731ad8dd50a42522f",
+      "reservedBy": "banner_b_resume",
+      "promptAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-east-practice-r1.txt",
+      "rawAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-east-practice-r1.png",
+      "inputAbsolute": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-east-practice-r1\\1.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-east-practice-r1\\2.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-east-practice-r1\\3.png"
+      ]
+    },
+    {
+      "id": "banner-b-southeast-damage-r1",
+      "identityId": "b",
+      "familyId": "banner",
+      "direction": "southeast",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/banner/prompts/banner-b-southeast-damage-r1.txt",
+      "promptSha256": "84f53d6a01589af0c63fe8deb9e7b3fa88308035fbbd10dd807358f6b79007ae",
+      "raw": "actors/b/banner/sources/banner-b-southeast-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southeast-damage-r1/1.png",
+          "sha256": "406f3a4400e4ee29ae4610784ecd3ecb9f2a18fa3881e84dc2c4ce6afd226917",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-southeast-nearest8x.png",
+          "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southeast-damage-r1/2.png",
+          "sha256": "895b7948ccfd4a54aec8dca5cf2a8b07996b8a8049bca66b52cdce9c26551917",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-southeast-core-r2\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southeast-damage-r1/3.png",
+          "sha256": "72896d8b960f4924f308ebbbb2e94a1c29fa46979decfa9fa22a8f6aac8a6361",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-southeast-core-r2.png",
+          "role": "own-B-banner-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+      "dependency": "banner-b-southeast-core-r2 own neutral key1, factor0.35398230088495575",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "72896d8b960f4924f308ebbbb2e94a1c29fa46979decfa9fa22a8f6aac8a6361",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-2x.png",
+      "neutralReviewEvidenceSha256": "0686000c81c24855a9491b35998143009e1f7961b566efc731ad8dd50a42522f",
+      "reservedBy": "banner_b_resume",
+      "promptAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-southeast-damage-r1.txt",
+      "rawAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-southeast-damage-r1.png",
+      "inputAbsolute": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southeast-damage-r1\\1.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southeast-damage-r1\\2.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southeast-damage-r1\\3.png"
+      ]
+    },
+    {
+      "id": "banner-b-southeast-practice-r1",
+      "identityId": "b",
+      "familyId": "banner",
+      "direction": "southeast",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/banner/prompts/banner-b-southeast-practice-r1.txt",
+      "promptSha256": "d94dfe401e5765d1f59d3354d2428d0fb9b67a76fcb61ac2f874f4b9519a066a",
+      "raw": "actors/b/banner/sources/banner-b-southeast-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southeast-practice-r1/1.png",
+          "sha256": "406f3a4400e4ee29ae4610784ecd3ecb9f2a18fa3881e84dc2c4ce6afd226917",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-southeast-nearest8x.png",
+          "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southeast-practice-r1/2.png",
+          "sha256": "895b7948ccfd4a54aec8dca5cf2a8b07996b8a8049bca66b52cdce9c26551917",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-southeast-core-r2\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southeast-practice-r1/3.png",
+          "sha256": "72896d8b960f4924f308ebbbb2e94a1c29fa46979decfa9fa22a8f6aac8a6361",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-southeast-core-r2.png",
+          "role": "own-B-banner-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+      "dependency": "banner-b-southeast-core-r2 own neutral key1, factor0.35398230088495575",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "72896d8b960f4924f308ebbbb2e94a1c29fa46979decfa9fa22a8f6aac8a6361",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-2x.png",
+      "neutralReviewEvidenceSha256": "0686000c81c24855a9491b35998143009e1f7961b566efc731ad8dd50a42522f",
+      "reservedBy": "banner_b_resume",
+      "promptAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-southeast-practice-r1.txt",
+      "rawAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-southeast-practice-r1.png",
+      "inputAbsolute": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southeast-practice-r1\\1.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southeast-practice-r1\\2.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southeast-practice-r1\\3.png"
+      ]
+    },
+    {
+      "id": "banner-b-south-damage-r1",
+      "identityId": "b",
+      "familyId": "banner",
+      "direction": "south",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/banner/prompts/banner-b-south-damage-r1.txt",
+      "promptSha256": "e2717aaece7db4159613a7df25959159bacf7be91176f43168c8340839a87028",
+      "raw": "actors/b/banner/sources/banner-b-south-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-south-damage-r1/1.png",
+          "sha256": "aae0c63e30dd625c52c53fe89335143dce5af637ceac2935787d95fcc9011ad5",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-south-nearest8x.png",
+          "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-south-damage-r1/2.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-south-core-r1\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-south-damage-r1/3.png",
+          "sha256": "542d601a189af5d998857c3682a0b4e0f9e0649191b4d62e0f556fe1b725bb64",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-south-core-r1.png",
+          "role": "own-B-banner-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+      "dependency": "banner-b-south-core-r1 own neutral key1, factor0.34334763948497854",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "542d601a189af5d998857c3682a0b4e0f9e0649191b4d62e0f556fe1b725bb64",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-2x.png",
+      "neutralReviewEvidenceSha256": "0686000c81c24855a9491b35998143009e1f7961b566efc731ad8dd50a42522f",
+      "reservedBy": "banner_b_resume",
+      "promptAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-south-damage-r1.txt",
+      "rawAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-south-damage-r1.png",
+      "inputAbsolute": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-south-damage-r1\\1.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-south-damage-r1\\2.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-south-damage-r1\\3.png"
+      ]
+    },
+    {
+      "id": "banner-b-south-practice-r1",
+      "identityId": "b",
+      "familyId": "banner",
+      "direction": "south",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/banner/prompts/banner-b-south-practice-r1.txt",
+      "promptSha256": "13438295c0b890402b25807c153ccbbf985fdec1b497d587e3acbe0b67228f4d",
+      "raw": "actors/b/banner/sources/banner-b-south-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-south-practice-r1/1.png",
+          "sha256": "aae0c63e30dd625c52c53fe89335143dce5af637ceac2935787d95fcc9011ad5",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-south-nearest8x.png",
+          "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-south-practice-r1/2.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-south-core-r1\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-south-practice-r1/3.png",
+          "sha256": "542d601a189af5d998857c3682a0b4e0f9e0649191b4d62e0f556fe1b725bb64",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-south-core-r1.png",
+          "role": "own-B-banner-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+      "dependency": "banner-b-south-core-r1 own neutral key1, factor0.34334763948497854",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "542d601a189af5d998857c3682a0b4e0f9e0649191b4d62e0f556fe1b725bb64",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-2x.png",
+      "neutralReviewEvidenceSha256": "0686000c81c24855a9491b35998143009e1f7961b566efc731ad8dd50a42522f",
+      "reservedBy": "banner_b_resume",
+      "promptAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-south-practice-r1.txt",
+      "rawAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-south-practice-r1.png",
+      "inputAbsolute": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-south-practice-r1\\1.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-south-practice-r1\\2.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-south-practice-r1\\3.png"
+      ]
+    },
+    {
+      "id": "banner-b-southwest-damage-r1",
+      "identityId": "b",
+      "familyId": "banner",
+      "direction": "southwest",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/banner/prompts/banner-b-southwest-damage-r1.txt",
+      "promptSha256": "5b30e03ab23fc29900ac26c13cdd5ca8874b8289b12f5cd96c5289b8cb311edc",
+      "raw": "actors/b/banner/sources/banner-b-southwest-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southwest-damage-r1/1.png",
+          "sha256": "a92f3de7188bc214927552606af96d391828bceed03230febd3289d96507c152",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-southwest-nearest8x.png",
+          "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southwest-damage-r1/2.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-southwest-core-r3\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southwest-damage-r1/3.png",
+          "sha256": "722b8e585c83999fb99dd01180b02d0e5386062ca144faca90c7955cff2036bc",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-southwest-core-r3.png",
+          "role": "own-B-banner-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+      "dependency": "banner-b-southwest-core-r3 own neutral key1, factor0.39800995024875624",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "722b8e585c83999fb99dd01180b02d0e5386062ca144faca90c7955cff2036bc",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-2x.png",
+      "neutralReviewEvidenceSha256": "0686000c81c24855a9491b35998143009e1f7961b566efc731ad8dd50a42522f",
+      "reservedBy": "banner_b_resume",
+      "promptAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-southwest-damage-r1.txt",
+      "rawAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-southwest-damage-r1.png",
+      "inputAbsolute": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southwest-damage-r1\\1.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southwest-damage-r1\\2.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southwest-damage-r1\\3.png"
+      ]
+    },
+    {
+      "id": "banner-b-southwest-practice-r1",
+      "identityId": "b",
+      "familyId": "banner",
+      "direction": "southwest",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/banner/prompts/banner-b-southwest-practice-r1.txt",
+      "promptSha256": "751aa1865916977142d0a964b0cac92d22ee111ed05e85a1217b407e9947b4b2",
+      "raw": "actors/b/banner/sources/banner-b-southwest-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southwest-practice-r1/1.png",
+          "sha256": "a92f3de7188bc214927552606af96d391828bceed03230febd3289d96507c152",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\neutral\\banner-b-southwest-nearest8x.png",
+          "role": "own-same-identity-B-banner-same-view-reviewed-neutral-PRIMARY"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southwest-practice-r1/2.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\core\\banner-b-southwest-core-r3\\2.png",
+          "role": "Wang-same-view-camera-anatomy-style-only"
+        },
+        {
+          "file": "actors/b/banner/inputs/foundation/banner-b-southwest-practice-r1/3.png",
+          "sha256": "722b8e585c83999fb99dd01180b02d0e5386062ca144faca90c7955cff2036bc",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-southwest-core-r3.png",
+          "role": "own-B-banner-same-view-core-full-source-support"
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+      "dependency": "banner-b-southwest-core-r3 own neutral key1, factor0.39800995024875624",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "reserved-ready-built-in-call",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "basisCoreSha256": "722b8e585c83999fb99dd01180b02d0e5386062ca144faca90c7955cff2036bc",
+      "neutralReviewed": true,
+      "neutralReviewEvidence": "actors/b/banner/review/neutral-foundation-lineup-2x.png",
+      "neutralReviewEvidenceSha256": "0686000c81c24855a9491b35998143009e1f7961b566efc731ad8dd50a42522f",
+      "reservedBy": "banner_b_resume",
+      "promptAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\prompts\\banner-b-southwest-practice-r1.txt",
+      "rawAbsolute": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\sources\\banner-b-southwest-practice-r1.png",
+      "inputAbsolute": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southwest-practice-r1\\1.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southwest-practice-r1\\2.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\banner\\inputs\\foundation\\banner-b-southwest-practice-r1\\3.png"
+      ]
+    }
+  ],
+  "onlyRawAndProvenance": true,
+  "ownerApproved": false,
+  "runtimeIntegrated": false
+}

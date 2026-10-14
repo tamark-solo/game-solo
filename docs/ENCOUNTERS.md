@@ -2,11 +2,11 @@
 
 > **Toàn bộ hồ sơ bên dưới là tham chiếu lịch sử ngày 06/10:** ENC-001/002/003, combat tự chạy theo lượt CP-001/002/003, thông số, lộ trình A → B và đề xuất offline farm giữ để đối chiếu. Chúng không là luật nhập môn hiện hành hoặc encounter đã triển khai. Mô hình đệ tử riêng từng được xét cũng đã bị thay.
 
-> **Chuẩn hiện hành [GDD 0.28](GDD.md):** ba nhân vật chọn từ đầu, có sẵn Kiếm Khí/Lôi Ấn/Ngự Phong Bộ R01; Hằng Nhạc qua Ngưng Khí, phân hóa từ Trúc Cơ. Dùng [đối thủ và khảo nghiệm Hằng Nhạc](HANG-NHAC-ENCOUNTERS-TRIAL.md), [trải nghiệm](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay](NGUNG-KHI-GAMEPLAY-SPEC.md) và [tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) để đánh giá HN-E01/02/03, ba pha HN10 và checkpoint/kết nối lại. Các hồ sơ mới còn là đề xuất; idle hiện hành không tự combat khi đóng game.
+> **Chuẩn hiện hành [GDD 0.34](GDD.md) (14/10/2026):** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Xem thêm [Lộ trình Giai đoạn & Nhiệm vụ](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic Từng Chặng](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md). Các hồ sơ lịch sử bên dưới giữ để đối chiếu.
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  
 **Trạng thái nguồn:** lộ trình A → B của bản trước; hồ sơ gặp gỡ/luật combat chưa được triển khai, chơi thử.\
-**Tham chiếu lịch sử:** [node truyện](WORLD-MAPS.md), [asset](ASSET-PLAN.md), [GDD idle](GDD-IDLE-REFERENCE-v0.26.md).
+**Tham chiếu lịch sử:** [node truyện](WORLD-MAPS.md), [asset](ASSET-PLAN.md).
 
 ## 1. Phạm vi gặp gỡ theo lộ trình lịch sử
 

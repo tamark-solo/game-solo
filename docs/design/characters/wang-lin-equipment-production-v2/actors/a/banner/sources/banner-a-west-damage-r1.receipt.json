@@ -1,0 +1,71 @@
+{
+  "id": "banner-a-west-damage-r1",
+  "identityId": "a",
+  "familyId": "banner",
+  "direction": "west",
+  "group": "damage",
+  "actions": [
+    "hit",
+    "death"
+  ],
+  "calibrationCells": 6,
+  "prompt": "actors/a/banner/prompts/banner-a-west-damage-r1.txt",
+  "promptSha256": "ba56d221abaab67075b9f3f2048aae9ec0f830471e6a508e1e94453255dc6384",
+  "raw": "actors/a/banner/sources/banner-a-west-damage-r1.png",
+  "inputs": [
+    {
+      "file": "actors/a/banner/inputs/foundation/banner-a-west-damage-r1/1.png",
+      "sha256": "5249952c77810521a7de8eafa5add3a21968f2c42a59e3a7bdfd6986d88769aa",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\measured-neutral\\banner-a-west-core-r2-native-nearest8x.png",
+      "role": "own-A-banner-same-view-neutral-primary",
+      "basisSourceId": "banner-a-west-core-r2",
+      "basisSourceSha256": "d90ab271efe699969ad0e783dfce09fda894aa5ee533821f18977f0c75be722f"
+    },
+    {
+      "file": "actors/a/banner/inputs/foundation/banner-a-west-damage-r1/2.png",
+      "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\corrective\\banner-a-west-core-r2\\2.png",
+      "role": "Wang-same-view-style-anatomy-only",
+      "basisSourceId": "banner-a-west-core-r2",
+      "basisSourceSha256": "d90ab271efe699969ad0e783dfce09fda894aa5ee533821f18977f0c75be722f"
+    },
+    {
+      "file": "actors/a/banner/inputs/foundation/banner-a-west-damage-r1/3.png",
+      "sha256": "d4a4155b26152ec9369e5e9cefdd03cd3b1aa90f1d652b1aaac90f1987c1b61a",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\corrective\\banner-a-west-core-r2\\3.png",
+      "role": "own-A-banner-P1-full-source-outfit-support",
+      "basisSourceId": "banner-a-west-core-r2",
+      "basisSourceSha256": "d90ab271efe699969ad0e783dfce09fda894aa5ee533821f18977f0c75be722f"
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": null,
+  "tool": "built-in-imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    3,
+    6
+  ],
+  "requestedSourcePoses": 18,
+  "status": "generated-awaiting-source-review",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "neutralBasisReviewed": true,
+  "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1387f-9141-7e10-8b79-ce994001f7cb\\exec-616e0c9a-64f9-4737-b173-016e8ab9480b.png",
+  "originalSha256": "a6eff4083124717fd5017d82436f826c15feb676b0ce3d561b4e6694c47d7ddb",
+  "sha256": "a6eff4083124717fd5017d82436f826c15feb676b0ce3d561b4e6694c47d7ddb",
+  "sourceSize": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "outputProvenance": {
+    "originalToolOutput": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1387f-9141-7e10-8b79-ce994001f7cb\\exec-616e0c9a-64f9-4737-b173-016e8ab9480b.png",
+    "workspaceRaw": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\sources\\banner-a-west-damage-r1.png",
+    "copiedOriginalUnchanged": true
+  },
+  "sourceViewed": true,
+  "rawImmutable": true
+}

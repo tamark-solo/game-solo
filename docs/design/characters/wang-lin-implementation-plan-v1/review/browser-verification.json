@@ -1,0 +1,511 @@
+{
+  "schema": "wang-lin-implementation-plan-browser-verification-1",
+  "status": "passed",
+  "date": "2026-10-14",
+  "method": "separate headless Chromium context, new plan and V5 approval overlay only",
+  "ownerTabsUntouched": true,
+  "ownerStorageUntouched": true,
+  "oldV5ReportsOverwritten": false,
+  "checkCount": 73,
+  "checks": [
+    {
+      "name": "both-characters-present",
+      "passed": true
+    },
+    {
+      "name": "canonical-approved-character-names",
+      "passed": true
+    },
+    {
+      "name": "four-approved-artifact-families",
+      "passed": true
+    },
+    {
+      "name": "approval-counts-match-pinned-scope",
+      "passed": true
+    },
+    {
+      "name": "actual-plan-phases-present",
+      "passed": true,
+      "details": {
+        "phaseCount": 9
+      }
+    },
+    {
+      "name": "phase-ids-follow-plan",
+      "passed": true
+    },
+    {
+      "name": "phase-gates-present",
+      "passed": true
+    },
+    {
+      "name": "phase-filter-art",
+      "passed": true,
+      "details": {
+        "visible": 5
+      }
+    },
+    {
+      "name": "phase-filter-pressed-art",
+      "passed": true
+    },
+    {
+      "name": "phase-filter-integration",
+      "passed": true,
+      "details": {
+        "visible": 4
+      }
+    },
+    {
+      "name": "phase-filter-pressed-integration",
+      "passed": true
+    },
+    {
+      "name": "phase-filter-all",
+      "passed": true,
+      "details": {
+        "visible": 9
+      }
+    },
+    {
+      "name": "phase-filter-pressed-all",
+      "passed": true
+    },
+    {
+      "name": "scope-counts-1-milestones",
+      "passed": true
+    },
+    {
+      "name": "scope-estimate-label-1",
+      "passed": true
+    },
+    {
+      "name": "scope-rows-1",
+      "passed": true
+    },
+    {
+      "name": "scope-counts-3-milestones",
+      "passed": true
+    },
+    {
+      "name": "scope-estimate-label-3",
+      "passed": true
+    },
+    {
+      "name": "scope-rows-3",
+      "passed": true
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/index.html",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/approval.json",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/sources/identity-a.png",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/sources/identity-b.png",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/index.html#family=sword&identity=a&option=sword-a&palette=sword-a&milestone=awakening&mode=aoe&phase=release",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/index.html#family=banner&identity=a&option=banner-a&palette=banner-a&milestone=awakening&mode=aoe&phase=release",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/index.html#family=chariot&identity=a&option=chariot-a&palette=chariot-a&milestone=awakening&mode=aoe&phase=release",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/index.html#family=bead&identity=a&option=bead-a&palette=bead-a&milestone=awakening&mode=aoe&phase=release",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/sources/sword-aoe.png",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../../../WANG-LIN-IMPLEMENTATION-PLAN.md",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-plan.json",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/approval.json",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "link-loads-../wang-lin-concept-direction-v5/manifest.json",
+      "passed": true,
+      "details": {
+        "status": 200
+      }
+    },
+    {
+      "name": "navigation-characters",
+      "passed": true
+    },
+    {
+      "name": "navigation-pilot",
+      "passed": true
+    },
+    {
+      "name": "navigation-phases",
+      "passed": true
+    },
+    {
+      "name": "navigation-scope",
+      "passed": true
+    },
+    {
+      "name": "plan-does-not-write-browser-storage",
+      "passed": true
+    },
+    {
+      "name": "desktop-no-horizontal-overflow",
+      "passed": true
+    },
+    {
+      "name": "tablet-no-horizontal-overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile-no-horizontal-overflow",
+      "passed": true
+    },
+    {
+      "name": "v5-concept-approval-status-visible",
+      "passed": true
+    },
+    {
+      "name": "v5-both-characters-approved-summary",
+      "passed": true
+    },
+    {
+      "name": "v5-production-status-remains-pending",
+      "passed": true
+    },
+    {
+      "name": "v5-overlay-does-not-rewrite-historical-manifest",
+      "passed": true
+    },
+    {
+      "name": "v5-character-sword-a",
+      "passed": true
+    },
+    {
+      "name": "v5-option-canonical-name-sword-a",
+      "passed": true
+    },
+    {
+      "name": "v5-character-sword-b",
+      "passed": true
+    },
+    {
+      "name": "v5-option-canonical-name-sword-b",
+      "passed": true
+    },
+    {
+      "name": "v5-board-is-identity-a-direction-sword",
+      "passed": true
+    },
+    {
+      "name": "v5-character-banner-a",
+      "passed": true
+    },
+    {
+      "name": "v5-option-canonical-name-banner-a",
+      "passed": true
+    },
+    {
+      "name": "v5-character-banner-b",
+      "passed": true
+    },
+    {
+      "name": "v5-option-canonical-name-banner-b",
+      "passed": true
+    },
+    {
+      "name": "v5-board-is-identity-a-direction-banner",
+      "passed": true
+    },
+    {
+      "name": "v5-character-chariot-a",
+      "passed": true
+    },
+    {
+      "name": "v5-option-canonical-name-chariot-a",
+      "passed": true
+    },
+    {
+      "name": "v5-character-chariot-b",
+      "passed": true
+    },
+    {
+      "name": "v5-option-canonical-name-chariot-b",
+      "passed": true
+    },
+    {
+      "name": "v5-board-is-identity-a-direction-chariot",
+      "passed": true
+    },
+    {
+      "name": "v5-character-bead-a",
+      "passed": true
+    },
+    {
+      "name": "v5-option-canonical-name-bead-a",
+      "passed": true
+    },
+    {
+      "name": "v5-character-bead-b",
+      "passed": true
+    },
+    {
+      "name": "v5-option-canonical-name-bead-b",
+      "passed": true
+    },
+    {
+      "name": "v5-board-is-identity-a-direction-bead",
+      "passed": true
+    },
+    {
+      "name": "v5-overlay-does-not-write-storage",
+      "passed": true
+    },
+    {
+      "name": "v5-links-to-new-implementation-plan",
+      "passed": true
+    },
+    {
+      "name": "v5-mobile-overlay-no-overflow",
+      "passed": true
+    },
+    {
+      "name": "v5-pinned-file-preserved-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "v5-pinned-file-preserved-generation.json",
+      "passed": true
+    },
+    {
+      "name": "v5-pinned-file-preserved-brief.json",
+      "passed": true
+    },
+    {
+      "name": "v5-pinned-file-preserved-review/browser-verification.json",
+      "passed": true
+    },
+    {
+      "name": "no-javascript-errors",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "no-failed-requests",
+      "passed": true,
+      "details": []
+    }
+  ],
+  "decodedImages": [
+    {
+      "file": "../wang-lin-concept-direction-v5/sources/identity-a.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "../wang-lin-concept-direction-v5/sources/identity-b.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "../wang-lin-concept-direction-v5/sources/sword-aoe.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/identity-a.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "sources/identity-b.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "sources/bead-a.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "concepts/native/bead-a.png",
+      "width": 160,
+      "height": 144
+    },
+    {
+      "file": "sources/bead-b.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "concepts/native/bead-b.png",
+      "width": 160,
+      "height": 144
+    },
+    {
+      "file": "inputs/wang-lin-live-southeast-native.png",
+      "width": 64,
+      "height": 96
+    },
+    {
+      "file": "sources/bead-progression.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/bead-aoe.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/sword-a.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "concepts/native/sword-a.png",
+      "width": 160,
+      "height": 144
+    },
+    {
+      "file": "sources/sword-b.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "concepts/native/sword-b.png",
+      "width": 160,
+      "height": 144
+    },
+    {
+      "file": "sources/sword-progression.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/sword-aoe.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/banner-a-r2.png",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "file": "concepts/native/banner-a.png",
+      "width": 160,
+      "height": 144
+    },
+    {
+      "file": "sources/banner-b.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "concepts/native/banner-b.png",
+      "width": 160,
+      "height": 144
+    },
+    {
+      "file": "sources/banner-progression.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/banner-aoe.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/chariot-a.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "concepts/native/chariot-a.png",
+      "width": 160,
+      "height": 144
+    },
+    {
+      "file": "sources/chariot-b.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "concepts/native/chariot-b.png",
+      "width": 160,
+      "height": 144
+    },
+    {
+      "file": "sources/chariot-progression.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sources/chariot-aoe.png",
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "errors": [],
+  "requestFailures": []
+}

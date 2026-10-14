@@ -1,0 +1,24 @@
+{
+  "schema": "equipment-review-export-history-2",
+  "date": "2026-10-14",
+  "events": [
+    {
+      "scope": "sword",
+      "status": "failed-copy-preserved",
+      "directory": "output/review/wang-lin-equipment-v2-sword-failed-copy-r1",
+      "reason": "Concurrent references to the same SHA wrote the same destination before copy completion; byte verification rejected the partial copy.",
+      "sourceFilesChanged": false,
+      "sourceOrRuntimeImportAttempted": false
+    },
+    {
+      "scope": "sword",
+      "status": "exported-and-byte-verified",
+      "directory": "output/review/wang-lin-equipment-v2-sword",
+      "bodyClips": 128,
+      "assetFiles": 1445,
+      "correction": "One awaited copy job per SHA; all aliases share its completed result.",
+      "sourceFilesChanged": false,
+      "runtimeIntegrated": false
+    }
+  ]
+}

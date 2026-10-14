@@ -1,0 +1,13 @@
+import {readFile,writeFile,copyFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {resolve} from 'node:path';
+import {sharp} from '../../../../scripts/actor-sprite-tools.mjs';
+const root=fileURLToPath(new URL('./',import.meta.url));
+const [id,original]=process.argv.slice(2),p=resolve(root,'generation.json'),m=JSON.parse(await readFile(p,'utf8'));
+const r=m.requests.find(v=>v.id===id);if(!r||!original)throw Error('Unknown source');
+await copyFile(original,resolve(root,r.raw));
+const bytes=await readFile(resolve(root,r.raw)),info=await sharp(bytes).metadata();
+Object.assign(r,{status:'generated-preview',original,actualDimensions:[info.width,info.height],sha256:createHash('sha256').update(bytes).digest('hex'),ownerApproved:false,artApproved:false});
+await writeFile(p,JSON.stringify(m,null,2)+'\n');
+console.log(JSON.stringify({id,actualDimensions:r.actualDimensions,raw:r.raw}));

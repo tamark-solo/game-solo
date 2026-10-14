@@ -1,0 +1,347 @@
+{
+  "schema": "wang-lin-equipment-family-vfx-plan-2",
+  "date": "2026-10-14",
+  "familyId": "bead",
+  "source": "built-in ImageGen",
+  "inputs": [
+    {
+      "file": "inputs/bead-aoe.png",
+      "role": "approved-concept-style-and-element-reference",
+      "sha256": "5c4869a6204a2acc9133d53b854fa9a5b110f022128217c4b3fa2bbb8d790e8e"
+    },
+    {
+      "file": "inputs/bead-progression.png",
+      "role": "approved-concept-style-and-element-reference",
+      "sha256": "06cc48b9f4f4ce2e1a3b9faf4f63637eb2787dbc57261e2c41c34769da1c6160"
+    }
+  ],
+  "sequences": [
+    {
+      "id": "st-warning",
+      "mode": "st",
+      "phase": "warning",
+      "anchor": "ground-node",
+      "canvas": [
+        160,
+        128
+      ],
+      "pivot": [
+        80,
+        96
+      ],
+      "sourcePivot": [
+        0.5,
+        0.7
+      ],
+      "peakExtent": 70,
+      "extentAxis": "width",
+      "durations": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "cameraPolicy": "abstract-effect-direction-or-ground",
+      "aimRotationAllowed": true,
+      "factLifetimePolicy": "Support/control lifetime comes from distinct facts; do not convert to hit or extend duration by ART.",
+      "subject": "One small isolated pale-jade sanctuary seed glyph at ground, fractured ivory seam and three small jade petals. Six phases scratch→seed→thin fold→pale petals→tiny fissure→poised calm ward. No whole circle/three-anchor layout.",
+      "sizeDecision": "Small70px support-warning ornament; Core owns sanctuary geometry and readability."
+    },
+    {
+      "id": "st-charge",
+      "mode": "st",
+      "phase": "charge",
+      "anchor": "hand",
+      "canvas": [
+        160,
+        160
+      ],
+      "pivot": [
+        80,
+        80
+      ],
+      "sourcePivot": [
+        0.5,
+        0.5
+      ],
+      "peakExtent": 92,
+      "extentAxis": "max",
+      "durations": [
+        60,
+        60,
+        70,
+        70,
+        80,
+        80
+      ],
+      "cameraPolicy": "abstract-effect-direction-or-ground",
+      "aimRotationAllowed": true,
+      "factLifetimePolicy": "Support/control lifetime comes from distinct facts; do not convert to hit or extend duration by ART.",
+      "subject": "An isolated tiny ancient milky jade orb seed with folded ivory/celadon qi ribbons gathering around it at a hand socket. Six true phases seed→one ribbon→two uneven folds→compressed inner glint→jade shell hint→quiet dense light. No hand or physical equipped bead."
+    },
+    {
+      "id": "st-release",
+      "mode": "st",
+      "phase": "release",
+      "anchor": "projectile",
+      "canvas": [
+        224,
+        176
+      ],
+      "pivot": [
+        112,
+        88
+      ],
+      "sourcePivot": [
+        0.5,
+        0.5
+      ],
+      "peakExtent": 166,
+      "extentAxis": "width",
+      "durations": [
+        50,
+        50,
+        50,
+        50,
+        60,
+        60
+      ],
+      "cameraPolicy": "abstract-effect-direction-or-ground",
+      "aimRotationAllowed": true,
+      "factLifetimePolicy": "Support/control lifetime comes from distinct facts; do not convert to hit or extend duration by ART.",
+      "subject": "One east-facing folded jade-light ribbon reaching an ally, ivory core edged pale celadon with small spatial paper-like shards. Six actual morphing contours, no physical bead, hand, landscape or player. This is support energy, not a damage lance."
+    },
+    {
+      "id": "st-resolve",
+      "mode": "st",
+      "phase": "resolve",
+      "anchor": "contact",
+      "canvas": [
+        192,
+        208
+      ],
+      "pivot": [
+        96,
+        184
+      ],
+      "sourcePivot": [
+        0.5,
+        0.82
+      ],
+      "peakExtent": 118,
+      "extentAxis": "max",
+      "durations": [
+        120,
+        140,
+        150,
+        150,
+        160,
+        180
+      ],
+      "cameraPolicy": "camera-facing-fixed-inner-world-or-sanctuary-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Support/control lifetime comes from distinct facts; do not convert to hit or extend duration by ART.",
+      "subject": "One protective ward contact: pale jade petals and ivory folded membrane gently open around a fixed target ground point. Six phases seed→unfold→full shelter shimmer→steady panels→small jade strips→soft fading flecks. NO attack explosion, blood, damage cue or target body."
+    },
+    {
+      "id": "st-tail",
+      "mode": "st",
+      "phase": "tail",
+      "anchor": "projectile",
+      "canvas": [
+        192,
+        144
+      ],
+      "pivot": [
+        96,
+        72
+      ],
+      "sourcePivot": [
+        0.5,
+        0.5
+      ],
+      "peakExtent": 72,
+      "extentAxis": "width",
+      "durations": [
+        60,
+        70,
+        90,
+        100,
+        110,
+        130
+      ],
+      "cameraPolicy": "abstract-effect-direction-or-ground",
+      "aimRotationAllowed": true,
+      "factLifetimePolicy": "Support/control lifetime comes from distinct facts; do not convert to hit or extend duration by ART.",
+      "subject": "Residual inner-world qi: a few delicate milky-jade folds and quiet ivory specks. Six progressively thinner distinct frames, subtle celadon mist fading without a black-hole shockwave.",
+      "sizeDecision": "Quiet residual tail stays72px physical wide; source uniform factor, not per-key fitting."
+    },
+    {
+      "id": "aoe-warning",
+      "mode": "aoe",
+      "phase": "warning",
+      "anchor": "ground-node",
+      "canvas": [
+        176,
+        192
+      ],
+      "pivot": [
+        88,
+        176
+      ],
+      "sourcePivot": [
+        0.5,
+        0.84
+      ],
+      "peakExtent": 116,
+      "extentAxis": "height",
+      "durations": [
+        100,
+        120,
+        140,
+        160,
+        180,
+        200
+      ],
+      "cameraPolicy": "camera-facing-fixed-inner-world-or-sanctuary-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Support/control lifetime comes from distinct facts; do not convert to hit or extend duration by ART.",
+      "subject": "ONE sanctuary anchor cue, small jade step/petal-like apparition and an ivory folded edge. Six dormant-to-poised warning phases. No whole field or three-anchor diagram, no real terrain."
+    },
+    {
+      "id": "aoe-deploy",
+      "mode": "aoe",
+      "phase": "deploy",
+      "anchor": "ground-node",
+      "canvas": [
+        208,
+        256
+      ],
+      "pivot": [
+        104,
+        240
+      ],
+      "sourcePivot": [
+        0.5,
+        0.84
+      ],
+      "peakExtent": 176,
+      "extentAxis": "height",
+      "durations": [
+        60,
+        70,
+        80,
+        80,
+        90,
+        100
+      ],
+      "cameraPolicy": "camera-facing-fixed-inner-world-or-sanctuary-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Support/control lifetime comes from distinct facts; do not convert to hit or extend duration by ART.",
+      "subject": "ONE vertical shelter membrane emerges from a pale jade sanctuary seed, narrow ivory inner-world fold edges and calm translucent celadon veil. Six phases seed, corner, rising veil, parted fold, full shelter membrane, quiet poised refuge. No target/body or physical map."
+    },
+    {
+      "id": "aoe-active",
+      "mode": "aoe",
+      "phase": "active",
+      "anchor": "field-center",
+      "canvas": [
+        352,
+        352
+      ],
+      "pivot": [
+        176,
+        320
+      ],
+      "sourcePivot": [
+        0.5,
+        0.84
+      ],
+      "peakExtent": 264,
+      "extentAxis": "height",
+      "durations": [
+        170,
+        180,
+        190,
+        190,
+        200,
+        220
+      ],
+      "cameraPolicy": "camera-facing-fixed-inner-world-or-sanctuary-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Support/control lifetime comes from distinct facts; do not convert to hit or extend duration by ART.",
+      "subject": "ONE immense translucent folded INNER-WORLD VEIL, camera-facing field element: narrow ivory-gold spatial seam opens onto a ghostly pale-jade miniature mountain/temple depth contained INSIDE the fold. This is an ethereal inner realm image, not a baked real floor/map. Six distinct opening/sweeping/settling folded membranes with different veil contours. No player, NPC, real target, attack blast, damage portal or physical equipped bead."
+    },
+    {
+      "id": "aoe-contact",
+      "mode": "aoe",
+      "phase": "contact",
+      "anchor": "contact",
+      "canvas": [
+        208,
+        224
+      ],
+      "pivot": [
+        104,
+        200
+      ],
+      "sourcePivot": [
+        0.5,
+        0.82
+      ],
+      "peakExtent": 144,
+      "extentAxis": "max",
+      "durations": [
+        80,
+        100,
+        110,
+        120,
+        140,
+        150
+      ],
+      "cameraPolicy": "camera-facing-fixed-inner-world-or-sanctuary-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Support/control lifetime comes from distinct facts; do not convert to hit or extend duration by ART.",
+      "subject": "One confirmed support/control ward ripple: milky jade folded petals and thin ivory seam curl around a fixed sanctuary/border contact point. Six phases small seed→three unfolding facets→gentle shelter crest→thin wave→settled strips→tiny flecks. No damage burst or body."
+    },
+    {
+      "id": "aoe-collapse",
+      "mode": "aoe",
+      "phase": "collapse",
+      "anchor": "ground-node",
+      "canvas": [
+        192,
+        256
+      ],
+      "pivot": [
+        96,
+        240
+      ],
+      "sourcePivot": [
+        0.5,
+        0.84
+      ],
+      "peakExtent": 176,
+      "extentAxis": "height",
+      "durations": [
+        70,
+        80,
+        90,
+        100,
+        110,
+        140
+      ],
+      "cameraPolicy": "camera-facing-fixed-inner-world-or-sanctuary-element-at-Core-anchor",
+      "aimRotationAllowed": false,
+      "factLifetimePolicy": "Support/control lifetime comes from distinct facts; do not convert to hit or extend duration by ART.",
+      "subject": "ONE inner-world membrane closes and its jade/ivory folded edges dissolve into quiet mist. Six phases narrowing veil, closing seam, broken petals, shrinking fold, two thin wisps, final calm flecks. No whole field/real map/players or damage."
+    }
+  ],
+  "releaseMs": 900,
+  "activeEndMs": 2050,
+  "endMs": 2640,
+  "ownerApproved": false,
+  "runtimeIntegrated": false
+}

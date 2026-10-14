@@ -1,121 +1,116 @@
 # GDD — Vân Hải Đạo Đồ
 
-**Phiên bản 0.33 · 13/10/2026 · Thiết kế lại theo phản hồi chơi thử.**
+**Phiên bản 0.34 · 14/10/2026 · Tái cấu trúc Toàn diện: Một Tuyến Nhân Vật Chính (Huyễn Tâm / Tịch Bạch), Bốn Pháp Bảo Biểu Tượng, Vòng Lặp Sandbox Tu Luyện & Lộ Trình 5 Đại Cảnh Giới.**
 
-**Tạo hình đối thủ 13/10/2026:** theo ưu tiên mới, [8 quái thường và 3 tinh anh Pixel01](design/characters/van-hai-monster-concepts-v1/README.md) có identity master và sân đối chiếu với Vương Lâm/map1×. Mỗi mẫu một neutral Đông Nam; raw/body/shadow/VFX tách, giữ morphology theo loài. Đợi duyệt hình trước bảy hướng còn lại và năm nhóm animation; chưa thay NPC/quái live, behavior, reward hoặc mở farm. Đây là sản xuất concept của roster đã đề xuất, không nâng phiên bản GDD hoặc suy duyệt bằng test.
+> *“Thuận vi phàm, nghịch tắc tiên. Đạo chưa có đường — ta tự mở!”*
 
-**NPC/sinh cảnh 13/10/2026:** owner chọn [chốt dàn NPC và brief concept trước](VAN-HAI-LIVING-WORLD-PLAN.md). Gói đề xuất có14 NPC (bốn station giữ nguyên +mười vai mới), tám quái thường, ba tinh anh và bốn boss nối dấu niêm→ngoại vi→khảo nghiệm→cổ lâm. [Review](design/world/van-hai-living-world-v1/index.html) và catalog96record tách role runtime với danh tính/ART mới. Chưa đổi map, nhiệm vụ/thưởng, HP/MP, NPC global state hoặc mở Đọa Ma; số liệu/cơ chế mới theo prototype/gate riêng. Đây là phụ lục thiết kế, chưa nâng số phiên bản hoặc duyệt toàn bộ nội dung.
+---
 
-**Bản trải nghiệm 12/10/2026 theo phạm vi owner chọn:** đã tích hợp [Hằng Nhạc HN01–HN12 và nhánh EX01–EX04](HANG-NHAC-CHAPTER-RUNTIME.md), sáu công thức, save/proof/checkpoint server và bộ pixel Vương Lâm mới. Các đoạn “chưa mở runtime” trong ghi chú nghiên cứu 10–11/10 và [GDD 0.32 lưu lịch sử](GDD-v0.32-2026-10-11.md) ghi trạng thái lúc thiết kế; xem tài liệu bản trải nghiệm để biết phần đã triển khai và phần còn thử. Map ngoại vi/ART hai nhân vật còn lại/tăng chỉ số M03–M04 vẫn cần hoàn thiện, không suy duyệt toàn bộ GDD từ tích hợp.
+## 0. Tuyên bố Phạm vi & Trạng thái Phiên bản (14/10/2026)
 
-> Đạo chưa có đường. Ta tự mở.
+1. **Bước ngoặt Thiết kế của GDD 0.34 (Dọn dẹp các bản GDD cũ):**
+   - Các file GDD phiên bản cũ (`0.24`, `0.26`, `0.32`, `0.33`) đã được dọn bỏ để tránh nhầm lẫn; **`docs/GDD.md` (Phiên bản 0.34 · 14/10/2026) là nguồn GDD duy nhất của dự án**.
+   - **Chấm dứt cấu trúc chia 3 nhân vật khởi đầu dùng chung tuyến nhiệm vụ hành chính nhạt nhẽo ("Dấu sai trên vân lộ")**.
+   - **Tập trung 100% chiều sâu vào 1 tuyến nhân vật chính duy nhất đi theo con đường Vương Lâm** với 2 tạo hình đã được Owner duyệt ([Approval V5](design/characters/wang-lin-concept-direction-v5/approval.json) & [Pilot V1](design/characters/wang-lin-equipment-production-v1/approval.json)): **Huyễn Tâm (`ID: a` — Nam)** và **Tịch Bạch (`ID: b` — Nữ)** cùng **4 Họ Pháp Bảo Biểu Tượng** (**Kiếm linh · Hứa Lập Quốc, Thập Ức Tôn Hồn Phiên, Xạ Thần Xa, Thiên Nghịch Châu**).
+   - **Tư Đồ Nam** và **Lý Mộ Uyển** trở về đúng vai trò kinh điển trong nguyên tác *Tiên Nghịch*: **Tư Đồ Nam** là tàn hồn đại năng thức tỉnh bên trong **Thiên Nghịch Châu** (hệ thống Thức Hải / Chỉ điểm / Giám định cổ bảo); **Lý Mộ Uyển** là nhân vật Nhân Duyên & Đan–Trận trọng tâm từ giai đoạn cuối Ngưng Khí – Trúc Cơ – Kết Đan (Quyết Minh Cốc → Tu Ma Hải).
+2. **Ranh giới Bảo toàn Kỹ thuật & Sản xuất (`AGENTS.md`):**
+   - Bản GDD 0.34 này là **định hướng thiết kế tổng thể mới** đã chốt cùng Owner ngày 14/10/2026.
+   - Tuyến nhiệm vụ hành chính cũ (`HN01–HN12`) và các tài liệu đặc tả cũ của nó đã được dọn bỏ khỏi hệ thống tài liệu và giao diện hiển thị nhiệm vụ để chuyển sang **Mệnh Kiếp Chí (`VG01–VG11`)**.
+   - Việc cập nhật GDD **không tự động suy diễn thành duyệt ART/Motion/VFX cho các gói đang sản xuất (V2)**, không sửa SQLite DB, map đã chốt hay bất kỳ file bảo vệ nào trong `basis.json` / `approval.json` / `body-basis.json`.
 
-Người chơi bước vào thế giới tu tiên với năng lực có giới hạn, tự kiếm tài nguyên, học cách vận dụng, xây quan hệ và chọn con đường vượt bình cảnh. Sức mạnh mới phải giúp giải một vấn đề từng khó; mỗi chương để lại một món đồ, một khả năng hoặc một người còn nhớ việc mình đã làm.
+---
 
-Bản này thay định hướng nhiệm vụ và nhịp tu luyện của [GDD 0.32](GDD-v0.32-2026-10-11.md). Đây là **phương án thiết kế mới**, chưa thay gameplay đang chạy, chưa khóa balance hoặc duyệt ART. Các lựa chọn sản phẩm đã thống nhất vẫn giữ: MMORPG web, chiến đấu chủ động, bộ ba nhân vật từ đầu, Hằng Nhạc chung, phân hóa sâu từ Trúc Cơ, farm/build/PvE/PvP/sưu tập. Không quay lại hướng nhân vật đệ tử tự tạo.
+## 1. Bộ Tài Liệu Trụ Cột Của GDD 0.34
 
-## 1. Bộ tài liệu dùng để triển khai hướng mới
-
-| Tài liệu | Sở hữu nội dung |
-| --- | --- |
-| [Thiết kế tu tiên và hành trình nhân vật](CULTIVATION-REDESIGN-2026-10-13.md) | Thuật ngữ, sức mạnh, công pháp/build, đại cảnh giới, cốt truyện, hệ MMO và thứ tự sản xuất |
-| [Thiết kế lại Hằng Nhạc](HANG-NHAC-ONBOARDING-V2.md) | HN01–HN12/EX, HN04 thay thế, ngân sách tu vi, UX, tương thích save và tiêu chí chơi thử |
-| [Dàn NPC, quái và boss Vân Hải](VAN-HAI-LIVING-WORLD-PLAN.md) | Kế hoạch owner: 14 NPC theo wave A/B, 15 encounter, 8 vật liệu và 3 map design; nguồn chính của roster, danh tính và brief concept |
-| [NPC và sinh hoạt Hằng Nhạc](HANG-NHAC-NPC-LIFE-PLAN.md) | Phụ lục nối roster owner với bốn station hiện có, nơi dùng đế đối chứng và phản hồi theo chương; đề xuất sáu vai/sáu người nền cũ đã được thay thế |
-| [Reference và bằng chứng](CULTIVATION-QUEST-REFERENCES-2026-10-13.md) | Nguồn truyện/game đã đọc, giới hạn bằng chứng, cơ chế học và cách chuyển hóa |
-| [Bản runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md) | Những gì đã chạy: HN01–HN12, M01–M04, EX01–EX04, sáu công thức, checkpoint |
-| [Tự chọn nhiệm vụ và tìm đường](HANG-NHAC-QUEST-NAVIGATION.md) | Cải tiến UX đã làm trước đợt thiết kế này |
-
-**Thứ tự ưu tiên:** GDD 0.33 và hai thiết kế mới sở hữu hành vi nhiệm vụ/tu luyện đề xuất. [Kế hoạch sinh cảnh owner](VAN-HAI-LIVING-WORLD-PLAN.md) và `design/world/van-hai-living-world-v1/plan.json` sở hữu roster, danh tính, brief và thứ tự sản xuất NPC/quái/boss; thay đề xuất sáu NPC/sáu người nền trước đó. Plan ghi basis 0.32 được giữ nguyên nguồn, không kéo lại vòng xác nhận HN04/từng tầng đã thay trong 0.33. Hồ sơ runtime/code sở hữu sự thật đang triển khai. Các spec ngày 08–12/10 giữ hợp đồng và lịch sử; câu “giữ HN04”, “xác nhận từng tầng”, “EX chỉ sau HN12” trong chúng không còn là yêu cầu của phương án mới. Thực thi cần phiên bản nội dung và migration, không sửa save thật để khớp thiết kế.
-
-## 2. Vấn đề cần giải
-
-| Quan sát từ bản thử/code | Quyết định thiết kế mới |
-| --- | --- |
-| Ngưng Khí, tích lũy, vận khí, tầng và M01–M04 xuất hiện cùng lúc nhưng tác dụng ít rõ | Chỉ hiện cảnh giới/tầng, thanh tu vi tới tầng kế và lợi ích sắp đạt; M01–M04 là thông tin nội bộ |
-| HN02 bấm từng nhịp, trả lời câu hỏi rồi xác nhận; HN04 khởi động hai lần và quay NPC | Một lượt bài liền mạch; kiểm hiểu bằng hành động, hoàn tất/ghi thưởng tự động trong việc đã nhận |
-| Có tu vi nhưng phải bấm xác nhận từng tầng | Tầng nhỏ tự ổn định khi đủ điều kiện; quyết định chủ động dành cho chọn build, tiêu tài nguyên và đại đột phá |
-| Thiếu 600 tu vi trước tầng 9 và 1.620 trước tầng 15 theo tổng thưởng tối thiểu | Tuyến chính cung cấp đủ tiến trình qua hoạt động; không bắt chờ thổ nạp hoặc làm nhánh phụ để bù |
-| Tầng tăng nhưng HP/MP vẫn 100, gear đầu không bonus, vai trò mốc chưa nhìn thấy | Làm bảng nguồn sức mạnh và tình huống kiểm trước/sau; chỉ bật tăng trưởng cùng encounter đã cân lại |
-| Nhiều bước “tới điểm → E → quay về” và EX xuất hiện quá muộn | Cho thấy vấn đề trước, rồi lựa chọn chuẩn bị, hành động, hệ quả; mở nhánh khám phá từ giữa chương |
-
-Chẩn đoán dựa trên bản checkout hiện hành, không coi mục tiêu thời lượng bên dưới là kết quả playtest đã đo.
-
-## 3. Lời hứa trải nghiệm
-
-1. **Có việc đáng làm ngay:** trong vài phút đầu đã điều khiển, dùng thuật và thấy một bất thường cần mình xử lý.
-2. **Tu luyện có công dụng:** người chơi biết cần gì để tiến tiếp, được gì và sẽ dùng ở đâu.
-3. **Mạnh lên bằng cả chuẩn bị và thao tác:** trang bị/công pháp mở lựa chọn; đọc đòn, giữ vị trí, dùng thời cơ vẫn quan trọng.
-4. **Nhân vật có hành trình riêng:** điều đã làm và quyết định của mình được nhắc lại bằng tình huống, không chỉ câu chúc mừng.
-5. **Nghịch thiên có giới hạn:** lúc yếu có thể giữ mục tiêu, thoát hoặc phá điều kiện của đối thủ; về sau trở lại đối đầu. Không mặc định thắng cao thủ bằng một nút.
-6. **Chơi trực tiếp đủ tiến triển:** idle hỗ trợ người muốn nghỉ, không là cổng bắt buộc trong tuyến tân thủ.
-
-Vòng chơi: **thấy trở ngại → chọn mục tiêu → chuẩn bị/build → chiến đấu hoặc khám phá → nhận thành quả → dùng sức mạnh mới → gặp lựa chọn/hệ quả tiếp theo**.
-
-## 4. Những khái niệm người chơi cần hiểu
-
-| Khái niệm | Nghĩa và công dụng |
-| --- | --- |
-| Cảnh giới / tầng | Mức năng lực đã đạt. Ngưng Khí có 15 tầng; các đại cảnh giới sau chia giai đoạn theo spec riêng |
-| Tu vi | Tích lũy bền để tiến tầng; dùng thuật không trừ tu vi, tăng tầng không tiêu lại số tổng đã tích lũy |
-| Linh lực / MP | Năng lượng thi triển trong trận; giảm và hồi theo luật combat |
-| Vận khí / thổ nạp | Hành động vận hành/tu luyện. Không tạo một loại tiền “điểm vận khí” riêng |
-| Công pháp | Nền đang vận hành, đổi ưu/nhược của build; không đồng nghĩa tầng hoặc một nút đánh |
-| Lĩnh ngộ | Điều cụ thể đã trải qua và kiểm chứng, mở cách vận dụng; không thêm thanh EXP “đạo tâm” |
-| Linh thạch, vật liệu | Dùng chuẩn bị/chế tác/giao dịch khi hệ tương ứng mở; mỗi nguồn phải có nơi tiêu rõ |
-
-Không đồng nhất **vận khí** với **vận may/khí vận**. Bản đầu không thêm chỉ số may mắn ẩn chi phối đột phá hoặc phần thưởng bắt buộc.
-
-## 5. Nhập môn và chương Hằng Nhạc
-
-**Hướng dẫn HN01–HN05:** mục tiêu 15–20 phút chơi chủ động, tới tầng 3. HN04 thay bài hai lần né bằng “Qua trận dẫn khí”: một lượt 60–90 giây, đi bộ luôn qua được, Phong là lựa chọn đường ngắn. Không quay NPC giữa các đoạn.
-
-**Phần còn lại HN06–HN12:** chương đầu có khám phá, chuẩn bị, nhân duyên và khảo nghiệm; mục tiêu tổng chương 60–90 phút ở lượt đầu thông thường. Giữ 15 tầng trong toàn chương, không nhồi thành 15 lần xác nhận của tutorial. Thời lượng là giả thuyết cần đo; nếu thiếu nội dung thú vị, thu gọn chương trước khi thêm kill/chờ.
-
-Trục truyện sáng tạo **“Dấu sai trên vân lộ”** được phát triển thành việc liên quan trực tiếp tới cơ hội tu luyện của người chơi: mẫu vật bị hao khí, một người bị quy trách nhiệm, đường vật tư bị đình lại. Người chơi tìm ra điều kiện gây sai, tự chế công cụ và đưa ra cách xử lý. Chương kết thúc bằng tuyến được sửa, một lời hứa được đáp lại và mục tiêu xuất hành riêng; không chỉ đậu bài thi.
-
-Hub Hằng Nhạc dùng sinh hoạt/chuẩn bị, ngoại vi dùng khám phá/chiến đấu, khảo nghiệm dùng phiên riêng. Giữ map owner, 9 blocker và ART hiện hành. Các cảnh mới cần thiết kế không gian riêng trước khi sản xuất, không tự đặt hazard lên hub.
-
-**Bổ sung sau phản hồi map trống:** bốn NPC chức năng prototype chưa tạo thành một tông môn đang sống. [Kế hoạch owner](VAN-HAI-LIVING-WORLD-PLAN.md) có 14 NPC: Wave A gồm tám đầu mối và Kỷ An/Phùng Dã sinh hoạt, Wave B gồm bốn vai mở cùng nội dung tương ứng. Bốn station hiện hành giữ ID, mang danh tính đề xuất Trần Duy/Diệp Tĩnh/Tạ Kiếm Sơn/Tô Nhược. [Phụ lục Hằng Nhạc](HANG-NHAC-NPC-LIFE-PLAN.md) nối phản hồi theo chương và điểm dùng đế đối chứng cạnh khu chuẩn bị đông nam hoặc trong sân bài riêng; vị trí chân/collider chưa chốt. NPC có việc đang làm, không biến toàn bộ roster thành điểm nhận/trả. Thiết kế mới chưa xuất hiện trong game.
-
-## 6. Sức mạnh và hệ thống mở dần
-
-| Chặng | Thành quả phải chơi được | Hoạt động dùng thành quả |
+| Nhóm | Tài liệu | Nội dung sở hữu |
 | --- | --- | --- |
-| Ngưng Khí 1–3 | Hiểu MP/tu vi, dùng bộ R01, cảm nhận tăng lực nhỏ | Trận đầu, vượt trận dẫn khí, chuyến ngoại vi |
-| Ngưng Khí 4–9 | Một lựa chọn vận hành đổi được, ngọc hộ thân, biết chuẩn bị | Hai cách xử lý cùng chuyến đi, EX, đối thủ đọc được |
-| Ngưng Khí 10–15 | Kết hợp công cụ/kỹ năng, giữ mục tiêu dưới áp lực | Chuyến thực địa nhiều tình huống, HN10 ba pha |
-| Trúc Cơ | Công pháp phân hóa, cấu hình thuật/pháp khí có đánh đổi, nguồn farm mục tiêu | Bí cảnh nhỏ, tổ đội 2–3 người, tỷ thí tự nguyện |
-| Kết Đan | Pháp bảo gắn bó lâu dài, chuyên môn nghề và build rõ | Boss nhóm, truyền thừa, hoạt động tông môn |
-| Nguyên Anh | Năng lực thần thức/linh hồn được đặc tả riêng theo nhân vật | Bí cảnh nhiều lớp mục tiêu và đối thủ có điều kiện |
-| Hóa Thần | Hành trình lĩnh ngộ, cách vận dụng ý cảnh; Đọa Ma là lựa chọn có hệ quả | Thử thách con đường, đối thủ ngang chặng, hoạt động nhóm cao |
+| **Thiết kế Cốt lõi 0.34 (Mới — 14/10)** | **[Thiết kế Lộ trình Giai đoạn, Nhiệm vụ & Nhân vật](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md)** | Kiến trúc 1 tuyến chính (Huyễn Tâm/Tịch Bạch) + Tư Đồ Nam/Lý Mộ Uyển; Vòng lặp 20% Cốt truyện Nghịch thiên + 80% Sandbox; Ma trận 5 Đại Cảnh Giới × 3 Mốc Pháp Bảo; Đặc tả chi tiết Chặng 1 (Ngưng Khí → Trúc Cơ) & Chặng 2 (Kết Đan) |
+| **Đặc tả Artwork & Logic Từng Chặng (Mới — 14/10)** | **[Đặc tả Chi tiết Artwork & Logic Theo Từng Chặng](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md)** | Bảng quy chuẩn Canvas/Pivot/Layer; State Machine (`PlayerCultivationState`, `ArtifactLoadoutState`, `StageProgressionLedger`); Phân rã chi tiết **Artwork cần làm × Logic cần code** cho từng Hồi (`VG01 → VG11`) và kiến trúc Chặng 3–5 |
+| **Prototype Vòng Lặp G2 (Mới — 14/10)** | **[Prototype Logic Vòng Lặp Tiến Trình & Nhiệm Vụ G2](design/gameplay/wang-lin-progression-loop-prototype-v1/README.md)** | Hiện thực hóa `VG01–VG11` (`Auto-Chain Fact`), 5 Đại Cảnh Giới, 4 Pháp Bảo × 3 Mốc, Nội Giới Tư Đồ Nam, Lò đan Lý Mộ Uyển và 4 Boss Chặng 1 |
+| **Nghiên cứu Thị trường & Truyện (Mới — 14/10)** | **[Reference Game Tu Tiên Thị Trường & Nguyên Tác Tiên Nghịch](XIANXIA-MARKET-STORY-REFERENCES-2026-10-14.md)** | Phân tích đối chiếu *Quỷ Cốc Bát Hoang, Mịch Trường Sinh, Đại Hiệp Lập Chí Truyện (`1948980`), Dật Kiếm Phong Vân Quyết (`1876890`), Nhất Niệm Tiêu Dao, Tru Tiên Thế Giới* và bằng chứng chương truyện *Tiên Nghịch* (Ch.8, 17–49, 76, 104, 365–808) |
+| **Sản xuất Nhân vật & Pháp Bảo (14/10)** | **[Kế hoạch Triển khai Vương Lâm / Huyễn Tâm – Tịch Bạch](WANG-LIN-IMPLEMENTATION-PLAN.md)** & **[Prototype Cơ chế 4 Pháp Bảo](design/gameplay/wang-lin-equipment-prototype-v1/README.md)** | Lộ trình sản xuất P1–P5 cho Huyễn Tâm (`a`) & Tịch Bạch (`b`), 4 họ Pháp Bảo qua 3 Mốc (I, II, III), thông số kỹ năng ST/AOE và quy tắc thẩm mỹ |
+| **Sinh cảnh Thế giới, NPC, Quái & Boss (13/10)** | **[Dàn 14 NPC, 11 Quái/Tinh Anh & 4 Boss Vân Hải](VAN-HAI-LIVING-WORLD-PLAN.md)** & **[Kế hoạch Chiêu thức Boss](BOSS-SKILL-ANIMATION-PLAN.md)** | Roster 14 NPC (Wave A/B), 8 quái thường, 3 tinh anh, 4 Boss (*Vân Nha Lang Vương, Tam Ấn Khôi Lỗi, Cổ Mộc Trấn Khí, Hắc Ấn Chấp Sự*) và [Checklist Cụm Quái](design/characters/van-hai-monster-animation-v1/CLUSTER-REVIEW.md) |
+| **Hợp đồng Kỹ thuật** | [Kiến trúc](ARCHITECTURE.md) · [Hợp đồng MMORPG](MMORPG-SYSTEM-CONTRACTS.md) | Hợp đồng server-authoritative, quản lý trạng thái và ranh giới module |
 
-Bộ ba có Kiếm/Lôi/Phong R01 từ đầu. HN03/HN04 dạy sử dụng, không cấp lại quyền. Hệ sau phải có nguồn, nơi dùng, tác dụng và giới hạn trước khi mở menu. R02–R05/ART đã có không tự trở thành gameplay.
+---
 
-## 7. Nhân vật và cốt truyện
+## 2. Ba Trụ Cột Định Hướng Giải Quyết Tắc Nghẽn Thiết Kế
 
-- **Vương Lâm:** ít lợi thế ban đầu, quan sát, chịu đựng, thử nghiệm và giữ bí mật cơ duyên. Thiên Nghịch Châu có tuyến riêng, không là quà chung cho mọi người chơi.
-- **Tư Đồ Nam:** đã có tri thức, bị giới hạn hiện diện/thi triển; tiến trình gameplay biểu thị hồi phục khả năng vận dụng. Không viết ông thành thiếu niên Ngưng Khí mất trí nhớ.
-- **Lý Mộ Uyển:** có mục tiêu và lựa chọn độc lập; đan–trận/chuẩn bị phải giúp cô tự chiến đấu, cứu điều mình coi trọng và có quyền quyết định. Không chỉ là người cấp thuốc cho Vương Lâm.
+| Điểm nghẽn ở bản cũ (0.32–0.33) | Giải pháp Đột phá ở GDD 0.34 |
+| --- | --- |
+| **1. Tắc nghẽn Nhân vật:** Chia 3 nhân vật khởi đầu (Vương Lâm, Tư Đồ Nam, Lý Mộ Uyển) cùng làm đệ tử Ngưng Khí tầng 1 khiến cốt truyện mất chất *Tiên Nghịch* và nhân ba khối lượng việc. | **Một Tuyến Nhân Vật Chính Duy Nhất:** Người chơi hóa thân thành **Huyễn Tâm (Nam)** hoặc **Tịch Bạch (Nữ)** trên hành trình nghịch thiên của Vương Lâm. **Tư Đồ Nam** là đạo sư/tàn hồn trong **Thiên Nghịch Châu**; **Lý Mộ Uyển** là trụ cột Đan–Trận & Nhân Duyên ở Quyết Minh Cốc / Tu Ma Hải. |
+| **2. Tắc nghẽn Nhiệm vụ:** Mạch nhiệm vụ *"Dấu sai trên vân lộ"* nặng tính hành chính (kiểm tra kho bãi, báo cáo qua lại), thiếu cảm giác sinh tồn và đoạt thiên cơ. | **Mô hình Lai 20% Cốt Truyện Sinh Tử + 80% Sandbox Mở:**<br>• **20% Tuyến Chính (Mệnh Kiếp Chí):** Ngắn gọn, kịch tính cao (rơi xuống vực nhặt Châu Đá, sát cơ khảo nghiệm, họa diệt môn Hằng Nhạc, huyết chiến Quyết Minh Cốc).<br>• **80% Vòng lặp Sandbox:** Tự do săn Quái/Tinh Anh/Boss, gặp Kỳ ngộ đa nhánh, luyện đan/rèn khí và tiến hóa **4 Họ Pháp Bảo**. |
+| **3. Tắc nghẽn Giai đoạn:** Chưa có khung phát triển rõ ràng sau Ngưng Khí, chưa gắn kết 4 Pháp Bảo và 4 Boss mới vào nhịp đột phá cảnh giới. | **Khung 5 Đại Cảnh Giới × 3 Mốc Pháp Bảo:** Nối chặt **Ngưng Khí → Trúc Cơ → Kết Đan → Nguyên Anh → Hóa Thần** với **Mốc I (Khởi nguyên) → Mốc II (Bản sắc) → Mốc III (Ý cảnh)**. Mỗi cảnh giới có vùng đất mới, hoạt động MMO rõ ràng và Boss Đại Kiếp Nạn gác cổng đột phá. |
 
-Hằng Nhạc chung của ba người là chuyển thể game. Chương cá nhân theo hồ sơ không thay canon toàn server; nhiều người chọn cùng mẫu không sinh nhiều bản Thiên Nghịch Châu trong kinh tế chung. Nội dung mang nhãn **nguyên tác có nguồn / chuyển thể / sáng tạo mới**. Các arc cao chưa đủ nguồn chỉ ở mức brief, không bịa tình tiết rồi gán cho Tiên Nghịch.
+---
 
-## 8. MMORPG có trọng tâm
+## 3. Vòng Lặp Gameplay Cốt Lõi (Core Loop)
 
-Giữ mục tiêu farm đồ/build, PvE/PvP, sưu tập và thể hiện nhân vật. Thứ tự mở: một vòng farm có đích dùng → bí cảnh nhóm nhỏ → tỷ thí → tông môn/kinh tế. Solo vẫn có đường tới năng lực nền. Chợ, open PK, bang chiến và hàng chục tiền tệ chưa cần cho chương đầu.
+Người chơi trải nghiệm vòng lặp liên tục, có mục đích rõ ràng ở mọi cảnh giới:
 
-Loot cá nhân theo đóng góp hợp lệ, không tranh last-hit của tutorial. Đồ thiết yếu có đường chắc chắn; đồ hiếm mở lựa chọn/sưu tập và có tiến độ bảo đảm khi thiết kế nguồn lặp. Thành tựu, áo, hình pháp bảo/tọa kỵ là dấu hành trình; không mặc định mỗi ngoại hình cộng chỉ số.
+1. **Biến cố / Mục tiêu Cảnh giới:** Nhận diện mối đe dọa hoặc bình cảnh phía trước (ví dụ: cần phá giải *Tam Ấn Khôi Lỗi* hoặc chuẩn bị *Trúc Cơ Đan* trước khi *Hắc Ấn Chấp Sự* ra tay).
+2. **Thám hiểm Sandbox & Kỳ ngộ (80% thời lượng):** Ra vùng ngoại vi / rừng sâu / bí cảnh để săn 8 loài yêu thú, 3 tinh anh (*Lang Tuần Sơn, Thiết Giáp Linh Trùng, Phù Sư Hắc Lụa*) và giải quyết các sự kiện Kỳ ngộ đa nhánh.
+3. **Chuẩn bị & Luyện hóa:**
+   - Dùng **Thiên Nghịch Châu** ngưng tụ lộ thủy, mở Không Gian Nội Giới và nhận chỉ điểm từ **Tư Đồ Nam**.
+   - Phối hợp cùng dàn NPC chuyên môn (**Bạch Chỉ / Lý Mộ Uyển** luyện đan, **Tống Thiết** luyện khí, **Tạ Kiếm Sơn** rèn kiếm thức) để nâng cấp trang bị.
+   - Tiến hóa và cấu hình **4 Họ Pháp Bảo (Kiếm linh, Hồn phiên, Xạ Thần Xa, Thiên Nghịch Châu)** cùng **3 Khuynh hướng Công pháp**.
+4. **Thực chiến Cơ chế & Độ Kiếp:** Đấu với Boss có nhịp báo đòn rõ ràng (*Vân Nha Lang Vương, Tam Ấn Khôi Lỗi, Cổ Mộc Trấn Khí, Hắc Ấn Chấp Sự*), dùng thao tác di chuyển + Pháp bảo để phá cơ chế và **Đột phá Cảnh giới**.
 
-Nhân duyên mở bằng một người nhớ một quyết định, kỳ ngộ bằng một chuỗi có điều kiện, tông môn bằng một công việc cộng tác. Mở rộng sau khi chúng tạo trải nghiệm tốt, không mô phỏng cả xã hội ngay.
+> **Nguyên tắc UX bất di bất dịch:**
+> - **Tầng nhỏ tự ổn định:** Khi đủ Tu vi, các tầng nhỏ trong Ngưng Khí tự động tăng và cộng chỉ số ngay; người chơi chỉ bấm đột phá chủ động ở **các mốc mở khóa lớn (Tầng 3, 6, 12)** và **Đại Đột Phá (Trúc Cơ, Kết Đan...)**.
+> - **Không chạy việc vặt báo cáo:** Bước nhiệm vụ ngoài thực địa tự động chuyển tiếp; chỉ gặp NPC khi có cốt truyện quan trọng, lựa chọn nhánh nhân duyên hoặc mở tính năng mới.
 
-## 9. UX, sản xuất và kiểm chứng
+---
 
-Tự chuyển mục tiêu sau kết quả đã lưu; **bấm mục tiêu để tìm đường**, di chuyển tay để hủy. Không tự chiến đấu, chọn truyện, tiêu nguyên liệu hoặc đại đột phá. Trong việc đã nhận, bước kế và thưởng chắc chắn nối tự động; không thêm nút “đồng ý đã hoàn thành”. Chỉ quay NPC khi có đối thoại, lựa chọn hoặc kết quả đáng xem.
+## 4. Hệ Thống Chiến Đấu & Bốn Họ Pháp Bảo Biểu Tượng
 
-Phân kỳ: **P0 rõ tiến trình/giảm thao tác → P1 HN04 và mạch HN mới → P2 sức mạnh/build/nguồn farm → P3 Trúc Cơ và xã hội nhỏ → P4 cảnh giới sau**. Không triển khai toàn bộ GDD một lần. P0/P1 bảo toàn save/receipt và không thay owner map; chi tiết nghiệm thu/migration trong bản Hằng Nhạc v2.
+Nhân vật chính (**Huyễn Tâm / Tịch Bạch**) làm chủ hệ thống chiến đấu chủ động góc nhìn Isometric, kết hợp **Di chuyển / Lướt né (Dash)** với **Bộ Kỹ Năng Pháp Bảo (ST + AOE)** và **Công Pháp Vận Hành**:
 
-Đây là phân kỳ gameplay. `productionWaves` P0–P3 trong kế hoạch sinh cảnh là các đợt sản xuất dàn nhân vật/đối thủ riêng; áp ưu tiên owner mới nhất quái/tinh anh trước NPC/boss, không suy hai bảng cùng mã là cùng phạm vi thực hiện.
+| Họ Pháp Bảo | Kỹ năng Đơn (ST) | Kỹ năng Diện rộng (AOE) | Đặc trưng Cơ chế & Vai trò trong Build |
+| --- | --- | --- | --- |
+| **Kiếm linh**<br>*(Hứa Lập Quốc)* | `Kiếm Ý Nhất Tuyến`<br>*(Đâm xuyên tuyến 320px)* | `Kiếm Trận Phá Giới`<br>*(Trận kiếm 3 đợt, r=136px)* | **Sát thương bùng nổ & Xuyên thấu:** Tốc độ ra đòn nhanh, tối ưu khi kết liễu mục tiêu đơn lẻ hoặc tỉa máu Boss từ tầm trung. Lên Mốc II có kiếm linh Hứa Lập Quốc mang sát khí tím sẫm. |
+| **Hồn phiên**<br>*(Thập Ức Tôn Hồn Phiên)* | `Chủ Hồn Dẫn Lộ`<br>*(Phóng chủ hồn đeo bám)* | `Tam Môn Tụ Hồn`<br>*(Mở 3 cổng hồn, r=168px)* | **Triệu hồi & Rút sinh lực theo nhịp:** Khống chế vùng rộng, gây sát thương duy trì (DoT) và tự hồi phục qua hồn phách thu thập được. Lên Mốc II triệu hồi Chủ Hồn Tinh Anh/Boss. |
+| **Xạ Thần Xa**<br>*(Chiến Xa Cổ Tu)* | `Giải Niêm Dẫn Thú`<br>*(Phóng chiến thú húc phá giáp)* | `Lôi Thú Liệt Địa`<br>*(Chiến xa giẫm nát, r=184px)* | **Phá giáp hạng nặng & Làm choáng:** Chuyên trị các đối thủ có khiên dày (*Tam Ấn Khôi Lỗi, Thiết Giáp Linh Trùng*) hoặc phá vỡ đội hình cụm quái đông. |
+| **Thiên Nghịch Châu**<br>*(Dị Bảo Bản Mệnh)* | `Dẫn Giới Hộ Thân`<br>*(Khiên hộ thể + Thanh tẩy)* | `Nội Giới Hộ Đạo`<br>*(Trường không gian, r=160px)* | **Hộ đạo, Phản chấn & Không gian riêng:** Bảo toàn tính mạng trước sát chiêu của Boss (*Đạo Ấn / Ấn Hồi* của Hắc Ấn Chấp Sự), hồi linh lực và mở Không Gian Nội Giới gặp **Tư Đồ Nam**. |
 
-Kiểm cảm giác với 5 lượt người mới: ít nhất 4 người phân biệt được tu vi và MP, biết mục tiêu tiếp mà không hỏi; không có chờ idle bắt buộc; ít nhất 4 người nêu được một lợi ích mới và một hệ quả của lựa chọn. Dữ liệu thời gian/menu/retry hỗ trợ quan sát, không thay phản hồi. Bản hiện tại chưa đạt các tiêu chí này chỉ vì test kỹ thuật đã qua.
+---
 
-Hợp đồng kỹ thuật tiếp tục theo [kiến trúc](ARCHITECTURE.md), [nhân vật](CHARACTER-SYSTEM.md), [nhiệm vụ](QUEST-SYSTEM.md), [nội dung](GAME-CONTENT-CONTROL-PLAN.md) và [MMORPG](MMORPG-SYSTEM-CONTRACTS.md). Runtime, balance và duyệt hình là ba kết quả riêng. Mọi thay đổi tương lai kiểm trên fixture; không reset DB/map/draft của owner.
+## 5. Tổng Quan Lộ Trình 5 Đại Cảnh Giới (Stage Progression)
+
+Chi tiết từng bước của Chặng 1 và Chặng 2 được quy định tại **[STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md)**:
+
+1. **Chặng 1 — Ngưng Khí (Tầng 1 → 15) lên Trúc Cơ:**
+   - **Bối cảnh:** Hằng Nhạc Ngoại Môn → Tuyến Ngoại Vi → Sân Khảo Nghiệm → Rừng Cổ Mộc → Quyết Minh Cốc.
+   - **Tuyến chính (6 Hồi):** *Hồi I: Phế Sài Nhập Môn & Cơ Duyên Châu Đá (Tầng 1–3)* → *Hồi II: Máu Nhuộm Ngoại Vi & Vân Nha Lang Vương (Tầng 4–6)* → *Hồi III: Bí Mật Thức Hải Tư Đồ Nam & Chọn Công Pháp (Tầng 7–9)* → *Hồi IV: Sát Cơ Khảo Nghiệm & Tam Ấn Khôi Lỗi (Tầng 10–12)* → *Hồi V: Rừng Cổ Mộc, Gặp Lý Mộ Uyển & Cổ Mộc Trấn Khí (Tầng 13–15)* → *Hồi VI: Đại Kiếp Nạn Hằng Nhạc, Đấu Hắc Ấn Chấp Sự & Đột Phá Trúc Cơ*.
+   - **Mốc Pháp Bảo:** Hoàn thiện **Mốc I (Tự mở đường)** cho cả 4 họ Pháp Bảo.
+2. **Chặng 2 — Trúc Cơ lên Kết Đan:**
+   - **Bối cảnh:** Quyết Minh Cốc → Hàn Thiết Kiếm Mộ → Vực Ngoại Vân Hải → Cửa ngõ Tu Ma Hải.
+   - **Tuyến chính (5 Hồi):** *Hồi VII: Phong Vân Quyết Minh Cốc (Mở Động Phủ/Nội Giới & Hồn Phiên Mốc II)* → *Hồi VIII: Hung Linh Nhập Kiếm (Thu phục Hứa Lập Quốc — Kiếm linh Mốc II)* → *Hồi IX: Hộ Đạo Đan Tâm (Bảo vệ đan thất Lý Mộ Uyển & Mở Xạ Thần Xa Mốc II)* → *Hồi X: Đoạt Mệnh Chân Thân (Tiêu diệt chân thân Hắc Ấn Chấp Sự)* → *Hồi XI: Tiến Vào Tu Ma Hải & Độ Kiếp Kết Đan (Hoàn thiện Thiên Nghịch Châu Mốc II)*.
+   - **Mốc Pháp Bảo:** Trọng tâm của gói **Production V2 — Mốc II (Luyện hóa thành bản sắc)**. Mở Bí cảnh tổ đội 2–3 người và Tỷ thí luận đạo.
+3. **Chặng 3 — Kết Đan lên Nguyên Anh:**
+   - **Bối cảnh:** Tu Ma Hải & Cổ Thần Chi Địa.
+   - **Trọng tâm:** Ngưng tụ Đạo Đan chuyên biệt, chiến trường phe phái (Chính – Ma – Tán Tu), săn Boss Thế Giới đoạt nguyên liệu luyện chế Phân Thân và chuẩn bị nhục thân cho **Tư Đồ Nam**.
+4. **Chặng 4 — Nguyên Anh lên Hóa Thần:**
+   - **Bối cảnh:** Tiên Giới Toái Phiến & Vực Sâu Tinh Không.
+   - **Trọng tâm:** Bước vào đại kiếp thọ nguyên của **Lý Mộ Uyển**, lĩnh ngộ **Ý Cảnh Riêng** (*Sinh Tử / Sát Lục / Chân Giả*) và tiến hóa toàn bộ 4 Pháp Bảo lên **Mốc III (Đạo của chính mình)**.
+
+---
+
+## 6. Định Hướng MMORPG & Kinh Tế Bền Vững
+
+- **Solo vẫn sống tốt, Tổ đội thêm chiều sâu:** Toàn bộ mạch truyện chính (Mệnh Kiếp Chí) và nguyên liệu đột phá nền tảng đều có thể hoàn thành Solo nhờ cơ chế phối hợp 4 Pháp Bảo. Các Bí cảnh nhóm 2–3 người (từ Trúc Cơ) và 3–5 người (từ Kết Đan) giúp tăng tốc độ săn nguyên liệu hiếm, mảnh cổ bảo và ngoại trang danh vọng.
+- **Kinh tế có điểm tiêu rõ ràng:**
+  - *Linh thạch & Linh thảo:* Tiêu hao cho Luyện Đan (**Bạch Chỉ / Lý Mộ Uyển**) và duy trì Trận pháp.
+  - *Khoáng thạch & Lõi Khôi Lỗi:* Tiêu hao cho Luyện Khí (**Tống Thiết**) và giải ấn **Xạ Thần Xa**.
+  - *Yêu Hồn & Chủ Hồn Boss:* Nguyên liệu độc quyền để nuôi dưỡng **Hồn Phiên** và dung luyện **Kiếm Linh**.
+- **Nhân bản Dị Bảo hợp lý trong MMO:** Mỗi người chơi đều sở hữu **Thiên Nghịch Châu** trong hành trình cá nhân của mình; khi bước vào hoạt động chung toàn server, năng lực này được biểu đạt dưới dạng **Nội Giới Hộ Đạo / Ấn Ký Nghịch Thiên** của từng đạo hữu mà không phá vỡ logic thế giới chung.
+
+---
+
+## 7. Phân Kỳ Triển Khai (`G0 → G4`) & Tiêu Chí Nghiệm Thu
+
+1. **G0 (Đã hoàn tất 14/10):** Chốt GDD 0.34, tài liệu Reference thị trường/truyện mới và bản thiết kế chi tiết Chặng 1–2.
+2. **G1 (Đang thực hiện theo Plan 14/10):** Sản xuất gói ART/Motion/VFX **Huyễn Tâm & Tịch Bạch × 4 Pháp Bảo (P4–P5)** và hoàn thiện duyệt các gói Quái/Tinh Anh/Boss.
+3. **G2 (Prototype Gameplay Chặng 1 trên Fixture):** Chuyển hóa 6 Hồi Chặng 1 (`VG01–VG06`) và vòng lặp Sandbox Ngoại vi lên fixture kiểm thử, nối cùng hợp đồng 4 Pháp Bảo.
+4. **G3 (Tích hợp Sinh Cảnh & Boss Chặng 1):** Ghép 14 NPC, 11 Quái/Tinh Anh và 4 Boss vào bản đồ thực địa/khảo nghiệm khi đủ gate duyệt.
+5. **G4 (Mở rộng Chặng 2 — Quyết Minh Cốc & Kết Đan):** Đưa gói Pháp Bảo Mốc II, hệ thống Thức Hải Tư Đồ Nam, Đan Thất Lý Mộ Uyển và Bí cảnh tổ đội vào vận hành.

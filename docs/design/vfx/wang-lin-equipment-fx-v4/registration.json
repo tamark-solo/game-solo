@@ -1,0 +1,4688 @@
+{
+  "schema": "wang-lin-equipment-fx-registration-4",
+  "canvas": [
+    384,
+    320
+  ],
+  "pivot": [
+    176,
+    288
+  ],
+  "registration": [
+    {
+      "id": "sword-escort",
+      "source": "sources/sword-escort.png",
+      "sourceSha256": "0ef45c41ce239028662e0bb9960d58b6237469d5d22d3b3171e0f035571ece9f",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        521,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            480,
+            563
+          ],
+          "cut": 521,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          503,
+          1029,
+          1536
+        ],
+        [
+          0,
+          547,
+          1048,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              413,
+              593
+            ],
+            "cut": 503,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              941,
+              1118
+            ],
+            "cut": 1029,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              501,
+              594
+            ],
+            "cut": 547,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              970,
+              1127
+            ],
+            "cut": 1048,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.27522935779816515,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.9375
+        ],
+        "requestedCellOrigin": [
+          256,
+          416
+        ],
+        "registeredCellOrigin": [
+          256,
+          480
+        ],
+        "reason": "Visible common hắc-khí tail base around cell y480; no per-frame fitting of coil/slash stages."
+      },
+      "targetWidth": 120,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        215,
+        256
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            503,
+            521
+          ],
+          "sourceOrigin": [
+            256,
+            480
+          ],
+          "localOrigin": [
+            256,
+            480
+          ],
+          "alphaBounds": [
+            99,
+            83,
+            413,
+            480
+          ],
+          "coreBounds": [
+            102,
+            85,
+            409,
+            478
+          ],
+          "alpha4Pixels": 57013,
+          "alpha64Pixels": 49535,
+          "nativeOffset": [
+            172,
+            147
+          ],
+          "nativeSize": [
+            86,
+            109
+          ],
+          "scale": 0.27522935779816515,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            503,
+            0,
+            1029,
+            521
+          ],
+          "sourceOrigin": [
+            768,
+            480
+          ],
+          "localOrigin": [
+            265,
+            480
+          ],
+          "alphaBounds": [
+            90,
+            81,
+            438,
+            480
+          ],
+          "coreBounds": [
+            92,
+            82,
+            432,
+            478
+          ],
+          "alpha4Pixels": 66388,
+          "alpha64Pixels": 57858,
+          "nativeOffset": [
+            167,
+            146
+          ],
+          "nativeSize": [
+            96,
+            110
+          ],
+          "scale": 0.27522935779816515,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1029,
+            0,
+            1536,
+            521
+          ],
+          "sourceOrigin": [
+            1280,
+            480
+          ],
+          "localOrigin": [
+            251,
+            480
+          ],
+          "alphaBounds": [
+            89,
+            73,
+            442,
+            479
+          ],
+          "coreBounds": [
+            91,
+            73,
+            441,
+            478
+          ],
+          "alpha4Pixels": 77703,
+          "alpha64Pixels": 67236,
+          "nativeOffset": [
+            170,
+            144
+          ],
+          "nativeSize": [
+            97,
+            112
+          ],
+          "scale": 0.27522935779816515,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            521,
+            547,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            992
+          ],
+          "localOrigin": [
+            256,
+            471
+          ],
+          "alphaBounds": [
+            62,
+            42,
+            501,
+            441
+          ],
+          "coreBounds": [
+            63,
+            44,
+            499,
+            440
+          ],
+          "alpha4Pixels": 97631,
+          "alpha64Pixels": 85214,
+          "nativeOffset": [
+            162,
+            138
+          ],
+          "nativeSize": [
+            121,
+            110
+          ],
+          "scale": 0.27522935779816515,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            547,
+            521,
+            1048,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            992
+          ],
+          "localOrigin": [
+            221,
+            471
+          ],
+          "alphaBounds": [
+            47,
+            56,
+            423,
+            441
+          ],
+          "coreBounds": [
+            49,
+            58,
+            420,
+            440
+          ],
+          "alpha4Pixels": 75853,
+          "alpha64Pixels": 64553,
+          "nativeOffset": [
+            167,
+            142
+          ],
+          "nativeSize": [
+            103,
+            106
+          ],
+          "scale": 0.27522935779816515,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1048,
+            521,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            992
+          ],
+          "localOrigin": [
+            232,
+            471
+          ],
+          "alphaBounds": [
+            79,
+            45,
+            398,
+            441
+          ],
+          "coreBounds": [
+            82,
+            48,
+            396,
+            440
+          ],
+          "alpha4Pixels": 60387,
+          "alpha64Pixels": 51686,
+          "nativeOffset": [
+            173,
+            139
+          ],
+          "nativeSize": [
+            88,
+            109
+          ],
+          "scale": 0.27522935779816515,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 118680,
+        "clearedFullyTransparentRgb": 1130755,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "sword-charge",
+      "source": "sources/sword-charge.png",
+      "sourceSha256": "8f652704c0629899019834ac34a7acac4afaea4bc94ffc6d4c243bb7621d4b9a",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        497,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            478,
+            516
+          ],
+          "cut": 497,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          512,
+          1014,
+          1536
+        ],
+        [
+          0,
+          512,
+          1004,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              327,
+              659
+            ],
+            "cut": 512,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              856,
+              1149
+            ],
+            "cut": 1014,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              454,
+              570
+            ],
+            "cut": 512,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              958,
+              1051
+            ],
+            "cut": 1004,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.3724604966139955,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.8125
+        ],
+        "reason": "Requested source emitter retained after cell registration."
+      },
+      "targetWidth": 165,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        234,
+        268
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            512,
+            497
+          ],
+          "sourceOrigin": [
+            256,
+            416
+          ],
+          "localOrigin": [
+            256,
+            416
+          ],
+          "alphaBounds": [
+            196,
+            195,
+            327,
+            478
+          ],
+          "coreBounds": [
+            199,
+            198,
+            324,
+            473
+          ],
+          "alpha4Pixels": 11000,
+          "alpha64Pixels": 7114,
+          "nativeOffset": [
+            212,
+            186
+          ],
+          "nativeSize": [
+            49,
+            105
+          ],
+          "scale": 0.3724604966139955,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            512,
+            0,
+            1014,
+            497
+          ],
+          "sourceOrigin": [
+            768,
+            416
+          ],
+          "localOrigin": [
+            256,
+            416
+          ],
+          "alphaBounds": [
+            147,
+            97,
+            344,
+            476
+          ],
+          "coreBounds": [
+            149,
+            98,
+            342,
+            473
+          ],
+          "alpha4Pixels": 29435,
+          "alpha64Pixels": 18514,
+          "nativeOffset": [
+            193,
+            149
+          ],
+          "nativeSize": [
+            73,
+            141
+          ],
+          "scale": 0.3724604966139955,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1014,
+            0,
+            1536,
+            497
+          ],
+          "sourceOrigin": [
+            1280,
+            416
+          ],
+          "localOrigin": [
+            266,
+            416
+          ],
+          "alphaBounds": [
+            135,
+            40,
+            404,
+            477
+          ],
+          "coreBounds": [
+            137,
+            40,
+            400,
+            473
+          ],
+          "alpha4Pixels": 43322,
+          "alpha64Pixels": 30679,
+          "nativeOffset": [
+            185,
+            128
+          ],
+          "nativeSize": [
+            100,
+            163
+          ],
+          "scale": 0.3724604966139955,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            497,
+            512,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            928
+          ],
+          "localOrigin": [
+            256,
+            431
+          ],
+          "alphaBounds": [
+            71,
+            70,
+            454,
+            459
+          ],
+          "coreBounds": [
+            74,
+            71,
+            452,
+            456
+          ],
+          "alpha4Pixels": 51591,
+          "alpha64Pixels": 35478,
+          "nativeOffset": [
+            165,
+            134
+          ],
+          "nativeSize": [
+            143,
+            145
+          ],
+          "scale": 0.3724604966139955,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            512,
+            497,
+            1004,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            928
+          ],
+          "localOrigin": [
+            256,
+            431
+          ],
+          "alphaBounds": [
+            58,
+            19,
+            446,
+            459
+          ],
+          "coreBounds": [
+            60,
+            20,
+            444,
+            456
+          ],
+          "alpha4Pixels": 68206,
+          "alpha64Pixels": 49182,
+          "nativeOffset": [
+            160,
+            115
+          ],
+          "nativeSize": [
+            145,
+            164
+          ],
+          "scale": 0.3724604966139955,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1004,
+            497,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            928
+          ],
+          "localOrigin": [
+            276,
+            431
+          ],
+          "alphaBounds": [
+            47,
+            23,
+            496,
+            459
+          ],
+          "coreBounds": [
+            50,
+            25,
+            493,
+            456
+          ],
+          "alpha4Pixels": 81297,
+          "alpha64Pixels": 56634,
+          "nativeOffset": [
+            149,
+            116
+          ],
+          "nativeSize": [
+            167,
+            162
+          ],
+          "scale": 0.3724604966139955,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 178925,
+        "clearedFullyTransparentRgb": 1165671,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "sword-release",
+      "source": "sources/sword-release.png",
+      "sourceSha256": "b754cd1b618b8603702d9f99c6c56d71d227a4b1f6f6fc9dbf55b19fd5554801",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        529,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            450,
+            608
+          ],
+          "cut": 529,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          462,
+          1006,
+          1536
+        ],
+        [
+          0,
+          528,
+          1041,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              357,
+              557
+            ],
+            "cut": 462,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              974,
+              1039
+            ],
+            "cut": 1006,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              506,
+              551
+            ],
+            "cut": 528,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              1008,
+              1075
+            ],
+            "cut": 1041,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.3870967741935484,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "sourceOrigins": [
+          [
+            222,
+            315
+          ],
+          [
+            695,
+            320
+          ],
+          [
+            1169,
+            327
+          ],
+          [
+            143,
+            835
+          ],
+          [
+            630,
+            845
+          ],
+          [
+            1167,
+            852
+          ]
+        ],
+        "expectedSourceSize": [
+          1536,
+          1024
+        ],
+        "nativeOrigin": [
+          210,
+          248
+        ],
+        "requestedNativeOrigin": [
+          244,
+          222
+        ],
+        "originEvidence": [
+          "visible ivory burst star",
+          "visible ivory burst star",
+          "visible ivory burst star",
+          "visible ivory burst star",
+          "estimated continuation of faded burst/emitter",
+          "estimated continuation of faded burst/emitter"
+        ],
+        "reason": "Manual physical emitter registration fixes bright burst position across source cells. Late fade origins are explicit estimates; fixed global scale and one native emitter, no per-frame bbox fit."
+      },
+      "targetWidth": 180,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        210,
+        248
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            462,
+            529
+          ],
+          "sourceOrigin": [
+            222,
+            315
+          ],
+          "localOrigin": [
+            222,
+            315
+          ],
+          "alphaBounds": [
+            99,
+            147,
+            357,
+            397
+          ],
+          "coreBounds": [
+            102,
+            152,
+            356,
+            394
+          ],
+          "alpha4Pixels": 19713,
+          "alpha64Pixels": 15000,
+          "nativeOffset": [
+            162,
+            183
+          ],
+          "nativeSize": [
+            100,
+            97
+          ],
+          "scale": 0.3870967741935484,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            462,
+            0,
+            1006,
+            529
+          ],
+          "sourceOrigin": [
+            695,
+            320
+          ],
+          "localOrigin": [
+            233,
+            320
+          ],
+          "alphaBounds": [
+            95,
+            139,
+            512,
+            430
+          ],
+          "coreBounds": [
+            96,
+            143,
+            511,
+            427
+          ],
+          "alpha4Pixels": 45657,
+          "alpha64Pixels": 37380,
+          "nativeOffset": [
+            157,
+            178
+          ],
+          "nativeSize": [
+            161,
+            113
+          ],
+          "scale": 0.3870967741935484,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1006,
+            0,
+            1536,
+            529
+          ],
+          "sourceOrigin": [
+            1169,
+            327
+          ],
+          "localOrigin": [
+            163,
+            327
+          ],
+          "alphaBounds": [
+            33,
+            119,
+            500,
+            450
+          ],
+          "coreBounds": [
+            35,
+            120,
+            500,
+            449
+          ],
+          "alpha4Pixels": 82623,
+          "alpha64Pixels": 67083,
+          "nativeOffset": [
+            160,
+            167
+          ],
+          "nativeSize": [
+            181,
+            128
+          ],
+          "scale": 0.3870967741935484,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            529,
+            528,
+            1024
+          ],
+          "sourceOrigin": [
+            143,
+            835
+          ],
+          "localOrigin": [
+            143,
+            306
+          ],
+          "alphaBounds": [
+            46,
+            104,
+            506,
+            393
+          ],
+          "coreBounds": [
+            48,
+            106,
+            503,
+            391
+          ],
+          "alpha4Pixels": 50624,
+          "alpha64Pixels": 39112,
+          "nativeOffset": [
+            172,
+            170
+          ],
+          "nativeSize": [
+            178,
+            112
+          ],
+          "scale": 0.3870967741935484,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            528,
+            529,
+            1041,
+            1024
+          ],
+          "sourceOrigin": [
+            630,
+            845
+          ],
+          "localOrigin": [
+            102,
+            316
+          ],
+          "alphaBounds": [
+            23,
+            123,
+            480,
+            365
+          ],
+          "coreBounds": [
+            24,
+            125,
+            479,
+            363
+          ],
+          "alpha4Pixels": 35283,
+          "alpha64Pixels": 25401,
+          "nativeOffset": [
+            179,
+            173
+          ],
+          "nativeSize": [
+            177,
+            94
+          ],
+          "scale": 0.3870967741935484,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1041,
+            529,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1167,
+            852
+          ],
+          "localOrigin": [
+            126,
+            323
+          ],
+          "alphaBounds": [
+            34,
+            79,
+            462,
+            349
+          ],
+          "coreBounds": [
+            36,
+            81,
+            460,
+            348
+          ],
+          "alpha4Pixels": 24385,
+          "alpha64Pixels": 16986,
+          "nativeOffset": [
+            174,
+            154
+          ],
+          "nativeSize": [
+            166,
+            105
+          ],
+          "scale": 0.3870967741935484,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 141433,
+        "clearedFullyTransparentRgb": 1232229,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "sword-residual",
+      "source": "sources/sword-residual.png",
+      "sourceSha256": "730996393465061d2bf44fc9b54594a98a2925224b144777adcd69acd9ee0524",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        550,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            496,
+            605
+          ],
+          "cut": 550,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          531,
+          1044,
+          1536
+        ],
+        [
+          0,
+          557,
+          1061,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              492,
+              570
+            ],
+            "cut": 531,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              1014,
+              1074
+            ],
+            "cut": 1044,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              488,
+              626
+            ],
+            "cut": 557,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              959,
+              1164
+            ],
+            "cut": 1061,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.36995515695067266,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.5
+        ],
+        "reason": "Requested source emitter retained after cell registration."
+      },
+      "targetWidth": 165,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        256,
+        228
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            531,
+            550
+          ],
+          "sourceOrigin": [
+            256,
+            256
+          ],
+          "localOrigin": [
+            256,
+            256
+          ],
+          "alphaBounds": [
+            41,
+            70,
+            492,
+            496
+          ],
+          "coreBounds": [
+            44,
+            72,
+            490,
+            494
+          ],
+          "alpha4Pixels": 94631,
+          "alpha64Pixels": 73063,
+          "nativeOffset": [
+            176,
+            159
+          ],
+          "nativeSize": [
+            167,
+            158
+          ],
+          "scale": 0.36995515695067266,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            531,
+            0,
+            1044,
+            550
+          ],
+          "sourceOrigin": [
+            768,
+            256
+          ],
+          "localOrigin": [
+            237,
+            256
+          ],
+          "alphaBounds": [
+            39,
+            68,
+            483,
+            478
+          ],
+          "coreBounds": [
+            42,
+            70,
+            481,
+            477
+          ],
+          "alpha4Pixels": 70341,
+          "alpha64Pixels": 52971,
+          "nativeOffset": [
+            183,
+            158
+          ],
+          "nativeSize": [
+            164,
+            152
+          ],
+          "scale": 0.36995515695067266,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1044,
+            0,
+            1536,
+            550
+          ],
+          "sourceOrigin": [
+            1280,
+            256
+          ],
+          "localOrigin": [
+            236,
+            256
+          ],
+          "alphaBounds": [
+            30,
+            78,
+            438,
+            461
+          ],
+          "coreBounds": [
+            32,
+            80,
+            436,
+            459
+          ],
+          "alpha4Pixels": 45162,
+          "alpha64Pixels": 29917,
+          "nativeOffset": [
+            180,
+            162
+          ],
+          "nativeSize": [
+            151,
+            142
+          ],
+          "scale": 0.36995515695067266,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            550,
+            557,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            768
+          ],
+          "localOrigin": [
+            256,
+            218
+          ],
+          "alphaBounds": [
+            91,
+            76,
+            488,
+            396
+          ],
+          "coreBounds": [
+            93,
+            78,
+            485,
+            394
+          ],
+          "alpha4Pixels": 35228,
+          "alpha64Pixels": 22555,
+          "nativeOffset": [
+            195,
+            175
+          ],
+          "nativeSize": [
+            147,
+            118
+          ],
+          "scale": 0.36995515695067266,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            557,
+            550,
+            1061,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            768
+          ],
+          "localOrigin": [
+            211,
+            218
+          ],
+          "alphaBounds": [
+            69,
+            55,
+            402,
+            361
+          ],
+          "coreBounds": [
+            73,
+            57,
+            400,
+            360
+          ],
+          "alpha4Pixels": 18383,
+          "alpha64Pixels": 11079,
+          "nativeOffset": [
+            203,
+            168
+          ],
+          "nativeSize": [
+            123,
+            113
+          ],
+          "scale": 0.36995515695067266,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1061,
+            550,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            768
+          ],
+          "localOrigin": [
+            219,
+            218
+          ],
+          "alphaBounds": [
+            103,
+            98,
+            353,
+            344
+          ],
+          "coreBounds": [
+            104,
+            100,
+            351,
+            343
+          ],
+          "alpha4Pixels": 8252,
+          "alpha64Pixels": 4567,
+          "nativeOffset": [
+            213,
+            184
+          ],
+          "nativeSize": [
+            92,
+            91
+          ],
+          "scale": 0.36995515695067266,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 186614,
+        "clearedFullyTransparentRgb": 1248492,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "banner-escort",
+      "source": "sources/banner-escort.png",
+      "sourceSha256": "d40279a0ab58bc2878fd372fd0b3e258854b4c5e2a7385a216394a6bef28a344",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        520,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            496,
+            544
+          ],
+          "cut": 520,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          480,
+          977,
+          1536
+        ],
+        [
+          0,
+          542,
+          1061,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              399,
+              561
+            ],
+            "cut": 480,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              910,
+              1045
+            ],
+            "cut": 977,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              515,
+              570
+            ],
+            "cut": 542,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              956,
+              1168
+            ],
+            "cut": 1061,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.3080082135523614,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.9375
+        ],
+        "requestedCellOrigin": [
+          256,
+          416
+        ],
+        "registeredCellOrigin": [
+          256,
+          480
+        ],
+        "reason": "Visible common soul-ribbon tail base around cell y480; source varies modestly in lower-row tail curl. One uniform correction keeps the source development."
+      },
+      "targetWidth": 150,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        225,
+        272
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            480,
+            520
+          ],
+          "sourceOrigin": [
+            256,
+            480
+          ],
+          "localOrigin": [
+            256,
+            480
+          ],
+          "alphaBounds": [
+            120,
+            192,
+            399,
+            496
+          ],
+          "coreBounds": [
+            122,
+            192,
+            398,
+            495
+          ],
+          "alpha4Pixels": 43833,
+          "alpha64Pixels": 37160,
+          "nativeOffset": [
+            183,
+            183
+          ],
+          "nativeSize": [
+            86,
+            94
+          ],
+          "scale": 0.3080082135523614,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            480,
+            0,
+            977,
+            520
+          ],
+          "sourceOrigin": [
+            768,
+            480
+          ],
+          "localOrigin": [
+            288,
+            480
+          ],
+          "alphaBounds": [
+            81,
+            67,
+            430,
+            495
+          ],
+          "coreBounds": [
+            82,
+            70,
+            428,
+            494
+          ],
+          "alpha4Pixels": 78472,
+          "alpha64Pixels": 67106,
+          "nativeOffset": [
+            161,
+            145
+          ],
+          "nativeSize": [
+            107,
+            132
+          ],
+          "scale": 0.3080082135523614,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            977,
+            0,
+            1536,
+            520
+          ],
+          "sourceOrigin": [
+            1280,
+            480
+          ],
+          "localOrigin": [
+            303,
+            480
+          ],
+          "alphaBounds": [
+            68,
+            95,
+            518,
+            495
+          ],
+          "coreBounds": [
+            70,
+            95,
+            515,
+            495
+          ],
+          "alpha4Pixels": 90742,
+          "alpha64Pixels": 76891,
+          "nativeOffset": [
+            153,
+            153
+          ],
+          "nativeSize": [
+            139,
+            123
+          ],
+          "scale": 0.3080082135523614,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            520,
+            542,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            992
+          ],
+          "localOrigin": [
+            256,
+            472
+          ],
+          "alphaBounds": [
+            25,
+            24,
+            515,
+            450
+          ],
+          "coreBounds": [
+            26,
+            25,
+            513,
+            448
+          ],
+          "alpha4Pixels": 122778,
+          "alpha64Pixels": 108220,
+          "nativeOffset": [
+            154,
+            134
+          ],
+          "nativeSize": [
+            151,
+            131
+          ],
+          "scale": 0.3080082135523614,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            542,
+            520,
+            1061,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            992
+          ],
+          "localOrigin": [
+            226,
+            472
+          ],
+          "alphaBounds": [
+            28,
+            66,
+            414,
+            454
+          ],
+          "coreBounds": [
+            29,
+            67,
+            412,
+            452
+          ],
+          "alpha4Pixels": 74502,
+          "alpha64Pixels": 63060,
+          "nativeOffset": [
+            164,
+            147
+          ],
+          "nativeSize": [
+            119,
+            120
+          ],
+          "scale": 0.3080082135523614,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1061,
+            520,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            992
+          ],
+          "localOrigin": [
+            219,
+            472
+          ],
+          "alphaBounds": [
+            107,
+            153,
+            385,
+            442
+          ],
+          "coreBounds": [
+            107,
+            154,
+            384,
+            440
+          ],
+          "alpha4Pixels": 40787,
+          "alpha64Pixels": 34511,
+          "nativeOffset": [
+            191,
+            174
+          ],
+          "nativeSize": [
+            86,
+            89
+          ],
+          "scale": 0.3080082135523614,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 112535,
+        "clearedFullyTransparentRgb": 1071804,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "banner-charge",
+      "source": "sources/banner-charge.png",
+      "sourceSha256": "b06079ac407429a661e925aac15faa4ffa3469f6aed7a0813b30ed0b45ac0e49",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        506,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            498,
+            515
+          ],
+          "cut": 506,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          515,
+          1016,
+          1536
+        ],
+        [
+          0,
+          533,
+          1016,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              460,
+              571
+            ],
+            "cut": 515,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              963,
+              1069
+            ],
+            "cut": 1016,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              443,
+              624
+            ],
+            "cut": 533,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              909,
+              1124
+            ],
+            "cut": 1016,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.39759036144578314,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.8125
+        ],
+        "reason": "Requested source emitter retained after cell registration."
+      },
+      "targetWidth": 165,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        234,
+        268
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            515,
+            506
+          ],
+          "sourceOrigin": [
+            256,
+            416
+          ],
+          "localOrigin": [
+            256,
+            416
+          ],
+          "alphaBounds": [
+            69,
+            138,
+            460,
+            490
+          ],
+          "coreBounds": [
+            73,
+            141,
+            458,
+            475
+          ],
+          "alpha4Pixels": 40034,
+          "alpha64Pixels": 22760,
+          "nativeOffset": [
+            160,
+            157
+          ],
+          "nativeSize": [
+            155,
+            140
+          ],
+          "scale": 0.39759036144578314,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            515,
+            0,
+            1016,
+            506
+          ],
+          "sourceOrigin": [
+            768,
+            416
+          ],
+          "localOrigin": [
+            253,
+            416
+          ],
+          "alphaBounds": [
+            56,
+            113,
+            448,
+            498
+          ],
+          "coreBounds": [
+            59,
+            114,
+            446,
+            496
+          ],
+          "alpha4Pixels": 56119,
+          "alpha64Pixels": 31877,
+          "nativeOffset": [
+            156,
+            148
+          ],
+          "nativeSize": [
+            156,
+            153
+          ],
+          "scale": 0.39759036144578314,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1016,
+            0,
+            1536,
+            506
+          ],
+          "sourceOrigin": [
+            1280,
+            416
+          ],
+          "localOrigin": [
+            264,
+            416
+          ],
+          "alphaBounds": [
+            53,
+            67,
+            471,
+            496
+          ],
+          "coreBounds": [
+            55,
+            70,
+            470,
+            496
+          ],
+          "alpha4Pixels": 87101,
+          "alpha64Pixels": 53884,
+          "nativeOffset": [
+            150,
+            129
+          ],
+          "nativeSize": [
+            166,
+            171
+          ],
+          "scale": 0.39759036144578314,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            506,
+            533,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            928
+          ],
+          "localOrigin": [
+            256,
+            422
+          ],
+          "alphaBounds": [
+            95,
+            31,
+            443,
+            467
+          ],
+          "coreBounds": [
+            97,
+            38,
+            440,
+            464
+          ],
+          "alpha4Pixels": 68595,
+          "alpha64Pixels": 45653,
+          "nativeOffset": [
+            170,
+            113
+          ],
+          "nativeSize": [
+            138,
+            173
+          ],
+          "scale": 0.39759036144578314,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            533,
+            506,
+            1016,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            928
+          ],
+          "localOrigin": [
+            235,
+            422
+          ],
+          "alphaBounds": [
+            91,
+            24,
+            376,
+            468
+          ],
+          "coreBounds": [
+            92,
+            25,
+            373,
+            466
+          ],
+          "alpha4Pixels": 59351,
+          "alpha64Pixels": 43114,
+          "nativeOffset": [
+            177,
+            110
+          ],
+          "nativeSize": [
+            113,
+            177
+          ],
+          "scale": 0.39759036144578314,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1016,
+            506,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            928
+          ],
+          "localOrigin": [
+            264,
+            422
+          ],
+          "alphaBounds": [
+            108,
+            9,
+            366,
+            469
+          ],
+          "coreBounds": [
+            110,
+            10,
+            365,
+            468
+          ],
+          "alpha4Pixels": 58972,
+          "alpha64Pixels": 44647,
+          "nativeOffset": [
+            172,
+            104
+          ],
+          "nativeSize": [
+            103,
+            183
+          ],
+          "scale": 0.39759036144578314,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 196943,
+        "clearedFullyTransparentRgb": 1161694,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "banner-release",
+      "source": "sources/banner-release.png",
+      "sourceSha256": "9bff3899cb1cfb9da78e7ca4078ee37ff50b5d2bc0372af1e08907f0797540e7",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        536,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            480,
+            592
+          ],
+          "cut": 536,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          468,
+          985,
+          1536
+        ],
+        [
+          0,
+          537,
+          1039,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              414,
+              523
+            ],
+            "cut": 468,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              964,
+              1006
+            ],
+            "cut": 985,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              513,
+              562
+            ],
+            "cut": 537,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              1020,
+              1059
+            ],
+            "cut": 1039,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.4158415841584158,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.5
+        ],
+        "reason": "Requested source emitter retained after cell registration."
+      },
+      "targetWidth": 210,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        244,
+        222
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            468,
+            536
+          ],
+          "sourceOrigin": [
+            256,
+            256
+          ],
+          "localOrigin": [
+            256,
+            256
+          ],
+          "alphaBounds": [
+            83,
+            193,
+            414,
+            455
+          ],
+          "coreBounds": [
+            83,
+            193,
+            412,
+            453
+          ],
+          "alpha4Pixels": 40093,
+          "alpha64Pixels": 33438,
+          "nativeOffset": [
+            172,
+            196
+          ],
+          "nativeSize": [
+            138,
+            109
+          ],
+          "scale": 0.4158415841584158,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            468,
+            0,
+            985,
+            536
+          ],
+          "sourceOrigin": [
+            768,
+            256
+          ],
+          "localOrigin": [
+            300,
+            256
+          ],
+          "alphaBounds": [
+            55,
+            135,
+            496,
+            464
+          ],
+          "coreBounds": [
+            56,
+            137,
+            494,
+            462
+          ],
+          "alpha4Pixels": 76018,
+          "alpha64Pixels": 64555,
+          "nativeOffset": [
+            142,
+            172
+          ],
+          "nativeSize": [
+            183,
+            137
+          ],
+          "scale": 0.4158415841584158,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            985,
+            0,
+            1536,
+            536
+          ],
+          "sourceOrigin": [
+            1280,
+            256
+          ],
+          "localOrigin": [
+            295,
+            256
+          ],
+          "alphaBounds": [
+            21,
+            99,
+            531,
+            480
+          ],
+          "coreBounds": [
+            23,
+            102,
+            528,
+            480
+          ],
+          "alpha4Pixels": 115252,
+          "alpha64Pixels": 103959,
+          "nativeOffset": [
+            130,
+            157
+          ],
+          "nativeSize": [
+            212,
+            158
+          ],
+          "scale": 0.4158415841584158,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            536,
+            537,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            768
+          ],
+          "localOrigin": [
+            256,
+            232
+          ],
+          "alphaBounds": [
+            18,
+            56,
+            513,
+            411
+          ],
+          "coreBounds": [
+            19,
+            57,
+            512,
+            409
+          ],
+          "alpha4Pixels": 93788,
+          "alpha64Pixels": 77842,
+          "nativeOffset": [
+            145,
+            149
+          ],
+          "nativeSize": [
+            206,
+            148
+          ],
+          "scale": 0.4158415841584158,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            537,
+            536,
+            1039,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            768
+          ],
+          "localOrigin": [
+            231,
+            232
+          ],
+          "alphaBounds": [
+            25,
+            73,
+            483,
+            388
+          ],
+          "coreBounds": [
+            27,
+            73,
+            479,
+            386
+          ],
+          "alpha4Pixels": 62514,
+          "alpha64Pixels": 50648,
+          "nativeOffset": [
+            158,
+            156
+          ],
+          "nativeSize": [
+            190,
+            131
+          ],
+          "scale": 0.4158415841584158,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1039,
+            536,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            768
+          ],
+          "localOrigin": [
+            241,
+            232
+          ],
+          "alphaBounds": [
+            20,
+            129,
+            451,
+            343
+          ],
+          "coreBounds": [
+            22,
+            131,
+            450,
+            342
+          ],
+          "alpha4Pixels": 25515,
+          "alpha64Pixels": 18966,
+          "nativeOffset": [
+            152,
+            179
+          ],
+          "nativeSize": [
+            179,
+            89
+          ],
+          "scale": 0.4158415841584158,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 124605,
+        "clearedFullyTransparentRgb": 1110805,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "banner-residual",
+      "source": "sources/banner-residual.png",
+      "sourceSha256": "3696656e19fd67142f344186c5e6d9a7099e32812c3418deb9f4c2d5ebb0e470",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        544,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            480,
+            609
+          ],
+          "cut": 544,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          531,
+          1029,
+          1536
+        ],
+        [
+          0,
+          507,
+          1029,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              486,
+              576
+            ],
+            "cut": 531,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              971,
+              1087
+            ],
+            "cut": 1029,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              431,
+              583
+            ],
+            "cut": 507,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              953,
+              1106
+            ],
+            "cut": 1029,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.38461538461538464,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.5
+        ],
+        "reason": "Requested source emitter retained after cell registration."
+      },
+      "targetWidth": 165,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        256,
+        228
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            531,
+            544
+          ],
+          "sourceOrigin": [
+            256,
+            256
+          ],
+          "localOrigin": [
+            256,
+            256
+          ],
+          "alphaBounds": [
+            54,
+            57,
+            486,
+            480
+          ],
+          "coreBounds": [
+            55,
+            60,
+            484,
+            480
+          ],
+          "alpha4Pixels": 95699,
+          "alpha64Pixels": 77975,
+          "nativeOffset": [
+            178,
+            151
+          ],
+          "nativeSize": [
+            166,
+            163
+          ],
+          "scale": 0.38461538461538464,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            531,
+            0,
+            1029,
+            544
+          ],
+          "sourceOrigin": [
+            768,
+            256
+          ],
+          "localOrigin": [
+            237,
+            256
+          ],
+          "alphaBounds": [
+            45,
+            80,
+            440,
+            474
+          ],
+          "coreBounds": [
+            47,
+            81,
+            437,
+            471
+          ],
+          "alpha4Pixels": 68393,
+          "alpha64Pixels": 50094,
+          "nativeOffset": [
+            182,
+            160
+          ],
+          "nativeSize": [
+            152,
+            152
+          ],
+          "scale": 0.38461538461538464,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1029,
+            0,
+            1536,
+            544
+          ],
+          "sourceOrigin": [
+            1280,
+            256
+          ],
+          "localOrigin": [
+            251,
+            256
+          ],
+          "alphaBounds": [
+            58,
+            98,
+            453,
+            472
+          ],
+          "coreBounds": [
+            60,
+            99,
+            449,
+            471
+          ],
+          "alpha4Pixels": 44753,
+          "alpha64Pixels": 28104,
+          "nativeOffset": [
+            182,
+            167
+          ],
+          "nativeSize": [
+            152,
+            144
+          ],
+          "scale": 0.38461538461538464,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            544,
+            507,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            768
+          ],
+          "localOrigin": [
+            256,
+            224
+          ],
+          "alphaBounds": [
+            64,
+            66,
+            431,
+            423
+          ],
+          "coreBounds": [
+            64,
+            67,
+            430,
+            421
+          ],
+          "alpha4Pixels": 36402,
+          "alpha64Pixels": 22548,
+          "nativeOffset": [
+            182,
+            167
+          ],
+          "nativeSize": [
+            141,
+            137
+          ],
+          "scale": 0.38461538461538464,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            507,
+            544,
+            1029,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            768
+          ],
+          "localOrigin": [
+            261,
+            224
+          ],
+          "alphaBounds": [
+            76,
+            65,
+            446,
+            416
+          ],
+          "coreBounds": [
+            78,
+            67,
+            442,
+            415
+          ],
+          "alpha4Pixels": 21455,
+          "alpha64Pixels": 10338,
+          "nativeOffset": [
+            185,
+            167
+          ],
+          "nativeSize": [
+            142,
+            135
+          ],
+          "scale": 0.38461538461538464,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1029,
+            544,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            768
+          ],
+          "localOrigin": [
+            251,
+            224
+          ],
+          "alphaBounds": [
+            77,
+            99,
+            398,
+            384
+          ],
+          "coreBounds": [
+            79,
+            101,
+            377,
+            383
+          ],
+          "alpha4Pixels": 5824,
+          "alpha64Pixels": 2395,
+          "nativeOffset": [
+            189,
+            180
+          ],
+          "nativeSize": [
+            123,
+            110
+          ],
+          "scale": 0.38461538461538464,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 179077,
+        "clearedFullyTransparentRgb": 1203681,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "chariot-escort",
+      "source": "sources/chariot-escort.png",
+      "sourceSha256": "83ff4e9ea58f21f91661ff15ec97daced1e2914590307a0842e634b5b50e239c",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        523,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            496,
+            551
+          ],
+          "cut": 523,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          522,
+          997,
+          1536
+        ],
+        [
+          0,
+          537,
+          1007,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              487,
+              558
+            ],
+            "cut": 522,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              968,
+              1027
+            ],
+            "cut": 997,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              513,
+              561
+            ],
+            "cut": 537,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              969,
+              1046
+            ],
+            "cut": 1007,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.3634361233480176,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.9375
+        ],
+        "requestedCellOrigin": [
+          256,
+          416
+        ],
+        "registeredCellOrigin": [
+          256,
+          480
+        ],
+        "reason": "Visible common lower chain base around cell y480; preserve source chain/roar movement and slight lower-row drift, no per-frame fitting."
+      },
+      "targetWidth": 165,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        267,
+        267
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            522,
+            523
+          ],
+          "sourceOrigin": [
+            256,
+            480
+          ],
+          "localOrigin": [
+            256,
+            480
+          ],
+          "alphaBounds": [
+            56,
+            128,
+            487,
+            494
+          ],
+          "coreBounds": [
+            58,
+            128,
+            485,
+            492
+          ],
+          "alpha4Pixels": 90746,
+          "alpha64Pixels": 81608,
+          "nativeOffset": [
+            194,
+            139
+          ],
+          "nativeSize": [
+            157,
+            133
+          ],
+          "scale": 0.3634361233480176,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            522,
+            0,
+            997,
+            523
+          ],
+          "sourceOrigin": [
+            768,
+            480
+          ],
+          "localOrigin": [
+            246,
+            480
+          ],
+          "alphaBounds": [
+            36,
+            89,
+            446,
+            496
+          ],
+          "coreBounds": [
+            36,
+            91,
+            444,
+            489
+          ],
+          "alpha4Pixels": 101601,
+          "alpha64Pixels": 88439,
+          "nativeOffset": [
+            191,
+            125
+          ],
+          "nativeSize": [
+            149,
+            148
+          ],
+          "scale": 0.3634361233480176,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            997,
+            0,
+            1536,
+            523
+          ],
+          "sourceOrigin": [
+            1280,
+            480
+          ],
+          "localOrigin": [
+            283,
+            480
+          ],
+          "alphaBounds": [
+            30,
+            66,
+            488,
+            491
+          ],
+          "coreBounds": [
+            33,
+            67,
+            486,
+            489
+          ],
+          "alpha4Pixels": 136434,
+          "alpha64Pixels": 116183,
+          "nativeOffset": [
+            175,
+            117
+          ],
+          "nativeSize": [
+            166,
+            154
+          ],
+          "scale": 0.3634361233480176,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            523,
+            537,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            992
+          ],
+          "localOrigin": [
+            256,
+            469
+          ],
+          "alphaBounds": [
+            50,
+            28,
+            513,
+            433
+          ],
+          "coreBounds": [
+            53,
+            29,
+            507,
+            430
+          ],
+          "alpha4Pixels": 126626,
+          "alpha64Pixels": 104500,
+          "nativeOffset": [
+            192,
+            107
+          ],
+          "nativeSize": [
+            168,
+            147
+          ],
+          "scale": 0.3634361233480176,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            537,
+            523,
+            1007,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            992
+          ],
+          "localOrigin": [
+            231,
+            469
+          ],
+          "alphaBounds": [
+            24,
+            37,
+            432,
+            452
+          ],
+          "coreBounds": [
+            25,
+            38,
+            430,
+            444
+          ],
+          "alpha4Pixels": 109445,
+          "alpha64Pixels": 88562,
+          "nativeOffset": [
+            192,
+            110
+          ],
+          "nativeSize": [
+            148,
+            151
+          ],
+          "scale": 0.3634361233480176,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1007,
+            523,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            992
+          ],
+          "localOrigin": [
+            273,
+            469
+          ],
+          "alphaBounds": [
+            39,
+            73,
+            465,
+            450
+          ],
+          "coreBounds": [
+            41,
+            76,
+            464,
+            448
+          ],
+          "alpha4Pixels": 99408,
+          "alpha64Pixels": 87946,
+          "nativeOffset": [
+            182,
+            123
+          ],
+          "nativeSize": [
+            155,
+            137
+          ],
+          "scale": 0.3634361233480176,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 122907,
+        "clearedFullyTransparentRgb": 904501,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "chariot-charge",
+      "source": "sources/chariot-charge.png",
+      "sourceSha256": "caefab04a87ed17bd810867883eb3f31fd750ed82fa9e441d6f42046b9a29255",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        499,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            482,
+            517
+          ],
+          "cut": 499,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          525,
+          1025,
+          1536
+        ],
+        [
+          0,
+          542,
+          1028,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              447,
+              604
+            ],
+            "cut": 525,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              955,
+              1096
+            ],
+            "cut": 1025,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              493,
+              591
+            ],
+            "cut": 542,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              1002,
+              1055
+            ],
+            "cut": 1028,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.38372093023255816,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.9375
+        ],
+        "requestedCellOrigin": [
+          256,
+          416
+        ],
+        "registeredCellOrigin": [
+          256,
+          480
+        ],
+        "reason": "Common chain base appears around cell y480; one uniform source registration for all six charging poses."
+      },
+      "targetWidth": 165,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        234,
+        268
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            525,
+            499
+          ],
+          "sourceOrigin": [
+            256,
+            480
+          ],
+          "localOrigin": [
+            256,
+            480
+          ],
+          "alphaBounds": [
+            92,
+            120,
+            447,
+            477
+          ],
+          "coreBounds": [
+            94,
+            123,
+            446,
+            474
+          ],
+          "alpha4Pixels": 54906,
+          "alpha64Pixels": 41036,
+          "nativeOffset": [
+            171,
+            130
+          ],
+          "nativeSize": [
+            136,
+            137
+          ],
+          "scale": 0.38372093023255816,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            525,
+            0,
+            1025,
+            499
+          ],
+          "sourceOrigin": [
+            768,
+            480
+          ],
+          "localOrigin": [
+            243,
+            480
+          ],
+          "alphaBounds": [
+            79,
+            107,
+            430,
+            479
+          ],
+          "coreBounds": [
+            81,
+            109,
+            427,
+            477
+          ],
+          "alpha4Pixels": 72731,
+          "alpha64Pixels": 51608,
+          "nativeOffset": [
+            171,
+            125
+          ],
+          "nativeSize": [
+            135,
+            143
+          ],
+          "scale": 0.38372093023255816,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1025,
+            0,
+            1536,
+            499
+          ],
+          "sourceOrigin": [
+            1280,
+            480
+          ],
+          "localOrigin": [
+            255,
+            480
+          ],
+          "alphaBounds": [
+            71,
+            73,
+            468,
+            482
+          ],
+          "coreBounds": [
+            74,
+            74,
+            466,
+            479
+          ],
+          "alpha4Pixels": 96913,
+          "alpha64Pixels": 72695,
+          "nativeOffset": [
+            163,
+            112
+          ],
+          "nativeSize": [
+            152,
+            157
+          ],
+          "scale": 0.38372093023255816,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            499,
+            542,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            992
+          ],
+          "localOrigin": [
+            256,
+            493
+          ],
+          "alphaBounds": [
+            66,
+            57,
+            493,
+            472
+          ],
+          "coreBounds": [
+            68,
+            59,
+            490,
+            470
+          ],
+          "alpha4Pixels": 105357,
+          "alpha64Pixels": 78256,
+          "nativeOffset": [
+            161,
+            101
+          ],
+          "nativeSize": [
+            164,
+            159
+          ],
+          "scale": 0.38372093023255816,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            542,
+            499,
+            1028,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            992
+          ],
+          "localOrigin": [
+            226,
+            493
+          ],
+          "alphaBounds": [
+            49,
+            31,
+            460,
+            473
+          ],
+          "coreBounds": [
+            51,
+            33,
+            448,
+            470
+          ],
+          "alpha4Pixels": 122299,
+          "alpha64Pixels": 87559,
+          "nativeOffset": [
+            166,
+            91
+          ],
+          "nativeSize": [
+            158,
+            170
+          ],
+          "scale": 0.38372093023255816,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1028,
+            499,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            992
+          ],
+          "localOrigin": [
+            252,
+            493
+          ],
+          "alphaBounds": [
+            27,
+            18,
+            462,
+            476
+          ],
+          "coreBounds": [
+            30,
+            21,
+            460,
+            474
+          ],
+          "alpha4Pixels": 146549,
+          "alpha64Pixels": 109082,
+          "nativeOffset": [
+            148,
+            86
+          ],
+          "nativeSize": [
+            167,
+            176
+          ],
+          "scale": 0.38372093023255816,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 185700,
+        "clearedFullyTransparentRgb": 961270,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "chariot-release",
+      "source": "sources/chariot-release.png",
+      "sourceSha256": "701eaef45d7ece73e9c7944359733ae05911b74769dfa54dd699dd8e367ddc1d",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        535,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            482,
+            589
+          ],
+          "cut": 535,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          485,
+          1002,
+          1536
+        ],
+        [
+          0,
+          530,
+          1025,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              434,
+              536
+            ],
+            "cut": 485,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              973,
+              1032
+            ],
+            "cut": 1002,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              512,
+              548
+            ],
+            "cut": 530,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              994,
+              1057
+            ],
+            "cut": 1025,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.48596112311015116,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.5
+        ],
+        "nativeOrigin": [
+          244,
+          200
+        ],
+        "requestedNativeOrigin": [
+          244,
+          222
+        ],
+        "reason": "Common native emitter raised22px for full alpha4 padding; peak width225 and source scale preserved. One offset for all six frames; no clipping/cropping/haze-driven downscale."
+      },
+      "targetWidth": 225,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        244,
+        200
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            485,
+            535
+          ],
+          "sourceOrigin": [
+            256,
+            256
+          ],
+          "localOrigin": [
+            256,
+            256
+          ],
+          "alphaBounds": [
+            57,
+            74,
+            434,
+            477
+          ],
+          "coreBounds": [
+            58,
+            76,
+            433,
+            473
+          ],
+          "alpha4Pixels": 83246,
+          "alpha64Pixels": 70374,
+          "nativeOffset": [
+            147,
+            112
+          ],
+          "nativeSize": [
+            183,
+            196
+          ],
+          "scale": 0.48596112311015116,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            485,
+            0,
+            1002,
+            535
+          ],
+          "sourceOrigin": [
+            768,
+            256
+          ],
+          "localOrigin": [
+            283,
+            256
+          ],
+          "alphaBounds": [
+            51,
+            98,
+            488,
+            468
+          ],
+          "coreBounds": [
+            53,
+            100,
+            486,
+            466
+          ],
+          "alpha4Pixels": 89729,
+          "alpha64Pixels": 75632,
+          "nativeOffset": [
+            131,
+            123
+          ],
+          "nativeSize": [
+            212,
+            180
+          ],
+          "scale": 0.48596112311015116,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1002,
+            0,
+            1536,
+            535
+          ],
+          "sourceOrigin": [
+            1280,
+            256
+          ],
+          "localOrigin": [
+            278,
+            256
+          ],
+          "alphaBounds": [
+            30,
+            51,
+            491,
+            482
+          ],
+          "coreBounds": [
+            32,
+            53,
+            490,
+            480
+          ],
+          "alpha4Pixels": 119401,
+          "alpha64Pixels": 101454,
+          "nativeOffset": [
+            123,
+            100
+          ],
+          "nativeSize": [
+            224,
+            209
+          ],
+          "scale": 0.48596112311015116,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            535,
+            530,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            768
+          ],
+          "localOrigin": [
+            256,
+            233
+          ],
+          "alphaBounds": [
+            48,
+            54,
+            512,
+            383
+          ],
+          "coreBounds": [
+            48,
+            56,
+            511,
+            381
+          ],
+          "alpha4Pixels": 87546,
+          "alpha64Pixels": 73247,
+          "nativeOffset": [
+            143,
+            113
+          ],
+          "nativeSize": [
+            225,
+            160
+          ],
+          "scale": 0.48596112311015116,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            530,
+            535,
+            1025,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            768
+          ],
+          "localOrigin": [
+            238,
+            233
+          ],
+          "alphaBounds": [
+            18,
+            64,
+            464,
+            392
+          ],
+          "coreBounds": [
+            20,
+            66,
+            462,
+            390
+          ],
+          "alpha4Pixels": 66879,
+          "alpha64Pixels": 51915,
+          "nativeOffset": [
+            137,
+            118
+          ],
+          "nativeSize": [
+            217,
+            159
+          ],
+          "scale": 0.48596112311015116,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1025,
+            535,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            768
+          ],
+          "localOrigin": [
+            255,
+            233
+          ],
+          "alphaBounds": [
+            32,
+            115,
+            461,
+            325
+          ],
+          "coreBounds": [
+            33,
+            117,
+            459,
+            323
+          ],
+          "alpha4Pixels": 32746,
+          "alpha64Pixels": 22348,
+          "nativeOffset": [
+            136,
+            143
+          ],
+          "nativeSize": [
+            208,
+            102
+          ],
+          "scale": 0.48596112311015116,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 162247,
+        "clearedFullyTransparentRgb": 1075652,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    },
+    {
+      "id": "chariot-residual",
+      "source": "sources/chariot-residual.png",
+      "sourceSha256": "70c41f15ba93158bb03369140c08798ee1c404b2633bba4bd2f9c8f61cb8dfdf",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "layout": [
+        3,
+        2
+      ],
+      "yCuts": [
+        0,
+        556,
+        1024
+      ],
+      "horizontalGutters": [
+        {
+          "boundary": 1,
+          "ideal": 512,
+          "emptyBand": [
+            494,
+            619
+          ],
+          "cut": 556,
+          "alphaThreshold": 4,
+          "alpha4PixelsAtCut": 0
+        }
+      ],
+      "xCutsByRow": [
+        [
+          0,
+          529,
+          1029,
+          1536
+        ],
+        [
+          0,
+          520,
+          1030,
+          1536
+        ]
+      ],
+      "verticalGutters": [
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              479,
+              579
+            ],
+            "cut": 529,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              958,
+              1101
+            ],
+            "cut": 1029,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ],
+        [
+          {
+            "boundary": 1,
+            "ideal": 512,
+            "emptyBand": [
+              404,
+              636
+            ],
+            "cut": 520,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          },
+          {
+            "boundary": 2,
+            "ideal": 1024,
+            "emptyBand": [
+              893,
+              1209
+            ],
+            "cut": 1030,
+            "alphaThreshold": 4,
+            "alpha4PixelsAtCut": 0
+          }
+        ]
+      ],
+      "sourceAlpha8EdgePixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "gutterAlphaThreshold": 4,
+      "scale": 0.3937947494033413,
+      "scaleBasis": "one peak alpha64 width across all six genuine source frames; fixed native emitter with reviewed common or physical source anchors; no per-frame fit",
+      "sourceOriginRegistration": {
+        "originNormalized": [
+          0.5,
+          0.5
+        ],
+        "nativeOrigin": [
+          256,
+          220
+        ],
+        "requestedNativeOrigin": [
+          256,
+          228
+        ],
+        "reason": "Common native emitter raised8px for full alpha4 padding; peak width165 and source scale preserved. One offset for all six fading stages; no clipping/cropping or per-frame fit."
+      },
+      "targetWidth": 165,
+      "canvas": [
+        384,
+        320
+      ],
+      "pivot": [
+        176,
+        288
+      ],
+      "nativeOrigin": [
+        256,
+        220
+      ],
+      "frames": [
+        {
+          "frame": 1,
+          "sourceRect": [
+            0,
+            0,
+            529,
+            556
+          ],
+          "sourceOrigin": [
+            256,
+            256
+          ],
+          "localOrigin": [
+            256,
+            256
+          ],
+          "alphaBounds": [
+            57,
+            38,
+            479,
+            494
+          ],
+          "coreBounds": [
+            58,
+            41,
+            477,
+            492
+          ],
+          "alpha4Pixels": 118675,
+          "alpha64Pixels": 90974,
+          "nativeOffset": [
+            178,
+            134
+          ],
+          "nativeSize": [
+            166,
+            180
+          ],
+          "scale": 0.3937947494033413,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 2,
+          "sourceRect": [
+            529,
+            0,
+            1029,
+            556
+          ],
+          "sourceOrigin": [
+            768,
+            256
+          ],
+          "localOrigin": [
+            239,
+            256
+          ],
+          "alphaBounds": [
+            50,
+            78,
+            429,
+            485
+          ],
+          "coreBounds": [
+            53,
+            78,
+            426,
+            483
+          ],
+          "alpha4Pixels": 85577,
+          "alpha64Pixels": 64115,
+          "nativeOffset": [
+            182,
+            150
+          ],
+          "nativeSize": [
+            149,
+            160
+          ],
+          "scale": 0.3937947494033413,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 3,
+          "sourceRect": [
+            1029,
+            0,
+            1536,
+            556
+          ],
+          "sourceOrigin": [
+            1280,
+            256
+          ],
+          "localOrigin": [
+            251,
+            256
+          ],
+          "alphaBounds": [
+            72,
+            114,
+            406,
+            476
+          ],
+          "coreBounds": [
+            75,
+            115,
+            403,
+            474
+          ],
+          "alpha4Pixels": 66436,
+          "alpha64Pixels": 42747,
+          "nativeOffset": [
+            186,
+            164
+          ],
+          "nativeSize": [
+            132,
+            143
+          ],
+          "scale": 0.3937947494033413,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 4,
+          "sourceRect": [
+            0,
+            556,
+            520,
+            1024
+          ],
+          "sourceOrigin": [
+            256,
+            768
+          ],
+          "localOrigin": [
+            256,
+            212
+          ],
+          "alphaBounds": [
+            114,
+            63,
+            404,
+            385
+          ],
+          "coreBounds": [
+            120,
+            63,
+            402,
+            383
+          ],
+          "alpha4Pixels": 46649,
+          "alpha64Pixels": 29159,
+          "nativeOffset": [
+            200,
+            161
+          ],
+          "nativeSize": [
+            114,
+            127
+          ],
+          "scale": 0.3937947494033413,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 5,
+          "sourceRect": [
+            520,
+            556,
+            1030,
+            1024
+          ],
+          "sourceOrigin": [
+            768,
+            768
+          ],
+          "localOrigin": [
+            248,
+            212
+          ],
+          "alphaBounds": [
+            116,
+            95,
+            373,
+            373
+          ],
+          "coreBounds": [
+            117,
+            96,
+            371,
+            370
+          ],
+          "alpha4Pixels": 26836,
+          "alpha64Pixels": 15658,
+          "nativeOffset": [
+            204,
+            174
+          ],
+          "nativeSize": [
+            101,
+            109
+          ],
+          "scale": 0.3937947494033413,
+          "disconnectedComponentsRemoved": 0
+        },
+        {
+          "frame": 6,
+          "sourceRect": [
+            1030,
+            556,
+            1536,
+            1024
+          ],
+          "sourceOrigin": [
+            1280,
+            768
+          ],
+          "localOrigin": [
+            250,
+            212
+          ],
+          "alphaBounds": [
+            179,
+            133,
+            363,
+            352
+          ],
+          "coreBounds": [
+            180,
+            134,
+            361,
+            350
+          ],
+          "alpha4Pixels": 11060,
+          "alpha64Pixels": 5418,
+          "nativeOffset": [
+            228,
+            189
+          ],
+          "nativeSize": [
+            72,
+            86
+          ],
+          "scale": 0.3937947494033413,
+          "disconnectedComponentsRemoved": 0
+        }
+      ],
+      "softAlphaPreservedAtThreshold": 4,
+      "fringeCleanup": {
+        "threshold": 4,
+        "removedAlpha1to3": 156402,
+        "clearedFullyTransparentRgb": 1159277,
+        "noRgbPaint": true,
+        "noLargestComponentFilter": true,
+        "noHueFilter": true
+      },
+      "sourceUnchanged": true
+    }
+  ],
+  "artApproved": false
+}

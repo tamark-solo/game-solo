@@ -1,0 +1,1651 @@
+{
+  "schema": "equipment-body-generation-v2",
+  "identityId": "b",
+  "identityName": "Tá»‹ch Báº¡ch",
+  "familyId": "bead",
+  "date": "2026-10-14",
+  "generationAllowed": true,
+  "requiredGate": "Chariot checkpoint pinned; Bead source calls open. Own identity body remains PRIMARY; orb/inner-world separate.",
+  "records": [
+    {
+      "id": "bead-b-north-core-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "north",
+      "group": "core",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-north-core-r1.txt",
+      "promptSha256": "5d28f557fe1eeced08a4d69d2875fad2157277f9509dd2dfcb5ed16697affec2",
+      "raw": "actors/b/bead/sources/bead-b-north-core-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-north-core-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\bead\\inputs\\b\\p1-nearest8x.png",
+          "role": "own-P1-native-nearest8x-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-north-core-r1/2.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-north-nearest8x.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-north-core-r1/3.png",
+          "sha256": "823de6e0186a99a04515fb13b05077e40d6ed724cd468475202cc47623ef5d10",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\bead-b.png",
+          "role": "own-P1-full-source-outfit-support-SE-does-not-override-view",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": null,
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        6,
+        5
+      ],
+      "requestedSourcePoses": 30,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-north-core-planned",
+      "planPromptSha256": "5d28f557fe1eeced08a4d69d2875fad2157277f9509dd2dfcb5ed16697affec2",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-b30d29ae-ed63-47e7-a0d0-5c60b07f938c.png",
+      "originalSha256": "b9182fc6b1ab76fdbb4ba9643712d2e98c44a7095824270af4e59cd3bc8a6ca4",
+      "sha256": "b9182fc6b1ab76fdbb4ba9643712d2e98c44a7095824270af4e59cd3bc8a6ca4",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-north-damage-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "north",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-north-damage-r1.txt",
+      "promptSha256": "7116d52064a3ce981bd25c2d44e92b3a9b8173856ea1364ac9dc070f395a5ccc",
+      "raw": "actors/b/bead/sources/bead-b-north-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-north-damage-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-north-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-north-damage-r1/2.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-north-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-north-damage-r1/3.png",
+          "sha256": "b9182fc6b1ab76fdbb4ba9643712d2e98c44a7095824270af4e59cd3bc8a6ca4",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-north-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-north-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-north-damage-planned",
+      "planPromptSha256": "7116d52064a3ce981bd25c2d44e92b3a9b8173856ea1364ac9dc070f395a5ccc",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-943ee8d0-8a8b-4d8a-8a07-287e1f4dc597.png",
+      "originalSha256": "3aa9fa362999ad50d4c480f72e1329547f93a48c3a9bb35f80846b9c78a69af8",
+      "sha256": "3aa9fa362999ad50d4c480f72e1329547f93a48c3a9bb35f80846b9c78a69af8",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-north-practice-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "north",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-north-practice-r1.txt",
+      "promptSha256": "3845ec9eab8a05b490a1edefcb75e71cf8951a9281e4b378d7a2c800e3fb15fb",
+      "raw": "actors/b/bead/sources/bead-b-north-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-north-practice-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-north-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-north-practice-r1/2.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-north-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-north-practice-r1/3.png",
+          "sha256": "b9182fc6b1ab76fdbb4ba9643712d2e98c44a7095824270af4e59cd3bc8a6ca4",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-north-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-north-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-north-practice-planned",
+      "planPromptSha256": "3845ec9eab8a05b490a1edefcb75e71cf8951a9281e4b378d7a2c800e3fb15fb",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-a38f980e-6dca-4aa0-97cf-1378285e9ab2.png",
+      "originalSha256": "0d822bd59d7c8162ee1d542d982c52c4d09dabd5ab3b3506e5c6fd4211a6f68a",
+      "sha256": "0d822bd59d7c8162ee1d542d982c52c4d09dabd5ab3b3506e5c6fd4211a6f68a",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-northeast-core-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "northeast",
+      "group": "core",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-northeast-core-r1.txt",
+      "promptSha256": "c09eed7f9da56c661cdcf43af1de4376bf9e2ebd795f5d618ef374cc1ce28bd9",
+      "raw": "actors/b/bead/sources/bead-b-northeast-core-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-northeast-core-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\bead\\inputs\\b\\p1-nearest8x.png",
+          "role": "own-P1-native-nearest8x-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-northeast-core-r1/2.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northeast-nearest8x.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-northeast-core-r1/3.png",
+          "sha256": "823de6e0186a99a04515fb13b05077e40d6ed724cd468475202cc47623ef5d10",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\bead-b.png",
+          "role": "own-P1-full-source-outfit-support-SE-does-not-override-view",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": null,
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        6,
+        5
+      ],
+      "requestedSourcePoses": 30,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-northeast-core-planned",
+      "planPromptSha256": "c09eed7f9da56c661cdcf43af1de4376bf9e2ebd795f5d618ef374cc1ce28bd9",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-24dc3555-42e2-437b-a092-abfafb1de82f.png",
+      "originalSha256": "b82cb892d34f125feb33eb0c9b1513eeddaf2db6b430b6d049bb2b71f0990289",
+      "sha256": "b82cb892d34f125feb33eb0c9b1513eeddaf2db6b430b6d049bb2b71f0990289",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-northeast-damage-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "northeast",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-northeast-damage-r1.txt",
+      "promptSha256": "1942db09309d4e644a4c0c5e31b0741c0288e0d479ecd8ed7598b48f6d5efcc1",
+      "raw": "actors/b/bead/sources/bead-b-northeast-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northeast-damage-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-northeast-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northeast-damage-r1/2.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-northeast-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northeast-damage-r1/3.png",
+          "sha256": "b82cb892d34f125feb33eb0c9b1513eeddaf2db6b430b6d049bb2b71f0990289",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-northeast-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-northeast-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-northeast-damage-planned",
+      "planPromptSha256": "1942db09309d4e644a4c0c5e31b0741c0288e0d479ecd8ed7598b48f6d5efcc1",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-d925501f-0961-451c-9cff-800ced3da194.png",
+      "originalSha256": "11bf09d0ed6e211066686fe4a1c84fb48661011e80800a78ad8c35bbe16ce511",
+      "sha256": "11bf09d0ed6e211066686fe4a1c84fb48661011e80800a78ad8c35bbe16ce511",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-northeast-practice-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "northeast",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-northeast-practice-r1.txt",
+      "promptSha256": "4831ff91bf0fb562e234d92ccb2fccd8e60abc9c2ec7ecc70800c6e286d10700",
+      "raw": "actors/b/bead/sources/bead-b-northeast-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northeast-practice-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-northeast-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northeast-practice-r1/2.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-northeast-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northeast-practice-r1/3.png",
+          "sha256": "b82cb892d34f125feb33eb0c9b1513eeddaf2db6b430b6d049bb2b71f0990289",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-northeast-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-northeast-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "superseded",
+      "selected": false,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-northeast-practice-planned",
+      "planPromptSha256": "4831ff91bf0fb562e234d92ccb2fccd8e60abc9c2ec7ecc70800c6e286d10700",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-ae590613-9f38-4d71-b307-6cd464d23ae9.png",
+      "originalSha256": "461de3d416ceb3bf48de4e12f2e844683d243cc040e4f34a4ba660ce27b04167",
+      "sha256": "461de3d416ceb3bf48de4e12f2e844683d243cc040e4f34a4ba660ce27b04167",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true,
+      "supersededBy": "bead-b-northeast-practice-r2",
+      "supersededReason": "Corrective sibling required: generated practice sheet touched the bottom alpha edge."
+    },
+    {
+      "id": "bead-b-east-core-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "east",
+      "group": "core",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-east-core-r1.txt",
+      "promptSha256": "2f94297d6a17840eab6f43da5a10ccaa6ec032b5598befa3d9163dbf85dcd47c",
+      "raw": "actors/b/bead/sources/bead-b-east-core-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-east-core-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\bead\\inputs\\b\\p1-nearest8x.png",
+          "role": "own-P1-native-nearest8x-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-east-core-r1/2.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-east-nearest8x.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-east-core-r1/3.png",
+          "sha256": "823de6e0186a99a04515fb13b05077e40d6ed724cd468475202cc47623ef5d10",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\bead-b.png",
+          "role": "own-P1-full-source-outfit-support-SE-does-not-override-view",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": null,
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        6,
+        5
+      ],
+      "requestedSourcePoses": 30,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-east-core-planned",
+      "planPromptSha256": "2f94297d6a17840eab6f43da5a10ccaa6ec032b5598befa3d9163dbf85dcd47c",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-5b03e25f-f18d-4640-8e02-8a63cbaf0200.png",
+      "originalSha256": "36166c23a5b5af9233b8460ab7053652ae200ecf456f7fdd70aa326c8053008b",
+      "sha256": "36166c23a5b5af9233b8460ab7053652ae200ecf456f7fdd70aa326c8053008b",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-east-damage-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "east",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-east-damage-r1.txt",
+      "promptSha256": "8163850c9e1bccae77fd4bb052447fb2c0434db0933726ea2433bbf9f2ad62c7",
+      "raw": "actors/b/bead/sources/bead-b-east-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-east-damage-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-east-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-east-damage-r1/2.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-east-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-east-damage-r1/3.png",
+          "sha256": "36166c23a5b5af9233b8460ab7053652ae200ecf456f7fdd70aa326c8053008b",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-east-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-east-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-east-damage-planned",
+      "planPromptSha256": "8163850c9e1bccae77fd4bb052447fb2c0434db0933726ea2433bbf9f2ad62c7",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-ed80693f-0c94-4257-830a-c8d9be3fd62a.png",
+      "originalSha256": "2ab6faa53b109926fc03ecf0b8714cb36167e0917b295c64b8a6e1000bb04ec5",
+      "sha256": "2ab6faa53b109926fc03ecf0b8714cb36167e0917b295c64b8a6e1000bb04ec5",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-east-practice-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "east",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-east-practice-r1.txt",
+      "promptSha256": "715af4326e8d11991feb434f3deb8b42c6fc3967ddf4465213cb355f1bc0a502",
+      "raw": "actors/b/bead/sources/bead-b-east-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-east-practice-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-east-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-east-practice-r1/2.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-east-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-east-practice-r1/3.png",
+          "sha256": "36166c23a5b5af9233b8460ab7053652ae200ecf456f7fdd70aa326c8053008b",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-east-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-east-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-east-practice-planned",
+      "planPromptSha256": "715af4326e8d11991feb434f3deb8b42c6fc3967ddf4465213cb355f1bc0a502",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-77bbe1cf-368b-4ec4-9a36-7c852bcb6dde.png",
+      "originalSha256": "67b3115f9eb889fecc4ec6b5e1b7ecc6afa6ca85f04e8cbc14c7d1d81340f86e",
+      "sha256": "67b3115f9eb889fecc4ec6b5e1b7ecc6afa6ca85f04e8cbc14c7d1d81340f86e",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-southeast-core-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "southeast",
+      "group": "core",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-southeast-core-r1.txt",
+      "promptSha256": "d6bee4ec5c52c6aab0d4de5282c8f90b9c36ee34f8dc7d4b6b17b2e948d70e6b",
+      "raw": "actors/b/bead/sources/bead-b-southeast-core-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-southeast-core-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\bead\\inputs\\b\\p1-nearest8x.png",
+          "role": "own-P1-native-nearest8x-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-southeast-core-r1/2.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-southeast-nearest8x.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-southeast-core-r1/3.png",
+          "sha256": "823de6e0186a99a04515fb13b05077e40d6ed724cd468475202cc47623ef5d10",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\bead-b.png",
+          "role": "own-P1-full-source-outfit-support-SE-does-not-override-view",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": null,
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        6,
+        5
+      ],
+      "requestedSourcePoses": 30,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-southeast-core-planned",
+      "planPromptSha256": "d6bee4ec5c52c6aab0d4de5282c8f90b9c36ee34f8dc7d4b6b17b2e948d70e6b",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-c52b9ed3-183c-4cef-9428-96607b095c6f.png",
+      "originalSha256": "935cbc52c9884e1cd282ec7d70aea287d247160ba66d88c3769b39483fd54dc4",
+      "sha256": "935cbc52c9884e1cd282ec7d70aea287d247160ba66d88c3769b39483fd54dc4",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-southeast-damage-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "southeast",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-southeast-damage-r1.txt",
+      "promptSha256": "2a3b9ac0681366d69b698d666bc9e4b501a56a4c04f776756e5c3e0c1c76c0fa",
+      "raw": "actors/b/bead/sources/bead-b-southeast-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southeast-damage-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-southeast-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southeast-damage-r1/2.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-southeast-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southeast-damage-r1/3.png",
+          "sha256": "935cbc52c9884e1cd282ec7d70aea287d247160ba66d88c3769b39483fd54dc4",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-southeast-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-southeast-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-southeast-damage-planned",
+      "planPromptSha256": "2a3b9ac0681366d69b698d666bc9e4b501a56a4c04f776756e5c3e0c1c76c0fa",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-c0b780a1-e536-45fa-b493-06c452aa9861.png",
+      "originalSha256": "aa888bdfb51cbcbcb39308fa2354d66db41ff4210b6f4934ef94affdb4b8f6eb",
+      "sha256": "aa888bdfb51cbcbcb39308fa2354d66db41ff4210b6f4934ef94affdb4b8f6eb",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-southeast-practice-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "southeast",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-southeast-practice-r1.txt",
+      "promptSha256": "fb72e4f684dc6726dcf8c78836cfe197bfe2e54a17d23ce0565e1574b9e6f400",
+      "raw": "actors/b/bead/sources/bead-b-southeast-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southeast-practice-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-southeast-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southeast-practice-r1/2.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-southeast-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southeast-practice-r1/3.png",
+          "sha256": "935cbc52c9884e1cd282ec7d70aea287d247160ba66d88c3769b39483fd54dc4",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-southeast-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-southeast-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-southeast-practice-planned",
+      "planPromptSha256": "fb72e4f684dc6726dcf8c78836cfe197bfe2e54a17d23ce0565e1574b9e6f400",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-9b94cec3-10d1-41f2-8bf5-704e42bcd547.png",
+      "originalSha256": "7f3912e7b1e40324e352ccfd9dc07ff563775268bbb18ebc165af811c9545983",
+      "sha256": "7f3912e7b1e40324e352ccfd9dc07ff563775268bbb18ebc165af811c9545983",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-south-core-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "south",
+      "group": "core",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-south-core-r1.txt",
+      "promptSha256": "7277cfca288f97f733dd9dfc1b98a906450e6dfd57b25270a387e12c6eb72292",
+      "raw": "actors/b/bead/sources/bead-b-south-core-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-south-core-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\bead\\inputs\\b\\p1-nearest8x.png",
+          "role": "own-P1-native-nearest8x-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-south-core-r1/2.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-south-nearest8x.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-south-core-r1/3.png",
+          "sha256": "823de6e0186a99a04515fb13b05077e40d6ed724cd468475202cc47623ef5d10",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\bead-b.png",
+          "role": "own-P1-full-source-outfit-support-SE-does-not-override-view",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": null,
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        6,
+        5
+      ],
+      "requestedSourcePoses": 30,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-south-core-planned",
+      "planPromptSha256": "7277cfca288f97f733dd9dfc1b98a906450e6dfd57b25270a387e12c6eb72292",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-e0827bf3-207d-4664-a69f-1d61ba056486.png",
+      "originalSha256": "8897307613c1d83b8a547581c4c3271ffc6b312c01ff60ced4fe374c31d3a721",
+      "sha256": "8897307613c1d83b8a547581c4c3271ffc6b312c01ff60ced4fe374c31d3a721",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-south-damage-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "south",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-south-damage-r1.txt",
+      "promptSha256": "48650a708cc76dc5d9e3e9a8c83d2433c8c0bd96ef656a142a2b7f6ced4d6778",
+      "raw": "actors/b/bead/sources/bead-b-south-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-south-damage-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-south-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-south-damage-r1/2.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-south-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-south-damage-r1/3.png",
+          "sha256": "8897307613c1d83b8a547581c4c3271ffc6b312c01ff60ced4fe374c31d3a721",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-south-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-south-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-south-damage-planned",
+      "planPromptSha256": "48650a708cc76dc5d9e3e9a8c83d2433c8c0bd96ef656a142a2b7f6ced4d6778",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-1c9676ca-517c-4d70-888e-09408c3a3256.png",
+      "originalSha256": "d5f0e76482f2927d581d1d39734327121051b5f9df4ee2a94f1dfa6e5d0ec577",
+      "sha256": "d5f0e76482f2927d581d1d39734327121051b5f9df4ee2a94f1dfa6e5d0ec577",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-south-practice-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "south",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-south-practice-r1.txt",
+      "promptSha256": "818b114111a565f37f414763367d47b525cc00bf69f4503801af5b8732403b13",
+      "raw": "actors/b/bead/sources/bead-b-south-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-south-practice-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-south-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-south-practice-r1/2.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-south-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-south-practice-r1/3.png",
+          "sha256": "8897307613c1d83b8a547581c4c3271ffc6b312c01ff60ced4fe374c31d3a721",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-south-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-south-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-south-practice-planned",
+      "planPromptSha256": "818b114111a565f37f414763367d47b525cc00bf69f4503801af5b8732403b13",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-cb4a41b3-82bc-437e-a89b-ad5068e86706.png",
+      "originalSha256": "dab343fd6aca83f24aa0c928628ad760c23f2b7cfd313fe445f59c2e2ecad818",
+      "sha256": "dab343fd6aca83f24aa0c928628ad760c23f2b7cfd313fe445f59c2e2ecad818",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-southwest-core-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "southwest",
+      "group": "core",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-southwest-core-r1.txt",
+      "promptSha256": "a8e1d8ef5c312885e7ce0c88f47276eafd039ec462962bff2ceb73f1a04dd9c6",
+      "raw": "actors/b/bead/sources/bead-b-southwest-core-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-southwest-core-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\bead\\inputs\\b\\p1-nearest8x.png",
+          "role": "own-P1-native-nearest8x-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-southwest-core-r1/2.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-southwest-nearest8x.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-southwest-core-r1/3.png",
+          "sha256": "823de6e0186a99a04515fb13b05077e40d6ed724cd468475202cc47623ef5d10",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\bead-b.png",
+          "role": "own-P1-full-source-outfit-support-SE-does-not-override-view",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": null,
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        6,
+        5
+      ],
+      "requestedSourcePoses": 30,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-southwest-core-planned",
+      "planPromptSha256": "a8e1d8ef5c312885e7ce0c88f47276eafd039ec462962bff2ceb73f1a04dd9c6",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-19ad4ab8-578b-482a-b492-a3f794a0e9d5.png",
+      "originalSha256": "d049e02db8f1226f7b4fd0c7b79d4a9e48db2c36aed01fb1b7ef4a057ea53c9d",
+      "sha256": "d049e02db8f1226f7b4fd0c7b79d4a9e48db2c36aed01fb1b7ef4a057ea53c9d",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-southwest-damage-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "southwest",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-southwest-damage-r1.txt",
+      "promptSha256": "039360a424583fc9af0ae42b47e5abcd263e4b8c5c265fcc11db0bcb25b4f924",
+      "raw": "actors/b/bead/sources/bead-b-southwest-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southwest-damage-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-southwest-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southwest-damage-r1/2.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-southwest-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southwest-damage-r1/3.png",
+          "sha256": "d049e02db8f1226f7b4fd0c7b79d4a9e48db2c36aed01fb1b7ef4a057ea53c9d",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-southwest-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-southwest-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-southwest-damage-planned",
+      "planPromptSha256": "039360a424583fc9af0ae42b47e5abcd263e4b8c5c265fcc11db0bcb25b4f924",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-71caef7f-1df5-43d1-b888-68d48008f92e.png",
+      "originalSha256": "b72f83805c91a68ea5a5faa6f363a7535ea14d4ffcd96be332fa4ea0da3178df",
+      "sha256": "b72f83805c91a68ea5a5faa6f363a7535ea14d4ffcd96be332fa4ea0da3178df",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-southwest-practice-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "southwest",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-southwest-practice-r1.txt",
+      "promptSha256": "87e3c1491c297e975a5cd24b59ca27bc4b7bce385614af7d4d2b521741c21af6",
+      "raw": "actors/b/bead/sources/bead-b-southwest-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southwest-practice-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-southwest-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southwest-practice-r1/2.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-southwest-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-southwest-practice-r1/3.png",
+          "sha256": "d049e02db8f1226f7b4fd0c7b79d4a9e48db2c36aed01fb1b7ef4a057ea53c9d",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-southwest-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-southwest-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-southwest-practice-planned",
+      "planPromptSha256": "87e3c1491c297e975a5cd24b59ca27bc4b7bce385614af7d4d2b521741c21af6",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-ec8d21f1-0bd3-4d2a-9bc5-1a2fa4ce79e4.png",
+      "originalSha256": "532119bcc9a9149c34d3833068137edc22ac73fd6a5d24003b8bbd9d9d8059ac",
+      "sha256": "532119bcc9a9149c34d3833068137edc22ac73fd6a5d24003b8bbd9d9d8059ac",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-west-core-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "west",
+      "group": "core",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-west-core-r1.txt",
+      "promptSha256": "809c27cd67c12b10c590e7a5b1184b7e40b85a1daa100539b83237cb8aea0d23",
+      "raw": "actors/b/bead/sources/bead-b-west-core-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-west-core-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\bead\\inputs\\b\\p1-nearest8x.png",
+          "role": "own-P1-native-nearest8x-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-west-core-r1/2.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-west-nearest8x.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-west-core-r1/3.png",
+          "sha256": "823de6e0186a99a04515fb13b05077e40d6ed724cd468475202cc47623ef5d10",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\bead-b.png",
+          "role": "own-P1-full-source-outfit-support-SE-does-not-override-view",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": null,
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        6,
+        5
+      ],
+      "requestedSourcePoses": 30,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-west-core-planned",
+      "planPromptSha256": "809c27cd67c12b10c590e7a5b1184b7e40b85a1daa100539b83237cb8aea0d23",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-605c34f6-ad0b-4033-a838-ccb4c5639d4d.png",
+      "originalSha256": "630a01157e7e97f5a187c2a572c6e4b04af1ad82cbcdaa9b4942891d4339e8fc",
+      "sha256": "630a01157e7e97f5a187c2a572c6e4b04af1ad82cbcdaa9b4942891d4339e8fc",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-west-damage-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "west",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-west-damage-r1.txt",
+      "promptSha256": "512611095df73f28d35a6d7bf975607aad04a068bdf9223cfb1276bcc255c073",
+      "raw": "actors/b/bead/sources/bead-b-west-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-west-damage-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-west-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-west-damage-r1/2.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-west-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-west-damage-r1/3.png",
+          "sha256": "630a01157e7e97f5a187c2a572c6e4b04af1ad82cbcdaa9b4942891d4339e8fc",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-west-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-west-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-west-damage-planned",
+      "planPromptSha256": "512611095df73f28d35a6d7bf975607aad04a068bdf9223cfb1276bcc255c073",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-c289ef62-4a86-41bf-b27f-efb555fd01ef.png",
+      "originalSha256": "6e7a96f7de1cec77f989694c076625a1bd4de9c933aba5e876ca8f164cc4486c",
+      "sha256": "6e7a96f7de1cec77f989694c076625a1bd4de9c933aba5e876ca8f164cc4486c",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-west-practice-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "west",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-west-practice-r1.txt",
+      "promptSha256": "c36a70da137e10426d9b144f4c933b7f4c51f333811e1f89d9ea824108805747",
+      "raw": "actors/b/bead/sources/bead-b-west-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-west-practice-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-west-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-west-practice-r1/2.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-west-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-west-practice-r1/3.png",
+          "sha256": "630a01157e7e97f5a187c2a572c6e4b04af1ad82cbcdaa9b4942891d4339e8fc",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-west-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-west-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-west-practice-planned",
+      "planPromptSha256": "c36a70da137e10426d9b144f4c933b7f4c51f333811e1f89d9ea824108805747",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-af8c353e-6277-4e60-8f04-d673c22bc239.png",
+      "originalSha256": "6b94d44bea0aae73f1354a45579107e17ae55171c5e4238fe7bd353f30244f1a",
+      "sha256": "6b94d44bea0aae73f1354a45579107e17ae55171c5e4238fe7bd353f30244f1a",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-northwest-core-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "northwest",
+      "group": "core",
+      "actions": [
+        "idle",
+        "run",
+        "cast-single-target",
+        "cast-aoe"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-northwest-core-r1.txt",
+      "promptSha256": "b7e87c0c181583dd14dd3493fbe58868caac94b47ab9122368f0db73c86a3fa1",
+      "raw": "actors/b/bead/sources/bead-b-northwest-core-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-northwest-core-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\support\\p5-next-family-briefs\\bead\\inputs\\b\\p1-nearest8x.png",
+          "role": "own-P1-native-nearest8x-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-northwest-core-r1/2.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northwest-nearest8x.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/core/bead-b-northwest-core-r1/3.png",
+          "sha256": "823de6e0186a99a04515fb13b05077e40d6ed724cd468475202cc47623ef5d10",
+          "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\bead-b.png",
+          "role": "own-P1-full-source-outfit-support-SE-does-not-override-view",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": null,
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        6,
+        5
+      ],
+      "requestedSourcePoses": 30,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-northwest-core-planned",
+      "planPromptSha256": "b7e87c0c181583dd14dd3493fbe58868caac94b47ab9122368f0db73c86a3fa1",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-80e409a2-d165-4022-b552-e55deabc0e6b.png",
+      "originalSha256": "3fadb06cb4166dfbdaf55c3ec62c6483832509bfa4e49e84c8512978751b6f02",
+      "sha256": "3fadb06cb4166dfbdaf55c3ec62c6483832509bfa4e49e84c8512978751b6f02",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-northwest-damage-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "northwest",
+      "group": "damage",
+      "actions": [
+        "hit",
+        "death"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-northwest-damage-r1.txt",
+      "promptSha256": "cffc2e8b1ffde1494db79cf0a5497ff95f06be3f3c1e6e9a2a36ca5d78646a47",
+      "raw": "actors/b/bead/sources/bead-b-northwest-damage-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northwest-damage-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-northwest-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northwest-damage-r1/2.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-northwest-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northwest-damage-r1/3.png",
+          "sha256": "3fadb06cb4166dfbdaf55c3ec62c6483832509bfa4e49e84c8512978751b6f02",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-northwest-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-northwest-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-northwest-damage-planned",
+      "planPromptSha256": "cffc2e8b1ffde1494db79cf0a5497ff95f06be3f3c1e6e9a2a36ca5d78646a47",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-b18ae4b6-4570-4ec3-ad31-04a218ceedd5.png",
+      "originalSha256": "239e3718593dd6283add67686930ee6ab174d63fc3af5290f9732aea6a402e8d",
+      "sha256": "239e3718593dd6283add67686930ee6ab174d63fc3af5290f9732aea6a402e8d",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-northwest-practice-r1",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "northwest",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-northwest-practice-r1.txt",
+      "promptSha256": "37f392e772e91a2173d69d5963468d796ca9f2818a0bf1b2e66c5bcb0b116e4c",
+      "raw": "actors/b/bead/sources/bead-b-northwest-practice-r1.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northwest-practice-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-northwest-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northwest-practice-r1/2.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-northwest-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northwest-practice-r1/3.png",
+          "sha256": "3fadb06cb4166dfbdaf55c3ec62c6483832509bfa4e49e84c8512978751b6f02",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-northwest-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-northwest-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-northwest-practice-planned",
+      "planPromptSha256": "37f392e772e91a2173d69d5963468d796ca9f2818a0bf1b2e66c5bcb0b116e4c",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-f1f060c2-cf4b-4214-bf0a-4589246541a3.png",
+      "originalSha256": "83a47e232817b98195bfb44cd30e686c001bfe328947f0e0a673afde2857b277",
+      "sha256": "83a47e232817b98195bfb44cd30e686c001bfe328947f0e0a673afde2857b277",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    },
+    {
+      "id": "bead-b-northeast-practice-r2",
+      "identityId": "b",
+      "familyId": "bead",
+      "direction": "northeast",
+      "group": "practice",
+      "actions": [
+        "meditate",
+        "gather"
+      ],
+      "calibrationCells": 6,
+      "prompt": "actors/b/bead/prompts/bead-b-northeast-practice-r2.txt",
+      "promptSha256": "e225131381b087c314c5345df2ced9e2652fc59e37e0dc745d1faf4a9b3cf915",
+      "raw": "actors/b/bead/sources/bead-b-northeast-practice-r2.png",
+      "inputs": [
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northeast-practice-r1/1.png",
+          "sha256": "304f66c7eff2bf4a0acc886264c6ceb776d811d92141050566f123ded96ec736",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-northeast-core-r1\\1.png",
+          "role": "own-reviewed-same-view-neutral-PRIMARY",
+          "index": 1
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northeast-practice-r1/2.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\inputs\\core\\bead-b-northeast-core-r1\\2.png",
+          "role": "Wang-same-view-anatomy-pixel-camera-support-only",
+          "index": 2
+        },
+        {
+          "file": "actors/b/bead/inputs/foundation/bead-b-northeast-practice-r1/3.png",
+          "sha256": "b82cb892d34f125feb33eb0c9b1513eeddaf2db6b430b6d049bb2b71f0990289",
+          "original": "docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\b\\bead\\sources\\bead-b-northeast-core-r1.png",
+          "role": "own-same-view-generated-core-raw-support",
+          "index": 3
+        }
+      ],
+      "inputSnapshotsReady": true,
+      "inputSnapshotPolicy": "Core triplet is immutable now; damage/practice snapshots are deferred until the reviewed same-view Bead core neutral exists. No foreign outfit, Sword/Banner fallback, or mirrored view.",
+      "dependency": "bead-b-northeast-core-r1 reviewed own neutral",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "requestedGrid": [
+        3,
+        6
+      ],
+      "requestedSourcePoses": 18,
+      "status": "generated",
+      "selected": true,
+      "ownerApproved": false,
+      "runtimeIntegrated": false,
+      "planJobId": "bead-b-northeast-practice-r2-planned",
+      "planPromptSha256": "e225131381b087c314c5345df2ced9e2652fc59e37e0dc745d1faf4a9b3cf915",
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-3a75eda7-7c76-4902-bdbc-5b049ebe546f.png",
+      "originalSha256": "7230061b1c3cee6eb29f59d4997aff22ebe15b8ab925eb9a3bd3f192b441c809",
+      "sha256": "7230061b1c3cee6eb29f59d4997aff22ebe15b8ab925eb9a3bd3f192b441c809",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sourceViewed": true,
+      "rawImmutable": true
+    }
+  ],
+  "forecast": {
+    "sourceSheets": 24,
+    "clips": 64,
+    "motionKeysAtSixEach": 384,
+    "neutralCalibrationAtSixEach": 144,
+    "sourcePosesRequested": 528
+  },
+  "actualCoverage": {
+    "generatedSources": 24,
+    "clips": 0,
+    "motionKeys": 0
+  },
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "choreographyPolicy": "Empty dominant palm-up hover anchor; Bead is separate prop/FX. No embedded orb, no grip, no fake eight-view apparition rotation. AOE veil/temple/mountain belongs to fixed-camera FX.",
+  "releasedGate": {
+    "family": "chariot",
+    "file": "checkpoints/chariot.json",
+    "sha256": "b86a4965c787b6a51c1e155348d523c2eff654c81609d65da86ace029e27c87b",
+    "releasedAt": "2026-10-14",
+    "reason": "Chariot 128 clips each identity passed scoped CPU/lineage/browser/Three and technical checkpoint."
+  }
+}

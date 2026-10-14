@@ -1,0 +1,259 @@
+{
+  "schema": "wang-lin-sword-pilot-body-generation-1",
+  "date": "2026-10-14",
+  "ownerApproved": false,
+  "motionApproved": false,
+  "runtimeIntegrated": false,
+  "records": [
+    {
+      "id": "sword-a-southeast",
+      "identityId": "a",
+      "direction": "southeast",
+      "raw": "sources/motion/sword-a-southeast.png",
+      "sha256": "e657c1c143affb8f9796a29f5aae5f347af9d908bcb562ec403605b2dfbc46b9",
+      "prompt": "sources/motion/sword-a-southeast.prompt.txt",
+      "promptSha256": "00e20c5fc060d7217c6740f968c88857fa38ec2385a3399e3e877231aa64a24d",
+      "inputs": [
+        {
+          "file": "sources/body/sword-a.png",
+          "sha256": "38a94dff0962cdcc343e5c82c7d090d1ca139561733fe08b77c7c6373a95e39a"
+        },
+        {
+          "file": "../wang-lin-concept-direction-v5/inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-b02054ce-1cec-417f-aad1-7f4fd223d79c.png",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6columns/5rows: neutral,idle,run,ST,AOE",
+      "selected": true,
+      "selectedActions": [
+        "idle",
+        "run"
+      ],
+      "supersededActions": [
+        {
+          "action": "cast-single-target",
+          "row": 3,
+          "replacedBy": "sword-a-southeast-st-r2"
+        },
+        {
+          "action": "cast-aoe",
+          "row": 4,
+          "replacedBy": "sword-a-southeast-aoe-r2"
+        }
+      ],
+      "sourceHistoryPreserved": true
+    },
+    {
+      "id": "sword-b-southeast",
+      "identityId": "b",
+      "direction": "southeast",
+      "raw": "sources/motion/sword-b-southeast.png",
+      "sha256": "5d03b0cdf213e07a2961aa754e808b1cf7b091301edb791675dfd6e1d5d13ab7",
+      "prompt": "sources/motion/sword-b-southeast.prompt.txt",
+      "promptSha256": "d86887b87114e9bfcfb6d540ceb0d0297010f5322767a1c3c23115500e6154b2",
+      "inputs": [
+        {
+          "file": "sources/body/sword-b.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575"
+        },
+        {
+          "file": "../wang-lin-concept-direction-v5/inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-e7ba89d8-bb76-45f0-b915-1a714b1047f2.png",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6columns/5rows: neutral,idle,run,ST,AOE",
+      "selected": true,
+      "selectedActions": [
+        "idle",
+        "run"
+      ],
+      "supersededActions": [
+        {
+          "action": "cast-single-target",
+          "row": 3,
+          "replacedBy": "sword-b-southeast-st-r2"
+        },
+        {
+          "action": "cast-aoe",
+          "row": 4,
+          "replacedBy": "sword-b-southeast-aoe-r2"
+        }
+      ],
+      "sourceHistoryPreserved": true
+    },
+    {
+      "id": "sword-a-north",
+      "identityId": "a",
+      "direction": "north",
+      "raw": "sources/motion/sword-a-north.png",
+      "sha256": "20e883071d9fc90c9b48add0ac1cdd1d55aa15ecb88be5036ea44905a8835096",
+      "prompt": "sources/motion/sword-a-north.prompt.txt",
+      "promptSha256": "4582eb7a0de60389dcc96316ccba9d30fc54b559ac7da496e59d554f90448595",
+      "inputs": [
+        {
+          "file": "sources/body/sword-a.png",
+          "sha256": "38a94dff0962cdcc343e5c82c7d090d1ca139561733fe08b77c7c6373a95e39a"
+        },
+        {
+          "file": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-north-nearest8x.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+        }
+      ],
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-2fb9b6b4-64ac-4322-beb9-5fb43019814a.png",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6columns/5rows: neutral,idle,run,ST,AOE",
+      "selected": true
+    },
+    {
+      "id": "sword-b-north",
+      "identityId": "b",
+      "direction": "north",
+      "raw": "sources/motion/sword-b-north.png",
+      "sha256": "4b5e96ab1537ab98691793ace8d3bb4183707dbb084d1a580ed059de4ef157d3",
+      "prompt": "sources/motion/sword-b-north.prompt.txt",
+      "promptSha256": "ec8bedc501fc6cea0110e93136a81ccc13d1cb6422694d83a727a0ccd69b8691",
+      "inputs": [
+        {
+          "file": "sources/body/sword-b.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575"
+        },
+        {
+          "file": "../van-hai-npc-visual-standard-v1/inputs/wang-lin-live-north-nearest8x.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+        }
+      ],
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-cd62ea8a-b2ce-4747-aad9-4e705c587fd0.png",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "6columns/5rows: neutral,idle,run,ST,AOE",
+      "selected": true
+    },
+    {
+      "id": "sword-a-southeast-st-r2",
+      "identityId": "a",
+      "direction": "southeast",
+      "raw": "sources/motion/sword-a-southeast-st-r2.png",
+      "sha256": "c65649e69511870e662953c3490b0a39de8416eeb492e92ceb37db089387e39b",
+      "prompt": "sources/motion/sword-a-southeast-st-r2.prompt.txt",
+      "promptSha256": "31010c697f934071fa8203f3f02b7102af240e339a2dae866cfedbcfd942698f",
+      "inputs": [
+        {
+          "file": "sources/body/sword-a.png",
+          "sha256": "38a94dff0962cdcc343e5c82c7d090d1ca139561733fe08b77c7c6373a95e39a"
+        },
+        {
+          "file": "sources/motion/sword-a-southeast.png",
+          "sha256": "e657c1c143affb8f9796a29f5aae5f347af9d908bcb562ec403605b2dfbc46b9"
+        },
+        {
+          "file": "../wang-lin-concept-direction-v5/inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-54ffea88-46e7-49f9-89cd-6f6a73c208fe.png",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "3columns/4rows: neutral6,action6",
+      "selected": true,
+      "actionReplacement": "cast-single-target",
+      "correction": "Keep neutral anatomy and recover standing size; legacy action rows retained as history"
+    },
+    {
+      "id": "sword-b-southeast-st-r2",
+      "identityId": "b",
+      "direction": "southeast",
+      "raw": "sources/motion/sword-b-southeast-st-r2.png",
+      "sha256": "0cba78cd202eb66c065930d965256700a6f114d60edd9397be45294b796fa16d",
+      "prompt": "sources/motion/sword-b-southeast-st-r2.prompt.txt",
+      "promptSha256": "9bfb84a256e9f686b967b730fe018ff4b04c7ddd1b103bd4605f583ab8e3fc97",
+      "inputs": [
+        {
+          "file": "sources/body/sword-b.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575"
+        },
+        {
+          "file": "sources/motion/sword-b-southeast.png",
+          "sha256": "5d03b0cdf213e07a2961aa754e808b1cf7b091301edb791675dfd6e1d5d13ab7"
+        },
+        {
+          "file": "../wang-lin-concept-direction-v5/inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-9ade9f43-2e88-42f4-8863-45c3d57d1657.png",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "3columns/4rows: neutral6,action6",
+      "selected": true,
+      "actionReplacement": "cast-single-target",
+      "correction": "Keep neutral anatomy and recover standing size; legacy action rows retained as history"
+    },
+    {
+      "id": "sword-a-southeast-aoe-r2",
+      "identityId": "a",
+      "direction": "southeast",
+      "raw": "sources/motion/sword-a-southeast-aoe-r2.png",
+      "sha256": "0e36cabd8fbcd81d6cbfab7831db0b469e9e1d6f44f687cf309d2e95789d8a69",
+      "prompt": "sources/motion/sword-a-southeast-aoe-r2.prompt.txt",
+      "promptSha256": "212779e5f790162a2c9a37c5226b29e3cbb04ed9093ec02a483d4a5e4e4937a2",
+      "inputs": [
+        {
+          "file": "sources/body/sword-a.png",
+          "sha256": "38a94dff0962cdcc343e5c82c7d090d1ca139561733fe08b77c7c6373a95e39a"
+        },
+        {
+          "file": "sources/motion/sword-a-southeast.png",
+          "sha256": "e657c1c143affb8f9796a29f5aae5f347af9d908bcb562ec403605b2dfbc46b9"
+        },
+        {
+          "file": "../wang-lin-concept-direction-v5/inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-8f8d90d5-4028-4f6f-942e-3a9cc99e7452.png",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "3columns/4rows: neutral6,action6",
+      "selected": true,
+      "actionReplacement": "cast-aoe",
+      "correction": "Keep neutral anatomy and recover standing size; legacy action rows retained as history"
+    },
+    {
+      "id": "sword-b-southeast-aoe-r2",
+      "identityId": "b",
+      "direction": "southeast",
+      "raw": "sources/motion/sword-b-southeast-aoe-r2.png",
+      "sha256": "875526844eda0c5a2c2f0fea85891d4e80c6db76b6ff1ce9f09adde691a78c01",
+      "prompt": "sources/motion/sword-b-southeast-aoe-r2.prompt.txt",
+      "promptSha256": "492474edd244f9355250561725387f17402cf4f6e426f29206e2fd2ea9f6ba77",
+      "inputs": [
+        {
+          "file": "sources/body/sword-b.png",
+          "sha256": "8b0e665f7b9b086dab16785706915eada172514491eed98f435e5b97549ad575"
+        },
+        {
+          "file": "sources/motion/sword-b-southeast.png",
+          "sha256": "5d03b0cdf213e07a2961aa754e808b1cf7b091301edb791675dfd6e1d5d13ab7"
+        },
+        {
+          "file": "../wang-lin-concept-direction-v5/inputs/wang-lin-live-southeast-nearest8x.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        }
+      ],
+      "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-c0e1c7d7-8d4a-43be-8e1c-86f92fb8b265.png",
+      "tool": "built-in-imagegen",
+      "transparentRequested": true,
+      "layout": "3columns/4rows: neutral6,action6",
+      "selected": true,
+      "actionReplacement": "cast-aoe",
+      "correction": "Keep neutral anatomy and recover standing size; legacy action rows retained as history"
+    }
+  ]
+}

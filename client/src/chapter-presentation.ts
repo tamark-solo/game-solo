@@ -28,7 +28,7 @@ export class ChapterPresentation {
  private clearWarnings(){while(this.warnings.children.length){const o=this.warnings.children[0];this.warnings.remove(o);if(o instanceof THREE.Mesh){o.geometry.dispose();(o.material as THREE.Material).dispose();}}}
  update(view:ChapterView|undefined,own:RenderActor){
   if(!this.visible||!view)return;
-  const q=view.progress.activity,active=(id:string)=>q==='HN06'?['stable','sample-a','sample-b'].includes(id):q==='HN07'?id==='stable':q==='EX01'?['herb','water','sand'].includes(id):q==='EX02'?['fiber','jade','verify'].includes(id):q==='EX03'?['observe-a','observe-b','sand','deliver'].includes(id):q==='EX04'?['observe-a','observe-b','verify'].includes(id):false;
+  const q=view.progress.activity,active=(id:string)=>q==='HN06'?['stable','sample-a','sample-b'].includes(id):q==='HN07'?id==='stable':['HN09','HN11','EX01'].includes(q)?['herb','water','sand'].includes(id):['HN12','EX02'].includes(q)?['fiber','jade','verify'].includes(id):q==='EX03'?['observe-a','observe-b','sand','deliver'].includes(id):q==='EX04'?['observe-a','observe-b','verify'].includes(id):false;
   const canvas=this.renderer.webgl.domElement,rect=canvas.getBoundingClientRect();
   for(const n of CHAPTER_WORLD.nodes){const on=active(n.id);this.markers.get(n.id)!.visible=on;const label=this.labels.get(n.id)!;label.hidden=!on;
    if(on){const p=new THREE.Vector3(n.x,-n.y+62,0).project(this.renderer.camera);label.style.left=`${(p.x+1)*rect.width/2}px`;label.style.top=`${(1-p.y)*rect.height/2}px`;label.textContent=`${n.name}${Math.hypot(n.x-own.x,n.y-own.y)<=72?' · E':''}`;}

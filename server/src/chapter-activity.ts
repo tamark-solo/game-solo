@@ -45,7 +45,7 @@ export class ChapterActivity {
   this.s.status='running';
   const c=p.chapter??initialChapter(),q=c.activity;
   if(q==='EX03')return;
-  const phase=q==='HN10'?c.checkpoint+1:q==='HN05'?1:2,hp=phase===1?60:phase===2?80:240;
+  const phase=q==='HN10'?c.checkpoint+1:['HN12','EX02'].includes(q)?3:q==='HN05'?1:2,hp=phase===1?60:phase===2?80:240;
   const target:TrainingTarget={id:`chapter-${p.id}-${q}-${c.checkpoint}-${serial}`,ownerId:this.actor.id,...CHAPTER_WORLD.enemy,hp,maxHp:hp,radius:phase===3?24:18};
   this.engine.targets.set(target.id,target);
   this.s.enemyPose={actor:phase===3?'boss':'wolf',action:phase===3?'appear':'idle',at:this.engine.now,dx:0,dy:1,lifeId:target.id};
@@ -105,7 +105,7 @@ export class ChapterActivity {
   }
   this.engine.finish(dt);
   if(this.actor.hp<=0){this.stop('failed');this.flushActions();return 'failed';}
-  if(c.activity==='HN07'&&this.credit||c.activity==='HN08'&&this.s.guardSpent||['HN05','HN09','HN10'].includes(c.activity)&&enemy&&enemy.hp<=0&&this.credit){this.stop('won');this.flushActions();return 'proof';}
+  if(c.activity==='HN07'&&this.credit||c.activity==='HN08'&&this.s.guardSpent||['HN05','HN06','HN09','HN10','HN11','HN12','EX01','EX02'].includes(c.activity)&&enemy&&enemy.hp<=0&&this.credit){this.stop('won');this.flushActions();return 'proof';}
   this.flushActions();
  }
  stop(status:ChapterActivitySave['status']):void{this.s.status=status;this.engine.cancel(this.actor.id);this.engine.projectiles.clear();if(this.s.basic&&!this.s.basic.released)this.cancelBasic();else delete this.s.basic;delete this.s.combo;this.actor.motionLocked=false;this.actor.dashVX=this.actor.dashVY=0;}

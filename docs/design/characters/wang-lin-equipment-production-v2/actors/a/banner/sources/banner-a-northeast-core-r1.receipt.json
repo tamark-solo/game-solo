@@ -1,0 +1,66 @@
+{
+  "id": "banner-a-northeast-core-r1",
+  "identityId": "a",
+  "familyId": "banner",
+  "direction": "northeast",
+  "group": "core",
+  "actions": [
+    "idle",
+    "run",
+    "cast-single-target",
+    "cast-aoe"
+  ],
+  "calibrationCells": 6,
+  "prompt": "actors/a/banner/prompts/banner-a-northeast-core-r1.txt",
+  "promptSha256": "98f3c576a43e25d33bbb4566aefb89cdc474f3279e24ac710b85657107b768cd",
+  "raw": "actors/a/banner/sources/banner-a-northeast-core-r1.png",
+  "inputs": [
+    {
+      "file": "actors/a/banner/inputs/core/banner-a-northeast-core-r1/1.png",
+      "sha256": "b85dc7a8c32bd8e173129d38ee123e0501ccd0d8d5c9031d846f51d49146e5df",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\huyen-tam-banner-p1-nearest8x.png",
+      "role": "own-approved-A-banner-P1-primary"
+    },
+    {
+      "file": "actors/a/banner/inputs/core/banner-a-northeast-core-r1/2.png",
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\van-hai-npc-visual-standard-v1\\inputs\\wang-lin-live-northeast-nearest8x.png",
+      "role": "Wang-same-view-style-anatomy-only"
+    },
+    {
+      "file": "actors/a/banner/inputs/core/banner-a-northeast-core-r1/3.png",
+      "sha256": "d4a4155b26152ec9369e5e9cefdd03cd3b1aa90f1d652b1aaac90f1987c1b61a",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v1\\sources\\body\\banner-a.png",
+      "role": "own-A-banner-P1-full-source-outfit-support"
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": null,
+  "tool": "built-in-imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    6,
+    5
+  ],
+  "requestedSourcePoses": 30,
+  "status": "generated-awaiting-source-review",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-fef1-7e50-b5c9-ca4c07ddb02e\\exec-c1eed774-49d2-42f1-a3ff-cb6014c13022.png",
+  "originalSha256": "e937d6f0ebee203eca06ff892fb7f2c5abbd4df930458cb94428dfbc740248c1",
+  "sha256": "e937d6f0ebee203eca06ff892fb7f2c5abbd4df930458cb94428dfbc740248c1",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "outputProvenance": {
+    "originalToolOutput": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13657-fef1-7e50-b5c9-ca4c07ddb02e\\exec-c1eed774-49d2-42f1-a3ff-cb6014c13022.png",
+    "workspaceRaw": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\sources\\banner-a-northeast-core-r1.png",
+    "copiedOriginalUnchanged": true
+  },
+  "sourceViewed": true,
+  "rawImmutable": true
+}

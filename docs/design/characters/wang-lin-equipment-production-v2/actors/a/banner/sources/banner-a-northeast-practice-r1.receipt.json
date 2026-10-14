@@ -1,0 +1,83 @@
+{
+  "id": "banner-a-northeast-practice-r1",
+  "identityId": "a",
+  "familyId": "banner",
+  "direction": "northeast",
+  "group": "practice",
+  "actions": [
+    "meditate",
+    "gather"
+  ],
+  "calibrationCells": 6,
+  "prompt": "actors/a/banner/prompts/history/banner-a-northeast-practice-r1-actual-helper-prompt.txt",
+  "promptSha256": "02702a4e2fd8b947efc6e3bca8dba5913fa6ed3bbb567949c49801ae20e51149",
+  "raw": "actors/a/banner/sources/banner-a-northeast-practice-r1.png",
+  "inputs": [
+    {
+      "file": "actors/a/banner/inputs/helper/banner-a-northeast-practice-r1/1.png",
+      "sha256": "acd2243ce05798811f4b5595bcb6b082e5b5b37249a711b3280d6a7a46770f40",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\measured-neutral\\banner-a-northeast-core-r1-native-nearest8x.png",
+      "role": "own-A-banner-same-view-neutral-primary",
+      "basisSourceId": "banner-a-northeast-core-r1",
+      "basisSourceSha256": "e937d6f0ebee203eca06ff892fb7f2c5abbd4df930458cb94428dfbc740248c1",
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\foundation\\banner-a-northeast-practice-r1\\1.png",
+      "index": 1
+    },
+    {
+      "file": "actors/a/banner/inputs/helper/banner-a-northeast-practice-r1/2.png",
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\core\\banner-a-northeast-core-r1\\2.png",
+      "role": "Wang-same-view-style-anatomy-only",
+      "basisSourceId": "banner-a-northeast-core-r1",
+      "basisSourceSha256": "e937d6f0ebee203eca06ff892fb7f2c5abbd4df930458cb94428dfbc740248c1",
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\foundation\\banner-a-northeast-practice-r1\\2.png",
+      "index": 2
+    },
+    {
+      "file": "actors/a/banner/inputs/helper/banner-a-northeast-practice-r1/3.png",
+      "sha256": "d4a4155b26152ec9369e5e9cefdd03cd3b1aa90f1d652b1aaac90f1987c1b61a",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\core\\banner-a-northeast-core-r1\\3.png",
+      "role": "own-A-banner-P1-full-source-outfit-support",
+      "basisSourceId": "banner-a-northeast-core-r1",
+      "basisSourceSha256": "e937d6f0ebee203eca06ff892fb7f2c5abbd4df930458cb94428dfbc740248c1",
+      "sourceSnapshot": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\inputs\\foundation\\banner-a-northeast-practice-r1\\3.png",
+      "index": 3
+    }
+  ],
+  "inputSnapshotsReady": true,
+  "inputSnapshotPolicy": "Core exact input bytes hashed now; damage/practice snapshots made only after own same-view Banner core neutral is reviewed. No foreign outfit or mirrored view fallback.",
+  "dependency": null,
+  "tool": "built-in-imagegen",
+  "transparentRequested": true,
+  "requestedGrid": [
+    3,
+    6
+  ],
+  "requestedSourcePoses": 18,
+  "status": "imported-helper-raw-awaiting-source-review",
+  "selected": false,
+  "ownerApproved": false,
+  "runtimeIntegrated": false,
+  "neutralBasisReviewed": true,
+  "preparedPrompt": {
+    "file": "actors/a/banner/prompts/banner-a-northeast-practice-r1.txt",
+    "sha256": "02702a4e2fd8b947efc6e3bca8dba5913fa6ed3bbb567949c49801ae20e51149"
+  },
+  "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13880-27b5-7690-becf-8edfeba067c1\\exec-6c453683-6c44-4e5d-8b9d-5bfb8b5a6257.png",
+  "originalSha256": "672fb9d43ec96745ce2d983167f854a68da11f5374012a2a61a82e1bf7f7f902",
+  "sha256": "672fb9d43ec96745ce2d983167f854a68da11f5374012a2a61a82e1bf7f7f902",
+  "sourceSize": [
+    1024,
+    1536
+  ],
+  "mode": "RGBA",
+  "sourceViewed": false,
+  "rawImmutable": true,
+  "outputProvenance": {
+    "originalToolOutput": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a13880-27b5-7690-becf-8edfeba067c1\\exec-6c453683-6c44-4e5d-8b9d-5bfb8b5a6257.png",
+    "workspaceRaw": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\wang-lin-equipment-production-v2\\actors\\a\\banner\\sources\\banner-a-northeast-practice-r1.png",
+    "copiedOriginalUnchanged": true,
+    "helperRecord": "support/banner-foundation-assist/records/banner-a-northeast-practice-r1.json",
+    "helperRecordSha256": "a08fa478468c8932871eacb90aeac283be79bc4052ca07cd5bc01e01776c4257"
+  }
+}
