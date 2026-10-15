@@ -199,31 +199,42 @@ async function enter(): Promise<void> {
   catch (error) { feedback(error instanceof Error?error.message:String(error));if(entry)throw error; }
   finally { opening=false; updateStatus(); shell.focus(); }
 }
+let clearingInput = false;
 function clearInput(): void {
-  navigation.cancel(); navigationNotice.hidden = true;
-  keys.clear(); touch.clear();
-  skills.moveAim({x:0,y:0});
-  document.querySelectorAll('.touch-pad button').forEach(b => b.classList.remove('active'));
+  if (clearingInput) return;
+  clearingInput = true;
+  try {
+    navigation.cancel(); navigationNotice.hidden = true;
+    keys.clear(); touch.clear();
+    skills.moveAim({x:0,y:0});
+    document.querySelectorAll('.touch-pad button').forEach(b => b.classList.remove('active'));
+  } finally { clearingInput = false; }
 }
 function readInput(): Input {
-  if (document.hidden || !document.hasFocus() || sect.modal || chapter.modal || character.panel.modal || daoHud?.modal || shell.blocking || document.activeElement?.matches('input,select,textarea')) return { x: 0, y: 0 };
   if(navigation.status==='moving')return navigation.input;
+  if (document.hidden || !document.hasFocus() || sect.modal || chapter.modal || character.panel.modal || daoHud?.modal || shell.blocking || document.activeElement?.matches('input,select,textarea')) return { x: 0, y: 0 };
   return { x: Number(keys.has('d') || keys.has('arrowright') || touch.has('east')) - Number(keys.has('a') || keys.has('arrowleft') || touch.has('west')),
     y: Number(keys.has('s') || keys.has('arrowdown') || touch.has('south')) - Number(keys.has('w') || keys.has('arrowup') || touch.has('north')),fast:keys.has('shift') };
 }
+let startingNavigation = false;
 function startNavigation(stationId: StationId): void {
+  if (startingNavigation) return;
+  startingNavigation = true;
+  try {
+  stage.focus();
   const own=network.room?.state.players?.get(network.room.sessionId),station=SECT_STATIONS.find(s=>s.id===stationId);
-  if(!station||network.status!=='connected'||!own?.connected||own.scene!=='hub'||sect.modal||chapter.modal||character.panel.modal||daoHud?.modal||shell.blocking||document.hidden||!document.hasFocus())return;
+  if(!station||network.status!=='connected'||!own?.connected||own.scene!=='hub'||sect.modal||chapter.modal||character.panel.modal||daoHud?.modal||shell.blocking||document.hidden)return;
   if(own.motionLocked||sect.view?.practising||sect.view?.lessonView?.status==='warning'){feedback('Đợi thao tác luyện thuật kết thúc rồi tìm đường.');return;}
   clearInput();stage.focus();navigationProfile=own.profileId;
   const position=network.renderMotion(network.room!.sessionId)??own;
   if(!navigation.start(position,station,npcStationName(station.id),performance.now()))feedback('Chưa tìm được đường từ vị trí này. Di chuyển ra chỗ trống rồi thử lại.');
   else if(navigation.status==='arrived'){feedback(`Đã tới ${npcStationName(station.id)}.`);sect.interact();}
+  } finally { startingNavigation = false; }
 }
 function updateNavigation(now:number):void {
   if(navigation.status!=='moving'){navigationNotice.hidden=true;return;}
   const own=network.room?.state.players?.get(network.room.sessionId);
-  if(network.status!=='connected'||!own?.connected||own.profileId!==navigationProfile||own.scene!=='hub'||own.hp<=0||own.motionLocked||document.hidden||!document.hasFocus()||sect.modal||chapter.modal||character.panel.modal||daoHud?.modal||shell.blocking){clearInput();return;}
+  if(network.status!=='connected'||!own?.connected||own.profileId!==navigationProfile||own.scene!=='hub'||own.hp<=0||own.motionLocked||document.hidden||sect.modal||chapter.modal||character.panel.modal||daoHud?.modal||shell.blocking){clearInput();return;}
   navigation.update(network.renderMotion(network.room!.sessionId)??own,now);
   const status=navigation.diagnostics.status;
   navigationNotice.hidden=status!=='moving';
@@ -338,8 +349,8 @@ window.addEventListener('keydown', event => {
   if (['shift','w', 'a', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'].includes(key)) { event.preventDefault(); navigation.cancel();keys.add(key); skills.moveAim(readInput()); }
 });
 window.addEventListener('keyup', event => {keys.delete(event.key.toLowerCase());skills.moveAim(readInput());});
-window.addEventListener('blur',()=>{clearInput();sect.updateNpcLife();});
-document.addEventListener('visibilitychange',()=>{clearInput();sect.updateNpcLife();});
+window.addEventListener('blur',()=>{if(navigation.status!=='moving')clearInput();sect.updateNpcLife();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden||navigation.status!=='moving')clearInput();sect.updateNpcLife();});
 document.addEventListener('click',event=>{if((event.target as HTMLElement).closest('[data-hotbar-skill],#basic-attack,#training'))navigation.cancel();},true);
 stage.addEventListener('pointerdown', event => {
   if (!ready||sect.modal||chapter.modal||character.panel.modal||daoHud?.modal||shell.blocking) return;

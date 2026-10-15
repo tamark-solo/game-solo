@@ -2,7 +2,7 @@
 
 > **Toàn bộ hồ sơ bên dưới là tham chiếu lịch sử ngày 06/10:** ENC-001/002/003, combat tự chạy theo lượt CP-001/002/003, thông số, lộ trình A → B và đề xuất offline farm giữ để đối chiếu. Chúng không là luật nhập môn hiện hành hoặc encounter đã triển khai. Mô hình đệ tử riêng từng được xét cũng đã bị thay.
 
-> **Chuẩn hiện hành [GDD 0.34](GDD.md) (14/10/2026):** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Xem thêm [Lộ trình Giai đoạn & Nhiệm vụ](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic Từng Chặng](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md). Các hồ sơ lịch sử bên dưới giữ để đối chiếu.
+> **Chuẩn hiện hành [GDD 0.35](GDD.md) (15/10/2026):** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Xem thêm [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md). Các hồ sơ lịch sử bên dưới giữ để đối chiếu.
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  
 **Trạng thái nguồn:** lộ trình A → B của bản trước; hồ sơ gặp gỡ/luật combat chưa được triển khai, chơi thử.\

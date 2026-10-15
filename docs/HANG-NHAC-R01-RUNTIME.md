@@ -2,7 +2,7 @@
 
 **08/10/2026 · _MMO · GDD 0.28.** Hoàn tất mốc hồ sơ/lưu và luyện thử R01 của bước 2 trong [kế hoạch triển khai](HANG-NHAC-IMPLEMENTATION-PLAN.md). Ngôn ngữ vẫn là TypeScript; Three.js dựng hình, Node.js + Colyseus xử lý phiên và gameplay. Đây là bản thử local, chưa hoàn tất nhập môn HN01–HN12 hoặc combat trên map farm.
 
-**Tiếp nối hiện hành:** [NPC/HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) đã có bản đầu bước 3. Hồ sơ JSON và DB nâng schema 2, giữ nguyên dữ liệu R01 và receipts bước 2; chưa có đòn đánh cơ bản/bài HN03–HN04. Phần dưới và biên bản bước 2 ghi baseline đã bàn giao theo thời điểm.
+**Tiếp nối hồi quy:** [luồng NPC Hằng Nhạc](HANG-NHAC-NPC-RUNTIME.md) đã có bản đầu bước 3. Hồ sơ JSON và DB nâng schema 2, giữ nguyên dữ liệu R01 và receipts bước 2; chưa có đòn đánh cơ bản/bài HN03–HN04. Phần dưới và biên bản bước 2 ghi baseline đã bàn giao theo thời điểm; điều kiện VG hiện hành xem [hợp đồng 0.35](GDD-035-UNIFIED-CONTRACT.md).
 
 ## Chơi thử
 
@@ -28,7 +28,7 @@ WASD/phím mũi tên/nút di chuyển mobile đổi hướng Kiếm Khí và Ng�
 
 ## Luật thử R01
 
-Số liệu dưới đây lấy baseline trong [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), **chưa phải cân bằng đã duyệt**. HP/MP khởi đầu 100; tốc độ đi giữ 80 px/s của map hiện hành. Regen online trong sân: 12 MP/s sau hai giây kể từ lần tiêu linh lực cuối; không cộng bù thời gian offline.
+Số liệu dưới đây là baseline lịch sử, **chưa phải cân bằng đã duyệt**. Điều kiện hiện hành đọc từ [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md); HP/MP khởi đầu 100; tốc độ đi giữ 80 px/s của map hiện hành. Regen online trong sân: 12 MP/s sau hai giây kể từ lần tiêu linh lực cuối; không cộng bù thời gian offline.
 
 | Thuật | Chi phí / hồi | Xử lý đã có |
 | --- | --- | --- |

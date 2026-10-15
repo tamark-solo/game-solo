@@ -1,0 +1,261 @@
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/dao-an-v3/font-0.ttf') format('truetype')}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/dao-an-v3/font-1.ttf') format('truetype')}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/dao-an-v3/font-2.ttf') format('truetype')}
+@font-face{font-family:'Noto Serif';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/dao-an-v3/font-3.ttf') format('truetype')}
+@font-face{font-family:'Noto Serif';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/dao-an-v3/font-4.ttf') format('truetype')}
+@font-face{font-family:'Noto Serif';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/dao-an-v3/font-5.ttf') format('truetype')}
+
+/* Approved Đạo Ấn V3. Geometry and materials only; no fixture state or world art. */
+#game-shell[data-ui-design=dao-an-v3]{--dao-panel:#202729;--dao-paper:#e9dec7;--dao-ink:#393d33;--dao-text:#ece5d5;--dao-muted:#a9b0ac;--dao-border:#b6a17e60;--dao-accent:#ce8b65;--game-text:#ece5d5;--vn-bronze:#b6a17e;--vn-bronze-light:#dec09b;--dao-line:#b6a17e38;--dao-card:#1b2426;--dao-selected:#b9784820;--ui-text-body:14px;--ui-text-small:12px;--dao-font:'Be Vietnam Pro','Segoe UI',sans-serif;--dao-serif:'Noto Serif',Georgia,serif;--ui-font-copy:var(--dao-font);--ui-font-heading:var(--dao-serif);font-family:var(--dao-font);color:var(--dao-text)}
+#game-shell[data-ui-design=dao-an-v3] :is(button,input,select){font-family:var(--dao-font)}
+#game-shell[data-ui-design=dao-an-v3] :is(button,input,select,summary,a):focus-visible{outline:2px solid #ebc59b;outline-offset:3px}
+#game-shell[data-ui-design=dao-an-v3] :is(h1,h2,h3){font-family:var(--dao-serif);font-weight:500}
+#game-shell[data-ui-design=dao-an-v3] :is(.van-panel,.journal-map-panel){border-image:none;border:1px solid var(--dao-border);border-radius:0;background:linear-gradient(120deg,#1b2528f7,#202729f5);box-shadow:0 12px 36px #0005;color:var(--dao-text)}
+#game-shell[data-ui-design=dao-an-v3] :is(.vn-frame-surface,.van-panel::before,.van-panel::after,.journal-map-panel::before,.journal-map-panel::after){display:none!important}
+#game-shell[data-ui-design=dao-an-v3] :is(.game-button,.resource button,.quest-tracker button,.chapter-actions button){border:1px solid var(--dao-border);border-radius:0;background:#ffffff03;box-shadow:none;color:#e0c5a1;font:12px/1.5 var(--dao-font);min-height:36px;padding:7px 12px}
+#game-shell[data-ui-design=dao-an-v3] :is(.game-button.primary,.dao-primary-cta){background:#9c4d36;color:#f7e6cc;border-color:#ce8b65;box-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] :is(.game-button,button):disabled{opacity:.5}
+#game-shell[data-ui-design=dao-an-v3] :is(dialog)::backdrop{background:#071014b8;backdrop-filter:blur(4px)}
+#game-shell[data-ui-design=dao-an-v3] .hud-glyph{--glyph-ink:#e4c79f;--glyph-cut:#1c2728;--glyph-accent:#9db2a7;filter:none}
+
+/* Top-left identity and authoritative vitals. */
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-live-identity{position:absolute;top:24px;left:24px;right:auto;bottom:auto;width:300px;min-height:0;height:auto;max-width:none;padding:16px 16px 12px 78px;display:block;overflow:visible;border-radius:0;background:linear-gradient(120deg,#1b2528f5,#202729ed)}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-open{position:absolute;top:16px;left:16px;width:48px;height:56px;min-width:0;min-height:0;padding:0;border:0;border-radius:0;background:none}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-open .player-emblem{width:48px;height:56px;border:1px solid #b6a17e60;border-radius:0;background:#ffffff04;box-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-label{display:block;background:none;border:0;border-radius:0;padding:0;font:9px/1.5 var(--dao-font);letter-spacing:.5px;color:#c1b39a}
+#game-shell[data-ui-design=dao-an-v3] #stage #character-name{display:block;font:500 20px/1.3 var(--dao-serif);margin:3px 0 0;color:#f0e5d0}
+#game-shell[data-ui-design=dao-an-v3] #stage :is(#profile-summary,#save-status,#leave){display:none}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-unit-vitals{display:flex;flex-direction:column;gap:8px;margin:18px 0 0 -62px;width:calc(100% + 62px)}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-vital-row{display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:8px;font:11px/1.4 var(--dao-font);color:#bdc4b9}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-vital-row b{font-size:11px;font-weight:500;color:#e9dbc1;font-variant-numeric:tabular-nums}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-vital-track{height:6px;border:0;border-radius:0;background:#0f1416;overflow:hidden}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-vital-track i{display:block;height:100%;width:0;transition:width .2s}
+#game-shell[data-ui-design=dao-an-v3] .dao-vital-hp i{background:linear-gradient(90deg,#a35d54,#dd9780)}
+#game-shell[data-ui-design=dao-an-v3] .dao-vital-mp i{background:linear-gradient(90deg,#496f88,#a4c5cc)}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-cultivation{margin:12px 0 0 -62px;width:calc(100% + 62px);border-top:1px solid var(--dao-line);padding:9px 0 0;min-height:30px;font:10px/1.5 var(--dao-font);color:#c6b394}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-cultivation b{font:500 12px var(--dao-font)}
+
+/* Quiet, rectangular minimap and context HUD. */
+#game-shell[data-ui-design=dao-an-v3] .dao-hud-map{top:24px;right:24px;width:222px;gap:6px;align-items:stretch}
+#game-shell[data-ui-design=dao-an-v3] .dao-hud-map-name{font:500 20px/1.4 var(--dao-serif);text-transform:none;letter-spacing:.5px;text-align:left}
+#game-shell[data-ui-design=dao-an-v3] .dao-minimap{width:100%;height:126px;border:1px solid #cbb58b77;border-radius:0;background:#202a2e;box-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-minimap img{filter:saturate(.45) brightness(.8)}
+#game-shell[data-ui-design=dao-an-v3] :is(.dao-map-east,.dao-map-south,.dao-map-west){display:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-map-tools{display:flex;justify-content:flex-end;gap:6px}
+#game-shell[data-ui-design=dao-an-v3] .dao-map-tools button{border:1px solid var(--dao-line);border-radius:0;background:#1c2728e8;width:32px;min-width:32px;height:32px;min-height:32px;padding:6px}
+#game-shell[data-ui-design=dao-an-v3] .dao-map-tools [data-dao-hud-style-toggle]{display:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-hud-coordinates{font:9px/1.5 var(--dao-font);text-align:right;color:#baa98e}
+#game-shell[data-ui-design=dao-an-v3] #stage #connection-indicator{font:9px/1.4 var(--dao-font);color:#a7b7a8}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-live-target{top:24px;left:50%;transform:translateX(-50%);width:300px;padding:12px 16px;border:1px solid var(--dao-border);background:#1b2528ed;box-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-live-target-name{font:500 18px/1.5 var(--dao-serif)}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-live-target .resource{display:flex;flex-wrap:wrap;gap:6px}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-live-target :is(#resources,#basic-attack){display:none}
+#game-shell[data-ui-design=dao-an-v3] #stage .dao-live-target .resource button{min-height:30px;font-size:10px;padding:4px 8px}
+#game-shell[data-ui-design=dao-an-v3] .skill-aim{font:10px/1.6 var(--dao-font);color:#b5bba9}
+#game-shell[data-ui-design=dao-an-v3] #stage #sect-objective.dao-live-quest{top:278px;right:24px;width:260px;max-height:calc(100% - 430px);min-height:170px;padding:15px 16px 12px;display:flex;flex-direction:column;gap:8px;background:#1b2528f0;border:1px solid var(--dao-border);border-radius:0}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-tracker-heading{border-bottom:1px solid var(--dao-line);padding-bottom:6px}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-tracker-heading strong{font:500 10px/1.5 var(--dao-font);color:var(--dao-accent);text-transform:uppercase;letter-spacing:1px}
+#game-shell[data-ui-design=dao-an-v3] #stage #quest-title{font:500 18px/1.5 var(--dao-serif);color:#e9ddc6}
+#game-shell[data-ui-design=dao-an-v3] #stage #quest-tracker-body{overflow:auto;min-height:0;flex:1;font:12px/1.7 var(--dao-font);padding-right:3px}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-actions{display:flex;flex-wrap:wrap;gap:5px;flex:none}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-actions button{flex:1;min-height:36px;font-size:10px;padding:5px}
+#game-shell[data-ui-design=dao-an-v3] :is(.dao-objective-row,.quest-tracker .dao-objective-row){border:0;border-radius:0;box-shadow:none;background:none}
+#game-shell[data-ui-design=dao-an-v3] :is(.dao-world-dock,.dao-social-dock){display:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-hud-journal{left:24px;bottom:24px;width:260px;max-width:calc((100% - 660px)/2 - 48px);background:linear-gradient(90deg,#162027dd,transparent);padding:8px 12px;border:0;font:11px var(--dao-font)}
+#game-shell[data-ui-design=dao-an-v3] .dao-hud-journal header b{font:500 10px var(--dao-font);letter-spacing:1px;color:#d2ab83}
+#game-shell[data-ui-design=dao-an-v3] .dao-main-dock{right:24px;bottom:24px;display:flex;gap:8px}
+#game-shell[data-ui-design=dao-an-v3] .dao-hud-icon{width:44px;min-height:54px;padding:0;gap:5px;border:0;border-radius:0;background:none;font:9px/1.4 var(--dao-font);color:#e6d6ba}
+#game-shell[data-ui-design=dao-an-v3] .dao-hud-icon::before{display:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-hud-icon .hud-glyph{width:30px;height:30px;padding:5px;border:1px solid var(--dao-border);background:#1c2929eb}
+#game-shell[data-ui-design=dao-an-v3] .dao-hud-icon kbd{display:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-hud-menu-mark{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--dao-border);background:#1c2929eb;font:22px/1 var(--dao-serif)}
+
+/* Eight equally sized cells; the skill session still owns availability/timing. */
+#game-shell[data-ui-design=dao-an-v3] .game-hotbar{bottom:22px;left:50%;width:660px;height:auto;min-height:0;transform:translateX(-50%);font-family:var(--dao-font);pointer-events:none}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-tray{height:auto;padding:0;border:0;border-radius:0;background:none;box-shadow:none;filter:none}
+#game-shell[data-ui-design=dao-an-v3] :is(.hotbar-orb,.hotbar-exp-bar,.hotbar-rail,.hotbar-surge-aura,.hotbar-effects,.hotbar-frame){display:none!important}
+#game-shell[data-ui-design=dao-an-v3] .dao-an-hotbar-title{font:10px/1.5 var(--dao-font);text-align:center;letter-spacing:2px;color:#e7cda2;margin-bottom:8px}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-slots{position:relative;left:auto;top:auto;bottom:auto;width:100%;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:7px;padding:12px 16px;transform:none;border:1px solid #beaa8280;background:linear-gradient(100deg,#1b2528f5,#20282af2);box-shadow:0 6px 20px #0005;pointer-events:auto}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-slot-group{display:flex;flex-direction:column;align-items:center;min-width:0;position:relative;border:1px solid #b7a27966;background:#141e20}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-slot{position:relative;display:block;width:100%;height:62px;min-width:0;min-height:0;margin:0;padding:5px;border:0;border-radius:0;background:none;box-shadow:none;transform:none;overflow:hidden}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-slot :is(img,.hotbar-art){position:absolute;top:8px;left:50%;right:auto;bottom:auto;width:44px;height:44px;transform:translateX(-50%);object-fit:contain;filter:none}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-art{display:block;background-size:300% 100%}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-slot kbd{position:absolute;left:3px;top:2px;bottom:auto;right:auto;z-index:5;width:auto;min-width:13px;height:auto;min-height:0;padding:0 3px;border:1px solid #ad926677;border-radius:0;background:#12181bec;box-shadow:none;font:10px/1.3 var(--dao-font);color:#e9d1aa;transform:none}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-slot-group :is(.hotbar-skill-name,.dao-an-slot-label){display:block;position:static;margin:0;padding:0 2px 5px;width:100%;min-height:18px;font:9px/1.5 var(--dao-font);color:#e4d6b9;text-align:center;white-space:normal;overflow-wrap:anywhere;text-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-slot:has(.dao-an-slot-label){height:80px}
+#game-shell[data-ui-design=dao-an-v3] .dao-an-slot-label{position:absolute!important;bottom:0;left:0}
+#game-shell[data-ui-design=dao-an-v3] .dao-an-empty-mark{display:grid;place-items:center;height:52px;font:28px var(--dao-serif);color:#a7987880}
+#game-shell[data-ui-design=dao-an-v3] .dao-an-empty .dao-an-slot-label{color:#aaa28c}
+#game-shell[data-ui-design=dao-an-v3] :is(.hotbar-slot-status,.hotbar-cost,.hotbar-aim){display:none}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-state-mark{font:20px var(--dao-serif);top:18px;left:0;width:100%;text-align:center;color:#f5dfb7;text-shadow:0 1px 4px #000}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-footer{position:static;display:block;width:100%;height:auto;padding:8px 0 0;margin:0;text-align:center;font:9px/1.5 var(--dao-font);letter-spacing:0;color:#c4b996}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-tooltip{width:280px;padding:16px;border:1px solid #c1a16e88;border-radius:0;background:#131e21fa;box-shadow:0 10px 25px #0008;color:#d8d8c7;font-family:var(--dao-font)}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-tooltip-title b{font:500 18px var(--dao-serif)}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-tooltip p{font:12px/1.8 var(--dao-font)}
+
+/* One navigation position and one material language across live workspaces. */
+#game-shell[data-ui-design=dao-an-v3] :is(#sect-dialog,#game-menu,.chapter-dialog,#dao-hud-dialog){width:min(1120px,calc(100vw - 48px));height:auto;max-height:calc(100dvh - 48px);padding:24px 26px;margin:auto;border:1px solid var(--dao-border);border-radius:0;background:#202729f9;box-shadow:0 20px 70px #0007;overflow:auto;font-family:var(--dao-font)}
+#game-shell[data-ui-design=dao-an-v3] :is(.vn-frame-scroll){max-height:calc(100dvh - 100px);padding:0;overflow:auto;scrollbar-width:thin;scrollbar-color:#8a7659 #151e20}
+#game-shell[data-ui-design=dao-an-v3] #character-dialog{width:min(1120px,calc(100vw - 48px));margin:auto;top:0;bottom:0;font-family:var(--dao-font)}
+#game-shell[data-ui-design=dao-an-v3] #character-dialog .character-window{height:min(800px,calc(100dvh - 48px));padding:24px 26px;background:#202729f9;border:1px solid var(--dao-border);border-radius:0}
+#game-shell[data-ui-design=dao-an-v3] :is(.character-heading,.sect-dialog-heading,.chapter-heading,.game-menu-heading,.dao-runtime-dialog-heading){padding:0 0 16px;margin:0;border-bottom:1px solid var(--dao-line);background:none;gap:14px}
+#game-shell[data-ui-design=dao-an-v3] :is(.character-heading h1,.sect-dialog-heading h2,.chapter-heading h2,.game-menu-heading h2,.dao-runtime-dialog-heading h2){font:500 27px/1.5 var(--dao-serif);color:#ece0c9;text-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] :is(.character-heading .review-eyebrow,.ui-eyebrow,.chapter-heading>div>span,.dao-runtime-dialog-heading>div>span){font:10px/1.5 var(--dao-font);color:var(--dao-accent);letter-spacing:1.5px}
+#game-shell[data-ui-design=dao-an-v3] :is(.close-character,#sect-close,#menu-close,.chapter-heading>button,.dao-runtime-dialog-heading>button){border:1px solid var(--dao-border);border-radius:0;background:#ffffff03;box-shadow:none;min-width:36px;min-height:36px;padding:5px;color:#e7c79b}
+#game-shell[data-ui-design=dao-an-v3] .dao-an-menu-nav{display:flex;gap:4px;flex:none;overflow-x:auto;scrollbar-width:thin;margin:0 0 18px;padding:9px 0;border-bottom:1px solid var(--dao-line)}
+#game-shell[data-ui-design=dao-an-v3] .dao-an-menu-nav button{min-height:36px;flex:none;padding:7px 12px;border:0;border-bottom:2px solid transparent;border-radius:0;background:none;color:#a9b0a3;font:11px/1.5 var(--dao-font);cursor:pointer;white-space:nowrap}
+#game-shell[data-ui-design=dao-an-v3] .dao-an-menu-nav button[aria-current=page]{color:#edc89c;border-bottom-color:#ce8b65;background:#ffffff03}
+#game-shell[data-ui-design=dao-an-v3] :is(.character-tabs,.chapter-tabs,.dao-character-subnav,.dao-directory-tabs){gap:6px;padding:7px 0;border:0;background:none}
+#game-shell[data-ui-design=dao-an-v3] :is(.character-tabs,.chapter-tabs,.dao-character-subnav,.dao-directory-tabs) button{font:12px/1.5 var(--dao-font);padding:8px 12px;min-height:36px;border:1px solid var(--dao-line)!important;border-radius:0!important;background:#ffffff03!important;color:#b4bead!important;box-shadow:none!important}
+#game-shell[data-ui-design=dao-an-v3] :is(.character-tabs,.chapter-tabs,.dao-character-subnav,.dao-directory-tabs) :is(button[aria-selected=true],button[aria-pressed=true]){color:#edc89c!important;border-color:#c18b6266!important;background:#b9784820!important}
+#game-shell[data-ui-design=dao-an-v3] #character-dialog .profile-pane{background:linear-gradient(0deg,#ddcfb6dc,#eee2cbf0),url('/assets/dao-an-v3/dao-paper.png') center/cover;color:#3b3c32;border:1px solid #bfa78088}
+#game-shell[data-ui-design=dao-an-v3] #character-dialog .profile-pane :is(h2,p,small,.pane-eyebrow,.dao-identity-foot){color:#5a5647}
+#game-shell[data-ui-design=dao-an-v3] #character-dialog .dao-paper{background:#ffffff02;color:#d8dac8;border-color:var(--dao-line)}
+#game-shell[data-ui-design=dao-an-v3] #character-dialog :is(.primary-pane,.detail-pane){border-color:var(--dao-line)}
+#game-shell[data-ui-design=dao-an-v3] #character-dialog :is(.primary-pane,.detail-pane) :is(.pane-eyebrow,.text-action,.ui-section-title){color:#d5b28b}
+#game-shell[data-ui-design=dao-an-v3] :is(.item-cell,.equip-slot,.chapter-select,.chapter-material,.dao-directory-entry){border:1px solid var(--dao-line);border-radius:0;background:#141e2066;box-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] :is(.item-cell[aria-selected=true],.chapter-select[aria-pressed=true],.equip-slot[aria-pressed=true]){border-color:#c18b6288;background:#b9784820}
+#game-shell[data-ui-design=dao-an-v3] :is(input,select){border:1px solid var(--dao-border);border-radius:0;background:#141e20;color:#e3d8c0;padding:8px;font-family:var(--dao-font)}
+#game-shell[data-ui-design=dao-an-v3] :is(.journal-body,.quest-detail-panel,.chapter-detail){background:linear-gradient(90deg,#ded1b4f2,#eee2cdf5),url('/assets/dao-an-v3/dao-paper.png') center/cover;color:#393d33;border:1px solid #bfa78066;border-radius:0;padding:20px}
+#game-shell[data-ui-design=dao-an-v3] :is(.chapter-detail,.quest-detail-panel) :is(h2,h3,h4,b,strong){color:#474335;text-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] :is(.chapter-detail,.quest-detail-panel) :is(p,small,li){color:#645f4c}
+#game-shell[data-ui-design=dao-an-v3] .chapter-detail :is(.game-button,button){color:#614c36;border-color:#96754866;background:#ffffff2b}
+#game-shell[data-ui-design=dao-an-v3] .chapter-dialog{height:min(780px,calc(100dvh - 48px));overflow:hidden}
+#game-shell[data-ui-design=dao-an-v3] .chapter-dialog .vn-frame-scroll{display:flex;flex-direction:column;height:100%;max-height:none;overflow:hidden}
+#game-shell[data-ui-design=dao-an-v3] .chapter-body{flex:1;min-height:0;overflow:auto}
+#game-shell[data-ui-design=dao-an-v3] .dao-world-map{border:1px solid var(--dao-border);border-radius:0;overflow:hidden;background:#28322e}
+#game-shell[data-ui-design=dao-an-v3] .game-menu-heading .ui-eyebrow{color:var(--dao-accent)}
+#game-shell[data-ui-design=dao-an-v3] .chapter-dock{right:24px;top:278px;bottom:auto;width:270px;max-height:calc(100% - 440px);overflow:auto;padding:14px;border:1px solid var(--dao-border);border-radius:0;background:#1b2528f2;box-shadow:none;font-family:var(--dao-font)}
+#game-shell[data-ui-design=dao-an-v3] [data-dao-hud-style-toggle]{display:none}
+
+#game-shell[data-ui-design=dao-an-v3] :is(.hotbar-skill-name,.hotbar-footer){clip-path:none;overflow:visible;height:auto;white-space:normal}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-slot::after{display:none}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-slot-group .hotbar-skill-name{width:100%;height:auto;min-height:18px}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-feedback{bottom:calc(100% + 14px)}
+#game-shell[data-ui-design=dao-an-v3] :is(.hud-fx-layer,.hud-fx-slot-clip,.hud-fx-skill-halo){display:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-map-tools :is([data-dao-feature=mail],[data-dao-feature=notifications]){display:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-map-tools .chapter-launch{position:static;left:auto;top:auto;flex:none;width:32px;min-width:32px;height:32px;min-height:32px;padding:5px;border-radius:0;background:#1c2728e8;box-shadow:none;font:16px var(--dao-serif)}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-tracker-heading{display:flex;flex-direction:row;align-items:center;gap:6px}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-tracker-heading :is(small,img){display:none}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-tracker-heading strong{flex:1;white-space:nowrap}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-tracker-heading button{min-width:28px;min-height:28px;height:28px;padding:3px;font-size:10px}
+#game-shell[data-ui-design=dao-an-v3] #stage #sect-objective[data-details=compact] :is(#quest-category-ribbon,#quest-state,#quest-next,#quest-reward,#quest-hint,#cultivation-summary,#cultivation-meter,.quest-objective-progress){display:none!important}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-actions{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:4px 0 0}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-actions button{height:auto;min-height:36px;min-width:0;padding:6px;word-break:normal;overflow-wrap:normal;font-size:10px;line-height:1.5;background:#ffffff03;box-shadow:none;border:1px solid var(--dao-border);border-radius:0}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-actions #quest-guide{grid-column:1/-1;flex-basis:auto;font-size:0;background:#9c4d3622;border:1px solid #ce8b6566;box-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] #stage #quest-guide::after{content:'Tự tìm đường';display:block;font:11px/1.5 var(--dao-font)}
+#game-shell[data-ui-design=dao-an-v3] #stage #interact,#game-shell[data-ui-design=dao-an-v3] #stage #journal{font-size:0}
+#game-shell[data-ui-design=dao-an-v3] #stage #interact::after{content:'E · Tương tác';display:block;font:10px/1.5 var(--dao-font)}
+#game-shell[data-ui-design=dao-an-v3] #stage #journal::after{content:'Đạo thư';display:block;font:10px/1.5 var(--dao-font)}
+#game-shell[data-ui-design=dao-an-v3] .chapter-dialog .chapter-detail{background:#172225;color:#d9dece;border:1px solid var(--dao-line)}
+#game-shell[data-ui-design=dao-an-v3] .chapter-dialog .chapter-detail :is(h2,h3,h4,b,strong){color:#e5cfaa}
+#game-shell[data-ui-design=dao-an-v3] .chapter-dialog .chapter-detail :is(p,small,li){color:#b8c0b0}
+#game-shell[data-ui-design=dao-an-v3] .chapter-detail .chapter-service{background:#ffffff03;border:1px solid var(--dao-line);border-radius:0;box-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] .chapter-dialog .chapter-detail :is(.game-button,button){color:#e4c49c;border-color:#b6a17e60;background:#ffffff05}
+#game-shell[data-ui-design=dao-an-v3] .chapter-bag{background:#111b1e;border:1px solid var(--dao-line);border-radius:0}
+#game-shell[data-ui-design=dao-an-v3] #game-menu .hud-effects-toggle{display:none}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-tray{text-align:center}
+#game-shell[data-ui-design=dao-an-v3] .dao-an-hotbar-title{display:inline-block;padding:3px 10px;background:#1b2528ec;border:1px solid var(--dao-line);text-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] .hotbar-footer>span:first-child{display:inline-block;padding:3px 8px;background:#1b2528eb}
+#game-shell[data-ui-design=dao-an-v3] #stage #sect-objective[data-details=compact] .dao-objective-row:not([data-current=true]){display:none}
+#game-shell[data-ui-design=dao-an-v3] :is(.dao-sect-tabbar,.dao-codex-filter-bar){padding:0;border:0;background:none;box-shadow:none;border-radius:0}
+#game-shell[data-ui-design=dao-an-v3] :is(.dao-sect-tab,.dao-codex-filter-btn){border:1px solid var(--dao-line);border-radius:0;background:#ffffff03;box-shadow:none;color:#bec5b4;font:11px/1.5 var(--dao-font);padding:8px}
+#game-shell[data-ui-design=dao-an-v3] :is(.dao-sect-tab,.dao-codex-filter-btn)[data-active=true]{border-color:#ce8b6580;background:#b9784820;box-shadow:none;color:#e4bf95}
+#game-shell[data-ui-design=dao-an-v3] .dao-codex-card{border:1px solid var(--dao-line);border-radius:0;background:#141e2066;box-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-codex-card[data-selected=true]{border-color:#ce8b6580;background:#b9784820}
+#game-shell[data-ui-design=dao-an-v3] .dao-codex-scroll-pane{background:linear-gradient(90deg,#ded1b4f2,#eee2cdf5),url('/assets/dao-an-v3/dao-paper.png') center/cover;border:1px solid #bfa78066;color:#3b3d32}
+#game-shell[data-ui-design=dao-an-v3] .dao-scroll-sheet{background:none;border:0;border-radius:0;box-shadow:none;color:#3b3d32}
+#game-shell[data-ui-design=dao-an-v3] .dao-scroll-sheet :is(h3,h4,p,li,small,b,strong){color:#504c3d;text-shadow:none}
+#game-shell[data-ui-design=dao-an-v3] .dao-scroll-sheet :is(.dao-scroll-lore-box,.dao-scroll-next-step){background:#ffffff25;border:1px solid #9c896f55;border-radius:0;color:#504c3d}
+#game-shell[data-ui-design=dao-an-v3] .dao-scroll-sheet .dao-scroll-section-title{color:#8f563e}
+#game-shell[data-ui-design=dao-an-v3] #stage .quest-actions #quest-guide{background:#9c4d3622}
+
+@media(min-width:1700px){#game-shell[data-ui-design=dao-an-v3] .game-hotbar{width:724px;bottom:30px}}
+@media(max-width:1200px){
+ #game-shell[data-ui-design=dao-an-v3] .game-hotbar{width:620px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-hud-journal{display:none}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-live-identity{top:18px;left:18px;width:270px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-hud-map{top:18px;right:18px;width:190px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-live-target{width:260px;top:18px}
+ #game-shell[data-ui-design=dao-an-v3] #stage #sect-objective.dao-live-quest{right:18px;width:230px;max-height:calc(100% - 540px);min-height:0}
+ #game-shell[data-ui-design=dao-an-v3] .dao-main-dock{right:18px;bottom:200px;top:auto;left:auto;gap:4px}
+}
+@media(max-width:800px){
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-live-identity{left:12px;top:12px;width:210px;padding:12px 10px 10px 60px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-open{left:10px;top:12px;width:38px;height:44px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-open .player-emblem{width:38px;height:44px}
+ #game-shell[data-ui-design=dao-an-v3] #stage #character-name{font-size:17px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-label{font-size:8px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-unit-vitals{margin-left:-50px;width:calc(100% + 50px);gap:6px;margin-top:16px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-vital-row{grid-template-columns:46px 1fr auto;gap:5px;font-size:9px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-vital-row b{font-size:9px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-cultivation{margin-left:-50px;width:calc(100% + 50px);font-size:9px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-hud-map{right:12px;top:12px;width:125px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-hud-map-name{font-size:15px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-hud-coordinates{display:none}
+ #game-shell[data-ui-design=dao-an-v3] .dao-minimap{height:84px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-map-tools button{width:28px;min-width:28px;height:28px;min-height:28px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-live-target{top:200px;width:210px;left:12px;transform:none;padding:10px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-live-target-name{font-size:15px}
+ #game-shell[data-ui-design=dao-an-v3] #stage #sect-objective.dao-live-quest{top:200px;right:12px;width:156px;max-height:min(184px,calc(50% - 132px));min-height:0;padding:10px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .quest-tracker-heading :is(small,strong){display:none}
+ #game-shell[data-ui-design=dao-an-v3] #stage #quest-title{font-size:15px}
+ #game-shell[data-ui-design=dao-an-v3] #stage #quest-tracker-body{font-size:11px;min-height:44px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .quest-actions button,
+ #game-shell[data-ui-design=dao-an-v3] #stage .quest-actions #quest-guide{height:44px;min-height:44px!important;font-size:9px}
+ #game-shell[data-ui-design=dao-an-v3] .game-hotbar{bottom:76px;width:calc(100% - 24px);max-width:450px}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-slots{grid-template-columns:repeat(4,minmax(0,1fr));padding:8px;gap:4px}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-slot{height:46px;padding:3px}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-slot :is(img,.hotbar-art){top:4px;width:36px;height:36px}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-slot:has(.dao-an-slot-label){height:64px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-an-empty-mark{height:40px;font-size:25px}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-slot-group :is(.hotbar-skill-name,.dao-an-slot-label){font-size:8px;min-height:18px;padding-bottom:4px}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-footer{font-size:8px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-an-hotbar-title{font-size:9px;letter-spacing:1px}
+ #game-shell[data-ui-design=dao-an-v3] :is(.dao-main-dock,.dao-world-dock){display:none}
+ #game-shell[data-ui-design=dao-an-v3] .dao-mobile-dock{display:flex;justify-content:center;gap:12px;left:50%;right:auto;bottom:12px;width:max-content;transform:translateX(-50%);border:0;background:none}
+ #game-shell[data-ui-design=dao-an-v3] .dao-mobile-dock .dao-hud-icon{width:40px;min-height:52px;gap:5px;padding:0}
+ #game-shell[data-ui-design=dao-an-v3] :is(#sect-dialog,#game-menu,.chapter-dialog,#dao-hud-dialog,#character-dialog){width:calc(100vw - 20px);max-height:calc(100dvh - 20px);margin:10px auto;padding:16px;top:0;bottom:auto}
+ #game-shell[data-ui-design=dao-an-v3] #character-dialog{padding:0}
+ #game-shell[data-ui-design=dao-an-v3] #character-dialog .character-window{height:calc(100dvh - 20px);padding:16px}
+ #game-shell[data-ui-design=dao-an-v3] :is(.vn-frame-scroll){max-height:calc(100dvh - 54px)}
+ #game-shell[data-ui-design=dao-an-v3] :is(.character-heading h1,.sect-dialog-heading h2,.chapter-heading h2,.game-menu-heading h2,.dao-runtime-dialog-heading h2){font-size:22px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-an-menu-nav{margin-bottom:10px;padding:6px 0}
+ #game-shell[data-ui-design=dao-an-v3] .dao-an-menu-nav button{padding:6px 9px;font-size:10px}
+ #game-shell[data-ui-design=dao-an-v3] .chapter-dialog{height:calc(100dvh - 20px)}
+ #game-shell[data-ui-design=dao-an-v3] .chapter-dock{right:12px;top:200px;bottom:auto;width:180px;max-height:calc(100% - 435px)}
+ #game-shell[data-ui-design=dao-an-v3] .touch-pad{left:12px;bottom:280px;transform:scale(.85);transform-origin:left bottom}
+}
+@media(max-width:360px){
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-live-identity{width:190px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-hud-map{width:96px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-live-target{width:145px}
+ #game-shell[data-ui-design=dao-an-v3] #stage #sect-objective.dao-live-quest{width:145px}
+}
+@media(max-height:620px) and (min-width:600px){
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-live-identity{left:12px;top:12px;width:210px;padding:12px 10px 10px 60px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-open{left:10px;top:12px;width:38px;height:44px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-open .player-emblem{width:38px;height:44px}
+ #game-shell[data-ui-design=dao-an-v3] #stage #character-name{font-size:17px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-unit-vitals{margin-left:-50px;width:calc(100% + 50px);gap:6px;margin-top:16px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-vital-row,#game-shell[data-ui-design=dao-an-v3] #stage .dao-vital-row b{font-size:9px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-identity-cultivation{margin-left:-50px;width:calc(100% + 50px);font-size:9px}
+ #game-shell[data-ui-design=dao-an-v3] #stage .dao-live-target{top:12px;left:236px;width:220px;transform:none}
+ #game-shell[data-ui-design=dao-an-v3] .dao-hud-map{top:12px;right:12px;width:150px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-minimap{height:84px}
+ #game-shell[data-ui-design=dao-an-v3] .dao-hud-map :is(.dao-hud-coordinates,#connection-indicator){display:none}
+ #game-shell[data-ui-design=dao-an-v3] #stage #sect-objective.dao-live-quest{top:200px;right:12px;width:230px;max-height:70px;min-height:0;padding:8px}
+ #game-shell[data-ui-design=dao-an-v3] #stage #sect-objective :is(.quest-tracker-heading,.quest-actions,#quest-objectives,#quest-next,#quest-reward,#cultivation-summary,#cultivation-meter,#quest-state,#quest-hint,#quest-category-ribbon){display:none!important}
+ #game-shell[data-ui-design=dao-an-v3] #stage #quest-title{font-size:12px;line-height:1.6;margin:0}
+ #game-shell[data-ui-design=dao-an-v3] #stage #sect-objective.dao-live-quest:has(#quest-navigation:not([hidden])){max-height:118px;overflow:visible}
+ #game-shell[data-ui-design=dao-an-v3] #stage #quest-navigation{display:flex;min-height:44px;margin:0}
+ #game-shell[data-ui-design=dao-an-v3] #stage #quest-navigation button{width:44px;min-width:44px;height:44px;min-height:44px;padding:4px}
+ #game-shell[data-ui-design=dao-an-v3] :is(.dao-main-dock,.dao-mobile-dock){display:none!important}
+ #game-shell[data-ui-design=dao-an-v3] .game-hotbar{bottom:12px;max-width:660px;width:calc(100% - 32px)}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-slots{grid-template-columns:repeat(8,minmax(0,1fr));padding:8px;gap:4px}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-slot{height:46px}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-slot :is(img,.hotbar-art){top:4px;width:36px;height:36px}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-slot:has(.dao-an-slot-label){height:64px}
+ #game-shell[data-ui-design=dao-an-v3] .hotbar-slot-group :is(.hotbar-skill-name,.dao-an-slot-label){font-size:8px;min-height:18px;padding-bottom:4px}
+ #game-shell[data-ui-design=dao-an-v3] :is(.dao-an-hotbar-title,.hotbar-footer){display:none}
+}

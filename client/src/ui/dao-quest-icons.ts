@@ -200,7 +200,7 @@ export function objectiveKindMeta(objId: string, text: string): ObjectiveActionM
     return {
       kind: 'breakthrough',
       shortLabel: 'Độ Kiếp / Đột Phá',
-      ctaLabel: '⚡ Đột Phá',
+      ctaLabel: 'Đột Phá Cảnh Giới',
       accentColor: '#e4b8ff',
       svg: OBJECTIVE_SVGS.breakthrough,
     };
@@ -209,7 +209,7 @@ export function objectiveKindMeta(objId: string, text: string): ObjectiveActionM
     return {
       kind: 'gather',
       shortLabel: 'Thu Thập / Giải Ấn',
-      ctaLabel: '🌿 Tới Điểm Thu Thập',
+      ctaLabel: 'Tới Điểm Thu Thập',
       accentColor: '#7ce8be',
       svg: OBJECTIVE_SVGS.gather,
     };
@@ -218,7 +218,7 @@ export function objectiveKindMeta(objId: string, text: string): ObjectiveActionM
     return {
       kind: 'alchemy',
       shortLabel: 'Tế Luyện / Pháp Bảo',
-      ctaLabel: '🔮 Tế Luyện Đạo Quả',
+      ctaLabel: 'Tế Luyện Đạo Quả',
       accentColor: '#f5d27a',
       svg: OBJECTIVE_SVGS.alchemy,
     };
@@ -227,7 +227,7 @@ export function objectiveKindMeta(objId: string, text: string): ObjectiveActionM
     return {
       kind: 'talk',
       shortLabel: 'Đàm Đạo / Cơ Duyên',
-      ctaLabel: '🧭 Tầm Lộ Gặp NPC',
+      ctaLabel: 'Tầm Lộ Gặp NPC',
       accentColor: '#ffe08c',
       svg: OBJECTIVE_SVGS.talk,
     };
@@ -235,15 +235,63 @@ export function objectiveKindMeta(objId: string, text: string): ObjectiveActionM
   return {
     kind: 'combat',
     shortLabel: 'Thực Chiến Bí Cảnh',
-    ctaLabel: '⚔️ Khai Chiến 2D',
+    ctaLabel: 'Khai Chiến 2D',
     accentColor: '#ff9d8c',
     svg: OBJECTIVE_SVGS.combat,
   };
 }
 
+export type DaoUiIconName =
+  | 'scroll'
+  | 'compass'
+  | 'cauldron'
+  | 'orb'
+  | 'sword'
+  | 'sparkle'
+  | 'reward'
+  | 'dialogue'
+  | 'check'
+  | 'pending'
+  | 'bolt';
+
+const DAO_UI_SVGS: Record<DaoUiIconName, string> = {
+  scroll: CATEGORY_SVGS.destiny,
+  compass: `<svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true" fill="none">
+    <circle cx="10" cy="10" r="7.5" fill="rgba(104,218,236,0.14)" stroke="currentColor" stroke-width="1.5"/>
+    <polygon points="10,4.5 12.2,9.8 10,15.5 7.8,9.8" fill="currentColor" opacity="0.88"/>
+    <circle cx="10" cy="10" r="1.4" fill="#09161b"/>
+  </svg>`,
+  cauldron: CATEGORY_SVGS.alchemy_fate,
+  orb: CATEGORY_SVGS.inner_world,
+  sword: CATEGORY_SVGS.boss_hunt,
+  sparkle: `<svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true" fill="none">
+    <path d="M10 2.5L12.1 7.9L17.5 10L12.1 12.1L10 17.5L7.9 12.1L2.5 10L7.9 7.9L10 2.5Z" fill="rgba(245,210,122,0.24)" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  </svg>`,
+  reward: `<svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true" fill="none">
+    <rect x="3" y="8" width="14" height="9" rx="2" fill="rgba(245,210,122,0.16)" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M2.5 8h15M10 4.5v12.5M10 8C7.5 8 6 6.5 6 5.2C6 4 7.2 3.5 8.4 4.4L10 6L11.6 4.4C12.8 3.5 14 4 14 5.2C14 6.5 12.5 8 10 8Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`,
+  dialogue: OBJECTIVE_SVGS.talk,
+  check: `<svg viewBox="0 0 18 18" width="14" height="14" aria-hidden="true" fill="none">
+    <circle cx="9" cy="9" r="7.2" fill="rgba(78,222,168,0.2)" stroke="#5ee6b3" stroke-width="1.5"/>
+    <path d="M5.6 9.2l2.2 2.2 4.6-4.8" stroke="#7ef7c8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`,
+  pending: `<svg viewBox="0 0 18 18" width="14" height="14" aria-hidden="true" fill="none">
+    <circle cx="9" cy="9" r="6.8" fill="rgba(245,210,122,0.15)" stroke="#f5d27a" stroke-width="1.4" stroke-dasharray="3 2"/>
+    <polygon points="9,5.2 12.8,9 9,12.8 5.2,9" fill="#ffe08c"/>
+  </svg>`,
+  bolt: OBJECTIVE_SVGS.breakthrough,
+};
+
+export function daoUiSvg(name: DaoUiIconName, size?: number): string {
+  const raw = DAO_UI_SVGS[name] ?? DAO_UI_SVGS.sparkle;
+  if (!size) return raw;
+  return raw.replace(/width="\d+" height="\d+"/, `width="${size}" height="${size}"`);
+}
+
 export function questSealStampSvg(status: SectQuestStatus): string {
   if (status === 'completed') {
-    return `<svg class="dao-cinnabar-seal" viewBox="0 0 88 88" width="68" height="68" aria-hidden="true">
+    return `<svg class="dao-cinnabar-seal" viewBox="0 0 88 88" width="52" height="52" aria-hidden="true">
       <g transform="rotate(-11 44 44)">
         <rect x="6" y="6" width="76" height="76" rx="6" fill="rgba(182, 36, 28, 0.14)" stroke="#d94638" stroke-width="3"/>
         <rect x="11" y="11" width="66" height="66" rx="3" fill="none" stroke="#d94638" stroke-width="1.3" stroke-dasharray="6 2"/>
@@ -254,7 +302,7 @@ export function questSealStampSvg(status: SectQuestStatus): string {
     </svg>`;
   }
   if (status === 'ready') {
-    return `<svg class="dao-cinnabar-seal dao-seal-ready" viewBox="0 0 88 88" width="68" height="68" aria-hidden="true">
+    return `<svg class="dao-cinnabar-seal dao-seal-ready" viewBox="0 0 88 88" width="52" height="52" aria-hidden="true">
       <g transform="rotate(-8 44 44)">
         <rect x="6" y="6" width="76" height="76" rx="6" fill="rgba(235, 196, 108, 0.16)" stroke="#f3c868" stroke-width="3"/>
         <rect x="11" y="11" width="66" height="66" rx="3" fill="none" stroke="#f3c868" stroke-width="1.3"/>
@@ -265,7 +313,7 @@ export function questSealStampSvg(status: SectQuestStatus): string {
     </svg>`;
   }
   if (status === 'active' || status === 'available') {
-    return `<svg class="dao-cinnabar-seal dao-seal-active" viewBox="0 0 88 88" width="68" height="68" aria-hidden="true">
+    return `<svg class="dao-cinnabar-seal dao-seal-active" viewBox="0 0 88 88" width="52" height="52" aria-hidden="true">
       <g transform="rotate(-8 44 44)">
         <rect x="6" y="6" width="76" height="76" rx="6" fill="rgba(78, 212, 182, 0.12)" stroke="#62d9bc" stroke-width="2.6"/>
         <rect x="11" y="11" width="66" height="66" rx="3" fill="none" stroke="#62d9bc" stroke-width="1.2" stroke-dasharray="5 3"/>
@@ -275,7 +323,7 @@ export function questSealStampSvg(status: SectQuestStatus): string {
       </g>
     </svg>`;
   }
-  return `<svg class="dao-cinnabar-seal dao-seal-locked" viewBox="0 0 88 88" width="68" height="68" aria-hidden="true">
+  return `<svg class="dao-cinnabar-seal dao-seal-locked" viewBox="0 0 88 88" width="52" height="52" aria-hidden="true">
     <g transform="rotate(-8 44 44)">
       <rect x="6" y="6" width="76" height="76" rx="6" fill="rgba(90, 108, 122, 0.12)" stroke="#7c909e" stroke-width="2.4"/>
       <rect x="11" y="11" width="66" height="66" rx="3" fill="none" stroke="#7c909e" stroke-width="1.1" stroke-dasharray="4 4"/>

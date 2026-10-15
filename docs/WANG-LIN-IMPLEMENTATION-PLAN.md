@@ -1,10 +1,12 @@
 # Kế hoạch triển khai Huyễn Tâm và Tịch Bạch
 
+> **Cập nhật triển khai ·15/10:** Phạm vi và thứ tự toàn game theo [kế hoạch asset đã thống nhất](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md); tài liệu này chỉ chi tiết nhánh nhân vật/pháp bảo. Theo [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md), owner cho phép làm lại logic bản chạy chưa đưa vào test. Gói production cũ đã retire cho test build; [GDD character animation pack](design/characters/gdd-character-animation-v1/README.md) là nguồn tiếp nối, còn adapter runtime sẽ làm sau. Bảng P0–P8 dưới đây giữ kế hoạch gốc và không phải backlog đã tích hợp.
+
 Ngày 14/10/2026, owner duyệt **cả Huyễn Tâm và Tịch Bạch**, cùng concept Kiếm linh, Hồn phiên, Xạ Thần Xa và Thiên Nghịch Châu. Cả hai nhân vật được sản xuất riêng về nhận diện, có đủ bốn bộ áo và pháp bảo. Vương Lâm live tiếp tục làm chuẩn tỷ lệ người và nét pixel.
 
 Triển khai theo một lát Kiếm linh cho cả hai nhân vật trước, đồng thời prototype cơ chế ST/AOE của cả bốn họ. Khi lát đầu chứng minh được anatomy, grip, nhiều mục tiêu và cách ghép body–gear–FX, mở đủ tám hướng rồi triển khai Hồn phiên, Xạ Thần Xa và Thiên Nghịch Châu. Mốc luyện hóa được hoàn thiện trước; diện mạo nhập đạo và ý cảnh theo sau cùng luồng nguồn, điều kiện và quyền vận dụng.
 
-[Bảng tiến độ](design/characters/wang-lin-implementation-plan-v1/index.html) · [Dữ liệu kế hoạch](design/characters/wang-lin-implementation-plan-v1/plan.json) · [Duyệt concept](design/characters/wang-lin-concept-direction-v5/approval.json)
+[Bảng tiến độ lịch sử](design/characters/gdd-character-concepts-v1/index.html) · [Dữ liệu GDD mới](design/characters/gdd-character-animation-v1/progress.json) · [Duyệt neutral](design/characters/gdd-character-concepts-v1/approval.json)
 
 ## Căn cứ đã duyệt
 

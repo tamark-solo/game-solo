@@ -1,5 +1,7 @@
 # Hồ sơ tạo hình Vương Lâm — giai đoạn nhập môn
 
+> **Phân loại tài liệu ·15/10/2026.** Hồ sơ giữ các mốc tạo hình Vương Lâm trước Huyễn Tâm/Tịch Bạch. Trạng thái được cập nhật theo [thư viện tùy biến giữ nguồn](design/characters/character-customization-library-v1/README.md); hướng sản xuất mới theo [kế hoạch Huyễn Tâm/Tịch Bạch](WANG-LIN-IMPLEMENTATION-PLAN.md) và [asset GDD 0.35](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md). Không suy roster ba playable hoặc ưu tiên mới từ ghi chú 08–12/10.
+
 **Sửa Hóa Thần 02 · 12/10:** [Sinh Tử](design/characters/wang-lin-hoa-than-review-v2/README.md) tăng mảng ngà sáng, giảm tro xám theo phản hồi chìm; giữ 0 pixel phần người đổi. Áo Huyền Tử giữ nguồn 01, khí hai đạo đã tách ground/rear/front/mote và thử motion. [Ghép VFX độc lập khi làm tám hướng](CHARACTER-AURA-LAYERS.md); chưa làm bộ người/áo đa hướng hoặc thay runtime.
 
 **Tiếp nối Hóa Thần 12/10:** [Hai mẫu áo và khí tức 01](design/characters/wang-lin-hoa-than-review-v1/README.md) giữ đúng người native-v2, chỉ đổi mask 471 pixel vải; 0 pixel ngoài vải/đầu/mặt/da/giày/alpha đổi. Sinh Tử ngà bạc–tro mực, Huyền Tử xanh đen–huyết đồng là đề xuất ART, chưa trang phục canon/chỉ số hoặc gameplay. Khí tĩnh riêng không đổi frame người hay hợp đồng R01; chờ đánh giá hình.

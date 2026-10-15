@@ -1,14 +1,14 @@
 # Hằng Nhạc — NPC và sinh hoạt môn phái
 
-**13/10/2026 · Phụ lục GDD 0.33 · Đã đồng bộ roster owner, chưa ghép runtime.**
+**Snapshot 13/10/2026 · trước GDD 0.35 · Đã đồng bộ roster owner, chưa ghép runtime.**
 
 **Nguồn thay thế:** [Kế hoạch Vân Hải của owner](VAN-HAI-LIVING-WORLD-PLAN.md) và [plan.json](design/world/van-hai-living-world-v1/plan.json) là nguồn chính của **14 NPC**, wave, danh tính và brief concept. Kế hoạch này **thay đề xuất sáu vai/sáu nhân vật nền** trước đó; không cộng hai danh sách để thành 26 NPC. Tài liệu này chỉ bổ sung quan hệ với bốn station hiện có, đế đối chứng và luồng nhiệm vụ mới. Danh tính/ART/tọa độ trong plan vẫn là ứng viên, không suy đã duyệt hoặc triển khai.
 
-Theo phản hồi map trống, chương nhập môn cần những người có việc đang làm, mục đích riêng và phản ứng với hành trình của người chơi. Tham chiếu [GDD](GDD.md), [nhập môn v2](HANG-NHAC-ONBOARDING-V2.md) và [bộ asset nhập môn](design/gameplay/hang-nhac-onboarding-assets-v1/README.md).
+Theo phản hồi map trống, chương nhập môn cần những người có việc đang làm, mục đích riêng và phản ứng với hành trình của người chơi. Tham chiếu [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [bộ asset nhập môn](design/gameplay/hang-nhac-onboarding-assets-v1/README.md). Hồ sơ “nhập môn v2” cũ đã dọn.
 
 ## 1. Hiện trạng và mục tiêu
 
-Runtime có **bốn điểm NPC đứng yên**, dùng lại hai atlas đệ tử nam/nữ; chưa có dàn NPC riêng hoặc sinh hoạt nền. Nguồn hiện hành là `shared/sect.ts`, mô tả trong [runtime môn phái](HANG-NHAC-SECT-RUNTIME.md). Roster 14 NPC trong bản owner mới được pull về là thiết kế kế tiếp, chưa phải dân cư đang chạy trong game.
+Runtime có **bốn điểm NPC đứng yên**, dùng lại hai atlas đệ tử nam/nữ; chưa có dàn NPC riêng hoặc sinh hoạt nền. Nguồn hồi quy là `shared/sect.ts`, mô tả trong [luồng NPC Hằng Nhạc](HANG-NHAC-NPC-RUNTIME.md). Roster 14 NPC trong bản owner mới được pull về là thiết kế kế tiếp, chưa phải dân cư đang chạy trong game.
 
 Roster owner chia **Wave A: tám đầu mối + hai đệ tử sinh hoạt** và **Wave B: bốn vai mở theo nội dung cần dùng**. Mỗi cụm trả lời được: họ đang làm gì, vì sao ở đây, và người chơi có lý do gì để chú ý. Hai đệ tử sinh hoạt không biến thành hai người phát nhiệm vụ bắt buộc.
 

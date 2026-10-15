@@ -1,6 +1,6 @@
 # Định hướng online — ba nhân vật chơi được
 
-**Phiên bản:** 0.9 · **Ngày:** 11/10/2026 · **Chuẩn hiện hành:** [GDD 0.32](GDD.md), [tu tiên](CULTIVATION-SYSTEM.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md).
+**Snapshot 0.9 · 11/10/2026 · trước GDD 0.35.** Chuẩn hiện hành để đối chiếu là [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [pacing tu luyện](MMORPG-CULTIVATION-PACING-AND-DEPTH-2026-10-15.md) và [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md).
 
 Owner làm rõ mục tiêu xuyên chặng: farm/build để mạnh, vận dụng trong PvE/PvP và thể hiện nhân vật bằng trang bị/thời trang/tọa kỵ/pháp bảo. [Ma trận MMORPG](MMORPG-PROGRESSION-PLAN.md) và [hợp đồng Core/backend](MMORPG-SYSTEM-CONTRACTS.md) nối mục tiêu đó vào lộ trình từng gói; cụ thể loot/credit/ruleset/ART còn là thiết kế. Pilot farm/tỷ thí/diện mạo có thể được chọn sau nền RM2 đủ ổn, trước khi hoàn tất toàn tiện ích MMO.
 
@@ -46,12 +46,12 @@ Máy chủ sở hữu thời gian, chi phí, phần thưởng, vị trí hợp l
 
 Mỗi lệnh cần quyền hồ sơ và cách xử lý một lần; gửi lại hoặc nhiều tab không nhân thưởng, đột phá hay thời gian. Kết nối lại khôi phục trạng thái và kết quả theo contract của từng hoạt động. Lease điều khiển đã có trong entry local; chuyển room cần handoff một writer, lock nhiều host/thiết bị cần mở rộng theo [hợp đồng Core](MMORPG-SYSTEM-CONTRACTS.md).
 
-Riêng [HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất checkpoint sau pha 1/2, reset hai actor khi thử lại pha chưa qua và pause tối đa 30 giây sau khi server phát hiện mất kết nối. Pause chỉ mô phỏng phiên cá nhân, không thế giới chung; không regen/offline thưởng khi pause. Kết quả đã lưu quyết định checkpoint/M04, event pha cũ không tác động pha mới. Luật này cần đánh giá/hợp đồng kỹ thuật, không áp ngầm cho PvP hoặc mọi encounter.
+Riêng snapshot HN10 đề xuất checkpoint sau pha 1/2, reset hai actor khi thử lại pha chưa qua và pause tối đa 30 giây sau khi server phát hiện mất kết nối. Pause chỉ mô phỏng phiên cá nhân, không thế giới chung; không regen/offline thưởng khi pause. Kết quả đã lưu quyết định checkpoint/M04, event pha cũ không tác động pha mới. Luật này cần đánh giá/hợp đồng kỹ thuật, không áp ngầm cho PvP hoặc mọi encounter.
 
-Tu luyện vắng mặt chỉ tiếp tục hoạt động đã chọn theo điều kiện/kho/bình cảnh. Không tự combat, truyện, lĩnh ngộ then chốt hoặc đại đột phá. [Hồ sơ tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) đề xuất cap offline thử 30 phút, nền dừng ở cổng, thưởng nhiệm vụ vượt cổng được giữ và không tự xác nhận tầng; rời game trong combat/bài tương tác không tự chuyển hoạt động. Đây là luật thử cần đánh giá, không kế thừa 8 giờ cũ thành quyết định đã khóa.
+Tu luyện vắng mặt chỉ tiếp tục hoạt động đã chọn theo điều kiện/kho/bình cảnh. Không tự combat, truyện, lĩnh ngộ then chốt hoặc đại đột phá. Cap offline thử 30 phút và nền dừng ở cổng là fixture lịch sử; hợp đồng hiện hành giữ nguyên yêu cầu khóa đầu ra khi đầu vào khóa. Rời game trong combat/bài tương tác không tự chuyển hoạt động. Đây là luật thử cần đánh giá, không kế thừa 8 giờ cũ thành quyết định đã khóa.
 
 ## 5. Phạm vi kiểm chứng
 
 Lát A đề xuất: ba lựa chọn từ đầu, hai tài khoản vào Hằng Nhạc, di chuyển/tương tác, nhiệm vụ/tu luyện đầu và combat đơn giản, lưu riêng. Lát B hoàn thiện Ngưng Khí và khảo nghiệm cuối. Lát C mở phân hóa Trúc Cơ. Đây là phân kỳ thiết kế, chưa là lịch phát hành.
 
-Entry local đã có đăng nhập và DB hồ sơ; vận hành production, loot/tổ đội/PvP/giao dịch và quy mô nhiều server còn mở. [Bản thử hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) giữ hợp đồng guest riêng. Map owner, tương tác môn phái và HN01–HN04 đã tích hợp; nội dung kế tiếp là HN05/ngoại vi/M02 theo [roadmap](DEVELOPMENT-ROADMAP.md), rồi các pilot MMORPG khi gate đủ. Chưa chứng minh sáu hệ tu tiên hoặc kinh tế MMO hoạt động.
+Entry local đã có đăng nhập và DB hồ sơ; vận hành production, loot/tổ đội/PvP/giao dịch và quy mô nhiều server còn mở. [Bản thử hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) giữ hợp đồng guest riêng. Map owner, tương tác môn phái và HN01–HN04 đã tích hợp; nội dung hiện hành là VG01–VG11 theo [hợp đồng](GDD-035-UNIFIED-CONTRACT.md), rồi các pilot MMORPG khi gate đủ. Chưa chứng minh sáu hệ tu tiên hoặc kinh tế MMO hoạt động.

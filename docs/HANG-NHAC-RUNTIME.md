@@ -4,7 +4,7 @@
 
 ## Chạy và đối chiếu
 
-Tiếp nối nền runtime: [hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) và [NPC/HN01–HN02/thổ nạp](HANG-NHAC-SECT-RUNTIME.md) đã có bản thử. Nhấn E gần NPC, dùng Nhật ký để xem đường. Camera/blocker giữ nguyên; [đợt tích hợp HUD và layer 09/10](HANG-NHAC-HUD-LAYERS.md) thay nền bake trong game bằng scene 22 object / 32 part từ trang review chủ dự án chỉ định.
+Tiếp nối nền runtime: [hồ sơ/R01](HANG-NHAC-R01-RUNTIME.md) và [luồng NPC Hằng Nhạc](HANG-NHAC-NPC-RUNTIME.md) đã có bản thử. Nhấn E gần NPC, dùng Nhật ký để xem đường. Camera/blocker giữ nguyên; [đợt tích hợp HUD và layer 09/10](HANG-NHAC-HUD-LAYERS.md) thay nền bake trong game bằng scene 22 object / 32 part từ trang review chủ dự án chỉ định. Các mã HN01–HN02 ở đây là wire lịch sử.
 
 Chạy `npm.cmd run dev`, mở [Hằng Nhạc](http://127.0.0.1:5173/hang-nhac.html). Khi trang nạp xong có thể khám phá cục bộ; chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển, bấm **Vào sân chung** để kết nối hồ sơ riêng. Dùng browser profile/context riêng cho người chơi thứ hai; cùng tài khoản chỉ điều khiển một nhân vật mỗi lần. WASD/mũi tên và nút hướng điều khiển nhân vật. Tạo mục tiêu luyện rồi dùng phím 1/2/3 để kiểm R01. Backend mặc định localhost:2567; `VITE_SERVER_URL` cấu hình endpoint client khi cần.
 

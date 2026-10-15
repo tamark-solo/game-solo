@@ -1,9 +1,0 @@
-from pathlib import Path
-import json,hashlib
-R=Path(__file__).resolve().parent;V=R.parents[2];p=R/'generation.json';g=json.loads(p.read_text(encoding='utf-8'))
-delta=''' FINAL ROOT-APPROVED CHOREOGRAPHY OVERRIDE: Hồn phiên is a PLANTED RITUAL. Idle/run one actual anatomical hand keeps EMPTY CLOSED pole grip, opposite arm relaxed/swinging. Cast ready key1 starts same held empty fist. At charge key2 put the separately attached pole down onto ground beside self; from key2 onward BOTH hands are free to chest seal/open commanding gestures. ST: held ready, two-hand chest seal, brace/lock seal, open facing-direction command release, hold command, upright recovery free hands. AOE: held ready, two-hand seal, raise commanding arm, broad open commanding release, steady command, upright recovery. Pole stays PLANTED separately through cast/recovery and never swaps holding hand. Thus previous requirements closed pole fist ALL30, no two-hand join, LEFT low pole through cast DO NOT APPLY to cast; only idle/run/ready have continuous actual grip. BODY ONLY absolutely no pole/cloth/FX painted. Native body roots/source anatomy complete; full standing head/torso size stable; run6 last key still running. True requested direction in ALL cells.'''
-for r in g['records']:
- if r['group']=='core' and not r.get('sha256'):
-  q=V/r['prompt'];s=q.read_text(encoding='utf-8').rstrip()+'\n'+delta+'\n';q.write_text(s,encoding='utf-8');r['promptSha256']=hashlib.sha256(q.read_bytes()).hexdigest();r['choreographyDelta']='Root approved planted ritual: key1 held, from charge key2 pole fixed at ground and body hands free. Idle/run same physical held hand.'
-g['choreographyPolicy']='Root-approved planted ritual. Idle/run one actual held palm; cast key1 held, key2 onward detached body hands with separately ground-planted pole.'
-p.write_text(json.dumps(g,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print('Uncalled core prompts revised and hashed for planted ritual')

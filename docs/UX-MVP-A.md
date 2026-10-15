@@ -2,7 +2,7 @@
 
 > **Hồ sơ lịch sử, đối chiếu ngày 08/10/2026:** năm khu Tu luyện/Hạt châu/Hành trình/Hành trang/Cài đặt, E01–E08, import save cục bộ, 480 tu vi/8 giờ và màn kết thúc tầng 1 ở các mục 1–11 bên dưới là UX idle v0.6. Các wireframe/bản vẽ được giữ để tham khảo bố cục, chưa là UX online hiện hành. Hướng tạo đệ tử riêng từng được xét cũng đã bị thay.
 
-> **Chuẩn hiện hành [GDD 0.34](GDD.md) (14/10/2026):** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Xem thêm [Lộ trình Giai đoạn & Nhiệm vụ](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic Từng Chặng](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md).
+> **Chuẩn hiện hành [GDD 0.35](GDD.md) (15/10/2026):** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Xem thêm [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md).
 
 **Phiên bản:** 0.3, ngày 06/10/2026.  
 **Trạng thái nguồn:** UX/sơ đồ/bản vẽ tĩnh của bản idle; tương tác chưa được nghiệm thu bởi các bản phác.\

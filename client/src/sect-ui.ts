@@ -3,11 +3,12 @@ import type { AvatarId } from '../../shared/profiles';
 import { SECT_STATIONS, nearStation,
   type SectAction, type SectCommand, type SectResult, type SectView, type StationId } from '../../shared/sect';
 import { sectRoute } from '../../shared/sect-route';
-import { currentSectQuest, sectQuests, type SectQuest } from '../../shared/sect-quests';
-import { QuestUI, renderRewardSlots, showG2LootToast } from './quest-ui';
+import { currentSectQuest, QUEST_STATUS_LABELS, sectQuests, type SectQuest } from '../../shared/sect-quests';
+import { attachSafeIconFallback, checklist, QuestUI, renderRewardSlots, showG2LootToast } from './quest-ui';
 import { attachFrameSurface } from './frame-surface';
 import type { Position } from '@shared/world/types';
 import { chapterGate, initialChapter, readG2State, type ChapterQuestId } from '@shared/chapter';
+import { daoUiSvg, questCategoryMeta, questSealStampSvg } from './ui/dao-quest-icons';
 import { nearbyLifeNpc, nearLifeNpc, npcLifeAvailable, npcLore, npcStationName, type HangNhacNpc, type NpcLifeContext } from './npc-life';
 
 const element=<K extends keyof HTMLElementTagNameMap>(tag:K,text?:string):HTMLElementTagNameMap[K]=>{const node=document.createElement(tag);if(text)node.textContent=text;return node;};
@@ -16,6 +17,12 @@ const STATION_PORTRAITS: Record<StationId, string> = {
   cultivation: '/assets/g2-items/npc-diep-tinh.png',
   training: '/assets/g2-items/npc-ta-kiem-son.png',
   preparation: '/assets/g2-items/npc-bach-chi.png',
+};
+const STATION_ROLES: Record<StationId, { title: string; realm: string }> = {
+  guide: { title: 'Chấp Sự Tiếp Dẫn Ngoại Môn', realm: 'Trúc Cơ Sơ Kỳ' },
+  cultivation: { title: 'Chấp Sự Linh Điền & Tụ Khí Đài', realm: 'Trúc Cơ Trung Kỳ' },
+  training: { title: 'Chấp Sự Thực Chiến & Kiếm Trận', realm: 'Trúc Cơ Hậu Kỳ' },
+  preparation: { title: 'Đan Dược Đường · Chấp Sự Hộ Đạo', realm: 'Trúc Cơ Sơ Kỳ' },
 };
 const reasons:Record<string,string>={ distance:'Tiến lại gần người hướng dẫn, trên cùng lối đi, rồi nhấn E.',profile:'Vào sân chung để lưu hành trình.',inactive:'Nhân vật chưa sẵn sàng.',
   combat:'Đợi thi triển và luyện thuật kết thúc rồi tiếp tục.',hn01:'Gặp người tiếp dẫn trước.',hn02:'Hoàn thành vòng vận khí và xác nhận mốc đầu trước.',
@@ -189,7 +196,8 @@ export class SectUI {
     const context=this.options.npcContext?.(),lore=context?nearbyLifeNpc(context):undefined;
     const targetNpcShort=npcStationName(goal.stationId).split(' · ')[0]!;
     const isNearGoal=nearStation(position,goal.stationId);
-    document.getElementById('quest-title')!.textContent=`${goal.id} · ${goal.title}`;
+    const daoAn=document.getElementById('game-shell')?.dataset.uiDesign==='dao-an-v3';
+    document.getElementById('quest-title')!.textContent=daoAn?goal.title.replace(/^Hồi\s+[IVXLCDM]+:\s*/iu,''):`${goal.id} · ${goal.title}`;
     document.getElementById('quest-hint')!.textContent=online
       ?nearby
         ?`Đang đứng cạnh ${npcStationName(nearby.id)} · Nhấn E (hoặc nút bên dưới) để đàm đạo & thực hiện nhiệm vụ`
@@ -200,23 +208,31 @@ export class SectUI {
     if(online){
       const guideBtn=document.getElementById('quest-guide')!;
       if(!isNearGoal){
-        guideBtn.textContent=`🧭 Tự tìm đường tới ${targetNpcShort} (${goal.id})`;
+        guideBtn.textContent=`Tầm lộ tới ${targetNpcShort} (${goal.id})`;
       }else if(goal.id==='VG01'){
         guideBtn.textContent=!this.view?.hn01
-          ?'✨ Đàm đạo Trần Duy · Nhặt Châu Đá (E)'
+          ?'Đàm đạo Trần Duy · Nhặt Châu Đá (E)'
           :!this.view?.hn02
-            ?'✨ Đàm đạo Diệp Tĩnh · Lĩnh Kiếm Linh (E)'
+            ?'Đàm đạo Diệp Tĩnh · Lĩnh Kiếm Linh (E)'
             :(this.view?.lessons.hn03||this.view?.lessons.basic)
-              ?'⚡ Đột Phá Ngưng Khí Tầng 3 · Hoàn Tất VG01 (E)'
-              :'⚔️ Đàm đạo Tạ Kiếm Sơn · Thử Kiếm 2D (E)';
+              ?'Đột Phá Ngưng Khí Tầng 3 · Hoàn Tất VG01 (E)'
+              :'Đàm đạo Tạ Kiếm Sơn · Thử Kiếm 2D (E)';
       }else if(goal.status==='ready'){
-        guideBtn.textContent=`🎁 Nhận Đạo Quả ${goal.id} tại ${targetNpcShort} (E)`;
+        guideBtn.textContent=`Lĩnh Đạo Quả ${goal.id} tại ${targetNpcShort} (E)`;
       }else{
-        guideBtn.textContent=`⚔️ Gặp ${targetNpcShort} · Vào Bí Cảnh ${goal.id} (E)`;
+        guideBtn.textContent=`Gặp ${targetNpcShort} · Vào Bí Cảnh ${goal.id} (E)`;
       }
     }
     this.interaction.disabled=!online||(!nearby&&!lore)||!!this.pending;
     this.interaction.textContent=nearby?`E · Đàm đạo ${npcStationName(nearby.id).split(' · ')[0]}`:lore?`E · Trò chuyện ${lore.name}`:'E · Tới gần NPC';
+    if(daoAn){
+      const guide=document.getElementById('quest-guide')!;
+      guide.title=guide.textContent??'';guide.setAttribute('aria-label',guide.title);
+      guide.textContent=!isNearGoal?'Tự tìm đường':goal.status==='ready'?'Nhận đạo quả':'Thực hiện';
+      this.interaction.title=this.interaction.textContent;this.interaction.setAttribute('aria-label',this.interaction.title);
+      this.interaction.textContent=nearby?'E · Đàm đạo':lore?'E · Trò chuyện':'E · Tương tác';
+      document.getElementById('journal')!.textContent='Đạo thư';
+    }
     this.panel.dataset.quest=goal.id;
     const panel=document.getElementById('lesson-panel')!;
     panel.hidden=true;
@@ -244,11 +260,72 @@ export class SectUI {
     if(npc&&context?.view){this.showLore(npc,context);return;}
     this.guide();
   }
+  private renderModalSystemTabs(activeMode:'npc'|'journal'):HTMLElement {
+    const goal=this.objective();
+    const activeStationId=this.station??goal.stationId;
+    const npcShort=npcStationName(activeStationId).split(' · ')[0]!;
+    const nav=element('nav');
+    nav.className='dao-sect-tabbar';
+    nav.setAttribute('aria-label','Hệ thống Tab Nhiệm Vụ & Đạo Đồ');
+
+    const npcTab=element('button');
+    npcTab.type='button';
+    npcTab.className='dao-sect-tab';
+    npcTab.dataset.active=String(activeMode==='npc');
+    npcTab.innerHTML=`<span class="dao-tab-svg">${daoUiSvg('dialogue')}</span><span>Đàm Đạo · ${npcShort} (${goal.id})</span>`;
+    npcTab.addEventListener('click',()=>{
+      if(activeMode==='npc')return;
+      if(nearStation(this.options.position(),activeStationId)){
+        this.station=activeStationId;
+        this.signature='';
+        this.renderStation();
+      }else if(this.options.navigate&&this.options.online()){
+        this.dialog.close();
+        this.options.navigate(activeStationId);
+      }else{
+        this.station=activeStationId;
+        this.signature='';
+        this.renderStation();
+      }
+    });
+
+    const codexTab=element('button');
+    codexTab.type='button';
+    codexTab.className='dao-sect-tab';
+    codexTab.dataset.active=String(activeMode==='journal');
+    codexTab.innerHTML=`<span class="dao-tab-svg">${daoUiSvg('scroll')}</span><span>Thiên Mệnh Chi Quyển · 11 Hồi (J)</span>`;
+    codexTab.addEventListener('click',()=>{
+      if(activeMode==='journal')return;
+      this.journal(goal.id);
+    });
+
+    nav.append(npcTab,codexTab);
+
+    if(this.options.chapter){
+      const innerTab=element('button');
+      innerTab.type='button';
+      innerTab.className='dao-sect-tab dao-sect-tab-inner';
+      innerTab.dataset.chapterRoute=activeStationId;
+      innerTab.innerHTML=`<span class="dao-tab-svg">${daoUiSvg('orb')}</span><span>Nội Giới & Đan Lô (H)</span>`;
+      innerTab.addEventListener('click',()=>{
+        this.dialog.close();
+        this.options.chapter?.(activeStationId);
+      });
+      nav.append(innerTab);
+    }
+    return nav;
+  }
   private showLore(npc:HangNhacNpc,context:NpcLifeContext):void {
     this.station=undefined;this.loreNpc=npc;this.loreProfile=context.profileId;this.signature='';this.playerDot=undefined;this.actions=undefined;
     this.title.textContent=`${npc.name} · ${npc.role}`;this.body.replaceChildren();this.feedback('');
     this.dialog.dataset.mode='lore';document.getElementById('sect-category')!.textContent=`HẰNG NHẠC · ${npc.zone.toLocaleUpperCase('vi-VN')}`;
-    for(const line of npcLore(npc,context.view!))this.paragraph(line);
+    const card=element('section');
+    card.className='dao-npc-dialogue-card';
+    for(const line of npcLore(npc,context.view!)){
+      const p=element('p',line);
+      card.append(p);
+    }
+    this.body.append(card);
     this.dialog.showModal();
   }
   private button(text:string,action:SectAction,extra:Partial<SectCommand>={}):HTMLButtonElement {
@@ -257,45 +334,129 @@ export class SectUI {
   private paragraph(text:string):void{this.body.append(element('p',text));}
   private renderStation():void {
     const s=SECT_STATIONS.find(s=>s.id===this.station)!,v=this.view,g2=readG2State(v),goal=this.objective();
+    const catMeta=questCategoryMeta(goal.id);
+    const roleMeta=STATION_ROLES[s.id];
     this.title.textContent=npcStationName(s.id);this.body.replaceChildren();this.playerDot=undefined;
     this.dialog.dataset.mode='npc';document.getElementById('sect-category')!.textContent=`HẰNG NHẠC · ${s.area.toLocaleUpperCase('vi-VN')}`;
 
-    const heroCard=element('section');
-    heroCard.style.cssText='display:flex;align-items:flex-start;gap:14px;padding:12px 14px;border-radius:10px;background:rgba(12,20,30,0.88);border:1px solid rgba(235,196,108,0.42);margin-bottom:12px;';
+    this.body.append(this.renderModalSystemTabs('npc'));
+
+    const stageGrid=element('div');
+    stageGrid.className='dao-npc-quest-stage';
+
+    // Left / Top Card: NPC Speaker & Station Lore
+    const npcCard=element('section');
+    npcCard.className='dao-npc-dialogue-card';
+    const npcHeader=element('div');
+    npcHeader.className='dao-npc-header';
     const portrait=element('img');
     portrait.src=STATION_PORTRAITS[s.id]??goal.portrait;
     portrait.alt=npcStationName(s.id);
-    portrait.width=portrait.height=64;
-    portrait.style.cssText='image-rendering:pixelated;object-fit:contain;border-radius:8px;border:1.5px solid #e7c068;background:rgba(255,255,255,0.06);padding:3px;flex-shrink:0;';
-    const heroText=element('div');
-    heroText.style.cssText='display:flex;flex-direction:column;gap:4px;';
-    const badge=element('small',`Cảnh giới: ${g2.realmLabel} · Công pháp: ${g2.stance.name} · Pháp Bảo Mốc [${g2.artifacts.sword.tier}/${g2.artifacts.banner.tier}/${g2.artifacts.chariot.tier}/${g2.artifacts.bead.tier}]`);
-    badge.style.cssText='color:#9ec5be;font-size:11.5px;';
-    const voice=element('p',`“${goal.voiceover}”`);
-    voice.style.cssText='margin:0;color:#fff2d0;font-style:italic;font-size:13.5px;line-height:1.45;';
-    heroText.append(badge,voice);
-    heroCard.append(portrait,heroText);
-    this.body.append(heroCard);
+    portrait.width=portrait.height=52;
+    portrait.className='dao-npc-portrait';
+    attachSafeIconFallback(portrait);
 
-    const questBox=element('section');
-    questBox.style.cssText='padding:12px 14px;border-radius:10px;background:rgba(16,26,38,0.75);border:1px solid rgba(158,197,190,0.28);margin-bottom:12px;';
-    const qTitle=element('h4',`📜 Nhiệm vụ hiện tại: ${goal.id} — ${goal.title}`);
-    qTitle.style.cssText='margin:0 0 6px 0;color:#ffe49e;font-size:14px;';
-    const qStep=element('p',`▸ Bước tiếp theo: ${goal.nextStep}`);
-    qStep.style.cssText='margin:0 0 8px 0;color:#d9ece8;font-size:13px;';
-    questBox.append(qTitle,qStep);
-    if(goal.rewardItems.length){
-      const rLabel=element('small',`Đạo quả & Vật phẩm thưởng ${goal.id}:`);
-      rLabel.style.cssText='color:#e7c068;font-weight:600;display:block;margin-top:4px;';
-      questBox.append(rLabel,renderRewardSlots(goal.rewardItems,false));
+    const npcMeta=element('div');
+    npcMeta.className='dao-npc-meta';
+    const roleRow=element('div');
+    roleRow.className='dao-npc-role-row';
+    const roleChip=element('span',roleMeta.title);
+    roleChip.className='dao-npc-role-chip';
+    const realmChip=element('span',roleMeta.realm);
+    realmChip.className='dao-npc-realm-chip';
+    roleRow.append(roleChip,realmChip);
+
+    const playerRealmLine=element('small',`Đạo hữu: ${g2.realmLabel} · ${g2.stance.name} · Pháp Bảo [${g2.artifacts.sword.tier}/${g2.artifacts.banner.tier}/${g2.artifacts.chariot.tier}/${g2.artifacts.bead.tier}]`);
+    playerRealmLine.className='dao-npc-player-summary';
+    npcMeta.append(roleRow,playerRealmLine);
+    npcHeader.append(portrait,npcMeta);
+    npcCard.append(npcHeader);
+
+    const voiceQuote=element('blockquote',`“${goal.voiceover}”`);
+    voiceQuote.className='dao-npc-voice-quote';
+    npcCard.append(voiceQuote);
+
+    const speechBody=element('div');
+    speechBody.className='dao-npc-speech-body';
+    if(s.id==='guide'){
+      const intro=element('p','Trần Duy: “Đạo đồ nghịch thiên bắt đầu từ Hẻm Vân Liệt. Châu Đá Ngũ Vân và Thanh Phong Linh Kiếm là căn cơ hộ mệnh của ngươi!”');
+      intro.classList.add('station-intro');
+      speechBody.append(intro);
+    }else if(s.id==='cultivation'){
+      const intro=element('p','Diệp Tĩnh: “Lộ thủy trong Thiên Nghịch Châu tự động tụ khí 120 Tu vi/phút. Khi chạm bình cảnh, hãy mở Nội Giới (H) để đột phá!”');
+      intro.classList.add('station-intro');
+      const gate=chapterGate(v?.chapter??initialChapter());
+      const progress=element('p','Tu vi Nội Giới: '),value=element('b',String(v?.cultivation??0));
+      value.dataset.cultivation='';
+      progress.className='dao-telemetry-pill';
+      progress.append(value,` / ${gate}`);
+      const activity=element('p');
+      activity.dataset.activity='';
+      activity.className='dao-telemetry-pill';
+      speechBody.append(intro,progress,activity);
+    }else if(s.id==='training'){
+      const intro=element('p','Tạ Kiếm Sơn: “Phím F đánh gần, phím 1 xuất Kiếm Linh, phím 2 triệu Hồn Phiên, phím 3 thúc Xạ Thần Xa, phím G mở Hộ Đạo!”');
+      intro.classList.add('station-intro');
+      speechBody.append(intro);
+    }else{
+      const intro=element('p',g2.noiGioi.liMuwanMessage);
+      intro.classList.add('station-intro');
+      const hpStatus=element('p',`HP: ${v?.hp??100}/100 · Hồi Xuân Đan: ${v?.supplies??0} viên (+30 HP).`);
+      hpStatus.className='dao-telemetry-pill';
+      const timer=element('p');
+      timer.dataset.recoveryTimer='';
+      timer.className='dao-telemetry-pill';
+      speechBody.append(intro,hpStatus,timer);
     }
-    this.body.append(questBox);
+    npcCard.append(speechBody);
 
-    this.actions=element('div');this.actions.className='dialog-actions';
-    const addChapterBtn=(label:string,nodeName:string,choice:string,primary=true,autoNav?:StationId)=>{
-      const btn=element('button',label);
+    // Right / Bottom Card: Active Quest Step & Reward Showcase
+    const questBox=element('section');
+    questBox.className='dao-active-quest-card';
+    const sealWrap=element('div');
+    sealWrap.className='dao-scroll-seal-wrap';
+    sealWrap.innerHTML=questSealStampSvg(goal.status);
+    questBox.append(sealWrap);
+
+    const qRibbon=element('div');
+    qRibbon.className='dao-active-quest-ribbon';
+    qRibbon.style.cssText=`color:${catMeta.accentColor};border-color:${catMeta.borderColor};background:${catMeta.bgColor};`;
+    qRibbon.innerHTML=`${catMeta.svg}<span>${goal.id} · ${catMeta.badgeText} · ${catMeta.realmText}</span>`;
+
+    const qTitle=element('h4',`${goal.id} — ${goal.title}`);
+    qTitle.className='dao-active-quest-title';
+
+    const qStep=element('p');
+    qStep.className='dao-active-quest-next';
+    qStep.innerHTML=`${daoUiSvg('compass',13)}<span><strong>Chỉ lộ:</strong> ${goal.nextStep}</span>`;
+
+    questBox.append(qRibbon,qTitle,qStep);
+
+    const stepListWrap=element('div');
+    stepListWrap.className='dao-active-quest-steps';
+    const doneCount=goal.objectives.filter(o=>o.done).length;
+    const stepHeader=element('div');
+    stepHeader.className='dao-active-quest-subhead';
+    stepHeader.innerHTML=`${daoUiSvg('sword',13)}<span>Đạo Tiêu (${doneCount}/${goal.objectives.length} bước)</span>`;
+    stepListWrap.append(stepHeader,checklist(goal,undefined,true));
+    questBox.append(stepListWrap);
+
+    if(goal.rewardItems.length){
+      const rHead=element('div');
+      rHead.className='dao-active-quest-subhead';
+      rHead.innerHTML=`${daoUiSvg('reward',13)}<span>Đạo Quả Thưởng (${goal.id})</span>`;
+      questBox.append(rHead,renderRewardSlots(goal.rewardItems,true));
+    }
+
+    stageGrid.append(npcCard,questBox);
+    this.body.append(stageGrid);
+
+    this.actions=element('div');this.actions.className='dialog-actions dao-command-bar';
+    const addChapterBtn=(label:string,iconSvg:string,nodeName:string,choice:string,primary=true,autoNav?:StationId)=>{
+      const btn=element('button');
       btn.type='button';
-      if(primary)btn.className='sect-chapter-route';
+      if(primary)btn.className='sect-chapter-route dao-primary-cta';
+      btn.innerHTML=`<span class="dao-btn-svg">${iconSvg}</span><span>${label}</span>`;
       btn.addEventListener('click',()=>{
         this.dialog.close();
         this.options.sendChapter?.(nodeName,choice);
@@ -308,56 +469,50 @@ export class SectUI {
 
     if(goal.id==='VG01'){
       if(!v?.hn01){
-        addChapterBtn('✨ Nhặt Châu Đá Ngũ Vân & Ghi Danh Nội Môn (Bước 1/3)','g2-act','step1_VG01',true,'cultivation');
+        addChapterBtn('Nhặt Châu Đá Ngũ Vân (Bước 1/3)',daoUiSvg('sparkle',13),'g2-act','step1_VG01',true,'cultivation');
       }else if(!v?.hn02){
-        addChapterBtn('✨ Dẫn Khí Nhập Thể & Lĩnh Thanh Phong Linh Kiếm (Bước 2/3)','g2-act','step2_VG01',true,'training');
+        addChapterBtn('Dẫn Khí & Lĩnh Thanh Phong Kiếm (Bước 2/3)',daoUiSvg('sparkle',13),'g2-act','step2_VG01',true,'training');
       }else{
         const artsDone=!!(v?.lessons.hn03||v?.lessons.basic);
         if(!artsDone){
-          const fightBtn=element('button','⚔️ Triệu Hồi Khôi Lỗi Rạn Ngọc Trên Sân 2D (Đánh bằng Phím F / 1 / 2)');
-          fightBtn.type='button';fightBtn.className='sect-chapter-route';
+          const fightBtn=element('button');
+          fightBtn.type='button';fightBtn.className='sect-chapter-route dao-primary-cta';
+          fightBtn.innerHTML=`<span class="dao-btn-svg">${daoUiSvg('sword',13)}</span><span>Triệu Hồi Khôi Lỗi Trên Sân 2D (Phím F / 1)</span>`;
           fightBtn.addEventListener('click',()=>this.command('lesson_start',{lesson:'arts'}));
           this.actions.append(fightBtn);
         }
         addChapterBtn(
           artsDone
-            ?'⚡ Đột Phá Ngưng Khí Tầng 3 & Hoàn Tất Hồi I (VG01)'
-            :'⚡ Lĩnh Ngộ Nhanh & Đột Phá Ngưng Khí Tầng 3 (Hoàn Tất VG01)',
+            ?'Đột Phá Ngưng Khí Tầng 3 · Hoàn Tất VG01'
+            :'Lĩnh Ngộ Nhanh · Hoàn Tất VG01',
+          daoUiSvg('bolt',13),
           'g2-act',
           'complete_VG01',
           artsDone,
         );
       }
     }else if(goal.status==='ready'){
-      addChapterBtn(`🎁 Nhận Đạo Quả ${goal.id} & Nối Mạch Auto-Chain`,'g2-act',`complete_${goal.id}`,true);
+      addChapterBtn(`Lĩnh Đạo Quả ${goal.id} & Nối Mạch Auto-Chain`,daoUiSvg('reward',13),'g2-act',`complete_${goal.id}`,true);
     }else{
-      addChapterBtn(`⚔️ Tiến Vào Bí Cảnh 2D · ${goal.id} (${goal.title.split(' — ')[1]??goal.title})`,'g2-act',`enter_${goal.id}`,true);
+      addChapterBtn(`Vào Bí Cảnh 2D · ${goal.id}`,daoUiSvg('sword',13),'g2-act',`enter_${goal.id}`,true);
     }
 
-    if(s.id==='guide'){
-      this.paragraph('Trần Duy (Chấp Sự Nhập Môn): “Đạo đồ nghịch thiên bắt đầu từ Hẻm Vân Liệt. Châu Đá Ngũ Vân và Thanh Phong Linh Kiếm là căn cơ hộ mệnh của ngươi!”');
-    }else if(s.id==='cultivation'){
-      const gate=chapterGate(v?.chapter??initialChapter());
-      const progress=element('p','Tu vi Nội Giới Thiên Nghịch Châu: '),value=element('b',String(v?.cultivation??0));value.dataset.cultivation='';progress.append(value,` / ${gate}`);this.body.append(progress);
-      const activity=element('p');activity.dataset.activity='';this.body.append(activity);
-      this.paragraph('Diệp Tĩnh (Linh Điền Chấp Sự): “Lộ thủy trong Thiên Nghịch Châu tự động tụ khí 120 Tu vi/phút và tự thăng cấp các tầng nhỏ. Khi chạm bình cảnh, hãy mở Nội Giới (H) để đột phá!”');
-    }else if(s.id==='training'){
-      this.paragraph('Tạ Kiếm Sơn (Chấp Sự Thực Chiến): “Phím F đánh gần, phím 1 xuất Kiếm Linh, phím 2 triệu Hồn Phiên, phím 3 thúc Xạ Thần Xa, phím G mở Nội Giới Hộ Đạo của Thiên Nghịch Châu!”');
-      const button=element('button','🪵 Triệu Hồi Khôi Lỗi Rạn Ngọc Để Luyện Chiêu');button.type='button';button.addEventListener('click',()=>this.command('lesson_start',{lesson:'arts'}));this.actions.append(button);
-    }else{
-      this.paragraph(`HP ${v?.hp??100} / 100 · Hồi Xuân Linh Đan: ${v?.supplies??0}. Dùng ngoài giao chiến để hồi 30 HP (hồi chiêu 10 giây).`);
-      this.button('💊 Dùng 1 Hồi Xuân Linh Đan (+30 HP)','use_recovery');
-      const timer=element('p');timer.dataset.recoveryTimer='';this.body.append(timer);
-      this.paragraph(g2.noiGioi.liMuwanMessage);
-    }
-
-    if(this.options.chapter){
-      const button=element('button',s.id==='preparation'?'🔥 Mở Lò Đan Lý Mộ Uyển (4 Đan Phương · H)':s.id==='cultivation'?'🔮 Mở Nội Giới · 4 Pháp Bảo & 3 Công Pháp (H)':`📜 Mở Bảng Mệnh Kiếp Chí · ${goal.id} (H)`);
-      button.type='button';button.dataset.chapterRoute=s.id;
-      button.addEventListener('click',()=>{this.dialog.close();this.options.chapter?.(s.id);});
+    if(s.id==='training'){
+      const button=element('button');
+      button.type='button';
+      button.innerHTML=`<span class="dao-btn-svg">${daoUiSvg('sword',13)}</span><span>Triệu Hồi Khôi Lỗi Luyện Chiêu</span>`;
+      button.addEventListener('click',()=>this.command('lesson_start',{lesson:'arts'}));
       this.actions.append(button);
+    }else if(s.id==='preparation'){
+      this.button('Dùng Hồi Xuân Đan (+30 HP)','use_recovery');
     }
-    this.body.querySelector('p')?.classList.add('station-intro');
+
+    const journalBtn=element('button');
+    journalBtn.type='button';
+    journalBtn.innerHTML=`<span class="dao-btn-svg">${daoUiSvg('scroll',13)}</span><span>Sổ Nhiệm Vụ (J)</span>`;
+    journalBtn.addEventListener('click',()=>this.journal(goal.id));
+    this.actions.append(journalBtn);
+
     if(this.actions.childElementCount)this.body.append(this.actions);
   }
   toggleJournal():void {if(this.dialog.open)this.dialog.close();else this.journal();}
@@ -369,9 +524,11 @@ export class SectUI {
     const station=SECT_STATIONS.find(s=>s.id===(this.destination??goal.stationId))!;
     this.mapPanel.replaceChildren();
     attachFrameSurface(this.mapPanel);
+    const mapHeading=element('h3');
+    mapHeading.innerHTML=`<span class="dao-tab-svg">${daoUiSvg('compass',13)}</span><span>Hải Đồ · Hằng Nhạc</span>`;
     this.mapPanel.append(
-      element('h3','🧭 Hải Đồ Chỉ Lộ · Hằng Nhạc'),
-      element('p',`Điểm đến: ${npcStationName(station.id)} · ${station.area}`),
+      mapHeading,
+      element('p',`Điểm đến: ${npcStationName(station.id).split(' · ')[0]} (${station.area})`),
     );
     const map=element('div');map.className='sect-minimap';map.style.backgroundImage=`url(${this.options.mapBackground?.()??HANG_NHAC.background.url})`;
     const route=sectRoute(this.options.position(),station);
@@ -390,20 +547,22 @@ export class SectUI {
     this.playerDot.style.top=`${pos.y/HANG_NHAC.world.height*100}%`;
     map.append(this.playerDot);this.mapPanel.append(map);
     const legend=element('div');legend.className='map-legend';
-    for(const [index,s] of SECT_STATIONS.entries()){const label=element('span');label.append(element('b',String(index+1)),npcStationName(s.id));legend.append(label);}this.mapPanel.append(legend);
+    for(const [index,s] of SECT_STATIONS.entries()){const label=element('span');label.append(element('b',String(index+1)),npcStationName(s.id).split(' · ')[0]!);legend.append(label);}this.mapPanel.append(legend);
     if(this.options.navigate){
-      const navigate=element('button',`🧭 Tự Tìm Đường Tới ${npcStationName(station.id).split(' · ')[0]}`);navigate.type='button';navigate.className='sect-chapter-route';navigate.dataset.navigateStation=station.id;navigate.disabled=!route||!this.options.online();
+      const navigate=element('button');
+      navigate.type='button';navigate.className='sect-chapter-route dao-primary-cta';navigate.dataset.navigateStation=station.id;navigate.disabled=!route||!this.options.online();
+      navigate.innerHTML=`<span class="dao-btn-svg">${daoUiSvg('compass',13)}</span><span>Tầm Lộ Tới ${npcStationName(station.id).split(' · ')[0]}</span>`;
       navigate.addEventListener('click',()=>{this.dialog.addEventListener('close',()=>this.options.navigate?.(station.id),{once:true});this.dialog.close();});
       this.mapPanel.append(navigate);
     }
-    this.mapPanel.append(element('p','Chấm trắng là bạn. Tới nơi sẽ tự động mở đối thoại NPC (hoặc nhấn phím E).'));
-    if(!route)this.mapPanel.append(element('p','Chưa tìm được đường gợi ý từ vị trí này. Di chuyển ra khoảng trống rồi xem lại.'));
+    if(!route)this.mapPanel.append(element('p','Di chuyển ra khoảng trống để mở đường dẫn.'));
     if(focusedPin)this.mapPanel.querySelector<HTMLButtonElement>(`[data-station="${focusedPin}"]`)?.focus({preventScroll:true});
   }
   journal(questId?:SectQuest['id']):void {
     this.station=undefined;this.loreNpc=undefined;this.loreProfile=undefined;this.signature='';
-    this.title.textContent='Thiên Mệnh Chi Quyển · Mệnh Kiếp Chí (VG01–VG11)';this.body.replaceChildren();this.feedback('');
-    this.dialog.dataset.mode='journal';document.getElementById('sect-category')!.textContent='NGHỊCH THIÊN KÝ · 11 HỒI SINH TỬ (CHUẨN GDD 0.34)';this.actions=undefined;
+    this.title.textContent='Mệnh Kiếp Chí';this.body.replaceChildren();this.feedback('');
+    this.dialog.dataset.mode='journal';document.getElementById('sect-category')!.textContent='ĐẠO THƯ / CỐT TRUYỆN / CƠ DUYÊN';this.actions=undefined;
+    this.body.append(this.renderModalSystemTabs('journal'));
     const goal=sectQuests(this.view).find(quest=>quest.id===questId)??this.objective();
     if(questId||!this.destination)this.destination=goal.stationId;
     const layout=element('div');layout.className='journal-layout';

@@ -61,7 +61,7 @@ ART Hằng Nhạc cũ đã xóa; map C access-v5-clean-v1/9 blocker đã chốt 
 1. **Đã có:** ứng dụng TypeScript + Three.js, loader/animation/movement/renderer và catalog chibi bốn hướng.
 2. **Đã có:** room Hằng Nhạc với ba hồ sơ khách SQLite, authoritative movement/R01, reload/reconnect/restart; room fixture đệ tử giữ hồi quy. Đăng nhập sản xuất còn mở.
 3. **Đã có:** Level Design/Map Editor, lưu/export và release Hằng Nhạc dùng chung client/server.
-4. **Ưu tiên hiện tại:** nền/hồ sơ/R01 và [NPC/HN01–HN02/thổ nạp online](HANG-NHAC-SECT-RUNTIME.md) đã tích hợp; tiếp nối HN03–HN04 theo [kế hoạch GDD](HANG-NHAC-IMPLEMENTATION-PLAN.md). Chủ dự án giữ quyền bố trí level/navigation.
+4. **Ưu tiên hồi quy:** nền/hồ sơ/R01 và [luồng NPC Hằng Nhạc](HANG-NHAC-NPC-RUNTIME.md) đã tích hợp; các mã HN03–HN04 chỉ giữ trong snapshot, còn lộ trình hiện hành là VG01–VG11 theo [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md). Chủ dự án giữ quyền bố trí level/navigation.
 5. **Còn cần đánh giá:** motion/nhận diện từng bộ; cast ba thuật R01/bốn hướng đã có, ART mới cần đánh giá. Trúng đòn, đòn thường, R02–R05 và tương tác riêng tiếp tục theo nội dung.
 6. **Tiếp tục:** NPC/nhiệm vụ/tu luyện, farm và khảo nghiệm riêng; đặc tả đăng nhập/vận hành MMO theo GDD.
 

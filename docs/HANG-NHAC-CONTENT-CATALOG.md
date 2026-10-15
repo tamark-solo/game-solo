@@ -1,10 +1,12 @@
 # Catalog nội dung nhập môn — đồ, nền vận hành, thuật và pháp khí
 
-**Bản thiết kế làm việc 0.1 · 10/10/2026 · ND3, phần đầu ND4.** Đi cùng [chương Hằng Nhạc phương án A](HANG-NHAC-CHAPTER-PLAN.md). Catalog này là tài liệu, không được loader/runtime đọc và không tự cấp item/quyền mới. Owner cho bắt đầu bước thiết kế, chưa phê duyệt mọi chi phí/slot/tên/hiệu lực hoặc ART dưới đây.
+> **Phân loại tài liệu ·15/10/2026.** Phần kế hoạch/số lượng/roster bên dưới là snapshot trước GDD 0.35, giữ để truy nguồn kỹ thuật và ART; không dùng làm backlog hay yêu cầu sản xuất mới. Nguồn áp dụng: [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [kế hoạch asset toàn game đã thống nhất](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md). Tận dụng bộ Huyễn Tâm/Tịch Bạch, quái/boss/NPC hiện có; Tư Đồ Nam và Lý Mộ Uyển không là tuyến playable bổ sung. Các trạng thái “hiện hành/đã chốt” dưới đây chỉ đúng tại ngày ghi mốc.
 
-[GDD](GDD.md) · [mô hình nhân vật](CHARACTER-SYSTEM.md) · [nhiệm vụ](QUEST-SYSTEM.md) · [nguồn số thử](HANG-NHAC-PROGRESSION-REWARDS.md) · [runtime hành trang](HANG-NHAC-CHARACTER-RUNTIME.md).
+**Snapshot thiết kế làm việc 0.1 · 10/10/2026 · ND3, phần đầu ND4.** Từng đi cùng chương Hằng Nhạc phương án A (đã dọn khỏi cây tài liệu); đối chiếu nội dung hiện hành tại [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md). Catalog này là tài liệu, không được loader/runtime đọc và không tự cấp item/quyền mới. Owner cho bắt đầu bước thiết kế, chưa phê duyệt mọi chi phí/slot/tên/hiệu lực hoặc ART dưới đây.
 
-**Mở rộng có kế hoạch sau nhập môn:** [nguồn đợt 2](TIEN-NGHICH-CRAFTING-REFERENCES.md), [thiết kế luyện chế](ITEM-CRAFTING-DESIGN.md) và [VP0–VP4](ITEM-PRODUCTION-PLAN.md) cụ thể hóa 8 định nghĩa/5 recipe hậu HN12. Không thêm chúng vào ngân sách HN05 hoặc tự đổi 2 nguyên liệu dư. Khuyến nghị giảm nguồn HN06 chưa phát hành là phương án cần duyệt, số 3+3−4=2 trong bản hiện hành vẫn giữ.
+[GDD 0.35](GDD.md) · [hợp đồng điều kiện](GDD-035-UNIFIED-CONTRACT.md) · [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) · [pacing/tiến trình](MMORPG-CULTIVATION-PACING-AND-DEPTH-2026-10-15.md) · [runtime hành trang](HANG-NHAC-CHARACTER-RUNTIME.md).
+
+**Đề xuất lịch sử về mở rộng sau nhập môn:** [nguồn đợt 2](TIEN-NGHICH-CRAFTING-REFERENCES.md), [thiết kế luyện chế](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-CRAFTING-DESIGN.md) và [VP0–VP4](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-PRODUCTION-PLAN.md) cụ thể hóa 8 định nghĩa/5 recipe hậu HN12. Không thêm chúng vào ngân sách HN05 hoặc tự đổi 2 nguyên liệu dư. Khuyến nghị giảm nguồn HN06 chưa phát hành là phương án cần duyệt, số 3+3−4=2 trong bản hiện hành vẫn giữ.
 
 ## 1. Quy tắc đọc và quyền quyết định
 

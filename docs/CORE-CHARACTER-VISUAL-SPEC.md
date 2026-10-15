@@ -1,5 +1,7 @@
 # Ba nhân vật trọng tâm — nhận diện và gói tạo hình đầu tiên
 
+> **Phân loại tài liệu ·15/10/2026.** Phần kế hoạch/số lượng/roster bên dưới là snapshot trước GDD 0.35, giữ để truy nguồn kỹ thuật và ART; không dùng làm backlog hay yêu cầu sản xuất mới. Nguồn áp dụng: [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [kế hoạch asset toàn game đã thống nhất](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md). Tận dụng bộ Huyễn Tâm/Tịch Bạch, quái/boss/NPC hiện có; Tư Đồ Nam và Lý Mộ Uyển không là tuyến playable bổ sung. Các trạng thái “hiện hành/đã chốt” dưới đây chỉ đúng tại ngày ghi mốc.
+
 **Hướng hiện hành — GDD 0.28:** chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu; cả ba cùng trải qua Hằng Nhạc đến hết Ngưng Khí, phân hóa từ Trúc Cơ. Nguồn diện mạo/mốc nguyên tác dưới đây phục vụ ART và truyện; không khóa quyền chọn nhân vật. Xem [GDD](GDD.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md).
 
 **Phiên bản:** 0.5, ngày 08/10/2026.\

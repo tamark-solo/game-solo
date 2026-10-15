@@ -2,7 +2,7 @@
 
 > **Hồ sơ lịch sử, đối chiếu ngày 08/10/2026:** toàn bộ màn Hạt châu, import/thay save cục bộ, snapshot offline 8 giờ, kết thúc E08/tầng 1 và các con số bên dưới là UX idle v0.6. Giữ chúng để đối chiếu bản vẽ, không là màn hình/hợp đồng máy chủ hiện hành. Hướng tạo đệ tử riêng cũng đã bị thay; không có một khu Hạt châu mặc định dùng chung cho cả ba.
 
-> **Chuẩn hiện hành [GDD 0.28](GDD.md):** cả ba chọn từ đầu, có sẵn Kiếm Khí/Lôi Ấn/Ngự Phong Bộ R01; Hằng Nhạc qua Ngưng Khí, phân hóa từ hành trình Trúc Cơ. UX mới cần [trải nghiệm Hằng Nhạc](HANG-NHAC-NGUNG-KHI-SPEC.md), [hệ thống tu tiên](CULTIVATION-SYSTEM.md), [online](ONLINE-DIRECTION.md) và [mapping UX](UX-MVP-A.md#0-điểm-cần-biên-tập-cho-ux-hiện-hành). Lưu/import client bên dưới không cấp tiến trình hợp lệ; cơ chế tài khoản/lưu bền vững còn cần đặc tả.
+> **Chuẩn hiện hành [GDD 0.35](GDD.md):** Huyễn Tâm/Tịch Bạch dùng tuyến Mệnh Kiếp Chí và bốn Pháp Bảo; UX mới cần [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md), [hệ thống tu tiên](CULTIVATION-SYSTEM.md), [online](ONLINE-DIRECTION.md) và [mapping UX](UX-MVP-A.md#0-điểm-cần-biên-tập-cho-ux-hiện-hành). Lưu/import client bên dưới không cấp tiến trình hợp lệ; cơ chế tài khoản/lưu bền vững còn cần đặc tả.
 
 **Phiên bản:** 0.1, ngày 06/10/2026.  
 **Trạng thái nguồn:** thiết kế UX idle; các hình là bản vẽ tĩnh, chưa chứng minh hành vi runtime.\

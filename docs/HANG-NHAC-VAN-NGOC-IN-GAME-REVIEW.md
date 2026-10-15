@@ -30,7 +30,7 @@ Concept và bản chi tiết đều có nhà/cây đã bake. Bản chi tiết c�
 
 Tích hợp phục vụ kiểm màu, vật liệu, độ rõ, tỷ lệ công trình cạnh người và sự đồng bộ với HUD/entry. Owner đã chốt V2 làm chuẩn ART nền bake trong [approval.json](design/world/hang-nhac-van-ngoc-detail-v2/approval.json). Phạm vi gốc của [metadata concept](design/world/hang-nhac-van-ngoc-concept-v1/concept.json) vẫn giữ riêng; layer che và navigation theo ART mới chưa được xác nhận. Nguồn concept, owner-authored map, bậc thang, blocker, Spawn, atlas, save và DB không thay.
 
-Sau phản hồi hình, tiếp tục [kế hoạch asset](HANG-NHAC-VAN-NGOC-ASSET-PLAN.md): khu chi tiết/căn footprint, rồi đạo cụ cần source riêng và part che người. Đạo cụ trước, icon hành trang sau theo phạm vi owner đã yêu cầu.
+Mốc rà soát concept này thuộc lịch sử 12/10. Chuẩn nền đã lưu ở [Vân Ngọc V2](HANG-NHAC-VAN-NGOC-BASELINE.md); ưu tiên hiện hành theo [kế hoạch asset GDD 0.35](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md). Kiểm kê đạo cụ đã có trong nền trước khi thêm source/part mới; không dùng thứ tự đạo cụ trước–icon sau của mốc cũ làm backlog hiện tại.
 
 ## Kiểm kỹ thuật
 

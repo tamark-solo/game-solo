@@ -19,4 +19,4 @@ Tổng **4 clip / 16 frame**, canvas **128 × 128** cho FX. Body vẫn 96 × 96,
 
 `client/src/quest-qi-presentation.ts` chỉ đọc pose đã xác nhận, dùng cùng index động tác cho nhịp FX. Vận khí/thổ nạp hợp lệ có trận pháp + khí lưu; đi/cast/dừng/gate/offline kết thúc theo pose. Hidden dọn FX; reduced motion giữ trận pháp tĩnh và bỏ khí xoáy, one-shot dùng frame tĩnh. Không có lệnh từ FX tới gameplay hoặc ghi save. Renderer chỉ căn depth attachment theo body, không sửa authored map/layer/camera.
 
-[Bàn giao toàn luồng](../../../HANG-NHAC-QUEST-MOTION.md) · [kiểm chứng](../../../data/hang-nhac-quest-motion-verification.json). Test riêng so đủ 16 frame FX qua GPU với canonical alpha/RGB/pivot, đồng thời kiểm bám nhân vật, tắt khi di chuyển/hidden và reduced motion.
+[Bàn giao toàn luồng](../../characters/quest-motion-v1/README.md) · [kiểm chứng](../../../data/hang-nhac-quest-motion-verification.json). Test riêng so đủ 16 frame FX qua GPU với canonical alpha/RGB/pivot, đồng thời kiểm bám nhân vật, tắt khi di chuyển/hidden và reduced motion.

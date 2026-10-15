@@ -1,6 +1,6 @@
 # Catalog nội dung thống nhất — registry quản trị v1
 
-**Triển khai 11/10/2026 · GDD 0.32.** Theo yêu cầu owner xây catalog thống nhất. Đã có schema/validator, reader qua port Core, API quản trị chỉ đọc và tab Catalog trong `/admin.html?view=catalog`. Dữ liệu hiện là **authoring index**: 56 record, 45 quan hệ, 12 tham chiếu có code local và 44 nội dung chưa phát hành (bổ sung 8 diện mạo giữ cho tùy biến ngày 12/10). Catalog không phải definition gameplay đã phát hành và không tự cấp đồ/quyền.
+**Snapshot triển khai 11/10/2026 · trước GDD 0.35.** Theo yêu cầu owner xây catalog thống nhất. Đã có schema/validator, reader qua port Core, API quản trị chỉ đọc và tab Catalog trong `/admin.html?view=catalog`. Dữ liệu hiện là **authoring index**: 56 record, 45 quan hệ, 12 tham chiếu có code local và 44 nội dung chưa phát hành (bổ sung 8 diện mạo giữ cho tùy biến ngày 12/10). Catalog không phải definition gameplay đã phát hành và không tự cấp đồ/quyền; danh mục hiện hành là [item–material catalog GDD 0.35](design/systems/item-material-catalog-gdd035-v1/README.md).
 
 [Taxonomy](GAME-CONTENT-TAXONOMY.md) · [quy trình/Core](GAME-CONTENT-CONTROL-PLAN.md) · [nguồn JSON](design/systems/content-registry-v1/catalog.json) · [registry README](design/systems/content-registry-v1/README.md).
 

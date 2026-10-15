@@ -1,5 +1,7 @@
 # Hình ảnh trên map — nhân vật pixel art, nền stylized 2D
 
+> **Phân loại tài liệu ·15/10/2026.** Bảng roster/chibi/map và các con số bên dưới là snapshot 08/10. Hướng người hiện hành đọc [kế hoạch Huyễn Tâm/Tịch Bạch](WANG-LIN-IMPLEMENTATION-PLAN.md), [thư viện ART](design/README.md) và [chuẩn nền Vân Ngọc V2](HANG-NHAC-VAN-NGOC-BASELINE.md). [Kế hoạch asset GDD 0.35](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md) sở hữu ưu tiên; canvas người không áp đồng loạt cho quái/boss.
+
 **Phiên bản:** 0.9, ngày 08/10/2026.
 
 **Hướng đã chọn:** nhân vật pixel art chibi đầu lớn/thân gọn + nền stylized 2D; top-down ba phần tư, thấy mặt/thân.  

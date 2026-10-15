@@ -2,7 +2,7 @@
 
 **10/10/2026.** Chủ dự án yêu cầu kiểm luồng nhiệm vụ và bổ sung sprite animation còn thiếu. Dùng built-in ImageGen theo skill `imagegen`; các nguồn/câu lệnh, frame canonical, atlas, hash và metadata giữ tại thư mục này. ART mới là bản ghép để xem chuyển động; `ownerApproved`/`artApproved` giữ false cho đến phản hồi hình của owner.
 
-[Xem animation](index.html) · [contact sheet native 2×](native-contact-sheet.png) · [catalog/source/QA](clips.json) · [bàn giao runtime](../../../HANG-NHAC-QUEST-MOTION.md).
+[Xem animation](index.html) · [contact sheet native 2×](native-contact-sheet.png) · [catalog/source/QA](clips.json) · [hồ sơ UI hiện hành](../../../HANG-NHAC-DAO-AN-V3.md). Gói sprite này là hồ sơ ART/presentation lịch sử; không mở quyền runtime VG.
 
 ## Kiểm luồng và đầu ra
 

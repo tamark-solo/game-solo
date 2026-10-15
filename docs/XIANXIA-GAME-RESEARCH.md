@@ -1,8 +1,10 @@
 # Nghiên cứu game tu tiên và nguồn truyện — góc nhìn cho Vân Hải Đạo Đồ
 
+> **Phân loại tài liệu ·15/10/2026.** Giữ kết quả khảo sát có ngày/phạm vi riêng; các đầu ra kế hoạch vật phẩm cũ đã chuyển sang lịch sử. Thiết kế mới áp dụng [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md) và [kế hoạch asset toàn game](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md).
+
 **Bản 0.1 · tra cứu 10/10/2026.** Theo yêu cầu owner: đọc lại GDD/roadmap, đào sâu nhiệm vụ, nhân vật, đồ, kỹ năng, pháp bảo và tìm bản sắc riêng. Đây là nghiên cứu tài liệu/nguồn web, **không phải báo cáo đã chơi thử các game**, không chốt feature/cân bằng hoặc xác nhận quyền khai thác tác phẩm.
 
-**Đợt 2 tiếp nối:** [Tiên Nghịch và reference luyện chế](TIEN-NGHICH-CRAFTING-REFERENCES.md) bổ sung Immortal Life, Yi Xian, The Lost Village và sổ khảo sát 12 trang chương, ghi rõ phần trích đoạn/không đủ bằng chứng. [Thiết kế vật phẩm](ITEM-CRAFTING-DESIGN.md) và [lộ trình sản xuất](ITEM-PRODUCTION-PLAN.md) chuyển ý tưởng thành nguồn–recipe–công dụng–đầu việc, chưa phát sinh runtime/ART hoặc quyết định canon mới.
+**Đợt 2 tiếp nối:** [Tiên Nghịch và reference luyện chế](TIEN-NGHICH-CRAFTING-REFERENCES.md) bổ sung Immortal Life, Yi Xian, The Lost Village và sổ khảo sát 12 trang chương, ghi rõ phần trích đoạn/không đủ bằng chứng. [Thiết kế vật phẩm](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-CRAFTING-DESIGN.md) và [lộ trình sản xuất](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-PRODUCTION-PLAN.md) chuyển ý tưởng thành nguồn–recipe–công dụng–đầu việc, chưa phát sinh runtime/ART hoặc quyết định canon mới.
 
 Đọc tiếp: [đề xuất bản sắc/cốt truyện](VAN-HAI-CREATIVE-DIRECTION.md), [kế hoạch nội dung và hệ thống](RPG-CONTENT-PLAN.md), [roadmap](DEVELOPMENT-ROADMAP.md).
 

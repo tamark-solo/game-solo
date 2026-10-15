@@ -2,9 +2,9 @@
 
 > **Bố cục tham chiếu:** [Hằng Nhạc — map và bố cục v0.1](HANG-NHAC-MAP-LAYOUT.md) giữ đề xuất bảy địa điểm/tám chức năng, khu chung 2400 × 1800 và arena HN10 riêng. ART cùng hai bản thử vùng đi đã xóa; chờ kế hoạch map mới. Các kích thước/tọa độ chưa khóa.
 
-> **Đặc tả trải nghiệm mới:** [Hằng Nhạc — Ngưng Khí v0.4](HANG-NHAC-NGUNG-KHI-SPEC.md) đề xuất tám khu chức năng/tuyến HN01–HN12; [tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) phân bổ 15 tầng thử; [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md) đề xuất arena và phiên khảo nghiệm. Chưa là địa lý/ngân sách background đã khóa; bảng node ở đây giữ làm nguồn tham chiếu lịch sử.
+> **Đặc tả trải nghiệm lịch sử:** các hồ sơ Hằng Nhạc — Ngưng Khí, tiến trình/phần thưởng và đối thủ HN10 đã dọn; chúng từng đề xuất tám khu chức năng/tuyến HN01–HN12, 15 tầng thử và arena. Chưa là địa lý/ngân sách background đã khóa; bảng node ở đây giữ làm nguồn tham chiếu lịch sử.
 
-> **Đối chiếu [GDD 0.34](GDD.md) — 14/10/2026:** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Toàn bộ node, phân kỳ, ngân sách và ID MAP-001… bên dưới là hồ sơ lịch sử; không là địa lý/ngân sách map gameplay đã khóa. Xem [GDD 0.34](GDD.md), [Lộ trình Giai đoạn & Nhiệm vụ](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md).
+> **Đối chiếu [GDD 0.35](GDD.md) — 15/10/2026:** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Toàn bộ node, phân kỳ, ngân sách và ID MAP-001… bên dưới là hồ sơ lịch sử; không là địa lý/ngân sách map gameplay đã khóa. Xem [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [hệ thống tu tiên](CULTIVATION-SYSTEM.md).
 
 > **ART và map:** bộ sân legacy, ART Hằng Nhạc v1/v2/v3 và hai bản thử vùng đi đã [xóa](MAP-ASSETS-RESET.md). Đang chờ kế hoạch map mới. Không dùng đồ thị node cũ để tự bố trí level, thay tọa độ bản lưu của người phát triển hoặc khôi phục ART.
 

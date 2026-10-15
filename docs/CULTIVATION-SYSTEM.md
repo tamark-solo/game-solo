@@ -1,14 +1,14 @@
 # Hệ thống tu tiên — ba nhân vật chơi được
 
-> **Thiết kế tiếp nối 13/10/2026:** [GDD 0.33](GDD.md), [hệ tu tiên mới](CULTIVATION-REDESIGN-2026-10-13.md) và [Hằng Nhạc v2](HANG-NHAC-ONBOARDING-V2.md) thay đề xuất về nhịp nhập môn, HN04, xác nhận tầng/nhiệm vụ và thời điểm EX trong tài liệu này. Nội dung bên dưới giữ làm cơ sở/lịch sử; trạng thái đang chạy xem [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md). Bản thiết kế mới chưa thay code/save hoặc duyệt balance/ART.
+> **Snapshot trước GDD 0.35 · 13/10/2026:** các đề xuất hệ tu tiên/nhập môn bên dưới đã được thay bằng [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md) và [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md). Nội dung giữ làm cơ sở/lịch sử; trạng thái runtime hồi quy xem [luồng NPC](HANG-NHAC-NPC-RUNTIME.md). Không suy snapshot thành luật/save hoặc duyệt balance/ART.
 
-**Phiên bản:** 0.3 · **Ngày:** 08/10/2026 · **Tham chiếu:** [GDD 0.28](GDD.md), [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md).
+**Snapshot phiên bản:** 0.3 · **Ngày:** 08/10/2026 · **Tham chiếu hiện hành:** [GDD 0.35](GDD.md), [hợp đồng](GDD-035-UNIFIED-CONTRACT.md), [pacing tu luyện](MMORPG-CULTIVATION-PACING-AND-DEPTH-2026-10-15.md).
 
 **Đã chốt:** sáu phần phát triển; chọn Vương Lâm/Tư Đồ Nam/Lý Mộ Uyển từ đầu; Hằng Nhạc qua Ngưng Khí, phân hóa sâu từ hành trình Trúc Cơ. **Thiết kế cơ sở:** trạng thái, điều kiện và ví dụ dưới đây; chưa chốt số liệu, tên thuật mới hoặc schema runtime. Không có triển khai code trong tài liệu này.
 
 Bộ R01 Kiếm Khí/Lôi Ấn/Ngự Phong Bộ có sẵn cho cả ba từ lúc điều khiển; hướng dẫn và tiến triển công pháp không khóa lại quyền khởi đầu này.
 
-**Điểm nối 10/10 — GDD 0.29:** map/layer, HN01–HN04, entry và hành trang nhập môn đã có bản thử. Owner đồng ý thiết kế hệ thống trước mở rộng HN05: [CHARACTER-SYSTEM](CHARACTER-SYSTEM.md) cụ thể hóa ownership/state/nguồn stat/mốc/đồ; [QUEST-SYSTEM](QUEST-SYSTEM.md) nối tiến trình vào hoạt động; [roadmap](DEVELOPMENT-ROADMAP.md) quy định thứ tự. Hồ sơ này giữ ý nghĩa sáu phần và nguồn tham khảo, không là schema runtime mới hoặc yêu cầu làm lại map. Chưa mở tu luyện/đột phá cao hơn chỉ bởi đã viết thiết kế.
+**Điểm nối snapshot 10/10:** map/layer, HN01–HN04, entry và hành trang nhập môn đã có bản thử. Owner đồng ý thiết kế hệ thống trước mở rộng HN05: [CHARACTER-SYSTEM](CHARACTER-SYSTEM.md) cụ thể hóa ownership/state/nguồn stat/mốc/đồ; điều kiện hiện hành xem [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md) và [lộ trình VG](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md). Hồ sơ này giữ ý nghĩa sáu phần và nguồn tham khảo, không là schema runtime mới hoặc yêu cầu làm lại map.
 
 ## 1. Mô hình phát triển
 
@@ -41,7 +41,7 @@ Trong UI, Vương Lâm có cảnh giới/tu vi phù hợp giai đoạn; Tư Đ�
 
 ### 2.2. Khung và bình cảnh
 
-Ngưng Khí → Trúc Cơ → Kết Đan → Nguyên Anh → Hóa Thần là khung đầu. Anh Biến/Vấn Đỉnh và giai đoạn sau cần hồ sơ theo arc, không phải phần đã sản xuất gameplay. Ngưng Khí có 15 tầng theo [chương 17](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17); [hồ sơ tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) đề xuất phân bổ hết 15 tầng vào Hằng Nhạc chuyển thể, mốc 1/3/9/15 và ngân sách thử. Phạm vi map, ngưỡng tu vi và số liệu chưa duyệt chi tiết; không sao chép số tầng từ truyện khác.
+Ngưng Khí → Trúc Cơ → Kết Đan → Nguyên Anh → Hóa Thần là khung đầu. Anh Biến/Vấn Đỉnh và giai đoạn sau cần hồ sơ theo arc, không phải phần đã sản xuất gameplay. Ngưng Khí có 15 tầng theo [chương 17](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-17); phân bổ 15 tầng/mốc 1/3/9/15 của Hằng Nhạc là ngân sách thử lịch sử. Phạm vi map, ngưỡng tu vi và số liệu chưa duyệt chi tiết; điều kiện hiện hành xem hợp đồng 0.35, không sao chép số tầng từ truyện khác.
 
 Tu vi phản ánh tích lũy dài hạn; linh lực là nguồn vận dụng trong trận. Cạn linh lực không tự giảm tu vi/cảnh giới. Thuật pháp thành thạo và lĩnh ngộ không tự bằng tu vi cao. Bình cảnh có lý do cụ thể: thiếu tích lũy, nền công pháp, năng lực, cơ duyên hoặc điều kiện riêng; UI nói rõ phần còn thiếu mà không tiết lộ nội dung truyện chưa mở.
 
@@ -67,7 +67,7 @@ Hồ sơ thuật phải nêu nguồn/nhân vật, mốc/công pháp/cơ duyên y
 
 Hằng Nhạc dùng ít thuật nền, mỗi nhiệm vụ dạy một khái niệm. Sau nhập môn mở lựa chọn có tác dụng: chẳng hạn cách vận dụng thiên về xuyên phá hay giữ khoảng cách. Ví dụ này là ý tưởng thiết kế, chưa là kỹ năng canon hoặc biến thể đã sản xuất.
 
-**Quyết định hiện hành:** cả ba có Kiếm Khí, Lôi Ấn và Ngự Phong Bộ R01 làm skill khởi đầu từ lúc điều khiển. Tutorial hướng dẫn dần, không giữ quyền skill sau nhiệm vụ/công pháp hiếm. Đây là bộ nền của game chuyển thể; Tư Đồ Nam khôi phục/thử vận dụng mức nhập môn, không bị xóa kiến thức. Các sheet/atlas vẫn không xác định số hit hoặc sát thương; [hồ sơ gameplay](NGUNG-KHI-GAMEPLAY-SPEC.md) đề xuất phần đó. Quyền học và biến thể sau nhập môn còn cần hồ sơ riêng; đổi màu/cỡ ảnh không đủ là nâng cấp gameplay.
+**Quyết định snapshot:** bộ R01 từng được dùng làm skill khởi đầu trong pilot. Tutorial hướng dẫn dần, không giữ quyền skill sau nhiệm vụ/công pháp hiếm. Đây là bộ nền của game chuyển thể; Tư Đồ Nam khôi phục/thử vận dụng mức nhập môn, không bị xóa kiến thức. Các sheet/atlas vẫn không xác định số hit hoặc sát thương; điều kiện hiện hành xem [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md) và [pacing tu luyện](MMORPG-CULTIVATION-PACING-AND-DEPTH-2026-10-15.md). Quyền học và biến thể sau nhập môn còn cần hồ sơ riêng; đổi màu/cỡ ảnh không đủ là nâng cấp gameplay.
 
 ## 5. Pháp bảo — công cụ và giới hạn vận dụng
 
@@ -131,7 +131,7 @@ Mốc nhập môn hoàn tất Ngưng Khí không tự cho Trúc Cơ khi qua cổ
 
 ## 10. Idle, multiplayer và PvP
 
-Idle chỉ hỗ trợ hoạt động đã chọn và được phép: tích lũy hoặc chuẩn bị có luật. Không auto truyện, combat, lĩnh ngộ then chốt hay đại đột phá; không có offline battle mặc định. [Hồ sơ tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) đề xuất nền 120/phút, tạm dừng combat/bài tương tác, cổng tích lũy và cap offline thử 30 phút. Các số/luật này cần đánh giá, không kế thừa 8 giờ hoặc 10 giây như quyết định đã duyệt.
+Idle chỉ hỗ trợ hoạt động đã chọn và được phép: tích lũy hoặc chuẩn bị có luật. Không auto truyện, combat, lĩnh ngộ then chốt hay đại đột phá; không có offline battle mặc định. Các số nền 120/phút/cap offline 30 phút là fixture lịch sử; pacing hiện hành xem [MMORPG-CULTIVATION-PACING-AND-DEPTH-2026-10-15.md](MMORPG-CULTIVATION-PACING-AND-DEPTH-2026-10-15.md). Các số/luật này cần đánh giá, không kế thừa 8 giờ hoặc 10 giây như quyết định đã duyệt.
 
 Tiến trình gắn hồ sơ nhân vật, tài nguyên không tự chuyển giữa các hồ sơ. [Entry local](GAME-ENTRY-BACKEND.md) đã có tạo/chọn/đổi nhân vật, mặc định 3 slot/realm có cấu hình và cho nhiều hồ sơ cùng avatar. Kho chung, chuyển realm và phần khám phá dùng chung chưa mở; không lấy avatar làm khóa tiến trình. Cảnh giới hiển thị không đủ để xác định sức mạnh ghép nhóm Tư Đồ Nam: cần mốc gameplay/năng lực hiện dùng được trong luật sau.
 
@@ -139,7 +139,7 @@ Tiến trình gắn hồ sơ nhân vật, tài nguyên không tự chuyển gi�
 
 ## 11. Nguồn và việc cần đặc tả
 
-[Trải nghiệm Hằng Nhạc v0.4](HANG-NHAC-NGUNG-KHI-SPEC.md), [tiến trình/phần thưởng v0.2](HANG-NHAC-PROGRESSION-REWARDS.md) và [đối thủ/HN10 v0.1](HANG-NHAC-ENCOUNTERS-TRIAL.md) áp dụng khung này vào tuyến nhập môn, ngưỡng/nền/vật tư và khảo nghiệm tổng hợp. Đây là bản để đánh giá, không phải số liệu đã khóa.
+Các hồ sơ Hằng Nhạc v0.4, tiến trình/phần thưởng v0.2 và đối thủ HN10 đã dọn khỏi cây tài liệu; chúng từng áp dụng khung này vào tuyến nhập môn, ngưỡng/nền/vật tư và khảo nghiệm tổng hợp. Đây là bản để truy nguồn, không phải số liệu đã khóa.
 
 Nguồn nền đã đối chiếu: [Ngưng Khí, chương 20](https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-20); [mộng cảnh châu, 23](https://www.wuxiaworld.com/novel/renegade-immortal/rge-chapter-23); [Tư Đồ Nam, 47](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-47); [đan–trận Lý Mộ Uyển, 143](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-143), [224](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-224); [Anh Biến, 410](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-410); [khác cách vận dụng thuật, 543](https://lite.wuxiaworld.com/novel/renegade-immortal/rge-chapter-543). Một nguồn cho chi tiết nền không xác nhận toàn bộ luật game ở cùng mục.
 

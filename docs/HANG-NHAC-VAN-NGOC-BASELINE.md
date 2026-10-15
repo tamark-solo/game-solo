@@ -41,4 +41,4 @@ Giữ nguyên 200 file được đối chiếu hash, gồm nguồn ảnh chuẩn
 
 Đã qua build, TypeScript/boundary, self-test đăng ký/ghép, 5 unit test duyệt theo hash/phạm vi và 11 nhóm browser map-art trên fixture/GPU của máy. Browser kiểm cả ba ART, chuyển nền giữ room/profile, minimap/nhật ký, reload, mobile và nhân vật native. Nguồn runtime/owner map giữ nguyên hash. HUD/layer 14 nhóm đã đạt ở lượt tích hợp cùng renderer trước đó.
 
-Mái/tán alpha, nền sạch và footprint theo ART mới vẫn cần công việc riêng theo [kế hoạch asset](HANG-NHAC-VAN-NGOC-ASSET-PLAN.md). Không tạo thêm ART hoặc mở gameplay trong đợt lưu/dọn này.
+Mái/tán alpha, nền sạch và footprint theo ART mới vẫn cần công việc riêng theo [kế hoạch asset GDD 0.35](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md), sau khi đối chiếu phần đã có trong nền. Không tạo thêm ART hoặc mở gameplay trong đợt lưu/dọn này.

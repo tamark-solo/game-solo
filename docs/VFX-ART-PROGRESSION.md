@@ -1,5 +1,7 @@
 # Phân bổ ART/VFX kỹ năng theo cảnh giới
 
+> **Phân loại tài liệu ·15/10/2026.** Phần kế hoạch/số lượng/roster bên dưới là snapshot trước GDD 0.35, giữ để truy nguồn kỹ thuật và ART; không dùng làm backlog hay yêu cầu sản xuất mới. Nguồn áp dụng: [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [kế hoạch asset toàn game đã thống nhất](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md). Tận dụng bộ Huyễn Tâm/Tịch Bạch, quái/boss/NPC hiện có; Tư Đồ Nam và Lý Mộ Uyển không là tuyến playable bổ sung. Các trạng thái “hiện hành/đã chốt” dưới đây chỉ đúng tại ngày ghi mốc.
+
 **Phiên bản:** 0.16 · 08/10/2026.
 **Phạm vi:** thư viện ART/VFX MMORPG dùng làm nền tích hợp cho ba nhân vật người chơi của [GDD 0.28](GDD.md), chọn từ đầu; bộ thi triển hiện dùng Vương Lâm chibi hướng Đông. Chưa có mapping kỹ năng/pose đầy đủ cho từng actor hoặc tích hợp client/server.\
 **Đã được người phát triển chấp nhận:** bộ ba Kiếm Khí, Lôi Ấn, Ngự Phong Bộ; chất lượng và ngôn ngữ mỹ thuật của [bảng Ngưng Khí v1](design/vfx/ngung-khi-approved-art-v1.png); cảnh giới cao tăng độ phức tạp và uy lực từ nền này.  

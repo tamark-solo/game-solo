@@ -2,6 +2,7 @@ import { HUD_CATEGORIES, HUD_FEATURES, HUD_MAIN_DOCK, HUD_RELATED, HUD_SOCIAL_DO
 import { hudGlyph } from './dao-hud-glyph';
 import { SECT_STATIONS } from '../../../shared/sect';
 import './dao-runtime-hud.css';
+import {DaoAnNavigation} from './dao-an-navigation';
 
 export type DaoRuntimeCharacterTab = 'overview' | 'inventory' | 'equipment' | 'cultivation' | 'spells';
 export interface DaoRuntimeHudOptions {
@@ -27,7 +28,7 @@ export interface DaoRuntimeHudSnapshot {
 
 const esc = (text: string) => text.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 const folded = (text: string) => text.toLocaleLowerCase('vi').normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/đ/g, 'd');
-const PIN_KEY = 'game-solo.dao-hud.pins.v1';
+const PIN_KEY = 'game-solo.dao-an-v3.pins.v1';
 const available = new Set<HudFeatureId>(['character', 'inventory', 'equipment', 'cultivation', 'spells', 'quest', 'map', 'settings', 'crafting']);
 const shortcuts: Partial<Record<HudFeatureId, string>> = { character: 'C', inventory: 'I', quest: 'J', map: 'M' };
 const iconButton = (id: HudFeatureId) => `<button type="button" class="dao-hud-icon" data-dao-feature="${id}" aria-label="${hudFeature(id)!.label}" title="${hudFeature(id)!.label}${shortcuts[id] ? ` · ${shortcuts[id]}` : ''}">${hudGlyph(id)}<span>${hudFeature(id)!.label}</span>${shortcuts[id] ? `<kbd>${shortcuts[id]}</kbd>` : ''}</button>`;
@@ -47,22 +48,27 @@ export class DaoRuntimeHud {
   private observedText = new Map<HTMLElement, string>();
   private observer: MutationObserver;
   private transferFocus = false;
+  private navigation:DaoAnNavigation;
 
   constructor(private stage: HTMLElement, private options: DaoRuntimeHudOptions) {
-    stage.dataset.daoHud = '05';
+    stage.dataset.daoHud = 'v3';
     this.root = document.createElement('div');
     this.root.className = 'dao-runtime-hud';
     this.root.dataset.gameUi = '';
     this.root.dataset.playingUi = '';
     this.root.innerHTML = `<nav class="dao-world-dock" aria-label="Hoạt động và tổ đội">${HUD_WORLD_DOCK.map(iconButton).join('')}</nav>
-      <section class="dao-hud-map" aria-label="Bản đồ khu vực"><b class="dao-hud-map-name">HẰNG NHẠC</b><button type="button" class="dao-minimap" data-dao-feature="map" aria-label="Mở bản đồ Hằng Nhạc"><span class="dao-map-north" aria-hidden="true">B</span><span class="dao-minimap-plane" data-dao-map-plane><img alt="Bản đồ khu vực hiện tại" draggable="false" hidden><i class="dao-player-dot" data-dao-player-dot hidden></i><i class="dao-target-dot" data-dao-target-dot hidden></i></span></button><span class="dao-hud-coordinates">Chờ vị trí</span><nav class="dao-map-tools" aria-label="Thư, thông báo và thiết lập">${(['mail', 'notifications'] as const).map(id => `<button type="button" data-dao-feature="${id}" aria-label="${hudFeature(id)!.label}" title="${hudFeature(id)!.label}">${hudGlyph(id)}</button>`).join('')}</nav></section>
+      <section class="dao-hud-map" aria-label="Bản đồ khu vực"><b class="dao-hud-map-name">HẰNG NHẠC</b><button type="button" class="dao-minimap" data-dao-feature="map" aria-label="Mở bản đồ Hằng Nhạc"><span class="dao-map-north" aria-hidden="true">B</span><span class="dao-map-cardinal dao-map-east" aria-hidden="true">Đ</span><span class="dao-map-cardinal dao-map-south" aria-hidden="true">N</span><span class="dao-map-cardinal dao-map-west" aria-hidden="true">T</span><span class="dao-minimap-plane" data-dao-map-plane><img alt="Bản đồ khu vực hiện tại" draggable="false" hidden><i class="dao-player-dot" data-dao-player-dot hidden></i><i class="dao-target-dot" data-dao-target-dot hidden></i></span></button><span class="dao-hud-coordinates">Chờ vị trí</span><nav class="dao-map-tools" aria-label="Thư, thông báo và thiết lập">${(['mail', 'notifications'] as const).map(id => `<button type="button" data-dao-feature="${id}" aria-label="${hudFeature(id)!.label}" title="${hudFeature(id)!.label}">${hudGlyph(id)}</button>`).join('')}<button type="button" data-dao-hud-style-toggle aria-label="Đổi Pháp Đài HUD" title="Đổi Pháp Đài HUD: Kim Ngọc Liên Hoa ↔ Huyết Ma Kích Phát (Empire of Fire)"><span style="font:700 14px/1 Cambria,serif;color:#ffe6a8">☯</span></button></nav></section>
       <section class="dao-hud-journal" aria-label="Nhật ký phiên"><header><b>Nhật ký</b><button type="button" data-dao-log-toggle aria-expanded="false" aria-controls="dao-hud-log" aria-label="Mở nhật ký">+</button></header><ol id="dao-hud-log" hidden><li>Chưa có thông báo.</li></ol><nav class="dao-social-dock" aria-label="Cộng đồng">${HUD_SOCIAL_DOCK.map(iconButton).join('')}</nav></section>
       <nav class="dao-main-dock" aria-label="Chức năng đã ghim"></nav><nav class="dao-mobile-dock" aria-label="Chức năng nhanh">${(['character', 'inventory', 'quest', 'map'] as const).map(iconButton).join('')}${systemsButton()}</nav>`;
     stage.append(this.root);
     this.renderPins();
     this.enhanceExistingNodes();
     const journey = stage.closest('#game-shell')!.querySelector<HTMLElement>('.chapter-launch');
-    if (journey) { journey.classList.add('dao-hud-icon'); this.root.querySelector('.dao-world-dock')!.append(journey); }
+    if (journey) {
+      journey.textContent='H';
+      journey.title='H · Mệnh Kiếp Chí & Nội Giới';
+      this.root.querySelector('.dao-map-tools')!.append(journey);
+    }
     this.dialog = document.createElement('dialog');
     this.dialog.id = 'dao-hud-dialog';
     this.dialog.className = 'dao-runtime-dialog van-panel';
@@ -96,6 +102,11 @@ export class DaoRuntimeHud {
       this.observedText.set(node, node.textContent?.trim() ?? '');
       this.observer.observe(node, { childList: true, subtree: true, characterData: true });
     }
+    stage.addEventListener('dao:resources',this.resources);
+    this.navigation=new DaoAnNavigation(stage.closest<HTMLElement>('#game-shell')!,id=>{
+      if(id==='world')this.options.focus();
+      else this.openFeature(id);
+    });
   }
 
   get modal(): boolean { return this.dialog.open; }
@@ -113,9 +124,17 @@ export class DaoRuntimeHud {
     const identityText = identity?.querySelector('.player-identity');
     if (identityText) {
       const label = document.createElement('small'); label.className = 'dao-identity-label'; label.textContent = 'ĐẠO HỮU'; identityText.prepend(label);
+      const vitals = document.createElement('div');
+      vitals.className = 'dao-unit-vitals';
+      vitals.setAttribute('aria-label', 'Sinh lực và linh lực');
+      vitals.innerHTML = `
+        <div class="dao-vital-row dao-vital-hp"><span>Sinh lực</span><div class="dao-vital-track" role="progressbar" aria-label="Sinh lực" aria-valuemin="0"><i></i></div><b>—</b></div>
+        <div class="dao-vital-row dao-vital-mp"><span>Linh lực</span><div class="dao-vital-track" role="progressbar" aria-label="Linh lực" aria-valuemin="0"><i></i></div><b>—</b></div>
+      `;
+      identityText.append(vitals);
       const cultivation = document.createElement('button');
       cultivation.type = 'button'; cultivation.className = 'dao-identity-cultivation';
-      cultivation.innerHTML = '<span>Tu vi <b data-dao-cultivation>—</b></span><span>Tu đạo ↗</span>';
+      cultivation.innerHTML = '<span>Tu vi <b data-dao-cultivation>—</b></span><span class="dao-cultivation-cta">Tu đạo ↗</span>';
       cultivation.addEventListener('click', () => this.options.openCharacter('cultivation'));
       identityText.append(cultivation);
     }
@@ -149,6 +168,19 @@ export class DaoRuntimeHud {
     }
     this.renderMapState();
   }
+
+  private resources=(event:Event):void=>{
+    const value=(event as CustomEvent<{hp:number;maxHp:number;mp:number;maxMp:number}>).detail;
+    if(!value||![value.hp,value.maxHp,value.mp,value.maxMp].every(Number.isFinite))return;
+    for(const [key,amount,max] of [['hp',value.hp,value.maxHp],['mp',value.mp,value.maxMp]] as const){
+      const row=this.stage.querySelector<HTMLElement>(`.dao-vital-${key}`);
+      if(!row)continue;
+      this.setText(row.querySelector('b'),`${Math.floor(amount)} / ${max}`);
+      const track=row.querySelector<HTMLElement>('.dao-vital-track')!;
+      track.setAttribute('aria-valuenow',String(Math.floor(amount)));track.setAttribute('aria-valuemax',String(max));
+      row.querySelector<HTMLElement>('i')!.style.width=`${max>0?Math.max(0,Math.min(100,amount/max*100)):0}%`;
+    }
+  };
 
   openSystems(): void {
     this.screen = 'systems';
@@ -211,7 +243,7 @@ export class DaoRuntimeHud {
       const saved: unknown = JSON.parse(localStorage.getItem(PIN_KEY) ?? 'null');
       if (Array.isArray(saved)) return [...new Set(saved.filter((id): id is HudFeatureId => typeof id === 'string' && !!hudFeature(id)))].slice(0, 5);
     } catch { /* Presentation preferences may be unavailable in private browsing. */ }
-    return [...HUD_MAIN_DOCK];
+    return ['character','inventory','quest','settings'];
   }
 
   private pin(id: HudFeatureId): void {
@@ -242,6 +274,15 @@ export class DaoRuntimeHud {
       button.setAttribute('aria-expanded', String(!log.hidden));
       button.setAttribute('aria-label', log.hidden ? 'Mở nhật ký' : 'Gọn nhật ký');
       button.textContent = log.hidden ? '+' : '−';
+    } else if (button.hasAttribute('data-dao-hud-style-toggle')) {
+      const shell = this.stage.closest<HTMLElement>('#game-shell');
+      if (shell) {
+        const next = shell.dataset.hudStyle === 'empire-fire' ? 'empire-lotus' : 'empire-fire';
+        shell.dataset.hudStyle = next;
+        try { localStorage.setItem('game-solo.hud-style.v1', next); } catch { /* ignore */ }
+        window.dispatchEvent(new CustomEvent('dao:hud-style-change', { detail: { style: next } }));
+        this.options.feedback(next === 'empire-fire' ? 'Đã chuyển Pháp Đài: Huyết Ma Kích Phát (Empire of Fire)' : 'Đã chuyển Pháp Đài: Kim Ngọc Liên Hoa (Vàng Ngọc)');
+      }
     }
   };
 
@@ -288,5 +329,5 @@ export class DaoRuntimeHud {
 
   private setText(node: Element | null, value: string): void { if (node && node.textContent !== value) node.textContent = value; }
 
-  dispose(): void { this.observer.disconnect(); this.close(); this.root.remove(); this.dialog.remove(); }
+  dispose(): void { this.navigation.dispose();this.stage.removeEventListener('dao:resources',this.resources);this.observer.disconnect(); this.close(); this.root.remove(); this.dialog.remove(); }
 }

@@ -87,13 +87,13 @@ try{
   // A denied join stays on entry; check the error where that player can read it.
   await duplicate.locator('#entry-status').waitFor({state:'visible'});
   assert.match(await duplicate.locator('#entry-status').innerText(),/tab khác/);assert.equal((await state(page)).own.casts,3);await duplicate.close();checks.push('second_tab_cannot_control_same_account');
-  await page.bringToFront();await page.locator('#leave').click();await page.waitForFunction(()=>window.__hangNhacDiagnostics().status==='idle');
+  await page.bringToFront();await page.locator('#menu-button').click();await page.locator('#menu-character').click();await page.waitForFunction(()=>window.__hangNhacDiagnostics().status==='idle');
   for(const id of ['CHR-SITU-NAN','CHR-LI-MUWAN']){
     await page.locator('#avatar').selectOption(id);await page.locator('#join').click();await page.waitForFunction(()=>window.__hangNhacDiagnostics().status==='connected');
     await page.waitForFunction(()=>window.__hangNhacR01().own?.profileId);
     const p=await state(page);assert.equal(p.own.casts,0);assert.equal(p.own.mp,100);assert.equal(p.own.avatarId,id);
     assert.equal(p.own.progressionKind,id==='CHR-SITU-NAN'?'recovery':'cultivation');
-    await page.locator('#leave').click();await page.waitForFunction(()=>window.__hangNhacDiagnostics().status==='idle');
+    await page.locator('#menu-button').click();await page.locator('#menu-character').click();await page.waitForFunction(()=>window.__hangNhacDiagnostics().status==='idle');
   }
   await page.locator('#avatar').selectOption('CHR-WANG-LIN-CHIBI');await page.locator('#join').click();await page.waitForFunction(()=>window.__hangNhacDiagnostics().status==='connected');
   await page.waitForFunction(()=>window.__hangNhacR01().own?.profileId);

@@ -1,6 +1,8 @@
 # Bộ ba người chơi — kế hoạch động tác
 
-**Bổ sung theo yêu cầu owner 10/10/2026:** [animation nhiệm vụ](HANG-NHAC-QUEST-MOTION.md) đã sản xuất và ghép 21 clip / 84 frame: chào, vận khí đứng/ổn định linh thể, đòn thường đủ bốn hướng và hồi phục cho cả ba nhân vật. Đây là ngân sách riêng, không cộng vào 60 frame locomotion hoặc 300 frame core cast. ART mới chờ owner xem chuyển động; các dự toán 09/10 bên dưới giữ lịch sử lúc chưa sản xuất.
+> **Phân loại tài liệu ·15/10/2026.** Phần kế hoạch/số lượng/roster bên dưới là snapshot trước GDD 0.35, giữ để truy nguồn kỹ thuật và ART; không dùng làm backlog hay yêu cầu sản xuất mới. Nguồn áp dụng: [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [kế hoạch asset toàn game đã thống nhất](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md). Tận dụng bộ Huyễn Tâm/Tịch Bạch, quái/boss/NPC hiện có; Tư Đồ Nam và Lý Mộ Uyển không là tuyến playable bổ sung. Các trạng thái “hiện hành/đã chốt” dưới đây chỉ đúng tại ngày ghi mốc.
+
+**Bổ sung theo yêu cầu owner 10/10/2026:** [gói sprite nhiệm vụ](design/characters/quest-motion-v1/README.md) đã sản xuất và ghép 21 clip / 84 frame: chào, vận khí đứng/ổn định linh thể, đòn thường đủ bốn hướng và hồi phục cho cả ba nhân vật. Đây là ngân sách riêng, không cộng vào 60 frame locomotion hoặc 300 frame core cast. ART mới chờ owner xem chuyển động; các dự toán 09/10 bên dưới giữ lịch sử lúc chưa sản xuất.
 
 **Phiên bản:** 0.5, ngày 09/10/2026.\
 **Hướng gameplay:** [GDD 0.28](GDD.md) cho chọn Vương Lâm, Tư Đồ Nam hoặc Lý Mộ Uyển từ đầu; cả ba trải qua Hằng Nhạc đến hết Ngưng Khí, phân hóa từ Trúc Cơ. Mốc xuất hiện trong nguyên tác là căn cứ biên tập truyện, không khóa quyền chọn nhân vật.\

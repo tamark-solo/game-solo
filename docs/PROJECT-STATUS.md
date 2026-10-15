@@ -1,5 +1,6 @@
 # Trạng thái hiện hành của _MMO
 
+
 **Đủ320clip quái/Boss ·15/10 (mới nhất):** hai nguồn cuối trả ảnh thành công trong đúng1POST mới/nguồn owner vừa mở: Kiếm hitSW retry2 và Giáp moveNW retry1. Đã xem và đóng đủ Kiếm40/240, Giáp64/384; tổng6actor320/1920 và48view, toàn gói576/3447. [Coverage](design/characters/gdd-character-animation-v1/enemy-production/coverage.json) không còn clip/source blocker. Raw Kiếm17hình4+4+5+4 dùng witness riêng pinhash/bounds,8calibration/9action chọn0/1/2/3/5/6; không sửa raw/fit hoặc nới guard nguồn khác. Giáp chọn0/1/2/4/5/6 để giữ hai foot-lift. QA320 quaCPU91596/contract3470/browser2570/GPU3840/UI178/23test; checkpoint Kiếm40pin676 và Giáp64pin1119 complete-candidate đã đóng, ZIP320 đã mở lại kiểm6558member/SHA256 và đủ1920frame/320atlas/306source/48view, hồ sơ hai retry mới và witness Kiếm nguyên vẹn;   mọi nguồn cũ, snapshot318/315 và2039pin Main/truyện nguyên trạng. Không ART/motion/runtime approval hoặc live/map/DB/draft/receipt mới.
 
 
@@ -25,6 +26,12 @@
 **Duyệt tạo hình GDD 0.34 / dọn ART đối thủ cũ ·15/10:** owner chấp nhận 18 neutral main/NPC/truyện/quái/boss trong [gói GDD mới](design/characters/gdd-character-concepts-v1/README.md), pin đúng source/native/lineage tại [approval](design/characters/gdd-character-concepts-v1/approval.json); một hướng Đông Nam, chưa motion/FX/runtime mới. Theo yêu cầu cleanup, 10 gói quái/tinh anh/Boss GDD cũ cùng 67 tool/test đã chuyển vào [ZIP lưu trữ kiểm hash](archive/gdd-legacy-enemies-2026-10-15/README.md); các mốc ART đối thủ ngày13/10 trong tài liệu trước đây là lịch sử trong archive. Không dùng lại hoặc tái sinh bộ cũ ở luồng active. Roster/logic GDD, main V5/V1/V2, NPC, reference và bộ Lang/Khôi Lỗi đang chạy vẫn được giữ. [Biên bản](GDD-LEGACY-ENEMY-ASSET-CLEANUP-2026-10-15.md).
 
 **Chuẩn hóa GDD 0.34, Đồng bộ G0 & Prototype Vòng Lặp G2 · 14/10:** owner chốt tái cấu trúc [GDD 0.34](GDD.md), hoàn tất **G0** (dọn bỏ các bản GDD cũ `0.24/0.26/0.32/0.33`) và triển khai **Nhánh G2 — [Prototype Vòng Lặp Tiến Trình & Nhiệm Vụ](design/gameplay/wang-lin-progression-loop-prototype-v1/README.md)** ([sân chơi tương tác](design/gameplay/wang-lin-progression-loop-prototype-v1/index.html) · [verification](design/gameplay/wang-lin-progression-loop-prototype-v1/review/verification.json) · `955 checks / 9 unit tests PASS`). Gói G2 hiện thực hóa trên fixture độc lập: `PlayerCultivationState` (2 danh tính `Huyễn Tâm a / Tịch Bạch b`, 5 Đại Cảnh Giới, tự động thăng tầng thường vs. mở cổng ở tầng cột mốc `3, 6, 9, 12, 15`), `ArtifactLoadoutState` (4 Pháp Bảo × 3 Mốc nối trực tiếp với 8 hợp đồng ST/AOE của P2), `StageProgressionLedger` (11 Hồi `VG01–VG11` theo quy tắc `Auto-Chain Fact`), `NoiGioiState` (Thiên Nghịch Châu + Tư Đồ Nam + 3 Khuynh hướng Công pháp), `LiMuwanAlchemyState` (Lò đan Lý Mộ Uyển + Ngọc Giản Hộ Mệnh), cơ chế 4 Boss Chặng 1 (gồm kiểm chứng hình học khe an toàn `90°` của chiêu *Ấn Hồi*) và **Bù Đắp Đạo Cơ** (`Phàm → Địa → Thiên Đạo Trúc Cơ`). Toàn bộ 86 pin V5, 831 pin V1 pilot và 11 file runtime/map bảo vệ của V2 giữ nguyên tuyệt đối.
+
+
+> **Phân loại tài liệu ·15/10/2026.** Thiết kế hiện hành là [GDD 0.35](GDD.md) và [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md). Owner đã đồng ý [kế hoạch asset toàn game](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md); bốn kế hoạch cũ đã [lưu lịch sử](archive/asset-plans-before-gdd-035-2026-10-15/README.md). Production V2 đủ bốn họ/512 body clip, còn candidate ngoài pilot được duyệt. Các mốc GDD 0.34/HN/VP và trạng thái tiến độ dưới đây là nhật ký theo thời điểm, không thay ưu tiên hoặc luật hiện hành.
+
+**GDD 0.35, Đồng bộ G0 & Prototype Vòng Lặp G2 · 14–15/10:** owner chốt tái cấu trúc [GDD 0.35](GDD.md) và [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), hoàn tất **G0** (dọn bỏ các bản GDD cũ `0.24/0.26/0.32/0.33`) và triển khai **Nhánh G2 — [Prototype Vòng Lặp Tiến Trình & Nhiệm Vụ](design/gameplay/wang-lin-progression-loop-prototype-v1/README.md)** ([sân chơi tương tác](design/gameplay/wang-lin-progression-loop-prototype-v1/index.html) · [verification](design/gameplay/wang-lin-progression-loop-prototype-v1/review/verification.json) · `955 checks / 9 unit tests PASS`). Gói G2 hiện thực hóa trên fixture độc lập: `PlayerCultivationState` (2 danh tính `Huyễn Tâm a / Tịch Bạch b`, 5 Đại Cảnh Giới, tự động thăng tầng thường vs. mở cổng ở tầng cột mốc `3, 6, 9, 12, 15`), `ArtifactLoadoutState` (4 Pháp Bảo × 3 Mốc nối trực tiếp với 8 hợp đồng ST/AOE của P2), `StageProgressionLedger` (11 Hồi `VG01–VG11` theo quy tắc `Auto-Chain Fact`), `NoiGioiState` (Thiên Nghịch Châu + Tư Đồ Nam + 3 Khuynh hướng Công pháp), `LiMuwanAlchemyState` (Lò đan Lý Mộ Uyển + Ngọc Giản Hộ Mệnh), cơ chế 4 Boss Chặng 1 (gồm kiểm chứng hình học khe an toàn `90°` của chiêu *Ấn Hồi*) và **Bù Đắp Đạo Cơ** (`Phàm → Địa → Thiên Đạo Trúc Cơ`). Toàn bộ 86 pin V5, 831 pin V1 pilot và 11 file runtime/map bảo vệ của V2 giữ nguyên tuyệt đối.
+
 
 **Sản xuất Huyễn Tâm/Tịch Bạch & 4 Pháp Bảo V1–V2 · 14/10:** [Approval Concept V5](design/characters/wang-lin-concept-direction-v5/approval.json) (pin 86 file) và [Approval Pilot V1](design/characters/wang-lin-equipment-production-v1/approval.json) (pin 831 file) đã duyệt; [Gói mở rộng V2](design/characters/wang-lin-equipment-production-v2/README.md) đang sản xuất Mốc II đủ 8 hướng × 8 action (đã qua checkpoint kỹ thuật cho [Kiếm linh](design/characters/wang-lin-equipment-production-v2/checkpoints/sword.json) và [Hồn phiên](design/characters/wang-lin-equipment-production-v2/checkpoints/banner.json), đang tiếp nối Xạ Thần Xa → Thiên Nghịch Châu).
 
@@ -92,23 +99,23 @@
 
 ## Nguồn quyết định và cách đọc tài liệu
 
-**Ưu tiên thiết kế 14/10 (Thay thế tuyến nhiệm vụ cũ):** Tuyến nhiệm vụ hành chính cũ đã được dọn bỏ khỏi tài liệu và giao diện hiển thị nhiệm vụ để đồng bộ theo [Lộ trình Giai đoạn & Nhiệm vụ `VG01–VG11`](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md), [Đặc tả Artwork & Logic](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md) và [Prototype G2](design/gameplay/wang-lin-progression-loop-prototype-v1/README.md). Cơ sở [nhân vật 0.1](CHARACTER-SYSTEM.md) và [lộ trình RM0–RM6](DEVELOPMENT-ROADMAP.md) tiếp tục được đối chiếu cùng GDD 0.34.
+**Ưu tiên thiết kế 14–15/10 (Thay thế tuyến nhiệm vụ cũ):** Tuyến nhiệm vụ hành chính cũ đã được dọn bỏ khỏi tài liệu và giao diện hiển thị nhiệm vụ để đồng bộ theo [Lộ trình Giai đoạn & Nhiệm vụ `VG01–VG11`](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md), [Đặc tả Artwork & Logic](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md), [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md) và [Prototype G2](design/gameplay/wang-lin-progression-loop-prototype-v1/README.md). Cơ sở [nhân vật 0.1](CHARACTER-SYSTEM.md) và [lộ trình RM0–RM6](DEVELOPMENT-ROADMAP.md) chỉ tiếp tục được đối chiếu như lịch sử.
 
 **Nghiên cứu nội dung 10/10–14/10:** đã đọc GDD/roadmap và các hồ sơ hệ thống/truyện, đối chiếu nguồn chính thức của các game tu tiên và chương truyện *Tiên Nghịch* ([XIANXIA-MARKET-STORY-REFERENCES-2026-10-14.md](XIANXIA-MARKET-STORY-REFERENCES-2026-10-14.md), [XIANXIA-GAME-RESEARCH.md](XIANXIA-GAME-RESEARCH.md), [VAN-HAI-CREATIVE-DIRECTION.md](VAN-HAI-CREATIVE-DIRECTION.md), [RPG-CONTENT-PLAN.md](RPG-CONTENT-PLAN.md)).
 
-**Catalog vật phẩm & luyện chế:** bổ sung [3 game và sổ khảo sát 12 trang chương Tiên Nghịch](TIEN-NGHICH-CRAFTING-REFERENCES.md), [Thiết kế luyện chế](ITEM-CRAFTING-DESIGN.md), [kế hoạch sản xuất VP0–VP4](ITEM-PRODUCTION-PLAN.md), [catalog nhập môn](HANG-NHAC-CONTENT-CATALOG.md) và [Manifest](design/systems/items-v1/plan.json).
+**Catalog vật phẩm & luyện chế:** bổ sung [3 game và sổ khảo sát 12 trang chương Tiên Nghịch](TIEN-NGHICH-CRAFTING-REFERENCES.md), [Thiết kế luyện chế](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-CRAFTING-DESIGN.md), [kế hoạch sản xuất VP0–VP4](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-PRODUCTION-PLAN.md), [catalog nhập môn](HANG-NHAC-CONTENT-CATALOG.md) và [Manifest](design/systems/items-v1/plan.json).
 
 **Màn đầu 10/10:** [Tiên môn trên biển mây](GAME-TITLE-SCREEN.md) đã nối trước entry, có Bắt đầu/Tiếp tục, Thiết lập/tiên lộ và về màn đầu từ game. Nền UI riêng dùng cho title/login/server/nhân vật; Hằng Nhạc chỉ hiện sau khi vào. ART mới giữ trạng thái chờ owner xem, không suy duyệt từ test.
 
 1. Chỉ dẫn mới nhất của người phát triển và [AGENTS](../AGENTS.md) xác định phạm vi công việc.
-2. [GDD 0.34](GDD.md) xác định hướng sản phẩm đã chốt ngày 14/10/2026.
+2. [GDD 0.35](GDD.md) và [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md) xác định hướng sản phẩm đã chốt ngày 15/10/2026.
 3. Code/manifest hiện tại xác định chức năng đã triển khai và asset được nạp. Bản thử kỹ thuật không thay quyết định sản phẩm.
 4. Hồ sơ duyệt ART xác định mức chấp nhận hình ảnh của đúng phiên bản; test kỹ thuật không tự cấp duyệt mỹ thuật.
 5. Tài liệu có nhãn lịch sử, prompt, source metadata và verification giữ thông tin tại thời điểm tạo. Không tự lấy số liệu hoặc hướng cũ làm luật hiện hành.
 
 Nếu có mâu thuẫn, sửa mô tả hoặc ghi rõ snapshot; không tự quyết định cân bằng, khôi phục asset cũ hay xác nhận một feature đã hoàn thành. [Mục lục](README.md) phân nhóm tài liệu đang dùng và hồ sơ lịch sử.
 
-## Hướng sản phẩm đã chốt (Theo GDD 0.34 · 14/10/2026)
+## Hướng sản phẩm đã chốt (Theo GDD 0.35 · 15/10/2026)
 
 - **MMORPG web tu tiên có combat chủ động**, kết hợp **20% tuyến nhiệm vụ cốt truyện nghịch thiên (`Mệnh Kiếp Chí VG01–VG11`)** và **80% vòng lặp sandbox tu luyện – săn đồ – kỳ ngộ – luyện hóa pháp bảo**.
 - **Một tuyến nhân vật chính duy nhất đi theo con đường Vương Lâm** với 2 tạo hình đã duyệt: **Huyễn Tâm (`ID: a` — Nam)** và **Tịch Bạch (`ID: b` — Nữ)** cùng **4 Họ Pháp Bảo Biểu Tượng** (*Kiếm linh · Hứa Lập Quốc, Thập Ức Tôn Hồn Phiên, Xạ Thần Xa, Thiên Nghịch Châu*) tiến hóa qua **3 Mốc (`Mốc I → II → III`)**.
@@ -116,7 +123,7 @@ Nếu có mâu thuẫn, sửa mô tả hoặc ghi rõ snapshot; không tự quy�
 - **Khung 5 Đại Cảnh Giới (`Ngưng Khí → Trúc Cơ → Kết Đan → Nguyên Anh → Hóa Thần`):** Chi tiết từng Hồi (`VG01 → VG11`) và đặc tả Artwork × Logic theo [Lộ trình Giai đoạn](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md).
 - **Chia cảnh & Authority:** Hằng Nhạc là hub sinh hoạt/nhập môn; ngoại vi farm dùng khu vực riêng, khảo nghiệm/bí cảnh dùng phiên riêng. Server sở hữu toàn bộ tiến trình/tài nguyên/facts; giữ authority này khi mở rộng.
 
-Tuyến nhiệm vụ hành chính cũ đã được dọn bỏ khỏi tài liệu và giao diện hiển thị nhiệm vụ để chuyển sang **Mệnh Kiếp Chí (`VG01–VG11`)** của GDD 0.34, đồng thời giữ nguyên 11 file bảo vệ trong `basis.json` để đảm bảo tiến độ sản xuất G1 (V2).
+Tuyến nhiệm vụ hành chính cũ đã được dọn bỏ khỏi tài liệu và giao diện hiển thị nhiệm vụ để chuyển sang **Mệnh Kiếp Chí (`VG01–VG11`)** của GDD 0.35, đồng thời giữ nguyên 11 file bảo vệ trong `basis.json` để đảm bảo tiến độ sản xuất G1 (V2).
 
 ## Những gì đã triển khai
 
@@ -132,7 +139,7 @@ Tuyến nhiệm vụ hành chính cũ đã được dọn bỏ khỏi tài liệ
 | Level Design / Map Editor | Nhiều level/layer, vùng đi/chặn/portal, chọn nhiều/nhóm/căn chỉnh, tileset/brush, prefab, multipart, minimap, audit, save và export | Save là dữ liệu biên tập; API workspace có trong Vite dev/preview, không có khi chỉ phục vụ dist tĩnh. Release Hằng Nhạc đã nối client/server từ export đã chốt |
 | Starter region cũ | Prototype di chuyển/portal/điểm nội dung từ trước GDD mới | Chưa có nhiệm vụ/combat; không thay bố cục Hằng Nhạc hiện hành |
 
-Các tag `story_npc`/`player_template` của catalog preview là nhãn kỹ thuật lịch sử; quyền chọn nhân vật theo GDD 0.34. Không thay enum code bảo vệ chỉ để đổi thuật ngữ tài liệu.
+Các tag `story_npc`/`player_template` của catalog preview là nhãn kỹ thuật lịch sử; quyền chọn nhân vật theo GDD 0.35. Không thay enum code bảo vệ chỉ để đổi thuật ngữ tài liệu.
 
 ## Map và ART
 

@@ -27,7 +27,7 @@ Hướng tiếp theo có ba lớp: **không gian tu luyện** quanh nhân vật,
 5. **Hành trang:** 12 icon painterly có chất liệu khác nhau. Kiếm gỗ/kiếm ngọc, áo vải/pháp y, bình thuốc/linh dịch/pháp châu dùng artwork riêng.
 6. **Khả năng đọc:** giữ khung/mask/chữ/thao tác. Khí quanh sprite/pháp bảo, mô tả trên giấy sáng. Offline/hidden/đóng dừng motion, reduced motion giữ cảnh và pose tĩnh.
 
-Nguồn/prompt/crop/hash artwork mới ở [pack 02](design/ui/character-van-ngoc-v2/README.md). Pose dùng [gói nhiệm vụ hiện hành](HANG-NHAC-QUEST-MOTION.md), không tạo clip mới. Chỉ áp dụng ở prototype; HUD/map/room/save game giữ hợp đồng.
+Nguồn/prompt/crop/hash artwork mới ở [pack 02](design/ui/character-van-ngoc-v2/README.md). Pose dùng [gói sprite nhiệm vụ](design/characters/quest-motion-v1/README.md), không tạo clip mới. Chỉ áp dụng ở prototype; HUD/map/room/save game giữ hợp đồng.
 
 ## Kiểm và hướng tiếp nối
 

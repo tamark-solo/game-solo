@@ -6,7 +6,7 @@
 
 **Cập nhật ART13/10:** owner yêu cầu tạo quái và tinh anh trước NPC/boss. [Pixel01](design/characters/van-hai-monster-concepts-v1/index.html) đã có11identity (8quái/3tinh anh), mỗi mẫu một neutral Đông Nam, nguồn/prompt/input/hash/native và sân so Vương Lâm/map1×/2×. `concept` trên11record trong plan nối gói art. Candidate chờ duyệt hình; chưa sản xuất bảy view/năm action hoặc đưa vào gameplay. Nội dung/production waves dưới đây giữ kế hoạch tổng; ưu tiên art mới được áp trước các wave ấy.
 
-**13/10/2026 · GDD 0.32 · brief concept trước.** Owner chọn chốt dàn nhân vật và kịch bản trước khi thêm vào map. [Trang duyệt](design/world/van-hai-living-world-v1/index.html) / [plan.json đầy đủ](design/world/van-hai-living-world-v1/plan.json). Tên, tạo hình, vùng xuất hiện và cơ chế mới là ứng viên thiết kế; runtime/ART không được đổi trong đợt này.
+**Snapshot 13/10/2026 · trước GDD 0.35 · brief concept.** Owner chọn chốt dàn nhân vật và kịch bản trước khi thêm vào map. [Trang duyệt](design/world/van-hai-living-world-v1/index.html) / [plan.json đầy đủ](design/world/van-hai-living-world-v1/plan.json). Tên, tạo hình, vùng xuất hiện và cơ chế mới là ứng viên thiết kế; runtime/ART không được đổi trong đợt này. Roster hiện hành vẫn phải qua gate trong [kế hoạch asset GDD 0.35](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md).
 
 ## Nền và mục tiêu
 

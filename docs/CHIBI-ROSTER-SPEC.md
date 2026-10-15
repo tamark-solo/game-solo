@@ -1,5 +1,7 @@
 # Chuẩn chibi trên map — năm nhân vật
 
+> **Phân loại tài liệu ·15/10/2026.** Phần kế hoạch/số lượng/roster bên dưới là snapshot trước GDD 0.35, giữ để truy nguồn kỹ thuật và ART; không dùng làm backlog hay yêu cầu sản xuất mới. Nguồn áp dụng: [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [kế hoạch asset toàn game đã thống nhất](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md). Tận dụng bộ Huyễn Tâm/Tịch Bạch, quái/boss/NPC hiện có; Tư Đồ Nam và Lý Mộ Uyển không là tuyến playable bổ sung. Các trạng thái “hiện hành/đã chốt” dưới đây chỉ đúng tại ngày ghi mốc.
+
 **Phiên bản:** 0.3, ngày 08/10/2026. **Mốc sản xuất bộ chibi:** runtime 0.5.1; runtime công cụ hiện tại 0.12.0. Vương Lâm chibi làm chuẩn theo phản hồi tích cực. Lý Mộ Uyển native-v5 đã được người phát triển chấp nhận làm chuẩn bản thử: “tôi thấy ổn rồi đó.” Hai đệ tử và Tư Đồ Nam chibi mới còn chờ đánh giá.
 
 ## Chuẩn dùng chung

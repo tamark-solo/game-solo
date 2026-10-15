@@ -1,6 +1,6 @@
 # Bộ UI Vân Ngọc trong view H5
 
-**Tiếp nối sau chốt UI:** owner yêu cầu bổ sung [sprite animation cho luồng nhiệm vụ](HANG-NHAC-QUEST-MOTION.md): chào, vận khí, đòn thường và hồi phục. Đây là gói ART/presentation riêng của ngày 10/10; trạng thái chốt UI phía dưới giữ nguyên phạm vi chữ/khung/bố cục đã xử lý.
+**Tiếp nối sau chốt UI:** owner yêu cầu bổ sung [sprite animation cho luồng nhiệm vụ](design/characters/quest-motion-v1/README.md): chào, vận khí, đòn thường và hồi phục. Đây là gói ART/presentation riêng của ngày 10/10; trạng thái chốt UI phía dưới giữ nguyên phạm vi chữ/khung/bố cục đã xử lý.
 
 ## Trạng thái chốt ngày 10/10/2026
 

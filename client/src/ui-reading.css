@@ -3,12 +3,12 @@
 .hang-nhac-game {
   --ui-font-copy: 'Segoe UI', Arial, sans-serif;
   --ui-font-heading: Cambria, Georgia, serif;
-  --ui-text-body: 15px;
-  --ui-text-small: 12px;
-  --ui-text-title: 20px;
-  --ui-leading: 1.7;
-  --ui-space: 8px;
-  --ui-copy-measure: 60ch;
+  --ui-text-body: 12.5px;
+  --ui-text-small: 11px;
+  --ui-text-title: 15px;
+  --ui-leading: 1.48;
+  --ui-space: 6px;
+  --ui-copy-measure: 64ch;
 }
 .hang-nhac-game :is(.ui-reading, .ui-text-stack) {
   min-width: 0;
@@ -25,66 +25,67 @@
 .hang-nhac-game #sect-body.ui-reading > p {
   font: inherit;
   max-width: var(--ui-copy-measure);
-  margin: 0 0 calc(2 * var(--ui-space));
+  margin: 0 0 var(--ui-space);
 }
-.hang-nhac-game .ui-copy-section + .ui-copy-section { margin-top: calc(2.5 * var(--ui-space)); }
+.hang-nhac-game .ui-copy-section + .ui-copy-section { margin-top: calc(1.5 * var(--ui-space)); }
 .hang-nhac-game .ui-copy-section > :last-child { margin-bottom: 0; }
 .hang-nhac-game .ui-reading .ui-section-title {
-  font: 600 var(--ui-text-small)/1.5 var(--ui-font-copy);
+  font: 600 var(--ui-text-small)/1.4 var(--ui-font-copy);
   color: #4c6347;
   margin: 0 0 var(--ui-space);
 }
 .hang-nhac-game .ui-reading .quest-checklist {
   display: grid; list-style: none; padding: 0; margin: 0;
-  font: inherit; gap: calc(1.25 * var(--ui-space));
+  font: inherit; gap: var(--ui-space);
 }
 .hang-nhac-game .quest-checklist li { display: grid; grid-template-columns: 1em minmax(0, 1fr); gap: var(--ui-space); }
 .hang-nhac-game .quest-checklist li > span { min-width: 0; overflow-wrap: anywhere; }
 .hang-nhac-game .ui-reading .quest-checklist [data-complete=true] { color: #41643c; }
 .hang-nhac-game .quest-card:is([data-state=completed], [data-state=locked]) .quest-checklist { display: grid; }
 
-/* The three columns keep long Vietnamese titles inside the clickable tab. */
+/* The two columns keep long Vietnamese titles inside the clickable tab. */
 .hang-nhac-game .quest-card-select {
-  display: grid; grid-template-columns: auto minmax(0, 1fr) 1em;
-  gap: 12px; align-items: center; padding: 16px; height: auto;
+  display: flex; align-items: flex-start;
+  gap: 8px; padding: 7px 8px; height: auto;
   white-space: normal; min-width: 0;
 }
 .hang-nhac-game .quest-card-title {
-  display: block; font: 500 var(--ui-text-title)/1.45 var(--ui-font-heading);
+  display: block; font: 600 13px/1.25 var(--ui-font-heading);
   color: #efdfb7; overflow-wrap: anywhere;
 }
-.hang-nhac-game .quest-card-select small { font-size: var(--ui-text-small); line-height: 1.5; margin-top: 4px; }
-.hang-nhac-game .quest-card-select::after { margin: 0; text-align: center; }
-.hang-nhac-game .quest-card-detail { padding: 24px; }
+.hang-nhac-game .quest-card-select small { font-size: 10.5px; line-height: 1.35; margin-top: 2px; }
+.hang-nhac-game .quest-card-select::after { display: none; }
+.hang-nhac-game .quest-card-detail { padding: 12px 14px; }
 .hang-nhac-game #sect-body .quest-card-detail .quest-card-reward {
   border: 0; padding: 0; margin: 0; color: #735c2d;
 }
 .hang-nhac-game :is(.journal-layout, .menu-sections) > * { min-width: 0; }
 .hang-nhac-game :is(.sect-dialog-heading, .game-menu-heading) {
-  gap: 16px; align-items: start; position: sticky; top: 0; z-index: 2;
-  background: #15322f; padding-top: 8px;
+  gap: 12px; align-items: center; position: sticky; top: 0; z-index: 2;
+  background: #15322f; padding-top: 2px;
 }
 .hang-nhac-game :is(.sect-dialog-heading, .game-menu-heading) > div { min-width: 0; overflow-wrap: anywhere; }
 .hang-nhac-game :is(#sect-close, #menu-close) { flex: none; }
 
 /* Safe horizontal inset follows the displayed frame, including real borders. */
 .hang-nhac-game :is(#sect-dialog, #game-menu) {
-  padding-inline: max(12px, calc(var(--vn-frame-size) * .48 - var(--vn-frame-border)));
+  padding-inline: 14px;
 }
 .hang-nhac-game .journal-map-panel {
-  padding: max(20px, calc(var(--vn-frame-size) * .7));
+  padding: 10px;
   overflow-wrap: anywhere;
 }
 .hang-nhac-game #sect-body.ui-reading .station-intro {
-  font: 500 var(--ui-text-title)/1.6 var(--ui-font-heading);
+  font: 500 12.5px/1.45 var(--ui-font-copy);
+  margin: 0 0 6px;
 }
 .hang-nhac-game #sect-body .dialog-actions button {
   min-width: 0; height: auto; white-space: normal; overflow-wrap: anywhere;
-  font-size: var(--ui-text-body); line-height: 1.5; padding: 12px 24px;
+  font-size: 12px; line-height: 1.35; padding: 6px 10px;
 }
 .hang-nhac-game .setting-row > span { min-width: 0; }
-.hang-nhac-game #game-menu .setting-row b { font-size: var(--ui-text-body); line-height: 1.5; }
-.hang-nhac-game #game-menu .setting-row small { font-size: var(--ui-text-small); line-height: 1.65; }
+.hang-nhac-game #game-menu .setting-row b { font-size: var(--ui-text-body); line-height: 1.45; }
+.hang-nhac-game #game-menu .setting-row small { font-size: var(--ui-text-small); line-height: 1.5; }
 .hang-nhac-game .control-guide > div { flex-wrap: wrap; }
 .hang-nhac-game .control-guide dd { overflow-wrap: anywhere; }
 

@@ -55,9 +55,9 @@ export class SkillSession {
     room.onMessage('training:result',(result:{ok:boolean;targetId?:string;reason?:string})=>{
       if(result.reason==='lesson_active'){this.options.feedback('Đang có mục tiêu của bài học. Dừng bài trước khi tạo mục tiêu luyện tự do.');return;}
       this.selectedTarget=result.targetId??'';this.update();
-      this.options.feedback(result.ok?'Mục tiêu đã chọn · phím 1 Kiếm, 2 Lôi · phím 3 lướt theo hướng ngắm.':'Không đủ khoảng trống để đặt mục tiêu. Chọn hướng khác.');
+      this.options.feedback(result.ok?`Mục tiêu đã chọn · 1 ${SKILL_DEFINITIONS.sword.name} · 2 ${SKILL_DEFINITIONS.thunder.name} · 3 cơ động theo hướng ngắm.`:'Không đủ khoảng trống để đặt mục tiêu. Chọn hướng khác.');
     });
-    this.options.feedback('Ba thuật R01 sẵn sàng. Tạo mục tiêu để luyện Kiếm và Lôi.');
+    this.options.feedback('Ba thuật đang sẵn sàng. Tạo mục tiêu để luyện chiêu.');
   }
   shortcut(event:KeyboardEvent):SkillId|undefined {
     if(event.repeat||event.ctrlKey||event.altKey||event.metaKey)return;
@@ -86,7 +86,7 @@ export class SkillSession {
     const aim=this.aim,arrows=['→','↘','↓','↙','←','↖','↑','↗'];
     const arrow=arrows[(Math.round(Math.atan2(aim.y,aim.x)/(Math.PI/4))+8)%8];
     const source={facing:'hướng nhân vật',movement:'hướng di chuyển',pointer:'đã ngắm'}[this.aiming.source];
-    return `Kiếm / Phong ${arrow} · ${source}`;
+    return `Hướng thi triển ${arrow} · ${source}`;
   }
   updateAim():void {
     const indicator=document.getElementById('skill-aim'),text=this.aimLabel();

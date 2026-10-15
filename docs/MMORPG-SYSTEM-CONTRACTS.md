@@ -1,8 +1,10 @@
 # Hợp đồng hệ thống MMORPG — sức mạnh, farm, tỷ thí và diện mạo
 
+> **Phân loại tài liệu ·15/10/2026.** Giữ làm tài liệu kỹ thuật về phân lớp/authority và kiểm soát dữ liệu. Các ví dụ GDD 0.32, HN/EX/VP và số 13 item/sáu recipe thuộc snapshot cũ, không là thiết kế nội dung hiện hành. Điều kiện và nguồn–chi áp dụng xem [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md) và [kế hoạch asset toàn game](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md); việc dọn docs chưa đổi schema/registry/runtime.
+
 **Bản thiết kế 0.1 · 11/10/2026 · phục vụ GDD 0.32.** Tài liệu nối yêu cầu sản phẩm với kiến trúc và điều kiện kiểm trước khi triển khai. Đây là **kế hoạch**, không báo loot/PvP/tọa kỵ đã hoạt động, không khóa số liệu cân bằng, chính sách giao dịch hoặc doanh thu.
 
-Đọc cùng [GDD](GDD.md), [hành trình MMORPG](MMORPG-PROGRESSION-PLAN.md), [nhân vật](CHARACTER-SYSTEM.md), [nhiệm vụ](QUEST-SYSTEM.md), [vật phẩm](ITEM-PRODUCTION-PLAN.md), [kiến trúc Core](ARCHITECTURE.md), [entry backend](GAME-ENTRY-BACKEND.md) và [roadmap](DEVELOPMENT-ROADMAP.md). GDD sở hữu mục tiêu sản phẩm; hồ sơ này sở hữu hợp đồng kỹ thuật cần chốt theo lát. Không yêu cầu hoàn tất mọi MMO mới làm HN05.
+Đọc cùng [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [hành trình MMORPG](MMORPG-PROGRESSION-PLAN.md), [nhân vật](CHARACTER-SYSTEM.md), [vật phẩm](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-PRODUCTION-PLAN.md), [kiến trúc Core](ARCHITECTURE.md), [entry backend](GAME-ENTRY-BACKEND.md) và [roadmap](DEVELOPMENT-ROADMAP.md). GDD sở hữu mục tiêu sản phẩm; hồ sơ này sở hữu hợp đồng kỹ thuật cần chốt theo lát. Không yêu cầu hoàn tất mọi MMO mới làm VG01–VG11.
 
 ## 1. Mục tiêu sản phẩm và nguyên tắc kỹ thuật
 

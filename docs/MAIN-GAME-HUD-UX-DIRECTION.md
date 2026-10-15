@@ -4,7 +4,7 @@
 
 **11/10/2026 · Đề xuất sau nghiên cứu, chưa triển khai/duyệt bố cục.** Owner tạm chấp nhận study nhân vật/hành trang và gửi ảnh chế độ chỉ HUD của `/ui-material-review.html`, yêu cầu tư vấn cách làm màn hình đủ thông tin và đúng cảm giác game tu tiên. Đây là bước thiết kế **HUD tổng thể** nối các cửa sổ, thế giới và hành trình; không thay game/backend trong đợt tư vấn.
 
-Đọc cùng [GDD 0.32](GDD.md), [Core](ARCHITECTURE.md), [hai theme](DAO-UI-SYSTEM.md), [nhân vật/hành trang 02](CHARACTER-INVENTORY-UI-DESIGN.md), [MMORPG xuyên chặng](MMORPG-PROGRESSION-PLAN.md) và [game shell hiện hành](HANG-NHAC-GAME-SHELL.md).
+Đọc cùng [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [Core](ARCHITECTURE.md), [hai theme](DAO-UI-SYSTEM.md), [nhân vật/hành trang 02](CHARACTER-INVENTORY-UI-DESIGN.md), [MMORPG xuyên chặng](MMORPG-PROGRESSION-PLAN.md) và [game shell hiện hành](HANG-NHAC-GAME-SHELL.md).
 
 ## Đánh giá ảnh và phần còn thiếu
 

@@ -2,7 +2,7 @@ import { type SectView } from '../../shared/sect';
 import { currentSectQuest, QUEST_STATUS_LABELS, sectQuests, type SectQuest } from '../../shared/sect-quests';
 import type { AvatarId } from '../../shared/profiles';
 import { chapterGate, initialChapter, readG2State, type G2RewardItem } from '@shared/chapter';
-import { objectiveKindMeta, questCategoryMeta, questSealStampSvg } from './ui/dao-quest-icons';
+import { daoUiSvg, objectiveKindMeta, questCategoryMeta, questSealStampSvg } from './ui/dao-quest-icons';
 import { npcStationName } from './npc-life';
 
 const node = <K extends keyof HTMLElementTagNameMap>(tag: K, text?: string): HTMLElementTagNameMap[K] => {
@@ -10,6 +10,18 @@ const node = <K extends keyof HTMLElementTagNameMap>(tag: K, text?: string): HTM
   if (text) result.textContent = text;
   return result;
 };
+
+export function attachSafeIconFallback(img: HTMLImageElement, fallback = '/assets/g2-items/bead.png'): void {
+  img.addEventListener(
+    'error',
+    () => {
+      if (!img.src.endsWith(fallback)) {
+        img.src = fallback;
+      }
+    },
+    { once: true },
+  );
+}
 
 const RARITY_LABELS: Record<G2RewardItem['rarity'], string> = {
   artifact: 'Pháp Bảo Bản Mệnh',
@@ -53,36 +65,37 @@ export function renderRewardSlots(items: G2RewardItem[], compact = false): HTMLE
   const wrap = node('div');
   wrap.className = compact ? 'g2-reward-slots g2-reward-slots-compact' : 'g2-reward-slots';
   wrap.style.cssText = compact
-    ? 'display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;align-items:center;'
-    : 'display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:8px;margin-top:8px;';
+    ? 'display:flex;flex-wrap:wrap;gap:5px;margin-top:4px;align-items:center;'
+    : 'display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:6px;margin-top:4px;';
   for (const item of items) {
     const theme = RARITY_THEMES[item.rarity] ?? RARITY_THEMES.material;
     const slot = node('div');
     slot.className = `g2-reward-slot g2-reward-${item.rarity}`;
     slot.title = `${item.name}${item.count ? ` (${item.count})` : ''} · ${RARITY_LABELS[item.rarity]}`;
     slot.style.cssText = compact
-      ? `display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:7px;background:${theme.bg};border:1px solid ${theme.border};box-shadow:inset 0 0 8px ${theme.glow};font-size:11.5px;color:#f5ebd6;`
-      : `display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:9px;background:${theme.bg};border:1px solid ${theme.border};box-shadow:0 4px 12px rgba(0,0,0,0.35),inset 0 0 12px ${theme.glow};`;
+      ? `display:inline-flex;align-items:center;gap:5px;padding:2px 6px;border-radius:6px;background:${theme.bg};border:1px solid ${theme.border};box-shadow:inset 0 0 6px ${theme.glow};font-size:10.5px;color:#f5ebd6;`
+      : `display:flex;align-items:center;gap:7px;padding:5px 7px;border-radius:7px;background:${theme.bg};border:1px solid ${theme.border};box-shadow:0 2px 8px rgba(0,0,0,0.3),inset 0 0 8px ${theme.glow};`;
     const iconFrame = node('span');
     iconFrame.style.cssText = compact
-      ? `display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:5px;background:rgba(0,0,0,0.38);border:1px solid ${theme.border};flex-shrink:0;`
-      : `display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:7px;background:rgba(0,0,0,0.42);border:1px solid ${theme.border};box-shadow:0 0 10px ${theme.glow};flex-shrink:0;position:relative;`;
+      ? `display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:5px;background:rgba(0,0,0,0.45);border:1px solid ${theme.border};flex-shrink:0;overflow:hidden;`
+      : `display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:6px;background:rgba(0,0,0,0.48);border:1px solid ${theme.border};box-shadow:0 0 6px ${theme.glow};flex-shrink:0;position:relative;overflow:hidden;`;
     const img = node('img');
     img.src = item.icon;
     img.alt = item.name;
-    img.width = img.height = compact ? 20 : 36;
-    img.style.cssText = 'image-rendering:pixelated;object-fit:contain;display:block;';
+    img.width = img.height = compact ? 18 : 26;
+    img.style.cssText = 'object-fit:contain;display:block;';
+    attachSafeIconFallback(img);
     iconFrame.append(img);
     const textWrap = node('div');
-    textWrap.style.cssText = 'display:flex;flex-direction:column;min-width:0;line-height:1.25;';
+    textWrap.style.cssText = 'display:flex;flex-direction:column;min-width:0;line-height:1.2;';
     const title = node('strong', item.count ? `${item.name} (${item.count})` : item.name);
     title.style.cssText = compact
-      ? `font-size:11px;color:${theme.title};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:142px;`
-      : `font-size:12.5px;color:${theme.title};font-weight:700;`;
+      ? `font-size:10.5px;color:${theme.title};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px;`
+      : `font-size:11.5px;color:${theme.title};font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;`;
     textWrap.append(title);
     if (!compact) {
       const badge = node('small', RARITY_LABELS[item.rarity]);
-      badge.style.cssText = `font-size:10.5px;color:${theme.badge};letter-spacing:0.02em;margin-top:2px;`;
+      badge.style.cssText = `font-size:9.5px;color:${theme.badge};letter-spacing:0.01em;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;`;
       textWrap.append(badge);
     }
     slot.append(iconFrame, textWrap);
@@ -98,7 +111,7 @@ export function showG2LootToast(title: string, subtitle: string, items: G2Reward
   const toast = node('aside');
   toast.id = 'g2-loot-toast';
   toast.setAttribute('role', 'status');
-  toast.style.cssText = 'position:fixed;top:64px;left:50%;transform:translateX(-50%);z-index:9999;min-width:340px;max-width:560px;padding:14px 18px;border-radius:14px;background:linear-gradient(180deg,rgba(18,28,40,0.98),rgba(9,15,24,0.98));border:1.5px solid #e7c068;box-shadow:0 16px 40px rgba(0,0,0,0.82),0 0 28px rgba(231,192,104,0.32);color:#f7efe0;cursor:pointer;animation:fadeIn 0.2s ease-out;';
+  toast.style.cssText = 'position:fixed;top:64px;left:50%;transform:translateX(-50%);z-index:9999;min-width:340px;max-width:560px;padding:14px 18px;border-radius:14px;background:linear-gradient(180deg,rgba(14,30,36,0.98),rgba(7,16,22,0.98));border:1.5px solid #e7c068;box-shadow:0 16px 40px rgba(0,0,0,0.82),0 0 28px rgba(231,192,104,0.32);color:#f7efe0;cursor:pointer;animation:fadeIn 0.2s ease-out;';
   const head = node('div');
   head.style.cssText = 'display:flex;align-items:center;gap:12px;';
   if (portrait) {
@@ -106,12 +119,14 @@ export function showG2LootToast(title: string, subtitle: string, items: G2Reward
     avatar.src = portrait;
     avatar.alt = '';
     avatar.width = avatar.height = 52;
-    avatar.style.cssText = 'image-rendering:pixelated;object-fit:contain;border-radius:9px;border:1.5px solid rgba(231,192,104,0.75);background:rgba(255,255,255,0.06);padding:2px;flex-shrink:0;';
+    avatar.style.cssText = 'object-fit:contain;border-radius:9px;border:1.5px solid rgba(231,192,104,0.75);background:rgba(255,255,255,0.06);padding:2px;flex-shrink:0;';
+    attachSafeIconFallback(avatar);
     head.append(avatar);
   }
   const headText = node('div');
-  const kicker = node('div', '✨ THIÊN MỆNH CHI QUYỂN · ĐẠO QUẢ VIÊN MÃN');
-  kicker.style.cssText = 'font-size:10.5px;letter-spacing:0.1em;color:#e7c068;font-weight:800;';
+  const kicker = node('div');
+  kicker.style.cssText = 'display:flex;align-items:center;gap:5px;font-size:10.5px;letter-spacing:0.1em;color:#e7c068;font-weight:800;';
+  kicker.innerHTML = `${daoUiSvg('sparkle')}<span>THIÊN MỆNH CHI QUYỂN · ĐẠO QUẢ VIÊN MÃN</span>`;
   const mainTitle = node('div', title);
   mainTitle.style.cssText = 'font-size:15.5px;font-weight:700;color:#fff4d2;margin-top:2px;';
   const sub = node('div', subtitle);
@@ -129,10 +144,18 @@ export function showG2LootToast(title: string, subtitle: string, items: G2Reward
   }, 4800);
 }
 
-export function checklist(quest: SectQuest, onAction?: () => void, detailed = false): HTMLOListElement {
+export function checklist(quest: SectQuest, onAction?: () => void, detailed = false, tracker = false): HTMLOListElement {
   const list = node('ol');
   list.className = detailed ? 'quest-checklist quest-checklist-detailed' : 'quest-checklist';
   const current = quest.objectives.find(objective => !objective.done) ?? quest.objectives.at(-1);
+  if(tracker){
+    list.className='quest-checklist dao-tracker-checklist';
+    if(current){
+      const row=node('li');row.className='dao-tracker-step';row.dataset.current='true';row.dataset.complete=String(current.done);row.dataset.objective=current.id;
+      row.append(node('small',current.done?'Mục tiêu đã hoàn thành':'Mục tiêu hiện tại'),node('p',current.text));list.append(row);
+    }else list.append(node('li',quest.nextStep));
+    return list;
+  }
   for (const [idx, objective] of quest.objectives.entries()) {
     const meta = objectiveKindMeta(objective.id, objective.text);
     const isCurrent = objective === current && !objective.done && quest.status !== 'locked';
@@ -146,10 +169,8 @@ export function checklist(quest: SectQuest, onAction?: () => void, detailed = fa
     const iconBadge = node('span');
     iconBadge.className = 'quest-check dao-obj-icon';
     iconBadge.setAttribute('aria-hidden', 'true');
-    iconBadge.style.color = objective.done ? '#79e2b7' : isCurrent ? meta.accentColor : '#8da3b0';
-    iconBadge.innerHTML = objective.done
-      ? `<svg viewBox="0 0 20 20" width="15" height="15" fill="none"><circle cx="10" cy="10" r="8" fill="rgba(104,226,178,0.22)" stroke="#79e2b7" stroke-width="1.6"/><path d="M6.3 10.2l2.4 2.5 5-5.2" stroke="#79e2b7" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>`
-      : meta.svg;
+    iconBadge.style.setProperty('--objective-accent',objective.done ? '#79e2b7' : isCurrent ? meta.accentColor : '#8da3b0');
+    iconBadge.innerHTML = objective.done ? daoUiSvg('check') : meta.svg;
 
     const copyWrap = node('div');
     copyWrap.className = 'dao-obj-copy';
@@ -157,11 +178,11 @@ export function checklist(quest: SectQuest, onAction?: () => void, detailed = fa
     topMeta.className = 'dao-obj-meta';
     const kindPill = node('span', `Bước ${idx + 1} · ${meta.shortLabel}`);
     kindPill.className = 'dao-obj-kind-pill';
-    kindPill.style.color = objective.done ? '#79e2b7' : meta.accentColor;
+    kindPill.style.setProperty('--objective-accent',objective.done ? '#79e2b7' : meta.accentColor);
     topMeta.append(kindPill);
 
     if (objective.done) {
-      const doneTag = node('span', '✓ Đã đạt');
+      const doneTag = node('span', 'Đã viên mãn');
       doneTag.className = 'dao-obj-done-tag';
       topMeta.append(doneTag);
     } else if (isCurrent && onAction) {
@@ -197,6 +218,7 @@ export interface QuestUIActions {
 }
 
 export class QuestUI {
+  private readonly daoAn=document.getElementById('game-shell')?.dataset.uiDesign==='dao-an-v3';
   private signature = '';
   private journalList?: HTMLElement;
   private selectedQuest = '';
@@ -211,7 +233,9 @@ export class QuestUI {
     document.getElementById('journal')!.addEventListener('click', actions.journal);
     document.getElementById('quest-guide')!.addEventListener('click', actions.guide);
     const toggle = document.getElementById('quest-toggle') as HTMLButtonElement;
+    if(this.daoAn){toggle.textContent='−';toggle.setAttribute('aria-label','Thu gọn mục tiêu');toggle.title='Thu gọn mục tiêu';}
     this.tracker.dataset.details = 'compact';
+    if(!this.daoAn){
     const details = node('button', '⋯');
     details.type = 'button';
     details.id = 'quest-details-toggle';
@@ -230,6 +254,7 @@ export class QuestUI {
       details.setAttribute('aria-expanded', String(expanded));
       details.setAttribute('aria-label', expanded ? 'Rút gọn chi tiết Mệnh Kiếp Chí' : 'Hiện chi tiết Mệnh Kiếp Chí');
     });
+    }
     const title = document.getElementById('quest-title')!;
     title.tabIndex = 0;
     title.setAttribute('role', 'button');
@@ -249,7 +274,8 @@ export class QuestUI {
       const body = document.getElementById('quest-tracker-body')!;
       body.hidden = !body.hidden;
       toggle.setAttribute('aria-expanded', String(!body.hidden));
-      toggle.textContent = body.hidden ? 'Mở' : 'Gọn';
+      toggle.textContent = this.daoAn?(body.hidden?'+':'−'):(body.hidden ? 'Mở' : 'Gọn');
+      if(this.daoAn){const label=body.hidden?'Mở mục tiêu':'Thu gọn mục tiêu';toggle.setAttribute('aria-label',label);toggle.title=label;}
     });
   }
 
@@ -272,14 +298,16 @@ export class QuestUI {
 
     const headingStrong = this.tracker.querySelector<HTMLElement>('.quest-tracker-heading strong')!;
     headingStrong.dataset.shortLabel = current.id;
-    if (!this.portraitImg) {
+    if(this.daoAn)headingStrong.textContent=`Mệnh Kiếp Chí / ${current.id}`;
+    else if (!this.portraitImg) {
       this.portraitImg = node('img');
       this.portraitImg.width = this.portraitImg.height = 38;
       this.portraitImg.alt = '';
-      this.portraitImg.style.cssText = 'image-rendering:pixelated;object-fit:contain;border-radius:7px;border:1.5px solid rgba(235,196,108,0.68);background:rgba(12,20,30,0.92);padding:2px;margin-right:7px;vertical-align:middle;box-shadow:0 2px 8px rgba(0,0,0,0.45);';
+      this.portraitImg.style.cssText = 'object-fit:contain;border-radius:7px;border:1.5px solid rgba(235,196,108,0.68);background:rgba(12,20,30,0.92);padding:2px;margin-right:7px;vertical-align:middle;box-shadow:0 2px 8px rgba(0,0,0,0.45);';
+      attachSafeIconFallback(this.portraitImg);
       headingStrong.prepend(this.portraitImg);
     }
-    this.portraitImg.src = current.portrait;
+    if(this.portraitImg)this.portraitImg.src = current.portrait;
 
     const bodyEl = document.getElementById('quest-tracker-body')!;
     if (!this.categoryRibbon) {
@@ -298,7 +326,7 @@ export class QuestUI {
       ? 'Đang đọc Thiên Mệnh Chi Quyển đã lưu…'
       : !online
       ? 'Vào sân chung để tiếp tục Mệnh Kiếp Chí (VG01–VG11).'
-      : `▸ ${current.nextStep}`;
+      : `Chỉ lộ: ${current.nextStep}`;
     const completed = quests.filter(quest => quest.status === 'completed').length;
     document.getElementById('quest-chapter-progress')!.textContent = `${completed}/${quests.length} Hồi · ${current.speaker}`;
     const gate = chapterGate(view?.chapter ?? initialChapter());
@@ -323,7 +351,7 @@ export class QuestUI {
       const doneCount = current.objectives.filter(objective => objective.done).length;
       const progress = node('p', `Tiến độ Hồi ${current.id}: ${doneCount} / ${current.objectives.length} mục tiêu hoàn thành`);
       progress.className = 'quest-objective-progress';
-      document.getElementById('quest-objectives')!.replaceChildren(checklist(current, this.actions.guide, false), progress);
+      document.getElementById('quest-objectives')!.replaceChildren(checklist(current, this.actions.guide, false,this.daoAn), progress);
       progress.hidden = !current.objectives.length;
       if (this.journalList?.isConnected) this.renderCards(quests);
     }
@@ -353,16 +381,17 @@ export class QuestUI {
     filterBar.className = 'dao-codex-filter-bar';
     const filterTabs = node('div');
     filterTabs.className = 'dao-codex-filter-tabs';
-    const filters: { id: 'all' | 'stage1' | 'stage2'; label: string }[] = [
-      { id: 'all', label: `📜 Toàn Quyển (${completedCount}/${quests.length} Hồi)` },
-      { id: 'stage1', label: '⚔️ Quyển Thượng · Ngưng Khí → Trúc Cơ (VG01–VG06)' },
-      { id: 'stage2', label: '⚡ Quyển Hạ · Quyết Minh Cốc → Kết Đan (VG07–VG11)' },
+    const filters: { id: 'all' | 'stage1' | 'stage2'; icon: string; label: string }[] = [
+      { id: 'all', icon: daoUiSvg('scroll', 13), label: `Tất cả · ${completedCount}/${quests.length}` },
+      { id: 'stage1', icon: daoUiSvg('sword', 13), label: 'Chặng 1 · VG01–06' },
+      { id: 'stage2', icon: daoUiSvg('bolt', 13), label: 'Chặng 2 · VG07–11' },
     ];
     for (const f of filters) {
-      const btn = node('button', f.label);
+      const btn = node('button');
       btn.type = 'button';
       btn.className = 'dao-codex-filter-btn';
       btn.dataset.active = String(this.stageFilter === f.id);
+      btn.innerHTML = `<span class="dao-tab-svg">${f.icon}</span><span>${f.label}</span>`;
       btn.addEventListener('click', () => {
         this.stageFilter = f.id;
         this.renderCards(quests);
@@ -392,6 +421,10 @@ export class QuestUI {
     for (const quest of filteredQuests) {
       const isSelected = this.selectedQuest === quest.id;
       const catMeta = questCategoryMeta(quest.id);
+      const doneSteps = quest.objectives.filter(o => o.done).length;
+      const totalSteps = Math.max(1, quest.objectives.length);
+      const pct = quest.status === 'completed' ? 100 : Math.round((doneSteps / totalSteps) * 100);
+
       const card = node('article');
       card.className = 'quest-card dao-codex-card';
       card.dataset.quest = quest.id;
@@ -407,8 +440,9 @@ export class QuestUI {
       const portrait = node('img');
       portrait.src = quest.portrait;
       portrait.alt = quest.speaker;
-      portrait.width = portrait.height = 44;
-      portrait.style.cssText = `image-rendering:pixelated;object-fit:contain;border-radius:8px;border:1.5px solid ${catMeta.borderColor};background:rgba(12,20,30,0.92);padding:2px;flex-shrink:0;`;
+      portrait.width = portrait.height = 36;
+      portrait.style.cssText = `object-fit:contain;border-radius:6px;border:1px solid ${catMeta.borderColor};background:rgba(12,20,30,0.92);padding:1px;flex-shrink:0;`;
+      attachSafeIconFallback(portrait);
 
       const label = node('span');
       label.className = 'quest-card-label ui-text-stack';
@@ -420,7 +454,7 @@ export class QuestUI {
       const catTag = node('span');
       catTag.className = 'dao-card-cat-tag';
       catTag.style.cssText = `color:${catMeta.accentColor};border-color:${catMeta.borderColor};background:${catMeta.bgColor};`;
-      catTag.innerHTML = `${catMeta.svg}<span>${catMeta.badgeText}</span>`;
+      catTag.innerHTML = `<span>${catMeta.badgeText}</span>`;
       topBadgeRow.append(idBadge, catTag);
 
       const title = node('span', quest.title);
@@ -428,13 +462,16 @@ export class QuestUI {
 
       const statusLine = node('small');
       statusLine.className = `dao-card-status dao-status-${quest.status}`;
-      const statusIcon =
-        quest.status === 'completed' ? '✓ ' :
-        quest.status === 'ready' ? '🎁 ' :
-        quest.status === 'active' ? '▸ ' : '🔒 ';
-      statusLine.textContent = `${statusIcon}${QUEST_STATUS_LABELS[quest.status]} · ${catMeta.realmText} · ${quest.speaker}`;
+      statusLine.textContent = `${QUEST_STATUS_LABELS[quest.status]} · ${doneSteps}/${totalSteps} bước`;
 
-      label.append(topBadgeRow, title, statusLine);
+      const progBar = node('span');
+      progBar.className = 'dao-card-prog-track';
+      const progFill = node('span');
+      progFill.className = 'dao-card-prog-fill';
+      progFill.style.width = `${pct}%`;
+      progBar.append(progFill);
+
+      label.append(topBadgeRow, title, statusLine, progBar);
       heading.append(portrait, label);
 
       heading.addEventListener('click', () => {
@@ -454,6 +491,16 @@ export class QuestUI {
 
     codexSplit.append(leftColumn, rightScrollPane);
     this.journalList.append(codexSplit);
+    // A retained selection must also be visible in the horizontal mobile list.
+    requestAnimationFrame(()=>{
+      if(!leftColumn.isConnected)return;
+      const selectedCard=leftColumn.querySelector<HTMLElement>('[data-selected=true]');
+      const firstCard=leftColumn.firstElementChild as HTMLElement|null;
+      if(selectedCard&&firstCard){
+        leftColumn.scrollLeft=selectedCard.offsetLeft-firstCard.offsetLeft;
+        leftColumn.scrollTop=selectedCard.offsetTop-firstCard.offsetTop;
+      }
+    });
   }
 
   private buildScrollSheet(quest: SectQuest, isSelected: boolean): HTMLElement {
@@ -472,7 +519,7 @@ export class QuestUI {
     scrollHeader.className = 'dao-scroll-header';
     const catPill = node('div');
     catPill.className = 'dao-scroll-cat-pill';
-    catPill.style.cssText = `display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:${catMeta.bgColor};border:1px solid ${catMeta.borderColor};color:${catMeta.accentColor};font-size:11px;font-weight:700;letter-spacing:0.06em;`;
+    catPill.dataset.category=catMeta.kind;
     catPill.innerHTML = `${catMeta.svg}<span>${catMeta.badgeText} · ${catMeta.stageLabel}</span>`;
 
     const scrollTitle = node('h3', `${quest.id} · ${quest.title}`);
@@ -480,9 +527,12 @@ export class QuestUI {
 
     const metaRow = node('div');
     metaRow.className = 'dao-scroll-meta-row';
-    const realmChip = node('span', `⚡ Cảnh giới: ${catMeta.realmText}`);
-    const locChip = node('span', `📍 Địa điểm: ${catMeta.locationLabel}`);
-    const npcChip = node('span', `👤 Nhân vật: ${npcStationName(quest.stationId)}`);
+    const realmChip = node('span');
+    realmChip.innerHTML = `${daoUiSvg('bolt', 12)}<span>${catMeta.realmText}</span>`;
+    const locChip = node('span');
+    locChip.innerHTML = `${daoUiSvg('compass', 12)}<span>${catMeta.locationLabel}</span>`;
+    const npcChip = node('span');
+    npcChip.innerHTML = `${daoUiSvg('dialogue', 12)}<span>${npcStationName(quest.stationId).split(' · ')[0]}</span>`;
     metaRow.append(realmChip, locChip, npcChip);
 
     scrollHeader.append(catPill, scrollTitle, metaRow);
@@ -493,56 +543,71 @@ export class QuestUI {
     const lorePortrait = node('img');
     lorePortrait.src = quest.portrait;
     lorePortrait.alt = quest.speaker;
-    lorePortrait.width = lorePortrait.height = 60;
-    lorePortrait.style.cssText = `image-rendering:pixelated;object-fit:contain;border-radius:10px;border:1.5px solid ${catMeta.borderColor};background:rgba(12,20,30,0.92);padding:3px;flex-shrink:0;`;
+    lorePortrait.width = lorePortrait.height = 44;
+    lorePortrait.style.cssText = `object-fit:contain;border-radius:8px;border:1.5px solid ${catMeta.borderColor};background:rgba(12,20,30,0.92);padding:2px;flex-shrink:0;`;
+    attachSafeIconFallback(lorePortrait);
     const loreCopy = node('div');
     loreCopy.className = 'dao-scroll-lore-copy';
-    const speakerTag = node('strong', `Lời dẫn Thiên Cơ · ${quest.speaker}`);
-    speakerTag.style.cssText = 'color:#ffe39a;font-size:12px;letter-spacing:0.04em;display:block;margin-bottom:3px;';
-    const voiceQuote = node('p', `“${quest.voiceover}”`);
-    voiceQuote.style.cssText = 'font-style:italic;color:#fff4d6;font-size:13.5px;margin:0 0 6px 0;line-height:1.45;';
+    const speakerTag = node('strong', `${quest.speaker}`);
+    speakerTag.className='dao-scroll-speaker';
+    const voiceQuote = node('p', quest.voiceover);
+    voiceQuote.className='dao-scroll-voice';
     const descP = node('p', quest.description);
-    descP.style.cssText = 'margin:0;color:#c9dfd9;font-size:12.5px;line-height:1.5;';
+    descP.className='dao-scroll-description';
     loreCopy.append(speakerTag, voiceQuote, descP);
     loreBox.append(lorePortrait, loreCopy);
     detail.append(loreBox);
 
-    const section = (name: string, icon: string, content: HTMLElement): HTMLElement => {
+    const section = (name: string, iconSvg: string, content: HTMLElement): HTMLElement => {
       const group = node('section');
       group.className = 'ui-copy-section dao-scroll-section';
       const heading = node('h4');
       heading.className = 'ui-section-title dao-scroll-section-title';
-      heading.innerHTML = `<span>${icon}</span><span>${name}</span>`;
+      heading.innerHTML = `<span class="dao-section-svg">${iconSvg}</span><span>${name}</span>`;
       group.append(heading, content);
       return group;
     };
 
     const doneObjectives = quest.objectives.filter(o => o.done).length;
+    const objContainer = node('div');
+    objContainer.append(
+      checklist(quest, () => {
+        if (this.actions.onPrimaryQuestAction) this.actions.onPrimaryQuestAction(quest);
+        else this.actions.guide();
+      }, true),
+    );
+    const nextStepCard = node('div');
+    nextStepCard.className = 'dao-scroll-next-step';
+    nextStepCard.append(node('strong', 'Chỉ lộ: '), node('span', quest.nextStep));
+    objContainer.append(nextStepCard);
+
     detail.append(
       section(
-        `Mục Tiêu Tu Hành (${doneObjectives}/${quest.objectives.length} hoàn thành · Bấm vào mục tiêu để tự tìm đường)`,
-        '⚔️',
-        checklist(quest, () => {
-          if (this.actions.onPrimaryQuestAction) this.actions.onPrimaryQuestAction(quest);
-          else this.actions.guide();
-        }, true),
+        `Đạo Tiêu Hành Đạo (${doneObjectives}/${quest.objectives.length} bước)`,
+        daoUiSvg('sword', 13),
+        objContainer,
       ),
     );
 
-    const nextStepCard = node('div');
-    nextStepCard.className = 'dao-scroll-next-step';
-    nextStepCard.append(node('strong', '🧭 Chỉ dẫn bước tiếp theo: '), node('span', quest.nextStep));
-    detail.append(section('Thiên Cơ Chỉ Lộ', '🧭', nextStepCard));
-
     const rewardWrap = node('div');
-    const reward = node('p', quest.reward);
-    reward.className = 'quest-card-reward';
-    reward.style.cssText = 'margin:0 0 6px 0;color:#ffe298;font-size:12.5px;font-weight:600;';
-    rewardWrap.append(reward);
     if (quest.rewardItems.length) {
       rewardWrap.append(renderRewardSlots(quest.rewardItems, false));
+      const hiddenRewardText = node('p', quest.reward);
+      hiddenRewardText.className = 'quest-card-reward sr-only';
+      rewardWrap.append(hiddenRewardText);
+    } else {
+      const reward = node('p', quest.reward);
+      reward.className = 'quest-card-reward';
+      reward.classList.add('dao-scroll-reward-copy');
+      rewardWrap.append(reward);
     }
-    detail.append(section(quest.status === 'completed' ? 'Đạo Quả Đã Viên Mãn' : 'Đạo Quả & Vật Phẩm Thưởng', '🎁', rewardWrap));
+    detail.append(
+      section(
+        quest.status === 'completed' ? 'Đạo Quả Đã Lĩnh' : 'Đạo Quả & Pháp Bảo Thưởng',
+        daoUiSvg('reward', 13),
+        rewardWrap,
+      ),
+    );
 
     const ctaBar = node('footer');
     ctaBar.className = 'dao-scroll-cta-bar';
@@ -551,13 +616,13 @@ export class QuestUI {
     primaryBtn.className = 'sect-chapter-route dao-scroll-primary-btn';
     const targetShort = npcStationName(quest.stationId).split(' · ')[0]!;
     if (quest.status === 'completed') {
-      primaryBtn.textContent = `✓ ${quest.id} Đã Viên Mãn · Tầm Lộ Tới ${targetShort}`;
+      primaryBtn.innerHTML = `${daoUiSvg('check', 13)}<span>Tầm Lộ Tới ${targetShort}</span>`;
     } else if (quest.status === 'ready') {
-      primaryBtn.textContent = `🎁 Lĩnh Nhận Đạo Quả ${quest.id} Ngay`;
+      primaryBtn.innerHTML = `${daoUiSvg('reward', 13)}<span>Lĩnh Đạo Quả ${quest.id}</span>`;
     } else if (quest.id === 'VG01') {
-      primaryBtn.textContent = `🧭 Tự Tìm Đường Thực Hiện ${quest.id} Tại ${targetShort}`;
+      primaryBtn.innerHTML = `${daoUiSvg('compass', 13)}<span>Tầm Lộ Thực Hiện ${quest.id} (${targetShort})</span>`;
     } else {
-      primaryBtn.textContent = `⚔️ Tiến Vào Bí Cảnh 2D · ${quest.id} (Hoặc Tìm Đường Tới ${targetShort})`;
+      primaryBtn.innerHTML = `${daoUiSvg('sword', 13)}<span>Vào Bí Cảnh ${quest.id} (${targetShort})</span>`;
     }
     primaryBtn.addEventListener('click', () => {
       if (this.actions.onPrimaryQuestAction) this.actions.onPrimaryQuestAction(quest);
@@ -566,9 +631,10 @@ export class QuestUI {
     ctaBar.append(primaryBtn);
 
     if (this.actions.onOpenChapter) {
-      const secondaryBtn = node('button', `🔮 Mở Nội Giới & Lò Đan Lý Mộ Uyển (${quest.id} · Phím H)`);
+      const secondaryBtn = node('button');
       secondaryBtn.type = 'button';
       secondaryBtn.className = 'dao-scroll-secondary-btn';
+      secondaryBtn.innerHTML = `${daoUiSvg('orb', 13)}<span>Nội Giới & Đan Lô (H)</span>`;
       secondaryBtn.addEventListener('click', () => this.actions.onOpenChapter?.(quest));
       ctaBar.append(secondaryBtn);
     }

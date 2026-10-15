@@ -117,7 +117,7 @@ Giữ ID hồ sơ, quest/cast/item receipts, tọa độ và tài nguyên hiện
 
 ## 7. Thứ tự triển khai
 
-**Đối chiếu lộ trình tổng 10/10:** [RM0–RM6](DEVELOPMENT-ROADMAP.md) bổ sung thiết kế [nhân vật](CHARACTER-SYSTEM.md)/[nhiệm vụ](QUEST-SYSTEM.md) trước mở rộng. Mã E bên dưới giữ phạm vi entry: E0–E2 là nền đã có; E3 tối thiểu nối RM1; E4/HN05 nối RM2; E5 được tách vào RM3–RM6. Không phải hai roadmap cạnh tranh hoặc yêu cầu hoàn thành toàn kho/kinh tế trước HN05.
+**Đối chiếu snapshot 10/10:** [RM0–RM6](DEVELOPMENT-ROADMAP.md) từng bổ sung thiết kế nhân vật/nhiệm vụ trước mở rộng. Mã E bên dưới giữ phạm vi entry: E0–E2 là nền đã có; E3 tối thiểu nối RM1; E4/HN05 nối RM2; E5 được tách vào RM3–RM6. Không phải hai roadmap cạnh tranh; điều kiện hiện hành của VG01–VG11 xem [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md).
 
 | Mốc | Sản phẩm cụ thể | Tiêu chí xong |
 | --- | --- | --- |

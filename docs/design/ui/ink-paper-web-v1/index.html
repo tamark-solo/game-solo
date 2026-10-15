@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vân Hải Đạo Đồ · Mực & Chu Sa</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="review-header">
+    <a class="brand" href="#explore" aria-label="Về HUD khám phá"><span class="seal">道</span><span>VÂN HẢI ĐẠO ĐỒ<small>MỰC & CHU SA <i>—</i> BẢN DUYỆT 01</small></span></a>
+    <nav class="review-nav" aria-label="Các màn thiết kế">
+      <button data-view="explore" class="active">Khám phá</button><button data-view="combat">Chiến đấu</button><button data-view="artifacts">Pháp bảo</button><button data-view="inventory">Hành trang</button><button data-view="progress">Đột phá</button><button data-view="journal">Mệnh Kiếp Chí</button>
+    </nav>
+    <button class="help-button" id="help" aria-label="Hướng dẫn xem bản review">?</button>
+  </header>
+  <main>
+    <section class="stage" id="stage" aria-label="Bản thiết kế giao diện game">
+      <div class="world"></div><div class="world-light"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+      <div class="world-actor player"><span class="actor-name">Huyễn Tâm</span><img id="world-player" src="../../characters/wang-lin-equipment-production-v1/body/native/sword-a.png" alt="Huyễn Tâm"><div class="foot-shadow"></div></div>
+      <div class="world-actor npc"><span class="actor-name">Bạch Chỉ <small>Đan dược</small></span><img src="../../characters/van-hai-npc-wave-a-concepts-v1/sprites/bach-chi.png" alt="Bạch Chỉ"><div class="foot-shadow"></div></div>
+      <div class="world-actor boss" hidden><span class="actor-name">Hắc Ấn Chấp Sự</span><img src="../../characters/van-hai-dark-seal-officer-v3/sprites/officer.png" alt="Hắc Ấn Chấp Sự"><div class="foot-shadow"></div></div>
+      <div class="telegraph" hidden aria-label="Cảnh báo Ấn Hồi, khe né 90 độ"><div></div><span>KHE NÉ</span></div>
+      <div class="hud" id="hud">
+        <button class="identity ink-frame" data-view="artifacts"><span class="portrait"><img id="portrait-img" src="../../characters/wang-lin-equipment-production-v1/body/native/sword-a.png" alt=""></span><span class="identity-copy"><small>TÁN TU</small><strong id="identity-name">Huyễn Tâm</strong><span>Ngưng Khí <b>·</b> Tầng 15</span><span class="cultivation-line"><i></i></span><em>Tu vi viên mãn · Bình cảnh</em></span></button>
+        <div class="location"><span class="tiny-seal">境</span><div><h1>Hằng Nhạc</h1><p>NGOẠI MÔN <span>•</span> GIỜ THÌN</p></div><button class="map-disc" data-view="journal" aria-label="Xem chỉ dẫn khu vực"><img src="../../world/hang-nhac-van-ngoc-detail-v2/regions/map-web.webp" alt="Bản đồ tổng tham chiếu"><span class="map-point"></span><b>BẮC</b></button></div>
+        <div class="boss-health" hidden><p>KIẾP NẠN HẰNG NHẠC</p><h2>Hắc Ấn Chấp Sự</h2><div class="boss-meter"><i></i></div><span>Ấn Hồi <b>·</b> Đang tụ ấn</span></div>
+        <aside class="quest-tracker"><div class="eyebrow">MỆNH KIẾP CHÍ <span>VI</span></div><h2>Kiếp nạn Hằng Nhạc</h2><p>Chuẩn bị đạo cơ trước khi<br>đối diện đại kiếp.</p><button data-view="progress"><span class="diamond"></span> Xem điều kiện Trúc Cơ <b>↗</b></button><div class="side-quest"><span>KỲ NGỘ ĐANG GHIM</span><p>Hương thảo trong sương</p><small>Tìm Bạch Chỉ ở sân ngoại môn</small></div></aside>
+        <button class="interaction" id="interact"><kbd>E</kbd><span>Bạch Chỉ<small>Hỏi về đan dược</small></span></button>
+        <div class="world-caption"><i></i>Vân hải vô nhai, đạo tâm bất diệt.<i></i></div>
+        <div class="event-log"><span class="log-mark">記</span><div><b>Đạo thư vừa mở thêm một trang</b><p>Đã ghi nhận tiến trình tu luyện.</p><button data-view="journal">Mở Mệnh Kiếp Chí <span>J</span></button></div></div>
+        <div class="combat-dock"><div class="dock-label"><span></span><b id="dock-artifact">KIẾM LINH</b><span></span></div><div class="vitals"><div class="vital hp"><label>Sinh lực <b id="hp-value">1.000 / 1.000</b></label><div><i></i></div></div><span class="vital-divider">◇</span><div class="vital mp"><label>Linh lực <b>240 / 300</b></label><div><i></i></div></div></div><div id="skills" class="skills"></div><p class="dock-hint">W A S D <span>Di chuyển</span> <i>·</i> SHIFT <span>Chạy nhanh</span></p></div>
+        <nav class="quick-menu" aria-label="Chức năng nhân vật"></nav>
+      </div>
+      <div id="screen-layer" class="screen-layer" hidden></div>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </section>
+    <footer class="review-bar"><div><span class="review-dot"></span><b id="view-label">01 / KHÁM PHÁ</b><span class="bar-caption">Thiết kế tương tác · Dữ liệu minh họa</span></div><div class="review-options"><label>Nhân vật <select id="avatar"><option value="a">Huyễn Tâm</option><option value="b">Tịch Bạch</option></select></label><button id="lighting" aria-pressed="false">Ánh sáng: Ngày</button><button id="hide-hud" aria-pressed="false">Ẩn HUD</button><button id="reset">Đặt lại</button></div></footer>
+  </main>
+  <dialog id="help-dialog" class="help-dialog"><button class="close" id="close-help" aria-label="Đóng hướng dẫn">×</button><span class="eyebrow">BẢN DUYỆT MỸ THUẬT</span><h2>Một đạo thư có thể chạm.</h2><p>Chuyển màn bằng thanh phía trên hoặc nút trong HUD. Thử chọn bốn pháp bảo, lọc và trang bị vật phẩm, xem các hồi truyện hoặc kiểm tra điều kiện đột phá.</p><p><b>C</b> Pháp bảo · <b>I</b> Hành trang · <b>J</b> Mệnh Kiếp Chí · <b>Esc</b> Trở về HUD.</p><p class="muted">Đây là sân review độc lập. Số liệu và trạng thái là minh họa; thao tác không ghi vào nhân vật hoặc game. ART actor/pháp bảo dùng lại từ các gói dự án, chưa suy duyệt mới.</p><button class="primary" id="begin">Bắt đầu xem</button></dialog>
+  <script type="module" src="review.js"></script>
+</body>
+</html>

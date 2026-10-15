@@ -89,7 +89,7 @@ try {
   // Explicit leave cancels scheduled recovery; a backend restart must not pull the player back in.
   await page.locator('#sect-close').click();
   backend.stop();await waitFor(async()=>(await state(page!)).game.status==='reconnecting','second backend drop');
-  await page.locator('#leave').click();await waitFor(async()=>(await state(page!)).game.status==='idle','leave cancels recovery');
+  await page.locator('#menu-button').click();await page.locator('#menu-character').click();await waitFor(async()=>(await state(page!)).game.status==='idle','leave cancels recovery');
   backend=await startService(['--import','tsx','server/src/index.ts'],`${endpoint}/health`,{PORT:'2596',GAME_DB_PATH:dbPath});
   await page.waitForTimeout(1600);assert.equal((await state(page)).game.status,'idle');
   assert.equal(await page.evaluate(()=>sessionStorage.getItem('hang-nhac.active.v1')),null);

@@ -1,5 +1,7 @@
 # Phân công xây map — 08/10/2026
 
+> **Phân loại tài liệu ·15/10/2026.** Quyền owner bố trí map/navigation vẫn áp dụng. Thứ tự và tình trạng asset trong mốc 08/10 bên dưới là lịch sử; nền hiện hành đọc [Vân Ngọc V2](HANG-NHAC-VAN-NGOC-BASELINE.md), phần mới theo [kế hoạch asset GDD 0.35](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md), kiểm kê trước để tránh đặt/vẽ lại đạo cụ đã bake trong nền.
+
 **Quy trình hiện hành được chủ dự án yêu cầu:** map đầy đủ trước, thiết kế navigation tiếp, asset rời sau. [Map Hằng Nhạc mới](design/world/hang-nhac-map-v1/README.md) dùng một ảnh đủ công trình để chủ dự án có căn cứ vẽ luồng đi/chặn. Concept, nền sạch và ba asset thử vừa tạo đã [xóa](data/hang-nhac-review-reset-2026-10-08.json); không dùng lại nguồn hoặc builder của bộ đó.
 
 Trợ lý được yêu cầu dựng map tổng theo GDD, lấy nhân vật native làm chuẩn tỷ lệ và chuẩn bị ảnh/gói Editor nhẹ. Chủ dự án vẽ/chỉnh vùng đi/chặn, Spawn và cửa nối, kiểm luồng và quyết định footprint. Việc này thay lựa chọn trước là bắt đầu bằng các asset rời rồi tự ghép; không thay quyền sở hữu map đã biên tập.

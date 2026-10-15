@@ -1,12 +1,14 @@
 # Lộ trình Vân Hải Đạo Đồ — từ nền hiện có tới RPG tu tiên online
 
-**Phiên bản 0.5 · 11/10/2026 · GDD 0.32.** Owner đã đồng ý: **thiết kế rõ hệ thống nhân vật và nhiệm vụ trước khi mở rộng HN05**, đồng thời yêu cầu kế hoạch xuyên suốt **farm để mạnh, PvE/PvP và thể hiện nhân vật**. Lộ trình theo phụ thuộc và điều kiện hoàn tất, chưa cam kết ngày phát hành/nhân lực/thời lượng. Bản này là kế hoạch, không là lệnh chạy toàn bộ hoặc bằng chứng tính năng đã xong.
+> **Phân loại tài liệu ·15/10/2026.** Phần kế hoạch/số lượng/roster bên dưới là snapshot trước GDD 0.35, giữ để truy nguồn kỹ thuật và ART; không dùng làm backlog hay yêu cầu sản xuất mới. Nguồn áp dụng: [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [kế hoạch asset toàn game đã thống nhất](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md). Tận dụng bộ Huyễn Tâm/Tịch Bạch, quái/boss/NPC hiện có; Tư Đồ Nam và Lý Mộ Uyển không là tuyến playable bổ sung. Các trạng thái “hiện hành/đã chốt” dưới đây chỉ đúng tại ngày ghi mốc.
+
+**Snapshot 0.5 · 11/10/2026 · trước GDD 0.35.** Owner đã đồng ý: **thiết kế rõ hệ thống nhân vật và nhiệm vụ trước khi mở rộng HN05**, đồng thời yêu cầu kế hoạch xuyên suốt **farm để mạnh, PvE/PvP và thể hiện nhân vật**. Lộ trình theo phụ thuộc và điều kiện hoàn tất, chưa cam kết ngày phát hành/nhân lực/thời lượng. Bản này là lịch sử, không là lệnh chạy toàn bộ hoặc bằng chứng tính năng đã xong; nguồn hiện hành là [GDD 0.35](GDD.md) và [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md).
 
 [Ma trận tu tiên/MMORPG](MMORPG-PROGRESSION-PLAN.md) nối nội dung từng chặng với sức mạnh, farm, đấu quái/đấu người và sưu tập. [Hợp đồng Core/backend](MMORPG-SYSTEM-CONTRACTS.md) ghi điều kiện mở loot/damage peer/appearance, migration và số đo scale. Mốc phát triển RM khác cảnh giới: một pilot RM5 có thể được xây sớm để phục vụ Ngưng Khí/Trúc Cơ, không đợi người chơi tới cảnh giới cao.
 
-## 1. Một đường đọc và một thứ tự công việc
+## 1. Đường đọc và thứ tự công việc trong roadmap lịch sử
 
-**[GDD](GDD.md) → [nghiên cứu nguồn](XIANXIA-GAME-RESEARCH.md) / [hướng sáng tạo](VAN-HAI-CREATIVE-DIRECTION.md) → [kế hoạch nội dung](RPG-CONTENT-PLAN.md) → [hệ thống nhân vật](CHARACTER-SYSTEM.md) + [hệ thống nhiệm vụ](QUEST-SYSTEM.md) → lộ trình này → [backlog GD](MVP-BACKLOG.md) → đặc tả đợt triển khai → code/kiểm/chơi thử.**
+**[GDD 0.35](GDD.md) → [nghiên cứu nguồn](XIANXIA-GAME-RESEARCH.md) / [hướng sáng tạo](VAN-HAI-CREATIVE-DIRECTION.md) → [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) → [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md) → đặc tả đợt triển khai → code/kiểm/chơi thử.** Chuỗi HN/QUEST bên dưới chỉ là snapshot truy nguồn.
 
 **Bổ sung theo yêu cầu nghiên cứu:** RM0 không chỉ là schema/receipt. Phải có động lực truyện, dòng phát triển, vai trò đồ/công pháp/thuật/pháp bảo và nét riêng muốn kiểm trước khi xây framework. Ba hồ sơ nghiên cứu/nội dung mới là bản đề xuất, chưa chốt đổi tuyến hoặc số liệu.
 
@@ -61,12 +63,12 @@ RM5 không phải điều kiện bắt buộc để một người qua HN10 ho�
 | Gói | Đầu ra | Tình trạng ở bản tài liệu này |
 | --- | --- | --- |
 | Nghiên cứu và bản sắc | Đợt 1: 5 game; đợt 2: 3 game mới và 12 trang chương khảo sát có giới hạn | [Đợt 1](XIANXIA-GAME-RESEARCH.md), [nguồn luyện chế/Tiên Nghịch đợt 2](TIEN-NGHICH-CRAFTING-REFERENCES.md); chưa chơi trực tiếp, không nói đã đọc hết truyện |
-| Nội dung/luồng phát triển | Đồ thị/cổng HN05–HN12, thẻ nhiệm vụ, góc nhìn bộ ba, một lựa chọn 2 nhánh và storyboard HN05 | [Chương phương án A](HANG-NHAC-CHAPTER-PLAN.md) đã có bản chi tiết làm việc ND1–ND2; chưa duyệt thoại/luật mới |
+| Nội dung/luồng phát triển | Đồ thị/cổng HN05–HN12, thẻ nhiệm vụ, góc nhìn bộ ba, một lựa chọn 2 nhánh và storyboard HN05 | Bản phương án A đã dọn khỏi cây tài liệu; đối chiếu hiện hành tại [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md), chưa duyệt thoại/luật mới của snapshot |
 | Catalog đầu | 3 item ID hiện có + 2 định nghĩa dự kiến; nền vận hành, R01 bảo toàn, recipe và hộ thân | [Catalog nhập môn](HANG-NHAC-CONTENT-CATALOG.md) bản chi tiết ND3/phần ND4; chưa codec/schema hoặc ART mới |
-| Vật phẩm sau nhập môn | 8 định nghĩa mới, 5 recipe và EX01–EX04 hữu hạn, nguồn–chi/đường thủ công | [Thiết kế](ITEM-CRAFTING-DESIGN.md), [gói sản xuất](ITEM-PRODUCTION-PLAN.md), [manifest chỉ kiểm kế hoạch](design/systems/items-v1/plan.json); chưa kinh tế lặp hoặc runtime |
+| Vật phẩm sau nhập môn | 8 định nghĩa mới, 5 recipe và EX01–EX04 hữu hạn, nguồn–chi/đường thủ công | [Thiết kế](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-CRAFTING-DESIGN.md), [gói sản xuất](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-PRODUCTION-PLAN.md), [manifest chỉ kiểm kế hoạch](design/systems/items-v1/plan.json); chưa kinh tế lặp hoặc runtime |
 | Nhân vật | Danh tính/ownership, bốn lớp state, sáu phần tu tiên, nguồn stat, milestone, UI và tương thích | Bản cơ sở ở [CHARACTER-SYSTEM](CHARACTER-SYSTEM.md) |
-| Nhiệm vụ | Định nghĩa/tiến trình/attempt, state, mục tiêu, credit, reward, versioning/migration | Bản cơ sở ở [QUEST-SYSTEM](QUEST-SYSTEM.md) |
-| HN05 để kiểm thiết kế | Nhận → đi ngoại vi → E01 → proof/clue → quay về nhận gói → xác nhận ngưỡng/M02 | [Storyboard chương A](HANG-NHAC-CHAPTER-PLAN.md) đã mô tả; D04–D06 vẫn chặn bật portal/encounter |
+| Nhiệm vụ | Định nghĩa/tiến trình/attempt, state, mục tiêu, credit, reward, versioning/migration | Snapshot QUEST đã dọn; điều kiện hiện hành ở [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md) và [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) |
+| HN05 để kiểm thiết kế | Nhận → đi ngoại vi → E01 → proof/clue → quay về nhận gói → xác nhận ngưỡng/M02 | Storyboard phương án A đã dọn; D04–D06 chỉ còn là ghi chú lịch sử, không chặn VG01–VG11 |
 | Quyết định trước code | Các lựa chọn có khuyến nghị, nơi phụ thuộc và người chốt | Bảng dưới; chưa coi owner đã duyệt chi tiết |
 
 ### 4.2. Những điểm cần chốt theo từng gate
@@ -99,13 +101,13 @@ RM5 không phải điều kiện bắt buộc để một người qua HN10 ho�
 5. **ND5:** phạm vi riêng/chung và một hệ quả nhìn thấy nếu chọn; chưa xây engine mọi quan hệ NPC.
 6. **ND6:** storyboard HN05 và liên kết HN06–HN08, failure/retry và ngân sách asset để chốt slice.
 
-**Tiến độ sau yêu cầu bắt đầu:** ND1–ND2 có [bản chương A](HANG-NHAC-CHAPTER-PLAN.md), ND3 có [catalog](HANG-NHAC-CONTENT-CATALOG.md); ND4 có bài mẫu/contract hộ thân, ND5 thu gọn một lựa chọn có hồi đáp, ND6 mới là storyboard giấy. Đã cụ thể hóa phương án, chưa đánh dấu các gate đã qua. Bản A đề xuất HN06 sau M02 (khác điều kiện HN05-only cũ), giữ cùng instance phôi/refined và tách thưởng HN09 khỏi proof bài — các điểm này được ghi rõ để đánh giá, không đổi runtime.
+**Tiến độ snapshot trước 0.35:** ND1–ND2 từng có bản chương A, ND3 có [catalog](HANG-NHAC-CONTENT-CATALOG.md); ND4 có bài mẫu/contract hộ thân, ND5 thu gọn một lựa chọn có hồi đáp, ND6 mới là storyboard giấy. Đã cụ thể hóa phương án nhưng chưa đánh dấu gate đã qua. Bản A và các đề xuất HN06/HN09 không đổi runtime; điều kiện mới phải đọc từ [GDD 0.35](GDD.md), [hợp đồng](GDD-035-UNIFIED-CONTRACT.md) và VG01–VG11.
 
 Chỉ phần liên quan đến lát kế tiếp phải chốt trước code; không đợi có mọi nghề/pháp bảo/cảnh giới. D01–D06 vẫn chặn implementation tương ứng, ý tưởng truyện không thay hợp đồng save/lifecycle. Nếu không chọn tuyến sáng tạo ứng viên, thay ND1/ND2 chứ không phải bỏ nền hệ thống.
 
 ### 4.4. Nhánh vật phẩm/luyện chế — thiết kế xa, xây từng gói
 
-[VP0–VP4](ITEM-PRODUCTION-PLAN.md) là gói nội dung/đầu việc trong các RM, không roadmap cạnh tranh:
+[VP0–VP4](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-PRODUCTION-PLAN.md) là gói nội dung/đầu việc trong các RM, không roadmap cạnh tranh:
 
 - **VP0 / RM1–RM2:** nguồn thưởng HN05/06, nguyên liệu và codec giữ đồ/supplies cũ.
 - **VP1 / RM3–RM4:** recipe phôi→hộ thân, activation và proof bài HN08.

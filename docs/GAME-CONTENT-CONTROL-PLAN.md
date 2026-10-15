@@ -1,6 +1,8 @@
 # Quản lý nội dung game — catalog, Core và dữ liệu người chơi
 
-**Bản thiết kế 0.1 · 11/10/2026 · phục vụ GDD 0.32.** Owner hỏi cách phân loại nguyên liệu/pháp bảo/tọa kỵ/nhiệm vụ và các hệ liên quan để dễ kiểm soát backend/gameplay. Đã có taxonomy, sổ catalog tham chiếu và [registry quản trị v1](GAME-CONTENT-CATALOG-RUNTIME.md) với schema/validator/API/tra cứu. Content compiler/editor ghi và definition gameplay mới là phần tiếp theo.
+> **Phân loại tài liệu ·15/10/2026.** Giữ làm tài liệu kỹ thuật về phân lớp/authority và kiểm soát dữ liệu. Các ví dụ GDD 0.32, HN/EX/VP và số 13 item/sáu recipe thuộc snapshot cũ, không là thiết kế nội dung hiện hành. Điều kiện và nguồn–chi áp dụng xem [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md) và [kế hoạch asset toàn game](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md); việc dọn docs chưa đổi schema/registry/runtime.
+
+**Snapshot bản thiết kế 0.1 · 11/10/2026 · trước GDD 0.35.** Owner hỏi cách phân loại nguyên liệu/pháp bảo/tọa kỵ/nhiệm vụ và các hệ liên quan để dễ kiểm soát backend/gameplay. Đã có taxonomy, sổ catalog tham chiếu và [registry quản trị v1](GAME-CONTENT-CATALOG-RUNTIME.md) với schema/validator/API/tra cứu. Content compiler/editor ghi và definition gameplay mới là phần tiếp theo; danh mục hiện hành xem [item–material catalog GDD 0.35](design/systems/item-material-catalog-gdd035-v1/README.md).
 
 Đọc [phân loại và từ điển](GAME-CONTENT-TAXONOMY.md), [catalog khởi đầu](design/systems/content-registry-v1/catalog.json), [kế hoạch MMORPG](MMORPG-PROGRESSION-PLAN.md), [Core/backend](MMORPG-SYSTEM-CONTRACTS.md) và [kiến trúc](ARCHITECTURE.md). Sổ catalog giúp tìm/kiểm quan hệ nội dung; các hồ sơ/code được nó trỏ tới vẫn sở hữu luật và số liệu.
 

@@ -1,23 +1,23 @@
 # Hệ thống nhân vật — nền RPG tu tiên
 
-> **Thiết kế tiếp nối 13/10/2026:** [GDD 0.33](GDD.md), [hệ tu tiên mới](CULTIVATION-REDESIGN-2026-10-13.md) và [Hằng Nhạc v2](HANG-NHAC-ONBOARDING-V2.md) thay đề xuất về nhịp nhập môn, HN04, xác nhận tầng/nhiệm vụ và thời điểm EX trong tài liệu này. Nội dung bên dưới giữ làm cơ sở/lịch sử; trạng thái đang chạy xem [runtime chương](HANG-NHAC-CHAPTER-RUNTIME.md). Bản thiết kế mới chưa thay code/save hoặc duyệt balance/ART.
+> **Snapshot trước GDD 0.35 · 13/10/2026:** các đề xuất hệ nhân vật/nhập môn bên dưới đã được thay bằng [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md) và [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md). Nội dung giữ làm cơ sở/lịch sử; trạng thái runtime hồi quy xem [luồng NPC](HANG-NHAC-NPC-RUNTIME.md). Không suy snapshot thành luật/save hoặc duyệt balance/ART.
 
-**Phiên bản 0.1 · 10/10/2026 · GDD 0.29.** Owner đã đồng ý hướng thiết kế hệ thống nhân vật/nhiệm vụ trước khi mở rộng HN05. Tài liệu này là **thiết kế cơ sở để đánh giá**, không xác nhận mọi luật mới đã được duyệt hoặc triển khai. Phạm vi chi tiết là Hằng Nhạc; arc sau giữ đường mở rộng, không sản xuất toàn bộ MMO ngay.
+**Snapshot phiên bản 0.1 · 10/10/2026 · trước GDD 0.35.** Owner đã đồng ý hướng thiết kế hệ thống nhân vật/nhiệm vụ trước khi mở rộng HN05. Tài liệu này là **thiết kế cơ sở để truy nguồn**, không xác nhận mọi luật mới đã được duyệt hoặc triển khai. Phạm vi chi tiết là Hằng Nhạc; arc sau giữ đường mở rộng, không sản xuất toàn bộ MMO ngay.
 
-Đọc cùng [GDD](GDD.md), [sáu phần tu tiên](CULTIVATION-SYSTEM.md), [nhiệm vụ](QUEST-SYSTEM.md) và [lộ trình](DEVELOPMENT-ROADMAP.md). Truyện/nhận diện thuộc [CHARACTERS](CHARACTERS.md); đây không phải tài liệu vẽ UI hay thay ngoại hình.
+Đọc cùng [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [sáu phần tu tiên](CULTIVATION-SYSTEM.md), [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [lộ trình lịch sử](DEVELOPMENT-ROADMAP.md). Truyện/nhận diện thuộc [CHARACTERS](CHARACTERS.md); đây không phải tài liệu vẽ UI hay thay ngoại hình.
 
 **Lớp nội dung bổ sung 10/10:** [kế hoạch phát triển RPG](RPG-CONTENT-PLAN.md) nối chặng nhiệm vụ với công pháp/thuật/đồ/pháp bảo, nguồn–chi, lựa chọn hậu nhập môn và phạm vi MMO. [Hướng sáng tạo](VAN-HAI-CREATIVE-DIRECTION.md) là ứng viên để đánh giá; không tự thêm slot, bonus, recipe hoặc cảnh giới vào hợp đồng hiện tại.
 
 ## 1. Mục tiêu và nền hiện có
 
-**Bổ sung theo GDD 0.32 ngày 11/10:** [kế hoạch MMORPG xuyên chặng](MMORPG-PROGRESSION-PLAN.md) đặt tăng sức mạnh/farm/build, PvE/PvP và hiện diện nhân vật vào hành trình. [Contract Core](MMORPG-SYSTEM-CONTRACTS.md) tách nguồn power, item ownership, appearance entitlement/đang hiển thị và public projection; đây là phần cần mở rộng, chưa schema runtime. Avatar/cảnh giới canon khác năng lực gameplay dùng để ghép đấu. Đổi thời trang không tự đổi avatar identity hoặc stat; hiệu lực nếu có phải nguồn riêng được công khai/cân bằng. Giữ gear/max HP/MP pilot và save tới khi đặc tả tăng trưởng/migration được chốt.
+**Bổ sung theo snapshot 11/10:** [kế hoạch MMORPG xuyên chặng](MMORPG-PROGRESSION-PLAN.md) đặt tăng sức mạnh/farm/build, PvE/PvP và hiện diện nhân vật vào hành trình. [Contract Core](MMORPG-SYSTEM-CONTRACTS.md) tách nguồn power, item ownership, appearance entitlement/đang hiển thị và public projection; đây là phần cần mở rộng, chưa schema runtime. Avatar/cảnh giới canon khác năng lực gameplay dùng để ghép đấu. Đổi thời trang không tự đổi avatar identity hoặc stat; hiệu lực nếu có phải nguồn riêng được công khai/cân bằng. Giữ gear/max HP/MP pilot và save tới khi đặc tả tăng trưởng/migration được chốt theo GDD 0.35.
 
 Người chơi phải trả lời được: **tôi là ai → hiện dùng được gì → muốn tiến tiếp còn thiếu gì → phải làm gì để đạt được → kết quả đã lưu chưa**. Sức mạnh có nguồn và giới hạn, không chỉ một số chiến lực hoặc nhiều thanh EXP.
 
 | Nền checkout 10/10 | Giới hạn cần giữ |
 | --- | --- |
 | [Entry thật](GAME-ENTRY-BACKEND.md): account/session/realm/character, tên riêng, vé chơi và lease | Mặc định 3 slot/realm, admin cấu hình; nhiều hồ sơ có thể cùng avatar. Chưa phải hạ tầng MMO nhiều máy/khôi phục tài khoản hoàn chỉnh |
-| [R01](HANG-NHAC-R01-RUNTIME.md), [HN01–HN02](HANG-NHAC-SECT-RUNTIME.md), [HN03–HN04](HANG-NHAC-LESSONS-RUNTIME.md) | Bộ R01 có sẵn, tích lũy và tầng 1–3 thử, mốc profile mới tới M01. Không coi tầng 3 là đã có M02 |
+| [R01](HANG-NHAC-R01-RUNTIME.md), [luồng NPC](HANG-NHAC-NPC-RUNTIME.md) | Bộ R01 có sẵn; HN01–HN04 là wire hồi quy lịch sử, không coi tầng 3 là đã có M02 |
 | [Nhân vật/hành trang nhập môn](HANG-NHAC-CHARACTER-RUNTIME.md) | Hai gear, mang/tháo/bảo vệ; vật tư thật phản chiếu `sect.supplies`. Chưa container/loot/bonus tổng quát |
 | C/I và UI Vân Ngọc/Linh Đài | Dữ liệu/bonus/12 món của trang preview không phải catalog gameplay |
 
@@ -75,7 +75,7 @@ Luồng tổng: **nhiệm vụ/khám phá → tài nguyên hoặc điều đã h
 
 **Ví dụ phải hỗ trợ:** người đã tích lũy/xác nhận tầng 3 nhưng mới xong HN04 vẫn chưa có M02. Ngược lại, nếu chính sách sau này cho hoàn tất HN05 trước ngưỡng 3, nhiệm vụ đã hoàn tất giữ nguyên; M02 chờ điều kiện còn thiếu, không bắt đánh lại hoặc nhận lại thưởng. Đánh giá mốc cần chạy khi bất kỳ điều kiện liên quan thay đổi, không chỉ lúc bấm nhận thưởng.
 
-Phần thưởng vượt cổng tích lũy giữ đủ; không clamp mất thưởng hoặc tự mở nền kế. Idle dừng ở gate theo luật, không tự xác nhận tầng/nhiệm vụ. Phân bổ 15 tầng và mốc 1/3/9/15 ở [hồ sơ tiến trình](HANG-NHAC-PROGRESSION-REWARDS.md) vẫn là bảng thử, không phải cân bằng đã khóa.
+Phần thưởng vượt cổng tích lũy giữ đủ; không clamp mất thưởng hoặc tự mở nền kế. Idle dừng ở gate theo luật, không tự xác nhận tầng/nhiệm vụ. Phân bổ 15 tầng và mốc 1/3/9/15 là bảng thử lịch sử; điều kiện hiện hành xem [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md), không phải cân bằng đã khóa.
 
 ## 6. Thuộc tính và nguồn tăng trưởng
 

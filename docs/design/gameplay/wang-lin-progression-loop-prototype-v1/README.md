@@ -2,7 +2,7 @@
 
 Ngày 14/10/2026 · Nhánh G2 · Fixture độc lập · Chưa tích hợp runtime.
 
-Gói này hiện thực hóa **Logic Vòng Lặp Cốt Lõi & Kịch Bản Chặng 1–2 (`VG01–VG11`)** theo [GDD 0.34](../../../GDD.md), [Thiết kế lại Tiến trình & Nhiệm vụ](../../../STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic Từng Chặng](../../../STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md), kết nối trực tiếp (read-only) với [core.mjs](../wang-lin-equipment-prototype-v1/core.mjs) của gói P2.
+Gói này hiện thực hóa **Logic Vòng Lặp Cốt Lõi & Kịch Bản Chặng 1–2 (`VG01–VG11`)** theo [GDD 0.35](../../../GDD.md), [hợp đồng thống nhất](../../../GDD-035-UNIFIED-CONTRACT.md), [Thiết kế lại Tiến trình & Nhiệm vụ](../../../STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic Từng Chặng](../../../STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md), kết nối trực tiếp (read-only) với [core.mjs](../wang-lin-equipment-prototype-v1/core.mjs) của gói P2. Đây vẫn là fixture G2 lịch sử, chưa phải tích hợp runtime đầy đủ.
 
 Toàn bộ con số ngưỡng tu vi, hệ số công pháp, tỷ lệ rơi đồ và thời gian cảnh báo Boss trong gói này là **số thử nghiệm trên nhánh fixture**, dùng để kiểm chứng vòng lặp gameplay trước khi mở migration sang server/runtime chính.
 

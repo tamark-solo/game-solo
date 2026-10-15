@@ -2,7 +2,7 @@
 
 **Ngày:** 08/10/2026 · **Trạng thái:** đề xuất bố cục HN-Z01–Z08 giữ làm tham chiếu, chưa là kế hoạch map mới hoặc map vận hành. ART Hằng Nhạc v1/v2/v3 và hai bản thử vùng đi đã [xóa](MAP-ASSETS-RESET.md); chờ chỉ dẫn mới của chủ dự án.
 
-**Tham chiếu:** [GDD](GDD.md), [trải nghiệm nhập môn](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay R01](NGUNG-KHI-GAMEPLAY-SPEC.md), [khảo nghiệm](HANG-NHAC-ENCOUNTERS-TRIAL.md), [tọa độ nguồn](design/world/hang-nhac-layout-v1/layout.json).
+**Tham chiếu lịch sử:** [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md), [đặc tả ART/logic](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md), [tọa độ nguồn](design/world/hang-nhac-layout-v1/layout.json). Các đặc tả Ngưng Khí/R01/khảo nghiệm cũ đã dọn.
 
 **Quyết định hiện hành sau đề xuất này, 08/10/2026:** chủ dự án chọn concept mới làm khu môn phái, nối map ngoại vi farm riêng và phiên khảo nghiệm riêng. Các nhánh/tọa độ Z05 bên dưới chỉ mô tả đề xuất cũ, không là kế hoạch đặt tuyến farm vào scene môn phái. Concept giữ tỷ lệ vật thể/nhân vật đã chọn ở nền 2×; không khóa kích thước world theo bảng v0.1.
 

@@ -1,5 +1,7 @@
 # Định hướng ART — TuTiên
 
+> **Phân loại tài liệu ·15/10/2026.** Các dự toán/roster GDD cũ trong hồ sơ này thuộc lịch sử. Chuẩn nguồn để tái dùng và trạng thái từng bộ đọc tại [thư viện ART](design/README.md); ưu tiên/số lượng mới theo [kế hoạch asset GDD 0.35](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md). Nguồn người hiện hành theo Pixel02 và identity riêng Huyễn Tâm/Tịch Bạch; nền theo Vân Ngọc V2, UI theo Đạo Ấn V3.
+
 **Khí Hóa Thần theo lớp · 12/10:** [Bản 02](design/characters/wang-lin-hoa-than-review-v2/README.md) sửa Sinh Tử sáng ngà/nẹp ngọc, thêm khí rear/front và hạt động; Tu Đạo ngọc bạc, Đọa Ma xanh tím/huyết sắc. [Quy ước layer riêng](CHARACTER-AURA-LAYERS.md) giữ cùng chân và body hiện hành khi làm hướng/animation sau này. Review motion texture, chưa atlas FX từng frame/người tám hướng; chờ owner đánh giá.
 
 **Hóa Thần 01 · 12/10:** [Sinh Tử/Tu Đạo, Huyền Tử/Đọa Ma và hai khí tức](design/characters/wang-lin-hoa-than-review-v1/README.md) có bốn source ImageGen/prompt riêng. Áo giữ nguyên chibi, chỉ ghép vùng vải; khí tĩnh tách canvas/pivot, không làm người lớn hơn. Gallery/map cùng năm áo và mốc gốc, mặc định tắt khí để so áo. Chờ duyệt hình, chưa animation hoặc thay ART runtime.
@@ -123,7 +125,7 @@ Bảng trên giữ brief phản hồi UI của phương án idle trước; chu k
 | Tích hợp gameplay | Nhiệm vụ Hằng Nhạc, combat chủ động, tu luyện hỗ trợ và tiến trình | Thiết kế theo GDD; chưa triển khai |
 | VFX tích hợp | Gắn host events, pose theo actor/hướng và kiểm khả năng đọc | Đợt ART 15 skill đã đóng; hướng/SFX/icon/LOD/benchmark là hạng mục riêng |
 
-Các tổng portrait/minh họa **20/22/30** và gói **A → B** trước là dự toán lịch sử, không đại diện ngân sách nhập môn ba nhân vật hoặc map/runtime hiện hành. Số nguồn, frame, atlas và nhân vật được theo dõi riêng trong [ASSET-PLAN](ASSET-PLAN.md).
+Các tổng portrait/minh họa **20/22/30** và gói **A → B** trước là dự toán lịch sử, không đại diện ngân sách GDD 0.35 hoặc map/runtime hiện hành. Số nguồn, frame, atlas và nhân vật được theo dõi riêng trong [ASSET-PLAN](ASSET-PLAN.md).
 
 ## 9. Nghiệm thu hướng hình
 

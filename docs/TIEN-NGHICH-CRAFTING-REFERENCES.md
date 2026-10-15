@@ -1,8 +1,10 @@
 # Tiên Nghịch và reference bổ sung — thiết kế vật phẩm, luyện chế, năng lực
 
+> **Phân loại tài liệu ·15/10/2026.** Nghiên cứu này giữ nguồn khảo sát ngày 11/10. Áp dụng ý tưởng vào nội dung mới qua [kế hoạch asset GDD 0.35](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md) và [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md); các link VP/IT bên dưới chỉ truy nguồn bản lịch sử.
+
 **Nghiên cứu đợt 2 · bản 0.1 · 10/10/2026.** Theo yêu cầu owner đào thêm reference/đọc cốt truyện để lên kế hoạch rõ. Đọc cùng [nghiên cứu đợt 1](XIANXIA-GAME-RESEARCH.md). Đợt này bổ sung **3 game**, khảo sát 12 trang chương Tiên Nghịch; không tuyên bố đã đọc hết truyện hoặc chơi trực tiếp các game. Không đổi canon, roster, runtime, ART hay save.
 
-Đầu ra thiết kế từ nghiên cứu nằm ở [vật phẩm/luyện chế](ITEM-CRAFTING-DESIGN.md) và [lộ trình sản xuất](ITEM-PRODUCTION-PLAN.md). Những món đặt tên mới đều là sáng tạo đề xuất, không gắn tên truyện vào món tự chế để tạo cảm giác có nguồn.
+Đầu ra thiết kế lịch sử từ nghiên cứu được giữ ở [vật phẩm/luyện chế](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-CRAFTING-DESIGN.md) và [lộ trình sản xuất](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-PRODUCTION-PLAN.md). Những món đặt tên mới đều là sáng tạo đề xuất, không gắn tên truyện vào món tự chế để tạo cảm giác có nguồn.
 
 ## 1. Cách dùng bằng chứng
 

@@ -1,6 +1,8 @@
 # Backlog thiết kế — Hằng Nhạc và hệ thống tu tiên
 
-**Phiên bản:** 0.16 · **Cập nhật:** 11/10/2026 · **Tham chiếu:** [GDD 0.32](GDD.md), [nghiên cứu tu tiên](XIANXIA-GAME-RESEARCH.md), [kế hoạch nội dung](RPG-CONTENT-PLAN.md), [lộ trình RM0–RM6](DEVELOPMENT-ROADMAP.md), [nhân vật](CHARACTER-SYSTEM.md), [nhiệm vụ](QUEST-SYSTEM.md), [tu tiên](CULTIVATION-SYSTEM.md), [gameplay Ngưng Khí](NGUNG-KHI-GAMEPLAY-SPEC.md), [tiến trình/phần thưởng](HANG-NHAC-PROGRESSION-REWARDS.md), [đối thủ/HN10](HANG-NHAC-ENCOUNTERS-TRIAL.md).
+> **Phân loại tài liệu ·15/10/2026.** Phần kế hoạch/số lượng/roster bên dưới là snapshot trước GDD 0.35, giữ để truy nguồn kỹ thuật và ART; không dùng làm backlog hay yêu cầu sản xuất mới. Nguồn áp dụng: [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [kế hoạch asset toàn game đã thống nhất](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md). Tận dụng bộ Huyễn Tâm/Tịch Bạch, quái/boss/NPC hiện có; Tư Đồ Nam và Lý Mộ Uyển không là tuyến playable bổ sung. Các trạng thái “hiện hành/đã chốt” dưới đây chỉ đúng tại ngày ghi mốc.
+
+**Snapshot 0.16 · 11/10/2026 · trước GDD 0.35.** Tham chiếu hiện hành để đối chiếu: [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md), [nghiên cứu tu tiên](XIANXIA-GAME-RESEARCH.md), [kế hoạch nội dung](RPG-CONTENT-PLAN.md), [lộ trình phát triển](DEVELOPMENT-ROADMAP.md). Các link HN/QUEST cũ trong bản snapshot đã được dọn, không dùng làm backlog mới.
 
 **Trọng tâm 11/10:** owner chốt vòng mạnh lên–farm/build–PvE/PvP–sưu tập/hiện diện xuyên chặng. [Kế hoạch](MMORPG-PROGRESSION-PLAN.md) và [hợp đồng Core](MMORPG-SYSTEM-CONTRACTS.md) có bản thiết kế; luật cụ thể và cân bằng chưa khóa. GD20/GD21 nối mục tiêu dài hạn vào pilot nhỏ, không mở toàn MMO trước HN05.
 
@@ -22,7 +24,7 @@ Backlog hiện hành thay tuyến đệ tử P và kết thúc A tại Ngưng Kh
 
 ## 2. Đặc tả trước triển khai
 
-[Trải nghiệm v0.4](HANG-NHAC-NGUNG-KHI-SPEC.md), [gameplay v0.3](NGUNG-KHI-GAMEPLAY-SPEC.md) và [tiến trình/phần thưởng v0.2](HANG-NHAC-PROGRESSION-REWARDS.md) có tuyến, bộ chung, nền/15 ngưỡng, vật tư và idle thử. [Đối thủ/HN10 v0.1](HANG-NHAC-ENCOUNTERS-TRIAL.md) bổ sung GD06/GD09/GD10: collider/telegraph/AI, ba pha, checkpoint/reset và pause riêng khi mất mạng. Trạng thái của các phần mở rộng là **đã có đề xuất để đánh giá**, chưa duyệt toàn bộ số liệu/chơi thử/triển khai. GD07 đã có identity/lease/đổi nhân vật local; còn kho chung/chuyển realm/recovery/production. GD12 đã có cast bộ ba/động tác nhiệm vụ, còn enemy/pháp khí theo nhu cầu. GD11 thiết kế tuyến sau map. Không dùng nhãn chung này phủ nhận runtime HN01–HN04 đã có.
+Các gói trải nghiệm, gameplay, tiến trình/phần thưởng và HN10 bên trên là snapshot đã dọn, từng bổ sung tuyến/bộ chung/ngưỡng/vật tư và fixture đối thủ. Trạng thái của các phần mở rộng là **đã có đề xuất để đánh giá**, chưa duyệt toàn bộ số liệu/chơi thử/triển khai. GD07 đã có identity/lease/đổi nhân vật local; còn kho chung/chuyển realm/recovery/production. GD12 đã có cast bộ ba/động tác nhiệm vụ, còn enemy/pháp khí theo nhu cầu. GD11 thiết kế tuyến sau map. Không dùng nhãn chung này phủ nhận runtime HN01–HN04 đã có; điều kiện hiện hành đọc từ hợp đồng 0.35/VG01–VG11.
 
 | ID | Công việc | Phụ thuộc | Kết quả cần đánh giá |
 | --- | --- | --- | --- |
@@ -39,12 +41,12 @@ Backlog hiện hành thay tuyến đệ tử P và kết thúc A tại Ngưng Kh
 | GD11 | Phân hóa Trúc Cơ đầu | GD04, GD05 | Một lựa chọn/tổ hợp/tuyến riêng có tác dụng thật, thử/chỉnh được |
 | GD12 | Ngân sách ART cho cả ba | GD04, GD06, GD09 | Tách asset có sẵn khỏi animation/hướng mới; không tự mở lại gói đã duyệt |
 | GD13 | Mô hình nhân vật RPG | GD02, GD04, GD05, nền GD07 | [Bản 0.1](CHARACTER-SYSTEM.md): ownership/state/nguồn stat/mốc/đồ/UI; chốt D01–D03 trước RM1/RM2 |
-| GD14 | Khung nhiệm vụ dùng lại | GD03, GD07, GD13 | [Bản 0.1](QUEST-SYSTEM.md): định nghĩa/tiến trình/attempt, credit/thưởng/lifecycle/versioning; không đổi luật HN01–HN04 |
+| GD14 | Khung nhiệm vụ dùng lại | GD03, GD07, GD13 | Snapshot QUEST đã dọn; định nghĩa/tiến trình/attempt, credit/thưởng/lifecycle/versioning hiện hành xem [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md), không đổi wire HN01–HN04 |
 | GD15 | Đặc tả vòng HN05 xuyên hệ thống | GD06, GD09, GD10, GD12–GD14 | Chốt D02–D06: item/M02, failure/reconnect, ngoại vi/transfer, E01 và UI; gate RM2 |
 | GD16 | Nghiên cứu và trục truyện/bản sắc | GDD, GD01–GD03 | [Nguồn](XIANXIA-GAME-RESEARCH.md) và [ứng viên sáng tạo](VAN-HAI-CREATIVE-DIRECTION.md) đã viết; chốt D09–D10/ND1, không suy thành canon mới |
 | GD17 | Nội dung phát triển xuyên hệ thống | GD04–GD06, GD13–GD16 | [Ma trận/các gói ND2–ND4/ND6](RPG-CONTENT-PLAN.md): mỗi chặng có hành động, thành quả, đồ/năng lực, nguồn–chi và ngân sách; chốt D11 |
 | GD18 | Hệ quả và nội dung MMO | GD07, GD10, GD14, GD16 | ND5/D12: choice riêng, một callback nếu chọn; party/farm chung có luật trước RM5, không simulation thế giới vô hạn |
-| GD19 | Nguyên liệu/luyện chế và vòng đời pháp bảo | GD04, GD08, GD13, GD15–GD18 | [Nguồn đợt 2](TIEN-NGHICH-CRAFTING-REFERENCES.md), [thiết kế](ITEM-CRAFTING-DESIGN.md), [gói VP/IT](ITEM-PRODUCTION-PLAN.md): nguồn–recipe–nội dung dùng và ngân sách asset, không toàn nghề trước HN05 |
+| GD19 | Nguyên liệu/luyện chế và vòng đời pháp bảo | GD04, GD08, GD13, GD15–GD18 | [Nguồn đợt 2](TIEN-NGHICH-CRAFTING-REFERENCES.md), [thiết kế](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-CRAFTING-DESIGN.md), [gói VP/IT](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-PRODUCTION-PLAN.md): nguồn–recipe–nội dung dùng và ngân sách asset, không toàn nghề trước HN05 |
 | GD20 | Tiến triển MMORPG xuyên cảnh giới | GD04, GD06, GD08, GD11, GD19 | [Ma trận](MMORPG-PROGRESSION-PLAN.md): mỗi chặng có nguồn sức mạnh, PvE/farm, PvP/nhóm và diện mạo; chọn một pilot RM5-A/B/C theo gate, VP4-A farm không đợi EX hữu hạn |
 | GD21 | Core loot/PvP/appearance và vận hành | GD07, GD13–GD15 + scope pilot GD20 | [Contract](MMORPG-SYSTEM-CONTRACTS.md): target damage peer, source/business receipt, schema/codec, public projection và một writer; lỗi/lifecycle/telemetry theo gói, không rewrite auth/framework |
 
@@ -60,7 +62,7 @@ Backlog hiện hành thay tuyến đệ tử P và kết thúc A tại Ngưng Kh
 
 ### Hàng đợi gần nhất
 
-1. Đánh giá [bản chương phương án A](HANG-NHAC-CHAPTER-PLAN.md) đã cụ thể hóa GD16/ND1–ND2: graph/thẻ HN05–HN12, nhánh bộ ba, một lựa chọn 2 nhánh. Đạo đồ và dấu niêm là phương án làm việc, chưa mặc định duyệt toàn bộ nội dung.
+1. Snapshot phương án A từng cụ thể hóa GD16/ND1–ND2: graph/thẻ HN05–HN12, nhánh bộ ba, một lựa chọn 2 nhánh. Hồ sơ chương đã dọn; Đạo đồ và dấu niêm chỉ là phương án làm việc lịch sử, chưa mặc định duyệt toàn bộ nội dung. Đối chiếu hiện hành tại [VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md).
 2. Rà/chốt GD13–GD14/D01–D03 từ [catalog nhập môn](HANG-NHAC-CONTENT-CATALOG.md) đã chi tiết hóa ND3/phần ND4: nguồn vật phẩm, recipe một instance, nền vận hành/hộ thân, validator/migration. Giữ HN01–HN04/save, chưa khóa balance mới.
 3. Chốt D04–D06/GD15 và phần D11–D12 liên quan trước code chuyển cảnh/encounter; ND5–ND6 quy định phạm vi riêng/chung/storyboard và ngân sách. UI/map có thể song song khi hợp đồng đã rõ.
 4. Tách ticket RM1: adapter/luật tối thiểu, item, migration/receipt và snapshot; không refactor toàn game hay làm quest editor trước nội dung.

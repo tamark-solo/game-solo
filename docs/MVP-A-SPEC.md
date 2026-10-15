@@ -2,7 +2,7 @@
 
 > **Hồ sơ lịch sử, đối chiếu ngày 08/10/2026:** toàn bộ luật E01–E08, nước/linh dịch/480 tu vi, chu kỳ 10 giây, giới hạn 8 giờ, save cục bộ/import JSON và kết thúc tầng 1 bên dưới thuộc thiết kế idle trước. Chúng được giữ để truy nguồn, không là đặc tả runtime hoặc hợp đồng máy chủ hiện hành. Hướng đệ tử riêng từng được xét sau bản idle cũng đã bị thay.
 
-> **Chuẩn hiện hành là [GDD 0.34](GDD.md) (14/10/2026):** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Xem thêm [Lộ trình Giai đoạn & Nhiệm vụ](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic Từng Chặng](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md).
+> **Chuẩn hiện hành là [GDD 0.35](GDD.md) (15/10/2026):** 1 tuyến nhân vật chính duy nhất (`Huyễn Tâm a` / `Tịch Bạch b`) cùng 4 Pháp Bảo biểu tượng, Tư Đồ Nam trong Thiên Nghịch Châu, Lý Mộ Uyển ở Quyết Minh Cốc/Tu Ma Hải. Xem thêm [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [lộ trình VG01–VG11](STAGE-PROGRESSION-QUEST-REDESIGN-2026-10-14.md) và [Đặc tả Artwork & Logic](STAGE-ART-AND-LOGIC-SPEC-2026-10-14.md).
 
 **Phiên bản:** 0.2, ngày 06/10/2026.  
 **Trạng thái nguồn:** đặc tả thiết kế ngày 06/10; không có gameplay idle được nghiệm thu bởi tài liệu này.\

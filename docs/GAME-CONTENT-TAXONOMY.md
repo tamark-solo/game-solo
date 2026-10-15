@@ -1,8 +1,10 @@
 # Phân loại nội dung — catalog thống nhất cho Vân Hải Đạo Đồ
 
+> **Phân loại tài liệu ·15/10/2026.** Giữ làm tài liệu kỹ thuật về phân lớp/authority và kiểm soát dữ liệu. Các ví dụ GDD 0.32, HN/EX/VP và số 13 item/sáu recipe thuộc snapshot cũ, không là thiết kế nội dung hiện hành. Điều kiện và nguồn–chi áp dụng xem [hợp đồng GDD 0.35](GDD-035-UNIFIED-CONTRACT.md) và [kế hoạch asset toàn game](ITEM-MATERIAL-ASSET-MASTER-PLAN-GDD-035.md); việc dọn docs chưa đổi schema/registry/runtime.
+
 **Thiết kế 0.1 · 11/10/2026 · phục vụ GDD 0.32.** Đây là khung biên tập/kiểm soát đề xuất; có [sổ kiểm kê tham chiếu](design/systems/content-registry-v1/README.md), đã có [registry quản trị chỉ đọc](GAME-CONTENT-CATALOG-RUNTIME.md); compiler và definition gameplay mới chưa triển khai. Không tự cấp đồ, mở nhiệm vụ, chốt rarity/stat/giao dịch hoặc duyệt ART.
 
-Đọc cùng [GDD](GDD.md), [nhân vật](CHARACTER-SYSTEM.md), [nhiệm vụ](QUEST-SYSTEM.md), [catalog Hằng Nhạc](HANG-NHAC-CONTENT-CATALOG.md), [luyện chế](ITEM-CRAFTING-DESIGN.md), [hợp đồng MMORPG](MMORPG-SYSTEM-CONTRACTS.md) và [kế hoạch kiểm soát Core/storage](GAME-CONTENT-CONTROL-PLAN.md). Tài liệu này sở hữu cách phân loại; tài liệu chuyên ngành tiếp tục sở hữu luật và số liệu, tránh có hai bảng điều hành cùng nội dung.
+Đọc cùng [GDD 0.35](GDD.md), [hợp đồng thống nhất](GDD-035-UNIFIED-CONTRACT.md), [catalog Hằng Nhạc](HANG-NHAC-CONTENT-CATALOG.md), [luyện chế](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-CRAFTING-DESIGN.md), [hợp đồng MMORPG](MMORPG-SYSTEM-CONTRACTS.md) và [kế hoạch kiểm soát Core/storage](GAME-CONTENT-CONTROL-PLAN.md). Tài liệu này sở hữu cách phân loại; tài liệu chuyên ngành tiếp tục sở hữu luật và số liệu, tránh có hai bảng điều hành cùng nội dung.
 
 ## 1. Ba lớp dữ liệu, ba trách nhiệm
 
@@ -75,7 +77,7 @@ Theo dõi riêng **design status** (candidate/specified/reviewed), **code status
 | `hn-refining-material` — thiết kế | item/material, luyện hóa nhiệm vụ | Xác nhận HN05/HN06 theo bảng thử → recipe HN08; binding character, chưa nguồn farm runtime |
 | `hn-training-jade` — thiết kế | item/artifact, instance raw/refined | Phôi HN08 một lần → biến đổi cùng instance, charm khi refined; chưa code/ART duyệt |
 
-Catalog HN có **5 định nghĩa: 3 hiện có, 2 dự kiến**. Catalog tới VP3 có 13 theo [luyện chế](ITEM-CRAFTING-DESIGN.md); số thử ở nguồn đó, không tạo thêm bảng balance trong tài liệu này. Validator pilot hiện chỉ nhận hai gear, không hỗ trợ đồ mới bằng việc thêm icon/constants.
+Catalog HN có **5 định nghĩa: 3 hiện có, 2 dự kiến**. Catalog tới VP3 có 13 theo [luyện chế](archive/asset-plans-before-gdd-035-2026-10-15/ITEM-CRAFTING-DESIGN.md); số thử ở nguồn đó, không tạo thêm bảng balance trong tài liệu này. Validator pilot hiện chỉ nhận hai gear, không hỗ trợ đồ mới bằng việc thêm icon/constants.
 
 **HN05:** quest chính tuyến một lần, hiện `unreleased`. Tham chiếu encounter E01 đề xuất và ngoại vi chưa triển khai; thắng tạo `hn05-encounter-proof` của đúng owner/attempt, rồi xác nhận NPC mới cấp gói nguồn HN05 atomic. Proof không là loot/item; kill E01 không tự cấp thêm hoặc mở farm lặp. Source key theo character + reward grant lần đầu giữ qua đổi text/version; retry attempt khác không nhận lại. Số thử và luật thua/transfer cần chốt trong đặc tả HN05 trước release.
 

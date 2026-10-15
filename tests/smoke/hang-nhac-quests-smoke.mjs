@@ -48,9 +48,9 @@ try {
   assert.equal(await page.locator('#quest-state').textContent(), 'Chưa kết nối');
   assert.match(await page.locator('#quest-next').textContent(), /Vào sân chung/);
   await page.locator('#entry-journal').click(); await page.locator('#sect-dialog').waitFor({ state: 'visible' });
-  assert.equal(await page.locator('.quest-card').count(), 5);
-  assert.equal(await page.locator('.quest-card[data-quest=HN03]').getAttribute('data-state'), 'locked');
-  assert.equal(await page.locator('.quest-card[data-quest=HN05]').getAttribute('data-state'), 'unreleased');
+  assert.equal(await page.locator('.quest-card').count(), 11);
+  assert.equal(await page.locator('.quest-card[data-quest=VG01]').getAttribute('data-state'), 'active');
+  assert.equal(await page.locator('.quest-card[data-quest=VG02]').getAttribute('data-state'), 'locked');
   await page.keyboard.press('j'); await page.locator('#sect-dialog').waitFor({ state: 'hidden' });
   await page.waitForFunction(() => document.activeElement?.id === 'join');
   assert.equal(await page.evaluate(() => document.activeElement.id), 'join');
@@ -66,11 +66,12 @@ try {
   assert.equal((await game()).own.casts, castsBefore);
   await page.keyboard.press('Escape');
   await page.locator('#sect-dialog').waitFor({ state: 'hidden' });
-  await page.locator('#quest-guide').click(); await page.locator('[data-action=accept_intro]').click();
+  await page.locator('#quest-guide').click();
+  await page.locator('#sect-dialog .sect-chapter-route').first().click();
   await page.waitForFunction(() => window.__hangNhacSect().view?.hn01);
-  await page.locator('#sect-close').click();
-  assert.equal(await page.locator('#quest-title').textContent(), 'HN02 · Một vòng vận hành');
-  assert.equal(await page.locator('#quest-chapter-progress').textContent(), '1/16 nhiệm vụ');
+  assert.equal(await page.locator('#sect-dialog').isVisible(), false);
+  assert.match(await page.locator('#quest-title').textContent(), /Phế Sài Nhập Môn/);
+  assert.equal(await page.locator('#quest-chapter-progress').textContent(), '0/11 Hồi · Trần Duy · Tiếp Dẫn');
   const startRoute = async () => {
     await page.locator('#quest-guide').click();
     await page.waitForFunction(() => window.__hangNhacNavigation().status === 'moving');
@@ -88,6 +89,7 @@ try {
     return Math.hypot(p.x - start.x, p.y - start.y) > 12;
   }, { x: beforeRoute.x, y: beforeRoute.y });
   await page.setViewportSize({ width: 844, height: 390 });
+  await page.waitForTimeout(100);
   const landscapeNavigation = await page.evaluate(() => {
     const tracker = document.querySelector('#sect-objective').getBoundingClientRect();
     const stop = document.querySelector('#quest-navigation button');
@@ -119,49 +121,66 @@ try {
   checks.push('explicit_quest_autoroute_moves_and_manual_W_Escape_map_skill_cancel');
 
   await startRoute();
-  await page.reload(); await page.waitForFunction(() => window.__hangNhacSect?.().view?.hn01);
+  await page.reload();
+  await page.waitForFunction(() => {
+    const diagnostics = window.__hangNhacDiagnostics?.();
+    return window.__hangNhacSect?.().view?.hn01 && diagnostics?.shell?.phase === 'playing' && !diagnostics.shell.blocking && document.visibilityState === 'visible';
+  });
   await assertRouteStopped();
   assert.notEqual((await navigation()).status, 'moving', 'reload does not restart an old route');
   assert.equal((await game()).own.profileId, profileId);
-  assert.equal(await page.locator('#quest-chapter-progress').textContent(), '1/16 nhiệm vụ');
+  assert.equal((await page.locator('#quest-chapter-progress').textContent()).startsWith('0/11 Hồi'), true);
+  await page.bringToFront();
+  await page.waitForTimeout(100);
   await page.locator('#journal').click();
+  await page.locator('#sect-dialog').waitFor({ state: 'visible' });
   await page.locator('[data-navigate-station="cultivation"]').click();
+  await page.locator('#sect-dialog').waitFor({ state: 'hidden' });
   await page.waitForFunction(() => window.__hangNhacNavigation().status === 'moving');
   await page.waitForFunction(() => window.__hangNhacNavigation().status === 'arrived', undefined, { timeout: 30000 });
+  await page.waitForFunction(({ x, y }) => {
+    const own = window.__hangNhacR01().own;
+    return !!own && Math.hypot(own.x - x, own.y - y) <= 84;
+  }, SECT_STATIONS[1], { timeout: 5000 });
   const arrived = (await game()).own;
   assert.ok(Math.hypot(arrived.x - SECT_STATIONS[1].x, arrived.y - SECT_STATIONS[1].y) <= 84, 'navigation arrives inside the existing NPC interaction range');
-  assert.equal(await page.locator('#sect-dialog').isVisible(), false, 'arrival does not open a dialogue or issue a quest command');
+  assert.equal(await page.locator('#sect-dialog').isVisible(), true, 'arrival opens the existing NPC interaction without issuing a quest command');
+  await page.locator('#sect-close').click();
+  await page.locator('#sect-dialog').waitFor({ state: 'hidden' });
   assert.equal((await sect()).view.foundation, 'none');
   assert.equal((await sect()).view.hn02, false);
   checks.push('journal_station_route_arrives_without_auto_accept_or_turn_in_and_reload_does_not_resume');
 
   const switchAvatar = async avatar => {
-    await page.locator('#leave').click(); await page.waitForFunction(() => !window.__hangNhacR01().own);
+    await page.locator('#menu-button').click();
+    await page.locator('#game-menu').waitFor({ state: 'visible' });
+    await page.locator('#menu-character').click();
+    await page.waitForFunction(() => !window.__hangNhacR01().own);
     await page.locator('#avatar:enabled').selectOption(avatar); await page.locator('#join:enabled').click();
     await page.waitForFunction(id => window.__hangNhacR01().own?.connected && window.__hangNhacSect().view?.profileId === window.__hangNhacR01().own.profileId && window.__hangNhacR01().avatarId === id, avatar);
   };
   await switchAvatar('CHR-SITU-NAN');
   assert.equal(await page.locator('#quest-state').textContent(), 'Đang thực hiện');
-  assert.equal(await page.locator('#quest-objectives [data-complete=true]').count(), 3);
-  assert.match(await page.locator('#cultivation-summary').textContent(), /Linh thể.*Tích lũy hồi phục/);
+  assert.match(await page.locator('.quest-objective-progress').textContent(), /1\s*\/\s*3/);
+  assert.match(await page.locator('#cultivation-summary').textContent(), /Tu vi/);
   await page.screenshot({ path: 'artifacts/hang-nhac-quests-desktop.png' });
   checks.push('separate_partial_HN02_snapshot_and_spirit_progression');
 
   await switchAvatar('CHR-LI-MUWAN');
-  assert.equal(await page.locator('#quest-state').textContent(), 'Chờ xác nhận');
-  assert.equal(await page.locator('#quest-objectives [data-complete=true]').count(), 3);
+  assert.equal(await page.locator('#quest-state').textContent(), 'Chờ ghi nhận đạo quả');
+  assert.match(await page.locator('.quest-objective-progress').textContent(), /3\s*\/\s*3/);
   assert.equal((await sect()).view.cultivation, 100);
   await page.locator('#journal').click();
-  assert.equal(await page.locator('.quest-card[data-quest=HN03]').getAttribute('data-state'), 'ready');
+  assert.equal(await page.locator('.quest-card[data-quest=VG01]').getAttribute('data-state'), 'ready');
   await page.screenshot({ path: 'artifacts/hang-nhac-quests-journal.png' });
   await page.locator('#sect-close').click();
-  await page.locator('#quest-guide').click(); await page.locator('[data-action=lesson_confirm]').click();
-  await page.waitForFunction(() => window.__hangNhacSect().view.lessons.hn03);
-  await page.locator('#sect-close').click();
-  assert.equal((await sect()).view.cultivation, 180);
-  assert.equal(await page.locator('#quest-title').textContent(), 'HN04 · Nhìn đòn mà tiến');
-  assert.equal(await page.locator('#quest-chapter-progress').textContent(), '3/16 nhiệm vụ');
-  checks.push('ready_is_not_rewarded_until_NPC_server_confirmation_and_next_quest');
+  await page.locator('#quest-guide').click();
+  await page.locator('#sect-dialog .sect-chapter-route').first().click();
+  await page.waitForFunction(() => window.__hangNhacSect().view?.chapter?.facts?.includes('g2-act-VG01'));
+  assert.equal((await sect()).view.cultivation, 390);
+  assert.match(await page.locator('#quest-title').textContent(), /Máu Nhuộm Ngoại Vi/);
+  assert.equal((await page.locator('#quest-chapter-progress').textContent()).startsWith('1/11 Hồi'), true);
+  checks.push('ready_is_not_rewarded_until_G2_server_confirmation_and_next_act');
 
   await page.setViewportSize({ width: 390, height: 844 });
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);

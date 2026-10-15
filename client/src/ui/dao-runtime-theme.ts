@@ -1,6 +1,4 @@
-const ART = '/assets/dao-dual-theme-v1';
 const SKILL_ICONS = '/assets/skill-hud/skill-icons-v2.webp';
-const MASK_PARTS = ['tl', 't', 'tr', 'l', 'c', 'r', 'bl', 'b', 'br'] as const;
 
 interface OrbLayout { left: number; top: number; size: number }
 // Narrow presentation port; SkillHotbar supplies it without a UI-to-client import.
@@ -17,52 +15,21 @@ interface DaoHotbarLayout {
   slotTop: number;
 }
 
-// Measured from the current Tu Đạo hud.webp, in the native 760 × 140 frame.
-// Defaults keep the controls aligned while metadata loads, or if it is unavailable.
-const TU_DAO_LAYOUT: DaoHotbarLayout = {
-  hp: { left: 58.3097605893186, top: 35.04088397790055, size: 63.58305709023941 },
-  mp: { left: 637.7572744014733, top: 35.04088397790055, size: 63.58305709023941 },
-  tray: { left: 153.60957642725597, top: 57.03499079189687, width: 452.43093922651934, height: 35.690607734806626 },
-  slotTop: 56.880294659300176,
+// Crisp symmetrical geometry for the Sculpted Vector/CSS Dual-Orb + 10-Slot Pháp Đài (760 × 136).
+const UNIFIED_PHAP_DAI_LAYOUT: DaoHotbarLayout = {
+  hp: { left: 66, top: 34, size: 70 },
+  mp: { left: 624, top: 34, size: 70 },
+  tray: { left: 152, top: 52, width: 456, height: 54 },
+  slotTop: 58,
 };
 
-/** Presentation default only: the current server has no activated Đọa Ma state. */
 export function initializeDaoRuntimeTheme(shell: HTMLElement): void {
-  shell.dataset.daoTheme = 'tu-dao';
-  shell.dataset.skin = 'tu-dao';
-  shell.dataset.daoUx = '05';
+  shell.dataset.uiDesign = 'dao-an-v3';
+  shell.dataset.daoTheme = 'dao-an';
+  shell.dataset.skin = 'dao-an';
+  shell.dataset.daoUx = 'v3';
+  shell.dataset.hudStyle = 'dao-an';
   shell.style.setProperty('--dao-skill-icon-atlas', `url("${SKILL_ICONS}")`);
-  for (const part of MASK_PARTS) {
-    shell.style.setProperty(`--mask-${part}`, `url("${ART}/tu-dao/frame-aperture-${part}.svg")`);
-  }
-}
-
-function record(value: unknown): value is Record<string, unknown> {
-  return typeof value === 'object' && value !== null && !Array.isArray(value);
-}
-
-function within(value: unknown, min: number, max: number): value is number {
-  return typeof value === 'number' && Number.isFinite(value) && value >= min && value <= max;
-}
-
-function validOrb(value: unknown): value is OrbLayout {
-  if (!record(value) || !within(value.left, 0, 760) || !within(value.top, 0, 140) || !within(value.size, 36, 100)) return false;
-  return value.left + value.size <= 760 && value.top + value.size <= 140;
-}
-
-function readLayout(value: unknown): DaoHotbarLayout | undefined {
-  if (!record(value) || !record(value['tu-dao'])) return;
-  const layout = value['tu-dao'], tray = layout.tray;
-  if (!validOrb(layout.hp) || !validOrb(layout.mp) || !record(tray) ||
-      !within(tray.left, 0, 760) || !within(tray.top, 0, 140) ||
-      !within(tray.width, 414, 600) || !within(tray.height, 30, 60) ||
-      !within(layout.slotTop, 0, 104) || tray.left + tray.width > 760 || tray.top + tray.height > 140) return;
-  return {
-    hp: { left: layout.hp.left, top: layout.hp.top, size: layout.hp.size },
-    mp: { left: layout.mp.left, top: layout.mp.top, size: layout.mp.size },
-    tray: { left: tray.left, top: tray.top, width: tray.width, height: tray.height },
-    slotTop: layout.slotTop,
-  };
 }
 
 function applyLayout(root: HTMLElement, layout: DaoHotbarLayout): void {
@@ -81,29 +48,32 @@ function applyLayout(root: HTMLElement, layout: DaoHotbarLayout): void {
 export function attachDaoHotbarTheme(hotbar: HotbarThemeSurface): () => void {
   const controller = new AbortController();
   const root = hotbar.root;
-  root.dataset.daoLayout = 'defaults';
-  applyLayout(root, TU_DAO_LAYOUT);
-  hotbar.setIconAtlas(SKILL_ICONS);
-  hotbar.setFrame(`${ART}/tu-dao/hud.webp`);
-  hotbar.setOrbTexture('/assets/skill-hud/orb-textures-v2.webp');
-  const frame = new Image();
-  root.dataset.daoArt = 'loading';
-  frame.onload = () => { if (!controller.signal.aborted) root.dataset.daoArt = 'ready'; };
-  frame.onerror = () => {
-    if (controller.signal.aborted) return;
-    root.dataset.daoArt = 'fallback';
+  const shell = root.closest<HTMLElement>('#game-shell') ?? document.getElementById('game-shell');
+
+  const syncHudStyle = () => {
+    if (shell?.dataset.uiDesign === 'dao-an-v3') {
+      root.dataset.hudStyle = 'dao-an';
+      hotbar.setIconAtlas(SKILL_ICONS);
+      root.dataset.daoArt = 'ready';
+      root.dataset.daoLayout = 'ready';
+      return;
+    }
+    const style = shell?.dataset.hudStyle || 'empire-lotus';
+    root.dataset.hudStyle = style;
+    applyLayout(root, UNIFIED_PHAP_DAI_LAYOUT);
+    hotbar.setIconAtlas(SKILL_ICONS);
     hotbar.setFrame('');
-  };
-  frame.src = `${ART}/tu-dao/hud.webp`;
-  void fetch(`${ART}/layout.json`, { signal: controller.signal }).then(async response => {
-    if (!response.ok) throw new Error('Missing Dao HUD layout');
-    const layout = readLayout(await response.json());
-    if (!layout) throw new Error('Invalid Dao HUD layout');
-    if (controller.signal.aborted) return;
-    applyLayout(root, layout);
+    hotbar.setOrbTexture('/assets/skill-hud/orb-textures-v2.webp');
+    root.dataset.daoArt = 'ready';
     root.dataset.daoLayout = 'ready';
-  }).catch(() => {
-    if (!controller.signal.aborted) root.dataset.daoLayout = 'fallback';
-  });
-  return () => { controller.abort(); frame.onload = null; frame.onerror = null; };
+  };
+
+  syncHudStyle();
+
+  const onStyleToggle = () => syncHudStyle();
+  window.addEventListener('dao:hud-style-change', onStyleToggle, { signal: controller.signal });
+
+  return () => {
+    controller.abort();
+  };
 }
