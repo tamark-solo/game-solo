@@ -1,0 +1,390 @@
+{
+  "schema": "gdd-character-art-inventory-1",
+  "date": "2026-10-14",
+  "gddVersion": "0.34",
+  "existing": {
+    "mainMilestoneII": {
+      "identities": 2,
+      "appearances": 8,
+      "clips": 512,
+      "keys": 3048,
+      "gearTracks": 512,
+      "fxSequences": 40,
+      "status": "technical-review-ready-new-art-candidate",
+      "review": "../wang-lin-equipment-production-v2/index.html"
+    },
+    "npcWaveA": {
+      "actors": 10,
+      "clips": 240,
+      "status": "SE-pilots-approved-other-views-candidate",
+      "reviews": [
+        "../van-hai-npc-motion-v2/index.html",
+        "../van-hai-npc-wave-a-motion-v2/index.html"
+      ]
+    }
+  },
+  "newConcepts": [
+    {
+      "id": "huyen-tam-entry",
+      "name": "Huyễn Tâm · Ngoại Môn",
+      "group": "main",
+      "act": "VG01–VG06",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/huyen-tam-entry.png",
+      "source": "sources/huyen-tam-entry-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "tich-bach-entry",
+      "name": "Tịch Bạch · Ngoại Môn",
+      "group": "main",
+      "act": "VG01–VG06",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/tich-bach-entry.png",
+      "source": "sources/tich-bach-entry-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "situ-nan-spirit",
+      "name": "Tư Đồ Nam · Tàn hồn",
+      "group": "story",
+      "act": "VG03–VG11",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/situ-nan-spirit.png",
+      "source": "sources/situ-nan-spirit-r2.png",
+      "revision": "r2"
+    },
+    {
+      "id": "li-muwan-alchemist",
+      "name": "Lý Mộ Uyển · Đan sư",
+      "group": "story",
+      "act": "VG05–VG11",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/li-muwan-alchemist.png",
+      "source": "sources/li-muwan-alchemist-r2.png",
+      "revision": "r2"
+    },
+    {
+      "id": "luc-van",
+      "name": "Lục Văn",
+      "group": "npc",
+      "act": "VG03",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/luc-van.png",
+      "source": "sources/luc-van-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "a-ly",
+      "name": "A Ly",
+      "group": "npc",
+      "act": "VG03 / sinh cảnh Trúc Cơ",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/a-ly.png",
+      "source": "sources/a-ly-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "mac-ba",
+      "name": "Mạc Bà",
+      "group": "npc",
+      "act": "VG03",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/mac-ba.png",
+      "source": "sources/mac-ba-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "tieu-nghien",
+      "name": "Tiểu Nghiên",
+      "group": "npc",
+      "act": "VG03",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/tieu-nghien.png",
+      "source": "sources/tieu-nghien-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "sword-servant",
+      "name": "Kiếm Nô Khôi Lỗi",
+      "group": "mob-stage2",
+      "act": "VG08",
+      "bodyNominalPx": 72,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/sword-servant.png",
+      "source": "sources/sword-servant-r2.png",
+      "revision": "r2"
+    },
+    {
+      "id": "yin-corpse-cultivator",
+      "name": "Âm Thi Tu Sĩ",
+      "group": "mob-stage2",
+      "act": "VG09",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/yin-corpse-cultivator.png",
+      "source": "sources/yin-corpse-cultivator-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "blood-talisman-mage",
+      "name": "Huyết Phù Sư",
+      "group": "mob-stage2",
+      "act": "VG09–VG10",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/blood-talisman-mage.png",
+      "source": "sources/blood-talisman-mage-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "hua-lap-quoc",
+      "name": "Hung Linh Hứa Lập Quốc",
+      "group": "boss-stage2",
+      "act": "VG08",
+      "bodyNominalPx": 96,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/hua-lap-quoc.png",
+      "source": "sources/hua-lap-quoc-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "blood-armor-commander",
+      "name": "Huyết Giáp Khôi Lỗi Thống Lĩnh",
+      "group": "boss-stage2",
+      "act": "VG09",
+      "bodyNominalPx": 128,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/blood-armor-commander.png",
+      "source": "sources/blood-armor-commander-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "dark-seal-true-body",
+      "name": "Hắc Ấn · Chân thân Huyết Ấn",
+      "group": "boss-stage2",
+      "act": "VG10",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/dark-seal-true-body.png",
+      "source": "sources/dark-seal-true-body-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "huyen-tam-domain",
+      "name": "Huyễn Tâm · Ý cảnh",
+      "group": "main-future",
+      "act": "Chặng 5 / Mốc III",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/huyen-tam-domain.png",
+      "source": "sources/huyen-tam-domain-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "tich-bach-domain",
+      "name": "Tịch Bạch · Ý cảnh",
+      "group": "main-future",
+      "act": "Chặng 5 / Mốc III",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/tich-bach-domain.png",
+      "source": "sources/tich-bach-domain-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "situ-nan-restored",
+      "name": "Tư Đồ Nam · Nhục thân",
+      "group": "story-future",
+      "act": "Chặng 4",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/situ-nan-restored.png",
+      "source": "sources/situ-nan-restored-r1.png",
+      "revision": "r1"
+    },
+    {
+      "id": "li-muwan-lifespan",
+      "name": "Lý Mộ Uyển · Kiếp thọ nguyên",
+      "group": "story-future",
+      "act": "Chặng 4",
+      "bodyNominalPx": 80,
+      "direction": "southeast",
+      "status": "neutral-candidate-ready-for-owner-selection",
+      "native": "native/li-muwan-lifespan.png",
+      "source": "sources/li-muwan-lifespan-r1.png",
+      "revision": "r1"
+    }
+  ],
+  "npcRoster": [
+    {
+      "id": "NPC-HN-GUIDE",
+      "name": "Trần Duy",
+      "wave": "A",
+      "role": "Chấp sự tiếp dẫn"
+    },
+    {
+      "id": "NPC-HN-CULTIVATION",
+      "name": "Diệp Tĩnh",
+      "wave": "A",
+      "role": "Giảng sư vận khí"
+    },
+    {
+      "id": "NPC-HN-TRAINING",
+      "name": "Tạ Kiếm Sơn",
+      "wave": "A",
+      "role": "Giáo tập luyện thuật"
+    },
+    {
+      "id": "NPC-HN-PREPARATION",
+      "name": "Tô Nhược",
+      "wave": "A",
+      "role": "Chấp sự Tư Vật Các"
+    },
+    {
+      "id": "NPC-HN-HERBALIST",
+      "name": "Bạch Chỉ",
+      "wave": "A",
+      "role": "Dược sư ngoại viện"
+    },
+    {
+      "id": "NPC-HN-FORGE",
+      "name": "Tống Thiết",
+      "wave": "A",
+      "role": "Luyện khí sư"
+    },
+    {
+      "id": "NPC-HN-ROUTE-KEEPER",
+      "name": "Hứa Hành",
+      "wave": "A",
+      "role": "Người giữ tuyến"
+    },
+    {
+      "id": "NPC-HN-GATE-WARDEN",
+      "name": "Đinh Sóc",
+      "wave": "A",
+      "role": "Hộ sơn đệ tử"
+    },
+    {
+      "id": "NPC-HN-ARCHIVIST",
+      "name": "Lục Văn",
+      "wave": "B",
+      "role": "Thủ thư Tàng Kinh"
+    },
+    {
+      "id": "NPC-HN-BEAST-KEEPER",
+      "name": "A Ly",
+      "wave": "B",
+      "role": "Người coi linh thú"
+    },
+    {
+      "id": "NPC-HN-TEA",
+      "name": "Mạc Bà",
+      "wave": "B",
+      "role": "Người coi trà đình"
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-WATER",
+      "name": "Kỷ An",
+      "wave": "A",
+      "role": "Đệ tử vận khí"
+    },
+    {
+      "id": "NPC-HN-DISCIPLE-SWORD",
+      "name": "Phùng Dã",
+      "wave": "A",
+      "role": "Đệ tử luyện kiếm"
+    },
+    {
+      "id": "NPC-HN-MESSENGER",
+      "name": "Tiểu Nghiên",
+      "wave": "B",
+      "role": "Người đưa tin"
+    }
+  ],
+  "rules": [
+    "GDD dated14/10 is design authority. MII production status is read from delivery, not stale narrative text.",
+    "MII visual unlock now follows VG07–VG11/Trúc Cơ→Kết Đan. This does not alter frozen old metadata or live balance.",
+    "Main MIII entries here are common-body concepts only, not eight family outfits.",
+    "Future story forms are sketches for later stages, not newly unlocked actors.",
+    "New neutral concepts require visual review before real views/actions. Existing approved ART is read-only."
+  ],
+  "remainingAfterNeutralReview": [
+    "Mốc I family gear/body variations for both identities and real eight views/actions",
+    "Eight family-specific Mốc III appearances and domain FX",
+    "Four WaveB NPC views/idle/talk/profession gestures",
+    "Tư Đồ Nam spirit motion/soft spectral FX and Lý Mộ Uyển alchemy motion/portraits",
+    "Stage2 mobs/bosses real views/motion/FX after neutral review",
+    "Chặng 1 monster/elite/boss artwork needs a new scoped concept decision; do not restore retired GDD artwork automatically."
+  ],
+  "runtimeIntegrated": false,
+  "productionDate": "2026-10-15",
+  "coverage": {
+    "newNeutralConcepts": 18,
+    "sourceImages": 21,
+    "directionsPerConcept": 1,
+    "motionClips": 0,
+    "newExternalFx": 0
+  },
+  "retiredLegacy": {
+    "status": "archived-excluded-from-active-art",
+    "date": "2026-10-15",
+    "archive": "../../../archive/gdd-legacy-enemies-2026-10-15/manifest.json",
+    "monstersAndElites": {
+      "actors": 11,
+      "clips": 440,
+      "keys": 2640,
+      "status": "body-feedback-positive-review-candidate",
+      "review": "../van-hai-monster-animation-v1/index.html"
+    },
+    "bosses": [
+      {
+        "name": "Vân Nha Lang Vương",
+        "status": "motion-and-vfx-owner-approved",
+        "review": "../cloud-wolf-king-animation-v1/index.html"
+      },
+      {
+        "name": "Hắc Ấn Chấp Sự",
+        "status": "neutral03-and-vfx02-approved-motion01-candidate",
+        "review": "../dark-seal-officer-animation-v1/index.html"
+      },
+      {
+        "name": "Tam Ấn Khôi Lỗi",
+        "status": "neutral02-candidate-motion-not-produced",
+        "review": "../van-hai-boss-concepts-v2/index.html"
+      },
+      {
+        "name": "Cổ Mộc Trấn Khí",
+        "status": "neutral02-candidate-motion-not-produced",
+        "review": "../van-hai-boss-concepts-v2/index.html"
+      }
+    ],
+    "note": "GDD gameplay roster/IDs are retained. Legacy artwork is not the active basis for new GDD production."
+  },
+  "neutralApproval": "approval.json"
+}

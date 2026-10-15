@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "tests": 11,
+  "commands": [
+    {
+      "command": "python -X utf8 -m unittest discover -s docs/design/characters/gdd-character-animation-v1 -p test_soft_extent.py -v",
+      "tests": 4
+    },
+    {
+      "command": "python -X utf8 -m unittest discover -s docs/design/characters/gdd-character-animation-v1 -p test_api_source_ops.py -v",
+      "tests": 7
+    }
+  ],
+  "scope": "Offline synthetic alpha crop/original-byte preservation, foreign-body rejection and one-shot paid POST guards; no actual POST from tests."
+}

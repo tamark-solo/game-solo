@@ -1,0 +1,277 @@
+{
+  "jobs": [
+    {
+      "id": "hua-lap-quoc-eight-view-neutral-board",
+      "actorId": "hua-lap-quoc",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/hua-lap-quoc-eight-view-neutral-board-enemy-r2.txt",
+      "promptSha256": "bc7c57d0f66b834ff871a1d5f9fc8842e6fe17b7dc305dc20ca3a80864e54211",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang camera/pixel support ONLY; OWN spectral anatomy PRIMARY",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ]
+        },
+        {
+          "file": "inputs/hua-lap-quoc-clean.png",
+          "sha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/hua-lap-quoc-clean.png",
+          "originalSha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+          "role": "OWN approved spectral anatomy and identity PRIMARY"
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-clean.png"
+      ],
+      "raw": "view-masters/sources/hua-lap-quoc-eight-view-neutral-board-r1.png",
+      "status": "generated-awaiting-view-review",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "preserved-soft-RGBA",
+      "history": [
+        {
+          "id": "hua-lap-quoc-eight-view-neutral-board",
+          "actorId": "hua-lap-quoc",
+          "direction": "eight-view-board",
+          "directions": [
+            "north",
+            "northeast",
+            "east",
+            "southeast",
+            "south",
+            "southwest",
+            "west",
+            "northwest"
+          ],
+          "grid": [
+            4,
+            2
+          ],
+          "prompt": "prompts/hua-lap-quoc-eight-view-neutral-board-r1.txt",
+          "promptSha256": "bc7c57d0f66b834ff871a1d5f9fc8842e6fe17b7dc305dc20ca3a80864e54211",
+          "inputs": [
+            {
+              "file": "inputs/wang-eight-view-camera-matrix.png",
+              "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+              "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+              "composedFrom": [
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+                  "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+                  "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+                  "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+                  "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+                  "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+                  "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+                  "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+                  "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+                }
+              ]
+            },
+            {
+              "file": "inputs/hua-lap-quoc-clean.png",
+              "sha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/hua-lap-quoc-clean.png",
+              "originalSha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+              "role": "Own approved identity/clothing support"
+            }
+          ],
+          "references": [
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-clean.png"
+          ],
+          "raw": "view-masters/sources/hua-lap-quoc-eight-view-neutral-board-r1.png",
+          "status": "planned",
+          "purpose": "independently drawn same-actor view masters before actions",
+          "alphaPolicy": "preserved-soft-RGBA"
+        }
+      ],
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-eight-view-neutral-board\\source.png",
+      "sha256": "d8d1f8233f7bdced8d5b4873d8ded145d6c33f7dee5f0e3a23e79c1c33904195",
+      "size": [
+        1448,
+        1086
+      ],
+      "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-eight-view-neutral-board/source.json",
+      "apiRequest": "enemy-production/api-sources/hua-lap-quoc-eight-view-neutral-board/request.json",
+      "viewReviewedByModel": true,
+      "viewPackingAllowed": false,
+      "viewAssessment": "Inspected all8: source invents solid boots and walking legs absent from approved own spectral master; rear face plane also exposed. Reject full board for active registration; restore floating intrinsic soft-alpha hem without boots or external FX, preserve source history."
+    },
+    {
+      "id": "hua-lap-quoc-eight-view-neutral-board-rear-r2",
+      "actorId": "hua-lap-quoc",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/hua-lap-quoc-eight-view-neutral-board-rear-r2.txt",
+      "promptSha256": "793cbdf845dab95a9402bc085c505a54562d51fe549196a78ea8b39a9c6d1518",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang camera/pixel support ONLY; OWN spectral anatomy PRIMARY",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ],
+          "index": 1
+        },
+        {
+          "file": "inputs/hua-lap-quoc-eight-view-neutral-board-inspected-r1-clean.png",
+          "sha256": "1cf1be54a5094cfbfd9d48354eab47d5935ac49d6e76c3c9392d2a759fa38cb7",
+          "original": "docs/design/characters/gdd-character-animation-v1/view-masters/sources/hua-lap-quoc-eight-view-neutral-board-r1.png",
+          "originalSha256": "d8d1f8233f7bdced8d5b4873d8ded145d6c33f7dee5f0e3a23e79c1c33904195",
+          "role": "OWN inspected board identity/clothing; its NE/NW cameras must be corrected",
+          "transparentRgbNormalized": true,
+          "index": 2
+        },
+        {
+          "file": "inputs/hua-lap-quoc-clean.png",
+          "sha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/hua-lap-quoc-clean.png",
+          "originalSha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+          "role": "OWN approved spectral anatomy and identity PRIMARY",
+          "index": 3
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-eight-view-neutral-board-inspected-r1-clean.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-clean.png"
+      ],
+      "raw": "view-masters/sources/hua-lap-quoc-eight-view-neutral-board-rear-r2.png",
+      "status": "view-candidate-reviewed",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "preserved-soft-RGBA",
+      "correctiveOf": "hua-lap-quoc-eight-view-neutral-board",
+      "correctionReason": "Inspected all8: source invents solid boots and walking legs absent from approved own spectral master; rear face plane also exposed. Reject full board for active registration; restore floating intrinsic soft-alpha hem without boots or external FX, preserve source history.",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-eight-view-neutral-board-rear-r2\\source.png",
+      "sha256": "2508c01dd768a474ea425164c64ffc5ea6d04ade44bd93992d9125ed41c77af4",
+      "size": [
+        1448,
+        1086
+      ],
+      "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-eight-view-neutral-board-rear-r2/source.json",
+      "apiRequest": "enemy-production/api-sources/hua-lap-quoc-eight-view-neutral-board-rear-r2/request.json",
+      "viewAssessment": "All8 complete spectral bodies inspected after explicit boot removal. Own long tied hair, sly face and charcoal/ivory ragged intrinsic hem maintained; no physical boots or invented walking legs. N/NE/NW hide discernible pupils/mouth, near-ear skin fringe remains. E/W slightly frontal reference cameras. Soft RGBA retained from raw including faint edge color; native light/dark review required. One scale/source, no mirror, fit or paint; projected hover support3px uncertainty, not foot claim. Owner approval pending."
+    }
+  ]
+}

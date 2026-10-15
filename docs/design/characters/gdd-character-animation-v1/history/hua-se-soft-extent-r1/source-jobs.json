@@ -1,0 +1,1093 @@
+{
+  "jobs": [
+    {
+      "id": "hua-lap-quoc-southeast-aoe-neutral-r2",
+      "actorId": "hua-lap-quoc",
+      "name": "Hung Linh Hứa Lập Quốc",
+      "group": "boss-stage2",
+      "direction": "southeast",
+      "bodyNominalPx": 96,
+      "actions": [
+        "cast-aoe"
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "prompt": "prompts/hua-lap-quoc-southeast-aoe-neutral-r2.txt",
+      "promptSha256": "9c7a38edceb9460fe4705809c2c1a788c5db5a0d781a85eb9dce2a47aba8d388",
+      "inputs": [
+        {
+          "index": 1,
+          "file": "inputs/hua-lap-quoc-southeast-neutral-same-view8x.png",
+          "sha256": "56bd850f20ee4ae7c8106c36f68aaf4188448935f423bf8062b5939b5e9eecde",
+          "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/hua-lap-quoc-southeast-neutral.png",
+          "originalSha256": "b6370dadc3188b8046ff9493d24c38e8371ef893c2590b3f67859cbd84729cbc",
+          "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+          "nearestIntegerEnlargement": 8,
+          "transparentRgbNormalized": true
+        },
+        {
+          "index": 2,
+          "file": "inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+          "nearestIntegerEnlargement": 1,
+          "transparentRgbNormalized": true
+        }
+      ],
+      "source": "sources/hua-lap-quoc-southeast-aoe-neutral-r2.png",
+      "status": "generated-awaiting-source-review",
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeReady": false,
+      "calibrationPoses": 8,
+      "sourceActionPoses": 8,
+      "activeActionIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "history": [
+        {
+          "id": "hua-lap-quoc-southeast-aoe",
+          "actorId": "hua-lap-quoc",
+          "name": "Hung Linh Hứa Lập Quốc",
+          "group": "boss-stage2",
+          "direction": "southeast",
+          "bodyNominalPx": 96,
+          "actions": [
+            "cast-aoe"
+          ],
+          "grid": [
+            4,
+            4
+          ],
+          "prompt": "prompts/hua-lap-quoc-southeast-aoe-r1.txt",
+          "promptSha256": "36f3f37fbd016298291ef342e617bcefac4ea54bf2c1a43ab5cfbd5b2ac5e590",
+          "inputs": [
+            {
+              "file": "inputs/hua-lap-quoc-clean.png",
+              "sha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+              "original": "docs/design/characters/gdd-character-concepts-v1/native/hua-lap-quoc.png",
+              "originalSha256": "c49728b440702053df48d64409c07bbb4c32294aa90c3c18ceddcf82c6e0774b",
+              "index": 1,
+              "role": "own-approved-identity/outfit",
+              "nearestIntegerEnlargement": 8,
+              "transparentRgbNormalized": true
+            },
+            {
+              "file": "inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+              "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+              "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+              "index": 2,
+              "role": "Wang-same-view-pixel/anatomy-reference",
+              "nearestIntegerEnlargement": 1,
+              "transparentRgbNormalized": true
+            }
+          ],
+          "source": "sources/hua-lap-quoc-southeast-aoe-r1.png",
+          "status": "planned",
+          "artApproved": false,
+          "motionApproved": false,
+          "runtimeReady": false,
+          "calibrationPoses": 8,
+          "sourceActionPoses": 8,
+          "activeActionIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "id": "hua-lap-quoc-southeast-aoe",
+          "actorId": "hua-lap-quoc",
+          "name": "Hung Linh Hứa Lập Quốc",
+          "group": "boss-stage2",
+          "direction": "southeast",
+          "bodyNominalPx": 96,
+          "actions": [
+            "cast-aoe"
+          ],
+          "grid": [
+            4,
+            4
+          ],
+          "prompt": "prompts/hua-lap-quoc-southeast-aoe-enemy-r3.txt",
+          "promptSha256": "0fd1f84fc135386f993eb0d9ea5e14cd9b9d4e0ccbbb46760a2a0a389c34f782",
+          "inputs": [
+            {
+              "index": 1,
+              "file": "inputs/hua-lap-quoc-clean.png",
+              "sha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+              "original": "docs/design/characters/gdd-character-concepts-v1/native/hua-lap-quoc.png",
+              "originalSha256": "c49728b440702053df48d64409c07bbb4c32294aa90c3c18ceddcf82c6e0774b",
+              "role": "OWN inspected SAME-VIEW motion target PRIMARY",
+              "nearestIntegerEnlargement": 8,
+              "transparentRgbNormalized": true
+            },
+            {
+              "index": 2,
+              "file": "inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+              "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+              "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+              "role": "Wang camera/pixel support only; OWN enemy anatomy is authoritative",
+              "nearestIntegerEnlargement": 1,
+              "transparentRgbNormalized": true
+            },
+            {
+              "index": 3,
+              "file": "inputs/hua-lap-quoc-clean.png",
+              "sha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+              "original": "docs/design/characters/gdd-character-concepts-v1/native/hua-lap-quoc.png",
+              "originalSha256": "c49728b440702053df48d64409c07bbb4c32294aa90c3c18ceddcf82c6e0774b",
+              "role": "OWN approved enemy identity/anatomy/outfit PRIMARY",
+              "nearestIntegerEnlargement": 8,
+              "transparentRgbNormalized": true
+            }
+          ],
+          "source": "sources/hua-lap-quoc-southeast-aoe-enemy-r3.png",
+          "status": "planned",
+          "artApproved": false,
+          "motionApproved": false,
+          "runtimeReady": false,
+          "calibrationPoses": 8,
+          "sourceActionPoses": 8,
+          "activeActionIndexes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "alphaPolicy": "preserved-soft-RGBA",
+          "enemyRecipeVersion": 3,
+          "anatomyAuthority": "own-spirit",
+          "supportMode": "spectral-projection",
+          "bodyCanvas": [
+            192,
+            160
+          ],
+          "bodyPivot": [
+            96,
+            144
+          ],
+          "waitingForViewMaster": false,
+          "requiredViewMaster": null,
+          "boundViewId": null,
+          "previewDurationMsByAction": {
+            "cast-aoe": [
+              120,
+              160,
+              220,
+              100,
+              180,
+              220
+            ]
+          },
+          "previewTimingsAreBalance": false,
+          "phaseLabels": {
+            "cast-aoe": [
+              "Sẵn sàng",
+              "Dẫn lực",
+              "Khóa thế",
+              "Phát lực",
+              "Dư thế",
+              "Hồi thế"
+            ]
+          }
+        }
+      ],
+      "alphaPolicy": "preserved-soft-RGBA",
+      "enemyRecipeVersion": 3,
+      "anatomyAuthority": "own-spirit",
+      "supportMode": "spectral-projection",
+      "bodyCanvas": [
+        192,
+        160
+      ],
+      "bodyPivot": [
+        96,
+        144
+      ],
+      "waitingForViewMaster": false,
+      "requiredViewMaster": null,
+      "boundViewId": "hua-lap-quoc-southeast-neutral",
+      "previewDurationMsByAction": {
+        "cast-aoe": [
+          120,
+          160,
+          220,
+          100,
+          180,
+          220
+        ]
+      },
+      "previewTimingsAreBalance": false,
+      "phaseLabels": {
+        "cast-aoe": [
+          "Sẵn sàng",
+          "Dẫn lực",
+          "Khóa thế",
+          "Phát lực",
+          "Dư thế",
+          "Hồi thế"
+        ]
+      },
+      "neutralSeeded": true,
+      "cameraSeedOf": "hua-lap-quoc-southeast-aoe",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-southeast-aoe-neutral-r2\\source.png",
+      "sourceSha256": "5d054d4f31eda26efd6b026b86d6ccc4f5e3f164e198beebd01d21fd985fce92",
+      "originalSha256": "5d054d4f31eda26efd6b026b86d6ccc4f5e3f164e198beebd01d21fd985fce92",
+      "sourceSize": [
+        1402,
+        1122
+      ],
+      "sourceViewed": true,
+      "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-southeast-aoe-neutral-r2/source.json",
+      "apiRequest": "enemy-production/api-sources/hua-lap-quoc-southeast-aoe-neutral-r2/request.json",
+      "poseSelections": {
+        "cast-aoe": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      "sourcePackingAllowed": true,
+      "sourceAssessment": "All16 source-derived native figures visually inspected. Own SE spirit identity, black/gold chest and white ragged soft-alpha hem retained; no boots/legs, no source edge cut or touching bodies. Two-hand prayer at chest opens into broad outward command then recoils and returns to rest7. Omit4 redundant release and6 extra neutral. One calibration scale with soft-RGBA support projection, no mirror/fit/paint. Candidate only, no owner ART/motion approval."
+    },
+    {
+      "id": "hua-lap-quoc-southeast-g1-neutral-r2-idle-wide-r4",
+      "actorId": "hua-lap-quoc",
+      "name": "Hung Linh Hứa Lập Quốc",
+      "group": "boss-stage2",
+      "direction": "southeast",
+      "bodyNominalPx": 96,
+      "actions": [
+        "idle"
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "prompt": "prompts/hua-lap-quoc-southeast-g1-neutral-r2-idle-wide-r4.txt",
+      "promptSha256": "833d3fff5c43bc9dc396932c22625272724620b9becce7813b0b1513172b4d27",
+      "inputs": [
+        {
+          "index": 1,
+          "file": "inputs/hua-lap-quoc-southeast-neutral-same-view8x.png",
+          "sha256": "56bd850f20ee4ae7c8106c36f68aaf4188448935f423bf8062b5939b5e9eecde",
+          "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/hua-lap-quoc-southeast-neutral.png",
+          "originalSha256": "b6370dadc3188b8046ff9493d24c38e8371ef893c2590b3f67859cbd84729cbc",
+          "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+          "nearestIntegerEnlargement": 8,
+          "transparentRgbNormalized": true
+        },
+        {
+          "index": 2,
+          "file": "inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+          "nearestIntegerEnlargement": 1,
+          "transparentRgbNormalized": true
+        }
+      ],
+      "source": "sources/hua-lap-quoc-southeast-g1-neutral-r2-idle-wide-r4.png",
+      "status": "generated-awaiting-source-review",
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeReady": false,
+      "alphaPolicy": "preserved-soft-RGBA",
+      "enemyRecipeVersion": 3,
+      "anatomyAuthority": "own-spirit",
+      "supportMode": "spectral-projection",
+      "bodyCanvas": [
+        192,
+        160
+      ],
+      "bodyPivot": [
+        96,
+        144
+      ],
+      "waitingForViewMaster": false,
+      "requiredViewMaster": null,
+      "boundViewId": "hua-lap-quoc-southeast-neutral",
+      "previewDurationMsByAction": {
+        "idle": [
+          180,
+          180,
+          180,
+          180,
+          180,
+          180
+        ]
+      },
+      "previewTimingsAreBalance": false,
+      "phaseLabels": {
+        "idle": [
+          "Nghỉ",
+          "Hít",
+          "Chuyển nhẹ",
+          "Thở",
+          "Lắng",
+          "Nghỉ"
+        ]
+      },
+      "neutralSeeded": true,
+      "cameraSeedOf": "hua-lap-quoc-southeast-g1",
+      "calibrationPoses": 8,
+      "activeActionIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "requestedSourceSize": "2048x1536",
+      "splitSourceOf": "hua-lap-quoc-southeast-g1-neutral-r2",
+      "corrective": false,
+      "correctionReason": "Unexecuted spectral source split into spacious one-action sheets based on observed long-hair clipping/touching in earlier actors. No image yet; no review or approval implied.",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-southeast-g1-neutral-r2-idle-wide-r4\\source.png",
+      "sourceSha256": "8a8ee4127db4ffc6b70344ffc65f81b390f8c9f84f2c1387c6e86e5476b6989e",
+      "originalSha256": "8a8ee4127db4ffc6b70344ffc65f81b390f8c9f84f2c1387c6e86e5476b6989e",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceViewed": true,
+      "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-southeast-g1-neutral-r2-idle-wide-r4/source.json",
+      "apiRequest": "enemy-production/api-sources/hua-lap-quoc-southeast-g1-neutral-r2-idle-wide-r4/request.json",
+      "poseSelections": {
+        "idle": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          7
+        ]
+      },
+      "sourcePackingAllowed": true,
+      "sourceAssessment": "All16 source-derived native figures visually inspected. Own SE spirit identity, black/gold chest and white ragged soft-alpha hem retained; no boots/legs, no source edge cut or touching bodies. Quiet hover, hair and ragged hem sway with small attached cuff hands. Exclude2 with wider arm flourish to keep rest quiet. One calibration scale with soft-RGBA support projection, no mirror/fit/paint. Candidate only, no owner ART/motion approval."
+    },
+    {
+      "id": "hua-lap-quoc-southeast-g1-neutral-r2-hit-wide-r4",
+      "actorId": "hua-lap-quoc",
+      "name": "Hung Linh Hứa Lập Quốc",
+      "group": "boss-stage2",
+      "direction": "southeast",
+      "bodyNominalPx": 96,
+      "actions": [
+        "hit"
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "prompt": "prompts/hua-lap-quoc-southeast-g1-neutral-r2-hit-wide-r4.txt",
+      "promptSha256": "f8073f150f089ed9772f512bc9d2aecba8ed9ee65f28f6a6da25f7d4a8f7bf92",
+      "inputs": [
+        {
+          "index": 1,
+          "file": "inputs/hua-lap-quoc-southeast-neutral-same-view8x.png",
+          "sha256": "56bd850f20ee4ae7c8106c36f68aaf4188448935f423bf8062b5939b5e9eecde",
+          "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/hua-lap-quoc-southeast-neutral.png",
+          "originalSha256": "b6370dadc3188b8046ff9493d24c38e8371ef893c2590b3f67859cbd84729cbc",
+          "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+          "nearestIntegerEnlargement": 8,
+          "transparentRgbNormalized": true
+        },
+        {
+          "index": 2,
+          "file": "inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+          "nearestIntegerEnlargement": 1,
+          "transparentRgbNormalized": true
+        }
+      ],
+      "source": "sources/hua-lap-quoc-southeast-g1-neutral-r2-hit-wide-r4.png",
+      "status": "generated-awaiting-source-review",
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeReady": false,
+      "alphaPolicy": "preserved-soft-RGBA",
+      "enemyRecipeVersion": 3,
+      "anatomyAuthority": "own-spirit",
+      "supportMode": "spectral-projection",
+      "bodyCanvas": [
+        192,
+        160
+      ],
+      "bodyPivot": [
+        96,
+        144
+      ],
+      "waitingForViewMaster": false,
+      "requiredViewMaster": null,
+      "boundViewId": "hua-lap-quoc-southeast-neutral",
+      "previewDurationMsByAction": {
+        "hit": [
+          100,
+          100,
+          160,
+          100,
+          120,
+          160
+        ]
+      },
+      "previewTimingsAreBalance": false,
+      "phaseLabels": {
+        "hit": [
+          "Sẵn sàng",
+          "Giật nhẹ",
+          "Giật mạnh",
+          "Bật lại",
+          "Hồi thế",
+          "Sẵn sàng"
+        ]
+      },
+      "neutralSeeded": true,
+      "cameraSeedOf": "hua-lap-quoc-southeast-g1",
+      "calibrationPoses": 8,
+      "activeActionIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "requestedSourceSize": "2048x1536",
+      "splitSourceOf": "hua-lap-quoc-southeast-g1-neutral-r2",
+      "corrective": false,
+      "correctionReason": "Unexecuted spectral source split into spacious one-action sheets based on observed long-hair clipping/touching in earlier actors. No image yet; no review or approval implied.",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-southeast-g1-neutral-r2-hit-wide-r4\\source.png",
+      "sourceSha256": "bf3a765ace9c1ff1a0818adf40b3b774790ade1f33ceea5e5ee2f50f721bf433",
+      "originalSha256": "bf3a765ace9c1ff1a0818adf40b3b774790ade1f33ceea5e5ee2f50f721bf433",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceViewed": true,
+      "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-southeast-g1-neutral-r2-hit-wide-r4/source.json",
+      "apiRequest": "enemy-production/api-sources/hua-lap-quoc-southeast-g1-neutral-r2-hit-wide-r4/request.json",
+      "poseSelections": {
+        "hit": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "sourcePackingAllowed": true,
+      "sourceAssessment": "All16 source-derived native figures visually inspected. Own SE spirit identity, black/gold chest and white ragged soft-alpha hem retained; no boots/legs, no source edge cut or touching bodies. Torso compresses with hands drawn inward, then recovers upright in hover. No detached hand or invented leg. One calibration scale with soft-RGBA support projection, no mirror/fit/paint. Candidate only, no owner ART/motion approval."
+    },
+    {
+      "id": "hua-lap-quoc-southeast-g2-neutral-r2-appear-wide-r4",
+      "actorId": "hua-lap-quoc",
+      "name": "Hung Linh Hứa Lập Quốc",
+      "group": "boss-stage2",
+      "direction": "southeast",
+      "bodyNominalPx": 96,
+      "actions": [
+        "appear"
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "prompt": "prompts/hua-lap-quoc-southeast-g2-neutral-r2-appear-wide-r4.txt",
+      "promptSha256": "30f690a45569c1a324b731f669f011e21a39d46b549dbeb6773477cd1155d0f2",
+      "inputs": [
+        {
+          "index": 1,
+          "file": "inputs/hua-lap-quoc-southeast-neutral-same-view8x.png",
+          "sha256": "56bd850f20ee4ae7c8106c36f68aaf4188448935f423bf8062b5939b5e9eecde",
+          "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/hua-lap-quoc-southeast-neutral.png",
+          "originalSha256": "b6370dadc3188b8046ff9493d24c38e8371ef893c2590b3f67859cbd84729cbc",
+          "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+          "nearestIntegerEnlargement": 8,
+          "transparentRgbNormalized": true
+        },
+        {
+          "index": 2,
+          "file": "inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+          "nearestIntegerEnlargement": 1,
+          "transparentRgbNormalized": true
+        }
+      ],
+      "source": "sources/hua-lap-quoc-southeast-g2-neutral-r2-appear-wide-r4.png",
+      "status": "generated-awaiting-source-review",
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeReady": false,
+      "alphaPolicy": "preserved-soft-RGBA",
+      "enemyRecipeVersion": 3,
+      "anatomyAuthority": "own-spirit",
+      "supportMode": "spectral-projection",
+      "bodyCanvas": [
+        192,
+        160
+      ],
+      "bodyPivot": [
+        96,
+        144
+      ],
+      "waitingForViewMaster": false,
+      "requiredViewMaster": null,
+      "boundViewId": "hua-lap-quoc-southeast-neutral",
+      "previewDurationMsByAction": {
+        "appear": [
+          160,
+          160,
+          200,
+          180,
+          240,
+          320
+        ]
+      },
+      "previewTimingsAreBalance": false,
+      "phaseLabels": {
+        "appear": [
+          "Thu thế",
+          "Mở vai",
+          "Nâng thân",
+          "Dựng thế",
+          "Lắng áo/giáp",
+          "Sẵn sàng"
+        ]
+      },
+      "neutralSeeded": true,
+      "cameraSeedOf": "hua-lap-quoc-southeast-g2",
+      "calibrationPoses": 8,
+      "activeActionIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "requestedSourceSize": "2048x1536",
+      "splitSourceOf": "hua-lap-quoc-southeast-g2-neutral-r2",
+      "corrective": false,
+      "correctionReason": "Unexecuted spectral source split into spacious one-action sheets based on observed long-hair clipping/touching in earlier actors. No image yet; no review or approval implied.",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-southeast-g2-neutral-r2-appear-wide-r4\\source.png",
+      "sourceSha256": "27fc52f649966f28493e07130fab3182bfb25d6794f87e4642b63e1fe3cd5bcf",
+      "originalSha256": "27fc52f649966f28493e07130fab3182bfb25d6794f87e4642b63e1fe3cd5bcf",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceViewed": true,
+      "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-southeast-g2-neutral-r2-appear-wide-r4/source.json",
+      "apiRequest": "enemy-production/api-sources/hua-lap-quoc-southeast-g2-neutral-r2-appear-wide-r4/request.json",
+      "poseSelections": {
+        "appear": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "sourcePackingAllowed": true,
+      "sourceAssessment": "All16 source-derived native figures visually inspected. Own SE spirit identity, black/gold chest and white ragged soft-alpha hem retained; no boots/legs, no source edge cut or touching bodies. Contracted bowed body opens both palms then returns to quiet hover. All body remains present; no external glow baked into body. One calibration scale with soft-RGBA support projection, no mirror/fit/paint. Candidate only, no owner ART/motion approval."
+    },
+    {
+      "id": "hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4",
+      "actorId": "hua-lap-quoc",
+      "name": "Hung Linh Hứa Lập Quốc",
+      "group": "boss-stage2",
+      "direction": "southeast",
+      "bodyNominalPx": 96,
+      "actions": [
+        "cast-single-target"
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "prompt": "prompts/hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4.txt",
+      "promptSha256": "fbdd63c9e167b5a966a7ec52548210f4e8f4cc8c8fcbcd154709075afbd8ffbd",
+      "inputs": [
+        {
+          "index": 1,
+          "file": "inputs/hua-lap-quoc-southeast-neutral-same-view8x.png",
+          "sha256": "56bd850f20ee4ae7c8106c36f68aaf4188448935f423bf8062b5939b5e9eecde",
+          "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/hua-lap-quoc-southeast-neutral.png",
+          "originalSha256": "b6370dadc3188b8046ff9493d24c38e8371ef893c2590b3f67859cbd84729cbc",
+          "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+          "nearestIntegerEnlargement": 8,
+          "transparentRgbNormalized": true
+        },
+        {
+          "index": 2,
+          "file": "inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+          "nearestIntegerEnlargement": 1,
+          "transparentRgbNormalized": true
+        }
+      ],
+      "source": "sources/hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4.png",
+      "status": "generated-awaiting-source-review",
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeReady": false,
+      "alphaPolicy": "preserved-soft-RGBA",
+      "enemyRecipeVersion": 3,
+      "anatomyAuthority": "own-spirit",
+      "supportMode": "spectral-projection",
+      "bodyCanvas": [
+        192,
+        160
+      ],
+      "bodyPivot": [
+        96,
+        144
+      ],
+      "waitingForViewMaster": false,
+      "requiredViewMaster": null,
+      "boundViewId": "hua-lap-quoc-southeast-neutral",
+      "previewDurationMsByAction": {
+        "cast-single-target": [
+          120,
+          160,
+          220,
+          100,
+          180,
+          220
+        ]
+      },
+      "previewTimingsAreBalance": false,
+      "phaseLabels": {
+        "cast-single-target": [
+          "Dẫn hồn",
+          "Kết ấn",
+          "Chỉ hồn",
+          "Thu tay",
+          "Hạ thế",
+          "Hồi thế"
+        ]
+      },
+      "neutralSeeded": true,
+      "cameraSeedOf": "hua-lap-quoc-southeast-g2",
+      "calibrationPoses": 8,
+      "activeActionIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "requestedSourceSize": "2048x1536",
+      "splitSourceOf": "hua-lap-quoc-southeast-g2-neutral-r2",
+      "corrective": false,
+      "correctionReason": "Unexecuted spectral source split into spacious one-action sheets based on observed long-hair clipping/touching in earlier actors. No image yet; no review or approval implied.",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4\\source.png",
+      "sourceSha256": "4aede97d07d03024e8d3880cb199ab228a0b5a4a66f50f7fc898ffcf0490fd8c",
+      "originalSha256": "4aede97d07d03024e8d3880cb199ab228a0b5a4a66f50f7fc898ffcf0490fd8c",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceViewed": true,
+      "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4/source.json",
+      "apiRequest": "enemy-production/api-sources/hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4/request.json",
+      "poseSelections": {
+        "cast-single-target": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7
+        ]
+      },
+      "sourcePackingAllowed": true,
+      "sourceAssessment": "All16 source-derived native figures visually inspected. Own SE spirit identity, black/gold chest and white ragged soft-alpha hem retained; no boots/legs, no source edge cut or touching bodies. Prayer joins at sternum, then one hand points toward own forward-right target. Omit3 with an additional double-arm thrust; include7 neutral recovery. One calibration scale with soft-RGBA support projection, no mirror/fit/paint. Candidate only, no owner ART/motion approval."
+    },
+    {
+      "id": "hua-lap-quoc-southeast-gait-neutral-r2-move-wide-r4",
+      "actorId": "hua-lap-quoc",
+      "name": "Hung Linh Hứa Lập Quốc",
+      "group": "boss-stage2",
+      "direction": "southeast",
+      "bodyNominalPx": 96,
+      "actions": [
+        "move"
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "prompt": "prompts/hua-lap-quoc-southeast-gait-neutral-r2-move-wide-r4.txt",
+      "promptSha256": "dcbcb6088628d15d89139d55483856b938858ea77343ca338929b676f2e811ae",
+      "inputs": [
+        {
+          "index": 1,
+          "file": "inputs/hua-lap-quoc-southeast-neutral-same-view8x.png",
+          "sha256": "56bd850f20ee4ae7c8106c36f68aaf4188448935f423bf8062b5939b5e9eecde",
+          "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/hua-lap-quoc-southeast-neutral.png",
+          "originalSha256": "b6370dadc3188b8046ff9493d24c38e8371ef893c2590b3f67859cbd84729cbc",
+          "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+          "nearestIntegerEnlargement": 8,
+          "transparentRgbNormalized": true
+        },
+        {
+          "index": 2,
+          "file": "inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+          "nearestIntegerEnlargement": 1,
+          "transparentRgbNormalized": true
+        }
+      ],
+      "source": "sources/hua-lap-quoc-southeast-gait-neutral-r2-move-wide-r4.png",
+      "status": "generated-awaiting-source-review",
+      "alphaPolicy": "preserved-soft-RGBA",
+      "enemyRecipeVersion": 3,
+      "anatomyAuthority": "own-spirit",
+      "supportMode": "spectral-projection",
+      "bodyCanvas": [
+        192,
+        160
+      ],
+      "bodyPivot": [
+        96,
+        144
+      ],
+      "waitingForViewMaster": false,
+      "requiredViewMaster": null,
+      "boundViewId": "hua-lap-quoc-southeast-neutral",
+      "previewDurationMsByAction": {
+        "move": [
+          140,
+          140,
+          140,
+          140,
+          140,
+          140
+        ]
+      },
+      "previewTimingsAreBalance": false,
+      "phaseLabels": {
+        "move": [
+          "Chạm trái",
+          "Trụ trái",
+          "Chuyển chân",
+          "Chạm phải",
+          "Trụ phải",
+          "Chuyển chân"
+        ]
+      },
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeReady": false,
+      "neutralSeeded": true,
+      "cameraSeedOf": "hua-lap-quoc-southeast-gait",
+      "calibrationPoses": 8,
+      "activeActionIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "requestedSourceSize": "2048x1536",
+      "splitSourceOf": "hua-lap-quoc-southeast-gait-neutral-r2",
+      "corrective": false,
+      "correctionReason": "Unexecuted spectral source split into spacious one-action sheets based on observed long-hair clipping/touching in earlier actors. No image yet; no review or approval implied.",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-southeast-gait-neutral-r2-move-wide-r4\\source.png",
+      "sourceSha256": "c47a72678c9f0cbae3229bd09a1aa584f4ce73ff6941c68963db3cf98a9edc2c",
+      "originalSha256": "c47a72678c9f0cbae3229bd09a1aa584f4ce73ff6941c68963db3cf98a9edc2c",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceViewed": true,
+      "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-southeast-gait-neutral-r2-move-wide-r4/source.json",
+      "apiRequest": "enemy-production/api-sources/hua-lap-quoc-southeast-gait-neutral-r2-move-wide-r4/request.json",
+      "poseSelections": {
+        "move": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "sourcePackingAllowed": true,
+      "sourceAssessment": "All16 source-derived native figures visually inspected. Own SE spirit identity, black/gold chest and white ragged soft-alpha hem retained; no boots/legs, no source edge cut or touching bodies. Forward glide lean and cyclic streaming sleeve/hem; no gait feet. Extra7 is neutral, omitted from loop. One calibration scale with soft-RGBA support projection, no mirror/fit/paint. Candidate only, no owner ART/motion approval."
+    },
+    {
+      "id": "hua-lap-quoc-southeast-attack-neutral-r2-attack-wide-r4",
+      "actorId": "hua-lap-quoc",
+      "name": "Hung Linh Hứa Lập Quốc",
+      "group": "boss-stage2",
+      "direction": "southeast",
+      "bodyNominalPx": 96,
+      "actions": [
+        "attack"
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "prompt": "prompts/hua-lap-quoc-southeast-attack-neutral-r2-attack-wide-r4.txt",
+      "promptSha256": "f40a5e386db78d4d514dd731a781f50f930351dd46d9737cf6e37a8243ebf1a7",
+      "inputs": [
+        {
+          "index": 1,
+          "file": "inputs/hua-lap-quoc-southeast-neutral-same-view8x.png",
+          "sha256": "56bd850f20ee4ae7c8106c36f68aaf4188448935f423bf8062b5939b5e9eecde",
+          "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/hua-lap-quoc-southeast-neutral.png",
+          "originalSha256": "b6370dadc3188b8046ff9493d24c38e8371ef893c2590b3f67859cbd84729cbc",
+          "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+          "nearestIntegerEnlargement": 8,
+          "transparentRgbNormalized": true
+        },
+        {
+          "index": 2,
+          "file": "inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+          "nearestIntegerEnlargement": 1,
+          "transparentRgbNormalized": true
+        }
+      ],
+      "source": "sources/hua-lap-quoc-southeast-attack-neutral-r2-attack-wide-r4.png",
+      "status": "generated-awaiting-source-review",
+      "alphaPolicy": "preserved-soft-RGBA",
+      "enemyRecipeVersion": 3,
+      "anatomyAuthority": "own-spirit",
+      "supportMode": "spectral-projection",
+      "bodyCanvas": [
+        192,
+        160
+      ],
+      "bodyPivot": [
+        96,
+        144
+      ],
+      "waitingForViewMaster": false,
+      "requiredViewMaster": null,
+      "boundViewId": "hua-lap-quoc-southeast-neutral",
+      "previewDurationMsByAction": {
+        "attack": [
+          120,
+          160,
+          220,
+          100,
+          180,
+          220
+        ]
+      },
+      "previewTimingsAreBalance": false,
+      "phaseLabels": {
+        "attack": [
+          "Sẵn sàng",
+          "Dẫn lực",
+          "Khóa thế",
+          "Phát lực",
+          "Dư thế",
+          "Hồi thế"
+        ]
+      },
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeReady": false,
+      "neutralSeeded": true,
+      "cameraSeedOf": "hua-lap-quoc-southeast-attack",
+      "calibrationPoses": 8,
+      "activeActionIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "requestedSourceSize": "2048x1536",
+      "splitSourceOf": "hua-lap-quoc-southeast-attack-neutral-r2",
+      "corrective": false,
+      "correctionReason": "Unexecuted spectral source split into spacious one-action sheets based on observed long-hair clipping/touching in earlier actors. No image yet; no review or approval implied.",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-southeast-attack-neutral-r2-attack-wide-r4\\source.png",
+      "sourceSha256": "8e5a76cf1830c34266eb09812f51c93621029865a3ebd379d8cfc0cbd53b66e1",
+      "originalSha256": "8e5a76cf1830c34266eb09812f51c93621029865a3ebd379d8cfc0cbd53b66e1",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceViewed": true,
+      "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-southeast-attack-neutral-r2-attack-wide-r4/source.json",
+      "apiRequest": "enemy-production/api-sources/hua-lap-quoc-southeast-attack-neutral-r2-attack-wide-r4/request.json",
+      "poseSelections": {
+        "attack": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "sourcePackingAllowed": true,
+      "sourceAssessment": "All16 source-derived native figures visually inspected. Own SE spirit identity, black/gold chest and white ragged soft-alpha hem retained; no boots/legs, no source edge cut or touching bodies. Coil, raised arm, crossing guard, forward open-palm strike, recoil and quiet recovery; attached hand joints. Release fingers are stylized and still require owner motion review. One calibration scale with soft-RGBA support projection, no mirror/fit/paint. Candidate only, no owner ART/motion approval."
+    },
+    {
+      "id": "hua-lap-quoc-southeast-subdued-neutral-r2-subdued-wide-r4",
+      "actorId": "hua-lap-quoc",
+      "name": "Hung Linh Hứa Lập Quốc",
+      "group": "boss-stage2",
+      "direction": "southeast",
+      "bodyNominalPx": 96,
+      "actions": [
+        "subdued"
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "prompt": "prompts/hua-lap-quoc-southeast-subdued-neutral-r2-subdued-wide-r4.txt",
+      "promptSha256": "66a483f5933cf563f455426c47421c7a3e6f11b404763d971ffe3ae67fd9f837",
+      "inputs": [
+        {
+          "index": 1,
+          "file": "inputs/hua-lap-quoc-southeast-neutral-same-view8x.png",
+          "sha256": "56bd850f20ee4ae7c8106c36f68aaf4188448935f423bf8062b5939b5e9eecde",
+          "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/hua-lap-quoc-southeast-neutral.png",
+          "originalSha256": "b6370dadc3188b8046ff9493d24c38e8371ef893c2590b3f67859cbd84729cbc",
+          "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+          "nearestIntegerEnlargement": 8,
+          "transparentRgbNormalized": true
+        },
+        {
+          "index": 2,
+          "file": "inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+          "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+          "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+          "nearestIntegerEnlargement": 1,
+          "transparentRgbNormalized": true
+        }
+      ],
+      "source": "sources/hua-lap-quoc-southeast-subdued-neutral-r2-subdued-wide-r4.png",
+      "status": "generated-awaiting-source-review",
+      "alphaPolicy": "preserved-soft-RGBA",
+      "enemyRecipeVersion": 3,
+      "anatomyAuthority": "own-spirit",
+      "supportMode": "spectral-projection",
+      "bodyCanvas": [
+        192,
+        160
+      ],
+      "bodyPivot": [
+        96,
+        144
+      ],
+      "waitingForViewMaster": false,
+      "requiredViewMaster": null,
+      "boundViewId": "hua-lap-quoc-southeast-neutral",
+      "previewDurationMsByAction": {
+        "subdued": [
+          160,
+          160,
+          200,
+          180,
+          240,
+          320
+        ]
+      },
+      "previewTimingsAreBalance": false,
+      "phaseLabels": {
+        "subdued": [
+          "Bị ép lùi",
+          "Hạ đầu",
+          "Thu tay",
+          "Co linh thể",
+          "Kiệt sức",
+          "Giữ trấn áp"
+        ]
+      },
+      "artApproved": false,
+      "motionApproved": false,
+      "runtimeReady": false,
+      "neutralSeeded": true,
+      "cameraSeedOf": "hua-lap-quoc-southeast-subdued",
+      "calibrationPoses": 8,
+      "activeActionIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "requestedSourceSize": "2048x1536",
+      "splitSourceOf": "hua-lap-quoc-southeast-subdued-neutral-r2",
+      "corrective": false,
+      "correctionReason": "Unexecuted spectral source split into spacious one-action sheets based on observed long-hair clipping/touching in earlier actors. No image yet; no review or approval implied.",
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-southeast-subdued-neutral-r2-subdued-wide-r4\\source.png",
+      "sourceSha256": "166f1648db000b1769d4ded253c489ba9e7272d18576dc24a805141787ecd168",
+      "originalSha256": "166f1648db000b1769d4ded253c489ba9e7272d18576dc24a805141787ecd168",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "sourceViewed": true,
+      "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-southeast-subdued-neutral-r2-subdued-wide-r4/source.json",
+      "apiRequest": "enemy-production/api-sources/hua-lap-quoc-southeast-subdued-neutral-r2-subdued-wide-r4/request.json",
+      "poseSelections": {
+        "subdued": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "sourcePackingAllowed": true,
+      "sourceAssessment": "All16 source-derived native figures visually inspected. Own SE spirit identity, black/gold chest and white ragged soft-alpha hem retained; no boots/legs, no source edge cut or touching bodies. Bowed contracted hover settles into persistent subdued hold; head remains above ragged hem. Not a death/corpse/loot pose. One calibration scale with soft-RGBA support projection, no mirror/fit/paint. Candidate only, no owner ART/motion approval."
+    }
+  ]
+}

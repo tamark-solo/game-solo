@@ -1,0 +1,65 @@
+{
+  "status": "failed-no-retry",
+  "httpStatus": 502,
+  "requestId": "cmq_3dfd0d0f3e306e77cab6791f",
+  "reason": "upstream service overloaded",
+  "providerReportedNoTokensCharged": true,
+  "generationVerified": false,
+  "imageFilesCreated": 0,
+  "requestEndpoint": "https://api.clituasmail.com/v1/responses",
+  "imageModel": "gpt-image-2",
+  "responseModel": "gpt-6-astra",
+  "automaticRetry": false,
+  "modelOrTransportFallback": false,
+  "promptSha256": "5343642460035000a7c3fbcb873d8e648718a4d09927190db4f8f8ccd0ad84ad",
+  "inputHashes": [
+    {
+      "file": "inputs/wang-eight-view-camera-matrix.png",
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+      "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "role": "Wang camera/pixel support ONLY; OWN construct anatomy PRIMARY",
+      "composedFrom": [
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+        }
+      ]
+    },
+    {
+      "file": "inputs/sword-servant-clean.png",
+      "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+      "original": "docs/design/characters/gdd-character-animation-v1/inputs/sword-servant-clean.png",
+      "originalSha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+      "role": "OWN approved nonhuman anatomy and identity PRIMARY"
+    }
+  ]
+}

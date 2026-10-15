@@ -1,0 +1,12 @@
+import {chromium} from 'playwright';
+import fs from 'node:fs/promises';import {createServer} from 'node:http';import {resolve,relative,isAbsolute,extname,dirname} from 'node:path';import {fileURLToPath} from 'node:url';
+import {readbackAllActualFrames} from './gpu-readback.mjs';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..'),workspace=resolve(root,'../../../..'),mime={'.html':'text/html','.mjs':'text/javascript','.js':'text/javascript','.json':'application/json','.png':'image/png','.css':'text/css'},errors=[],failed=[];
+const server=createServer(async(req,res)=>{try{const p=resolve(workspace,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname)),r=relative(workspace,p);if(r.startsWith('..')||isAbsolute(r))throw Error('path');const bytes=await fs.readFile(p);res.writeHead(200,{'Content-Type':mime[extname(p)]||'application/octet-stream'});res.end(bytes);}catch{res.writeHead(404);res.end();}});
+await new Promise(r=>server.listen(0,'127.0.0.1',r));const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'}),page=await browser.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)failed.push(r.url());});
+try{
+ await page.goto(`http://127.0.0.1:${server.address().port}/docs/design/characters/gdd-character-animation-v1/enemy-production/index.html`,{waitUntil:'networkidle'});await page.waitForFunction(()=>document.body.dataset.ready==='true');
+ const count=await page.evaluate(async()=>{const m=await fetch('view-masters.json').then(r=>r.json());window.__gddMotion={manifest:{clips:m.records.map(v=>({id:v.id,canvas:v.canvas,atlas:{file:'../'+v.atlasFile},frames:[{index:0,file:'../'+v.file,pivot:v.pivot,atlasRect:v.atlasRect}]}))}};return m.records.length;});
+ const gpu=await page.evaluate(readbackAllActualFrames);if(gpu.length!==count*2||errors.length||failed.length)throw Error('Enemy neutral GPU/source failure');
+ const report={status:'passed',neutralViews:count,gpuReadbacks:gpu.length,gpuRenders:gpu,errors,failedAssets:failed,animationClips:0,ownerApprovalInferred:false,runtimeIntegrated:false};await fs.writeFile(resolve(root,'enemy-production/view-browser-verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:'passed',neutralViews:count,gpuReadbacks:gpu.length,animationClips:0}));
+}finally{await browser.close();await new Promise(r=>server.close(r));}

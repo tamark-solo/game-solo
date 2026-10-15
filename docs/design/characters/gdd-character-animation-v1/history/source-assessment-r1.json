@@ -1,0 +1,59 @@
+{
+  "id": "huyen-tam-entry-southeast",
+  "actorId": "huyen-tam-entry",
+  "name": "Huyễn Tâm · Ngoại Môn",
+  "group": "main",
+  "direction": "southeast",
+  "bodyNominalPx": 80,
+  "actions": [
+    "idle",
+    "run",
+    "hit",
+    "death",
+    "meditate",
+    "gather",
+    "cast-single-target",
+    "cast-aoe"
+  ],
+  "grid": [
+    6,
+    9
+  ],
+  "prompt": "prompts/huyen-tam-entry-southeast-r1.txt",
+  "promptSha256": "7d06513251176fe9d56b14bc04734b4dce6d2b4b33396dafa3f3ac336c13d889",
+  "inputs": [
+    {
+      "file": "inputs/huyen-tam-entry.png",
+      "sha256": "990386b21360fc2130e464c57e45ed32db298c22fe1cdf8e08a48d49e591442d",
+      "original": "docs/design/characters/gdd-character-concepts-v1/native/huyen-tam-entry.png",
+      "originalSha256": "719aa016ee863ed1c04eda5f646ebc441e3f65661270c7d6f0e5ba8a442cb748",
+      "index": 1,
+      "role": "own-approved-identity/outfit",
+      "nearestIntegerEnlargement": 8
+    },
+    {
+      "file": "inputs/wang-southeast.png",
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+      "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "index": 2,
+      "role": "Wang-same-view-pixel/anatomy-reference",
+      "nearestIntegerEnlargement": 1
+    }
+  ],
+  "source": "sources/huyen-tam-entry-southeast-r1.png",
+  "status": "generated-awaiting-source-review",
+  "artApproved": false,
+  "motionApproved": false,
+  "runtimeReady": false,
+  "original": "C:\\Users\\AnhLT\\.codex\\generated_images\\01a1348f-068e-79a1-abc9-be2c94f982cd\\exec-5d1429d6-1dea-4092-affe-2be63229e7bb.png",
+  "sourceSha256": "9e5f17238c9c0585f73dbbd5f6dc51a2563862fead8f7e2ceed2ecba4ee95864",
+  "originalSha256": "9e5f17238c9c0585f73dbbd5f6dc51a2563862fead8f7e2ceed2ecba4ee95864",
+  "sourceSize": [
+    1024,
+    1536
+  ],
+  "sourceViewed": true,
+  "assessment": "9-row sheet has 226 alpha>=128 pixels on bottom edge; AOE boots clipped. Preserve history, exclude full source from active pack until scoped row selection.",
+  "activeForPacking": false
+}

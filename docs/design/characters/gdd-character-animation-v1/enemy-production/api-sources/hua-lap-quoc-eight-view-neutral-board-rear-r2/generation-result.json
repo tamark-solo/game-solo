@@ -1,0 +1,71 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+      "filename": "wang-eight-view-camera-matrix.png",
+      "mimeType": "image/png",
+      "bytes": 63538,
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-eight-view-neutral-board-inspected-r1-clean.png",
+      "filename": "hua-lap-quoc-eight-view-neutral-board-inspected-r1-clean.png",
+      "mimeType": "image/png",
+      "bytes": 1766894,
+      "sha256": "1cf1be54a5094cfbfd9d48354eab47d5935ac49d6e76c3c9392d2a759fa38cb7",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-clean.png",
+      "filename": "hua-lap-quoc-clean.png",
+      "mimeType": "image/png",
+      "bytes": 27418,
+      "sha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+      "dimensions": {
+        "width": 1024,
+        "height": 1152
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-eight-view-neutral-board-rear-r2\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-eight-view-neutral-board-rear-r2\\source.json",
+      "sha256": "2508c01dd768a474ea425164c64ffc5ea6d04ade44bd93992d9125ed41c77af4",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "sizeMatchesRequest": false
+    }
+  ],
+  "warnings": [
+    "Image 1: router returned 1448x1086, requested 1536x1024. Image saved unchanged; no additional generation was sent."
+  ],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

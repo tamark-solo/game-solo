@@ -1,0 +1,71 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+      "filename": "wang-eight-view-camera-matrix.png",
+      "mimeType": "image/png",
+      "bytes": 63538,
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-talisman-mage-eight-view-neutral-board-inspected-r1-clean.png",
+      "filename": "blood-talisman-mage-eight-view-neutral-board-inspected-r1-clean.png",
+      "mimeType": "image/png",
+      "bytes": 1421685,
+      "sha256": "295138f149271ff31079399053879ee71accd4ab221343b59ae34b19fe136933",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-talisman-mage-clean.png",
+      "filename": "blood-talisman-mage-clean.png",
+      "mimeType": "image/png",
+      "bytes": 13433,
+      "sha256": "71ba64472e14f7e1bbb9799b9b2f93b02f53c9698f3b017b011a9c64b267c1d2",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-talisman-mage-eight-view-neutral-board-rear-r2\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-talisman-mage-eight-view-neutral-board-rear-r2\\source.json",
+      "sha256": "93a398bbe77828e0d00cd0a11ff05efea121cdb78366967073229722c5350a54",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "sizeMatchesRequest": false
+    }
+  ],
+  "warnings": [
+    "Image 1: router returned 1448x1086, requested 1536x1024. Image saved unchanged; no additional generation was sent."
+  ],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

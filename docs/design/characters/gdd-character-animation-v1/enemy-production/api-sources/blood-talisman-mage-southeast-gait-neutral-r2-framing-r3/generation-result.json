@@ -1,0 +1,58 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-talisman-mage-southeast-neutral-same-view8x.png",
+      "filename": "blood-talisman-mage-southeast-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 16555,
+      "sha256": "b8127721bf98505cb8dee7e23d07b5b2d40745b3fc6c4605cb0b3c5a365725fe",
+      "dimensions": {
+        "width": 640,
+        "height": 896
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-southeast-clean.png",
+      "filename": "wang-southeast-clean.png",
+      "mimeType": "image/png",
+      "bytes": 9320,
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-talisman-mage-southeast-gait-neutral-r2-framing-r3\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-talisman-mage-southeast-gait-neutral-r2-framing-r3\\source.json",
+      "sha256": "31fa47ec45af4fd2e166b0bc617ce1091093839bf726f5edd93a181c181b2e5b",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "sizeMatchesRequest": false
+    }
+  ],
+  "warnings": [
+    "Image 1: router returned 1448x1086, requested 2048x1536. Image saved unchanged; no additional generation was sent."
+  ],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

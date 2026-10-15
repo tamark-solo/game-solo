@@ -1,5 +1,8 @@
 # Tool tạo nguồn asset game
 
+**Cấu hình15/10/2026:** MCP/CLI dùng endpoint mới owner chọn `https://img.aishenji.top/v1`, model `gpt-image-2`, khóa DPAPI ngoài Git. `generate_game_asset` chỉ nhận text; nguồn cần khóa identity dùng `imagegen-router.mjs edit` multipart với ảnh tham chiếu có hash. Không dùng `edit-responses` cho provider này vì `/responses`404. [Pilot mới](design/characters/gdd-character-animation-v1/enemy-production/router-pilot-v2/connection.json) đã xác nhận generation thực bằng PNG1536×1024, tách khỏi model-list và duyệt ART.
+
+
 `scripts/game-assetgen.mjs` và MCP cục bộ dùng lại [router hiện hành](IMAGEGEN-ROUTER.md), giữ model **`gpt-image-2`**. Tool biên soạn brief theo loại asset, lưu nguồn và hồ sơ xem thử; không tự đưa ảnh vào game, thư viện Editor hoặc map owner. Không tạo ảnh mới thật trong các kiểm thử của tool này.
 
 ## Bảy profile

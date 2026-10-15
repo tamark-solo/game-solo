@@ -1,0 +1,61 @@
+{
+  "kind": "motion",
+  "jobId": "blood-armor-commander-south-attack-api4x4-r1-neutral-r2",
+  "promptSha256": "43a420e19fbae99a70f92d425ea1bf109ff48638ca5c68655cbd90ac494d8b66",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/blood-armor-commander-south-neutral-same-view8x.png",
+      "sha256": "eb55634783779e91c4c2c717136f708335d3c8bbe004b8cb42c0f54d9fb74da5",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/blood-armor-commander-south-neutral.png",
+      "originalSha256": "b06b84f17f0c7a58d6be443ac8ab31970cee40c32e8b50c35db36bfd65a5cd23",
+      "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-south-clean.png",
+      "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-south-nearest8x.png",
+      "originalSha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+      "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "blood-armor-commander-south-attack-api4x4-r1-neutral-r2",
+    "prompt": "Use case: identity-preserve. Huyết Giáp Khôi Lỗi Thống Lĩnh BODY attack, exact south: strict FRONT, two eyes and chest in EVERY figure.\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY camera, nonhuman anatomy and identity. Image2 Wang supports camera/pixel only. Only requested SAME-VIEW images are provided: inherit approved identity through the own-view lineage, never borrow another camera.\nIdentity: OWN approved massive broad 128px blood-red armored stone construct, squared head, bronze seal armor, huge complete stone fists and stone feet. Keep nonhuman anatomy and weight. No human face/hair, cloth shoes, wheels, rails or chariot device.\nExactly FOUR COLUMNS and FOUR ROWS, SIXTEEN complete separate figures, on a 2048x1536 transparent source. Each figure is centered in a spacious 512x384 area. At least80px genuinely empty transparent horizontal gutters between all fists/bodies; at least64px vertical gutters. Keep outer margins80px. Do NOT let hands or silhouettes touch another figure. Use one source-wide body/head scale, leave the unused space empty; never expand a body to fill a cell. No drawn grid.\nROWS1+2: eight identical own standing neutral calibration figures, same requested camera.\nROWS3+4: eight ordered attack poses in reading order: wide heavy guard / near fist draws backward / hips and shoulder wind up behind planted feet / near stone fist strikes short and forward / torso absorbs recoil, knees bend / wide heavy guard restored / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing.\nKeep 128px nominal stone anatomy after later ONE common source scale from the eight neutrals. Skull and armor dimensions remain stable, not per-pose fitted. Lowered and prone poses lower naturally. Body-only empty fists, keep actual heavy stone feet, arms and knees attached; no human anatomy. Rear N/NE/NW never expose eyes even while attacking or recoiling. Do not turn a rear head toward camera.\nSubtle heavy idle, actual alternating foot contacts for move, deliberate shoulder-led attack and honest torso recoil as appropriate; no standing-neutral substituted for footfalls.\nTrue transparent RGBA, crisp pixel clusters and limited shade bands. No ground, shadow, glow, halo, checkerboard, text, weapon, shard, extra body, projectile or FX. Preserve all margins and physical silhouette. Do not crop any edge.\nFINAL CAMERA AUTHORITY for south: copy Image1 orientation into ALL 16 figures, including neutral calibration, recoil, wind-up and low poses. Show the exact front/diagonal head and torso from Image1, with correct face/chest, never the other diagonal. Preserve own hair/skull, material, attached limbs and body build exactly from Image1, including any own hair tuft/tie; descriptive hair shorthand never overrides the actual inspected identity. No mirror, fitting, external prop or FX.\n",
+    "quality": "high",
+    "size": "2048x1536",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\blood-armor-commander-south-attack-api4x4-r1-neutral-r2.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-armor-commander-south-neutral-same-view8x.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-south-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "2048x1536",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-armor-commander-south-attack-api4x4-r1-neutral-r2\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-armor-commander-south-attack-api4x4-r1-neutral-r2",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/blood-armor-commander-south-attack-api4x4-r1-neutral-r2.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router."
+}

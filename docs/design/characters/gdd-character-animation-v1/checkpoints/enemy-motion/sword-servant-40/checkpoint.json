@@ -1,0 +1,2725 @@
+{
+  "schema": "gdd-enemy-motion-technical-checkpoint-1",
+  "actorId": "sword-servant",
+  "status": "complete-candidate",
+  "bodyClips": 40,
+  "bodyKeys": 240,
+  "targetBodyClips": 40,
+  "missingClips": [],
+  "cpuChecks": 89801,
+  "browserChecks": 2570,
+  "gpuReadbacks": 480,
+  "aggregateReportGpuReadbacks": 3840,
+  "aggregateReportEnemyClips": 320,
+  "cpuAndBrowserChecksScope": "All actually packed clips in frozen reports; GPU count above is scoped to this actor.",
+  "sourceJobs": 40,
+  "ownerArtApproved": false,
+  "ownerMotionApproved": false,
+  "runtimeIntegrated": false,
+  "files": [
+    {
+      "file": "atlases/sword-servant-attack-east.png",
+      "sha256": "5e5c05987e1b59b0c7c30b47f3a8df85b1502dd2626e0e4861842f7a5ddd8882"
+    },
+    {
+      "file": "atlases/sword-servant-attack-north.png",
+      "sha256": "39f96838137c4c1e4ca89dc9fb2617733016d2c491adac0ee66f8afc6f47f16b"
+    },
+    {
+      "file": "atlases/sword-servant-attack-northeast.png",
+      "sha256": "081a6a65b5b37070421f3ebe4bb96ce4f269463b0289d9c380361c2db0fec582"
+    },
+    {
+      "file": "atlases/sword-servant-attack-northwest.png",
+      "sha256": "bd6c5b511fe6b2eedf85a202d459fc9188f77bcec7d8e760ef701b75a44cb5fd"
+    },
+    {
+      "file": "atlases/sword-servant-attack-south.png",
+      "sha256": "41a42e1ed80fc7882b14e83a7d6dd04788d699c78293e6d5e6e98d728c01fd01"
+    },
+    {
+      "file": "atlases/sword-servant-attack-southeast.png",
+      "sha256": "377242bbc81ef65197b9d928a00885976179e037fcbbc5d330e86e16ff1cc3df"
+    },
+    {
+      "file": "atlases/sword-servant-attack-southwest.png",
+      "sha256": "3b81e0a1f37a0f9d21aaa729e6d3f7cf236a2c479873fd15fd97f9155d9d7540"
+    },
+    {
+      "file": "atlases/sword-servant-attack-west.png",
+      "sha256": "452fe5cc4c4566e7b6ace863a070a795612fc87fe43cffc4eae81bf0cd00e40e"
+    },
+    {
+      "file": "atlases/sword-servant-death-east.png",
+      "sha256": "bc7e21dc4ab83d936242f83de04b0c6b5d149ebc962b783722147c09c732682f"
+    },
+    {
+      "file": "atlases/sword-servant-death-north.png",
+      "sha256": "0e52080949e51d9cc09357c533b7111576f09654fd2b2106578efc8fbc81fb78"
+    },
+    {
+      "file": "atlases/sword-servant-death-northeast.png",
+      "sha256": "63f33b6ba78bf1a6467ea1d39556e8eeb9decb77360f080aa8cb989070dd3dbd"
+    },
+    {
+      "file": "atlases/sword-servant-death-northwest.png",
+      "sha256": "c014e834c6c81d96952080097c2cede64b775eb6628a9f89af39d2530b0b8c35"
+    },
+    {
+      "file": "atlases/sword-servant-death-south.png",
+      "sha256": "b22a77bc8db1d8d9540eea62f4d4c6637e27b6f641ad07fee90446fb7b4b2c95"
+    },
+    {
+      "file": "atlases/sword-servant-death-southeast.png",
+      "sha256": "be9005a0f46cf39ed76b8dd8873a2147b3f940feae7516b75b27354401939714"
+    },
+    {
+      "file": "atlases/sword-servant-death-southwest.png",
+      "sha256": "177594dc789cdbbb2bdaf05c86180db41e2275c403da9fa80af53bac137a0cce"
+    },
+    {
+      "file": "atlases/sword-servant-death-west.png",
+      "sha256": "54e66e0d4e10e05f025b11a3d30ad7f7d5b4835f2699b7875a1db8b0fd266b70"
+    },
+    {
+      "file": "atlases/sword-servant-hit-east.png",
+      "sha256": "64e8d1ec9880ac0151926a5815d77d6df9252501ddac16c58ffcc5f51b981b62"
+    },
+    {
+      "file": "atlases/sword-servant-hit-north.png",
+      "sha256": "64e6ff5a3a750400ebb77ab7c489bd56ee322f7b2a2bb1d3d6a3c0701e31c644"
+    },
+    {
+      "file": "atlases/sword-servant-hit-northeast.png",
+      "sha256": "b96f3c26d122b081c7c24f584158538bb73a4f31e10150c826fea20555101338"
+    },
+    {
+      "file": "atlases/sword-servant-hit-northwest.png",
+      "sha256": "e598924c190eed1cad8aba0598d9c7dfbe8d31b53dc2e8e3ea6e486d62b14eeb"
+    },
+    {
+      "file": "atlases/sword-servant-hit-south.png",
+      "sha256": "c9d61c23d1e4ba9177217187a7cd613079d74ddc156659f234ae9dce6712056f"
+    },
+    {
+      "file": "atlases/sword-servant-hit-southeast.png",
+      "sha256": "fbc65616e36aa0d249ea8bfdfd7e9ffc5303a73165248b2bd4691c7d57f54b44"
+    },
+    {
+      "file": "atlases/sword-servant-hit-southwest.png",
+      "sha256": "61090faa4a3dc2c604c9a1e3d54f9ebd5f34d96be57c349459d00b25f9c5980a"
+    },
+    {
+      "file": "atlases/sword-servant-hit-west.png",
+      "sha256": "8cd47ca3cd093b6938117387535118edde63312b89921953e93b6759a3c7e918"
+    },
+    {
+      "file": "atlases/sword-servant-idle-east.png",
+      "sha256": "e7f43905627dc7bf9934eb94218431a5203f0a9cad6259d2cd137af45f92dd35"
+    },
+    {
+      "file": "atlases/sword-servant-idle-north.png",
+      "sha256": "91ca411268bde0c968959ee0fa3e00c849c3fbe667497213460b61bf43c26381"
+    },
+    {
+      "file": "atlases/sword-servant-idle-northeast.png",
+      "sha256": "868b8b6bdaa3ac528894200c537d3c11841851a581b72aee1e7494cc50ec2f8b"
+    },
+    {
+      "file": "atlases/sword-servant-idle-northwest.png",
+      "sha256": "4ae27cce5d7ac7d9820db259ce261a7297837ee8db49f783b0a0040a361e1ad0"
+    },
+    {
+      "file": "atlases/sword-servant-idle-south.png",
+      "sha256": "cbd9a5f5409914d9aff612fa9d8dccfa4cbb43c8844fe9ac7a7e5638dd094c0f"
+    },
+    {
+      "file": "atlases/sword-servant-idle-southeast.png",
+      "sha256": "3d3f34a65752a7a3e03ee444a697119493522d5658a6b0ce2562b2d39826d1ec"
+    },
+    {
+      "file": "atlases/sword-servant-idle-southwest.png",
+      "sha256": "e042512b43d41b17baae92bbe23fe54586edb0faf034d6a556a9eae5e79290d8"
+    },
+    {
+      "file": "atlases/sword-servant-idle-west.png",
+      "sha256": "55b0af97a403d0d93683e33f3e398e87e2a0a2a61d2a27d267cc3cf7f6c9c97d"
+    },
+    {
+      "file": "atlases/sword-servant-move-east.png",
+      "sha256": "38462ace00115c1e4f25554360ed6816ed5b51f2fd48ebc49341f685539b4228"
+    },
+    {
+      "file": "atlases/sword-servant-move-north.png",
+      "sha256": "dba8fea3043168423cd3deb4111d67c6960359168d6f82e9b215294ee827bf8e"
+    },
+    {
+      "file": "atlases/sword-servant-move-northeast.png",
+      "sha256": "e9c980b88a1aa18c60e0f315c61684fa9489162453c311362276787f070ac1a8"
+    },
+    {
+      "file": "atlases/sword-servant-move-northwest.png",
+      "sha256": "4aa3b528fd152c4f39edc8423cca296a9661dd97fd303e8fe4480a7273e496f3"
+    },
+    {
+      "file": "atlases/sword-servant-move-south.png",
+      "sha256": "a3a40ace091c839af0449c36b45a0c6da0e6ef4d115b7e0a0f0be69b2113b976"
+    },
+    {
+      "file": "atlases/sword-servant-move-southeast.png",
+      "sha256": "b0dc303128c1087b29839ec974dc8142d75a7f12649ced66a96d141408aca3a4"
+    },
+    {
+      "file": "atlases/sword-servant-move-southwest.png",
+      "sha256": "e638813564fad0eb439e340510c8755488a11b0230bbd64d39a0b1268762ed11"
+    },
+    {
+      "file": "atlases/sword-servant-move-west.png",
+      "sha256": "14a554252ef493472b0ae4a82819a787a8985460388c4c3dd491471310d0f02f"
+    },
+    {
+      "file": "checkpoints/enemy-motion/sword-servant-40/lineage-verification.json",
+      "sha256": "37018a197e78a13c98a6b24bea36f314aee318b16f5b3c882d0083a2577ebd33"
+    },
+    {
+      "file": "checkpoints/enemy-motion/sword-servant-40/manifest.json",
+      "sha256": "8a20062f32994691192e05d76e20e7bd7bbb615d2f7a0d3fe07b4024387af9f0"
+    },
+    {
+      "file": "checkpoints/enemy-motion/sword-servant-40/model-assessments.json",
+      "sha256": "6ffb3f4ff8c228ef8a58a939b682f38724bcca1b796c74800c397646f1602de9"
+    },
+    {
+      "file": "checkpoints/enemy-motion/sword-servant-40/motion-browser-verification.json",
+      "sha256": "1438ba98eb8fbc56bcc3c3e098db86bd6fc0aedc1b8b5656e2abe3970afb6f2f"
+    },
+    {
+      "file": "checkpoints/enemy-motion/sword-servant-40/plan-verification.json",
+      "sha256": "a6ad2f870189c96fd223f7a3a6b9b6337ba412b70d7b577c78ebfbb1acb72703"
+    },
+    {
+      "file": "checkpoints/enemy-motion/sword-servant-40/source-jobs.json",
+      "sha256": "105d1f4ebb76d0eb8d418bbddef886a4e96e83e191fd7ecf4f9741356e737249"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-attack-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "fe0453cb683f4d0374efeefacd75d0ea9cc8ab37c60eb0f788224d39f8913855"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-attack-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "708a707006b185c66e84d5980eaf11cfa155fe46eeebe4a0af75031bd43f98d1"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-attack-api4x4-r1-neutral-r2/request.json",
+      "sha256": "86f7ee6c5e0478921b6024e9ff3c5392318562c3a73c9c602b1be02f71be55aa"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-attack-api4x4-r1-neutral-r2/source.json",
+      "sha256": "2c091a20be7d2fe0935718d41114fee8d42802df129f38fcf1b85916b1f877eb"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-death-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "33564123de924a683037d10a8cf14060828882e2097dad29d00890f7e6ac94f5"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-death-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "0eb7e455e56f585b2d71aef84a23a412d6e321dceb54d915cb7c7f564ca4b0b8"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-death-api4x4-r1-neutral-r2/request.json",
+      "sha256": "222d82c63458179eec833880243da08b07221b542c4bfb60e592e7279c1abb72"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-death-api4x4-r1-neutral-r2/source.json",
+      "sha256": "8318921dcea67ad07927b3d0cde162fb61b2b544bb0750b252fdf40e155abf0d"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-hit-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "acf1a353f25296249d2e5b322e9763da9ba832c2ff6d4a1ba574ce2e0c657fe5"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-hit-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "fcb549e76529e28984c7582b8bed6602a7f884e3300ae6a72a5234894164d5b6"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-hit-api4x4-r1-neutral-r2/request.json",
+      "sha256": "d100686042bb3f0c71b328ce8aaaf3d7e6d8c5100c271a3960b5cc58061ee193"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-hit-api4x4-r1-neutral-r2/source.json",
+      "sha256": "0239dda35d38ef2e405df84d54c1e999d1113827677273675de47095612b1027"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-idle-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "2e8c3e51ccaf01131753c2e41e20109b3370901a51489a43a8df75803e1f671e"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-idle-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "67a3d6975a6d8db67ae8be47f48bf26597698b9f821c1c48c655658ff3fc8af9"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-idle-api4x4-r1-neutral-r2/request.json",
+      "sha256": "a3aca0f99fd5d8870653ff4667c08974570af2ba92f6b30b6f752cc18b507a78"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-idle-api4x4-r1-neutral-r2/source.json",
+      "sha256": "e33120999cfd9f4f64667d6061da182cd2d6f7a4438a48cf7f91dd3e18e24b20"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-move-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "d9d1c7b50e0813b1ca281c2657e612ee1c6a5b357be4037ff05dc794fc11cd6e"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-move-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "02c723b88f80d46f203b948e116b408c75ad3287b7b54d0c36821e0a962a2c4c"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-move-api4x4-r1-neutral-r2/request.json",
+      "sha256": "3a608bf363326b12fd607dbc07e9f244572472ee2f8571108bf3fe4d498189cd"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-east-move-api4x4-r1-neutral-r2/source.json",
+      "sha256": "53e87df3a5167d7aa1301014f2ee34b637ab9a7b72da15c2c347d4c392ef0449"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-attack-api4x4-r1/generation-result.json",
+      "sha256": "742c77d8485a0a191ec8029026d5e430c4f8e9b575368995535deb9ee50b9778"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-attack-api4x4-r1/mcp-plan.json",
+      "sha256": "dd0812fb202bba1cdb6016ad9764ea347fac2fd00a6c1bab69d3f453ffcf247b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-attack-api4x4-r1/request.json",
+      "sha256": "015ffe434cee6b56764205e954780c9df8f13261fc22e9d45dfe7dd651f8078b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-attack-api4x4-r1/source.json",
+      "sha256": "3f12ca73f76aa546f25e3bb3aeb8d85924374a2d6dd40a7d7e8a63baa454cdab"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-death-api4x4-r1/generation-result.json",
+      "sha256": "20d9dc95801c005aa9db4a60e93d53fcbc7a8c820e8ce1762e79c230eca805d0"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-death-api4x4-r1/mcp-plan.json",
+      "sha256": "4a9ba3877ce217135b787d63f413b16cb28eb160e10050c1cfd8a16f5f78c1d7"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-death-api4x4-r1/request.json",
+      "sha256": "bfab7b6705b9fc2800b02b2312d78580c1d16a3e5dc1a5b33562971f58cd98a9"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-death-api4x4-r1/source.json",
+      "sha256": "6b11ce331adc99ffa82337109f50d9dfa567c2b88ba319f2a1120588f1521e0f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-hit-api4x4-r1/generation-result.json",
+      "sha256": "9138b0d527d3e1ee5cfac89c326db36d8399e1b89cd500cce87684bb7d1ee167"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-hit-api4x4-r1/mcp-plan.json",
+      "sha256": "c9e4696f4f2ab251bdfcde369c25448da22357bb537f10b5066939959b9eede9"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-hit-api4x4-r1/request.json",
+      "sha256": "ddc6709808936556e1b4228300b8b401f88c4a21d6a5d5089cbabe0f4f64a7f0"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-hit-api4x4-r1/source.json",
+      "sha256": "259c7c6db2db862ed3ec04a247c8c91f47a9469c7189ca337df04d721fca4c1c"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-idle-api4x4-r1/generation-result.json",
+      "sha256": "edc82c9a7675c244c05e6e0bfaa2e5d8132acf195abc7a73435751a688476012"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-idle-api4x4-r1/mcp-plan.json",
+      "sha256": "2863d29e50ae9de9bf3af88b042054dc707fb05f3cb54aad68c47365aa57258d"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-idle-api4x4-r1/request.json",
+      "sha256": "892605efed600f27806183cb70daf67ba4a34bb40236799a2f3906bdb6ef5448"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-idle-api4x4-r1/source.json",
+      "sha256": "897393a8d72f2b01fe85efa87ece99592110c58f24d35c50c825b2ae90a90988"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-move-api4x4-r1/generation-result.json",
+      "sha256": "d61aaf152b4c147bd9b82c69b56eb57c345a8ee735def86a3d695824eb49b596"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-move-api4x4-r1/mcp-plan.json",
+      "sha256": "d3fc0c186db1f6e83bb55bb2d7ed734c91ccb174edcf3922fbf81b8a47f23e5c"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-move-api4x4-r1/request.json",
+      "sha256": "60a1370906a6eca97f7a181996bf3c721a1c4175db0bc63de96c45fcc9976ebb"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-north-move-api4x4-r1/source.json",
+      "sha256": "e72be1e3460046f0f2addaf06ea8f11f5bd7743b77791f08c41da9c92e8c75c3"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-attack-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "50d31a4b78aa0cab6d8910b60e2704d7f47bda727615ef350f176b82dc4a217d"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-attack-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "9cfc093e442ebfb013b66176b6d7edef6ee6a01ecc4f5b94f8702e2b9a343acd"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-attack-api4x4-r1-neutral-r2/request.json",
+      "sha256": "74ae8045fe39cbd442edf89fd10d6ed4fd7c43fc41504a06e869d463ef1b3488"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-attack-api4x4-r1-neutral-r2/source.json",
+      "sha256": "1f0edad43072ac07fb0a3b34b681a3b182900e1bcfe9d6776f962950f01ea77b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-death-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "3b951ff5f8f63fe6404074489e555d6d2e72bf1ad5a9d47deba334f1b1a3d960"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-death-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "7f491e567d4be62d02974ab38f0859a8a2c3f1f5e3b9556d3facbf351c03cab2"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-death-api4x4-r1-neutral-r2/request.json",
+      "sha256": "366cff00b3ac1e0a82a4c7397f1e8c5541120167eb57ae06bef6aa10bd233187"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-death-api4x4-r1-neutral-r2/source.json",
+      "sha256": "5384e9e61bb95567288675908d7ac09eda6bdd57c4abcfd8e00412cf59564a8d"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-hit-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "d031f90ab09d817768f8fb49e394264647b45671b397cfe42f15500fc11fa517"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-hit-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "0cd85712c877c5d3d70572b9c884d351b78f0a63038d0e8925a68f666db36c0f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-hit-api4x4-r1-neutral-r2/request.json",
+      "sha256": "cf22500dc8503904abaab12d2f14fdba351b87f9ac99830f483dd7fe41eb525f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-hit-api4x4-r1-neutral-r2/source.json",
+      "sha256": "0d967fb00d89755eb6daa1366db5ae987e5da79109896d4f278aaff181d50b9f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-idle-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "e6ac0bc5034cdad8a853d460436ca9bf461c5975155c0bf392a332a9953e4364"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-idle-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "d3f59f186562cc2182b3dcd45d7983cf7e515e0f83986d91874b0a9873dcdfb8"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-idle-api4x4-r1-neutral-r2/request.json",
+      "sha256": "9137b86474a6e3b2bb329b9e5876f96fd1ce2dee0ed7e027767dcfbc1a785453"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-idle-api4x4-r1-neutral-r2/source.json",
+      "sha256": "6857ec94b66749cfdb162144398f4eb60973e7a8d6cfd7be86730d75a2ed017f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-move-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "d436e7cce519147bbd201b49e07b483996920b80ec073ba11ff6f1580a0cd8f0"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-move-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "67cecd050aae7c6e46900fa6b1268a75784d9f5b24fe12d1ccc1ab4029e65be9"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-move-api4x4-r1-neutral-r2/request.json",
+      "sha256": "a5f201a91ad7e3102d2803ab08e0ce9a0295c6aa3274ab6e9bb9e3acef6d40c4"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northeast-move-api4x4-r1-neutral-r2/source.json",
+      "sha256": "214d6711f20f66ddbe960568eef4441f8ef0fc146ef255fc06c1392caa683737"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-attack-api4x4-r1-camera-r2/generation-result.json",
+      "sha256": "65fd834adcaa56a08ead0c735338eefa55a96150f467c8bd4cffa854bc850e3d"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-attack-api4x4-r1-camera-r2/mcp-plan.json",
+      "sha256": "620e2def9ade90eada757bd660438eb58bd284b9055f8e52fbb55713a2a537c2"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-attack-api4x4-r1-camera-r2/request.json",
+      "sha256": "0cf0daa2523d707a744f51083c4d9a972d370ae41112d780f2affff16ff320b8"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-attack-api4x4-r1-camera-r2/source.json",
+      "sha256": "f32196e6b446375510f7de040c47f06e19857b9a69348b7137d1d093e6bc30c1"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-death-api4x4-r1/generation-result.json",
+      "sha256": "ffbc3dda18d66aeb7a7d76345cd0750ee122aab7661c1a152386c7877f6eeb2b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-death-api4x4-r1/mcp-plan.json",
+      "sha256": "3e2dc9afbfc9305247f4d3b428d18f9627f80fbfb61af860cd62abbb714fe6a5"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-death-api4x4-r1/request.json",
+      "sha256": "b5962a55a6c69b488f437498f8f9d0d20ce95ff8728b68c02c9322d317fdc76a"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-death-api4x4-r1/source.json",
+      "sha256": "89a619f48734b953b21c84ad2baf4d3f88169ea2dbdcb707c245169663b82ae7"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-hit-api4x4-r1-camera-r2/generation-result.json",
+      "sha256": "99af774b41b2b4cf0a4a0d9e0667cc26badcfb6a5bf9a7b58b1c985669a2cd44"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-hit-api4x4-r1-camera-r2/mcp-plan.json",
+      "sha256": "9cac9d0ad63e97432720a189fe23eb7b912f5dedd53cae5f21eb21bbb76c816b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-hit-api4x4-r1-camera-r2/request.json",
+      "sha256": "b931543b885acd206d657207af1415fd0a2d4effc9cc7d073614a56eeaf9d6ce"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-hit-api4x4-r1-camera-r2/source.json",
+      "sha256": "0e62f25604803de9f1582c017264dc5fdd6f7e965a79ec08dae3d74bdffd27e4"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-idle-api4x4-r1/generation-result.json",
+      "sha256": "87f98a8b04dc9de924430eb466febec30862860930b08e70b106fd57e328d81b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-idle-api4x4-r1/mcp-plan.json",
+      "sha256": "be8a5a98d67ecad7f60aa92c5b53fc5d6037c6a5874479e3704bbf94dac71dac"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-idle-api4x4-r1/request.json",
+      "sha256": "011bae0ba808be4f36083e45ce583c30042a2e9d2e1359ec97556f68733d43bc"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-idle-api4x4-r1/source.json",
+      "sha256": "75aa3fe14317234cce2b0a6053ebd33a0738e95e5ea1e92681a19a73d4bb81eb"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-move-api4x4-r1/generation-result.json",
+      "sha256": "18a25142b0a1a3f03f703450d274d3309bb0c6808b6fa34da1aa9e6d7e73b8cc"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-move-api4x4-r1/mcp-plan.json",
+      "sha256": "e25d2d5d49800e7140bcb679852d2976bf3511abd961d5682fdd0dd38fac79f3"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-move-api4x4-r1/request.json",
+      "sha256": "4082949ae5711bb60c073bed5caafcb5f0bb59c8709e76509b5ac8f86286f36f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-northwest-move-api4x4-r1/source.json",
+      "sha256": "cda4c1492283f59062e66479cb20687a257a30a7e5fef096f30b00a47e16ad54"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-attack-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "404ae7bdd031695dd65550ba9ebc2d3dd1fd98c9b5c879e6ec99c07ad2b3f749"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-attack-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "2aa66e3e76dad7ea065c4b2c40d81e22213e6ef9584726874cd0c4dff6c55867"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-attack-api4x4-r1-neutral-r2/request.json",
+      "sha256": "8b77a9b1ed1e2d963ee51fbd8f0287e02522cc13a95a8362471f34f2c495d3ac"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-attack-api4x4-r1-neutral-r2/source.json",
+      "sha256": "75ef20e24b617284208fdc321a147d79d00ae87571d1a68add661ac0e63a0558"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-death-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "49f0ca1665900243b05b9637d31af89fe363310fda3231567d21f1943dbc9796"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-death-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "1d91249d222f5c690f816fe13388716b1c928e0704d34184c23fab7245f70787"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-death-api4x4-r1-neutral-r2/request.json",
+      "sha256": "89044c72b05c9bce070a4fca23dc05180685999ff25b2414108cc56ef8dccf0b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-death-api4x4-r1-neutral-r2/source.json",
+      "sha256": "78cc1f099baef4be7cb242ae72c12fa2dacc489a994abb565c462085f8fd68b2"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-hit-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "d38a32433174d018a01e194b40a125b9c30db81d1b1f043429eabec4050cb38b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-hit-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "9084dcd726bfad23881491744c607d40abaabaae81c121ed60d2bf73b8284d66"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-hit-api4x4-r1-neutral-r2/request.json",
+      "sha256": "5b1ee55e14ac935f9fe4ffac40fbcd1212d0b5e38046170848488b4ab0b5df88"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-hit-api4x4-r1-neutral-r2/source.json",
+      "sha256": "378feef7bc72636ca59bdb821c7176f37862f0588c0a51171f937404a3d9ecd5"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-idle-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "413a5a724ca2ca9c6e596c7ffbd6bdf65886d3fa975ecc6b0a7d3c5bd2c7547d"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-idle-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "0d2976151249be86386188ea47fad909177120d8be9caf097ff5cc4b2e706191"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-idle-api4x4-r1-neutral-r2/request.json",
+      "sha256": "09873a8cf0f2cdc1eeb3d2ea582b83931a6e6e2f1eefa7077bd962acd2fa8da4"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-idle-api4x4-r1-neutral-r2/source.json",
+      "sha256": "039d752d0d43571a66bc2f69f41fea3afd4ba972e1b87e6a656313f0de69797d"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-move-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "9b36afba1528590a5ea166c7bd9426c884690232b542f9b6057e7db615472a55"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-move-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "63a29a509d5795ca88297c8b2bbc76f5ee6501022c40b1975f564cf2a6dfbfc4"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-move-api4x4-r1-neutral-r2/request.json",
+      "sha256": "b2d68b254b94752842575f054df5d91d79822468b59ed393cff4e85b5088ec67"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-south-move-api4x4-r1-neutral-r2/source.json",
+      "sha256": "d96c46035792fe391c3b99f58281c7259e0b530bedb9c15ef26dd0cd951db98c"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-attack-api4x4-r1/generation-result.json",
+      "sha256": "de2f538fdbbcc4cf0d355c46843f4cc3a302162dd88c69a9e8ae565818bcbe74"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-attack-api4x4-r1/mcp-plan.json",
+      "sha256": "0aab57182c80863044cf6d58807e4928695061111fc810b0a54ea8003e3edd33"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-attack-api4x4-r1/request.json",
+      "sha256": "6f9966872ab7e7a92f8d321e1739f323c2318f72910b9e7aaa91069e11a182af"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-attack-api4x4-r1/source.json",
+      "sha256": "5a0e1e4efe4d9ac968699cf5eea67afe6094f6a84fc6734c8cfe8693f9544614"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-death-api4x4-r1/generation-result.json",
+      "sha256": "a84b4828f51de4b86d1e39409e7830fc788744db5240172689d72aa55f6b8ce0"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-death-api4x4-r1/mcp-plan.json",
+      "sha256": "b46bb242700ca22f14bc3f805109890fc2c1b9eb8d7bb3d08ac84ed277acea5f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-death-api4x4-r1/request.json",
+      "sha256": "76489c57d38a1ac32f8961f8dfbec9fcd7ee67317d4d3f90cece3ad2ed5837f9"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-death-api4x4-r1/source.json",
+      "sha256": "d2e7f8addc109634846ce067b0ed18c9b045083ad4870185f1265d59ad607430"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-hit-api4x4-r1/generation-result.json",
+      "sha256": "02a3098e4ec0ac33e694f610e1fe0306731ae22e0ffb5b6f2726d33f0773690e"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-hit-api4x4-r1/mcp-plan.json",
+      "sha256": "3e496b5cd86a58cba0a0b3ba9a362dcb6b6a7eb869a3badca3865e3a4fda069b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-hit-api4x4-r1/request.json",
+      "sha256": "a2e269b7f7863ab4561bcb3b32c3ec96e5f01a5740135a934ca5ce69f39192d3"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-hit-api4x4-r1/source.json",
+      "sha256": "97f34cea8e03cced2fa1244eea26c97536046a092a8e4dc7a1032dd9385615c2"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-idle-api4x4-r1/generation-result.json",
+      "sha256": "80b467a59d36e6facab147dfef3814cab2ad46c77becdfac63309c4b228078f7"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-idle-api4x4-r1/mcp-plan.json",
+      "sha256": "fae775f4787a88a680e61fee783bf6806bcfec2102326ce6d02f20a663e9bcb5"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-idle-api4x4-r1/request.json",
+      "sha256": "70933f73056108ca893e4beade4d9e63de3eda459e75645e7fb12b19f6abf566"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-idle-api4x4-r1/source.json",
+      "sha256": "5f08d393baf0181bdefbefd0db0317b25665bdc32629efbf003df815adf300b2"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-move-api4x4-r1/generation-result.json",
+      "sha256": "073e1a5fd45b0a822b9e3dc760eabbf65482d23fb4e5be99cdf3882ccdefecde"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-move-api4x4-r1/mcp-plan.json",
+      "sha256": "a403b9c93370b0c15e7108925cb8ad0037fa04364bdcde784b468046e9b1b71b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-move-api4x4-r1/request.json",
+      "sha256": "2a3a45eee3f648fd535af29cc0b22ce9d2bc33ddc38da369622f7eb8868f810c"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southeast-move-api4x4-r1/source.json",
+      "sha256": "f101c572902ec4592fe6a00d75624aa186a61db5ff14e5cecd7189dac85cda09"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-attack-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "9fe9c7c6e7891d6b1eb1e57e21ad8a7d09d6da2636f437d0484fa62ebdc31302"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-attack-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "f67ce6656c310b80027d9ce05a6dee14663a2a0b884fe8eb68897f8896c22136"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-attack-api4x4-r1-neutral-r2/request.json",
+      "sha256": "c742c98b95577b776811f1381f460ac504a501c3ed8567f9e079dc15645b986f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-attack-api4x4-r1-neutral-r2/source.json",
+      "sha256": "378dad72ee206b35e24d51a828c6b83083a2392e7c63ac82476b46e3054b486f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-death-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "e369450d38da2c60395d56c9e6ccf79e9403c023f832eb1213bd8b2e8d837619"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-death-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "d802518e8a983c028e2d172cca8a37fa8885b66c6f9c0512f6af1bdd3cea699d"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-death-api4x4-r1-neutral-r2/request.json",
+      "sha256": "1ab589c21a0a40f0f8b4d93e0e8edc426b7c3a5031cf66591a77ffbb4d2b275b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-death-api4x4-r1-neutral-r2/source.json",
+      "sha256": "1b285c2ef7f12ae7a080ea00ca78a21c196f68728822333d63d5cfceb73965ee"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "585c1edde7aa58f1d843007796b6ce0b440bd86ad4f2adca00dd170cb92bad18"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "752b3ef776097283ebd97b9def756ac7f79fe33b6448f8a05bd6ab16f76b612f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/request.json",
+      "sha256": "cef5527df6a3dfda3912b31ec1fc95b5523e9f6eedf2396dcbd3934d59cbfcbd"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-1/dispatch-receipt.json",
+      "sha256": "f7d1c5527f4d944f1a95a04ccc444aa002f3a806306732454fccfae4f632173a"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-1/generation-result.json",
+      "sha256": "585c1edde7aa58f1d843007796b6ce0b440bd86ad4f2adca00dd170cb92bad18"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-1/mcp-plan.json",
+      "sha256": "752b3ef776097283ebd97b9def756ac7f79fe33b6448f8a05bd6ab16f76b612f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-1/request.json",
+      "sha256": "d64b73027f16e5bb2c5f38c9ccff70136a63e8e28f7ff2655197be51b2a3d6ca"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-2-authorization.json",
+      "sha256": "c30d7703146ad07adf5bb3e3fee1a5bdc50d8ab1a311c3634eaeb4739a657d0b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-2-summary.json",
+      "sha256": "a8ee810813e427fe64635e6c2db2e986d6c7403003dafbf022684404801cd8e7"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-2/dispatch-receipt.json",
+      "sha256": "6bf957fd0a3a011c254c463874650234d81547357bb0bf8ea57bbe862a40990a"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-2/generation-result.json",
+      "sha256": "cce0b94cf1364e7a79fba07eb810d7298ead7fac5a803a20088f7c9713aa0e9b"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-2/mcp-plan.json",
+      "sha256": "752b3ef776097283ebd97b9def756ac7f79fe33b6448f8a05bd6ab16f76b612f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-2/request.json",
+      "sha256": "f79856837998a74fe1c74978fec787638bf47c64a660d099d14f180033e6223a"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-2/source.json",
+      "sha256": "9f5e4d4b2322f8a5fbc161c9d1e0e8525e069d91b93f236c6ba4b6b080107b8e"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-authorization.json",
+      "sha256": "d5995a03a965f71a48bd2a8b4da63bb8ec58c9729ca8a9c84d0ec998be795e64"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-summary.json",
+      "sha256": "fe90bdcf888be0b41e8d8d481eeda95e3bbe54ea6ecc1c93722eaa4d58b6f9b8"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-idle-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "e766cede5f4f92a997c7c291e2219e1febc63db4ec0b1176f924ea1c720d79ec"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-idle-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "10ae045dfb0eb4cfd1b4c9da3629b644ce54725eb98a9fb6c1570936e6bfa461"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-idle-api4x4-r1-neutral-r2/request.json",
+      "sha256": "7e3d143241f28559a6f5076ca672514986336ee74958c62a44508dc8dba83830"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-idle-api4x4-r1-neutral-r2/source.json",
+      "sha256": "01b5a0b05de5388fc177af61393c476c6bf8816841c84c511c4cd3a4a2bc247f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-move-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "df0525bc99ed95f897cf5e618281319ff0ecc3751cc13aa31c2252d6b5b2802d"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-move-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "e4c88f4c4a7f4d2f64ae2709e3edc632832aa141f51adb517a403b517984fa62"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-move-api4x4-r1-neutral-r2/request.json",
+      "sha256": "9190d05de45c2ab00c115012075c87b1e815527c27fd742fb5904de5b772474f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-southwest-move-api4x4-r1-neutral-r2/source.json",
+      "sha256": "d75899d8bcab28d32a4014b5c809d735d0856637383015c6c694c3275f875f2f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-attack-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "64b24bf59d0d7309c1188cdd976e34a557ad53946826480f20d4c1cb07f48204"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-attack-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "95d5f3ff40255657cc47f5ccb8761ac196359552393299c9e6b5e3219ef0cb93"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-attack-api4x4-r1-neutral-r2/request.json",
+      "sha256": "4e9ac2655d5808d0dacee13a360eb91becebce5ab3246e3abcf4a8788ba0a832"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-attack-api4x4-r1-neutral-r2/source.json",
+      "sha256": "53cd9a20b7cef20f737cb565b7ed7f25c7e0bd90d4213b7d97abfee58b592fbf"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-death-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "82a7e0763231be3f4b422d8ce231e0b31d4dc7435282ce62afac580d7b786b3a"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-death-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "39b087d6c93df8313a586db6c2d4ba9a0bcf29c378a1a1cf5063c82578158f5f"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-death-api4x4-r1-neutral-r2/request.json",
+      "sha256": "d35acca95e386ffb2ff9dd9a76cc9d5d5c4b614083f013a5e1fbe90c3d1d9ada"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-death-api4x4-r1-neutral-r2/source.json",
+      "sha256": "1903e60c26352f83870623373653f6b867c7989ad236a27aa8063aa51110c200"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-hit-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "96e08742dfb27fef6f9e583de2f3991fa5848ed78bba9df0223e10a771cb668e"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-hit-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "27b3bcbf01aa4d1258f383b485f061da01601d485ec2c2671e3c40fc83178a5a"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-hit-api4x4-r1-neutral-r2/request.json",
+      "sha256": "6bc5a0dec52e8416f73464c7c25530cca9f2a1b3fe2cb77a6c348f9f9f5122ba"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-hit-api4x4-r1-neutral-r2/source.json",
+      "sha256": "eb74e773d5d29ed86df58996d6447637e22f0157f1d01c0077f9b9eb84211305"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-idle-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "7f6ba892d1e1ca642510c63ab28332e449eb7faf5e447e9d512128f071c00db3"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-idle-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "708af57db9e8ef9848658417ff7413047330b172d64462d1137ee9cb14be46b7"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-idle-api4x4-r1-neutral-r2/request.json",
+      "sha256": "97dcfbd5dc543131b4550883a1a0b74d368843e820fccf8dc0b9dd85597f1380"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-idle-api4x4-r1-neutral-r2/source.json",
+      "sha256": "0c37b9e3871ddd19413dc02626624838cc2afc8cf12786fdb1ec2058f90c209a"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-move-api4x4-r1-neutral-r2/generation-result.json",
+      "sha256": "2ccc38f2bb520ae4f0eb95c5e9c698369757d32b4d26be3f10e9240bbc13ac13"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-move-api4x4-r1-neutral-r2/mcp-plan.json",
+      "sha256": "a46892e2bd6b1afee3e4e1511157d9b13ce2728ee093dbdbe6a91d735d85b516"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-move-api4x4-r1-neutral-r2/request.json",
+      "sha256": "69239b55db04640dbb649f9c67262d3e97c898a68eff60aa87d900cd85541dab"
+    },
+    {
+      "file": "enemy-production/api-sources/sword-servant-west-move-api4x4-r1-neutral-r2/source.json",
+      "sha256": "9794df6fa53ce30cd145bb21566c0bcfafdeeedcbdedbdc6605cd1c69e6ff52b"
+    },
+    {
+      "file": "frames/sword-servant-attack-east/00.png",
+      "sha256": "c79e1de0b179817dbb12b168a55d60cbc5802eaa7bc74785617d896f43e9eddc"
+    },
+    {
+      "file": "frames/sword-servant-attack-east/01.png",
+      "sha256": "ad8b025612e600634cc41cd0384b3a58e85e4aad41ef133e12c224d79e801ce3"
+    },
+    {
+      "file": "frames/sword-servant-attack-east/02.png",
+      "sha256": "16a685e16507aa1291024d79a25c0152a07e801eda22857b6be1b52b79e346ad"
+    },
+    {
+      "file": "frames/sword-servant-attack-east/03.png",
+      "sha256": "69192de6cc1008c454307e1f075d245030db3dc43b0bf85375b05809010c2447"
+    },
+    {
+      "file": "frames/sword-servant-attack-east/04.png",
+      "sha256": "35a9cf4678eaad4a82dba127cc740d809f46543bf1082ca4915e6adb8381cbeb"
+    },
+    {
+      "file": "frames/sword-servant-attack-east/05.png",
+      "sha256": "27e6fb6767d74dddd52019557f4c3c161a56f563f0500c160cc2239e7575142d"
+    },
+    {
+      "file": "frames/sword-servant-attack-north/00.png",
+      "sha256": "f3db6d057bfbc92d1c6a7cce41a50c05ccf03e91392040b4029e3b21825790d9"
+    },
+    {
+      "file": "frames/sword-servant-attack-north/01.png",
+      "sha256": "78e03fc8e87d05f0543cc22fade34b736644a68d3b70c52a1b11727caa3abd00"
+    },
+    {
+      "file": "frames/sword-servant-attack-north/02.png",
+      "sha256": "e25a39b791a6e9167f138cbd81dcb0baab2d7b748a048b602dc775c7e610f970"
+    },
+    {
+      "file": "frames/sword-servant-attack-north/03.png",
+      "sha256": "b0b2e63d351881baaa1e692d3d808c97bccfa09de605d62fda7863b4a008d988"
+    },
+    {
+      "file": "frames/sword-servant-attack-north/04.png",
+      "sha256": "17fec5b5c4349832d7043d67594866ac89edc3737ed53bc4f5d99fa1a2337bb1"
+    },
+    {
+      "file": "frames/sword-servant-attack-north/05.png",
+      "sha256": "749581d47f0c52032b49f6adb8703ae35c7a6fe5d74f1749ef0526708ed15856"
+    },
+    {
+      "file": "frames/sword-servant-attack-northeast/00.png",
+      "sha256": "ddb771d4e75fb6395c3b9e2fe6a14aba0528c075ea76565b329eabb6152472a1"
+    },
+    {
+      "file": "frames/sword-servant-attack-northeast/01.png",
+      "sha256": "626b5029cd8b496d3938b9281d6a5b6fd736b38c61deb0801f1939e55ef0e253"
+    },
+    {
+      "file": "frames/sword-servant-attack-northeast/02.png",
+      "sha256": "6eed2e1ae32d95f3e0589af30adf967f5b0a75fdc7379ee0fdd3ca46d6430f3a"
+    },
+    {
+      "file": "frames/sword-servant-attack-northeast/03.png",
+      "sha256": "193fe6c2bde1c0bfcbfe4916656c62db89cb34516f3e9600c386aa6c5727c1c9"
+    },
+    {
+      "file": "frames/sword-servant-attack-northeast/04.png",
+      "sha256": "dec32c9f0384e02a08d6e3b1087c70e101b3338cdd4395c54146cfaf84c2222b"
+    },
+    {
+      "file": "frames/sword-servant-attack-northeast/05.png",
+      "sha256": "213d9367aea719852b94b3ca3be8eef2d9f2d333dba7fbed7dd6779e9b420195"
+    },
+    {
+      "file": "frames/sword-servant-attack-northwest/00.png",
+      "sha256": "1cc08f88280a4c07d7bee7b54ac1343ad69547692c81e68ac5265bbc1f4903bd"
+    },
+    {
+      "file": "frames/sword-servant-attack-northwest/01.png",
+      "sha256": "0fc1da261afd474f888df8a8923c8780d4bca54eaec9af5da4ef72e5eb0d7a1e"
+    },
+    {
+      "file": "frames/sword-servant-attack-northwest/02.png",
+      "sha256": "39b5b574e9239d212b80e3e91130acc921eddd04e68a6a665a80999a947e98cd"
+    },
+    {
+      "file": "frames/sword-servant-attack-northwest/03.png",
+      "sha256": "945854240baa8ee625e2f4fdef88653a5c83b8e3225d04ccc70121034cea74b4"
+    },
+    {
+      "file": "frames/sword-servant-attack-northwest/04.png",
+      "sha256": "b5c4b88ba4a00223dae68f849a6e44e0545bb5fd250834c3d8b26b9f1c3498d0"
+    },
+    {
+      "file": "frames/sword-servant-attack-northwest/05.png",
+      "sha256": "63875be50a9463421bbebf802dae1cd8518afa6dd46b92b5c37c01294b859fae"
+    },
+    {
+      "file": "frames/sword-servant-attack-south/00.png",
+      "sha256": "c1b19e1e30a67baac8f5b46d2315bc0e1d4abe9cbfff332044e09284f0a3ad17"
+    },
+    {
+      "file": "frames/sword-servant-attack-south/01.png",
+      "sha256": "6c4e3d2cf3901dd7767f9653e4bc6d54e2006ae0eace6ee4ee5f9b1d800d6d5b"
+    },
+    {
+      "file": "frames/sword-servant-attack-south/02.png",
+      "sha256": "027bae92c6a08b7441ef81eed6ed16d8ca15c32015c949b288a523eb67f0ff56"
+    },
+    {
+      "file": "frames/sword-servant-attack-south/03.png",
+      "sha256": "e93b374bea44b7002eaced6f32447f9d20bee1e10ba3a0008e03c76cece8e97b"
+    },
+    {
+      "file": "frames/sword-servant-attack-south/04.png",
+      "sha256": "6c9f86ba7509290649d015d04471782590e466aff96f837c4431b8aa42a6032b"
+    },
+    {
+      "file": "frames/sword-servant-attack-south/05.png",
+      "sha256": "bd0af854d554473139472d6a039ce2245d7570be233ef0a226bfba91081b0bb6"
+    },
+    {
+      "file": "frames/sword-servant-attack-southeast/00.png",
+      "sha256": "dce2ec37dfafb06efa27493e00bb5ea6841e889b7ed43323a6a71b8f6f5b433a"
+    },
+    {
+      "file": "frames/sword-servant-attack-southeast/01.png",
+      "sha256": "83f25144c1df9d46acace98a9d424bbe14071dc9436844473c56858a647474a9"
+    },
+    {
+      "file": "frames/sword-servant-attack-southeast/02.png",
+      "sha256": "cbf2252b06979d913ea6b9359085396b9f6c440b2756d3710d4dfee17648b6fc"
+    },
+    {
+      "file": "frames/sword-servant-attack-southeast/03.png",
+      "sha256": "1f86ff8c7284b931e07e228486ac7de2bfa6185abbe6726563289a75694e22ee"
+    },
+    {
+      "file": "frames/sword-servant-attack-southeast/04.png",
+      "sha256": "ad8ba6cf3a8e0fb6248d1abd3849526e62023a72b0199a130b33e7b4aad5a1a4"
+    },
+    {
+      "file": "frames/sword-servant-attack-southeast/05.png",
+      "sha256": "b88836846cd8ed3955dae39c1f6662595b8eafb89fa6796864bf3f378f6ef86f"
+    },
+    {
+      "file": "frames/sword-servant-attack-southwest/00.png",
+      "sha256": "85371124a013569ac0e559c807e070a3348467e41c17268b63c422a347685c00"
+    },
+    {
+      "file": "frames/sword-servant-attack-southwest/01.png",
+      "sha256": "447a0e31c0a949326ca61fcb56713160b66eb3f02ff2baa26e3866c8a8b14c75"
+    },
+    {
+      "file": "frames/sword-servant-attack-southwest/02.png",
+      "sha256": "069c338930fd7adf39595f8abdf6676730e2f6cc03c395a4944c7a0d088060b8"
+    },
+    {
+      "file": "frames/sword-servant-attack-southwest/03.png",
+      "sha256": "c93a74f89734064c0ee04c142044936620200ef818a4936f0f677ad8a96ebdab"
+    },
+    {
+      "file": "frames/sword-servant-attack-southwest/04.png",
+      "sha256": "7b7e9d85ae549b97f65cb7594b73a0f86f7b2418bd87bbb942fe54c35da8ecf5"
+    },
+    {
+      "file": "frames/sword-servant-attack-southwest/05.png",
+      "sha256": "f1af80adb528972c98fb44907d740696831e504c092bc848c7e7859a3865745c"
+    },
+    {
+      "file": "frames/sword-servant-attack-west/00.png",
+      "sha256": "180b32791e4b36696f47a8a1f340e1057e17bdd4f94e74babdc7ccc538eb6bdf"
+    },
+    {
+      "file": "frames/sword-servant-attack-west/01.png",
+      "sha256": "fad95c257916c6d24c461ac241f14bc766d9c50ac30e8bb3a420fb5d0d61dcfe"
+    },
+    {
+      "file": "frames/sword-servant-attack-west/02.png",
+      "sha256": "db4f23c70699f8ebf11a83e0312c8dddf8ea3f435e172e5cba39da4f4b01ee8f"
+    },
+    {
+      "file": "frames/sword-servant-attack-west/03.png",
+      "sha256": "a257b69bccd9df56a2ca57af5183f6a1aa85d3006a80e5d5d585d75cb37a20f0"
+    },
+    {
+      "file": "frames/sword-servant-attack-west/04.png",
+      "sha256": "65bf039c1c3d8f83cd7e8c8e215fca27c3907990d646f937e347e8a665d46bfe"
+    },
+    {
+      "file": "frames/sword-servant-attack-west/05.png",
+      "sha256": "0341d212d7aa9f52f12f54d653026867cd78039a2e1dc0d8df6fe042c4972e8e"
+    },
+    {
+      "file": "frames/sword-servant-death-east/00.png",
+      "sha256": "a10b7f56e54c3c6527644ca8b389318444ab5141f24c69aa25199bf7414e1f5c"
+    },
+    {
+      "file": "frames/sword-servant-death-east/01.png",
+      "sha256": "f04f37d642e24a42cf8df152045858308efca0dc750d9e019ea4b402334dcf80"
+    },
+    {
+      "file": "frames/sword-servant-death-east/02.png",
+      "sha256": "cfd75a8893f015b65708c0050c3c16fc50c0826f9f3db523c04772874cce7975"
+    },
+    {
+      "file": "frames/sword-servant-death-east/03.png",
+      "sha256": "ca5c27fb12a107bc46c080fdcf8fdc2a4e3224a3bb0d2069f377cd884533204f"
+    },
+    {
+      "file": "frames/sword-servant-death-east/04.png",
+      "sha256": "3e72b56cf6bce2f62eccc650e7b2d0dfe80c3fa8159b1b0c12203a1917206a98"
+    },
+    {
+      "file": "frames/sword-servant-death-east/05.png",
+      "sha256": "e5525fc1440057db65077be66856d6b08f148a4c16c3b2a4ac2a4a56b466b357"
+    },
+    {
+      "file": "frames/sword-servant-death-north/00.png",
+      "sha256": "6870bba39cb91808576d0ecc1ea8d0d4f2e7cb92a91feaf390c15836f1ee971c"
+    },
+    {
+      "file": "frames/sword-servant-death-north/01.png",
+      "sha256": "a808344310bb714bd95b15f800b75fa2b640c2760a83c9d33fc5458e91e9b300"
+    },
+    {
+      "file": "frames/sword-servant-death-north/02.png",
+      "sha256": "b4ef7f81009769d21be83c9283e2c78493cb70482ad4d6c4075e5299d3c45c8c"
+    },
+    {
+      "file": "frames/sword-servant-death-north/03.png",
+      "sha256": "3d05ab6712374d712b1f2cb76958a64ac0dc8d18e910d176a83478476a6655d0"
+    },
+    {
+      "file": "frames/sword-servant-death-north/04.png",
+      "sha256": "cca5d31d212f7492f2660a2db7355d5bf5af4026080f09bb65094ac24e3f27eb"
+    },
+    {
+      "file": "frames/sword-servant-death-north/05.png",
+      "sha256": "b4b837a0ed9bff9470adfdd1878ebe7c6cd8bf2d227a015643fcd7e85f1deb8c"
+    },
+    {
+      "file": "frames/sword-servant-death-northeast/00.png",
+      "sha256": "f55d0c61c67845c1aa1e33854eabbc45a08bf1db0480509881851a6b261a93c2"
+    },
+    {
+      "file": "frames/sword-servant-death-northeast/01.png",
+      "sha256": "658cfd993951574d950daaf3cf979318f96d8c79168849679e41073ff1beff12"
+    },
+    {
+      "file": "frames/sword-servant-death-northeast/02.png",
+      "sha256": "1763c9a7aefef7e45f368e5f7aa76afe5d4e3827f2c5156b0242d0a4f3f9ea90"
+    },
+    {
+      "file": "frames/sword-servant-death-northeast/03.png",
+      "sha256": "3164022e91041c4740ab1a090c6a2ab49cfeaa936355cdec4b91f8c850706809"
+    },
+    {
+      "file": "frames/sword-servant-death-northeast/04.png",
+      "sha256": "6aef38a7391805a9f309f962af27aab0c1f093fc3364e153851d8c3f6bc95c0f"
+    },
+    {
+      "file": "frames/sword-servant-death-northeast/05.png",
+      "sha256": "6097d92473c85ddfec12bf8eb5d52650cac7e2572b1a351e051ae24be44c8a8a"
+    },
+    {
+      "file": "frames/sword-servant-death-northwest/00.png",
+      "sha256": "598b4f215dd17c06801b4c0fe2f2427faae7469d2d5869ce3c4caae3f86fca64"
+    },
+    {
+      "file": "frames/sword-servant-death-northwest/01.png",
+      "sha256": "a95a96a3233541a2c721f6851d30912c73dd43386babab6c5d07f9f04cc2cd6f"
+    },
+    {
+      "file": "frames/sword-servant-death-northwest/02.png",
+      "sha256": "a2c5075abcc4574897873988c0c47cd6447f6ea607cd4b8ef0e5ac37913e1788"
+    },
+    {
+      "file": "frames/sword-servant-death-northwest/03.png",
+      "sha256": "7c98e8cffe1e94203afa2c0b4c9d8d5490b285f615b81169f7b14e516da7129d"
+    },
+    {
+      "file": "frames/sword-servant-death-northwest/04.png",
+      "sha256": "9d61cecc28c2dc6b3ad02823963476f7000554524b1d26cf749f279f3ce66b0a"
+    },
+    {
+      "file": "frames/sword-servant-death-northwest/05.png",
+      "sha256": "e7e44680a35a7b9dcc456d8752c272b7cdd565ac7128fe5888672766c8eed888"
+    },
+    {
+      "file": "frames/sword-servant-death-south/00.png",
+      "sha256": "0b7cac7b49c74eeccf7099cbde027673af83e13f701fc6d4307969c48bc3aef9"
+    },
+    {
+      "file": "frames/sword-servant-death-south/01.png",
+      "sha256": "e633a7435d6ffcc13dfa64505992779c528186925494e5833e1da4e02006f2ac"
+    },
+    {
+      "file": "frames/sword-servant-death-south/02.png",
+      "sha256": "758804787afd82e7a81d64de20e7e75a5bd3c6127c3d716457f5fb900b6d5d12"
+    },
+    {
+      "file": "frames/sword-servant-death-south/03.png",
+      "sha256": "daa6fe388e83e506304f0cff280b9f8d74caf48ad88d40fab966d98c9a582200"
+    },
+    {
+      "file": "frames/sword-servant-death-south/04.png",
+      "sha256": "86388f1831e339b807468e21a070a778b05c7985f7fac264bb258b91590cb7e9"
+    },
+    {
+      "file": "frames/sword-servant-death-south/05.png",
+      "sha256": "7963b581105d9879fb352d3bcb5a27f3289140211695e9203f70d44395453290"
+    },
+    {
+      "file": "frames/sword-servant-death-southeast/00.png",
+      "sha256": "05777f9d42fea88f81e712ea9d2264fc1871a0b7ac699bb75ea409335b599a6d"
+    },
+    {
+      "file": "frames/sword-servant-death-southeast/01.png",
+      "sha256": "7e3f6ad0e2f527159606fe7bd79aaaa2c3dce38891e4268ad42a88db03e00934"
+    },
+    {
+      "file": "frames/sword-servant-death-southeast/02.png",
+      "sha256": "57e07e6410703f8e69ef534f765b8cf5ea06db1119d05f7701552240d2fee60e"
+    },
+    {
+      "file": "frames/sword-servant-death-southeast/03.png",
+      "sha256": "946998e78cdf7f68a456b99fdc680eb90284f73187ba8fe51fb2e29cec938764"
+    },
+    {
+      "file": "frames/sword-servant-death-southeast/04.png",
+      "sha256": "a7ff3c6af63a8a08cbf8a921cc2d9010558c867607497a5c5b0fdf95fe05480c"
+    },
+    {
+      "file": "frames/sword-servant-death-southeast/05.png",
+      "sha256": "01910d9a1ee1c6358328878f0b825b5b08f5d880a77679576501f76a56fc0c4e"
+    },
+    {
+      "file": "frames/sword-servant-death-southwest/00.png",
+      "sha256": "e202255372c8bfe7c5f2a2d921d151e39b3e0b4938f41d32129cbc1be352e86d"
+    },
+    {
+      "file": "frames/sword-servant-death-southwest/01.png",
+      "sha256": "2daf4303b69a5ae04e60cb5dce77d07d7cc48291efd2ef7ed0335aaa6e8c90dc"
+    },
+    {
+      "file": "frames/sword-servant-death-southwest/02.png",
+      "sha256": "21046eb933972cc8c50eef2a0ce284f23ff2a55958fddb7114a49104b1407a32"
+    },
+    {
+      "file": "frames/sword-servant-death-southwest/03.png",
+      "sha256": "79d1d17fed29adda97ee3beb5eb4c9e81ecabd194c0935c44ce4b04798516311"
+    },
+    {
+      "file": "frames/sword-servant-death-southwest/04.png",
+      "sha256": "6bdc54e0dabc8d3656ea75272c3cda668f63ed4ce4c3a0dc29c836e6e6b316c0"
+    },
+    {
+      "file": "frames/sword-servant-death-southwest/05.png",
+      "sha256": "7a4123d17e38b54d29463e4dfc7dc4d3f974a76383a038214d4e075958a65394"
+    },
+    {
+      "file": "frames/sword-servant-death-west/00.png",
+      "sha256": "77bfe10fcf67e30d9d88d6ccf541ee54ddf5278175a52bd48ce9ed0bbeb04305"
+    },
+    {
+      "file": "frames/sword-servant-death-west/01.png",
+      "sha256": "1d7f88f4eae3c08d5432292f939594b15867d558ed32f62e18ef4d561062fa62"
+    },
+    {
+      "file": "frames/sword-servant-death-west/02.png",
+      "sha256": "faad5ec164394574f0cb6bc013186fca41f833e3a01c3c1d395d3577b53b6809"
+    },
+    {
+      "file": "frames/sword-servant-death-west/03.png",
+      "sha256": "98d14bbbd6c226d16899e8211d929ee48d0ae78e1ba43519e7f8eddb90e14fbb"
+    },
+    {
+      "file": "frames/sword-servant-death-west/04.png",
+      "sha256": "add8678cc6f1ccd1b17a4151377ca160587de1b3d3abdb09fb35b18b91fa3354"
+    },
+    {
+      "file": "frames/sword-servant-death-west/05.png",
+      "sha256": "5bd98be1e2da1e1085a1676b30ff01b3bea9839875951b8583061f509cf9e76b"
+    },
+    {
+      "file": "frames/sword-servant-hit-east/00.png",
+      "sha256": "7be872b1a33c93d7ae35371439d18f3dad19fa62ac81b69d51667601603844d8"
+    },
+    {
+      "file": "frames/sword-servant-hit-east/01.png",
+      "sha256": "23e81877edc8065dab4296aef21819978e5ce739f120ce0d942d3a60eb329167"
+    },
+    {
+      "file": "frames/sword-servant-hit-east/02.png",
+      "sha256": "7106f205eb1f06a061c5b95505f775dd3e2c63f9c088bc0b9ef881f9530c48a0"
+    },
+    {
+      "file": "frames/sword-servant-hit-east/03.png",
+      "sha256": "a54c60fadadb40fef4a282ec0f5c194651fb062e0ea3bdcc2899707412a39181"
+    },
+    {
+      "file": "frames/sword-servant-hit-east/04.png",
+      "sha256": "aeb4420c2e2da41a3ba1ad5c611e90e49ebc4b79c7d6a5aab54a13268132a2f1"
+    },
+    {
+      "file": "frames/sword-servant-hit-east/05.png",
+      "sha256": "2b36f8417529e29ede978d6beec5a28693c7ffafa640bf501c2d009f0af33442"
+    },
+    {
+      "file": "frames/sword-servant-hit-north/00.png",
+      "sha256": "b60e791bbb84cb838386530736aa3c82330fa95035c2a56dd7bf8cd162182093"
+    },
+    {
+      "file": "frames/sword-servant-hit-north/01.png",
+      "sha256": "105dbc8ee27ba7c437c4ab78e05c1bc8bfb2416be95462c150f693f1dbd0c2df"
+    },
+    {
+      "file": "frames/sword-servant-hit-north/02.png",
+      "sha256": "5a681490196fa1cc260d2d5e1d2c8a79ed00598d0eca266bd2502e8ed4cc1f5d"
+    },
+    {
+      "file": "frames/sword-servant-hit-north/03.png",
+      "sha256": "62f2e1bdf376434766e1b0b4be8174abd38b2485720f89218ea9c8c96e9138c2"
+    },
+    {
+      "file": "frames/sword-servant-hit-north/04.png",
+      "sha256": "4f4ce0c3c78efc73e35726478cdd345d9225a84dbdb18161919de84378251a21"
+    },
+    {
+      "file": "frames/sword-servant-hit-north/05.png",
+      "sha256": "87ea2749f3865ed97869855948c7bc5e7d7793f71ce962fd48934650912af99a"
+    },
+    {
+      "file": "frames/sword-servant-hit-northeast/00.png",
+      "sha256": "c9f942862d05a37e7efd7a9a331fd8ac34680dc5d873279a6156d2621e8951a2"
+    },
+    {
+      "file": "frames/sword-servant-hit-northeast/01.png",
+      "sha256": "f2931dbdc92b4086fce73b8f2543010bf99a2ede376303d4137e4889c48eef5a"
+    },
+    {
+      "file": "frames/sword-servant-hit-northeast/02.png",
+      "sha256": "a592c817a6b3e79c8c09e8efe6676cf4230e74171a2de4643b5fdfcc504ef597"
+    },
+    {
+      "file": "frames/sword-servant-hit-northeast/03.png",
+      "sha256": "9685fb5d4661fe646f7c6f77cd149057865a3443aa8f8b838c5b42fa15a9ee29"
+    },
+    {
+      "file": "frames/sword-servant-hit-northeast/04.png",
+      "sha256": "4296d891ad9d895336dd7caa3de4c4800c03b1b40ac22f26af2f542417cb050a"
+    },
+    {
+      "file": "frames/sword-servant-hit-northeast/05.png",
+      "sha256": "2ef5102ddcadb7dd1a02384e4c660f37751b5799d67f1473cbc1dbb40e521c83"
+    },
+    {
+      "file": "frames/sword-servant-hit-northwest/00.png",
+      "sha256": "61d95bee84e3bad342a9a03f80d2a518db9bbf0d554fa43ee78166664fdac3d9"
+    },
+    {
+      "file": "frames/sword-servant-hit-northwest/01.png",
+      "sha256": "c8cbbee95a472887fb7174e079bcbdccceddc6824700d38494f14ab639ef28ce"
+    },
+    {
+      "file": "frames/sword-servant-hit-northwest/02.png",
+      "sha256": "5dcaa9ac4022e83547ce04e867c4b7a3bd9190c573d1d0afb49ed145a1a90c3b"
+    },
+    {
+      "file": "frames/sword-servant-hit-northwest/03.png",
+      "sha256": "da77553811e7d797fc43f333e75613d1c2aeeaef5dfac047b2604b157169e5d5"
+    },
+    {
+      "file": "frames/sword-servant-hit-northwest/04.png",
+      "sha256": "1730c49394e002fbada975b587dcecf450803591d7ef9526ad2c4f8480f1e16a"
+    },
+    {
+      "file": "frames/sword-servant-hit-northwest/05.png",
+      "sha256": "916049115dcdb921459d43841703af7088a5bf18937fbf4ecb6fc14e38d848a2"
+    },
+    {
+      "file": "frames/sword-servant-hit-south/00.png",
+      "sha256": "a45b8860f937ea96e67e9a8713b165169c4bf80bf4d05ac1b281f1240c97673e"
+    },
+    {
+      "file": "frames/sword-servant-hit-south/01.png",
+      "sha256": "a9a008b2dac086eed163ae6fce1b0ec2cfea2d5e0ad977139dc0c30508c2a4a8"
+    },
+    {
+      "file": "frames/sword-servant-hit-south/02.png",
+      "sha256": "96dd7602f8a2fe1936e1607166f962f89ebad139510caceca0de6f0f2603371b"
+    },
+    {
+      "file": "frames/sword-servant-hit-south/03.png",
+      "sha256": "dcf0edd3cd10e9bcb91e4c4b2dcd4ba6564c1816902b6d265d6516df2f6cb5ee"
+    },
+    {
+      "file": "frames/sword-servant-hit-south/04.png",
+      "sha256": "b2903b2dd41badd55ddf6c8e84496ce8eb797e8f6d4b61ca63c0a1e43b7b0365"
+    },
+    {
+      "file": "frames/sword-servant-hit-south/05.png",
+      "sha256": "dfc392240d46115fee3ad5674d9d92b58e4491cbb88eb10f91bbc1a4e6ce545f"
+    },
+    {
+      "file": "frames/sword-servant-hit-southeast/00.png",
+      "sha256": "eebada28e3436cd0b650038ea8e62c344e64c6f51910c1513e30b60ec49215a9"
+    },
+    {
+      "file": "frames/sword-servant-hit-southeast/01.png",
+      "sha256": "5df1ec7078ca2f0d57642b54adaaec6ba77121f049b30504f78c4709cd8e6a43"
+    },
+    {
+      "file": "frames/sword-servant-hit-southeast/02.png",
+      "sha256": "490a71173abd460cc639b7848bd688df1a1b3885693657984b195c0622f7a828"
+    },
+    {
+      "file": "frames/sword-servant-hit-southeast/03.png",
+      "sha256": "737f7ca55561f769c6174add6b8cefc7daeac65fd07b88b6a9cb61febb7f64de"
+    },
+    {
+      "file": "frames/sword-servant-hit-southeast/04.png",
+      "sha256": "0e164a7f0ff7758e47e018d31fbd8ae5a4a58bbb13ef93cf97e61084503be64c"
+    },
+    {
+      "file": "frames/sword-servant-hit-southeast/05.png",
+      "sha256": "6d984d5ea67499f1bdab6f7ade188ecc5fcf29b4f924094f2d29c7b945e04236"
+    },
+    {
+      "file": "frames/sword-servant-hit-southwest/00.png",
+      "sha256": "6b667e8f1c68e3698a36dfc32defd69f2d496b52eb16d5789546585fd2bf6b45"
+    },
+    {
+      "file": "frames/sword-servant-hit-southwest/01.png",
+      "sha256": "0842dda189ea46699c7319d2b4910c3d190f9a465c078e444dbe04c8cea42d83"
+    },
+    {
+      "file": "frames/sword-servant-hit-southwest/02.png",
+      "sha256": "81748760ad0c35159602ca3c458f6b6349fb4059774a7ece38ae0911741d6fa9"
+    },
+    {
+      "file": "frames/sword-servant-hit-southwest/03.png",
+      "sha256": "8351434d8af082414c2204043cdf67898914a1d5d3ebe702dcbb920b565bdd59"
+    },
+    {
+      "file": "frames/sword-servant-hit-southwest/04.png",
+      "sha256": "dc1168f10c1e1729ca917df14933b1139c55e0ef0b44fbcf9c6adcf50db3fe07"
+    },
+    {
+      "file": "frames/sword-servant-hit-southwest/05.png",
+      "sha256": "f04cc48052a45dd91bc82754d5136286c6247ab342f3047aabb4fb5e26373528"
+    },
+    {
+      "file": "frames/sword-servant-hit-west/00.png",
+      "sha256": "97856dd3aadd418b7e56f272968157b2e5a478bcc4df42fc09b5858ebf8732dd"
+    },
+    {
+      "file": "frames/sword-servant-hit-west/01.png",
+      "sha256": "b31184d8e9ff9c54988abe8be7e6f57c7792967b9fdb52f2e40c12557dd744f5"
+    },
+    {
+      "file": "frames/sword-servant-hit-west/02.png",
+      "sha256": "dd3fe80cbf595c1302577eee67beb8d6409975419fb8c9f899c2dfa8a006956f"
+    },
+    {
+      "file": "frames/sword-servant-hit-west/03.png",
+      "sha256": "53485fa1d603c6fc94a98e8cfcbac0c46ca4242b244adf2b2b319cf6a996b911"
+    },
+    {
+      "file": "frames/sword-servant-hit-west/04.png",
+      "sha256": "7d35a2bd2823c8ba71e2b91f181ca705435fc61893622dbaddfa71a395b1b477"
+    },
+    {
+      "file": "frames/sword-servant-hit-west/05.png",
+      "sha256": "eb84a783fa7e6f32b7f21b2ae14d567dfc3929009b65fef9c1f0b5416ee99a64"
+    },
+    {
+      "file": "frames/sword-servant-idle-east/00.png",
+      "sha256": "fec00ac150d7b6ad1fc15bd107549a713027a7486160a3aafb8d5d558cf1ccd8"
+    },
+    {
+      "file": "frames/sword-servant-idle-east/01.png",
+      "sha256": "ee9a26c3605ed909a65981fee7c9411ac39693b8dc14fb11ffc516c87359ec12"
+    },
+    {
+      "file": "frames/sword-servant-idle-east/02.png",
+      "sha256": "36eab1b7d4f1319620201172791e76e7facecbfcab8f6080e47861afdf6d0222"
+    },
+    {
+      "file": "frames/sword-servant-idle-east/03.png",
+      "sha256": "4e7f6fcb556e8de33e8153fece1312d085c67aef03b0676f849ad75aa9b195d3"
+    },
+    {
+      "file": "frames/sword-servant-idle-east/04.png",
+      "sha256": "1bb37785e9b475d85fc4e1a5cf7a1e2ee6938d54a009fdf9a2cc6ecba9204bf3"
+    },
+    {
+      "file": "frames/sword-servant-idle-east/05.png",
+      "sha256": "674e5f55fff2b75612363435db3cea8d5e0aea84a101fc599ca80b9b50c67826"
+    },
+    {
+      "file": "frames/sword-servant-idle-north/00.png",
+      "sha256": "dee5d6b69172ece852afc1cd9189facec7f9958e8c602516e370bc3e80043dfd"
+    },
+    {
+      "file": "frames/sword-servant-idle-north/01.png",
+      "sha256": "2c2b4400556f35db4718b1d31ff23c47698d158a590e2b88e98cdd477ec2d128"
+    },
+    {
+      "file": "frames/sword-servant-idle-north/02.png",
+      "sha256": "176c4a27ecc5c40729c63d4184e9d5555fe23c9166e9bf5ed11b88a986a0ee10"
+    },
+    {
+      "file": "frames/sword-servant-idle-north/03.png",
+      "sha256": "4c195471095bdf4ceb9b7f34da21a6bedb77e3b446ec1dbc07d14938f16ac5b6"
+    },
+    {
+      "file": "frames/sword-servant-idle-north/04.png",
+      "sha256": "7dbe326c69bdbc80d8887d016d23341a19de8321bdcfe1b686dfda9fe887ee4a"
+    },
+    {
+      "file": "frames/sword-servant-idle-north/05.png",
+      "sha256": "5794053ed9f48e8da9a3737074cb77dbe226e3b1b4b1883778e5ece11b076f21"
+    },
+    {
+      "file": "frames/sword-servant-idle-northeast/00.png",
+      "sha256": "48b2d73ab41959bc22fa61da25ceb7666c2d2241edaff74140e4ba9de8d84756"
+    },
+    {
+      "file": "frames/sword-servant-idle-northeast/01.png",
+      "sha256": "28be9e9850bbe25fc73f2c7c7e8401542a6b92c2141d6435550f7395efcc0dba"
+    },
+    {
+      "file": "frames/sword-servant-idle-northeast/02.png",
+      "sha256": "cff5efed961f147512c24eb23b4c07b7eba15c9928659e3acf7f1b50a85c9697"
+    },
+    {
+      "file": "frames/sword-servant-idle-northeast/03.png",
+      "sha256": "89566030c20d96e2f72f42a1aaff3d06c7872a4d9742e5ed6a6f7f97a8614856"
+    },
+    {
+      "file": "frames/sword-servant-idle-northeast/04.png",
+      "sha256": "48db12306099319a05ddb8d4eeb8ef3669cb33bfd05d8fe11c3c78dd11295bc5"
+    },
+    {
+      "file": "frames/sword-servant-idle-northeast/05.png",
+      "sha256": "41a5bdaf761a77739c30ea23e5979d9be7a1b3b55301285d13d447c5532f7593"
+    },
+    {
+      "file": "frames/sword-servant-idle-northwest/00.png",
+      "sha256": "e770fca55ff150e32b3994c333c24ff557ed18282066e03232768f8d35e099b6"
+    },
+    {
+      "file": "frames/sword-servant-idle-northwest/01.png",
+      "sha256": "02a92633365005775535bbc8683bfd557feca4e2143401c890941ea78d47371e"
+    },
+    {
+      "file": "frames/sword-servant-idle-northwest/02.png",
+      "sha256": "e9d2442b7bcd66552b1ab8a932ac6cdb34bf8e2f47c14a971d8ee7f6e018d6d8"
+    },
+    {
+      "file": "frames/sword-servant-idle-northwest/03.png",
+      "sha256": "3fd5edc0160c116e159c5eead433a2b9b27113bcb0d6af6a2d4058541eec953a"
+    },
+    {
+      "file": "frames/sword-servant-idle-northwest/04.png",
+      "sha256": "665e0ad1db4994bfc739479606b333eedda711f845534242d2eed38c0d99414a"
+    },
+    {
+      "file": "frames/sword-servant-idle-northwest/05.png",
+      "sha256": "9a5ddb4d56844c9974ffd91d1c5e4736f4b7a7e4edd85e8756a6f9ffed75854d"
+    },
+    {
+      "file": "frames/sword-servant-idle-south/00.png",
+      "sha256": "50285941e76689fef2bd49c984aa440ec02de753f854c8d8c0ce8faaeddb95c2"
+    },
+    {
+      "file": "frames/sword-servant-idle-south/01.png",
+      "sha256": "ccf92093fc5965752ad37438150d673dc3496d70da54f5f898a80d76f70c17e0"
+    },
+    {
+      "file": "frames/sword-servant-idle-south/02.png",
+      "sha256": "108709d2af660f1c47ccc0562f989e97b6c9e71f6179664fd7b09870c0479af1"
+    },
+    {
+      "file": "frames/sword-servant-idle-south/03.png",
+      "sha256": "c015c003568834fe1c681e4a7e7398d0223b35bd809b9d9799c9b289a5eb81b0"
+    },
+    {
+      "file": "frames/sword-servant-idle-south/04.png",
+      "sha256": "8854f336b27d71abfcd9b39145c29c4d7c8f911f11af95b7004af0c6777f508c"
+    },
+    {
+      "file": "frames/sword-servant-idle-south/05.png",
+      "sha256": "8fd3480b5e8e0eac421606806648f2c227aac1b6674ccaf1c8778736c62a81cf"
+    },
+    {
+      "file": "frames/sword-servant-idle-southeast/00.png",
+      "sha256": "ddaa4263af40b60cbf7c31b59d682e77ce4fca38cd3a0c3b36f992251973417a"
+    },
+    {
+      "file": "frames/sword-servant-idle-southeast/01.png",
+      "sha256": "5983cde12e3a019dbc080d318fc556d6cdae1aef95b5bdb3910da769bc8f55fa"
+    },
+    {
+      "file": "frames/sword-servant-idle-southeast/02.png",
+      "sha256": "b2289ec69107c6476be33e152b290323f1a3501535f8ece9a63dc8f1a9f1a368"
+    },
+    {
+      "file": "frames/sword-servant-idle-southeast/03.png",
+      "sha256": "6ddef5e3c70b59d16aced14d7f24149b5d43620008d9f9a49f3950cf7ac0979a"
+    },
+    {
+      "file": "frames/sword-servant-idle-southeast/04.png",
+      "sha256": "a76ff1400b4443ec882dafc022415df6d92aa745614c0a6a5f9f079a755a158e"
+    },
+    {
+      "file": "frames/sword-servant-idle-southeast/05.png",
+      "sha256": "247590446290add1e042b5e2aae8781d8bad7ab3b03c46f7dca0aa5a744d6f3f"
+    },
+    {
+      "file": "frames/sword-servant-idle-southwest/00.png",
+      "sha256": "7282bc32f6f5ebbd1cedc9877442932ef71b9fc5cec69e9fdc629fe6427509ec"
+    },
+    {
+      "file": "frames/sword-servant-idle-southwest/01.png",
+      "sha256": "d0c2dc5d8bcfa8b2ed73a5c2b58da9b66b289d1b2b13d4013bfef8110d8f3dcb"
+    },
+    {
+      "file": "frames/sword-servant-idle-southwest/02.png",
+      "sha256": "8c611f825e6bd4167f67e7c77d780cdca7183e3362faf0a7bbf92a8693dcd486"
+    },
+    {
+      "file": "frames/sword-servant-idle-southwest/03.png",
+      "sha256": "631b288b2a54de454905ea5f2413be67f02686180e71c5686ed667efa693859b"
+    },
+    {
+      "file": "frames/sword-servant-idle-southwest/04.png",
+      "sha256": "b7d41817f3b8c0de83f8fdc67f92352ac3618cd9dcabbbcd29e0e020eeb057c9"
+    },
+    {
+      "file": "frames/sword-servant-idle-southwest/05.png",
+      "sha256": "bc8cc1d67b72ec43fcbb08af3bbb93470497fd074e1560f2a7ff68801e257152"
+    },
+    {
+      "file": "frames/sword-servant-idle-west/00.png",
+      "sha256": "8246b1715562d28e5da549dcd1d8de5661e751868a82024bb50ff46d20554b9a"
+    },
+    {
+      "file": "frames/sword-servant-idle-west/01.png",
+      "sha256": "76e2d241c15272b67c7fc7efeea3630e4d819c3909b11abc749efb31e97a6c4b"
+    },
+    {
+      "file": "frames/sword-servant-idle-west/02.png",
+      "sha256": "65eaae99fa7232b386ffa17b8bce46eed5982e48bac717da7ccde59f5c78a3e3"
+    },
+    {
+      "file": "frames/sword-servant-idle-west/03.png",
+      "sha256": "1dddf32f38c3ff0f21f8caaf402bc27324b07b288ac36cb22af625a9584da1e1"
+    },
+    {
+      "file": "frames/sword-servant-idle-west/04.png",
+      "sha256": "96f11d1bb1ea7445093d8e801a5d0385af12b7931848dbf9fce44caf446aa85d"
+    },
+    {
+      "file": "frames/sword-servant-idle-west/05.png",
+      "sha256": "b82d4941ebe38e1498999cc1d60c00425cd10773aba21d2f1bcda8b6a0e990bf"
+    },
+    {
+      "file": "frames/sword-servant-move-east/00.png",
+      "sha256": "6285ae49553ff672d7a9575bb6279b94705e9336061c578a05cb5dba1af21a9c"
+    },
+    {
+      "file": "frames/sword-servant-move-east/01.png",
+      "sha256": "d9771f4cddc1d35a01bd95f28947c0e761e66bdfe6c17e196925bb89c7d7c03d"
+    },
+    {
+      "file": "frames/sword-servant-move-east/02.png",
+      "sha256": "27e9f69e50f390fd1372d97152e9575f4cb32b22c227ece84357879596e1dc63"
+    },
+    {
+      "file": "frames/sword-servant-move-east/03.png",
+      "sha256": "2a31f9e99805c22de72eacde0feee4f0a8168293afcab7f856621e857d7f844a"
+    },
+    {
+      "file": "frames/sword-servant-move-east/04.png",
+      "sha256": "456a3578d892aa8282f9e0b9d03a0b8e0114fad16cf13bc7a9c7eb00ec8b545c"
+    },
+    {
+      "file": "frames/sword-servant-move-east/05.png",
+      "sha256": "b3c9a542fc5f9063d10f41c7e48c7a14d8e5a53d44be96ad091dc1478ca812ef"
+    },
+    {
+      "file": "frames/sword-servant-move-north/00.png",
+      "sha256": "52f3f6072a833cba1baddefbea82e9cf90d5fa8c405ff80e4ec657db8bd7f8b1"
+    },
+    {
+      "file": "frames/sword-servant-move-north/01.png",
+      "sha256": "ed8003421d661fc2798571e92dd9227b48e4440ec0ae44aa43dcdcb507b613a0"
+    },
+    {
+      "file": "frames/sword-servant-move-north/02.png",
+      "sha256": "bacb27dbdcee426bb96ae11fb6f0239fae1fcd38f592bf2f6e1faac94f1c6a7e"
+    },
+    {
+      "file": "frames/sword-servant-move-north/03.png",
+      "sha256": "30fc34d1977000ee9daad05519de392081dca426c77598805704ca998f1171a5"
+    },
+    {
+      "file": "frames/sword-servant-move-north/04.png",
+      "sha256": "02b1e801e761d4844fee171a11db8c48e162be168168d6e5eef993fc28f16603"
+    },
+    {
+      "file": "frames/sword-servant-move-north/05.png",
+      "sha256": "893a1e8fe5ebdce8e8957327c5b858d1b5cb0a44eb76c5281639d8ad2caf554f"
+    },
+    {
+      "file": "frames/sword-servant-move-northeast/00.png",
+      "sha256": "db73ee1597ea9876d8b90c41c123f5546b1279061d97f4fbb088ff8b7dfdcf23"
+    },
+    {
+      "file": "frames/sword-servant-move-northeast/01.png",
+      "sha256": "99e2b513923f8a87f68504c945f365580f84b982452864485dd4b6e6d062d5fc"
+    },
+    {
+      "file": "frames/sword-servant-move-northeast/02.png",
+      "sha256": "89b4e38cdb9c0d3b6bbeb748ba2db5c1b35a598dc418fd89ff66a5b4c4bd1c09"
+    },
+    {
+      "file": "frames/sword-servant-move-northeast/03.png",
+      "sha256": "5ad88e473f1151dc68914737e10ce42395d77b9a7713ea08fc156706be64232e"
+    },
+    {
+      "file": "frames/sword-servant-move-northeast/04.png",
+      "sha256": "debbc982b927055ddee3bbb40c7f372e8ce9df576d7e04110c4abe2fc19df610"
+    },
+    {
+      "file": "frames/sword-servant-move-northeast/05.png",
+      "sha256": "86c95687a0b1a41baec2cab21ad4919904090b72842ea3e6f0e88835b5ccca78"
+    },
+    {
+      "file": "frames/sword-servant-move-northwest/00.png",
+      "sha256": "a1f203d920f05643fe7fdcb2ac7da395d87bea2ea4893cfd75d710b158c5cb01"
+    },
+    {
+      "file": "frames/sword-servant-move-northwest/01.png",
+      "sha256": "ab2758a4c1c1dd93c568214819890c8b511317ad17639e1f6b23f21d51856c74"
+    },
+    {
+      "file": "frames/sword-servant-move-northwest/02.png",
+      "sha256": "723be6a1d5b76987cac7a9b666a162a22d6cc5de2834e93a216472cc45a24e42"
+    },
+    {
+      "file": "frames/sword-servant-move-northwest/03.png",
+      "sha256": "20994f90be398db1d49fe31a505abae5f8bebafd63894cb1eb0c36db20719c04"
+    },
+    {
+      "file": "frames/sword-servant-move-northwest/04.png",
+      "sha256": "488a57cdc2d2fa6193b7c158a843d16ea1dfa82364d09709e5b9f5759268f619"
+    },
+    {
+      "file": "frames/sword-servant-move-northwest/05.png",
+      "sha256": "b13dd2388ca5f22101c9063f4628e47667af897299a0bf2d11fde8f6f9b9d118"
+    },
+    {
+      "file": "frames/sword-servant-move-south/00.png",
+      "sha256": "032e554a2fac4e190e6d747e2e8fb214184f18dff7ca93f48cae31001678a57e"
+    },
+    {
+      "file": "frames/sword-servant-move-south/01.png",
+      "sha256": "46a1b86384e4892b8cc84ce20b439408d96d14668151b6491259184e6a63f97f"
+    },
+    {
+      "file": "frames/sword-servant-move-south/02.png",
+      "sha256": "4f95eeee9a1e415d42b9f66fe964e5847963d71923d71049c0304d6b084c24a2"
+    },
+    {
+      "file": "frames/sword-servant-move-south/03.png",
+      "sha256": "31d28b9330e1ceca9e15267f3bb469192423c120ac5576f89068e9d92808b95c"
+    },
+    {
+      "file": "frames/sword-servant-move-south/04.png",
+      "sha256": "4856fefa2feebd987fe50fc89588c4939d08a3547e67731db6f259e50e037df6"
+    },
+    {
+      "file": "frames/sword-servant-move-south/05.png",
+      "sha256": "67f582ec4a22dab2d2cee03f56e97b93aab339619728c0d2b4ec69a9502890cb"
+    },
+    {
+      "file": "frames/sword-servant-move-southeast/00.png",
+      "sha256": "f550ca606649e712be576ee181ccc9ea4cbbf888ce40ca17817baa16cf9bb76e"
+    },
+    {
+      "file": "frames/sword-servant-move-southeast/01.png",
+      "sha256": "7cfcde583d9ca1ab54cc843505ecebe50a08dccb3d23bf2518266c91518daaac"
+    },
+    {
+      "file": "frames/sword-servant-move-southeast/02.png",
+      "sha256": "9614303d67e35f4b187a35ec8c446343f04d32afb23784aa9c12f73cda802bf7"
+    },
+    {
+      "file": "frames/sword-servant-move-southeast/03.png",
+      "sha256": "ed8978b25d7dc4fe9357d6d74fdd6f136cdabe6278694f51913558e74f048d98"
+    },
+    {
+      "file": "frames/sword-servant-move-southeast/04.png",
+      "sha256": "efa8f482b3033911096920b16a1097fe2c3fdac7139994de6db73ddda7e5ae3b"
+    },
+    {
+      "file": "frames/sword-servant-move-southeast/05.png",
+      "sha256": "503d79d887c4553713d203bd730974e5af7c5c16b6700321119bb35289b0c4d8"
+    },
+    {
+      "file": "frames/sword-servant-move-southwest/00.png",
+      "sha256": "da11578b6757258b71b108c4f93f90be0b6b9b728a35fc2fe29fe6e112e507dc"
+    },
+    {
+      "file": "frames/sword-servant-move-southwest/01.png",
+      "sha256": "2fd049d5d4fc068dabe306e0724980fda436f4ce28d5c1096ff399a14f523494"
+    },
+    {
+      "file": "frames/sword-servant-move-southwest/02.png",
+      "sha256": "87ab81a70deec58c8c6c0ab8fa1eafeb20314bc51c5cb4cdf719acaed1ddc52c"
+    },
+    {
+      "file": "frames/sword-servant-move-southwest/03.png",
+      "sha256": "10ae1c0fb9adc61faaf1d889e3f523da15b4665b744483ac58c229c4316c9b53"
+    },
+    {
+      "file": "frames/sword-servant-move-southwest/04.png",
+      "sha256": "3ebb9c642244112aa22907cbe10f1caa901e414feb272aefa11771d5b6d48b53"
+    },
+    {
+      "file": "frames/sword-servant-move-southwest/05.png",
+      "sha256": "93b238f142b9c32b4498b08b6cf009163ccf762d1ca4efcc4e0de594b1643de0"
+    },
+    {
+      "file": "frames/sword-servant-move-west/00.png",
+      "sha256": "972c6c0c38c4d21e2bbcedd7c785ce424ad885bd851042a0ce4c016e178d018b"
+    },
+    {
+      "file": "frames/sword-servant-move-west/01.png",
+      "sha256": "295390e586aee87a3b775e6d02a6d72931e1536be26900d490b2e1a507119a4c"
+    },
+    {
+      "file": "frames/sword-servant-move-west/02.png",
+      "sha256": "ca73f00abb62f40c1d61466ff5e585bae34de97f4800b7912991281041d7e475"
+    },
+    {
+      "file": "frames/sword-servant-move-west/03.png",
+      "sha256": "968800fd78cbd9c99f5399967ec54e6ca46206bd6d1b2e899af937a53c0b9052"
+    },
+    {
+      "file": "frames/sword-servant-move-west/04.png",
+      "sha256": "4d303c94badf70bad35633a9c25ccb2ebb6f96afa694ab35d6b1f876281ef256"
+    },
+    {
+      "file": "frames/sword-servant-move-west/05.png",
+      "sha256": "436b9f2f646f88aa117faa758643e23231a5d0f2fff6a297013e814a919ef0ab"
+    },
+    {
+      "file": "inputs/sword-servant-clean.png",
+      "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888"
+    },
+    {
+      "file": "inputs/sword-servant-east-neutral-same-view8x.png",
+      "sha256": "50893c802bcc874cb412e3aaaf00576a294dac6c55f57b9f1216264d351475ca"
+    },
+    {
+      "file": "inputs/sword-servant-north-neutral-same-view8x.png",
+      "sha256": "dcd0c7ce16ccbf36943ef940e669b352db50af1ab998d2ee721dca721143ea0e"
+    },
+    {
+      "file": "inputs/sword-servant-northeast-neutral-same-view8x.png",
+      "sha256": "6026167d29a56ea025ca7a3ef93f3fbbe7535031c01a25c0084a10da95f15b01"
+    },
+    {
+      "file": "inputs/sword-servant-northwest-idle-api4x4-r1-clean-source.png",
+      "sha256": "6b394081ef64c87de3af16da7d87ccffaaa5d6aaa6e728d56a81669c09a8d355"
+    },
+    {
+      "file": "inputs/sword-servant-northwest-neutral-same-view8x.png",
+      "sha256": "d9f2858d3b40eefe20962730db1945f88101c7d11ac55042fac89f506edcae79"
+    },
+    {
+      "file": "inputs/sword-servant-south-neutral-same-view8x.png",
+      "sha256": "bbaec2dab621690a57b9cf84e72157266e5ad04003ff7e4105483172ee3483ff"
+    },
+    {
+      "file": "inputs/sword-servant-southeast-neutral-same-view8x.png",
+      "sha256": "221c6fd1a94004fa0f05aa43453a20e7e84523ba449b272783af6a375f4c41da"
+    },
+    {
+      "file": "inputs/sword-servant-southwest-neutral-same-view8x.png",
+      "sha256": "dd3090bdf8844920e7d737583b259349e8ac5d554a3b8fa9765d78be420112dd"
+    },
+    {
+      "file": "inputs/sword-servant-west-neutral-same-view8x.png",
+      "sha256": "a7101ac2abdc0b61aba0c72ad96dfdd0e7c29d4c0fdd0840f63778ef8534db44"
+    },
+    {
+      "file": "inputs/wang-east-clean.png",
+      "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+    },
+    {
+      "file": "inputs/wang-north-clean.png",
+      "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+    },
+    {
+      "file": "inputs/wang-northeast-clean.png",
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+    },
+    {
+      "file": "inputs/wang-northwest-clean.png",
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+    },
+    {
+      "file": "inputs/wang-south-clean.png",
+      "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+    },
+    {
+      "file": "inputs/wang-southeast-clean.png",
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+    },
+    {
+      "file": "inputs/wang-southwest-clean.png",
+      "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+    },
+    {
+      "file": "inputs/wang-west-clean.png",
+      "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+    },
+    {
+      "file": "prompts/sword-servant-east-attack-api4x4-r1-neutral-r2.txt",
+      "sha256": "738cff86a5d53f38c9278440087526325c675d0b643b81a6d51cffadc294f247"
+    },
+    {
+      "file": "prompts/sword-servant-east-death-api4x4-r1-neutral-r2.txt",
+      "sha256": "216abed88aef22a786c1872c91eabb5e7729a4b9b7a564580bd1692fb30410f4"
+    },
+    {
+      "file": "prompts/sword-servant-east-hit-api4x4-r1-neutral-r2.txt",
+      "sha256": "7404eb5397a17129b808355e9f1e6a775f98d2fb1652d80a97a4da4dff168b2b"
+    },
+    {
+      "file": "prompts/sword-servant-east-idle-api4x4-r1-neutral-r2.txt",
+      "sha256": "da9f82164033eb94b77476ced95173303caa807c02135582b4399603120c688e"
+    },
+    {
+      "file": "prompts/sword-servant-east-move-api4x4-r1-neutral-r2.txt",
+      "sha256": "4f5f37f463ac5d7089e2214ef18f41e8d211e68436d068151ff2dfc70319ee5c"
+    },
+    {
+      "file": "prompts/sword-servant-north-attack-api4x4-r1.txt",
+      "sha256": "013317561d5e5f4ed23f2c7ebfe7f41331757f1c8f35f5df910ce59e74ecccf1"
+    },
+    {
+      "file": "prompts/sword-servant-north-death-api4x4-r1.txt",
+      "sha256": "14268b6eecb2d5a28bf1683edc1e06e25a4e97bb1a4b55ca8bf70695d5890220"
+    },
+    {
+      "file": "prompts/sword-servant-north-hit-api4x4-r1.txt",
+      "sha256": "75658322cc4c0a7686f966d4e80a0b8a602383c416c23281d320af0cdd3a606c"
+    },
+    {
+      "file": "prompts/sword-servant-north-idle-api4x4-r1.txt",
+      "sha256": "f3f500a8e067a7365163de041c9cbd3448804aaadfa2df320df361255d650272"
+    },
+    {
+      "file": "prompts/sword-servant-north-move-api4x4-r1.txt",
+      "sha256": "d7e91d2cb6a7b3157e641882ab30addcd9ae9451f0de4f9eed22dcdacd56659c"
+    },
+    {
+      "file": "prompts/sword-servant-northeast-attack-api4x4-r1-neutral-r2.txt",
+      "sha256": "941a9123327fc875087a45965126fd8cd6435f1a531919d6a460eeb1e8dc4ffc"
+    },
+    {
+      "file": "prompts/sword-servant-northeast-death-api4x4-r1-neutral-r2.txt",
+      "sha256": "cbcaad28f5c6dbde16335b5f172031e13a79b49623b0d7638bbaa150dc1a4560"
+    },
+    {
+      "file": "prompts/sword-servant-northeast-hit-api4x4-r1-neutral-r2.txt",
+      "sha256": "9498c565d877a4e53767e812e324289ae363f82d6a9ed8e51519e5a17dd49bd9"
+    },
+    {
+      "file": "prompts/sword-servant-northeast-idle-api4x4-r1-neutral-r2.txt",
+      "sha256": "73af24f18e71dba0153d341efdb8f408c4fcbd2e7f202049086deb21ae52d679"
+    },
+    {
+      "file": "prompts/sword-servant-northeast-move-api4x4-r1-neutral-r2.txt",
+      "sha256": "b3cbcccab721adde80f74ea9b67d23b0308d3a72a0f059adf70809f67d3b7aa7"
+    },
+    {
+      "file": "prompts/sword-servant-northwest-attack-api4x4-r1-camera-r2.txt",
+      "sha256": "ce04cc2c3b8ff97df388d2ae57225bf4e62be0c9bc09d0eacc4f472246e9130f"
+    },
+    {
+      "file": "prompts/sword-servant-northwest-death-api4x4-r1.txt",
+      "sha256": "a554747d3de3185a3f81fb2c21a92f1cf2057e8b173f1519c986b2a349858839"
+    },
+    {
+      "file": "prompts/sword-servant-northwest-hit-api4x4-r1-camera-r2.txt",
+      "sha256": "527d12ad6a1d497e52c46e3c5a5615239405d44febdec875869ebbe607304252"
+    },
+    {
+      "file": "prompts/sword-servant-northwest-idle-api4x4-r1.txt",
+      "sha256": "b73e80a4e519b70a999ebb746cd647bc962905dada12baf9a63fd307eda248c4"
+    },
+    {
+      "file": "prompts/sword-servant-northwest-move-api4x4-r1.txt",
+      "sha256": "e1764792a9fc35579a509fe108f4e4749daa28c879e00307361bd437233d864b"
+    },
+    {
+      "file": "prompts/sword-servant-south-attack-api4x4-r1-neutral-r2.txt",
+      "sha256": "01935d728df301a5d12f706f9763e1294b73d44687a466ca58558f8e2b1ac295"
+    },
+    {
+      "file": "prompts/sword-servant-south-death-api4x4-r1-neutral-r2.txt",
+      "sha256": "9de7bdb025acb304b5d9ccedd17132f0ea9cb4cde5f52629d2dc9e86ed98d221"
+    },
+    {
+      "file": "prompts/sword-servant-south-hit-api4x4-r1-neutral-r2.txt",
+      "sha256": "b331f4717e7a0639ed79ffe243a7e47f5150d8866dc6f1f58802466a4ee7ee57"
+    },
+    {
+      "file": "prompts/sword-servant-south-idle-api4x4-r1-neutral-r2.txt",
+      "sha256": "32e8d6cde88158f61995f10aad19b216e4afa9f1005210803d30a1cb0a31818a"
+    },
+    {
+      "file": "prompts/sword-servant-south-move-api4x4-r1-neutral-r2.txt",
+      "sha256": "fba3886bfd9df24d002a722b1fa134267e1d18d591cec3c57e9b116757b377e3"
+    },
+    {
+      "file": "prompts/sword-servant-southeast-attack-api4x4-r1.txt",
+      "sha256": "3d7ce4e37835efa2a368ecd0a1ac8fa8f1de368a78c647c1226e9461d976682d"
+    },
+    {
+      "file": "prompts/sword-servant-southeast-death-api4x4-r1.txt",
+      "sha256": "8ecccb2e17540897a95a00c9ef81d48de8d5a278560939dd1f9c6797ecf07bb1"
+    },
+    {
+      "file": "prompts/sword-servant-southeast-hit-api4x4-r1.txt",
+      "sha256": "2e6016b3b15ce7874e0c77c53027c2da32db5d327581a604d64dff3730124294"
+    },
+    {
+      "file": "prompts/sword-servant-southeast-idle-api4x4-r1.txt",
+      "sha256": "ac6a7606747ee47770ab856c86fc89b9223185f62098e85283cb48bf9aadbe6a"
+    },
+    {
+      "file": "prompts/sword-servant-southeast-move-api4x4-r1.txt",
+      "sha256": "113886d1beb12fe7944bdd13bdd14700270ad5bb82c6b2226835ede9df193a45"
+    },
+    {
+      "file": "prompts/sword-servant-southwest-attack-api4x4-r1-neutral-r2.txt",
+      "sha256": "05626340aa7f4eb1f66970b5926248ee7f2edd69a1a42117c4a9715ad94fbbba"
+    },
+    {
+      "file": "prompts/sword-servant-southwest-death-api4x4-r1-neutral-r2.txt",
+      "sha256": "da0b16593461ccb0a863e2854cef8f5f9823603c2bcdcd56c3d15ff797aa2017"
+    },
+    {
+      "file": "prompts/sword-servant-southwest-hit-api4x4-r1-neutral-r2.txt",
+      "sha256": "74a93f05ea8f4e3b420cbbb1b9c7c1799a3089163d667c8a239857ca39625c6b"
+    },
+    {
+      "file": "prompts/sword-servant-southwest-idle-api4x4-r1-neutral-r2.txt",
+      "sha256": "6c3e548807aaaa0d1f5884139fb69fd41b135fbfc4fd384c96826cbcb53c2afd"
+    },
+    {
+      "file": "prompts/sword-servant-southwest-move-api4x4-r1-neutral-r2.txt",
+      "sha256": "b7fe6b7fb15043d93c459427d4be68c11bcd51385db1bbd570b24320774ad677"
+    },
+    {
+      "file": "prompts/sword-servant-west-attack-api4x4-r1-neutral-r2.txt",
+      "sha256": "354336c8b9eefcb6d0f9a8b36811b227d105bee6730b709651a082a715a50776"
+    },
+    {
+      "file": "prompts/sword-servant-west-death-api4x4-r1-neutral-r2.txt",
+      "sha256": "859ed859f3efc07f6a58338bf9fda3afb5e9b984d95123d8ff013cf0406482b7"
+    },
+    {
+      "file": "prompts/sword-servant-west-hit-api4x4-r1-neutral-r2.txt",
+      "sha256": "b0fabd9e2d932dd8aa0000212d3df676df6976e7cfdda341f847fcf22cc54ddf"
+    },
+    {
+      "file": "prompts/sword-servant-west-idle-api4x4-r1-neutral-r2.txt",
+      "sha256": "6965df5f7011b08f2d1ef1856e4e08b84d7b2efcacd59e9d878feda3a78fa8aa"
+    },
+    {
+      "file": "prompts/sword-servant-west-move-api4x4-r1-neutral-r2.txt",
+      "sha256": "a9be79c6b318bb8d008eb8bd69bbe569894980522b7aa6d9307702a274e36691"
+    },
+    {
+      "file": "review/sword-servant-attack-east-contact.png",
+      "sha256": "cbfe0bc1070939a1c607d755729935e1e632667823887e6c9c680fa2060771ba"
+    },
+    {
+      "file": "review/sword-servant-attack-north-contact.png",
+      "sha256": "36dd5adfa52c1e96b32d731a6eccbd90c7d59b37bc9550275a67844e3aa208a6"
+    },
+    {
+      "file": "review/sword-servant-attack-northeast-contact.png",
+      "sha256": "72324ce6e66951e2b683ee299d727aaf83f6e354b3106f398a33d786261df449"
+    },
+    {
+      "file": "review/sword-servant-attack-northwest-contact.png",
+      "sha256": "6c34079d004a1b8fa4ce6bb986339014ee09cf09a10ff4bbdc50d0a9ef2e6eaa"
+    },
+    {
+      "file": "review/sword-servant-attack-south-contact.png",
+      "sha256": "b67e1f7becc260559cf7fd014a1191e44b9bf14f47b705a8540334e555dc12e4"
+    },
+    {
+      "file": "review/sword-servant-attack-southeast-contact.png",
+      "sha256": "463b6a8b92dc419342f26088f9c84649d8834daab7dab145cdfec1c35ffccb68"
+    },
+    {
+      "file": "review/sword-servant-attack-southwest-contact.png",
+      "sha256": "a780c5390e9c07328b6d2a3722aefac80a8122a1a0e05714691260a8a4d8c249"
+    },
+    {
+      "file": "review/sword-servant-attack-west-contact.png",
+      "sha256": "7d7db8660f00f64c4e598a7da81b4a8402332e92d7dadd5476a374b41b7f551c"
+    },
+    {
+      "file": "review/sword-servant-death-east-contact.png",
+      "sha256": "1a4562930c6e58fb300dd6ab5d628be439e822b23c6f1139c3c80d225aeb953b"
+    },
+    {
+      "file": "review/sword-servant-death-north-contact.png",
+      "sha256": "329af691084803452cfab9a95917712b534552614fb81b532dcc77544ab94eac"
+    },
+    {
+      "file": "review/sword-servant-death-northeast-contact.png",
+      "sha256": "3bad9f80a6c76943529e643756230006517c6543c0c45b28bd5b79bb605c0f6f"
+    },
+    {
+      "file": "review/sword-servant-death-northwest-contact.png",
+      "sha256": "64efbc160c85c84f55fcb6f05e79f26d3118ab37200eb27e1ff258f36d5f6b74"
+    },
+    {
+      "file": "review/sword-servant-death-south-contact.png",
+      "sha256": "a87a18a29924ea2b4534b599dfd51536384bd230630002ad97a9d5b05960aedd"
+    },
+    {
+      "file": "review/sword-servant-death-southeast-contact.png",
+      "sha256": "dc70f476d2fc487eab5a92dc1244415d2352fcdbc7fad92432d978153794188d"
+    },
+    {
+      "file": "review/sword-servant-death-southwest-contact.png",
+      "sha256": "ff017aaee1931e46d230e80467091eafc7e01f9f7c8d9a8a0e5e9186ead0c48c"
+    },
+    {
+      "file": "review/sword-servant-death-west-contact.png",
+      "sha256": "8c500ac72e9747ead068df6d559111d4564e4c2a34fcebb5dd7baa41205d17e1"
+    },
+    {
+      "file": "review/sword-servant-east-attack-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "83ddd888f198ddc946820fe25d720508c74ecc1a8c40817614f690b91083c21c"
+    },
+    {
+      "file": "review/sword-servant-east-attack-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "1571a0177435802bf86a848634fbaf71211268928e4b5b76cea0cf6bd6dc5e6d"
+    },
+    {
+      "file": "review/sword-servant-east-death-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "b3d47ac38090952e55c57695b3b78de9972bd2e111f8c3bd4d0b17a5aa4b9967"
+    },
+    {
+      "file": "review/sword-servant-east-death-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "c170cffdfd19387a5ae52106e22176a2290c81d221d30d78bb6b75d9ed6cab89"
+    },
+    {
+      "file": "review/sword-servant-east-hit-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "a12b846c024bdc7da9ced398b6116f85bbc7dcb9b293784de514a25c09a95e1b"
+    },
+    {
+      "file": "review/sword-servant-east-hit-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "3f7103fb83a41191e1c113943d87ed1bf13762399e4f93bbab0a895171d87366"
+    },
+    {
+      "file": "review/sword-servant-east-idle-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "9589fa4cd68fe4fe646ef98eb8952155caf219a8e36e4fe39cb76a66187ffd5f"
+    },
+    {
+      "file": "review/sword-servant-east-idle-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "c47cdb9c46f1533c9a2b0a1bce2461f8fa536d35a51e913aa46e701a1c2a318b"
+    },
+    {
+      "file": "review/sword-servant-east-move-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "f06e01036f338dc2c0a266d7b38396c4c733c318ebde4588af2a24438c2b462e"
+    },
+    {
+      "file": "review/sword-servant-east-move-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "7ea9059cb333c32a04f71f8545f3e700c81261988e2e99bd0b8184cc165b6904"
+    },
+    {
+      "file": "review/sword-servant-hit-east-contact.png",
+      "sha256": "514b1395770d22fe33035b70ca6ff2f0687cf48c0c0696b67527216c07713b11"
+    },
+    {
+      "file": "review/sword-servant-hit-north-contact.png",
+      "sha256": "c1952a702770f5e241e98293c55a44818641ecbc3f4659c5acde30f719ce84cc"
+    },
+    {
+      "file": "review/sword-servant-hit-northeast-contact.png",
+      "sha256": "1f798edc04157a7185f8b741295708b20757f2cb9d10faf61b567cd8d7ad17c8"
+    },
+    {
+      "file": "review/sword-servant-hit-northwest-contact.png",
+      "sha256": "8f474f7a882a436c228c985053725bd8d156719e5e91934cf6a5b8f6b59748b9"
+    },
+    {
+      "file": "review/sword-servant-hit-south-contact.png",
+      "sha256": "e326b672c61d4696381e6a465e77c74f7f20dfeb3b6154fcfa4becfaf2145e35"
+    },
+    {
+      "file": "review/sword-servant-hit-southeast-contact.png",
+      "sha256": "08e56020212a0507b43f99e72a5e8ee3d46c277104a06ebed7ac72aa63fc7693"
+    },
+    {
+      "file": "review/sword-servant-hit-southwest-contact.png",
+      "sha256": "27eeb29151c1b18e50486606e5d78ec898d75244582a933cfdd136a7b6c8c463"
+    },
+    {
+      "file": "review/sword-servant-hit-west-contact.png",
+      "sha256": "806651d3cc4390131c62340bdc0080c630865162ea5e1cd915c7812d854c8cd4"
+    },
+    {
+      "file": "review/sword-servant-idle-east-contact.png",
+      "sha256": "16d42a4cc082311083e4b166c6f3dd88b5bfc6addae1522c42ab92cd3a845c41"
+    },
+    {
+      "file": "review/sword-servant-idle-north-contact.png",
+      "sha256": "5db31d714f2840d662e2a2dee983c3f1bb4cb4548a71ee1d50466b691a58e8fa"
+    },
+    {
+      "file": "review/sword-servant-idle-northeast-contact.png",
+      "sha256": "f9754d80737033778904aab3deee9095583d5c65a368f0be4259af6f0eb37201"
+    },
+    {
+      "file": "review/sword-servant-idle-northwest-contact.png",
+      "sha256": "83c1d9403d20fe00118752151db99fddb6ea20ad91fd811f9ae92ede648b9fec"
+    },
+    {
+      "file": "review/sword-servant-idle-south-contact.png",
+      "sha256": "33399fa3a466b828d77ecd864642b12b73ab4b799db320e9b9f1095222084f22"
+    },
+    {
+      "file": "review/sword-servant-idle-southeast-contact.png",
+      "sha256": "b58b2acdf86afa447f7f9a6c1715d7801a7eed5ad77fa646ef9c17b2343dbf1a"
+    },
+    {
+      "file": "review/sword-servant-idle-southwest-contact.png",
+      "sha256": "6345ee69d18a08598e52842806368c486d00dea68fa97c0aef1c5a1e83a10c44"
+    },
+    {
+      "file": "review/sword-servant-idle-west-contact.png",
+      "sha256": "60d4ebeb50abfb0fe7948ce500639c71a9b4772719ffbe8a5cb3a8b41bd93241"
+    },
+    {
+      "file": "review/sword-servant-move-east-contact.png",
+      "sha256": "c68f036c9ca6831acb97c34026e02f546e28ad122b32c8f050fc9b993834591c"
+    },
+    {
+      "file": "review/sword-servant-move-north-contact.png",
+      "sha256": "5a3c759b78417b992bb9379c491d63e2b89d202e9d0a78ac1b3adddc7c17f09b"
+    },
+    {
+      "file": "review/sword-servant-move-northeast-contact.png",
+      "sha256": "eb86922712e5f3f52a6dab19beb0f8d84c1193ab3057ad63d8d3a5bf8886c718"
+    },
+    {
+      "file": "review/sword-servant-move-northwest-contact.png",
+      "sha256": "5a95c58a3641bcc402ebb59e276ab264f6e691f54c736df04c20fd8ed124f559"
+    },
+    {
+      "file": "review/sword-servant-move-south-contact.png",
+      "sha256": "a7a97968c248af0ab8bc8a2d3da5a0cf944d857594ea6ddd87d776aaec96d728"
+    },
+    {
+      "file": "review/sword-servant-move-southeast-contact.png",
+      "sha256": "23dba31447709013c705a469db22f183b57eac8d6cdb7e8a9ac44e39ea4e362d"
+    },
+    {
+      "file": "review/sword-servant-move-southwest-contact.png",
+      "sha256": "10cbfd5cb86bc0474014fc29a6ef4cb38714e64745fc0a9dc743f2a4f9e706ae"
+    },
+    {
+      "file": "review/sword-servant-move-west-contact.png",
+      "sha256": "257972d324f9e8961b087d951bb02728ced086d79d05565d42dc6a9ef63e5b1e"
+    },
+    {
+      "file": "review/sword-servant-north-attack-api4x4-r1-inspection.json",
+      "sha256": "dad523c999b4f57cb4ef2280fb1783bd422d17e9d700d621c60d8f80438e2a48"
+    },
+    {
+      "file": "review/sword-servant-north-attack-api4x4-r1-source-native2x.png",
+      "sha256": "b6c88eb3a87778bbde36c03d8b818cc17daea45b383013065102ef047e321f7a"
+    },
+    {
+      "file": "review/sword-servant-north-death-api4x4-r1-inspection.json",
+      "sha256": "c0cd8c562232ef89da10f4c19bc8c7ad113eb51b16747c421c8cbab4bdc9731c"
+    },
+    {
+      "file": "review/sword-servant-north-death-api4x4-r1-source-native2x.png",
+      "sha256": "6066beeffdcca25eb674599eb885644d33dbf6bbd977fa404e16796b84c4e5e5"
+    },
+    {
+      "file": "review/sword-servant-north-hit-api4x4-r1-inspection.json",
+      "sha256": "100c18d4b8d8663d0b3306e4c5caf7b145f0ae56fa7a27d603522900cb0cfd3a"
+    },
+    {
+      "file": "review/sword-servant-north-hit-api4x4-r1-source-native2x.png",
+      "sha256": "33e1cbf9dbb6645eb104b2aaef67379f308475bfde9a28f37d2c5a981eaf7a3a"
+    },
+    {
+      "file": "review/sword-servant-north-idle-api4x4-r1-inspection.json",
+      "sha256": "f0180cd4a40cdb045e2ea0f40804ce843c295bb38c2f92d50ab46d47b73a8e2f"
+    },
+    {
+      "file": "review/sword-servant-north-idle-api4x4-r1-source-native2x.png",
+      "sha256": "b39f0d6980a05c2ea13b37605bf18b27dbe713a7506e484b5abd9d208821a16c"
+    },
+    {
+      "file": "review/sword-servant-north-move-api4x4-r1-inspection.json",
+      "sha256": "bceae29030f9756b59b7f7cd007868f664825bbf566ea03a9d7975941dbf5776"
+    },
+    {
+      "file": "review/sword-servant-north-move-api4x4-r1-source-native2x.png",
+      "sha256": "2792aa159719550229c13fb631304b374400170b5747b41ca84b1597e3da8391"
+    },
+    {
+      "file": "review/sword-servant-northeast-attack-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "6670e23108dbc610dde4685448f0846986652a4ebbe0010371068ea219c96f0b"
+    },
+    {
+      "file": "review/sword-servant-northeast-attack-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "c36850544ef85047f0055791c9b242464aa226f5c5127d70c83fa195f6054de7"
+    },
+    {
+      "file": "review/sword-servant-northeast-death-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "322082c5b550c43f4efbc8e0059afc1736d4199557bd074b2564ad9c253ffc8c"
+    },
+    {
+      "file": "review/sword-servant-northeast-death-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "7447c8344e24407c853dfb54947574f72032165d6a3bab8cfa46cfd3b83d0f8a"
+    },
+    {
+      "file": "review/sword-servant-northeast-hit-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "b6daa5e4a9bb1e31e89103e9056a1357c71ba1f46ce3f5d4038247dadf97a43c"
+    },
+    {
+      "file": "review/sword-servant-northeast-hit-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "0f327e620005366d528856ff22dabd3676e5e36f5e3b664e9cf69f9b39d67335"
+    },
+    {
+      "file": "review/sword-servant-northeast-idle-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "6825ff3c19bd3d8705010ff7edee3ced6b5e6a0081d4cb52cdd0f52b60fad442"
+    },
+    {
+      "file": "review/sword-servant-northeast-idle-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "9141f5e28541e907c8b7adf2962e5262260d6e1ccd876344bdd8857996dca251"
+    },
+    {
+      "file": "review/sword-servant-northeast-move-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "44372b40837401981f2dafcec42b8c76918bedff4b0ab61a1b1123c949caaedb"
+    },
+    {
+      "file": "review/sword-servant-northeast-move-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "e4de4d2650b01483e27d26031653b82dee522cf5cdc9658f662a623cbf1596cd"
+    },
+    {
+      "file": "review/sword-servant-northwest-attack-api4x4-r1-camera-r2-inspection.json",
+      "sha256": "e0a24010dd293246e44bcf7e93326a0242f0c71c542dc78d65fefd4fffbe255e"
+    },
+    {
+      "file": "review/sword-servant-northwest-attack-api4x4-r1-camera-r2-source-native2x.png",
+      "sha256": "93bf7deab186a66f4b11326ec93351d06b1a07084a777a1210f12db32b4d4ef0"
+    },
+    {
+      "file": "review/sword-servant-northwest-death-api4x4-r1-inspection.json",
+      "sha256": "e4eb9fee941646c8bf508b5fa0b8b1ab2cc6817f51dc8c17d4a61eaeb244a4de"
+    },
+    {
+      "file": "review/sword-servant-northwest-death-api4x4-r1-source-native2x.png",
+      "sha256": "7ac39ab3ac61ae09ca95ef8c008e43f8593c319ac1496c154fb3a8a973985e7d"
+    },
+    {
+      "file": "review/sword-servant-northwest-hit-api4x4-r1-camera-r2-inspection.json",
+      "sha256": "734c729fe7d83a30685f6721883bc0dab95040de0fd25cc30be8ed83a514d5f8"
+    },
+    {
+      "file": "review/sword-servant-northwest-hit-api4x4-r1-camera-r2-source-native2x.png",
+      "sha256": "7a7be7b67ea19329f0f75f6d374609faf50d7e583160ec2f50ddf853b610747d"
+    },
+    {
+      "file": "review/sword-servant-northwest-idle-api4x4-r1-inspection.json",
+      "sha256": "14d90b16754c870c3cc38ab60290b6384714c8cf719a271a1ac9c981ebb08234"
+    },
+    {
+      "file": "review/sword-servant-northwest-idle-api4x4-r1-source-native2x.png",
+      "sha256": "e2849caef4536de01a7d0100c30772222ab1fb0ad7149416bedf1bad57c216e4"
+    },
+    {
+      "file": "review/sword-servant-northwest-move-api4x4-r1-inspection.json",
+      "sha256": "64b1740c7d44bde1becd11a5be2565ec9e1c4805e0168ecdd216d9879b46e7c0"
+    },
+    {
+      "file": "review/sword-servant-northwest-move-api4x4-r1-source-native2x.png",
+      "sha256": "15369b102688d2d17ed109c5bbb66fa6e54ff7f4758e187885c622c0e793689c"
+    },
+    {
+      "file": "review/sword-servant-south-attack-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "c7a36349ee4361916e80fcdea4f679081df3fd5d40d1dc3f5d5f7afcf944f26f"
+    },
+    {
+      "file": "review/sword-servant-south-attack-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "20a012ab44198e363dd7d88ebf12360845f7c07b8d169b34ffc328a61e1b6111"
+    },
+    {
+      "file": "review/sword-servant-south-death-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "2cbbc4dc3209ec28ce0f32d99324a7cd326e58050d48442c179b12d33827e168"
+    },
+    {
+      "file": "review/sword-servant-south-death-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "880e236030960ef03e0f235f2dd0f3bae2021d3a10bf79284c94e57c0ccaa5f6"
+    },
+    {
+      "file": "review/sword-servant-south-hit-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "8a85d611b0cf2ebac3d1fbe74374994790bd9b1693f240da245fb2781a078694"
+    },
+    {
+      "file": "review/sword-servant-south-hit-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "f59b0bd77f06a446babd5e258a0fc3d3bb587675e8f5d2d325329f28b3108435"
+    },
+    {
+      "file": "review/sword-servant-south-idle-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "16c5ef19ad785d340a1e9066cefb32bf0662338272ee848bc1fa0c3c360a4c43"
+    },
+    {
+      "file": "review/sword-servant-south-idle-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "3bf294d146a0913d1ddaac4d10ca7d22390b921e02bbe31426204dc991dbda3d"
+    },
+    {
+      "file": "review/sword-servant-south-move-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "c6dcf53b788d48bbabd7d6cb4ce816de6adfb546616e955cf53f064c9cd580c8"
+    },
+    {
+      "file": "review/sword-servant-south-move-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "23797ebe6644e95c3b485ae2a2fda2562550627dd402256d8f0d18e0f2e9f6df"
+    },
+    {
+      "file": "review/sword-servant-southeast-attack-api4x4-r1-inspection.json",
+      "sha256": "46889acd03a2eb9976a6a2fefb01f7d7e5558558623799bca8dd8645da8eca59"
+    },
+    {
+      "file": "review/sword-servant-southeast-attack-api4x4-r1-source-native2x.png",
+      "sha256": "b2da22034b9d579d725909c773d2941fd48c617abb341b1fe57618e2d75fd14d"
+    },
+    {
+      "file": "review/sword-servant-southeast-death-api4x4-r1-inspection.json",
+      "sha256": "223349c56013307765129b8ca1517479747c11322f1a6ce610b1a5c9468d08be"
+    },
+    {
+      "file": "review/sword-servant-southeast-death-api4x4-r1-source-native2x.png",
+      "sha256": "30ed518c6f04ede228dfa4b853bbff9fd8cf35c62e0ffaaf1bf8d63f8a0f9bff"
+    },
+    {
+      "file": "review/sword-servant-southeast-hit-api4x4-r1-inspection.json",
+      "sha256": "7229fb79fdc574f954497963ec5d9518a7fd6461b8580a8a2269b3014e0e668d"
+    },
+    {
+      "file": "review/sword-servant-southeast-hit-api4x4-r1-source-native2x.png",
+      "sha256": "4f934833aefa8490c11aef39039555bea5584fb133792787978390259e3d4a4c"
+    },
+    {
+      "file": "review/sword-servant-southeast-idle-api4x4-r1-inspection.json",
+      "sha256": "79706dea2b0d99fd027bc30153de99110a00fc1d61ecca17f6e7d15449e1eadd"
+    },
+    {
+      "file": "review/sword-servant-southeast-idle-api4x4-r1-source-native2x.png",
+      "sha256": "b94f1edd490ab04f0381f3073343d07912c49f31607d1a2ea96ed6d0c79bf43e"
+    },
+    {
+      "file": "review/sword-servant-southeast-move-api4x4-r1-inspection.json",
+      "sha256": "92f622059d2580e5867a21717f2db6b57f2de6a08fd188f0533dc4d80913ef20"
+    },
+    {
+      "file": "review/sword-servant-southeast-move-api4x4-r1-source-native2x.png",
+      "sha256": "b4d3ccb0190e5c6ef7ca9d42e8ce120a6c53c39e2926e7d7fda3ea85c60a4db6"
+    },
+    {
+      "file": "review/sword-servant-southwest-attack-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "49124ed026c9c248a7b5de54e1f8b426f1055f29e3440203c4d29a3684a2bf1a"
+    },
+    {
+      "file": "review/sword-servant-southwest-attack-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "53c3237811a302e4d0a4ec7b1cc3a837d931e9f438c989d0ff40763ee5c70687"
+    },
+    {
+      "file": "review/sword-servant-southwest-death-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "1801d00f6d321457322d398357afcee39c98247ac23757e4ffc172cf6fcb8fdd"
+    },
+    {
+      "file": "review/sword-servant-southwest-death-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "80fce73d601c100c4201a51854946dec3ffb5d618d53877f9a8bc6e9f525b72e"
+    },
+    {
+      "file": "review/sword-servant-southwest-hit-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "e8bd7d0110e481fec10624b7c1b440d1a65683e1a4100ce0ba0f70b709419abc"
+    },
+    {
+      "file": "review/sword-servant-southwest-hit-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "40f5db795c05c1593558a1d8959987e7d962e156732d5aa6ce0a22cf439bf800"
+    },
+    {
+      "file": "review/sword-servant-southwest-idle-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "a297d16f8d4cd939a2de5e5453add6d12f157c6e9f771af5d100d248589093b2"
+    },
+    {
+      "file": "review/sword-servant-southwest-idle-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "f40763e695bf3d3963e44996a00c547d5a76589e31ce2ec22edf6cf599117bca"
+    },
+    {
+      "file": "review/sword-servant-southwest-move-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "e6aa2238526666d349936af14b6b57257999023fda4439be207ab85557e13541"
+    },
+    {
+      "file": "review/sword-servant-southwest-move-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "bcabc18fe5b907079a0aeec71641e7ed59f57dcb650166b9a081eccbcb346282"
+    },
+    {
+      "file": "review/sword-servant-west-attack-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "d82fb0c1717b3de09c32d05b4f3584b6c1e283dabfdaef27ff53c9b81a6ddb9f"
+    },
+    {
+      "file": "review/sword-servant-west-attack-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "935c6daa331aaeb8d5ac828166cf63d1d56407435806508ae5d4cb8483447e3b"
+    },
+    {
+      "file": "review/sword-servant-west-death-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "c2c5dcdabc336a54e6552dff879dd0a48f9bc4bbd5578dda0f46903cf5e6f90e"
+    },
+    {
+      "file": "review/sword-servant-west-death-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "6c35846eaafc200064c3517b5195041fda6eff6a7dae5612050759a95038dcb6"
+    },
+    {
+      "file": "review/sword-servant-west-hit-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "574b34083cea2d078f0be64cb68e60b0cb52112c5480ce2b342e612b4fa7c848"
+    },
+    {
+      "file": "review/sword-servant-west-hit-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "7da5dbc712e3895fb4d9b7d6b1b3bb3dcb893e23350451fa65a14aabbcf247d1"
+    },
+    {
+      "file": "review/sword-servant-west-idle-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "38775b3f199c6eb31e227d710ab091d3a049c036a9832802713b4cfc5c0c920c"
+    },
+    {
+      "file": "review/sword-servant-west-idle-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "3d82f52b9e6bf3bd3028e5bd4718b3babbfb2a97d9e49266bfc1a707650575f2"
+    },
+    {
+      "file": "review/sword-servant-west-move-api4x4-r1-neutral-r2-inspection.json",
+      "sha256": "9da438e62335faf38225cede2d32edfb416bc4332716919926ce6d363263b128"
+    },
+    {
+      "file": "review/sword-servant-west-move-api4x4-r1-neutral-r2-source-native2x.png",
+      "sha256": "cca4024f522949f744ce9585aeb09460e74c1968f44ed44f441c1e7c3fbcc653"
+    },
+    {
+      "file": "sources/sword-servant-east-attack-api4x4-r1-neutral-r2.png",
+      "sha256": "5da20c1167f2c5f40d69f2bcd00fd7b5161f59920b896b10411bd0f99ffc5304"
+    },
+    {
+      "file": "sources/sword-servant-east-death-api4x4-r1-neutral-r2.png",
+      "sha256": "954f11e405334c32859443df621961528bc530fe8a454e7817d3903629f47033"
+    },
+    {
+      "file": "sources/sword-servant-east-hit-api4x4-r1-neutral-r2.png",
+      "sha256": "a021a30ad40d808ba2d6383a555a837c4743e7a83b997807a8ac1c97a3107e6f"
+    },
+    {
+      "file": "sources/sword-servant-east-idle-api4x4-r1-neutral-r2.png",
+      "sha256": "912173f0f9af524eb24189a23d12e56be675651c63111a4449c18118e3818b5c"
+    },
+    {
+      "file": "sources/sword-servant-east-move-api4x4-r1-neutral-r2.png",
+      "sha256": "c1f6eb4bc41654f8d90851412c668be20ef1dee2f411379b0e52d523acfac1a8"
+    },
+    {
+      "file": "sources/sword-servant-north-attack-api4x4-r1.png",
+      "sha256": "f7daa5b7d41d59ac4365d74cc211fc1196ce7c961698431a29405055e88340d2"
+    },
+    {
+      "file": "sources/sword-servant-north-death-api4x4-r1.png",
+      "sha256": "97547d99252610ff814f2a2b94f1f0eb674fe9b4f56f2d711ec921413576481b"
+    },
+    {
+      "file": "sources/sword-servant-north-hit-api4x4-r1.png",
+      "sha256": "39287299e3affa1e578a273527adbe351765a694371337a1175c283564f1d6a2"
+    },
+    {
+      "file": "sources/sword-servant-north-idle-api4x4-r1.png",
+      "sha256": "99e48ed76ecc14788e447c012ee6f7ef070e2136917e002f6f35efb06f7e6cfb"
+    },
+    {
+      "file": "sources/sword-servant-north-move-api4x4-r1.png",
+      "sha256": "a3b84cc2e0f4da4dd4434b18e19b9afd77450ef9686db7f4b2d37403d7f0089e"
+    },
+    {
+      "file": "sources/sword-servant-northeast-attack-api4x4-r1-neutral-r2.png",
+      "sha256": "b6deb88478508088857b0bb001d2e07e93c9d69a0cbb4cc21aa49c51fca5d122"
+    },
+    {
+      "file": "sources/sword-servant-northeast-death-api4x4-r1-neutral-r2.png",
+      "sha256": "317d9a2a739f2200d57b6d553906e1c6ae216b9af11e43fc12113274368f00f0"
+    },
+    {
+      "file": "sources/sword-servant-northeast-hit-api4x4-r1-neutral-r2.png",
+      "sha256": "c06233f7d0549d8decc17645e954c192c714a0349e690e5b2204b4dfe1041d38"
+    },
+    {
+      "file": "sources/sword-servant-northeast-idle-api4x4-r1-neutral-r2.png",
+      "sha256": "d703d6e99b91a96eb38e86de49876da7a3b56bfa6c85811fa4133f538e61caa3"
+    },
+    {
+      "file": "sources/sword-servant-northeast-move-api4x4-r1-neutral-r2.png",
+      "sha256": "ed1b58ef8fac19373298765303f8cc5872b96526cc82bafe3c7b635a8216adbb"
+    },
+    {
+      "file": "sources/sword-servant-northwest-attack-api4x4-r1-camera-r2.png",
+      "sha256": "4f62f31d3b8ab9788bbcade9ffd71b024f5ea81a93c5ab86b0fd1662824fb8ed"
+    },
+    {
+      "file": "sources/sword-servant-northwest-death-api4x4-r1.png",
+      "sha256": "7a5f15cd800df9be7783caf59f7cb827ba3a52af70402a92e1ec56fc8b846505"
+    },
+    {
+      "file": "sources/sword-servant-northwest-hit-api4x4-r1-camera-r2.png",
+      "sha256": "9c15eba7a25800bf8618b6627b7b300e1b80e2efc82db7b13a20ec87af791676"
+    },
+    {
+      "file": "sources/sword-servant-northwest-idle-api4x4-r1.png",
+      "sha256": "60dced58409e4a6c3bb51eb7e84cdd56d4e4d399ae6617c0687eee246f71d561"
+    },
+    {
+      "file": "sources/sword-servant-northwest-move-api4x4-r1.png",
+      "sha256": "216f5dd152266a5f97e89d44073a64d3f464df885e137082151db0ee50cf7306"
+    },
+    {
+      "file": "sources/sword-servant-south-attack-api4x4-r1-neutral-r2.png",
+      "sha256": "c370b702ec0f297d93cd4ec06197b2820cdf45864cd4cbbcd2a21c19b4b9079e"
+    },
+    {
+      "file": "sources/sword-servant-south-death-api4x4-r1-neutral-r2.png",
+      "sha256": "73b5a540da62098fcae31b0e2ce5403a6cf640bb452e539c3c5839edd71e61f0"
+    },
+    {
+      "file": "sources/sword-servant-south-hit-api4x4-r1-neutral-r2.png",
+      "sha256": "36db7e13c6ccb1ff6055effe18477045c86ec965feeb8c2f64259808919f497c"
+    },
+    {
+      "file": "sources/sword-servant-south-idle-api4x4-r1-neutral-r2.png",
+      "sha256": "fc591f62fbfd90d5b0e360656246dbe268e40546eb2890f7a470b116bf0681d6"
+    },
+    {
+      "file": "sources/sword-servant-south-move-api4x4-r1-neutral-r2.png",
+      "sha256": "7b4d4cae2c4f1377400e65073c2b3eebfe95560df4f08117f0902d9b4c2c7da5"
+    },
+    {
+      "file": "sources/sword-servant-southeast-attack-api4x4-r1.png",
+      "sha256": "ae8f6ca046d983ab53a1a6effc2a55a70ab30993e035e3f03091bb2728081214"
+    },
+    {
+      "file": "sources/sword-servant-southeast-death-api4x4-r1.png",
+      "sha256": "d7bfc62a25529fdb4d8ffdeee532120495bbac2b74ac1eada4009d2353a8101b"
+    },
+    {
+      "file": "sources/sword-servant-southeast-hit-api4x4-r1.png",
+      "sha256": "c3192ee22adb55793e27ddce2bae52e21a4d594c0febdb1c5260868f97adb92f"
+    },
+    {
+      "file": "sources/sword-servant-southeast-idle-api4x4-r1.png",
+      "sha256": "45070a64cc6631f30d887464e2137188ce99a67ba96051b959b64e2ed729164f"
+    },
+    {
+      "file": "sources/sword-servant-southeast-move-api4x4-r1.png",
+      "sha256": "874858f1cd28125b8f94b37ade12aa44e5616cabd878c7832fac9fc539a16a90"
+    },
+    {
+      "file": "sources/sword-servant-southwest-attack-api4x4-r1-neutral-r2.png",
+      "sha256": "c670dba09b1e44965fe25610ddd2f607c98a1aa9709cd46fc980900bc55b00f2"
+    },
+    {
+      "file": "sources/sword-servant-southwest-death-api4x4-r1-neutral-r2.png",
+      "sha256": "8af0c918bb39ec59f4d2be811d5c6b17272fbdacd7ad07bd7852dc2db9e742a7"
+    },
+    {
+      "file": "sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2.png",
+      "sha256": "36a55eff3d01c71b7c21f2046c9c8eef68798ad478a78181320b4ad2afaad7b5"
+    },
+    {
+      "file": "sources/sword-servant-southwest-idle-api4x4-r1-neutral-r2.png",
+      "sha256": "2209145ca0f7b7cc1fa5374b6b052c9de8dc66aca38e9fd8b236fc59a0434259"
+    },
+    {
+      "file": "sources/sword-servant-southwest-move-api4x4-r1-neutral-r2.png",
+      "sha256": "aedbf486ca026b88c08e56eb0628d4a411ca98677da4377a30025beb5b94da90"
+    },
+    {
+      "file": "sources/sword-servant-west-attack-api4x4-r1-neutral-r2.png",
+      "sha256": "d21ba41fad8aff1dc644c89ebaea830f325b1d7e9048f720e6d817dd660886dd"
+    },
+    {
+      "file": "sources/sword-servant-west-death-api4x4-r1-neutral-r2.png",
+      "sha256": "3ec35e5c9dab29e06358682f4f1fef93f61a922b49d3bd7f08563ff34dbb6ed3"
+    },
+    {
+      "file": "sources/sword-servant-west-hit-api4x4-r1-neutral-r2.png",
+      "sha256": "ab909ec257144482855bb8390c342a123459331cc8a7cf1ce9cd12ef9d7c40d6"
+    },
+    {
+      "file": "sources/sword-servant-west-idle-api4x4-r1-neutral-r2.png",
+      "sha256": "5457f5bc49cbabcd240430a86160f067a41bc7dbacf01209650ed4611f590f66"
+    },
+    {
+      "file": "sources/sword-servant-west-move-api4x4-r1-neutral-r2.png",
+      "sha256": "15dd25b14af2c8607366785aaa04f74e107cdcdb3914ff990cb59cb2635e3305"
+    }
+  ]
+}

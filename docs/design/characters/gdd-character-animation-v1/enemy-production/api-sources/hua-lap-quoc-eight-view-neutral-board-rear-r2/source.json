@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: identity-preserve / stylized-concept. Eight independently drawn directional standing neutrals of Hung Linh Hứa Lập Quốc.\r\nInputs: Image1 Wang eight-view camera matrix, Image3 OWN approved character. Image1 supplies camera and pixel treatment ONLY for this spectral character; preserve own proportions and intrinsic translucent hem from Image3.\r\nExactly FOUR COLUMNS and TWO ROWS, eight complete separated full-body sprites. Match the corresponding camera in Image1.\r\nROW1 left to right: NORTH back / NORTHEAST rear-right / EAST right profile / SOUTHEAST front-right.\r\nROW2 left to right: SOUTH front / SOUTHWEST front-left / WEST left profile / NORTHWEST rear-left.\r\nEvery view is newly drawn; NEVER mirror a bitmap. Rear views show back of head/torso and anatomically occluded hands, no eyes or face. Profiles show only one eye and nose on correct side. All eight have exactly the same standing scale and skull size; no pose-based fitting.\r\nIdentity invariants: Spectral villain with approved long tied hair and sly smirk, distinct from short-haired mentor. Preserve own 96px spectral build and intrinsic translucent fabric, no attached sword or soul mist FX.\r\nEmpty hands, relaxed neutral arms, complete hair/hem/feet in every sprite. Body/outfit only. Crisp pixel-chibi stepped contours and limited shade bands at native 96px body height. Truly transparent RGBA. Large transparent outer margins and gutters between all figures. No text, labels, cell lines, floor, shadow, weapon, floating object, magic or FX. Preserve intrinsic soft alpha in spectral fabric, no opaque background.\r\nImage2 is the inspected own board for same identity/clothing only, with known incorrect rear-diagonal face exposure. Correct camera from Image1 Wang exact corresponding slot. Image3 is own approved identity. Keep own hair, face, age, attire and anatomy; no head transplant.\r\nCRITICAL BACK-CAMERA CORRECTION: TOP row slot2 NORTHEAST and BOTTOM row slot4 NORTHWEST show the BACK of head, neck, shoulders, cloak and belt. Entire face plane points away from viewer. ZERO visible eyes, nose, mouth, front collar V or chest seals. The near ear may show, never the front cheek or eye. Preserve diagonal body orientation upper-right and upper-left respectively, not strict back copies. TOP slot1 NORTH strict back also hides all face. Do not expose face by rotating head toward camera. All eight are newly drawn unmirrored views, one common scale and consistent skull/body size. Maintain complete silhouettes and truly empty gutters.\r\nCRITICAL SPECTRAL ANATOMY: Image2 incorrectly invented solid cloth boots copied from Wang. REMOVE ALL boots, shoes, physical feet and walking legs in ALL eight views. Image3 OWN approved spirit is floating with a tapered ragged soft-alpha spectral hem and no shoes. Restore exactly that intrinsic spirit silhouette in each camera. Wang supplies camera/pixel treatment only, NEVER his legs or boots. Complete floating body remains visible; no empty final sprite, detached smoke or aura. Leave true transparent air below the intrinsic hem in every slot. Retain 96px own build and sly mature identity; preserve intrinsic partial alpha inside fabric, not just antialiased outside edges.\r\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: identity-preserve / stylized-concept. Eight independently drawn directional standing neutrals of Hung Linh Hứa Lập Quốc.\r\nInputs: Image1 Wang eight-view camera matrix, Image3 OWN approved character. Image1 supplies camera and pixel treatment ONLY for this spectral character; preserve own proportions and intrinsic translucent hem from Image3.\r\nExactly FOUR COLUMNS and TWO ROWS, eight complete separated full-body sprites. Match the corresponding camera in Image1.\r\nROW1 left to right: NORTH back / NORTHEAST rear-right / EAST right profile / SOUTHEAST front-right.\r\nROW2 left to right: SOUTH front / SOUTHWEST front-left / WEST left profile / NORTHWEST rear-left.\r\nEvery view is newly drawn; NEVER mirror a bitmap. Rear views show back of head/torso and anatomically occluded hands, no eyes or face. Profiles show only one eye and nose on correct side. All eight have exactly the same standing scale and skull size; no pose-based fitting.\r\nIdentity invariants: Spectral villain with approved long tied hair and sly smirk, distinct from short-haired mentor. Preserve own 96px spectral build and intrinsic translucent fabric, no attached sword or soul mist FX.\r\nEmpty hands, relaxed neutral arms, complete hair/hem/feet in every sprite. Body/outfit only. Crisp pixel-chibi stepped contours and limited shade bands at native 96px body height. Truly transparent RGBA. Large transparent outer margins and gutters between all figures. No text, labels, cell lines, floor, shadow, weapon, floating object, magic or FX. Preserve intrinsic soft alpha in spectral fabric, no opaque background.\r\nImage2 is the inspected own board for same identity/clothing only, with known incorrect rear-diagonal face exposure. Correct camera from Image1 Wang exact corresponding slot. Image3 is own approved identity. Keep own hair, face, age, attire and anatomy; no head transplant.\r\nCRITICAL BACK-CAMERA CORRECTION: TOP row slot2 NORTHEAST and BOTTOM row slot4 NORTHWEST show the BACK of head, neck, shoulders, cloak and belt. Entire face plane points away from viewer. ZERO visible eyes, nose, mouth, front collar V or chest seals. The near ear may show, never the front cheek or eye. Preserve diagonal body orientation upper-right and upper-left respectively, not strict back copies. TOP slot1 NORTH strict back also hides all face. Do not expose face by rotating head toward camera. All eight are newly drawn unmirrored views, one common scale and consistent skull/body size. Maintain complete silhouettes and truly empty gutters.\r\nCRITICAL SPECTRAL ANATOMY: Image2 incorrectly invented solid cloth boots copied from Wang. REMOVE ALL boots, shoes, physical feet and walking legs in ALL eight views. Image3 OWN approved spirit is floating with a tapered ragged soft-alpha spectral hem and no shoes. Restore exactly that intrinsic spirit silhouette in each camera. Wang supplies camera/pixel treatment only, NEVER his legs or boots. Complete floating body remains visible; no empty final sprite, detached smoke or aura. Leave true transparent air below the intrinsic hem in every slot. Retain 96px own build and sly mature identity; preserve intrinsic partial alpha inside fabric, not just antialiased outside edges.\r\n",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-15T04:19:10.349Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+      "filename": "wang-eight-view-camera-matrix.png",
+      "mimeType": "image/png",
+      "bytes": 63538,
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-eight-view-neutral-board-inspected-r1-clean.png",
+      "filename": "hua-lap-quoc-eight-view-neutral-board-inspected-r1-clean.png",
+      "mimeType": "image/png",
+      "bytes": 1766894,
+      "sha256": "1cf1be54a5094cfbfd9d48354eab47d5935ac49d6e76c3c9392d2a759fa38cb7",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-clean.png",
+      "filename": "hua-lap-quoc-clean.png",
+      "mimeType": "image/png",
+      "bytes": 27418,
+      "sha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+      "dimensions": {
+        "width": 1024,
+        "height": 1152
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "source.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1923420,
+    "sha256": "2508c01dd768a474ea425164c64ffc5ea6d04ade44bd93992d9125ed41c77af4",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": false
+  }
+}

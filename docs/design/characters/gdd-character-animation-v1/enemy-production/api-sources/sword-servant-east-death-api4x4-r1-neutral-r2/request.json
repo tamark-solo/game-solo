@@ -1,0 +1,61 @@
+{
+  "kind": "motion",
+  "jobId": "sword-servant-east-death-api4x4-r1-neutral-r2",
+  "promptSha256": "216abed88aef22a786c1872c91eabb5e7729a4b9b7a564580bd1692fb30410f4",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/sword-servant-east-neutral-same-view8x.png",
+      "sha256": "50893c802bcc874cb412e3aaaf00576a294dac6c55f57b9f1216264d351475ca",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/sword-servant-east-neutral.png",
+      "originalSha256": "9a3a4c72ce7858fdf819e96dd67faca3e2121b4325308537967281c598a28e6d",
+      "role": "OWN inspected SAME-VIEW neutral PRIMARY camera, construct anatomy and identity; approved ancestry retained",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-east-clean.png",
+      "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-east-nearest8x.png",
+      "originalSha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+      "role": "Wang SAME-VIEW camera/pixel support only",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "sword-servant-east-death-api4x4-r1-neutral-r2",
+    "prompt": "Use case: identity-preserve. Kiếm Nô Khôi Lỗi BODY death, exact east: right PROFILE, nose/face right in EVERY figure.\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY camera, anatomy and identity. Image2 Wang supports camera/pixel only. There is no southeast image input: inherit approved identity through the own same-view lineage, never invent another camera.\nIdentity: OWN approved broad squat cracked-stone construct, jagged stone face, aged bronze bindings and chest tablet. Keep 72px anatomy; no human skull, hair or cloth shoes.\nExactly FOUR COLUMNS and FOUR ROWS, SIXTEEN complete separate figures, on a 2048x1536 transparent source. Each figure is centered in a spacious 512x384 area. At least80px genuinely empty transparent horizontal gutters between all fists/bodies; at least64px vertical gutters. Keep outer margins80px. Do NOT let hands or silhouettes touch another figure. Use one source-wide body/head scale, leave the unused space empty; never expand a body to fill a cell. No drawn grid.\nROWS1+2: eight identical own standing neutral calibration figures, same requested camera.\nROWS3+4: eight ordered death poses in reading order: struck standing / knees buckle toward screen RIGHT / brace hand and torso lower toward screen RIGHT / near-side fall, head remains screen RIGHT / completely grounded corpse, head still RIGHT / settled corpse hold; never rise or exchange head and feet / settled grounded corpse quiet hold, same head and feet side / same settled corpse hold.\nKeep 72px nominal stone anatomy after later ONE common source scale from the eight neutrals. Skull and armor dimensions remain stable, not per-pose fitted. Lowered and prone poses lower naturally. Body-only empty fists, keep actual heavy stone feet, arms and knees attached; no human anatomy. Rear N/NE/NW never expose eyes even while attacking or recoiling. Do not turn a rear head toward camera.\nDeath: head always screen RIGHT, feet opposite through all eight poses. After grounded fall never rise or swap sides. Complete prone body and both fists fit generous horizontal gutters.\nTrue transparent RGBA, crisp pixel clusters and limited shade bands. No ground, shadow, glow, halo, checkerboard, text, weapon, shard, extra body, projectile or FX. Preserve all margins and physical silhouette. Do not crop any edge.\nFINAL CAMERA AUTHORITY for east: copy Image1 orientation into ALL sixteen figures, including the neutral calibration, hit recoil, attack wind-up and corpse. Show strict PROFILE, one visible eye, no frontal chest presentation; front tablet only a thin side edge. Keep the same own skull and stone body; no mirror, fitting, external prop or FX.\n",
+    "quality": "high",
+    "size": "2048x1536",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\sword-servant-east-death-api4x4-r1-neutral-r2.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-east-neutral-same-view8x.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-east-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "2048x1536",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-east-death-api4x4-r1-neutral-r2\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-east-death-api4x4-r1-neutral-r2",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/sword-servant-east-death-api4x4-r1-neutral-r2.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router."
+}

@@ -1,0 +1,58 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-east-neutral-same-view8x.png",
+      "filename": "hua-lap-quoc-east-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 29150,
+      "sha256": "5c0f6d83e21c97b56aaf17304b4dbddd4a1eabc981648bd4004337c0908d8b22",
+      "dimensions": {
+        "width": 1024,
+        "height": 1152
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-east-clean.png",
+      "filename": "wang-east-clean.png",
+      "mimeType": "image/png",
+      "bytes": 9489,
+      "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-east-subdued-neutral-r2-subdued-wide-r4\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-east-subdued-neutral-r2-subdued-wide-r4\\source.json",
+      "sha256": "96f67df713a2959d8a2ef88bf68e4c0472e30a69f7a795ec5190eff0fca4fc25",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "sizeMatchesRequest": false
+    }
+  ],
+  "warnings": [
+    "Image 1: router returned 1448x1086, requested 2048x1536. Image saved unchanged; no additional generation was sent."
+  ],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

@@ -1,0 +1,71 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-northwest-neutral-same-view8x.png",
+      "filename": "sword-servant-northwest-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 20478,
+      "sha256": "d9f2858d3b40eefe20962730db1945f88101c7d11ac55042fac89f506edcae79",
+      "dimensions": {
+        "width": 896,
+        "height": 896
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-northwest-clean.png",
+      "filename": "wang-northwest-clean.png",
+      "mimeType": "image/png",
+      "bytes": 9340,
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png",
+      "filename": "sword-servant-clean.png",
+      "mimeType": "image/png",
+      "bytes": 21589,
+      "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+      "dimensions": {
+        "width": 896,
+        "height": 896
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-northwest-death-api4x4-r1\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-northwest-death-api4x4-r1\\source.json",
+      "sha256": "7a5f15cd800df9be7783caf59f7cb827ba3a52af70402a92e1ec56fc8b846505",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "sizeMatchesRequest": false
+    }
+  ],
+  "warnings": [
+    "Image 1: router returned 1448x1086, requested 2048x1536. Image saved unchanged; no additional generation was sent."
+  ],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

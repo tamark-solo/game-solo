@@ -72,15 +72,7 @@
     "test:actor-animation-production": "node scripts/verify-wang-pixel-production.mjs && node scripts/verify-wang-pixel-wind.mjs && tsx --test tests/unit/actor-animation-pilot.test.ts tests/unit/pixel-actor-production.test.ts tests/unit/animation-arena.test.ts && node tests/smoke/wang-pixel-production-gpu.mjs && node tests/smoke/wang-pixel-wind-gpu.mjs && node tests/smoke/wang-pixel-production-browser.mjs && node tests/smoke/wang-pixel-wind-browser.mjs",
     "assets:game-actor-actions": "node scripts/sync-r01-vfx.mjs && node scripts/sync-hang-nhac-pixel-player.mjs && node scripts/sync-game-actor-actions.mjs",
     "test:game-actor-actions": "node scripts/verify-game-actor-actions.mjs && tsx --test tests/unit/actor-runtime.test.ts && node tests/smoke/game-actor-actions-gpu.mjs && node --import tsx tests/smoke/game-actor-runtime-browser.mjs",
-    "test:monster-animation-review": "node --import tsx tests/smoke/van-hai-monster-animation-smoke.mjs",
-    "test:monster-vfx-v2": "node --import tsx --test tests/unit/monster-vfx-v2.test.mjs && node --import tsx tests/smoke/monster-vfx-v2-smoke.mjs",
-    "test:monster-cluster-review": "node --import tsx --test tests/unit/monster-cluster-review.test.mjs && node --import tsx tests/smoke/monster-cluster-review-smoke.mjs",
-    "test:boss-concepts": "node tests/smoke/van-hai-boss-concepts-smoke.mjs",
-    "test:boss-concepts-v2": "node tests/smoke/van-hai-boss-concepts-v2-smoke.mjs",
-    "test:dark-seal-officer-v3": "node tests/smoke/dark-seal-officer-v3-smoke.mjs",
-    "test:cloud-wolf-king-animation": "node --import tsx --test tests/unit/cloud-wolf-king-fixture.test.mjs && node --import tsx tests/smoke/cloud-wolf-king-animation-smoke.mjs",
-    "test:dark-seal-officer-animation": "node --import tsx --test tests/unit/dark-seal-officer-fixture.test.mjs && node --import tsx tests/smoke/dark-seal-officer-animation-smoke.mjs",
-    "test:dark-seal-officer-vfx-v2": "node --import tsx --test tests/unit/dark-seal-officer-vfx-v2.test.mjs && node --import tsx tests/smoke/dark-seal-officer-vfx-v2-smoke.mjs"
+    "test:gdd-enemy-cleanup": "python scripts/verify-gdd-legacy-enemy-cleanup.py"
   },
   "dependencies": {
     "@colyseus/schema": "5.0.36",

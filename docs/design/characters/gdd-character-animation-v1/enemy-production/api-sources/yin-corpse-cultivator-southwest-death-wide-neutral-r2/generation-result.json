@@ -1,0 +1,58 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-southwest-neutral-same-view8x.png",
+      "filename": "yin-corpse-cultivator-southwest-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 15454,
+      "sha256": "049587c361bfcd0e00da44233f1d4d8d1ec1482abd330c483a1fe4999d2c70e2",
+      "dimensions": {
+        "width": 640,
+        "height": 896
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-southwest-clean.png",
+      "filename": "wang-southwest-clean.png",
+      "mimeType": "image/png",
+      "bytes": 9702,
+      "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-southwest-death-wide-neutral-r2\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-southwest-death-wide-neutral-r2\\source.json",
+      "sha256": "510b2583c10a37eb5a0d8dfa8453fdccffbb7be32804cb8f1a1b19f0fe77db63",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1282,
+        "height": 1227
+      },
+      "sizeMatchesRequest": false
+    }
+  ],
+  "warnings": [
+    "Image 1: router returned 1282x1227, requested 1536x1024. Image saved unchanged; no additional generation was sent."
+  ],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

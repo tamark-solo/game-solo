@@ -1,0 +1,15 @@
+{
+  "jobId": "sword-servant-southwest-hit-api4x4-r1-neutral-r2",
+  "status": "blocked-after-authorized-retry",
+  "ownerAuthorizedAdditionalPosts": 1,
+  "additionalPostsUsed": 1,
+  "imageSaved": false,
+  "feeKnown": false,
+  "failures": [
+    "generation-result.json",
+    "retry-1/generation-result.json"
+  ],
+  "reason": "Both submitted requests returned HTTP200 invalid JSON; no saved image; no more POST authorized for this source.",
+  "nextAction": "Obtain provider resolution or explicit additional retry authority; continue independent source jobs.",
+  "runtimeIntegrated": false
+}

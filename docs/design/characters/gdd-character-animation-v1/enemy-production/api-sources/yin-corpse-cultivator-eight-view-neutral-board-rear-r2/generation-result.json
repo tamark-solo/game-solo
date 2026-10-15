@@ -1,0 +1,71 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+      "filename": "wang-eight-view-camera-matrix.png",
+      "mimeType": "image/png",
+      "bytes": 63538,
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-eight-view-neutral-board-inspected-r1-clean.png",
+      "filename": "yin-corpse-cultivator-eight-view-neutral-board-inspected-r1-clean.png",
+      "mimeType": "image/png",
+      "bytes": 1380023,
+      "sha256": "6908ba8763238ed0f84b356c606cca8d36b6e66fec3103bf1ced23dc98da1e49",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-clean.png",
+      "filename": "yin-corpse-cultivator-clean.png",
+      "mimeType": "image/png",
+      "bytes": 13692,
+      "sha256": "b07d244f26eeb9d7b7c7f7d552ce32d8d2d4cfff8cb29272c63113a811d53d9d",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-eight-view-neutral-board-rear-r2\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-eight-view-neutral-board-rear-r2\\source.json",
+      "sha256": "d52cc5d459ef712b74aaded3daf96e4c9344bbb999450e3331533cc826aafd59",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "sizeMatchesRequest": false
+    }
+  ],
+  "warnings": [
+    "Image 1: router returned 1448x1086, requested 1536x1024. Image saved unchanged; no additional generation was sent."
+  ],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

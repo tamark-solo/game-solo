@@ -1,0 +1,58 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-northeast-neutral-same-view8x.png",
+      "filename": "sword-servant-northeast-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 19422,
+      "sha256": "6026167d29a56ea025ca7a3ef93f3fbbe7535031c01a25c0084a10da95f15b01",
+      "dimensions": {
+        "width": 896,
+        "height": 896
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-northeast-clean.png",
+      "filename": "wang-northeast-clean.png",
+      "mimeType": "image/png",
+      "bytes": 8833,
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-northeast-idle-api4x4-r1-neutral-r2\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-northeast-idle-api4x4-r1-neutral-r2\\source.json",
+      "sha256": "d703d6e99b91a96eb38e86de49876da7a3b56bfa6c85811fa4133f538e61caa3",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "sizeMatchesRequest": false
+    }
+  ],
+  "warnings": [
+    "Image 1: router returned 1448x1086, requested 2048x1536. Image saved unchanged; no additional generation was sent."
+  ],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

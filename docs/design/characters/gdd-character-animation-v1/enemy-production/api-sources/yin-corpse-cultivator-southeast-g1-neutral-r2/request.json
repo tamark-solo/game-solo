@@ -1,0 +1,61 @@
+{
+  "kind": "motion",
+  "jobId": "yin-corpse-cultivator-southeast-g1-neutral-r2",
+  "promptSha256": "14d5d4efcc3b17cbf110a3d7885632de269d7b534f84894f5bb5e37a4c91cb91",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/yin-corpse-cultivator-southeast-neutral-same-view8x.png",
+      "sha256": "39619e15f07bedaef482f853ad6495ffee492bace2c1cd58358148993b89bdf7",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/yin-corpse-cultivator-southeast-neutral.png",
+      "originalSha256": "f913a4929f7232ae2d6a1aaac2e3ab9fa93a21e767ef6b5d603916971aec06c3",
+      "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-southeast-clean.png",
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+      "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "role": "Wang SAME-VIEW PRIMARY human anatomy/pixel standard; retain own face and outfit",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "yin-corpse-cultivator-southeast-g1-neutral-r2",
+    "prompt": "Use case: identity-preserve. New GDD enemy BODY animation: Âm Thi Tu Sĩ, exact southeast: front three-quarter lower RIGHT in every pose.\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY motion/camera target and identity. Image2 live Wang is the direct PRIMARY human anatomy/pixel standard; keep OWN face, hair, age, clothing and approved body proportions. Only requested SAME-VIEW images are provided: inherit approved identity through the own-view lineage, never borrow another camera.\nIdentity: OWN approved short-haired gaunt human corpse cultivator, dead-jade seals on dark robe, physical cloth boots. Keep same dead-jade palette and narrow shoulders. No coffin or summoned body baked into character.\nExactly 6 COLUMNS x 3 ROWS. ROW1: six identical own standing/floating neutral calibration figures.\nROW2: idle: closed-shoulder neutral / small chest inhale / subtle head tilt / exhale / chin levels / closed-shoulder neutral.\nROW3: hit: guarded neutral / small chest recoil / strongest torso recoil, bent knees and connected ankles / rebound / straighten cautiously / guarded neutral.\nONE scale for the complete source from the neutral calibration, nominal 80 native pixels. Keep own skull/armor dimensions throughout. Lean, compression, crouch and fall lower the pose naturally; never fit per-pose height. Keep actual camera and anatomical rear occlusion in all actions. Rear hands do not show through torso, mantle or hair.\nCompact attached hands/fingers for human/spirit; complete heavy stone fists for construct. Both actual stone feet/boots stay attached where applicable; spectral character has NO boots or invented walking legs. No mirrored view or flipped costume. All figures isolated by generous transparent gutters, with ample margins for complete hair, fists and prone body on all edges.\nTruly transparent RGBA, crisp stepped pixel contours and limited shade bands. Body/outfit only; no floor, shadow, captions, grid, held weapon, projectile, detached shards, duplicate actor, warning ring, spell glow, smoke, aura or external FX. Solid own body, truthful physical foot contact.\nFINAL CAMERA AUTHORITY for southeast: copy Image1 orientation into ALL 18 figures, including neutral calibration, recoil, wind-up and low poses. Show the exact front/diagonal head and torso from Image1, with correct face/chest, never the other diagonal. Preserve own hair/skull, material, attached limbs and body build exactly from Image1, including any own hair tuft/tie; descriptive hair shorthand never overrides the actual inspected identity. No mirror, fitting, external prop or FX.\n",
+    "quality": "high",
+    "size": "1536x1024",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\yin-corpse-cultivator-southeast-g1-neutral-r2.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-southeast-neutral-same-view8x.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-southeast-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "1536x1024",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-southeast-g1-neutral-r2\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-southeast-g1-neutral-r2",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/yin-corpse-cultivator-southeast-g1-neutral-r2.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router."
+}

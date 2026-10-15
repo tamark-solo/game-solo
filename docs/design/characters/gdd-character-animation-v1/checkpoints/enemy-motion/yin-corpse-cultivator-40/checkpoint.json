@@ -1,0 +1,2541 @@
+{
+  "schema": "gdd-enemy-motion-technical-checkpoint-1",
+  "actorId": "yin-corpse-cultivator",
+  "status": "complete-candidate",
+  "bodyClips": 40,
+  "bodyKeys": 240,
+  "targetBodyClips": 40,
+  "missingClips": [],
+  "cpuChecks": 50001,
+  "browserChecks": 658,
+  "gpuReadbacks": 480,
+  "aggregateReportGpuReadbacks": 972,
+  "aggregateReportEnemyClips": 81,
+  "cpuAndBrowserChecksScope": "All actually packed clips in frozen reports; GPU count above is scoped to this actor.",
+  "sourceJobs": 32,
+  "ownerArtApproved": false,
+  "ownerMotionApproved": false,
+  "runtimeIntegrated": false,
+  "files": [
+    {
+      "file": "atlases/yin-corpse-cultivator-attack-east.png",
+      "sha256": "dfe2d9a506914fb362a41bcc195bc96dfee71123206d3b95b48d7f81167bbde3"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-attack-north.png",
+      "sha256": "6e34920b1c0796cf13818dff586c9e1fec04e2e484e00ed6c4816febbcb50a20"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-attack-northeast.png",
+      "sha256": "a9601e3a933ba1f882faa06715986c5857a60ec2add57b2ecad37cec5220b0d5"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-attack-northwest.png",
+      "sha256": "777002e6fa26bc68ece560290118fba5722124e5c143f7b30650a06f126eb168"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-attack-south.png",
+      "sha256": "e6e62beab473403da4bbb15eaf776b6e1d0897231e48125c895a73d2eede3505"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-attack-southeast.png",
+      "sha256": "e12c564590e948a6991704bd0a62d3a86b78cc479166cccec02b8686da61554b"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-attack-southwest.png",
+      "sha256": "3984c1a905d8c8cd35657a410d4302b49041d1d4bd70b33e0cfd321612281ef1"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-attack-west.png",
+      "sha256": "c2935bd3bc9e031442aef7e77f19b235ddafc494173dc518b26339c4576417cd"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-death-east.png",
+      "sha256": "e1adee08a03f11dd33f44582348a3bfd777a065ef8e57ec7b5158ca197bdb1d3"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-death-north.png",
+      "sha256": "a669d5937fc89051c341f4d61c79fddf0e26c4b35e9610337bd25514f38f9c2e"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-death-northeast.png",
+      "sha256": "9cdb7fdfa663d6f0287465eb3319ec51d1e85057f6068ba92e3702c91f0ece1d"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-death-northwest.png",
+      "sha256": "5e13de58ae35c4f6c967657ec94c812799d5794ece0704b85c22045298c4b627"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-death-south.png",
+      "sha256": "56fbe1e914e82c79c3c5a805c2f13c5fa4d711fee608feaf581dc649bc6f5d5c"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-death-southeast.png",
+      "sha256": "09d8d363fa1ee53baf5c4ac7c0360566b8c62a7fd344fce244d4f21fdfaa47cd"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-death-southwest.png",
+      "sha256": "4d49a9704e2b2c227bf2695936698bbcdcc2695ebc76c20661fe9a22efdfbbf7"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-death-west.png",
+      "sha256": "58d2e9053fc80fc0fa805fdad6228657fe73dd5829d74cf5091d56842b5f53e8"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-hit-east.png",
+      "sha256": "2cce038716f87680027ac5022be90c5111f258cc33d97cb2974b67238e513fd2"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-hit-north.png",
+      "sha256": "c51c85a375aa586f730476c9168308562a2dd9d2dd87e7723907fa955dcb51d8"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-hit-northeast.png",
+      "sha256": "e72a881457ab73b8d5a169f80f785da77c8bb1d8d6f99e47e0e6fba044ca1b86"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-hit-northwest.png",
+      "sha256": "e287f2fb42a3c1e260900f60f5b157315f3de2cb54bce6d7a67957e30625ef96"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-hit-south.png",
+      "sha256": "b169c3292bd23d514ead2b6e425aebbbb078cc2f427c2621a1394f8d954a690a"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-hit-southeast.png",
+      "sha256": "8e4434a9c35fbff860245791429c76c9bf5d126a7bdb0f52c1c2dba186e8cbfb"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-hit-southwest.png",
+      "sha256": "e3b6e84e22e81f02ca09a6572f6f5d20cdf133b880e59bf38ff6817a08845730"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-hit-west.png",
+      "sha256": "fd1e76f91b6ff4c97bfa8a6ae169f64ca26dab1f8cd7397eed55f1c31ab34879"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-idle-east.png",
+      "sha256": "7e71119660c89b9621b4f4a18b9438fca114e0a22a9d57ae2a359f812563b488"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-idle-north.png",
+      "sha256": "ec25373b57f5ca89ef746d0971c13ff43fc093df10a0adf6234d5c31fb5508b3"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-idle-northeast.png",
+      "sha256": "47b2e7e294e0f90fc26a045ff54dd7151c0a3160fb03ff864e345b47a5c7f47a"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-idle-northwest.png",
+      "sha256": "1c384692a2e568f2f8bbf1bfce085accb12f044f5d347ce4c6bc84bf61da604f"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-idle-south.png",
+      "sha256": "b94d703aa48cc0bdb94bc44101849356c2fb225141a479aa9414bc64b6ec5da8"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-idle-southeast.png",
+      "sha256": "e9ce797802421e31f777d67341ce2a2f9d9d94c944d23dbd3b0fcd2fa100ca9c"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-idle-southwest.png",
+      "sha256": "340b073bd0d5e33dbd2752af05f719d3ca61fd2fd13a167a54972920387dccf8"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-idle-west.png",
+      "sha256": "126a482abc52c529788289d12978505af12f7331ad850f89d0a2a10d2a095e11"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-move-east.png",
+      "sha256": "749a93b0f8a02cffafad8f40ec61af7fddae8475a1774f4643bf849693d21fb5"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-move-north.png",
+      "sha256": "2b97b963fe2c083101bcdf1cc13b8553227e74da27d4320b5b7d33c30581bfef"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-move-northeast.png",
+      "sha256": "eca4de4e6b632f894597a90ea2e847b4bea6031ac3cb8f593db64f0ae20c1312"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-move-northwest.png",
+      "sha256": "a88a9f3bdc4639301106fefb472f0487148faa68f2b246750c59d7b8afaed46e"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-move-south.png",
+      "sha256": "db7b38123b0c8d8d292a1786effbc93736a3efe89e80738dea7aa0fb92423acb"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-move-southeast.png",
+      "sha256": "12f6e748bddac212f0b57ba637f1b1b154ef400e721bf088014b05e6f5fe23a6"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-move-southwest.png",
+      "sha256": "c8f625d1426b781d692a4bea5d76c41557d2e9714d520ad0bf916f602cd0f761"
+    },
+    {
+      "file": "atlases/yin-corpse-cultivator-move-west.png",
+      "sha256": "902aa0ee000abe123df22d3eec3780d8ec14478443ec5d17fd9620efbf6f5b2a"
+    },
+    {
+      "file": "checkpoints/enemy-motion/yin-corpse-cultivator-40/lineage-verification.json",
+      "sha256": "fc01ce1eb440cd50a26f0816b9a1f14700587237c28f7c05e978d5fe3cdbd49d"
+    },
+    {
+      "file": "checkpoints/enemy-motion/yin-corpse-cultivator-40/manifest.json",
+      "sha256": "468cd62fd7e3e27c0d406256a28df73a9381f681d69410eea89e58ad3f8a9cb1"
+    },
+    {
+      "file": "checkpoints/enemy-motion/yin-corpse-cultivator-40/model-assessments.json",
+      "sha256": "dfd2783274aeef99b9cbafede2b5f03b8b08a315288eaec039da234e14d2a61f"
+    },
+    {
+      "file": "checkpoints/enemy-motion/yin-corpse-cultivator-40/motion-browser-verification.json",
+      "sha256": "602e71f612e1ad84986a8854dda96669ba22f4048b643e74a4835cbd3dc1d5fb"
+    },
+    {
+      "file": "checkpoints/enemy-motion/yin-corpse-cultivator-40/plan-verification.json",
+      "sha256": "2612f2e091fd3632932b2a58f6371ace53a46ce82304ec2989c405820fbc9d5d"
+    },
+    {
+      "file": "checkpoints/enemy-motion/yin-corpse-cultivator-40/source-jobs.json",
+      "sha256": "8258aa5420cf414e4df47149dda24f32f6526e1575bc2fbf0e68428c46342221"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-death-wide-neutral-r2/dispatch-receipt.json",
+      "sha256": "2dbee298ddf29f9c18fd25aac381d5da664e299ac586f892595b832af0e37fbc"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-death-wide-neutral-r2/generation-result.json",
+      "sha256": "952a180fa3d52d705941df13b6a62d629279d257c41254f5a882fe11cd655e4c"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-death-wide-neutral-r2/mcp-plan.json",
+      "sha256": "b36dc0cb29496428cf28abbbcca753d77747680b95b7116693ae130bd9de9c4c"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-death-wide-neutral-r2/request.json",
+      "sha256": "6d15fba3c14f99fe9f3a7c00b6ad3bcf7e4f453827261369c24bfdbf9bf68cd5"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-death-wide-neutral-r2/source.json",
+      "sha256": "f64231e1e6ad64c923d06cf3107f83ebf6da11477780b2ee7ca3e39b41cb76e1"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-g1-neutral-r2/dispatch-receipt.json",
+      "sha256": "966325d671858ab33173e55d42f1a1dbf18a2752882b3d93d76bcd0f69434dd5"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-g1-neutral-r2/generation-result.json",
+      "sha256": "d161520553ac6f338a1cd424e412355665c091977eb351af8b96878e2692cc03"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-g1-neutral-r2/mcp-plan.json",
+      "sha256": "8e54a9a67c5ba8904c17566ce562caec55361d1e7492d8d766e1321c0794ba37"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-g1-neutral-r2/request.json",
+      "sha256": "8658c797a6591c36920e230ab22f94ba94fd3079a8f6542a1814d14eee7387cd"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-g1-neutral-r2/source.json",
+      "sha256": "da441f8b2f83701af404f0951293f56e1feb4901a2f3a5f947a8555d51eb9db6"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-g2-neutral-r2/dispatch-receipt.json",
+      "sha256": "917def4087233e588b3b13a221cab601dad90f31754ca801b6e1d7423e9dd87f"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-g2-neutral-r2/generation-result.json",
+      "sha256": "55d8279caeb2f8b7c25c6da51b7dcf19785a4267d4d18da52debd4ea53747953"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-g2-neutral-r2/mcp-plan.json",
+      "sha256": "1da76f02dd66db1d170df01ce4ab3cbd5152f6d3205f362ef3d7c31d7433a802"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-g2-neutral-r2/request.json",
+      "sha256": "99c39b66295e8516a36255e2e53870d54073789e544a7f910b9e569746083e6b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-g2-neutral-r2/source.json",
+      "sha256": "a23268d137e876ac1ac4b533a8d9135e426fdaa498e0e5d6cda77e88457090ee"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-gait-neutral-r2/dispatch-receipt.json",
+      "sha256": "d2d267ca81eb2fb9fbdc4c448266bdb5ce94f099cd5b1d61f47902aa559b955e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-gait-neutral-r2/generation-result.json",
+      "sha256": "69558655cd6cb017fc1d4b9c2943d02c38b6cb1e4742b333f7e162349e067ada"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-gait-neutral-r2/mcp-plan.json",
+      "sha256": "3fef6080579c01573f28adf3f61329a1104ce1925b5cfc2fc326afd52aa24933"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-gait-neutral-r2/request.json",
+      "sha256": "00ca6059f59813538e949937ab71d132b1834ebdddba5df00989e500619101e9"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-east-gait-neutral-r2/source.json",
+      "sha256": "097d9fda21039fab4167f76201fb0a4c10f202398a245d8e3b89100bac8a0945"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-death-wide-neutral-r2/dispatch-receipt.json",
+      "sha256": "b6e771957acfadea34883a508332db9fdcda54d77dbf06a28dfca286d2f12e62"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-death-wide-neutral-r2/generation-result.json",
+      "sha256": "f5dde911d3bda5b6d507c4465d00eeb6f09b26d55f0eccee9cb3bd6a9e1d373c"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-death-wide-neutral-r2/mcp-plan.json",
+      "sha256": "06d8bbec22522f13e6f36311e424ff32a4e2e41312728178f6dae365c862b9f4"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-death-wide-neutral-r2/request.json",
+      "sha256": "54424a8cb1cc3a4d00bb136b49d9f1d4d8a27845e4b3d9967f5a1779e7e4d187"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-death-wide-neutral-r2/source.json",
+      "sha256": "5da661c7f6cc8836bd317f96d01d17803796c574dd186246174af90d10a421e6"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-g1-neutral-r2/dispatch-receipt.json",
+      "sha256": "6f7a43f9410e037ce727f401d47ad09e1b1a112054ee37d896b80f98272eed0e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-g1-neutral-r2/generation-result.json",
+      "sha256": "cf39a4f48e9ad285088b990551c3a734ce907870cc65e0637c27f4657d0ef14c"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-g1-neutral-r2/mcp-plan.json",
+      "sha256": "5c4f99b8909540f2bb89c92f752eb9221df376a4c329dbcd3aeb48221339435e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-g1-neutral-r2/request.json",
+      "sha256": "6b3e815c5f679b2d27cdd5011683104b255d527edcd460f51c65ef711176e7ec"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-g1-neutral-r2/source.json",
+      "sha256": "2dfe878db8c82f362d1e841763f36099bfba8cbca3699b9f2b4e27ba66dfac59"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-g2-neutral-r2-gesture-r3/dispatch-receipt.json",
+      "sha256": "348285b5920d1cee79e2a9ef5fa59c1a6026e2ce788f6e723cfb89240dc5717b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-g2-neutral-r2-gesture-r3/generation-result.json",
+      "sha256": "9ca4e739c2e043b00b4743fd260227cc8fa3b0746f7484fcf553150062a3104f"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-g2-neutral-r2-gesture-r3/mcp-plan.json",
+      "sha256": "7eedadbebe5ab35ffa5987156f2b17c317476363da837e10a78d6df7ba98af23"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-g2-neutral-r2-gesture-r3/request.json",
+      "sha256": "a324a814300f5c2842df43ea51da187fd14850627de0284a56ef8cdfb5370e4b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-g2-neutral-r2-gesture-r3/source.json",
+      "sha256": "d3ca576258dbce31fab7448726495c80e578823ce1672671c60b66575b182a4e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-gait-neutral-r2/dispatch-receipt.json",
+      "sha256": "a559f4aaa95b237535ea79d3ac309624930f343d2904500435725800866833e0"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-gait-neutral-r2/generation-result.json",
+      "sha256": "4bcc10d4e1018dc856c48e5b72c3de6fdb7e64b9b23afc5bd101b6000e3b260e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-gait-neutral-r2/mcp-plan.json",
+      "sha256": "85452b02680a71e7866c1b8cb95025a7b64e83d2b56fb8ad8e71299ea9a64243"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-gait-neutral-r2/request.json",
+      "sha256": "030d0ce44495abbe0018c4cde20d9706198ac4bd4b947324f6f5b4f70571c0a0"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-north-gait-neutral-r2/source.json",
+      "sha256": "473fc7b9fd939d448524026b9906d66924a620e6e7f4474768088c0ed04554df"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-death-wide-neutral-r2/dispatch-receipt.json",
+      "sha256": "0e51ee4d0c85e063bd8b88e8faa2f9a817e5fd4c03e58c60bdcc01ef60e65415"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-death-wide-neutral-r2/generation-result.json",
+      "sha256": "b439dbd76560436bd138aee1c6b4d9298e9dcecd81bc98a2d4225479b6640c13"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-death-wide-neutral-r2/mcp-plan.json",
+      "sha256": "5e53f6ede591fd6ae555c17bb475100a2831a94d1a3e0b5173c552be43cbba00"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-death-wide-neutral-r2/request.json",
+      "sha256": "fa5e89f70fb68fcabbb971a3a9ebe93ec21c44bd3d58fd4d956170c2449e6125"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-death-wide-neutral-r2/source.json",
+      "sha256": "766099d8d066b912378ad6bd4797b8a9de181038b6c1f5c67e74fcc9b005130d"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-g1-neutral-r2/dispatch-receipt.json",
+      "sha256": "c4cd7f33a0074c536b72d9b481af32309aee82b07a5fcba644c49c3d4280b2c5"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-g1-neutral-r2/generation-result.json",
+      "sha256": "97f1ed09eaa39fbd317d1f50822651218ba18f37831598e335e74f729e6fb3d2"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-g1-neutral-r2/mcp-plan.json",
+      "sha256": "35960cac4ff2c22f76db39e27ee677df91459948b64521c4d424d60d6840246e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-g1-neutral-r2/request.json",
+      "sha256": "5e0b4ab05b1b2f2b109ba95e1f854ab97c43fc9f9ef0536048c14ea4ed1b2856"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-g1-neutral-r2/source.json",
+      "sha256": "0a71bf170bd5781b620835e4b46c56ca1ee0245ead1f1ae4bd141f8523a54a33"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-g2-neutral-r2/dispatch-receipt.json",
+      "sha256": "b23afa7a909bce835b1ebe7bdacd80563fe38a5a3b08f954ea6a7edf724687a1"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-g2-neutral-r2/generation-result.json",
+      "sha256": "78b17725caead6e217b2db3b3b4de41e2cfcf04129661ea7fc04a9ea7bf7ac4d"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-g2-neutral-r2/mcp-plan.json",
+      "sha256": "414788576514594e6a1b6d9785270674386f97c6d0b61b1e32044fee0c341d64"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-g2-neutral-r2/request.json",
+      "sha256": "de74e4709a20cc2620038fa42c9c23f44de6cfeabdd08fe67874b74f718bd4d7"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-g2-neutral-r2/source.json",
+      "sha256": "b2f3f5ab878349b40aa16e638fa2c913ae23ddc4b756e3c6ac9d74b7f1986d75"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-gait-neutral-r2/dispatch-receipt.json",
+      "sha256": "102a5bfc864f714825351974567920de71d3050428e7e5e8d48e1c4b3b4a8855"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-gait-neutral-r2/generation-result.json",
+      "sha256": "80867a947c1e5b4dcf871c18d98979f9b7a97d322f3c4d2117e86c5f995e3cac"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-gait-neutral-r2/mcp-plan.json",
+      "sha256": "f2b1496b412f3a878548a7c284e7d04fe9fba7cf22ba17439f061b1ccc930929"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-gait-neutral-r2/request.json",
+      "sha256": "cb030fca5e3746e5d985ed465d7261ee698af8505cb4381b982c37d6d3411a7b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northeast-gait-neutral-r2/source.json",
+      "sha256": "4962dfe7caa769f50b339b59bcbdfa6c572a6b5c9137e480de427ebfd7c3688d"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-death-wide-neutral-r2/dispatch-receipt.json",
+      "sha256": "165af2e06b86bc2437c9d6546364ed91e7359da5c32dde51872042aa25d89b75"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-death-wide-neutral-r2/generation-result.json",
+      "sha256": "87e24a37a4cfe7766971445696ccb665b2426c4a0c87611d4125fe4f18db4d4e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-death-wide-neutral-r2/mcp-plan.json",
+      "sha256": "98186f444c3268dc840da86c46251f18904f3844aa3b9435321e549bd1811412"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-death-wide-neutral-r2/request.json",
+      "sha256": "0e1292adf24b0581ccfe9de86f712c17e1bd9578826a44ce923078f74a8ed866"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-death-wide-neutral-r2/source.json",
+      "sha256": "f4c0af5305f356a6cd5773c3082ff17a07695bdd7dda8551c060517663e1ea5b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-g1-neutral-r2/dispatch-receipt.json",
+      "sha256": "2c5ae52a51b69a925a7b0ae7c46aee0c4561f3e36d104f4e29e7e4533b43ae1c"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-g1-neutral-r2/generation-result.json",
+      "sha256": "deb996c2a72215fd1814cf49cea469d8ff8c1819ad847387e9307af2903eb7b3"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-g1-neutral-r2/mcp-plan.json",
+      "sha256": "df53a8ffd3e4ec7377704b7c17666611a719f5d1b7fc60cb554109f655233c6b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-g1-neutral-r2/request.json",
+      "sha256": "130d384dc6d3fccb8a53249ff992822d5bcefe4b4464200f3be0fed8ac2e88c5"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-g1-neutral-r2/source.json",
+      "sha256": "a83b62fde0e399923b1bc2015b107dd3e2b5d79fcc2dc1aa6ea17ef9a704a9f9"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-g2-neutral-r2/dispatch-receipt.json",
+      "sha256": "7d1ffebc25f9b2724a126cbf1cf702c68aefc49ced11e3e4a06e8b045ca66c18"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-g2-neutral-r2/generation-result.json",
+      "sha256": "2b513ee8a33ab2314cae66185b2431defcb5830ff40252c067efbf88510216ed"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-g2-neutral-r2/mcp-plan.json",
+      "sha256": "29a10f4f5795703c7c3b3acca81928fd6350bc9ff8abc6b6004633db34a7b80b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-g2-neutral-r2/request.json",
+      "sha256": "b110707a6a28630409a9dfcd461635fdeff2ef6470b1061957691fd20bad895f"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-g2-neutral-r2/source.json",
+      "sha256": "fb3488e7026aa3c81cebda890f6c36f0501bdefe986eac94f71048dd3bdb1214"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-gait-neutral-r2/dispatch-receipt.json",
+      "sha256": "d7fd81992c4fcd9c14eb1ce45fd099a5efcfdcfab826b97376048addd96c1142"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-gait-neutral-r2/generation-result.json",
+      "sha256": "f8741aa5da59beba506430135359ee1b870677454afcadbd0c7a0c645dae03bf"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-gait-neutral-r2/mcp-plan.json",
+      "sha256": "201a68896170bbce38b010379bab462c33744053ae5f20a04325af6b90636f15"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-gait-neutral-r2/request.json",
+      "sha256": "bcf63d2e91cba4cae41a290ea2c8e000cd9b48e6a07c43f688ceb324804d4610"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-northwest-gait-neutral-r2/source.json",
+      "sha256": "6114fa861f60ef5c09bf711fc7ae97584a72c94a676e5ae1c2b14cd0305d5a3f"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-death-wide-neutral-r2/dispatch-receipt.json",
+      "sha256": "62d3ba83884f8651ea7ee0f4b41fd3ba4d75d3607019874957704b8dc19c2a60"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-death-wide-neutral-r2/generation-result.json",
+      "sha256": "6238ee759a889b5d9481073553aa830de2d13b84d88021fe4378c0afbf1fc565"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-death-wide-neutral-r2/mcp-plan.json",
+      "sha256": "5875e35f05e292cd73ceec7a9cf87f1be9706334d1f36a9114c7ea34d46c5982"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-death-wide-neutral-r2/request.json",
+      "sha256": "655113a3bb714cbdd9b7a64c05950834a844b17e18495610b1e9c7dbd35cccdb"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-death-wide-neutral-r2/source.json",
+      "sha256": "ab7db50b7a314ae65599894847b6894fd12be091fc14d1b5fcf4b83f7cebb974"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-g1-neutral-r2/dispatch-receipt.json",
+      "sha256": "258eb0f25a0ae515fa7f4d337cfef38db9a0d5c5a066a23572a2d5027baf7d1a"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-g1-neutral-r2/generation-result.json",
+      "sha256": "fcda70842352ab70178d33044dc3002d4e74dd0953a0f4acaf1bd28db15c74d5"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-g1-neutral-r2/mcp-plan.json",
+      "sha256": "c12b21e9ae62420a579bad10c5e37e0943b9ab664f4039a3be6c15216b771fbb"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-g1-neutral-r2/request.json",
+      "sha256": "dccbda30173942f2d993aefc1587a8ea99353e0185bf45a696c944ab3c96e874"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-g1-neutral-r2/source.json",
+      "sha256": "0d73f8db64727945c2ed4c16b943fad2437abdf90797e87d35711d6079436154"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-g2-neutral-r2/dispatch-receipt.json",
+      "sha256": "7db27e98c4ff15ab1f4630f7b86355b605459f6346cde94bb47ac56e58850695"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-g2-neutral-r2/generation-result.json",
+      "sha256": "f37b8fef78c1d8927b97d914de1880f5ddb41424640f20d3d68142105fba92fa"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-g2-neutral-r2/mcp-plan.json",
+      "sha256": "20a14cee14de66d48d7e8e57ead8670c0bfb5d817c0fc47ce4440f6c9d68dd7b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-g2-neutral-r2/request.json",
+      "sha256": "d299a3119a58d4741bed3fe0428b93ce65856586449d049b806f448014ffa529"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-g2-neutral-r2/source.json",
+      "sha256": "ced343dc8921fd3eccc71ba9e58cc7c164ef45e40e43f89c12aeaac74859b1a5"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-gait-neutral-r2/dispatch-receipt.json",
+      "sha256": "49d88ea915c5610691e0ebf1dc35e1bf6342fe8bc161d2d5546aeacb1229bdbb"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-gait-neutral-r2/generation-result.json",
+      "sha256": "96b0bab0a854cda192ee40a095d483f2254a33538d1900e952ce939c9302f530"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-gait-neutral-r2/mcp-plan.json",
+      "sha256": "0eb57cb64e67a62d353d624f80283565df5f3f7b3eaef409836a2c02c1790cf9"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-gait-neutral-r2/request.json",
+      "sha256": "2893fce0904d48b63b9d3a0747505273bcef16e4c91995c9e9381e29f4e71d1b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-south-gait-neutral-r2/source.json",
+      "sha256": "50ac604c77fdd620550008388708c9f45cf4f7a41cefa3047718bacf5209838d"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-death-wide-neutral-r2/dispatch-receipt.json",
+      "sha256": "90f4270996488d779ceb6adacba8449f1bbedd3650ff0188fba4d7186886c348"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-death-wide-neutral-r2/generation-result.json",
+      "sha256": "613dbf3b70015b4d9f05972983c07260602ea52ae24e872a0d2ff65091bc97aa"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-death-wide-neutral-r2/mcp-plan.json",
+      "sha256": "38cd745067e210449f8ade2d1ee4e1626ac7179cb596afadfa1fe243cbdc0880"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-death-wide-neutral-r2/request.json",
+      "sha256": "612106f96d57b86687b02f81581ce02c8509ff3a0d6c71b0c5508601e54fad01"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-death-wide-neutral-r2/source.json",
+      "sha256": "a63bf99a4ec8e42ca32b9629f501c6f06c1cad89a244105735476bffaae671e3"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-g1-neutral-r2/dispatch-receipt.json",
+      "sha256": "78bdd0edceac0adcaed85f17ad1ba4412fadaeb60a71348b0db3f497b1ac55b5"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-g1-neutral-r2/generation-result.json",
+      "sha256": "c5e6a09b9cf468983b62c59437793eff41aecb2b37cf681a3bfb6ad2bc6c0b2e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-g1-neutral-r2/mcp-plan.json",
+      "sha256": "8ee4e0ac8a017144a0a2d9e379ddc9a39ec028a25d04dbe8582f8744e2d2e74d"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-g1-neutral-r2/request.json",
+      "sha256": "93436d82efd0b2c0e3bd1cafebbdfb083ba3d8a9f39dbbfcdc108cbc9cd04626"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-g1-neutral-r2/source.json",
+      "sha256": "b060fba60e2737447648a8598c620e163642717624339dd42797e5fcfbd74d8b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-g2-neutral-r2/dispatch-receipt.json",
+      "sha256": "4efc90df682e1dcf219a8c62cff2bf636ded0c74dc8fe892d9dab35dd3db323b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-g2-neutral-r2/generation-result.json",
+      "sha256": "7bc63773176a4bfb1fbd21cea263c5b5c58e9061347f24ba342145794cb27e5f"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-g2-neutral-r2/mcp-plan.json",
+      "sha256": "0c06f68b064f31bb4314aa736c09abfac3874e261332b47ccb6b47c6ccbea6f7"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-g2-neutral-r2/request.json",
+      "sha256": "db777d7c3d33e38df16a39914cbef8e66096056b940ba48c1ec8816f7569847a"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-g2-neutral-r2/source.json",
+      "sha256": "01a1bc407fe098f63cec88c1cd0f7810721b536aa5d6fd3d28937830bbbb52b7"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-gait-neutral-r2/dispatch-receipt.json",
+      "sha256": "b8e317f7a40eaa70de94f5e6971cf815be5a25572cb0ccd499534df0e1ec86aa"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-gait-neutral-r2/generation-result.json",
+      "sha256": "57ad33e3f7ca0683ca4c3a8ce96d166753847f959c569e36dd4fbd5633a7dfd4"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-gait-neutral-r2/mcp-plan.json",
+      "sha256": "44289a530e4b5826baad797c920d5b18a472b92ba95bd8ad932838cb6b247d54"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-gait-neutral-r2/request.json",
+      "sha256": "1622dd1df286737b90da3f3006d8f6dbed9aa8b97208324024c92cddb6dc4865"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southeast-gait-neutral-r2/source.json",
+      "sha256": "0a9fa1335ef52ed22ae455445f08bdcbe6bddc6230b9a26aa7005fe846e65b14"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-death-wide-neutral-r2/dispatch-receipt.json",
+      "sha256": "a5ba1f0e292220e94a60d83b367c821a3a47f61aff615b8a5a5b7276c857378b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-death-wide-neutral-r2/generation-result.json",
+      "sha256": "c8c2d250f15c211c60351687f41df6d9ff004f476e97c2c5a27f6a74d0d1c5e9"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-death-wide-neutral-r2/mcp-plan.json",
+      "sha256": "89b0e2002c5707e396e6b3f61f8262533b2b0379759544e095b38d076b33e598"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-death-wide-neutral-r2/request.json",
+      "sha256": "e3f5616afc7210b05c27b7e1de4aa5cf1f575a40c194a803c17ddd72440e4424"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-death-wide-neutral-r2/source.json",
+      "sha256": "272c866f0ef38074ef4f41bd582e6f94a7102bc94a4d15d3379920d71e3d1918"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-g1-neutral-r2/dispatch-receipt.json",
+      "sha256": "e2921cfac379671a15591b500e6f416c65144e78cc0532d1639468092e62fed3"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-g1-neutral-r2/generation-result.json",
+      "sha256": "d1ae032a2c61958e230af2883acff64875ceb469bbeb069ece54d50dfec3929b"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-g1-neutral-r2/mcp-plan.json",
+      "sha256": "d2bad254f0bf645050bb90e166c2811dc7b2823119220c6e835c9563bf7d1342"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-g1-neutral-r2/request.json",
+      "sha256": "756fe2a9bba87dde948cfb5e91e9ae03872379c9fbf58d1456ca4a5b4ee87878"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-g1-neutral-r2/source.json",
+      "sha256": "158499e3d93fa9abeac9677860f6273bdd2d30d2ec38881b95838b0ff0704fd1"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-g2-neutral-r2/dispatch-receipt.json",
+      "sha256": "8583ee53c7b27191128f21e73fac6390c985f5db8833dcafd02668f76305bd98"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-g2-neutral-r2/generation-result.json",
+      "sha256": "8d4f0fc8eed188d7b93c4d63159c5a89cf11b5b008ce356ef2f81ac2bd447a68"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-g2-neutral-r2/mcp-plan.json",
+      "sha256": "fb85309138255b622de6dc073f4d5cc52d6b274c6695b7a01806da5402e4f7a3"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-g2-neutral-r2/request.json",
+      "sha256": "e71ee68f9b12495e83fc26f7689e0fe3e91c31547c12e4c0f9c78e5cb4352997"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-g2-neutral-r2/source.json",
+      "sha256": "677e76f9dbdc0c9f0885bd3037ec688ec706b77d20ab760b8acf0968beb5fa98"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-gait-neutral-r2-framing-r3/dispatch-receipt.json",
+      "sha256": "326e5cca0da55c1951ee83b854acbc56165313ba5eb07473bccb208ac4d6d3e6"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-gait-neutral-r2-framing-r3/generation-result.json",
+      "sha256": "9df0d9be841e22094a8ba48bafc63d204357729fafb43ba2d997a40be24a85b6"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-gait-neutral-r2-framing-r3/mcp-plan.json",
+      "sha256": "65dbc7143782ef4b25552e834dd7623a314c1da27cb50d1d3a67b8243f3a9c56"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-gait-neutral-r2-framing-r3/request.json",
+      "sha256": "21aeb9a7fcab56c262afe4516dc746857060de46601a672f6428234ccf8dd325"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-southwest-gait-neutral-r2-framing-r3/source.json",
+      "sha256": "deb081ff16d5a84e2a8c016883f5464d5a8d1265cafe7edffdcf4917bf0b6a06"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-death-wide-neutral-r2/dispatch-receipt.json",
+      "sha256": "114d0d5ff13b5293d2b194310c5d3ff4459846b958980c44f875f621da64c18e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-death-wide-neutral-r2/generation-result.json",
+      "sha256": "5fa45686ec87b99c7902d4798578ce678a3f8ea7ff0d123f87ae88bcbb9fd28f"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-death-wide-neutral-r2/mcp-plan.json",
+      "sha256": "2f671a283fe07fac3ce7315692d3f3d5c45636d43640c7baadaf60f2ed9e5902"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-death-wide-neutral-r2/request.json",
+      "sha256": "13061c3b9bfbf44d15e88040db4670cdd8b1cdb32caa09c658605e81c2ebee52"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-death-wide-neutral-r2/source.json",
+      "sha256": "8f528d249d36c5ed1b30ed9e3193cb7308bdd66d786f68700f8d912a3b61c965"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-g1-neutral-r2/dispatch-receipt.json",
+      "sha256": "c41f1b56f5fbdc4058cd9ac9ee0a5647a72c72379974ad75924db3161dba5cc7"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-g1-neutral-r2/generation-result.json",
+      "sha256": "172ebc7020f8b1825198bc68de010d22176b0a4ab634c3b762e43c762c69a973"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-g1-neutral-r2/mcp-plan.json",
+      "sha256": "22c561d593ae88183e03daded498ab1ef828bec721c9f1744e9b7661d5328d3e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-g1-neutral-r2/request.json",
+      "sha256": "b675fd65d16debe54f873e6d575cf4fbd30cf7f689b8386d6ae16ef182b795c8"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-g1-neutral-r2/source.json",
+      "sha256": "35f48315976409e6917e46ced6812ef4c99746c28e0b38bfcdddc973685f6103"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-g2-neutral-r2/dispatch-receipt.json",
+      "sha256": "f48d5539db04c1f26ac86fe8012578116fe2f57b6f9965cf38c9e7705ed503a2"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-g2-neutral-r2/generation-result.json",
+      "sha256": "c2680064d9c4554c4708cc228b77d3eed6b499db4fea25c2efc3e0d7e9251e82"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-g2-neutral-r2/mcp-plan.json",
+      "sha256": "0205bbc69c480cc322f8532c2d0a1a28a72d6a890068f8f492e69a04dcb2dc61"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-g2-neutral-r2/request.json",
+      "sha256": "bc8930b28b73b42c7e4fdf27099bf5358eaa26621fa232e665e52b54331d6541"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-g2-neutral-r2/source.json",
+      "sha256": "c07615af45148192cfd54beb18e5c8997f0c94ea28aa6b110b7166bce77fe733"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-gait-neutral-r2/dispatch-receipt.json",
+      "sha256": "fdf08649ac13ecd025439f9ef3cb0498a96b38154685c30de8f923f3c6f1a7ec"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-gait-neutral-r2/generation-result.json",
+      "sha256": "0f92037efde2410243ab069b0aa15be7c6c6ba4a02f22e232676ebbdd395e369"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-gait-neutral-r2/mcp-plan.json",
+      "sha256": "18cbaaed13a588e568478f576bc5e847039996afd71511bbf100bfe94826207e"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-gait-neutral-r2/request.json",
+      "sha256": "cf9ed852107ed96c275ebcd8ac4597f9f3a8ddf5299c02d608c1d0dbed45cd2f"
+    },
+    {
+      "file": "enemy-production/api-sources/yin-corpse-cultivator-west-gait-neutral-r2/source.json",
+      "sha256": "a03eb15822ad2a70f57c3b29b063a5a8936290edcb688b94532659211ed696eb"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-east/00.png",
+      "sha256": "2dc4fbd75581ff9646d532e08915845ee72c670ded9e0d18c757c36995bd7157"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-east/01.png",
+      "sha256": "788495d3406a27118616aecfb0ed506bd45b7a678410b68262c6187b30c9dab8"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-east/02.png",
+      "sha256": "60779fdef955f388777a352b6fb9d094155d0298310ecf48981ba71cd2c5ac52"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-east/03.png",
+      "sha256": "9cc4e6b8e306ad953508e5f67069f4747a31ba888ea6918e5d26d2429b6363a4"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-east/04.png",
+      "sha256": "d2fc2d978b152787d6148a48a1090b570a7e9b0331314f4ee06ae548169340a7"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-east/05.png",
+      "sha256": "82c9d5aefb5d280666e440cb85d4fa9917d89716f4e068a8a8d71078443b1961"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-north/00.png",
+      "sha256": "1ec96eee75ebccad28f45979e30f8c8c7e3ecf5cb3c580b3c00f7020a5339093"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-north/01.png",
+      "sha256": "557fb52f8982ff4af643166974f71337c6de1fdd3ec8ae4390ba47dd147348ce"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-north/02.png",
+      "sha256": "754890d90870e80f91c6e0ee4942b80a02a55b94252b5e42011810ece618b2d4"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-north/03.png",
+      "sha256": "e74ba868961cba2e0ad6333c4735ce5a20aa35986eab5660a2082147d7a2b2f4"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-north/04.png",
+      "sha256": "5637440a6ff77c5358adda84c22c1870d338df93d90c22d1b73acd9272861933"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-north/05.png",
+      "sha256": "c05b5f748166184700785bee00571261c9ea202b65bc6da93567a6e97b02b2c0"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northeast/00.png",
+      "sha256": "41a194e9d19a92025577031171eb72337d93fd2dbf9cac6f14106f6d6f46a4ce"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northeast/01.png",
+      "sha256": "0eedca0debdfc9466f42d186f0fb82d3066216dfa91351c62a2c574409f95c9c"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northeast/02.png",
+      "sha256": "1100a48e71d57eaffc9597b795517b115dcb2f552059730b296446a7dce6b838"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northeast/03.png",
+      "sha256": "afdfe942e39d2f33a972ebc94849e56c6a5eefddce25dbb8c907551182e3c074"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northeast/04.png",
+      "sha256": "ebd6e3b6947a403c0c0fa12eb54cfb20ff6bd88bdd321acf7fe51c9ab4b68f3b"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northeast/05.png",
+      "sha256": "0a4d931fdf362a705bb33f66c21cf788ec4a40a2017e90b9116a7dac906cc4a6"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northwest/00.png",
+      "sha256": "5419f73e43c3d01c3d98a84de0482a4e52a713d12390a10fd925f2f07237c53d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northwest/01.png",
+      "sha256": "63d1ceb5da807b39b5d72a31f708e503fefc8487ae679ed293d2f783daacd4f8"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northwest/02.png",
+      "sha256": "8d0f423283dfed94103e0d7d919cd57db536067894512c9de45cc599fcbb6cde"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northwest/03.png",
+      "sha256": "cb758fe2b99569b15011b95433b34a89f38e556097d295f219e60759ba9918cc"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northwest/04.png",
+      "sha256": "8d0a0e98d46f06fa624899aa7d233ec2a0510c281326c7512e3f988b799bb27c"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-northwest/05.png",
+      "sha256": "5a941aecf1d9e12d114cec342cadd585c281ffa9ef96a84841535a6fffb7acb0"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-south/00.png",
+      "sha256": "f4dcdaba2d1d9d7d80aa89e67cf08589176db3962c6fb7d7f60b4fff7c1dd9f8"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-south/01.png",
+      "sha256": "3c81e76eafe521b3e10a574b94b2bd2d9f51c80375a105197b0a7e11062e5545"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-south/02.png",
+      "sha256": "d930f5573a0ea2e5507bc9e5a886c42e8af023f6f4556164b49bd5a6b80709e8"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-south/03.png",
+      "sha256": "7fc7338588299e49544c26519dde783250eb567c18a7293e42f8d6bb0089c563"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-south/04.png",
+      "sha256": "468008559ff6f869793200425257abc4936cb7158f8e218ba831588059e1e355"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-south/05.png",
+      "sha256": "93e3145da4e82a68c88662e35ca80a7a4d9d9396e2ecebe03bb56a458bdc9a80"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southeast/00.png",
+      "sha256": "4548663efb51f1f1f86204859313853c8d64f841167438c5f60f82d004ac2e83"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southeast/01.png",
+      "sha256": "eb5b643748ef9debc9731593c528dc09a47ed963b2de8064499cb91ea4896d7c"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southeast/02.png",
+      "sha256": "38fa271864cccc26ba8bf233b829a09e924fabfc6e14efab088ac1f943043b99"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southeast/03.png",
+      "sha256": "85d4804b346c9cfb6d382a17ea5cdfec398fb3993ec27609c073c647e55c0878"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southeast/04.png",
+      "sha256": "dcb0060c2efd7121221b604e5e7ebbc5c46c10a2188d911449508b6bc95439a4"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southeast/05.png",
+      "sha256": "5966a199d19546f727702083edde96fb67ec084cf971c2dd8474cb1816827855"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southwest/00.png",
+      "sha256": "f546bf9da47b887805a5b291dc7298ee38978e706d40e00274ae36c75ddd20c4"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southwest/01.png",
+      "sha256": "dc216b53e9634aca8b9016800e867d022000a945a8a86354c38af2c3fdd296fb"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southwest/02.png",
+      "sha256": "095d1bd3a8d2a16b4f3b25d435935046a9fc827dfd0d195658ac0206ca3a1e02"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southwest/03.png",
+      "sha256": "366eacb71ff6a46ce13e780fc0329d4ce0a09617220357cc248eb9a38ee8c572"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southwest/04.png",
+      "sha256": "5adf448c5f3981e8375e3f9c849309cc75148be756bc0b28a79a94cbbb2ded04"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-southwest/05.png",
+      "sha256": "1d620c13edccff87acc4d5e98831c8b955940ecde4839d85cd4ce1cf7b2b0c4d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-west/00.png",
+      "sha256": "4f948fbe2e838710dd8c502fa1fafd005e2ade97e3aadca88388d1cc454bb889"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-west/01.png",
+      "sha256": "c8a1f3a52e6344cd216dc787febc77e748fba96287b711dce48e4baba545ed00"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-west/02.png",
+      "sha256": "7765306e8a62828e0274c3b47989dd103f5422b41e9e08c0b456a941a7d004ed"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-west/03.png",
+      "sha256": "94ee3daa641241a0131ec7ffcdb22234fa31f77baf17223c337d846c4fdab7d8"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-west/04.png",
+      "sha256": "148b71fa3cc260f3b4256d041de452de86f8fa5f600395406da88a3197f6b871"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-attack-west/05.png",
+      "sha256": "e9337a660e0c00e15569643667e0b8db0b1e25a7738843ac5cfb86604b9cb208"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-east/00.png",
+      "sha256": "1b701d4093f9e6bcd1a586b9cb5786e252927c1e55c3e6350e4dbadec7497017"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-east/01.png",
+      "sha256": "b89285198a8bb8da8161a0e8d1918c48761011547f6a721d32c2d379cbfb74cb"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-east/02.png",
+      "sha256": "8ba2cb69876cd3eacad789a45a7ff518acdd6999b39ecb1788bdad2e245ce091"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-east/03.png",
+      "sha256": "47e7c840b19a04306659ab41c2af621a5a42de22eec9624ded9d5f77a0f2bd90"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-east/04.png",
+      "sha256": "f8850394bceeeed346f839d38863f63895d184f164564bb64483010344640f05"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-east/05.png",
+      "sha256": "57ab6646c7843a5db1fbdc434067f3be919351efecf4a6189fc37476cb8d66ed"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-north/00.png",
+      "sha256": "3a9a3864df9d5a6bf7cd39dd5f279189698bcb8596570b4fdbd9d462560e2b3d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-north/01.png",
+      "sha256": "dd74e884a829fe74e82f2829095e090ea9a8eec03e4ef0a8d0eb880be951575b"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-north/02.png",
+      "sha256": "9bb17493ee263c2c4a0465ad3938a873a38022edb391b7c96dcdd3ba42b0fc2f"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-north/03.png",
+      "sha256": "da6e0712f0f5b80630bef87c0220b4a51d292f0fb8aaa555500842183bbc7841"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-north/04.png",
+      "sha256": "0a25a1aedaea7b7da1601bbe6b733ca601b5fd4218bed00d9c6d60560aea3b08"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-north/05.png",
+      "sha256": "6b2cc5cf334a190b79356a1ec9fe1f8735281437125520a65102c61cdedde6e3"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northeast/00.png",
+      "sha256": "28ad2f8e94094c6878246aa21a390eec8b0c3a5255ba38b56bd895f63e52ca22"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northeast/01.png",
+      "sha256": "4ede85766a21634502ae5a029df9bde5cffd8c1272bc2a5f119b1ff66a73bbee"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northeast/02.png",
+      "sha256": "3349e97b243b3fe51722be0de092a1828193c98fc6b4cd96d529d4895917f083"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northeast/03.png",
+      "sha256": "ef58d6a64ddeda55ac1fa2dba3986a183358b74b309ac753adca741ca489c9bc"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northeast/04.png",
+      "sha256": "d46bbff32986bcbf720be06902396e2ab584880ce4e3734360a46f227d99499b"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northeast/05.png",
+      "sha256": "4ae0c7ac9319fcbbe4f9f4ebbe1fca0d46097c39dd98f8e86fbcfe68c7528fb1"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northwest/00.png",
+      "sha256": "2844a35326a23cfe736c47e691398fdd5e7a26dd60b93d9285648c1a6008c1cf"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northwest/01.png",
+      "sha256": "d09294aa50026bacf38e3557b2719fcebe6216f3db4db8d07132a8270a8b566e"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northwest/02.png",
+      "sha256": "7dfa6424793feed4d7322d3e750dbeb6c8161b48a3e394a60276165e91d4fe81"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northwest/03.png",
+      "sha256": "3eea8099fb42e12ae03810c9df7a6fc7cea3932f03af33fc6d9d62bb1c2ef6a6"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northwest/04.png",
+      "sha256": "cfa8fc3d0d259b44240df35ee79e7adba5712d1ade5976783225f55cea96aa48"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-northwest/05.png",
+      "sha256": "0581d4fc7c40522b4084d96c6ccde312516e473795f0a9dcbe945e75b498d07e"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-south/00.png",
+      "sha256": "259422080948ead70e1da1cacc09ca796bdf69c11280a3d4c24f5c24ee53ded7"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-south/01.png",
+      "sha256": "a4523d22b07865abf466bac0e9ecc5761f78a9785eaa890ccd89b810dab6caef"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-south/02.png",
+      "sha256": "233b70126404b6bc3d9ffccf2f9d4ef9ed77facaa454c0a3f6fe735f601a7248"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-south/03.png",
+      "sha256": "7da19e896f85d625e6567633f73e74d27c72340dca905a7c8cf58101462aa0eb"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-south/04.png",
+      "sha256": "98bd3366d97b2ea4492319fa805966cf316af374f4c58c6ce90c1e06a7564d4d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-south/05.png",
+      "sha256": "35a29af07cceb08bd86a53c42f93b6193a26c29e5f38ed4a1fd9ad90585ce170"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southeast/00.png",
+      "sha256": "a1a8841955fa251f309134c9d0d11fbe95062941d1b7b692b4c55f144ab8151f"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southeast/01.png",
+      "sha256": "74058fb5782ac67289a1e51bb8263a636d5f9f63a5df3897beab47b559b2810a"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southeast/02.png",
+      "sha256": "716cb8939af9076eb99646a289c104ad6a5289ceeffb912a794826bd9b4ae79f"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southeast/03.png",
+      "sha256": "a96d130e076c2ac5f859b5d9a9ccd23b1ae25d7cccb949d76bcc4efcf25b6653"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southeast/04.png",
+      "sha256": "cdcbcf0edaf6064e37c629669227a730885a46b71f0ff42133a6067ca42d0843"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southeast/05.png",
+      "sha256": "d35f9a617cadf8dee5def435f6d9b71d105e59120c2a2a9ba669dd03b723669e"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southwest/00.png",
+      "sha256": "fc5ca1b5bf9d1be6f5b53cdb5689cd58224a49dc116a9cf974bfc46880b45899"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southwest/01.png",
+      "sha256": "be3bc708e8c29f2bc99cc661d0a2f5505f1d9928e04e98253a04c18f57d601d7"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southwest/02.png",
+      "sha256": "3bef96db93425e4d695aecf0f0c2460835a100fad231234a8ed189a89ebd7dbe"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southwest/03.png",
+      "sha256": "bd7f1803805a7117d86575268c87cc744b30af0a77ba0998d84413c228df6df9"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southwest/04.png",
+      "sha256": "3c4a579e99240ba258acc3c1a550a4796e0c2a990c9878f9ace32d448074a74e"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-southwest/05.png",
+      "sha256": "eff7ecac5decf044b980a9cf003a179ae21d9e5887de1082c92af0b3ca18f0c4"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-west/00.png",
+      "sha256": "4f53fb57b7c046c4dfd0d7f4753a674d5067b224de97e5034ed616c5d421feb0"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-west/01.png",
+      "sha256": "0e6656762cb63e52ba3bd3e5ef3dd679b1a4df1d3388d24f24b5cdee7385dd49"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-west/02.png",
+      "sha256": "1a823cd494f4183cca19319a45776a90ce139bd128fee03411f5a1874667b3db"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-west/03.png",
+      "sha256": "a6b52e9e242b721663e64c87138f000c5eca46e9e85e6db65a8c417ac86c9657"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-west/04.png",
+      "sha256": "7b2fefcec3f0cb70bf4f6d3c5a641af138a7d817583b4d57452311bf644af4a9"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-death-west/05.png",
+      "sha256": "5c13f574b65f57560f988ee6afdd56278ce7aae51f82216cb3c3ca81f419afee"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-east/00.png",
+      "sha256": "2665cb6fdf6da57c51e1374d2ec11bfcad758bd436839616351b6363e45e8dec"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-east/01.png",
+      "sha256": "da4adaa74bd2a4e102c54997a4ceb969ea8ca8178d1323450453fdb964c6b8dc"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-east/02.png",
+      "sha256": "e9fa4759b985891c546344bcd1d21853067f38dd42e8a1e44bbe893d74cbbdcf"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-east/03.png",
+      "sha256": "096461636157df9b18cbc612c945cd32f3459a41d0d03aa7b635acf75f5f0195"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-east/04.png",
+      "sha256": "d1e4825b5c4f4a96d250957e3b80eb6abfa6d8a8dd901d59c75208a57d467fcf"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-east/05.png",
+      "sha256": "a91c1fed03552ac50c354ab002c3c1cbd41d53346480e1a748f62ebc99694846"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-north/00.png",
+      "sha256": "ae14987049fb5b5413697098296f833c01c413a5b81365c6c34bf2e0e8e6c486"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-north/01.png",
+      "sha256": "aa7f31c77998847e98bbaae688b57bda9895dbf7719dae55268f39aeeddfca10"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-north/02.png",
+      "sha256": "fc219aa2a4c3bcadf3947d490287cb1d0f4e65a754d9f748032e823eb491e629"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-north/03.png",
+      "sha256": "930e9b48245a652271672b12fe9c28601f03295830bcd6804a181cdc4018698b"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-north/04.png",
+      "sha256": "04d0702cbcf99d50c5cfbaf79ea3ab3aa03c944ce29eb7b1cfa9f9b8e3c51af2"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-north/05.png",
+      "sha256": "60f118ea8cc06abb3d641f11d86e03923791de3f1777bd05c5c9923075094157"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northeast/00.png",
+      "sha256": "2cf0f5acf2637fc21febe9da0b53f88427469c2bea4d047570c37fe9fe6caffd"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northeast/01.png",
+      "sha256": "fdafc42e0c56ed2d317f4d1b9b392349e59d2a5fc2a3019dce639489c1ad4c26"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northeast/02.png",
+      "sha256": "1b60e8e50baf07d151992ea5d047a69784963f344a27a0b887df06186f6f2c0d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northeast/03.png",
+      "sha256": "a035a471d8ddb8bfedfca8db04e72350449781aaefba77327e14035e589fde6a"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northeast/04.png",
+      "sha256": "d270506a6f5e323aa9bfb75dec3d63cd1b2f171b7a377c8ebae807972bfe0401"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northeast/05.png",
+      "sha256": "a3f2d953647b7d99c3c4426df7497de827bfda3be572d7067a80cbe61a962100"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northwest/00.png",
+      "sha256": "d891a104fd5e3d9828ad0efd9e6d8cd6ceffab9cb0741b301314d6f9d8bcefad"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northwest/01.png",
+      "sha256": "6724deb167e57bfd025ee3d0b75341a29aa10f4440800a1e2fe4de07921cfdfd"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northwest/02.png",
+      "sha256": "b4fa15f101f0d6e246c55daf2a097ea79f83fb0e895f2cc4a1d359c2bf1c393b"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northwest/03.png",
+      "sha256": "ef050b9a7313e55e25cd593973be56794a3ac6adbd02ff0a5616aadce178a6c8"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northwest/04.png",
+      "sha256": "da67dee200c4160e5e7df89053383fc6fce6ead2055047098127a143fdbfe3c0"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-northwest/05.png",
+      "sha256": "40a32b51aa93ebb55ef11138849f5f3c058821ab814b671dbae9a243c1c275bf"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-south/00.png",
+      "sha256": "d99a6059a18ea5bde7b3fa851e40a2fe6509d5b634e28e68db6d37dbd835abe9"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-south/01.png",
+      "sha256": "52abf43f17eaf80f28d3bb8bd4c9a356ed6eca283bf83bac705c903cb1834210"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-south/02.png",
+      "sha256": "f54d5128cab99dc1e2a5219ee4d757bb51d9d3c52d944416bbf5dae3b7108870"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-south/03.png",
+      "sha256": "22a97def1ca9acb192b842117e757e2c3dcb1882b6b882f0fcb8c65d899a1e1a"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-south/04.png",
+      "sha256": "0336bfd2c012e4b141d295141abc5978682f4a5c37b469209340eadd2062e8af"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-south/05.png",
+      "sha256": "3122a4591f5e8abe56f859ba91ce0f8009165ac7d35df403db188699660abd7b"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southeast/00.png",
+      "sha256": "3147093bcc449626006d6b01cdffdbb94ead3d7c7f76c65598c1b9f73c5b5fa7"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southeast/01.png",
+      "sha256": "690226aab2473b8f317bfe6eb504072499fe2aa714f75467d2b2d35420a519c3"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southeast/02.png",
+      "sha256": "03d44a31408a2f13b955a740b38524c37928084e96b9aac0b5159734323def83"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southeast/03.png",
+      "sha256": "b918b0946b636b5aef0788a9b712da7d3386e56eb4a464d7dca9dc0e3c8e3dcd"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southeast/04.png",
+      "sha256": "80231deaae8b330a36c1c5ad8223f2e0d886956ba522653ecdc696f570f03bcb"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southeast/05.png",
+      "sha256": "215b97f599c8118cc9d8773ab4de86874401f9246e5e2afe71cfad2f095b720e"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southwest/00.png",
+      "sha256": "43664a2563eaf5978135a74fd67a76871db67c132c6c3a4dbcc6691fccbde491"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southwest/01.png",
+      "sha256": "d21fb1216314ebab5ffeec28380e23ed8e7b77ff7a0b6e3be992da361deeb76c"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southwest/02.png",
+      "sha256": "8f73aa19dd2bc15d17ee5375f00c4615d76e854811365f0a23c795031548223d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southwest/03.png",
+      "sha256": "d2632eb1d8a6a5ea5be65d61e5c35ccea6155380b3afb562d856e862b94c4c4d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southwest/04.png",
+      "sha256": "bfabe9314b90e7bcc0f464149b9e5bfef361d9ea0588debc85acaeaf100c8b5d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-southwest/05.png",
+      "sha256": "c5d0f7085d9d333c03ed28a64a1d50077f385c2b149cbbf51a90a22f7537e587"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-west/00.png",
+      "sha256": "d8c91d7dfe1a32bf3ea24b8da8c155cb6b6baa2f151b5392de7d4285b46013b0"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-west/01.png",
+      "sha256": "1d1ac0b310711f94e7f3e981b2ffeb1fce8e2c6d927270b7df24c8e8ad336313"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-west/02.png",
+      "sha256": "dd0a933a1b06d09b5a9f7970331360430369f68624631bb582f95dab3ed1fafa"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-west/03.png",
+      "sha256": "16a061a5d544f099f497c48fb725164e3a9b7d4b56b331af188b73a1162566e2"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-west/04.png",
+      "sha256": "59a29d5dcb9b5dbc252b329745ae66ff49bc1cac24e82a22eb1100cff67c416d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-hit-west/05.png",
+      "sha256": "621da837e1e9baa2ed7f076326ca8b341ae603ef31574da9f91f6692b262e875"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-east/00.png",
+      "sha256": "fc6eb75cfd13bd289a1c5219d26b9b1fed2a88fdbe3cfd6fd2a6c3e7ba7097d1"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-east/01.png",
+      "sha256": "31fe9aabf6a12fb0fc25b18e71ac1882bf0555787b8511d1616eebe733cd038f"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-east/02.png",
+      "sha256": "15105dfeaf3222b78dcc8e0a4d0f5189a926dd4538348b43a2d7962262e4798c"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-east/03.png",
+      "sha256": "07fdaa8802fa67dc1d2685483e88f94463ec8d8c333b54c8e2ee7c4a8081985e"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-east/04.png",
+      "sha256": "47812135ac62b9728b574da98ebd0357412e4cec92511a7162d4a45ce64e68e5"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-east/05.png",
+      "sha256": "156b86f311c926ec4bb1293cdd70f1b6fb84e2df8212c44e2aa3bed2e65065b8"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-north/00.png",
+      "sha256": "4f2ca707c337c4fd1d2248c471ce65a43f6acfc1193788ec3816f72fef5cd594"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-north/01.png",
+      "sha256": "70f0ccbfaee1cb063856d6dcf3a2826557dd1ef9eccb734f8867320bdde8d327"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-north/02.png",
+      "sha256": "a92ca1edbaa0e40696d2be03bd76af9662f02ab1b169c37afae908d579fbeaa2"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-north/03.png",
+      "sha256": "6d486adbb04cc072d9640466be01c328d1fea1bebd57516411feedcd43af01fd"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-north/04.png",
+      "sha256": "078f78ce507f09b86815160139f494e1bfd374c9b7ba43566b5e52b79dfc68d1"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-north/05.png",
+      "sha256": "ca340b83ca4f3a87d63a46fe777f529ea1ce018f5fcc5d6521d78d976596896e"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northeast/00.png",
+      "sha256": "f9e425cfa58e98c9181d6376743208c10a922f0216c88f7508eb9b60c04202ec"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northeast/01.png",
+      "sha256": "2c8687f7aa8d3b900c9f71d2e7d68ff65ad5c57203e3b8a20cac737629a3e6ac"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northeast/02.png",
+      "sha256": "498860395d43c91d9b0874a4a60cab1514ec46fa083f04c745ce6def1373dc47"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northeast/03.png",
+      "sha256": "6166a6e94727db69c8b395d5cd3ddce2a29d1b51d3fc333895904a654a9b1cb1"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northeast/04.png",
+      "sha256": "8b0f9db524b69c32cf8d3a0b1d2594a93619f1093a64cffd8985f4016bd0cc8d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northeast/05.png",
+      "sha256": "9734454a559b763ca2df6d2ed30618ec3d0d0b8135d50f32a9ba14631d61eff4"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northwest/00.png",
+      "sha256": "70626e048f17621e1277e2335556f8655fc61362ed0f6b28134eb35a827376fa"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northwest/01.png",
+      "sha256": "8fa50ee92438944d1dc482d297f2eb0e7013b67745bd2150ba38166257170b53"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northwest/02.png",
+      "sha256": "aca280d19785dadd59d134fb53830884e9d637d7db7409426a953f648b08d381"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northwest/03.png",
+      "sha256": "bf5fb505343423498f77a563ecaa81189366e54fd0160b9707fead87867dbca0"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northwest/04.png",
+      "sha256": "fd4c6145c2460276834fcb8ec383a26ac2ed183e9286eb6caacb1b19f0d98d92"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-northwest/05.png",
+      "sha256": "2e05093ff6979e340b7521214b58fd78657a62ae8e5397b6b5aaf156ad734b18"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-south/00.png",
+      "sha256": "c05d36ab9b54ea69bd834d277fdc69feccece2240bbaba2a32c5bf5cf62cde8e"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-south/01.png",
+      "sha256": "11c7d7ec46cd47242b204ad92d85463bdaf65c0d2a544c425fd43ee535371fa3"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-south/02.png",
+      "sha256": "65873b7a3c17ac3c96d512a552cde40a920dd85668b67f622e51174aaa09809c"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-south/03.png",
+      "sha256": "bc9fe5716ae888f6f447ea2dadab27c2a5496d0d6f42a33c4842ea181abfe9af"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-south/04.png",
+      "sha256": "8290442ff3641e82d59926734034981eba4e61c96434d83f1272be8b39230c5e"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-south/05.png",
+      "sha256": "dc692bd01dbda38eeb3b13898e2e3cdbdcf1a64e1481c262c3281036de870018"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southeast/00.png",
+      "sha256": "1a9fcb1006c4ad3ad1bc438eba9fa680d1e3ec4b46b8ec48110369be87dce786"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southeast/01.png",
+      "sha256": "615dc4ba9ce854392edea7477fdc99049fa9c8df0a51eabd6c90342c5eb25d53"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southeast/02.png",
+      "sha256": "b2fad12ebc52607377bc6247db75f5aac15e9adfe917b7adf6cf90d0883cbc3a"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southeast/03.png",
+      "sha256": "eefa9c0acfa8367fb45fad4ba7dddf3734f0d354f74b049093713a21724b52e4"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southeast/04.png",
+      "sha256": "436d0d84bb62bb4b91a9718b2e3f25feb3b0283d95f6042a99129555ce4a4e8f"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southeast/05.png",
+      "sha256": "ed045ad7abd8afe016b8940cf2f29a08fdc9337b57a59009d967b81c4e950c9d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southwest/00.png",
+      "sha256": "f7c8fbc84cbc07f6bffb3e9fb5818210adb79ad19347937cc2f4f7404e9d7008"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southwest/01.png",
+      "sha256": "397f88666da8cc51279c0835b491affb8902348444edb8b9a1ed1bbf65777edb"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southwest/02.png",
+      "sha256": "0fde4f5b77bb4e04afb0c4924097e8f02d3f46ee1baba1b9cebf44bc087fc6d0"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southwest/03.png",
+      "sha256": "9c9f211169fde193867e9e7deb1718ff6679003e169761eacea8e17b5013b7e2"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southwest/04.png",
+      "sha256": "7b29dba2bf9b8aa709197e55ef3136473cf2faf3fd80f34412bb924f418020ae"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-southwest/05.png",
+      "sha256": "c2e859fa1bac4099e1f643302b9e0c6b761eb181625779e1cf9d5244427495e5"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-west/00.png",
+      "sha256": "7e6866b9a16bfed994f58982367c671b5bf505d593d4052d4ab73cab796eeabe"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-west/01.png",
+      "sha256": "72265cba8654c37769c46328d3f97ccabaaeed22cbb64e608114d39bdd781959"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-west/02.png",
+      "sha256": "3213971604c6a06087657fc4b19849615cf4ff95801a6d8490383d21a05e278b"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-west/03.png",
+      "sha256": "438e272d4671b84aad67dd5d06221930d57eeec53dd2b7e68d892e69894a63d6"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-west/04.png",
+      "sha256": "8cdec49530a1ff44ac3d8c97dd2ffaf45b30f5e5445524b224898a79445e0447"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-idle-west/05.png",
+      "sha256": "7db8e124b68d86c2e074693e7e1f823a0a85c2c519cf1ee2d7875256de1db73d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-east/00.png",
+      "sha256": "d427c77a4cded453aeae91493a5fae557ae0efc6b7bbbd75ac7df438a5edc386"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-east/01.png",
+      "sha256": "80694bf6d7afeb301ec4c1c72c4014e6826efc48162da706621032fb62f6e560"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-east/02.png",
+      "sha256": "f578efee62fdfd855bd757a2ea7e5746d1127b70166dd090d65aa0b70829ad78"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-east/03.png",
+      "sha256": "a31b83e3d6e1dfa04476e9af0ae7e1724a345d0b1432738da34a713ac534bf3c"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-east/04.png",
+      "sha256": "329995ba8b8f32d5efd7e9bb1d97975143e402333819b1b59868e72a764340b1"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-east/05.png",
+      "sha256": "30abe6ce5430151ef0fa338dfa4cbcd42d40d7feadb773e3297784adf1281218"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-north/00.png",
+      "sha256": "6e65b382324e40210a41fb183d724b235405b2a5f787c23f44335ba196ff19fb"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-north/01.png",
+      "sha256": "a7d9f4aa8c41c6f07460ded50c7c8b002db64a5a1acbbf3d63c891f3152f4998"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-north/02.png",
+      "sha256": "355ccf51424189e9e6b723202620e0b18848f2665dcceebf21f85142d44c9b91"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-north/03.png",
+      "sha256": "5db9006beab57c7484a4dd0694e029e15b7620722ec4138f53e08fa212f814fd"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-north/04.png",
+      "sha256": "af7bb0feffcee7383ebdd5ec1519192936f75a88586e17ad5a4744f50b429fa1"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-north/05.png",
+      "sha256": "ffb3898d18737b1b4532603f7ed174a9e6893409c08499caffb49b393dc58b2d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northeast/00.png",
+      "sha256": "908ebc294b1218924d784c7c63eef1715ac35413a3a729df5e3710fbd00f1637"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northeast/01.png",
+      "sha256": "be9a4a90fa0730bf8eedd4af57ee4f2c355fb97ac8c96a6a615203305a930947"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northeast/02.png",
+      "sha256": "418e41bef526d20a7fefbe5c1b209a0b7945ae5e0e397759bf0e5f138736b2ab"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northeast/03.png",
+      "sha256": "f79256ba2bba9d8839b0bb5c9ca66bae5686a18665f1af275c4171276d5573e1"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northeast/04.png",
+      "sha256": "54a6110d0e427c1993f1c91d32f2c1546a7cde41fd0148c43bf70a388b06e21d"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northeast/05.png",
+      "sha256": "02fdc864cb7ddc78536bbfc5692b8fe8425792e11f661cd67c8016e92b11ddf4"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northwest/00.png",
+      "sha256": "28effbc949f9d24db8556db7389f86db2f73e9f696ca4a2e1b2728b5eae2d048"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northwest/01.png",
+      "sha256": "5298567b9d7a765e9b5e2c8c8ab7110f3429ccd94b06cf832e4b09186ca96832"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northwest/02.png",
+      "sha256": "13fd361382bc63ed8f37bfe919d45314f34dbfe9c41609ca5e621af65e222633"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northwest/03.png",
+      "sha256": "6f3e82d9d31043392df103ab4ba752634c58b2c77198eb9174da603c5344e665"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northwest/04.png",
+      "sha256": "e8b8df10da94b3fb593f96c9f8a1ae7b75d1eb8990eef9450da178aaaa217f73"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-northwest/05.png",
+      "sha256": "8d45cdd1caad889724febc49c5b5ec7bac83dd262e62b0feb5d4264b28cc6dc3"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-south/00.png",
+      "sha256": "cd87f6dd8ddc52c9e627246ed5af4c005109aa60b7964ff2291515dbf9e822bb"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-south/01.png",
+      "sha256": "5a9c77982bd2a2f59466a2580859fcd974d724455437d1911971627f8819236b"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-south/02.png",
+      "sha256": "d7843c206c7ff0a4a4cb6356f71c5a9abb96fd752d97d6632b101e17a909f37b"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-south/03.png",
+      "sha256": "bfded690b429d15767b975ec61469186dfda713692db3d8d51af5b32ef121e70"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-south/04.png",
+      "sha256": "20ae9ad8547e505a491fc3d3ebfbe75eb915de7b2e70d27226f41b8e7d552fb3"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-south/05.png",
+      "sha256": "6d53a8e7ad426dbbbbc857702d1737e7fc30326987d2e61725196798fe27e957"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southeast/00.png",
+      "sha256": "4192511163d156d062aff5f13cb119f84f7c6a83de8b6ae8df68b3b64b7a84eb"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southeast/01.png",
+      "sha256": "e8ece2e982520088c05d81f33e69d867a39f9ca54af94142c3c93764b05f24c1"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southeast/02.png",
+      "sha256": "8ff9a711d692ebfbefb0ae787626ed9c7c14276aa1550e2ca21c3d3f51a047af"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southeast/03.png",
+      "sha256": "568deb1158840fa22881d4405872c20f9429c9f390d97efd9bbb490b1fe5d4a0"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southeast/04.png",
+      "sha256": "27fe1dc4bf8cfe5cb332f4d38d8c33c2eb917d9e97f2fe04e84f6a25f28d8610"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southeast/05.png",
+      "sha256": "1dec11552e782f8d81183fb5e0499021c4c1c13fd21a0fa094821c9ccf80cc34"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southwest/00.png",
+      "sha256": "4963c695c3d3081f7acddaeb24c7f2481fa3b57f2b5e267283fcc41b3d466b24"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southwest/01.png",
+      "sha256": "999cf0fed45b4583c2931531ff175d30bad4e711e6b1026c8bddfcf96bb7ff54"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southwest/02.png",
+      "sha256": "b53e3cb1cb1df581453d0177e23d5dea3b50c5d8269edfee1680e3c5dbbc504a"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southwest/03.png",
+      "sha256": "d6af805376a768fcdaa758096ef5dbcdf09c60d0771fffe774148c20927cfea1"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southwest/04.png",
+      "sha256": "c7e3145e421b27e39c626880da86bdff96b4135e966527729d9f2e271c0c8998"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-southwest/05.png",
+      "sha256": "6e5ca32e71c3684a927c9cd8f062fba97923e22a52c0fbcaf66e9b818d6ecce4"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-west/00.png",
+      "sha256": "b31fe617d39675f6326179657642d3249bc6bcae41af04423e32b91778ee7890"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-west/01.png",
+      "sha256": "3f9b944c8d5d893f5444d73eb2c7c9e7b4a428ae40f57a4cdf40a7f639e7d54a"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-west/02.png",
+      "sha256": "0752d4e60dedd09784aeeffbface891510495b66b446f23b4c89c716f4a8a3b3"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-west/03.png",
+      "sha256": "fa658c7874701aa51a4aabc2932f553fea72a0ae3f395acd1e1e776772143626"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-west/04.png",
+      "sha256": "6ed046041947f2c6bfc69279374a1c5a9aee4d03ed2c0edb2f062ff3fea593b8"
+    },
+    {
+      "file": "frames/yin-corpse-cultivator-move-west/05.png",
+      "sha256": "c5d1fdb1f3586607fae4b452cfc6dcd836b0c333ec355fa750cd114d4757186d"
+    },
+    {
+      "file": "inputs/wang-east-clean.png",
+      "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+    },
+    {
+      "file": "inputs/wang-north-clean.png",
+      "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+    },
+    {
+      "file": "inputs/wang-northeast-clean.png",
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+    },
+    {
+      "file": "inputs/wang-northwest-clean.png",
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+    },
+    {
+      "file": "inputs/wang-south-clean.png",
+      "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+    },
+    {
+      "file": "inputs/wang-southeast-clean.png",
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+    },
+    {
+      "file": "inputs/wang-southwest-clean.png",
+      "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+    },
+    {
+      "file": "inputs/wang-west-clean.png",
+      "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+    },
+    {
+      "file": "inputs/yin-corpse-cultivator-east-neutral-same-view8x.png",
+      "sha256": "9b2e1d4cd551bf3626e6e2fa9e5153010129fc988bcb27ca5d6d32ab3ee96a64"
+    },
+    {
+      "file": "inputs/yin-corpse-cultivator-north-neutral-same-view8x.png",
+      "sha256": "c572b9dfdb6ef8f16b0e86f5664a1bb4ae176eef0bb83ffbc6f8ef8033560d80"
+    },
+    {
+      "file": "inputs/yin-corpse-cultivator-northeast-neutral-same-view8x.png",
+      "sha256": "7837be86b8a49b30cc0d8adb22e88af8a3d28fc1efd0c7a9dfc38344f5615b64"
+    },
+    {
+      "file": "inputs/yin-corpse-cultivator-northwest-neutral-same-view8x.png",
+      "sha256": "40f68d8994a75adb687ed0384b4df9a8c4f4ae73aa624f1ae8a787509fa5f7d5"
+    },
+    {
+      "file": "inputs/yin-corpse-cultivator-south-neutral-same-view8x.png",
+      "sha256": "65a1aee0eb0f4f879b8029ae59d3c88e25c96a95188be521827a9ff6143579a5"
+    },
+    {
+      "file": "inputs/yin-corpse-cultivator-southeast-neutral-same-view8x.png",
+      "sha256": "39619e15f07bedaef482f853ad6495ffee492bace2c1cd58358148993b89bdf7"
+    },
+    {
+      "file": "inputs/yin-corpse-cultivator-southwest-neutral-same-view8x.png",
+      "sha256": "049587c361bfcd0e00da44233f1d4d8d1ec1482abd330c483a1fe4999d2c70e2"
+    },
+    {
+      "file": "inputs/yin-corpse-cultivator-west-neutral-same-view8x.png",
+      "sha256": "692786f7ababe61a9d80d94c9c32b638e0ed67defcb974f4c401fc6ade6d2553"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-east-death-wide-neutral-r2.txt",
+      "sha256": "bc044ea1fce24a3930ef58922af24147af49ba42898da7b00cdd38a68b32f0c2"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-east-g1-neutral-r2.txt",
+      "sha256": "81c45f15a1884cc6249d0a7e288b8b420599c7fed9744668a58b84880826128b"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-east-g2-neutral-r2.txt",
+      "sha256": "5c8919296053fc47df5d7605fe1d45a89970f6f95588e9b5d1d227595bad374a"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-east-gait-neutral-r2.txt",
+      "sha256": "9af98679ac68834a6b6046096eea7e256c773c990ceb4d36dc912074a29d64f7"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-north-death-wide-neutral-r2.txt",
+      "sha256": "f6b97d0763456c4def7f055071aef2d190a0e4ada8c0f019d40f954eda9b1ecd"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-north-g1-neutral-r2.txt",
+      "sha256": "eaa9d649b209818714ead79bb6a7935168e30b8377da206b6f19446dd9af50ce"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-north-g2-neutral-r2-gesture-r3.txt",
+      "sha256": "430e168b197d2bb4593da05d5d7b3ad82c463e242b86fae051eb0b1443622b61"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-north-gait-neutral-r2.txt",
+      "sha256": "5ad85eb837052da1be238d080d3865c607297b829243b11c4d668359875bcd19"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-northeast-death-wide-neutral-r2.txt",
+      "sha256": "8c10c5c6b47889170fc5ffced2866f3d90228fe4414c861446afe1748b3421a4"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-northeast-g1-neutral-r2.txt",
+      "sha256": "f826f4c324294bc6ef2d1dbefc92d58f256825c260f9cc08c3c400ea9201f4cf"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-northeast-g2-neutral-r2.txt",
+      "sha256": "f03b391f1ab87ee900411ca4383a6fd4d6c89881b976b2bcbab8a86969208ebd"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-northeast-gait-neutral-r2.txt",
+      "sha256": "4e682a70efa34217bf2d2486197a0e1ab66f791adfeda0c8afbbe0f072d05296"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-northwest-death-wide-neutral-r2.txt",
+      "sha256": "5236bc1e5ef6a3a8d514d954f9459bfa4f6029e78b45687b83c40953baa7fa7f"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-northwest-g1-neutral-r2.txt",
+      "sha256": "c2490ea4b60e3975b67263321d50e579b190a8b39d5abffe642a2d901c06f49f"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-northwest-g2-neutral-r2.txt",
+      "sha256": "8c4a77e537dd736d884c1d0a36c0353bd95ec517aedb59a841cdc69fab49e960"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-northwest-gait-neutral-r2.txt",
+      "sha256": "e3098eddf4c50d231c2f1bfa9ebe3f179c3ecccda5c34c3ff724376ac9313fbd"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-south-death-wide-neutral-r2.txt",
+      "sha256": "a0ac53c37dc34661e5bf1c5ec5bbcc45bf9505c2f748527eaa787f1f706ca399"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-south-g1-neutral-r2.txt",
+      "sha256": "d91f5c57c8fd0a71b53ea0d8a25c8cc266626b6c650e2bfef041ed6ec774ea81"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-south-g2-neutral-r2.txt",
+      "sha256": "3cf19ae4eae5f121e7376e256d0821c5c008f6e017273f38679a2d195a541d8b"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-south-gait-neutral-r2.txt",
+      "sha256": "d7015c35a0df2aacf9a2ecb16a5e430b9a4109d651fb2a420b0220145b36f7c8"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-southeast-death-wide-neutral-r2.txt",
+      "sha256": "d6abe911ec106533bc6a3c7e3e0ce89c0ff044bd2f3e8cc4ab455f5819899041"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-southeast-g1-neutral-r2.txt",
+      "sha256": "14d5d4efcc3b17cbf110a3d7885632de269d7b534f84894f5bb5e37a4c91cb91"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-southeast-g2-neutral-r2.txt",
+      "sha256": "04c62f4b4fd3d3125b18b5d094e1228b583de4510243e3137bf9243a8cf724cf"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-southeast-gait-neutral-r2.txt",
+      "sha256": "834284cee36979f6706c2180c4ed78f7be9bd958dc540a35399b52594155824d"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-southwest-death-wide-neutral-r2.txt",
+      "sha256": "adebb1e227714492071180ef897e6df644ea10c73d35fa2b62979bd40a32abf9"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-southwest-g1-neutral-r2.txt",
+      "sha256": "60f518462088ca6f8b1f54ca5c794345c409b6ca3898b126ffaab23e023ffe78"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-southwest-g2-neutral-r2.txt",
+      "sha256": "c50c3a4d30a61cdb365f2d64007a18c79a746747d451d1edc811b222b91a9660"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-southwest-gait-neutral-r2-framing-r3.txt",
+      "sha256": "4bffa4c0d573309e0b3668b684c0581c2ef63c94c0bdbb2ceb1f7f6dd81ef8a8"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-west-death-wide-neutral-r2.txt",
+      "sha256": "e26a801037e701a5bf8066ff396645ea0d522c0a3dca686c944eb1f352007b28"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-west-g1-neutral-r2.txt",
+      "sha256": "e1d48f7f8544f242763b5b92d4030784aea4ce0abfd273eb4f3a7c84337c428d"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-west-g2-neutral-r2.txt",
+      "sha256": "5948728360a1235ee913709c6af9c0b359e969289c485512bab52c833fb133ea"
+    },
+    {
+      "file": "prompts/yin-corpse-cultivator-west-gait-neutral-r2.txt",
+      "sha256": "edc724fc8149a6ee006e5c3e35105734f26e73598d5dc0168aae912c56e01817"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-attack-east-contact.png",
+      "sha256": "cb33470e7234626dd0ca9e1e32cdd91bd076a1704f8f08c4aacc715bbdf9a77c"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-attack-north-contact.png",
+      "sha256": "09242aef03615cdc64ffaf8d7f550038c9eddb781d5c44a0d75f60628d7660c6"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-attack-northeast-contact.png",
+      "sha256": "7d34bf09f82a5c6b96881280895521b58c08d74ac14daa7f61560c6b2c8bb6ec"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-attack-northwest-contact.png",
+      "sha256": "ba9a22a0ab6f8855122e7be56c23280dce5c2e2ccdadf37aae05165def6ad4dc"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-attack-south-contact.png",
+      "sha256": "d4ba3bdd3132de10be6ec1a005dc6b34f62b1b22861d71854c44f2610a3f50df"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-attack-southeast-contact.png",
+      "sha256": "4af0338ccf353fbec3d25df4728d052ef555ec6e380791157dfcd7dcbfb77bc2"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-attack-southwest-contact.png",
+      "sha256": "2d1d096b8e0a8f88064e7e4ac735c487a9823fce682f06cae16cef24a83ddf54"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-attack-west-contact.png",
+      "sha256": "d8af1bd710767088e94a4a4725397c99d3db8dbfa99f4b68741200040f43e007"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-death-east-contact.png",
+      "sha256": "0f7fb94045d1333130f3f2b69c4f6de417a806d74a699d771e670a5dff810e25"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-death-north-contact.png",
+      "sha256": "14c1628e148c4e8c69ef613cf1c674b3b555a1fcd0a47f1ae03a53ff61c44132"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-death-northeast-contact.png",
+      "sha256": "b68d7cbd2451538cd5500ef1f755fab15a389a1f65c3f36d7ee82b862a297804"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-death-northwest-contact.png",
+      "sha256": "aed48607bd5c70ef50589d582be7658b2ec775619aa18088d8cd6792f3907a4d"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-death-south-contact.png",
+      "sha256": "80da8ee6303e5f44e2d84486771a10a4cce8c720b3fd26412562f489bd3e9f38"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-death-southeast-contact.png",
+      "sha256": "da1ad5287e4b9ea143a489afe30679fefb7eee919b5594c33d4fbe079942e4a8"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-death-southwest-contact.png",
+      "sha256": "111baa7867e47e79ffad912a58163fcdc64216af4ccd263ae5090655115feb77"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-death-west-contact.png",
+      "sha256": "d01c8094202914cca248ab4c074f82c50c6352a799c9edaa5c17ab4289a0b818"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-east-death-wide-neutral-r2-inspection.json",
+      "sha256": "f211099fdf6a493ccf22627ddc0726f5d2924d71ba6d47866d35d99e5505fa18"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-east-death-wide-neutral-r2-source-native2x.png",
+      "sha256": "a24acc463442dff4c6feb3bd0ade64b26157e0fc40cfe66372e159f30e8a75a4"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-east-g1-neutral-r2-inspection.json",
+      "sha256": "4eea5bd2618a547b6d161bbfa98369906abba75232d9bff9be063f634bdecded"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-east-g1-neutral-r2-source-native2x.png",
+      "sha256": "d9ff0902ba806236c035c173e022a7dd67d0c6775b2c213c8bed822c72e5ab6b"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-east-g2-neutral-r2-inspection.json",
+      "sha256": "495de0aa57058543f5ba66a78e287538bd2000f9f46ba88416906cfcb305d339"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-east-g2-neutral-r2-source-native2x.png",
+      "sha256": "d15206b60706125f8e2dd79f2f33e17b2d229f682e34199931c389d08c7f5a8b"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-east-gait-neutral-r2-inspection.json",
+      "sha256": "630e36e31030daa6e6a8658abb55532725c2517427c4b444916fb365316ba9bd"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-east-gait-neutral-r2-source-native2x.png",
+      "sha256": "a879dadf410cf9edd0529e92d0b7ee157a3e7cbf22971c12e5eedd08aa57c4de"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-hit-east-contact.png",
+      "sha256": "11ba704c3d0c3516a06d4b597d8a4ab379f918dbe50ecfe3f3430c21309e3e9c"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-hit-north-contact.png",
+      "sha256": "9b4f68de01f26896e5bab65beeff7155afe567f4af64e64657940b0e9a7c17a3"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-hit-northeast-contact.png",
+      "sha256": "08e947dd27c76e0bab95debc2a771380db35124780c75815be31178116278a1f"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-hit-northwest-contact.png",
+      "sha256": "da39b8f743e79cfd3ec482f15f3f28f5792ff8d329414cc25c82baee1fbb398d"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-hit-south-contact.png",
+      "sha256": "a4b056e27ceea3f7382b51c3d26b66b03786db0cab0645dd7db20232f2f4a024"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-hit-southeast-contact.png",
+      "sha256": "c623822f15576a31ffa5c510f02a1c95308157b6f1167a1c1cc22a38f648ec96"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-hit-southwest-contact.png",
+      "sha256": "8b1111f36a5bbffaf910d23d1f58b78bfefea101a507bcf0a15e38c2eb425eea"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-hit-west-contact.png",
+      "sha256": "3407259c1d0a58e43e01c3c23b29c50da8b2921bfa416f465f127092b8ebd87d"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-idle-east-contact.png",
+      "sha256": "736037cbbce3a7c3640bc8c43b693a73115e90d7013211acaf025794990921c3"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-idle-north-contact.png",
+      "sha256": "36e3cd0f0a7739d431afa973f041a77eab27a36ed31e170d79e09153ef6473f8"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-idle-northeast-contact.png",
+      "sha256": "f4b5296c0486e16d0f9a7d7881bb3165cb006c69f9eedf390d37fa63fecd4914"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-idle-northwest-contact.png",
+      "sha256": "be17594ec45b1e6a126b1dcbd894eff09d22b1f0af9a309d629e5b710c48339b"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-idle-south-contact.png",
+      "sha256": "8dd30b45c06aac3cb62c2dc601a91e912e2f21821425ddf5e6498f7acc8a0c4b"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-idle-southeast-contact.png",
+      "sha256": "5d36fe9a578841c5b0986413e4825f030336fce4db8731041785af22aee8fa92"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-idle-southwest-contact.png",
+      "sha256": "b885d21798b7b614d8edbc05c29fd1adeb26300385dc3b85d9646e31991ad2dc"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-idle-west-contact.png",
+      "sha256": "c4aa3100fd9dfe9532f885c724133af82fbbe02bb8f81210ecf536541d0c07cc"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-move-east-contact.png",
+      "sha256": "6a4ed865e83780efd3e0769343c32c9bd1cfd1f77388bba6fcfb7fab68c57e7f"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-move-north-contact.png",
+      "sha256": "c38cecc8e047474ab0d1c5a8b3da3f26079513e32c11318031955dd3629bb42a"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-move-northeast-contact.png",
+      "sha256": "4a402f6f03325cf1bb8ead3709b53b2c74ce8219ad86c0b7ca3eb0b7547c67b1"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-move-northwest-contact.png",
+      "sha256": "2d32e7d4fe53dc25c9422408f51b3fab42ace0049333cf22724f03fc315635d0"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-move-south-contact.png",
+      "sha256": "9311675c327da8ecaf6081a95a407322cb8068674e6bd9760d2e45b4b929b733"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-move-southeast-contact.png",
+      "sha256": "4d546afb882b6ce351d53ae8df2f0e587f07b75b1cb2993383076f39dc59037d"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-move-southwest-contact.png",
+      "sha256": "fb9f6c510a31b3e23f61d63be4e7818cf1054b24f9ca9bdc21331a3b759db09d"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-move-west-contact.png",
+      "sha256": "6b7a91b718dbf51bbd54dc56a033fb409e1212fe9ac72927d749164cae7a9d57"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-north-death-wide-neutral-r2-inspection.json",
+      "sha256": "a14b17cff4fa93deb2af2d13a707f232e3cb7183a169e26974e7af4ecc3836c4"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-north-death-wide-neutral-r2-source-native2x.png",
+      "sha256": "aca72c21575e3ad896d2d89975c7879bd949b70409bf87d8f776b66feff22dd5"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-north-g1-neutral-r2-inspection.json",
+      "sha256": "6e204aff91a7b319c7b400de2316494459c04e9e442dfdd80cc4292d451e2f71"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-north-g1-neutral-r2-source-native2x.png",
+      "sha256": "05d1c4d1b4ff850d688a15fb0f40a28224335535e5ec09c5afde2d547454572e"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-north-g2-neutral-r2-gesture-r3-inspection.json",
+      "sha256": "4d50cbd8d9ff695320bfbf8859647dc6e036a4a4979f251d31e11aca8e797d11"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-north-g2-neutral-r2-gesture-r3-source-native2x.png",
+      "sha256": "c65c5846404f8efa447c2eb8c1d59fd3cf6d033484f37bc4cd72b7ac0dec7b56"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-north-gait-neutral-r2-inspection.json",
+      "sha256": "86595da992a9ae7ad2699990fa3b6f08c0d6fe8fa1d37baf0c21aab0743182d3"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-north-gait-neutral-r2-source-native2x.png",
+      "sha256": "5e6f014065deed898e0848db1093b5d7cb5371ce94b3cfffa089721c104bcf35"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northeast-death-wide-neutral-r2-inspection.json",
+      "sha256": "b4c45ade74bd840e154b17169e6a586c18d9a9a3c502bed75efb802a96f7d20c"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northeast-death-wide-neutral-r2-source-native2x.png",
+      "sha256": "324eaa54862d991979783e1f7924ec0948f9cbd6c8d439465fc528bdc7fdc797"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northeast-g1-neutral-r2-inspection.json",
+      "sha256": "b6e9f564654fc9a3e5a2c2b6256f315c82bba3a9471155fe064e9d02988a9910"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northeast-g1-neutral-r2-source-native2x.png",
+      "sha256": "354a00f6bfd336fd56ed3fa4c81532f24e7a563a546f495170d92970597dc442"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northeast-g2-neutral-r2-inspection.json",
+      "sha256": "9d8a2d7dfab6483e47d2ff968286327198f6c9f1e9b12a65fe1ac33a1ab18d65"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northeast-g2-neutral-r2-source-native2x.png",
+      "sha256": "147dc86541b9d371d4866aeec3bdbcf632baab84f6d14695dad7ad9b3942b86e"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northeast-gait-neutral-r2-inspection.json",
+      "sha256": "5b4aa6b39b48fbe4619c1010367900bc1b13d1383705abc5752733c3faf6b258"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northeast-gait-neutral-r2-source-native2x.png",
+      "sha256": "3da59db8d213bf96fc81349af8125b830780353c43cbcfd85dedab357457979d"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northwest-death-wide-neutral-r2-inspection.json",
+      "sha256": "4c5c4de9f31f85198d42b400aba8a8d6555ababe75b5fb61194be77fa7cd858a"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northwest-death-wide-neutral-r2-source-native2x.png",
+      "sha256": "d88c582501b109c8963bbf30025b7930c38572b84d55d2040ef10c9ebf4d3afb"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northwest-g1-neutral-r2-inspection.json",
+      "sha256": "100f74f2606250125b2a9528dbd196ac5a55092721cab69dd86458dd6a8ca62f"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northwest-g1-neutral-r2-source-native2x.png",
+      "sha256": "bd8e9ffe2ec40d85a5db36d9fbcca9b8b6174849d38048523f36c574c33d96fc"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northwest-g2-neutral-r2-inspection.json",
+      "sha256": "35af3613c7c11ce989cb04d63eb5a7dcc34e4af9513dca8db0044c30d48d55ea"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northwest-g2-neutral-r2-source-native2x.png",
+      "sha256": "45344df4607a2d9f604b40a5c966cdf29ce45e2d95f88b21febe05a71e9119b5"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northwest-gait-neutral-r2-inspection.json",
+      "sha256": "84e182539b49d7be7c96c9f43e5cacb2231c0097268a9e5c956fa885103b57db"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-northwest-gait-neutral-r2-source-native2x.png",
+      "sha256": "95a651db37d9bc46d13e05bd0ef9503c87d068724ab7a2d7b6d73fd90b8bf4bd"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-south-death-wide-neutral-r2-inspection.json",
+      "sha256": "dcdaea8ba5c549a731f63b93e3056375fde96cedcdb0451824ea1c5cd8955255"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-south-death-wide-neutral-r2-source-native2x.png",
+      "sha256": "ca418c2299ac8f5c4d02a6f48cba999fce9c8e824a4d41ba7be5a3c5ff1d231b"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-south-g1-neutral-r2-inspection.json",
+      "sha256": "e2d38ea72db35138533f27882bebb76aab7edf5d1e74ea72d77c7fed5ddf402c"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-south-g1-neutral-r2-source-native2x.png",
+      "sha256": "81e211675c607db5cd109989c60a10fc901b0f04e715235da68faccaa4d71156"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-south-g2-neutral-r2-inspection.json",
+      "sha256": "2412ee6c3a4690c4dd06e9e209c1c45012267bf5b9777d8384190502c47a5388"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-south-g2-neutral-r2-source-native2x.png",
+      "sha256": "701488b9882090a70a7c3bf7e0dbcfef672d27dff15d0178480abbbeac33f2e5"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-south-gait-neutral-r2-inspection.json",
+      "sha256": "efff7c0ad98f1373a249f65401b85fdd1899bed8d73f63bf465fd05e2b28eb84"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-south-gait-neutral-r2-source-native2x.png",
+      "sha256": "5c17f483b219f78203856f3dcbc7ceb1bcb7b5395ef78b25d9576b04ed30fb77"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southeast-death-wide-neutral-r2-inspection.json",
+      "sha256": "0a39c20c0508160744b443f46487c22824ccd91242ad6a5f0df687d5bb16032e"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southeast-death-wide-neutral-r2-source-native2x.png",
+      "sha256": "473608dc5012b4ef4d942be124fc78633f43171b85f1ba0c386ed6bc9776381c"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southeast-g1-neutral-r2-inspection.json",
+      "sha256": "8aa9bab24d799c701bee2d44a779bca80f567a2f5ec5f8e770e790b28848f63e"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southeast-g1-neutral-r2-source-native2x.png",
+      "sha256": "b885a01813b7628184cdc75a48564a7a93612baece321b633debe99c4e95aaa8"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southeast-g2-neutral-r2-inspection.json",
+      "sha256": "86bcbc5066ecef847ecf51419fefcf30f53fd93af2c2d8e32464875ccf705764"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southeast-g2-neutral-r2-source-native2x.png",
+      "sha256": "d854c12527fa37d8463236ebc9eefe892d70b0b5e44fb97e12e913c591981e2e"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southeast-gait-neutral-r2-inspection.json",
+      "sha256": "2288603395d3fa08e0148a06fdaae6a644d71a86ca38b2b65b4e7e932e69566f"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southeast-gait-neutral-r2-source-native2x.png",
+      "sha256": "fbf27decc65cb4d8fae0dc477a922abb54b22fe30f26d045ceadce4a0286ec93"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southwest-death-wide-neutral-r2-inspection.json",
+      "sha256": "b8fad1169949186845a943c44f17f7c558dad228ee5d148c1d57bedf49ca61f3"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southwest-death-wide-neutral-r2-source-native2x.png",
+      "sha256": "ac4a8c759aa95fede7704d2ef84670ec20ff37c34c75a689b5f42bf4398df408"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southwest-g1-neutral-r2-inspection.json",
+      "sha256": "4e548ea0995b162556205a47a80d0080d4639547b545434b7b7bda08f2eed13f"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southwest-g1-neutral-r2-source-native2x.png",
+      "sha256": "266e91cf32b82c74cd784a380ba1a08de219cf486c4a472b861b282ae9270142"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southwest-g2-neutral-r2-inspection.json",
+      "sha256": "9bd2dc009566eab57274c7f926c0db61066afc5019a9cb93c982e41b5672da15"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southwest-g2-neutral-r2-source-native2x.png",
+      "sha256": "802e1d0ee9a3a8be479da178ed3d05e37053ea41cae74e9f90a8650edd36b70e"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southwest-gait-neutral-r2-framing-r3-inspection.json",
+      "sha256": "a7400efa7878a53b4f6615f1adf5f693184e5b99fe7ea5346ffba16c127d6c60"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-southwest-gait-neutral-r2-framing-r3-source-native2x.png",
+      "sha256": "9f0605ca3b56131c6de767480207905f71bec417979f74d8dad4c6fae7d38426"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-west-death-wide-neutral-r2-inspection.json",
+      "sha256": "f72db5ce044c2144534763bc66a223d453cfaff1349651893eb0f8c3d1cf4725"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-west-death-wide-neutral-r2-source-native2x.png",
+      "sha256": "5cc1b9102db6c2ab6288ff43a3d63309e3d625db50b305016b43250abf7d78d2"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-west-g1-neutral-r2-inspection.json",
+      "sha256": "da6cc6a481506e1f9db2a0f900c114a620dc2fb28d1d62708a999e93a5702755"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-west-g1-neutral-r2-source-native2x.png",
+      "sha256": "d7728fe579787ec6d1ace0141bd7b2ab99717aeb5223e84f213212b02ede4bbd"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-west-g2-neutral-r2-inspection.json",
+      "sha256": "cb29e72fb751d876dba63649b88e90cddf840c5deba312c3f548ffdaafcafe9c"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-west-g2-neutral-r2-source-native2x.png",
+      "sha256": "ba79de54db47462201cb4ded28ca9a91751cc769e6665a975f5f1269451e3b65"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-west-gait-neutral-r2-inspection.json",
+      "sha256": "2c9395770c5175aa9e7f0bd231d7b07b23608439604e29a522ba470c5758a7f2"
+    },
+    {
+      "file": "review/yin-corpse-cultivator-west-gait-neutral-r2-source-native2x.png",
+      "sha256": "c6c5f542d44925f4e4a9e249daebf8a1ca3f83392e0798acf256132667700b8b"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-east-death-wide-neutral-r2.png",
+      "sha256": "1efae7aba55893ae241413fc0c364a68fe1bc5ee8be64ad6306a44e43a5ce441"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-east-g1-neutral-r2.png",
+      "sha256": "352c38062b37ef128bbafe63b11da04b177c8a41930bfd24b5f22bf07265b7a8"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-east-g2-neutral-r2.png",
+      "sha256": "6b6cc1e498699c25201457badd466a94f4639f7c8c417bbd1d2ded61db06400f"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-east-gait-neutral-r2.png",
+      "sha256": "067f618a3845b6775fb24612e8726b9bdc70477e4982bc0ef22bfe0224ed4308"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-north-death-wide-neutral-r2.png",
+      "sha256": "bb3dfb25c50f56d08cebec9aa65a81094bf2373db2445fefb2ae2ac07e0dd2ba"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-north-g1-neutral-r2.png",
+      "sha256": "03e20224df4bfea540df145d2052a77b2a947a2bab864ec7eb08e608a87049ed"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-north-g2-neutral-r2-gesture-r3.png",
+      "sha256": "1cf6e141ee0feb9f4e8588dc7aaebb43d930f7bc1c68054382625c2658830516"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-north-gait-neutral-r2.png",
+      "sha256": "c89d38b26e0584f19c335d71db714bf347cb8b30a6d71ec6de3f787f05c4443a"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-northeast-death-wide-neutral-r2.png",
+      "sha256": "3b25eb6133cc255968ef95e8d6dcaaf246bd1e422a2227a1a0841508bea16be8"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-northeast-g1-neutral-r2.png",
+      "sha256": "ee2f226e1de88cdc9d67eb5f10993a19a45006ed0184630c21ed0b1d8a28dbc4"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-northeast-g2-neutral-r2.png",
+      "sha256": "efdbf10c65a5ce3e25b6dd3e8448b9536bc338186f31cac7dc51a9d1ca488b23"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-northeast-gait-neutral-r2.png",
+      "sha256": "08daa15c8d256f0d68848f24893f975f9615a07222c3336cffbc1570cf4c58e0"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-northwest-death-wide-neutral-r2.png",
+      "sha256": "e29a87c1b4ac0a4e4072ffb8e9ad5f237bf3ed6f74f8d6a00249c027e482fab0"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-northwest-g1-neutral-r2.png",
+      "sha256": "288ca22bbaf22338ec585846dbe95287253c23b18037d8e8427ea6566a29e478"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-northwest-g2-neutral-r2.png",
+      "sha256": "58ae444090621d46d2d6b8dab0876cf1820fccd7e1fce08fade49f02bb018eec"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-northwest-gait-neutral-r2.png",
+      "sha256": "38e3762e221204439cb1245ce373519efcfdbe827c53fd9b6a5b46f1dce55fad"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-south-death-wide-neutral-r2.png",
+      "sha256": "9791d28215cc65eae4e2ef0568c6b466d2521266e765a480b86501436a858b03"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-south-g1-neutral-r2.png",
+      "sha256": "dd42f9dfc5e6759ac2da09ba015d67720fa4a7e86701fbe3a4976f2f94e4b359"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-south-g2-neutral-r2.png",
+      "sha256": "20ee38b62380b097babeddc10126b97202dbb448c946e2c09bc5e49dd8b36381"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-south-gait-neutral-r2.png",
+      "sha256": "8680ff65c863c7e8cdc97ae1c4814c3f7971c446e2b0ae85178ed8b40239a26d"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-southeast-death-wide-neutral-r2.png",
+      "sha256": "cdcb09a76e9471985f3ac6b8d54c67219953a077c212a0dba77b0c128f099a63"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-southeast-g1-neutral-r2.png",
+      "sha256": "7f6ff7867924142d0ae5210986323334f4371083a029c5055ad8527f33c570fb"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-southeast-g2-neutral-r2.png",
+      "sha256": "53e7c8eaa8471325b93ae8c7bf37b2b629199358a7f25aefecc0a0cde0feeb13"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-southeast-gait-neutral-r2.png",
+      "sha256": "21979746f1f9385ef8aacc766abff2bdfc6996ce826770eb3138d32697d96e45"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-southwest-death-wide-neutral-r2.png",
+      "sha256": "510b2583c10a37eb5a0d8dfa8453fdccffbb7be32804cb8f1a1b19f0fe77db63"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-southwest-g1-neutral-r2.png",
+      "sha256": "142ed1282ef8229a6d616acc15b2e886be5251da809c6920b76a387d58b44ba2"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-southwest-g2-neutral-r2.png",
+      "sha256": "bc52ff1d15b835ab972bf181f4617fe3fc2a4f4c4f7589b49200ed53b33a17df"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-southwest-gait-neutral-r2-framing-r3.png",
+      "sha256": "77c3448ae42fe2c2af20bc8925eb5d20d85caea25708806d9972fde5e46e0e15"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-west-death-wide-neutral-r2.png",
+      "sha256": "8269f4c55642faf8a7f8dd3e14a80e3e1aac3f50e727b7be449664391f5c7197"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-west-g1-neutral-r2.png",
+      "sha256": "4ddd3f14d44baebcdf66bbe41bceacbf2cff4e28a4c4d8da6a82212dd502f5fd"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-west-g2-neutral-r2.png",
+      "sha256": "8f91ce759cf589521ba7e89121917b67d29f5de35a0260a2ba3c9a4fa5ee3432"
+    },
+    {
+      "file": "sources/yin-corpse-cultivator-west-gait-neutral-r2.png",
+      "sha256": "ecab0f537750b5911dc7c943a9bd7c01b88dbd5fc47c1003cef23477b86535b0"
+    }
+  ]
+}

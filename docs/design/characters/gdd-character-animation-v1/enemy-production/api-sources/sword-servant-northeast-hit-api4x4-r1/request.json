@@ -1,0 +1,70 @@
+{
+  "kind": "motion",
+  "jobId": "sword-servant-northeast-hit-api4x4-r1",
+  "promptSha256": "10eb13ff9068104bef1be31b2677ebd470c4c1a6d786bcbb07ea053308b5135d",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/sword-servant-northeast-neutral-same-view8x.png",
+      "sha256": "6026167d29a56ea025ca7a3ef93f3fbbe7535031c01a25c0084a10da95f15b01",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/sword-servant-northeast-neutral.png",
+      "originalSha256": "00bde411a63828d3bf57b2aa21b2ab9f6f32f4eb957971bff21e31a692eeb52c",
+      "role": "OWN inspected SAME-VIEW motion target PRIMARY",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-northeast-clean.png",
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-northeast-nearest8x.png",
+      "originalSha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "role": "Wang camera/pixel support only; OWN enemy anatomy is authoritative",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 3,
+      "file": "inputs/sword-servant-clean.png",
+      "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+      "original": "docs/design/characters/gdd-character-concepts-v1/native/sword-servant.png",
+      "originalSha256": "ae257aad0d6a8c5ec569810b18338e28903ee9a43bab129dd63c9df2460d734b",
+      "role": "OWN approved enemy identity/anatomy/outfit PRIMARY",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "sword-servant-northeast-hit-api4x4-r1",
+    "prompt": "Use case: identity-preserve. Kiếm Nô Khôi Lỗi BODY hit, exact northeast: rear three-quarter upper RIGHT, face hidden NO eyes in EVERY figure.\nImage1 OWN inspected same-view neutral is PRIMARY camera/motion target. Image2 Wang is camera/pixel support ONLY. Image3 OWN approved identity is PRIMARY nonhuman stone anatomy/material. No Wang head, hair, cloth shoes or costume.\nIdentity: OWN approved broad squat cracked-stone construct, jagged stone face, aged bronze bindings and chest tablet. Keep 72px anatomy; no human skull, hair or cloth shoes.\nExactly FOUR COLUMNS and FOUR ROWS, SIXTEEN complete separate figures, on a 2048x1536 transparent source. Each figure is centered in a spacious 512x384 area. At least80px genuinely empty transparent horizontal gutters between all fists/bodies; at least64px vertical gutters. Keep outer margins80px. Do NOT let hands or silhouettes touch another figure. Use one source-wide body/head scale, leave the unused space empty; never expand a body to fill a cell. No drawn grid.\nROWS1+2: eight identical own standing neutral calibration figures, same requested camera.\nROWS3+4: eight ordered hit poses in reading order: heavy neutral / chest twists slightly backward / strongest stone torso recoil with feet planted / shoulders rebound forward / stone arms settle / heavy neutral / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing.\nKeep 72px nominal stone anatomy after later ONE common source scale from the eight neutrals. Skull and armor dimensions remain stable, not per-pose fitted. Lowered and prone poses lower naturally. Body-only empty fists, keep actual heavy stone feet, arms and knees attached; no human anatomy. Rear N/NE/NW never expose eyes even while attacking or recoiling. Do not turn a rear head toward camera.\nSubtle heavy idle, actual alternating foot contacts for move, deliberate shoulder-led attack and honest torso recoil as appropriate; no standing-neutral substituted for footfalls.\nTrue transparent RGBA, crisp pixel clusters and limited shade bands. No ground, shadow, glow, halo, checkerboard, text, weapon, shard, extra body, projectile or FX. Preserve all margins and physical silhouette. Do not crop any edge.",
+    "quality": "high",
+    "size": "2048x1536",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\sword-servant-northeast-hit-api4x4-r1.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-northeast-neutral-same-view8x.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-northeast-clean.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "2048x1536",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-northeast-hit-api4x4-r1\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-northeast-hit-api4x4-r1",
+  "automaticRetry": false
+}

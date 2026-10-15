@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: identity-preserve. Kiếm Nô Khôi Lỗi BODY move, exact south: strict FRONT, two eyes and chest in EVERY figure.\r\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY camera, anatomy and identity. Image2 Wang supports camera/pixel only. There is no southeast image input: inherit approved identity through the own same-view lineage, never invent another camera.\r\nIdentity: OWN approved broad squat cracked-stone construct, jagged stone face, aged bronze bindings and chest tablet. Keep 72px anatomy; no human skull, hair or cloth shoes.\r\nExactly FOUR COLUMNS and FOUR ROWS, SIXTEEN complete separate figures, on a 2048x1536 transparent source. Each figure is centered in a spacious 512x384 area. At least80px genuinely empty transparent horizontal gutters between all fists/bodies; at least64px vertical gutters. Keep outer margins80px. Do NOT let hands or silhouettes touch another figure. Use one source-wide body/head scale, leave the unused space empty; never expand a body to fill a cell. No drawn grid.\r\nROWS1+2: eight identical own standing neutral calibration figures, same requested camera.\r\nROWS3+4: eight ordered move poses in reading order: left stone foot contacts / weight compresses left foot, right knee passes / right foot swings forward low / right stone foot contacts / weight compresses right foot, left knee passes / left foot swings forward low into next contact / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing.\r\nKeep 72px nominal stone anatomy after later ONE common source scale from the eight neutrals. Skull and armor dimensions remain stable, not per-pose fitted. Lowered and prone poses lower naturally. Body-only empty fists, keep actual heavy stone feet, arms and knees attached; no human anatomy. Rear N/NE/NW never expose eyes even while attacking or recoiling. Do not turn a rear head toward camera.\r\nSubtle heavy idle, actual alternating foot contacts for move, deliberate shoulder-led attack and honest torso recoil as appropriate; no standing-neutral substituted for footfalls.\r\nTrue transparent RGBA, crisp pixel clusters and limited shade bands. No ground, shadow, glow, halo, checkerboard, text, weapon, shard, extra body, projectile or FX. Preserve all margins and physical silhouette. Do not crop any edge.\r\nFINAL CAMERA AUTHORITY for south: copy Image1 orientation into ALL sixteen figures, including the neutral calibration, hit recoil, attack wind-up and corpse. Show the exact front/diagonal head and torso from Image1, with correct face/chest, never the other diagonal. Keep the same own skull and stone body; no mirror, fitting, external prop or FX.\r\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: identity-preserve. Kiếm Nô Khôi Lỗi BODY move, exact south: strict FRONT, two eyes and chest in EVERY figure.\r\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY camera, anatomy and identity. Image2 Wang supports camera/pixel only. There is no southeast image input: inherit approved identity through the own same-view lineage, never invent another camera.\r\nIdentity: OWN approved broad squat cracked-stone construct, jagged stone face, aged bronze bindings and chest tablet. Keep 72px anatomy; no human skull, hair or cloth shoes.\r\nExactly FOUR COLUMNS and FOUR ROWS, SIXTEEN complete separate figures, on a 2048x1536 transparent source. Each figure is centered in a spacious 512x384 area. At least80px genuinely empty transparent horizontal gutters between all fists/bodies; at least64px vertical gutters. Keep outer margins80px. Do NOT let hands or silhouettes touch another figure. Use one source-wide body/head scale, leave the unused space empty; never expand a body to fill a cell. No drawn grid.\r\nROWS1+2: eight identical own standing neutral calibration figures, same requested camera.\r\nROWS3+4: eight ordered move poses in reading order: left stone foot contacts / weight compresses left foot, right knee passes / right foot swings forward low / right stone foot contacts / weight compresses right foot, left knee passes / left foot swings forward low into next contact / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing.\r\nKeep 72px nominal stone anatomy after later ONE common source scale from the eight neutrals. Skull and armor dimensions remain stable, not per-pose fitted. Lowered and prone poses lower naturally. Body-only empty fists, keep actual heavy stone feet, arms and knees attached; no human anatomy. Rear N/NE/NW never expose eyes even while attacking or recoiling. Do not turn a rear head toward camera.\r\nSubtle heavy idle, actual alternating foot contacts for move, deliberate shoulder-led attack and honest torso recoil as appropriate; no standing-neutral substituted for footfalls.\r\nTrue transparent RGBA, crisp pixel clusters and limited shade bands. No ground, shadow, glow, halo, checkerboard, text, weapon, shard, extra body, projectile or FX. Preserve all margins and physical silhouette. Do not crop any edge.\r\nFINAL CAMERA AUTHORITY for south: copy Image1 orientation into ALL sixteen figures, including the neutral calibration, hit recoil, attack wind-up and corpse. Show the exact front/diagonal head and torso from Image1, with correct face/chest, never the other diagonal. Keep the same own skull and stone body; no mirror, fitting, external prop or FX.\r\n",
+    "n": 1,
+    "size": "2048x1536",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-15T03:48:55.015Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-south-neutral-same-view8x.png",
+      "filename": "sword-servant-south-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 22239,
+      "sha256": "bbaec2dab621690a57b9cf84e72157266e5ad04003ff7e4105483172ee3483ff",
+      "dimensions": {
+        "width": 896,
+        "height": 896
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-south-clean.png",
+      "filename": "wang-south-clean.png",
+      "mimeType": "image/png",
+      "bytes": 9300,
+      "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "source.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1795014,
+    "sha256": "7b4d4cae2c4f1377400e65073c2b3eebfe95560df4f08117f0902d9b4c2c7da5",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": false
+  }
+}

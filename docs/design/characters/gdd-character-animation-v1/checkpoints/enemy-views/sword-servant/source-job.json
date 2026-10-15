@@ -1,0 +1,278 @@
+{
+  "id": "sword-servant-eight-view-neutral-board",
+  "actorId": "sword-servant",
+  "direction": "eight-view-board",
+  "directions": [
+    "north",
+    "northeast",
+    "east",
+    "southeast",
+    "south",
+    "southwest",
+    "west",
+    "northwest"
+  ],
+  "grid": [
+    4,
+    2
+  ],
+  "prompt": "enemy-production/router-pilot-v2/northwest-r3/prompt.txt",
+  "promptSha256": "b413ff07e68949205f29dce6434f67939abb11d23205d721a5cd460c777a0112",
+  "inputs": [
+    {
+      "index": 1,
+      "file": "enemy-production/router-pilot-v2/rear-correction/source.png",
+      "sha256": "1b40a12ae7ee5fde44a6963a825769b5a6ba0244a6a63cd7423a34dac24f868f",
+      "original": "docs/design/characters/gdd-character-animation-v1/enemy-production/router-pilot-v2/rear-correction/source.png",
+      "originalSha256": "1b40a12ae7ee5fde44a6963a825769b5a6ba0244a6a63cd7423a34dac24f868f",
+      "role": "own source board target PRIMARY"
+    },
+    {
+      "index": 2,
+      "file": "inputs/sword-servant-clean.png",
+      "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+      "original": "docs/design/characters/gdd-character-animation-v1/inputs/sword-servant-clean.png",
+      "originalSha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+      "role": "own approved construct anatomy PRIMARY"
+    },
+    {
+      "index": 3,
+      "file": "inputs/wang-eight-view-camera-matrix.png",
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+      "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "role": "Wang camera and pixel support ONLY"
+    }
+  ],
+  "references": [
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\router-pilot-v2\\rear-correction\\source.png",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png"
+  ],
+  "raw": "view-masters/sources/sword-servant-eight-view-neutral-board-api-r3.png",
+  "status": "view-candidate-reviewed",
+  "purpose": "independently drawn same-actor view masters before actions",
+  "alphaPolicy": "body-binary-alpha128-after-nearest",
+  "history": [
+    {
+      "id": "sword-servant-eight-view-neutral-board",
+      "actorId": "sword-servant",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/sword-servant-eight-view-neutral-board-r1.txt",
+      "promptSha256": "38f3ac7fda7a7ec904d62e293172b8849a4a0034d79cbec7387d19e1f98825a9",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ]
+        },
+        {
+          "file": "inputs/sword-servant-clean.png",
+          "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/sword-servant-clean.png",
+          "originalSha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+          "role": "Own approved identity/clothing support"
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png"
+      ],
+      "raw": "view-masters/sources/sword-servant-eight-view-neutral-board-r1.png",
+      "status": "planned",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "body-binary-alpha128-after-nearest"
+    },
+    {
+      "id": "sword-servant-eight-view-neutral-board",
+      "actorId": "sword-servant",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/sword-servant-eight-view-neutral-board-enemy-r2.txt",
+      "promptSha256": "2b48e5bb0022b23c05a9a3f78dac1d0572e1768c7d9c6cf0b9e79d0212e32f80",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang camera/pixel support ONLY; OWN construct anatomy PRIMARY",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ]
+        },
+        {
+          "file": "inputs/sword-servant-clean.png",
+          "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/sword-servant-clean.png",
+          "originalSha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+          "role": "OWN approved nonhuman anatomy and identity PRIMARY"
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png"
+      ],
+      "raw": "view-masters/sources/sword-servant-eight-view-neutral-board-r1.png",
+      "status": "planned",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "body-binary-alpha128-after-nearest"
+    }
+  ],
+  "attempts": [
+    {
+      "date": "2026-10-15",
+      "tool": "built-in image_gen",
+      "outcome": "usage_limit_reached",
+      "httpStatus": 429,
+      "reportedResetsInSeconds": 7444,
+      "reportedResetsAtEpoch": 1792035799,
+      "imageProduced": false
+    },
+    {
+      "date": "2026-10-15",
+      "tool": "configured-project-router",
+      "endpoint": "https://api.clituasmail.com/v1/responses",
+      "imageModel": "gpt-image-2",
+      "responseModel": "gpt-6-astra",
+      "outcome": "upstream-overloaded",
+      "httpStatus": 502,
+      "requestId": "cmq_3dfd0d0f3e306e77cab6791f",
+      "imageProduced": false,
+      "automaticRetry": false,
+      "prompt": "enemy-production/router-pilot-v1/prompt.txt",
+      "promptSha256": "5343642460035000a7c3fbcb873d8e648718a4d09927190db4f8f8ccd0ad84ad",
+      "metadata": "enemy-production/router-pilot-v1/generation-result.json"
+    },
+    {
+      "tool": "project-configured-router",
+      "endpoint": "https://img.aishenji.top/v1/images/edits",
+      "imageModel": "gpt-image-2",
+      "operation": "edit",
+      "status": "generated-preview-needs-view-correction",
+      "prompt": "enemy-production/router-pilot-v2/prompt.txt",
+      "promptSha256": "5343642460035000a7c3fbcb873d8e648718a4d09927190db4f8f8ccd0ad84ad",
+      "source": "enemy-production/router-pilot-v2/source.png",
+      "sourceSha256": "a85ff0ddb5769eb3331626d6a4c29dcf316f377f9275cc16b2dc5d27a42a6c2c",
+      "result": "enemy-production/router-pilot-v2/generation-result.json",
+      "automaticRetry": false,
+      "registeredViews": 0
+    },
+    {
+      "tool": "project-configured-router",
+      "endpoint": "https://img.aishenji.top/v1/images/edits",
+      "imageModel": "gpt-image-2",
+      "operation": "edit",
+      "status": "generated-preview-partial-correction",
+      "prompt": "enemy-production/router-pilot-v2/rear-correction/prompt.txt",
+      "promptSha256": "68c804739bc69a56defb96ca4e79a6ff52bc0f598cdcecd5449a446ec58a5c8b",
+      "source": "enemy-production/router-pilot-v2/rear-correction/source.png",
+      "sourceSha256": "1b40a12ae7ee5fde44a6963a825769b5a6ba0244a6a63cd7423a34dac24f868f",
+      "result": "enemy-production/router-pilot-v2/rear-correction/generation-result.json",
+      "automaticRetry": false,
+      "registeredViews": 0
+    }
+  ],
+  "apiMetadata": "enemy-production/router-pilot-v2/northwest-r3/source.json",
+  "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\router-pilot-v2\\northwest-r3\\source.png",
+  "sha256": "8349623672d72718ba54a6cecb410a59039df0b0b22450907e4376146c45d395",
+  "size": [
+    1536,
+    1024
+  ],
+  "viewAssessment": "All eight complete source views inspected. N/NE/NW now have hidden front face and no eyes; NW head follows rear torso. Both side views and front diagonals distinct, crack/plate asymmetry independently drawn. Own squat stone72 anatomy, no human boots or props. One board scale; foot witnesses candidate, no owner ART/motion approval."
+}

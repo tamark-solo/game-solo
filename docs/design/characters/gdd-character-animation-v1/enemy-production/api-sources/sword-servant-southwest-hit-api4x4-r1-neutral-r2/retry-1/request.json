@@ -1,0 +1,64 @@
+{
+  "kind": "motion",
+  "jobId": "sword-servant-southwest-hit-api4x4-r1-neutral-r2",
+  "promptSha256": "74a93f05ea8f4e3b420cbbb1b9c7c1799a3089163d667c8a239857ca39625c6b",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/sword-servant-southwest-neutral-same-view8x.png",
+      "sha256": "dd3090bdf8844920e7d737583b259349e8ac5d554a3b8fa9765d78be420112dd",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/sword-servant-southwest-neutral.png",
+      "originalSha256": "a303fbc0e301771ca3af051f6d48b752f603b84595ce3ec60bafe7def5dccb77",
+      "role": "OWN inspected SAME-VIEW neutral PRIMARY camera, construct anatomy and identity; approved ancestry retained",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-southwest-clean.png",
+      "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southwest-nearest8x.png",
+      "originalSha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+      "role": "Wang SAME-VIEW camera/pixel support only",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "sword-servant-southwest-hit-api4x4-r1-neutral-r2",
+    "prompt": "Use case: identity-preserve. Kiếm Nô Khôi Lỗi BODY hit, exact southwest: front three-quarter lower LEFT in EVERY figure.\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY camera, anatomy and identity. Image2 Wang supports camera/pixel only. There is no southeast image input: inherit approved identity through the own same-view lineage, never invent another camera.\nIdentity: OWN approved broad squat cracked-stone construct, jagged stone face, aged bronze bindings and chest tablet. Keep 72px anatomy; no human skull, hair or cloth shoes.\nExactly FOUR COLUMNS and FOUR ROWS, SIXTEEN complete separate figures, on a 2048x1536 transparent source. Each figure is centered in a spacious 512x384 area. At least80px genuinely empty transparent horizontal gutters between all fists/bodies; at least64px vertical gutters. Keep outer margins80px. Do NOT let hands or silhouettes touch another figure. Use one source-wide body/head scale, leave the unused space empty; never expand a body to fill a cell. No drawn grid.\nROWS1+2: eight identical own standing neutral calibration figures, same requested camera.\nROWS3+4: eight ordered hit poses in reading order: heavy neutral / chest twists slightly backward / strongest stone torso recoil with feet planted / shoulders rebound forward / stone arms settle / heavy neutral / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing.\nKeep 72px nominal stone anatomy after later ONE common source scale from the eight neutrals. Skull and armor dimensions remain stable, not per-pose fitted. Lowered and prone poses lower naturally. Body-only empty fists, keep actual heavy stone feet, arms and knees attached; no human anatomy. Rear N/NE/NW never expose eyes even while attacking or recoiling. Do not turn a rear head toward camera.\nSubtle heavy idle, actual alternating foot contacts for move, deliberate shoulder-led attack and honest torso recoil as appropriate; no standing-neutral substituted for footfalls.\nTrue transparent RGBA, crisp pixel clusters and limited shade bands. No ground, shadow, glow, halo, checkerboard, text, weapon, shard, extra body, projectile or FX. Preserve all margins and physical silhouette. Do not crop any edge.\nFINAL CAMERA AUTHORITY for southwest: copy Image1 orientation into ALL sixteen figures, including the neutral calibration, hit recoil, attack wind-up and corpse. Show the exact front/diagonal head and torso from Image1, with correct face/chest, never the other diagonal. Keep the same own skull and stone body; no mirror, fitting, external prop or FX.\n",
+    "quality": "high",
+    "size": "2048x1536",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\sword-servant-southwest-hit-api4x4-r1-neutral-r2.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-southwest-neutral-same-view8x.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-southwest-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "2048x1536",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-southwest-hit-api4x4-r1-neutral-r2\\retry-1\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-southwest-hit-api4x4-r1-neutral-r2\\retry-1",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/sword-servant-southwest-hit-api4x4-r1-neutral-r2.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router.",
+  "ownerAuthorizedRetry": true,
+  "attempt": "retry-1",
+  "maxAdditionalPosts": 1
+}

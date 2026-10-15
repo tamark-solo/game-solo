@@ -1,0 +1,61 @@
+{
+  "kind": "motion",
+  "jobId": "hua-lap-quoc-northwest-aoe-neutral-r2",
+  "promptSha256": "c031fab8debe3a0e94d400490835f45a29ae66b791fb257e3818e0fe4e80ff8e",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/hua-lap-quoc-northwest-neutral-same-view8x.png",
+      "sha256": "f99746ac2a3d1dd06ca7952123cd1411818c1ab814f36fbcc9f5e814ab94bf3c",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/hua-lap-quoc-northwest-neutral.png",
+      "originalSha256": "4337642fa04425832e04a4f925eb92364f8564ed4864642c3df3322dd5cad230",
+      "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-northwest-clean.png",
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-northwest-nearest8x.png",
+      "originalSha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "hua-lap-quoc-northwest-aoe-neutral-r2",
+    "prompt": "Use case: identity-preserve. New GDD enemy BODY animation: Hung Linh Hứa Lập Quốc, exact northwest: REAR three-quarter upper LEFT, face hidden in every pose.\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY camera, nonhuman anatomy and identity. Image2 Wang supports camera/pixel only. Only requested SAME-VIEW images are provided: inherit approved identity through the own-view lineage, never borrow another camera.\nIdentity: OWN approved spectral villain with long tied dark hair and sly mature smirk, tattered charcoal/ivory spectral cloth, 96px intrinsic silhouette. Preserve soft RGBA hem. No physical boots, borrowed mentor short hair or attached sword.\nExactly 4 COLUMNS x 4 ROWS. ROWS1+2: eight identical own standing/floating neutral calibration figures. ROWS3+4: eight ordered cast-aoe poses in reading order: floating ready / both forearms draw across chest / shoulders coil, hands stay small at chest / arms sweep outward at two different heights to command a surrounding field / hands retract, torso unwinds / floating ready restored / own neutral settles / own neutral quiet hold.\nONE scale for the complete source from the neutral calibration, nominal 96 native pixels. Keep own skull/armor dimensions throughout. Lean, compression, crouch and fall lower the pose naturally; never fit per-pose height. Keep actual camera and anatomical rear occlusion in all actions. Rear hands do not show through torso, mantle or hair.\nCompact attached hands/fingers for human/spirit; complete heavy stone fists for construct. Both actual stone feet/boots stay attached where applicable; spectral character has NO boots or invented walking legs. No mirrored view or flipped costume. All figures isolated by generous transparent gutters, with ample margins for complete hair, fists and prone body on all edges.\nTruly transparent RGBA, crisp stepped pixel contours and limited shade bands. Body/outfit only; no floor, shadow, captions, grid, held weapon, projectile, detached shards, duplicate actor, warning ring, spell glow, smoke, aura or external FX. Preserve original intrinsic soft spectral alpha, not binary clipping. Each key still has a complete visible body; no empty/fully vanished final slot.\nFINAL CAMERA AUTHORITY for northwest: copy Image1 orientation into ALL 16 figures, including neutral calibration, recoil, wind-up and low poses. Show only BACK head, neck, shoulders and back outfit; NO front collar/chest, face or eyes. Preserve own hair/skull, material, attached limbs and body build exactly from Image1, including any own hair tuft/tie; descriptive hair shorthand never overrides the actual inspected identity. No mirror, fitting, external prop or FX.\n",
+    "quality": "high",
+    "size": "1536x1024",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\hua-lap-quoc-northwest-aoe-neutral-r2.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-northwest-neutral-same-view8x.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-northwest-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "1536x1024",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-northwest-aoe-neutral-r2\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-northwest-aoe-neutral-r2",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/hua-lap-quoc-northwest-aoe-neutral-r2.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router."
+}

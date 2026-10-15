@@ -1,0 +1,16 @@
+export async function readbackAllActualFrames(){
+
+  const THREE=await import('/node_modules/three/build/three.module.js');const clips=window.__gddMotion.manifest.clips;
+  const renderer=new THREE.WebGLRenderer({alpha:true,antialias:false,premultipliedAlpha:false});renderer.setPixelRatio(1);renderer.outputColorSpace=THREE.LinearSRGBColorSpace;
+  const load=async file=>{const image=new Image();image.src=new URL(file,location.href).href;await image.decode();const canvas=document.createElement('canvas');canvas.width=image.width;canvas.height=image.height;const c=canvas.getContext('2d',{willReadFrequently:true});c.drawImage(image,0,0);const t=new THREE.Texture(image);t.colorSpace=THREE.NoColorSpace;t.minFilter=t.magFilter=THREE.NearestFilter;t.flipY=false;t.generateMipmaps=false;t.needsUpdate=true;return {image,texture:t,rgba:c.getImageData(0,0,image.width,image.height).data};};
+  const evidence=[],readbackPolicy="alpha plus visible premultiplied color; tolerance1.5; CPU atlas exact RGBA";
+  for(const clip of clips){const sheet=await load(clip.atlas.file);for(const r of clip.frames){const native=await load(r.file);const [w,h]=clip.canvas,[px,py]=r.pivot;
+   for(const mode of ['native','atlas']){const texture=mode==='native'?native:sheet,rect=mode==='native'?[0,0,w,h]:r.atlasRect;
+    const mat=new THREE.ShaderMaterial({uniforms:{map:{value:texture.texture},rect:{value:new THREE.Vector4(...rect)},size:{value:new THREE.Vector2(texture.image.width,texture.image.height)}},vertexShader:'varying vec2 vUv; void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',fragmentShader:'precision highp float; uniform sampler2D map;uniform vec4 rect;uniform vec2 size;varying vec2 vUv;void main(){vec2 uv=vec2((rect.x+vUv.x*rect.z)/size.x,(rect.y+(1.0-vUv.y)*rect.w)/size.y);gl_FragColor=texture2D(map,uv);}',blending:THREE.NoBlending,depthTest:false,depthWrite:false});
+    const scene=new THREE.Scene(),geometry=new THREE.PlaneGeometry(w,h),mesh=new THREE.Mesh(geometry,mat);mesh.position.set(w/2-px,py-h/2,0);scene.add(mesh);const camera=new THREE.OrthographicCamera(-px,w-px,py,py-h,.1,10);camera.position.z=1;
+    const target=new THREE.WebGLRenderTarget(w,h,{minFilter:THREE.NearestFilter,magFilter:THREE.NearestFilter,depthBuffer:false});renderer.setRenderTarget(target);renderer.clear();renderer.render(scene,camera);const pixels=new Uint8Array(w*h*4);renderer.readRenderTargetPixels(target,0,0,w,h,pixels);let mismatch=0,maxError=0;
+    for(let y=0;y<h;y++)for(let x=0;x<w;x++){const a=(y*w+x)*4,b=((h-1-y)*w+x)*4;if(native.rgba[a+3]===0&&pixels[b+3]===0)continue;for(let k=0;k<4;k++){const e=k===3?Math.abs(native.rgba[a+3]-pixels[b+3]):Math.abs(native.rgba[a+k]*native.rgba[a+3]/255-pixels[b+k]*pixels[b+3]/255);maxError=Math.max(maxError,e);if(e>1.5)mismatch++;}}
+    if(mismatch)throw Error('GPU pixel mismatch '+clip.id+' key'+r.index+' '+mode+': '+mismatch);evidence.push({clipId:clip.id,key:r.index,mode,canvas:clip.canvas,pivot:r.pivot,mismatch,maxChannelError:maxError,comparisonPolicy:readbackPolicy,realThreeWebGLReadback:true});target.dispose();geometry.dispose();mat.dispose();
+   }native.texture.dispose();
+  }sheet.texture.dispose();}renderer.dispose();return evidence;
+}

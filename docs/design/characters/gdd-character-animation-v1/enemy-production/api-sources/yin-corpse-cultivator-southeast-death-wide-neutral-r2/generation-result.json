@@ -1,0 +1,56 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-southeast-neutral-same-view8x.png",
+      "filename": "yin-corpse-cultivator-southeast-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 15746,
+      "sha256": "39619e15f07bedaef482f853ad6495ffee492bace2c1cd58358148993b89bdf7",
+      "dimensions": {
+        "width": 640,
+        "height": 896
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-southeast-clean.png",
+      "filename": "wang-southeast-clean.png",
+      "mimeType": "image/png",
+      "bytes": 9320,
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-southeast-death-wide-neutral-r2\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-southeast-death-wide-neutral-r2\\source.json",
+      "sha256": "cdcb09a76e9471985f3ac6b8d54c67219953a077c212a0dba77b0c128f099a63",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sizeMatchesRequest": true
+    }
+  ],
+  "warnings": [],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

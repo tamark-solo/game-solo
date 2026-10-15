@@ -1,0 +1,61 @@
+{
+  "kind": "motion",
+  "jobId": "dark-seal-true-body-north-aoe-neutral-r2",
+  "promptSha256": "16c035b91b324d8cad03a66cb5ce636be4e8be9a926f23192014b58cbc42318a",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/dark-seal-true-body-north-neutral-same-view8x.png",
+      "sha256": "9343e4f5698456fb8d6b3f028ccf05cd2105da91fd84c81430779de5aae70942",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/dark-seal-true-body-north-neutral.png",
+      "originalSha256": "8e19a22c4e045f2b2ecd9918033a6cb6f8109c231affd532e83e534b32f580f2",
+      "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-north-clean.png",
+      "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-north-nearest8x.png",
+      "originalSha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3",
+      "role": "Wang SAME-VIEW PRIMARY human anatomy/pixel standard; retain own face and outfit",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "dark-seal-true-body-north-aoe-neutral-r2",
+    "prompt": "Use case: identity-preserve. New GDD enemy BODY animation: Hắc Ấn · Chân thân Huyết Ấn, exact north: strict BACK, no eyes or face in every pose.\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY motion/camera target and identity. Image2 live Wang is the direct PRIMARY human anatomy/pixel standard; keep OWN face, hair, age, clothing and approved body proportions. Only requested SAME-VIEW images are provided: inherit approved identity through the own-view lineage, never borrow another camera.\nIdentity: OWN approved mature seal officer, gray-templed high tied hair, stern older face, crimson mantle and seal bands, ivory/dark human robe and actual cloth boots. Keep own head/build, not Wang face. No rings, duplicated actors or core aura baked into body.\nExactly 4 COLUMNS x 4 ROWS. ROWS1+2: eight identical own standing/floating neutral calibration figures. ROWS3+4: eight ordered cast-aoe poses in reading order: stern ready / forearms cross high, knees soften / hands compress into central double seal / near palm presses down while far palm turns outward, commanding double An Hoi / both elbows retract while knees absorb motion / stern ready restored / own neutral settles / own neutral quiet hold.\nONE scale for the complete source from the neutral calibration, nominal 80 native pixels. Keep own skull/armor dimensions throughout. Lean, compression, crouch and fall lower the pose naturally; never fit per-pose height. Keep actual camera and anatomical rear occlusion in all actions. Rear hands do not show through torso, mantle or hair.\nCompact attached hands/fingers for human/spirit; complete heavy stone fists for construct. Both actual stone feet/boots stay attached where applicable; spectral character has NO boots or invented walking legs. No mirrored view or flipped costume. All figures isolated by generous transparent gutters, with ample margins for complete hair, fists and prone body on all edges.\nTruly transparent RGBA, crisp stepped pixel contours and limited shade bands. Body/outfit only; no floor, shadow, captions, grid, held weapon, projectile, detached shards, duplicate actor, warning ring, spell glow, smoke, aura or external FX. Solid own body, truthful physical foot contact.\nFINAL CAMERA AUTHORITY for north: copy Image1 orientation into ALL 16 figures, including neutral calibration, recoil, wind-up and low poses. Show only BACK head, neck, shoulders and back outfit; NO front collar/chest, face or eyes. Preserve own hair/skull, material, attached limbs and body build exactly from Image1, including any own hair tuft/tie; descriptive hair shorthand never overrides the actual inspected identity. No mirror, fitting, external prop or FX.\n",
+    "quality": "high",
+    "size": "1536x1024",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\dark-seal-true-body-north-aoe-neutral-r2.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\dark-seal-true-body-north-neutral-same-view8x.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-north-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "1536x1024",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\dark-seal-true-body-north-aoe-neutral-r2\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\dark-seal-true-body-north-aoe-neutral-r2",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/dark-seal-true-body-north-aoe-neutral-r2.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router."
+}

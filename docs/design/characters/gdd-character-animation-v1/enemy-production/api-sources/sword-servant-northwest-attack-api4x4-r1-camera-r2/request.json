@@ -1,0 +1,71 @@
+{
+  "kind": "motion",
+  "jobId": "sword-servant-northwest-attack-api4x4-r1-camera-r2",
+  "promptSha256": "ce04cc2c3b8ff97df388d2ae57225bf4e62be0c9bc09d0eacc4f472246e9130f",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/sword-servant-northwest-idle-api4x4-r1-clean-source.png",
+      "sha256": "6b394081ef64c87de3af16da7d87ccffaaa5d6aaa6e728d56a81669c09a8d355",
+      "original": "docs/design/characters/gdd-character-animation-v1/sources/sword-servant-northwest-idle-api4x4-r1.png",
+      "originalSha256": "60dced58409e4a6c3bb51eb7e84cdd56d4e4d399ae6617c0687eee246f71d561",
+      "role": "OWN inspected same-actor SAME-VIEW motion source PRIMARY edit target",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true,
+      "sourceJob": "sword-servant-northwest-idle-api4x4-r1"
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-northwest-clean.png",
+      "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-northwest-nearest8x.png",
+      "originalSha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55",
+      "role": "Wang exact camera/pixel support only",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 3,
+      "file": "inputs/sword-servant-northwest-neutral-same-view8x.png",
+      "sha256": "d9f2858d3b40eefe20962730db1945f88101c7d11ac55042fac89f506edcae79",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/sword-servant-northwest-neutral.png",
+      "originalSha256": "4f92fd418e7f45235856b1aebd017614846c780a734d19913df5e8aa5206e282",
+      "role": "OWN same-view neutral identity/anatomy authority; lineage retains approved original",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "sword-servant-northwest-attack-api4x4-r1-camera-r2",
+    "prompt": "Use case: identity-preserve. Kiếm Nô Khôi Lỗi BODY attack, exact northwest: rear three-quarter upper LEFT, face hidden NO eyes in EVERY figure.\nImage1 OWN inspected SAME-VIEW motion sheet is the edit target and camera authority. Image2 Wang supports exact camera/pixel only. Image3 OWN SAME-VIEW neutral locks identity and nonhuman anatomy. All references show the same requested camera; never substitute another direction.\nIdentity: OWN approved broad squat cracked-stone construct, jagged stone face, aged bronze bindings and chest tablet. Keep 72px anatomy; no human skull, hair or cloth shoes.\nExactly FOUR COLUMNS and FOUR ROWS, SIXTEEN complete separate figures, on a 2048x1536 transparent source. Each figure is centered in a spacious 512x384 area. At least80px genuinely empty transparent horizontal gutters between all fists/bodies; at least64px vertical gutters. Keep outer margins80px. Do NOT let hands or silhouettes touch another figure. Use one source-wide body/head scale, leave the unused space empty; never expand a body to fill a cell. No drawn grid.\nROWS1+2: eight identical own standing neutral calibration figures, same requested camera.\nROWS3+4: eight ordered attack poses in reading order: ready closed grip hands / two compact gripping hands draw toward near shoulder / torso winds up, weight stays on rear stone foot / both hands cut diagonally downward through empty hilt position / arms decelerate and knees absorb weight / hands return to own neutral guard / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing / own ready rest, same facing.\nKeep 72px nominal stone anatomy after later ONE common source scale from the eight neutrals. Skull and armor dimensions remain stable, not per-pose fitted. Lowered and prone poses lower naturally. Body-only empty fists, keep actual heavy stone feet, arms and knees attached; no human anatomy. Rear N/NE/NW never expose eyes even while attacking or recoiling. Do not turn a rear head toward camera.\nSubtle heavy idle, actual alternating foot contacts for move, deliberate shoulder-led attack and honest torso recoil as appropriate; no standing-neutral substituted for footfalls.\nTrue transparent RGBA, crisp pixel clusters and limited shade bands. No ground, shadow, glow, halo, checkerboard, text, weapon, shard, extra body, projectile or FX. Preserve all margins and physical silhouette. Do not crop any edge.\nCAMERA CORRECTION: The prior output incorrectly showed the FRONT chest tablet. Preserve Image1 rear torso/back armor in BOTH calibration rows and ALL action poses. This northwest view shows BACK armor, NO red front chest tablet, NO front face and NO eyes. Never rotate toward southeast during wind-up or recoil. Keep own head turned with rear torso. Retain full stone anatomy, connected fists/feet, requested motion and transparent gutters. Original southeast identity is inherited through lineage, NOT a camera input.\n",
+    "quality": "high",
+    "size": "2048x1536",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\sword-servant-northwest-attack-api4x4-r1-camera-r2.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-northwest-idle-api4x4-r1-clean-source.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-northwest-clean.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-northwest-neutral-same-view8x.png",
+    "--quality",
+    "high",
+    "--size",
+    "2048x1536",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-northwest-attack-api4x4-r1-camera-r2\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\sword-servant-northwest-attack-api4x4-r1-camera-r2",
+  "automaticRetry": false
+}

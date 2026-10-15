@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: identity-preserve / precise-object-edit. Correct ONLY the two REAR DIAGONAL views on the supplied eight-view Kiem No stone construct sheet.\r\nImage1 is the exact source board to edit. Image2 is the approved OWN stone construct anatomy/identity authority. Image3 is Wang eight-view CAMERA ONLY; do not adopt human body/hair/clothes.\r\nKeep the canvas 1536x1024 and FOUR COLUMNS / TWO ROWS. Do not move, scale, repaint or redesign any of the other six figures. Preserve the approved short wide stone body, small jagged skull, stone fists, chest plate, stone feet, pixel cluster style, and all spatial separation.\r\nEDIT ROW1 COLUMN2 (NORTHEAST): keep the rear three-quarter torso, but turn the head with the body to face upper-right, away from the viewer; show the back of the stone head and its side edge, with NO visible eye, eye socket or front face. Both shoulders/arms obey rear occlusion; no face looking over shoulder.\r\nEDIT ROW2 COLUMN4 (NORTHWEST): turn the stone head with the rear three-quarter torso upper-left; show back and side edge of head, NO visible eye, eye socket or front face. Do not mirror row1 column2; preserve unique cracks and equipment from its own side.\r\nEvery other sprite remains fixed: N, E, SE / S, SW, W unchanged. Maintain one body/skull scale across the source, no per-pose fitting. This is a static eight-view source, no animation, weapon, ground, shadow, lighting halo or FX.\r\nReturn a genuine transparent RGBA PNG with clean transparent gutters and margins. Preserve the full eight silhouettes, no background, no checkerboard pattern, no labels or grid lines. Do not make a human or redesign the original actor.",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: identity-preserve / precise-object-edit. Correct ONLY the two REAR DIAGONAL views on the supplied eight-view Kiem No stone construct sheet.\r\nImage1 is the exact source board to edit. Image2 is the approved OWN stone construct anatomy/identity authority. Image3 is Wang eight-view CAMERA ONLY; do not adopt human body/hair/clothes.\r\nKeep the canvas 1536x1024 and FOUR COLUMNS / TWO ROWS. Do not move, scale, repaint or redesign any of the other six figures. Preserve the approved short wide stone body, small jagged skull, stone fists, chest plate, stone feet, pixel cluster style, and all spatial separation.\r\nEDIT ROW1 COLUMN2 (NORTHEAST): keep the rear three-quarter torso, but turn the head with the body to face upper-right, away from the viewer; show the back of the stone head and its side edge, with NO visible eye, eye socket or front face. Both shoulders/arms obey rear occlusion; no face looking over shoulder.\r\nEDIT ROW2 COLUMN4 (NORTHWEST): turn the stone head with the rear three-quarter torso upper-left; show back and side edge of head, NO visible eye, eye socket or front face. Do not mirror row1 column2; preserve unique cracks and equipment from its own side.\r\nEvery other sprite remains fixed: N, E, SE / S, SW, W unchanged. Maintain one body/skull scale across the source, no per-pose fitting. This is a static eight-view source, no animation, weapon, ground, shadow, lighting halo or FX.\r\nReturn a genuine transparent RGBA PNG with clean transparent gutters and margins. Preserve the full eight silhouettes, no background, no checkerboard pattern, no labels or grid lines. Do not make a human or redesign the original actor.",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-15T02:21:27.335Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\router-pilot-v2\\source.png",
+      "filename": "source.png",
+      "mimeType": "image/png",
+      "bytes": 1925258,
+      "sha256": "a85ff0ddb5769eb3331626d6a4c29dcf316f377f9275cc16b2dc5d27a42a6c2c",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png",
+      "filename": "sword-servant-clean.png",
+      "mimeType": "image/png",
+      "bytes": 21589,
+      "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+      "dimensions": {
+        "width": 896,
+        "height": 896
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+      "filename": "wang-eight-view-camera-matrix.png",
+      "mimeType": "image/png",
+      "bytes": 63538,
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "source.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1944278,
+    "sha256": "1b40a12ae7ee5fde44a6963a825769b5a6ba0244a6a63cd7423a34dac24f868f",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

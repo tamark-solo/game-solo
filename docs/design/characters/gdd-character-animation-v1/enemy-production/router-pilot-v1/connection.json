@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-15",
+  "configuredEndpoint": "https://api.clituasmail.com/v1",
+  "imageModel": "gpt-image-2",
+  "credentialStorage": "Windows DPAPI, LocalAppData/game-solo/imagegen-router.json, outside Git",
+  "mcpServer": "game_assets",
+  "mcpRegistered": true,
+  "modelListCheck": {
+    "endpoint": "https://api.clituasmail.com/v1/models",
+    "modelAvailable": true,
+    "generationVerified": false,
+    "requestId": "cmq_a78521ad9cb0760495dfe000"
+  },
+  "existingImplementation": {
+    "mcp": "scripts/game-assetgen-mcp.mjs",
+    "router": "scripts/imagegen-router.mjs",
+    "docs": [
+      "docs/GAME-ASSETGEN.md",
+      "docs/IMAGEGEN-ROUTER.md"
+    ]
+  },
+  "referenceImageRoute": {
+    "operation": "edit-responses",
+    "responseModel": "gpt-6-astra",
+    "imageModel": "gpt-image-2",
+    "responsesToolMode": "minimal",
+    "source": "Provider public dashboard fetched 2026-10-15: multipart edits not supported; Responses image_generation uses separate text model."
+  },
+  "offlineVerification": {
+    "tests": 71,
+    "passed": 71,
+    "failed": 0
+  },
+  "pilot": {
+    "name": "sword-servant-eight-view-neutral-board",
+    "requestStatus": "failed-upstream-overloaded",
+    "requestedImages": 1,
+    "automaticRetry": false,
+    "modelOrTransportFallback": false,
+    "raw": "enemy-production/router-pilot-v1/source.png",
+    "generationResult": "generation-result.json",
+    "generationVerified": false,
+    "httpStatus": 502,
+    "requestId": "cmq_3dfd0d0f3e306e77cab6791f",
+    "providerReportedNoTokensCharged": true,
+    "imageFilesCreated": 0
+  },
+  "runtimeIntegrated": false,
+  "credentialLeakCheck": {
+    "sourcePackageAndEditedDocsChecked": true,
+    "credentialPatternFound": false
+  }
+}

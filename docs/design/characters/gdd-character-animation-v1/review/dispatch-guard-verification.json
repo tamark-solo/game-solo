@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "tests": 7,
+  "command": "python -X utf8 test_api_source_ops.py",
+  "fixture": "offline temporary isolated package; no network/real credentials",
+  "guardedCases": [
+    "already dispatched",
+    "failed result",
+    "missing authorization",
+    "retry limit expansion",
+    "authorized retry once and interrupted completion",
+    "missing MCP plan",
+    "superseded job"
+  ],
+  "source": "test_api_source_ops.py",
+  "sourceSha256": "1be4d2e5bfcc2fba8eb0a885ddb22901c84bd34d78cd56b9272ad7735d65d757"
+}

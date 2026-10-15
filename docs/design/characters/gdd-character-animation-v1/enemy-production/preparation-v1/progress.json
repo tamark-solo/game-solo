@@ -1,0 +1,61 @@
+{
+  "schema": "gdd-character-animation-progress-1",
+  "date": "2026-10-15",
+  "status": "waiting-imagegen-quota-enemy-views",
+  "activeWave": "mob-stage2",
+  "targetSources": 280,
+  "targetBodyClips": 832,
+  "generatedSources": 142,
+  "packedBodyClips": 256,
+  "runtimeIntegrated": false,
+  "historySourceCount": 5,
+  "sourcePolicy": "max 4 actions per source; failed edge source excluded",
+  "packedBodyKeys": 1527,
+  "sourceSheetsPacked": 135,
+  "correctiveSourceJobs": 23,
+  "totalSourceJobs": 487,
+  "mainEntryComplete": true,
+  "mainEntryBodyClips": 128,
+  "realViewMasters": 56,
+  "dedicatedWideJobs": 12,
+  "latestTechnicalStatus": "passed-main256 CPU34089/browser1807/GPU3054; story-neutral32 CPU752/browser264/GPU64",
+  "limbAudit": "review/limb-audit-v1/findings.json",
+  "mainComplete": true,
+  "mainBodyClips": 256,
+  "mainBodyKeys": 1527,
+  "mainCheckpoint": "checkpoints/main-8dir/checkpoint.json",
+  "productionBlocker": {
+    "tool": "built-in ImageGen",
+    "reason": "usage_limit_reached",
+    "reportedWaitSeconds": 7444,
+    "affectedJobs": [
+      "sword-servant-eight-view-neutral-board"
+    ],
+    "fallbackUsed": false,
+    "nextStep": "Prioritize three monster view boards, then three bosses; story/NPC motion remains deferred by owner priority."
+  },
+  "storyViewMasters": 32,
+  "generatedViewSources": 28,
+  "plannedViewSources": 10,
+  "storyViewCheckpoint": "checkpoints/story-views/checkpoint.json",
+  "remainingBodyClips": 576,
+  "ownerPriority": "Monsters then bosses, requested 2026-10-15",
+  "priorityTargetClips": 320,
+  "blockerHistory": [
+    {
+      "tool": "built-in ImageGen",
+      "reason": "usage_limit_reached",
+      "reportedWaitSeconds": 9281,
+      "affectedJobs": [
+        "li-muwan-alchemist-southeast-g1",
+        "situ-nan-spirit-southeast-g1",
+        "li-muwan-lifespan-southeast-g1",
+        "situ-nan-restored-southeast-g1"
+      ],
+      "fallbackUsed": false,
+      "nextStep": "Resume these exact planned jobs; no neutral frame relabeled as animation."
+    }
+  ],
+  "progressStatusText": "Ưu tiên Quái → Boss · đang chờ nguồn",
+  "enemyPlan": "enemy-production/plan.json"
+}

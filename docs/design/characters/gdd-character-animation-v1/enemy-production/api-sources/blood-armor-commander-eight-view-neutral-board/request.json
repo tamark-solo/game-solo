@@ -1,0 +1,89 @@
+{
+  "kind": "view",
+  "jobId": "blood-armor-commander-eight-view-neutral-board",
+  "promptSha256": "d79777c2981dfef7ba1b6077670eec382d216d1bb23b2eea5e42f53abb43977f",
+  "inputHashes": [
+    {
+      "file": "inputs/wang-eight-view-camera-matrix.png",
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+      "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "role": "Wang camera/pixel support ONLY; OWN construct anatomy PRIMARY",
+      "composedFrom": [
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+        }
+      ]
+    },
+    {
+      "file": "inputs/blood-armor-commander-clean.png",
+      "sha256": "694cf3675e66079423c7f149a97b5f756fa2d859706f5a164153b93681608c7e",
+      "original": "docs/design/characters/gdd-character-animation-v1/inputs/blood-armor-commander-clean.png",
+      "originalSha256": "694cf3675e66079423c7f149a97b5f756fa2d859706f5a164153b93681608c7e",
+      "role": "OWN approved nonhuman anatomy and identity PRIMARY"
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "blood-armor-commander-eight-view-neutral-board",
+    "prompt": "Use case: identity-preserve / stylized-concept. Eight independently drawn directional standing neutrals of Huyết Giáp Khôi Lỗi Thống Lĩnh.\nInputs: Image1 Wang eight-view camera matrix, Image2 OWN approved character. Image1 supplies camera and pixel treatment ONLY. Image2 OWN approved character is PRIMARY nonhuman anatomy and identity; do not reshape into Wang.\nExactly FOUR COLUMNS and TWO ROWS, eight complete separated full-body sprites. Match the corresponding camera in Image1.\nROW1 left to right: NORTH back / NORTHEAST rear-right / EAST right profile / SOUTHEAST front-right.\nROW2 left to right: SOUTH front / SOUTHWEST front-left / WEST left profile / NORTHWEST rear-left.\nEvery view is newly drawn; NEVER mirror a bitmap. Rear views show back of head/torso and anatomically occluded hands, no eyes or face. Profiles show only one eye and nose on correct side. All eight have exactly the same standing scale and skull size; no pose-based fitting.\nIdentity invariants: Massive broad armored formation-defender CONSTRUCT in blood-red and dark metal/stone, own 128px nonhuman build. Keep complete stone feet and armored fists, no wheels, rails or chariot device.\nEmpty hands, relaxed neutral arms, complete hair/hem/feet in every sprite. Body/outfit only. Crisp pixel-chibi stepped contours and limited shade bands at native 128px body height. Truly transparent RGBA. Large transparent outer margins and gutters between all figures. No text, labels, cell lines, floor, shadow, weapon, floating object, magic or FX. Solid stone/armored feet exactly like OWN master; no cloth shoes or human feet.",
+    "quality": "high",
+    "size": "1536x1024",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\blood-armor-commander-eight-view-neutral-board-enemy-r2.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-armor-commander-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "1536x1024",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-armor-commander-eight-view-neutral-board\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-armor-commander-eight-view-neutral-board",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/blood-armor-commander-eight-view-neutral-board-enemy-r2.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router."
+}

@@ -1,0 +1,56 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-east-neutral-same-view8x.png",
+      "filename": "yin-corpse-cultivator-east-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 15013,
+      "sha256": "9b2e1d4cd551bf3626e6e2fa9e5153010129fc988bcb27ca5d6d32ab3ee96a64",
+      "dimensions": {
+        "width": 640,
+        "height": 896
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-east-clean.png",
+      "filename": "wang-east-clean.png",
+      "mimeType": "image/png",
+      "bytes": 9489,
+      "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-east-gait-neutral-r2\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-east-gait-neutral-r2\\source.json",
+      "sha256": "067f618a3845b6775fb24612e8726b9bdc70477e4982bc0ef22bfe0224ed4308",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sizeMatchesRequest": true
+    }
+  ],
+  "warnings": [],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

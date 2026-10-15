@@ -1,0 +1,975 @@
+{
+  "jobs": [
+    {
+      "id": "sword-servant-eight-view-neutral-board",
+      "actorId": "sword-servant",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/sword-servant-eight-view-neutral-board-enemy-r2.txt",
+      "promptSha256": "2b48e5bb0022b23c05a9a3f78dac1d0572e1768c7d9c6cf0b9e79d0212e32f80",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang camera/pixel support ONLY; OWN construct anatomy PRIMARY",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ]
+        },
+        {
+          "file": "inputs/sword-servant-clean.png",
+          "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/sword-servant-clean.png",
+          "originalSha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+          "role": "OWN approved nonhuman anatomy and identity PRIMARY"
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png"
+      ],
+      "raw": "view-masters/sources/sword-servant-eight-view-neutral-board-r1.png",
+      "status": "planned",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "body-binary-alpha128-after-nearest",
+      "history": [
+        {
+          "id": "sword-servant-eight-view-neutral-board",
+          "actorId": "sword-servant",
+          "direction": "eight-view-board",
+          "directions": [
+            "north",
+            "northeast",
+            "east",
+            "southeast",
+            "south",
+            "southwest",
+            "west",
+            "northwest"
+          ],
+          "grid": [
+            4,
+            2
+          ],
+          "prompt": "prompts/sword-servant-eight-view-neutral-board-r1.txt",
+          "promptSha256": "38f3ac7fda7a7ec904d62e293172b8849a4a0034d79cbec7387d19e1f98825a9",
+          "inputs": [
+            {
+              "file": "inputs/wang-eight-view-camera-matrix.png",
+              "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+              "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+              "composedFrom": [
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+                  "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+                  "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+                  "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+                  "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+                  "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+                  "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+                  "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+                  "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+                }
+              ]
+            },
+            {
+              "file": "inputs/sword-servant-clean.png",
+              "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/sword-servant-clean.png",
+              "originalSha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+              "role": "Own approved identity/clothing support"
+            }
+          ],
+          "references": [
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png"
+          ],
+          "raw": "view-masters/sources/sword-servant-eight-view-neutral-board-r1.png",
+          "status": "planned",
+          "purpose": "independently drawn same-actor view masters before actions",
+          "alphaPolicy": "body-binary-alpha128-after-nearest"
+        }
+      ],
+      "attempts": [
+        {
+          "date": "2026-10-15",
+          "tool": "built-in image_gen",
+          "outcome": "usage_limit_reached",
+          "httpStatus": 429,
+          "reportedResetsInSeconds": 7444,
+          "reportedResetsAtEpoch": 1792035799,
+          "imageProduced": false
+        }
+      ]
+    },
+    {
+      "id": "yin-corpse-cultivator-eight-view-neutral-board",
+      "actorId": "yin-corpse-cultivator",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/yin-corpse-cultivator-eight-view-neutral-board-enemy-r2.txt",
+      "promptSha256": "51ed1be28b513446ddd720f6f7921be86143dd0b9992c755f6df17152771571f",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ]
+        },
+        {
+          "file": "inputs/yin-corpse-cultivator-clean.png",
+          "sha256": "b07d244f26eeb9d7b7c7f7d552ce32d8d2d4cfff8cb29272c63113a811d53d9d",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/yin-corpse-cultivator-clean.png",
+          "originalSha256": "b07d244f26eeb9d7b7c7f7d552ce32d8d2d4cfff8cb29272c63113a811d53d9d",
+          "role": "Own approved identity/clothing support"
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-clean.png"
+      ],
+      "raw": "view-masters/sources/yin-corpse-cultivator-eight-view-neutral-board-r1.png",
+      "status": "planned",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "body-binary-alpha128-after-nearest",
+      "history": [
+        {
+          "id": "yin-corpse-cultivator-eight-view-neutral-board",
+          "actorId": "yin-corpse-cultivator",
+          "direction": "eight-view-board",
+          "directions": [
+            "north",
+            "northeast",
+            "east",
+            "southeast",
+            "south",
+            "southwest",
+            "west",
+            "northwest"
+          ],
+          "grid": [
+            4,
+            2
+          ],
+          "prompt": "prompts/yin-corpse-cultivator-eight-view-neutral-board-r1.txt",
+          "promptSha256": "51ed1be28b513446ddd720f6f7921be86143dd0b9992c755f6df17152771571f",
+          "inputs": [
+            {
+              "file": "inputs/wang-eight-view-camera-matrix.png",
+              "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+              "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+              "composedFrom": [
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+                  "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+                  "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+                  "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+                  "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+                  "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+                  "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+                  "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+                  "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+                }
+              ]
+            },
+            {
+              "file": "inputs/yin-corpse-cultivator-clean.png",
+              "sha256": "b07d244f26eeb9d7b7c7f7d552ce32d8d2d4cfff8cb29272c63113a811d53d9d",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/yin-corpse-cultivator-clean.png",
+              "originalSha256": "b07d244f26eeb9d7b7c7f7d552ce32d8d2d4cfff8cb29272c63113a811d53d9d",
+              "role": "Own approved identity/clothing support"
+            }
+          ],
+          "references": [
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-clean.png"
+          ],
+          "raw": "view-masters/sources/yin-corpse-cultivator-eight-view-neutral-board-r1.png",
+          "status": "planned",
+          "purpose": "independently drawn same-actor view masters before actions",
+          "alphaPolicy": "body-binary-alpha128-after-nearest"
+        }
+      ]
+    },
+    {
+      "id": "blood-talisman-mage-eight-view-neutral-board",
+      "actorId": "blood-talisman-mage",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/blood-talisman-mage-eight-view-neutral-board-enemy-r2.txt",
+      "promptSha256": "6f1be0e5cc9d5415564d79c30d851e3dde29246dd07cf2d70c39e9ea4ba33290",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ]
+        },
+        {
+          "file": "inputs/blood-talisman-mage-clean.png",
+          "sha256": "71ba64472e14f7e1bbb9799b9b2f93b02f53c9698f3b017b011a9c64b267c1d2",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/blood-talisman-mage-clean.png",
+          "originalSha256": "71ba64472e14f7e1bbb9799b9b2f93b02f53c9698f3b017b011a9c64b267c1d2",
+          "role": "Own approved identity/clothing support"
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-talisman-mage-clean.png"
+      ],
+      "raw": "view-masters/sources/blood-talisman-mage-eight-view-neutral-board-r1.png",
+      "status": "planned",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "body-binary-alpha128-after-nearest",
+      "history": [
+        {
+          "id": "blood-talisman-mage-eight-view-neutral-board",
+          "actorId": "blood-talisman-mage",
+          "direction": "eight-view-board",
+          "directions": [
+            "north",
+            "northeast",
+            "east",
+            "southeast",
+            "south",
+            "southwest",
+            "west",
+            "northwest"
+          ],
+          "grid": [
+            4,
+            2
+          ],
+          "prompt": "prompts/blood-talisman-mage-eight-view-neutral-board-r1.txt",
+          "promptSha256": "6f1be0e5cc9d5415564d79c30d851e3dde29246dd07cf2d70c39e9ea4ba33290",
+          "inputs": [
+            {
+              "file": "inputs/wang-eight-view-camera-matrix.png",
+              "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+              "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+              "composedFrom": [
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+                  "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+                  "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+                  "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+                  "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+                  "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+                  "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+                  "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+                  "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+                }
+              ]
+            },
+            {
+              "file": "inputs/blood-talisman-mage-clean.png",
+              "sha256": "71ba64472e14f7e1bbb9799b9b2f93b02f53c9698f3b017b011a9c64b267c1d2",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/blood-talisman-mage-clean.png",
+              "originalSha256": "71ba64472e14f7e1bbb9799b9b2f93b02f53c9698f3b017b011a9c64b267c1d2",
+              "role": "Own approved identity/clothing support"
+            }
+          ],
+          "references": [
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-talisman-mage-clean.png"
+          ],
+          "raw": "view-masters/sources/blood-talisman-mage-eight-view-neutral-board-r1.png",
+          "status": "planned",
+          "purpose": "independently drawn same-actor view masters before actions",
+          "alphaPolicy": "body-binary-alpha128-after-nearest"
+        }
+      ]
+    },
+    {
+      "id": "blood-armor-commander-eight-view-neutral-board",
+      "actorId": "blood-armor-commander",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/blood-armor-commander-eight-view-neutral-board-enemy-r2.txt",
+      "promptSha256": "d79777c2981dfef7ba1b6077670eec382d216d1bb23b2eea5e42f53abb43977f",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang camera/pixel support ONLY; OWN construct anatomy PRIMARY",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ]
+        },
+        {
+          "file": "inputs/blood-armor-commander-clean.png",
+          "sha256": "694cf3675e66079423c7f149a97b5f756fa2d859706f5a164153b93681608c7e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/blood-armor-commander-clean.png",
+          "originalSha256": "694cf3675e66079423c7f149a97b5f756fa2d859706f5a164153b93681608c7e",
+          "role": "OWN approved nonhuman anatomy and identity PRIMARY"
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-armor-commander-clean.png"
+      ],
+      "raw": "view-masters/sources/blood-armor-commander-eight-view-neutral-board-r1.png",
+      "status": "planned",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "body-binary-alpha128-after-nearest",
+      "history": [
+        {
+          "id": "blood-armor-commander-eight-view-neutral-board",
+          "actorId": "blood-armor-commander",
+          "direction": "eight-view-board",
+          "directions": [
+            "north",
+            "northeast",
+            "east",
+            "southeast",
+            "south",
+            "southwest",
+            "west",
+            "northwest"
+          ],
+          "grid": [
+            4,
+            2
+          ],
+          "prompt": "prompts/blood-armor-commander-eight-view-neutral-board-r1.txt",
+          "promptSha256": "a8c6047bc0322981a91de15cb077950ca889fe8c91cdb7c02a0b97c54cbfc3d9",
+          "inputs": [
+            {
+              "file": "inputs/wang-eight-view-camera-matrix.png",
+              "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+              "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+              "composedFrom": [
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+                  "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+                  "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+                  "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+                  "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+                  "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+                  "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+                  "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+                  "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+                }
+              ]
+            },
+            {
+              "file": "inputs/blood-armor-commander-clean.png",
+              "sha256": "694cf3675e66079423c7f149a97b5f756fa2d859706f5a164153b93681608c7e",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/blood-armor-commander-clean.png",
+              "originalSha256": "694cf3675e66079423c7f149a97b5f756fa2d859706f5a164153b93681608c7e",
+              "role": "Own approved identity/clothing support"
+            }
+          ],
+          "references": [
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-armor-commander-clean.png"
+          ],
+          "raw": "view-masters/sources/blood-armor-commander-eight-view-neutral-board-r1.png",
+          "status": "planned",
+          "purpose": "independently drawn same-actor view masters before actions",
+          "alphaPolicy": "body-binary-alpha128-after-nearest"
+        }
+      ]
+    },
+    {
+      "id": "dark-seal-true-body-eight-view-neutral-board",
+      "actorId": "dark-seal-true-body",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/dark-seal-true-body-eight-view-neutral-board-enemy-r2.txt",
+      "promptSha256": "d490f75de0e7333f55b994f0926747acdf42eca275575a0f42e8f45e6b09ad90",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ]
+        },
+        {
+          "file": "inputs/dark-seal-true-body-clean.png",
+          "sha256": "83060aeb4420579dbd0acb10d50666cf35634ff2aa568de9a3e5ffc241354982",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/dark-seal-true-body-clean.png",
+          "originalSha256": "83060aeb4420579dbd0acb10d50666cf35634ff2aa568de9a3e5ffc241354982",
+          "role": "Own approved identity/clothing support"
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\dark-seal-true-body-clean.png"
+      ],
+      "raw": "view-masters/sources/dark-seal-true-body-eight-view-neutral-board-r1.png",
+      "status": "planned",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "body-binary-alpha128-after-nearest",
+      "history": [
+        {
+          "id": "dark-seal-true-body-eight-view-neutral-board",
+          "actorId": "dark-seal-true-body",
+          "direction": "eight-view-board",
+          "directions": [
+            "north",
+            "northeast",
+            "east",
+            "southeast",
+            "south",
+            "southwest",
+            "west",
+            "northwest"
+          ],
+          "grid": [
+            4,
+            2
+          ],
+          "prompt": "prompts/dark-seal-true-body-eight-view-neutral-board-r1.txt",
+          "promptSha256": "d490f75de0e7333f55b994f0926747acdf42eca275575a0f42e8f45e6b09ad90",
+          "inputs": [
+            {
+              "file": "inputs/wang-eight-view-camera-matrix.png",
+              "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+              "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+              "composedFrom": [
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+                  "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+                  "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+                  "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+                  "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+                  "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+                  "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+                  "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+                  "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+                }
+              ]
+            },
+            {
+              "file": "inputs/dark-seal-true-body-clean.png",
+              "sha256": "83060aeb4420579dbd0acb10d50666cf35634ff2aa568de9a3e5ffc241354982",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/dark-seal-true-body-clean.png",
+              "originalSha256": "83060aeb4420579dbd0acb10d50666cf35634ff2aa568de9a3e5ffc241354982",
+              "role": "Own approved identity/clothing support"
+            }
+          ],
+          "references": [
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\dark-seal-true-body-clean.png"
+          ],
+          "raw": "view-masters/sources/dark-seal-true-body-eight-view-neutral-board-r1.png",
+          "status": "planned",
+          "purpose": "independently drawn same-actor view masters before actions",
+          "alphaPolicy": "body-binary-alpha128-after-nearest"
+        }
+      ]
+    },
+    {
+      "id": "hua-lap-quoc-eight-view-neutral-board",
+      "actorId": "hua-lap-quoc",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/hua-lap-quoc-eight-view-neutral-board-enemy-r2.txt",
+      "promptSha256": "bc7c57d0f66b834ff871a1d5f9fc8842e6fe17b7dc305dc20ca3a80864e54211",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang camera/pixel support ONLY; OWN spectral anatomy PRIMARY",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ]
+        },
+        {
+          "file": "inputs/hua-lap-quoc-clean.png",
+          "sha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/hua-lap-quoc-clean.png",
+          "originalSha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+          "role": "OWN approved spectral anatomy and identity PRIMARY"
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-clean.png"
+      ],
+      "raw": "view-masters/sources/hua-lap-quoc-eight-view-neutral-board-r1.png",
+      "status": "planned",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "preserved-soft-RGBA",
+      "history": [
+        {
+          "id": "hua-lap-quoc-eight-view-neutral-board",
+          "actorId": "hua-lap-quoc",
+          "direction": "eight-view-board",
+          "directions": [
+            "north",
+            "northeast",
+            "east",
+            "southeast",
+            "south",
+            "southwest",
+            "west",
+            "northwest"
+          ],
+          "grid": [
+            4,
+            2
+          ],
+          "prompt": "prompts/hua-lap-quoc-eight-view-neutral-board-r1.txt",
+          "promptSha256": "bc7c57d0f66b834ff871a1d5f9fc8842e6fe17b7dc305dc20ca3a80864e54211",
+          "inputs": [
+            {
+              "file": "inputs/wang-eight-view-camera-matrix.png",
+              "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+              "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+              "composedFrom": [
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+                  "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+                  "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+                  "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+                  "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+                  "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+                  "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+                  "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+                  "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+                }
+              ]
+            },
+            {
+              "file": "inputs/hua-lap-quoc-clean.png",
+              "sha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/hua-lap-quoc-clean.png",
+              "originalSha256": "8e61625b7674a56928d4a64b38395d16441a7051d63bcb60d7da8fdc4edbba77",
+              "role": "Own approved identity/clothing support"
+            }
+          ],
+          "references": [
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-clean.png"
+          ],
+          "raw": "view-masters/sources/hua-lap-quoc-eight-view-neutral-board-r1.png",
+          "status": "planned",
+          "purpose": "independently drawn same-actor view masters before actions",
+          "alphaPolicy": "preserved-soft-RGBA"
+        }
+      ]
+    }
+  ]
+}

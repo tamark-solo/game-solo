@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "routerMcpUnitTests": {
+    "passed": 71,
+    "failed": 0
+  },
+  "lineageChecks": 35611,
+  "enemyPlanChecks": 3674,
+  "browserChecks": 178,
+  "approvedMasterPixelComparisons": 12,
+  "priorDeliveryPinsPreserved": 2039,
+  "sourceChecks": [
+    {
+      "source": "source.png",
+      "sha256": "a85ff0ddb5769eb3331626d6a4c29dcf316f377f9275cc16b2dc5d27a42a6c2c",
+      "inputHashesVerified": 2,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "hasTransparentPixels": true
+    },
+    {
+      "source": "rear-correction/source.png",
+      "sha256": "1b40a12ae7ee5fde44a6963a825769b5a6ba0244a6a63cd7423a34dac24f868f",
+      "inputHashesVerified": 3,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "hasTransparentPixels": true
+    }
+  ],
+  "credentialPatternMatches": 0,
+  "registeredNewEnemyViews": 0,
+  "newEnemyAnimationClips": 0,
+  "technicalGenerationVerified": true,
+  "sourceArtReady": false,
+  "reason": "NW rear view still exposes an eye; source candidates preserved for correction.",
+  "runtimeIntegrated": false
+}

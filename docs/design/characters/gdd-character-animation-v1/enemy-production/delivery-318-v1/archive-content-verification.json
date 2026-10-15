@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "bodyClips": 318,
+  "bodyKeys": 1908,
+  "sourceSheets": 304,
+  "neutralViews": 48,
+  "allFrameAtlasSourceViewPathsPresent": true,
+  "threeExplicitRetryLineagesIncluded": true,
+  "missingClips": [
+    {
+      "jobId": "sword-servant-southwest-hit-api4x4-r1-neutral-r2",
+      "actorId": "sword-servant",
+      "direction": "southwest",
+      "actions": [
+        "hit"
+      ],
+      "reason": "HTTP200 invalid JSON; no image returned",
+      "attempts": [
+        {
+          "attempt": "initial",
+          "result": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/generation-result.json"
+        },
+        {
+          "attempt": "retry-1",
+          "result": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/retry-1/generation-result.json"
+        }
+      ],
+      "additionalPostsUsed": 1,
+      "imageSaved": false,
+      "feeKnown": false,
+      "noFurtherPostAuthorized": true,
+      "ownerRetryApprovalPending": true,
+      "prompt": "prompts/sword-servant-southwest-hit-api4x4-r1-neutral-r2.txt",
+      "request": "enemy-production/api-sources/sword-servant-southwest-hit-api4x4-r1-neutral-r2/request.json"
+    },
+    {
+      "jobId": "blood-armor-commander-northwest-move-api4x4-r1-neutral-r2",
+      "actorId": "blood-armor-commander",
+      "direction": "northwest",
+      "actions": [
+        "move"
+      ],
+      "reason": "HTTP200 invalid JSON; no image returned",
+      "attempts": [
+        {
+          "attempt": "initial",
+          "result": "enemy-production/api-sources/blood-armor-commander-northwest-move-api4x4-r1-neutral-r2/generation-result.json"
+        }
+      ],
+      "additionalPostsUsed": 0,
+      "imageSaved": false,
+      "feeKnown": false,
+      "noFurtherPostAuthorized": true,
+      "ownerRetryApprovalPending": true,
+      "prompt": "prompts/blood-armor-commander-northwest-move-api4x4-r1-neutral-r2.txt",
+      "request": "enemy-production/api-sources/blood-armor-commander-northwest-move-api4x4-r1-neutral-r2/request.json"
+    }
+  ],
+  "artApproved": false,
+  "motionApproved": false,
+  "runtimeIntegrated": false
+}

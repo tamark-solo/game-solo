@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: identity-preserve. New GDD enemy BODY animation: Âm Thi Tu Sĩ, exact south: strict FRONT toward screen DOWN, two eyes/chest in every pose.\r\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY motion/camera target and identity. Image2 live Wang is the direct PRIMARY human anatomy/pixel standard; keep OWN face, hair, age, clothing and approved body proportions. Only requested SAME-VIEW images are provided: inherit approved identity through the own-view lineage, never borrow another camera.\r\nIdentity: OWN approved short-haired gaunt human corpse cultivator, dead-jade seals on dark robe, physical cloth boots. Keep same dead-jade palette and narrow shoulders. No coffin or summoned body baked into character.\r\nExactly 6 COLUMNS x 3 ROWS. ROW1: six identical own standing/floating neutral calibration figures.\r\nROW2: idle: closed-shoulder neutral / small chest inhale / subtle head tilt / exhale / chin levels / closed-shoulder neutral.\r\nROW3: hit: guarded neutral / small chest recoil / strongest torso recoil, bent knees and connected ankles / rebound / straighten cautiously / guarded neutral.\r\nONE scale for the complete source from the neutral calibration, nominal 80 native pixels. Keep own skull/armor dimensions throughout. Lean, compression, crouch and fall lower the pose naturally; never fit per-pose height. Keep actual camera and anatomical rear occlusion in all actions. Rear hands do not show through torso, mantle or hair.\r\nCompact attached hands/fingers for human/spirit; complete heavy stone fists for construct. Both actual stone feet/boots stay attached where applicable; spectral character has NO boots or invented walking legs. No mirrored view or flipped costume. All figures isolated by generous transparent gutters, with ample margins for complete hair, fists and prone body on all edges.\r\nTruly transparent RGBA, crisp stepped pixel contours and limited shade bands. Body/outfit only; no floor, shadow, captions, grid, held weapon, projectile, detached shards, duplicate actor, warning ring, spell glow, smoke, aura or external FX. Solid own body, truthful physical foot contact.\r\nFINAL CAMERA AUTHORITY for south: copy Image1 orientation into ALL 18 figures, including neutral calibration, recoil, wind-up and low poses. Show the exact front/diagonal head and torso from Image1, with correct face/chest, never the other diagonal. Preserve own hair/skull, material, attached limbs and body build exactly from Image1, including any own hair tuft/tie; descriptive hair shorthand never overrides the actual inspected identity. No mirror, fitting, external prop or FX.\r\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: identity-preserve. New GDD enemy BODY animation: Âm Thi Tu Sĩ, exact south: strict FRONT toward screen DOWN, two eyes/chest in every pose.\r\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY motion/camera target and identity. Image2 live Wang is the direct PRIMARY human anatomy/pixel standard; keep OWN face, hair, age, clothing and approved body proportions. Only requested SAME-VIEW images are provided: inherit approved identity through the own-view lineage, never borrow another camera.\r\nIdentity: OWN approved short-haired gaunt human corpse cultivator, dead-jade seals on dark robe, physical cloth boots. Keep same dead-jade palette and narrow shoulders. No coffin or summoned body baked into character.\r\nExactly 6 COLUMNS x 3 ROWS. ROW1: six identical own standing/floating neutral calibration figures.\r\nROW2: idle: closed-shoulder neutral / small chest inhale / subtle head tilt / exhale / chin levels / closed-shoulder neutral.\r\nROW3: hit: guarded neutral / small chest recoil / strongest torso recoil, bent knees and connected ankles / rebound / straighten cautiously / guarded neutral.\r\nONE scale for the complete source from the neutral calibration, nominal 80 native pixels. Keep own skull/armor dimensions throughout. Lean, compression, crouch and fall lower the pose naturally; never fit per-pose height. Keep actual camera and anatomical rear occlusion in all actions. Rear hands do not show through torso, mantle or hair.\r\nCompact attached hands/fingers for human/spirit; complete heavy stone fists for construct. Both actual stone feet/boots stay attached where applicable; spectral character has NO boots or invented walking legs. No mirrored view or flipped costume. All figures isolated by generous transparent gutters, with ample margins for complete hair, fists and prone body on all edges.\r\nTruly transparent RGBA, crisp stepped pixel contours and limited shade bands. Body/outfit only; no floor, shadow, captions, grid, held weapon, projectile, detached shards, duplicate actor, warning ring, spell glow, smoke, aura or external FX. Solid own body, truthful physical foot contact.\r\nFINAL CAMERA AUTHORITY for south: copy Image1 orientation into ALL 18 figures, including neutral calibration, recoil, wind-up and low poses. Show the exact front/diagonal head and torso from Image1, with correct face/chest, never the other diagonal. Preserve own hair/skull, material, attached limbs and body build exactly from Image1, including any own hair tuft/tie; descriptive hair shorthand never overrides the actual inspected identity. No mirror, fitting, external prop or FX.\r\n",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-15T04:25:24.688Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-south-neutral-same-view8x.png",
+      "filename": "yin-corpse-cultivator-south-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 16199,
+      "sha256": "65a1aee0eb0f4f879b8029ae59d3c88e25c96a95188be521827a9ff6143579a5",
+      "dimensions": {
+        "width": 640,
+        "height": 896
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-south-clean.png",
+      "filename": "wang-south-clean.png",
+      "mimeType": "image/png",
+      "bytes": 9300,
+      "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "source.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 2213412,
+    "sha256": "dd42f9dfc5e6759ac2da09ba015d67720fa4a7e86701fbe3a4976f2f94e4b359",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

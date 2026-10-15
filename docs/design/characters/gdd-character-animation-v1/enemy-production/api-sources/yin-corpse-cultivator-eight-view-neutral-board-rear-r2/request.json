@@ -1,0 +1,102 @@
+{
+  "kind": "view",
+  "jobId": "yin-corpse-cultivator-eight-view-neutral-board-rear-r2",
+  "promptSha256": "77285cad5440c8c1b6be00cfc319732dff7b5c5bf9f1b337b291802dc0b3564a",
+  "inputHashes": [
+    {
+      "file": "inputs/wang-eight-view-camera-matrix.png",
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+      "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+      "composedFrom": [
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+          "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+          "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+          "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+          "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+          "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+          "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+          "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+        },
+        {
+          "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+          "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+        }
+      ],
+      "index": 1
+    },
+    {
+      "file": "inputs/yin-corpse-cultivator-eight-view-neutral-board-inspected-r1-clean.png",
+      "sha256": "6908ba8763238ed0f84b356c606cca8d36b6e66fec3103bf1ced23dc98da1e49",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/sources/yin-corpse-cultivator-eight-view-neutral-board-r1.png",
+      "originalSha256": "84bced59a592a5fa6a2849aad79f5d021a0e7eb7cd029553f0a9dc6903e12bdf",
+      "role": "OWN inspected board identity/clothing; its NE/NW cameras must be corrected",
+      "transparentRgbNormalized": true,
+      "index": 2
+    },
+    {
+      "file": "inputs/yin-corpse-cultivator-clean.png",
+      "sha256": "b07d244f26eeb9d7b7c7f7d552ce32d8d2d4cfff8cb29272c63113a811d53d9d",
+      "original": "docs/design/characters/gdd-character-animation-v1/inputs/yin-corpse-cultivator-clean.png",
+      "originalSha256": "b07d244f26eeb9d7b7c7f7d552ce32d8d2d4cfff8cb29272c63113a811d53d9d",
+      "role": "Own approved identity/clothing support",
+      "index": 3
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "yin-corpse-cultivator-eight-view-neutral-board-rear-r2",
+    "prompt": "Use case: identity-preserve / stylized-concept. Eight independently drawn directional standing neutrals of Âm Thi Tu Sĩ.\nInputs: Image1 Wang eight-view camera matrix, Image3 OWN approved character. Image1 Wang live is PRIMARY human anatomy, pixel clusters, shading and camera standard. Image3 supplies own identity/clothing, sex and age. Preserve own recognisable face/hair; do not transplant Wang face or outfit.\nExactly FOUR COLUMNS and TWO ROWS, eight complete separated full-body sprites. Match the corresponding camera in Image1.\nROW1 left to right: NORTH back / NORTHEAST rear-right / EAST right profile / SOUTHEAST front-right.\nROW2 left to right: SOUTH front / SOUTHWEST front-left / WEST left profile / NORTHWEST rear-left.\nEvery view is newly drawn; NEVER mirror a bitmap. Rear views show back of head/torso and anatomically occluded hands, no eyes or face. Profiles show only one eye and nose on correct side. All eight have exactly the same standing scale and skull size; no pose-based fitting.\nIdentity invariants: Gaunt short-dark-haired corpse cultivator with dead-jade body seals and own approved robe. Preserve human joints and corpse identity; no summoned corpse or coffin.\nEmpty hands, relaxed neutral arms, complete hair/hem/feet in every sprite. Body/outfit only. Crisp pixel-chibi stepped contours and limited shade bands at native 80px body height. Truly transparent RGBA. Large transparent outer margins and gutters between all figures. No text, labels, cell lines, floor, shadow, weapon, floating object, magic or FX. Solid body and cloth boots.\nImage2 is the inspected own board for same identity/clothing only, with known incorrect rear-diagonal face exposure. Correct camera from Image1 Wang exact corresponding slot. Image3 is own approved identity. Keep own hair, face, age, attire and anatomy; no head transplant.\nCRITICAL BACK-CAMERA CORRECTION: TOP row slot2 NORTHEAST and BOTTOM row slot4 NORTHWEST show the BACK of head, neck, shoulders, cloak and belt. Entire face plane points away from viewer. ZERO visible eyes, nose, mouth, front collar V or chest seals. The near ear may show, never the front cheek or eye. Preserve diagonal foot orientation upper-right and upper-left respectively, not strict back copies. TOP slot1 NORTH strict back also hides all face. Do not expose face by rotating head toward camera. All eight are newly drawn unmirrored views, one common scale and consistent skull/body size. Maintain complete silhouettes and truly empty gutters.\n",
+    "quality": "high",
+    "size": "1536x1024",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\yin-corpse-cultivator-eight-view-neutral-board-rear-r2.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-eight-view-neutral-board-inspected-r1-clean.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\yin-corpse-cultivator-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "1536x1024",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-eight-view-neutral-board-rear-r2\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\yin-corpse-cultivator-eight-view-neutral-board-rear-r2",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/yin-corpse-cultivator-eight-view-neutral-board-rear-r2.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router."
+}

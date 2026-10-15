@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "tests": 23,
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "docs\\design\\characters\\gdd-character-animation-v1",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "output": "test_authorized_retry_dispatches_once_only (test_api_source_ops.PostGuards.test_authorized_retry_dispatches_once_only) ... ok\ntest_existing_dispatch_never_resubmits (test_api_source_ops.PostGuards.test_existing_dispatch_never_resubmits) ... ok\ntest_failed_result_never_resubmits (test_api_source_ops.PostGuards.test_failed_result_never_resubmits) ... ok\ntest_missing_plan_stops_before_post (test_api_source_ops.PostGuards.test_missing_plan_stops_before_post) ... ok\ntest_retry_cannot_expand_limit (test_api_source_ops.PostGuards.test_retry_cannot_expand_limit) ... ok\ntest_retry_needs_explicit_matching_authorization (test_api_source_ops.PostGuards.test_retry_needs_explicit_matching_authorization) ... ok\ntest_second_retry_cannot_expand_single_post (test_api_source_ops.PostGuards.test_second_retry_cannot_expand_single_post) ... ok\ntest_second_retry_dispatches_once_only (test_api_source_ops.PostGuards.test_second_retry_dispatches_once_only) ... ok\ntest_second_retry_needs_new_authorization (test_api_source_ops.PostGuards.test_second_retry_needs_new_authorization) ... ok\ntest_second_retry_rejects_successful_prior (test_api_source_ops.PostGuards.test_second_retry_rejects_successful_prior) ... ok\ntest_second_retry_requires_failed_attempt_receipt (test_api_source_ops.PostGuards.test_second_retry_requires_failed_attempt_receipt) ... ok\ntest_superseded_job_stops_before_post (test_api_source_ops.PostGuards.test_superseded_job_stops_before_post) ... ok\ntest_changed_regions_rejected (test_reviewed_layout.LayoutWitnessTests.test_changed_regions_rejected) ... ok\ntest_changed_source_rejected (test_reviewed_layout.LayoutWitnessTests.test_changed_source_rejected) ... ok\ntest_different_keys_rejected (test_reviewed_layout.LayoutWitnessTests.test_different_keys_rejected) ... ok\ntest_exact_inspected_source_accepted (test_reviewed_layout.LayoutWitnessTests.test_exact_inspected_source_accepted) ... ok\ntest_other_actor_cannot_borrow_witness (test_reviewed_layout.LayoutWitnessTests.test_other_actor_cannot_borrow_witness) ... ok\ntest_regular_layout_unchanged (test_reviewed_layout.LayoutWitnessTests.test_regular_layout_unchanged) ... ok\ntest_unreviewed_extra_body_rejected (test_reviewed_layout.LayoutWitnessTests.test_unreviewed_extra_body_rejected) ... ok\ntest_excludes_distant_faint_gutter_residue (test_soft_extent.SoftCropTests.test_excludes_distant_faint_gutter_residue) ... ok\ntest_foreign_body_core_blocks_crop (test_soft_extent.SoftCropTests.test_foreign_body_core_blocks_crop) ... ok\ntest_keeps_soft_and_faint_fringe_exact (test_soft_extent.SoftCropTests.test_keeps_soft_and_faint_fringe_exact) ... ok\ntest_margin_scales_once_per_source (test_soft_extent.SoftCropTests.test_margin_scales_once_per_source) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 2.395s\n\nOK\n",
+  "scope": "Offline alpha preservation, source-bound measured layout witness and bounded paid-POST guards; no network or credentials."
+}

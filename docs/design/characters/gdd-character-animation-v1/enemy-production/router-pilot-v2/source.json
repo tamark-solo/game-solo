@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: identity-preserve / stylized-concept. Eight independently drawn directional standing neutrals of Kiếm Nô Khôi Lỗi.\r\nInputs: Image1 Wang eight-view camera matrix, Image2 OWN approved character. Image1 supplies camera and pixel treatment ONLY. Image2 OWN approved character is PRIMARY nonhuman anatomy and identity; do not reshape into Wang.\r\nExactly FOUR COLUMNS and TWO ROWS, eight complete separated full-body sprites. Match the corresponding camera in Image1.\r\nROW1 left to right: NORTH back / NORTHEAST rear-right / EAST right profile / SOUTHEAST front-right.\r\nROW2 left to right: SOUTH front / SOUTHWEST front-left / WEST left profile / NORTHWEST rear-left.\r\nEvery view is newly drawn; NEVER mirror a bitmap. Rear views show back of head/torso and anatomically occluded hands, no eyes or face. Profiles show only one eye and nose on correct side. All eight have exactly the same standing scale and skull size; no pose-based fitting.\r\nIdentity invariants: Broad squat cracked-stone sword-servant construct with its approved jagged stone face and body. Keep its own nonhuman anatomy and 72px body contract; EMPTY stone fists, broken sword is a separate prop. No wheels.\r\nEmpty hands, relaxed neutral arms, complete hair/hem/feet in every sprite. Body/outfit only. Crisp pixel-chibi stepped contours and limited shade bands at native 72px body height. Use a PERFECTLY FLAT solid magenta #FF00FF background for later chroma-to-alpha extraction. Do not draw transparency checkerboard or magenta lighting on the stone. Large empty flat magenta outer margins and clear magenta gutters between all figures. No text, labels, cell lines, floor, shadow, weapon, floating object, magic or FX. Solid stone/armored feet exactly like OWN master; no cloth shoes or human feet.\r\nThis is one static eight-view character study, not an animation sheet. Preserve the approved squat nonhuman stone anatomy from Image2 exactly. Human Image1 is camera/pixel treatment support only. Draw no human hair or cloth shoes. Native body height72px is a later one-scale measurement, not requested output canvas size. Request a wide 1536x1024 source if supported, but keep all eight complete figures separated.\r\n",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: identity-preserve / stylized-concept. Eight independently drawn directional standing neutrals of Kiếm Nô Khôi Lỗi.\r\nInputs: Image1 Wang eight-view camera matrix, Image2 OWN approved character. Image1 supplies camera and pixel treatment ONLY. Image2 OWN approved character is PRIMARY nonhuman anatomy and identity; do not reshape into Wang.\r\nExactly FOUR COLUMNS and TWO ROWS, eight complete separated full-body sprites. Match the corresponding camera in Image1.\r\nROW1 left to right: NORTH back / NORTHEAST rear-right / EAST right profile / SOUTHEAST front-right.\r\nROW2 left to right: SOUTH front / SOUTHWEST front-left / WEST left profile / NORTHWEST rear-left.\r\nEvery view is newly drawn; NEVER mirror a bitmap. Rear views show back of head/torso and anatomically occluded hands, no eyes or face. Profiles show only one eye and nose on correct side. All eight have exactly the same standing scale and skull size; no pose-based fitting.\r\nIdentity invariants: Broad squat cracked-stone sword-servant construct with its approved jagged stone face and body. Keep its own nonhuman anatomy and 72px body contract; EMPTY stone fists, broken sword is a separate prop. No wheels.\r\nEmpty hands, relaxed neutral arms, complete hair/hem/feet in every sprite. Body/outfit only. Crisp pixel-chibi stepped contours and limited shade bands at native 72px body height. Use a PERFECTLY FLAT solid magenta #FF00FF background for later chroma-to-alpha extraction. Do not draw transparency checkerboard or magenta lighting on the stone. Large empty flat magenta outer margins and clear magenta gutters between all figures. No text, labels, cell lines, floor, shadow, weapon, floating object, magic or FX. Solid stone/armored feet exactly like OWN master; no cloth shoes or human feet.\r\nThis is one static eight-view character study, not an animation sheet. Preserve the approved squat nonhuman stone anatomy from Image2 exactly. Human Image1 is camera/pixel treatment support only. Draw no human hair or cloth shoes. Native body height72px is a later one-scale measurement, not requested output canvas size. Request a wide 1536x1024 source if supported, but keep all eight complete figures separated.\r\n",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png"
+  },
+  "generatedAt": "2026-10-15T02:17:21.696Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+      "filename": "wang-eight-view-camera-matrix.png",
+      "mimeType": "image/png",
+      "bytes": 63538,
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png",
+      "filename": "sword-servant-clean.png",
+      "mimeType": "image/png",
+      "bytes": 21589,
+      "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+      "dimensions": {
+        "width": 896,
+        "height": 896
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "source.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1925258,
+    "sha256": "a85ff0ddb5769eb3331626d6a4c29dcf316f377f9275cc16b2dc5d27a42a6c2c",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

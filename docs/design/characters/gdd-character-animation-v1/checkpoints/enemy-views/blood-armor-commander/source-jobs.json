@@ -1,0 +1,173 @@
+{
+  "jobs": [
+    {
+      "id": "blood-armor-commander-eight-view-neutral-board",
+      "actorId": "blood-armor-commander",
+      "direction": "eight-view-board",
+      "directions": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ],
+      "grid": [
+        4,
+        2
+      ],
+      "prompt": "prompts/blood-armor-commander-eight-view-neutral-board-enemy-r2.txt",
+      "promptSha256": "d79777c2981dfef7ba1b6077670eec382d216d1bb23b2eea5e42f53abb43977f",
+      "inputs": [
+        {
+          "file": "inputs/wang-eight-view-camera-matrix.png",
+          "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+          "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+          "role": "Wang camera/pixel support ONLY; OWN construct anatomy PRIMARY",
+          "composedFrom": [
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+              "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+              "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+              "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+              "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+              "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+              "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+              "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+            },
+            {
+              "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+              "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+            }
+          ]
+        },
+        {
+          "file": "inputs/blood-armor-commander-clean.png",
+          "sha256": "694cf3675e66079423c7f149a97b5f756fa2d859706f5a164153b93681608c7e",
+          "original": "docs/design/characters/gdd-character-animation-v1/inputs/blood-armor-commander-clean.png",
+          "originalSha256": "694cf3675e66079423c7f149a97b5f756fa2d859706f5a164153b93681608c7e",
+          "role": "OWN approved nonhuman anatomy and identity PRIMARY"
+        }
+      ],
+      "references": [
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+        "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-armor-commander-clean.png"
+      ],
+      "raw": "view-masters/sources/blood-armor-commander-eight-view-neutral-board-r1.png",
+      "status": "view-candidate-reviewed",
+      "purpose": "independently drawn same-actor view masters before actions",
+      "alphaPolicy": "body-binary-alpha128-after-nearest",
+      "history": [
+        {
+          "id": "blood-armor-commander-eight-view-neutral-board",
+          "actorId": "blood-armor-commander",
+          "direction": "eight-view-board",
+          "directions": [
+            "north",
+            "northeast",
+            "east",
+            "southeast",
+            "south",
+            "southwest",
+            "west",
+            "northwest"
+          ],
+          "grid": [
+            4,
+            2
+          ],
+          "prompt": "prompts/blood-armor-commander-eight-view-neutral-board-r1.txt",
+          "promptSha256": "a8c6047bc0322981a91de15cb077950ca889fe8c91cdb7c02a0b97c54cbfc3d9",
+          "inputs": [
+            {
+              "file": "inputs/wang-eight-view-camera-matrix.png",
+              "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/wang-eight-view-camera-matrix.png",
+              "originalSha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+              "role": "Wang PRIMARY human anatomy/pixel, same-view camera matrix",
+              "composedFrom": [
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-north-clean.png",
+                  "sha256": "57a028e4313d0796d4ff8f2db673c4536c76345c5ea90251c4b41adc62b3cea3"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northeast-clean.png",
+                  "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-east-clean.png",
+                  "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southeast-clean.png",
+                  "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-south-clean.png",
+                  "sha256": "43f375235ada15c6b74d99e845c338444a6ef5c47285be44f16aeb02e7191ed9"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-southwest-clean.png",
+                  "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-west-clean.png",
+                  "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5"
+                },
+                {
+                  "file": "docs/design/characters/gdd-character-animation-v1/inputs/wang-northwest-clean.png",
+                  "sha256": "f32d6ff796077f34406a0c74709dcd33084491cb40e8988ce63764c2b3aced55"
+                }
+              ]
+            },
+            {
+              "file": "inputs/blood-armor-commander-clean.png",
+              "sha256": "694cf3675e66079423c7f149a97b5f756fa2d859706f5a164153b93681608c7e",
+              "original": "docs/design/characters/gdd-character-animation-v1/inputs/blood-armor-commander-clean.png",
+              "originalSha256": "694cf3675e66079423c7f149a97b5f756fa2d859706f5a164153b93681608c7e",
+              "role": "Own approved identity/clothing support"
+            }
+          ],
+          "references": [
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+            "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-armor-commander-clean.png"
+          ],
+          "raw": "view-masters/sources/blood-armor-commander-eight-view-neutral-board-r1.png",
+          "status": "planned",
+          "purpose": "independently drawn same-actor view masters before actions",
+          "alphaPolicy": "body-binary-alpha128-after-nearest"
+        }
+      ],
+      "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-armor-commander-eight-view-neutral-board\\source.png",
+      "sha256": "f31c9cf0de71b4f337d1ee7d096e0a2b95d234ec5f14cebf60c015a52b7ee31d",
+      "size": [
+        1448,
+        1086
+      ],
+      "apiMetadata": "enemy-production/api-sources/blood-armor-commander-eight-view-neutral-board/source.json",
+      "apiRequest": "enemy-production/api-sources/blood-armor-commander-eight-view-neutral-board/request.json",
+      "viewAssessment": "Inspected all8 complete isolated core bodies, no source edge clipping. Own massive128px red-bronze stone construct, attached stone fists/feet and no human anatomy/device. N/NE/NW back head/armor without eyes; E/W directional profiles and S/SE/SW front cameras. Back seal motifs similar to front are candidates, not canon approval. One source scale, no mirror/fit/paint."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "kind": "motion",
+  "jobId": "blood-talisman-mage-southwest-g2-neutral-r2-framing-r3",
+  "promptSha256": "9c08370a80e45b7a6802818c25af1c309e816018c232f64b274bc25f132441cd",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/blood-talisman-mage-southwest-neutral-same-view8x.png",
+      "sha256": "eaa67eda76307e26f0d156a59a1921ccfae1fb858159d1abbee2ae788878b34c",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/blood-talisman-mage-southwest-neutral.png",
+      "originalSha256": "eb331ff9df8904f0769bae8d98b992c1ce81d11339429080ad0e27471537b1cb",
+      "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-southwest-clean.png",
+      "sha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southwest-nearest8x.png",
+      "originalSha256": "0e0067e30d2f7bd9356dbf33f68136f3ee802dc196e023b795c8ee07486d3623",
+      "role": "Wang SAME-VIEW PRIMARY human anatomy/pixel standard; retain own face and outfit",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "blood-talisman-mage-southwest-g2-neutral-r2-framing-r3",
+    "prompt": "Use case: identity-preserve. New GDD enemy BODY animation: Huyết Phù Sư, exact southwest: front three-quarter lower LEFT in every pose.\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY motion/camera target and identity. Image2 live Wang is the direct PRIMARY human anatomy/pixel standard; keep OWN face, hair, age, clothing and approved body proportions. Only requested SAME-VIEW images are provided: inherit approved identity through the own-view lineage, never borrow another camera.\nIdentity: OWN approved stern human blood-talisman mage, high tied dark hair and red seal textiles. Preserve approved hair silhouette and crimson/ivory/dark palette; never switch to Wang clothing.\nExactly FOUR COLUMNS x FOUR ROWS, SIXTEEN complete isolated figures on2048x1536. Each has spacious512x384 area; generous80px outer margins and80px clear gutters on ALL edges. Never enlarge a figure to fill a cell. ROWS1+2: eight identical own standing neutral calibration figures. ROWS3+4: eight ordered attack figures: composed ready / near forearm draws inward as if drawing a talisman / short two-finger seal held near chest, compact fingers / wrist snaps outward along facing direction, palm release / sleeve follows wrist recoil / hands lower fully to composed ready / same settled final posture / same settled final posture.\nONE scale for the complete source from the neutral calibration, nominal 80 native pixels. Keep own skull/armor dimensions throughout. Lean, compression, crouch and fall lower the pose naturally; never fit per-pose height. Keep actual camera and anatomical rear occlusion in all actions. Rear hands do not show through torso, mantle or hair.\nCompact attached hands/fingers for human/spirit; complete heavy stone fists for construct. Both actual stone feet/boots stay attached where applicable; spectral character has NO boots or invented walking legs. No mirrored view or flipped costume. All figures isolated by generous transparent gutters, with ample margins for complete hair, fists and prone body on all edges.\nTruly transparent RGBA, crisp stepped pixel contours and limited shade bands. Body/outfit only; no floor, shadow, captions, grid, held weapon, projectile, detached shards, duplicate actor, warning ring, spell glow, smoke, aura or external FX. Solid own body, truthful physical foot contact.\nFINAL CAMERA AUTHORITY for southwest: copy Image1 orientation into ALL 12 figures, including neutral calibration, recoil, wind-up and low poses. Show the exact front/diagonal head and torso from Image1, with correct face/chest, never the other diagonal. Preserve own hair/skull, material, attached limbs and body build exactly from Image1, including any own hair tuft/tie; descriptive hair shorthand never overrides the actual inspected identity. No mirror, fitting, external prop or FX.\n\nEXPLICIT ACTION CORRECTION AFTER SOURCE REVIEW: Use wide4x4 layout for long tied hair and extending casting hand. Eight complete neutral calibration figures and eight action figures; first six real draw-seal-release-recoil-neutral keys. At least80px clear gutters between all hands/hair and80px outer margins. No touching or clipping, same own requested camera, one source-wide scale. Rear commands put hands IN FRONT of sternum, naturally occluded by torso from rear; never clasp behind back or draw palms on back belt. Release arm may clear shoulder silhouette with compact attached hand.\n",
+    "quality": "high",
+    "size": "2048x1536",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\blood-talisman-mage-southwest-g2-neutral-r2-framing-r3.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-talisman-mage-southwest-neutral-same-view8x.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-southwest-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "2048x1536",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-talisman-mage-southwest-g2-neutral-r2-framing-r3\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-talisman-mage-southwest-g2-neutral-r2-framing-r3",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/blood-talisman-mage-southwest-g2-neutral-r2-framing-r3.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router."
+}

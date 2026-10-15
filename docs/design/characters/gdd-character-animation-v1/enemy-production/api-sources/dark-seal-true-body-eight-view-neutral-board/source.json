@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: identity-preserve / stylized-concept. Eight independently drawn directional standing neutrals of Hắc Ấn · Chân thân Huyết Ấn.\r\nInputs: Image1 Wang eight-view camera matrix, Image2 OWN approved character. Image1 Wang live is PRIMARY human anatomy, pixel clusters, shading and camera standard. Image2 supplies own identity/clothing, sex and age. Preserve own recognisable face/hair; do not transplant Wang face or outfit.\r\nExactly FOUR COLUMNS and TWO ROWS, eight complete separated full-body sprites. Match the corresponding camera in Image1.\r\nROW1 left to right: NORTH back / NORTHEAST rear-right / EAST right profile / SOUTHEAST front-right.\r\nROW2 left to right: SOUTH front / SOUTHWEST front-left / WEST left profile / NORTHWEST rear-left.\r\nEvery view is newly drawn; NEVER mirror a bitmap. Rear views show back of head/torso and anatomically occluded hands, no eyes or face. Profiles show only one eye and nose on correct side. All eight have exactly the same standing scale and skull size; no pose-based fitting.\r\nIdentity invariants: Mature gray-haired seal officer with approved crimson mantle and seal bands; preserve own stern older face, cloth anatomy and broad sleeve layering. No body-baked ring or fake-core aura.\r\nEmpty hands, relaxed neutral arms, complete hair/hem/feet in every sprite. Body/outfit only. Crisp pixel-chibi stepped contours and limited shade bands at native 80px body height. Truly transparent RGBA. Large transparent outer margins and gutters between all figures. No text, labels, cell lines, floor, shadow, weapon, floating object, magic or FX. Solid body and cloth boots.",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: identity-preserve / stylized-concept. Eight independently drawn directional standing neutrals of Hắc Ấn · Chân thân Huyết Ấn.\r\nInputs: Image1 Wang eight-view camera matrix, Image2 OWN approved character. Image1 Wang live is PRIMARY human anatomy, pixel clusters, shading and camera standard. Image2 supplies own identity/clothing, sex and age. Preserve own recognisable face/hair; do not transplant Wang face or outfit.\r\nExactly FOUR COLUMNS and TWO ROWS, eight complete separated full-body sprites. Match the corresponding camera in Image1.\r\nROW1 left to right: NORTH back / NORTHEAST rear-right / EAST right profile / SOUTHEAST front-right.\r\nROW2 left to right: SOUTH front / SOUTHWEST front-left / WEST left profile / NORTHWEST rear-left.\r\nEvery view is newly drawn; NEVER mirror a bitmap. Rear views show back of head/torso and anatomically occluded hands, no eyes or face. Profiles show only one eye and nose on correct side. All eight have exactly the same standing scale and skull size; no pose-based fitting.\r\nIdentity invariants: Mature gray-haired seal officer with approved crimson mantle and seal bands; preserve own stern older face, cloth anatomy and broad sleeve layering. No body-baked ring or fake-core aura.\r\nEmpty hands, relaxed neutral arms, complete hair/hem/feet in every sprite. Body/outfit only. Crisp pixel-chibi stepped contours and limited shade bands at native 80px body height. Truly transparent RGBA. Large transparent outer margins and gutters between all figures. No text, labels, cell lines, floor, shadow, weapon, floating object, magic or FX. Solid body and cloth boots.",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-15T04:16:28.424Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+      "filename": "wang-eight-view-camera-matrix.png",
+      "mimeType": "image/png",
+      "bytes": 63538,
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\dark-seal-true-body-clean.png",
+      "filename": "dark-seal-true-body-clean.png",
+      "mimeType": "image/png",
+      "bytes": 13879,
+      "sha256": "83060aeb4420579dbd0acb10d50666cf35634ff2aa568de9a3e5ffc241354982",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "source.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1401728,
+    "sha256": "c83803664d16f4e949d6234261880815e646ce9b8a05e25df88c7f922c79a8a2",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-talisman-mage-west-neutral-same-view8x.png",
+      "filename": "blood-talisman-mage-west-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 15660,
+      "sha256": "7b1c4c6a214c5e6006b01ce76ded0aa292b97d1a92fc037873e83a013b4d3957",
+      "dimensions": {
+        "width": 640,
+        "height": 896
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-west-clean.png",
+      "filename": "wang-west-clean.png",
+      "mimeType": "image/png",
+      "bytes": 9314,
+      "sha256": "827737a566ecdd7f4941e6ac2fe55c30a468c6e04553585a3c85948e5148a2b5",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-talisman-mage-west-g1-neutral-r2\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-talisman-mage-west-g1-neutral-r2\\source.json",
+      "sha256": "915526e007dec55fdaf60f7c042b450d755713f8ab88c47a8e7e100f3f8ad3a1",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sizeMatchesRequest": true
+    }
+  ],
+  "warnings": [],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

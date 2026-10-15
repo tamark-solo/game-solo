@@ -1,0 +1,82 @@
+{
+  "status": "generated-preview-partial-correction",
+  "generationVerified": true,
+  "imageModel": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "image": {
+    "filename": "source.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1944278,
+    "sha256": "1b40a12ae7ee5fde44a6963a825769b5a6ba0244a6a63cd7423a34dac24f868f",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "promptSha256": "68c804739bc69a56defb96ca4e79a6ff52bc0f598cdcecd5449a446ec58a5c8b",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\router-pilot-v2\\source.png",
+      "filename": "source.png",
+      "mimeType": "image/png",
+      "bytes": 1925258,
+      "sha256": "a85ff0ddb5769eb3331626d6a4c29dcf316f377f9275cc16b2dc5d27a42a6c2c",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png",
+      "filename": "sword-servant-clean.png",
+      "mimeType": "image/png",
+      "bytes": 21589,
+      "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+      "dimensions": {
+        "width": 896,
+        "height": 896
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+      "filename": "wang-eight-view-camera-matrix.png",
+      "mimeType": "image/png",
+      "bytes": 63538,
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      }
+    }
+  ],
+  "automaticRetry": false,
+  "sourcePreserved": true,
+  "localPixelEdits": false,
+  "assessment": {
+    "reviewedByModel": true,
+    "northeastEyeRemoved": true,
+    "northwestStillShowsEye": true,
+    "otherViewsByteIdentical": false,
+    "changedPixelsWholeSource": 1550726,
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "alphaZeroPixels": 867005,
+    "readyForViewRegistration": false,
+    "reason": "NW still exposes a yellow eye and six unselected views are redrawn by the provider; preserve as correction candidate, do not bind motion."
+  },
+  "artApproved": false,
+  "motionApproved": false,
+  "runtimeIntegrated": false
+}

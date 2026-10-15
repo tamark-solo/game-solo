@@ -1,0 +1,61 @@
+{
+  "kind": "motion",
+  "jobId": "dark-seal-true-body-northeast-decoy-neutral-r2-cast-decoy-wide-r4",
+  "promptSha256": "3a839ed492da89df2b8828c340cbb8a7fbd73f5ac114cbb1ed489c4cf5d06127",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/dark-seal-true-body-northeast-neutral-same-view8x.png",
+      "sha256": "0aa55ace1e7124597bb32f92b008bf393fb4d467cdec60609ffa14a4cbdab735",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/dark-seal-true-body-northeast-neutral.png",
+      "originalSha256": "18efe85ded2ec9029807bd5540a543cb6edfe6106b54aa3bad6444dd7401da71",
+      "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-northeast-clean.png",
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-northeast-nearest8x.png",
+      "originalSha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "role": "Wang SAME-VIEW PRIMARY human anatomy/pixel standard; retain own face and outfit",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "dark-seal-true-body-northeast-decoy-neutral-r2-cast-dec-96a87697",
+    "prompt": "Use case: identity-preserve. New GDD enemy BODY animation: Hắc Ấn · Chân thân Huyết Ấn, exact northeast: REAR three-quarter upper RIGHT, face hidden in every pose.\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY motion/camera target and identity. Image2 live Wang is the direct PRIMARY human anatomy/pixel standard; keep OWN face, hair, age, clothing and approved body proportions. Only requested SAME-VIEW images are provided: inherit approved identity through the own-view lineage, never borrow another camera.\nIdentity: OWN approved mature seal officer, gray-templed high tied hair, stern older face, crimson mantle and seal bands, ivory/dark human robe and actual cloth boots. Keep own head/build, not Wang face. No rings, duplicated actors or core aura baked into body.\nExactly FOUR COLUMNS x FOUR ROWS, SIXTEEN complete isolated figures on2048x1536. Each has spacious512x384 area;80px truly transparent outer margins and80px clear gutters between ALL hair/hand/robe/body edges. Never expand figures to fill cells. ROWS1+2: eight identical own standing/floating neutral calibration figures. ROWS3+4: eight ordered cast-decoy figures: stern ready / both forearms cross at sternum / two compact hands draw apart under crossed sleeves / one palm opens to either side at different heights for Phan Phu command; exactly ONE body / hands sweep inward again / stern ready restored; no duplicate silhouette / own ready rest in same view / own ready rest in same view.\nONE scale for the complete source from the neutral calibration, nominal 80 native pixels. Keep own skull/armor dimensions throughout. Lean, compression, crouch and fall lower the pose naturally; never fit per-pose height. Keep actual camera and anatomical rear occlusion in all actions. Rear hands do not show through torso, mantle or hair.\nCompact attached hands/fingers for human/spirit; complete heavy stone fists for construct. Both actual stone feet/boots stay attached where applicable; spectral character has NO boots or invented walking legs. No mirrored view or flipped costume. All figures isolated by generous transparent gutters, with ample margins for complete hair, fists and prone body on all edges.\nTruly transparent RGBA, crisp stepped pixel contours and limited shade bands. Body/outfit only; no floor, shadow, captions, grid, held weapon, projectile, detached shards, duplicate actor, warning ring, spell glow, smoke, aura or external FX. Solid own body, truthful physical foot contact.\nFINAL CAMERA AUTHORITY for northeast: copy Image1 orientation into ALL 12 figures, including neutral calibration, recoil, wind-up and low poses. Show only BACK head, neck, shoulders and back outfit; NO front collar/chest, face or eyes. Preserve own hair/skull, material, attached limbs and body build exactly from Image1, including any own hair tuft/tie; descriptive hair shorthand never overrides the actual inspected identity. No mirror, fitting, external prop or FX.\n\nSPACIOUS SOURCE: every calibration and action body complete and fully inside image; no hand can touch neighboring hair. Same source-wide scale and requested own camera in all16 figures. Rear N/NE/NW hide face/pupils; front-of-sternum command hands are naturally occluded by torso from rear, never clasp behind the back or show skin on the back belt. Release arm may clear shoulder silhouette. Keep attached wrists and grouped fingers. No mirror, fit, pixel painting or external FX.\n",
+    "quality": "high",
+    "size": "2048x1536",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\dark-seal-true-body-northeast-decoy-neutral-r2-cast-decoy-wide-r4.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\dark-seal-true-body-northeast-neutral-same-view8x.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-northeast-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "2048x1536",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\dark-seal-true-body-northeast-decoy-neutral-r2-cast-decoy-wide-r4\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\dark-seal-true-body-northeast-decoy-neutral-r2-cast-decoy-wide-r4",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/dark-seal-true-body-northeast-decoy-neutral-r2-cast-decoy-wide-r4.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router."
+}

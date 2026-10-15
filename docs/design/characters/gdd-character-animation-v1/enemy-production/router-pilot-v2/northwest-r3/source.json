@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "status": "preview-only",
+  "ownerApproved": false,
+  "artApproved": false,
+  "prompt": "Use case: identity-preserve / precise-object-edit. Final eight-view neutral board of the SAME squat stone sword-servant construct.\r\nImage1: own eight-view board, PRIMARY identity, stone body and exact grid. Image2: own approved stone master, PRIMARY anatomy/material. Image3: Wang eight-view matrix for camera ONLY, no human proportions.\r\nFOUR COLUMNS / TWO ROWS. Top row N / NE / E / SE. Bottom row S / SW / W / NW. Keep all eight complete and separated, all at one consistent body/head scale. Keep the same small jagged stone skull, very broad short stone build, heavy fists and bronze bindings. No weapon, shadow, floor or FX.\r\nCRITICAL CORRECTION: BOTTOM ROW RIGHTMOST FIGURE (row2 column4) is NORTHWEST, facing upper-left AWAY from the camera. Its torso already shows its BACK armor. Turn its HEAD with that back-facing torso. Show ONLY the BACK OF THE STONE SKULL and a narrow left side edge. NO FRONT FACE SURFACE, NO visible eye, NO yellow dot, NO black eye socket, NO looking over the shoulder. The leftmost edge of this skull must be ordinary pale stone and cracks, not an eye. The far/front face is completely occluded around the other side of the head.\r\nTOP ROW COLUMN2 NE must also keep its hidden face with NO EYE. TOP ROW COLUMN1 N is fully back with NO EYE. Thus exactly three rear views N/NE/NW have ZERO visible eyes; only the five front/side views have yellow eyes. Do not add an eye to rear views for character readability.\r\nMaintain the other seven views and the overall pixel-chibi treatment. Each direction is independently drawn, not mirrored. All stone hands/feet complete, empty hands, broad squat 72px anatomy after later one-scale measurement.\r\n1536x1024 genuine transparent RGBA, no colored background or checkerboard drawing, clean transparent gutters and generous margins. Preserve intrinsic stone colors, no glow or halo outside the body. No text, label or grid lines.",
+  "model": "gpt-image-2",
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "requestParameters": {
+    "model": "gpt-image-2",
+    "prompt": "Use case: identity-preserve / precise-object-edit. Final eight-view neutral board of the SAME squat stone sword-servant construct.\r\nImage1: own eight-view board, PRIMARY identity, stone body and exact grid. Image2: own approved stone master, PRIMARY anatomy/material. Image3: Wang eight-view matrix for camera ONLY, no human proportions.\r\nFOUR COLUMNS / TWO ROWS. Top row N / NE / E / SE. Bottom row S / SW / W / NW. Keep all eight complete and separated, all at one consistent body/head scale. Keep the same small jagged stone skull, very broad short stone build, heavy fists and bronze bindings. No weapon, shadow, floor or FX.\r\nCRITICAL CORRECTION: BOTTOM ROW RIGHTMOST FIGURE (row2 column4) is NORTHWEST, facing upper-left AWAY from the camera. Its torso already shows its BACK armor. Turn its HEAD with that back-facing torso. Show ONLY the BACK OF THE STONE SKULL and a narrow left side edge. NO FRONT FACE SURFACE, NO visible eye, NO yellow dot, NO black eye socket, NO looking over the shoulder. The leftmost edge of this skull must be ordinary pale stone and cracks, not an eye. The far/front face is completely occluded around the other side of the head.\r\nTOP ROW COLUMN2 NE must also keep its hidden face with NO EYE. TOP ROW COLUMN1 N is fully back with NO EYE. Thus exactly three rear views N/NE/NW have ZERO visible eyes; only the five front/side views have yellow eyes. Do not add an eye to rear views for character readability.\r\nMaintain the other seven views and the overall pixel-chibi treatment. Each direction is independently drawn, not mirrored. All stone hands/feet complete, empty hands, broad squat 72px anatomy after later one-scale measurement.\r\n1536x1024 genuine transparent RGBA, no colored background or checkerboard drawing, clean transparent gutters and generous margins. Preserve intrinsic stone colors, no glow or halo outside the body. No text, label or grid lines.",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "output_format": "png",
+    "background": "transparent"
+  },
+  "generatedAt": "2026-10-15T02:27:24.518Z",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\router-pilot-v2\\rear-correction\\source.png",
+      "filename": "source.png",
+      "mimeType": "image/png",
+      "bytes": 1944278,
+      "sha256": "1b40a12ae7ee5fde44a6963a825769b5a6ba0244a6a63cd7423a34dac24f868f",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\sword-servant-clean.png",
+      "filename": "sword-servant-clean.png",
+      "mimeType": "image/png",
+      "bytes": 21589,
+      "sha256": "f27eae44ceace34a36d91fad18cb3934376e64c79b3825073bc4d17ba1f5a888",
+      "dimensions": {
+        "width": 896,
+        "height": 896
+      }
+    },
+    {
+      "index": 3,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-eight-view-camera-matrix.png",
+      "filename": "wang-eight-view-camera-matrix.png",
+      "mimeType": "image/png",
+      "bytes": 63538,
+      "sha256": "26030a51cf77d71178d8dee2e4e55a8eaec2515efaa8a3d3174a337cfa71be3e",
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "image": {
+    "filename": "source.png",
+    "index": 1,
+    "requestedCount": 1,
+    "returnedCount": 1,
+    "source": "b64_json",
+    "mimeType": "image/png",
+    "bytes": 1991915,
+    "sha256": "8349623672d72718ba54a6cecb410a59039df0b0b22450907e4376146c45d395",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "verification": {
+    "status": "signature-verified",
+    "signatureVerified": true,
+    "mimeType": "image/png",
+    "visualReview": "pending",
+    "generationVerified": true,
+    "sizeMatchesRequest": true
+  }
+}

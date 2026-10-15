@@ -1,0 +1,118 @@
+{
+  "id": "hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4",
+  "actorId": "hua-lap-quoc",
+  "name": "Hung Linh Hứa Lập Quốc",
+  "group": "boss-stage2",
+  "direction": "southeast",
+  "bodyNominalPx": 96,
+  "actions": [
+    "cast-single-target"
+  ],
+  "grid": [
+    4,
+    4
+  ],
+  "prompt": "prompts/hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4.txt",
+  "promptSha256": "fbdd63c9e167b5a966a7ec52548210f4e8f4cc8c8fcbcd154709075afbd8ffbd",
+  "inputs": [
+    {
+      "index": 1,
+      "file": "inputs/hua-lap-quoc-southeast-neutral-same-view8x.png",
+      "sha256": "56bd850f20ee4ae7c8106c36f68aaf4188448935f423bf8062b5939b5e9eecde",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/hua-lap-quoc-southeast-neutral.png",
+      "originalSha256": "b6370dadc3188b8046ff9493d24c38e8371ef893c2590b3f67859cbd84729cbc",
+      "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-southeast-clean.png",
+      "sha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-southeast-nearest8x.png",
+      "originalSha256": "dca5ef1d44c0b67b69f51b53582fad96e7bc2914d1ca2bdc1c702c61f4b3d9d8",
+      "role": "Wang SAME-VIEW camera/pixel support only; preserve own nonhuman anatomy",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "source": "sources/hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4.png",
+  "status": "generated-awaiting-source-review",
+  "artApproved": false,
+  "motionApproved": false,
+  "runtimeReady": false,
+  "alphaPolicy": "preserved-soft-RGBA",
+  "enemyRecipeVersion": 3,
+  "anatomyAuthority": "own-spirit",
+  "supportMode": "spectral-projection",
+  "bodyCanvas": [
+    192,
+    160
+  ],
+  "bodyPivot": [
+    96,
+    144
+  ],
+  "waitingForViewMaster": false,
+  "requiredViewMaster": null,
+  "boundViewId": "hua-lap-quoc-southeast-neutral",
+  "previewDurationMsByAction": {
+    "cast-single-target": [
+      120,
+      160,
+      220,
+      100,
+      180,
+      220
+    ]
+  },
+  "previewTimingsAreBalance": false,
+  "phaseLabels": {
+    "cast-single-target": [
+      "Dẫn hồn",
+      "Kết ấn",
+      "Chỉ hồn",
+      "Thu tay",
+      "Hạ thế",
+      "Hồi thế"
+    ]
+  },
+  "neutralSeeded": true,
+  "cameraSeedOf": "hua-lap-quoc-southeast-g2",
+  "calibrationPoses": 8,
+  "activeActionIndexes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "requestedSourceSize": "2048x1536",
+  "splitSourceOf": "hua-lap-quoc-southeast-g2-neutral-r2",
+  "corrective": false,
+  "correctionReason": "Unexecuted spectral source split into spacious one-action sheets based on observed long-hair clipping/touching in earlier actors. No image yet; no review or approval implied.",
+  "original": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4\\source.png",
+  "sourceSha256": "4aede97d07d03024e8d3880cb199ab228a0b5a4a66f50f7fc898ffcf0490fd8c",
+  "originalSha256": "4aede97d07d03024e8d3880cb199ab228a0b5a4a66f50f7fc898ffcf0490fd8c",
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "sourceViewed": true,
+  "apiMetadata": "enemy-production/api-sources/hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4/source.json",
+  "apiRequest": "enemy-production/api-sources/hua-lap-quoc-southeast-g2-neutral-r2-cast-single-target-wide-r4/request.json",
+  "poseSelections": {
+    "cast-single-target": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7
+    ]
+  },
+  "sourcePackingAllowed": true,
+  "sourceAssessment": "All16 source-derived native figures visually inspected. Own SE spirit identity, black/gold chest and white ragged soft-alpha hem retained; no boots/legs, no source edge cut or touching bodies. Prayer joins at sternum, then one hand points toward own forward-right target. Omit3 with an additional double-arm thrust; include7 neutral recovery. One calibration scale with soft-RGBA support projection, no mirror/fit/paint. Candidate only, no owner ART/motion approval.",
+  "softExtentPolicy": "alpha8-body-plus-native3px-original-rgba"
+}

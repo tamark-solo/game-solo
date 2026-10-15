@@ -1,0 +1,1305 @@
+{
+  "schema": "gdd-main-limb-audit-1",
+  "date": "2026-10-15",
+  "status": "reviewed-with-scoped-corrections-candidate",
+  "actualCoverage": {
+    "sourceSheetsPacked": 101,
+    "bodyClips": 208,
+    "bodyKeys": 1239,
+    "actorForms": 4,
+    "realDirections": [
+      "east",
+      "north",
+      "northeast",
+      "northwest",
+      "south",
+      "southeast",
+      "southwest",
+      "west"
+    ]
+  },
+  "manifestSha256": "47430f83271d06a9dd8f7b3cae10caecc27f9437abc3291e10ec35cfcd1f73a0",
+  "reviewedActorDirectionBoards": 26,
+  "repairs": [
+    {
+      "clipId": "tich-bach-entry-run-north",
+      "kind": "foot-cycle",
+      "sourceJob": "tich-bach-entry-north-run-limbs-r1",
+      "sourceSha256": "891fb975bece62572ff804509f6f86e077e9663d2743ffc6131f5641f702e590",
+      "activeKeys": 6,
+      "oldClipArchived": true,
+      "oldSourceSha256": "b5ea6c3516c70728994e2ccd90cdaef7a59ea9551c66c439f5dd3bb39e4bff47",
+      "resultVi": "Chạy Bắc Tịch Bạch Ngoại Môn: thay nguồn để thấy hai chân đổi trụ, giày và cổ chân còn liền với cẳng chân.",
+      "assessment": "model visually reviewed candidate; not owner ART/motion approval"
+    },
+    {
+      "clipId": "huyen-tam-entry-run-northwest",
+      "kind": "foot-cycle",
+      "sourceJob": "huyen-tam-entry-northwest-run-limbs-r3",
+      "sourceSha256": "4e926a21386dd77bd6071ec3e8411cdd07f125e7063ed6c3348045b3efd81e86",
+      "activeKeys": 6,
+      "oldClipArchived": true,
+      "oldSourceSha256": "9bb50660d0aa47fb6da804a63d63004c9826a2f2bfbbf7b17a6760b1c2932313",
+      "resultVi": "Chạy Tây Bắc Huyễn Tâm Ngoại Môn: thay chu kỳ gần lặp nửa đầu bằng sáu phase mới, tay và chân đổi silhouette theo nhịp.",
+      "assessment": "model visually reviewed candidate; not owner ART/motion approval"
+    },
+    {
+      "clipId": "tich-bach-domain-run-north",
+      "kind": "foot-cycle",
+      "sourceJob": "tich-bach-domain-north-run-limbs-r3",
+      "sourceSha256": "43fee4241c37641c5ef4e5c540ba6a6d6886f5baa51001e7d9cc0e0572c7a381",
+      "activeKeys": 6,
+      "oldClipArchived": true,
+      "oldSourceSha256": "284efb9a5fc3aa5582bc8152921ad270c90404193bc094ea737b9baad2fb62eb",
+      "resultVi": "Chạy Bắc Tịch Bạch Ý cảnh: nguồn mới giữ dải áo ngọc cùng bên, chân đổi trụ và tay thay lớp che; nguồn thử đảo áo đã loại.",
+      "assessment": "model visually reviewed candidate; not owner ART/motion approval"
+    },
+    {
+      "clipId": "huyen-tam-domain-run-west",
+      "kind": "missing-run",
+      "sourceJob": "huyen-tam-domain-west-run-limbs-r3",
+      "sourceSha256": "511466dac88a4145acb00e4e49b07b875e981d340e4cf4f94616d4dd53be8477",
+      "activeKeys": 6,
+      "oldClipArchived": false,
+      "oldSourceSha256": null,
+      "resultVi": "Chạy Tây Huyễn Tâm Ý cảnh: bổ sung clip sáu key độc lập; nguồn cũ có hàng pose dính nên chưa có clip hoạt động.",
+      "assessment": "model visually reviewed candidate; not owner ART/motion approval"
+    },
+    {
+      "clipId": "huyen-tam-entry-cast-aoe-south",
+      "kind": "oversized-palms",
+      "sourceJob": "huyen-tam-entry-south-aoe-hands-r3",
+      "sourceSha256": "653d54a8460c4dc9b5795d7f8db5513e7033c9eebd88f00c88c98ceb407fc922",
+      "activeKeys": 6,
+      "oldClipArchived": true,
+      "oldSourceSha256": "7116484273e1a15a76f166d0c360fb23d639d4c6caf97c617da6a4dc3ab47bfd",
+      "resultVi": "AOE Nam Huyễn Tâm Ngoại Môn: giảm bàn tay/ngón xòe nhọn thành bàn tay nhỏ, cụm ngón gọn, cổ tay nối vào cuff.",
+      "assessment": "model visually reviewed candidate; not owner ART/motion approval"
+    },
+    {
+      "clipId": "tich-bach-entry-cast-aoe-south",
+      "kind": "oversized-palms",
+      "sourceJob": "tich-bach-entry-south-aoe-hands-r2",
+      "sourceSha256": "e3451c708ec3e3253a1dc47c3d651ad01e251c47e37c17e378602170ea02698b",
+      "activeKeys": 6,
+      "oldClipArchived": true,
+      "oldSourceSha256": "ba74e35d8510ee76e69e45d54b0aa24a2aa8176029c0715587010dcb4ca4937a",
+      "resultVi": "AOE Nam Tịch Bạch Ngoại Môn: thu gọn hai bàn tay mở ở charge/release, giữ tư thế thân và hai chân trụ.",
+      "assessment": "model visually reviewed candidate; not owner ART/motion approval"
+    }
+  ],
+  "beforeSources": [
+    {
+      "id": "tich-bach-entry-north-g1",
+      "file": "sources/tich-bach-entry-north-g1-r1.png",
+      "sha256": "b5ea6c3516c70728994e2ccd90cdaef7a59ea9551c66c439f5dd3bb39e4bff47",
+      "size": [
+        1024,
+        1536
+      ],
+      "observedGrid": [
+        6,
+        5
+      ],
+      "oneScale": 0.3331020124913255,
+      "nominalBodyPx": 80,
+      "calibrationBounds": [
+        [
+          37,
+          93,
+          156,
+          334
+        ],
+        [
+          212,
+          94,
+          332,
+          334
+        ],
+        [
+          378,
+          94,
+          497,
+          334
+        ],
+        [
+          532,
+          94,
+          649,
+          334
+        ],
+        [
+          700,
+          94,
+          819,
+          334
+        ],
+        [
+          862,
+          94,
+          982,
+          334
+        ]
+      ],
+      "calibrationSupportProposals": [
+        {
+          "root": [
+            95.5,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                60,
+                83
+              ],
+              "centerX": 71.5,
+              "soleY": 334
+            },
+            {
+              "xRange": [
+                107,
+                132
+              ],
+              "centerX": 119.5,
+              "soleY": 334
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            270.75,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                235,
+                257
+              ],
+              "centerX": 246.0,
+              "soleY": 334
+            },
+            {
+              "xRange": [
+                283,
+                308
+              ],
+              "centerX": 295.5,
+              "soleY": 334
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            436.25,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                400,
+                424
+              ],
+              "centerX": 412.0,
+              "soleY": 334
+            },
+            {
+              "xRange": [
+                448,
+                473
+              ],
+              "centerX": 460.5,
+              "soleY": 334
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            589.0,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                553,
+                576
+              ],
+              "centerX": 564.5,
+              "soleY": 334
+            },
+            {
+              "xRange": [
+                601,
+                626
+              ],
+              "centerX": 613.5,
+              "soleY": 334
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            758.5,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                722,
+                747
+              ],
+              "centerX": 734.5,
+              "soleY": 334
+            },
+            {
+              "xRange": [
+                770,
+                795
+              ],
+              "centerX": 782.5,
+              "soleY": 334
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            921.0,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                885,
+                909
+              ],
+              "centerX": 897.0,
+              "soleY": 334
+            },
+            {
+              "xRange": [
+                932,
+                958
+              ],
+              "centerX": 945.0,
+              "soleY": 334
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        }
+      ],
+      "rootReview": "candidate-witnesses-await-native-review",
+      "sourceViewed": true,
+      "excludedActions": [
+        "death",
+        "run"
+      ],
+      "rejectedRows": {
+        "death": {
+          "reason": "touching or incomplete alpha regions",
+          "observedRegions": 5,
+          "expected": 6
+        }
+      },
+      "acceptedActions": [
+        "idle",
+        "hit"
+      ]
+    },
+    {
+      "id": "huyen-tam-entry-south-aoe",
+      "file": "sources/huyen-tam-entry-south-aoe-r1.png",
+      "sha256": "7116484273e1a15a76f166d0c360fb23d639d4c6caf97c617da6a4dc3ab47bfd",
+      "size": [
+        1536,
+        1024
+      ],
+      "observedGrid": [
+        4,
+        4
+      ],
+      "oneScale": 0.3155818540433925,
+      "nominalBodyPx": 80,
+      "calibrationBounds": [
+        [
+          227,
+          19,
+          383,
+          275
+        ],
+        [
+          529,
+          19,
+          682,
+          275
+        ],
+        [
+          851,
+          19,
+          1006,
+          275
+        ],
+        [
+          1153,
+          19,
+          1306,
+          275
+        ],
+        [
+          227,
+          285,
+          379,
+          536
+        ],
+        [
+          528,
+          285,
+          684,
+          536
+        ],
+        [
+          851,
+          285,
+          1008,
+          536
+        ],
+        [
+          1156,
+          285,
+          1310,
+          536
+        ]
+      ],
+      "calibrationSupportProposals": [
+        {
+          "root": [
+            308.0,
+            275
+          ],
+          "groups": [
+            {
+              "xRange": [
+                269,
+                303
+              ],
+              "centerX": 286.0,
+              "soleY": 275
+            },
+            {
+              "xRange": [
+                312,
+                348
+              ],
+              "centerX": 330.0,
+              "soleY": 275
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            609.75,
+            275
+          ],
+          "groups": [
+            {
+              "xRange": [
+                570,
+                602
+              ],
+              "centerX": 586.0,
+              "soleY": 275
+            },
+            {
+              "xRange": [
+                615,
+                652
+              ],
+              "centerX": 633.5,
+              "soleY": 275
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            932.5,
+            275
+          ],
+          "groups": [
+            {
+              "xRange": [
+                893,
+                927
+              ],
+              "centerX": 910.0,
+              "soleY": 275
+            },
+            {
+              "xRange": [
+                936,
+                974
+              ],
+              "centerX": 955.0,
+              "soleY": 275
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            1232.5,
+            275
+          ],
+          "groups": [
+            {
+              "xRange": [
+                1193,
+                1228
+              ],
+              "centerX": 1210.5,
+              "soleY": 275
+            },
+            {
+              "xRange": [
+                1235,
+                1274
+              ],
+              "centerX": 1254.5,
+              "soleY": 275
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            306.25,
+            536
+          ],
+          "groups": [
+            {
+              "xRange": [
+                266,
+                302
+              ],
+              "centerX": 284.0,
+              "soleY": 536
+            },
+            {
+              "xRange": [
+                309,
+                348
+              ],
+              "centerX": 328.5,
+              "soleY": 536
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            609.0,
+            536
+          ],
+          "groups": [
+            {
+              "xRange": [
+                570,
+                604
+              ],
+              "centerX": 587.0,
+              "soleY": 536
+            },
+            {
+              "xRange": [
+                611,
+                651
+              ],
+              "centerX": 631.0,
+              "soleY": 536
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            931.5,
+            536
+          ],
+          "groups": [
+            {
+              "xRange": [
+                893,
+                926
+              ],
+              "centerX": 909.5,
+              "soleY": 536
+            },
+            {
+              "xRange": [
+                934,
+                973
+              ],
+              "centerX": 953.5,
+              "soleY": 536
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            1234.5,
+            536
+          ],
+          "groups": [
+            {
+              "xRange": [
+                1196,
+                1229
+              ],
+              "centerX": 1212.5,
+              "soleY": 536
+            },
+            {
+              "xRange": [
+                1237,
+                1276
+              ],
+              "centerX": 1256.5,
+              "soleY": 536
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        }
+      ],
+      "rootReview": "candidate-witnesses-await-native-review",
+      "sourceViewed": true,
+      "excludedActions": [
+        "cast-aoe"
+      ],
+      "rejectedRows": {},
+      "acceptedActions": []
+    },
+    {
+      "id": "tich-bach-entry-south-aoe",
+      "file": "sources/tich-bach-entry-south-aoe-r1.png",
+      "sha256": "ba74e35d8510ee76e69e45d54b0aa24a2aa8176029c0715587010dcb4ca4937a",
+      "size": [
+        1536,
+        1024
+      ],
+      "observedGrid": [
+        4,
+        4
+      ],
+      "oneScale": 0.32160804020100503,
+      "nominalBodyPx": 80,
+      "calibrationBounds": [
+        [
+          173,
+          13,
+          334,
+          262
+        ],
+        [
+          502,
+          13,
+          658,
+          262
+        ],
+        [
+          843,
+          13,
+          1007,
+          262
+        ],
+        [
+          1191,
+          12,
+          1352,
+          262
+        ],
+        [
+          171,
+          275,
+          338,
+          523
+        ],
+        [
+          502,
+          274,
+          663,
+          523
+        ],
+        [
+          845,
+          275,
+          1013,
+          523
+        ],
+        [
+          1189,
+          275,
+          1352,
+          523
+        ]
+      ],
+      "calibrationSupportProposals": [
+        {
+          "root": [
+            260.5,
+            262
+          ],
+          "groups": [
+            {
+              "xRange": [
+                214,
+                254
+              ],
+              "centerX": 234.0,
+              "soleY": 262
+            },
+            {
+              "xRange": [
+                271,
+                303
+              ],
+              "centerX": 287.0,
+              "soleY": 262
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            589.75,
+            262
+          ],
+          "groups": [
+            {
+              "xRange": [
+                543,
+                584
+              ],
+              "centerX": 563.5,
+              "soleY": 262
+            },
+            {
+              "xRange": [
+                600,
+                632
+              ],
+              "centerX": 616.0,
+              "soleY": 262
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            931.25,
+            262
+          ],
+          "groups": [
+            {
+              "xRange": [
+                884,
+                925
+              ],
+              "centerX": 904.5,
+              "soleY": 262
+            },
+            {
+              "xRange": [
+                943,
+                973
+              ],
+              "centerX": 958.0,
+              "soleY": 262
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            1280.0,
+            262
+          ],
+          "groups": [
+            {
+              "xRange": [
+                1234,
+                1273
+              ],
+              "centerX": 1253.5,
+              "soleY": 262
+            },
+            {
+              "xRange": [
+                1291,
+                1322
+              ],
+              "centerX": 1306.5,
+              "soleY": 262
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            263.0,
+            523
+          ],
+          "groups": [
+            {
+              "xRange": [
+                223,
+                255
+              ],
+              "centerX": 239.0,
+              "soleY": 523
+            },
+            {
+              "xRange": [
+                271,
+                303
+              ],
+              "centerX": 287.0,
+              "soleY": 523
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            592.5,
+            523
+          ],
+          "groups": [
+            {
+              "xRange": [
+                551,
+                583
+              ],
+              "centerX": 567.0,
+              "soleY": 523
+            },
+            {
+              "xRange": [
+                603,
+                633
+              ],
+              "centerX": 618.0,
+              "soleY": 523
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            938.25,
+            523
+          ],
+          "groups": [
+            {
+              "xRange": [
+                898,
+                930
+              ],
+              "centerX": 914.0,
+              "soleY": 523
+            },
+            {
+              "xRange": [
+                947,
+                978
+              ],
+              "centerX": 962.5,
+              "soleY": 523
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            1281.5,
+            523
+          ],
+          "groups": [
+            {
+              "xRange": [
+                1241,
+                1272
+              ],
+              "centerX": 1256.5,
+              "soleY": 523
+            },
+            {
+              "xRange": [
+                1291,
+                1322
+              ],
+              "centerX": 1306.5,
+              "soleY": 523
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        }
+      ],
+      "rootReview": "candidate-witnesses-await-native-review",
+      "sourceViewed": true,
+      "excludedActions": [
+        "cast-aoe"
+      ],
+      "rejectedRows": {},
+      "acceptedActions": []
+    },
+    {
+      "id": "huyen-tam-entry-northwest-g1",
+      "file": "sources/huyen-tam-entry-northwest-g1-r1.png",
+      "sha256": "9bb50660d0aa47fb6da804a63d63004c9826a2f2bfbbf7b17a6760b1c2932313",
+      "size": [
+        1151,
+        1367
+      ],
+      "observedGrid": [
+        6,
+        5
+      ],
+      "oneScale": 0.32454361054766734,
+      "nominalBodyPx": 80,
+      "calibrationBounds": [
+        [
+          63,
+          50,
+          211,
+          296
+        ],
+        [
+          241,
+          49,
+          389,
+          296
+        ],
+        [
+          421,
+          50,
+          568,
+          296
+        ],
+        [
+          600,
+          50,
+          746,
+          296
+        ],
+        [
+          778,
+          49,
+          925,
+          296
+        ],
+        [
+          957,
+          49,
+          1104,
+          296
+        ]
+      ],
+      "calibrationSupportProposals": [
+        {
+          "root": [
+            124.5,
+            296
+          ],
+          "groups": [
+            {
+              "xRange": [
+                86,
+                118
+              ],
+              "centerX": 102.0,
+              "soleY": 296
+            },
+            {
+              "xRange": [
+                134,
+                160
+              ],
+              "centerX": 147.0,
+              "soleY": 293
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            302.25,
+            296
+          ],
+          "groups": [
+            {
+              "xRange": [
+                264,
+                296
+              ],
+              "centerX": 280.0,
+              "soleY": 296
+            },
+            {
+              "xRange": [
+                311,
+                338
+              ],
+              "centerX": 324.5,
+              "soleY": 293
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            481.5,
+            296
+          ],
+          "groups": [
+            {
+              "xRange": [
+                443,
+                475
+              ],
+              "centerX": 459.0,
+              "soleY": 296
+            },
+            {
+              "xRange": [
+                491,
+                517
+              ],
+              "centerX": 504.0,
+              "soleY": 293
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            660.25,
+            296
+          ],
+          "groups": [
+            {
+              "xRange": [
+                622,
+                654
+              ],
+              "centerX": 638.0,
+              "soleY": 296
+            },
+            {
+              "xRange": [
+                670,
+                695
+              ],
+              "centerX": 682.5,
+              "soleY": 293
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            839.0,
+            296
+          ],
+          "groups": [
+            {
+              "xRange": [
+                801,
+                833
+              ],
+              "centerX": 817.0,
+              "soleY": 296
+            },
+            {
+              "xRange": [
+                848,
+                874
+              ],
+              "centerX": 861.0,
+              "soleY": 293
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        },
+        {
+          "root": [
+            1018.0,
+            296
+          ],
+          "groups": [
+            {
+              "xRange": [
+                980,
+                1012
+              ],
+              "centerX": 996.0,
+              "soleY": 296
+            },
+            {
+              "xRange": [
+                1027,
+                1053
+              ],
+              "centerX": 1040.0,
+              "soleY": 294
+            }
+          ],
+          "confidence": "two-lower-dark-support-clusters"
+        }
+      ],
+      "rootReview": "candidate-witnesses-await-native-review",
+      "sourceViewed": true,
+      "excludedActions": [
+        "run"
+      ],
+      "rejectedRows": {},
+      "acceptedActions": [
+        "idle",
+        "hit",
+        "death"
+      ]
+    },
+    {
+      "id": "tich-bach-domain-north-g1",
+      "file": "sources/tich-bach-domain-north-g1-r1.png",
+      "sha256": "284efb9a5fc3aa5582bc8152921ad270c90404193bc094ea737b9baad2fb62eb",
+      "size": [
+        1024,
+        1536
+      ],
+      "observedGrid": [
+        6,
+        5
+      ],
+      "oneScale": 0.31893687707641194,
+      "nominalBodyPx": 80,
+      "calibrationBounds": [
+        [
+          40,
+          84,
+          163,
+          334
+        ],
+        [
+          205,
+          83,
+          328,
+          334
+        ],
+        [
+          370,
+          83,
+          492,
+          334
+        ],
+        [
+          534,
+          83,
+          656,
+          334
+        ],
+        [
+          699,
+          83,
+          821,
+          334
+        ],
+        [
+          864,
+          83,
+          985,
+          334
+        ]
+      ],
+      "calibrationSupportProposals": [
+        {
+          "root": [
+            102.5,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                65,
+                140
+              ],
+              "centerX": 102.5,
+              "soleY": 334
+            }
+          ],
+          "confidence": "one-lower-dark-support-cluster"
+        },
+        {
+          "root": [
+            266.0,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                229,
+                303
+              ],
+              "centerX": 266.0,
+              "soleY": 334
+            }
+          ],
+          "confidence": "one-lower-dark-support-cluster"
+        },
+        {
+          "root": [
+            430.0,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                393,
+                467
+              ],
+              "centerX": 430.0,
+              "soleY": 334
+            }
+          ],
+          "confidence": "one-lower-dark-support-cluster"
+        },
+        {
+          "root": [
+            594.5,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                558,
+                631
+              ],
+              "centerX": 594.5,
+              "soleY": 334
+            }
+          ],
+          "confidence": "one-lower-dark-support-cluster"
+        },
+        {
+          "root": [
+            760.0,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                722,
+                798
+              ],
+              "centerX": 760.0,
+              "soleY": 334
+            }
+          ],
+          "confidence": "one-lower-dark-support-cluster"
+        },
+        {
+          "root": [
+            924.0,
+            334
+          ],
+          "groups": [
+            {
+              "xRange": [
+                887,
+                961
+              ],
+              "centerX": 924.0,
+              "soleY": 334
+            }
+          ],
+          "confidence": "one-lower-dark-support-cluster"
+        }
+      ],
+      "rootReview": "candidate-witnesses-await-native-review",
+      "sourceViewed": true,
+      "excludedActions": [
+        "run"
+      ],
+      "rejectedRows": {
+        "death": {
+          "reason": "touching or incomplete alpha regions",
+          "observedRegions": 5,
+          "expected": 6
+        }
+      },
+      "acceptedActions": [
+        "idle",
+        "hit"
+      ]
+    }
+  ],
+  "rejectedNewSources": [
+    {
+      "id": "huyen-tam-entry-northwest-run-limbs-r1",
+      "file": "sources/huyen-tam-entry-northwest-run-limbs-r1.png",
+      "sha256": "d8ebb846e8064be8ceded16132fd2b29bcd7aea8e730e7450fa4604375f7be05",
+      "reason": "Near white sleeve/fist stays forward in both half strides; exchange near/far arm depth in the bottom row."
+    },
+    {
+      "id": "tich-bach-domain-north-run-limbs-r1",
+      "file": "sources/tich-bach-domain-north-run-limbs-r1.png",
+      "sha256": "14e9bc47e93940c79273248e4bdb0fca009a2d039ebfde96d125f26b31c9f20c",
+      "reason": "Bottom row mirrors the hair and jade cloth to the other side. This is invalid. Keep original hair and jade drape on the same screen side throughout."
+    },
+    {
+      "id": "huyen-tam-domain-west-run-limbs-r1",
+      "file": "sources/huyen-tam-domain-west-run-limbs-r1.png",
+      "sha256": "e9b79b15a2d30efb843b5cfa845bc120b217dc93a833e31f5f4506e3fcae215c",
+      "reason": "Near arm and leg look too similar in both halves; clearly bend the near knee forward and send the near arm back in bottom-left contact."
+    },
+    {
+      "id": "huyen-tam-entry-northwest-run-limbs-r2",
+      "file": "sources/huyen-tam-entry-northwest-run-limbs-r2.png",
+      "sha256": "c5b6954c83b40ac9fddb4e4f8bce0bdf9c665e8291ca9d1b929f82e56532b67d",
+      "reason": "Targeted edit did not resolve repeated arm cycle / costume mirror. Keep excluded, use one action row with approved motion reference."
+    },
+    {
+      "id": "tich-bach-domain-north-run-limbs-r2",
+      "file": "sources/tich-bach-domain-north-run-limbs-r2.png",
+      "sha256": "a38ebff9eb2c3b22a037f110565849567f7365f8dba15c465a7963c1685a0c40",
+      "reason": "Targeted edit did not resolve repeated arm cycle / costume mirror. Keep excluded, use one action row with approved motion reference."
+    },
+    {
+      "id": "huyen-tam-domain-west-run-limbs-r2",
+      "file": "sources/huyen-tam-domain-west-run-limbs-r2.png",
+      "sha256": "40dbdc95b7d81991a187e10b1ee2292922c1a325e3a20338131379875b369787",
+      "reason": "Targeted edit did not resolve repeated arm cycle / costume mirror. Keep excluded, use one action row with approved motion reference."
+    },
+    {
+      "id": "huyen-tam-entry-south-aoe-hands-r2",
+      "file": "sources/huyen-tam-entry-south-aoe-hands-r2.png",
+      "sha256": "a5209b650af907e48d76fd31c63ecc7ab03a3676b967736a23912170c4d15e00",
+      "reason": "Hands improved but alpha background reaches image edges; exclude source."
+    }
+  ],
+  "limits": [
+    "Native hands are compact pixel shapes; this does not certify anatomically separate five digits in every occluded pose.",
+    "Run leg identity/arm depth assessed visually, not inferred from connected-component counts.",
+    "Existing automatic boot witnesses and low-pose projections remain candidates, not completed manual world-root registration.",
+    "Future main northwest/northeast/east action views and the rest of the 824-clip roster are still pending."
+  ],
+  "tools": "built-in ImageGen for every art correction; existing threshold-alpha/nearest pipeline for canonical/atlas registration",
+  "ownerMotionApprovalInferred": false,
+  "runtimeIntegrated": false
+}

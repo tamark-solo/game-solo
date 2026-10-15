@@ -1,0 +1,36 @@
+{
+  "status": "model-reviewed-candidate",
+  "actorId": "sword-servant",
+  "actualBodyClips": 39,
+  "actualBodyKeys": 234,
+  "boards": [
+    {
+      "file": "review/sword-servant-all-directions-move-native2x.png",
+      "sha256": "6227d5c37f56cf3ef1051f5c228536469c413d57f09a5a99e2e5a08ec637c78c"
+    },
+    {
+      "file": "review/sword-servant-all-directions-attack-native2x.png",
+      "sha256": "75ef70b5d16047d9fe8f713f071cd4b36cd04b51d7013266f5eb85742b6489da"
+    },
+    {
+      "file": "review/sword-servant-all-directions-death-native2x.png",
+      "sha256": "18bdffa52483adde8fd63410d938b2616687ee658fa955831a626375834bf233"
+    }
+  ],
+  "observations": [
+    "All eight movement clips have distinct stepping contacts/passing knees. Near/far legs occlude naturally; no neutral inserted as final gait key. Foot support remains a candidate measured from actual source.",
+    "Attack views retain own stone skull/torso and attached fists; N/NE/NW hide eyes throughout. SW wind-up forearms occlude part of chest without turning the head away from own front-left camera.",
+    "All eight falls lower into complete grounded corpse holds, keeping head RIGHT except W/SW/NW head LEFT; no head-foot swap or corpse rising.",
+    "Motion style/timing/root continuity still require owner review; body-only artwork does not prove held-weapon grip or combat hit timing."
+  ],
+  "missing": [
+    {
+      "action": "hit",
+      "direction": "southwest",
+      "reason": "HTTP200 malformed JSON, single authorized retry exhausted"
+    }
+  ],
+  "ownerArtApproved": false,
+  "ownerMotionApproved": false,
+  "runtimeIntegrated": false
+}

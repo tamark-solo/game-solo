@@ -1,0 +1,61 @@
+{
+  "kind": "motion",
+  "jobId": "blood-talisman-mage-east-gait-neutral-r2",
+  "promptSha256": "4466abf7b6e55a7073e6bf24478b96a0eb308a327da85728b9b472cad5e3f8c3",
+  "inputHashes": [
+    {
+      "index": 1,
+      "file": "inputs/blood-talisman-mage-east-neutral-same-view8x.png",
+      "sha256": "d3a708dc64ae7be5fe40effd0c558fdcf4ff2be7afe0e874abfd5fbfb9a6625a",
+      "original": "docs/design/characters/gdd-character-animation-v1/view-masters/native/blood-talisman-mage-east-neutral.png",
+      "originalSha256": "0ce340e74c87935463e3b87fe55d750ffb95d77d42b3c9d85c5042bf1113d952",
+      "role": "OWN inspected SAME-VIEW neutral PRIMARY camera/action target and identity; approved ancestry retained",
+      "nearestIntegerEnlargement": 8,
+      "transparentRgbNormalized": true
+    },
+    {
+      "index": 2,
+      "file": "inputs/wang-east-clean.png",
+      "sha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+      "original": "docs/design/characters/van-hai-npc-visual-standard-v1/inputs/wang-lin-live-east-nearest8x.png",
+      "originalSha256": "c17b3544cc1ce4cbe41c6b1b6bc866a576244c6716fb44d16b6f47390c5cfc1a",
+      "role": "Wang SAME-VIEW PRIMARY human anatomy/pixel standard; retain own face and outfit",
+      "nearestIntegerEnlargement": 1,
+      "transparentRgbNormalized": true
+    }
+  ],
+  "spec": {
+    "assetType": "character-concept",
+    "name": "blood-talisman-mage-east-gait-neutral-r2",
+    "prompt": "Use case: identity-preserve. New GDD enemy BODY animation: Huyết Phù Sư, exact east: RIGHT PROFILE, nose right in every pose.\nImage1 OWN inspected SAME-VIEW neutral is PRIMARY motion/camera target and identity. Image2 live Wang is the direct PRIMARY human anatomy/pixel standard; keep OWN face, hair, age, clothing and approved body proportions. Only requested SAME-VIEW images are provided: inherit approved identity through the own-view lineage, never borrow another camera.\nIdentity: OWN approved stern human blood-talisman mage, high tied dark hair and red seal textiles. Preserve approved hair silhouette and crimson/ivory/dark palette; never switch to Wang clothing.\nExactly 6 COLUMNS x 2 ROWS. ROW1: six identical own standing/floating neutral calibration figures.\nROW2: move: left boot contact, short controlled step / right knee passes / right boot advances, scarf and hem lag / right boot contact / left knee passes / left boot advances, hem recovers into next contact.\nONE scale for the complete source from the neutral calibration, nominal 80 native pixels. Keep own skull/armor dimensions throughout. Lean, compression, crouch and fall lower the pose naturally; never fit per-pose height. Keep actual camera and anatomical rear occlusion in all actions. Rear hands do not show through torso, mantle or hair.\nCompact attached hands/fingers for human/spirit; complete heavy stone fists for construct. Both actual stone feet/boots stay attached where applicable; spectral character has NO boots or invented walking legs. No mirrored view or flipped costume. All figures isolated by generous transparent gutters, with ample margins for complete hair, fists and prone body on all edges.\nTruly transparent RGBA, crisp stepped pixel contours and limited shade bands. Body/outfit only; no floor, shadow, captions, grid, held weapon, projectile, detached shards, duplicate actor, warning ring, spell glow, smoke, aura or external FX. Solid own body, truthful physical foot contact.\nFINAL CAMERA AUTHORITY for east: copy Image1 orientation into ALL 12 figures, including neutral calibration, recoil, wind-up and low poses. Show the SAME PROFILE camera as Image1, one visible eye, no turn toward a front diagonal. Preserve own hair/skull, material, attached limbs and body build exactly from Image1, including any own hair tuft/tie; descriptive hair shorthand never overrides the actual inspected identity. No mirror, fitting, external prop or FX.\n",
+    "quality": "high",
+    "size": "1536x1024",
+    "n": 1
+  },
+  "argv": [
+    "node",
+    "scripts/imagegen-router.mjs",
+    "edit",
+    "--prompt-file",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\prompts\\blood-talisman-mage-east-gait-neutral-r2.txt",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\blood-talisman-mage-east-neutral-same-view8x.png",
+    "--image",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-east-clean.png",
+    "--quality",
+    "high",
+    "--size",
+    "1536x1024",
+    "--background",
+    "transparent",
+    "--timeout",
+    "900",
+    "--out",
+    "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-talisman-mage-east-gait-neutral-r2\\source.png"
+  ],
+  "folder": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\blood-talisman-mage-east-gait-neutral-r2",
+  "automaticRetry": false,
+  "actualPromptAuthority": "prompts/blood-talisman-mage-east-gait-neutral-r2.txt",
+  "mcpProfilePromptTransmitted": false,
+  "mcpUse": "Planning gate only; scoped custom actor prompt and true reference hashes are transmitted by the existing router."
+}

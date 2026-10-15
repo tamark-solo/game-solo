@@ -1,5 +1,8 @@
 # Tạo ảnh qua router gpt-image-2
 
+**Kết nối hiện hành15/10/2026:** owner đổi sang `https://img.aishenji.top/v1`, giữ `gpt-image-2`. Khóa mới lưu DPAPI ngoài Git qua stdin; MCP và CLI đọc ngay cấu hình. GET `/models` xác nhận model; OPTIONS `/images/edits`204, `/responses`404. Nguồn có reference dùng `edit` multipart của router hiện có. [Pilot Kiếm Nô mới](design/characters/gdd-character-animation-v1/enemy-production/router-pilot-v2/connection.json) đã tạo một PNG1536×1024 có alpha thật, giữ raw và input/prompt/hash, chưa ART/motion approval. Lượt provider clituasmail trước trả502 quá tải, lưu nguyên tại router-pilot-v1, không có ảnh và không tự retry.
+
+
 Tool độc lập `scripts/imagegen-router.mjs` nhận prompt, gọi Image API của router và lưu ảnh cùng metadata. Model mặc định giữ đúng `gpt-image-2`; tool không tự đổi model hoặc tự gửi lại yêu cầu tạo ảnh khi lỗi.
 
 Ngày 12/10/2026 đã kiểm tra thật: `/models` trả HTTP 200 và có `gpt-image-2`; `/images/generations` trả một PNG base64 mở được. Ảnh đối chiếu nằm ở `output/imagegen/router-connectivity-v1.png`, prompt và hash nằm trong JSON cùng tên. Đây là ảnh chén gốm xem thử để kiểm tra kết nối.
@@ -8,7 +11,7 @@ Router trả ảnh **1536 × 1024** dù request đặt **1024 × 1024**. Tool gh
 
 ## Cấu hình trên máy hiện tại
 
-- Endpoint hiện tại: `https://img.aishenji.top/v1` (owner đổi nhà cung cấp ngày 12/10/2026).
+- Endpoint hiện tại: `https://img.aishenji.top/v1` (owner cập nhật ngày15/10/2026).
 - Model: `gpt-image-2`.
 - Cấu hình nằm ngoài Git: `%LOCALAPPDATA%\game-solo\imagegen-router.json`.
 - Khóa trong cấu hình được mã hóa bằng Windows DPAPI, chỉ tài khoản Windows hiện tại giải mã được. Không đưa khóa vào mã nguồn, prompt, tham số dòng lệnh hoặc metadata.
@@ -16,7 +19,7 @@ Router trả ảnh **1536 × 1024** dù request đặt **1024 × 1024**. Tool gh
 
 Khóa mới đã được thay qua stdin và mã hóa DPAPI ngoài Git. CLI và MCP `game_assets` cùng đọc cấu hình này mỗi lần gọi; GET `/v1/models` đã xác nhận `gpt-image-2` ở cả hai đường. URL owner cung cấp là hostname; API nằm dưới `/v1` (`/models` ở root trả 404, `/v1/models` nhận Bearer và trả danh sách model).
 
-Đường Image API mới có `/images/generations` và `/images/edits` (OPTIONS trả 204); `/responses` trả 404. Khi chỉnh ảnh trên nhà cung cấp mới, chọn `edit` multipart với ảnh bố cục đầu tiên, rồi nguồn style. Kiểm ảnh trả về để xác nhận khả năng edit thực tế; không tự đổi transport sau lỗi. Phần Responses bên dưới ghi lịch sử nhà cung cấp trước, không dùng nguyên schema cũ cho endpoint mới.
+**Giao thức img.aishenji.top kiểm lại15/10:** đường Image API có `/images/generations` và `/images/edits` (OPTIONS trả 204); `/responses` trả 404. Khi chỉnh ảnh trên nhà cung cấp này, chọn `edit` multipart với ảnh bố cục đầu tiên, rồi nguồn style. Kiểm ảnh trả về để xác nhận khả năng edit thực tế; không tự đổi transport sau lỗi. Phần Responses bên dưới ghi lịch sử nhà cung cấp trước, không dùng nguyên schema cũ cho endpoint mới.
 
 Đã xác nhận edits bằng POST thực: năm khu được chọn C01/C03/C04/C05/C06 trả PNG 1254 × 1254 mở được, model request giữ `gpt-image-2`. Prompt, thứ tự input, hash, endpoint và kích thước thực nằm trong [gói chi tiết Vân Ngọc](design/world/hang-nhac-van-ngoc-detail-v1/PRODUCTION.md). Request `1232x1232` khác kích thước thực; chuẩn hóa/căn khu là bước riêng, không sửa bitmap gốc hoặc metadata lịch sử.
 

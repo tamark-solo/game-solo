@@ -1,0 +1,58 @@
+{
+  "dryRun": false,
+  "endpoint": "https://img.aishenji.top/v1/images/edits",
+  "model": "gpt-image-2",
+  "operation": "edit",
+  "encoding": "multipart/form-data",
+  "imageField": "image[]",
+  "inputImages": [
+    {
+      "index": 1,
+      "role": "edit-target",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\hua-lap-quoc-northeast-neutral-same-view8x.png",
+      "filename": "hua-lap-quoc-northeast-neutral-same-view8x.png",
+      "mimeType": "image/png",
+      "bytes": 28215,
+      "sha256": "417001b5edd00b7ffa8d51aad85c64cc638fc0fd04f4786177e340039086ad09",
+      "dimensions": {
+        "width": 1024,
+        "height": 1152
+      }
+    },
+    {
+      "index": 2,
+      "role": "supporting-input",
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\inputs\\wang-northeast-clean.png",
+      "filename": "wang-northeast-clean.png",
+      "mimeType": "image/png",
+      "bytes": 8833,
+      "sha256": "68c03497393916977447a39798cc5a8d11635077701922ef5d20608053eb1c01",
+      "dimensions": {
+        "width": 512,
+        "height": 768
+      }
+    }
+  ],
+  "registrationVerified": false,
+  "files": [
+    {
+      "path": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-northeast-aoe-neutral-r2\\source.png",
+      "metadataPath": "C:\\Users\\AnhLT\\Documents\\GM\\game-solo\\docs\\design\\characters\\gdd-character-animation-v1\\enemy-production\\api-sources\\hua-lap-quoc-northeast-aoe-neutral-r2\\source.json",
+      "sha256": "d62ad30f68080fd9c811171b5e59b0928024be21e1198cb076a7d56de42ade4b",
+      "mimeType": "image/png",
+      "dimensions": {
+        "width": 1402,
+        "height": 1122
+      },
+      "sizeMatchesRequest": false
+    }
+  ],
+  "warnings": [
+    "Image 1: router returned 1402x1122, requested 1536x1024. Image saved unchanged; no additional generation was sent."
+  ],
+  "requestedCount": 1,
+  "returnedCount": 1,
+  "generationVerified": true,
+  "status": "preview-only",
+  "ownerApproved": false
+}

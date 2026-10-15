@@ -1,0 +1,44 @@
+{
+  "status": "connected-generation-verified",
+  "baseUrl": "https://img.aishenji.top/v1",
+  "imageModel": "gpt-image-2",
+  "operation": "edit",
+  "imageEndpoint": "https://img.aishenji.top/v1/images/edits",
+  "modelAvailable": true,
+  "modelCheck": "model-check.json",
+  "credentialStorage": "Windows DPAPI outside repository",
+  "credentialInRepo": false,
+  "tests": {
+    "routerAndMcp": 71,
+    "passed": 71
+  },
+  "generationVerified": true,
+  "imageFilesCreated": 1,
+  "imageDimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "imageSha256": "a85ff0ddb5769eb3331626d6a4c29dcf316f377f9275cc16b2dc5d27a42a6c2c",
+  "actualPilot": "generation-result.json",
+  "automaticRetry": false,
+  "modelFallback": false,
+  "protocolProbe": {
+    "imagesEditsOptionsStatus": 204,
+    "responsesOptionsStatus": 404
+  },
+  "artApproved": false,
+  "viewRegistrationReady": true,
+  "previousFailedProvider": "../router-pilot-v1/generation-result.json",
+  "successfulReferenceImageRequests": 3,
+  "correctionResult": "rear-correction/generation-result.json",
+  "credentialScan": {
+    "filesChecked": 1122,
+    "credentialPatternMatches": 0
+  },
+  "verificationReport": "verification.json",
+  "successfulReferenceImageRequestsScope": "Three view pilot requests only; body production has per-job API metadata under ../api-sources.",
+  "registeredViewCount": 8,
+  "northwestIssueResolved": true,
+  "latestViewCheckpoint": "../../checkpoints/enemy-views/sword-servant/checkpoint.json",
+  "latestProduction": "../../progress.json"
+}

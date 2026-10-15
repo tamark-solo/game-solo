@@ -1,0 +1,172 @@
+{
+  "schema": "gdd-character-animation-progress-1",
+  "date": "2026-10-15",
+  "status": "enemy-motion-technical-candidate",
+  "activeWave": "boss-stage2",
+  "targetSources": 280,
+  "targetBodyClips": 832,
+  "generatedSources": 478,
+  "packedBodyClips": 576,
+  "runtimeIntegrated": false,
+  "historySourceCount": 5,
+  "sourcePolicy": "Real own views; one scale/source. Spacious 4x4 sheets for single actions plus role-specific grouped sources; rejected raw retained. No automatic POST retry.",
+  "packedBodyKeys": 3447,
+  "sourceSheetsPacked": 441,
+  "correctiveSourceJobs": 58,
+  "totalSourceJobs": 1004,
+  "mainEntryComplete": true,
+  "mainEntryBodyClips": 128,
+  "realViewMasters": 104,
+  "dedicatedWideJobs": 12,
+  "latestTechnicalStatus": "576 clips/3447 keys total; enemy320/1920,48views,0missing. CPU91596/contract3470/browser2570/GPU3840/UI178/23offline tests passed; prior2039pins preserved. Candidate, no ART/motion/runtime approval.",
+  "limbAudit": "review/limb-audit-v1/findings.json",
+  "mainComplete": true,
+  "mainBodyClips": 256,
+  "mainBodyKeys": 1527,
+  "mainCheckpoint": "checkpoints/main-8dir/checkpoint.json",
+  "productionBlocker": null,
+  "storyViewMasters": 32,
+  "generatedViewSources": 29,
+  "plannedViewSources": 9,
+  "storyViewCheckpoint": "checkpoints/story-views/checkpoint.json",
+  "remainingBodyClips": 256,
+  "ownerPriority": "Monsters then bosses, requested 2026-10-15",
+  "priorityTargetClips": 320,
+  "blockerHistory": [
+    {
+      "tool": "built-in ImageGen",
+      "reason": "usage_limit_reached",
+      "reportedWaitSeconds": 9281,
+      "affectedJobs": [
+        "li-muwan-alchemist-southeast-g1",
+        "situ-nan-spirit-southeast-g1",
+        "li-muwan-lifespan-southeast-g1",
+        "situ-nan-restored-southeast-g1"
+      ],
+      "fallbackUsed": false,
+      "nextStep": "Resume these exact planned jobs; no neutral frame relabeled as animation."
+    },
+    {
+      "tool": "built-in ImageGen",
+      "reason": "usage_limit_reached",
+      "reportedWaitSeconds": 7444,
+      "affectedJobs": [
+        "sword-servant-eight-view-neutral-board"
+      ],
+      "fallbackUsed": false,
+      "nextStep": "Prioritize three monster view boards, then three bosses; story/NPC motion remains deferred by owner priority."
+    },
+    {
+      "tool": "configured Image API router",
+      "reason": "upstream-overloaded",
+      "httpStatus": 502,
+      "affectedJobs": [
+        "sword-servant-eight-view-neutral-board"
+      ],
+      "requestId": "cmq_3dfd0d0f3e306e77cab6791f",
+      "providerReportedNoTokensCharged": true,
+      "fallbackUsed": false,
+      "nextStep": "Keep the source planned. Use the configured Responses reference-image route when provider capacity recovers; no automatic POST retry."
+    }
+  ],
+  "progressStatusText": "Quái/Boss 320/320 clip · 1920 key · 0 nguồn API thiếu",
+  "enemyPlan": "enemy-production/plan.json",
+  "enemyPreparationCheckpoint": "enemy-production/preparation-checkpoint.json",
+  "generationBackend": {
+    "mode": "project-configured-router",
+    "ownerAuthorized": true,
+    "baseUrl": "https://img.aishenji.top/v1",
+    "imageModel": "gpt-image-2",
+    "operation": "edit",
+    "credentialsOutsideRepo": true,
+    "generationVerified": true,
+    "connectionReport": "enemy-production/router-pilot-v2/connection.json"
+  },
+  "enemyApiPilot": {
+    "imageSources": 2,
+    "registeredViews": 8,
+    "bodyClips": 0,
+    "sourceReview": "enemy-production/router-pilot-v2/generation-result.json",
+    "nextStep": "Produce all five body actions in eight inspected own views.",
+    "sourcePreview": "enemy-production/router-pilot-v2/northwest-r3/source.png",
+    "reviewNote": "Bản r3 đã sửa góc Tây Bắc: ba hướng Bắc/Đông Bắc/Tây Bắc không còn mắt lộ. Tám view mới đã được kiểm và đăng ký một scale chung; animation đang sản xuất.",
+    "correctionReview": "enemy-production/router-pilot-v2/rear-correction/generation-result.json"
+  },
+  "enemyBodyClips": 320,
+  "enemyBodyKeys": 1920,
+  "enemyMotionCheckpoint": "checkpoints/enemy-motion/sword-servant-40/checkpoint.json",
+  "sourceBlockers": [],
+  "enemyCoverage": [
+    {
+      "actorId": "sword-servant",
+      "name": "Kiếm Nô Khôi Lỗi",
+      "bodyClips": 40,
+      "bodyKeys": 240,
+      "targetBodyClips": 40,
+      "missingClips": []
+    },
+    {
+      "actorId": "yin-corpse-cultivator",
+      "name": "Âm Thi Tu Sĩ",
+      "bodyClips": 40,
+      "bodyKeys": 240,
+      "targetBodyClips": 40,
+      "missingClips": []
+    },
+    {
+      "actorId": "blood-talisman-mage",
+      "name": "Huyết Phù Sư",
+      "bodyClips": 40,
+      "bodyKeys": 240,
+      "targetBodyClips": 40,
+      "missingClips": []
+    },
+    {
+      "actorId": "hua-lap-quoc",
+      "name": "Hung Linh Hứa Lập Quốc",
+      "bodyClips": 64,
+      "bodyKeys": 384,
+      "targetBodyClips": 64,
+      "missingClips": []
+    },
+    {
+      "actorId": "blood-armor-commander",
+      "name": "Huyết Giáp Khôi Lỗi Thống Lĩnh",
+      "bodyClips": 64,
+      "bodyKeys": 384,
+      "targetBodyClips": 64,
+      "missingClips": []
+    },
+    {
+      "actorId": "dark-seal-true-body",
+      "name": "Hắc Ấn · Chân thân Huyết Ấn",
+      "bodyClips": 72,
+      "bodyKeys": 432,
+      "targetBodyClips": 72,
+      "missingClips": []
+    }
+  ],
+  "enemyViewMasters": 48,
+  "targetSourcesIsHistorical": true,
+  "enemyMotionCheckpoints": {
+    "sword-servant": "checkpoints/enemy-motion/sword-servant-40/checkpoint.json",
+    "yin-corpse-cultivator": "checkpoints/enemy-motion/yin-corpse-cultivator-40/checkpoint.json",
+    "blood-talisman-mage": "checkpoints/enemy-motion/blood-talisman-mage-40/checkpoint.json",
+    "hua-lap-quoc": "checkpoints/enemy-motion/hua-lap-quoc-64/checkpoint.json",
+    "blood-armor-commander": "checkpoints/enemy-motion/blood-armor-commander-64/checkpoint.json",
+    "dark-seal-true-body": "checkpoints/enemy-motion/dark-seal-true-body-72/checkpoint.json"
+  },
+  "latestEnemyDelivery": {
+    "file": "enemy-production/delivery-320-v1/handoff.json",
+    "archive": "output/art/gdd-enemy-body-candidate-320-v1.zip",
+    "verification": "enemy-production/delivery-320-v1/archive-verification.json",
+    "contentVerification": "enemy-production/delivery-320-v1/archive-content-verification.json",
+    "bodyClips": 320,
+    "bodyKeys": 1920,
+    "members": 6558,
+    "archiveSha256": "2649baa85869014ce70bc6bd72b6bc54f366bfe28f12f68ea34b2bb154ce9fe1",
+    "status": "complete-candidate"
+  },
+  "enemyComplete": true,
+  "priorityRemainingBodyClips": 0
+}
