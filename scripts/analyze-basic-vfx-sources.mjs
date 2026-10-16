@@ -1,3 +1,0 @@
-import {readFile} from 'node:fs/promises';import {sharp} from './actor-sprite-tools.mjs';
-const root='docs/design/vfx/basic-attack-jade-v1',p=JSON.parse(await readFile(root+'/production-plan.json'));
-for(const r of p.requests){const{data,info}=await sharp(root+'/'+r.sourceFile).ensureAlpha().raw().toBuffer({resolveWithObject:true}),rows=[];for(let row=0;row<2;row++){const xs=[];for(let x=0;x<info.width;x++){let count=0;for(let y=row*512;y<(row+1)*512;y++)if(data[(y*info.width+x)*4+3]>2)count++;if(count>0)xs.push(x);}const bands=[];for(const x of xs){const last=bands.at(-1);if(last&&x-last[1]<=24)last[1]=x;else bands.push([x,x]);}rows.push(bands);}console.log(JSON.stringify({id:r.id,rows}));}

@@ -1,0 +1,54 @@
+{
+  "schema": "gdd-main-runtime-handoff-2026-10-16",
+  "date": "2026-10-16",
+  "status": "prepared-not-integrated",
+  "runtimeIntegrated": false,
+  "canonicalActors": [
+    {
+      "actorId": "huyen-tam-entry",
+      "runtimeId": "a",
+      "conceptRole": "main-entry"
+    },
+    {
+      "actorId": "tich-bach-entry",
+      "runtimeId": "b",
+      "conceptRole": "main-entry"
+    },
+    {
+      "actorId": "huyen-tam-domain",
+      "runtimeId": "a",
+      "conceptRole": "main-domain"
+    },
+    {
+      "actorId": "tich-bach-domain",
+      "runtimeId": "b",
+      "conceptRole": "main-domain"
+    }
+  ],
+  "basisFiles": [
+    {
+      "file": "docs/design/characters/gdd-character-concepts-v1/approval.json",
+      "sha256": "fa0982b6ca9f4fc094c95456138d5a132f382e8e87f7b0b67d9585bfead5f113"
+    },
+    {
+      "file": "docs/design/characters/gdd-character-concepts-v1/manifest.json",
+      "sha256": "ad5e1dfcc15dd7863710f2f71e9e09c76c0bcbe2fd1b7bc9e6c2d48326c0ac69"
+    },
+    {
+      "file": "docs/design/characters/gdd-character-animation-v1/checkpoints/main-8dir/checkpoint.json",
+      "sha256": "aaa81597474db44975985fd3943d4ae0bc9b84d9a721519680423efa8ee57f0d"
+    },
+    {
+      "file": "docs/design/characters/gdd-character-animation-v1/checkpoints/main-8dir/manifest.json",
+      "sha256": "5afc6490101a2179afb09f4cc9ef20f3b83749f40dcd18012f87f3966f06cb06"
+    }
+  ],
+  "registryUpdatePending": true,
+  "smokeTestPending": true,
+  "cleanupManifest": "docs/archive/character-asset-cleanup-2026-10-16/manifest.json",
+  "notes": [
+    "Prepared as a handoff record only.",
+    "Do not set runtimeIntegrated true until registry, renderer and smoke tests pass.",
+    "Historical approvals and checkpoints remain immutable."
+  ]
+}

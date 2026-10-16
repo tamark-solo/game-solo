@@ -100,6 +100,10 @@ ImageGen built-in đã thử đúng một lượt Kiếm Nô viewboard và tiế
 5. Pack đọc bodyCanvas/bodyPivot theo vai, stone-foot/boot/spectral support tách nhau. Preview holds và terminal hold là dữ liệu ART, không gây hit hoặc đổi gameplay.
 6. verify.py, verify-enemy-plan.py, browser/Three theo coverage **thực sau khi có ảnh**; chưa mở ART/motion/runtime approval. Main/limb/story checkpoints giữ nguyên hash. Story/NPC tiếp tục sau nhóm owner ưu tiên.
 
+### Handoff Main theo kế hoạch 16/10
+
+Main 256 clip hiện là checkpoint kỹ thuật candidate. Việc dùng concept 15/10 làm identity canonical, cập nhật runtime registry và đổi `runtimeIntegrated` phải thực hiện theo [kế hoạch tích hợp riêng](../../../CHARACTER-ASSET-INTEGRATION-PLAN-2026-10-16.md); không suy ra từ basis/QA. File cũ và generated cache được quản lý trong [cleanup manifest](../../../archive/character-asset-cleanup-2026-10-16/manifest.json), chưa xóa trước khi smoke test chuyển registry pass.
+
 ## Rà tay và chân theo yêu cầu owner
 
 [Trang so trước–sau 1×–4×](review/limb-audit-v1/index.html) · [Biên bản](review/limb-audit-v1/findings.json) · [26 board thực](review/limb-audit-v1/audit.json) · [Browser riêng70check](review/limb-audit-v1/browser-verification.json).

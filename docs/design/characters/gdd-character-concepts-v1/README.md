@@ -43,3 +43,7 @@ Chọn neutral/nhận diện → view thật cùng identity → idle/talk/cử c
 `prepare.py` fail khi ledger tồn tại. `record.py` giữ raw và prompt/input hash; corrective sibling giữ source cũ. `pack.py` chỉ ghi root mới; `verify.py` kiểm source/atlas/native/lineage/basis; `review/browser-verify.mjs` kiểm trang chọn và Three texture/pivot thật. Không full assets/build, map builder, DB, receipt hoặc runtime.
 
 **18 neutral Đông Nam đã được owner duyệt15/10.** [Approval](approval.json) khóa source/native/lineage; helpers không ghi lại bộ đã duyệt. Manifest sản xuất giữ nguyên status tại thời điểm đóng source; approval là hồ sơ bổ sung có hiệu lực. Ghim trong UI chỉ để so sánh. View/action/FX/runtime chưa được mở approval. Verification đọc bốn ảnh basis cũ qua resolver ZIP đúng hash; đây là provenance lịch sử, không runtime fallback.
+
+## Handoff cập nhật 16/10
+
+Gói này là canonical concept basis cho Main theo [kế hoạch tích hợp](../../../CHARACTER-ASSET-INTEGRATION-PLAN-2026-10-16.md). Việc duyệt neutral không tự chuyển asset vào runtime; handoff Main, registry và smoke test là các bước riêng. Cleanup dùng [sổ cleanup](../../../archive/character-asset-cleanup-2026-10-16/README.md), giữ nguyên raw/hash/checkpoint và không xóa archive lịch sử.
